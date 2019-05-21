@@ -15,13 +15,15 @@ IBM Power Systems Virtual Servers
     configuring-custom-image.md
     configuring-private-network.md
     managing-resources-and-users.md
+    /direct-link/direct-link-provision-ibm-cloud-direct-link-connect-from-the-ui-console
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://cloud.ibm.com/apidocs/power-cloud)
+    [API reference](https://test.cloud.ibm.com/apidocs/power-cloud)
     [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faq.md
+    getting-help-and-support.md
     {: .navgroup-end}
