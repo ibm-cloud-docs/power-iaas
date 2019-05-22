@@ -13,9 +13,12 @@ IBM Power Systems Virtual Servers
     {: .navgroup id="howto"}
     creating-power-virtual-server.md
     configuring-custom-image.md
-    configuring-private-network.md
     managing-resources-and-users.md
-    /direct-link/direct-link-provision-ibm-cloud-direct-link-connect-from-the-ui-console
+    
+    {: .topicgroup}
+    Networking tasks
+        configuring-private-network.md
+        /direct-link/direct-link-provision-ibm-cloud-direct-link-connect-from-the-ui-console
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

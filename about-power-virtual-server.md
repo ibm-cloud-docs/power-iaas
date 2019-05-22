@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-21"
 
 ---
 
@@ -31,7 +31,7 @@ The following are some of the key features for {{site.data.keyword.powerSys_notm
 ### Straightforward billing
 {: #apvs-billing}
 
-The {{site.data.keyword.powerSys_notm}} uses a a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify.  You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
+The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify.  You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
 ### Hybrid cloud environment
 {: #apvs-hybrid}
@@ -82,30 +82,28 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces or a public network interface.
 
 * Public network
-  * Easy and quick method to create a {{site.data.keyword.powerSys_notm}} instance in minutes.
-  * IBM configures the network infrastructure for you with a public Virtual Local Area Network (VLAN).
-  * Uses a {{site.data.keyword.cloud_notm}} virtual router and a Direct Link Dedicated connection.
-  * You must use the following ports or protocols for network traffic over the public network:
-    * 22
-    * 80
-    * 423
-    * 992 (IBM i 5250 terminal emulation with SSL)
-    * Internet Control Message Protocol (ICMP)
+  * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
+  * IBM configures the network infrastructure to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
+  * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
+  * Protected by firewall and supports the following secure network protocols:
+    * SSH
+    * HTTPS
+    * Ping
+    * IBM i 5250 terminal emulation with SSL (port 992)
 
 * Private network
-  * Requires existing knowledge of {{site.data.keyword.cloud_notm}} network technologies.
-  * Allows the {{site.data.keyword.powerSys_notm}} resources to access existing {{site.data.keyword.cloud_notm}} resources, such as Bare Metal Servers, Kubernetes containers, or storage devices.
-  * Uses a Direct Link Connect connection or a Virtual Private Network (VPN) connection for network communication. The Direct Link Connect setup process can take a few days because you must work with {{site.data.keyword.cloud_notm}} support and a Direct Link Connect provider.
-For more information about configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
-{:note}
+  * Allows the resources for your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as Bare Metal Servers, Kubernetes containers, or cloud storage.
+  * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources. The process for creating a Direct Link Connect connection can take a few days because IBM Cloud support must configure the link.
+  * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-The following figure displays the following information:
+    For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
+    {:note}
 
-* Customer A is able to connect to a public network by using a Direct Link Dedicated connection with their {{site.data.keyword.cloud_notm}} Power account.
-* Customer A is able to connect to a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account.
-* Customer A can use either a public or private network to access their {{site.data.keyword.powerSys_notm}}.
-* Customer B is able to connect to only a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account.
+The following figure displays the the basic configuration for a public and private network:
 
-**Figure 1: Public and private network configurations**
+![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"}
 
-![Displays how network traffic flows for public or private connection](/images/power-iaas-network.svg)
+<!-- Customer A is able to connect to a public network by using a Direct Link Dedicated connection with their {{site.data.keyword.cloud_notm}} Power account. -->
+<!-- Customer A is able to connect to a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account. -->
+<!-- Customer A can use either a public or private network to access their {{site.data.keyword.powerSys_notm}}. -->
+<!-- Customer B is able to connect to only a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account.  -->

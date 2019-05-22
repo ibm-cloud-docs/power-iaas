@@ -20,19 +20,19 @@ lastupdated: "2019-05-17"
 
 The {{site.data.keyword.powerSysFull}} authorization and resource management practices coordinate with the IBM Cloud Identity and Access Management (IAM) services. IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSys_notm}} resources with resource groups, and allow access to specific resources for a set of users with access groups. In other words, IAM is your one stop shop for all user and resource management in {{site.data.keyword.cloud_notm}}.
 
-For more information about IAM, review the following information:
-
-* [IAM concepts](https://cloud.ibm.com/docs/iam?topic=iam-iamoverview)
-* [Getting started with IAM](https://cloud.ibm.com/docs/iam?topic=iam-getstarted#getstarted)
-* [Managing resource groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
-* [Setting up access groups](https://cloud.ibm.com/docs/iam?topic=iam-groups)
-
 You can assign IAM authorizations based on the follow criteria:
 
 * Individual users
 * Access groups (groups of users)
 * Specific types of resources
 * Resource groups
+
+For more information about IAM, review the following information:
+
+* [IAM concepts](https://cloud.ibm.com/docs/iam?topic=iam-iamoverview)
+* [Getting started with IAM](https://cloud.ibm.com/docs/iam?topic=iam-getstarted#getstarted)
+* [Managing resource groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
+* [Setting up access groups](https://cloud.ibm.com/docs/iam?topic=iam-groups)
 
 ## Platform access roles
 {: #platform-access-roles}
@@ -59,7 +59,7 @@ The following table displays the IAM service access roles and the corresponding 
 |-----------|-------------------------|
 | Reader | View all resources, such as SSH keys, storage volumes, and network settings. You cannot make any changes to the resources. |
 | Manager | You can configure all resources. The following are some of the actions you can perform:<ul><li>Create instances</li><li>Increase storage volume sizes</li><li>Create SSH keys</li><li>Modify network settings</li><li>Create boot images</li><li>Delete storage volumes</li>
-</ul> |
+</ul>
 
 ## User access scenarios
 {: #user-access-scenarios}

@@ -17,7 +17,7 @@ lastupdated: "2019-03-29"
 {:faq: data-hd-content-type='faq'}
 
 # FAQ
-{: #faqs}
+{: #power-iaas-faqs}
 
 
 ## What versions of AIX and IBM i operating systems are supported?
