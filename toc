@@ -1,29 +1,31 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="power-iaas" audience="compute" href="/docs/infrastructure/power-iaas?topic=power-iaas-getting-started#getting-started" path="infrastructure/power-iaas"}
+{: .toc subcollection="power-iaas" category="compute" audience="compute" href="/docs/infrastructure/power-iaas?topic=power-iaas-getting-started#getting-started" path="infrastructure/power-iaas"}
 IBM Power Systems Virtual Servers
 
     {: .navgroup id="learn"}
     getting-started.md
     about-power-virtual-server.md
     pricing.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     creating-power-virtual-server.md
     configuring-custom-image.md
     managing-resources-and-users.md
-    
+
     {: .topicgroup}
     Networking tasks
         configuring-private-network.md
-        /direct-link/direct-link-provision-ibm-cloud-direct-link-connect-from-the-ui-console
+        ordering-direct-link.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API reference](https://test.cloud.ibm.com/apidocs/power-cloud)
     [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
+    at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

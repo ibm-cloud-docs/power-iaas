@@ -67,3 +67,10 @@ Yes.
 {: faq}
 
 No. The scope of the {{site.data.keyword.powerSys_notm}} offering is to focus on virtual instances and not bare-metal.
+
+<!-- 
+## Is there a price difference between shared or dedicated cores?
+{: #shared}
+{: faq}
+
+No. Performance of shared cores is almost identical to dedicated cores. However, as server utilization spikes, there might be a cache or memory latency impacts. -->

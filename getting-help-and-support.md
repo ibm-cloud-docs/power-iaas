@@ -23,7 +23,7 @@ Before you open a support ticket for {{site.data.keyword.powerSys_notm}}, review
 
 To open a support ticket for {{site.data.keyword.powerSys_notm}}, complete the following steps:
 
-1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
+1. Log in to the [IBM Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
 1. In the menu bar, click **Support**.
 1. Click **Manage cases**.
 1. Click **Create new case**.

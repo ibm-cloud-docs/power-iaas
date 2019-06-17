@@ -35,7 +35,7 @@ You can use one of the following options to create a private network that connec
    * For more information on how to configure this option, see [Set up IPSec VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 3. **Direct Link Connect with IBM Cloud Virtual Router Appliance**
-   * You can order a Direct Link Connect connection from IBM that connects your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
+   * You can order the Direct Link Connect service from IBM that connects your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
    * This option provide high performance between the on-premises and the IBM Cloud network.
-   * To order a Direct Link Connect, complete the steps in the [Provision IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/direct-link?topic=direct-link-provision-ibm-cloud-direct-link-connect-from-the-ui-console) topic.
-   * There are specific IP address that you cannot use with a Direct Link Connect connection. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).
+   * To order a Direct Link Connect, complete the steps in the [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect) topic.
+   * There are specific IP address that you cannot use with a Direct Link Connect service. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).

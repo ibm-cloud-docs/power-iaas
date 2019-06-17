@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-17"
 
 ---
 
@@ -21,9 +21,6 @@ lastupdated: "2019-05-17"
 {{site.data.keyword.powerSysFull}} is an infrastructure as a service offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes.
 {:shortdesc}
 
-Starting in May 2019, IBM is accepting a limited number of customers to participate in an Early Access Program for {{site.data.keyword.powerSys_notm}}. If your organization wants to participate, send an email to Jose Paez (<a href="mailto:jose.paez@ibm.com">jose.paez@ibm.com</a>) asking for access.
-{: important}
-
 You can quickly deploy {{site.data.keyword.powerSys_notm}}s to meet your specific business needs. With {{site.data.keyword.powerSys_notm}} you can create a hybrid cloud environment that allows you to easily control workload demands.
 
 {{site.data.keyword.powerSys_notm}}s can run AIX or IBM i workloads in different geographic locations.
@@ -38,6 +35,8 @@ Before you create your first Power Systems Virtual Server instance, review the f
 1. Create a public and private SSH key that you can use to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
 1. (Optional) If you want to use a custom image for the AIX or IBM i operating systems, you must create an IBM Cloud Object Storage and upload the image. For more information, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
+
+1. (Optional) If you want to use a private network to connect your environment (on-premises) with the {{site.data.keyword.cloud_notm}} environment (off-premise) there are different options that require additional configuration. For more information, see [Configuring Power Systems Virtual Servers with a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring).
 
 ## Next steps
 {: #gs-next-steps}

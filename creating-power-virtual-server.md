@@ -22,8 +22,8 @@ lastupdated: "2019-05-17"
 To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
-1. In the **Compute Infrastructure** section, click the **Power Virtual Server** tile.
-1. From the Power Systems Virtual Server catalog entry, click **Create**.
+1. From the Catalog, select **Compute Infrastructure**, and under the **Infrastructure** heading click the **Power Virtual Server** tile.
+1. From the Power Systems Virtual Server catalog entry, select the location you want to deploy your {{site.data.keyword.powerSys_notm}} in and click **Create**.
 1. From the Resource List, click **Manage > Virtual Instances > Provision New**.
 1. Complete all fields and click **Create** to create the {{site.data.keyword.powerSys_notm}}. The following table provides information about the fields that you might have trouble completing.
 
@@ -48,7 +48,11 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
   <dd>Select this option to add numbers before the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <tt>Austin</tt> the next name for the virtual instance is <tt>1Austin</tt></dd>
   <dt><strong>Numerical Postfix</strong></dt>
   <dd>Select this option to add numbers after the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <tt>Rochester</tt> the next name for the virtual instance is <tt>Rochester1</tt>.</dd>
-  </dl> </td>
+  </dl>
+  <p>
+  <b>Note:</b> When you create multiple instances of the virtual server, you must select On from the Shareable field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server.
+  </p>
+   </td>
 </tr>
 <tr>
 <td>Pin Virtual Machine</td>
@@ -60,7 +64,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 </tr>
 <tr>
 <td>Cores</td>
-<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <b>Shared Processors</b>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement.</td>
+<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <b>Shared Processors</b>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement. If you are concerned about performance issues, you can select <b>Dedicated Processor</b> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
 </tr>
 <tr>
 <td>Memory</td>

@@ -52,7 +52,7 @@ In this example, you purchase an instance that has 2 cores and 64 GB RAM, at a b
 | 81-100%                       | 20% |       $.85      |
 {: caption="Table 2. Tiered discounts example" caption-side="top"}
 
-In this usage example, if you left the {{site.data.keyword.powerSys_notm}} instance running for the entire month, your total bill would be $962.53. The discounts result in a monthly savings of 10%, compared to the hourly rate.
+In this usage example, if you leave the {{site.data.keyword.powerSys_notm}} instance running for the entire month, your total bill would be $962.53. The discounts result in a monthly savings of 10%, compared to the hourly rate.
 
 ## Base instance prices
 {: #pricing-base-instance-prices}
