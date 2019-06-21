@@ -22,7 +22,7 @@ lastupdated: "2019-05-17"
 To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
-1. From the Catalog, select **Compute Infrastructure**, and under the **Infrastructure** heading click the **Power Virtual Server** tile.
+1. From the Catalog, select **Compute**, and under the **Infrastructure** heading click the **Power Systems Virtual Server** tile.
 1. From the Power Systems Virtual Server catalog entry, select the location you want to deploy your {{site.data.keyword.powerSys_notm}} in and click **Create**.
 1. From the Resource List, click **Manage > Virtual Instances > Provision New**.
 1. Complete all fields and click **Create** to create the {{site.data.keyword.powerSys_notm}}. The following table provides information about the fields that you might have trouble completing.
