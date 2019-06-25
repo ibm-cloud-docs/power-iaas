@@ -23,7 +23,7 @@ IBM Power Systems Virtual Servers
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://test.cloud.ibm.com/apidocs/power-cloud)
+    [API reference](https://cloud.ibm.com/apidocs/power-cloud)
     [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
     at-events.md
     {: .navgroup-end}
