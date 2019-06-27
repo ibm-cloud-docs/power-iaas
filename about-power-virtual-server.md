@@ -97,7 +97,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
   * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
     For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
-    {:note}
+    {: note}
 
 The following figure displays the the basic configuration for a public and private network:
 

@@ -19,6 +19,7 @@ lastupdated: "2019-05-17"
 {: #managing-resources-and-users}
 
 The {{site.data.keyword.powerSysFull}} authorization and resource management practices coordinate with the IBM Cloud Identity and Access Management (IAM) services. IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSys_notm}} resources with resource groups, and allow access to specific resources for a set of users with access groups. In other words, IAM is your one stop shop for all user and resource management in {{site.data.keyword.cloud_notm}}.
+{:shortdesc}
 
 You can assign IAM authorizations based on the follow criteria:
 

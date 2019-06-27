@@ -22,7 +22,7 @@ You can bring your own AIX or IBM i operating system image that you have already
 {:shortdesc}
 
 You cannot transfer an operating system license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running the cloud environment. The license cost is factored into the overall hourly billing rate.
-{:note}
+{: note}
 
 ## Before you begin
 {: #cci-before-you-begin}

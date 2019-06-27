@@ -21,8 +21,11 @@ lastupdated: "2019-06-17"
 {: #ordering-direct-link-connect}
 
 One option for configuring a private network with {{site.data.keyword.powerSys_notm}} is to use the Direct Link Connect service. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from you {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
+{:shortdesc}
 
-You can use the {{site.data.keyword.cloud_notm}} UI console to order the Direct Link Connect service. For connecting to your {{site.data.keyword.powerSys_notm}} environment, you want to order two Direct Link Connect connections. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-direct-link-connect){: new_window}.
+You can use the {{site.data.keyword.cloud_notm}} UI console to order the Direct Link Connect service. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-direct-link-connect){: new_window}.
+
+IBM recommends that you order a second Direct Link Connect connection for backup purposes.
 
 ## Before you begin
 {: #before-direct-link-connect}
@@ -51,7 +54,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
 1. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
 
    As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
-   {:note}
+   {: note}
 
    <dl>
    <dt><strong>Direct Link Instance Name</strong><dt>
