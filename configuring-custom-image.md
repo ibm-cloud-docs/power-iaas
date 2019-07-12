@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-7-12"
 
 ---
 
@@ -33,12 +33,12 @@ Before you can use a custom image as the boot volume, review the following infor
 
 * You must have a basic understand of the concepts for IBM Cloud Object Storage. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about).
 
-* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export a image for use with {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window} and [Exporting images ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}.
+* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window} and [Exporting images ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}.
 
 ## Uploading a custom image as an object
 {: #cci-uploading}
 
-1. Create an IBM Cloud Storage object and upload your image.  For more information, see [Upload data](/docs/services/cloud-object-storage?topic=cloud-object-storage-upload).
+1. Create an IBM Cloud Storage object and upload your image. For more information, see [Upload data](/docs/services/cloud-object-storage?topic=cloud-object-storage-upload).
 
 2. Generate secret and access keys with Hash-based Message Authentication Code (HMAC). You can generate these keys when you create the service credentials for the IBM Cloud Storage object. To create the service credentials, you must have `Writer` access for the Object Storage bucket. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 

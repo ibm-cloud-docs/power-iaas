@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-7-12"
 
 ---
 
@@ -14,8 +14,6 @@ lastupdated: "2019-06-27"
 {:screen: .screen}
 {:important: .important}
 {:tip: .tip}
-{hide-in-docs: .hide-in-docs}
-{hide-dashboard: .hide-dashboard}
 
 # Getting started with Power Systems Virtual Servers
 {: #getting-started}
@@ -25,7 +23,6 @@ lastupdated: "2019-06-27"
 {:shortdesc}
 
 You can quickly deploy {{site.data.keyword.powerSys_notm}}s to meet your specific business needs. With {{site.data.keyword.powerSys_notm}} you can create a hybrid cloud environment that allows you to easily control workload demands.
-{: hide-dashboard}
 
 {{site.data.keyword.powerSys_notm}}s can run AIX or IBM i workloads in different geographic locations.
 
