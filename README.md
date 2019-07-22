@@ -1,2 +1,2 @@
 # power-iaas
-This repo is owened by  Nick Fernholz (nfernho@us.ibm.com)
+This repo is owened by Mike Bagwell (mpbagwel@us.ibm.com).
