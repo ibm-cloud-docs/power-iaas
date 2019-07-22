@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-07-22"
 
 ---
 
@@ -54,7 +54,7 @@ The following table displays the IAM platform access roles and the corresponding
 
 You can use the service access roles to define what users can specifically do with the functions for the {{site.data.keyword.powerSys_notm}} service.
 
-The following table displays the IAM service access roles and the corresponding actions a users can complete with {{site.data.keyword.powerSys_notm}}:
+The following table displays the IAM service access roles and the corresponding actions a user can complete with {{site.data.keyword.powerSys_notm}}:
 
 | Service access role | Description of actions |
 |-----------|-------------------------|
@@ -65,7 +65,7 @@ The following table displays the IAM service access roles and the corresponding 
 ## User access scenarios
 {: #user-access-scenarios}
 
-The following scenarios covers the basic steps that are required to add a new user and modify an existing user's permissions.
+The following scenarios covers the basic steps that are required to add a new user and modify the permissions for an existing user.
 
 ### Inviting a new user to view {{site.data.keyword.powerSys_notm}} resources
 {: #inviting-a-new-user-to-create-or-manage-resources}
@@ -78,17 +78,17 @@ Complete the following steps in IAM to enable a user to view {{site.data.keyword
 
       ![Displays the invite users icon from the IAM UI](/images/invite_users.png "Invite users from the IAM UI")
 
-1. On the **Invite users** page, in the **Users** section, enter the email addresses of the users that you want to invite in the **Email address** field.
-1. In the **Services** section, select **Resources** from the **Assign access to** field.
-1. From the **Services** field, select **{{site.data.keyword.powerSys_notm}}**.
+2. On the **Invite users** page, in the **Users** section, enter the email addresses of the users that you want to invite in the **Email address** field.
+3. In the **Services** section, select **Resources** from the **Assign access to** field.
+4. From the **Services** field, select **{{site.data.keyword.powerSys_notm}}**.
 
     ![Displays the service fields](/images/invite_users2.png "Selecting the {{site.data.keyword.powerSys_notm}} service for a new user from the IAM UI")
 
-1. Select the platform access role that you want to assign to the users. In this scenario, the user can only view {{site.data.keyword.cloud_notm}} and {{site.data.keyword.powerSys_notm}} resources.
+5. Select the platform access role that you want to assign to the users. In this scenario, the user can only view {{site.data.keyword.cloud_notm}} and {{site.data.keyword.powerSys_notm}} resources.
 
     ![Displays the UI for IAM roles](/images/invite_users3.png "Selecting roles for a new user from the IAM UI")
 
-1. Click **Invite users**. The user must accept the invite to be added to the if the invitation is sent successfully, a message is displayed.
+6. Click **Invite users**. The user must accept the invite to be added to the if the invitation is sent successfully, a message is displayed.
 
     ![Displays message for successful invitation](/images/invite_users4.png "Successfully invitation message")
 
