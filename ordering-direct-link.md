@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-25"
 
 ---
 
@@ -15,7 +15,6 @@ lastupdated: "2019-06-17"
 {:tip: .tip}
 {:note: .note}
 {:download: .download}
-
 
 # Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
@@ -32,10 +31,10 @@ IBM recommends that you order a second Direct Link Connect connection for backup
 
 * Verify your {{site.data.keyword.cloud}} account has the correct authorizations to order the Direct Link Connect service.
 * Understand the basic networking concepts for the Direct Link Connect service by reviewing the following topics:
-  * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-direct-link-connect-solution#direct-link-connect-solution)
-  * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
-  * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
-  * [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
+    * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-direct-link-connect-solution#direct-link-connect-solution)
+    * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
+    * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
+    * [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
 ## Steps to order Direct Link Connect
 {: #steps-to-order-direct-link-connect}
@@ -82,7 +81,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dt><strong>Link Speed</strong><dt>
    <dd>Select the link speed to meet your workload requirements. The recommended selection for  this field is 1000 Mbps.</dd>
    <dt><strong>Routing Option</strong><dt>
-   <dd>Select <b>Local Routing (Free)</b> to access all data centers that are connected at the location that you specified in the <b>Location</b> field. Select <b>Global Routing</b> to access all IBM Cloud data centers in the world. </dd>
+   <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
    <dt><strong>BGP ASN</strong><dt>
    <dd>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.
    <table>
@@ -102,9 +101,9 @@ To order the Direct Link Connect service that creates a connection to the {{site
    </table>
    </dd>
    <dt><strong>Select VRF</strong><dt>
-   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. </dd>
+   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.The following figure is an example of the Direct Link Connect fields.</dd>
    <dd>
-   The following figure is an example of the Direct Link Connect fields.
+
    ![Displays the Direct Link Connect fields that are completed](/images/directlink2.png "Displays the Direct Link Connect fields that are completed"){: caption="Figure 2. Direct Link Connect fields." caption-side="bottom"}
    </dd>
    </dl>
@@ -113,16 +112,16 @@ To order the Direct Link Connect service that creates a connection to the {{site
 1. Click **Create**. The following message is displayed when your request is submitted successfully.
 ![Displays the Direct Link Connect submitted successfully message](/images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
-1. Click the Case number link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
+1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
-  It can take IBM Cloud support up to three business days for the IBM Cloud support team to create the Direct Link Connect connection.
+  It can take IBM Cloud support up to three business days to create the Direct Link Connect connection.
   {: note}
 
 1. Open a new case for the {{site.data.keyword.powerSys_notm}} support team to create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service. In the {{site.data.keyword.powerSys_notm}} case, specify the Direct Link Connect case number. The {{site.data.keyword.powerSys_notm}} case is updated with a Service ID. For information on how to open a case, see [Getting help and support](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
 
 1. Enter the Service ID from the {{site.data.keyword.powerSys_notm}} case number into the Direct Link Connect case number. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following is an example of the network information that is displayed in the case:
 
-  ```
+  ```shell
   Link Speed:                  1000 Mbps
   Location:                    Washington 2
   Network Provider:            MEGAPORT
@@ -137,7 +136,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
 
 1. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
 
-  ```
+  ```shell
   Customer name:
   Customer account ID:
   Direct Link Connect subnet:

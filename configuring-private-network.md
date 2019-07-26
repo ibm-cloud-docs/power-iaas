@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2019-05-21"
 # Configuring Power Systems Virtual Servers with a private network
 {: #cpn-configuring}
 
-You can use a private network with {{site.data.keyword.powerSysFull}} to securely connect your environment (on-premises) with the {{site.data.keyword.cloud_notm}} environment (off-premise). In a private network, you can access {{site.data.keyword.cloud_notm}} resources and interconnect with other virtual servers.
+You can use a private network with {{site.data.keyword.powerSysFull}} to securely connect your on-premises environment with the off-premises {{site.data.keyword.cloud_notm}} environment. In a private network, you can access {{site.data.keyword.cloud_notm}} resources and interconnect with other virtual servers.
 {:shortdesc}
 
 You can use one of the following options to create a private network that connects your on-premises environment with the {{site.data.keyword.cloud_notm}} environment:
@@ -36,6 +36,6 @@ You can use one of the following options to create a private network that connec
 
 3. **Direct Link Connect with IBM Cloud Virtual Router Appliance**
    * You can order the Direct Link Connect service from IBM that connects your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
-   * This option provide high performance between the on-premises and the IBM Cloud network.
+   * This option provides high performance between the on-premises and the IBM Cloud network.
    * To order a Direct Link Connect, complete the steps in the [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect) topic.
-   * There are specific IP address that you cannot use with a Direct Link Connect service. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).
+   * There are specific IP addresses that you cannot use with a Direct Link Connect service. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).
