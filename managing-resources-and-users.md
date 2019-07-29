@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-29"
 
 ---
 
@@ -32,7 +32,7 @@ You can assign IAM authorizations based on the follow criteria:
 For more information about IAM, review the following information:
 
 * [Getting started with IAM](https://cloud.ibm.com/docs/iam?topic=iam-getstarted#getstarted)
-* * [IAM concepts](https://cloud.ibm.com/docs/iam?topic=iam-iamoverview)
+* [IAM concepts](https://cloud.ibm.com/docs/iam?topic=iam-iamoverview)
 * [Managing resource groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
 * [Setting up access groups](https://cloud.ibm.com/docs/iam?topic=iam-groups)
 
@@ -90,7 +90,7 @@ Complete the following steps in IAM to enable a user to view {{site.data.keyword
 
 5. Click **Invite users**. The user must accept the invite to be added to the account. If the invitation is sent successfully, a message is displayed.
 
-    ![Displays message for successful invitation](/images/invite_users4.png "Successful invitation message"){: caption="Figure 4. Successful invitation message"}
+    ![Displays message for successful invitation](/images/invite_users4.png "Successful invitation message"){: caption="Figure 4. Successful invitation message" caption-side="bottom"}
 
 ### Giving an existing user permission to manage {{site.data.keyword.powerSys_notm}} resources
 {: #giving-an-existing-user-permission-to-manage-resources}
@@ -101,11 +101,11 @@ Complete the following steps to provide an existing user in your account permiss
 2. From the list of users, select the user whose authorization you want to change.
 3. Click **Access policies** and click the current roles for the users. In this scenario, click **Viewer, Reader**.
 
-    ![Displays how to change the permissions for an existing user](/images/existing_user1.png "Changing the permissions for a user from the IAM UI"){: caption="Figure 5. Changing the permissions for a user from the IAM UI"}
+    ![Displays how to change the permissions for an existing user](/images/existing_user1.png "Changing the permissions for a user from the IAM UI"){: caption="Figure 5. Changing the permissions for a user from the IAM UI" caption-side="bottom"}
 
 4. From the **Select Roles** field, click **Manager**. You can leave the **Reader** role selected.
 
-    ![Displays adding the manager role for an existing user](/images/existing_user2.png "Selecting the manager role from the IAM UI"){: caption="Figure 6. Selecting the manager role from the IAM UI"}
+    ![Displays adding the manager role for an existing user](/images/existing_user2.png "Selecting the manager role from the IAM UI"){: caption="Figure 6. Selecting the manager role from the IAM UI" caption-side="bottom"}
 
 5. Click **Save**.
 
