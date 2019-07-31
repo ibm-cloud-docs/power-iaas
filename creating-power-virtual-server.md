@@ -80,7 +80,7 @@ The following table provides information about the **Virtual server instance** f
 </tr>
 <tr>
 <td>Machine Type</td>
-<td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www.ibm.com/support/knowledgecenter/en/POWER9/p9hdx/9009_22a_landing.htm" target="_blank">S922</a> and <a href="https://www.ibm.com/support/knowledgecenter/en/POWER8/p8hdx/9119_mhe_landing.htm" target="_blank">E880</a>.</td>
+<td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/1/760/ENUS9009-_h01/index.html&lang=en&request_locale=en" target="_blank">S922</a> and <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en&request_locale=en" target="_blank">E880</a>.</td>
 </tr>
 <tr>
 <td>Cores</td>

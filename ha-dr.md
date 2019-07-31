@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-29"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-06-14"
 {:tip: .tip}
 {:note: .note}
 
-#High Availability and Disaster Recovery options in Power Systems Virtual Servers
+# High Availability and Disaster Recovery options in Power Systems Virtual Servers
 {: #ha-dr}
 
 The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for the {{site.data.keyword.powerSys_notm}} service.
