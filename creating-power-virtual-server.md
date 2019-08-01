@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-31"
 
 ---
 
@@ -39,14 +39,28 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
 
-7. From here, click the **provision new** button and complete all of the required fields.
+7. From here, click the **provision new** button.
+
+    ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 4. Provisioning a new virtual server" caption-side="bottom"}
+
+8. Complete all of the required fields to successfully create a new instance:
 
      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
      {: tip}
 
-    ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 4. Provisioning a new virtual server" caption-side="bottom"}
+    1. Fill in all of the fields under the Virtual servers section.
 
-8. Accept the **Terms of Use** and click the **Create** button to provision a {{site.data.keyword.powerSys_notm}}.
+      ![Creating a new power virtual server instance](./images/console-virtual-instance.png "Creating a new power virtual server instance"){: caption="Figure 4. Creating a new power virtual server instance" caption-side="bottom"} 
+
+    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remeber to click the the desired **Machine type** and the number of cores as well.
+
+      ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 4. Selecting your processor and system" caption-side="bottom"}
+
+    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization.
+
+      ![Define your volumes and network interfaces](./images/console-volume-network.png "Define your volumes and network interfaces"){: caption="Figure 4. Creating a new power virtual server instance" caption-side="bottom"}
+
+9. Accept the **Terms of Use** and click the **Create** button to provision a {{site.data.keyword.powerSys_notm}}.
 
 The following table provides information about the **Virtual server instance** fields:
 
