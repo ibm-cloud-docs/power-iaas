@@ -52,11 +52,11 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Creating a new power virtual server instance](./images/console-virtual-instance.png "Creating a new power virtual server instance"){: caption="Figure 6. Creating a new power virtual server instance" caption-side="bottom"}
 
-    2\. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remeber to click the the desired **Machine type**, the number of cores, and the amount of memory as well.
+    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remeber to click the the desired **Machine type**, the number of cores, and the amount of memory as well.
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    3\. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization.
+    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization.
 
       ![Define your volumes and network interfaces](./images/console-volume-network.png "Define your volumes and network interfaces"){: caption="Figure 8. Creating a new power virtual server instance" caption-side="bottom"}
 
