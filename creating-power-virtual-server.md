@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-1"
 
 ---
 
@@ -48,7 +48,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
      {: tip}
 
-    1. Fill in all of the fields under the **Virtual servers** section.
+    1. Fill in all of the fields under the **Virtual servers** section. If you select more than once instance, you are presented with additional options.
 
       ![Creating a new power virtual server instance](./images/console-virtual-instance.png "Creating a new power virtual server instance"){: caption="Figure 6. Creating a new power virtual server instance" caption-side="bottom"}
 
@@ -74,8 +74,8 @@ The following table provides information about the **Virtual server instance** f
 <td>Number of Instances</td>
 <td>Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. If you specify more than one instance, you can select the following naming conventions and colocation rules:
   <dl>
-    <dt><strong>Same Server</strong></dt>
-  <dd>Select this option to have all instances hosted on the same server. You can use this option if you want fast communication between each {{site.data.keyword.powerSys_notm}} instance.</dd>
+    <dt><strong>No preference</strong></dt>
+  <dd>Select this option if you do not have a hosting preference.</dd>
     <dt><strong>Different  Server</strong></dt>
   <dd>Select this option to have each instance hosted on a different server.  You can use this option if you are concerned about a single-server outage occurring that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
   <dt><strong>Numerical Prefix</strong></dt>
