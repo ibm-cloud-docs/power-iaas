@@ -98,7 +98,9 @@ The following table provides information about the **Virtual server instance** f
 </tr>
 <tr>
 <td>Cores</td>
-<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <strong>Shared Processors</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement. If you are concerned about performance issues, you can select <strong>Dedicated Processor</strong> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
+<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <strong>Shared Processors</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement.
+
+If you are concerned about performance issues, you can select <strong>Dedicated Processor</strong> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
 </tr>
 <tr>
 <td>Memory</td>
@@ -106,28 +108,9 @@ The following table provides information about the **Virtual server instance** f
 </tr>
 <tr>
 <td>Create Boot Volume</td>
-<td>Select a version of the AIX or IBM i operating system stock image that are provided for you, or select a custom AIX or IBM i operating system image that you previously deployed on-premises.
-<p>
-The following are the stock images that are provided to you by IBM:
-<ul>
-<li><strong>AIX</strong>
-  <ul>
-  <li>7200-03-02</li>
-  <li>7100-05-03</li>
-  </ul>
-</li>
-<li><strong>IBM i</strong>
-  <ul>
-  <li>7.3 TR5</li>
-  <li>7.2 TR9</li>
-  </ul>
-</li>
-</ul>
-</p>
-<p>
-If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image">Configuring a custom image</a>.
-</p>
-</td>
+<td>Select a version of the AIX or IBM i operating system stock image that are provided for you, or select a custom AIX or IBM i operating system image that you previously deployed on-premises. For operatins system licensing information, see IBM's <a href="https://www-03.ibm.com/software/sla/sladb.nsf" target="_blank">License Information documents</a>.
+
+If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image">Configuring a custom image</a>.</td>
 </tr>
 <tr>
 <td>Attached Data Volumes</td>
