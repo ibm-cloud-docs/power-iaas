@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-1"
+lastupdated: "2019-08-2"
 
 ---
 
@@ -39,11 +39,11 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 4. IBM Cloud Resource List" caption-side="bottom"}
 
-7. From here, click the **provision new** button.
+7. From here, click the **Provision new** button.
 
     ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 5. Provisioning a new virtual server" caption-side="bottom"}
 
-8. Complete all of the required fields to successfully create a new instance:
+8. Complete all of the required fields to successfully create a new instance.
 
      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
      {: tip}
@@ -52,7 +52,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Creating a new power virtual server instance](./images/console-virtual-instance.png "Creating a new power virtual server instance"){: caption="Figure 6. Creating a new power virtual server instance" caption-side="bottom"}
 
-    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remeber to click the the desired **Machine type**, the number of cores, and the amount of memory as well.
+    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remeber to click the the desired **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
@@ -108,9 +108,10 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
 </tr>
 <tr>
 <td>Create Boot Volume</td>
-<td>Select a version of the AIX or IBM i operating system stock image that are provided for you, or select a custom AIX or IBM i operating system image that you previously deployed on-premises. For operatins system licensing information, see IBM's <a href="https://www-03.ibm.com/software/sla/sladb.nsf" target="_blank">License Information documents</a>.
+<td>Select a version of the IBM-provided AIX or IBM i operating system stock image or select a custom AIX or IBM i operating system image that you previously deployed on-premises. If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image">Configuring a custom image</a>.
 
-If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image">Configuring a custom image</a>.</td>
+<p>For IBM i system licensing information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.</p>
+</td>
 </tr>
 <tr>
 <td>Attached Data Volumes</td>

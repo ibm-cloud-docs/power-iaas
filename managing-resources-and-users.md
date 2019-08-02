@@ -48,7 +48,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Viewer | View instances and list instances. |
 | Operator | View instances and list instances. |
 | Editor | View instances, list instances, create instances, and delete instances.  |
-| Administrator | View instances, View instances, list instances, create instances, delete instances, and assign policies to other users. |
+| Administrator | View instances, list instances, create instances, delete instances, and assign policies to other users. |
 
 ## Service access roles
 {: #service-access-roles}
