@@ -37,7 +37,7 @@ Before you can use a custom image as the boot volume, review the following infor
 You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to capture a server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
 {: tip}
 
-## Creating an IBM Cloud Storage bucket
+## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
 
 1. Type **object storage** into the catalog's search box and select **Cloud Object Storage**.
