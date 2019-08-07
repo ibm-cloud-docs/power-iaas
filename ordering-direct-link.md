@@ -15,16 +15,18 @@ lastupdated: "2019-08-7"
 {:tip: .tip}
 {:note: .note}
 {:download: .download}
+{:important: .important}
 
 # Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-One option for configuring a private network with {{site.data.keyword.powerSys_notm}} is to use the Direct Link Connect service. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from you {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
+You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with {{site.data.keyword.powerSys_notm}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
 {:shortdesc}
 
-You can use the {{site.data.keyword.cloud_notm}} UI console to order the Direct Link Connect service. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link.
+You can use the {{site.data.keyword.cloud_notm}} UI console to order the Direct Link Connect service. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
 
-IBM recommends that you order a second Direct Link Connect connection for backup purposes.
+  IBM recommends that you order a second Direct Link Connect connection for backup purposes.
+  {: important}
 
 ## Before you begin
 {: #before-direct-link-connect}
