@@ -18,8 +18,8 @@ IBM Power Systems Virtual Servers
 
     {: .topicgroup}
     Networking tasks
-        configuring-private-network.md
         ordering-direct-link.md
+        configuring-private-network.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
