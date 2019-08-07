@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-1"
+lastupdated: "2019-08-7"
 
 ---
 
@@ -43,14 +43,14 @@ To order the Direct Link Connect service that creates a connection to the {{site
 
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
 
-2. In the **Networking** section, click the **Direct Link Connect** tile.
-![Displays the Direct Link catalog tile](/images/directlink1.png "Displays the Direct Link catalog tile"){: caption="Figure 1. Direct Link Connect tile from the IBM Cloud catalog." caption-side="bottom"}
+1. In the **Networking** section, click the **Direct Link Connect** tile.
+![Displays the Direct Link catalog tile](./images/directlink1.png "Displays the Direct Link catalog tile"){: caption="Figure 1. Direct Link Connect tile from the IBM Cloud catalog." caption-side="bottom"}
 
-3. From the Direct Link Connect catalog entry, click **Create**.
+1. From the Direct Link Connect catalog entry, click **Create**.
 
-4. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
+1. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
 
-5. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
+1. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
 
    As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
    {: note}
@@ -104,25 +104,25 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.The following figure is an example of the Direct Link Connect fields.</dd>
    <dd>
 
-   ![Displays the Direct Link Connect fields that are completed](/images/directlink2.png "Displays the Direct Link Connect fields that are completed"){: caption="Figure 2. Direct Link Connect fields." caption-side="bottom"}
+   ![Displays the Direct Link Connect fields that are completed](./images/directlink2.png "Displays the Direct Link Connect fields that are completed"){: caption="Figure 2. Direct Link Connect fields." caption-side="bottom"}
    </dd>
    </dl>
-6. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
+1. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
-7. Click **Create**. The following message is displayed when your request is submitted successfully.
-![Displays the Direct Link Connect submitted successfully message](/images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
+1. Click **Create**. The following message is displayed when your request is submitted successfully.
+![Displays the Direct Link Connect submitted successfully message](./images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
-8. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
+1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
     It can take IBM Cloud support up to three business days to create the Direct Link Connect connection.
     {: note}
 
-9. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, open a [new case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) for the {{site.data.keyword.powerSys_notm}} support team.
+1. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, open a [new case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) for the {{site.data.keyword.powerSys_notm}} support team.
 
     1. In the new case's description field, add the Direct Link Connect case number.
-    2. Copy the {site.data.keyword.powerSys_notm}} case IAM Service ID that the system automtically generated.
+    2. Copy the {{site.data.keyword.powerSys_notm}} case IAM Service ID that the system automtically generated.
 
-10. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following is an example of the network information that is displayed in the case:
+1. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following is an example of the network information that is displayed in the case:
 
   ```shell
   Link Speed:                  1000 Mbps
@@ -137,7 +137,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
   ```
   {: screen}
 
-11. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
+1. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
 
   ```shell
   Customer name:
@@ -153,4 +153,4 @@ To order the Direct Link Connect service that creates a connection to the {{site
   ```
   {: codeblock}
 
-12. The {{site.data.keyword.powerSys_notm}} case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
+1. The {{site.data.keyword.powerSys_notm}} case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.

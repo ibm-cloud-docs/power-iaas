@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-07-29"
+lastupdated: "2019-08-07"
 
 ---
 
@@ -77,20 +77,20 @@ Complete the following steps in IAM to enable a user to view {{site.data.keyword
 
 1. Navigate to the [IAM Users UI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/iam/users){: new_window} in the IBM Cloud Console, and click **Invite users**.
 
-      ![Displays the invite users icon from the IAM UI](/images/invite_users.png "Inviting users from the IAM UI"){: caption="Figure 1. Inviting users from the IAM UI" caption-side="bottom"}
+      ![Inviting users from the IAM UI](./images/invite_users.png "Inviting users from the IAM UI"){: caption="Figure 1. Inviting users from the IAM UI" caption-side="bottom"}
 
 2. Under the **Users** section, enter the desired user email addresses in the **Email address** field.
 3. Next, select **Resource** from the **Assign access to** field and **{{site.data.keyword.powerSys_notm}}** in the **Services** field.
 
-    ![Displays the service fields](/images/invite_users2.png "Selecting the {{site.data.keyword.powerSys_notm}} service for a new user from the IAM UI"){: caption="Figure 2. Selecting a Power Systems Virtual Server service for a new user" caption-side="bottom"}
+    ![Selecting a Power Systems Virtual Server service for a new user](./images/invite_users2.png "Selecting the Power Systems Virtual Server service for a new user from the IAM UI"){: caption="Figure 2. Selecting a Power Systems Virtual Server service for a new user" caption-side="bottom"}
 
 4. Select the platform access role that you want to assign to the users. In this scenario, the user can only view {{site.data.keyword.cloud_notm}} and {{site.data.keyword.powerSys_notm}} resources.
 
-    ![Displays the UI for IAM roles](/images/invite_users3.png "Selecting roles for a new user from the IAM UI"){: caption="Figure 3. A description that prints on the page" caption-side="bottom"}
+    ![Selecting roles for a new user from the IAM UI](./images/invite_users3.png "Selecting roles for a new user from the IAM UI"){: caption="Figure 3. Selecting roles for a new user from the IAM UI]" caption-side="bottom"}
 
 5. Click **Invite users**. The user must accept the invite to be added to the account. If the invitation is sent successfully, a message is displayed.
 
-    ![Displays message for successful invitation](/images/invite_users4.png "Successful invitation message"){: caption="Figure 4. Successful invitation message" caption-side="bottom"}
+    ![Successful invitation message](./images/invite_users4.png "Successful invitation message"){: caption="Figure 4. Successful invitation message" caption-side="bottom"}
 
 ### Giving an existing user permission to manage {{site.data.keyword.powerSys_notm}} resources
 {: #giving-an-existing-user-permission-to-manage-resources}
@@ -101,11 +101,11 @@ Complete the following steps to provide an existing user in your account permiss
 2. From the list of users, select the user whose authorization you want to change.
 3. Click **Access policies** and click the current roles for the users. In this scenario, click **Viewer, Reader**.
 
-    ![Displays how to change the permissions for an existing user](/images/existing_user1.png "Changing the permissions for a user from the IAM UI"){: caption="Figure 5. Changing the permissions for a user from the IAM UI" caption-side="bottom"}
+    ![Changing the permissions for a user from the IAM UI](./images/existing_user1.png "Changing the permissions for a user from the IAM UI"){: caption="Figure 5. Changing the permissions for a user from the IAM UI" caption-side="bottom"}
 
 4. From the **Select Roles** field, click **Manager**. You can leave the **Reader** role selected.
 
-    ![Displays adding the manager role for an existing user](/images/existing_user2.png "Selecting the manager role from the IAM UI"){: caption="Figure 6. Selecting the manager role from the IAM UI" caption-side="bottom"}
+    ![Selecting the manager role from the IAM UI](./images/existing_user2.png "Selecting the manager role from the IAM UI"){: caption="Figure 6. Selecting the manager role from the IAM UI" caption-side="bottom"}
 
 5. Click **Save**.
 

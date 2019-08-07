@@ -58,7 +58,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization.
 
-      ![Define your volumes and network interfaces](./images/console-volume-network.png "Define your volumes and network interfaces"){: caption="Figure 8. Creating a new power virtual server instance" caption-side="bottom"}
+      ![Defining your volumes and network interfaces](./images/console-volume-network.png "Defining your volumes and network interfaces"){: caption="Figure 8. Defining your volumes and network interfaces" caption-side="bottom"}
 
 9. Accept the **Terms of Use** and click the **Create** button to provision a new {{site.data.keyword.powerSys_notm}}.
 
