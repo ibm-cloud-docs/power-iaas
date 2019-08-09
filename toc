@@ -16,10 +16,13 @@ IBM Power Systems Virtual Servers
     configuring-custom-image.md
     managing-resources-and-users.md
 
+
     {: .topicgroup}
     Networking tasks
         ordering-direct-link.md
         configuring-private-network.md
+        create-vm-ssh-keys.md
+        configure-ibmi-network.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
