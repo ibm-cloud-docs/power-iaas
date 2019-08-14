@@ -1,0 +1,34 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="power-iaas" category="compute" audience="compute" href="/docs/infrastructure/power-iaas?topic=power-iaas-getting-started#getting-started" path="infrastructure/power-iaas"}
+IBM Power Systems Virtual Servers
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    about-power-virtual-server.md
+    pricing.md
+    ha-dr.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    creating-power-virtual-server.md
+    configuring-custom-image.md
+    managing-resources-and-users.md
+
+    {: .topicgroup}
+    Attività di rete
+        configuring-private-network.md
+        ordering-direct-link.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Guida di riferimento API](https://cloud.ibm.com/apidocs/power-cloud)
+    [Guida di riferimento CLI](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
+    at-events.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    faq.md
+    getting-help-and-support.md
+    {: .navgroup-end}
