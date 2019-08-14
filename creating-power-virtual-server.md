@@ -15,7 +15,7 @@ lastupdated: "2019-08-13"
 {:tip: .tip}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
-{:important .important}
+{:important: .important}
 
 # Creating a Power Systems Virtual Server
 {: #creating-power-virtual-server}
@@ -46,8 +46,8 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 8. Complete all of the required fields to successfully create a new instance.
 
-     The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
-     {: tip}
+      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
+      {: tip}
 
     1. Complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with more options.
 
@@ -64,7 +64,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Defining your volumes and network interfaces](./images/console-volume-network.png "Defining your volumes and network interfaces"){: caption="Figure 8. Defining your volumes and network interfaces" caption-side="bottom"}
 
-1. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
+9. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
 The following table provides information about the **Virtual server instance** fields:
 

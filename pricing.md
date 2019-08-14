@@ -15,7 +15,7 @@ lastupdated: "2019-08-1"
 {:tip: .tip}
 {:note: .note}
 
-# Pricing for Power Systems Virtual Server on IBM Cloud
+# Pricing for Power Systems Virtual Servers on IBM Cloud
 {: #pricing-virtual-server}
 
 {{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR) up to 15 Cores and 320 GB of memory and also with enterprise LPARs up to 143 cores and 8192 GB of memory. With these options, a {{site.data.keyword.powerSys_notm}} can meet any business workload requirement. You are billed at a monthly rate.
