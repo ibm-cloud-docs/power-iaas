@@ -32,7 +32,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 
 ```
 
-To use an SSH key with a VM-create operation, you must first add the public key to the cloud instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the `ssh-keygen`-generated public key, enter the following command (replacing the public key value with your own):
+To use an SSH key with a VM-create operation, you must first add the public key to the cloud instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the public key value with your own):
 
 ```bash
 ibmcloud pi key-create testkey --key ssh-rsa AAAAB3NzaC
@@ -40,7 +40,7 @@ ibmcloud pi key-create testkey --key ssh-rsa AAAAB3NzaC
 SSHKey created: testkey
 ```
 
-To confirm that the key was successfully added, use the [ibmcloud pi key](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-keys) command.
+To confirm that the key was successfully added, use the [ibmcloud pi key](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-keys) command:
 
 ```bash
 ibmcloud pi key testkey
@@ -99,25 +99,21 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 1. Navigate to your console's device menu. For more information, see [Navigating to devices](/docs/infrastructure/ssh-keys?topic=virtual-servers-navigating-devices).
 2. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
 
-3. Click **{{site.data.keyword.powerSys_notm}}** under the **Resource List**.
-4. Select the **SSH keys** tab and click **New key**.
-
-  ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 1. SSH key navigation" caption-side="bottom"}
-
-1. Enter a **Key name** and your previously generated **Public key**.
-
-  ![Adding your SSH Key](./images/console-ssh-add.png "Adding your SSH Key"){: caption="Figure 2. Adding your SSH Key" caption-side="bottom"}
-
-1. Click **Create** to add the SSH key.
-
-1. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
+3. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
 
     ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
 
-1. From here, click **Provision new**.
+4. From here, click **Provision new**.
 
     ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 4. Provisioning a new virtual server" caption-side="bottom"}
 
-1. Under the **Virtual servers** section, select your generated SSH key. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
+5. Under the **Virtual servers** section, select **New keys**.
 
-      ![Creating a new power virtual server instance](./images/console-virtual-instance.png "Creating a new power virtual server instance"){: caption="Figure 5. Creating a new power virtual server instance" caption-side="bottom"}
+    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 5. SSH key navigation" caption-side="bottom"}
+
+6. Enter a **Key name** and your previously generated **Public key**.
+
+    ![Adding your SSH Key](./images/console-ssh-add.png "Adding your SSH Key"){: caption="Figure 2. Adding your SSH Key" caption-side="bottom"}
+
+7. Click **Create** to add the SSH key.
+8. Complete the rest of the fields to successfully create a new instance with a configured SSH key.

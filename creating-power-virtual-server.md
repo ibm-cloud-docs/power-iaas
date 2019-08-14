@@ -40,7 +40,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 4. IBM Cloud Resource List" caption-side="bottom"}
 
-7. From here, click **Provision new**.
+7. Click **Provision new**.
 
     ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 5. Provisioning a new virtual server" caption-side="bottom"}
 
@@ -64,7 +64,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Defining your volumes and network interfaces](./images/console-volume-network.png "Defining your volumes and network interfaces"){: caption="Figure 8. Defining your volumes and network interfaces" caption-side="bottom"}
 
-9. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
+1. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
 The following table provides information about the **Virtual server instance** fields:
 
@@ -83,9 +83,9 @@ The following table provides information about the **Virtual server instance** f
     <dt><strong>Different  Server</strong></dt>
   <dd>Select this option to have each instance hosted on a different server.  You can use this option if you are concerned about a single-server outage occurring that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
   <dt><strong>Numerical Prefix</strong></dt>
-  <dd>Select this option to add numbers before the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <kbd>Austin</kbd> the next name for the virtual instance is <kbd>1Austin</kbd></dd>
+  <dd>Select this option to add numbers before the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <i>Austin</i> the next name for the virtual instance is <i>1Austin</i></dd>
   <dt><strong>Numerical Postfix</strong></dt>
-  <dd>Select this option to add numbers after the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <kbd>Rochester</kbd> the next name for the virtual instance is <kbd>Rochester1</kbd>.</dd>
+  <dd>Select this option to add numbers after the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <i>Rochester</i> the next name for the virtual instance is <i>Rochester1</i>.</dd>
   </dl>
   <p>
   <strong>Note:</strong> When you create multiple instances of the virtual server, you must select <strong>On</strong> from the <strong>Shareable</strong> field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server.
