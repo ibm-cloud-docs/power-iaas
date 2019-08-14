@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-7-12"
+lastupdated: "2019-8-05"
 
 ---
 
@@ -15,9 +15,8 @@ lastupdated: "2019-7-12"
 {:important: .important}
 {:tip: .tip}
 
-# Getting started with Power Systems Virtual Servers
+# Getting started
 {: #getting-started}
-
 
 {{site.data.keyword.powerSysFull}} is an infrastructure as a service offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes.
 {:shortdesc}

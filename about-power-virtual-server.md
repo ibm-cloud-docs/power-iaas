@@ -42,6 +42,7 @@ You can use the {{site.data.keyword.powerSys_notm}}s to run any AIX or IBM i wor
 {: #apvs-customization}
 
 You can configure and customize the following options when you create a {{site.data.keyword.powerSys_notm}}:
+
 * Number of virtual server instances
 * Number of cores
 * Amount of memory
@@ -58,46 +59,54 @@ IBM provides you with stock AIX and IBM i operating system images when you creat
 
 The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_notm}}:
 
-* Compute
-  * [Power System E880 (9119-MHE) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/POWER8/p8hdx/9119_mhe_landing.htm){: new_window}
-    * 9 TB memory
-    * 8 x 16 Gigabit PCI Express Dual-port Fibre Channel (FC)
-    * 10 x 10 Gigabit Ethernet-SR PCI Express Dual-port
-  * [Power System S922 (9009-22A) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/POWER9/p9hdx/9009_22a_landing.htm){: new_window}
-    * 384 GB memory
-    * 2 x 16 Gigabit PCI Express Dual-port FC
-    * 3 x 10 Gigabit Ethernet-SR PCI Express Dual-port
+**Compute**
 
-* Storage
-  * Storewize V7000F(2076-AF6) Dual Controller
-  * Storwize V7000 (2076-624) Dual Controller
+[Power System E880 (9119-MHE) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}
 
-* Network
-  * Cisco Nexus9000 93180YC-EX (10G)
-  * Cisco Nexus9000 C9348GC-FXP (1G)
+* 9 TB memory
+* 8 x 16 Gigabit PCI Express Dual-port Fibre Channel (FC)
+* 10 x 10 Gigabit Ethernet-SR PCI Express Dual-port
+
+[Power System S922 (9009-22A) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}
+
+* 384 GB memory
+* 2 x 16 Gigabit PCI Express Dual-port FC
+* 3 x 10 Gigabit Ethernet-SR PCI Express Dual-port
+
+**Storage**
+
+* Storewize V7000F(2076-AF6) Dual Controller
+* Storwize V7000 (2076-624) Dual Controller
+
+**Network**
+
+* Cisco Nexus9000 93180YC-EX (10G)
+* Cisco Nexus9000 C9348GC-FXP (1G)
 
 ## Public and private networks
 {: #apvs-public-and-private}
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces or a public network interface.
 
-* Public network
-  * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
-  * IBM configures the network infrastructure to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
-  * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
-  * Protected by firewall and supports the following secure network protocols:
+**Public network**
+
+* Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
+* IBM configures the network infrastructure to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
+* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
+* Protected by firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
     * Ping
     * IBM i 5250 terminal emulation with SSL (port 992)
 
-* Private network
-  * Allows the resources for your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as Bare Metal Servers, Kubernetes containers, or cloud storage.
-  * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources. The process for creating a Direct Link Connect connection can take a few days because IBM Cloud support must configure the link.
-  * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
+**Private network**
 
-    For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
-    {: note}
+* Allows the resources for your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as Bare Metal Servers, Kubernetes containers, or cloud storage.
+* Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources. The process for creating a Direct Link Connect connection can take a few days because IBM Cloud support must configure the link.
+* Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
+
+  For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
+  {: note}
 
 The following figure displays the the basic configuration for a public and private network:
 
