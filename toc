@@ -25,7 +25,6 @@ IBM Power Systems Virtual Servers
         ordering-direct-link.md
         configuring-private-network.md
         creating-vm-ssh-keys.md
-        configuring-ibmi-network.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
