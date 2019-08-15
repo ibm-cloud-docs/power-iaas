@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-14"
+lastupdated: "2019-08-15"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-08-14"
 {:important: .important}
 {:note: .note}
 
-# Restoring an AIX mksysb image onto a Cloud VM
+# Restoring an AIX mksysb image onto an IBM Cloud VM
 {: restoring-aix-mksysb-image}
 
 ## Defining an AIX Helper VM
