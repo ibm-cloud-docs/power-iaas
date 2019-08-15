@@ -124,7 +124,7 @@ After you run the `alt_disk_mksysb` command, the terminal displays information s
 
 Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
 
-  ![Permoning a check using the bootlist command](./images/terminal-bootlist.png "Permoning a check using the bootlist command"){: caption="Figure 17. Permoning a check using the bootlist command" caption-side="bottom"}
+  ![Performing a check using the bootlist command](./images/terminal-bootlist.png "Performing a check using the bootlist command"){: caption="Figure 17. Performing a check using the bootlist command" caption-side="bottom"}
 
 When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
 The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
