@@ -14,7 +14,7 @@ lastupdated: "2019-08-07"
 {:screen: .screen}
 {:tip: .tip}
 
-# Configuring {{site.data.keyword.powerSysFull}}
+# Configuring IBM Power Systems Virtual Servers
 {: #cpn-configuring}
 
 ## Direct Link offerings

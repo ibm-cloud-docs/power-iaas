@@ -30,21 +30,21 @@ You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CL
     ```shell
     ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volume-ids "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
     ```
-    {: screen}
+    {: codeblock}
 
 2. After succesfully capturing your VM, export it to your **iamge catalog** or **cloud storage** by entering:
 
     ```shell
     ibmcloud pi image-export IMAGE_NAME --bucket BUCKET_NAME --region REGION_NAME --access-key KEY --secret-key KEY [--json]
     ```
-    {: screen}
+    {: codeblock}
 
-3. To see your image catalog, use the `ibmcloud pi image-list-catalog command`:
+3. To see your image catalog, use the `ibmcloud pi image-list-catalog` command:
 
     ```shell
     ibmcloud pi image-list-catalog [--long] [--json]
     ```
-    {: screen}
+    {: codeblock}
 
 For more information on how to use the IBM Cloud CLI to capture and export an image, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before).
 

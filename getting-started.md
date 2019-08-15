@@ -15,13 +15,11 @@ lastupdated: "2019-8-15"
 {:important: .important}
 {:tip: .tip}
 
-# Getting started
+# Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.powerSysFull}} is an infrastructure as a service offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes.
+{{site.data.keyword.powerSysFull}} is an infrastructure as a service offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources into the cloud. Avoid the large capital expense or added risk when migrating your essential workloads.
 {:shortdesc}
-
-IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources into the cloud. Avoid the large capital expense or added risk when migrating your essential workloads.
 
 IBM Power Systems Virtual Servers on IBM Cloud integrates your IBM AIX® and IBM i capabilities into the IBM Cloud™ experience. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out.
 

@@ -19,10 +19,8 @@ lastupdated: "2019-07-29"
 # High Availability and Disaster Recovery options in Power Systems Virtual Servers
 {: #ha-dr}
 
-The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for the {{site.data.keyword.powerSys_notm}} service.
+The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for the {{site.data.keyword.powerSys_notm}} service. If you want more advanced HA or Disaster Recover (DR) solutions, you can deploy the following applications in your {{site.data.keyword.powerSys_notm}} environment.
 {:shortdesc}
-
-If you want more advanced HA or Disaster Recover (DR) solutions, you can deploy the following applications in your {{site.data.keyword.powerSys_notm}} environment.
 
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}
@@ -50,6 +48,4 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}.
-
-You can use the {{site.data.keyword.cloud_notm}} UI to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} UI to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
