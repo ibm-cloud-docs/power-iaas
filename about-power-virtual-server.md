@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-08-15"
 
 ---
 
@@ -22,6 +22,8 @@ lastupdated: "2019-05-21"
 {:shortdesc}
 
 {{site.data.keyword.powerSysFull}} are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or multiple virtual servers that are running either the AIX or IBM i operating systems in a public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that the AIX or IBM i operating system is secure.
+
+Current AIX and IBM i clients can use {{site.data.keyword.powerSysFull}} for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSysFull}} clients can not only stay competitive with the scaling of their infrastructure, but also stay flexible with the management and capacity of their workloads both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premise AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
 {: #apvs-key-features}

@@ -16,7 +16,7 @@ lastupdated: "2019-08-15"
 {:important: .important}
 {:note: .note}
 
-# Restoring an AIX mksysb image onto an IBM Cloud VM
+# Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)
 {: restoring-aix-mksysb-image}
 
 ## Defining an AIX Helper VM

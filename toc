@@ -17,6 +17,7 @@ IBM Power Systems Virtual Servers
     configuring-custom-image.md
     managing-resources-and-users.md
     restoring-aix-mksysb-image.md
+    capturing-exporting-vm.md
 
 
     {: .topicgroup}

@@ -14,13 +14,13 @@ lastupdated: "2019-05-22"
 {:important: .important}
 {:note: .note}
 
-# {{site.data.keyword.powerSys_notm}} Activity Tracker events
+# {{site.data.keyword.powerSysFull}} activity tracker events
 {: #at_events}
 
-As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.powerSys_notm}} service in {{site.data.keyword.cloud}}.
+As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with {{site.data.keyword.powerSysFull}} in the {{site.data.keyword.cloud}}.
 {:shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. [Learn more](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see[Learn more](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 ## List of events: Read
 {: #at_actions_read}
@@ -30,7 +30,6 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 | Action                     | Description                     |
 |:---------------------------|:--------------------------------|
 | pcloud.cloud-instance.read | Read a Power Cloud Instance     |
-
 
 ## List of events: Images
 {: #at_actions_images}
@@ -45,7 +44,6 @@ The following events are for working with images in your {{site.data.keyword.pow
 | pcloud.image.delete        | Delete an Image                 |
 | pcloud.image.capture       | Exports an Image                |
 
-
 ## List of events: Networks
 {: #at_actions_networks}
 
@@ -57,7 +55,6 @@ The following events are for working with networks in your {{site.data.keyword.p
 | pcloud.network.create      | Create a new Network (Public/Private) |
 | pcloud.network.update      | Update a Network                      |
 | pcloud.network.delete      | Delete a Network                      |
-{: caption="Table 3. Actions that generate events" caption-side="top"}
 
 ## List of events: {{site.data.keyword.powerSys_notm}}
 {: #at_actions_virtual_servers}
@@ -85,8 +82,8 @@ The following events are for working with account and SSH keys in your {{site.da
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | pcloud.tenant.read       | Read your Tenant Info       |
-| pcloud.ssh-key.read      | Read an SSHKey or SSH keys   |
-| pcloud.ssh-key.create    | Create an SSH key            |
+| pcloud.ssh-key.read      | Read an SSHKey or SSH keys  |
+| pcloud.ssh-key.create    | Create an SSH key           |
 | pcloud.ssh-key.update    | Update an SSH key           |
 | pcloud.ssh-key.delete    | Delete an SSH key           |
 
@@ -106,6 +103,4 @@ The following events are for working with data volumes in your {{site.data.keywo
 ## Viewing events
 {: #at_ui}
 
-Events are available in the **Dallas** location.
-
-{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the `us-south` location. [Learn more](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
+Events are available in the **Dallas** location. {{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the `us-south` location. To learn more, see [Launching the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).

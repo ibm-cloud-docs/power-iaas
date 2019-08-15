@@ -14,7 +14,7 @@ lastupdated: "2019-08-07"
 {:screen: .screen}
 {:tip: .tip}
 
-# Configuring Power Systems Virtual Servers
+# Configuring {{site.data.keyword.powerSysFull}}
 {: #cpn-configuring}
 
 ## Direct Link offerings

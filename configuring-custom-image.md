@@ -22,8 +22,8 @@ lastupdated: "2019-8-06"
 You can bring your own customized AIX or IBM i operating system image to deploy within a {{site.data.keyword.powerSysFull}}.
 {:shortdesc}
 
-You cannot transfer an operating system license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running in the cloud environment. The license cost is factored into the overall hourly billing rate.
-{: note}
+  You cannot transfer an operating system license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running in the cloud environment. The license cost is factored into the overall hourly billing rate.
+  {: note}
 
 ## Before you begin
 {: #cci-before-you-begin}
@@ -34,35 +34,35 @@ Before you can use a custom image as the boot volume, review the following infor
 * You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage).
 * If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window} and [Exporting images ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}.
 
-You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
-{: tip}
+  You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
+  {: tip}
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
 
 1. Type **object storage** into the catalog's search box and select **Cloud Object Storage**.
 
-  ![IBM Cloud Object Storage](./images/catalog-object-storage.png "IBM Cloud Object Storage"){: caption="Figure 1. IBM Cloud Object Storage" caption-side="bottom"}
+    ![IBM Cloud Object Storage](./images/catalog-object-storage.png "IBM Cloud Object Storage"){: caption="Figure 1. IBM Cloud Object Storage" caption-side="bottom"}
 
-1. Give the service a name, add tags (if wanted), and select your pricing plan. Click the **Create** button at the bottom of the page to create your service.
+2. Give the service a name, add tags (if wanted), and select your pricing plan. Click **Create** at the bottom of the page to create your service.
 
-2. After you click the **Create** button, you are taken to the **Cloud Object Storage** landing page. Select **Create Bucket**.
+3. After you click **Create**, you are taken to the **Cloud Object Storage** landing page. Select **Create Bucket**.
 
-  ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 2. IBM Cloud Object Storage bucket" caption-side="bottom"}
+    ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 2. IBM Cloud Object Storage bucket" caption-side="bottom"}
 
-1. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms _resource instance_ and _service instance_ refer to the same concept, and can be used interchangeably.
+4. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms _resource instance_ and _service instance_ refer to the same concept, and can be used interchangeably.
 
-1. Choose a unique name. All buckets in all regions across the globe share a single namespace. Ensure that you have the correct permissions to create a bucket.
+5. Choose a unique name. All buckets in all regions across the globe share a single namespace. Ensure that you have the correct permissions to create a bucket.
 
-  When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
-  {: note}
+    When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
+    {: note}
 
-1. First, choose a wanted level of _resiliency_, and then a _location_ where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. _Cross Region_ resiliency spreads your data across several metropolitan areas, while _Regional_ resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
+6. First, choose a wanted level of _resiliency_, and then a _location_ where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. _Cross Region_ resiliency spreads your data across several metropolitan areas, while _Regional_ resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
 
-1. Choose the bucket's _storage class_, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
+7. Choose the bucket's _storage class_, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
-  Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
-  {: tip}
+    Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
+    {: tip}
 
   ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 3. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
@@ -97,11 +97,11 @@ You must [Create a Power Systems Virtual Server service](/docs/infrastructure/po
 
 1. You can also choose to import a boot image from the services **Boot images** menu by clicking **Import**.
 
-  ![Importing a custom image in the boot images menu](./images/console-boot-images.png "Importing a custom image in the boot images menu"){: caption="Figure 1. Importing a custom image in the boot images menu" caption-side="bottom"}
+  ![Importing a custom image in the boot images menu](./images/console-boot-images.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
 
 1. After clicking **Import**, enter all of the required information.
 
-  ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
+  ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 9. Importing a custom image in the boot images menu" caption-side="bottom"}
 
 Refer to the following table to complete the necessary fields to create a custom image:
 
