@@ -61,7 +61,6 @@ For more information on how to use the IBM Cloud CLI to capture and export an im
 1. Click the **Capture and export** icon under your **Virtual server instance** tab.
 
     ![Capturing and exporting icon](./images/console-capture-export.png "Capturing and exporting icon"){: caption="Figure 1. Capturing and exporting icon" caption-side="bottom"}
-
 2. Choose the volumes that you want to capture and export.
 3. Select whether you want to export the volume to the **image catalog**, **Cloud Object Storage**, or both.
 4. Give your captured image a **Name**.
@@ -78,7 +77,7 @@ For more information on how to use the IBM Cloud CLI to capture and export an im
 
     ![VM capture and export success!](./images/console-capture-export-success.png "VM capture and export success!"){: caption="Figure 3. VM capture and export success!" caption-side="bottom"}
 
-8. Find your newly exported image by completing the following tasks:
+8. Find your newly exported image by completing either one of the following tasks:
 
     - If you chose to capture and export your image to the **image catalog**, go to your **Boot images** tab.
 
