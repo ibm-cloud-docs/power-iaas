@@ -14,7 +14,7 @@ lastupdated: "2019-08-15"
 {:important: .important}
 {:note: .note}
 
-# {{site.data.keyword.powerSysFull}} activity tracker events
+# Power Systems Virtual Servers activity tracker events
 {: #at_events}
 
 As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with {{site.data.keyword.powerSysFull}} in the {{site.data.keyword.cloud}}.
