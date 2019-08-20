@@ -13,9 +13,8 @@ IBM Power Systems Virtual Servers
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-
     {: .topicgroup}
-    Creating, configuring, and managing a Power Systems Virtual Server
+    Managing, creating, and deploying
         managing-resources-and-users.md
         creating-power-virtual-server.md
         configuring-custom-image.md
@@ -28,12 +27,12 @@ IBM Power Systems Virtual Servers
         configuring-private-subnet.md
 
     {: .topicgroup}
-    AIX and the Power Systems Virtual Server
-        restoring-aix-mksysb-image.md
+    AIX
         creating-vm-ssh-keys.md
+        restoring-aix-mksysb-image.md
 
     {: .topicgroup}
-    IBM i and the Power Systems Virtual Server
+    IBM i
         configuring-ibmi-network.md
         managing-ibmi-volume.md
         ibmi-license-info.md
