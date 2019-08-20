@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-07"
+lastupdated: "2019-08-19"
 
 ---
 
@@ -17,49 +17,35 @@ lastupdated: "2019-08-07"
 # Configuring IBM Power Systems Virtual Servers
 {: #cpn-configuring}
 
-## Direct Link offerings
-{: #cpn-dl}
+You can configure your subnet to interact with the {{site.data.keyword.cloud}} after establishing [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection working, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM professional works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
 
-{{site.data.keyword.cloud}} Direct Link is a suite of four offerings from the IBM Cloud Network, with availability in locations around the globe. Each one enables customers to create direct, private connections between their remote network environments and their IBM Cloud deployments--without touching the public internet. Most commonly, these offerings are implemented to support hybrid workloads, cross-provider workloads, large or frequent data transfers, private workloads, or to ease administration of the {{site.data.keyword.cloud_notm}} environment.
-
-* **IBM Cloud Direct Link Exchange** allows customers to utilize an Exchange provider to deliver connectivity to their IBM Cloud. An Exchange provider is a co-location or data center provider that is already connected to the {{site.data.keyword.cloud_notm}} network, using multi-tenant, high capacity links (also known as a network-to-network interface, or NNI). Customers typically can purchase a virtual circuit at this provider, bringing connectivity at a reduced cost, because the physical connectivity from {{site.data.keyword.cloud_notm}} to the Exchange provider is in place already, shared amongst other customers.
-
-* **IBM Cloud Direct Link Connect** allows customers to utilize a connection through our Carrier partners who own and operate a facility-based network. A Connect provider is a network service provider (NSP) that is already connected to the {{site.data.keyword.cloud_notm}} network, using multi-tenant, high capacity links (also known as a network-to-network interface, or NNI). Customers typically can purchase a virtual circuit at this provider, bringing connectivity at a reduced cost, because the physical connectivity from {{site.data.keyword.cloud_notm}} to the Connect provider is in place already, shared among other customers.
-
-* **IBM Cloud Direct Link Dedicated** allows customers to terminate a single-tenant, fiber-based cross-connect into the {{site.data.keyword.cloud_notm}} network. This offering can be utilized by customers with co-location premises that are adjacent to IBM Cloud PoPs and data centers; as well as network service providers that deliver circuits to customer premises or other data centers.
-
-* **IBM Cloud Direct Link Dedicated** Hosting provides connectivity similar to {{site.data.keyword.cloud_notm}} Direct Link Dedicated, but the connection point is adjacent to a {{site.data.keyword.cloud_notm}} data center, which improves latency for higher-performance use cases. {{site.data.keyword.cloud_notm}} offers a variety of customizable co-location services with this solution.
-
-## Connecting to the IBM Power environment by using the IBM Cloud
+## Connecting to the IBM Cloud classic infrastructure
 {: #cpn-connect-cloud}
 
-You can use one of the following options to connect to the IBM Power enviornment:
+You can use one of the following options to connect to the IBM Cloud classic infrastructure:
 
-**{{site.data.keyword.cloud_notm}} SSL VPN with jump server**
+**Using an SSL VPN with a jump server and a VRA**
 
-You can use the {{site.data.keyword.cloud_notm}} SSL VPN service to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use a {{site.data.keyword.cloud_notm}} virtual machine (VM) as a jump server to connect to your {{site.data.keyword.powerSys_notm}} instance.
+You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect to your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use a {{site.data.keyword.cloud_notm}} virtual machine (VM) as a jump server to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
-* You must use a jump server because you cannot use a VPN connection to directly connect to the {{site.data.keyword.powerSys_notm}} instance.
-* This option is typically used to manage your environments. This option is not recommended for production workloads.
-* For more information on how to configure this option, see [Set up SSL VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
+* You must have a Direct Link connection.
+* This option is typically used to manage environments and is not recommended for production workloads.
+* Because VPN connections are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a jump server.
+* For more information, see [Setting up SSL VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
-**{{site.data.keyword.cloud_notm}} IPSec VPN with IBM Cloud Virtual Router Appliance**
+**Using a IPSec VPN and a VRA**
 
-You can use the {{site.data.keyword.cloud_notm}} IPSec VPN service to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use the IBM Cloud Virtual Router Appliance (VRA) to connect to your {{site.data.keyword.powerSys_notm}} instance.
+You can use the {{site.data.keyword.cloud_notm}} **IPSec VPN service** to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use the IBM Cloud VRA to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
-* You must use a VRA because you cannot use a VPN connection to directly connect to the {{site.data.keyword.powerSys_notm}} instance.
-* This option is typically used to manage your environments. This option is not recommended for production workloads.
-* For more information on how to configure this option, see [Set up IPSec VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
+* You must have a Direct Link connection.
+* This option is typically used to manage environments and is not recommended for production workloads.
+* Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a VRA.
+* For more information, see [Setting up IPSec VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
-## Connecting to the IBM Power environment from an on-premises network
-{: #cpn-connect-onprem}
+## Connecting to the IBM Cloud Power infrastructure
 
-You can connect directly to the IBM Power environment from an on-premises network:
+After establishing a connection to the IBM Cloud classic infrastructure, you must use a separate Direct Link connection to connect to the IBM Cloud Power infrastructure.
 
-**Direct Link Connect with IBM Cloud Virtual Router Appliance**
-
-You can order the Direct Link Connect service from IBM that connects your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
-
-* This option provides high performance between the on-premises and the IBM Cloud network.
-* To order a Direct Link Connect, complete the steps in the [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect) topic.
+* You can choose from several Direct Link Connect services to connect to the IBM Cloud Power infrastructure. For more information, see [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+* This option provides high performance between the on-premises network and the IBM Cloud Power infrastructure.
 * There are specific IP addresses that you cannot use with a Direct Link Connect service. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).

@@ -13,25 +13,36 @@ IBM Power Systems Virtual Servers
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    creating-power-virtual-server.md
-    configuring-custom-image.md
-    managing-resources-and-users.md
-    restoring-aix-mksysb-image.md
-    capturing-exporting-vm.md
-
 
     {: .topicgroup}
-    Networking tasks
+    Creating, configuring, and managing a Power Systems Virtual Server
+        managing-resources-and-users.md
+        creating-power-virtual-server.md
+        configuring-custom-image.md
+        capturing-exporting-vm.md
+
+    {: .topicgroup}
+    Networking
         ordering-direct-link.md
         configuring-private-network.md
+        configuring-private-subnet.md
+
+    {: .topicgroup}
+    AIX and the Power Systems Virtual Server
+        restoring-aix-mksysb-image.md
         creating-vm-ssh-keys.md
+
+    {: .topicgroup}
+    IBM i and the Power Systems Virtual Server
+        configuring-ibmi-network.md
+        managing-ibmi-volume.md
+        ibmi-license-info.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
     [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
     at-events.md
-    ibmi-license-info.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

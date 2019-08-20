@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-7"
+lastupdated: "2019-08-19"
 
 ---
 
@@ -20,19 +20,24 @@ lastupdated: "2019-08-7"
 # Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with {{site.data.keyword.powerSys_notm}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA).
-{:shortdesc}
-
-You can use the {{site.data.keyword.cloud_notm}} UI console to order the Direct Link Connect service. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
+You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSys_notm}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
+{: shortdesc}
 
   IBM recommends that you order a second Direct Link Connect connection for backup purposes.
-  {: important}
+  {: tip}
+
+You can use the {{site.data.keyword.cloud_notm}} user inteface (UI) to order your perferred Direct Link Connect service.
+
+* [IBM Cloud Direct Link Exchange](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-exchange)
+* [IBM Cloud Direct Link Connect](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect)
+* [IBM Cloud Direct Link Dedicated](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-dedicated)
+* [IBM Cloud Direct Link Dedicated](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-dedicated-hosting)
 
 ## Before you begin
 {: #before-direct-link-connect}
 
-* Verify your {{site.data.keyword.cloud}} account has the correct authorizations to order the Direct Link Connect service.
-* Understand the basic networking concepts for the Direct Link Connect service by reviewing the following topics:
+1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
+2. Review some of the basic Direct Link Connect networking concepts:
     * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
     * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
     * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
@@ -46,16 +51,18 @@ To order the Direct Link Connect service that creates a connection to the {{site
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
 
 1. In the **Networking** section, click the **Direct Link Connect** tile.
-![Displays the Direct Link catalog tile](./images/directlink1.png "Displays the Direct Link catalog tile"){: caption="Figure 1. Direct Link Connect tile from the IBM Cloud catalog." caption-side="bottom"}
+![The Direct Link catalog tile](./images/directlink1.png "The Direct Link catalog tile"){: caption="Figure 1. Direct Link Connect tile from the IBM Cloud catalog." caption-side="bottom"}
 
 1. From the Direct Link Connect catalog entry, click **Create**.
 
 1. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
 
-1. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
+1. From the Create IBM Cloud Direct Link Connect Connection page, complete the fields below.
 
    As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
-   {: note}
+   {: important}
+
+    ![Completing the Direct Connect Link fields](./images/directlink2.png "Completing the Direct Connect Link fields"){: caption="Figure 2. Completing the Direct Connect Link fields" caption-side="bottom"}
 
    <dl>
    <dt><strong>Direct Link Instance Name</strong><dt>
@@ -103,11 +110,8 @@ To order the Direct Link Connect service that creates a connection to the {{site
    </table>
    </dd>
    <dt><strong>Select VRF</strong><dt>
-   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.The following figure is an example of the Direct Link Connect fields.</dd>
-   <dd>
-
-   ![Displays the Direct Link Connect fields that are completed](./images/directlink2.png "Displays the Direct Link Connect fields that are completed"){: caption="Figure 2. Direct Link Connect fields." caption-side="bottom"}
-   </dd>
+   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
+   <dd></dd>
    </dl>
 1. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
