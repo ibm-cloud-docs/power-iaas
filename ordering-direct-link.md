@@ -93,6 +93,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
    <dt><strong>BGP ASN</strong><dt>
    <dd>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.
+   <p><strong>Important</strong> You should not try to change the BGP ASN number to 64997. This results in an error. You must reach out to the IBM Power support team to handle your request to change the BGP ASN number.</p>
    <table>
    <caption>Table 2. BGP ASN number for specific locations</caption>
    <tr>
@@ -113,9 +114,9 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
    <dd></dd>
    </dl>
-1. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
+2. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
-1. Click **Create**. The following message is displayed when your request is submitted successfully.
+3. Click **Create**. The following message is displayed when your request is submitted successfully.
 ![Displays the Direct Link Connect submitted successfully message](./images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
 1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
