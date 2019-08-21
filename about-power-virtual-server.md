@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-08-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-08-15"
 {:tip: .tip}
 {:note: .note}
 
-# About Power Systems Virtual Servers
+# What is a Power Systems Virtual Server?
 {: #about-power-virtual-server}
 
 {{site.data.keyword.powerSysFull}} uses the existing IBM Cloud platform to create {{site.data.keyword.powerSysFull}}, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
