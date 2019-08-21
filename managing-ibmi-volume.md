@@ -14,7 +14,7 @@ lastupdated: "2019-08-20"
 {:screen: .screen}
 {:tip: .tip}
 
-# Managing an IBM i boot volume
+# Accessing an attached volume on IBM i (required)
 {: #miv-attaching}
 
 Complete the following tasks to get into **System Service Tools** (SST) and configure the newly attached disk:

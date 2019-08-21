@@ -92,8 +92,8 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dt><strong>Routing Option</strong><dt>
    <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
    <dt><strong>BGP ASN</strong><dt>
-   <dd>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.
-   <p><strong>Important</strong> You should not try to change the BGP ASN number to 64997. This results in an error. You must reach out to the IBM Power support team to handle your request to change the BGP ASN number.</p>
+   <dd><p>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.</p>
+   <p><strong>Important:</strong> You should not try to change the BGP ASN number to 64997. This results in an error. You must reach out to the IBM Power support team to handle your request to change the BGP ASN number.</p>
    <table>
    <caption>Table 2. BGP ASN number for specific locations</caption>
    <tr>
