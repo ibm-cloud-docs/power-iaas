@@ -19,10 +19,12 @@ lastupdated: "2019-08-16"
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
 
-You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CLI or the console. When you capture a VM, you are creating an open virtual application (OVA) from a FlashCopy. FlashCopy enables you to make copies of a set of tracks, with the copies immediately available for read or write access. This set of tracks can consist of an entire volume, a data set, or just a selected set of tracks.
+You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CLI or the console. A VM is captured as a volume backed image. The image is stored in new volumes on the storage providers. For example, if a VM is backed by two volumes, one on a storage area network (SAN) and the other one on a shared storage pool (SSP), then the new image would consist of one new volume on the SAN and another new volume on the SSP.
 {: shortdesc}
 
-When capturing your VM, you can choose the **image catalog**, **Cloud Object Storage**, or both. The image catalog resides on the IBM Power storage area network (SAN). IBM's **Cloud Object Storage** is encrypted and dispersed across multiple geographic locations, and accessed over HTTP using a REST API. This service makes use of the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your **image catalog** to **Cloud Object Storage** at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
+An image can be exported to an IBM Cloud Object Storage (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an OVA file. The OVA file is compressed by using _gzip_ before getting uploaded to the IBM COS bucket.
+
+When capturing your VM, you can choose the **image catalog**, **Cloud Object Storage**, or both. The image catalog resides on the IBM Power SAN. IBM's **Cloud Object Storage** is encrypted and dispersed across multiple geographic locations, and accessed over HTTP using a REST API. This service makes use of the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your **image catalog** to **Cloud Object Storage** at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
 
 You are charged different rates depending on whether you export to the **image catalog** or **Cloud Object Storage**.
 {: important}
@@ -53,7 +55,7 @@ You are charged different rates depending on whether you export to the **image c
         ```
         {: codeblock}
 
-For more information on how to use the IBM Cloud CLI to capture and export an image, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [Using the IBM Cloud CLI for Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#delete-bucket-cors).
+For more information, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [Using the IBM Cloud CLI for Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#delete-bucket-cors).
 
 ## Using the IBM Cloud console to capture and export a VM
 {: #console-capture-export}
@@ -62,7 +64,7 @@ For more information on how to use the IBM Cloud CLI to capture and export an im
 
     ![Capturing and exporting icon](./images/console-capture-export.png "Capturing and exporting icon"){: caption="Figure 1. Capturing and exporting icon" caption-side="bottom"}
 2. Choose the volumes that you want to capture and export.
-3. Select whether you want to export the volume to the **image catalog**, **Cloud Object Storage**, or both.
+3. Select whether you want to export the image to the **image catalog**, **Cloud Object Storage**, or both.
 4. Give your captured image a **Name**.
 5. _(Optional)_ If you decide to export to **Cloud Object Storage**, you are presented with more options:
    1. Select the **Region**.

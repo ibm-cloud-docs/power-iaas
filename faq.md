@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019n
 
 lastupdated: "2019-03-29"
 
@@ -19,24 +19,23 @@ lastupdated: "2019-03-29"
 # FAQ
 {: #power-iaas-faqs}
 
-
 ## What versions of AIX and IBM i operating systems are supported?
 {: #os_versions}
 {: faq}
 
-The versions of AIX and IBM i that are supported depends on if you select S922 (9009-22A) or E880 (9119-MHE) as the IBM Power Systems hardware for the {{site.data.keyword.powerSys_notm}}. To view a list of the supported AIX and IBM i operating system technology levels and Power System hardware, see [System software maps ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1maps).
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels and IBM Power System hardware, see [System software maps ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1maps).
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
 {: faq}
 
-Yes. This function is know as bring your own image. For more information about, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
 {: faq}
 
-No. It is the customers responsibility to maintain, update, and manage the AIX or IBM i operating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
 
 ## How does licensing work for the AIX and IBM i operating systems?
 {: #os_support}
@@ -48,7 +47,7 @@ The license for the operating system is part of the overall cost for the service
 {: #thridparty}
 {: faq}
 
-You are responsible for third-party licensing in the {{site.data.keyword.cloud_notm}}.
+You are responsible for third-party licensing.
 
 ## What are the hardware specifications?
 {: #hardwarespecs}
@@ -60,15 +59,74 @@ For hardware specifications, see [Hardware specifications](/docs/infrastructure/
 {: #multi}
 {: faq}
 
-Yes.
+Yes, {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment.
 
 ## Are there bare-metal options?
 {: #bare}
 {: faq}
 
-No. The scope of the {{site.data.keyword.powerSys_notm}} offering is to focus on virtual instances and not bare-metal.
+No, there are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
-<!-- 
+## What training is available using IBM Cloud?
+{: #training}
+{: faq}
+
+To learn more about how to use IBM Power Systems Virtual Servers, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+
+## How do you set up private networks between Intel&trade; Virtual Servers (x86) and Power System Virtual Servers?
+{: #connecting}
+{: faq}
+
+For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+
+## How do you set up customer site access to that private network by using VPN?
+{: #configuring}
+{: faq}
+
+For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring).
+
+## What firewall options are there around VPN connectivity?
+{: #firewall}
+{: faq}
+
+You must set your own firewall in your IBM Cloud account.
+
+## How is network bandwidth billed?
+{: #billing}
+{: faq}
+
+Bandwidth refers to the public data transfer of inbound and outbound network traffic, both to and from IBM Cloud data centers around the globe. Higher bandwidth options, when combined with 10 Gbps port-speed connectivity, enable greater throughput (for transaction-intensive workloads), eliminate bottlenecks and do a better job of meeting the needs of your business. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
+
+| Global private network       | Inbound data transfer   |  Outbound data transfer     |
+| ----------------------------- | ----------------- | --------------------  |
+| All inbound and outbound network within the IBM global private network is unlimited and not charged, offered between and within any IBM Cloud data center, and across our high-speed, global network backbone. | Inbound bandwidth is unlimited and not charged.  | Public bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages.    |
+{: caption="Table 1. Bandwidth packages" caption-side="top"}
+
+<!-- ## WBackup and DR options for Virtual Servers?
+{: #wbackup}
+{: faq}
+
+Backup and DR for cloud to cloud – BRMS with Cloud Storage Solutions or use manual with Savsys.  PowerHA Enterprise edition for Geo.  Licensing TBD for this bundle (can not bring their own license) – Bob to determine date/terms. -->
+
+## What monitoring services are available?
+{: #monitoring}
+{: faq}
+
+IBM does not provide status and performance monitoring for the IBM Cloud. The client must use their own on-premises tools.
+
+## What performance and capacity planning services do you provide for IBM i on IBM Cloud?
+{: #ibmi-performance}
+{: faq}
+
+IBM uses the same tools that are on an on-premises system.
+
+## IBM I and solution certification
+{: #ibmi-certification}
+{: faq}
+
+You can find self-certification and listing information on the [IBM Global Solutions Directory ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-356.ibm.com/partnerworld/gsd/homepage.do).
+
+<!--
 ## Is there a price difference between shared or dedicated cores?
 {: #shared}
 {: faq}
