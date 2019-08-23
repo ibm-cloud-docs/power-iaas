@@ -95,12 +95,7 @@ You must set your own firewall in your IBM Cloud account.
 {: #billing}
 {: faq}
 
-Bandwidth refers to the public data transfer of inbound and outbound network traffic, both to and from IBM Cloud data centers around the globe. Higher bandwidth options, when combined with 10 Gbps port-speed connectivity, enable greater throughput (for transaction-intensive workloads), eliminate bottlenecks and do a better job of meeting the needs of your business. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
-
-| Global private network       | Inbound data transfer   |  Outbound data transfer     |
-| ----------------------------- | ----------------- | --------------------  |
-| All inbound and outbound network within the IBM global private network is unlimited and not charged, offered between and within any IBM Cloud data center, and across our high-speed, global network backbone. | Inbound bandwidth is unlimited and not charged.  | Public bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages.    |
-{: caption="Table 1. Bandwidth packages" caption-side="top"}
+IBM does not currenty charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages.For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
 
 <!-- ## WBackup and DR options for Virtual Servers?
 {: #wbackup}
