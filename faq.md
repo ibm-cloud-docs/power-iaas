@@ -120,7 +120,7 @@ IBM does not provide status and performance monitoring for the IBM Cloud. The cl
 
 IBM uses the same tools that are on an on-premises system.
 
-## IBM I and solution certification
+## IBM i and solution certification
 {: #ibmi-certification}
 {: faq}
 
