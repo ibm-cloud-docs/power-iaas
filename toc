@@ -18,6 +18,7 @@ IBM Power Systems Virtual Servers
         managing-resources-and-users.md
         creating-power-virtual-server.md
         configuring-custom-image.md
+        resizing-storage-volume.md
         capturing-exporting-vm.md
 
     {: .topicgroup}
