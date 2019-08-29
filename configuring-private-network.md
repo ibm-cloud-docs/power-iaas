@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
+<<<<<<< HEAD
 lastupdated: "2019-08-19"
+=======
+lastupdated: "2019-08-29"
+>>>>>>> rebase test 1
 
 ---
 
