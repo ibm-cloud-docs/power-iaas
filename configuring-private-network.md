@@ -4,10 +4,14 @@ copyright:
   years: 2019
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 lastupdated: "2019-08-19"
 =======
 lastupdated: "2019-08-29"
 >>>>>>> rebase test 1
+=======
+lastupdated: "2019-08-30"
+>>>>>>> 76677f2... fixing broken configuring topic in publish
 
 ---
 
