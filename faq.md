@@ -3,7 +3,7 @@
 copyright:
   years: 2019n
 
-lastupdated: "2019-08-29"
+lastupdated: "2019-08-30"
 
 ---
 
@@ -24,16 +24,15 @@ lastupdated: "2019-08-29"
 {: #os_versions}
 {: faq}
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels, see the following:
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
+
+Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` install of the operating system over an existing LPAR that was provisioned.
+{: important}
 
 **AIX**
 
 * [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io)
-
 * [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io)
-
-Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` install of the operating system over an existing LPAR that was provisioned.
-{: important}
 
 **IBM i**
 
@@ -61,13 +60,13 @@ The license for the operating system is part of the overall cost for the service
 {: #thridparty}
 {: faq}
 
-You are responsible for third-party licensing.
+Clients are responsible for third-party licensing.
 
 ## What are the hardware specifications?
 {: #hardwarespecs}
 {: faq}
 
-For hardware specifications, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
+For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
 
 ## Does {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
@@ -85,7 +84,7 @@ No, there are no bare-metal options. The {{site.data.keyword.powerSys_notm}} off
 {: #training}
 {: faq}
 
-To learn more about how to use IBM Power Systems Virtual Servers, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+To learn more about how to use Power Systems Virtual Servers, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
 
 ## How do you set up private networks between Intel&trade; Virtual Servers (x86) and Power System Virtual Servers?
 {: #connecting}
@@ -109,7 +108,7 @@ You must set your own firewall in your IBM Cloud account.
 {: #billing}
 {: faq}
 
-IBM does not currenty charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages.For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
+IBM does not currenty charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per gigabyte (GB) tier and is offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
 
 <!-- ## WBackup and DR options for Virtual Servers?
 {: #wbackup}
@@ -121,7 +120,7 @@ Backup and DR for cloud to cloud – BRMS with Cloud Storage Solutions or use ma
 {: #monitoring}
 {: faq}
 
-IBM does not provide status and performance monitoring for the IBM Cloud. The client must use their own on-premises tools.
+IBM does not provide status and performance monitoring for the IBM Cloud. Clients must use their own on-premises tools.
 
 ## What performance and capacity planning services do you provide for IBM i on IBM Cloud?
 {: #ibmi-performance}
