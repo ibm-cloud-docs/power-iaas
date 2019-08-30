@@ -13,6 +13,7 @@ lastupdated: "2019-08-29"
 {:pre: .pre}
 {:screen: .screen}
 {:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
 
@@ -23,7 +24,20 @@ lastupdated: "2019-08-29"
 {: #os_versions}
 {: faq}
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels and IBM Power System hardware, see [System software maps ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1maps).
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels, see the following:
+
+**AIX**
+
+* [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io)
+
+* [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io)
+
+Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` install of the operating system over an existing LPAR that was provisioned.
+{: important}
+
+**IBM i**
+
+* [S922 (9009-22A) and E880 (9119-MHE) software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi)
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
