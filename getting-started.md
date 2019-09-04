@@ -38,14 +38,11 @@ For example, you can have two {{site.data.keyword.powerSys_notm}} **services**, 
 Before you create your first Power Systems Virtual Server instance, review the following prerequisites:
 
 1. {: hide-dashboard} Create an IBM Cloud account. To create an IBM Cloud account, see [Sign up for IBM Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration){: new_window}.
-
 2. Create a public and private SSH key that you can use to securely connect to your {{site.data.keyword.powerSys_notm}}. To create a public and private SSH key, see [Adding an SSH key ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/infrastructure/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-
 3. _(Optional)_ If you want to use a custom image for the AIX or IBM i operating systems, you must create an IBM Cloud Object Storage and upload the image. For more information, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
-
 4. _(Optional)_ If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the Direct Link Connect service. For more information, see [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
-For frequently asked questions about {{site.data.keyword.powerSysFull}}, see [FAQs](/docs/infrastructure/power-iaas?topic=power-iaas-power-iaas-faqs).
+For frequently asked questions about {{site.data.keyword.powerSys_notm}}, see [FAQs](/docs/infrastructure/power-iaas?topic=power-iaas-power-iaas-faqs).
 
 ## Next steps
 {: #gs-next-steps}

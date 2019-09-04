@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-19"
+lastupdated: "2019-09-04"
 
 ---
 
@@ -37,11 +37,12 @@ You can use the {{site.data.keyword.cloud_notm}} user inteface (UI) to order you
 {: #before-direct-link-connect}
 
 1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
-2. Review some of the basic Direct Link Connect networking concepts:
-    * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
-    * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
-    * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
-    * [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
+1. Review some of the basic Direct Link Connect networking concepts:
+
+* [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
+* [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
+* [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
+* [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
 ## Steps to order Direct Link Connect
 {: #steps-to-order-direct-link-connect}
