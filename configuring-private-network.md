@@ -13,6 +13,7 @@ lastupdated: "2019-08-30"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:important: .important}
 
 # Configuring IBM Power Systems Virtual Servers
 {: #cpn-configuring}
@@ -41,6 +42,9 @@ You can use the {{site.data.keyword.cloud_notm}} **IPSec VPN service** to connec
 * This option is typically used to manage environments and is not recommended for production workloads.
 * Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a VRA.
 * For more information, see [Setting up IPSec VPN](/docs/infrastructure/iaas-vpn?topic=VPN-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/infrastructure/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
+
+You cannot use the same private subnet for both IBM Cloud classic and IBM Cloud Power instances. These offerings are not colocated and their networks are not linked. You must order a DirectLink Connection.
+{: important}
 
 ## Connecting to the IBM Cloud Power infrastructure
 {: #cpn-connect-power}
