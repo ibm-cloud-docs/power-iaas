@@ -3,11 +3,7 @@
 copyright:
   years: 2019
 
-<<<<<<< HEAD
-lastupdated: "2019-08-16"
-=======
 lastupdated: "2019-09-04"
->>>>>>> syncing draft with publish
 
 ---
 
