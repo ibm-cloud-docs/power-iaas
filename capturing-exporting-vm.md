@@ -5,6 +5,10 @@ copyright:
 
 lastupdated: "2019-09-04"
 
+keywords: image catalog, virtual machine capture, cloud object storage bucket, export virtual machine
+
+subcollection: power-iaas
+
 ---
 
 {:shortdesc: .shortdesc}

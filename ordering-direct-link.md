@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-06"
+
+keywords: ordering direct link, dirct link location, bgp asn, iam service id
+
+subcollection: power-iaas
 
 ---
 
@@ -23,10 +27,10 @@ lastupdated: "2019-09-04"
 You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSys_notm}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
 {: shortdesc}
 
-  IBM recommends that you order a second Direct Link Connect connection for backup purposes.
+  Order a second Direct Link Connect connection for backup purposes.
   {: tip}
 
-You can use the {{site.data.keyword.cloud_notm}} user inteface (UI) to order your perferred Direct Link Connect service.
+You can use the {{site.data.keyword.cloud_notm}} console to order your preferred Direct Link Connect service.
 
 * [IBM Cloud Direct Link Exchange](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-exchange)
 * [IBM Cloud Direct Link Connect](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect)
@@ -37,7 +41,7 @@ You can use the {{site.data.keyword.cloud_notm}} user inteface (UI) to order you
 {: #before-direct-link-connect}
 
 1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
-1. Review some of the basic Direct Link Connect networking concepts:
+2. Review some of the basic Direct Link Connect networking concepts:
 
 * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
 * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
@@ -89,12 +93,12 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dt><strong>Network Provider</strong><dt>
    <dd>You must select <strong>MEGAPORT</strong> from the list.</dd>
    <dt><strong>Link Speed</strong><dt>
-   <dd>Select the link speed to meet your workload requirements. The recommended selection for  this field is 1000 Mbps.</dd>
+   <dd>Select the link speed to meet your workload requirements. The recommended selection for the Link Speed field is 1000 Mbps.</dd>
    <dt><strong>Routing Option</strong><dt>
    <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
    <dt><strong>BGP ASN</strong><dt>
    <dd><p>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.</p>
-   <p><strong>Important:</strong> You should not try to change the BGP ASN number to 64997. This results in an error. You must reach out to the IBM Power support team to handle your request to change the BGP ASN number.</p>
+   <p><strong>Important:</strong> Do not try to change the BGP ASN number to <strong>64997</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.</p>
    <table>
    <caption>Table 2. BGP ASN number for specific locations</caption>
    <tr>
@@ -128,9 +132,9 @@ To order the Direct Link Connect service that creates a connection to the {{site
 1. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, open a [new case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) for the {{site.data.keyword.powerSys_notm}} support team.
 
     1. In the new case's description field, add the Direct Link Connect case number.
-    2. Copy the {{site.data.keyword.powerSys_notm}} case IAM Service ID that the system automtically generated.
+    2. Copy the {{site.data.keyword.powerSys_notm}} case IAM Service ID that the system automatically generated.
 
-1. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following is an example of the network information that is displayed in the case:
+1. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
 
   ```shell
   Link Speed:                  1000 Mbps

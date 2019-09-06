@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-09-06"
+
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
+
+subcollection: power-iaas
 
 ---
 
@@ -15,7 +19,7 @@ lastupdated: "2019-08-13"
 {:tip: .tip}
 {:important: .important}
 
-# Creating a new AIX virtual machine (VM) with SSH keys for root login
+# Creating a AIX virtual machine (VM) with SSH keys for root login
 {: #create-vm}
 
 You can set up one or more SSH keys for root login when you create new AIX virtual machines (VM) on an IBM Cloud instance. The keys are loaded into the root's **authorized_keys** file. SSH keys allow you to securely log in to a VM. You must use the available operating system options to create SSH keys. To generate SSH keys on a Linux&reg; or Mac OS system, for example, you can use the standard `ssh-keygen` tool.
@@ -52,7 +56,7 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ## Creating an AIX VM instance
 {: #create-ssh-key}
 
-You can create an AIX VM instance with a configured SSH key by using the IBM Cloud CLI or the console. When using an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as 'root' appears as being _disabled_. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information on working with the AIX operating system, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html).
+You can create an AIX VM instance with a configured SSH key by using the IBM Cloud CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as 'root' appears as being _disabled_. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html).
 
 ### Using the IBM Cloud CLI to create an AIX VM with a configured SSH key
 {: #create-vm-cli}

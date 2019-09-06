@@ -3,7 +3,15 @@
 copyright:
   years: 2019
 
+<<<<<<< HEAD
 lastupdated: "2019-08-21"
+=======
+lastupdated: "2019-09-04"
+
+keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
+
+subcollection: power-iaas
+>>>>>>> 30d8a87... keyword addition and acrolinx improvement
 
 ---
 
@@ -116,7 +124,7 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
 4. Select `QAUTOVRT` with option “2” (change).
 5. Change the value from “0” to the number of auto-configured consoles you want to be able to connect concurrently.
 
-After completing these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
+After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
 
 ```shell
 https://127.0.0.1:2005/ibm/console/login.do?action=secure

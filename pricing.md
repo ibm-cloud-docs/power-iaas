@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-1"
+lastupdated: "2019-09-06"
+
+keywords: pricing, monthly usage, billing process, billing cycle
+
+subcollection: power-iaas
 
 ---
 

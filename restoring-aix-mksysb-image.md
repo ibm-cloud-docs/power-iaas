@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-09-06"
+
+keywords: aix mksysb, aix helper vm, attaching new disk
+
+subcollection: power-iaas
 
 ---
 
@@ -50,7 +54,7 @@ If your disk is not at the correct size, complete the following steps:
 1. Create a file system to hold the _mksysb_ archive.
 2. Click **Add new** under **Attached volumes**.
 
-    ![Adding a new volume](./images/console-attach-volume.png "Adding a new volume"){: caption="Figure 5. Adding a new volume" caption-side="bottom"}
+    ![Adding a volume](./images/console-attach-volume.png "Adding a volume"){: caption="Figure 5. Adding a volume" caption-side="bottom"}
 
 3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
 
@@ -111,20 +115,20 @@ You can now create an AIX boot disk from the source _mksysb_ archive. To create 
 
 <dl>
   <dt><strong>-m</strong></dt>
-  <dd>Specify the mksysb archive that you transferred to the helper VM. In our example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
+  <dd>Specify the mksysb archive that you transferred to the helper VM. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
   <dt><strong>-d</strong></dt>
-  <dd>Specify the logical disk (hdisk) that is currently empty of a volume group label. In the example, the target disk is named <em>hdisk2</em>.</dd>
+  <dd>Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named <em>hdisk2</em>.</dd>
   <dt><strong>-c</strong></dt>
   <dd> Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.</dd>
 </dl>
 
-After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following:
+After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
   ![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 16. Running the alt_disk_mksysb command" caption-side="bottom"}
 
 Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
 
-  ![Performing a check using the bootlist command](./images/terminal-bootlist.png "Performing a check using the bootlist command"){: caption="Figure 17. Performing a check using the bootlist command" caption-side="bottom"}
+  ![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 17. Performing a check by using the bootlist command" caption-side="bottom"}
 
 When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
 The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
@@ -136,7 +140,7 @@ You have successfully restored the AIX _mksysb_ archive and the environment is r
 ## (Optional) Detaching the staging volume
 {: detaching-staging-volume}
 
-In the previous section, we used a separate image volume for storing the source _mksysb_. To detach, keep, or delete a volume, review the  information in this section.
+In the previous section, we used a separate image volume for storing the source _mksysb_. To detach, keep, or delete a volume, review the following information.
 
 After the completion of the `alt_disk_mksysb` command, you can detach the staging volume (`mksysbvg`) from the _helper VM_. Before you detach the staging volume, you must close all available file systems by unmounting them. If no action is required, then it is safe to remove the volume group definition from the _helper VM_.
 
@@ -150,7 +154,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
 
-    ![Detaching the volumne](./images/console-detach-volume.png "Detaching the volumne"){: caption="Figure 21. Detaching the volumne" caption-side="bottom"}
+    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 21. Detaching the volumne" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 

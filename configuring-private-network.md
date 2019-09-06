@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-30"
+lastupdated: "2019-09-04"
+
+keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network
+
+subcollection: power-iaas
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-08-30"
 # Configuring IBM Power Systems Virtual Servers
 {: #cpn-configuring}
 
-You can configure your subnet to interact with the {{site.data.keyword.cloud}} after establishing [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection working, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM professional works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
+You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
 
 ## Connecting to the IBM Cloud classic infrastructure
 {: #cpn-connect-classic}
@@ -49,7 +53,7 @@ You cannot use the same private subnet for both IBM Cloud classic and IBM Cloud 
 ## Connecting to the IBM Cloud Power infrastructure
 {: #cpn-connect-power}
 
-After establishing a connection to the IBM Cloud classic infrastructure, you must use a separate Direct Link connection to connect to the IBM Cloud Power infrastructure.
+After you establish a connection to the IBM Cloud classic infrastructure, you must use a separate Direct Link connection to connect to the IBM Cloud Power infrastructure.
 
 * You can choose from several Direct Link Connect services to connect to the IBM Cloud Power infrastructure. For more information, see [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 * This option provides high performance between the on-premises network and the IBM Cloud Power infrastructure.

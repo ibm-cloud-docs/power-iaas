@@ -1,9 +1,13 @@
 ---
 
 copyright:
-  years: 2019n
+  years: 2019
 
-lastupdated: "2019-08-30"
+lastupdated: "2019-09-06"
+
+keywords: faq, virtual server, network bandwidth billing, multi-tenant environment, ibm cloud
+
+subcollection: power-iaas
 
 ---
 
@@ -26,7 +30,7 @@ lastupdated: "2019-08-30"
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
-Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` install of the operating system over an existing LPAR that was provisioned.
+Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` installation of the operating system over an existing LPAR that was provisioned.
 {: important}
 
 **AIX**
@@ -108,7 +112,7 @@ You must set your own firewall in your IBM Cloud account.
 {: #billing}
 {: faq}
 
-IBM does not currenty charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per gigabyte (GB) tier and is offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
+IBM does not currently charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per gigabyte (GB) tier and is offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
 
 <!-- ## WBackup and DR options for Virtual Servers?
 {: #wbackup}

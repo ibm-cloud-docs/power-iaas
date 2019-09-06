@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-06"
+
+keywords: storage volume, new storage size, modifying, edit
+
+subcollection: power-iaas
 
 ---
 

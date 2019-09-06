@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-07-29"
+lastupdated: "2019-09-06"
+
+keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
+
+subcollection: power-iaas
 
 ---
 
@@ -20,12 +24,12 @@ lastupdated: "2019-07-29"
 {: #ha-dr}
 
 The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for the {{site.data.keyword.powerSys_notm}} service. If you want more advanced HA or Disaster Recover (DR) solutions, you can deploy the following applications in your {{site.data.keyword.powerSys_notm}} environment.
-{:shortdesc}
+{: shortdesc}
 
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}
 
-You can use a monthly subscription model when purchasing PowerHA SystemMirror for AIX Standard Edition. For more information, see [Standard Edition monthly pricing options ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/8/897/ENUS219-288/index.html).
+You can use a monthly subscription model when you purchase PowerHA SystemMirror for AIX Standard Edition. For more information, see [Standard Edition monthly pricing options ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/8/897/ENUS219-288/index.html).
 
 After you purchase the software, you can download it from [IBM Entitled Systems Support (ESS) ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/eserver/ess). You can install PowerHA SystemMirror for AIX on the virtual server that is running in your {{site.data.keyword.powerSys_notm}} environment. For installation instructions, see [Installing PowerHA SystemMirror ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSPHQG_7.2/install/ha_install.html).
 

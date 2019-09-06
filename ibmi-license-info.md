@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-2"
+lastupdated: "2019-09-06"
+
+keywords: imb i license, operatin system, swma products, rational development studio
+
+subcollection: power-iaas
 
 ---
 
@@ -25,19 +29,19 @@ The following LPP and OS features include all of the group **SWMA** products oth
 **Rational Development Studio (5770-WDS)** and **Infoprint Server (5722-IP1)**:
 
 * 5770-SS1 IBM i Option 18 Media & Storage Extensions
-* 5770-SS1 IBM i Option 26 DB2 Symmetric Multiprocessing
-* 5770-SS1 IBM i Option 27 DB2 Multisystem
+* 5770-SS1 IBM i Option 26 Db2 Symmetric Multiprocessing
+* 5770-SS1 IBM i Option 27 Db2 Multisystem
 * 5770-SS1 IBM i Option 38 PSF for IBM i Any Speed Printer Support
 * 5770-SS1 IBM i Option 41 HA Switchable Resources
 * 5770-SS1 IBM i Option 42 HA Journal Performance
 * 5761-AMT: Rational Application Management Toolset
 * 5770-AP1: Advanced DBCS Printer Support
 * 5733-B45: AFP Font Collection for i
-* 5770-BR1: Backup, Recovery and Media Services
+* 5770-BR1: Backup, Recovery, and Media Services
 * 5761-DB1: System/38 Utilities
 * 5761-CM1: Communications Utilities
 * 5761-DS2: Business Graphics Utility
-* 5648-E77: InfoPrint Fonts
+* 5648-E77: Infoprint Fonts
 * 5769-FN1: AFP DBCS Fonts
 * 5769-FNT: AFP Fonts
 * 5770-JS1: Advanced Job Scheduler for i

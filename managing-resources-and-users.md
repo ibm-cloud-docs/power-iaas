@@ -3,7 +3,15 @@
 copyright:
   years: 2019
 
+<<<<<<< HEAD
 lastupdated: "2019-08-07"
+=======
+lastupdated: "2019-09-06"
+
+keywords: IAM, managing virtual servers, platform access roles, user access scenarios
+
+subcollection: power-iaas
+>>>>>>> 30d8a87... keyword addition and acrolinx improvement
 
 ---
 

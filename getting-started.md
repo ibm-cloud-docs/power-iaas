@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-8-15"
+lastupdated: "2019-09-06"
+
+keywords: getting started, infrastructure as a service, before you begin, terminology
+
+subcollection: power-iaas
 
 ---
 

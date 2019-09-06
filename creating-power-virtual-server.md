@@ -9,6 +9,10 @@ lastupdated: "2019-08-13"
 lastupdated: "2019-09-06"
 >>>>>>> 55cfce8... adding note about boot image location
 
+keywords: getting started, power systems virtual server, virtual server, creating virtual server
+
+subcollection: power-iaas
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -57,11 +61,11 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Creating a power virtual server instance](./images/console-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a power virtual server instance" caption-side="bottom"}
 
-    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remember to click the wanted **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
+    2. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remember to click the wanted **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot volume**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to the **Boot images** tab after provisioning the instance.
+    3. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot volume**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to the **Boot images** tab after provisioning the instance.
 
       When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SHH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
       {: important}

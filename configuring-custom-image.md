@@ -5,6 +5,10 @@ copyright:
 
 lastupdated: "2019-8-06"
 
+keywords: activity tracker service, regulatory audit requirements, abnormal activity
+
+subcollection: power-iaas
+
 ---
 
 {:shortdesc: .shortdesc}

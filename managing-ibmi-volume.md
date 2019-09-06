@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-06"
+
+keywords: accessing attached volume, system service tools, dedicated service tools
+
+subcollection: power-iaas
 
 ---
 

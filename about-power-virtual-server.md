@@ -5,6 +5,10 @@ copyright:
 
 lastupdated: "2019-08-28"
 
+keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
+
+subcollection: power-iaas
+
 ---
 
 {:shortdesc: .shortdesc}
