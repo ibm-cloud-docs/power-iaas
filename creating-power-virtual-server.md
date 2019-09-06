@@ -3,11 +3,7 @@
 copyright:
   years: 2019
 
-<<<<<<< HEAD
-lastupdated: "2019-08-13"
-=======
 lastupdated: "2019-09-06"
->>>>>>> 55cfce8... adding note about boot image location
 
 keywords: getting started, power systems virtual server, virtual server, creating virtual server
 
