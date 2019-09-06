@@ -3,15 +3,11 @@
 copyright:
   years: 2019
 
-<<<<<<< HEAD
-lastupdated: "2019-08-21"
-=======
 lastupdated: "2019-09-04"
 
 keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
 
 subcollection: power-iaas
->>>>>>> 30d8a87... keyword addition and acrolinx improvement
 
 ---
 

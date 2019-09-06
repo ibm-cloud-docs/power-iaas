@@ -3,15 +3,11 @@
 copyright:
   years: 2019
 
-<<<<<<< HEAD
-lastupdated: "2019-08-19"
-=======
 lastupdated: "2019-09-06"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
 subcollection: power-iaas
->>>>>>> 30d8a87... keyword addition and acrolinx improvement
 
 ---
 
