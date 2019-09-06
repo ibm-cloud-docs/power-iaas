@@ -3,7 +3,11 @@
 copyright:
   years: 2019
 
+<<<<<<< HEAD
 lastupdated: "2019-08-13"
+=======
+lastupdated: "2019-09-06"
+>>>>>>> 55cfce8... adding note about boot image location
 
 ---
 
@@ -46,18 +50,18 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 8. Complete all of the required fields to successfully create a new instance.
 
-      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}}. This allows you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
+      The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}} allowing you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.
       {: tip}
 
     1. Complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with more options.
 
-      ![Creating a power virtual server instance](./images/console-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a new power virtual server instance" caption-side="bottom"}
+      ![Creating a power virtual server instance](./images/console-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a power virtual server instance" caption-side="bottom"}
 
     1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remember to click the wanted **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization.
+    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot volume**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to the **Boot images** tab after provisioning the instance.
 
       When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SHH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
       {: important}
@@ -81,7 +85,7 @@ The following table provides information about the **Virtual server instance** f
     <dt><strong>No preference</strong></dt>
   <dd>Select this option if you do not have a hosting preference.</dd>
     <dt><strong>Different  Server</strong></dt>
-  <dd>Select this option to have each instance hosted on a different server.  You can use this option if you are concerned about a single-server outage occurring that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
+  <dd>Select this option to host each instance on a different server.  You can use this option if you are concerned about a single-server outage occurring that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
   <dt><strong>Numerical Prefix</strong></dt>
   <dd>Select this option to add numbers before the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <i>Austin</i> the next name for the virtual instance is <i>1Austin</i></dd>
   <dt><strong>Numerical Postfix</strong></dt>
@@ -93,7 +97,7 @@ The following table provides information about the **Virtual server instance** f
    </td>
 </tr>
 <tr>
-<td>Pin Virtual Machine</td>
+<td>PIN virtual server</td>
 <td>Select <strong>On</strong> to lock the {{site.data.keyword.powerSys_notm}} onto a host system. If you select <strong>On</strong>, the virtual server cannot be moved to a different host. For example, by selecting <strong>On</strong> you would experience an outage during host maintenance.</td>
 </tr>
 <tr>
@@ -102,9 +106,9 @@ The following table provides information about the **Virtual server instance** f
 </tr>
 <tr>
 <td>Cores</td>
-<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <strong>Shared Processors</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement.
+<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <strong>Shared processor</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement.
 
-If you are concerned about performance issues, you can select <strong>Dedicated Processor</strong> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
+If you are concerned about performance issues, you can select <strong>Dedicated processor</strong> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
 </tr>
 <tr>
 <td>Memory</td>
@@ -114,7 +118,7 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
 <td>Create Boot Volume</td>
 <td>Select a version of the IBM-provided AIX or IBM i operating system stock image or select a custom AIX or IBM i operating system image that you previously deployed on-premises. If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image">Configuring a custom image</a>.
 
-<p><strong>Important:</strong> When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SHH login as 'root' appears as being _disabled_.</p>
+<p><strong>Important:</strong> When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SHH login as 'root' appears as being _disabled_.</p>
 
 <p>For IBM i system licensing information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.</p>
 </td>
