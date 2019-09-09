@@ -53,6 +53,9 @@ You can use the {{site.data.keyword.cloud_notm}} console to order your preferred
 
 To order the Direct Link Connect service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 
+If you use the `10.x.x.x` network, you still cannot create overlap with your hosts within IBM Cloud nor with the IBM Cloud services network, which occupies `10.0.0.0/14`, `10.198.0.0/15`, and `10.200.0.0/14`. The following ranges are not allowed in the Federal system and are rejected by IBM servers: `169.254.0.0/16`, `224.0.0.0/4`.
+{: important}
+
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
 
 1. In the **Networking** section, click the **Direct Link Connect** tile.
@@ -62,7 +65,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
 
 1. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
 
-1. From the Create IBM Cloud Direct Link Connect Connection page, complete the fields below.
+2. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
 
    As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
    {: important}
@@ -119,9 +122,9 @@ To order the Direct Link Connect service that creates a connection to the {{site
    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
    <dd></dd>
    </dl>
-2. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
+3. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
-3. Click **Create**. The following message is displayed when your request is submitted successfully.
+4. Click **Create**. The following message is displayed when your request is submitted successfully.
 ![Displays the Direct Link Connect submitted successfully message](./images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
 1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
