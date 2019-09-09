@@ -29,4 +29,4 @@ Complete the following tasks to get into **System Service Tools** (SST) and conf
 4. Enter the `wrksysval qipltype` command and change the value to **0**.
 5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
 
-You should now be able to log in, run STRSST, and manage the newly attached disk as the password is manageable.
+You can now log in, run STRSST, and manage the newly attached disk as the password is manageable.

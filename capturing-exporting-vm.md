@@ -26,11 +26,11 @@ subcollection: power-iaas
 You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CLI or the console. A VM is captured as a volume backed image. The image is stored in new volumes on the storage providers. For example, if a VM is backed by two volumes, one residing on an SSD type storage and the other one on a standard HDD type storage, then the new image would consist of one volume on SSD storage and another volume on standard storage.
 {: shortdesc}
 
-An image can be exported to an IBM **Cloud Object Storage** (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an OVA file. The OVA file is compressed by using _gzip_ before getting uploaded to the IBM COS bucket.
+An image can be exported to an IBM **Cloud Object Storage** (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an OVA file. The OVA file is compressed by using _gzip_ before it gets uploaded to the IBM COS bucket.
 
-When capturing and exporting your VM, you can choose the **image catalog**, **Cloud Object Storage**, or both as destinations. The image catalog resides on the IBM Power SAN. IBM's **Cloud Object Storage** is encrypted and dispersed across multiple geographic locations, and accessed over HTTP using a REST API. This service makes use of the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your **image catalog** to **Cloud Object Storage** at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
+When you capture and export a VM, you can choose the **image catalog**, **Cloud Object Storage**, or both as destinations. The image catalog resides on the IBM Power SAN. IBM's **Cloud Object Storage** is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your **image catalog** to **Cloud Object Storage** at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
 
-You are charged different rates depending on whether you export to the **image catalog** or **Cloud Object Storage**.
+You are charged different rates based on whether you export to the **image catalog** or **Cloud Object Storage**.
 {: important}
 
 ## Using the IBM Cloud CLI to capture and export a VM

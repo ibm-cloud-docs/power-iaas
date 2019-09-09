@@ -13,6 +13,7 @@ subcollection: power-iaas
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -120,6 +121,6 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 6. Enter a **Key name** and your previously generated **Public key**.
 7. Click **Create** to add the SSH key.
 
-    ![Adding your SSH Key](./images/console-ssh-add.png "Adding your SSH Key"){: caption="Figure 2. Adding your SSH Key" caption-side="bottom"}
+    ![Adding your SSH Key](./images/console-ssh-add.png "Adding your SSH Key"){: caption="Figure 6. Adding your SSH Key" caption-side="bottom"}
 
 8. Complete the rest of the fields to successfully create a new instance with a configured SSH key.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-08-28"
+lastupdated: "2019-09-09"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.powerSysFull}} are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or multiple virtual servers that are running either the AIX or IBM i operating systems in a public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that the AIX or IBM i operating system is secure.
 
-Current AIX and IBM i clients can use {{site.data.keyword.powerSysFull}} for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSysFull}} clients can not only stay competitive with the scaling of their infrastructure, but also stay flexible with the management and capacity of their workloads both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premise AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
+Current AIX and IBM i clients can use {{site.data.keyword.powerSysFull}} for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSysFull}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
 {: #apvs-key-features}
@@ -37,7 +37,7 @@ The following are some of the key features for {{site.data.keyword.powerSys_notm
 ### Straightforward billing
 {: #apvs-billing}
 
-The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify.  You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
+The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
 ### Hybrid cloud environment
 {: #apvs-hybrid}
@@ -70,13 +70,13 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 [Power System E880 (9119-MHE) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}
 
 * 9 TB memory
-* 8 x 16 Gigabit PCI Express Dual-port Fibre Channel (FC)
+* 8 x 16-Gigabit PCI Express Dual-port Fibre Channel (FC)
 * 10 x 10 Gigabit Ethernet-SR PCI Express Dual-port
 
 [Power System S922 (9009-22A) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}
 
 * 384 GB memory
-* 2 x 16 Gigabit PCI Express Dual-port FC
+* 2 x 16-Gigabit PCI Express Dual-port FC
 * 3 x 10 Gigabit Ethernet-SR PCI Express Dual-port
 
 **Storage**
@@ -114,7 +114,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
   For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
   {: note}
 
-The following figure displays the the basic configuration for a public and private network:
+The following figure displays the basic configuration for a public and private network:
 
 ![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"}
 

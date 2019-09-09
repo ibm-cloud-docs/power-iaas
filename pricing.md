@@ -23,7 +23,7 @@ subcollection: power-iaas
 {: #pricing-virtual-server}
 
 {{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR) up to 15 Cores and 320 GB of memory and also with enterprise LPARs up to 143 cores and 8192 GB of memory. With these options, a {{site.data.keyword.powerSys_notm}} can meet any business workload requirement. You are billed at a monthly rate.
-{:shortdesc}
+{: shortdesc}
 
 ## Monthly usage
 {: #pricing-monthly-usage}
@@ -33,7 +33,7 @@ subcollection: power-iaas
 ### Monthly usage example
 {: #pricing-monthly-usage-example}
 
-In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has 1 core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is pro-rated by the hour for the resources deployed.
+In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is pro-rated by the hour for the resources deployed.
 
 | Hours elapsed in a month       | Amount charged   |  LPAR description     |
 | ----------------------------- | ----------------- | --------------------  |

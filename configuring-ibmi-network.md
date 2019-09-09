@@ -22,7 +22,7 @@ subcollection: power-iaas
 # Connecting to an IBM i Cloud virtual machine (VM) by using port forwarding
 {: #connect-ibmi}
 
-Review all of the information in this topic to connect to your IBM i Cloud VM by using the ACS client. To forward the various IBM i ports, enter the following command on a Linux-based system as a `root` user:
+Review all of the following information to connect to your IBM i Cloud VM by using the ACS client. To forward the various IBM i ports, enter the following command on a Linux-based system as a `root` user:
 {: shortdesc}
 
 ```shell
@@ -111,7 +111,7 @@ Start the required TCP servers on your IBM i operating system by performing the 
 ## Starting a 5250 session on your IBM i VM from ACS
 {: #starting-session}
 
-To get a 5250 session on your IBM i VM from ACS, you’ll either need to configure
+To get a 5250 session on your IBM i VM from ACS, you need to either configure
 your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
 
 1. Enter the `cfgtcp` command.

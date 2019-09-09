@@ -100,7 +100,7 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
     ![Displaying storage information](./images/console-attach-volume.png "Displaying storage information"){: caption="Figure 13. Displaying storage information" caption-side="bottom"}
 
-2. Create a new data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. In the following example, the name **AIX-7200-03-03-altdisk** is the volume name:
+2. Create a data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. In the following example, the name **AIX-7200-03-03-altdisk** is the volume name:
 
     ![Displaying storage information](./images/console-create-volume-alt.png "Displaying storage information"){: caption="Figure 14. Displaying storage information" caption-side="bottom"}
 

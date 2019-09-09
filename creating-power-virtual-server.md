@@ -18,7 +18,6 @@ subcollection: power-iaas
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:table: .aria-labeledby="caption"}
 {:important: .important}
 
 # Creating a Power Systems Virtual Server
@@ -85,7 +84,7 @@ The following table provides information about the **Virtual server instance** f
     <dt><strong>No preference</strong></dt>
   <dd>Select this option if you do not have a hosting preference.</dd>
     <dt><strong>Different  Server</strong></dt>
-  <dd>Select this option to host each instance on a different server.  You can use this option if you are concerned about a single-server outage occurring that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
+  <dd>Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. </dd>
   <dt><strong>Numerical Prefix</strong></dt>
   <dd>Select this option to add numbers before the name of the virtual server. For example, if the first {{site.data.keyword.powerSys_notm}} name is <i>Austin</i> the next name for the virtual instance is <i>1Austin</i></dd>
   <dt><strong>Numerical Postfix</strong></dt>
@@ -130,7 +129,7 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
   <dt><strong>Create Data Volume</strong></dt>
   <dd>Click <strong>Add</strong> to create a new data volume that can be used for more storage for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple instances of {{site.data.keyword.powerSys_notm}} to write data to the same data volume, you must select <strong>On</strong> from the <strong>Shareable</strong> field. </dd>
   <dt><strong>Attach Existing Data Volume</strong></dt>
-  <dd>Select an existing data volume for more storage for your {{site.data.keyword.powerSys_notm}} instance. If the list does not display a data volume that you have previously used, it might be because that data volume was created with a different IBM Cloud account.</dd>
+  <dd>Select an existing data volume for more storage for your {{site.data.keyword.powerSys_notm}} instance. If the list does not display a data volume that you previously used, it might be because that data volume was created with a different IBM Cloud account.</dd>
 </dl>
 </td>
 </tr>

@@ -24,7 +24,7 @@ subcollection: power-iaas
 {: #configuring-custom-image}
 
 You can bring your own customized AIX or IBM i operating system (OS) image to deploy within a {{site.data.keyword.powerSysFull}}.
-{:shortdesc}
+{: shortdesc}
 
   You cannot transfer an OS license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running in the cloud environment. The license cost is factored into the overall hourly billing rate.
   {: note}
@@ -35,10 +35,10 @@ You can bring your own customized AIX or IBM i operating system (OS) image to de
 Before you can use a custom image as the boot volume, review the following information:
 
 * You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage).
-* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window} and [Exporting images ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}.   You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
+* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window} and [Exporting images ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}. You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
 * You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field. To view a list of the supported AIX and IBM i OS technology levels, see the following system software maps:
 
-    Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` install of the OS over an existing LPAR that was provisioned.
+    Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` installation of the OS over an existing LPAR that was provisioned.
     {: important}
 
   **AIX**
@@ -104,7 +104,7 @@ To view your credential information, such as your secret and access keys, click 
 
 You must [Create a Power Systems Virtual Server service](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server) before you can upload a custom image.
 
-1. Before creating a new {{site.data.keyword.powerSysFull}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
+1. Before you create a new {{site.data.keyword.powerSysFull}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
 
   ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
 
@@ -112,7 +112,7 @@ You must [Create a Power Systems Virtual Server service](/docs/infrastructure/po
 
   ![Importing a custom image in the boot images menu](./images/console-boot-images.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
 
-1. After clicking **Import**, enter all of the required information.
+1. After you click **Import**, enter all of the required information.
 
   ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 9. Importing a custom image in the boot images menu" caption-side="bottom"}
 

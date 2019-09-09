@@ -45,7 +45,7 @@ For more information about IAM, review the following information:
 
 You can use platform access roles to enable users to complete tasks on {{site.data.keyword.cloud_notm}} resources, such as creating users or adding services.
 
-The following table displays the IAM platform access roles and the corresponding type of control allowed by {{site.data.keyword.powerSys_notm}}:
+The following table displays the IAM platform access roles and the corresponding type of control that is allowed by {{site.data.keyword.powerSys_notm}}:
 
 | Platform access role | Type of access allowed |
 |-----------|-------------------------|
@@ -70,7 +70,7 @@ The following table displays the IAM service access roles and the corresponding 
 ## User access scenarios
 {: #user-access-scenarios}
 
-The following access scenarios cover the steps that are required to add a new user and modify the permissions for an existing user.
+The following access scenarios cover the steps that are required to add a user and modify the permissions for an existing user.
 
 ### Inviting a new user to view {{site.data.keyword.powerSys_notm}} resources
 {: #inviting-a-new-user-to-create-or-manage-resources}
@@ -88,7 +88,7 @@ Complete the following steps in IAM to enable a user to view {{site.data.keyword
 
     ![Selecting a Power Systems Virtual Server service for a new user](./images/invite_users2.png "Selecting the Power Systems Virtual Server service for a new user from the IAM UI"){: caption="Figure 2. Selecting a Power Systems Virtual Server service for a new user" caption-side="bottom"}
 
-4. Select the platform access role that you want to assign to the users. In this scenario, the user can only view {{site.data.keyword.cloud_notm}} and {{site.data.keyword.powerSys_notm}} resources.
+4. Select the platform access role that you want to assign to the users. In this scenario, the user can view only {{site.data.keyword.cloud_notm}} and {{site.data.keyword.powerSys_notm}} resources.
 
     ![Selecting roles for a new user from the IAM UI](./images/invite_users3.png "Selecting roles for a new user from the IAM UI"){: caption="Figure 3. Selecting roles for a new user from the IAM UI]" caption-side="bottom"}
 

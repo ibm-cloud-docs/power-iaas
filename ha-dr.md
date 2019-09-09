@@ -36,7 +36,7 @@ After you purchase the software, you can download it from [IBM Entitled Systems 
 Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment.
 
 * When you are creating the virtual servers that are part of the PowerHA SystemMirror cluster, you must select **Different Server** from the **Colocation Rules** field.
-![Displays colocation rules field](/images/hadr2.png "Displays colocation rules field"){: caption="Figure 1. Creating virtual servers on different servers" caption-side="bottom"}
+![Displays colocation rules field](/images/hadr2.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
 
 * When you are creating storage volumes (disks) for the virtual severs that are part of the PowerHA SystemMirror cluster, you must select **On** from the **Shareable** field.
 ![Displays sharable rules field](/images/hadr1.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
@@ -52,4 +52,4 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} UI to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
