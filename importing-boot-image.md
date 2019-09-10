@@ -54,7 +54,7 @@ You must [Create a Power Systems Virtual Server service](/docs/infrastructure/po
 
   ![Importing a boot image](./images/console-boot-image-import.png "Importing a boot image"){: caption="Figure 1. Importing a boot image" caption-side="bottom"}
 
-1. After you click **Import**, enter all of the required information.
+2. After you click **Import**, enter all of the required information.
 
   ![Completing the boot image fields](./images/console-boot-image-fields.png "Completing the boot image fields"){: caption="Figure 2. Completing the boot image fields" caption-side="bottom"}
 
@@ -67,6 +67,6 @@ Refer to the following table to complete the necessary fields to import a boot i
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field. |
 | Image Path | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 
-1. Find your newly uploaded boot image under the **Boot images** tab.
+3. Find your newly uploaded boot image under the **Boot images** tab.
 
   ![Finding your newly uploaded boot image](./images/console-boot-image-tab.png "Finding your newly uploaded boot image"){: caption="Figure 3. Finding your newly uploaded boot image" caption-side="bottom"}
