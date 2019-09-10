@@ -21,10 +21,10 @@ subcollection: power-iaas
 {:download: .download}
 {:important: .important}
 
-# Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers
+# Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).You can use the {{site.data.keyword.cloud_notm}} console to order your preferred Direct Link Connect service:
+You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link). You can use the {{site.data.keyword.cloud_notm}} console to order your preferred Direct Link Connect service:
 {: shortdesc}
 
 * [IBM Cloud Direct Link Exchange](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-exchange)
@@ -41,16 +41,16 @@ Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
 1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
-1. Review some of the basic Direct Link Connect networking concepts:
+2. Review some of the basic Direct Link Connect networking concepts:
 
    * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
    * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
    * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
    * [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
-1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
+3. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
 
-1. In the **Networking** section, click the **Direct Link Connect** tile.
+4. In the **Networking** section, click the **Direct Link Connect** tile.
 ![The Direct Link catalog tile](./images/directlink1.png "The Direct Link catalog tile"){: caption="Figure 1. The Direct Link Connect tile" caption-side="bottom"}
 
 1. From the Direct Link Connect catalog entry, click **Create**.
