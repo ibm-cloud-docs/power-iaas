@@ -69,4 +69,4 @@ Refer to the following table to complete the necessary fields to import a boot i
 
 1. Find your newly uploaded boot image under the **Boot images** tab.
 
-  ![Finding your newly uploaded boot image](./images/console-boot-image-tab.png "Finding your newly uploaded boot image"){: caption="Figure 2. Finding your newly uploaded boot image" caption-side="bottom"}
+  ![Finding your newly uploaded boot image](./images/console-boot-image-tab.png "Finding your newly uploaded boot image"){: caption="Figure 3. Finding your newly uploaded boot image" caption-side="bottom"}
