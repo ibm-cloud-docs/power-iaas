@@ -24,18 +24,15 @@ subcollection: power-iaas
 # Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSys_notm}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
+You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). You can use the {{site.data.keyword.cloud_notm}} console to order your preferred Direct Link Connect service:
 {: shortdesc}
-
-  Order a second Direct Link Connect connection for backup purposes.
-  {: tip}
-
-You can use the {{site.data.keyword.cloud_notm}} console to order your preferred Direct Link Connect service.
 
 * [IBM Cloud Direct Link Exchange](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-exchange)
 * [IBM Cloud Direct Link Connect](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect)
 * [IBM Cloud Direct Link Dedicated](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-dedicated)
 * [IBM Cloud Direct Link Dedicated](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-dedicated-hosting)
+
+Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. To review the charges for Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/infrastructure/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
 
 ## Before you begin
 {: #before-direct-link-connect}
@@ -43,32 +40,32 @@ You can use the {{site.data.keyword.cloud_notm}} console to order your preferred
 1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
 2. Review some of the basic Direct Link Connect networking concepts:
 
-* [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
-* [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
-* [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
-* [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
+   * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
+   * [Direct Link Connect details](/docs/infrastructure/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
+   * [Direct Link Connect limitations](/docs/infrastructure/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
+   * [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
-## Steps to order Direct Link Connect
+## Ordering Direct Link Connect
 {: #steps-to-order-direct-link-connect}
 
 To order the Direct Link Connect service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 
-If you use the `10.x.x.x` network, you still cannot create overlap with your hosts within IBM Cloud nor with the IBM Cloud services network, which occupies `10.0.0.0/14`, `10.198.0.0/15`, and `10.200.0.0/14`. The following ranges are not allowed in the Federal system and are rejected by IBM servers: `169.254.0.0/16`, `224.0.0.0/4`.
-{: important}
+Order a second Direct Link Connect connection for backup purposes.
+{: tip}
 
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials. Your account must have correct authorization to order the Direct Link Connect service.
 
-1. In the **Networking** section, click the **Direct Link Connect** tile.
-![The Direct Link catalog tile](./images/directlink1.png "The Direct Link catalog tile"){: caption="Figure 1. Direct Link Connect tile from the IBM Cloud catalog." caption-side="bottom"}
+2. In the **Networking** section, click the **Direct Link Connect** tile.
+![The Direct Link catalog tile](./images/directlink1.png "The Direct Link catalog tile"){: caption="Figure 1. The Direct Link Connect tile" caption-side="bottom"}
 
-1. From the Direct Link Connect catalog entry, click **Create**.
+3. From the Direct Link Connect catalog entry, click **Create**.
 
-1. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
+4. From the IBM Cloud Direct Link page, click **Order Direct Link Connect**.
 
-2. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields.
+5. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields. As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-   As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
-   {: important}
+    Your Power private subnet cannot be in the `10.x.x.x` range. This range is blocked. Also, the following ranges are not allowed in the Federal system and are rejected by IBM servers: `169.254.0.0/16`, `224.0.0.0/4`.
+    {: important}
 
     ![Completing the Direct Connect Link fields](./images/directlink2.png "Completing the Direct Connect Link fields"){: caption="Figure 2. Completing the Direct Connect Link fields" caption-side="bottom"}
 
@@ -122,22 +119,22 @@ If you use the `10.x.x.x` network, you still cannot create overlap with your hos
    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
    <dd></dd>
    </dl>
-3. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
+6. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
-4. Click **Create**. The following message is displayed when your request is submitted successfully.
+7. Click **Create**. The following message is displayed when your request is submitted successfully.
 ![Displays the Direct Link Connect submitted successfully message](./images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
-1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
+8. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
     It can take IBM Cloud support up to three business days to create the Direct Link Connect connection.
     {: note}
 
-1. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, open a [new case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) for the {{site.data.keyword.powerSys_notm}} support team.
+9. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, open a [new case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) for the {{site.data.keyword.powerSys_notm}} support team.
 
     1. In the new case's description field, add the Direct Link Connect case number.
     2. Copy the {{site.data.keyword.powerSys_notm}} case IAM Service ID that the system automatically generated.
 
-1. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
+10. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
 
   ```shell
   Link Speed:                  1000 Mbps
@@ -152,7 +149,7 @@ If you use the `10.x.x.x` network, you still cannot create overlap with your hos
   ```
   {: screen}
 
-1. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
+11. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
 
   ```shell
   Customer name:
@@ -168,4 +165,4 @@ If you use the `10.x.x.x` network, you still cannot create overlap with your hos
   ```
   {: codeblock}
 
-1. The {{site.data.keyword.powerSys_notm}} case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
+12. The {{site.data.keyword.powerSys_notm}} case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
