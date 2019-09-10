@@ -59,7 +59,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 1. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields. As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-    Your Power private subnet cannot be in the `10.x.x.x` range. This range is blocked. Also, the following ranges are not allowed in the Federal system and are rejected by IBM servers: `169.254.0.0/16`, `224.0.0.0/4`.
+    Your Power private subnet cannot be in the `10.x.x.x`,`169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked.
     {: important}
 
     ![Completing the Direct Connect Link fields](./images/directlink2.png "Completing the Direct Connect Link fields"){: caption="Figure 2. Completing the Direct Connect Link fields" caption-side="bottom"}
@@ -114,9 +114,9 @@ Order a second Direct Link Connect connection for backup purposes.
    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
    <dd></dd>
    </dl>
-1. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
+2. Read the **Master Service Agreement** and select the check box. You must read and understand the **Master Service Agreement** as it contains important technical information.
 
-1. Click **Create**. The following message is displayed when your request is submitted successfully.
+3. Click **Create**. The following message is displayed when your request is submitted successfully.
 ![Displays the Direct Link Connect submitted successfully message](./images/directlink3.png "Displays the Direct Link Connect submitted successfully message"){: caption="Figure 3. Direct Link Connect success message." caption-side="bottom"}
 
 1. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
