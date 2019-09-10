@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-8-06"
 
-keywords: activity tracker service, regulatory audit requirements, abnormal activity
+keywords: custom image, boot image, upload, deploy
 
 subcollection: power-iaas
 
@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:important: .important}
 
 # Deploying a custom image within a Power Systems Virtual Server
-{: #configuring-custom-image}
+{: #deploying-custom-image}
 
 You can bring your own customized AIX or IBM i operating system (OS) image to deploy within a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
@@ -81,7 +81,7 @@ Before you can use a custom image as the boot volume, review the following infor
 
 Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. For example, _?_, _=_, _<_, and other special characters might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage Tutorial](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
 
-## Generate secret and access keys with Hash-based Message Authentication Code (HMAC)
+## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
 
 1. You can generate secret and access keys when you create the service credentials for the IBM Cloud Storage object. To create the service credentials, you must have `Writer` access for the **Object Storage** bucket.
@@ -99,12 +99,12 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 To view your credential information, such as your secret and access keys, click the dropdown arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 
-## Uploading a custom image
+## Uploading a custom boot image
 {: #cci-uploading}
 
 You must [Create a Power Systems Virtual Server service](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server) before you can upload a custom image.
 
-1. Before you create a new {{site.data.keyword.powerSysFull}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
+1. Before you create a new {{site.data.keyword.powerSys_notm}}}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
 
   ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
 

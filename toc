@@ -20,6 +20,7 @@ IBM Power Systems Virtual Servers
         configuring-custom-image.md
         resizing-storage-volume.md
         capturing-exporting-vm.md
+        importing-boot-image.md
 
     {: .topicgroup}
     Networking
