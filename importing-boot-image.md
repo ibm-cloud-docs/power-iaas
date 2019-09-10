@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 
 # Importing a boot image
-{: #capturing-exporting-vm}
+{: #importing-boot-image}
 
 You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the console.
 {: shortdesc}
