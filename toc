@@ -32,6 +32,7 @@ IBM Power Systems Virtual Servers
     AIX
         creating-vm-ssh-keys.md
         restoring-aix-mksysb-image.md
+        downloading-aix-iso-image.md
 
     {: .topicgroup}
     IBM i
