@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-11"
+lastupdated: "2019-09-12"
 
 keywords: aix iso, install media, entitled software support, ess
 
@@ -58,34 +58,35 @@ The first IBM ID to register a customer number becomes the primary contact for t
 1. Click the **Click here to use HTTP** link to download the ISO image by using HTTP. You can also click the **Download now** button.
 
 AIX installation DVDs are delivered as ISO image files, while other installation images are delivered as compressed _tar_ archives. In some cases, AIX ISO images are zipped and can be unzipped by using the [AIX Toolbox for Linux Application](https://www.ibm.com/support/pages/aix-toolbox-linux-applications-overview). After you download an ISO image, it is not necessary to burn a DVD to access the contents of the ISO image.
-{: note}
+{: tip}
 
-## Copying your ISO image to an AIX virtual machine (VM)
+## Copying and installing your ISO image to an AIX virtual machine (VM)
+{: copying-installing-iso
 
 After you download an AIX installation DVD as an ISO image, you must copy the image to an existing AIX VM's file system. To copy the image, you must use Secure Copy Protocol (SCP). SCP is a protocol for securely transferring files between a local and a remote host or between two remote hosts.
 
-1. Copy the ISO image to an existing AIX VM's file system by using the ([scp](https://www.ibm.com/support/knowledgecenter/ST5Q4U_1.5.2/com.ibm.storwize.v7000.unified.152.doc/usgr_usng_scp.html){: external}) command.
+1. Copy the ISO image to an existing AIX VM's file system by using the [`scp`](https://www.ibm.com/support/knowledgecenter/ST5Q4U_1.5.2/com.ibm.storwize.v7000.unified.152.doc/usgr_usng_scp.html){: external}) command.
+
+The scp command does not work unless you are on a public network.
+{: important}
 
 ```shell
 scp [Options] [[User@]From_Host:]Source_File [[User@]To_Host:][Destination_File]
 ```
 {: pre}
 
-The scp command does not work unless you are on a public network.
-{: important}
-
-2. Run the [loopmount](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make an image file available as a file system by using the loopback device.
+1. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make the ISO image available as a file system by using the loopback device.
 
 ```shell
 loopmount {-i imagefile | -l device} [-o mount options -m mountpoint]
 ```
 {: pre}
 
-3\. Use the [installp](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. You must use the `-R` flag to specify your ISO image's path.
+3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. You must use the `-R` flag to specify your ISO image's path.
 
 ```shell
 installp [-R _path_] [-a |-a -c [-N]] [-_eLogFile_] [-V _Number_  [-_dDevice_] [-E] [-Y] [-b] [-S] [-B] [-D] [-I] [-p] [-Q] [-q] [ -v] [-X] [-F | -g] [-O { [r] [s] [u]}] [-t _SaveDirectory_ ] [-w] [-_zBlockSize_] { _FilesetName_ [_Level_]... | -f _ListFile_ | all}
 ```
 {: pre}
 
-4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing the following at a command prompt, `lslpp -aL | grep -i idsldap`.
+4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL | grep -i idsldap`, at a command line.
