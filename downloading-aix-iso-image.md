@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 {:external: .external}
 
-# Using Entitled Software Support (ESS) to download ISO images of AIX installation media
+# Using Entitled Software Support (ESS) to download ISO images
 {: using-ess-iso}
 
 Entitled software means that the software is covered by a valid Software Maintenance Agreement (SWMA). If you obtain software maintenance by using a custom SWMA contract (as opposed to a standard SWMA), you might need to register on the [Entitled Software Support (ESS) website to access the custom SWMA contract. Without access to the customer SWMA contract, you might not be able to download ISO images. You cannot download all levels of entitled software. For example, you cannot download installation media for AIX technology levels that are outdated.
