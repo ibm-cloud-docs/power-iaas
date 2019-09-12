@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:external: .external}
 
 # Using Entitled Software Support (ESS) to download ISO images
-{: using-ess-iso}
+{: #using-ess-iso}
 
 Entitled software means that the software is covered by a valid Software Maintenance Agreement (SWMA). If you obtain software maintenance by using a custom SWMA contract (as opposed to a standard SWMA), you might need to register on the [Entitled Software Support (ESS) website to access the custom SWMA contract. Without access to the customer SWMA contract, you might not be able to download ISO images. You cannot download all levels of entitled software. For example, you cannot download installation media for AIX technology levels that are outdated.
 {: shortdesc}
@@ -31,7 +31,7 @@ The ESS customer number registration process can take several days.
 {: important}
 
 ## Before you begin
-{: before-you-begin}
+{: #before-you-begin}
 
 Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: external} and the IBM customer number under which the software was ordered. You must also have one of the following items:
 
@@ -43,7 +43,7 @@ Before you can download an ISO image of an AIX installation DVD, you must have a
 If you are missing any of the listed items, contact your IBM or Business Partner Power Systems sales representative with the machine type-model and serial number on which the software is licensed. If you are uncertain of the machine type-model of a server on which AIX is already running in your environment, enter the commands `lsconf` and `head` and look for the **System Model** and **Machine Serial Number** fields. Registering with a serial number provides access only to the entitled software download.
 
 ## Using the ESS website to download an ISO image
-{: downloading-ess-iso}
+{: #downloading-ess-iso}
 
 1. Go to the ESS website and log in with your IBM ID.
 2. Click **Register customer number** in the navigation pane and enter either a **Hardware or Software serial number** or **Customer Number (include country code)**. Decide whether you want to register your customer number permanently and click **Submit**.
@@ -61,7 +61,7 @@ AIX installation DVDs are delivered as ISO image files, while other installation
 {: tip}
 
 ## Copying and installing your ISO image to an AIX virtual machine (VM)
-{: copying-installing-iso}
+{: #copying-installing-iso}
 
 After you download an AIX installation DVD as an ISO image, you must copy the image to an existing AIX VM's file system. To copy the image, you must use Secure Copy Protocol (SCP). SCP is a protocol for securely transferring files between a local and a remote host or between two remote hosts.
 
