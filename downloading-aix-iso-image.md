@@ -61,7 +61,7 @@ AIX installation DVDs are delivered as ISO image files, while other installation
 {: tip}
 
 ## Copying and installing your ISO image to an AIX virtual machine (VM)
-{: copying-installing-iso
+{: copying-installing-iso}
 
 After you download an AIX installation DVD as an ISO image, you must copy the image to an existing AIX VM's file system. To copy the image, you must use Secure Copy Protocol (SCP). SCP is a protocol for securely transferring files between a local and a remote host or between two remote hosts.
 
