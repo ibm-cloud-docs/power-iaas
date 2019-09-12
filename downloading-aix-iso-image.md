@@ -46,10 +46,10 @@ If you are missing any of the listed items, contact your IBM or Business Partner
 {: defining-aix-helper-vm}
 
 1. Go to the ESS website and log in with your IBM ID.
-2. Click **Register customer number** in the navigation pane and enter either a **Hardware or Software serial number** or **Customer Number (include country code)**. Decide whether you want to register your customer number permanently and click **Submit**.
+1. Click **Register customer number** in the navigation pane and enter either a **Hardware or Software serial number** or **Customer Number (include country code)**. Decide whether you want to register your customer number permanently and click **Submit**.
 
-The first IBM ID to register a customer number becomes the primary contact for that customer number. If you attempt to register a customer number that already has a primary contact, you're offered the option of sending a request. The request goes to the customer number's primary contact and asks for access. You are not given access until the primary contact responds to that request.
-{: note}
+    The first IBM ID to register a customer number becomes the primary contact for that customer number. If you attempt to register a customer number that already has a primary contact, you're offered the option of sending a request. The request goes to the customer number's primary contact and asks for access. You are not given access until the primary contact responds to that request.
+    {: note}
 
 1. After IBM has registered the customer number or server, click **Software downloads** under **My entitled software** in the navigation pane.
 1. Select a category and group.
@@ -67,26 +67,26 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
 
 1. Copy the ISO image to an existing AIX VM's file system by using the [`scp`](https://www.ibm.com/support/knowledgecenter/ST5Q4U_1.5.2/com.ibm.storwize.v7000.unified.152.doc/usgr_usng_scp.html){: external}) command.
 
-The scp command does not work unless you are on a public network.
-{: important}
+    The scp command does not work unless you are on a public network.
+    {: important}
 
-```shell
-scp [Options] [[User@]From_Host:]Source_File [[User@]To_Host:][Destination_File]
-```
-{: pre}
+    ```shell
+    scp [Options] [[User@]From_Host:]Source_File [[User@]To_Host:][Destination_File]
+    ```
+    {: pre}
 
 1. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make the ISO image available as a file system by using the loopback device.
 
-```shell
-loopmount {-i imagefile | -l device} [-o mount options -m mountpoint]
-```
-{: pre}
+    ```shell
+    loopmount {-i imagefile | -l device} [-o mount options -m mountpoint]
+    ```
+    {: pre}
 
-3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. You must use the `-R` flag to specify your ISO image's path.
+1. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. You must use the `-R` flag to specify your ISO image's path.
 
-```shell
-installp [-R _path_] [-a |-a -c [-N]] [-_eLogFile_] [-V _Number_  [-_dDevice_] [-E] [-Y] [-b] [-S] [-B] [-D] [-I] [-p] [-Q] [-q] [ -v] [-X] [-F | -g] [-O { [r] [s] [u]}] [-t _SaveDirectory_ ] [-w] [-_zBlockSize_] { _FilesetName_ [_Level_]... | -f _ListFile_ | all}
-```
-{: pre}
+    ```shell
+    installp [-R _path_] [-a |-a -c [-N]] [-_eLogFile_] [-V _Number_  [-_dDevice_] [-E] [-Y] [-b] [-S] [-B] [-D] [-I] [-p] [-Q] [-q] [ -v] [-X] [-F | -g] [-O { [r] [s] [u]}] [-t _SaveDirectory_ ] [-w] [-_zBlockSize_] { _FilesetName_ [_Level_]... | -f _ListFile_ | all}
+      ```
+    {: pre}
 
-4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL | grep -i idsldap`, at a command line.
+1. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL | grep -i idsldap`, at a command line.
