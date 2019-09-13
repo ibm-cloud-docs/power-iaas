@@ -36,8 +36,8 @@ IBM Power Systems Virtual Servers
 
     {: .topicgroup}
     IBM i
-        configuring-ibmi-network.md
-        managing-ibmi-volume.md
+        configuring-ibmi-vm.md
+        connecting-ibmi-port.md
         ibmi-license-info.md
     {: .navgroup-end}
 

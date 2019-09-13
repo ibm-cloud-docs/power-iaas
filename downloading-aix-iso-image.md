@@ -86,4 +86,4 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
       ```
     {: pre}
 
-3. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL | grep -i idsldap`, at a command line.
+3. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line, at a command line.
