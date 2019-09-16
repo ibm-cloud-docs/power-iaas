@@ -36,7 +36,7 @@ Under the **Subnet** tab in your dashboard, you can see a single subnet. There i
 
 Next, check to see whether the two internal IP addresses are configured correctly. To do this, enter the `CFGTCP` command and choose option `1`.
 
-![Using the CFGTCP command](./images/terminal-ibmi-cfgtcp.png "Using the CFGTCP command"){: caption="Figure 3. Using the CFGTCP command]" caption-side="bottom"}
+![Using the CFGTCP command](./images/terminal-ibmi-cfgtcp.png "Using the CFGTCP command"){: caption="Figure 3. Using the CFGTCP command" caption-side="bottom"}
 
 If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
@@ -85,10 +85,10 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
 
 3. Go to the IBM i VM and start the telnet server for the console:
 
-```shell
-strtcpsvr server(*TELNET)
-```
-{: pre}
+    ```shell
+    strtcpsvr server(*TELNET)
+    ```
+    {: pre}
 
 For ACS, you need to configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
 
