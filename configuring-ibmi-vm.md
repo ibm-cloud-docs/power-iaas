@@ -32,22 +32,22 @@ To verify that `cloud-init` configured your IP addresses correctly, check your V
 
 Under the **Subnet** tab in your dashboard, you can see a single subnet. There is an additional internal IP address that represents the external IP address. Configuration information for the external IP address does not exist when you check the VM. The network forwards traffic from the internal IP address to the external IP address.
 
-![Checking your VM subnet](./images/console-ibmi-subnet.png "Checking your VM subnet"){: caption="Figure 2. Checking your VM subnet caption-side="bottom"}
+![Checking your VM subnet](./images/console-ibmi-subnet.png "Checking your VM subnet"){: caption="Figure 2. Checking your VM subnet" caption-side="bottom"}
 
 Next, check to see whether the two internal IP addresses are configured correctly. To do this, enter the `CFGTCP` command and choose option `1`.
 
-![Using the CFGTCP command](./images/terminal-ibmi-cfgtcp.png "Using the CFGTCP command]"){: caption="Figure 3. Using the CFGTCP command]" caption-side="bottom"}
+![Using the CFGTCP command](./images/terminal-ibmi-cfgtcp.png "Using the CFGTCP command"){: caption="Figure 3. Using the CFGTCP command]" caption-side="bottom"}
 
 If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
 Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the _lpar_.
 
-![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 4. DSPLICKEY command" caption-side="bottom"}
+![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 4. Using the DSPLICKEY command" caption-side="bottom"}
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST, and DST passwords are expired. To change the password, you need to boot into DST by changing the `SYSVAL QIPLTYPE` to **1** and redoing an IPL.
+By default, the SST and DST passwords are expired. To change the password, you need to boot into DST by changing the `SYSVAL QIPLTYPE` to **1** and redoing an IPL.
 
 ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
@@ -60,22 +60,22 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
 
 1. Start the **SSHD** server on the VM:
 
-```shell
-strtcpsvr server(*SSHD)
-```
-{: pre}
+    ```shell
+    strtcpsvr server(*SSHD)
+    ```
+    {: pre}
 
-On a Linux or Mac system, you would run a command similar to the following example:
+    On a Linux or Mac system, you would run a command similar to the following example:
 
-```shell
-ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
-```
-{: pre}
+    ```shell
+    ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
+    ```
+    {: pre}
 
-If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
-{: note}
+    If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
+    {: note}
 
-1. To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
+2. To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
     1. Enter the `cfgtcp` command.
     2. Select option **20** (Configure TCP/IP applications).
     3. Select option **11** (configure TELNET).
@@ -83,7 +83,7 @@ If the system is denying you permission, you might have to use `sudo` in front o
     5. Select `QAUTOVRT` with option **2** (change).
     6. Change the value from **0** to the number of auto-configured consoles you want to be able to connect concurrently.
 
-2. Go to the IBM i VM and start the telnet server for the console:
+3. Go to the IBM i VM and start the telnet server for the console:
 
 ```shell
 strtcpsvr server(*TELNET)
@@ -101,7 +101,7 @@ Complete the following tasks to get into **System Service Tools** (SST) and conf
 
 1. Enter the `wkrsysval qipltype` command and change the value to **1**.
 2. Enter the `pwrdwnsys` command to restart the IBM i operating system (OS).
-3. At the **Dedicated Service Tools** (DST) console on restart, enter `QSECOFR/QSECOFR` and change the password.
+3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
 4. Enter the `wrksysval qipltype` command and change the value to **0**.
 5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
 
