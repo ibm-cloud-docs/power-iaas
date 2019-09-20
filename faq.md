@@ -46,7 +46,7 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 {: #image}
 {: faq}
 
-Yes. This function is known as **bring your own image**. For more information, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}

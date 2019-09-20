@@ -58,7 +58,7 @@ You can configure and customize the following options when you create a {{site.d
 ### Bring your own image
 {: #apvs-own-image}
 
-IBM provides you with stock AIX and IBM i operating system images when you create a {{site.data.keyword.powerSys_notm}}. However, you can bring your own custom AIX or IBM i operating system image that you have previously deployed and tested. For more information, see [Configuring a custom image](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-custom-image#configuring-custom-image).
+IBM provides you with stock AIX and IBM i operating system images when you create a {{site.data.keyword.powerSys_notm}}. However, you can bring your own custom AIX or IBM i operating system image that you have previously deployed and tested. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
 
 ## Hardware specifications
 {: #apvs-hardware-specifications}
