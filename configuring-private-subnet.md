@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-09-06"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets
 
 subcollection: power-iaas
 
@@ -68,6 +68,7 @@ The following table lists the number of available addresses in a subnet, based o
 |      /27        |          27         |
 |      /28        |          11         |
 
-## Connecting subnets
-{: connecting-subnets}
+## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
+{: #connecting-subnet}
 
+ You can link private subnets within a colocation (colo) that are on the same virtual LAN (VLAN). You must open a ticket with IBM support to enable this functionality.
