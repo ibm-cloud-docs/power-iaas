@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 A {{site.data.keyword.cloud_notm}} integrates your IBM AIX and IBM i capabilities into the IBM Cloud experience. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out.
 
-You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs. With a {{{site.data.keyword.powerSys_notm}}, you can create a hybrid cloud environment that allows you to easily control workload demands.
+You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs. With a {{site.data.keyword.powerSys_notm}}, you can create a hybrid cloud environment that allows you to easily control workload demands.
 
 ## Terminology
 {: #gs-terminology}
