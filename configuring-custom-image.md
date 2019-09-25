@@ -104,12 +104,12 @@ To view your credential information, such as your secret and access keys, click 
 
 You must [Create a Power Systems Virtual Server service](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server) before you can upload a custom image.
 
-1. Before you create a new {{site.data.keyword.powerSys_notm}}}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
-
-  ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
+1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
 
   The **Source image path** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
   {: important}
+
+  ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
 
 1. You can also choose to import a boot image from the services **Boot images** menu by clicking **Import**.
 

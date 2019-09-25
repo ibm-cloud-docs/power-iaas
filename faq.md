@@ -138,9 +138,8 @@ IBM uses the same tools that are on an on-premises system.
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-356.ibm.com/partnerworld/gsd/homepage.do).
 
-<!--
-## Is there a price difference between shared or dedicated cores?
-{: #shared}
+## What formats should I use when uploading a custom image?
+{: #custom-image}
 {: faq}
 
-No. Performance of shared cores is almost identical to dedicated cores. However, as server utilization spikes, there might be a cache or memory latency impacts. -->
+Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
