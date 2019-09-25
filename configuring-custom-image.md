@@ -108,6 +108,9 @@ You must [Create a Power Systems Virtual Server service](/docs/infrastructure/po
 
   ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
 
+  The **Source image path** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+  {: important}
+
 1. You can also choose to import a boot image from the services **Boot images** menu by clicking **Import**.
 
   ![Importing a custom image in the boot images menu](./images/console-boot-images.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
