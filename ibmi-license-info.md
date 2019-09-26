@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 keywords: imb i license, operatin system, swma products, rational development studio
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 # IBM i License Program Products (LPP) and Operating System (OS) feature bundles
 {: #ibmi-lpps}
 
-All of the features are included for each LPP that contains optional features and is in the package. For example, **Recovery and Media Services (BRMS)**, **the base**, **Network Feature**, and **Advanced Feature** are all included.
+Each LPP in the package (that comes with optional features) contains all of the features. For example, the **5770-BR1** solution includes the **Network Feature** and **Advanced Feature** in addition to the base product.
 
 The following LPP and OS features include all of the group **SWMA** products other than
 **Rational Development Studio (5770-WDS)** and **Infoprint Server (5722-IP1)**:

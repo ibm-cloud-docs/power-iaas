@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 keywords: getting started, infrastructure as a service, before you begin, terminology
 

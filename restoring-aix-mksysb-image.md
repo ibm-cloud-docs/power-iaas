@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -70,7 +70,7 @@ If your disk is not at the correct size, complete the following steps:
 
     ![Running the mkvg command](./images/terminal-mkvg.png "Running the mkvg command"){: caption="Figure 9. Running the mkvg command" caption-side="bottom"}
 
-6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _VM helper_:
+6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
   ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 10. Creating a file system and mounting it" caption-side="bottom"}
 
@@ -86,11 +86,11 @@ If you did not decide on a private access option, or chose a different option fo
 ## Creating the alternate disk image volume
 {: creating-alternate-volume}
 
-Log on to the helper VM and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
+Log on to the h_elper VM_ and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
 
 To determine the necessary volume size of the alternate disk, examine the contents of the `bosinst.data` file within the mksysb archive. The `bosinst.data` file in the archive contains stanza information that indicates the minimum space that is required to restore the _mksysb_. An easy way to accomplish this is to use the `restore` command to extract the `./images/bosinst.data` file from the _mksysb_ archive.
 
-Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the helper VM.
+Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the _helper VM_.
 
 ![The restore -qf command](./images/terminal-qf.png "The restore -qf command"){: caption="Figure 12. The restore -qf command" caption-side="bottom"}
 
@@ -104,7 +104,7 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
     ![Displaying storage information](./images/console-create-volume-alt.png "Displaying storage information"){: caption="Figure 14. Displaying storage information" caption-side="bottom"}
 
-3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the helper VM, log on to the VM. Use the `cfgmgr` and `lspv` commands on the helper VM to show the new disk. The new disk is named `hdisk2`.
+3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the _helper VM_, log on to the VM. Use the `cfgmgr` and `lspv` commands on the _helper VM_ to show the new disk. The new disk is named `hdisk2`.
 
     ![Displaying storage information](./images/terminal-cfgmgr.png "Displaying storage information"){: caption="Figure 15. Displaying storage information" caption-side="bottom"}
 
@@ -115,7 +115,7 @@ You can now create an AIX boot disk from the source _mksysb_ archive. To create 
 
 <dl>
   <dt><strong>-m</strong></dt>
-  <dd>Specify the mksysb archive that you transferred to the helper VM. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
+  <dd>Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
   <dt><strong>-d</strong></dt>
   <dd>Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named <em>hdisk2</em>.</dd>
   <dt><strong>-c</strong></dt>

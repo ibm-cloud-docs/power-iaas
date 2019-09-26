@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 keywords: faq, virtual server, network bandwidth billing, multi-tenant environment, ibm cloud
 

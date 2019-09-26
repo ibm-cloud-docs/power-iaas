@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 keywords: getting started, power systems virtual server, virtual server, creating virtual server
 
@@ -28,27 +28,27 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the {{site.data.keyword.powerSys_notm}} tile.
 
-    ![IBM Cloud catalog](./images/catalog-search-bar.png "IBM Cloud catalog"){: caption="Figure 1. IBM Cloud catalog" caption-side="bottom"}
+    ![The IBM Cloud catalog](./images/catalog-search-bar.png "The IBM Cloud catalog"){: caption="Figure 1. The IBM Cloud catalog" caption-side="bottom"}
 
 3. Give your service a name and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance.
 
-    ![Service and region selection](./images/power-iaas-service-region.png "Service and region selection"){: caption="Figure 2. Service and region selection" caption-side="bottom"}
+    ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"}
 
     When you select a region for your service, **Dallas** uses the _DAL13_ data center, while **Washington D.C.** uses the _WDC04_ data center.
     {: note}
 
 4. Click **Create** at the bottom of the webpage.
 
-    ![Creating a service](./images/power-iaas-create-button.png "Creating a service"){: caption="Figure 3. Creating a service" caption-side="bottom"}
+    ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"}
 
 5. After you click **Create**, you are redirected to the **Resource List** pane.
 6. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
 
-    ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 4. IBM Cloud Resource List" caption-side="bottom"}
+    ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 4. The IBM Cloud Resource List" caption-side="bottom"}
 
 7. Click **Provision new**.
 
-    ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 5. Provisioning a new virtual server" caption-side="bottom"}
+    ![Provisioning a new Power Systems Virtual Server](./images/power-iaas-provision-new.png "Provisioning a new Power Systems Virtual Server"){: caption="Figure 5. Provisioning a new Power Systems Virtual Server" caption-side="bottom"}
 
 8. Complete all of the required fields to successfully create a new instance.
 
@@ -57,13 +57,13 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     1. Complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with more options.
 
-      ![Creating a power virtual server instance](./images/console-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a power virtual server instance" caption-side="bottom"}
+      ![Creating a power virtual server instance](./images/console-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
 
-    2. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remember to click the wanted **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
+    1. Select whether you'd like a **Dedicated processor** or a **Shared processor**. Remember to click the wanted **Machine type**, the number of **Cores**, and the amount of **Memory (GB)** as well.
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    3. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot volume**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to the **Boot images** tab after provisioning the instance.
+    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot volume**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to the **Boot images** tab after provisioning the instance.
 
       When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
       {: important}
@@ -72,10 +72,10 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 9. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
-The following table provides information about the **Virtual server instance** fields:
+The following table provides information about the **Power Ssytems Virtual server instance** fields:
 
 <table>
-<caption>Table 1. New Power Virtual Server Instance fields</caption>
+<caption>Table 1. Power Virtual Server instance fields</caption>
 <tr>
 <th>Field</th>
 <th>Description</th>

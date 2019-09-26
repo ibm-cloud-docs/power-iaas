@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-26"
 
 keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
 
@@ -33,7 +33,7 @@ sudo ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.putty.org/){: new_window} onto your system. PuTTY is used for the SSH tunnel on windows.
+1. Install [PuTTY ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.putty.org/){: new_window} onto your system. PuTTY is used for the SSH tunnel on a Windows&reg; system.
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 3. Enter **22** as the port number.
 

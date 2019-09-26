@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-26"
 
 keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
 
@@ -120,7 +120,7 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
 4. Select `QAUTOVRT` with option “2” (change).
 5. Change the value from “0” to the number of auto-configured consoles you want to be able to connect concurrently.
 
-After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
+After you complete these steps, you can reach a console from ACS. Additionally, you can reach _iNav/DM_ by pointing your browser to the following address:
 
 ```shell
 https://127.0.0.1:2005/ibm/console/login.do?action=secure
