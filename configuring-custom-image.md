@@ -102,28 +102,29 @@ To view your credential information, such as your secret and access keys, click 
 ## Uploading a custom boot image
 {: #cci-uploading}
 
-You must [Create a Power Systems Virtual Server service](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server) before you can upload a custom image.
+To use a custom boot image in a {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 
-1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, you can import a custom image by clicking the **Custom Image** tile under **Boot Volume**.
+1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to the **Boot images** menu and click **Import**.
 
-  The **Source image path** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+  The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
   {: important}
 
-  ![Importing a custom image](./images/console-create-custom-image.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
-
-1. You can also choose to import a boot image from the services **Boot images** menu by clicking **Import**.
-
-  ![Importing a custom image in the boot images menu](./images/console-boot-images.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
+    ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 9. Importing a custom image in the boot images menu" caption-side="bottom"}
 
 1. After you click **Import**, enter all of the required information.
 
-  ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 9. Importing a custom image in the boot images menu" caption-side="bottom"}
+    ![Importing a custom image in the boot images menu](./images/console-boot-image-fields.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
+
+1. When you provision a new {{site.data.keyword.powerSys_notm}} instance, your bustom boot image appears under the **Boot volume** section.
 
 Refer to the following table to complete the necessary fields to create a custom image:
 
 | Field | Description |
 | ------| ------------|
+| Catalog image name | Enter the name you want displayed in your catalog.|
+| Storage type | Select whether you want **Standard** or **SSD** for the storage type.|
+| Region | Select either **us-east** or **us-south** for the region.|
+| Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
-| Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field. |
-| Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field. |
-| Image Path | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
+| Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
+| Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
