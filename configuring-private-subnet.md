@@ -54,9 +54,7 @@ CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: ex
 
 You must reserve the last 16 bits (65,536 addresses) of the _IPv4_ as _0s_ to use them for various subnet IP addresses within the same {{site.data.keyword.cloud}} VPC. If you use an IP range outside of those that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet, the instances that are attached to that subnet might not be able to reach parts of the public internet.
 
-The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating.
-
-The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
+The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
 
 | CIDR block size | Available Addresses |
 | --------------- | ------------------- |

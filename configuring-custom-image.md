@@ -88,12 +88,13 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** pane.
 
-  ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 4. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
+    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 4. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
 
-1. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
+3. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
 
-  ![Adding a credential](./images/console-add-service-credential.png "Adding a credential"){: caption="Figure 5. Adding a credential" caption-side="bottom"}
-12. Find your new service credential in the service credentials table.
+    ![Adding a credential](./images/console-add-service-credential.png "Adding a credential"){: caption="Figure 5. Adding a credential" caption-side="bottom"}
+
+4. Find your new service credential in the service credentials table.
 
   ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 6. Your new service credential" caption-side="bottom"}
 
@@ -106,16 +107,16 @@ To use a custom boot image in a {{site.data.keyword.powerSys_notm}} instance, co
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to the **Boot images** menu and click **Import**.
 
-  The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
-  {: important}
+    The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+    {: important}
 
-    ![Importing a custom image in the boot images menu](./images/console-boot-image-import.png "Importing a custom image in the boot images menu"){: caption="Figure 9. Importing a custom image in the boot images menu" caption-side="bottom"}
+    ![Importing a custom image](./images/console-boot-image-import.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
 
-1. After you click **Import**, enter all of the required information.
+2. After you click **Import**, enter all of the required information.
 
-    ![Importing a custom image in the boot images menu](./images/console-boot-image-fields.png "Importing a custom image in the boot images menu"){: caption="Figure 8. Importing a custom image in the boot images menu" caption-side="bottom"}
+    ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 8. Configuring your custom boot image" caption-side="bottom"}
 
-1. When you provision a new {{site.data.keyword.powerSys_notm}} instance, your bustom boot image appears under the **Boot volume** section.
+3. When you provision a new {{site.data.keyword.powerSys_notm}} instance, your custom boot image appears under the **Boot volume** section.
 
 Refer to the following table to complete the necessary fields to create a custom image:
 
