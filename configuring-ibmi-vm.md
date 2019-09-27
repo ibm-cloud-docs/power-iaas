@@ -47,11 +47,11 @@ Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected t
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST and DST passwords are expired. To change the password, you need to boot into DST by changing the `SYSVAL QIPLTYPE` to **1** and redoing an IPL.
+By default, the SST and DST passwords are expired. To change the password, you need to boot into DST by changing the `SYSVAL QIPLTYPE` value to **1** and redoing an IPL.
 
 ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
-When you IPL back up to the operating system (OS), change the `QIPLTYPE` back to **0**.
+After you IPL, change the `QIPLTYPE` value back to **0**.
 
 ## Using SSH tunneling to allow ACS to connect over the public IP
 {: #ssh-tunneling}

@@ -48,6 +48,12 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
 
+## What formats should I use when uploading a custom image?
+{: #custom-image}
+{: faq}
+
+Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
 {: faq}
@@ -72,11 +78,11 @@ Clients are responsible for third-party licensing.
 
 For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
 
-## Does {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
+## Do Power Systemes Virtual Servers run in a multi-tenant environment?
 {: #multi}
 {: faq}
 
-Yes, {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment.
+Yes, {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment.
 
 ## Are there bare-metal options?
 {: #bare}
@@ -84,19 +90,19 @@ Yes, {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment.
 
 No, there are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
-## What training is available using IBM Cloud?
+## What training is available?
 {: #training}
 {: faq}
 
-To learn more about how to use Power Systems Virtual Servers, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+To learn more about how to use {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
 
-## How do you set up private networks between Intel&trade; Virtual Servers (x86) and Power System Virtual Servers?
+## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power System Virtual Servers?
 {: #connecting}
 {: faq}
 
 For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
-## How do you set up customer site access to that private network by using VPN?
+## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
 {: faq}
 
@@ -113,12 +119,6 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 
 IBM does not currently charge for public network traffic (this is subject to change). If you are using a private network with DirectLink Connect, you are charged IBM's standard rates. Public bandwidth is charged per gigabyte (GB) tier and is offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 500 GB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
-
-<!-- ## WBackup and DR options for Virtual Servers?
-{: #wbackup}
-{: faq}
-
-Backup and DR for cloud to cloud – BRMS with Cloud Storage Solutions or use manual with Savsys.  PowerHA Enterprise edition for Geo.  Licensing TBD for this bundle (can not bring their own license) – Bob to determine date/terms. -->
 
 ## What monitoring services are available?
 {: #monitoring}
@@ -137,9 +137,3 @@ IBM uses the same tools that are on an on-premises system.
 {: faq}
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-356.ibm.com/partnerworld/gsd/homepage.do).
-
-## What formats should I use when uploading a custom image?
-{: #custom-image}
-{: faq}
-
-Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
