@@ -24,6 +24,15 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
+## Where can I learn how to use a Power Systems Virtual Server?
+{: #training}
+{: faq}
+
+To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+
+This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
+{: note}
+
 ## What versions of AIX and IBM i operating systems are supported?
 {: #os_versions}
 {: faq}
@@ -88,13 +97,7 @@ Yes, {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment.
 {: #bare}
 {: faq}
 
-No, there are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
-
-## What training is available?
-{: #training}
-{: faq}
-
-To learn more about how to use {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power System Virtual Servers?
 {: #connecting}

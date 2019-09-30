@@ -45,6 +45,10 @@ Before you create your first Power Systems Virtual Server instance, review the f
 2. Create a public and private SSH key that you can use to securely connect to your {{site.data.keyword.powerSys_notm}}. To create a public and private SSH key, see [Adding an SSH key ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/infrastructure/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
 3. _(Optional)_ If you want to use a custom image for the AIX or IBM i operating systems, you must create an IBM Cloud Object Storage and upload the image. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
 4. _(Optional)_ If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the Direct Link Connect service. For more information, see [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+5. *(Optional)* Watch the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video to learn more about the {{site.data.keyword.powerSys_notm}} offering.
+
+The **AIX & IBM i in IBM (Public) Cloud** video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
+{: note}
 
 For frequently asked questions about {{site.data.keyword.powerSys_notm}}, see [FAQs](/docs/infrastructure/power-iaas?topic=power-iaas-power-iaas-faqs).
 
