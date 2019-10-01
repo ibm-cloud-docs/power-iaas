@@ -72,18 +72,18 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
     ```
     {: pre}
 
-1. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make the ISO image available as a file system by using the loopback device.
+2. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make the ISO image available as a file system by using the loopback device.
 
     ```shell
     loopmount {-i imagefile | -l device}[-o mount options -m mountpoint]
     ```
     {: pre}
 
-2. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd _path_  _software_to_install_`.
+3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd _path_  _software_to_install_`.
 
     ```shell
     installp [-R _path_] [-a |-a -c [-N]] [-_eLogFile_] [-V _Number_  [-_dDevice_] [-E] [-Y] [-b] [-S] [-B] [-D] [-I] [-p] [-Q] [-q] [ -v] [-X] [-F | -g] [-O { [r] [s] [u]}] [-t _SaveDirectory_ ] [-w] [-_zBlockSize_] { _FilesetName_ [_Level_]... | -f _ListFile_ | all}
       ```
     {: pre}
 
-3. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line.
+4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line.

@@ -154,7 +154,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
 
-    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 21. Detaching the volumne" caption-side="bottom"}
+    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 21. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
