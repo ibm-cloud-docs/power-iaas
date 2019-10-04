@@ -17,7 +17,9 @@ subcollection: power-iaas
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:external: .external}
 {:important: .important}
+{:note: .note}
 
 # Configuring IBM Power Systems Virtual Servers
 {: #cpn-configuring}
