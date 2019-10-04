@@ -41,5 +41,5 @@ To open a support ticket for a {{site.data.keyword.powerSys_notm}}, complete the
           ![Selecting the correct offering](./images/console-support-select.png "Selecting the correct offering"){: caption="Figure 2. Selecting the correct offering" caption-side="bottom"}
     3. Enter **Power Systems Virtual Server** in the **Subject** field and enter a detailed description of the problem.
 
-          ![Submitting your support ticket](./images/console-support-description.png "Submitting your support ticket"){: caption="Figure 1. Submitting your support ticket" caption-side="bottom"}
+          ![Submitting your support ticket](./images/console-support-description.png "Submitting your support ticket"){: caption="Figure 3. Submitting your support ticket" caption-side="bottom"}
     4. Attach any helpful files, check whether you want email updates, and submit your support ticket.
