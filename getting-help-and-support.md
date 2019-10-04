@@ -22,10 +22,10 @@ subcollection: power-iaas
 # Getting help and support
 {: #getting-help-and-support}
 
-Before you open a support ticket for {{site.data.keyword.powerSys_notm}}, review the [FAQ](/docs/get-support?topic=get-support-getting-customer-support).
+Before you open a support ticket for a {{site.data.keyword.powerSys_notm}}, review the [FAQ](/docs/get-support?topic=get-support-getting-customer-support).
 {: shortdesc}
 
-To open a support ticket for {{site.data.keyword.powerSys_notm}}, complete the following steps:
+To open a support ticket for a {{site.data.keyword.powerSys_notm}}, complete the following steps:
 
 1. Log in to the [IBM Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
 2. In the menu bar, click **Support**.

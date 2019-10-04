@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-10-04"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network
 
@@ -23,6 +23,9 @@ subcollection: power-iaas
 {: #cpn-configuring}
 
 You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
+
+If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
+{: note}
 
 ## Connecting to the IBM Cloud classic infrastructure
 {: #cpn-connect-classic}
@@ -62,9 +65,9 @@ After you establish a connection to the IBM Cloud classic infrastructure, you mu
 ## Using Megaport to directly connect to the IBM Cloud Power infrastructure
 {: #cpn-connect-megaport}
 
-You can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/) exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
+You can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/ibm-cloud){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
 
-## Understanding Novalink on AIX
+## Understanding how a Novalink connection on RMC works for AIX
 {: #novalink-aix-cloud }
 
 When Novalink is the management partition, each virtual machine on the host is assigned a local IPV6 interface to communicate with Novalink for Resource Monitoring and Control (Secure RMC). For more information, see [Simplified NovaLink RMC Connections](https://developer.ibm.com/powervc/2015/12/10/simplified-novalink-rmc-connections/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
