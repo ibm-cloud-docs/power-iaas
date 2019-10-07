@@ -67,7 +67,7 @@ After you establish a connection to the IBM Cloud classic infrastructure, you mu
 ## Using Megaport to directly connect to the IBM Cloud Power infrastructure
 {: #cpn-connect-megaport}
 
-You can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/ibm-cloud){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
+You can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/services/ibm-cloud/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
 
 ## Understanding how a Novalink connection on RMC works for AIX
 {: #novalink-aix-cloud }
