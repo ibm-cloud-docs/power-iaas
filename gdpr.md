@@ -55,12 +55,12 @@ Client data is retained during the client's use of the service (that is, until t
 
 The {{site.data.keyword.powerSys_notm}} service does not provide backups of client data.
 
-## Destruction of client Data
+## Destruction of client data
 {: #data-retention}
 
 The {{site.data.keyword.powerSys_notm}} service gives the client the ability to delete all online client data at their request or termination of the service. The secure destruction of all client data happens at the *end of life* of the associated infrastructure or cloud service.
 
-## Export of client Data
+## Export of client data
 {: #data-export}
 
 IBM contractually commits, as required by various industry and government regulations, that we will provide clients the capability to export their data, or that IBM will provide the client with export copies of their data upon request. The {{site.data.keyword.powerSys_notm}} service
