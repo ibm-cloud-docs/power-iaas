@@ -12,7 +12,6 @@ IBM Power Systems Virtual Servers
     {: .topicgroup}
     Security and compliance
         gdpr.md
-    {: .topicgroup}
     [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server){: external}
     {: .navgroup-end}
 
