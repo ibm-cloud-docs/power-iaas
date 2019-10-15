@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-10-14"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id
 
