@@ -28,22 +28,22 @@ The [General Data Protection Regulation](https://www.eugdpr.org/){: new_window}{
 
 With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in {{site.data.keyword.IBM}}'s wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
 
-## Physical and environmental security measures
+<!-- ## Physical and environmental security measures
 {: #security-measures}
 
 The physical security of our data centers is handled by our infrastructure providers: {{site.data.keyword.cloud}}, AWS, and 21Vianet. All of these infrastructure providers hold externally audited certifications for their physical security. The {{site.data.keyword.powerSys_notm}} team will not be providing further details of the physical security controls in place at our data centers.
 
-Physical security of the office locations that are used by our personnel is handled by {{site.data.keyword.IBM_notm}} Corporate. Certification details and attestation reports (that is, ISO and SOC2) can be provided to the client upon request.
+Physical security of the office locations that are used by our personnel is handled by {{site.data.keyword.IBM_notm}} Corporate. Certification details and attestation reports (that is, ISO and SOC2) can be provided to the client upon request. -->
 
-## Technical and organizational measures
+<!-- ## Technical and organizational measures
 {: #technical-measures}
 
-Technical and Organizational Measures (TOMs) are employed by the {{site.data.keyword.powerSys_notm}} service to ensure the security of personal data. The {{site.data.keyword.powerSys_notm}} service holds externally audited certifications for the controls it employs. Certification details and attestation reports (that is, ISO and SOC2) can be provided to the client upon request.
+Technical and Organizational Measures (TOMs) are employed by the {{site.data.keyword.powerSys_notm}} service to ensure the security of personal data. The {{site.data.keyword.powerSys_notm}} service holds externally audited certifications for the controls it employs. Certification details and attestation reports (that is, ISO and SOC2) can be provided to the client upon request. -->
 
-## Service access to data
+<!-- ## Service access to data
 {: #service-access-to-data}
 
-The {{site.data.keyword.powerSys_notm}} operations and support staff have access to client data and can access it during routine operations. This access is only done as required to operate and support the service. Access is also limited to a **need to know** basis and is logged, monitored, and audited.
+The {{site.data.keyword.powerSys_notm}} operations and support staff have access to client data and can access it during routine operations. This access is only done as required to operate and support the service. Access is also limited to a **need to know** basis and is logged, monitored, and audited. -->
 
 ## Online retention of client data
 {: #data-retention}
