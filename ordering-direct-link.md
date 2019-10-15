@@ -54,7 +54,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 1. From the Create IBM Cloud Direct Link Connect Connection page, complete the following fields. As you complete the following fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-    You can use the `10.x.x.x` range as long as there is no conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must reach out to support if you'd like to use NAT'ing or IP aliasing to resolve the IP conflict. IBM recommends that you not use `10.x.x.x` when starting a new network. Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see ![IBM Cloud IP Ranges](/docs/infrastructure/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
+    You can use the `10.x.x.x` range as long as there is no conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must reach out to support if you'd like to use NAT'ing or IP aliasing to resolve the IP conflict. IBM recommends that you not use `10.x.x.x` when starting a new network. Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/infrastructure/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
     {: important}
 
     ![Completing the Direct Connect Link fields](./images/directlink2.png "Completing the Direct Connect Link fields"){: caption="Figure 2. Completing the Direct Connect Link fields" caption-side="bottom"}
