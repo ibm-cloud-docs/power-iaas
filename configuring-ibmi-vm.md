@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-10-17"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -11,12 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
@@ -25,6 +29,9 @@ subcollection: power-iaas
 {: license-network}
 
 After you deploy an IBM i VM, you need to accept the license agreements. After you accept the license agreements, `cloud-init` configures your network and injects your license keys. The `cloud-init` configuration process can take up to 5 minutes. Do not restart your system while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
+
+To accept the license agreements from the console, you must press **5** to display the agreement and **F18** to accept it. When using **F** keys above **F12** on the console (such as **F18),** you must use the console buttons and not your keyboard.
+{: important}
 
 To verify that `cloud-init` configured your IP addresses correctly, check your VM's attributes. In the following example, you can see three IP addresses. Two of IP addresses are internal and one is external.
 
@@ -47,11 +54,20 @@ Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected t
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST and DST passwords are expired. To change the password, you need to boot into DST by changing the `SYSVAL QIPLTYPE` value to **1** and redoing an IPL.
+By default, the SST and DST passwords are expired. Complete the following tasks to get into **System Service Tools (SST),** change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required.
 
 ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
-After you IPL, change the `QIPLTYPE` value back to **0**.
+For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
+{: note}
+
+1. Enter the  `wkrsysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.
+2. Enter the `pwrdwnsys` command to restart the IBM i operating system (OS).
+3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
+4. Enter the `wrksysval qipltype` command and change the value to **0**.
+5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
+
+You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
 ## Using SSH tunneling to allow ACS to connect over the public IP
 {: #ssh-tunneling}
@@ -93,16 +109,3 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
 For ACS, you need to configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
 
 ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 6. Changing the port number" caption-side="bottom"}
-
-## Configuring a newly attached disk
-{: #accessing-volume}
-
-Complete the following tasks to get into **System Service Tools** (SST) and configure the newly attached disk. Configuring a newly attached disk is required.
-
-1. Enter the `wkrsysval qipltype` command and change the value to **1**.
-2. Enter the `pwrdwnsys` command to restart the IBM i operating system (OS).
-3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
-4. Enter the `wrksysval qipltype` command and change the value to **0**.
-5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
-
-You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
