@@ -98,10 +98,10 @@ The following table provides information about the **Power Ssytems Virtual serve
   </p>
    </td>
 </tr>
-<tr>
-<td>PIN virtual server</td>
+<tr>p
+<!-- <td>PIN virtual server</td>
 <td>Select <strong>On</strong> to lock the {{site.data.keyword.powerSys_notm}} onto a host system. If you select <strong>On</strong>, the virtual server cannot be moved to a different host. For example, by selecting <strong>On</strong> you would experience an outage during host maintenance.</td>
-</tr>
+</tr> -->
 <tr>
 <td>Machine Type</td>
 <td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a> and <a href="https://www.ibm.com/downloads/cas/EE476WAP" target="_blank">E880</a>.</td>
