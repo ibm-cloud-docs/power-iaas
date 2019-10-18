@@ -11,14 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
-{:important: .important}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
@@ -67,9 +69,13 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 1. Click the **Capture and export** icon under your **Virtual server instance** tab.
 
     ![Capturing and exporting icon](./images/console-capture-export.png "Capturing and exporting icon"){: caption="Figure 1. Capturing and exporting icon" caption-side="bottom"}
+
 2. Choose the volumes that you want to capture and export.
+
 3. Select whether you want to export the image to the **image catalog**, **Cloud Object Storage**, or both.
+
 4. Give your captured image a **Name**.
+
 5. _(Optional)_ If you decide to export to **Cloud Object Storage**, you are presented with more options:
    1. Select the **Region**.
    2. Provide your **Access** and **Secret** keys.

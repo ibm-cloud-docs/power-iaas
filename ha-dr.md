@@ -11,14 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
-{:important: .important}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # High Availability and Disaster Recovery options in Power Systems Virtual Servers
 {: #ha-dr}
@@ -52,4 +54,4 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).

@@ -11,13 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Connecting to an IBM i Cloud virtual machine (VM) by using port forwarding
 {: #connect-ibmi}
@@ -33,7 +36,7 @@ sudo ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.putty.org/){: new_window} onto your system. PuTTY is used for the SSH tunnel on a Windows&reg; system.
+1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows&reg; system.
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 3. Enter **22** as the port number.
 
@@ -67,6 +70,7 @@ sudo ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 
     ![Seeing your list of saved sessions](./images/putty-load-sesson.png "Seeing your list of saved sessions"){: caption="Figure 4. Seeing your list of saved sessions" caption-side="bottom"}
 
 10. You are prompted to accept a key on first use, and then presented with a log-in prompt. Use your IBM i session profile and password.
+
 11. Configure you ACS client or **IBM i Access for Windows Client** to use the SSH tunnel. In both clients, you must select **Configure** from the **Communications** menu.
 
     ![ACS communications menu](./images/putty-acs.png "ACS communications menu"){: caption="Figure 5. ACS communications menu" caption-side="bottom"}
@@ -128,4 +132,4 @@ https://127.0.0.1:2005/ibm/console/login.do?action=secure
 ```
 {: pre}
 
-To enable ICC to use an SSL connection to IBM Cloud Object Storage (which IBM COS requires), see [Configuring Cloud Storage Solutions file transfer encryption ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: new_window}.
+To enable ICC to use an SSL connection to IBM Cloud Object Storage (which IBM COS requires), see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: new_window}{: external}.

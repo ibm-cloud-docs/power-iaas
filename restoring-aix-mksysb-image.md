@@ -11,14 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
-{:important: .important}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)
 {: restoring-aix-mksysb-image}
@@ -52,6 +54,7 @@ If your disk is not at the correct size, complete the following steps:
   {: note}
 
 1. Create a file system to hold the _mksysb_ archive.
+
 2. Click **Add new** under **Attached volumes**.
 
     ![Adding a volume](./images/console-attach-volume.png "Adding a volume"){: caption="Figure 5. Adding a volume" caption-side="bottom"}

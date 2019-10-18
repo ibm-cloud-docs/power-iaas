@@ -11,16 +11,19 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # What is a Power Systems Virtual Server?
-{: #about-power-virtual-server}
+{: #about-virtual-server}
 
 {{site.data.keyword.powerSysFull}} uses the existing IBM Cloud platform to create {{site.data.keyword.powerSysFull}}, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
 {:shortdesc}
@@ -30,22 +33,22 @@ subcollection: power-iaas
 Current AIX and IBM i clients can use {{site.data.keyword.powerSysFull}} for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSysFull}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
-{: #apvs-key-features}
+{: #key-features}
 
 The following are some of the key features for {{site.data.keyword.powerSys_notm}}.
 
 ### Straightforward billing
-{: #apvs-billing}
+{: #straightforward-billing}
 
 The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
 ### Hybrid cloud environment
-{: #apvs-hybrid}
+{: #hybrid-cloud}
 
 You can use the {{site.data.keyword.powerSys_notm}}s to run any AIX or IBM i workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all the advantages the cloud as to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX and IBM i workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems Hardware provides.
 
 ### Infrastructure customization
-{: #apvs-customization}
+{: #infra-customization}
 
 You can configure and customize the following options when you create a {{site.data.keyword.powerSys_notm}}:
 
@@ -56,12 +59,12 @@ You can configure and customize the following options when you create a {{site.d
 * Private or public network
 
 ### Bring your own image
-{: #apvs-own-image}
+{: #bring-own-image}
 
 IBM provides you with stock AIX and IBM i operating system images when you create a {{site.data.keyword.powerSys_notm}}. However, you can bring your own custom AIX or IBM i operating system image that you have previously deployed and tested. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
 
 ## Hardware specifications
-{: #apvs-hardware-specifications}
+{: #hardware-specifications}
 
 The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_notm}}:
 
@@ -90,7 +93,7 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 * Cisco Nexus9000 C9348GC-FXP (1G)
 
 ## Public and private networks
-{: #apvs-public-and-private}
+{: #public-private-networks}
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces or a public network interface.
 

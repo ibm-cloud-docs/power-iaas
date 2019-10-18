@@ -73,7 +73,7 @@ The following table displays the IAM service access roles and the corresponding 
 The following access scenarios cover the steps that are required to add a user and modify the permissions for an existing user.
 
 ### Inviting a new user to view {{site.data.keyword.powerSys_notm}} resources
-{: #inviting-a-new-user-to-create-or-manage-resources}
+{: #user-invite}
 
 You must invite an IBM Cloud user to your account and give them access to view {{site.data.keyword.powerSys_notm}} resources. Remember, the service access role determines the access level that a user has for {{site.data.keyword.powerSys_notm}} resources.
 
@@ -97,7 +97,7 @@ Complete the following steps in IAM to enable a user to view {{site.data.keyword
     ![Successful invitation message](./images/invite_users4.png "Successful invitation message"){: caption="Figure 4. Successful invitation message" caption-side="bottom"}
 
 ### Giving an existing user permission to manage {{site.data.keyword.powerSys_notm}} resources
-{: #giving-an-existing-user-permission-to-manage-resources}
+{: #user-permissions}
 
 Complete the following steps to provide an existing user in your account permission to configure {{site.data.keyword.powerSys_notm}} resources.
 

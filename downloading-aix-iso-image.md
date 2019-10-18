@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Using Entitled Software Support (ESS) to download ISO images
 {: #using-ess-iso}
 
-Entitled software means that the software is covered by a valid Software Maintenance Agreement (SWMA). If you obtain software maintenance by using a custom SWMA contract (as opposed to a standard SWMA), you might need to register on the [Entitled Software Support (ESS)](https://www.ibm.com/servers/eserver/ess/ProtectedServlet.wss){: external} website to access the custom SWMA contract. Without access to the customer SWMA contract, you might not be able to download ISO images. You cannot download all levels of entitled software. For example, you cannot download installation media for AIX technology levels that are outdated.
+Entitled software means that the software is covered by a valid Software Maintenance Agreement (SWMA). If you obtain software maintenance by using a custom SWMA contract (as opposed to a standard SWMA), you might need to register on the [Entitled Software Support (ESS)](https://www.ibm.com/servers/eserver/ess/ProtectedServlet.wss){: new_window}{: external} website to access the custom SWMA contract. Without access to the customer SWMA contract, you might not be able to download ISO images. You cannot download all levels of entitled software. For example, you cannot download installation media for AIX technology levels that are outdated.
 {: shortdesc}
 
 The ESS customer number registration process can take several days.
@@ -33,7 +33,7 @@ The ESS customer number registration process can take several days.
 ## Before you begin
 {: #before-you-begin}
 
-Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: external} and your IBM Cloud customer number.
+Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: new_window}{: external} and your IBM Cloud customer number.
 
 If you bought entitlement through [Passport Advantage](https://www.ibm.com/software/passportadvantage/){: external}, ESS will not recognize your customer number. In this case, you need to get the customer number that the entitlement is being purchased under and go to Passport Advantage to download the files under the **5737-D09** product ID.
 

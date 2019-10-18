@@ -13,14 +13,17 @@ subcollection: power-iaas
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 {:tip: .tip}
-{:important: .important}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Power Systems Virtual Servers activity tracker events
-{: #at_events}
+{: #at-events}
 
 As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with {{site.data.keyword.powerSysFull}} in the {{site.data.keyword.cloud}}.
 {: shortdesc}
@@ -28,7 +31,7 @@ As a security officer, auditor, or manager, you can use the **Activity Tracker**
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see[Learn more](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 ## List of events: Read
-{: #at_actions_read}
+{: #at-actions-read}
 
 The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
 
@@ -37,7 +40,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 | pcloud.cloud-instance.read | Read a Power Cloud Instance     |
 
 ## List of events: Images
-{: #at_actions_images}
+{: #at-actions-images}
 
 The following events are for working with images in your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -50,7 +53,7 @@ The following events are for working with images in your {{site.data.keyword.pow
 | pcloud.image.capture       | Exports an Image                |
 
 ## List of events: Networks
-{: #at_actions_networks}
+{: #at-actions-networks}
 
 The following events are for working with networks in your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -62,7 +65,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | pcloud.network.delete      | Delete a Network                      |
 
 ## List of events: {{site.data.keyword.powerSys_notm}}
-{: #at_actions_virtual_servers}
+{: #at-actions-servers}
 
 The following events are for working with each virtual server within the {{site.data.keyword.powerSys_notm}} instance.
 
@@ -80,7 +83,7 @@ The following events are for working with each virtual server within the {{site.
 | pcloud.pvm-instance.capture   | Capture a Power virtual server instance into an image |
 
 ## List of events: SSH keys
-{: #at_actions_ssh_keys}
+{: #at-actions-ssh}
 
 The following events are for working with account and SSH keys in your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -93,7 +96,7 @@ The following events are for working with account and SSH keys in your {{site.da
 | pcloud.ssh-key.delete    | Delete an SSH key           |
 
 ## List of events: Data volumes
-{: #at_actions_data_volumes}
+{: #at-actions-volumes}
 
 The following events are for working with data volumes in your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -106,6 +109,6 @@ The following events are for working with data volumes in your {{site.data.keywo
 | pcloud.volume.configure  | Attach or Detach a Volume   |
 
 ## Viewing events
-{: #at_ui}
+{: #at-events}
 
 Events are available in the **Dallas** location. {{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the `us-south` location. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).

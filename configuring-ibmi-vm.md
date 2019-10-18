@@ -25,8 +25,11 @@ subcollection: power-iaas
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
 
+Complete the following instructions to configure your IBM i virtual machine.
+{: shortdesc}
+
 ## Accepting license keys and configuring your network
-{: license-network}
+{: #license-network}
 
 After you deploy an IBM i VM, you need to accept the license agreements. After you accept the license agreements, `cloud-init` configures your network and injects your license keys. The `cloud-init` configuration process can take up to 5 minutes. Do not restart your system while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 

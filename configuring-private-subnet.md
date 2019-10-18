@@ -11,19 +11,22 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
-{:external: .external}
+{:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Configuring a private network subnet
 {: #configuring-subnet}
 
 You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **name**, **Classless inter-domain routing (CIDR)**, **Gateway**, **IP range**, and **DNS server**.
+{: shortdesc}
 
 For the CIDR, you must specify the exact value of an IP address, `192.168.100.0/24` (192.168.100.14 on a 255.255.255.0 subnet), or a range of IP addresses, `192.168.100.0/22` (192.168.100.0 to 192.168.103.255). When you specify a CIDR, the web console automatically fills the **IP ranges** field.
 
