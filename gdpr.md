@@ -24,7 +24,7 @@ subcollection: power-iaas
 # General Data Protection Regulation (GDPR)
 {: #data-protection}
 
-The [General Data Protection Regulation](https://www.eugdpr.org/){: new_window}{: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
+The [General Data Protection Regulation](https://www.eugdpr.org){: new_window}{: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}
 
 With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in {{site.data.keyword.IBM}}'s wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.

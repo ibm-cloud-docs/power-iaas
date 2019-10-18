@@ -72,6 +72,8 @@ After you establish a connection to the IBM Cloud classic infrastructure, you mu
 ## Using Megaport to directly connect to the IBM Cloud Power infrastructure
 {: #cpn-connect-megaport}
 
+You can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/services/ibm-cloud/){: new_window}{: external} exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
+
 When connecting to the IBM Cloud Power infrastucture by using a Direct Link with Megaport, the Virtual Cross Connect (VXC) forms the layer 2 component of the connection. Layer 3 BGP connectivity is established directly between the customer and IBM Cloud.
 
 The benefit to creating IBM Direct Link by using Megaport:
@@ -80,22 +82,32 @@ The benefit to creating IBM Direct Link by using Megaport:
 * Reduce data egress cost
 * Secure connectivity
 
-### Create IBM Direct Link Connect VXC by using the Megaport Portal
-{: }
+### Creating an IBM Direct Link Connect Virtual Cross Conncect (VXC) by using the Megaport Portal
+{: creating-connect-vxc}
 
-ou can connect directly to the IBM Cloud Power infrastructure through [Megaport](https://www.megaport.com/services/ibm-cloud/){: new_window}{: external} exchange. You must engage Megaport directly to procure the bandwidth. You must also open a secondary ticket with IBM Power to perform the connection.
+To begin, complete the steps in [Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). After you read the *Master Service Agreement* and create your Direct Link, copy the IBM Cloud ticket number.
 
-To begin, complete the steps in the [Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect) topic. 
+### Deploying VXC
+{: deploying-vxc}
 
-1. After you read the *Master Service Agreement* and create your Direct Link, copy the IBM Cloud ticket number.
+For more information on deploying a VXC, see [IBM Cloud Direct Link Connect](https://knowledgebase.megaport.com/cloud-connectivity/ibm-cloud-direct-link-connect/){: new_window}{: external}.
 
-2. Open the [Megaport Portal](https://portal.megaport.com/login).
+1. Open the [Megaport Portal](https://portal.megaport.com/login).
 
-3. 
+2. Create an IBM Direct Link Connect Virtual Cross Connect (VXC). Provision a VXC in the Portal to your chosen IBM Direct Link Connect peering location. To create an IBM Direct Link VXC in the Portal, click **+Connection** on the Megaport to which you want to attach your VXC.
 
-Y
+3. Next, select **Cloud** tile.
 
+4. Type **IBM** into the **Select Provider** search box and select the IBM Direct Link location where the peer will be set up with IBM Cloud. This matches the peer location selected in the IBM console. Click **Next**.
 
+    1. Paste the IBM Cloud ticket number in the **Name your connection** field.
+    2. *(Optional)* Note an **Invoice Reference** internal to your records.
+    3. Choose a **Rate Limit** speed in 1 Mbps increments up to the Megaport rate size. In most cases, customers choose to match the port speed created in the IBM Console.
+    4. The VLAN for this connection that you will receive via the Megaport. This must be a unique VLAN ID on this port. You can also click the toggle to **untag** this VXC. This removes the VLAN tagging for this connection but limits the port to only one VXC.
+
+5. Click **Next** and add the VXC. You can then proceed through the checkout process. IBM will verify the IBM Cloud Ticket number and send you a */30* or */31* Private IP to provision for BGP.
+
+6. See [Configure IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete your private connection to your IBM Cloud environment.
 
 ## Understanding how a Novalink connection on RMC works for AIX
 {: #novalink-aix-cloud }
