@@ -31,7 +31,7 @@ The ESS customer number registration process can take several days.
 {: important}
 
 ## Before you begin
-{: #before-you-begin}
+{: #before-you-begin-ess}
 
 Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: new_window}{: external} and your IBM Cloud customer number.
 

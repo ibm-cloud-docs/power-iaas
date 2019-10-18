@@ -109,6 +109,6 @@ The following events are for working with data volumes in your {{site.data.keywo
 | pcloud.volume.configure  | Attach or Detach a Volume   |
 
 ## Viewing events
-{: #at-events}
+{: #at-viewing-events}
 
 Events are available in the **Dallas** location. {{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the `us-south` location. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).

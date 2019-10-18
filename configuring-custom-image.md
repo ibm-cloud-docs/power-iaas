@@ -30,7 +30,7 @@ You can bring your own customized AIX or IBM i operating system (OS) image to de
   {: note}
 
 ## Before you begin
-{: #before-you-begin}
+{: #before-you-begin-deploy}
 
 Before you can use a custom image as the boot volume, review the following information:
 

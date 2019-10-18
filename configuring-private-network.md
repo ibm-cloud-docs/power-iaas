@@ -92,7 +92,7 @@ The benefit to creating IBM Direct Link by using Megaport:
 
 For more information on deploying a VXC, see [IBM Cloud Direct Link Connect](https://knowledgebase.megaport.com/cloud-connectivity/ibm-cloud-direct-link-connect/){: new_window}{: external}.
 
-1. Open the [Megaport Portal](https://portal.megaport.com/login).
+1. Open the [Megaport Portal](https://portal.megaport.com).
 
 2. Create an IBM Direct Link Connect Virtual Cross Connect (VXC). Provision a VXC in the Portal to your chosen IBM Direct Link Connect peering location. To create an IBM Direct Link VXC in the Portal, click **+Connection** on the Megaport to which you want to attach your VXC.
 
