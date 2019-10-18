@@ -96,7 +96,7 @@ For more information on deploying a VXC, see [IBM Cloud Direct Link Connect](htt
 
 2. Create an IBM Direct Link Connect Virtual Cross Connect (VXC). Provision a VXC in the Portal to your chosen IBM Direct Link Connect peering location. To create an IBM Direct Link VXC in the Portal, click **+Connection** on the Megaport to which you want to attach your VXC.
 
-3. Next, select **Cloud** tile.
+3. Next, select the **Cloud** tile.
 
 4. Type **IBM** into the **Select Provider** search box and select the IBM Direct Link location where the peer will be set up with IBM Cloud. This matches the peer location selected in the IBM console. Click **Next**.
 
