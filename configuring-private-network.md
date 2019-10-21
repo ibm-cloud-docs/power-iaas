@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-10-21"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network
 
@@ -92,7 +92,7 @@ The benefit to creating IBM Direct Link by using Megaport:
 
 For more information on deploying a VXC, see [IBM Cloud Direct Link Connect](https://knowledgebase.megaport.com/cloud-connectivity/ibm-cloud-direct-link-connect/){: new_window}{: external}.
 
-1. Open the [Megaport Portal](https://portal.megaport.com).
+1. Open the [Megaport Portal](https://portal.megaport.com){: new_window}{: external}.
 
 2. Create an IBM Direct Link Connect Virtual Cross Connect (VXC). Provision a VXC in the Portal to your chosen IBM Direct Link Connect peering location. To create an IBM Direct Link VXC in the Portal, click **+Connection** on the Megaport to which you want to attach your VXC.
 
@@ -110,6 +110,6 @@ For more information on deploying a VXC, see [IBM Cloud Direct Link Connect](htt
 6. See [Configure IBM Cloud Direct Link](https://cloud.ibm.com/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete your private connection to your IBM Cloud environment.
 
 ## Understanding how a Novalink connection on RMC works for AIX
-{: #novalink-aix-cloud }
+{: #novalink-aix-cloud}
 
-When Novalink is the management partition, each virtual machine on the host is assigned a local IPV6 interface to communicate with Novalink for Resource Monitoring and Control (Secure RMC). For more information, see [Simplified NovaLink RMC Connections](https://developer.ibm.com/powervc/2015/12/10/simplified-novalink-rmc-connections/){: new_window}).
+When Novalink is the management partition, each virtual machine on the host is assigned a local IPV6 interface to communicate with Novalink for Resource Monitoring and Control (Secure RMC). For more information, see [Simplified NovaLink RMC Connections](https://developer.ibm.com/powervc/2015/12/10/simplified-novalink-rmc-connections/){: new_window}{: external}.

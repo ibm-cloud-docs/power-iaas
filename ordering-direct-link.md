@@ -37,6 +37,7 @@ Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
 1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
+
 2. Review the following basic Direct Link Connect networking concepts:
 
    * [Direct Link Connect concepts](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link)

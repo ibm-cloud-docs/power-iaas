@@ -33,16 +33,19 @@ Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your
 
 To resize a Power Systems Virtual Server storage volume after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
 
+Resizing is not immediately available after you deploy a virtual machine (VM).
+{: note}
+
 1. Go to the IBM console's **Storage volumes** tab and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
     ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 1. Editing a storage volume" caption-side="bottom"}
 
-3. After you click the **Edit** icon, a menu appears. Select your desired storage volume size.
+3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size.
 
     You can increase only the size of the storage volume. You cannot decrease it.
-    {: note}
+    {: important}
 
     ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 2. Modifying your storage volume" caption-side="bottom"}
 
