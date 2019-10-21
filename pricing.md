@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-010-21"
 
 keywords: pricing, monthly usage, billing process, billing cycle
 
@@ -11,13 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Pricing for Power Systems Virtual Servers on IBM Cloud
 {: #pricing-virtual-server}
