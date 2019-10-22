@@ -28,15 +28,14 @@ subcollection: power-iaas
 The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the {{site.data.keyword.cloud}}.
 {: #shortdesc}
 
-# Client needs
+## Client needs
 {: #use-case-dev-needs}
 
 * Requires a remote environment to test updates
 * Temporary need for system resource resources (consumption model)
 * Evaluate, plan and test next-generation hardware or operating system (OS) versions
 
-
-# Examples
+## Examples
 {: #use-case-dev-examples}
 
 * An initial step in the *Hybrid Cloud Journey*

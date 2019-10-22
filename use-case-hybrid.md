@@ -28,21 +28,21 @@ subcollection: power-iaas
 The client wants to use the {{site.data.keyword.cloud}} as a disaster recovery (DR) destination for their on-premises environment.
 {: #shortdesc}
 
-# Client needs
+## Client needs
 {: #use-case-hybrid-needs}
 
 * A first step into using the {{site.data.keyword.cloud_notm}} before committing to end-to-end, mission-critical application hosting
 * A mission-critical Power environment with a need of a DR solution to raise the level of security and reliability of their on-premises data center
 * A DR solution in a different geography
 
-# Examples
+## Examples
 {: #use-case-hybrid-examples}
 
 * Client is in need of reducing risk by adding a DR destinate without acquiring or growing their datacenter and capital investment
 * The client has a long-term strategy for cloud migration and can leverage building their DR environment to gain IBM cloud experience,  and prepare for a production rollout
 * Cloud to Cloud DR site
 
-# Solution components
+## Solution components
 {: #use-case-hybrid-solutions}
 
 * {{site.data.keyword.powerSysFull}}

@@ -38,6 +38,7 @@ IBM Power Systems Virtual Servers
         ordering-direct-link.md
         configuring-private-network.md
         configuring-private-subnet.md
+        firewall-ports.md
 
     {: .topicgroup}
     AIX

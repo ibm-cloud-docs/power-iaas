@@ -28,7 +28,7 @@ subcollection: power-iaas
 The client wants to run an enterprise-level workload in the {{site.data.keyword.cloud}}.
 {: #shortdesc}
 
-# Client needs
+## Client needs
 {: #use-case-app-needs}
 
 * Traditional cloud value
@@ -37,7 +37,7 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 * Interested in or have an evolving strategy for a consumption-based option
 * Looking to move away from operating a data center
 
-# Examples
+## Examples
 {: #use-case-app-examples}
 
 * Oracle&copy; and Db2 Workloads
@@ -45,8 +45,7 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 * Modernization and extending  the value of their enterpise systems with Cloud Native applications
 * Customer merging or acquiring business needs temporary capacity while moving or merging multiple DCs
 
-
-# Solution components
+## Solution components
 {: #use-case-app-solutions}
 
 * {{site.data.keyword.powerSysFull}}
