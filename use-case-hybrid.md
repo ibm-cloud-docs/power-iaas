@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Hybrid Power Disaster Recovery
+# Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
 
-The client wants to use the {{site.data.keyword.cloud}} as a disaster recovery (DR) destination for their on-premises environment.
+The client wants to use the {{site.data.keyword.cloud}} as a DR destination for their on-premises environment.
 {: #shortdesc}
 
 ## Client needs

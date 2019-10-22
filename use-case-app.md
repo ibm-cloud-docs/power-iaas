@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Cloud AIX and IBM i production application hosting
+# AIX and IBM i production application hosting
 {: #use-case-app-hosting}
 
 The client wants to run an enterprise-level workload in the {{site.data.keyword.cloud}}.
