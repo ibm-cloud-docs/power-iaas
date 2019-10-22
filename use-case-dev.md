@@ -1,0 +1,53 @@
+---
+
+copyright:
+  years: 2019
+
+lastupdated: "2019-10-22"
+
+keywords: use case, client needs, solution components, hybrid cloud journey, sandbox environment
+
+subcollection: power-iaas
+
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
+
+# AIX and IBM i development and test
+{: #use-case-dev-test}
+
+The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the {{site.data.keyword.cloud}}.
+{: #shortdesc}
+
+# Client needs
+{: #use-case-dev-needs}
+
+* Requires a remote environment to test updates
+* Temporary need for system resource resources (consumption model)
+* Evaluate, plan and test next-generation hardware or operating system (OS) versions
+
+
+# Examples
+{: #use-case-dev-examples}
+
+* An initial step in the *Hybrid Cloud Journey*
+* Testing complicated or large architecture changes without the need to procure the capital (for example, evaluating scale-up E980 deployment if clients’ needs grow beyond scale out image limits)
+* Looking for a temporary and isolated infrastructure for application testing
+* Wants to test hardware before a refresh
+
+# Technical solution
+{: #use-case-dev-solutions}
+
+* {{site.data.keyword.powerSysFull}}
+* Direct Link Connect for optional connectivity into full {{site.data.keyword.cloud_notm}} or from on-premises environment
+* VPN and Direct Link Dedicated for on-premises connectivity
+* Cloud Object Storage for optional backup and custom image hosting or migration

@@ -16,7 +16,9 @@ IBM Power Systems Virtual Servers
 
     {: .topicgroup}
     Use cases
-        networking-use-case.md
+        use-case-dev.md
+        use-case-app.md
+        use-case-hybrid.md
 
     [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server){: external}
     {: .navgroup-end}
