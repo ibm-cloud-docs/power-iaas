@@ -43,7 +43,7 @@ The client wants to create a temporary sandbox environment to perform testing an
 * Looking for a temporary and isolated infrastructure for application testing
 * Wants to test hardware before a refresh
 
-# Technical solution
+## Technical solution
 {: #use-case-dev-solutions}
 
 * {{site.data.keyword.powerSysFull}}
