@@ -77,7 +77,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 9. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
-The following table provides information about the **Power Ssytems Virtual server instance** fields:
+The following table provides information about the **Power Sytems Virtual server instance** fields:
 
 <table>
 <caption>Table 1. Power Virtual Server instance fields</caption>
@@ -103,7 +103,7 @@ The following table provides information about the **Power Ssytems Virtual serve
   </p>
    </td>
 </tr>
-<tr>p
+<tr>
 <!-- <td>PIN virtual server</td>
 <td>Select <strong>On</strong> to lock the {{site.data.keyword.powerSys_notm}} onto a host system. If you select <strong>On</strong>, the virtual server cannot be moved to a different host. For example, by selecting <strong>On</strong> you would experience an outage during host maintenance.</td>
 </tr> -->
