@@ -32,7 +32,7 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 {: #use-case-app-needs}
 
 * Traditional cloud value
-    * Modernize core business by leveraging the {{site.data.keyword.cloud_notm}} portfolio
+* Modernize core business by using the {{site.data.keyword.cloud_notm}} portfolio
 * Flexible option to bursting and scaling their on-premises environment or to host temporary capacity
 * Interested in or have an evolving strategy for a consumption-based option
 * Looking to move away from operating a data center
@@ -42,8 +42,8 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 
 * Oracle&copy; and Db2 Workloads
 * Custom Enterprise applications
-* Modernization and extending  the value of their enterpise systems with Cloud Native applications
-* Customer merging or acquiring business needs temporary capacity while moving or merging multiple DCs
+* Modernization and extending the value of their enterprise systems with {{site.data.keyword.cloud_notm}} native applications
+* Customer merging or acquiring a business and needs the temporary capacity while moving or merging multiple data centers
 
 ## Solution components
 {: #use-case-app-solutions}

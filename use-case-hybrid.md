@@ -38,8 +38,8 @@ The client wants to use the {{site.data.keyword.cloud}} as a DR destination for 
 ## Examples
 {: #use-case-hybrid-examples}
 
-* Client is in need of reducing risk by adding a DR destinate without acquiring or growing their datacenter and capital investment
-* The client has a long-term strategy for cloud migration and can leverage building their DR environment to gain IBM cloud experience,  and prepare for a production rollout
+* Client is in need of reducing risk by adding a DR destination without acquiring or growing their data center and capital investment
+* The client has a long-term strategy for cloud migration and can use building their DR environment to gain {{site.data.keyword.cloud}} experience, and prepare for a production rollout
 * Cloud to Cloud DR site
 
 ## Solution components

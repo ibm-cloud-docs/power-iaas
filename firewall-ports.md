@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Default firewall ports
 {: #firewall}
 
-Th {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
+The {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
 * 22 (SSH)
@@ -33,4 +33,4 @@ Th {{site.data.keyword.powerSysShort}} network security architecture relies on a
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
 
-If you need additional ports to be opened, you must submit a service ticket to request to vSRX appliance administrators to *manually* open the port. Dynamic configuration of the firewall rules will be added as an option through REST APIs, GUI, etc, at a later time.
+If you need additional ports to be opened, you must submit a service ticket to vSRX appliance administrators. They can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.
