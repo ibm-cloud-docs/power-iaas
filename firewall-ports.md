@@ -33,4 +33,4 @@ The {{site.data.keyword.powerSysShort}} network security architecture relies on 
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
 
-If you need additional ports to be opened, you must submit a service ticket to vSRX appliance administrators. They can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.
+If you need additional ports to be opened, you must submit a [service ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.

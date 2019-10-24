@@ -33,7 +33,7 @@ The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on
 
 You can use a monthly subscription model when you purchase PowerHA SystemMirror for AIX Standard Edition. For more information, see [Standard Edition monthly pricing options](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/8/897/ENUS219-288/index.html){: new_window}{: external}.
 
-After you purchase the software, you can download it from [IBM Entitled Systems Support (ESS)](ibm.com/servers/eserver/ess/index.wss). You can install PowerHA SystemMirror for AIX on the virtual server that is running in your {{site.data.keyword.powerSys_notm}} environment. For installation instructions, see [Installing PowerHA SystemMirror](https://www.ibm.com/support/knowledgecenter/SSPHQG_7.2/install/ha_install.html){: new_window}{: external}.
+After you purchase the software, you can download it from [IBM Entitled Systems Support (ESS)](www.ibm.com/servers/eserver/ess/index.wss). You can install PowerHA SystemMirror for AIX on the virtual server that is running in your {{site.data.keyword.powerSys_notm}} environment. For installation instructions, see [Installing PowerHA SystemMirror](https://www.ibm.com/support/knowledgecenter/SSPHQG_7.2/install/ha_install.html){: new_window}{: external}.
 
 Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment.
 
