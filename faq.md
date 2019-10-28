@@ -30,7 +30,7 @@ subcollection: power-iaas
 {: #training}
 {: faq}
 
-To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud ![External link icon](../icons/launch-glyph.svg "External link icon")](https://youtu.be/y5QaNdGJ6R0) video.
+To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external}c video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
@@ -46,18 +46,18 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 
 **AIX**
 
-* [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io)
-* [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io)
+* [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io){: new_window}{: external}
+* [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io){: new_window}{: external}
 
 **IBM i**
 
-* [S922 (9009-22A) and E880 (9119-MHE) software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi)
+* [S922 (9009-22A) and E880 (9119-MHE) software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
 {: faq}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## What formats should I use when uploading a custom image?
 {: #custom-image}
@@ -111,7 +111,7 @@ For more information, see [Ordering IBM Cloud Direct Link Connect for Power Syst
 {: #configuring}
 {: faq}
 
-For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring).
+For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-power).
 
 ## What firewall options are there around VPN connectivity?
 {: #firewall}
@@ -123,7 +123,7 @@ You must set your own firewall in your IBM Cloud account.
 {: #billing}
 {: faq}
 
-**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth).
+**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
 **IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per gigabyte (GB) when using a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
@@ -143,4 +143,4 @@ IBM uses the same tools that are on an on-premises system.
 {: #ibmi-certification}
 {: faq}
 
-You can find self-certification and listing information on the [IBM Global Solutions Directory ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-356.ibm.com/partnerworld/gsd/homepage.do).
+You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www-356.ibm.com/partnerworld/gsd/homepage.do){: new_window}{: external}.
