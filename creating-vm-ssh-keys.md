@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-10-21"
+lastupdated: "2019-10-28"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -48,7 +48,7 @@ SSHKey created: testkey
 ```
 {: codeblock}
 
-To confirm that the key was successfully added, use the [ibmcloud pi key](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-keys) command:
+To confirm that the key was successfully added, use the [`ibmcloud pi keys`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-keys) command:
 
 ```bash
 ibmcloud pi key testkey
