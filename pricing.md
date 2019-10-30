@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-010-21"
 
-keywords: pricing, monthly usage, billing process, billing cycle
+keywords: pricing, monthly usage, billing process, billing cycle, DLPAR
 
 subcollection: power-iaas
 
