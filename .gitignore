@@ -2,3 +2,4 @@ power-iaas-workspace.code-workspace
 .vscode/
 utterances.json
 .DS_Store
+test*.md

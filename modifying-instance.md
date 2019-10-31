@@ -31,10 +31,7 @@ Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your
 ## Resizing an instance by using the IBM console
 {: #resizing-vm}
 
-To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps.
-
-If the VM is inactive, you can change the processor type to **Dedicated** or **Shared** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amount is double.
-{: tip}
+To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
 
 1. Go to the IBM console's **Virtual server instances** tab and click your instance.
 
@@ -43,6 +40,9 @@ If the VM is inactive, you can change the processor type to **Dedicated** or **S
     ![Finding your server details](./images/console-server-details.png "Finding your server details"){: caption="Figure 1. Finding your server details" caption-side="bottom"}
 
 3. After you click the **Edit** icon, a menu appears. Use the toggles to change your instance's **Entitled capacity** and **Memory (GB)**. Click **Next.**
+
+    If the VM is inactive, you can change the processor type to **Dedicated** or **Shared** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amount is double.
+    {: tip}
 
     ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"}
 
@@ -57,26 +57,22 @@ If the VM is inactive, you can change the processor type to **Dedicated** or **S
 
 You can modify your attached volumes and remove or add a public network.
 
-**Adding a volume**
+### Adding or managing a volume
 
 1. To add a volume, click **Add new**.
 
 2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable**.
 
-3. Click **Next**, agree to the service agreement and click **Order**.
+3. Click **Next**, agree to the service agreement and submit your **Order**.
 
-    If you'd like to change the boot status of a volume, click **Bootable** toggle.
-    {: note}
+To attach or detach one or more volumes, click **Manage existing volumes**. Select your wanted volumes and click **Finish**.
 
-**Managing existing volumes**
+If you'd like to change the boot status of a volume, click the **Bootable** toggle.
+{: note}
 
-1. To attach or detach one or more volumes, click the **Manage existing volumes** link.
+![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 1. Managing your existing volumes" caption-side="bottom"}
 
-2. Select your wanted volumes and click **Finish**.
-
-    ![Modifying your attached volume](./images/console-modify-attached-volume.png "Modifying your attached volume"){: caption="Figure 1. Modifying your attached volume" caption-side="bottom"}
-
-**Adding or removing a public network**
+### Adding or removing a public network
 
 You can remove or add a public network by clicking the **Public networks** toggle.
 
@@ -90,7 +86,7 @@ To resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial
 Resizing is not immediately available after you deploy a virtual machine (VM).
 {: note}
 
-1. Go to the IBM console's **Storage volumes** tab and find your volume.
+1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
