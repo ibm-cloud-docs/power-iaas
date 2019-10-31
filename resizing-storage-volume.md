@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-10-31"
 
-keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR
+keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM
 
 subcollection: power-iaas
 
@@ -28,12 +28,15 @@ subcollection: power-iaas
 Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your business needs.
 {: shortdesc}
 
-## Resizing an instance using the IBM console
+## Resizing an instance by using the IBM console
 {: #resizing-vm}
 
-To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
+To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps.
 
-1. Go to the IBM console's **Virtual server instances** tab and click on your instance.
+If the VM is inactive, you can change the processor type to **Dedicated** or **Shared** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amount is double.
+{: tip}
+
+1. Go to the IBM console's **Virtual server instances** tab and click your instance.
 
 2. Click the **Edit** icon in the **Server details** pane.
 
@@ -48,6 +51,36 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
     ![Ordering your newly modified instance](./images/console-server-details-order.png "Ordering your newly modified instance"){: caption="Figure 3. Ordering your newly modified instance" caption-side="bottom"}
 
 5. To verify your instance modification, view your **Server details**.
+
+## Modifying attached volumes and network interfaces
+{: #modifying-volume-network}
+
+You can modify your attached volumes and remove or add a public network.
+
+**Adding a volume**
+
+1. To add a volume, click **Add new**.
+
+2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable**.
+
+3. Click **Next**, agree to the service agreement and click **Order**.
+
+    If you'd like to change the boot status of a volume, click **Bootable** toggle.
+    {: note}
+
+**Managing existing volumes**
+
+1. To attach or detach one or more volumes, click the **Manage existing volumes** link.
+
+2. Select your wanted volumes and click **Finish**.
+
+    ![Modifying your attached volume](./images/console-modify-attached-volume.png "Modifying your attached volume"){: caption="Figure 1. Modifying your attached volume" caption-side="bottom"}
+
+**Adding or removing a public network**
+
+You can remove or add a public network by clicking the **Public networks** toggle.
+
+![Adding or removing a public network](./images/console-public-network-toggle.png "Adding or removing a public network"){: caption="Figure 1. Adding or removing a public network" caption-side="bottom"}
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
