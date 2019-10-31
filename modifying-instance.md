@@ -70,13 +70,13 @@ To attach or detach one or more volumes, click **Manage existing volumes**. Sele
 If you'd like to change the boot status of a volume, click the **Bootable** toggle.
 {: note}
 
-![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 1. Managing your existing volumes" caption-side="bottom"}
+![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 4. Managing your existing volumes" caption-side="bottom"}
 
 ### Adding or removing a public network
 
 You can remove or add a public network by clicking the **Public networks** toggle.
 
-![Adding or removing a public network](./images/console-public-network-toggle.png "Adding or removing a public network"){: caption="Figure 1. Adding or removing a public network" caption-side="bottom"}
+![Adding or removing a public network](./images/console-public-network-toggle.png "Adding or removing a public network"){: caption="Figure 5. Adding or removing a public network" caption-side="bottom"}
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
@@ -90,17 +90,17 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-    ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 1. Editing a storage volume" caption-side="bottom"}
+    ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 6. Editing a storage volume" caption-side="bottom"}
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size.
 
     You can increase only the size of the storage volume. You cannot decrease it.
     {: important}
 
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 2. Modifying your storage volume" caption-side="bottom"}
+    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 7. Modifying your storage volume" caption-side="bottom"}
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
-    ![Ordering your new storage volume](./images/console-modify-volume-summary.png "Ordering your new storage volume"){: caption="Figure 3. Ordering your new storage volume" caption-side="bottom"}
+    ![Ordering your new storage volume](./images/console-modify-volume-summary.png "Ordering your new storage volume"){: caption="Figure 8. Ordering your new storage volume" caption-side="bottom"}
 
 5. To verify your new storage size, go back to the **Storage volumes** tab.
