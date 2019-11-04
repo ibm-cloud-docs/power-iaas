@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-26"
+lastupdated: "2019-11-04"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC
 
 subcollection: power-iaas
 
@@ -25,12 +25,14 @@ subcollection: power-iaas
 # Configuring a private network subnet
 {: #configuring-subnet}
 
-You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **name**, **Classless inter-domain routing (CIDR)**, **Gateway**, **IP range**, and **DNS server**.
+You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **Name** and specify a **Classless inter-domain routing (CIDR)**. When you specify a CIDR, the **Gateway**, **IP range**, and **DNS server** are automatically populated.
 {: shortdesc}
 
-For the CIDR, you must specify the exact value of an IP address, `192.168.100.0/24` (192.168.100.14 on a 255.255.255.0 subnet), or a range of IP addresses, `192.168.100.0/22` (192.168.100.0 to 192.168.103.255). When you specify a CIDR, the web console automatically fills the **IP ranges** field.
+For the CIDR, you must specify the exact value of an IP address, `192.168.100.14/24`, or a block of IP addresses, `192.168.100.0/22`.
 
-The **Gateway** value must be outside of the IP range.
+`192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits). The IPv4 block, `192.168.100.0/22`, represents the 1024 IPv4 addresses from `192.168.100.0` to `192.168.103.255`.
+
+The first IP address is always reserved for the gateway in both the Washington, D.C. (WDC) and Dallas (DAL) colocations (colo). The second and third IP addresses are reserved for high-availability gateways in only the WDC colo. The subnet address and subnet broadcast address are reserved for both colos.
 {: important}
 
   ![Configuring a new private network](./images/console-configure-private-network.png "Configuring a new private network"){: caption="Figure 5. Configuring a new private network" caption-side="bottom"}
@@ -48,14 +50,14 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 You must use CIDR notation when you choose the IP ranges for your private network subnet.
 
 ```shell
-<IPv4 address>/number` (VPC address example: `10.10.0.0/16`)
+<IPv4 address>/number>
 ```
 {: screen}
 
-CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: external}.
+CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
 {: note}
 
-You must reserve the last 16 bits (65,536 addresses) of the _IPv4_ as _0s_ to use them for various subnet IP addresses within the same {{site.data.keyword.cloud}} VPC. If you use an IP range outside of those that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet, the instances that are attached to that subnet might not be able to reach parts of the public internet.
+If you use an IP range outside of those that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: new_window}{: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet, the instances that are attached to that subnet might not be able to reach parts of the public internet.
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
 
@@ -72,4 +74,4 @@ The number after the slash represents the bit length of the subnet mask. As a re
 ## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
 {: #connecting-subnet}
 
- You can link private subnets within a colocation (colo) that are on the same virtual LAN (VLAN). You must open a ticket with IBM support to enable this functionality.
+ You can link private subnets within a colo that are on the same virtual LAN (VLAN). You must open a ticket with IBM support to enable this functionality.

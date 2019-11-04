@@ -122,7 +122,7 @@ Order a second Direct Link Connect connection for backup purposes.
    <td>Dallas 4</td>
    </tr>
    <tr>
-   <td>Washington D.C, US</td>
+   <td>Washington, D.C, US</td>
    <td>Washington 2</td>
    </tr>
    </table>
