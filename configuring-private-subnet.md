@@ -28,9 +28,17 @@ subcollection: power-iaas
 You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **Name** and specify a **Classless inter-domain routing (CIDR)**. When you specify a CIDR, the **Gateway**, **IP range**, and **DNS server** are automatically populated.
 {: shortdesc}
 
-For the CIDR, you must specify the exact value of an IP address, `192.168.100.14/24`, or a block of IP addresses, `192.168.100.0/22`.
+You must use CIDR notation when you choose the IP ranges for your private network subnet.
 
-`192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits). The IPv4 block, `192.168.100.0/22`, represents the 1024 IPv4 addresses from `192.168.100.0` to `192.168.103.255`.
+```shell
+<IPv4 address>/number>
+```
+{: screen}
+
+CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
+{: note}
+
+For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
 The first IP address is always reserved for the gateway in both the Washington, D.C. (WDC) and Dallas (DAL) colocations (colo). The second and third IP addresses are reserved for high-availability gateways in only the WDC colo. The subnet address and subnet broadcast address are reserved for both colos.
 {: important}
@@ -46,16 +54,6 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 ## Using CIDR notation
 {: #cidr-notation}
-
-You must use CIDR notation when you choose the IP ranges for your private network subnet.
-
-```shell
-<IPv4 address>/number>
-```
-{: screen}
-
-CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
-{: note}
 
 If you use an IP range outside of those that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: new_window}{: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet, the instances that are attached to that subnet might not be able to reach parts of the public internet.
 
