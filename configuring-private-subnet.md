@@ -56,15 +56,15 @@ If you use an IP range outside of those that are defined by [RFC 1918](https://t
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
 
-| CIDR block size | Available Addresses |
-| --------------- | ------------------- |
-|      /22        |        1019         |
-|      /23        |         507         |
-|      /24        |         251         |
-|      /25        |         123         |
-|      /26        |          59         |
-|      /27        |          27         |
-|      /28        |          11         |
+| CIDR block size | Available IP Addresses (WDC) | Available IP Addresses (DAL)
+| --------------- | ---------------------------- |---------------------------
+|      /22        |        1019                  |          1021
+|      /23        |         507                  |          509
+|      /24        |         251                  |          253
+|      /25        |         123                  |          125
+|      /26        |          59                  |           61
+|      /27        |          27                  |           29
+|      /28        |          11                  |           13
 
 ## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
 {: #connecting-subnet}
