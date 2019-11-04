@@ -28,19 +28,16 @@ subcollection: power-iaas
 You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **Name** and specify a **Classless inter-domain routing (CIDR)**. When you specify a CIDR, the **Gateway**, **IP range**, and **DNS server** are automatically populated.
 {: shortdesc}
 
-You must use CIDR notation when you choose the IP ranges for your private network subnet.
+You must use CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
 
 ```shell
 <IPv4 address>/number>
 ```
 {: screen}
 
-CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
-{: note}
-
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
-The first IP address is always reserved for the gateway in both the Washington, D.C. (WDC) and Dallas (DAL) colocations (colo). The second and third IP addresses are reserved for high-availability gateways in only the WDC colo. The subnet address and subnet broadcast address are reserved for both colos.
+The first IP address is always reserved for the gateway in the Washington, D.C. (WDC) and Dallas (DAL) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
   ![Configuring a new private network](./images/console-configure-private-network.png "Configuring a new private network"){: caption="Figure 5. Configuring a new private network" caption-side="bottom"}
