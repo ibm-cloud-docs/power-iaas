@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-26"
+lastupdated: "2019-11-05"
 
 keywords: custom image, boot image, upload, deploy
 
@@ -118,7 +118,7 @@ To use a custom boot image in a {{site.data.keyword.powerSys_notm}} instance, co
 
 3. When you provision a new {{site.data.keyword.powerSys_notm}} instance, your custom boot image appears under the **Boot volume** section.
 
-    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your Cloud Object Storage service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#ic-download-object) for the Cloud Object Storage CLI command.
+    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#ic-download-object) for the Cloud Object Storage CLI command.
     {: tip}
 
 Refer to the following table to complete the necessary fields to create a custom image:
