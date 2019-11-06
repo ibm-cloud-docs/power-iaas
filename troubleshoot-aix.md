@@ -32,14 +32,12 @@ Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues
 {: #troubleshoot-hung-aix}
 {: troubleshoot}
 
-If the AIX VM does not boot, the {{site.data.keyword.cloud}} Console does not display the LEDs. You must boot the VM into **Maintenance Mode** to debug the boot issue.
+If the AIX VM does not boot, the {{site.data.keyword.cloud}} Console does not display the LEDs. You must boot the AIX VM into **Maintenance Mode** to debug the boot issue.
 {: tsSymptoms}
 
-To debug the AIX boot issue, try the following steps:
+1. Start the console to the AIX VM from the Novalink host. The AIX VM must be powered on.
 
-1. Start the console to the VM from the Novalink host. The VM must be powered on.
+2. Restart the AIX VM from a **different** SSH session to the Novalink host.
 
-2. Restart the VM from a **different** SSH session to the Novalink host.
-
-3. Press **CTL+C** from the console on the first session. This should force the VM to boot to System Management Services (SMS).
+3. Press **CTL+C** from the console on the first session. This should force the AIX VM to boot to System Management Services (SMS).
 {: tsResolve}
