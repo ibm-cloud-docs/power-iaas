@@ -61,7 +61,10 @@ IBM Power Systems Virtual Servers
 
     {: .navgroup id="help"}
     faq.md
+
+    {: .topicgroup}
     troubleshooting
         troubleshoot-aix.md
+
     getting-help-and-support.md
     {: .navgroup-end}
