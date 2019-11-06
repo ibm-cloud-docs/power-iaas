@@ -68,12 +68,9 @@ Order a second Direct Link Connect connection for backup purposes.
     It can take IBM Cloud support up to three business days to create the Direct Link Connect connection.
     {: note}
 
-10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
+10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). In the new case's description field, add the Direct Link Connect case number.
 
-    1. In the new case's description field, add the Direct Link Connect case number.
-    2. Copy the {{site.data.keyword.powerSys_notm}} case IAM Service ID that the system automatically generated.
-
-11. Enter the IAM Service ID from the {{site.data.keyword.powerSys_notm}} case into the Direct Link Connect case. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
+11. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
 
     ```shell
     Link Speed:                  1000 Mbps
