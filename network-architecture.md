@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Network architecture
 {: #network-reference-architecture}
 
-Use the following graphics to better understand the {{site.data.keyword.powerSysShort}} network architecture.
+Use the following graphics to better understand the {{site.data.keyword.powerSysShort}} network architecture. This is currently not an exhaustive list of the {{site.data.keyword.powerSysShort}} connection methods.
 {: shortdesc}
 
 ## Private SSL connection
