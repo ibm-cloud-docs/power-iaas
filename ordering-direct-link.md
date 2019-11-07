@@ -65,12 +65,12 @@ Order a second Direct Link Connect connection for backup purposes.
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
-    It can take IBM Cloud support up to three business days to create the Direct Link Connect connection.
+    It can take IBM Cloud support up to three business days to complete the initial setup for the Direct Link connection rquest.
     {: note}
 
-10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). In the new case's description field, add the Direct Link Connect case number.
+10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
-11. When the Direct Link Connect connection is created, the Direct Link Connect case number is closed. The following network information is an example of what is displayed:
+11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is finally established, the **Direct Link Connect case number** is closed. The following network information is an example of what is displayed:
 
     ```shell
     Link Speed:                  1000 Mbps
@@ -85,7 +85,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     {: screen}
 
-12. Use this information from the Direct Link Connect case number and enter the following network information into the {{site.data.keyword.powerSys_notm}} case:
+12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
     ```shell
     Customer name:
@@ -101,7 +101,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     {: codeblock}
 
-13. The {{site.data.keyword.powerSys_notm}} case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
+13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
    <dl>
    <dt><strong>Direct Link Instance Name</strong><dt>

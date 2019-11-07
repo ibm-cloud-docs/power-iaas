@@ -35,7 +35,7 @@ To open a support ticket for a {{site.data.keyword.powerSys_notm}}, complete the
 3. Select **Manage cases** followed by **Create new case**.
 4. From the **New support case** page, complete the following steps:
 
-      Select **Technical** as the support type when requesting your initial Direct Link connection.
+      Select **Technical** as the support type to connect to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service.
       {: note}
 
     1. Select **Technical**, **Account & access**, **Billing & usage** or **Customer support** in the **What type of support do you need?** field. We've selected **Technical** in the following example.
