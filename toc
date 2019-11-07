@@ -39,7 +39,7 @@ IBM Power Systems Virtual Servers
         configuring-private-network.md
         configuring-private-subnet.md
         network-security.md
-        networking-reference-graphics.md
+        networking-architecture.md
 
     {: .topicgroup}
     AIX
