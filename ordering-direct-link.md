@@ -36,7 +36,7 @@ To order the Direct Link Connect service that creates a connection to the {{site
 Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
-1. Verify your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
+1. Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
 
 2. Review the following basic Direct Link Connect networking concepts:
 
@@ -51,13 +51,13 @@ Order a second Direct Link Connect connection for backup purposes.
 
     ![Finding Direct Link Connect](./images/console-direct-link-select.png "Finding Direct Link Connect"){: caption="Figure 1. Finding Direct Link Connect" caption-side="bottom"}
 
-5. Click the **Order Direct Link Connect** button at the top of the page to see the order form.
+5. Click the **Order Direct Link Connect** button at the near the page to see the order form.
 
 6. Enter the configuration parameters for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections. For more information, see the table at the bottom of the page.
 
     ![Configuring Direct Link Connect](./images/console-direct-link-configure.png "Configuring Direct Link Connect"){: caption="Figure 2. Configuring Direct Link Connect" caption-side="bottom"}
 
-7. Read the *Master Service Agreement* and select the check box. You must read and understand the *Master Service Agreement* as it contains important technical information.
+7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the *Master Service Agreement* as it contains important technical information.
 
 8. Click **Create**. The following message is displayed when your request is submitted successfully:
 
@@ -65,12 +65,12 @@ Order a second Direct Link Connect connection for backup purposes.
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
-    It can take IBM Cloud support up to three business days to complete the initial setup for the Direct Link connection rquest.
+    It can take IBM Cloud support up to three business days to complete the initial setup for the Direct Link connection request.
     {: note}
 
 10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
-11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is finally established, the **Direct Link Connect case number** is closed. The following network information is an example of what is displayed:
+11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
     ```shell
     Link Speed:                  1000 Mbps
