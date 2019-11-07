@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Networking reference graphics
-{: #networking-graphics}
+# Network reference architecture
+{: #network-architecture}
 
-Use the following networking reference graphics to better understand the {{site.data.keyword.powerSysShort} network architecture and connection methods.
+Use the following graphics to better understand the {{site.data.keyword.powerSysShort} network architecture and connection methods.
 {: shortdesc}
 
 ## Private SSL connection
@@ -49,7 +49,7 @@ You can use a private Direct Link connection to connect into your existing IBM C
 
   ![Power Systems Virtual Server private Direct Link connection](./images/network-private-direct-link.png "Power Systems Virtual Server private Direct Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
 
-## IBM Cloud Connect (or Megaport) to colo connection
+## IBM Cloud Connect (or Megaport) to colocation (colo) connection
 {: #cloud-to-colo}
 
 You can connect to the IBM Cloud Power environment by using IBM Cloud connect or Megaport.
@@ -59,7 +59,7 @@ You can connect to the IBM Cloud Power environment by using IBM Cloud connect or
 ## Power on-premise to colo connection
 {: #onprem-to-colo}
 
-You can connect your Power on-premise environment to a colo by using IBM Cloud Connect or Megaport.
+You can connect your IBM Power on-premise environment to a colo by using IBM Cloud Connect or Megaport.
 
   ![Power Systems Virtual Server private on-premise to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 6. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-l0-22"
+lastupdated: "2019-l1-07"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -22,8 +22,11 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Default firewall ports
-{: #firewall}
+# Network security
+{: #network-security}
+
+## Default firewall ports
+{: #firewall-ports}
 
 The {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
