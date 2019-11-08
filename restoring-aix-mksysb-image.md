@@ -161,4 +161,4 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
-    ![Attaching the saved image volume to other VM instances](./images/terminal-rmdev.png "Attaching the saved image volume to other VM instances"){: caption="Figure 22. Attaching the saved image volume to other VM instances" caption-side="bottom"}
+    ![Attaching the saved image volume to other VM instances](./images/console-attach-volume.png "Attaching the saved image volume to other VM instances"){: caption="Figure 22. Attaching the saved image volume to other VM instances" caption-side="bottom"}

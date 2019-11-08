@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-06"
+lastupdated: "2019-11-07"
 
 keywords: networking graphics, network architecture, private SSL, private IPSec, Direct Link, colocation, colo, IBM Cloud Connection, Megaport, IBM Cloud network
 
@@ -56,7 +56,7 @@ You can connect to the IBM Cloud Power environment by using IBM Cloud connect or
 
   ![Power Systems Virtual Server colo connection](./images/network-cloud-colo.png "Power Systems Virtual Server colo connection"){: caption="Figure 4. Power Systems Virtual Server Colo connection" caption-side="bottom"}
 
-## Power on-premise to colo connection
+## IBM Power on-premise environment to colo connection
 {: #onprem-to-colo}
 
 You can connect your IBM Power on-premise environment to a colo by using IBM Cloud Connect or Megaport.

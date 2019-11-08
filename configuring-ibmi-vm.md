@@ -65,9 +65,13 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 {: note}
 
 1. Enter the  `wkrsysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.
+
 2. Enter the `pwrdwnsys` command to restart the IBM i operating system (OS).
+
 3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
+
 4. Enter the `wrksysval qipltype` command and change the value to **0**.
+
 5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
 
 You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
@@ -96,10 +100,15 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
 
 2. To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
     1. Enter the `cfgtcp` command.
+
     2. Select option **20** (Configure TCP/IP applications).
+
     3. Select option **11** (configure TELNET).
+
     4. Select option **10** (autoconfigure virtual devices).
+
     5. Select `QAUTOVRT` with option **2** (change).
+
     6. Change the value from **0** to the number of auto-configured consoles you want to be able to connect concurrently.
 
 3. Go to the IBM i VM and start the telnet server for the console:
