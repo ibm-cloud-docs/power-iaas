@@ -21,6 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 {:new_window: target="_blank"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
+{:external: target="_blank" .external}
 
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
