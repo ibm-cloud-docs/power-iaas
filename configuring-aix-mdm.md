@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-11-12"
 
-keywords: aix mdm, storage pool, mount command,
+keywords: MDM, storage pool, mount command, PowerVM
 
 subcollection: power-iaas
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Configuring MDM on AIX
 {: #configuring-mdm}
 
-You can configure MDM on an {{site.data.keyword.powerSysShort}} AIX VM.
+You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR.
 {: shortdesc}
 
 1. Begin by connecting to the provided **Management** URL.
@@ -43,13 +43,13 @@ You can configure MDM on an {{site.data.keyword.powerSysShort}} AIX VM.
 
     ![Viewing your network shares](./images/mdm-network-shares-tab.png "Viewing your network shares"){: caption="Figure 3. Viewing your network shares" caption-side="bottom"}
 
-6. Right-click and select **View Mount Command** to view the mount parameters for the share.
+6. **Right-click** and select **View Mount Command** to view the mount parameters for the share.
 
     You can have multiple mount options depending on your MDM order's supplied network parameters. Make sure that you are using the correct mount for your network environment. In the following example, *eth2* is cabled to the management network, and *eth4* is cabled to a network that the production LPARs have access to.
 
     ![Viewing the share mount parameters](./images/mdm-view-mount.png "Viewing the share mount parameters"){: caption="Figure 4. Viewing the share mount parameters" caption-side="bottom"}
 
-7. To mount, enter the `mount ServerName:/remote/directory/local/directory` command. Your command should appear similar to the following, `mount 10.32.246.4:/export/ibmpoc/share/ibmpoc`.
+7. On your AIX LPAR, enter the `mount ServerName:/remote/directory /local/directory` command. You must replace *ServerName* with the MDM IP address. Your command should appear similar to the following: `mount 10.32.246.4:/export/ibmpoc /share/ibmpoc`.
 
     The MDM device does not allow routing on the secondary NIC unless management and data ports are shared. The secondary NIC and the AIX host must be on the same layer 2 VLAN or subnet.
     {: note}
@@ -58,4 +58,4 @@ You can configure MDM on an {{site.data.keyword.powerSysShort}} AIX VM.
 
 8. Copy or move your data from the AIX host to the share by using the `cp` or `mv` commands.
 
-9. Power the system down.
+9. Power down the system.
