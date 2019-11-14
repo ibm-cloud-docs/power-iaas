@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-11-12"
 
-keywords: aix mdm, storage pool, 
+keywords: aix mdm, storage pool, mount command,
 
 subcollection: power-iaas
 

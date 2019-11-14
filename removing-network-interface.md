@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-11-13"
 
-keywords: network inteface, AIX cloud VM, ifconfig, detach, en0, 
+keywords: network inteface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address
 
 subcollection: power-iaas
 
