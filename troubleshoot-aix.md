@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-05"
+lastupdated: "2019-11-18"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS
 
@@ -26,16 +26,17 @@ subcollection: power-iaas
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
 
-Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues.
+Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues. **This page is still under construction!**
 {: shortdesc}
 
 ## What can I do if my AIX virtual machine (VM) does not initially boot?
 {: #troubleshoot-hung-aix}
 {: troubleshoot}
 
-The AIX boot disk being used to provision an AIX VM is not successfully booting. As a result, the console displays a blank screen without standard debugging options.
 {: tsSymptoms}
+The AIX boot disk being used to provision an AIX VM is not successfully booting. As a result, the console displays a blank screen without standard debugging options.
 
+{: tsResolve}
 If the AIX VM does not boot, you must provision an additional AIX VM and use it as a Network Installation Management (NIM) server. Without a NIM server, you cannot debug the boot issue and must re-image your disk.
 
 1. Determine the hostname and IP address of the system by using the following two commands, `hostname` and `ifconfig -a`.
@@ -53,4 +54,3 @@ If the AIX VM does not boot, you must provision an additional AIX VM and use it 
     ![NIM master installation summary](./images/terminal-aix-nim-summary.png "NIM master installation summary"){: caption="Figure 3. NIM master installation summary" caption-side="bottom"}
 
 For more information on setting up a NIM server, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: new_window}{: external}. If you are unfamiliar with this process, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
-{: tsResolve}

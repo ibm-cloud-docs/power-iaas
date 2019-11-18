@@ -29,7 +29,7 @@ Learn more about connecting {{site.data.keyword.powerSysShort}} instances and ne
 {: shortdesc}
 
 ## Connecting a Power Systems Virtual Server instance between colocations (colo) (DAL to WDC)
-{: #connecting-classic}
+{: #connecting-instance-colos}
 
 You can use IBM Cloud Connect to connect {{site.data.keyword.cloud_notm}} instances across colos. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. You must open a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
 
@@ -47,6 +47,6 @@ With IBM Cloud Connect, IBM clients have access to:
 - **IBM GNPP Accessible Services & Transports** like ATT, Verizon, Orange, Equinix, etc.)
 
 ## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
-{: #connecting-subnet}
+{: #connecting-private-subnets}
 
  You can link private subnets within a colo that are on the same virtual LAN (VLAN). You must open a suport ticket with IBM to enable this functionality.
