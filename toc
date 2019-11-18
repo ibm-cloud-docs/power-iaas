@@ -38,6 +38,7 @@ IBM Power Systems Virtual Servers
         ordering-direct-link.md
         configuring-private-network.md
         configuring-private-subnet.md
+        connecting-networks.md
         network-security.md
         network-architecture.md
 
@@ -48,6 +49,7 @@ IBM Power Systems Virtual Servers
         downloading-aix-iso-image.md
         configuring-aix-mdm.md
         removing-network-interface.md
+        network-novalink.md
 
     {: .topicgroup}
     IBM i

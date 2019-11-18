@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-11-18"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC
 
@@ -65,8 +65,3 @@ The number after the slash represents the bit length of the subnet mask. As a re
 |      /26        |          59                  |           61
 |      /27        |          27                  |           29
 |      /28        |          11                  |           13
-
-## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
-{: #connecting-subnet}
-
- You can link private subnets within a colo that are on the same virtual LAN (VLAN). You must open a ticket with IBM support to enable this functionality.

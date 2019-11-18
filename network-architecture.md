@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-07"
+lastupdated: "2019-11-18"
 
-keywords: networking graphics, network architecture, private SSL, private IPSec, Direct Link, colocation, colo, IBM Cloud Connection, Megaport, IBM Cloud network
+keywords: networking diagrams, network architecture, private SSL, private IPSec, Direct Link, colocation, colo, IBM Cloud Connection, Megaport, IBM Cloud network
 
 subcollection: power-iaas
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Network architecture
 {: #network-reference-architecture}
 
-Use the following graphics to better understand the {{site.data.keyword.powerSysShort}} network architecture. This is currently not an exhaustive list of the {{site.data.keyword.powerSysShort}} connection methods.
+Use the following graphics to better understand the {{site.data.keyword.powerSysShort}} network architecture. This is not an exhaustive list of the {{site.data.keyword.powerSysShort}} connection methods.
 {: shortdesc}
 
 ## Private SSL connection

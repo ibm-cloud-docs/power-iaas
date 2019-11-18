@@ -119,6 +119,12 @@ For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/
 
 You must set your own firewall in your IBM Cloud account.
 
+## How do you connect a server instance between two colocations (DAL to WDC)?
+{: #gts-cloud-connect}
+{: faq}
+
+You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/infrastructure/power-iaas?topic=power-iaas-connecting-networks)
+
 ## How is network bandwidth billed?
 {: #billing}
 {: faq}

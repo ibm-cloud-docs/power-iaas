@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-13"
+lastupdated: "2019-11-18"
 
 keywords: network inteface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address
 
@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 {:external: .external}
 
-# How to add or remove a network interface from an AIX VM
+# How to add or remove a network interface from an AIX virtual machine (VM)
 {: #managing-network-interface}
 
 You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
