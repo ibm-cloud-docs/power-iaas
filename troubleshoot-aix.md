@@ -36,6 +36,9 @@ Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues
 {: tsSymptoms}
 The AIX boot disk being used to provision an AIX VM is not successfully booting. As a result, the console displays a blank screen without standard debugging options.
 
+{: tsCauses}
+The AIX boot disk might be corrupted.
+
 {: tsResolve}
 If the AIX VM does not boot, you must provision an additional AIX VM and use it as a Network Installation Management (NIM) server. Without a NIM server, you cannot debug the boot issue and must re-image your disk.
 

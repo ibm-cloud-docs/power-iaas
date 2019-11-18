@@ -123,7 +123,7 @@ You must set your own firewall in your IBM Cloud account.
 {: #gts-cloud-connect}
 {: faq}
 
-You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/infrastructure/power-iaas?topic=power-iaas-connecting-networks)
+You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/infrastructure/power-iaas?topic=power-iaas-connecting-networks).
 
 ## How is network bandwidth billed?
 {: #billing}
