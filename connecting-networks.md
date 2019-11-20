@@ -54,7 +54,7 @@ Find out how the IBM Cloud Connect team helps establish a **Direct Connection** 
 **Dallas, TX (DAL)**
 
 1. The Power IaaS Direct Connection (DC) is located in **CyrusOne** and uses the standard **Megaport Port**.
-2. The Power IaaS team creates a **Service Key** and provides it to the IBM Cloud Connect delivery team to establish the VxC.
+2. The Power IaaS team creates a **Service Key** and provides it to the IBM Cloud Connect delivery team to establish the VxC (one **Service Key** per VxC).
 3. The IBM Cloud Connect team enters the **Service Key** into the Megaport portal to establish the VxC.
 4. The IBM Cloud Connect team creates the VxC.
 
