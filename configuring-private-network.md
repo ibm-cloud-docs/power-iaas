@@ -74,7 +74,25 @@ After you establish a connection to the IBM Cloud classic infrastructure, you mu
 ## Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services
 {: #connecting-megaport}
 
-You can connect directly to the IBM Cloud Power infrastructure by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. You must engage [Megaport](https://portal.megaport.com){: new_window}{: external} directly to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**. You must also open a [secondary ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) with IBM Power to perform the network configuration.
+You can connect directly to the IBM Cloud Power infrastructure by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. You must engage [Megaport](https://portal.megaport.com){: new_window}{: external} directly to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**. You must also open a [secondary ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) with IBM Power to perform the network configuration. Remember to include the following pieces of information in your support ticket:
+
+```
+Customer name and contact:
+Customer account ID
+Service ID (VxC Identifier):
+
+Customer network subnet:
+Customer router IP Address:
+Power Systems Virtual Server customer network IP address:
+Power Systems Virtual Server network ASN: 64999 for WDC and 64997 for DAL
+Customer Network ASN:
+
+Customer subnets to be advertised:
+Power Systems Virtual Server customer Private Network ID (1):
+Power Systems Virtual Server customerPrivate Network ID (2):
+Power Systems Virtual Server customerPrivate Network ID (3):
+```
+{: screen}
 
 <!-- ### Using IBM Direct Link Connect via Megaport to connect to the IBM Cloud Power environment
 {: creating-connect-vxc}

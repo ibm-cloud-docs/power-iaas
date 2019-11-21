@@ -28,7 +28,7 @@ subcollection: power-iaas
 ## Default firewall ports
 {: #firewall-ports}
 
-The {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
+The public {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
 * 22 (SSH)
@@ -36,4 +36,14 @@ The {{site.data.keyword.powerSysShort}} network security architecture relies on 
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
 
-If you need additional ports to be opened, you must submit a [service ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.
+The following firewall ports are also available for IBM i virtual machines (VM):
+
+* 2005
+* 2007
+* 2010
+* 2012
+* 9470
+* 9475
+* 9476
+
+If you need additional ports to be opened, you must submit a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.
