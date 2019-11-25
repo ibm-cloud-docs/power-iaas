@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-11-18"
 
-keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC
+keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, GRE tunneling
 
 subcollection: power-iaas
 
@@ -93,6 +93,26 @@ Power Systems Virtual Server customerPrivate Network ID (2):
 Power Systems Virtual Server customerPrivate Network ID (3):
 ```
 {: screen}
+
+## Generic Routing Encapuslation (GRE) tunneling
+{: #gre-tunneling}
+
+{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the *Frankfurt 4* (FRA04) location. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+
+```
+GRE Tunnel Configuration Request:
+Customer name:
+Customer account ID:
+GRE Tunnel source (Power VS) IP:
+GRE Tunnel destination (IBM Cloud VRA) IP:
+GRE Tunnel interface (Power VS) IP:
+GRE Tunnel interface (IBM Cloud VRA) IP:
+Private Networks to be routed over GRE:
+Private Network ID (1):
+Private Network ID (2):
+Private Network ID (3):
+```
+{: codeblock}
 
 <!-- ### Using IBM Direct Link Connect via Megaport to connect to the IBM Cloud Power environment
 {: creating-connect-vxc}
