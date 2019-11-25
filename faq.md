@@ -30,7 +30,7 @@ subcollection: power-iaas
 {: #training}
 {: faq}
 
-To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external}c video.
+To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
@@ -65,6 +65,12 @@ Yes. This function is known as **bring your own image**. For more information, s
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
+## What are the available boot image storage types?
+{: #storage}
+{: faq}
+
+The storage types vary by region. The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types. The **eu-de (FRA04)** region uses **Tier 1 (SSD Flash storage)** or **Tier 3 (NVMe based Flash storage providing faster IO access)** storage types. For more information, see [Importing a boot image](/docs/infrastructure/power-iaas?topic=power-iaas-importing-boot-image#console-import-image).
+
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
 {: faq}
@@ -89,7 +95,7 @@ Clients are responsible for third-party licensing.
 
 For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
 
-## Do Power Systemes Virtual Servers run in a multi-tenant environment?
+## Do Power Systems Virtual Servers run in a multi-tenant environment?
 {: #multi}
 {: faq}
 
