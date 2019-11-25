@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-11-18"
+lastupdated: "2019-11-25"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04
 
 subcollection: power-iaas
 

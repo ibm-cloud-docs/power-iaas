@@ -126,8 +126,8 @@ Refer to the following table to complete the necessary fields to create a custom
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name you want displayed in your catalog.|
-| Storage type | Select whether you want **Standard** or **SSD** for the storage type.|
-| Region | Select either **us-east** or **us-south** for the region.|
+| Storage type | **us-east (WDC)** or **us-south (DAL)**: Select whether you want **Standard** or **SSD** for the storage type. <br> **eu-de (FRA04):** Select whether you want **Tier 1** or **Tier 3** for the storage type.|
+| Region | Select either **us-east**, **us-south**, or **eu-de** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|

@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-10-21"
+lastupdated: "2019-12-25"
 
-keywords: boot image, import boot image, upload boot image
+keywords: boot image, import boot image, upload boot image, storage types, regions, Tier 1, Tier 3, SSD, NVMe
 
 subcollection: power-iaas
 
@@ -50,7 +50,7 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 ## Using the IBM Cloud console to import a boot image
 {: #console-import-image}
 
-Complete the following steps to import a boot image by using the IBM Cloud console.
+Complete the following steps to import a boot image by using the IBM Cloud console. The storage types vary by region. The **us-east (WDC)** and **us-south (DAL)** regions have **Standard** or **SSD** storage types. The **eu-de (FRA04)** region uses **Tier 1 (SSD Flash storage)** or **Tier 3 (NVMe based Flash storage providing faster IO access)** storage types.
 
 1. Click the **Boot images** tab, then **Import**.
 
@@ -67,8 +67,9 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name you want displayed in your catalog.|
-| Storage type | Select whether you want **Standard** or **SSD** for the storage type.|
-| Region | Select either **us-east** or **us-south** for the region.|
+| Storage type | **us-east (WDC)** or **us-south (DAL)**: Select whether you want **Standard** or **SSD** for the storage type. <br> **eu-de (FRA04):** Select whether you want **Tier 1** or **Tier 3** for the storage type.|
+| Region | Select either **us-east**, **us-south**, or **eu-de** for the region.|
+| Region | Select either **us-east**, **us-south**, or **eu-de** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
