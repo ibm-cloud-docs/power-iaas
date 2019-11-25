@@ -3,3 +3,4 @@ power-iaas-workspace.code-workspace
 utterances.json
 .DS_Store
 test*.md
+*.txt
