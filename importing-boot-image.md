@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-12-25"
+lastupdated: "2019-11-25"
 
 keywords: boot image, import boot image, upload boot image, storage types, regions, Tier 1, Tier 3, SSD, NVMe
 
