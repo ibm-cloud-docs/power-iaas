@@ -92,7 +92,7 @@ Power Systems Virtual Server customer Private Network ID (1):
 Power Systems Virtual Server customerPrivate Network ID (2):
 Power Systems Virtual Server customerPrivate Network ID (3):
 ```
-{: screen}
+{: codeblock}
 
 ## Generic Routing Encapuslation (GRE) tunneling
 {: #gre-tunneling}

@@ -125,10 +125,14 @@ Order a second Direct Link Connect connection for backup purposes.
    <td>Washington, D.C, US</td>
    <td>Washington 2</td>
    </tr>
+      <tr>
+   <td>Frankfurt, Germany EU</td>
+   <td>Frankfurt 4</td>
+   </tr>
    </table>
    </dd>
    <dt><strong>Network Provider</strong><dt>
-   <dd>You must select <strong>MEGAPORT</strong> from the list.</dd>
+   <dd>You must select <strong>MEGAPORT</strong> or <strong>IBM POWER VIRTUAL SERVER</strong> from the list.</dd>
    <dt><strong>Link Speed</strong><dt>
    <dd>Select the link speed to meet your workload requirements. The recommended selection for the Link Speed field is 1000 Mbps.</dd>
    <dt><strong>Routing Option</strong><dt>
@@ -148,6 +152,9 @@ Order a second Direct Link Connect connection for backup purposes.
    </tr>
    <tr>
    <td>Washington 2</td>
+   <td>64999</td>
+   <tr>
+   <td>Frankfurt 4</td>
    <td>64999</td>
    </tr>
    </table>
