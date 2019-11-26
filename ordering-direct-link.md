@@ -116,18 +116,22 @@ Order a second Direct Link Connect connection for backup purposes.
    <tr>
    <th>Power Systems Virtual Server location</th>
    <th>Direct Link Connect location</th>
+   <th>Network provider</th>
    </tr>
    <tr>
    <td>Dallas, TX US</td>
    <td>Dallas 4</td>
+   <td>Megaport</td>
    </tr>
    <tr>
    <td>Washington, D.C, US</td>
    <td>Washington 2</td>
+   <td>Megaport</td>
    </tr>
       <tr>
    <td>Frankfurt, Germany EU</td>
    <td>Frankfurt 4</td>
+   <td>IBM Power Virtual Server</td>
    </tr>
    </table>
    </dd>

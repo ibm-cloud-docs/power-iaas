@@ -37,12 +37,14 @@ You must use CIDR notation when you choose the IP ranges for your private networ
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
-The first IP address is always reserved for the gateway in the Washington, D.C. (WDC) and Dallas (DAL) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
+The first IP address is always reserved for the gateway in the Washington, D.C. (WDC), Dallas (DAL), and Frankfurt (FRA04) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
   ![Configuring a new private network](./images/console-configure-private-network.png "Configuring a new private network"){: caption="Figure 5. Configuring a new private network" caption-side="bottom"}
 
-You can also create a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
+A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. You can choose a default **DNS server** value of `127.0.0.1` to avoid this issue.
+
+You can also create and configure a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
 
 ```shell
 ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "startIP-endIP[,startIP-endIP]" [--dns-servers "DNS1 DNS2"] [--gateway GATEWAY] [--json]
@@ -56,7 +58,7 @@ If you use an IP range outside of those that are defined by [RFC 1918](https://t
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
 
-| CIDR block size | Available IP Addresses (WDC) | Available IP Addresses (DAL)
+| CIDR block size | Available IP Addresses (WDC) | Available IP Addresses (DAL and FRA04)
 | --------------- | ---------------------------- |---------------------------
 |      /22        |        1019                  |          1021
 |      /23        |         507                  |          509
