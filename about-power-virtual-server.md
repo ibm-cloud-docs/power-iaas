@@ -25,12 +25,12 @@ subcollection: power-iaas
 # What is a Power Systems Virtual Server?
 {: #about-virtual-server}
 
-{{site.data.keyword.powerSysFull}} uses the existing IBM Cloud platform to create {{site.data.keyword.powerSysFull}}, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
+{{site.data.keyword.powerSysFull}} uses the existing IBM Cloud platform to create Power Systems virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
 {:shortdesc}
 
-{{site.data.keyword.powerSysFull}} are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or multiple virtual servers that are running either the AIX or IBM i operating systems in a public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that the AIX or IBM i operating system is secure.
+The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or multiple virtual servers that are running either the AIX or IBM i operating systems in a public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that the AIX or IBM i operating system is secure.
 
-Current AIX and IBM i clients can use {{site.data.keyword.powerSysFull}} for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSysFull}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
+Current AIX and IBM i clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
 {: #key-features}
