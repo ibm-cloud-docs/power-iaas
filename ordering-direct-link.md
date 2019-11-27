@@ -68,7 +68,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
-    It can take IBM Cloud support up to three business days to complete the initial setup for the Direct Link connection request.
+    It can take up to three business days to complete the initial setup for the Direct Link connection request.
     {: note}
 
 10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
@@ -89,6 +89,9 @@ Order a second Direct Link Connect connection for backup purposes.
     {: screen}
 
 12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
+
+    The **Power Systems Virtual Server network ASN** is the same as your BGP ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses.
+    {: note}
 
     ```shell
     Customer name:
@@ -138,11 +141,11 @@ Order a second Direct Link Connect connection for backup purposes.
    <dt><strong>Network Provider</strong><dt>
    <dd>You must select <strong>MEGAPORT</strong> or <strong>IBM POWER VIRTUAL SERVER</strong> from the list.</dd>
    <dt><strong>Link Speed</strong><dt>
-   <dd>Select the link speed to meet your workload requirements. The recommended selection for the Link Speed field is 1000 Mbps.</dd>
+   <dd>Select the link speed to meet your workload requirements. The recommended selection for the <strong>Link Speed</strong> field is 1000 Mbps.</dd>
    <dt><strong>Routing Option</strong><dt>
    <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
    <dt><strong>BGP ASN</strong><dt>
-   <dd><p>You must enter the BGP ASN number for the specific Direct Link Connect location in the following table.</p>
+   <dd><p>You must enter the BGP ASN number for the specific Direct Link Connect location.</p>
    <p><strong>Important:</strong> Do not try to change the BGP ASN number to <strong>64997</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.</p>
    <table>
    <caption>Table 2. BGP ASN number for specific locations</caption>
@@ -164,6 +167,6 @@ Order a second Direct Link Connect connection for backup purposes.
    </table>
    </dd>
    <dt><strong>Select VRF</strong><dt>
-   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF. The following figure is an example of the Direct Link Connect fields.</dd>
+   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.</dd>
    <dd></dd>
    </dl>

@@ -68,7 +68,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot iamge**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to **Boot images** after provisioning the instance.
+    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to **Boot images** after provisioning the instance.
 
       When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
       {: important}
