@@ -29,13 +29,20 @@ You can bring your own customized AIX or IBM i operating system (OS) image to de
   You cannot transfer an OS license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running in the cloud environment. The license cost is factored into the overall hourly billing rate.
   {: note}
 
+The basic steps involved in deploying a instance using your custom image are:
+
+1. Create the custom image.
+1. Store the image in your **Cloud Object Storage** account.
+1. Point the {{site.data.keyword.powerSys_notm}} user interface (UI) to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
+
 ## Before you begin
 {: #before-you-begin-deploy}
 
 Before you can use a custom image as the boot volume, review the following information:
 
 * You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage).
-* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}. You can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
+* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}.
+* Alternatively, if you have already deployed a Virtual server instance, you can capture it and redeploy a new Virtual Server Instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
 * You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field. To view a list of the supported AIX and IBM i OS technology levels, see the following system software maps:
 
     Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based` installation of the OS over an existing LPAR that was provisioned.
