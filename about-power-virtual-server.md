@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-09"
+lastupdated: "2019-12-02"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
 

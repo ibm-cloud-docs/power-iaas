@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-10-31"
+lastupdated: "2019-12-02"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM
 
@@ -77,6 +77,9 @@ If you'd like to change the boot status of a volume, click the **Bootable** togg
 You can remove or add a public network by clicking the **Public networks** toggle.
 
 ![Adding or removing a public network](./images/console-public-network-toggle.png "Adding or removing a public network"){: caption="Figure 5. Adding or removing a public network" caption-side="bottom"}
+
+You cannot toggle a public network off if there are no other defined networks.
+{: note}
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
