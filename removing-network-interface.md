@@ -24,10 +24,13 @@ subcollection: power-iaas
 # How to add or remove a network interface from an AIX virtual machine (VM)
 {: #managing-network-interface}
 
- You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
+Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it.  You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
 {: shortdesc}
 
-1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public inteface.
+When you toggle a public network on and off, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address to complete this procedure.
+{: note}
+
+1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public interface.
 
     ```
     ifconfig en0 down detach
@@ -41,14 +44,11 @@ subcollection: power-iaas
     ```
     {: codeblock}
 
-3. To readd the *en0* network interface and point it to the new external instance IP address, enter the following command:
-
-    Since Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it.
-    {: note}
+3. To readd the *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command replacing the internal IP address with your own:
 
     ```
-    ifconfig en0 169.47.176.8
+    ifconfig en0 192.168.103.12
     ```
     {: codeblock}
 
-    ![Finding your external IP address](./images/console-external-ip.png "Finding your external IP address"){: caption="Figure 1. Finding your external IP address" caption-side="bottom"}
+    ![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
