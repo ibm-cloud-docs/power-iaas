@@ -30,6 +30,9 @@ Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network inter
 When you toggle a public network on and off, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address to complete this procedure.
 {: note}
 
+## Removing a network interface from an AIX VM
+{: remove-nic}
+
 1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public interface.
 
     ```
@@ -44,7 +47,10 @@ When you toggle a public network on and off, the IBM console regenerates new int
     ```
     {: codeblock}
 
-3. To readd the *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command replacing the internal IP address with your own:
+## Adding a network interface to an AIX VM
+{: add-nic}
+
+1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command replacing the internal IP address with your own:
 
     ```
     ifconfig en0 192.168.103.12
