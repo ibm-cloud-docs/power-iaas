@@ -47,6 +47,8 @@ When you toggle a public network on and off, the IBM console regenerates new int
     ```
     {: codeblock}
 
+3. Use the `cfgmgr` command to reconfigure the device.
+
 ## Adding a network interface to an AIX VM
 {: add-nic}
 
