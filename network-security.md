@@ -25,6 +25,9 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
+Infrastructure provides VLAN isolation between different tenants, enforced at VIOS and physical CISCO switches and routers.
+{: shortdesc}
+
 ## Default firewall ports
 {: #firewall-ports}
 
