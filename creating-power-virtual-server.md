@@ -148,5 +148,5 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
 </tr>
 <tr>
 <td>Private Networks</td>
-<td>Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring" target="_blank">Configure private network</a>.</td>
+<td>Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.</td>
 </tr></table>

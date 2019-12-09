@@ -114,7 +114,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources. The process for creating a Direct Link Connect connection can take a few days because IBM Cloud support must configure the link.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-  For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-cpn-configuring#cpn-configuring).
+  For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet).
   {: note}
 
 The following figure displays the basic configuration for a public and private network:
