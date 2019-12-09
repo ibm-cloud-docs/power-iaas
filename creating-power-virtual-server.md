@@ -115,7 +115,7 @@ The following table provides information about the **Power Sytems Virtual server
 <td>Cores</td>
 <td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you selected <strong>Shared processor</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU is allocated for every 0.25 entitlement.
 
-If you are concerned about performance issues, you can select <strong>Dedicated processor</strong> because the process is dedicated to your virtual server and is not shared. For more information, see <a href="https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors" target="_blank">How does Shared Processor Performance Compare to Dedicated Processors</a>.</td>
+If you are concerned about performance issues, you can select <strong>Dedicated processor</strong> because the process is dedicated to your virtual server and is not shared.</td>
 </tr>
 <tr>
 <td>Memory</td>
