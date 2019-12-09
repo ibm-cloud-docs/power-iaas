@@ -17,7 +17,7 @@ A clear and concise description of the documentation request.
 A clear and concise description of what the problem is.
 
 - I'm always frustrated when [...]
-- I'm having trouble navigating through documentation. 
+- I'm having trouble navigating through topic [...] documentation. 
 
 **Do you have an idea that would improve the quality of the documentation?**
 A clear and concise description of what could be improved. 
