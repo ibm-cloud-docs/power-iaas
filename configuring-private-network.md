@@ -67,7 +67,7 @@ You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud 
 
 After you establish a connection to the IBM Cloud classic infrastructure, you must use a separate Direct Link connection to connect to the IBM Cloud Power infrastructure.
 
-* You must use [Direct Link Connect](/docs/infrastructure/direct-link?topic=direct-link-direct-link-connect-solution#direct-link-connect-solution) to connect to the IBM Cloud Power infrastructure.
+* You must use [Direct Link Connect](/docs/infrastructure/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution) to connect to the IBM Cloud Power infrastructure.
 * This option provides high performance between the on-premises network and the IBM Cloud Power infrastructure.
 * There are specific IP addresses that you cannot use with the Direct Link Connect service. For more information, see [Strict limitations on IP assignments](/docs/infrastructure/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments).
 
