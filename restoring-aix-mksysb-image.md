@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-26"
+lastupdated: "2019-12-11"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -21,12 +21,16 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)
 {: restoring-aix-mksysb-image}
 
 ## Defining an AIX Helper VM
 {: defining-aix-helper-vm}
+{: help}
+{: support}
 
 You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. The following screen capture shows a user-deployed AIX _helper VM_ named **AIX-7200-03-03**:
 {: shortdesc}
@@ -89,7 +93,7 @@ If you did not decide on a private access option, or chose a different option fo
 ## Creating the alternate disk image volume
 {: creating-alternate-volume}
 
-Log on to the h_elper VM_ and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
+Log on to the helper VM and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
 
 To determine the necessary volume size of the alternate disk, examine the contents of the `bosinst.data` file within the mksysb archive. The `bosinst.data` file in the archive contains stanza information that indicates the minimum space that is required to restore the _mksysb_. An easy way to accomplish this is to usfe the `restore` command to extract the `./images/bosinst.data` file from the _mksysb_ archive.
 

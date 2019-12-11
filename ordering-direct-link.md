@@ -21,6 +21,8 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
@@ -30,6 +32,8 @@ You must use [Direct Link](/docs/infrastructure/direct-link?topic=direct-link-ge
 
 ## Ordering Direct Link Connect
 {: #steps-to-order-direct-link-connect}
+{: help}
+{: support}
 
 To order the Direct Link Connect service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 

@@ -21,6 +21,8 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Importing a boot image
 {: #importing-boot-image}
@@ -49,6 +51,8 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 
 ## Using the IBM Cloud console to import a boot image
 {: #console-import-image}
+{: help}
+{: support}
 
 Complete the following steps to import a boot image by using the IBM Cloud console. The storage types vary by region. The **us-east (WDC)** and **us-south (DAL)** regions have **Standard** or **SSD** storage types. The **eu-de (FRA04)** region uses **Tier 1 (SSD flash storage)** or **Tier 3 (NVMe-based flash storage)** storage types.
 

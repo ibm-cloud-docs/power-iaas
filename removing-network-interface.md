@@ -20,6 +20,8 @@ subcollection: power-iaas
 {:important: .important}
 {:note: .note}
 {:external: .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # How to add or remove a network interface from an AIX virtual machine (VM)
 {: #managing-network-interface}
@@ -32,6 +34,8 @@ When you toggle a public network on and off, the IBM console regenerates new int
 
 ## Removing a network interface from an AIX VM
 {: remove-nic}
+{: help}
+{: support}
 
 1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public interface.
 

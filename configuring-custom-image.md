@@ -19,6 +19,8 @@ subcollection: power-iaas
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Deploying a custom image within a Power Systems Virtual Server
 {: #deploy-custom-image}
@@ -109,6 +111,8 @@ To view your credential information, such as your secret and access keys, click 
 
 ## Uploading a custom boot image
 {: #upload-custom-boot}
+{: help}
+{: support}
 
 To use a custom boot image in a {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 

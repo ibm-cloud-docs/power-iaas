@@ -21,9 +21,13 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Creating a Power Systems Virtual Server
 {: #creating-power-virtual-server}
+{: help}
+{: support}
 
 To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps:
 {: shortdesc}

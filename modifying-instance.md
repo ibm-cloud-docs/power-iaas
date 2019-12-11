@@ -21,6 +21,8 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Modifying a Power Systems Virtual Server instance
 {: #modifying-server}
@@ -83,6 +85,8 @@ You cannot toggle a public network off if there are no other defined networks.
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
+{: help}
+{: support}
 
 To resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation, complete the following steps:
 

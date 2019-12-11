@@ -22,6 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 
 # FAQ
 {: #power-iaas-faqs}
@@ -29,6 +30,7 @@ subcollection: power-iaas
 ## Where can I learn how to use a Power Systems Virtual Server?
 {: #training}
 {: faq}
+{: support}
 
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external} video.
 
@@ -38,6 +40,7 @@ This video does not capture the latest updates to the {{site.data.keyword.powerS
 ## What versions of AIX and IBM i operating systems are supported?
 {: #os_versions}
 {: faq}
+{: support}
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A) or E880 (9119-MHE). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
@@ -56,6 +59,7 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 ## Can I use my own AIX or IBM i image?
 {: #image}
 {: faq}
+{: support}
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
 
@@ -68,6 +72,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 ## What are the available boot image storage types?
 {: #storage}
 {: faq}
+{: support}
 
 The storage types vary by region. The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types.
 
@@ -94,6 +99,7 @@ Clients are responsible for third-party licensing.
 ## What are the hardware specifications?
 {: #hardwarespecs}
 {: faq}
+{: support}
 
 For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
 
@@ -112,12 +118,14 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power System Virtual Servers?
 {: #connecting}
 {: faq}
+{: support}
 
 For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 ## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
 {: faq}
+{: support}
 
 For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-power).
 
@@ -130,12 +138,14 @@ You must set your own firewall in your IBM Cloud account.
 ## How do you connect a server instance between two colocations (DAL to WDC)?
 {: #gts-cloud-connect}
 {: faq}
+{: support}
 
 You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/infrastructure/power-iaas?topic=power-iaas-connecting-networks).
 
 ## How is network bandwidth billed?
 {: #billing}
 {: faq}
+{: support}
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
