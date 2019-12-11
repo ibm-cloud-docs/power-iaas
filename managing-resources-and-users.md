@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-12-11"
 
 keywords: IAM, managing virtual servers, platform access roles, user access scenarios
 
@@ -70,9 +70,9 @@ The following table displays the IAM service access roles and the corresponding 
 ## User access scenarios
 {: #user-access-scenarios}
 
-The following access scenarios cover the steps that are required to add a user and modify the permissions for an existing user.
+See [Managing access to resources](/docs/iam?topic=iam-iammanidaccser) for information on how to manage or assign access for users by using IAM policies.
 
-### Inviting a new user to view {{site.data.keyword.powerSys_notm}} resources
+<!-- ### Inviting a new user to view {{site.data.keyword.powerSys_notm}} resources
 {: #user-invite}
 
 You must invite an IBM Cloud user to your account and give them access to view {{site.data.keyword.powerSys_notm}} resources. Remember, the service access role determines the access level that a user has for {{site.data.keyword.powerSys_notm}} resources.
@@ -114,4 +114,4 @@ Complete the following steps to provide an existing user in your account permiss
 5. Click **Save**.
 
    The user is now authorized to configure {{site.data.keyword.powerSys_notm}} resources. However, this user cannot manage services and resources that are specific to the {{site.data.keyword.cloud_notm}} platform. For example, they cannot add new users.
-   {: note}
+   {: note} -->
