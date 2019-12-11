@@ -40,7 +40,7 @@ For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, 
 The first IP address is always reserved for the gateway in the Washington, D.C. (WDC), Dallas (DAL), and Frankfurt (FRA04) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
-  ![Configuring a new private network](./images/console-configure-private-network.png "Configuring a new private network"){: caption="Figure 1. Configuring a new private network" caption-side="bottom"}
+  ![Configuring a new subnet](./images/console-configure-private-network.png "Configuring a new subnet"){: caption="Figure 1. Configuring a new subnet" caption-side="bottom"}
 
 A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. You can choose a default **DNS server** value of `127.0.0.1` to avoid this issue.
 
