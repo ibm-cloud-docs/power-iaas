@@ -114,10 +114,7 @@ To view your credential information, such as your secret and access keys, click 
 {: help}
 {: support}
 
-Complete the following steps to provision a new instance by using a custom boot image. For information on using the IBM Cloud CLI to import a custom boot image, see [Importing a boot image](/docs/infrastructure/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image).
-
-Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
-{: important}
+Complete the following steps to provision a new instance by using a custom boot image. For information on using the IBM Cloud CLI to import a custom boot image, see [Importing a boot image](/docs/infrastructure/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image). Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 

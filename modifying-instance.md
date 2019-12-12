@@ -83,7 +83,7 @@ You cannot toggle a public network off if there are no other defined networks.
 
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 5. Toggling a public network on or off" caption-side="bottom"}
 
-When you add a public network to an AIX VM, it is assigned to the *en0* network interface controller (NIC). This NIC is the first IP listed next to **IPs** in the **Server details** pane. The private network is listed directly below it and is assigned to the *en1* NIC. If you have more than one private network, *en1* corresponds to the IP listed at the bottom of the list. To verify your NICs, open the AIX console and type `ifconfig -a`.
+NICs are assigned based on the ordering in which they are specified during creation. When you add a public network to an AIX VM with a single private network, it is assigned to the first network interface controller (NIC). This NIC is the first IP listed next to **IPs** in the **Server details** pane and maps to the **External IP** address. To display information about all of the network interfaces in the system, open the AIX console and type `ifconfig -a`.
 
 ![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"}
 

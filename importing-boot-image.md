@@ -31,7 +31,7 @@ You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the cons
 {: shortdesc}
 
 You must first generate [**Secret** and **Access** keys](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.
-{: important}
+{: note}
 
 ## Using the IBM Cloud CLI to import a boot image
 {: #cli-import-image}

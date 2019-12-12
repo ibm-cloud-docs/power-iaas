@@ -29,6 +29,8 @@ subcollection: power-iaas
 Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it.  You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
 {: shortdesc}
 
+NICs are assigned based on the ordering in which they are specified during creation. To display information about all of the network interfaces in the system, open the AIX console and type `ifconfig -a`.
+
 When you toggle a public network on and off, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address to complete this procedure.
 {: note}
 
