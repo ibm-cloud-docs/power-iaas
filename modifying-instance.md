@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-12-02"
 
-keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM
+keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network
 
 subcollection: power-iaas
 
@@ -65,7 +65,7 @@ You can modify your attached volumes and remove or add a public network.
 
 2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable**.
 
-3. Click **Next**, agree to the service agreement and submit your **Order**.
+3. Click **Next**, agree to the service agreement, and submit your **Order**.
 
 To attach or detach one or more volumes, click **Manage existing volumes**. Select your wanted volumes and click **Finish**.
 
@@ -78,10 +78,14 @@ If you'd like to change the boot status of a volume, click the **Bootable** togg
 
 You can remove or add a public network by clicking the **Public networks** toggle.
 
-![Adding or removing a public network](./images/console-public-network-toggle.png "Adding or removing a public network"){: caption="Figure 5. Adding or removing a public network" caption-side="bottom"}
-
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
+
+![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 5. Toggling a public network on or off" caption-side="bottom"}
+
+When you add a public network to an AIX VM, it is assigned to the *en0* network interface controller (NIC). This NIC is the first IP listed next to **IPs** in the **Server details** pane. The private network is listed directly below it and is assigned to the *en1* NIC. If you have more than one private network, *en1* corresponds to the IP listed at the bottom of the list. To verify your NICs, open the AIX console and type `ifconfig -a`.
+
+![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"}
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
@@ -91,23 +95,20 @@ You cannot toggle a public network off if there are no other defined networks.
 To resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation, complete the following steps:
 
 Resizing is not immediately available after you deploy a virtual machine (VM).
-{: note}
+{: important}
 
 1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-    ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 6. Editing a storage volume" caption-side="bottom"}
+    ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 7. Editing a storage volume" caption-side="bottom"}
 
-3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size.
+3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
 
-    You can increase only the size of the storage volume. You cannot decrease it.
-    {: important}
-
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 7. Modifying your storage volume" caption-side="bottom"}
+    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 8. Modifying your storage volume" caption-side="bottom"}
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
-    ![Ordering your new storage volume](./images/console-modify-volume-summary.png "Ordering your new storage volume"){: caption="Figure 8. Ordering your new storage volume" caption-side="bottom"}
+    ![Ordering your new storage volume](./images/console-modify-volume-summary.png "Ordering your new storage volume"){: caption="Figure 9. Ordering your new storage volume" caption-side="bottom"}
 
 5. To verify your new storage size, go back to the **Storage volumes** tab.
