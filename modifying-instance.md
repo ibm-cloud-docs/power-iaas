@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-12-02"
+lastupdated: "2019-12-13"
 
-keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network
+keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network, NIC
 
 subcollection: power-iaas
 
@@ -83,9 +83,9 @@ You cannot toggle a public network off if there are no other defined networks.
 
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 5. Toggling a public network on or off" caption-side="bottom"}
 
-Network interface controllers (NICs) are assigned based on the order in which you specify them during provisioning. When you add a public network to an AIX VM with a private network(s), it is assigned to the first NIC. This IP address maps to the **External IP** address. To display information about all of the network interfaces, open the AIX console and type `ifconfig -a`.
+ When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a new NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
 
-![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"}
+<!-- ![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"} -->
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}

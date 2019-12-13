@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-26"
+lastupdated: "2019-12-13"
 
 keywords: getting started, power systems virtual server, virtual server, creating virtual server
 
@@ -72,12 +72,19 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
       ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-    1. Finally, complete the **Boot volume**, **Attached volumes**, and **Network interfaces** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to **Boot images** after provisioning the instance.
+    1. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select certain stock images and the list of images in your catalog. To see your boot images, go to **Boot images** after provisioning the instance.
 
       When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
       {: important}
 
-      ![Defining your volumes and network interfaces](./images/console-volume-network.png "Defining your volumes and network interfaces"){: caption="Figure 8. Defining your volumes and network interfaces" caption-side="bottom"}
+      ![Defining your volumes](./images/console-volume-network.png "Defining your volumes"){: caption="Figure 8. Defining your volumes" caption-side="bottom"}
+
+    1. Finally, define your **Network interfaces** by adding a public network, private network(s), or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
+
+    For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
+    {: important}
+
+      ![Defining your network interfaces](./images/console-add-private-network.png "Defining your network interfaces"){: caption="Figure 8. Defining your network interfaces" caption-side="bottom"}
 
 9. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
