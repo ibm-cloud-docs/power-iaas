@@ -83,7 +83,7 @@ You cannot toggle a public network off if there are no other defined networks.
 
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 5. Toggling a public network on or off" caption-side="bottom"}
 
-NICs are assigned based on the ordering in which they are specified during creation. When you add a public network to an AIX VM with a single private network, it is assigned to the first network interface controller (NIC). This NIC is the first IP listed next to **IPs** in the **Server details** pane and maps to the **External IP** address. To display information about all of the network interfaces in the system, open the AIX console and type `ifconfig -a`.
+Network interface controllers (NICs) are assigned based on the order in which you specify them during provisioning. When you add a public network to an AIX VM with a private network(s), it is assigned to the first NIC. This IP address maps to the **External IP** address. To display information about all of the network interfaces, open the AIX console and type `ifconfig -a`.
 
 ![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"}
 
