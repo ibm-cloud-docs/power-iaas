@@ -38,7 +38,7 @@ ICOS can be used as an intermediary location to store files from your on-premise
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
-MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their data to the device on-premises and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq).
+MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq).
 
 ## PowerVC images and ICOS
 {: #migration-powervc-icos}
@@ -59,7 +59,7 @@ IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and
 ## Replication
 {: #replication}
 
-You can use various replication mechanisms to migrate and sync environments between on-premises and the {{site.data.keyword.powerSys_notm}}.
+You can use various replication mechanisms to migrate and sync environments between your on-premises environment and the {{site.data.keyword.powerSys_notm}}.
 
 Storage area network (SAN) and hardware-based replication is not currently a migration option.
 {: note}
@@ -75,7 +75,7 @@ IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geomi
 ### Application-specific replication
 {: #replication-app}
 
-Applications might have replication mechanisms that can sync multiple mechanisms. These are some of the application-specific replication options:
+Applications might have replication mechanisms that can sync multiple mechanisms. These options are commonly used for application-specific replication:
 
 - *Db2 HADR*
 - *Oracle Data Guard*
@@ -86,7 +86,7 @@ Applications might have replication mechanisms that can sync multiple mechanisms
 ## Backup and restore
 {: #backup-restore}
 
-You can back up your environment on-premises and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to store (back up) and retrieve (restore) data. For more information on OS-specific, see
+You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to store (back up) and retrieve (restore) data. [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party}
@@ -104,7 +104,7 @@ You can engage IBM teams and services to assist you throughout the migration lif
 - [Power Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services)
 - [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration)
 
-## AIX
+## AIX migration strategies
 {: #migration-aix}
 
 Learn about migration strategies that are specific to AIX systems.
@@ -118,7 +118,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a new {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
-For more information see [Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)]()
+For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
@@ -132,7 +132,7 @@ GLVM is an OS-based IP replication approach. It is based on the AIX LVM and enab
 - [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html)
 - [PowerHA SystemMirror for AIX on Fix Central](https://www-945.ibm.com/support/fixcentral/options?selectionBean.selectedTab=find&selection=Cluster+software%3bibm%2fOther+software%2fPowerHAClusterManager)
 
-## IBM i
+## IBM i migration strategies
 {: #migration-ibmi}
 
 Learn about migration strategies that are specific to IBM i systems.
