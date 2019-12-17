@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:support: data-reuse='support'}
 
 # Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)
-{: restoring-aix-mksysb-image}
+{: #restoring-aix-mksysb-image}
 
 ## Defining an AIX Helper VM
 {: defining-aix-helper-vm}
@@ -50,7 +50,7 @@ Running the `df -g` command displays information about the total space and avail
 ![Displaying the storage information](./images/terminal-df-y.png "Displaying the storage information"){: caption="Figure 4. Displaying the storage information" caption-side="bottom"}
 
 ## Attaching a new (disk) volume
-{: attaching-new-volume}
+{: #attaching-new-volume}
 
 If your disk is not at the correct size, complete the following steps:
 
@@ -91,7 +91,7 @@ If you did not decide on a private access option, or chose a different option fo
 ![Running the cksurr command](./images/terminal-cksurr.png "Running the cksurr command"){: caption="Figure 11. Running the cksurr command" caption-side="bottom"}
 
 ## Creating the alternate disk image volume
-{: creating-alternate-volume}
+{: #creating-alternate-volume}
 
 Log on to the helper VM and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
 
@@ -116,7 +116,7 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
     ![Displaying storage information](./images/terminal-cfgmgr.png "Displaying storage information"){: caption="Figure 15. Displaying storage information" caption-side="bottom"}
 
 ## Restoring the alternate disk mksysb
-{: restoring-alternate-disk}
+{: #restoring-alternate-disk}
 
 You can now create an AIX boot disk from the source _mksysb_ archive. To create an AIX boot disk from the source _mksysb_ archive, run the `alt_disk_mksysb` command with the following options:
 
@@ -145,7 +145,7 @@ The device configuration can take several minutes. Upon its completion, the syst
 You have successfully restored the AIX _mksysb_ archive and the environment is ready for your use.
 
 ## (Optional) Detaching the staging volume
-{: detaching-staging-volume}
+{: #detaching-staging-volume}
 
 In the previous section, we used a separate image volume for storing the source _mksysb_. To detach, keep, or delete a volume, review the following information.
 
