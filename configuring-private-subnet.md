@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Configuring a private network subnet
+# Configuring and adding private network subnet
 {: #configuring-subnet}
 {: help}
 {: support}
@@ -44,6 +44,18 @@ For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, 
 The first IP address is always reserved for the gateway in the Washington, D.C. (WDC), Dallas (DAL), and Frankfurt (FRA04) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
+To create a new subnet, complete the following steps:
+
+1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com).
+
+2. Select the menu icon and select **Resource List**.
+
+3. Click the arrow next to **Services**.
+
+4. Select the Power Systems Virtual Server you'd like to assign a subnet.
+
+5. Click **Subnets** in the left navigation pane, then **Add subnet**.
+
   ![Configuring a new subnet](./images/console-configure-private-network.png "Configuring a new subnet"){: caption="Figure 1. Configuring a new subnet" caption-side="bottom"}
 
 A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. You can choose a default **DNS server** value of `127.0.0.1` to avoid this issue.
@@ -58,11 +70,11 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ## Using CIDR notation
 {: #cidr-notation}
 
-If you use an IP range outside of those that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: new_window}{: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet, the instances that are attached to that subnet might not be able to reach parts of the public internet.
+You must not use an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: new_window}{: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet. The instances that are attached to that subnet might not be able to reach parts of the public internet.
 
-The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet, based on its specified CIDR block size:
+The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP Addresses (WDC) | Available IP Addresses (DAL and FRA04)
+| CIDR block size | Available IP addresses (WDC) | Available IP addresses (DAL and FRA04)
 | --------------- | ---------------------------- |---------------------------
 |      /22        |        1019                  |          1021
 |      /23        |         507                  |          509
