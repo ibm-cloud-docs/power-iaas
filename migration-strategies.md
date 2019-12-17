@@ -91,7 +91,7 @@ You can back up your on-premises environment and restore it to the IBM Cloud. In
 ## Third-party vendors and tools
 {: #third-party}
 
-Customers can use third-party tools to perform data migration. Some commonly used third-party tools for data migration are:
+Customers can use third-party tools to perform data migration. Some third-party tools that are commonly used for data migration are:
 
 - *iCluster*
 - *MIMIX from Syncsort*
