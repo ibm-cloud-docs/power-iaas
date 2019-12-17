@@ -9,6 +9,7 @@ IBM Power Systems Virtual Servers
     about-power-virtual-server.md
     pricing.md
     ha-dr.md
+    migration-strategies.md
 
     {: .topicgroup}
     Security and compliance
