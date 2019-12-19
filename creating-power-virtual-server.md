@@ -154,7 +154,7 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
 </tr>
 <tr>
 <td>Public Networks</td>
-<td>Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-public-and-private" target="_blank">Public and private networks</a>.
+<td>Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Public and private networks</a>.
 </td>
 </tr>
 <tr>
