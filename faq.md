@@ -103,7 +103,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-power-virtual-server#apvs-hardware-specifications).
+For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 
 ## Do Power Systems Virtual Servers run in a multi-tenant environment?
 {: #multi}
