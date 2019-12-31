@@ -52,8 +52,8 @@ Before you can use a custom image as the boot volume, review the following infor
 
   **AIX**
 
-    * [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io)
-    * [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io)
+    * [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only)
+    * [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only)
 
   **IBM i**
 
