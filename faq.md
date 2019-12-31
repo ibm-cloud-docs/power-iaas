@@ -49,8 +49,8 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 
 **AIX**
 
-* [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-all-io){: new_window}{: external}
-* [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-all-io){: new_window}{: external}
+* [S922 (9009-22A) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only)
+* [E880 (9119-MHE) AIX software map ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only)
 
 **IBM i**
 
