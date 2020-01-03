@@ -3,9 +3,9 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-12-11"
+lastupdated: "2020-1-03"
 
-keywords: faq, virtual server, network bandwidth billing, multi-tenant environment, ibm cloud
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps
 
 subcollection: power-iaas
 
