@@ -50,7 +50,6 @@ IBM Power Systems Virtual Servers
         downloading-aix-iso-image.md
         configuring-aix-mdm.md
         removing-network-interface.md
-        network-novalink.md
 
     {: .topicgroup}
     IBM i
