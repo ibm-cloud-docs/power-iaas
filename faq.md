@@ -170,3 +170,9 @@ IBM uses the same tools that are on an on-premises system.
 {: faq}
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www-356.ibm.com/partnerworld/gsd/homepage.do){: new_window}{: external}.
+
+## How do I delete the service or a specific instance?
+{: #delete-service}
+{: faq}
+
+You can delete the service by clicking the overflow menu in the **Virtual server instances** page and selecting **Delete service**. To delete an instance, click the trash icon after you select the wanted instance.
