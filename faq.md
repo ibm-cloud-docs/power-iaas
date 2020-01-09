@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2020-1-03"
+lastupdated: "2020-1-08"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps
 
@@ -69,16 +69,19 @@ Yes. This function is known as **bring your own image**. For more information, s
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What are the available boot image storage types?
+## What are the available storage types in the Storage Area Network (SAN)?
 {: #storage}
 {: faq}
 {: support}
 
-The storage types vary by region. The storage type cannot be changed once the volume is created.
+The storage types vary by region and cannot be changed once the volume is created.
 
 The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types.
 
 The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs should select **Tier 3**. For more information, see [Importing a boot image](/docs/infrastructure/power-iaas?topic=power-iaas-importing-boot-image#console-import-image).
+
+The boot image storage type is predefined and cannot be chosen.
+{: note}
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
