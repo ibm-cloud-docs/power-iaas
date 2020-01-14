@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2020-1-14"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -44,6 +44,9 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 ![Displays sharable rules field](./images/hadr1.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
 
 * By using the {{site.data.keyword.powerSys_notm}} service, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available.
+
+Licenses that are purchased outside a subscription model license are not eligible to be used in the IBM Cloud environment.
+{: note}
 
 <!--* When you deploy PowerHA SystemMirror, you must verify that the Service IP address is defined as a private IP address. This Service IP address can be accessed by another {{site.data.keyword.powerSys_notm}} instance or from other {{site.data.keyword.cloud}} applications. You cannot use a public IP address because it cannot be moved from one interface to another interface within a virtual server or across different virtual servers. -->
 
