@@ -134,7 +134,7 @@ If you are concerned about performance issues, you can select <strong>Dedicated 
 </tr>
 <tr>
 <td>Create Boot Volume</td>
-<td>Select a version of the IBM-provided AIX or IBM i operating system stock image. If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-deploying-custom-image">Deploying a custom image within a Power Systems Virtual Server</a>.
+<td>Select a version of the IBM-provided AIX or IBM i operating system stock image. If you want to bring your own custom image, you must use a supported technology level of the AIX or IBM i operating system image for the Power Systems hardware that you selected in the <strong>Machine Type</strong> field. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image">Deploying a custom image within a Power Systems Virtual Server</a>.
 
 <p><strong>Important:</strong> When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as 'root' appears as being _disabled_.</p>
 
