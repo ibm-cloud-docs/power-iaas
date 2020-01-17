@@ -52,7 +52,7 @@ To create a new subnet, complete the following steps:
 
 3. Click the arrow next to **Services**.
 
-4. Select the Power Systems Virtual Server you'd like to assign a subnet.
+4. Select the Power Systems Virtual Server service you'd like to assign a subnet.
 
 5. Click **Subnets** in the left navigation pane, then **Add subnet**.
 
