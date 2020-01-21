@@ -70,13 +70,13 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 
 **Compute**
 
-[Power System E880 (9119-MHE) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}
+[Power System E880 (9119-MHE)](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
 
 * 9 TB memory
 * 8 x 16-Gigabit PCI Express Dual-port Fibre Channel (FC)
 * 10 x 10 Gigabit Ethernet-SR PCI Express Dual-port
 
-[Power System S922 (9009-22A) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}
+[Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
 
 * 384 GB memory
 * 2 x 16-Gigabit PCI Express Dual-port FC
@@ -95,7 +95,7 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 ## Public and private networks
 {: #public-private-networks}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces or a public network interface.
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces and or public network interface.
 
 **Public network**
 
@@ -120,8 +120,3 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 The following figure displays the basic configuration for a public and private network:
 
 ![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"}
-
-<!-- Customer A is able to connect to a public network by using a Direct Link Dedicated connection with their {{site.data.keyword.cloud_notm}} Power account. -->
-<!-- Customer A is able to connect to a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account. -->
-<!-- Customer A can use either a public or private network to access their {{site.data.keyword.powerSys_notm}}. -->
-<!-- Customer B is able to connect to only a private network by using a Direct Link Connect connection with their {{site.data.keyword.cloud_notm}} account.  -->
