@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-12-02"
+lastupdated: "2020-1-21"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
 
@@ -70,17 +70,9 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 
 **Compute**
 
-[Power System E880 (9119-MHE)](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
-
-* 9 TB memory
-* 8 x 16-Gigabit PCI Express Dual-port Fibre Channel (FC)
-* 10 x 10 Gigabit Ethernet-SR PCI Express Dual-port
-
-[Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-
-* 384 GB memory
-* 2 x 16-Gigabit PCI Express Dual-port FC
-* 3 x 10 Gigabit Ethernet-SR PCI Express Dual-port
+* [IBM Power System E880 (9119-MHE)](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
+* [IBMPower System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
+* [IBM Power System E980 (9080-M9S) - Frankfurt only](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
 **Storage**
 
