@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-1-22"
 
 keywords: image catalog, virtual machine capture, cloud object storage bucket, export virtual machine
 
@@ -66,7 +66,7 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 ## Using the IBM Cloud console to capture and export a VM
 {: #console-capture-export}
 
-1. Click the **Capture and export** icon under your **Virtual server instance** tab.
+1. Click the **Capture and export** icon in your **Virtual server instance** view. The icon is to the right of the **trash** icon.
 
 2. Choose the volumes that you want to capture and export.
 

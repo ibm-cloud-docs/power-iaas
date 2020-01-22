@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-1-22"
 
 keywords: boot image, import boot image, upload boot image, storage types, regions, Tier 1, Tier 3, SSD, NVMe
 
@@ -68,9 +68,7 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
 
     ![Completing the boot image fields](./images/console-boot-image-fields.png "Completing the boot image fields"){: caption="Figure 2. Completing the boot image fields" caption-side="bottom"}
 
-3. Find your newly uploaded boot image under **Boot images**.
-
-  ![Finding your newly uploaded boot image](./images/console-boot-image-tab.png "Finding your newly uploaded boot image"){: caption="Figure 3. Finding your newly uploaded boot image" caption-side="bottom"}
+3. Find your newly uploaded boot image in your **Boot images** tab.
 
 | Field | Description |
 | ------| ------------|

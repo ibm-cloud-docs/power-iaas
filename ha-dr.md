@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2020-1-14"
+lastupdated: "2020-1-22"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -38,10 +38,12 @@ After you purchase the software, you can download it from [Entitled Software Sup
 Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment.
 
 * When you are creating the virtual servers that are part of the PowerHA SystemMirror cluster, you must select **Different Server** from the **Colocation Rules** field.
-![Displays colocation rules field](./images/hadr2.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
+
+![Displays colocation rules field](./images/console-colocation-rules.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
 
 * When you are creating storage volumes (disks) for the virtual severs that are part of the PowerHA SystemMirror cluster, you must select **On** from the **Shareable** field.
-![Displays sharable rules field](./images/hadr1.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
+
+![Displays sharable rules field](./images/console-new-storage.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
 
 * By using the {{site.data.keyword.powerSys_notm}} service, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available.
 

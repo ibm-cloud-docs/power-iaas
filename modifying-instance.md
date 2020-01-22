@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-1-22"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network, NIC
 
@@ -50,8 +50,6 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 4. Check the service agreement box and click **Order** to complete the instance modification process and accept the price.
 
-    <!-- ![Ordering your newly modified instance](./images/console-server-details-order.png "Ordering your newly modified instance"){: caption="Figure 3. Ordering your newly modified instance" caption-side="bottom"} -->
-
 5. To verify your instance modification, view your **Server details**.
 
 ## Modifying attached volumes and network interfaces
@@ -85,8 +83,6 @@ You cannot toggle a public network off if there are no other defined networks.
 
  When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a new NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
 
-<!-- ![Adding a public network to an AIX VM](./images/console-add-public-network.png "Adding a public network to an AIX VM"){: caption="Figure 6. Adding a public network to an AIX VM" caption-side="bottom"} -->
-
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
 {: help}
@@ -100,8 +96,6 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
 1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
-
-    ![Editing a storage volume](./images/console-selecting-storage-volume.png  "Editing a storage volume"){: caption="Figure 7. Editing a storage volume" caption-side="bottom"}
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
 
