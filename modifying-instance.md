@@ -50,7 +50,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 4. Check the service agreement box and click **Order** to complete the instance modification process and accept the price.
 
-    ![Ordering your newly modified instance](./images/console-server-details-order.png "Ordering your newly modified instance"){: caption="Figure 3. Ordering your newly modified instance" caption-side="bottom"}
+    <!-- ![Ordering your newly modified instance](./images/console-server-details-order.png "Ordering your newly modified instance"){: caption="Figure 3. Ordering your newly modified instance" caption-side="bottom"} -->
 
 5. To verify your instance modification, view your **Server details**.
 
@@ -108,7 +108,5 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
     ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 8. Modifying your storage volume" caption-side="bottom"}
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
-
-    ![Ordering your new storage volume](./images/console-modify-volume-summary.png "Ordering your new storage volume"){: caption="Figure 9. Ordering your new storage volume" caption-side="bottom"}
 
 5. To verify your new storage size, go back to the **Storage volumes** tab.

@@ -68,8 +68,6 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 
 1. Click the **Capture and export** icon under your **Virtual server instance** tab.
 
-    ![The capturing and exporting icon](./images/console-capture-export.png "The capturing and exporting icon"){: caption="Figure 1. The capturing and exporting icon" caption-side="bottom"}
-
 2. Choose the volumes that you want to capture and export.
 
 3. Select whether you want to export the volume backed image to the **image catalog**, **Cloud Object Storage**, or both.

@@ -62,9 +62,7 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
   The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
   {: important}
 
-1. Click **Boot images**, then **Import**.
-
-    ![Importing a boot image](./images/console-boot-image-import.png "Importing a boot image"){: caption="Figure 1. Importing a boot image" caption-side="bottom"}
+1. Click **Boot images** tab, then **Import**.
 
 2. After you click **Import**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.
 

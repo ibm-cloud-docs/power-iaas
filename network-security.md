@@ -49,4 +49,7 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 * 9475
 * 9476
 
-If you need additional ports to be opened, you must submit a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you. There are plans to add the dynamic configuration of the firewall rules in the future.
+If you need additional ports to be opened, you must submit a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you.
+
+There are plans to add the dynamic configuration of the firewall rules in the future.
+{: note}
