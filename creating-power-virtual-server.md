@@ -57,8 +57,6 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 7. Click **New instance**.
 
-    ![Provisioning a new Power Systems Virtual Server](./images/power-iaas-provision-new.png "Provisioning a new Power Systems Virtual Server"){: caption="Figure 5. Provisioning a new Power Systems Virtual Server" caption-side="bottom"}
-
 8. Complete all of the required fields to successfully create a new instance.
 
       The price is dynamically updated in the **Order Summary** section as you complete the fields to create a {{site.data.keyword.powerSys_notm}} allowing you to easily create a cost-effective {{site.data.keyword.powerSys_notm}} that satisfies your business needs.

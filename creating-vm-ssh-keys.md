@@ -113,17 +113,14 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
     ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
 
-4. Click **Provision new**.
+4. Click **New instance**.
 
-    ![Provisioning a new virtual server](./images/power-iaas-provision-new.png "Provisioning a new virtual server"){: caption="Figure 4. Provisioning a new virtual server" caption-side="bottom"}
-
-5. Under the **Virtual servers** section, select **New keys**.
+5. Under the **Virtual servers** section, select **Add SSH Keys**.
 
     ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 5. SSH key navigation" caption-side="bottom"}
 
 6. Enter a **Key name** and your previously generated **Public key**.
-7. Click **Create** to add the SSH key.
 
-    ![Adding your SSH Key](./images/console-ssh-add.png "Adding your SSH Key"){: caption="Figure 6. Adding your SSH Key" caption-side="bottom"}
+7. Click **Add SSH key** to add the SSH key.
 
 8. Complete the rest of the fields to successfully create a new instance with a configured SSH key.

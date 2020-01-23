@@ -121,14 +121,12 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 
-    ![Importing a custom image](./images/console-boot-image-import.png "Importing a custom image"){: caption="Figure 7. Importing a custom image" caption-side="bottom"}
-
 2. After you click **Import**, enter all of the required information.
 
     The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
     {: important}
 
-    ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 8. Configuring your custom boot image" caption-side="bottom"}
+    ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"}
 
 3. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click on the arrow in the appropriate boot image tile to see your custom boot image.
 

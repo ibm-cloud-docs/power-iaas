@@ -58,7 +58,7 @@ To create a new subnet, complete the following steps:
 
   ![Configuring a new subnet](./images/console-configure-private-network.png "Configuring a new subnet"){: caption="Figure 1. Configuring a new subnet" caption-side="bottom"}
 
-A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. You can choose a default **DNS server** value of `127.0.0.1` to avoid this issue.
+A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. Go with the default **DNS server** value of `127.0.0.1` to avoid this issue. As of now, You can add up to 20 DNS servers. They DNS IP addresses must be separated by commas.
 
 You can also create and configure a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
 

@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-11-18"
+lastupdated: "2020-1-23"
 
 keywords: network inteface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC
 

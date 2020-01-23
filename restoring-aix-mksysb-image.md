@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-11"
+lastupdated: "2020-1-23"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -65,21 +65,19 @@ If your disk is not at the correct size, complete the following steps:
 
 3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
 
-    ![Specifying your volume](./images/console-create-volume.png "Specifying your volume"){: caption="Figure 6. Specifying your volume" caption-side="bottom"}
-
 4. After successfully attaching the _mksysbfs_ volume to the _helper VM_, log in to the VM. The volume appears as a new hdisk. Run the `lspv` and `cfgmgr` commands on the _helper VM_ to configure and show the new disk. The new disk is labeled as _hdisk1_.
 
-    ![Using the lspv command](./images/terminal-lspv-new.png "Using the lspv command"){: caption="Figure 7. Using the lspv command" caption-side="bottom"}
+    ![Using the lspv command](./images/terminal-lspv-new.png "Using the lspv command"){: caption="Figure 6. Using the lspv command" caption-side="bottom"}
 
-    ![Using the cfgmgr command](./images/terminal-cfgmgr-new.png "Using the cfgmgr command"){: caption="Figure 8. Using the cfgmgr command" caption-side="bottom"}
+    ![Using the cfgmgr command](./images/terminal-cfgmgr-new.png "Using the cfgmgr command"){: caption="Figure 7. Using the cfgmgr command" caption-side="bottom"}
 
 5. Create an _AIX Volume Group_ by running the `mkvg` command. On the _helper VM_, _mksysbvg_ is the volume group name.
 
-    ![Running the mkvg command](./images/terminal-mkvg.png "Running the mkvg command"){: caption="Figure 9. Running the mkvg command" caption-side="bottom"}
+    ![Running the mkvg command](./images/terminal-mkvg.png "Running the mkvg command"){: caption="Figure 8. Running the mkvg command" caption-side="bottom"}
 
 6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
-  ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 10. Creating a file system and mounting it" caption-side="bottom"}
+  ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
 
 After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
 
@@ -88,7 +86,7 @@ Log on to the source VM where the source `mksysb` resides and copy the image to 
 If you did not decide on a private access option, or chose a different option for your internal IP access, your steps might vary.
 {: note}
 
-![Running the cksurr command](./images/terminal-cksurr.png "Running the cksurr command"){: caption="Figure 11. Running the cksurr command" caption-side="bottom"}
+![Running the cksurr command](./images/terminal-cksurr.png "Running the cksurr command"){: caption="Figure 10. Running the cksurr command" caption-side="bottom"}
 
 ## Creating the alternate disk image volume
 {: #creating-alternate-volume}
@@ -99,21 +97,21 @@ To determine the necessary volume size of the alternate disk, examine the conten
 
 Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the _helper VM_.
 
-![The restore -qf command](./images/terminal-qf.png "The restore -qf command"){: caption="Figure 12. The restore -qf command" caption-side="bottom"}
+![The restore -qf command](./images/terminal-qf.png "The restore -qf command"){: caption="Figure 11. The restore -qf command" caption-side="bottom"}
 
 To create and attach a new volume to **AIX-7200-03-03**, complete the following steps:
 
 1. Click **Add new** under **Attached volumes**.
 
-    ![Displaying storage information](./images/console-attach-volume.png "Displaying storage information"){: caption="Figure 13. Displaying storage information" caption-side="bottom"}
+    ![Displaying storage information](./images/console-attach-volume.png "Displaying storage information"){: caption="Figure 12. Displaying storage information" caption-side="bottom"}
 
 2. Create a data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. In the following example, the name **AIX-7200-03-03-altdisk** is the volume name:
 
-    ![Displaying storage information](./images/console-create-volume-alt.png "Displaying storage information"){: caption="Figure 14. Displaying storage information" caption-side="bottom"}
+    ![Displaying storage information](./images/console-create-volume-alt.png "Displaying storage information"){: caption="Figure 13. Displaying storage information" caption-side="bottom"}
 
 3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the _helper VM_, log on to the VM. Use the `cfgmgr` and `lspv` commands on the _helper VM_ to show the new disk. The new disk is named `hdisk2`.
 
-    ![Displaying storage information](./images/terminal-cfgmgr.png "Displaying storage information"){: caption="Figure 15. Displaying storage information" caption-side="bottom"}
+    ![Displaying storage information](./images/terminal-cfgmgr.png "Displaying storage information"){: caption="Figure 14. Displaying storage information" caption-side="bottom"}
 
 ## Restoring the alternate disk mksysb
 {: #restoring-alternate-disk}
@@ -131,16 +129,16 @@ You can now create an AIX boot disk from the source _mksysb_ archive. To create 
 
 After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
-  ![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 16. Running the alt_disk_mksysb command" caption-side="bottom"}
+  ![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 15. Running the alt_disk_mksysb command" caption-side="bottom"}
 
 Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
 
-  ![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 17. Performing a check by using the bootlist command" caption-side="bottom"}
+  ![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 16. Performing a check by using the bootlist command" caption-side="bottom"}
 
 When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
 The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
 
-  ![AIX login prompt](./images/terminal-aix-login.png "AIX login prompt"){: caption="Figure 18. AIX login prompt" caption-side="bottom"}
+  ![AIX login prompt](./images/terminal-aix-login.png "AIX login prompt"){: caption="Figure 17. AIX login prompt" caption-side="bottom"}
 
 You have successfully restored the AIX _mksysb_ archive and the environment is ready for your use.
 
@@ -153,16 +151,16 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.
 
-    ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 19. Displaying storage information" caption-side="bottom"}
+    ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
 
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
 
-    ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 20. Removing the disk definition" caption-side="bottom"}
+    ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
 
-    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 21. Detaching the volume" caption-side="bottom"}
+    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
-    ![Attaching the saved image volume to other VM instances](./images/console-attach-volume.png "Attaching the saved image volume to other VM instances"){: caption="Figure 22. Attaching the saved image volume to other VM instances" caption-side="bottom"}
+    ![Attaching the saved image volume to other VM instances](./images/console-attach-volume.png "Attaching the saved image volume to other VM instances"){: caption="Figure 21. Attaching the saved image volume to other VM instances" caption-side="bottom"}

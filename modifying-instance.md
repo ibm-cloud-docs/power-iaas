@@ -70,7 +70,7 @@ To attach or detach one or more volumes, click **Manage existing volumes**. Sele
 If you'd like to change the boot status of a volume, click the **Bootable** toggle.
 {: note}
 
-![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 4. Managing your existing volumes" caption-side="bottom"}
+![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"}
 
 ### Adding or removing a public network
 
@@ -79,7 +79,7 @@ You can remove or add a public network by clicking the **Public networks** toggl
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
-![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 5. Toggling a public network on or off" caption-side="bottom"}
+![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"}
 
  When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a new NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
 
@@ -99,7 +99,7 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
 
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 8. Modifying your storage volume" caption-side="bottom"}
+    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 5. Modifying your storage volume" caption-side="bottom"}
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
