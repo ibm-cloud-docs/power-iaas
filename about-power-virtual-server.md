@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
 lastupdated: "2020-1-21"
 
@@ -109,6 +109,6 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
   For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet).
   {: note}
 
-The following figure displays the basic configuration for a public and private network:
+<!-- The following figure displays the basic configuration for a public and private network:
 
-![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"}
+![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"} -->

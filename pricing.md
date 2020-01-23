@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-010-21"
+lastupdated: "2020-1-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR
 
@@ -32,9 +32,6 @@ subcollection: power-iaas
 {: #pricing-monthly-usage}
 
 {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is pro-rated per hour. If you add resources to an LPAR during the middle of a month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is pro-rated per hour.
-
-### Monthly usage example
-{: #pricing-monthly-usage-example}
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is pro-rated by the hour for the resources deployed.
 

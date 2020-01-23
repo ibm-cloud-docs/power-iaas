@@ -66,7 +66,7 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
 
 2. After you click **Import**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.
 
-    ![Completing the boot image fields](./images/console-boot-image-fields.png "Completing the boot image fields"){: caption="Figure 2. Completing the boot image fields" caption-side="bottom"}
+    ![Completing the boot image fields](./images/console-boot-image-fields.png "Completing the boot image fields"){: caption="Figure 1. Completing the boot image fields" caption-side="bottom"}
 
 3. Find your newly uploaded boot image in your **Boot images** tab.
 

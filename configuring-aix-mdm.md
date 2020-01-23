@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-11-12"
+lastupdated: "2020-1-23"
 
 keywords: MDM, storage pool, mount command, PowerVM
 
@@ -43,9 +43,7 @@ You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR.
 
     ![Viewing your network shares](./images/mdm-network-shares-tab.png "Viewing your network shares"){: caption="Figure 3. Viewing your network shares" caption-side="bottom"}
 
-6. **Right-click** and select **View Mount Command** to view the mount parameters for the share.
-
-    You can have multiple mount options depending on your MDM order's supplied network parameters. Make sure that you are using the correct mount for your network environment. In the following example, *eth2* is cabled to the management network, and *eth4* is cabled to a network that the production LPARs have access to.
+6. **Right-click** and select **View Mount Command** to view the mount parameters for the share. You can have multiple mount options depending on your MDM order's supplied network parameters. Make sure that you are using the correct mount for your network environment. In the following example, *eth2* is cabled to the management network, and *eth4* is cabled to a network that the production LPARs have access to.
 
     ![Viewing the share mount parameters](./images/mdm-view-mount.png "Viewing the share mount parameters"){: caption="Figure 4. Viewing the share mount parameters" caption-side="bottom"}
 

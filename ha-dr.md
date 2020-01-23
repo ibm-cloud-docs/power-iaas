@@ -41,7 +41,7 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 ![Displays colocation rules field](./images/console-colocation-rules.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
 
-* When you are creating storage volumes (disks) for the virtual severs that are part of the PowerHA SystemMirror cluster, you must select **On** from the **Shareable** field.
+* When you are creating storage volumes for the virtual severs that are part of the PowerHA SystemMirror cluster, you must select **On** from the **Shareable** field.
 
 ![Displays sharable rules field](./images/console-new-storage.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
 

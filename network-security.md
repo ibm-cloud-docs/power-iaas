@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-1-23"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
