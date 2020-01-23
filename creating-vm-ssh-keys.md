@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2019-10-28"
+lastupdated: "2020-1-22"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
