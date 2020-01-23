@@ -81,7 +81,7 @@ You cannot toggle a public network off if there are no other defined networks.
 
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"}
 
- When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a new NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
+ When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
 
 ## Resizing a storage volume by using the IBM console
 {: #resizing-volume}
@@ -96,6 +96,9 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
 1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
+
+    To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+    {: important}
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
 
