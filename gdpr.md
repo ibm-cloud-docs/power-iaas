@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 lastupdated: "2019-10-14"
 
 keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data, export data, data retention, gdpr

@@ -1,7 +1,7 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
 lastupdated: "2019-09-12"
 
@@ -47,6 +47,7 @@ To download an ISO image from the ESS website, complete the following steps. For
 
     The first IBM ID to register a customer number becomes the primary contact for that customer number. If you attempt to register a customer number that already has a primary contact, you're offered the option of sending a request. The request goes to the customer number's primary contact and asks for access. You are not given access until the primary contact responds to that request.
     {: note}
+
 3. After IBM has registered the customer number or server, click **Software downloads** under **My entitled software** in the navigation pane.
 4. Select a category and group.
 5. Check the box next to the installation image you would like to download and click **Continue**.
