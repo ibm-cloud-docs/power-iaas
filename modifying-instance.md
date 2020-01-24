@@ -88,7 +88,7 @@ You cannot toggle a public network off if there are no other defined networks.
 {: help}
 {: support}
 
-To resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation, complete the following steps:
+Learn how to resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group,has snapshots, or is disassociated from its snapshots after a transfer.
 
 Resizing is not immediately available after you deploy a virtual machine (VM).
 {: important}
@@ -96,9 +96,6 @@ Resizing is not immediately available after you deploy a virtual machine (VM).
 1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
 
 2. Click the **Edit** icon to the right of your storage volume.
-
-    To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
-    {: important}
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
 

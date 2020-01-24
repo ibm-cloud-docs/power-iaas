@@ -38,7 +38,7 @@ To connect directly to the IBM Cloud Power infrastructure, see [Connecting direc
 
 You can use one of the following options to connect to the IBM Cloud classic infrastructure:
 
-  You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using `10.x.x.x` when starting a new network.
+  You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you start a new network.
   {: important}
 
 Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/infrastructure/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
@@ -76,7 +76,7 @@ After you establish a connection to the IBM Cloud classic infrastructure, you mu
 ## Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services
 {: #connecting-megaport}
 
-You can connect directly to the IBM Cloud Power infrastructure by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. You must engage [Megaport](https://portal.megaport.com){: new_window}{: external} directly to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**. You must also open a [secondary ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) with IBM Power to perform the network configuration. Remember to include the following pieces of information in your support ticket:
+You can connect directly to the IBM Cloud Power infrastructure by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: new_window}{: external} directly to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) with IBM Power to perform the network configuration. Remember to include the following pieces of information in your support ticket:
 
 ```
 Customer name and contact:
@@ -96,7 +96,7 @@ Power Systems Virtual Server customerPrivate Network ID (3):
 ```
 {: codeblock}
 
-## Generic Routing Encapuslation (GRE) tunneling
+## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
 {{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the *Frankfurt 4* (FRA04) location. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
