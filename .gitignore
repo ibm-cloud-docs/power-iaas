@@ -1,6 +1,5 @@
 power-iaas-workspace.code-workspace
 .vscode/
-utterances.json
+develop/
 .DS_Store
 test*.md
-*.txt
