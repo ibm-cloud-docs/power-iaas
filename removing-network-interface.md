@@ -56,10 +56,10 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ## Adding a network interface to an AIX VM
 {: add-nic}
 
-1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command replacing the internal IP address with your own:
+1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command:
 
     ```
-    ifconfig en0 192.168.103.12
+    smitty mktcpip
     ```
     {: codeblock}
 
