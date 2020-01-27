@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-09-26"
+lastupdated: "2020-01-27"
 
 keywords: getting started, infrastructure as a service, before you begin, terminology
 
@@ -50,7 +50,7 @@ Before you create your first Power Systems Virtual Server instance, review the f
 
 3. _(Optional)_ If you want to use a custom image for the AIX or IBM i operating systems, you must create an IBM Cloud Object Storage and upload the image. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
 
-4. _(Optional)_ If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the Direct Link Connect service. For more information, see [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+4. _(Optional)_ If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the Direct Link Connect service. For more information, see [Ordering IBM Cloud Direct Link Connect from the UI Console](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect). You cannot create a private network during the provisioning process. You must first go to the **Networks** tab.
 
 5. *(Optional)* Watch the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external} video to learn more about the {{site.data.keyword.powerSys_notm}} offering.
 
