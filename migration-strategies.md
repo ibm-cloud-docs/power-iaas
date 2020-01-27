@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-17"
+lastupdated: "2020-1-27"
 
 keywords: migration strategies, ICOS, mass data migration, MDM, PowerVC, backup and restore, replication, Aspera, mksysb
 
@@ -91,7 +91,7 @@ You can back up your on-premises environment and restore it to the IBM Cloud. In
 ## Third-party vendors and tools
 {: #third-party}
 
-Customers can use third-party tools to perform data migration. Some third-party tools that are commonly used for data migration are:
+Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
 - *iCluster*
 - *MIMIX from Syncsort*
@@ -123,7 +123,7 @@ For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtu
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
 
-GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA System Mirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
+GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
 
 - [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html)
 - [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html)
