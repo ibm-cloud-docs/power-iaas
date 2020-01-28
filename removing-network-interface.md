@@ -56,10 +56,10 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ## Adding a network interface to an AIX VM
 {: add-nic}
 
-1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the command line to perform the same task by entering the following command (replacing the values with your own):
+1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own):
 
 ```
-/usr/bin/mktcpip -h'isotopes02' -a'9.3.148.132' -m'255.255.254.0' -i'en0' -n'9.3.1.200' -d'aus.stglabs.ibm.com' -g'9.3.149.1' -A'no' -t'N/A'
+/usr/bin/mktcpip -h *poweraix* -a *192.168.103.12* -m *255.255.255.0* -i *en0* -n *127.0.0.1* -d *subdomain.subdomain.rootdomain* -g *192.168.103.13* -A *no* -t *N/A*
 ```
 {: codeblock}
 
