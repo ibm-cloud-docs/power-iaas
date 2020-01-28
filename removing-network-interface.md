@@ -1,11 +1,11 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019,2020
 
-lastupdated: "2020-1-23"
+lastupdated: "2020-1-28"
 
-keywords: network inteface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC
+keywords: network interface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC, smitty mktcpip
 
 subcollection: power-iaas
 
@@ -56,11 +56,13 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ## Adding a network interface to an AIX VM
 {: add-nic}
 
-1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), enter the following command:
+1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the command line to perform the same task by entering the following command (replacing the values with your own):
 
-    ```
-    smitty mktcpip
-    ```
-    {: codeblock}
+```
+/usr/bin/mktcpip -h'isotopes02' -a'9.3.148.132' -m'255.255.254.0' -i'en0' -n'9.3.1.200' -d'aus.stglabs.ibm.com' -g'9.3.149.1' -A'no' -t'N/A'
+```
+{: codeblock}
 
-    ![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
+For more information, see the manual page for the [`mktcpip` command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html) out on the IBM Knowledge Center.
+
+![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
