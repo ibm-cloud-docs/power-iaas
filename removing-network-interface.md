@@ -56,13 +56,11 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ## Adding a network interface to an AIX VM
 {: add-nic}
 
-1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own):
+1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own). For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} out on the IBM Knowledge Center.
 
 ```
 /usr/bin/mktcpip -h *poweraix* -a *192.168.103.12* -m *255.255.255.0* -i *en0* -n *127.0.0.1* -d *itsc.austin.ibm.com* -g *192.168.103.13* -A *no* -t *N/A*
 ```
 {: codeblock}
-
-For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} out on the IBM Knowledge Center.
 
 ![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
