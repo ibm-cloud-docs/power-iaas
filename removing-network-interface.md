@@ -63,6 +63,6 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ```
 {: codeblock}
 
-For more information, see the manual page for the [`mktcpip` command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html) out on the IBM Knowledge Center.
+For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} out on the IBM Knowledge Center.
 
 ![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
