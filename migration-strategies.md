@@ -95,6 +95,7 @@ Customers can use third-party tools to perform data migration. The following thi
 
 - *iCluster*
 - *MIMIX from Syncsort*
+- Double-Take® MoveTM for AIX
 
 ## IBM teams and managed services
 {: #teams-managed-services}
@@ -131,6 +132,15 @@ GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enab
 - [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html)
 - [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html)
 - [PowerHA SystemMirror for AIX on Fix Central](https://www-945.ibm.com/support/fixcentral/options?selectionBean.selectedTab=find&selection=Cluster+software%3bibm%2fOther+software%2fPowerHAClusterManager)
+
+### Alternative AIX migration strategies
+{: #migration-alternative-aix}
+
+Some alternative AIX migration strategies include:
+
+- `rsync` for non-database files
+- Logshipping for databases
+- The`savevg` and `restvg` AIX commands
 
 ## IBM i migration strategies
 {: #migration-ibmi}
