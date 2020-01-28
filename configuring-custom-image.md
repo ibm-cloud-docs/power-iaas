@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-1-10"
+lastupdated: "2020-1-28"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
