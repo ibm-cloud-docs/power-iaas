@@ -10,6 +10,7 @@ IBM Power Systems Virtual Servers
     pricing.md
     ha-dr.md
     migration-strategies.md
+    backup-strategies.md
 
     {: .topicgroup}
     Security and compliance
