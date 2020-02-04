@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-1-22"
+lastupdated: "2020-2-04"
 
-keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network, NIC
+keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network, NIC, affinity
 
 subcollection: power-iaas
 
@@ -59,9 +59,12 @@ You can modify your attached volumes and remove or add a public network.
 
 ### Adding or managing a volume
 
-1. To add a volume, click **Add new**.
+1. To add a volume, click **New volume**.
 
-2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable**.
+2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
+
+    Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+    {: important}
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
 

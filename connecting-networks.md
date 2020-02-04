@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019,2020
 
-lastupdated: "2019-11-18"
+lastupdated: "2020-2-04"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, POP
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Connecting Power Systems Virtual Server instances and networks
 {: #connecting-networks}
 
-Learn more about connecting {{site.data.keyword.powerSysShort}} instances and networks.
+Learn more about connecting {{site.data.keyword.powerSysShort}} instances and networks. You can connect {{site.data.keyword.powerSysShort}} instance between us-south (DAL) and us-east (WDC).
 {: shortdesc}
 
 ## Connecting a Power Systems Virtual Server instance between colocations (DAL to WDC)
@@ -33,7 +33,7 @@ Learn more about connecting {{site.data.keyword.powerSysShort}} instances and ne
 
 You can use IBM Cloud Connect to connect {{site.data.keyword.cloud_notm}} instances across colocations (colos). IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and software as a service (SaaS) solution connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
 
-IBM Cloud Connect provides network interconnect from 230+ global Post Office Protocol (POP) locations for:
+IBM Cloud Connect provides network interconnect from 230+ global Point of Presence (POP) locations for:
 
 - Data Center to the Cloud
 - Data Center to Data Center
@@ -49,7 +49,7 @@ With IBM Cloud Connect, IBM clients have access to:
 ### Power IaaS connectivity between Dallas and Ashburn
 {: #connecting-powerio-connectivity}
 
-Find out how the IBM Cloud Connect team helps establish a **Direct Connection** between Cloud Connect (Megaport) and Power IaaS (also known as Power VS or Power I/O) infrastructure that uses a virtual cross connect (VxC) between a **Cloud Connect Port** and **Power IaaS Port**.
+Learn more about how the IBM Cloud Connect team helps establish a **Direct Connection** between Cloud Connect (Megaport) and Power IaaS infrastructure.
 
 **Dallas, TX (DAL)**
 

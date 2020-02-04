@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019,2020
 
-lastupdated: "2020-1-08"
+lastupdated: "2020-2-4"
 
-keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity
 
 subcollection: power-iaas
 
@@ -82,6 +82,16 @@ The storage types vary by region and cannot be changed once the volume is create
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
+
+## What does it mean to set an affinity or anti-affinity rule?
+{: #affinity}
+{: faq}
+
+You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
+
+Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+
+The {{site.data.keyword.powerSys_notm}} offering has only one service provider in the WDC and DAL colos. As a result, neither one of the affinity policies have an effect. However, the FRA colo uses a separate service provider for each storage pool. In this case, the affinity volume storage type does not have to match the original volume type.
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
