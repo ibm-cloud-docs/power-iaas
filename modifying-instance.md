@@ -69,10 +69,7 @@ Learn how to add new storage volumes and modify existing ones.
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
 
-To attach or detach one or more volumes, click **Manage existing volumes**. Select your wanted volumes and click **Finish**.
-
-If you'd like to change the boot status of a volume, click the **Bootable** toggle.
-{: note}
+To attach or detach one or more volumes, click **Manage existing volumes**. Select your wanted volumes and click **Finish**. To simply change the boot status of a volume, click the **Bootable** toggle.
 
 ![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"}
 
@@ -81,7 +78,7 @@ If you'd like to change the boot status of a volume, click the **Bootable** togg
 {: help}
 {: support}
 
-You can resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
 
 Resizing is not immediately available after you deploy a VM.
 {: important}
@@ -90,7 +87,7 @@ Resizing is not immediately available after you deploy a VM.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can only increase the size of the storage volume. You cannot decrease it.
+3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can only increase the size of the storage volume.
 
     ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 5. Modifying your storage volume" caption-side="bottom"}
 
@@ -101,11 +98,9 @@ Resizing is not immediately available after you deploy a VM.
 ## Adding or removing a public network
 {: #adding-removing-network}
 
-You can remove or add a public network by clicking the **Public networks** toggle.
+You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove a NIC from an AIX VM, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"}
-
- When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
