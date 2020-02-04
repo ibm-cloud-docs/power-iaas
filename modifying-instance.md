@@ -43,7 +43,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 3. After you click the **Edit** icon, a menu appears. Use the toggles to change your instance's **Entitled capacity** and **Memory (GB)**. Click **Next.**
 
-    If the VM is inactive, you can change the processor type to **Dedicated** or **Shared** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amount is double.
+    If the VM is inactive, you can change the processor type to **Dedicated** or **Shared** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amounts are double.
     {: tip}
 
     ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"}
@@ -52,19 +52,20 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. To verify your instance modification, view your **Server details**.
 
-## Modifying attached volumes and network interfaces
+## Managing your storage volumes
 {: #modifying-volume-network}
 
-You can modify your attached volumes and remove or add a public network.
+Learn how to add new storage volumes and modify existing ones.
 
-### Adding or managing a volume
+### Adding and managing storage volumes
+{: #adding-managing-volume}
 
-1. To add a volume, click **New volume**.
+1. To add a storage volume, click **New volume**.
 
-2. Enter the **Name**, **Type**, and **Size** of the new volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
+2. Enter the **Name**, **Type**, and **Size** of the new storage volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
 
     Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
-    {: important}
+    {: note}
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
 
@@ -75,7 +76,30 @@ If you'd like to change the boot status of a volume, click the **Bootable** togg
 
 ![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"}
 
-### Adding or removing a public network
+### Resizing a storage volume
+{: #resizing-volume}
+{: help}
+{: support}
+
+You can resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+
+Resizing is not immediately available after you deploy a VM.
+{: important}
+
+1. Go to the IBM console and click the **Storage volumes** tab.
+
+2. Click the **Edit** icon to the right of your storage volume.
+
+3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can only increase the size of the storage volume. You cannot decrease it.
+
+    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 5. Modifying your storage volume" caption-side="bottom"}
+
+4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
+
+5. To verify your new storage size, go back to the **Storage volumes** tab.
+
+## Adding or removing a public network
+{: #adding-removing-network}
 
 You can remove or add a public network by clicking the **Public networks** toggle.
 
@@ -85,25 +109,3 @@ You cannot toggle a public network off if there are no other defined networks.
 ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"}
 
  When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the **External IP** address). You must add a NIC and point it to the new internal IP address. For more information, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface)
-
-## Resizing a storage volume by using the IBM console
-{: #resizing-volume}
-{: help}
-{: support}
-
-Learn how to resize a {{site.data.keyword.powerSys_notm}} storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: **available**, **error**, **error_restoring**, **error_extending**, or **error_managing**. Additionally, the volume cannot be deleted if it is migrating, attached, belongs to a group,has snapshots, or is disassociated from its snapshots after a transfer.
-
-Resizing is not immediately available after you deploy a virtual machine (VM).
-{: important}
-
-1. Go to the IBM console's **Storage volumes** link in the left navigation pane and find your volume.
-
-2. Click the **Edit** icon to the right of your storage volume.
-
-3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can increase the size of only the storage volume. You cannot decrease it.
-
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 5. Modifying your storage volume" caption-side="bottom"}
-
-4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
-
-5. To verify your new storage size, go back to the **Storage volumes** tab.
