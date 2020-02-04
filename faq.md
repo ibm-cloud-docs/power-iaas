@@ -89,7 +89,7 @@ The boot image storage type is predefined and cannot be chosen.
 
 You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-Volume affinity allows you to control the placement of a new volume into (or out from) a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
