@@ -1,6 +1,5 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
-{:external: target="_blank" .external}
 
 {: .toc subcollection="power-iaas" category="compute" audience="compute" href="/docs/infrastructure/power-iaas?topic=power-iaas-getting-started#getting-started" path="infrastructure/power-iaas"}
 IBM Power Systems Virtual Servers
@@ -24,7 +23,7 @@ IBM Power Systems Virtual Servers
         use-case-hybrid.md
         use-case-oracle.md
 
-    [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server){: external}
+    [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -63,7 +62,7 @@ IBM Power Systems Virtual Servers
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
-    [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference){: external}
+    [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
     at-events.md
     {: .navgroup-end}
 
