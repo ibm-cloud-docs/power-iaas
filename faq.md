@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2020-2-4"
+lastupdated: "2020-02-6"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity
 
@@ -82,6 +82,12 @@ The storage types vary by region and cannot be changed once the volume is create
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
+
+## How does my current environment compare to what's available through the Power Systems Virtual Server offering?
+{: #performance}
+{: faq}
+
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8). For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf).
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
