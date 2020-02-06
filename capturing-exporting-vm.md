@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-1-22"
+lastupdated: "2020-01-22"
 
 keywords: image catalog, virtual machine capture, cloud object storage bucket, export virtual machine
 

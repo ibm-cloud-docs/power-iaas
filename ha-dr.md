@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
-lastupdated: "2020-1-27"
+lastupdated: "2020-01-27"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 

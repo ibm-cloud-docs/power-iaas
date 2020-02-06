@@ -3,7 +3,7 @@
 copyright:
   years: 2019
 
-lastupdated: "2020-1-22"
+lastupdated: "2020-01-22"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Creating a AIX virtual machine (VM) with SSH keys for root login
+# Creating an AIX virtual machine (VM) with SSH keys for root login
 {: #create-vm}
 
 You can set up one or more SSH keys for root login when you create new AIX virtual machines (VM) on an IBM Cloud instance. The keys are loaded into the root's **authorized_keys** file. SSH keys allow you to securely log in to a VM. You must use the available operating system options to create SSH keys. To generate SSH keys on a Linux&reg; or Mac OS system, for example, you can use the standard `ssh-keygen` tool.

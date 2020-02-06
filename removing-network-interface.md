@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2020-1-28"
+lastupdated: "2020-01-28"
 
 keywords: network interface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC, smitty mktcpip
 

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
-lastupdated: "2020-2-04"
+lastupdated: "2020-02-04"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, POP
 
@@ -46,7 +46,7 @@ With IBM Cloud Connect, IBM clients have access to:
 - IBM services like **Watson** and **zCloud.**
 - **IBM GNPP Accessible Services & Transports** like ATT, Verizon, Orange, and Equinix.
 
-### Power IaaS connectivity between Dallas and Ashburn
+### Network connectivity between Dallas and Ashburn
 {: #connecting-powerio-connectivity}
 
 Learn more about how the IBM Cloud Connect team helps establish a **Direct Connection** between Cloud Connect (Megaport) and Power IaaS infrastructure.

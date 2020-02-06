@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-2-03"
+lastupdated: "2020-02-03"
 
 keywords: backup strategies, ICOS, BRMS, ICC, Veeam for AIX, IBM Spectrum Protect
 
