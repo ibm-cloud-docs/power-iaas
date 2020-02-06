@@ -1,5 +1,6 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
+{:external: target="_blank" .external}
 
 {: .toc subcollection="power-iaas" category="compute" audience="compute" href="/docs/infrastructure/power-iaas?topic=power-iaas-getting-started#getting-started" path="infrastructure/power-iaas"}
 IBM Power Systems Virtual Servers
