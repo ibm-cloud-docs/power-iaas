@@ -26,7 +26,7 @@ subcollection: power-iaas
 {: #use-case-dev-test}
 
 The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the {{site.data.keyword.cloud}}.
-{: #shortdesc}
+{: shortdesc}
 
 ## Client needs
 {: #use-case-dev-needs}

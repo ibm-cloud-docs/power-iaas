@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-02-06"
 
-keywords: use case, OracleDB
+keywords: use case, Oracle, database, demos
 
 subcollection: power-iaas
 
@@ -22,21 +22,24 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Deploying an Oracle database in an IBM Power Systems Virtual Server
+# Deploying an Oracle database IBM Power Systems Virtual Server
 {: #use-case-oracle}
 
-Learn how to deploy an Oracle database in an {{site.data.keyword.powerSysShort}}. These videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
-{: #shortdesc}
+Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}}.
+{: shortdesc}
 
-## Modernizing an Oracle database by using an IBM Power Systems Virtual Server
-{: modernizing-oracle}
+These videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
+{: important}
 
-The following video captures how to deploy an OracleDB in the {{site.data.keyword.cloud}} running Power Systems.
+## Modernizing an Oracle database
+{: #modernizing-oracle}
+
+The following video captures how to deploy an Oracle database in the {{site.data.keyword.cloud}} running Power Systems.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Building a new Oracle environment from a custom AIX image
-{: building-oracle}
+{: #building-oracle}
 
 The following video captures how to export a custom AIX image on-premises and redeploy it in the {{site.data.keyword.Bluemix_notm}} to build a new Oracle environment.
 

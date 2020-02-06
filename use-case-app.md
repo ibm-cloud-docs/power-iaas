@@ -26,7 +26,7 @@ subcollection: power-iaas
 {: #use-case-app-hosting}
 
 The client wants to run an enterprise-level workload in the {{site.data.keyword.cloud}}.
-{: #shortdesc}
+{: shortdesc}
 
 ## Client needs
 {: #use-case-app-needs}

@@ -62,7 +62,7 @@ IBM Power Systems Virtual Servers
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
-    [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
+    [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference){: external}
     at-events.md
     {: .navgroup-end}
 
