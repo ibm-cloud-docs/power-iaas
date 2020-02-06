@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
 lastupdated: "2019-11-18"
 
@@ -26,8 +26,11 @@ subcollection: power-iaas
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
 
-Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues. **This page is still under construction!**
+Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues.
 {: shortdesc}
+
+This page is still under construction!
+{: important}
 
 ## What can I do if my AIX virtual machine (VM) does not initially boot?
 {: #troubleshoot-hung-aix}
