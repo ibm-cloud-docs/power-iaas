@@ -126,8 +126,7 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 <tr>
 <td>Cores</td>
 <td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you select <strong>Shared processor</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU (vCPU) is allocated for every 0.25 entitlement.
-
-If you are concerned about performance issues, select <strong>Dedicated processor</strong>.</td>
+</td>
 </tr>
 <tr>
 <td>Memory</td>
