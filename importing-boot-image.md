@@ -73,7 +73,7 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name you want displayed in your catalog.|
-| Storage type | **us-east (WDC)** or **us-south (DAL)**: Select whether you want **Standard** or **SSD** for the storage type. <br> **eu-de (FRA04):** Select whether you want **Tier 1 (SSD flash storage)** or **Tier 3 (NVMe-based flash)** for the storage type. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the same VM.|
+| Storage type | **us-east (WDC)** or **us-south (DAL)**: Select whether you want **Standard** or **SSD** for the storage type. <br> **eu-de (FRA04):** Select whether you want **Tier 1 (SSD flash storage)** or **Tier 3 (NVMe-based flash)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
 | Region | Select either **us-east**, **us-south**, or **eu-de** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
