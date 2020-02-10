@@ -1,5 +1,5 @@
 ---
-name: Custom documentation issue
+name: Regular GitHub issue
 about: Create a regular GitHub issue
 title: ''
 labels: ''
