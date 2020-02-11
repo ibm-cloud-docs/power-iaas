@@ -77,8 +77,8 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created.
 
-* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types.
-* The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs should select **Tier 3**. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.
+* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types. You cannot deploy a stock image to SSD in WDC and DAL currently. This functionality requires PowerVC version 1.4.3 or higher.
+* The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
@@ -95,7 +95,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
@@ -168,7 +168,7 @@ You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
-**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per gigabyte (GB) when using a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per gigabyte (GB) when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
 ## What monitoring services are available?
 {: #monitoring}
