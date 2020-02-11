@@ -83,6 +83,12 @@ The storage types vary by region and cannot be changed once the volume is create
 The boot image storage type is predefined and cannot be chosen.
 {: note}
 
+## What's the difference in performance between a shared processor and a dedicated processor?
+{: #processor}
+{: faq}
+
+For more information, see the [How Does Shared Processor Performance Compare to Dedicated Processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} wiki.
+
 ## How does my current environment compare to what's available through the Power Systems Virtual Server offering?
 {: #performance}
 {: faq}
