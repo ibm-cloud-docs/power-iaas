@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
-lastupdated: "2020-02-6"
+lastupdated: "2020-02-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity
 
@@ -77,7 +77,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created.
 
-* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types. You cannot deploy a stock image to SSD in WDC and DAL currently. This functionality requires PowerVC version 1.4.3 or higher.
+* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types. You cannot deploy a stock image to **SSD** in WDC and DAL currently. This functionality requires PowerVC version 1.4.3 or higher.
 * The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.
 
 The boot image storage type is predefined and cannot be chosen.
@@ -93,7 +93,7 @@ For more information, see the [How Does Shared Processor Performance Compare to 
 {: #performance}
 {: faq}
 
-If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8). For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf).
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
