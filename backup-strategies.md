@@ -31,7 +31,7 @@ Learn more about different AIX and IBM i backup strategies for the {{site.data.k
 {: shortdesc}
 
 ## Image capture
-{: #backup-image-capture
+{: #backup-image-capture}
 
 Image capture produces a storage FlashCopy of the logical partition (LPAR) and works on both IBM i or AIX virtual machines (VMs). You can use image capture to store backup images within your account (locally), directly to [IBM Cloud Object Storage](https://cloud.ibm.com/docs/infrastructure/power-iaas?topic=power-iaas-capturing-exporting-vm), or both.
 
