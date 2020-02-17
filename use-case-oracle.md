@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-06"
+lastupdated: "2020-02-17"
 
 keywords: use case, Oracle, database, demos
 
@@ -36,11 +36,19 @@ These videos do not capture the latest updates to the {{site.data.keyword.powerS
 
 The following video captures how to deploy an Oracle database in the {{site.data.keyword.cloud}} running Power Systems.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+  <div class="embed-responsive embed-responsive-16by9" data-hd-video="video">
+    <iframe class="embed-responsive-item" id="youtube-modernizing" title="Modernizing an Oracle database" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</p>
 
 ## Building a new Oracle environment from a custom AIX image
 {: #building-oracle}
 
 The following video captures how to export a custom AIX image on-premises and redeploy it in the {{site.data.keyword.Bluemix_notm}} to build a new Oracle environment.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/soMU3sUrV7o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+  <div class="embed-responsive embed-responsive-16by9" data-hd-video="video">
+    <iframe class="embed-responsive-item" id="youtube-building" title="Building a new Oracle environment from a custom AIX image" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/soMU3sUrV7o" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</p>
