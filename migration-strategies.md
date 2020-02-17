@@ -33,12 +33,12 @@ Learn how to migrate your data and workloads to the {{site.data.keyword.powerSys
 ## IBM Cloud Object Storage (ICOS)
 {: #migration-icos}
 
-ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq).
+ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
 
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
-MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq).
+MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
 
 ## PowerVC images and ICOS
 {: #migration-powervc-icos}
@@ -54,7 +54,7 @@ For more information, see [Deploying a custom image within a Power Systems Virtu
 ## Aspera Technologies
 {: #aspera-technologies}
 
-IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera).
+IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera){: new_window}{: external}.
 
 ## Replication
 {: #replication}
@@ -102,8 +102,8 @@ Customers can use third-party tools to perform data migration. The following thi
 
 You can engage IBM teams and services to assist you throughout the migration lifecycle. For more information, contact your IBM representatives:
 
-- [IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services)
-- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration)
+- [IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: new_window}{: external}
+- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: new_window}{: external}
 
 ## AIX migration strategies
 {: #migration-aix}
@@ -126,12 +126,12 @@ For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtu
 
 GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
 
-- [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html)
-- [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html)
-- [Exploiting IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf)
-- [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html)
-- [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html)
-- [PowerHA SystemMirror for AIX on Fix Central](https://www-945.ibm.com/support/fixcentral/options?selectionBean.selectedTab=find&selection=Cluster+software%3bibm%2fOther+software%2fPowerHAClusterManager)
+- [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: new_window}{: external}
+- [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: new_window}{: external}
+- [Exploiting IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: new_window}{: external}
+- [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: new_window}{: external}
+- [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: new_window}{: external}
+- [PowerHA SystemMirror for AIX on Fix Central](https://www-945.ibm.com/support/fixcentral/options?selectionBean.selectedTab=find&selection=Cluster+software%3bibm%2fOther+software%2fPowerHAClusterManager){: new_window}{: external}
 
 ### Alternative AIX migration strategies
 {: #migration-alternative-aix}
@@ -166,12 +166,12 @@ The following steps detail how to migrate your OS and data from an on-premises s
 1. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
 1. Migrate your remaining data.
 
-For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm) and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm).
+For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}.
 
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-rep-glvm}
 
 GeoMirroring enables IBM i disk mirroring technology to multiple system environments and supports host-based and logical replication across geographically distant sites. Geomirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
 
-- [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm)
-- [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf)
+- [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: new_window}{: external}
+- [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: new_window}{: external}
