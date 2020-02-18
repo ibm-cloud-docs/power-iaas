@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-01-28"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04, FRA05
 
 subcollection: power-iaas
 
@@ -41,7 +41,7 @@ You must use CIDR notation when you choose the IP ranges for your private networ
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
-The first IP address is always reserved for the gateway in the Washington, D.C. (WDC), Dallas (DAL), and Frankfurt (FRA04) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
+The first IP address is always reserved for the gateway in the Washington, D.C. (WDC), Dallas (DAL), and Frankfurt (FRA04 and FRA05) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
 To create a new subnet, complete the following steps:
