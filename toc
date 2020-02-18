@@ -9,8 +9,11 @@ IBM Power Systems Virtual Servers
     about-power-virtual-server.md
     pricing.md
     ha-dr.md
-    migration-strategies.md
-    backup-strategies.md
+
+    {: .topicgroup}
+    Backup and migration strategies
+        backup-strategies.md
+        migration-strategies.md
 
     {: .topicgroup}
     Security and compliance
@@ -21,8 +24,9 @@ IBM Power Systems Virtual Servers
         use-case-dev.md
         use-case-app.md
         use-case-hybrid.md
+        use-case-oracle.md
 
-    [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server){: external}
+    [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

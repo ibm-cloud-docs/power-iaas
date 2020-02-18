@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
-lastupdated: "2020-2-4"
+lastupdated: "2020-02-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity
 
@@ -32,7 +32,7 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://youtu.be/y5QaNdGJ6R0){: new_window}{: external} video.
+To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
@@ -77,11 +77,23 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created.
 
-* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types.
-* The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs should select **Tier 3**.
+* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types. You cannot deploy a stock image to **SSD** in WDC and DAL currently.
+* The **eu-de (FRA04)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
+
+## What's the difference in performance between a shared processor and a dedicated processor?
+{: #processor}
+{: faq}
+
+For more information, see the [How Does Shared Processor Performance Compare to Dedicated Processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} wiki.
+
+## How does my current environment compare to what's available through the Power Systems Virtual Server offering?
+{: #performance}
+{: faq}
+
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
@@ -89,7 +101,7 @@ The boot image storage type is predefined and cannot be chosen.
 
 You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
 {: #licensing_os}
@@ -162,7 +174,7 @@ You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
-**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per gigabyte (GB) when using a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per gigabyte (GB) when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
 ## What monitoring services are available?
 {: #monitoring}
@@ -180,7 +192,7 @@ IBM uses the same tools that are on an on-premises system.
 {: #ibmi-certification}
 {: faq}
 
-You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www-356.ibm.com/partnerworld/gsd/homepage.do){: new_window}{: external}.
+You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: new_window}{: external}.
 
 ## How do I delete the service or a specific instance?
 {: #delete-service}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-1-23"
+lastupdated: "2020-01-23"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
-Infrastructure provides VLAN isolation between different tenants, enforced at VIOS and physical CISCO switches and routers.
+Infrastructure provides VLAN isolation between different tenants, which are enforced at VIOS and physical CISCO switches and routers.
 {: shortdesc}
 
 ## Default firewall ports
@@ -49,7 +49,7 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 * 9475
 * 9476
 
-If you need additional ports to be opened, you must submit a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you.
+If you need extra ports to be opened, you must submit a [support ticket](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you.
 
 There are plans to add the dynamic configuration of the firewall rules in the future.
 {: note}

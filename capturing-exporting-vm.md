@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-1-22"
+lastupdated: "2020-02-17"
 
 keywords: image catalog, virtual machine capture, cloud object storage bucket, export virtual machine
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
 
-You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CLI or the console. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers. For example, if a VM is backed by two volumes (one residing on SSD storage and the other one on a standard HDD storage), the new image will consist of one volume on SSD storage and the other on HDD storage.
+You can capture and export an AIX or IBM i VM instance by using the IBM Cloud CLI or the console. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers.
 {: shortdesc}
 
 An image can be exported to an IBM **Cloud Object Storage** (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an OVA file. The OVA file is compressed by using _gzip_ before it gets uploaded to the IBM COS bucket.
@@ -85,7 +85,7 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 
 7. If the capture and export is successful, you are presented with a confirmation message.
 
-    The export process can be signficantly longer if the volumes you selected are large.
+    The export process can be significantly longer if the volumes you selected are large.
     {: important}
 
     ![Capture and export success!](./images/console-capture-export-success.png "Capture and export success!"){: caption="Figure 3. Capture and export success!" caption-side="bottom"}

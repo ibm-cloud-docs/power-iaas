@@ -26,7 +26,7 @@ subcollection: power-iaas
 {: #use-case-hybrid-hosting}
 
 The client wants to use the {{site.data.keyword.cloud}} as a DR destination for their on-premises environment.
-{: #shortdesc}
+{: shortdesc}
 
 ## Client needs
 {: #use-case-hybrid-needs}

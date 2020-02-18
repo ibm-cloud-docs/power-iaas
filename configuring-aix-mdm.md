@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-1-23"
+lastupdated: "2020-01-23"
 
 keywords: MDM, storage pool, mount command, PowerVM
 

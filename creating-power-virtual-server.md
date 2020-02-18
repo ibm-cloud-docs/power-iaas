@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
-lastupdated: "2020-1-29"
+lastupdated: "2020-02-06"
 
-keywords: getting started, power systems virtual server, configure instance, 
+keywords: getting started, power systems virtual server, configure instance
 subcollection: power-iaas
 
 ---
@@ -73,7 +73,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
     ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. To see your boot images, go to **Boot images** after you provision the instance.
+2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **eu-de (FRA04)** region. To see your boot images, go to **Boot images** after you provision the instance.
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
     {: important}
@@ -126,8 +126,7 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 <tr>
 <td>Cores</td>
 <td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you select <strong>Shared processor</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU (vCPU) is allocated for every 0.25 entitlement.
-
-If you are concerned about performance issues, select <strong>Dedicated processor</strong>.</td>
+</td>
 </tr>
 <tr>
 <td>Memory</td>
