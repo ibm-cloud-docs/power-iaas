@@ -44,7 +44,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"}
 
-    When you select a region for your service, **Dallas, Texas** uses the *DAL13* data center, **Washington, D.C.** uses the *WDC04* data center, and **Frankfurt, Germany** uses the *FRA04* data center.
+    When you select a region for your service, **Dallas, Texas** uses the *DAL13* data center, **Washington, D.C.** uses the *WDC04* data center, and **Frankfurt, Germany** uses the *FRA04* and *FRA05* data centers.
     {: note}
 
 4. Click **Create**.
