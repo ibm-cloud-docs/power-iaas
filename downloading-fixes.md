@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-02-20"
 
-keywords: suma, fixes, SNDPTFORD, fix central
+keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central
 
 subcollection: power-iaas
 
@@ -24,18 +24,18 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Downloading fixes and updates for a Power Systems Virtual Server
+# Downloading fixes and updates
 {: #fixes-power-iaas}
 
-You must use the service update management assistant (SUMA) to download fixes and updates from the IBM Fix Central for an AIX virtual machine (VM). For an IBM i VM, you can download fixes by using the `Send PTF Order (SNDPTFORD)` command.
+You must use the AIX service update management assistant (SUMA) or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
-## Using SUMA to download fixes and updates for AIX VMs
+## Using SUMA to download fixes and updates for AIX virtual machines (VMs)
 {: #downloading-fixes-suma}
 {: help}
 {: support}
 
-SUMA sets up an automated interface to download fixes and updates from a fix distribution website to your system. You can configure SUMA to periodically check the availability of specific new fixes and technology levels. With SUMA, you do not have to manually retrieve maintenance updates from the web.
+SUMA sets up an automated interface to download fixes and updates from a fix distribution website to your system. You can configure SUMA to periodically check the availability of specific new fixes and technology levels. With SUMA, you do not have to manually retrieve maintenance updates.
 
 When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master, SUMA establishes a connection to the fix distribution website and downloads the available service update. If your configuration contains a firewall that blocks the connection to the fix distribution website, you must customize the firewall rules to allow SUMA to connect to the following IP addresses (SUMA connects to one of these IP addresses based on your geography):
 
@@ -46,24 +46,20 @@ When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master,
 The port numbers of the fix distribution website can be either 80 for *HTTP* or 443 for *HTTPS*.
 {: note}
 
-To verify that SUMA can get through your firewall to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes), `/usr/esa/bin/verifyConnectivity -tw`. If the tests fail, work with your network security team to determine why you are unable to access these servers.
+To verify that SUMA can get through your firewall to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes), `/usr/esa/bin/verifyConnectivity -tw`. If the tests fail, work with your network security team to determine why you are unable to access the servers.
 
 You can access the SUMA configuration by running the [suma command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/s_commands/suma.html){: new_window}{: external} or by using the `SMIT suma` fast path. When you create a SUMA policy, you must specify a request type that specifies the type of download.
 
-**PTF**
-
+**PTF**<br>
 Specifies a request to download a program temporary fix (PTF), such as U813941. Only certain PTFs can be downloaded as an individual file set. This limitation applies to PTFs that contain either the *bos.rte.install* or *bos.alt_disk_install.rte* file sets as well as those that are released in between Service Packs (SP). Otherwise, you must download the technology level (TL) or service pack (SP).
 
-**TL**
-
+**TL**<br>
 Specifies a request to download a specific TL (such as 7200-02).
 
-**SP**
-
+**SP**<br>
 Specifies a request to download a specific SP (such as 7200-02-00).
 
-**Latest**
-
+**Latest**<br>
 Specifies a request to download the latest fixes. This value returns the latest service pack or the TL as specified in the **FilterML** attribute.
 
 ### Configuring SUMA to use the proxy settings
@@ -97,9 +93,9 @@ Complete the following steps to configure SUMA to use the proxy settings:
    3. Select **Create/Change Primary Service Configuration** and press **Enter**.
    4. Set the following fields in the SMIT interface:
 
-  ![Configuring proxy settings](./images/terminal-configuring-proxy-settings.svg "Configuring proxy settings"){: caption="Figure 1. Configuring proxy settings" caption-side="bottom"}
+      ![Configuring proxy settings](./images/terminal-configuring-proxy-settings.svg "Configuring proxy settings"){: caption="Figure 1. Configuring proxy settings" caption-side="bottom"}
 
-Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
+      Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
 
 4. Run the `smit suma_config_base` command to access the SUMA base configuration SMIT interface. Verify the fields that are shown in the **Base Configuration** screen capture.
 
@@ -125,7 +121,7 @@ The `suma` command can be used to perform these operations on a SUMA task or pol
 To create and save a SUMA task by using the command line, run the following command:
 
 ```
-suma -w -a DisplayName=‘ AIX72TL2SP2‘ -a FilterML=‘7200-00‘Copy
+suma -w -a DisplayName=‘ AIX72TL2SP2‘ -a FilterML=‘7200-00‘
 ```
 {: codeblock}
 
@@ -134,14 +130,14 @@ The command returns a task ID after the successful creation of a SUMA task:
 ```
 Task ID 10 created.
 ```
-{: codeblock}
+{: screen}
 
 ## Ordering fixes and updates for IBM i VMs
 {: #downloading-fixes-ibmi}
 {: help}
 {: support}
 
-The `SNDPTFORD` command is used to order and receive IBM-supplied fixes (or program temporary fixes, PTFs) for the IBM i environment and IBM-supplied applications. You can use this command over the electronic customer support configuration that uses TCP/IP connectivity through Universal Connection. You can use the `SNDPTFORD` command to order the following types of fixes and related information:
+You can use the `SNDPTFORD` command to order and receive IBM-supplied fixes (or PTFs) for the IBM i environment and IBM-supplied applications. You can use this command over the electronic customer support configuration that uses TCP/IP connectivity through *Universal Connection*. You can use the `SNDPTFORD` command to order the following types of fixes and related information:
 
 - Separate or accompanying cover letters
 - Individual fixes
