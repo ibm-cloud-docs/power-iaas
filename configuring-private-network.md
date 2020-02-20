@@ -91,8 +91,8 @@ Customer Network ASN:
 
 Customer subnets to be advertised:
 Power Systems Virtual Server customer Private Network ID (1):
-Power Systems Virtual Server customerPrivate Network ID (2):
-Power Systems Virtual Server customerPrivate Network ID (3):
+Power Systems Virtual Server customer Private Network ID (2):
+Power Systems Virtual Server customer Private Network ID (3):
 ```
 {: codeblock}
 

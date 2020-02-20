@@ -14,13 +14,14 @@ subcollection: power-iaas
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 {:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 {:tip: .tip}
 {:note: .note}
-{:new_window: target="_blank"}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:important: .important}
+{:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
 # Troubleshooting AIX-related issues
