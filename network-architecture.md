@@ -68,7 +68,7 @@ You can connect your IBM Power on-premise environment to a colo by using IBM Clo
 
 You can connect a colo to a colo by using Direct Link and IBM Cloud Connect or Megaport.
 
-When connecting a colo to a colo by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external}. If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between DAL and WDC.
+When connecting a colo to a colo by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external}. If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between DAL and WDC. Please consult an IBM Cloud Connect or MegaPort representative for specific network requirements.
 
   ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection" caption-side="bottom"}
 

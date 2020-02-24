@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-01-28"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04, FRA05
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04, FRA05, DNS
 
 subcollection: power-iaas
 

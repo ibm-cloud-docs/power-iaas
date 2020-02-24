@@ -94,7 +94,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
-    The **Power Systems Virtual Server network ASN** is the same as your BGP ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses.
+    The **Power Systems Virtual Server network ASN** is the same as your BGP ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network ID is your subnet name.
     {: note}
 
     ```shell
@@ -105,9 +105,9 @@ Order a second Direct Link Connect connection for backup purposes.
     IBM Cloud IP address:
     Power Systems Virtual Server network ASN:
     IBM Cloud ASN:
-    Private Network ID (1):
-    Private Network ID (2):
-    Private Network ID (3):
+    Private Network (subnet) ID (1):
+    Private Network (subnet) ID (2):
+    Private Network (subnet) ID (3):
     ```
     {: codeblock}
 
