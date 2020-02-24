@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-02-24"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central
 
@@ -25,12 +25,23 @@ subcollection: power-iaas
 {:support: data-reuse='support'}
 
 # Downloading fixes and updates
-{: #fixes-power-iaas}
+{: #downloading-fixes}
 
 You must use the AIX service update management assistant (SUMA) or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
-## Using SUMA to download fixes and updates for AIX virtual machines (VMs)
+## Preparing your AIX VM to download fixes and updates by using SUMA
+{: #preparing-aix-fixes}
+
+If you'd like to use SUMA to download fixes and updates, you must perform one of the following.
+
+1. Put your AIX VM on the public network.
+2. Set up another AIX VM as a NIM server.
+3. Set up another public-facing AIX VM public network-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
+
+For more information on SUMA, see [nderstanding SUMA](#downloading-fixes-suma).
+
+### Understanding SUMA
 {: #downloading-fixes-suma}
 {: help}
 {: support}
