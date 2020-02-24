@@ -75,6 +75,6 @@ When connecting a colo to a colo by using Megaport, you might need a [Megaport C
 ## IBM dual colo connection
 {: #dual-colo}
 
-You can connect two colos after creating a Direct Link connection and by using IBM Cloud Connect or Megaport.
+You can connect to two colos after creating a Direct Link connection and by using IBM Cloud Connect or Megaport.
 
   ![Power Systems Virtual Server private dual colo connection](./images/network-dual-colo.png "Power Systems Virtual Server private dual colo connection"){: caption="Figure 7. Power Systems Virtual Server private dual Colo connection" caption-side="bottom"}
