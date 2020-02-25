@@ -102,7 +102,6 @@ Order a second Direct Link Connect connection for backup purposes.
     Customer name:
     Customer account ID:
     Direct Link Connect subnet:
-    Power Systems Virtual Server network IP address:
     IBM Cloud IP address:
     Power Systems Virtual Server network IP address:
     IBM Cloud ASN:
