@@ -55,6 +55,7 @@ IBM Power Systems Virtual Servers
         downloading-aix-iso-image.md
         configuring-aix-mdm.md
         removing-network-interface.md
+        provisioning-nim-server.md
 
     {: .topicgroup}
     IBM i

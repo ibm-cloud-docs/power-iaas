@@ -33,13 +33,13 @@ You must use the AIX service update management assistant (SUMA) or the IBM i `Se
 ## Preparing your AIX VM to download fixes and updates by using SUMA
 {: #preparing-aix-fixes}
 
-If you'd like to use SUMA to download fixes and updates, you must perform one of the following.
+If you'd like to use SUMA to download fixes and updates, you must perform one of the following:
 
 1. Put your AIX VM on the public network.
-2. Set up another AIX VM as a NIM server.
-3. Set up another public-facing AIX VM public network-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
+2. Set up another AIX VM as a [NIM server](/docs/infrastructure/power-iaas?topic=power-iaas-provisioning-nim).
+3. Set up another public-facing AIX VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
-For more information on SUMA, see [nderstanding SUMA](#downloading-fixes-suma).
+For more information on SUMA, see [Understanding SUMA](#downloading-fixes-suma).
 
 ### Understanding SUMA
 {: #downloading-fixes-suma}

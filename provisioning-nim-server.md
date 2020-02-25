@@ -1,20 +1,18 @@
----
+﻿---
 
 copyright:
   years: 2019, 2020
 
 lastupdated: "2020-02-25"
 
-keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS
+keywords: troubleshooting, NIM server, support, fixes, updates
 
 subcollection: power-iaas
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -24,27 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Troubleshooting AIX-related issues
-{: #troubleshoot-iaas-aix}
+# Setting up a NIM server
+{: #provisioning-nim}
 
-Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues.
-{: shortdesc}
-
-This page is still under construction!
-{: important}
-
-## What can I do if my AIX virtual machine (VM) does not initially boot?
-{: #troubleshoot-hung-aix}
-{: troubleshoot}
-
-{: tsSymptoms}
-The AIX boot disk that you are using to provision an AIX VM is not successfully booting. As a result, the console displays a blank screen without standard debugging options.
-
-{: tsCauses}
-The AIX boot disk might be corrupted.
-
-{: tsResolve}
-If the AIX VM does not boot, you must provision an additional AIX VM and use it as a Network Installation Management (NIM) server. Without a NIM server, you cannot debug the boot issue and must reimage your disk.
+You can provision an AIX virtual machine (VM) and use it as a Network Installation Management (NIM) server for troubleshooting purposes or for downloading fixes and updates.
 
 1. Determine the hostname and IP address of the system by using the following two commands, `hostname` and `ifconfig -a`.
 
