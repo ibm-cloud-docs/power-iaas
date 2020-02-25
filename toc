@@ -38,6 +38,7 @@ IBM Power Systems Virtual Servers
         modifying-instance.md
         capturing-exporting-vm.md
         importing-boot-image.md
+        downloading-fixes.md
 
     {: .topicgroup}
     Networking
@@ -76,6 +77,5 @@ IBM Power Systems Virtual Servers
     {: .topicgroup}
     Troubleshooting
         troubleshoot-aix.md
-    downloading-fixes.md
     getting-help-and-support.md
     {: .navgroup-end}
