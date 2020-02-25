@@ -83,10 +83,11 @@ Order a second Direct Link Connect connection for backup purposes.
     Link Speed:                  1000 Mbps
     Location:                    Washington 2
     Network Provider:            MEGAPORT
-    IBM IP Address:              10.254.0.25/30
+    Direct Link Connect subnet:  10.254.0.24/30
+    IBM Cloud IP Address:        10.254.0.25/30
     Customer IP Address:         10.254.0.26/30
-    Service Key:                 None
-    BGP ASN:                     64999
+    IBM Cloud ASN:               13884
+    Customer BGP ASN:            64999
     Network Identifier:          1748523-1
     Date Created:                2019-06-12T14:56:45-06:00
     ```
@@ -94,7 +95,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
-    The **Power Systems Virtual Server network ASN** is the same as your BGP ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network ID is your subnet name.
+    The **Power Systems Virtual Server network ASN** is the same as your BGP ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your [Power Systems Virtual Server private network subnet](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet) name.
     {: note}
 
     ```shell
@@ -103,11 +104,12 @@ Order a second Direct Link Connect connection for backup purposes.
     Direct Link Connect subnet:
     Power Systems Virtual Server network IP address:
     IBM Cloud IP address:
-    Power Systems Virtual Server network ASN:
+    Power Systems Virtual Server network IP address:
     IBM Cloud ASN:
-    Private Network (subnet) ID (1):
-    Private Network (subnet) ID (2):
-    Private Network (subnet) ID (3):
+    Power Systems Virtual Server network ASN:
+    Power Systems Virtual Server Private Network (subnet) Name (1):
+    Power Systems Virtual Server Private Network (subnet) Name (2):
+    Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
     {: codeblock}
 
