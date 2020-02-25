@@ -30,16 +30,14 @@ subcollection: power-iaas
 You must use the AIX service update management assistant (SUMA) or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
-## Preparing your AIX VM to download fixes and updates by using SUMA
+## Preparing your AIX VM to use SUMA
 {: #preparing-aix-fixes}
 
 If you'd like to use SUMA to download fixes and updates, you must perform one of the following:
 
-1. Put your AIX VM on the public network.
-2. Set up another AIX VM as a [NIM server](/docs/infrastructure/power-iaas?topic=power-iaas-provisioning-nim).
-3. Set up another public-facing AIX VM with an [HTTP/HTTPS proxy](#configuring-suma).
-
-For more information on SUMA, see [Understanding SUMA](#downloading-fixes-suma).
+- Put your AIX VM on the public network. You can add a public network [during](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/infrastructure/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. See the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the `suma` command.
+- Set up another AIX VM as a [NIM server](/docs/infrastructure/power-iaas?topic=power-iaas-provisioning-nim).
+- Set up another public-facing AIX VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
 ### Understanding SUMA
 {: #downloading-fixes-suma}
@@ -115,12 +113,12 @@ Complete the following steps to configure SUMA to use the proxy settings:
 For the **Fixserver protocol** field, *https* is the only option. For the **Download protocol** field, *http* is the default option. You can change the default option to *https* for a secure connection. If you set the **Download protocol** to *https*, the downloads are slower but more secure because *HTTP* provides multi-threaded performance and *HTTPS* provides single-threaded performance.
 {: important}
 
-For more information on SUMA, see [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: new_window}{: external}.
+For more information, see [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: new_window}{: external}.
 
 ### SUMA tasks and the command line
 {: #suma-tasks-cli}
 
-The `suma` command can be used to perform these operations on a SUMA task or policy. An **RqType** parameter specifies the type of download that is being requested, such as a TL, SP, or Latest. You can use several flag options with the `suma` command to perform the following tasks:
+The `suma` command can be used to perform various operations on a SUMA task or policy. An **RqType** parameter specifies the type of download that is being requested, such as a TL, SP, or Latest. You can use several flag options with the `suma` command to perform the following tasks:
 
 - Create
 - Edit
@@ -142,6 +140,14 @@ The command returns a task ID after the successful creation of a SUMA task:
 Task ID 10 created.
 ```
 {: screen}
+
+To create and schedule a task that downloads the latest fixes and adds a policy label through the **DisplayName** field (useful when you are listing policies through SMIT), run the following command:
+
+```
+suma -s "30 2 15 * *" -a RqType=Latest   \
+    -a DisplayName="Latest fixes - 15th Monthly"
+```
+{: codeblock}
 
 ## Ordering fixes and updates for IBM i VMs
 {: #downloading-fixes-ibmi}
