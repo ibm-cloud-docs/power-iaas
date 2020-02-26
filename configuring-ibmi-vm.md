@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-10-21"
+lastupdated: "2020-02-26"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -25,13 +25,21 @@ subcollection: power-iaas
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
 
-Complete the following instructions to configure your IBM i virtual machine.
+Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
 
-## Accepting license keys and configuring your network
+## Licenses and configuring your network
 {: #license-network}
 
-After you deploy an IBM i VM, you need to accept the license agreements. After you accept the license agreements, `cloud-init` configures your network and injects your license keys. The `cloud-init` configuration process can take up to 5 minutes. Do not restart your system while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
+You must install the following program temporary fixes (PTFs) on your IBM i VM in order for the {{site.data.keyword.cloud}} to inject licenses:
+
+- IBM i 7.2 - 5770SS1 SI71091 (prereqs SLIC PTFs: MF66395, MF66394, MF66391)
+- IBM i 7.3 - MF99207 (TR7) and SI69686
+- IBM i 7.4 - MF99301 (TR1) and SI70544
+
+If you are bringing your own IBM i custom image, you must install the PTFs previously mentioned and the software required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
+
+After you deploy an IBM i VM and and install the proper PTFs, you need to accept the license agreements. After you accept the license agreements, `cloud-init` configures your network and injects your license keys. The `cloud-init` configuration process can take up to 5 minutes. Do not restart your system while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 
 To accept the license agreements from the console, you must press **5** to display the agreement and **F18** to accept it. When using **F** keys above **F12** on the console (such as **F18**), you must use the console buttons and not your keyboard.
 {: important}
