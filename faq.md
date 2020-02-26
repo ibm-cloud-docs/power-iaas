@@ -62,7 +62,7 @@ Because AIX 6.1 does not support `cloud-init`, you must perform a `mksysb-based`
 {: faq}
 {: support}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## What formats should I use when uploading a custom image?
 {: #custom-image}
@@ -126,7 +126,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications](/docs/infrastructure/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 
 ## Do Power Systems Virtual Servers run in a multi-tenant environment?
 {: #multi}
@@ -145,14 +145,14 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 {: faq}
 {: support}
 
-For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 ## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
 {: faq}
 {: support}
 
-For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-power).
+For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-configuring-power).
 
 ## What firewall options are there around VPN connectivity?
 {: #firewall}
@@ -165,7 +165,7 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/infrastructure/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
 
 ## How is network bandwidth billed?
 {: #billing}

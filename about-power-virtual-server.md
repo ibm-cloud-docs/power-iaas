@@ -40,7 +40,7 @@ The following are some of the key features for {{site.data.keyword.powerSys_notm
 ### Straightforward billing
 {: #straightforward-billing}
 
-The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/infrastructure/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
+The {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
 ### Hybrid cloud environment
 {: #hybrid-cloud}
@@ -61,7 +61,7 @@ You can configure and customize the following options when you create a {{site.d
 ### Bring your own image
 {: #bring-own-image}
 
-IBM provides you with stock AIX and IBM i operating system images when you create a {{site.data.keyword.powerSys_notm}}. However, you can bring your own custom AIX or IBM i operating system image that you have previously deployed and tested. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
+IBM provides you with stock AIX and IBM i operating system images when you create a {{site.data.keyword.powerSys_notm}}. However, you can bring your own custom AIX or IBM i operating system image that you have previously deployed and tested. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Hardware specifications
 {: #hardware-specifications}
@@ -108,7 +108,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources. The process for creating a Direct Link Connect connection can take a few days because IBM Cloud support must configure the link.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-  For more information about the different options for configuring a private network, see [Configure a private network](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet).
+  For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
   {: note}
 
 <!-- The following figure displays the basic configuration for a public and private network:

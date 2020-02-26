@@ -33,7 +33,7 @@ Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your
 ## Resizing an instance by using the IBM console
 {: #resizing-vm}
 
-To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
+To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
 
 1. Go to the IBM console's **Virtual server instances** tab and click your instance.
 
@@ -98,7 +98,7 @@ Resizing is not immediately available after you deploy a VM.
 ## Adding or removing a public network
 {: #adding-removing-network}
 
-You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove a NIC from an AIX VM, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface).
+You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove a NIC from an AIX VM, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface).
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}

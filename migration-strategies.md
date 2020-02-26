@@ -49,7 +49,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 2. Copy the OVA image to the IBM Cloud.
 3. Deploy the OVA image and provision a new {{site.data.keyword.powerSys_notm}}.
 
-For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image).
+For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -119,7 +119,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
-For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)](/docs/infrastructure/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}

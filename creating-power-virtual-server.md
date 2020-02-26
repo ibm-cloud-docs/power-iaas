@@ -75,7 +75,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **eu-de (FRA04 and FRA05)** region. To see your boot images, go to **Boot images** after you provision the instance.
 
-    When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/infrastructure/power-iaas?topic=power-iaas-create-vm).
+    When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
     {: important}
 
     ![Defining your volumes](./images/console-volume-network.png "Defining your volumes"){: caption="Figure 8. Defining your volumes" caption-side="bottom"}
@@ -134,11 +134,11 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 </tr>
 <tr>
 <td>Boot image</td>
-<td>Select a version of the IBM-provided AIX or IBM i operating system stock image. If you want to use your own AIX or IBM i custom image, it must be at a supported technology level. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-deploy-custom-image">Deploying a custom image within a Power Systems Virtual Server</a>.
+<td>Select a version of the IBM-provided AIX or IBM i operating system stock image. If you want to use your own AIX or IBM i custom image, it must be at a supported technology level. For more information, see <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">Deploying a custom image within a Power Systems Virtual Server</a>.
 
 <p><strong>Important</strong>: When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as 'root' appears as being <i>disabled</i>.</p>
 
-<p>For IBM i system licensing information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.</p>
+<p>For IBM i system licensing information, see <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.</p>
 </td>
 </tr>
 <tr>
@@ -154,10 +154,10 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 </tr>
 <tr>
 <td>Public Networks</td>
-<td>Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Public and private networks</a>.
+<td>Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. For more information, see <a href="/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Public and private networks</a>.
 </td>
 </tr>
 <tr>
 <td>Private Networks</td>
-<td>Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.</td>
+<td>Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.</td>
 </tr></table>
