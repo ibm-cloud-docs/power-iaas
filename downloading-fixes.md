@@ -207,7 +207,7 @@ Changes to `VOLUME_LIST` file are not active until the next time the client devi
 
 To complete the configuration of an IBM i network installation server, see [Virtual optical storage using the Network File System](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzam4/rzam4virtualopstoragenfs.htm){: new_window}{: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: new_window}{: external}.
 
-### Setting up and configuring an IBM i proxy server
+### Configuring an IBM i proxy server
 {: #configuring-proxy-ibmi}
 
-The [Create Service Configuration](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY)(`CRTSRVCFG`) command creates the service configuration needed for all service and support applications: Electronic Customer Support (ECS) and Electronic Service Agent. Connectivity options are available from either local or remote systems or logical partitions. Primary or backup configurations can be created for the service configuration. To configure an IBM i proxy server, see [Proxy server (PROXY)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY).
+The [Create Service Configuration (`CRTSRVCFG`)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY){: new_window}{: external} command creates the service configuration needed for all service and support applications: Electronic Customer Support (ECS) and Electronic Service Agent. Connectivity options are available from either local or remote systems or logical partitions. Primary or backup configurations can be created for the service configuration. To configure an IBM i proxy server by using the `CRTSRVCFG` command, see [Proxy server (PROXY)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY).
