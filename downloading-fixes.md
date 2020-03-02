@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:support: data-reuse='support'}
 
 # Downloading fixes and updates
-{: #downloading-fixes}
+{: #downloading-fixes-updates}
 
 You must use the AIX service update management assistant (SUMA) or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
@@ -36,8 +36,13 @@ If you'd like to download fixes and updates, you must perform one of the followi
 - Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
 - Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
-## Understanding SUMA
-{: #downloading-fixes-suma}
+## Ordering fixes and updates for AIX VMs
+{: #downloading-fixes-aix}
+
+Learn more about ordering fixes and updates for AIX VMs using SUMA.
+
+### Understanding SUMA
+{: #understanding-suma}
 {: help}
 {: support}
 
@@ -62,7 +67,7 @@ Specifies a request to download a specific SP (such as 7200-02-00).
 Specifies a request to download the latest fixes. This value returns the latest service pack or the TL as specified in the **FilterML** attribute.
 
 ### Configuring SUMA to use the proxy settings
-{: #configuring-suma}
+{: #configuring-proxy-aix}
 
 Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet. To verify that the LPAR is connected to the internet, enter the following command:
 
@@ -201,3 +206,8 @@ Changes to `VOLUME_LIST` file are not active until the next time the client devi
 **Configuration**
 
 To complete the configuration of an IBM i network installation server, see [Virtual optical storage using the Network File System](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzam4/rzam4virtualopstoragenfs.htm){: new_window}{: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: new_window}{: external}.
+
+### Setting up and configuring an IBM i proxy server
+{: #configuring-proxy-ibmi}
+
+The [Create Service Configuration](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY)(`CRTSRVCFG`) command creates the service configuration needed for all service and support applications: Electronic Customer Support (ECS) and Electronic Service Agent. Connectivity options are available from either local or remote systems or logical partitions. Primary or backup configurations can be created for the service configuration. To configure an IBM i proxy server, see [Proxy server (PROXY)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY).
