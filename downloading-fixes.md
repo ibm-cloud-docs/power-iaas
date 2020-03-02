@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-02"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -30,14 +30,11 @@ subcollection: power-iaas
 You must use the AIX service update management assistant (SUMA) or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
-## Preparing your AIX VM to use SUMA
-{: #preparing-aix-fixes}
+If you'd like to download fixes and updates, you must perform one of the following:
 
-If you'd like to use SUMA to download fixes and updates, you must perform one of the following:
-
-- Put your AIX VM on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. See the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the `suma` command.
-- Set up another AIX VM as a [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
-- Set up another public-facing AIX VM with an [HTTP/HTTPS proxy](#configuring-suma).
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the `suma` command or the [Using the SNDPTFORD command](#sndptford-command).
+- Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
+- Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
 ### Understanding SUMA
 {: #downloading-fixes-suma}
