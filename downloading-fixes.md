@@ -36,7 +36,7 @@ If you'd like to download fixes and updates, you must perform one of the followi
 - Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
 - Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
-### Understanding SUMA
+## Understanding SUMA
 {: #downloading-fixes-suma}
 {: help}
 {: support}
