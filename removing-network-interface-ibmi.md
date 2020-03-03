@@ -1,11 +1,11 @@
 ﻿---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
 lastupdated: "2020-03-03"
 
-keywords: network interface, IBM i cloud VM, external IP address, dns, mktcpip, namerslv
+keywords: network interface, TCP/IP address, IBM i VM, external IP address, DNS, LIND, CFGTCP command
 
 subcollection: power-iaas
 
@@ -20,49 +20,47 @@ subcollection: power-iaas
 {:important: .important}
 {:note: .note}
 {:external: .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
 
 # How to add or remove a network interface from an IBM i virtual machine (VM)
 {: #managing-network-interface-ibmi}
 
-Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it.  You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
+Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
 {: shortdesc}
 
 When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address to complete this procedure.
 {: note}
 
-## Removing a network interface from an AIX VM
-{: remove-nic}
-{: help}
-{: support}
+## Removing a network interface from an IBM i VM
+{: #remove-nic-ibmi}
 
-1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public interface.
+Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface (TCP/IP address). For a complete set of instructions, see [Changing the TCP/IP Address of the IBM System i System](https://www.ibm.com/support/pages/changing-tcpip-address-ibm-system-i-system){: new_window}{: external}.
 
-    ```
-    ifconfig en0 down detach
-    ```
-    {: codeblock}
+1. Before you change a TCP/IP address (interface), determine whether it has any associated routes. Choose **Option 8** from the **NETSTAT \*IFC** screen.
 
-2. Next, run the `rmdev` command to remove the device from the AIX system.
+    It's a good idea to select **Option 5** to display the details of the route. Remember to press **F6** to print the details for reference for when the route must be readded. This step should be done for all of the **non-\*DIRECT** routes that are listed on the screen.
+    {: tip}
 
-    ```
-    rmdev -dl en0
-    ```
-    {: codeblock}
+2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you'd like to remove. All of that communication that is going over the route is terminated after you remove it.
 
-3. Use the `cfgmgr` command to reconfigure the device.
+3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you'd like to deactivate on the **NETSTAT \*IFC** screen.
 
-## Adding a network interface to an AIX VM
-{: add-nic}
+4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that
+menu. Select **Option 4** next to the interface you'd like to remove.
 
-To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
+    ![Removing a network interface](./images/terminal-ibmi-remove-nic.png "Removing a network interface"){: caption="Figure 2. Revmoing a network interface" caption-side="bottom"}
 
-```
-/usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0
-```
-{: codeblock}
+5. You must vary off the Line description (LIND) after you remove the interface.
 
-If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: new_window}{: external}.
+## Adding a network interface to an IBM i VM
+{: #add-nic-ibmi}
 
-![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
+1. Now that you removed the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
+
+    Most configurations require you to update only the first three fields. Add the new TCP/IP address for the iSeries family (you can type over the quotation marks) to the **Internet address** field. Add the new subnet mask to the **Subnet mask** field and complete the remaining fields by using your reference printout. The line description (LIND) must be the same as the LIND defined on the removed interface.
+    {: note}
+
+2. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
+
+3. To verify that the new interface is active, ping the address from the command line. If the ping responds, the change is complete.
+
+![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}

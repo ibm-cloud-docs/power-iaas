@@ -1,11 +1,11 @@
 ﻿---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
 lastupdated: "2020-03-03"
 
-keywords: network interface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC, smitty mktcpip
+keywords: network interface, NIC, AIX VM, ifconfig command, detach, en0, rmdev, external IP address, smitty mktcpip, namerslv command
 
 subcollection: power-iaas
 
@@ -33,7 +33,7 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 {: note}
 
 ## Removing a network interface from an AIX VM
-{: remove-nic}
+{: #remove-nic-aix}
 {: help}
 {: support}
 
@@ -56,14 +56,13 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 ## Adding a network interface to an AIX VM
 {: #add-nic}
 
-To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own). For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external}.
-
-If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: new_window}{: external}.
-{: note}
+To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
 ```
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0
 ```
 {: codeblock}
+
+If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: new_window}{: external}.
 
 ![Finding your internal IP address](./images/console-internal-ip.png "Finding your internal IP address"){: caption="Figure 1. Finding your internal IP address" caption-side="bottom"}
