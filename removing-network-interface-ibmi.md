@@ -56,7 +56,7 @@ menu. Select **Option 4** next to the interface you'd like to remove.
 
 1. Now that you removed the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
 
-    Most configurations require you to update only the first three fields. Add the new TCP/IP address for the iSeries family (you can type over the quotation marks) to the **Internet address** field. Add the new subnet mask to the **Subnet mask** field and complete the remaining fields by using your reference printout. The line description (LIND) must be the same as the LIND defined on the removed interface.
+    Most configurations require you to update only the first three fields. Add the new TCP/IP address for the iSeries family (you can type over the quotation marks) to the **Internet address** field. Add the new subnet mask to the **Subnet mask** field and complete the remaining fields by using your reference printout. The LIND must be the same as the LIND defined on the removed interface.
     {: note}
 
 2. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
