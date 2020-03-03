@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2020-02-19"
+lastupdated: "2020-03-03"
 
 keywords: network interface, AIX cloud VM, ifconfig, detach, en0, rmdev, external IP address, NIC, smitty mktcpip
 
@@ -54,9 +54,12 @@ When you toggle a public network off and then on, the IBM console regenerates ne
 3. Use the `cfgmgr` command to reconfigure the device.
 
 ## Adding a network interface to an AIX VM
-{: add-nic}
+{: #add-nic}
 
-1. To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own). For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external}.
+To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by entering the following command (replacing the values with your own). For more information, see the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external}.
+
+If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: new_window}{: external}.
+{: note}
 
 ```
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0
