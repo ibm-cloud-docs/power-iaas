@@ -54,13 +54,23 @@ menu. Select **Option 4** next to the interface you'd like to remove.
 ## Adding a network interface to an IBM i VM
 {: #add-nic-ibmi}
 
-1. Now that you removed the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
+When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the external IP address). Point the new interface at the new internal IP address.
 
-    Most configurations require you to update only the first three fields. Add the new TCP/IP address for the iSeries family (you can type over the quotation marks) to the **Internet address** field. Add the new subnet mask to the **Subnet mask** field and complete the remaining fields by using your reference printout. The LIND must be the same as the LIND defined on the removed interface.
+1. After you remove the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
+
+    Most configurations require you to update only the first three fields.
     {: note}
 
-2. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
+2. Add the new internal IP address you obtained from the IBM Console (you can type over the quotation marks) to the **Internet address** field.
 
-3. To verify that the new interface is active, ping the address from the command line. If the ping responds, the change is complete.
+3. Add the new subnet mask to the **Subnet mask** field.
+
+4. Complete the remaining fields by using your reference printout. The LIND must be the same as the LIND defined on the removed interface.
+
+5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
+
+6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
+
+7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
 
 ![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}
