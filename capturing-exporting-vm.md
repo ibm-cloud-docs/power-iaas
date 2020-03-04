@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-17"
+lastupdated: "2020-03-04"
 
 keywords: image catalog, virtual machine capture, cloud object storage bucket, export virtual machine
 
@@ -38,7 +38,7 @@ You are charged different rates based on whether you export to the **image catal
 ## Using the IBM Cloud CLI to capture and export a VM
 {: #cli-capture-export}
 
-For more information, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [Using the IBM Cloud CLI for Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#delete-bucket-cors).
+For more information, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM Cloud Object Storage CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
 
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your **image catalog**, **Cloud Object Storage**, or both.
 

@@ -46,7 +46,7 @@ The first IP address is always reserved for the gateway in the Washington, D.C. 
 
 To create a new subnet, complete the following steps:
 
-1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com).
+1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com){: new_window}{: external}.
 
 2. Select the menu icon and select **Resource List**.
 

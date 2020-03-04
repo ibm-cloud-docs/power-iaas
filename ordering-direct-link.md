@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link#browse-and-order) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link) and [IBM Cloud Direct Link Connect](https://cloud.ibm.com/docs/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect).
+You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link) and [IBM Cloud Direct Link Connect](/docs/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect-classic).
 {: shortdesc}
 
 ## Ordering Direct Link Connect
@@ -45,7 +45,7 @@ Order a second Direct Link Connect connection for backup purposes.
 2. Review the following basic Direct Link Connect networking concepts:
 
    * [Direct Link Connect concepts](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
-   * [Direct Link Connect details](/docs/direct-link?topic=direct-link-ibm-cloud-direct-link-connect-details)
+   * [Direct Link Connect details](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution)
    * [Direct Link Connect limitations](/docs/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
    * [Strict limitations on IP assignments](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 

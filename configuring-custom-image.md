@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-01-28"
+lastupdated: "2020-03-04"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -44,7 +44,7 @@ The basic steps that are involved in deploying an instance by using a custom ima
 
 Before you can use a custom image as the boot volume, review the following information:
 
-* You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage).
+* You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 * If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}.
 * Alternatively, if you have already deployed a Virtual server instance, you can capture it and redeploy a new Virtual Server Instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
 * You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field. To view a list of the supported AIX and IBM i OS technology levels, see the following system software maps:
@@ -130,7 +130,7 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 3. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click on the arrow in the appropriate boot image tile to see your custom boot image.
 
-    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/services/cloud-object-storage?topic=cloud-object-storage-ic-use-the-ibm-cli#ic-download-object) for the Cloud Object Storage CLI command.
+    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
     {: tip}
 
 Refer to the following table to complete the **Import boot image** fields:

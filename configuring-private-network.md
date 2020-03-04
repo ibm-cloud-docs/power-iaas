@@ -50,7 +50,7 @@ You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect 
 * You must have a Direct Link connection.
 * This option is typically used to manage environments and is not recommended for production workloads.
 * Because VPN connections are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a jump server.
-* For more information, see [Setting up an SSL VPN](/docs/iaas-vpn?topic=VPN-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
+* For more information, see [Setting up an SSL VPN](/docs/iaas-vpn?topic=iaas-vpn-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 **Using a IPSec VPN and a VRA**
 
@@ -59,7 +59,7 @@ You can use the {{site.data.keyword.cloud_notm}} **IPSec VPN service** to connec
 * You must have a Direct Link connection.
 * This option is typically used to manage environments and is not recommended for production workloads.
 * Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a VRA.
-* For more information, see [Setting up a IPSec VPN](/docs/iaas-vpn?topic=VPN-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
+* For more information, see [Setting up a IPSec VPN](/docs/iaas-vpn?topic=iaas-vpn-setup-ipsec-vpn) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud Power instances. These offerings are not colocated and their networks are not linked. You must order a Direct Link Connection.
 {: note}
