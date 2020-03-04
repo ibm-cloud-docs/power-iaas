@@ -62,7 +62,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
 
-To begin, complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with additional options.
+To begin, complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with more options.
 
   The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
   {: tip}
@@ -89,10 +89,10 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 4. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
-For more information on what each {site.data.keyword.powerSys_notm}} instance field means, refer to the following table:
+Refer to the following table for more information on each {site.data.keyword.powerSys_notm}} instance field.
 
 <table>
-<caption>Table 1. Power Virtual Server instance fields</caption>
+<caption>Table 1. Power Systems Virtual Server instance fields</caption>
 <tr>
 <th>Field</th>
 <th>Description</th>
@@ -130,7 +130,7 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 </tr>
 <tr>
 <td>Memory</td>
-<td>Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. The amount of memory that you can select depends on the number of cores you selected. You can allocate up to 64 GB for each core that you select. For example, selecting four cores allows you to select up to 256 GB of memory.</td>
+<td>Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price.</td>
 </tr>
 <tr>
 <td>Boot image</td>
@@ -143,7 +143,7 @@ For more information on what each {site.data.keyword.powerSys_notm}} instance fi
 </tr>
 <tr>
 <td>Attached volumes</td>
-<td>You can either create a new data volume or attach an existing one that you've defined in your IBM Cloud account.
+<td>You can either create a new data volume or attach an existing one that you defined in your IBM Cloud account.
 <dl>
   <dt><strong>Creating a new data volume</strong></dt>
   <dd>Click <strong>Add</strong> to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click <strong>On</strong> under <strong>Shareable</strong>. </dd>
