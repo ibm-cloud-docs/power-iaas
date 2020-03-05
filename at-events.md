@@ -3,9 +3,9 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2019-09-04"
+lastupdated: "2020-03-04"
 
-keywords: activity tracker service, regulatory audit requirements, abnormal activity
+keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
 subcollection: power-iaas
 
@@ -22,13 +22,13 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Power Systems Virtual Servers activity tracker events
+# Activity tracker events
 {: #at-events}
 
-As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with {{site.data.keyword.powerSysFull}} in the {{site.data.keyword.cloud}}.
+As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with your {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see[Learn more](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+The {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to alert you of abnormal activity and to comply with regulatory audit requirements. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [IBM Cloud Activity Tracker with LogDNA](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 ## List of events: Read
 {: #at-actions-read}
@@ -64,10 +64,10 @@ The following events are for working with networks in your {{site.data.keyword.p
 | pcloud.network.update      | Update a Network                      |
 | pcloud.network.delete      | Delete a Network                      |
 
-## List of events: {{site.data.keyword.powerSys_notm}}
+## List of events: Power Systems Virtual Server
 {: #at-actions-servers}
 
-The following events are for working with each virtual server within the {{site.data.keyword.powerSys_notm}} instance.
+The following events are for working with each {{site.data.keyword.powerSys_notm}} instance.
 
 | Action                        | Description                          |
 |:------------------------------|:-------------------------------------|
@@ -85,12 +85,12 @@ The following events are for working with each virtual server within the {{site.
 ## List of events: SSH keys
 {: #at-actions-ssh}
 
-The following events are for working with account and SSH keys in your {{site.data.keyword.powerSys_notm}} instance.
+The following events are for working with your account and SSH keys in your {{site.data.keyword.powerSys_notm}} instance.
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | pcloud.tenant.read       | Read your Tenant Information|
-| pcloud.ssh-key.read      | Read an SSHKey or SSH keys  |
+| pcloud.ssh-key.read      | Read an SSH key or SSH keys |
 | pcloud.ssh-key.create    | Create an SSH key           |
 | pcloud.ssh-key.update    | Update an SSH key           |
 | pcloud.ssh-key.delete    | Delete an SSH key           |
@@ -111,4 +111,4 @@ The following events are for working with data volumes in your {{site.data.keywo
 ## Viewing events
 {: #at-viewing-events}
 
-Events are available in the **Dallas** location. {{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the `us-south` location. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
+Events are available in all regions. The {{site.data.keyword.at_full_notm}} can have only one instance per region. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface (UI). To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
