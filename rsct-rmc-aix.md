@@ -29,6 +29,9 @@ subcollection: power-iaas
 
 RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSys_notm}} offering, RSCT 3.1 is the minimum package level that is required for an imported AIX image (added IPv6 support). The {{site.data.keyword.powerSys_notm}} development team, however, recommends you use [RSCT 3.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: new_window}{: external} for optimal performance.
 
+The RSCT `nodeid` is not rebuilt If you are deploying an AIX VM from a network installation management (NIM) server without `cloud-init` and RSCT is installed.
+{: important}
+
 ## Resource Managment Control (RMC)
 {: #rmc-aix}
 
