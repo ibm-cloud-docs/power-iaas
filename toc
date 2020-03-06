@@ -57,6 +57,7 @@ IBM Power Systems Virtual Servers
         configuring-aix-mdm.md
         removing-network-interface.md
         provisioning-nim-server.md
+        rsct-rmc-aix.md
 
     {: .topicgroup}
     IBM i

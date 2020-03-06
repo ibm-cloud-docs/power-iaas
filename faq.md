@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-11"
+lastupdated: "2020-03-06"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity
 
@@ -94,6 +94,12 @@ For more information, see the [How Does Shared Processor Performance Compare to 
 {: faq}
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+
+## How do I migrate my VM from one colo to another (WDC04 to DAl13)?
+{: #vm-migration}
+{: faq}
+
+To migrate your VM from one colo to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then perform an import followed by a deploy.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
