@@ -54,10 +54,10 @@ IBM Power Systems Virtual Servers
         creating-vm-ssh-keys.md
         restoring-aix-mksysb-image.md
         downloading-aix-iso-image.md
-        configuring-aix-mdm.md
         removing-network-interface.md
-        provisioning-nim-server.md
         rsct-rmc-aix.md
+        configuring-aix-mdm.md
+        provisioning-nim-server.md
 
     {: .topicgroup}
     IBM i
