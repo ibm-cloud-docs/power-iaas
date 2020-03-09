@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 {:external: .external}
 
-# Configuring MDM on AIX
+# Configuring Master Data Management (MDM) on AIX
 {: #configuring-mdm}
 
 You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR.

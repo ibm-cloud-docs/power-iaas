@@ -63,6 +63,7 @@ IBM Power Systems Virtual Servers
     IBM i
         configuring-ibmi-vm.md
         connecting-ibmi-port.md
+        creating-network-install-server.md
         removing-network-interface-ibmi.md
         ibmi-license-info.md
     {: .navgroup-end}

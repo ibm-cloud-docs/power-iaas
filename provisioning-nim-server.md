@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Setting up a NIM server
+# Setting up a Network Installation Management (NIM) server
 {: #provisioning-nim}
 
-You can provision an AIX virtual machine (VM) and use it as a Network Installation Management (NIM) server for troubleshooting purposes or for downloading fixes and updates.
+You can provision an AIX virtual machine (VM) and use it as a NIM server for troubleshooting purposes or for downloading fixes and updates.
 
 1. Determine the hostname and IP address of the system by using the following two commands, `hostname` and `ifconfig -a`.
 

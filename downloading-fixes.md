@@ -144,10 +144,15 @@ suma -s "30 2 15 * *" -a RqType=Latest   \
 ```
 {: codeblock}
 
-## Ordering fixes and updates for IBM i VMs
+## Using the Electronic Service Agent (ESA) to download fixes and updates for IBM i VMs
 {: #downloading-fixes-ibmi}
 {: help}
 {: support}
+
+### Setting up an IBM i multi-hop connection (proxy server)
+{: #configuring-proxy-ibmi}
+
+If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server). To configure an IBM i multi-hop connection, see [Setting up a connection to IBM](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. This topic shows users how to configure a Universal Connection to IBM services.
 
 ### Using the SNDPTFORD command
 {: #sndptford-command}
@@ -178,38 +183,6 @@ For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/suppo
 ### Setting up an IBM i network install server
 {: #ibmi-network-server}
 
-Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs. To share virtual optical images through a network, the network installation server must meet the following requirements:
-
-**Requirements**
-
-- The server must be able to share virtual optical images that use version 3 or later of the Network File System (NFS).
-- A volume list (`VOLUME_LIST`) file that contains the list of images to be loaded in the virtual optical device must exist in the image catalog directory. The `VFYIMGCLG` command is used to create the volume list file from the image catalog containing the images that you want to share. The following is an example of the command, `VFYIMGCLG IMGCLG(PUBS) TYPE(*OTHER) NFSSHR(*YES)`.
-
-The image catalog that is used must have an image catalog path name that is limited to 127 characters. Path name characters are limited to A-Z, a-z, 0-9, and / (slash). Each image file name is limited to 127 characters.
-{: note}
-
-- A volume list has the following characteristics:
-    - Must be called `VOLUME_LIST`
-    - Each line is either an image file name or a comment
-    - ASCII format
-    - All entries are ended by the end of a line
-    - All characters following the number sign '#' are considered comments until the end of the line
-    - Comments can be added after *#* and must be followed by a EOL character
-    - Provides the order that the image files will be processed on the client system
-    - File names are limited to 127 characters
-    - Can be created with the **Verify Image Catalog Entry** (`VFYIMGCLG`) with the `NFSSHR(*YES)` parameter or manually by using an ASCII editor
-    - No tabs or line feeds can be used in the path name
-
-Changes to `VOLUME_LIST` file are not active until the next time the client device is varied off and on.
-{: tip}
-
-**Configuration**
-
-To complete the configuration of an IBM i network installation server, see [Virtual optical storage using the Network File System](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzam4/rzam4virtualopstoragenfs.htm){: new_window}{: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: new_window}{: external}.
-
-### Configuring an IBM i proxy server
-{: #configuring-proxy-ibmi}
-
-To configure an IBM i proxy server, see [Setting up a connection to IBM](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. This topic shows users how to configure a Universal Connection to IBM services.
+Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs. For more information, see [Setting up an IBM i network install server](/docs/power-iaas?topic=power-iaas-ibmi-network-server)
 
 <!-- The [Create Service Configuration (`CRTSRVCFG`)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY){: new_window}{: external} command creates the service configuration needed for all service and support applications: Electronic Customer Support (ECS) and Electronic Service Agent. Connectivity options are available from either local or remote systems or logical partitions. Primary or backup configurations can be created for the service configuration. To configure an IBM i proxy server by using the `CRTSRVCFG` command, see [Proxy server (PROXY)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY){: new_window}{: external}. -->
