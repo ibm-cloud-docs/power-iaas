@@ -149,12 +149,9 @@ suma -s "30 2 15 * *" -a RqType=Latest   \
 {: help}
 {: support}
 
-### Setting up an IBM i multi-hop connection (proxy server)
-{: #configuring-multi-hop}
+Learn how to configure a [Universal Connection to IBM services](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm) {: new_window}{: external). If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server) to download fixes and updates. You can also use the `SNDPTFORD` command and a network installation server to do the same.
 
-If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server). To configure an IBM i multi-hop connection, see [Setting up a connection to IBM](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. This topic shows users how to configure a Universal Connection to IBM services.
-
-### Using the SNDPTFORD command
+### The SNDPTFORD command
 {: #sndptford-command}
 
 You can use the `SNDPTFORD` command to order and receive IBM-supplied fixes (or PTFs) for the IBM i environment and IBM-supplied applications. You can use this command over the electronic customer support configuration that uses TCP/IP connectivity through *Universal Connection*. You can use the `SNDPTFORD` command to order the following types of fixes and related information:

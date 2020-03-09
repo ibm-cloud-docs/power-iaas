@@ -44,3 +44,58 @@ The RMC connection between your VM and the system management service is configur
 - You attach a different boot volume to the VM and boot from it
 - You use the `mksysb restore` operation from an on-premises VM
 - You use `smitty` to remove the IPv6 interface
+
+## Issue diagnosis and recovery
+{: #-rsct-diagnosis-recovery}
+
+Diagnosis of the issue.
+
+ifconfig -a ( on the client AIX lpar)
+The ouput should include an IPV6 address which connects to the novalink host.
+If the IPV6 address is missing
+
+en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
+   inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
+
+Above we find the output from ifconfig -a on the AIX lpar. notice there is only ipv4 addresses, no ipv6..
+
+Resolving the issue.
+Validate the customer modification to the OS did not downlevel RSCT packages
+https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html
+lslpp -L rsct.*
+3.1.x is the MINIMUM release supported by PowerIaaS,
+If they redployed an OS image with older packages than 3.1 they must upgrade RSCT FIRST
+
+If the customer still has the original disk PowerIaaS created at deploy available...
+Boot to that disk.. rerun ifconfig -a , the output will include the configured IPV6 address.
+If the ipv6 address was removed from the original boot disk configuration ,
+the cloud-init logs on AIX can be read to find the IPV6 address
+Open /var/log/cloud-init-output.log  
+grep for the IP injection, there will be the IPV4 address and then the IPV6 address.
+
+using the found IPV6 address for the host https://cloud.ibm.com/docs/infrastructure/power-iaas?topic=power-iaas-managing-network-interface
+Next step is to restart RMC services on AIX
+
+/usr/sbin/rsct/bin/rmcctrl -z
+/usr/sbin/rsct/bin/rmcctrl -A
+/usr/sbin/rsct/bin/rmcctrl -p
+https://www.ibm.com/support/pages/fixing-no-rmc-connection-error
+
+If the customer altered the node id (unique to RMC), it may have impacted management .
+(IF the customer is using PowerHA and trying to copy their nodeid details from their on-prem deploy that is NOT supported).
+On the AIX lpar
+cat /etc/ct_node_id
+save output
+
+rebuild node
+oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
+then
+/opt/rsct/install/bin/recfgct
+to build a new nodeid.
+
+restart services again
+/usr/sbin/rsct/bin/rmcctrl -z
+/usr/sbin/rsct/bin/rmcctrl -A
+/usr/sbin/rsct/bin/rmcctrl -p
+
+If none of the above restore health to OK and RMC status to active open a case with support.
