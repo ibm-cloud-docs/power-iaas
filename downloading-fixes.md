@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-02"
+lastupdated: "2020-03-09"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -67,7 +67,7 @@ Specifies a request to download a specific SP (such as 7200-02-00).
 Specifies a request to download the latest fixes. This value returns the latest service pack or the TL as specified in the **FilterML** attribute.
 
 ### Configuring SUMA to use the proxy settings
-{: #configuring-proxy-aix}
+{: #configuring-aix-proxy}
 
 Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet. To verify that the LPAR is connected to the internet, enter the following command:
 
@@ -150,7 +150,7 @@ suma -s "30 2 15 * *" -a RqType=Latest   \
 {: support}
 
 ### Setting up an IBM i multi-hop connection (proxy server)
-{: #configuring-proxy-ibmi}
+{: #configuring-multi-hop}
 
 If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server). To configure an IBM i multi-hop connection, see [Setting up a connection to IBM](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. This topic shows users how to configure a Universal Connection to IBM services.
 
