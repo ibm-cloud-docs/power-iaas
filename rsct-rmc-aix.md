@@ -51,59 +51,65 @@ The RMC connection between your VM and the system management service is configur
 
 One of your AIX VM network interface controllers (NICs) must include an IPv6 address to connect to the Novalink host. If your NIC does not have an associated IPv6 address, you must perform a recovery procedure.
 
-1. Enter the `ifconfig -a` command on your AIX VM terminal. Check to see whether one of your NICs shows an IPv6 address (for example, `2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a network interface controller (NIC) without an IPv6 address:
+### Diagnosing a missing IPv6 address
+{: #ipv6-diagnose}
 
-        ```
-        en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
-        inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
-        ```
-        {: screen}
+Enter the `ifconfig -a` command on your AIX VM terminal. Check to see whether one of your NICs shows an IPv6 address (for example, `2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a network interface controller (NIC) without an IPv6 address:
 
-    If one of your NICs does not contain an IPv6 address, continue to the next step.
+```
+en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
+inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
+```
+{: screen}
 
-2. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: new_window}{: external}.
+If one of your NICs does not contain an IPv6 address, continue on to the next section.
 
-        *3.1.x* is the **minimum** release supported by the {{site.data.keyword.powerSys_notm}} service. If you redployed an AIX image with a package that is older than 3.1, you must upgrade RSCT first.
-        {: important}
+### Recovering from a missing IPv6 address
+{: #ipv6-recover}
 
-3. If you still have the originally deployed {site.data.keyword.powerSys_notm}} boot image, complete the following steps:
+1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: new_window}{: external}.
 
-    1. Boot to the original {site.data.keyword.powerSys_notm}} boot image.
+    *3.1.x* is the **minimum** release that is supported by the {{site.data.keyword.powerSys_notm}} service. If you redeployed an AIX image with a package that is older than 3.1, you must upgrade RSCT first.
+    {: important}
+
+2. If you still have the {{site.data.keyword.powerSys_notm}} boot image you originally deployed, complete the following steps:
+
+    1. Boot to the original {{site.data.keyword.powerSys_notm}} boot image.
     2. Rerun the `ifconfig -a` command. The output includes the configured IPv6 address. If you removed the IPv6 address from the original boot image configuration, you can read the AIX `cloud-init` logs to find the IPv6 address.
     3. Open the `/var/log/cloud-init-output.log` file.
     4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 address.
 
-4. Using the found IPv6 address for the host, [restart the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external} on AIX:
+3. Using the IPv6 address for the host, [restart the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
 
-        ```
-        /usr/sbin/rsct/bin/rmcctrl -z
-        /usr/sbin/rsct/bin/rmcctrl -A
-        /usr/sbin/rsct/bin/rmcctrl -p
-        ```
-        {: codeblock}
+    ```
+    /usr/sbin/rsct/bin/rmcctrl -z
+    /usr/sbin/rsct/bin/rmcctrl -A
+    /usr/sbin/rsct/bin/rmcctrl -p
+    ```
+    {: codeblock}
 
-5. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. Begin by rebuilding the node:
+4. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. Begin by rebuilding the node:
 
-        ```
-        oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
-        ```
-        {: codeblock}
+    ```
+    oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
+    ```
+    {: codeblock}
 
-        For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deploy that is not supported.On the AIX VM, `cat /etc/ct_node_id` and save the output
-        {: note}
+    For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deploy that is not supported.On the AIX VM, `cat /etc/ct_node_id` and save the output
+    {: note}
 
-6. *(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` file.
+5. *(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` file.
 
-7. *(Optional)* Restart RMC services again.
+6. *(Optional)* Restart RMC services:
 
-        ```
-        /usr/sbin/rsct/bin/rmcctrl -z
-        /usr/sbin/rsct/bin/rmcctrl -A
-        /usr/sbin/rsct/bin/rmcctrl -p
-        ```
-        {: codeblock}
+    ```
+    /usr/sbin/rsct/bin/rmcctrl -z
+    /usr/sbin/rsct/bin/rmcctrl -A
+    /usr/sbin/rsct/bin/rmcctrl -p
+    ```
+    {: codeblock}
 
-If these steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 <!-- ## Section 2
 
@@ -156,4 +162,4 @@ recfgct -i value from /etc/ct_node_id on the original IBM boot disk collected ab
 
 17. Run /usr/sbin/rsct/bin/lsnodeid
 
-18. Output should be the same as the output from the IBM Boot disk.
+18. Output should be the same as the output from the IBM Boot disk. -->
