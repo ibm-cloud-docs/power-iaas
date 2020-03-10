@@ -49,12 +49,12 @@ The RMC connection between your VM and the system management service is configur
 ## Diagnosing and recovering from a missing IPv6 address
 {: #rsct-diagnosis-recovery}
 
-One of your AIX VM network interface controllers (NICs) must include an IPv6 address to connect to the Novalink host. If your NIC does not have an associated IPv6 address, you must perform a recovery procedure.
+One of your AIX VM network interface controllers (NICs) must include an IPv6 address to connect to the Novalink host. If the desired NIC does not have an associated IPv6 address, you must perform a recovery procedure.
 
 ### Diagnosing a missing IPv6 address
 {: #diagnosing-ipv6}
 
-Enter the `ifconfig -a` command on your AIX VM terminal. Check to see whether one of your NICs shows an IPv6 address (for example, `2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a network interface controller (NIC) without an IPv6 address:
+Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 address:
 
 ```
 en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
@@ -75,7 +75,11 @@ If one of your NICs does not contain an IPv6 address, continue on to the next se
 2. If you still have the {{site.data.keyword.powerSys_notm}} deployed boot image, complete the following steps:
 
     1. Boot to the original {{site.data.keyword.powerSys_notm}} boot image.
-    2. Rerun the `ifconfig -a` command. The output includes the configured IPv6 address. If you removed the IPv6 address from the original boot image configuration, you can read the AIX `cloud-init` logs to find the IPv6 address.
+    2. Rerun the `ifconfig -a` command. The output includes the configured IPv6 address.
+
+        If you removed the IPv6 address from the original boot image configuration, you can read the AIX `cloud-init` logs to find the IPv6 address.
+        {: note}
+
     3. Open the `/var/log/cloud-init-output.log` file.
     4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 address.
 
@@ -97,7 +101,7 @@ If one of your NICs does not contain an IPv6 address, continue on to the next se
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
-6. *(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` file.
+6. *(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` command.
 
 7. *(Optional)* Restart RMC services:
 
@@ -108,7 +112,7 @@ If one of your NICs does not contain an IPv6 address, continue on to the next se
     ```
     {: codeblock}
 
-If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Recovering from a missing IPv6 address when using your own boot image
 {: #recover-ipv6-own}
@@ -119,9 +123,9 @@ Complete the following steps to recover from a missing IPv6 address:
 
 2. Gather the IP interface and adapter configuration details by using `smitty`.
 
-3. Run `/usr/sbin/rsct/bin/lsnodeid` to grab the `nodeid`.
+3. Run the `/usr/sbin/rsct/bin/lsnodeid` command to grab the `nodeid`.
 
-4. Confirm that the `nodeid` matches the output from `cat /etc/ct_node_id` and c`at /var/ct/cfg/ct_node_id`.
+4. Confirm that the `nodeid` matches the output from `cat /etc/ct_node_id` and `cat /var/ct/cfg/ct_node_id`.
 
 5. Check the management node details (to be used on your disk later) by entering the following command, `lsrsrc ManagementServer hostname`.
 
@@ -133,7 +137,7 @@ Complete the following steps to recover from a missing IPv6 address:
 
 9. Check what your boot OS management node is by entering, `lsrsrc ManagementServer hostname`.
 
-10. If your boot OS management node does not match the original IBM boot image, enter:
+10. If your boot OS management node does not match the original IBM boot image, enter the following commands:
 
     ```
     Stop RMC
@@ -150,11 +154,11 @@ Complete the following steps to recover from a missing IPv6 address:
     ```
     {: screen}
 
-12. Run `/usr/sbin/rsct/bin/lsnodeid`. This will likely **not** match the data from the IBM boot image.
+12. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will likely **not** match the data from the IBM boot image.
 
-13. Delete the file, `/etc/ct_node_id`.
+13. Delete the `/etc/ct_node_id` file.
 
-14. Generate a `Nodeid` to match the original boot ID.
+14. Generate a `nodeid` to match the original boot ID.
 
     ```
     recfgct -i value from /etc/ct_node_id (on the original IBM boot disk collected above)
@@ -169,6 +173,6 @@ Complete the following steps to recover from a missing IPv6 address:
     ```
     {: codeblock}
 
-16. Run `/usr/sbin/rsct/bin/lsnodeid`.
+16. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
 
-17. Output should be the same as the output from the IBM boot image.
+17. The output should be the same as the output from the IBM boot image.
