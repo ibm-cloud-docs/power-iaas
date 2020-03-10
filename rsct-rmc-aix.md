@@ -46,7 +46,7 @@ The RMC connection between your VM and the system management service is configur
 - You use the `mksysb restore` operation from an on-premises VM
 - You use `smitty` to remove the IPv6 interface
 
-## Diagnosing and recoverying from a missing IPv6 address
+## Diagnosing and recovering from a missing IPv6 address
 {: #rsct-diagnosis-recovery}
 
 One of your AIX VM network interface controllers (NICs) must include an IPv6 address to connect to the Novalink host. If your NIC does not have an associated IPv6 address, you must perform a recovery procedure.
@@ -57,6 +57,7 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 add
         en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
         inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
         ```
+        {: screen}
 
     If one of your NICs does not contain an IPv6 address, continue to the next step.
 
@@ -79,12 +80,14 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 add
         /usr/sbin/rsct/bin/rmcctrl -A
         /usr/sbin/rsct/bin/rmcctrl -p
         ```
+        {: codeblock}
 
 5. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. Begin by rebuilding the node:
 
         ```
         oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
         ```
+        {: codeblock}
 
         For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deploy that is not supported.On the AIX VM, `cat /etc/ct_node_id` and save the output
         {: note}
@@ -98,8 +101,9 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 add
         /usr/sbin/rsct/bin/rmcctrl -A
         /usr/sbin/rsct/bin/rmcctrl -p
         ```
+        {: codeblock}
 
-If none of the above restore health the RMC status to **active** and health to **OK**, open a case with [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If these steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 <!-- ## Section 2
 
