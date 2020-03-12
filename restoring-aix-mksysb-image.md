@@ -27,13 +27,18 @@ subcollection: power-iaas
 # Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)
 {: #restoring-aix-mksysb-image}
 
+Learn how to restore an AIX `mksysb` image onto an IBM Cloud VM.
+{: shortdesc}
+
+The IPv6 interface that is used for VM management might be affected when you restore an AIX `mksysb` image. Before proceeding onto the next section, review [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](https://cloud.ibm.com/docs/infrastructure/power-iaas?topic=power-iaas-recommended-rsct-package).
+{: important}
+
 ## Defining an AIX Helper VM
 {: defining-aix-helper-vm}
 {: help}
 {: support}
 
 You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. The following screen capture shows a user-deployed AIX _helper VM_ named **AIX-7200-03-03**:
-{: shortdesc}
 
 ![Defining an AIX helper VM](./images/console-aix-helper-vm.png "Defining an AIX helper VM"){: caption="Figure 1. Defining an AIX helper VM" caption-side="bottom"}
 
