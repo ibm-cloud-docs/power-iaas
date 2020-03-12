@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-26"
+lastupdated: "2020-03-12"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -72,15 +72,15 @@ By default, the SST and DST passwords are expired. Complete the following tasks 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
 {: note}
 
-1. Enter the  `wkrsysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.
+1. Enter the  `wrksysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.
 
-2. Enter the `pwrdwnsys` command to restart the IBM i operating system (OS).
+2. Enter the `pwrdwnsys` command twith the `RESTART` paramater to restart the IBM i operating system (OS).
 
 3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
 
 4. Enter the `wrksysval qipltype` command and change the value to **0**.
 
-5. Reenter the `pwrdwnsys` command to restart the IBM i OS again.
+5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again.
 
 You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
