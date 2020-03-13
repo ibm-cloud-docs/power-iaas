@@ -37,14 +37,14 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
 
-## What versions of AIX and IBM i operating systems are supported?
+## What versions of AIX and IBM i operating systems (OS) are supported?
 {: #os_versions}
 {: faq}
 {: support}
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
-The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
+The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it will be subject to outages during planned maintenance windows with no advanced notification given.
 {: important}
 
 **AIX**
