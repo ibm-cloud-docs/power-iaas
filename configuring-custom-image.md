@@ -49,14 +49,14 @@ Before you can use a custom image as the boot volume, review the following infor
 * Alternatively, if you have already deployed a Virtual server instance, you can capture it and redeploy a new Virtual Server Instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
 * You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field. To view a list of the supported AIX and IBM i OS technology levels, see the following system software maps:
 
+  The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When you view the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
+  {: important}
+
   **AIX**
 
     * [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
     * [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
     * [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
-
-  The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When you view the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
-  {: important}
 
   **IBM i**
 

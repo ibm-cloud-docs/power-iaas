@@ -44,14 +44,14 @@ This video does not capture the latest updates to the {{site.data.keyword.powerS
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
+The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
+{: important}
+
 **AIX**
 
 * [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 * [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
 * [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
-
-The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
-{: important}
 
 **IBM i**
 
