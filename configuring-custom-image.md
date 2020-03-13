@@ -55,8 +55,8 @@ Before you can use a custom image as the boot volume, review the following infor
     * [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
     * [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
 
-    The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When you view the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
-    {: important}
+  The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When you view the system software maps, refer to only the AIX 7.1 and AIX 7.2 information.
+  {: important}
 
   **IBM i**
 
