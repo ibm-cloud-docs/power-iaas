@@ -121,7 +121,7 @@ Refer to the following table for more information on each {site.data.keyword.pow
 </tr> -->
 <tr>
 <td>Machine type</td>
-<td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>, <a href="https://www.ibm.com/downloads/cas/EE476WAP" target="_blank">E880</a>, and <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Frankfurt only).</td>
+<td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>, <a href="https://www.ibm.com/downloads/cas/EE476WAP" target="_blank">E880</a>, and <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Frankfurt only)</a>.</td>
 </tr>
 <tr>
 <td>Cores</td>
