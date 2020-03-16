@@ -25,7 +25,13 @@ subcollection: power-iaas
 # Pricing for Power Systems Virtual Servers on IBM Cloud
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The theoretical maximum for an E980 (9080-M9S) system is 155 processors and 16,255 GB of memory. For a S922 (9009-22A) system, the theoretical maximum is 15 processors and 959 GB of memory. That being said, the theoretical maximums depend on the data center. The {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these options, a {{site.data.keyword.powerSys_notm}} can meet any business workload requirement. You are billed at a monthly rate.
+{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The {{site.data.keyword.powerSys_notm}} systems have the following theoretical maximums:
+
+- E880 (9119-MHE): 155 processors and 8,099 GB of memory
+- E980 (9080-M9S): 155 processors and 16,255 GB of memory
+- S922 (9009-22A): 15 processors and 959 GB of memory
+
+It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement. You are billed at a monthly rate.
 {: shortdesc}
 
 ## Monthly usage
