@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-06"
+lastupdated: "2020-03-16"
 
 keywords: getting started, power systems virtual server, configure instance
 subcollection: power-iaas
