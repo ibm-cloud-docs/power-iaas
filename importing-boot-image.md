@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Importing a boot image
 {: #importing-boot-image}
 
-You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the console. The storage types vary by region. The **us-east (WDC)** and **us-south (DAL)** regions have **Standard** or **SSD** storage types. The **eu-de (FRA04 and FRA05)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
+You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the console. The storage types vary by region. The **us-east (WDC)** region has **Standard** or **SSD** storage types. The **us-south (DAL)** and **eu-de (FRA04 and FRA05)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
 {: shortdesc}
 
 You must first generate [Secret and Access keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.

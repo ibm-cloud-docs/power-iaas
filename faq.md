@@ -77,8 +77,8 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created. A VM cannot have disks from both storage types.
 
-* The **us-east (WDC)** and **us-south (DAL)** regions use **Standard** or **SSD** storage types.
-* The **eu-de (FRA04 and FRA05)** region uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
+* The **us-east (WDC)** region uses **Standard** or **SSD** storage types.
+* The **us-south (DAL)** and **eu-de (FRA04 and FRA05)** regions uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
