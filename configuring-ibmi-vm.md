@@ -39,12 +39,10 @@ You must install the following program temporary fixes (PTFs) on your IBM i VM i
 
 If you are bringing your own IBM i custom image, you must install the PTFs previously mentioned and the software required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
 
-After you deploy an IBM i VM and and install the proper PTFs, you need to accept the license agreements. After you accept the license agreements, `cloud-init` configures your network and injects your license keys. 
+After you deploy an IBM i VM and and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display the agreement and **F18** to accept it. When using **F** keys above **F12** on the console (such as **F18**), you must use the buttons on the console screen and not your keyboard. After you accept the license agreements, `cloud-init` configures your network and injects your license keys.
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 {: important}
-
-To accept the license agreements from the console, you must press **5** to display the agreement and **F18** to accept it. When using **F** keys above **F12** on the console (such as **F18**), you must use the console buttons and not your keyboard.
 
 To verify that `cloud-init` configured your IP addresses correctly, check your VM's attributes. In the following example, you can see three IP addresses. Two of IP addresses are internal and one is external.
 
