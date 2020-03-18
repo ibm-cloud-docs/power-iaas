@@ -83,7 +83,7 @@ The storage types vary by region and cannot be changed once the volume is create
 The boot image storage type is predefined and cannot be chosen.
 {: note}
 
-## What's the difference in performance between a shared processor and a dedicated processor?
+## What's the difference between capped and uncapped shared processor performance? How does each one compare to dedicated processor performance?
 {: #processor}
 {: faq}
 
