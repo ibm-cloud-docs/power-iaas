@@ -30,7 +30,7 @@ subcollection: power-iaas
 Learn how to restore an AIX `mksysb` image onto an IBM Cloud VM.
 {: shortdesc}
 
-The IPv6 interface that is used for VM management might be affected when you restore an AIX `mksysb` image. Before proceeding onto the next section, review [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/infrastructure/power-iaas?topic=power-iaas-recommended-rsct-package).
+The IPv6 interface that is used for VM management might be affected when you restore an AIX `mksysb` image. Before proceeding onto the next section, review [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
 {: important}
 
 ## Defining an AIX Helper VM
