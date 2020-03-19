@@ -88,7 +88,7 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-## Installing IBM i Access Client Solutions (ACS)
+## Working with and installing IBM i Access Client Solutions (ACS)
 {: installing-acs}
 
 Before you proceed with this procedure, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
@@ -115,7 +115,7 @@ ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:l
 If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
 {: note}
 
-## Configuring concurrent logins (required by ACS)
+### Configuring concurrent logins (required by ACS)
 {: #configure-concurrent-logins}
 
 To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
