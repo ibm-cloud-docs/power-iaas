@@ -139,13 +139,6 @@ To get a 5250 session on your IBM i VM from ACS, you need either to configure yo
     ```
     {: pre}
 
-### Reducing ACS security
-{: #reducing-security}
-
-1. To reduce the security, enter the `wrksysval qsec*` command. Change **QSECURITY** from 50 to 20.
-
-2. Enter the `wrksysval qip*` command and change `QIPLType` to 1. The number one indicates an attended IPL with DST.
-
 ### Configuring ACS
 {: #configuring-acs}
 
