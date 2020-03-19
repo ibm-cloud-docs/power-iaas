@@ -62,10 +62,10 @@ IBM provides AIX and IBM i stock images. The operating system version levels of 
 
 You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for IBM Cloud. You cannot use an existing AIX or IBM i license for LPARs in a {{site.data.keyword.powerSys_notm}} instance. If you use a custom image or a stock image, you are charged the same price. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-## Processor type
+## Processor type pricing
 {: #pricing-processor}
 
-
+You are charged different rates depending on the processor type you choose for your VM. Shared capped processor types are more expensive than uncapped shared processor types.
 
 ## End of billing
 {: #pricing-end-billing}
