@@ -88,7 +88,7 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-## Working with and installing IBM i Access Client Solutions (ACS)
+## Installing and configuring IBM i Access Client Solutions (ACS)
 {: installing-acs}
 
 Before you proceed with this procedure, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
