@@ -28,6 +28,18 @@ subcollection: power-iaas
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
 
+## Tips for working with IBM i
+{: #tips-ibmi}
+
+- The standard IBM i user is **QSECOFR** / **QSECOFR**.
+- IBM i uses function keys extensively. Below the console, you'l see PF1 to PF12. Click the **Next...** button to get to **PF13** to **PF24.**
+- If you encounter a red "X" at the bottom of the terminal during the configuration process, use your keyboard's **CONTROL** button to exit.
+- You can use **CONTROL+W** to kill a hung session. If this happens, you must perform a bypass with **PF18** and log on again.
+- It is best to first shutdown the system, before restarting it.
+- **Do not restart the system until the cloud-init process is finished and you've configured the local IP address**. If you restart the system during the cloud-init process, you must call support or delete and recreate your IBM i instance.
+- If you are using a Mac computer, the **PageDown** key is the same as **FN+DownArrow**.
+- Use **PF18** to bypass the **Dedicated Service Tools (DST) Sign On** screen if it appears.
+
 ## Licenses and configuring your network
 {: #license-network}
 
@@ -39,35 +51,27 @@ You must install the following program temporary fixes (PTFs) on your IBM i VM i
 
 If you are bringing your own IBM i custom image, you must install the PTFs previously mentioned and the software required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
 
-After you deploy an IBM i VM and and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display the agreement and **F18** to accept it. When using **F** keys above **F12** on the console (such as **F18**), you must use the buttons on the console screen and not your keyboard. After you accept the license agreements, `cloud-init` configures your network and injects your license keys.
+After you deploy an IBM i VM and and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display each license agreement. Click **Next...** and **PF15** to show additional items. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 {: important}
 
-To verify that `cloud-init` configured your IP addresses correctly, check your VM's attributes. In the following example, you can see three IP addresses. Two of IP addresses are internal and one is external.
+To verify that `cloud-init` configured your IP addresses correctly, type the `cgftcp` command in the IBM i console window and choose `1`. If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
-![Verifying your VM IP addresses](./images/console-ibmi-ip.png "Verifying your VM IP addresses"){: caption="Figure 1. Verifying your VM IP addresses" caption-side="bottom"}
+![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 1. Verifying the cloud-init configuration" caption-side="bottom"}
 
-Under the **Subnet** tab in your dashboard, you can see a single subnet. There is an additional internal IP address that represents the external IP address. Configuration information for the external IP address does not exist when you check the VM. The network forwards traffic from the internal IP address to the external IP address.
-
-![Checking your VM subnet](./images/console-ibmi-subnet.png "Checking your VM subnet"){: caption="Figure 2. Checking your VM subnet" caption-side="bottom"}
-
-Next, check to see whether the two internal IP addresses are configured correctly. To do this, enter the `CFGTCP` command and choose option `1`.
-
-![Using the CFGTCP command](./images/terminal-ibmi-cfgtcp.png "Using the CFGTCP command"){: caption="Figure 3. Using the CFGTCP command" caption-side="bottom"}
-
-If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
+If you do not see the external IP address in the **Work with TCP/IP Intefaces** window, wait approximately 10 minutes, open another terminal window and ping the external IP address. The external address must match what is shown in the IBM Cloud console within your instance's **Server details** panel. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
 Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 4. Using the DSPLICKEY command" caption-side="bottom"}
+![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 2. Using the DSPLICKEY command" caption-side="bottom"}
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required.
+By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and be done if additional disks are attached.
 
-![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
+![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 3. Changing the system value" caption-side="bottom"}
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
 {: note}
@@ -84,7 +88,7 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-## Using SSH tunneling to allow ACS to connect over the public IP
+## Using SSH tunneling to allow Access Client Solutions (ACS) to connect over the public IP
 {: #ssh-tunneling}
 
 The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL.
@@ -126,6 +130,6 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
     ```
     {: pre}
 
-For ACS, you need to configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
+For ACS, you need to configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**. For more information on installing ACS, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
 
-![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 6. Changing the port number" caption-side="bottom"}
+![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 4. Changing the port number" caption-side="bottom"}
