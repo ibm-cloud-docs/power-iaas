@@ -20,4 +20,4 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## 1 March 2020
 {: #march-2020}
 
-You can now provision a {{site.data.keyword.powerSys_notm}} with a dedicated processor, uncapped shared processor, or a capped shared processor. This new functionality is an uncharged early access feature and will become fully available on **April 1, 2020**. The estimator and pricing detail will be updated on that date.
+You can now provision a {{site.data.keyword.powerSys_notm}} with a dedicated, uncapped shared, or capped shared processor. This new functionality is an uncharged early access feature and will become fully available on **April 1, 2020**. The estimator and pricing detail will be updated on that date.
