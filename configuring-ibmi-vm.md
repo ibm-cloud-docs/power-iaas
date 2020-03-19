@@ -28,7 +28,7 @@ subcollection: power-iaas
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
 
-## Tips for working with IBM i
+## Tips for working with the IBM i terminal
 {: #tips-ibmi}
 
 - The standard IBM i user is `QSECOFR/QSECOFR`.
@@ -37,7 +37,7 @@ Complete the following instructions to configure your IBM i virtual machine (VM)
 - You can use **CONTROL+W** to end a hung session. If this happens, you must perform a bypass by clicking **PF18** and logging on again.
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
-- If you are using a Mac computer, the **PageDown** key is the same as **FN+DownArrow**.
+- If you are using a Mac computer, the **PageDown** key is the same as **FN + Down arrow**.
 - Use **PF18** to bypass the **Dedicated Service Tools (DST) Sign On** screen if it appears.
 
 ## Licenses and configuring your network
@@ -115,7 +115,7 @@ ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:l
 If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
 {: note}
 
-## Configure concurrent Logins (required for ACS)
+## Configuring concurrent logins (required by ACS)
 {: #configure-concurrent-logins}
 
 To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
