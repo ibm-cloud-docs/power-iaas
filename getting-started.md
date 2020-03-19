@@ -55,7 +55,7 @@ Before you create your first Power Systems Virtual Server instance, review the f
     You cannot create a private network during the VM provisioning process. You must first go to the **Networks** tab.
     {: important}
 
-5. *(Optional)* Watch the [AIX & IBM i in IBM (Public) Cloud video to learn more about the {{site.data.keyword.powerSys_notm}} offering.
+5. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} offering.
 
 The **AIX & IBM i in IBM (Public) Cloud** video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}

@@ -37,7 +37,7 @@ Complete the following instructions to configure your IBM i virtual machine (VM)
 - You can use **CONTROL+W** to end a hung session. If this happens, you must perform a bypass by clicking **PF18** and logging on again.
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
-- If you are using a Mac computer, the **PageDown** key is the same as **FN + Down arrow**.
+- If you are using a Mac computer, the **Page Down** key is the same as **FN + Down Arrow**.
 - Use **PF18** to bypass the **Dedicated Service Tools (DST) Sign On** screen if it appears.
 
 ## Licenses and configuring your network
