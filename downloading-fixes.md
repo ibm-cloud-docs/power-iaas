@@ -149,7 +149,7 @@ suma -s "30 2 15 * *" -a RqType=Latest   \
 {: help}
 {: support}
 
-Learn how to configure a [Universal Connection to IBM services](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external). If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server) to download fixes and updates. You can also use the `SNDPTFORD` command and a network installation server to do the same.
+Learn how to configure a [Universal Connection to IBM services](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server) to download fixes and updates. You can also use the `SNDPTFORD` command and a network installation server to do the same.
 
 ### The SNDPTFORD command
 {: #sndptford-command}

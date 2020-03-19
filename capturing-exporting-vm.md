@@ -76,7 +76,7 @@ For more information, see the [IBM Power Systems Virtual Servers CLI Reference](
 
 5. _(Optional)_ If you decide to export to **Cloud Object Storage**, you are presented with more options:
    1. Select the **Region**.
-   2. Provide your [**Access** and **Secret** keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
+   2. Provide your [Access and Secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
    3. Select your **Bucket name** and **optional folders**.
 
 6. Click **Capture and export**.
