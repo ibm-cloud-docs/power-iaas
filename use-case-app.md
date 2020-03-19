@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-10-22"
+lastupdated: "2020-3-19"
 
 keywords: use case, application hosting, enterprise-level workload, bursting, scaling, Db2 workloads
 
@@ -43,7 +43,7 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 * Oracle&copy; and Db2 Workloads
 * Custom Enterprise applications
 * Modernization and extending the value of their enterprise systems with {{site.data.keyword.cloud_notm}} native applications
-* Customer merging or acquiring a business and needs the temporary capacity while moving or merging multiple data centers
+* Customer acquiring a business and needs the temporary capacity while moving or merging multiple data centers
 
 ## Solution components
 {: #use-case-app-solutions}

@@ -5,6 +5,7 @@
 IBM Power Systems Virtual Servers
 
     {: .navgroup id="learn"}
+    release-notes.md
     getting-started.md
     about-power-virtual-server.md
     pricing.md

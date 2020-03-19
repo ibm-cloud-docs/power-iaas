@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-03-16"
 
-keywords: getting started, power systems virtual server, configure instance
+keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 subcollection: power-iaas
 
 ---
