@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-01-28"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL, WDC, FRA04, FRA05, DNS
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
 subcollection: power-iaas
 
@@ -41,7 +41,7 @@ You must use CIDR notation when you choose the IP ranges for your private networ
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
-The first IP address is always reserved for the gateway in the Washington, D.C. (*WDC*), Dallas (*DAL*), and Frankfurt (*FRA04* and *FRA05*) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC colo. The subnet address and subnet broadcast address are reserved in both colos.
+The first IP address is always reserved for the gateway in the Washington, D.C. (*WDC04*), Dallas (*DAL13*), and Frankfurt (*FRA04* and *FRA05*) colocations (colo). The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC04 colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
 To create a new subnet, complete the following steps:
@@ -83,7 +83,7 @@ You must not use an IP range outside of the ranges that are defined by [RFC 1918
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC) | Available IP addresses (DAL and FRA04)
+| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (DAL13 and FRA04)
 | --------------- | ---------------------------- |---------------------------
 |      /22        |        1019                  |          1021
 |      /23        |         507                  |          509

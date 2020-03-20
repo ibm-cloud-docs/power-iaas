@@ -21,3 +21,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #march-2020}
 
 You can now provision a {{site.data.keyword.powerSys_notm}} with a capped shared processor. This new functionality is an uncharged early access feature and will become fully available on **April 1, 2020**. The estimator and pricing detail will be updated on that date.
+
+## 1 February 2020
+{: #feb-2020}
+
+You can now provision a {{site.data.keyword.powerSys_notm}} in the Frankfurt 2 (*FRA05*) colocation.

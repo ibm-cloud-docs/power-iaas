@@ -77,8 +77,8 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created. A VM cannot have disks from both storage types.
 
-* The **us-east (WDC)** region uses **Standard** or **SSD** storage types.
-* The **us-south (DAL)** and **eu-de (FRA04 and FRA05)** regions uses **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
+* The **us-east (WDC04)** region uses **Standard** or **SSD** storage types.
+* The **us-south (DAL13)** and **eu-de (FRA04 and FRA05)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
@@ -166,7 +166,7 @@ For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/
 
 You must set your own firewall in your IBM Cloud account.
 
-## How do you connect a server instance between two colocations (DAL to WDC)?
+## How do you connect a server instance between two colocations (DAL13 to WDC04)?
 {: #gts-cloud-connect}
 {: faq}
 {: support}

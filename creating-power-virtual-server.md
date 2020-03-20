@@ -44,7 +44,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"}
 
-    When you select a region for your service, **Dallas, Texas** uses the *DAL13* data center, **Washington, D.C.** uses the *WDC04* data center, and **Frankfurt, Germany** uses the *FRA04* and *FRA05* data centers.
+    When you select a region for your service, **Dallas, Texas** uses the *DAL13* colocation (colo), **Washington, D.C.** uses the *WDC04* colo, and **Frankfurt, Germany** uses the *FRA04* and *FRA05* colos.
     {: note}
 
 4. Click **Create**.
@@ -73,7 +73,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
     ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL)** or **eu-de (FRA04 and FRA05)** regions. To see your boot images, go to **Boot images** after you provision the instance.
+2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)** or **eu-de (FRA04 and FRA05)** regions. To see your boot images, go to **Boot images** after you provision the instance.
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
     {: important}
@@ -99,7 +99,7 @@ Refer to the following table for more information on each {site.data.keyword.pow
 </tr>
 <tr>
 <td>Number of Instances</td>
-<td>Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. If you specify more than one instance, you can select the following naming conventions and colocation rules:
+<td>Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. If you specify more than one instance, you can select the following naming conventions and colo rules:
   <dl>
     <dt><strong>No preference</strong></dt>
   <dd>Select this option if you do not have a hosting preference.</dd>
