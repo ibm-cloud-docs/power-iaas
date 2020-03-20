@@ -11,7 +11,7 @@ keywords: release notes, changes, power systems virtual server
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Release notes for Power Systems Virtual Servers
+# Release notes
 {: #release-notes}
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSys_notm}} service.
