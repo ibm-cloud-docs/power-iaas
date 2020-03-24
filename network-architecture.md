@@ -28,7 +28,7 @@ subcollection: power-iaas
 Use the following graphics to better understand the {{site.data.keyword.powerSysShort}} network architecture. This is not an exhaustive list of the {{site.data.keyword.powerSysShort}} connection methods.
 {: shortdesc}
 
-IBM Cloud Connect is only available to IBM clients within the US. IBM customers can always contact Megaport directly to procure their services.
+IBM Cloud Connect is only available to IBM clients within the US. IBM clients can always contact Megaport directly to procure their services.
 {: important}
 
 ## Private SSL connection
