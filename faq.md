@@ -173,6 +173,9 @@ You must set your own firewall in your IBM Cloud account.
 
 You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
 
+IBM Cloud Connect is only available to IBM clients within the US.
+{: important}
+
 ## How is network bandwidth billed?
 {: #billing}
 {: faq}
