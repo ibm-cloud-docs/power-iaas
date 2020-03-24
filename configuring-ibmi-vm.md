@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-24  "
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -84,68 +84,6 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 4. Enter the `wrksysval qipltype` command and change the value to **0**.
 
-5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again.
+5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again. You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
-
-## Installing and configuring IBM i Access Client Solutions (ACS)
-{: installing-acs}
-
-Before you proceed with this procedure, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
-
-### Using SSH tunneling to allow ACS to connect over the public IP
-{: #ssh-tunneling}
-
-The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL to allow ACS to connect over public IP.
-
-Start the **SSHD** server on the VM:
-
-```shell
-strtcpsvr server(*SSHD)
-```
-{: pre}
-
-On a Linux or Mac system, you would run a command similar to the following example:
-
-```shell
-ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
-```
-{: pre}
-
-If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
-{: note}
-
-### Configuring concurrent logins (required by ACS)
-{: #configure-concurrent-logins}
-
-To get a 5250 session on your IBM i VM from ACS, you need either to configure your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
-
-1. Enter the `cfgtcp` command.
-
-2. Select option **20** (Configure TCP/IP applications).
-
-3. Select option **11** (configure TELNET).
-
-4. Select option **10** (autoconfigure virtual devices).
-
-5. Select `QAUTOVRT` with option **2** (change).
-
-6. Change the value from **0** to the number of auto-configured consoles you want to be able to connect concurrently.
-
-7. Go to the IBM i VM and start the telnet server for the console:
-
-    ```shell
-    strtcpsvr server(*TELNET)
-    ```
-    {: pre}
-
-### Configuring ACS
-{: #configuring-acs}
-
-After starting ACS, create a system configuration (sysconfig).
-
-1. Configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
-
-    ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 4. Changing the port number" caption-side="bottom"}
-
-2. Return to the IBM i terminal and enter your credentials, including *System*, *User*, and *Password*.
+6. Proceed to the [Connecting to an IBM i Cloud virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi) to connect your IBM i Cloud VM.

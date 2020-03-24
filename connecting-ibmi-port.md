@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2019-09-26"
+lastupdated: "2019-03-24"
 
 keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
 
@@ -22,21 +22,45 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Connecting to an IBM i Cloud virtual machine (VM) by using port forwarding
+# Connecting to an IBM i Cloud virtual machine (VM)
 {: #connect-ibmi}
 
-Review all of the following information to connect to your IBM i Cloud VM by using the ACS client. To forward the various IBM i ports, enter the following command on a Linux-based system as a `root` user:
+Learn how to connect to an IBM i Cloud VM after configuring your system.
 {: shortdesc}
 
+## Installing and configuring IBM i Access Client Solutions (ACS)
+{: installing-acs}
+
+Before you proceed with this procedure, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
+
+### Using SSH tunneling to allow ACS to connect over the public IP
+{: #ssh-tunneling}
+
+The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL to allow ACS to connect over public IP.
+
+Start the **SSHD** server on the VM:
+
 ```shell
-sudo ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:loaclhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L "8474:localhost :8474" -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 @
+strtcpsvr server(*SSHD)
 ```
 {: pre}
+
+On a Linux or Mac system, you would run a command similar to the following example:
+
+```shell
+ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
+```
+{: pre}
+
+If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
+{: note}
+
+If you are on a Windows&trade; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise, see [Starting TCP servers](#start-tcp-servers).
 
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows&reg; system.
+1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows; system.
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 3. Enter **22** as the port number.
 
@@ -119,11 +143,23 @@ To get a 5250 session on your IBM i VM from ACS, you need to either configure
 your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete the following steps by using the IBM i VM:
 
  1. Enter the `cfgtcp` command.
+
  2. Select option **20** (Configure TCP/IP applications).
+
  3. Select option **11** (configure TELNET).
+
  4. Select option **10** (autoconfigure virtual devices).
+
  5. Select `QAUTOVRT` with option **2** (change).
+
  6. Change the value from **0** to the number of auto-configured consoles you want to be able to connect concurrently.
+
+ 7. Go to the IBM i VM and start the telnet server for the console:
+
+    ```shell
+    strtcpsvr server(*TELNET)
+    ```
+    {: pre}
 
 After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
 
@@ -133,3 +169,14 @@ https://127.0.0.1:2005/ibm/console/login.do?action=secure
 {: pre}
 
 To enable ICC to use an SSL connection to IBM Cloud Object Storage (which IBM COS requires), see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: new_window}{: external}.
+
+### Configuring ACS
+{: #configuring-acs}
+
+After starting ACS, create a system configuration (sysconfig).
+
+1. Configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
+
+    ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 4. Changing the port number" caption-side="bottom"}
+
+2. Return to the IBM i terminal and enter your credentials, including *System*, *User*, and *Password*.
