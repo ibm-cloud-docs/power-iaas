@@ -33,7 +33,7 @@ Learn how to connect to an IBM i Cloud VM after configuring your system.
 
 Before you proceed with this procedure, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
 
-### Using SSH tunneling to allow ACS to connect over the public IP
+## Using SSH tunneling to allow ACS to connect over the public IP
 {: #ssh-tunneling}
 
 The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL to allow ACS to connect over public IP.
@@ -55,7 +55,7 @@ ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:l
 If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
 {: note}
 
-If you are on a Windows&trade; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise, see [Starting TCP servers](#start-tcp-servers).
+If you are on a Windows&trade; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise see [Starting TCP servers](#start-tcp-servers).
 
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
