@@ -30,12 +30,12 @@ subcollection: power-iaas
 Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your business needs.
 {: shortdesc}
 
-## Resizing an instance by using the IBM console
+## Resizing an instance by using the IBM Cloud console
 {: #resizing-vm}
 
 To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
 
-1. Go to the IBM console's **Virtual server instances** tab and click your instance.
+1. Go to the IBM Cloud console's **Virtual server instances** tab and click your instance.
 
 2. Click the **Edit** icon in the **Server details** pane.
 
@@ -83,7 +83,7 @@ You can resize a storage volume after its initial creation. To delete a volume, 
 Resizing is not immediately available after you deploy a VM.
 {: important}
 
-1. Go to the IBM console and click the **Storage volumes** tab.
+1. Go to the IBM Cloud console and click the **Storage volumes** tab.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
@@ -98,7 +98,7 @@ Resizing is not immediately available after you deploy a VM.
 ## Adding or removing a public network
 {: #adding-removing-network}
 
-You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM console regenerates new internal and external IP addresses. You need to check the IBM console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
+You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}

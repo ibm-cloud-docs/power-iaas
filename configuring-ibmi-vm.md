@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-24  "
+lastupdated: "2020-03-24"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -27,6 +27,9 @@ subcollection: power-iaas
 
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
+
+You can assign up to 127 storage volumes to an IBM i VM.
+{: note}
 
 ## Tips for working with the IBM i terminal
 {: #tips-ibmi}

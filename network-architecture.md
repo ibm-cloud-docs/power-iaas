@@ -55,7 +55,7 @@ You can use a private Direct Link connection to connect into your existing IBM C
 ## IBM Cloud Connect (or Megaport) to colocation (colo) connection
 {: #cloud-to-colo}
 
-You can connect to the IBM Cloud Power environment by using IBM Cloud Connect or Megaport.
+You can connect to the IBM Cloud Power environment by using IBM Cloud Connect or Megaport. As stated previously, IBM Cloud Connect is only available to IBM clients within the US.
 
   ![Power Systems Virtual Server colo connection](./images/network-cloud-colo.png "Power Systems Virtual Server colo connection"){: caption="Figure 4. Power Systems Virtual Server Colo connection" caption-side="bottom"}
 

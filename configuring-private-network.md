@@ -140,11 +140,11 @@ For more information, see [IBM Cloud Direct Link Connect](https://knowledgebase.
 
 3. Next, select the **Cloud** tile.
 
-4. Type **IBM** into the **Select Provider** search box and select the IBM Direct Link location where the peer will be set up with IBM Cloud. This matches the peer location selected in the IBM console. Click **Next**.
+4. Type **IBM** into the **Select Provider** search box and select the IBM Direct Link location where the peer will be set up with IBM Cloud. This matches the peer location selected in the IBM Cloud console. Click **Next**.
 
     1. Paste the IBM Cloud ticket number in the **Name your connection** field.
     2. *(Optional)* Note an **Invoice Reference** internal to your records.
-    3. Choose a **Rate Limit** speed in 1 Mbps increments up to the Megaport rate size. In most cases, customers choose to match the port speed created in the IBM Console.
+    3. Choose a **Rate Limit** speed in 1 Mbps increments up to the Megaport rate size. In most cases, customers choose to match the port speed created in the IBM Cloud console.
     4. The VLAN for this connection that you will receive via the Megaport. This must be a unique VLAN ID on this port. You can also click the toggle to **untag** this VXC. This removes the VLAN tagging for this connection but limits the port to only one VXC.
 
 5. Click **Next** and add the VXC. You can then proceed through the checkout process. IBM will verify the IBM Cloud Ticket number and send you a */30* or */31* Private IP to provision for BGP.

@@ -177,6 +177,6 @@ After starting ACS, create a system configuration (sysconfig).
 
 1. Configure a server for _localhost_. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
 
-    ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 4. Changing the port number" caption-side="bottom"}
+    ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 9. Changing the port number" caption-side="bottom"}
 
 2. Return to the IBM i terminal and enter your credentials, including *System*, *User*, and *Password*.
