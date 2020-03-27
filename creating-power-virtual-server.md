@@ -44,8 +44,16 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"}
 
-    When you select a region for your service, **Dallas, Texas** uses the *DAL13* colocation (colo), **Washington, D.C.** uses the *WDC04* colo, and **Frankfurt, Germany** uses the *FRA04* and *FRA05* colos.
-    {: note}
+    See the following table to you select the appropriate region for your service.
+
+    Location | Region | Colocation
+    ---------|----------|---------
+    Dallas, Texas | us-south | DAL-13
+    Washington, D.C. | us-east| WDC04
+    Frankfurt, Germany | eu-de | FRA04 and FRA05
+    Toronto, Canada | TOR01 | TOR01
+    London, England | eu.gb | LON06
+    {: caption="Table 1. Power Systems Virtual servers colocations" caption-side="bottom"}
 
 4. Click **Create**.
 
@@ -73,7 +81,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
     ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)** or **eu-de (FRA04 and FRA05)** regions. To see your boot images, go to **Boot images** after you provision the instance.
+2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **eu-de (FRA04 and FRA05)**, **eu-gb (LON06)** and **TOR01** regions. To see your boot images, go to **Boot images** after you provision the instance.
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
     {: important}
@@ -92,7 +100,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 Refer to the following table for more information on each {site.data.keyword.powerSys_notm}} instance field.
 
 <table>
-<caption>Table 1. Power Systems Virtual Server instance fields</caption>
+<caption>Table 2. Power Systems Virtual Server instance fields</caption>
 <tr>
 <th>Field</th>
 <th>Description</th>
