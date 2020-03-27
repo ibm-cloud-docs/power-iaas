@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-01-23"
+lastupdated: "2020-03-27"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, GRE tunneling
 
@@ -99,7 +99,7 @@ Power Systems Virtual Server customer Private Network ID (3):
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 1 (*FRA04*) and Frankfurt 2 (*FRA05*) data colocations. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 1 (*FRA04*), Frankfurt 2 (*FRA05*), Toronto (*TOR01*), and London (*LON06*) colocations. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
 
 ```
 GRE Tunnel Configuration Request:
