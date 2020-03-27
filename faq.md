@@ -89,7 +89,7 @@ The boot image storage type is predefined and cannot be chosen.
 
 When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs).
 
-| Dedicated processors|
+|Dedicated processors|
 |:-----------------|
 | The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. Once a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the desired number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around 4 cores, but it peaks around 8 cores, you need to configure the partition with 8 cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand. |
 {: class="simple-tab-table"}
@@ -98,10 +98,10 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 {: #proc-table-1}
 {: tab-title="Dedicated processors"}
 
-| Shared processors|
+|Shared processors|
 |:-----------------|
 |<p>Shared processor configurations consist of several factors. The entitled capacity (EC) defines the minimum guaranteed amount of CPU time a partition can run on physical cores. For example, if the processor units are set to 0.5, the logical partition would be guaranteed 30 seconds of CPU time every minute. If a logical partition doesn’t use all of its entitlement, the remaining CPU time is automatically made available for other shared processor partitions. For shared processors, there are two sharing modes, capped or uncapped:
-<ol><li>For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition could consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5.</li><li>For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value specified for processing units. For example, if virtual processors are set to 3, the partition could consume 180 second of CPU time every minute (3 virtual processors each running at 100% utilization would be 3 physical cores worth of CPU time). There must be unused capacity available on the server for partition to consume more than its configured processing units.</li></ol></p>
+<ol><li>For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition could consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5.</li><li>For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value specified for processing units. For example, if virtual processors are set to 3, the partition could consume 180 second of CPU time every minute (3 virtual processors each running at 100% utilization would be 3 physical cores worth of CPU time). There must be unused capacity available on the server for partition to consume more than its configured processing units.</li></ol></p>|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 2. Shared processors" caption-side="top"}

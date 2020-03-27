@@ -46,7 +46,7 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 | 300 hours        | 300 hours x $251/month = $103  | 1 core, 8 GB memory, 150 GB disk, AIX    |
 | 430 hours        | 430 hours x $339/month = $200  | 1 core, 16 GB memory, 150 GB disk, AIX  |
 | 730 hours (Monthly Total)  | $103 + $200 = $303 (Monthly Total)  |   1 core, 16 GB memory, 150 GB disk, AIX |
-{: caption="Table 1. Monthly LPAR charges example" caption-side="top"}
+{: caption="Table 1. Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased after the 300 hour of the month from 8 GB of memory to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of the LPAR ($303).
 
@@ -65,7 +65,23 @@ You can also bring your own custom image to use on a {{site.data.keyword.powerSy
 ## Processor type pricing
 {: #pricing-processor}
 
-You are charged different rates depending on the processor type you choose for your VM. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+You are charged different rates depending on the processor type you choose for your VM. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month. Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922 vs Dedicated E880/980**).For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+
+The following tables show how different processor types affect the cost per system:
+
+Number of cores (S922)| Hourly rate (Processor type) | Monthly Cost (730 hours)
+---------|----------|---------
+ 1 | $0.64 (dedicated) | $467.20
+ 1 | $0.16 (uncapped shared) | $116.80
+ 1 | $0.24 (capped shared) | $175.20
+{: caption="Table 1. S922 processor type pricing" caption-side="top"}
+
+Number of cores (E880/E980)| Hourly rate (Processor type) | Monthly Cost (730 hours)
+---------|----------|---------
+ 1 | $1.73 (dedicated)| $1262.90
+ 1 | $0.43 (uncapped shared) | $313.90
+ 1 | $0.65 (capped shared) | $474.50
+{: caption="Table 2. E880/E980 processor type pricing" caption-side="top"}
 
 ## End of billing
 {: #pricing-end-billing}
