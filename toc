@@ -67,6 +67,7 @@ IBM Power Systems Virtual Servers
         creating-network-install-server.md
         removing-network-interface-ibmi.md
         ibmi-license-info.md
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
