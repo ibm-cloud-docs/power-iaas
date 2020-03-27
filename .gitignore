@@ -3,5 +3,5 @@ power-iaas-workspace.code-workspace
 develop/
 examples/
 .DS_Store
-test*.md
+test*
 duplicate*
