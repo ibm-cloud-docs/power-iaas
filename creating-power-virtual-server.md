@@ -46,26 +46,26 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     See the following table to you select the appropriate region for your service.
 
-    Location | Region | Colocation |
-    ---------|----------|--------- |
-    Dallas, Texas | us-south | DAL-13
-    Washington, D.C. | us-east| WDC04
-    Frankfurt, Germany | eu-de | FRA04 and FRA05
-    Toronto, Canada | TOR01 | TOR01
-    London, England | eu.gb | LON06
-    {: caption="Table 1. Power Systems Virtual servers colocations" caption-side="bottom"}
+| Location           | Region   | Colocation      |
+| ------------------ | -------- | --------------- |
+| Dallas, Texas      | us-south | DAL-13          |
+| Washington, D.C.   | us-east  | WDC04           |
+| Frankfurt, Germany | eu-de    | FRA04 and FRA05 |
+| Toronto, Canada    | TOR01    | TOR01           |
+| London, England    | eu.gb    | LON06           |
+{: caption="Table 1. Power Systems Virtual servers colocations" caption-side="bottom"}
 
-4. Click **Create**.
+1. Click **Create**.
 
     ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"}
 
-5. After you click **Create**, you are redirected to your **Resource List**.
+2. After you click **Create**, you are redirected to your **Resource List**.
 
-6. From the **Resource List**, select your service under **Services**.
+3. From the **Resource List**, select your service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 4. The IBM Cloud Resource List" caption-side="bottom"}
 
-7. Click **New instance** under the **Virtual server instances** tab.
+4. Click **New instance** under the **Virtual server instances** tab.
 
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
