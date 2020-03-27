@@ -32,4 +32,4 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## 01 February 2020
 {: #feb-2020}
 
-You can now provision a {{site.data.keyword.powerSys_notm}} in the Frankfurt 2 (*FRA05*) colocation.
+- You can now provision a {{site.data.keyword.powerSys_notm}} in the Frankfurt 2 (*FRA05*) colocation.
