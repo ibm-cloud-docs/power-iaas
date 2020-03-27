@@ -46,8 +46,8 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     See the following table to you select the appropriate region for your service.
 
-    Location | Region | Colocation
-    ---------|----------|---------
+    Location | Region | Colocation |
+    ---------|----------|--------- |
     Dallas, Texas | us-south | DAL-13
     Washington, D.C. | us-east| WDC04
     Frankfurt, Germany | eu-de | FRA04 and FRA05
