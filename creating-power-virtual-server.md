@@ -44,16 +44,16 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"}
 
-    See the following table to you select the appropriate region for your service.
+See the following table to you select the appropriate region for your service.
 
 | Location           | Region   | Colocation      |
 | ------------------ | -------- | --------------- |
-| Dallas, Texas      | us-south | DAL-13          |
+| Dallas, Texas      | us-south | DAL13           |
 | Washington, D.C.   | us-east  | WDC04           |
-| Frankfurt, Germany | eu-de    | FRA04 and FRA05 |
+| Frankfurt, Germany | eu-de    | FRA04/FRA05     |
 | Toronto, Canada    | TOR01    | TOR01           |
-| London, England    | eu.gb    | LON06           |
-{: caption="Table 1. Power Systems Virtual servers colocations" caption-side="bottom"}
+| London, England    | eu-gb    | LON06           |
+{: caption="Table 1. Power Systems Virtual Server colocations" caption-side="bottom"}
 
 4. Click **Create**.
 
