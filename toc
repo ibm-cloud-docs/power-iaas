@@ -31,7 +31,6 @@ IBM Power Systems Virtual Servers
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-
     {: .topicgroup}
     Managing, creating, and deploying
         managing-resources-and-users.md
@@ -69,7 +68,6 @@ IBM Power Systems Virtual Servers
         removing-network-interface-ibmi.md
         ibmi-license-info.md
     {: .navgroup-end}
-
     {: .navgroup id="reference"}
 
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
