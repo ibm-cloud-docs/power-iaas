@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-27"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 subcollection: power-iaas
