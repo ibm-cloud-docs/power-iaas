@@ -64,7 +64,7 @@ If you are on a Windows&trade; system, continue with [Setting up and configuring
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 3. Enter **22** as the port number.
 
-    ![Creating a PuTTY session](./images/putty-configure.png "Creating a PuTTY session"){: caption="Figure 1. Creating a PuTTY session" caption-side="bottom}
+    ![Creating a PuTTY session](./images/putty-configure.png "Creating a PuTTY session"){: caption="Figure 1. Creating a PuTTY session" caption-side="bottom"}
 
 4. Select **Tunnels** under the **Connection** category.
 5. Add your **Source port** number and **Destination**. In this example, the user chose 50000 as the source port number.

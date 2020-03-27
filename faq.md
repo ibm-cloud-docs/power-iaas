@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-27"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor
 
@@ -49,13 +49,13 @@ The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When 
 
 **AIX**
 
-* [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
-* [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
-* [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
+- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
+- [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
+- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
 
 **IBM i**
 
-* [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
+- [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
@@ -77,8 +77,8 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 The storage types vary by region and cannot be changed once the volume is created. A VM cannot have disks from both storage types.
 
-* The **us-east (WDC04)** region uses **Standard** or **SSD** storage types.
-* The **us-south (DAL13)** and **eu-de (FRA04 and FRA05)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
+- The **us-east (WDC04)** region uses **Standard** or **SSD** storage types.
+- The **us-south (DAL13)** and **eu-de (FRA04 and FRA05)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
@@ -86,6 +86,27 @@ The boot image storage type is predefined and cannot be chosen.
 ## What's the difference between capped and uncapped shared processor performance? How do they compare to dedicated processor performance?
 {: #processor}
 {: faq}
+
+When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs).
+
+| Dedicated processors |
+|:-----------------|
+| The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. Once a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the desired number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around 4 cores, but it peaks around 8 cores, you need to configure the partition with 8 cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand. |
+{: caption="Adding tags to clusters with the console." caption-side="top"}
+{: tab-title="Dedicated processors"}
+{: tab-group="processor"}
+{: class="simple-tab-table"}
+
+| Shared processors|
+|:-----------------|
+| Shared processor configurations consist of several factors. The entitled capacity (EC) defines the minimum guaranteed amount of CPU time a partition can run on physical cores. For example, if the processor units are set to **0.5**, the logical partition would be guaranteed 30 seconds of CPU time every minute. If a logical partition doesn’t use all of its entitlement, the remaining CPU time is automatically made available for other shared processor partitions. For shared processors, there are two sharing modes, capped or uncapped:
+
+- For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition could consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to **0.5**.
+- For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value specified for processing units. For example, if virtual processors are set to 3, the partition could consume 180 second of CPU time every minute (3 virtual processors each running at 100% utilization would be 3 physical cores worth of CPU time). There must be unused capacity available on the server for partition to consume more than its configured processing units.|
+{: caption="Shared processors" caption-side="top"}
+{: tab-title="Shared processors"}
+{: tab-group="tags"}
+{: class="simple-tab-table"}
 
 For more information, see the [How Does Shared Processor Performance Compare to Dedicated Processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} wiki.
 
