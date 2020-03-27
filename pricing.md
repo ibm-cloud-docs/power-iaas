@@ -65,7 +65,7 @@ You can also bring your own custom image to use on a {{site.data.keyword.powerSy
 ## Processor type pricing
 {: #pricing-processor}
 
-You are charged different rates depending on the processor type you choose for your VM. Shared capped processor types are more expensive than uncapped shared processor types.
+You are charged different rates depending on the processor type you choose for your VM. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
 
 ## End of billing
 {: #pricing-end-billing}

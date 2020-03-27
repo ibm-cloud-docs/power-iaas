@@ -4,3 +4,4 @@ develop/
 examples/
 .DS_Store
 test*.md
+duplicate*

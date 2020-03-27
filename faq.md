@@ -92,10 +92,11 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 | Dedicated processors |
 |:-----------------|
 | The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. Once a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the desired number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around 4 cores, but it peaks around 8 cores, you need to configure the partition with 8 cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand. |
-{: caption="Adding tags to clusters with the console." caption-side="top"}
-{: tab-title="Dedicated processors"}
-{: tab-group="processor"}
 {: class="simple-tab-table"}
+{: tab-group="processor"}
+{: caption="Table 1. Dedicated processors" caption-side="top"}
+{: #proc-table-1}
+{: tab-title="Dedicated processors"}
 
 | Shared processors|
 |:-----------------|
@@ -103,10 +104,11 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 
 - For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition could consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to **0.5**.
 - For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value specified for processing units. For example, if virtual processors are set to 3, the partition could consume 180 second of CPU time every minute (3 virtual processors each running at 100% utilization would be 3 physical cores worth of CPU time). There must be unused capacity available on the server for partition to consume more than its configured processing units.|
-{: caption="Shared processors" caption-side="top"}
-{: tab-title="Shared processors"}
-{: tab-group="tags"}
 {: class="simple-tab-table"}
+{: tab-group="processor"}
+{: caption="Table 2. Shared processors" caption-side="top"}
+{: #proc-table-2}
+{: tab-title="Shared processors"}
 
 For more information, see the [How Does Shared Processor Performance Compare to Dedicated Processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} wiki.
 
