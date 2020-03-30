@@ -119,6 +119,12 @@ If you'd like to compare your current environment's performance to what's availa
 
 To migrate your VM from one colo to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then perform an import followed by a deploy.
 
+## What does VM pinning do?
+{: #pinning}
+{: faq}
+
+You can choose to *soft pin* or *hard pin* a VM to the host where it is currently running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restrics the movement of the VM during remote restart, automated remote restart, DRO and live partition migration. The default pinning policy is *none*.
+
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
 {: faq}
