@@ -17,10 +17,10 @@ keywords: release notes, changes, power systems virtual server
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSys_notm}} service.
 {: shortdesc}
 
-## 01 April 2020
+<!-- ## 01 April 2020
 {: #april-2020}
 
-- You can now provision a {{site.data.keyword.powerSys_notm}} in the London 3 (*LON06*) and Toronto (*TOR01*) colocations.
+- You can now provision a {{site.data.keyword.powerSys_notm}} in the London 3 (*LON06*) and Toronto (*TOR01*) colocations. -->
 
 ## 01 March 2020
 {: #march-2020}

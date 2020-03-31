@@ -56,7 +56,17 @@ When you toggle a public network off and then on, the IBM Cloud console regenera
 ## Adding a network interface to an AIX VM
 {: #add-nic}
 
-To add a *en0* network interface and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
+When you toggle a public network off and then on, a new Virtual Ethernet Adapter (VEA) is created on your VM. You must identify the network interface that the new VLAN is associated with before reconfiguring the IP adress.
+
+1. After you toggle a public network off and then on, look up the list of networks and write down the public network VLAN ID.
+
+2. Use the `lsdev -Cc adapter` command to generate the list of adapters.
+
+3. Use either the `ifconfig -a` or `netstat -in` command to see all of the network interfaces.
+
+4. To find the network interface that has the public network VLAN ID, enter `entstat -d ent*X* | grep VLAN` (where *X* is the adapter number).
+
+To add a (for example, *en0*) network interface and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
 ```
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0
