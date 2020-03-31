@@ -1,5 +1,4 @@
 ---
-
 copyright:
   years: 2019
 
@@ -8,10 +7,7 @@ lastupdated: "2019-10-18"
 keywords: ordering direct link, dirct link location, bgp asn, iam service id
 
 subcollection: power-iaas
-
----
-
-{:new_window: target="_blank"}
+---{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,17 +16,19 @@ subcollection: power-iaas
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{:external: target="\_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
 # Direct Link Connect for Power Systems Virtual Servers
+
 {: #ordering-direct-link-connect}
 
 You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link) and [IBM Cloud Direct Link Connect](/docs/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect-classic).
 {: shortdesc}
 
 ## Ordering Direct Link Connect
+
 {: #steps-to-order-direct-link-connect}
 {: help}
 {: support}
@@ -44,36 +42,36 @@ Order a second Direct Link Connect connection for backup purposes.
 
 2. Review the following basic Direct Link Connect networking concepts:
 
-   * [Direct Link Connect concepts](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
-   * [Direct Link Connect details](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution)
-   * [Direct Link Connect limitations](/docs/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
-   * [Strict limitations on IP assignments](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
+   - [Direct Link Connect concepts](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
+   - [Direct Link Connect details](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution)
+   - [Direct Link Connect limitations](/docs/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
+   - [Strict limitations on IP assignments](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
 3. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: new_window}{: external} with your IBM Cloud account credentials.
 
 4. Select **Networking** and click the **Direct Link Connect** tile. You can also search for **Direct Link Connect** in the IBM Cloud console's search box.
 
-    ![Finding Direct Link Connect](./images/console-direct-link-select.png "Finding Direct Link Connect"){: caption="Figure 1. Finding Direct Link Connect" caption-side="bottom"}
+   ![Finding Direct Link Connect](./images/console-direct-link-select.png "Finding Direct Link Connect"){: caption="Figure 1. Finding Direct Link Connect" caption-side="bottom"}
 
 5. Click the **Order Direct Link Connect** to see the order form.
 
 6. Enter the configuration parameters for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections. For more information, see the table at the bottom of the page.
 
-    The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Frankfurt 1 (*FRA04*) and Frankfurt 2 (*FRA05*) colocations. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
-    {: note}
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Frankfurt 1 (_FRA04_) and Frankfurt 2 (_FRA05_) colocations. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
+   {: note}
 
-    ![Configuring Direct Link Connect](./images/console-direct-link-configure.png "Configuring Direct Link Connect"){: caption="Figure 2. Configuring Direct Link Connect" caption-side="bottom"}
+   ![Configuring Direct Link Connect](./images/console-direct-link-configure.png "Configuring Direct Link Connect"){: caption="Figure 2. Configuring Direct Link Connect" caption-side="bottom"}
 
-7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the *Master Service Agreement* as it contains important technical information.
+7. Read the _Master Service Agreement_ and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
 
 8. Click **Create**. The following message is displayed when your request is submitted successfully:
 
-    ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 3. Direct Link Connect success message and ticket number" caption-side="bottom"}
+   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 3. Direct Link Connect success message and ticket number" caption-side="bottom"}
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
-    It can take up to three business days to complete the initial setup for the Direct Link connection request.
-    {: note}
+   It can take up to three business days to complete the initial setup for the Direct Link connection request.
+   {: note}
 
 10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
@@ -91,6 +89,7 @@ Order a second Direct Link Connect connection for backup purposes.
     Network Identifier:          1748523-1
     Date Created:                2019-06-12T14:56:45-06:00
     ```
+
     {: screen}
 
 12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
@@ -110,68 +109,102 @@ Order a second Direct Link Connect connection for backup purposes.
     Power Systems Virtual Server Private Network (subnet) Name (2):
     Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
+
     {: codeblock}
 
 13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
-   <dl>
-   <dt><strong>Direct Link Instance Name</strong><dt>
-   <dd>Enter a name that describes the purpose of the Direct Link Connect.</dd>
-   <dt><strong>Location</strong><dt>
-   <dd>Select the same location as the {{site.data.keyword.powerSys_notm}} instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-   <table>
-   <caption>Table 1. Direct Link Connection location options</caption>
-   <tr>
-   <th>Power Systems Virtual Server location</th>
-   <th>Direct Link Connect location</th>
-   <th>Network provider</th>
-   </tr>
-   <tr>
-   <td>Dallas, TX US</td>
-   <td>Dallas 4</td>
-   <td>Megaport</td>
-   </tr>
-   <tr>
-   <td>Washington, D.C, US</td>
-   <td>Washington 2</td>
-   <td>Megaport</td>
-   </tr>
-      <tr>
-   <td>Frankfurt, Germany EU</td>
-   <td>Frankfurt 1<br>Frankfurt 2</td>
-   <td>IBM Power Virtual Server</td>
-   </tr>
-   </table>
-   </dd>
-   <dt><strong>Network Provider</strong><dt>
-   <dd>You must select <strong>MEGAPORT</strong> or <strong>IBM POWER VIRTUAL SERVER</strong> from the list.</dd>
-   <dt><strong>Link Speed</strong><dt>
-   <dd>Select the link speed to meet your workload requirements. The recommended selection for the <strong>Link Speed</strong> field is 1000 Mbps.</dd>
-   <dt><strong>Routing Option</strong><dt>
-   <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM Cloud data centers in the world. </dd>
-   <dt><strong>BGP ASN</strong><dt>
-   <dd><p>You must enter the BGP ASN number for the specific Direct Link Connect location.</p>
-   <p><strong>Important:</strong> Do not try to change the BGP ASN number to <strong>64997</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.</p>
-   <table>
-   <caption>Table 2. BGP ASN number for specific locations</caption>
-   <tr>
-   <th>Direct Link Connect location</th>
-   <th>BGP ASN number</th>
-   </tr>
-   <tr>
-   <td>Dallas 4</td>
-   <td>64997</td>
-   </tr>
-   <tr>
-   <td>Washington 2</td>
-   <td>64999</td>
-   <tr>
-   <td>Frankfurt 1<br>Frankfurt 2</td>
-   <td>64999</td>
-   </tr>
-   </table>
-   </dd>
-   <dt><strong>Select VRF</strong><dt>
-   <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.</dd>
-   <dd></dd>
-   </dl>
+<dl>
+    <dt><strong>Direct Link Instance Name</strong>
+    <dt>
+    <dd>Enter a name that describes the purpose of the Direct Link Connect.</dd>
+    <dt><strong>Location</strong>
+    <dt>
+    <dd>Select the same location as the {{site.data.keyword.powerSys_notm}} instance. The following table identifies the
+        {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+        <table>
+            <caption>Table 1. Direct Link Connection location options</caption>
+            <tr>
+                <th>Power Systems Virtual Server location</th>
+                <th>Direct Link Connect location</th>
+                <th>Network provider</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>Dallas 4</td>
+                <td>Megaport</td>
+            </tr>
+            <tr>
+                <td>Washington, D.C, US</td>
+                <td>Washington 2</td>
+                <td>Megaport</td>
+            </tr>
+            <tr>
+                <td>Frankfurt, Germany, EU</td>
+                <td>Frankfurt 1<br>Frankfurt 2</td>
+                <td>IBM Power Virtual Server</td>
+            </tr>
+            <tr>
+                <td>London, United Kingdom</td>
+                <td>London 3</td>
+                <td>IBM Power Virtual Server</td>
+            </tr>
+            <tr>
+                <td>Toronto, Canada</td>
+                <td>Toronto</td>
+                <td>IBM Power Virtual Server</td>
+            </tr>
+        </table>
+    </dd>
+    <dt><strong>Network Provider</strong>
+    <dt>
+    <dd>You must select <strong>MEGAPORT</strong> or <strong>IBM POWER VIRTUAL SERVER</strong> from the list.</dd>
+    <dt><strong>Link Speed</strong>
+    <dt>
+    <dd>Select the link speed to meet your workload requirements. The recommended selection for the <strong>Link
+            Speed</strong> field is 1000 Mbps.</dd>
+    <dt><strong>Routing Option</strong>
+    <dt>
+    <dd>Select <strong>Local Routing (Free)</strong> to access all data centers that are connected at the location that
+        you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all IBM
+        Cloud data centers in the world. </dd>
+    <dt><strong>BGP ASN</strong>
+    <dt>
+    <dd>
+        <p>You must enter the BGP ASN number for the specific Direct Link Connect location.</p>
+        <p><strong>Important:</strong> Do not try to change the BGP ASN number to <strong>64997</strong>. You must
+            contact the IBM Power support team to handle your request to change the BGP ASN number.</p>
+        <table>
+            <caption>Table 2. BGP ASN number for specific locations</caption>
+            <tr>
+                <th>Direct Link Connect location</th>
+                <th>BGP ASN number</th>
+            </tr>
+            <tr>
+                <td>Dallas 4</td>
+                <td>64997</td>
+            </tr>
+            <tr>
+                <td>Washington 2</td>
+                <td>64999</td>
+            <tr>
+                <td>Frankfurt 1<br>Frankfurt 2</td>
+                <td>64999</td>
+            </tr>
+            <tr>
+                <td>London 3</td>
+                <td>64999</td>
+            </tr>
+            <tr>
+                <td>Toronto 3</td>
+                <td>64999</td>
+            </tr>
+        </table>
+    </dd>
+    <dt><strong>Select VRF</strong>
+    <dt>
+    <dd>Select the virtual routing and forwarding option for the connection. If your account does not have a VRF
+        identified, this field is not displayed. You can still create the Direct Link Connect service without selecting
+        a VRF.</dd>
+    <dd></dd>
+</dl>
