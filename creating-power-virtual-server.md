@@ -6,6 +6,7 @@ copyright:
 lastupdated: "2020-03-27"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
+
 subcollection: power-iaas
 
 ---
@@ -100,72 +101,144 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 Refer to the following table for more information on each {site.data.keyword.powerSys_notm}} instance field.
 
 <table>
-<caption>Table 2. Power Systems Virtual Server instance fields</caption>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>Number of Instances</td>
-<td>Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. If you specify more than one instance, you can select the following naming conventions and colo rules:
-  <dl>
-    <dt><strong>No preference</strong></dt>
-  <dd>Select this option if you do not have a hosting preference.</dd>
-    <dt><strong>Different  Server</strong></dt>
-  <dd>Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances.</dd>
-  <dt><strong>Numerical Prefix</strong></dt>
-  <dd>Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is <i>Austin</i> the next name for the virtual instance is <i>1Austin</i>.</dd>
-  <dt><strong>Numerical Postfix</strong></dt>
-  <dd>Select this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is <i>Rochester</i> the next name for the virtual instance is <i>Rochester1</i>.</dd>
-  </dl>
-  <p>
-  <strong>Note:</strong> When you create multiple instances of the virtual server, you must select <strong>On</strong> from the <strong>Shareable</strong> field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server.
-  </p>
-   </td>
-</tr>
-<tr>
-<!-- <td>PIN virtual server</td>
-<td>Select <strong>On</strong> to lock the {{site.data.keyword.powerSys_notm}} onto a host system. If you select <strong>On</strong>, the virtual server cannot be moved to a different host. For example, by selecting <strong>On</strong> you would experience an outage during host maintenance.</td>
-</tr> -->
-<tr>
-<td>Machine type</td>
-<td>Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>, <a href="https://www.ibm.com/downloads/cas/EE476WAP" target="_blank">E880</a>, and <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Frankfurt only)</a>.</td>
-</tr>
-<tr>
-<td>Cores</td>
-<td>Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If you select <strong>Shared processor</strong>, you can specify the number of cores by 0.25 increments. For example, valid core values are 0.5, 1.25, and 2.75. A virtual CPU (vCPU) is allocated for every 0.25 entitlement.
-</td>
-</tr>
-<tr>
-<td>Memory</td>
-<td>Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price.</td>
-</tr>
-<tr>
-<td>Boot image</td>
-<td>Select a version of the IBM-provided AIX or IBM i operating system stock image. If you want to use your own AIX or IBM i custom image, it must be at a supported technology level. For more information, see <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">Deploying a custom image within a Power Systems Virtual Server</a>.
+  <caption>
+    Table 2. Power Systems Virtual Server instance fields
+  </caption>
+  <tr>
+    <th>Field</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Number of Instances</td>
+    <td>
+      Specify the number of instances that you want to create for the
+      {{site.data.keyword.powerSys_notm}}. If you specify more than one
+      instance, you can select the following naming conventions and colo rules:
+      <dl>
+        <dt><strong>No preference</strong></dt>
+        <dd>Select this option if you do not have a hosting preference.</dd>
+        <dt><strong>Different Server</strong></dt>
+        <dd>
+          Select this option to host each instance on a different server. You
+          can use this option if you are concerned about a single-server outage
+          that might affect all {{site.data.keyword.powerSys_notm}} instances.
+        </dd>
+        <dt><strong>Numerical Prefix</strong></dt>
+        <dd>
+          Select this option to add numbers before the name of the virtual
+          server. If, for example, the first {{site.data.keyword.powerSys_notm}}
+          name is <i>Austin</i> the next name for the virtual instance is
+          <i>1Austin</i>.
+        </dd>
+        <dt><strong>Numerical Postfix</strong></dt>
+        <dd>
+          Select this option to add numbers after the name of the virtual
+          server. If, for example, the first {{site.data.keyword.powerSys_notm}}
+          name is <i>Rochester</i> the next name for the virtual instance is
+          <i>Rochester1</i>.
+        </dd>
+      </dl>
+      <p>
+        <strong>Note:</strong> When you create multiple instances of the virtual
+        server, you must select <strong>On</strong> from the
+        <strong>Shareable</strong> field for each data volume that you add. If
+        you do not want the data volume to be shareable, you can add the data
+        volume after you create the virtual server.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <!-- <td>PIN virtual server</td>
+    <td>Select <strong>On</strong> to lock the {{site.data.keyword.powerSys_notm}} onto a host system. If you select <strong>On</strong>, the virtual server cannot be moved to a different host. For example, by selecting <strong>On</strong> you would experience an outage during host maintenance.</td>
+    </tr> -->
+  </tr>
 
-<p><strong>Important</strong>: When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as 'root' appears as being <i>disabled</i>.</p>
-
-<p>For IBM i system licensing information, see <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.</p>
-</td>
-</tr>
-<tr>
-<td>Attached volumes</td>
-<td>You can either create a new data volume or attach an existing one that you defined in your IBM Cloud account.
-<dl>
-  <dt><strong>Creating a new data volume</strong></dt>
-  <dd>Click <strong>Add</strong> to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click <strong>On</strong> under <strong>Shareable</strong>. </dd>
-  <dt><strong>Attaching an existing data Volume</strong></dt>
-  <dd>You can select an existing data volume from the <b>Attached volumes</b> list. If a previously used data volume does not appear, it might exist under a different IBM Cloud account.</dd>
-</dl>
-</td>
-</tr>
-<tr>
-<td>Public Networks</td>
-<td>Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. For more information, see <a href="/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Public and private networks</a>.
-</td>
-</tr>
-<tr>
-<td>Private Networks</td>
-<td>Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.</td>
-</tr></table>
+  <tr>
+    <td>Machine type</td>
+    <td>
+      Specify the machine type. The machine type that you select determines the
+      number of cores and memory that is available. For more information about
+      hardware specifications, see
+      <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>,
+      <a href="https://www.ibm.com/downloads/cas/EE476WAP" target="_blank">E880</a>, and
+      <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Frankfurt only)</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>Cores</td>
+    <td>
+      Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If
+      you select <strong>Shared processor</strong>, you can specify the number
+      of cores by 0.25 increments. For example, valid core values are 0.5, 1.25,
+      and 2.75. A virtual CPU (vCPU) is allocated for every 0.25 entitlement.
+    </td>
+  </tr>
+  <tr>
+    <td>Memory</td>
+    <td>
+      Select the amount of memory for the {{site.data.keyword.powerSys_notm}}.
+      If you choose to use more than 64 GBs of memory per core, you are charged
+      a higher price. For example, when you choose one core with 128 GBs of
+      memory, you are charged the regular price for the first 64 GBs. After the
+      first 64 GBs (64 - 128 GBs), you are charged a higher price.
+    </td>
+  </tr>
+  <tr>
+    <td>Boot image</td>
+    <td>
+      Select a version of the IBM-provided AIX or IBM i operating system stock
+      image. If you want to use your own AIX or IBM i custom image, it must be
+      at a supported technology level. For more information, see
+      <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image"
+        >Deploying a custom image within a Power Systems Virtual Server</a>.<p>
+        <strong>Important</strong>: When you use an AIX stock image as the boot
+        volume, a console session is required for the initial setting of the
+        root user password. Without completing this step, SSH login as 'root'
+        appears as being <i>disabled</i>.
+      </p><p>
+        For IBM i system licensing information, see
+        <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Attached volumes</td>
+    <td>
+      You can either create a new data volume or attach an existing one that you
+      defined in your IBM Cloud account.
+      <dl>
+        <dt><strong>Creating a new data volume</strong></dt>
+        <dd>
+          Click <strong>Add</strong> to create a new data volume for your
+          {{site.data.keyword.powerSys_notm}} instance. If you want to allow
+          multiple virtual instances to write data to the same data volume, you
+          must click <strong>On</strong> under <strong>Shareable</strong>.
+        </dd>
+        <dt><strong>Attaching an existing data Volume</strong></dt>
+        <dd>
+          You can select an existing data volume from the
+          <b>Attached volumes</b> list. If a previously used data volume does
+          not appear, it might exist under a different IBM Cloud account.
+        </dd>
+      </dl>
+    </td>
+  </tr>
+  <tr>
+    <td>Public Networks</td>
+    <td>
+      Select this option to use an IBM-provided public network. There is a cost
+      that is associated with selecting this option. For more information, see
+      <a
+        href="/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Public and private networks</a>.
+    </td>
+  </tr>
+  <tr>
+    <td>Private Networks</td>
+    <td>
+      Click <strong>Add</strong> to identify a new private network for the
+      virtual server. If you already added a private network, you can select it
+      from the list. For more information, see
+      <a href="/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.
+    </td>
+  </tr>
+</table>
