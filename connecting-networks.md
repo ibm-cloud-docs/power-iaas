@@ -28,10 +28,10 @@ subcollection: power-iaas
 Learn more about connecting {{site.data.keyword.powerSysShort}} instances and networks. You can connect {{site.data.keyword.powerSysShort}} instance between us-south (*DAL13*) and us-east (*WDC04*).
 {: shortdesc}
 
-## Connecting a Power Systems Virtual Server instance between colocations (DAL13 to WDC04)
+## Connecting a Power Systems Virtual Server instance between data centers (DAL13 to WDC04)
 {: #connecting-instance-colos}
 
-You can use IBM Cloud Connect to connect {{site.data.keyword.cloud_notm}} instances across colocations (colos). IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and software as a service (SaaS) solution connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
+You can use IBM Cloud Connect to connect {{site.data.keyword.cloud_notm}} instances across data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and software as a service (SaaS) solution connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
 
 IBM Cloud Connect is only available to IBM clients within the US.
 {: important}

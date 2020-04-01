@@ -47,14 +47,13 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
 See the following table to you select the appropriate region for your service.
 
-| Location           | Region   | Colocation      |
+| Location           | Region   | Data center     |
 | ------------------ | -------- | --------------- |
 | Dallas, Texas      | us-south | DAL13           |
 | Washington, D.C.   | us-east  | WDC04           |
-| Toronto, Canada    | us-east  | TOR01           |
 | Frankfurt, Germany | eu-de    | FRA04/FRA05     |
 | London, England    | eu-gb    | LON06           |
-{: caption="Table 1. Power Systems Virtual Server colocations" caption-side="bottom"}
+{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 4. Click **Create**.
 

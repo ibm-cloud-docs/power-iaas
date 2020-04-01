@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-2-24"
 
-keywords: networking diagrams, network architecture, private SSL, private IPSec, Direct Link, colocation, colo, IBM Cloud Connection, Megaport, IBM Cloud network
+keywords: networking diagrams, network architecture, private SSL, private IPSec, Direct Link, colocation, data center, IBM Cloud Connection, Megaport, IBM Cloud network
 
 subcollection: power-iaas
 
@@ -52,12 +52,12 @@ You can use a private Direct Link connection to connect into your existing IBM C
 
   ![Power Systems Virtual Server private Direct Link connection](./images/network-private-direct-link.png "Power Systems Virtual Server private Direct Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
 
-## IBM Cloud Connect (or Megaport) to colocation (colo) connection
+## IBM Cloud Connect (or Megaport) to data center connection
 {: #cloud-to-colo}
 
 You can connect to the IBM Cloud Power environment by using IBM Cloud Connect or Megaport. As stated previously, IBM Cloud Connect is only available to IBM clients within the US.
 
-  ![Power Systems Virtual Server colo connection](./images/network-cloud-colo.png "Power Systems Virtual Server colo connection"){: caption="Figure 4. Power Systems Virtual Server Colo connection" caption-side="bottom"}
+  ![Power Systems Virtual Server data center connection](./images/network-cloud-colo.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server Colo connection" caption-side="bottom"}
 
 ## IBM Power on-premise environment to colo connection
 {: #onprem-to-colo}

@@ -78,7 +78,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 The storage types vary by region and cannot be changed once the volume is created. A VM cannot have disks from both storage types.
 
 - The **us-east (WDC04)** region uses **Standard** or **SSD** storage types.
-- The **us-south (DAL13)**, **eu-de (FRA04 and FRA05)**, **eu-gb (LON06)** and **us-east (TOR01-only)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
+- The **us-south (DAL13)**, **eu-de (FRA04 and FRA05)**, and **eu-gb (LON06)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
@@ -190,12 +190,12 @@ For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/
 
 You must set your own firewall in your IBM Cloud account.
 
-## How do you connect a server instance between two colocations (DAL13 to WDC04)?
+## How do you connect a server instance between two data centers (DAL13 to WDC04)?
 {: #gts-cloud-connect}
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two colocations. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
 
 IBM Cloud Connect is only available to IBM clients within the US.
 {: important}
