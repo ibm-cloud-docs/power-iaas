@@ -66,7 +66,7 @@ When you toggle a public network off and then on, a new Virtual Ethernet Adapter
 
 4. To find the network interface that has the public network VLAN ID, enter `entstat -d ent*X* | grep VLAN` (where *X* is the adapter number).
 
-To add a (for example, *en0*) network interface and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
+To add a network interface (for example, *en0*) and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
 ```
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0

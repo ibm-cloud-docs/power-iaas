@@ -24,6 +24,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     - [Creating a new PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#create-a-new-pvm-instance){: new_window}{: external}
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
+- You can now provision a {{site.data.keyword.powerSys_notm}} in the London 3 (*LON06*) data center.
 <!-- - You can now provision a {{site.data.keyword.powerSys_notm}} in the Toronto (*TOR01*) data center. -->
 <!-- - Added several [snapshot](https://cloud.ibm.com/apidocs/power-cloud#list-all-pvm-instance-snapshots-for-this-cloud-ins) API methods. -->
 
@@ -31,7 +32,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #march-2020}
 
 - You can now provision a {{site.data.keyword.powerSys_notm}} with a capped shared processor. For more information, see the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor) and [Processor types](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
-- You can now provision a {{site.data.keyword.powerSys_notm}} in the London 3 (*LON06*) data center.
 
 ## 01 February 2020
 {: #feb-2020}
