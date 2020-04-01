@@ -4,12 +4,20 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-04-01"
 
-keywords: release notes, changes, power systems virtual server
+keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Release notes
 {: #release-notes}
