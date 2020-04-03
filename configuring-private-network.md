@@ -52,12 +52,12 @@ You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect 
 * Because VPN connections are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a jump server.
 * For more information, see [Setting up an SSL VPN](/docs/iaas-vpn?topic=iaas-vpn-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
-**Using a IPSec VPN and a VRA (customer implementation)**
+**Using an IPSec VPN and a VRA (customer implementation)**
 
 You can use your own IPSec VPN to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use the IBM Cloud VRA to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
 The IPSec VPN referenced here is not the one offered by IBM, but your own.
-{: note}
+{: important}
 
 * You must have a Direct Link connection.
 * This option is typically used to manage environments and is not recommended for production workloads.
