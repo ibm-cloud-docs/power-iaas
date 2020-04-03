@@ -66,9 +66,6 @@ For more information, see [Setting up NIM to boot into maintenance mode](https:/
 {: tsSymptoms}
 Your AIX VM with a Tier 1 (NVMe-based flash storage) disk is running below NVMe specifications.
 
-    chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
-    {: codeblock}
-
 {: tsCauses}
 The AIX Tier 1 (NVMe-based flash storage) disk's default settings are hindering optimal performance.
 
@@ -86,12 +83,9 @@ In the output of these `lsattr` commands, you'll see either **True** or **True+*
 
 You can set your disk's **queue_depth** to *64* and change the algorithm to **shortest_queue** with a **no_reserve policy** by using the following command:
 
-        chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
-        {: codeblock}
-
-If the AIX disk is open, an error message appears that states that the disk is busy. To prevent this error from occuring, add a *-U* flag to the `chdev` command and the values are updated without disruption (assuming the Object Data Manager (ODM) for the disk has that feature enabled).
-
 ```
 chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
 ```
 {: codeblock}
+
+If the AIX disk is open, an error message appears that states that the disk is busy. To prevent this error from occuring, add a *-U* flag to the `chdev` command and the values are updated without disruption (assuming the Object Data Manager (ODM) for the disk has that feature enabled).
