@@ -64,7 +64,6 @@ The IPSec VPN referenced here is not the one offered by IBM, but your own.
 * Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a [VRA](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud Power instances. These offerings are not colocated and their networks are not linked. You must order a Direct Link Connection.
-{: note}
 
 ## Connecting to the IBM Cloud Power infrastructure
 {: #connecting-power}
