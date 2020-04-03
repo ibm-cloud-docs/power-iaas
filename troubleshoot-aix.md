@@ -74,9 +74,9 @@ To improve disk performance, increase its **queue_depth** to *64* or *128* and c
 
 To look at your AIX disk's current settings, enter the following commands:
 
-1. `lsattr -El hdiskX -a algorithm`
-2. `lsattr -El hdiskX -a reserve_policy`
-3. `lsattr -El hdiskX -a queue_depth`
+- `lsattr -El hdiskX -a algorithm`
+- `lsattr -El hdiskX -a reserve_policy`
+- `lsattr -El hdiskX -a queue_depth`
 
 In the output of these `lsattr` commands, you'll see either **True** or **True+** at the very end. **True** indicates that the attribute is user-changeable. **True+** indicates that the attribute is user-changeable, and can be modified while the disk is open by using the *-U* flag.
 {: tip}
@@ -84,6 +84,5 @@ In the output of these `lsattr` commands, you'll see either **True** or **True+*
 You can set your disk's **queue_depth** to *64* and change the algorithm to **shortest_queue** with a **no_reserve policy** with the following command:
 
     chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
-    {: codeblock}
 
 You receive and error message that the disk is busy if the AIX disk is open. To prevent this error message from appearing, add a *-U* flag to the `chdev` command and the values are updated without disruption (assuming the Object Data Manager (ODM) for the disk has that feature enabled).
