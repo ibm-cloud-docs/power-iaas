@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2019-03-24"
+lastupdated: "2020-04-06"
 
 keywords: port forwarding, IBM i virtual machine, PuTTY session, TCP servers
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Connecting to an IBM i Cloud virtual machine (VM)
 {: #connect-ibmi}
 
-Learn how to connect to an IBM i Cloud VM after configuring your system.
+Learn how to connect to an IBM i Cloud VM after configuring your system. Make sure to review the [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmibefore) instructions before you proceed.
 {: shortdesc}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)
@@ -45,7 +45,7 @@ strtcpsvr server(*SSHD)
 ```
 {: pre}
 
-On a Linux or Mac system, you would run a command similar to the following example:
+On a Linux&trade; or Mac system, you would run a command similar to the following example:
 
 ```shell
 ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
@@ -55,7 +55,7 @@ ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:l
 If the system is denying you permission, you might have to use `sudo` in front of the `ssh` command.
 {: note}
 
-If you are on a Windows&trade; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise see [Starting TCP servers](#start-tcp-servers).
+If you are on a Windows&reg; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise see [Starting TCP servers](#start-tcp-servers).
 
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
