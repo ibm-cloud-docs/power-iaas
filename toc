@@ -67,6 +67,10 @@ IBM Power Systems Virtual Servers
         creating-network-install-server.md
         removing-network-interface-ibmi.md
         ibmi-license-info.md
+
+    Linux
+        registering-linux.md
+        linux-profiles.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
