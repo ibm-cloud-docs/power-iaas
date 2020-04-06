@@ -31,7 +31,7 @@ A profile is a combination of instance attributes, such as cores and Random Acce
 
 The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs).
 
-The letters *cp* stand for **Compute profile**, while *bp* stand for **Balanced profile**.
+*cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
 {: tip}
 
 | Profile      | CPUs | RAM  |
