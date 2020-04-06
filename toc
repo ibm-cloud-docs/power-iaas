@@ -68,6 +68,7 @@ IBM Power Systems Virtual Servers
         removing-network-interface-ibmi.md
         ibmi-license-info.md
 
+    {: .topicgropup}
     Linux
         registering-linux.md
         linux-profiles.md
