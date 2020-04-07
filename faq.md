@@ -88,7 +88,7 @@ The boot image storage type is predefined and cannot be chosen.
 {: faq}
 
 When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs). The following list provides a simplified breakdown of their differences:
-
+  
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 - **Uncapped shared**: shared among other clients
 - **Capped sharred**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, GRE tunneling
+keywords: configuring network, direct link connectivity, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
 
 subcollection: power-iaas
 
@@ -25,18 +25,15 @@ subcollection: power-iaas
 # Configuring IBM Power Systems Virtual Servers
 {: #configuring-power}
 
-You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
+You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
 {: shortdesc}
-
-If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
-{: note}
 
 To connect directly to the IBM Cloud Power infrastructure, see [Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services](#connecting-megaport).
 
 ## Connecting to the IBM Cloud classic infrastructure
 {: #connecting-classic}
 
-You can use one of the following options to connect to the IBM Cloud classic infrastructure and then use a secondary Direct Link Connection to access the Power environment.
+You can use one of the following options to connect to the IBM Cloud classic infrastructure and then use a secondary Direct Link Connection to access the IBM Cloud Power infrastructure.
 
   You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you start a new network.
   {: important}
@@ -56,7 +53,7 @@ You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect 
 You can use your own IPSec VPN to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use Direct Link Connection  to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
 The IPSec VPN referenced here is not the one offered by IBM, but your own.
-{: important}
+{: note}
 
 * Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a [VRA](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
