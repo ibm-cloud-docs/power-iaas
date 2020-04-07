@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-27"
+lastupdated: "2020-04-07"
 
-keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning
 
 subcollection: power-iaas
 
@@ -44,7 +44,7 @@ This video does not capture the latest updates to the {{site.data.keyword.powerS
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
-The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it will be subject to outages during planned maintenance windows with no advanced notification given.
+The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 {: important}
 
 **AIX**
@@ -70,7 +70,7 @@ Yes. This function is known as **bring your own image**. For more information, s
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What are the available storage types in the Storage Area Network (SAN)?
+## What are the available storage types in the storage area network (SAN)?
 {: #storage}
 {: faq}
 {: support}
@@ -87,11 +87,17 @@ The boot image storage type is predefined and cannot be chosen.
 {: #processor}
 {: faq}
 
-When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs). For more information, see [How Does Shared Processor Performance Compare to Dedicated Processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external}.
+When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs). The following list provides a simplified breakdown of their differences:
+
+- **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
+- **Uncapped shared**: shared among other clients
+- **Capped sharred**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
+
+For more information, see [How does shared processor performance compare to dedicated processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
 
 |Dedicated processors|
 |:-----------------|
-| The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. Once a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the desired number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around 4 cores, but it peaks around 8 cores, you need to configure the partition with 8 cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand.|
+| The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. Once a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the wanted number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around four cores, but it peaks around eight cores, you need to configure the partition with eight cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 1. Dedicated processors" caption-side="top"}
@@ -100,7 +106,7 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 
 |Shared processors|
 |:-----------------|
-| For shared processors, there are two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition could consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5.For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value specified for processing units. For example, if virtual processors are set to 3, the partition could consume 180 second of CPU time every minute (3 virtual processors each running at 100% utilization would be 3 physical cores worth of CPU time). There must be unused capacity available on the server for partition to consume more than its configured processing units.|
+| For shared processors, there are two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition might consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5. For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value that is specified for processing units. For example, if virtual processors are set to 3, the partition might consume 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization would be three physical cores worth of CPU time). There must be unused capacity available on the server for a partition to consume more than its configured processing units.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 2. Shared processors" caption-side="top"}
@@ -113,17 +119,17 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 
-## How do I migrate my VM from one colo to another (WDC04 to DAL13)?
+## How do I migrate my VM from one data center to another (WDC04 to DAL13)?
 {: #vm-migration}
 {: faq}
 
-To migrate your VM from one colo to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then perform an import followed by a deploy.
+To migrate your VM from one data center to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then perform an import followed by a deploy.
 
 ## What does VM pinning do?
 {: #pinning}
 {: faq}
 
-You can choose to *soft pin* or *hard pin* a VM to the host where it is currently running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restrics the movement of the VM during remote restart, automated remote restart, DRO and live partition migration. The default pinning policy is *none*.
+You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restrics the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
