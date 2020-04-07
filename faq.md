@@ -88,10 +88,10 @@ The boot image storage type is predefined and cannot be chosen.
 {: faq}
 
 When deploying a VM, customers can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for their virtual CPUs (vCPUs). The following list provides a simplified breakdown of their differences:
-  
+
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 - **Uncapped shared**: shared among other clients
-- **Capped sharred**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
+- **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
 For more information, see [How does shared processor performance compare to dedicated processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
 
