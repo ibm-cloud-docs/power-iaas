@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-27"
+lastupdated: "2020-04-07"
 
 keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, GRE tunneling
 
@@ -36,14 +36,14 @@ To connect directly to the IBM Cloud Power infrastructure, see [Connecting direc
 ## Connecting to the IBM Cloud classic infrastructure
 {: #connecting-classic}
 
-You can use one of the following options to connect to the IBM Cloud classic infrastructure  and then use a secondary Direct Link Connection to access Power environment 
+You can use one of the following options to connect to the IBM Cloud classic infrastructure and then use a secondary Direct Link Connection to access the Power environment.
 
   You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you start a new network.
   {: important}
 
 Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
 
-**Using an SSL VPN with a jump server **
+**Using an SSL VPN with a jump server**
 
 You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect to your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use a {{site.data.keyword.cloud_notm}} virtual machine (VM) as a jump server to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -63,7 +63,8 @@ The IPSec VPN referenced here is not the one offered by IBM, but your own.
 You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud Power instances. These offerings are not colocated and their networks are not linked. You must order a Direct Link Connection.
 
 **Using a Direct Link Connection and a VRA (customer implementation)**
- See[Configure IBM Cloud Direct Link](https://cloud.ibm.com/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete your private connection to your IBM Cloud environment. -->
+
+ For more information, see [Configure IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete a private connection to your IBM Cloud environment.
 
 ## Connecting to the IBM Cloud Power infrastructure
 {: #connecting-power}
