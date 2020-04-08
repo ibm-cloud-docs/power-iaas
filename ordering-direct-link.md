@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2019-3-31"
+lastupdated: "2020-4-08"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Connect Link service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link) and [IBM Cloud Direct Link Connect](/docs/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect-classic).
+You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a {{site.data.keyword.powerSysFull}}. The Direct Link Connect service creates a connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link) and [IBM Cloud Direct Link Connect on Classic](/docs/direct-link?topic=direct-link-how-to-order-ibm-cloud-direct-link-connect-classic).
 {: shortdesc}
 
 ## Ordering Direct Link Connect
@@ -57,9 +57,9 @@ Order a second Direct Link Connect connection for backup purposes.
 
 5. Click the **Order Direct Link Connect** to see the order form.
 
-6. Enter the configuration parameters for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections. For more information, see the table at the bottom of the page.
+6. Enter the configuration parameters for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections. For more information, see the <a href="#direct-link">description list</a> below.
 
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Frankfurt 1 (*FRA04*), Frankfurt 2 (*FRA05*), and London 3 (*LON06*) data centers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), and London 6 (*LON06*) data centers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
    {: note}
 
    ![Configuring Direct Link Connect](./images/console-direct-link-configure.png "Configuring Direct Link Connect"){: caption="Figure 2. Configuring Direct Link Connect" caption-side="bottom"}
@@ -114,10 +114,10 @@ Order a second Direct Link Connect connection for backup purposes.
 
 13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
-<dl>
+<dl id="direct-link">
   <dt><strong>Direct Link Instance Name</strong></dt>
   <dt></dt>
-  <dd>Enter a name that describes the purpose of the Direct Link Connect.</dd>
+  <dd>Enter a name for your Direct Link Connect instance.</dd>
   <dt><strong>Location</strong></dt>
   <dt></dt>
   <dd>
@@ -146,17 +146,17 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Frankfurt, Germany, EU</td>
-        <td>Frankfurt 1<br />Frankfurt 2</td>
+        <td>Frankfurt 4<br />Frankfurt 5</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
         <td>London, United Kingdom</td>
-        <td>London 3</td>
+        <td>London 6</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
         <td>Toronto, Canada</td>
-        <td>Toronto</td>
+        <td>Toronto 1</td>
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
@@ -176,10 +176,10 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt><strong>Routing Option</strong></dt>
   <dt></dt>
   <dd>
-    Select <strong>Local Routing (Free)</strong> to access all data centers that
+    Select <strong>Local Routing (Free)</strong> to access all of the data centers that
     are connected at the location that you specified in the
     <strong>Location</strong> field. Select <strong>Global Routing</strong> to
-    access all IBM Cloud data centers in the world.
+    access all of the IBM Cloud data centers in the world.
   </dd>
   <dt><strong>BGP ASN</strong></dt>
   <dt></dt>

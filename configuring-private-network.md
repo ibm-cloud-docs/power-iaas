@@ -98,7 +98,7 @@ Power Systems Virtual Server customer Private Network ID (3):
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 1 (*FRA04*), Frankfurt 2 (*FRA05*), and London 3 (*LON06*) data centers. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), and London 6 (*LON06*) data centers. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
 
 ```
 GRE Tunnel Configuration Request:
