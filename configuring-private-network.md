@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-27"
+lastupdated: "2020-04-08"
 
-keywords: configuring virtual machine, direct link connectivity, classic infrastructure, power infrastructure, network, Megaport, VxC, GRE tunneling
+keywords: configuring network, direct link connectivity, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
 
 subcollection: power-iaas
 
@@ -25,45 +25,43 @@ subcollection: power-iaas
 # Configuring IBM Power Systems Virtual Servers
 {: #configuring-power}
 
-You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link).
+You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
 {: shortdesc}
-
-If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
-{: note}
 
 To connect directly to the IBM Cloud Power infrastructure, see [Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services](#connecting-megaport).
 
 ## Connecting to the IBM Cloud classic infrastructure
 {: #connecting-classic}
 
-You can use one of the following options to connect to the IBM Cloud classic infrastructure:
+You can use one of the following options to connect to the IBM Cloud classic infrastructure and then use a secondary Direct Link Connection to access the IBM Cloud Power infrastructure.
 
   You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you start a new network.
   {: important}
 
 Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
 
-**Using an SSL VPN with a jump server and a VRA**
+**Using an SSL VPN with a jump server**
 
 You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect to your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use a {{site.data.keyword.cloud_notm}} virtual machine (VM) as a jump server to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
-* You must have a Direct Link connection.
 * This option is typically used to manage environments and is not recommended for production workloads.
 * Because VPN connections are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a jump server.
 * For more information, see [Setting up an SSL VPN](/docs/iaas-vpn?topic=iaas-vpn-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 **Using an IPSec VPN and a VRA (customer implementation)**
 
-You can use your own IPSec VPN to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use the IBM Cloud VRA to connect to your {{site.data.keyword.powerSys_notm}} instance.
+You can use your own IPSec VPN to connect into your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use Direct Link Connection  to connect to your {{site.data.keyword.powerSys_notm}} instance.
 
 The IPSec VPN referenced here is not the one offered by IBM, but your own.
-{: important}
+{: note}
 
-* You must have a Direct Link connection.
-* This option is typically used to manage environments and is not recommended for production workloads.
 * Because VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a [VRA](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
 You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud Power instances. These offerings are not colocated and their networks are not linked. You must order a Direct Link Connection.
+
+**Using a Direct Link Connection and a VRA (customer implementation)**
+
+ For more information, see [Configure IBM Cloud Direct Link](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete a private connection to your IBM Cloud environment.
 
 ## Connecting to the IBM Cloud Power infrastructure
 {: #connecting-power}
@@ -100,7 +98,7 @@ Power Systems Virtual Server customer Private Network ID (3):
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 1 (*FRA04*), Frankfurt 2 (*FRA05*), and London 3 (*LON06*) data centers. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+{{site.data.keyword.powerSysShort}} provides GRE tunneling to customers in the Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), London 6 (*LON06*), and Toronto 1 (*TOR01*) data centers. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
 
 ```
 GRE Tunnel Configuration Request:

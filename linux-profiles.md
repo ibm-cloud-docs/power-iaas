@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-23"
+lastupdated: "2020-04-27"
 
 keywords: Linux, compute, profiles, SLES, SAP
 
@@ -23,24 +23,23 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # SUSE Linux compute profiles
-{: #registering-linux}
+{: #linux profiles}
 
-When you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP, you can choose from a variety of profiles.: Balanced, Compute, and Memory.
+Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
 
-A profile is a combination of instance attributes, such as the number of vCPUs, amount of RAM, number of GPUs, and more that can be instantiated quickly to start a virtual server instance. In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs.
-{: note}
+A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance. In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
 
-The following balanced profiles are available for x86_64 processors:
+The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs).
 
-| Profile | vCPU | GB RAM | Network Performance Cap (Gbps) |
-|---------|---------|---------|---------|
-| bx2-2x8 | 2 | 8 | 4 |
-| bx2-4x16 | 4 | 16 | 8 |
-| bx2-8x32 | 8 | 32 | 16 |
-| bx2-16x64 | 16 | 64 | 32 |
-| bx2-32x128 | 32  | 128 | 64 |
-| bx2-48x192 | 48 | 192 | 80 |
-{: caption="Table 2. x86-64 balanced profile options" caption-side="top"}
+*cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
+{: tip}
 
-
-Choose your machine type, processor, memory, and cores. There is a 1:1 ratio of CPUs to vCPUs for shared cores, which rounds up. For example, 1.25 CPUs equals 2 vCPUs.
+| Profile      | CPUs | RAM  |
+| ------------ | ---- | ---- |
+| cp1-4x280    | 4    | 280  |
+| bp1-16x2250  | 16   | 16   |
+| bp1-16x7000  | 50   | 7000 |
+| bp1-16x14000 | 16   | 64   |
+| bx2-32x128   | 32   | 128  |
+| bx2-48x192   | 48   | 192  |
+{: caption="Table 1. Popular SLES for SAP profiles" caption-side="top"}

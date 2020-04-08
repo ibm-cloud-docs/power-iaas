@@ -51,6 +51,7 @@ See the following table to you select the appropriate region for your service.
 | ------------------ | -------- | --------------- |
 | Dallas, Texas      | us-south | DAL13           |
 | Washington, D.C.   | us-east  | WDC04           |
+| Toronto, Canada    | eu-east  | TOR01           |
 | Frankfurt, Germany | eu-de    | FRA04/FRA05     |
 | London, England    | eu-gb    | LON06           |
 {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
@@ -81,7 +82,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
     ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
 
-2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **eu-de (FRA04 and FRA05)**, **eu-gb (LON06)** and **us-east (TOR1-only)**. To see your boot images, go to **Boot images** after you provision the instance.
+2. Complete the **Boot volume** and **Attached volumes** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **us-east (TOR1-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)**. To see your boot images, go to **Boot images** after you provision the instance.
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being _disabled_. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
     {: important}
@@ -97,7 +98,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 4. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
-Refer to the following table for more information on each {site.data.keyword.powerSys_notm}} instance field.
+Refer to the following table for more information on each {{site.data.keyword.powerSys_notm}} instance field.
 
 <table>
   <caption>

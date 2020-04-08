@@ -49,6 +49,7 @@ IBM Power Systems Virtual Servers
         connecting-networks.md
         network-security.md
         network-architecture.md
+        networking-vpnaas.md
 
     {: .topicgroup}
     AIX
@@ -66,8 +67,9 @@ IBM Power Systems Virtual Servers
         connecting-ibmi-port.md
         creating-network-install-server.md
         removing-network-interface-ibmi.md
+        ibmi-minimum-levels.md
         ibmi-license-info.md
-    {: .navgroup-end}
+   {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-09"
+lastupdated: "2020-04-08"
 
 keywords: MDM, storage pool, mount command, PowerVM
 
@@ -21,10 +21,10 @@ subcollection: power-iaas
 {:note: .note}
 {:external: .external}
 
-# Configuring Master Data Management (MDM) on AIX
+# Configuring Master Data Migration (MDM) on AIX
 {: #configuring-mdm}
 
-You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR.
+You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR. For more information, see [IBM Cloud Mass Data Migration](https://www.ibm.com/cloud/mass-data-migration){: new_window}{: external}.
 {: shortdesc}
 
 1. Begin by connecting to the provided **Management** URL.
