@@ -55,7 +55,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **eu-de (FRA04 and FRA05)**, and **eu-gb (LON06)** regions.
+Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)** regions.
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}

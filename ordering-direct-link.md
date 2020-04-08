@@ -59,7 +59,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the configuration parameters for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections. For more information, see the <a href="#direct-link">description list</a> below.
 
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), and London 6 (*LON06*) data centers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Toronto 1 (*TOR01*), Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), London 6 (*LON06*) data centers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
    {: note}
 
    ![Configuring Direct Link Connect](./images/console-direct-link-configure.png "Configuring Direct Link Connect"){: caption="Figure 2. Configuring Direct Link Connect" caption-side="bottom"}
