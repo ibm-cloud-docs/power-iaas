@@ -98,7 +98,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 4. Accept the **Terms of Use** and click **Create** to provision a new {{site.data.keyword.powerSys_notm}}.
 
-Refer to the following table for more information on each {site.data.keyword.powerSys_notm}} instance field.
+Refer to the following table for more information on each {{site.data.keyword.powerSys_notm}} instance field.
 
 <table>
   <caption>
