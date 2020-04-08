@@ -70,7 +70,7 @@ The following IBM Power Systems hardware hosts the {{site.data.keyword.powerSys_
 
 **Compute**
 
-* [IBM Power System E880 (9119-MHE)](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
+* [IBM Power System E880 (9119-MHE)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
 * [IBM Power System E980 (9080-M9S) - Frankfurt only](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
