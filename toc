@@ -69,11 +69,6 @@ IBM Power Systems Virtual Servers
         removing-network-interface-ibmi.md
         ibmi-minimum-levels.md
         ibmi-license-info.md
-
-   {: .topicgroup}
-   Linux
-       registering-linux.md
-       linux-profiles.md
    {: .navgroup-end}
 
     {: .navgroup id="reference"}
