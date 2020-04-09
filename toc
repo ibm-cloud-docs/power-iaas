@@ -39,7 +39,6 @@ IBM Power Systems Virtual Servers
         modifying-instance.md
         capturing-exporting-vm.md
         importing-boot-image.md
-        volume-snapshot-clone.md
         downloading-fixes.md
 
     {: .topicgroup}
