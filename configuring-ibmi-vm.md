@@ -46,7 +46,7 @@ You can assign up to 127 storage volumes to an IBM i VM.
 ## Licenses and configuring your network
 {: #license-network}
 
-You must install the minimum program temporary fix (PTFs) level on your IBM i VM in order for the {{site.data.keyword.cloud}} to inject licenses. For more information, see [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
+You must install the minimum program temporary fix (PTFs) level on your IBM i VM. For more information, see [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 If you are bringing your own IBM i custom image, you must install the PTFs previously mentioned and the software that is required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
 
