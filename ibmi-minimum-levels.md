@@ -25,7 +25,7 @@ subcollection: power-iaas
 # IBM i PTF minimium levels
 {: #minimum-levels}
 
-You must install the following program temporary fixes (PTFs) on your IBM i VM in order for the {{site.data.keyword.cloud}} to inject licenses:
+You must install the following program temporary fixes (PTFs) on your IBM i VM:
 
 - IBM i 7.2 - 5770SS1 SI71091 (prereqs SLIC PTFs: MF66395, MF66394, MF66391)
 - IBM i 7.3 - MF99207 (TR7) and SI69686
