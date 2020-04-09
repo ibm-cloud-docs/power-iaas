@@ -17,6 +17,7 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
+{:preview: .preview}
 {:external: target="_blank" .external}
 
 # Release notes
@@ -34,7 +35,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     - [Creating a new PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#create-a-new-pvm-instance){: new_window}{: external}
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
-<!-- - Added several [snapshot](https://cloud.ibm.com/apidocs/power-cloud#list-all-pvm-instance-snapshots-for-this-cloud-ins) API methods. -->
+
+VM pinning is currently available in all data centers except for *WDC* or *FRA04*.
+{: preview}
 
 ## 01 March 2020
 {: #march-2020}

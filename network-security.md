@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
-Infrastructure provides VLAN isolation between different tenants, which are enforced at VIOS and physical CISCO switches and routers.
+Infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical CISCO switches and routers.
 {: shortdesc}
 
 ## Default firewall ports
@@ -51,5 +51,5 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 
 If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you.
 
-There are plans to add the dynamic configuration of the firewall rules in the future.
+There are plans to add the ability to dynamically configure the firewall rules in the future.
 {: note}
