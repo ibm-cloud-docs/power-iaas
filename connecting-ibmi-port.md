@@ -22,11 +22,14 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Connecting to an IBM i Cloud virtual machine (VM)
+# Connecting to an IBM i virtual machine (VM)
 {: #connect-ibmi}
 
-Learn how to connect to an IBM i Cloud VM after configuring your system. Make sure to review the [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmibefore) instructions before you proceed.
+Learn how to connect to an IBM i Cloud VM after configuring your system. Make sure to review the [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmibefore) instructions before connecting to an IBM i VM.
 {: shortdesc}
+
+For a complete list of firewall ports that are available for IBM i VMs, see [Network security](/docs/power-iaas?topic=power-iaas-network-security). If you plan on ordering [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) or already have it, port forwarding is not needed.
+{: important}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)
 {: installing-acs}
@@ -40,14 +43,14 @@ The public IP address blocks most ports. As a result, you need to use SSH tunnel
 
 Start the **SSHD** server on the VM:
 
-```shell
+```
 strtcpsvr server(*SSHD)
 ```
 {: pre}
 
 On a Linux&trade; or Mac system, you would run a command similar to the following example:
 
-```shell
+```
 ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
 ```
 {: pre}
@@ -60,7 +63,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows; system.
+1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 3. Enter **22** as the port number.
 
