@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-10"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -37,43 +37,48 @@ The basic steps that are involved in deploying an instance by using a custom ima
 
 1. Create the custom image.
 1. Store the image in your **Cloud Object Storage** account.
-1. Point the {{site.data.keyword.powerSys_notm}} user interface (UI) to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
+2. Point the {{site.data.keyword.powerSys_notm}} console to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
 
 ## Before you begin
 {: #before-you-begin-deploy}
 
 Before you can use a custom image as the boot volume, review the following information:
 
-* You must have a basic understanding of **IBM Cloud Object Storage** concepts. For more information, see [About IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
-* If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}.
-* Alternatively, if you have already deployed a Virtual server instance, you can capture it and redeploy a new Virtual Server Instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance. For more information, see [IBM Power Systems Virtual Servers CLI plug-in](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture).
-* You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field. To view a list of the supported AIX and IBM i OS technology levels, see the following system software maps:
+- You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}.
+- Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance.
+- You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
-  The {{site.data.keyword.powerSys_notm}} offering does not support AIX 6.1. When viewing the system software maps, refer to only the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it will be subject to outages during planned maintenance windows with no advanced notification given.
-  {: important}
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
-  **AIX**
+**AIX**
 
-    * [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
-    * [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
-    * [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
+The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
-  **IBM i**
+- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
+- [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
+- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
 
-    * [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
+**IBM i**
+
+The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
+
+- [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
+- [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
+- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
 
 1. Type **object storage** into the catalog's search box and select **Cloud Object Storage**.
 
-    ![IBM Cloud Object Storage](./images/catalog-object-storage.png "IBM Cloud Object Storage"){: caption="Figure 1. IBM Cloud Object Storage" caption-side="bottom"}
+    <!-- ![IBM Cloud Object Storage](./images/catalog-object-storage.png "IBM Cloud Object Storage"){: caption="Figure 1. IBM Cloud Object Storage" caption-side="bottom"} -->
 
-2. Give the service a name, add tags (if wanted), and select your pricing plan. Click **Create** at the bottom of the page to create your service.
+2. Give the service a name, add tags (if wanted), select your pricing plan and click **Create**.
 
 3. After you click **Create**, you are taken to the **Cloud Object Storage** landing page. Select **Create Bucket**.
 
-    ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 2. IBM Cloud Object Storage bucket" caption-side="bottom"}
+    ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 1. IBM Cloud Object Storage bucket" caption-side="bottom"}
 
 4. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms _resource instance_ and _service instance_ refer to the same concept, and can be used interchangeably.
 
@@ -89,9 +94,9 @@ Before you can use a custom image as the boot volume, review the following infor
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-  ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 3. Creating a Cloud Object Storage bucket" caption-side="bottom"}
+  ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 2. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. For example, *?*, *=*, *<*, and other special characters might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage Tutorial](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
@@ -100,15 +105,15 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** pane.
 
-    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 4. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
+    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 3. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
 
 3. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
 
-    ![Adding a credential](./images/console-add-service-credential.png "Adding a credential"){: caption="Figure 5. Adding a credential" caption-side="bottom"}
+    <!-- ![Adding a credential](./images/console-add-service-credential.png "Adding a credential"){: caption="Figure 5. Adding a credential" caption-side="bottom"} -->
 
 4. Find your new service credential in the service credentials table.
 
-  ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 6. Your new service credential" caption-side="bottom"}
+  ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 4. Your new service credential" caption-side="bottom"}
 
 To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 
@@ -121,19 +126,10 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 
-2. After you click **Import**, enter all of the required information.
+2. After you click **Import**, refer to the following table to complete the **Import boot image** fields:
 
     The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
     {: important}
-
-    ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"}
-
-3. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
-
-    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
-    {: tip}
-
-Refer to the following table to complete the **Import boot image** fields:
 
 | Field | Description |
 | ------| ------------|
@@ -145,3 +141,10 @@ Refer to the following table to complete the **Import boot image** fields:
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
 {: caption="Table 1. Importing a boot image" caption-side="bottom"}
+
+    <!-- ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"} -->
+
+1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
+
+    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
+    {: tip}

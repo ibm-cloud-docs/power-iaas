@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-04-10"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types
 
@@ -25,13 +25,13 @@ subcollection: power-iaas
 # Pricing for Power Systems Virtual Servers on IBM Cloud
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The {{site.data.keyword.powerSys_notm}} systems have the following theoretical maximums:
+{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The IBM Power systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
 - E880 (9119-MHE): 155 processors and 8,099 GB of memory
 - E980 (9080-M9S): 155 processors and 16,255 GB of memory
 - S922 (9009-22A): 15 processors and 959 GB of memory
 
-It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement. You are billed at a monthly rate.
+It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
 {: shortdesc}
 
 ## Monthly usage
@@ -41,14 +41,14 @@ It's important to note that a system's theoretical maximum depends on the data c
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
 
-| Hours elapsed in a month       | Amount charged   |  LPAR description     |
-| ----------------------------- | ----------------- | --------------------  |
-| 300 hours        | 300 hours x $251/month = $103  | 1 core, 8 GB memory, 150 GB disk, AIX    |
-| 430 hours        | 430 hours x $339/month = $200  | 1 core, 16 GB memory, 150 GB disk, AIX  |
-| 730 hours (Monthly Total)  | $103 + $200 = $303 (Monthly Total)  |   1 core, 16 GB memory, 150 GB disk, AIX |
+| Hours elapsed in a month  | Amount charged                     | LPAR description                       |
+| ------------------------- | ---------------------------------- | -------------------------------------- |
+| 300 hours                 | (300 hours x $251)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
+| 430 hours                 | (430 hours x $339)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
+| 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
 {: caption="Table 1. Monthly LPAR charges" caption-side="top"}
 
-In this example, the LPAR resources are increased after the 300 hour of the month from 8 GB of memory to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of the LPAR ($303).
+In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
 ## Base instances
 {: #pricing-base-instance-prices}
@@ -60,18 +60,18 @@ The base instance billing depends on your virtual instance options when you crea
 
 IBM provides AIX and IBM i stock images. The operating system version levels of the stock images are subject to change.
 
-You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for IBM Cloud. You cannot use an existing AIX or IBM i license for LPARs in a {{site.data.keyword.powerSys_notm}} instance. If you use a custom image or a stock image, you are charged the same price. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for {{site.data.keyword.cloud}}. You cannot use an existing AIX or IBM i license for LPARs in a {{site.data.keyword.powerSys_notm}} instance. If you use a custom image or a stock image, you are charged the same price. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Processor types
 {: #pricing-processor}
 
-You are charged different rates depending on the processor type you choose for your VM. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
+You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/980**). For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
 
 The following tables show how different processor types affect the cost per system:
 
-| Number of cores (S922) | Hourly rate (Processor type) | Monthly Cost (730 hours) |
+| Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
 | 1                      | $0.64 (dedicated)            | $467.20                  |
 | 1                      | $0.16 (uncapped shared)      | $116.80                  |
@@ -80,7 +80,7 @@ The following tables show how different processor types affect the cost per syst
 
 <br>
 
-| Number of cores (E880/E980) | Hourly rate (Processor type) | Monthly Cost (730 hours) |
+| Number of cores (E880/E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.73 (dedicated)            | $1262.90                 |
 | 1                           | $0.43 (uncapped shared)      | $313.90                  |

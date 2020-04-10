@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-24"
+lastupdated: "2020-04-10"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -37,17 +37,17 @@ After you purchase the software, you can download it from [Entitled Software Sup
 
 Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment.
 
-* When you are creating the virtual servers that are part of the PowerHA SystemMirror cluster, you must select **Different Server** from the **Colocation Rules** field. Selecting **Different Server** ensures that the different LPARs that will be a part of the PowerHA SystemMirror cluster are not deployed on the same host (machine).
+- When you are creating the virtual servers that are part of the PowerHA SystemMirror cluster, you must select **Different Server** from the **Colocation Rules** field. Selecting **Different Server** ensures that the different logical partitions (LPARs) that will be a part of the PowerHA SystemMirror cluster are not deployed on the same host.
 
 ![Displays colocation rules field](./images/console-colocation-rules.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
 
-* When you are creating storage volumes for the virtual severs that are part of the PowerHA SystemMirror cluster, you must select **On** from the **Shareable** field.
+- Uou must select **On** from the **Shareable** field when you create storage volumes for the virtual severs that are part of the PowerHA SystemMirror cluster.
 
 ![Displays sharable rules field](./images/console-new-storage.png "Displays shareable field"){: caption="Figure 2. Creating storage volumes that are shareable" caption-side="bottom"}
 
-* By using the {{site.data.keyword.powerSys_notm}} service, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available.
+- By using the {{site.data.keyword.powerSys_notm}} service, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available.
 
-Licenses that are purchased outside a subscription model license are not eligible to be used in the IBM Cloud environment.
+Licenses that are purchased outside a subscription model license are not eligible to be used in the {{site.data.keyword.cloud}} environment.
 {: note}
 
 <!--* When you deploy PowerHA SystemMirror, you must verify that the Service IP address is defined as a private IP address. This Service IP address can be accessed by another {{site.data.keyword.powerSys_notm}} instance or from other {{site.data.keyword.cloud}} applications. You cannot use a public IP address because it cannot be moved from one interface to another interface within a virtual server or across different virtual servers. -->
@@ -59,6 +59,6 @@ Licenses that are purchased outside a subscription model license are not eligibl
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by {{site.data.keyword.cloud}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to {{site.data.keyword.cloud_notm}} Object Storage. You can use this process to restore your virtual server in case a critical failure occurs. For more information, see [Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by the {{site.data.keyword.cloud_notm}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to [Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started). You can use this process to restore your virtual server in case a critical failure occurs.
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might a take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.
