@@ -48,8 +48,6 @@ You can assign up to 127 storage volumes to an IBM i VM.
 
 You must install the minimum program temporary fix (PTFs) level on your IBM i VM. For more information, see [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
-If you are bringing your own IBM i custom image, you must install the PTFs previously mentioned and the software that is required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
-
 After you deploy an IBM i VM and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display each license agreement. Click **Next...** and **PF15** to show more items. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
