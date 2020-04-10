@@ -45,26 +45,24 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     <!-- ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"} -->
 
-    | Location           | Region   | Data center     |
-    | ------------------ | -------- | --------------- |
-    | Dallas, Texas      | us-south | DAL13           |
-    | Washington, D.C.   | us-east  | WDC04           |
-    | Toronto, Canada    | eu-east  | TOR01           |
-    | Frankfurt, Germany | eu-de    | FRA04/FRA05     |
-    | London, England    | eu-gb    | LON06           |
-    {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+| Location           | Region   | Data center     |
+| ------------------ | -------- | --------------- |
+| Dallas, Texas      | us-south | DAL13           |
+| Washington, D.C.   | us-east  | WDC04           |
+| Toronto, Canada    | eu-east  | TOR01           |
+| Frankfurt, Germany | eu-de    | FRA04/FRA05     |
+| London, England    | eu-gb    | LON06           |
+{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
-4. Click **Create**.
+4. Click **Create**. You are redirected to the **Resource List**.
 
     <!-- ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"} -->
 
-5. After you click **Create**, you are redirected to your **Resource List**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}}    service under **Services**.
 
-6. From the **Resource List**, select your service under **Services**.
+    ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
-    ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 4. The IBM Cloud Resource List" caption-side="bottom"}
-
-7. Click **New instance** under the **Virtual server instances** tab.
+6. Click **New instance** under the **Virtual server instances** tab.
 
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
@@ -74,9 +72,9 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
   The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
   {: tip}
 
-  ![Creating a power virtual server instance](./images/console-create-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 6. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
+  ![Creating a power virtual server instance](./images/console-create-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 2. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
 
-1. Choose or create an new SSH key to securely connect to your Power Systems Virtual Server.
+1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
 2. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. To see your boot images, go to **Boot images** after you provision the instance.
 
@@ -94,7 +92,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 4. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
-    {: important}'
+    {: note}
 
     <!-- ![Defining your network interfaces](./images/console-add-private-network.png "Defining your network interfaces"){: caption="Figure 8. Defining your network interfaces" caption-side="bottom"} -->
 
@@ -196,7 +194,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
         root user password. Without completing this step, SSH login as root
         appears as being <i>disabled</i>.
       </p><p>
-        For IBM i system licensing information, see
+        For IBM i operating system licensing information, see
         <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.
       </p>
     </td>
