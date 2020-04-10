@@ -138,7 +138,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
           <em>Austin1</em>.
         <dt><strong>VM pinning</strong></dt>
         <dd>
-          Select this option to pin your virtual machine: <em>soft</em> or <em>hard</em><br><a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">Learn more</a>
+          Select this option to pin your virtual machine. You can choose either a <em>soft</em> or <em>hard</em> pinning policy.<br><a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">Learn more</a>
         </dd>
       </dl>
       <p>

@@ -78,7 +78,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 
 3. After you click **Create**, you are taken to the **Cloud Object Storage** landing page. Select **Create Bucket**.
 
-    ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 1. IBM Cloud Object Storage bucket" caption-side="bottom"}
+    <!-- ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 1. IBM Cloud Object Storage bucket" caption-side="bottom"} -->
 
 4. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms _resource instance_ and _service instance_ refer to the same concept, and can be used interchangeably.
 
@@ -94,7 +94,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-  ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 2. Creating a Cloud Object Storage bucket" caption-side="bottom"}
+  ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
 Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
 
@@ -105,7 +105,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** pane.
 
-    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 3. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
+    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 2. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
 
 3. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
 
@@ -113,7 +113,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-  ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 4. Your new service credential" caption-side="bottom"}
+  ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 3. Your new service credential" caption-side="bottom"}
 
 To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 
@@ -135,16 +135,16 @@ Complete the following steps to provision a new instance by using a custom boot 
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
 | Storage type | **us-east (WDC04)**: Select whether you want **Standard** or **SSD** for the storage type.<br>**us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)**: Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
-| Region | Select either **us-east**, **us-south**, **eu-de**, **eu-gb** for the region.|
+| Region | Select either **us-east**, **us-south**, **eu-de**, or **eu-gb** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
 {: caption="Table 1. Importing a boot image" caption-side="bottom"}
 
-    <!-- ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"} -->
+<!-- ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"} -->
 
-1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
+3. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
     If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
     {: tip}
