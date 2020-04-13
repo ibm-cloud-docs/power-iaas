@@ -5,21 +5,23 @@ copyright:
 
 lastupdated: "2020-03-03"
 
-keywords: network interface, TCP/IP address, IBM i VM, external IP address, DNS, LIND, CFGTCP command
+keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:screen: .screen}
 {:tip: .tip}
-{:important: .important}
 {:note: .note}
-{:external: .external}
+{:preview: .preview}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # How to add or remove a network interface from an IBM i virtual machine (VM)
 {: #managing-network-interface-ibmi}
@@ -33,9 +35,9 @@ When you toggle a public network off and then on, the IBM Cloud console regenera
 ## Removing a network interface from an IBM i VM
 {: #remove-nic-ibmi}
 
-Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface (TCP/IP address). For a complete set of instructions, see [Changing the TCP/IP Address of the IBM System i System](https://www.ibm.com/support/pages/changing-tcpip-address-ibm-system-i-system){: new_window}{: external}.
+Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface. For a complete set of instructions, see [Changing the TCP/IP Address of the IBM System i System](https://www.ibm.com/support/pages/changing-tcpip-address-ibm-system-i-system){: new_window}{: external}.
 
-1. Before you change a TCP/IP address (interface), determine whether it has any associated routes. Choose **Option 8** from the **NETSTAT \*IFC** screen.
+1. Before you change a TCP/IP address, determine whether it has any associated routes. Choose **Option 8** from the **NETSTAT \*IFC** screen.
 
     It's a good idea to select **Option 5** to display the details of the route. Remember to press **F6** to print the details for reference for when the route must be readded. This step should be done for all of the **non-\*DIRECT** routes that are listed on the screen.
     {: tip}

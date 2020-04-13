@@ -34,6 +34,9 @@ Infrastructure provides virtual LAN (VLAN) isolation between different tenants, 
 The public {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
+There are plans to add the ability to dynamically configure the firewall rules in the future.
+{: note}
+
 * 22 (SSH)
 * 443 (HTTPS)
 * 992 (IBM i5250 emulation SSL)
@@ -49,7 +52,4 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 * 9475
 * 9476
 
-If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can *manually* open the port for you.
-
-There are plans to add the ability to dynamically configure the firewall rules in the future.
-{: note}
+If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can **manually** open ports for you.

@@ -50,7 +50,7 @@ Before you create your first Power Systems Virtual Server instance, review the f
 
 4. _(Optional)_ If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#steps-to-order-direct-link-connect) service.
 
-    You cannot create a private network during the VM provisioning process. You must first go to the **Networks** tab.
+    You cannot create a private network during the VM provisioning process. You must first go to **Subnets**.
     {: important}
 
 5. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} service.
