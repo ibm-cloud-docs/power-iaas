@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-3-19"
+lastupdated: "2020-4-10"
 
-keywords: use case, application hosting, enterprise-level workload, bursting, scaling, Db2 workloads
+keywords: use case, application hosting, enterprise-level workload, bursting, scaling, db2 workloads
 
 subcollection: power-iaas
 
@@ -31,25 +31,25 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 ## Client needs
 {: #use-case-app-needs}
 
-* Traditional cloud value
-* Modernize core business by using the {{site.data.keyword.cloud_notm}} portfolio
-* Flexible option to bursting and scaling their on-premises environment or to host temporary capacity
-* Interested in or have an evolving strategy for a consumption-based option
-* Looking to move away from operating a data center
+- Traditional cloud value
+- Modernize core business by using the {{site.data.keyword.cloud_notm}} portfolio
+- Flexible option to bursting and scaling their on-premises environment or to host temporary capacity
+- Interested in or have an evolving strategy for a consumption-based option
+- Looking to move away from operating a data center
 
 ## Examples
 {: #use-case-app-examples}
 
-* Oracle&copy; and Db2 Workloads
-* Custom Enterprise applications
-* Modernization and extending the value of their enterprise systems with {{site.data.keyword.cloud_notm}} native applications
-* Customer acquiring a business and needs the temporary capacity while moving or merging multiple data centers
+- Oracle&copy; and Db2 Workloads
+- Custom Enterprise applications
+- Modernization and extending the value of their enterprise systems with {{site.data.keyword.cloud_notm}} native applications
+- Customer acquiring a business and needs the temporary capacity while moving or merging multiple data centers
 
 ## Solution components
 {: #use-case-app-solutions}
 
-* {{site.data.keyword.powerSysFull}}
-* PowerHA (optional)
-* Mass data migration
-* Direct Link and Direct Link Dedicated for on-premises connectivity
-* Cloud Object Storage for optional backup and custom image hosting
+- {{site.data.keyword.powerSysFull}}
+- PowerHA *(optional)*
+- Mass data migration (MDM)
+- Direct Link and Direct Link Dedicated for on-premises connectivity
+- Cloud Object Storage for optional backup and custom image hosting

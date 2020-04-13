@@ -210,7 +210,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>64999</td>
       </tr>
       <tr>
-        <td>Frankfurt 1<br/>Frankfurt 2</td>
+        <td>Frankfurt 4<br/>Frankfurt 5</td>
         <td>64999</td>
       </tr>
       <tr>

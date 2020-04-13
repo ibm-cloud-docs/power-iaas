@@ -27,4 +27,4 @@ subcollection: power-iaas
 # Snapshotting, cloning and restoring a volume
 {: #volume-snapshot-clone}
 
-Enter text here.
+

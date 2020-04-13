@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-17"
+lastupdated: "2020-04-10"
 
-keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling VM, public network, NIC, affinity
+keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
 subcollection: power-iaas
 
@@ -18,11 +18,10 @@ subcollection: power-iaas
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:preview: .preview}
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
 
 # Modifying a Power Systems Virtual Server instance
 {: #modifying-server}
@@ -41,12 +40,12 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
     ![Finding your server details](./images/console-server-details.png "Finding your server details"){: caption="Figure 1. Finding your server details" caption-side="bottom"}
 
-3. After you click the **Edit** icon, a menu appears. Use the toggles to change your instance's **Entitled capacity** and **Memory (GB)**. Click **Next.**
+3. After you click the **Edit** icon, a menu appears. Use the toggles to change your instance's **Entitled capacity**,  **Profile**, and change **VM pinning** if wanted. Click **Next.**
 
     If the VM is inactive, you can change the processor type to **Dedicated processor**, **Uncapped shared processor** or **Capped shared processor** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amounts are double.
     {: tip}
 
-    ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"}
+    <!-- ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"} -->
 
 4. Check the service agreement box and click **Order** to complete the instance modification process and accept the price.
 
@@ -55,7 +54,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types in the **us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)** regions.
+Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types.
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
@@ -71,7 +70,7 @@ Learn how to add new storage volumes and modify existing ones. Currently, you ca
 
 To attach or detach one or more volumes, click **Manage existing volumes**. Select your wanted volumes and click **Finish**. To simply change the boot status of a volume, click the **Bootable** toggle.
 
-![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"}
+<!-- ![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"} -->
 
 ### Resizing a storage volume
 {: #resizing-volume}
@@ -89,7 +88,7 @@ Resizing is not immediately available after you deploy a VM.
 
 3. After you click the **Edit** icon, a menu appears. Select your wanted storage volume size. You can only increase the size of the storage volume.
 
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 5. Modifying your storage volume" caption-side="bottom"}
+    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 2. Modifying your storage volume" caption-side="bottom"}
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
@@ -98,9 +97,9 @@ Resizing is not immediately available after you deploy a VM.
 ## Adding or removing a public network
 {: #adding-removing-network}
 
-You can remove or add a public network by clicking the **Public networks** toggle. When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
+You can remove or add a public network by clicking the **Public networks** toggle in your **Virtaul server** tab. When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information on how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
-![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"}
+<!-- ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"} -->

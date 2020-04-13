@@ -27,7 +27,7 @@ subcollection: power-iaas
 The [General Data Protection Regulation](https://www.eugdpr.org){: new_window}{: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}
 
-With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in {{site.data.keyword.IBM}}'s wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
+With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in IBM's wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
 
 <!-- ## Physical and environmental security measures
 {: #security-measures}
@@ -49,7 +49,7 @@ The {{site.data.keyword.powerSys_notm}} operations and support staff have access
 ## Online retention of client data
 {: #data-retention}
 
-Client data is retained during the client's use of the service (that is, until the client's contract termination or expiration) by default. Additionally, clients can define shorter retention periods for some of their data within the service to align with their own data organizational retention policies. All client data is removed from the online service **1 business day** after the client's contract termination or expiration.
+Client data is retained during the client's use of the service (that is, until the client's contract termination or expiration) by default. Additionally, clients can define shorter retention periods for some of their data within the service to align with their own organizational retention policies. All client data is removed from the online service **1 business day** after the client's contract termination or expiration.
 
 ## Backup retention of client data
 {: #backup-retention}
