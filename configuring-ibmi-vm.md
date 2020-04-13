@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-24"
+lastupdated: "2020-04-13"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -32,7 +32,7 @@ You can assign up to 127 storage volumes to an IBM i VM.
 {: note}
 
 ## Tips for working with the IBM i terminal
-{: #tips-ibmi}
+{: #tips-ibmi}f
 
 - The standard IBM i user is `QSECOFR/QSECOFR`.
 - IBM i uses function keys extensively. At the bottom of the terminal, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.
@@ -46,7 +46,7 @@ You can assign up to 127 storage volumes to an IBM i VM.
 ## Licenses and configuring your network
 {: #license-network}
 
-You must install the minimum program temporary fix (PTFs) level on your IBM i VM. For more information, see [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
+You must install the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels) on your IBM i VM.
 
 After you deploy an IBM i VM and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display each license agreement. Click **Next...** and **PF15** to show more items. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
 
@@ -66,7 +66,7 @@ Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected t
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST, and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and be done if other disks are attached.
+By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
 ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 3. Changing the system value" caption-side="bottom"}
 
