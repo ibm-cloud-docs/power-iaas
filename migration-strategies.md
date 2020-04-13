@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-keywords: migration strategies, ICOS, mass data migration, MDM, PowerVC, backup and restore, replication, Aspera, mksysb
+keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb
 
 subcollection: power-iaas
 
@@ -84,7 +84,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 ## Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party}
@@ -149,6 +149,9 @@ Learn about migration strategies that are specific to IBM i systems.
 {: #ibmi-brms-icc}
 
 Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, ICOS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including ICOS.
+
+The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
+{: note}
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
