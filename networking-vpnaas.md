@@ -50,9 +50,9 @@ To request and configure your VPN, complete the following steps:
 The {{site.data.keyword.powerSys_notm}} VPNaaS offering is in **beta**. You must open a support ticket to activate this offering. The official VPNaaS release will include user interface (UI) and command-line interface (CLI) support.
 {: preview}
 
-1. You can use VPNaaS with your existing VSIs and private networks. If you haven't created at least one VSI or private network, see [Creating a Power Systems Virtual Server](/docs/infrastructure/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/infrastructure/power-iaas?topic=power-iaas-configuring-subnet).
+1. You can use VPNaaS with your existing VSIs and private networks. If you haven't created at least one VSI or private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
-2. Open a support ticket against the {{site.data.keyword.powerSys_notm}} service to request a VPN connection. Follow the support ticket process that is described at [Getting help and support](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
+2. Open a support ticket against the {{site.data.keyword.powerSys_notm}} service to request a VPN connection. Follow the support ticket process that is described at [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 3. In the subject field of the support ticket, enter the following (replacing the location with your own):
 
