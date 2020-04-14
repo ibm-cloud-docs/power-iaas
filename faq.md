@@ -244,3 +244,9 @@ You can find self-certification and listing information on the [IBM Global Solut
 {: faq}
 
 You can delete the service by clicking the overflow menu in the **Virtual server instances** page and selecting **Delete service**. To delete an instance, click the trash icon after you select the wanted instance.
+
+## How do I open a support ticket for the Power Systems Virtual Server service?
+{: #support-ticket}
+{: faq}
+
+To open a support ticket, see [Getting help and support](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
