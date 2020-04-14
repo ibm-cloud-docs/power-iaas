@@ -40,6 +40,9 @@ ICOS can be used as an intermediary location to store files from your on-premise
 
 MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
 
+The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
+{: note}
+
 ## PowerVC images and ICOS
 {: #migration-powervc-icos}
 
@@ -149,9 +152,6 @@ Learn about migration strategies that are specific to IBM i systems.
 {: #ibmi-brms-icc}
 
 Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, ICOS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including ICOS.
-
-The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
-{: note}
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
