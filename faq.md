@@ -3,8 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-07"
-
+lastupdated: "2020-04-09"
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning
 
 subcollection: power-iaas
@@ -20,6 +19,7 @@ subcollection: power-iaas
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
+{:preview: .preview}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:support: data-reuse='support'}
@@ -54,9 +54,10 @@ The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-ME) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
+- [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
 ## Can I use my own AIX or IBM i image?
@@ -132,6 +133,9 @@ To migrate your VM from one data center to another, you must capture and export 
 {: faq}
 
 You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+
+VM pinning is currently available in all data centers except for *WDC* or *FRA04*.
+{: preview}
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}

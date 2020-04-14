@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-09"
+lastupdated: "2020-04-13"
 
-keywords: ibm i, network intsall server, PTFs
+keywords: ibm i, network intsall server, volume_list
 
 subcollection: power-iaas
 
@@ -38,18 +38,18 @@ The image catalog that is used must have an image catalog path name that is limi
 {: note}
 
 - A volume list has the following characteristics:
-    - Must be called `VOLUME_LIST`
-    - Each line is either an image file name or a comment
     - ASCII format
-    - All entries are ended by the end of a line
-    - All characters following the number sign '#' are considered comments until the end of the line
-    - Comments can be added after *#* and must be followed by a EOL character
-    - Provides the order that the image files will be processed on the client system
+    - Must be called `VOLUME_LIST`
     - File names are limited to 127 characters
-    - Can be created with the **Verify Image Catalog Entry** (`VFYIMGCLG`) with the `NFSSHR(*YES)` parameter or manually by using an ASCII editor
     - No tabs or line feeds can be used in the path name
+    - Each line is either an image file name or a comment
+    - All entries are ended by the end of a line
+    - Provides the order that the image files will be processed on the client system
+    - All characters following the number sign (*#*) are considered comments until the end of the line
+    - Comments can be added after the number sign (*#*) and must be followed by an end of line (EOL) character
+    - Can be created with the `VFYIMGCLG` command and `NFSSHR(*YES)` parameter or manually by using an ASCII editor
 
-Changes to `VOLUME_LIST` file are not active until the next time the client device is varied off and on.
+Changes to the `VOLUME_LIST` file are not active until the next time the client device is varied off and on.
 {: tip}
 
 **Configuration**

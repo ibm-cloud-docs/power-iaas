@@ -113,6 +113,7 @@ If one of your NICs does not contain an IPv6 address, continue on to the next se
     {: codeblock}
 
 If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+{: tip}
 
 ## Recovering from a missing IPv6 address when using your own boot image
 {: #recover-ipv6-own}

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-08"
 
-keywords: MDM, storage pool, mount command, PowerVM
+keywords: mdm, storage pool, mount command, powervm
 
 subcollection: power-iaas
 

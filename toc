@@ -40,6 +40,7 @@ IBM Power Systems Virtual Servers
         capturing-exporting-vm.md
         importing-boot-image.md
         downloading-fixes.md
+        volume-snapshot-clone.md
 
     {: .topicgroup}
     Networking
@@ -49,7 +50,6 @@ IBM Power Systems Virtual Servers
         connecting-networks.md
         network-security.md
         network-architecture.md
-        networking-vpnaas.md
 
     {: .topicgroup}
     AIX

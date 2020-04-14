@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-01-27"
+lastupdated: "2020-04-10"
 
-keywords: migration strategies, ICOS, mass data migration, MDM, PowerVC, backup and restore, replication, Aspera, mksysb
+keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb
 
 subcollection: power-iaas
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Migration strategies for IBM Power Systems Virtual Servers
 {: #migration-strategies-power}
 
-Learn how to migrate your data and workloads to the {{site.data.keyword.powerSysFull}}.
+Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
 ## IBM Cloud Object Storage (ICOS)
@@ -38,7 +38,7 @@ ICOS can be used as an intermediary location to store files from your on-premise
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
-MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
+MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
 
 ## PowerVC images and ICOS
 {: #migration-powervc-icos}
@@ -47,9 +47,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 
 1. Create an OVA image on your local system.
 2. Copy the OVA image to the IBM Cloud.
-3. Deploy the OVA image and provision a new {{site.data.keyword.powerSys_notm}}.
-
-For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+3. [Deploy the OVA imamage and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image)
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -86,7 +84,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 ## Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to store (back up) and retrieve (restore) data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party}
@@ -100,7 +98,7 @@ Customers can use third-party tools to perform data migration. The following thi
 ## IBM teams and managed services
 {: #teams-managed-services}
 
-You can engage IBM teams and services to assist you throughout the migration lifecycle. For more information, contact your IBM representatives:
+You can engage IBM teams and services to assist you throughout the migration lifecycle.
 
 - [IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: new_window}{: external}
 - [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: new_window}{: external}
@@ -124,7 +122,7 @@ For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtu
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
 
-GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
+GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
 
 - [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: new_window}{: external}
 - [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: new_window}{: external}
@@ -152,26 +150,28 @@ Learn about migration strategies that are specific to IBM i systems.
 
 Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, ICOS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including ICOS.
 
+The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
+{: note}
+
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
 1. Create your IBM i VM in the IBM Cloud.
-1. Create a virtual tape and *IMGCLG* on the deployed VM.
-1. Create a virtual tape and *IMGCLG* on the on-premises system.
-   1. Perform an operating system save by performing the following operation, `GO LICPGM Option 40`.
-1. Transfer or FTP the images to the IBM Cloud.
+2. Create a virtual tape and *IMGCLG* on the deployed VM.
+3. Create a virtual tape and *IMGCLG* on the on-premises system and perform an operating system save by entering, `GO LICPGM Option 40`.
+4. Transfer or FTP the images to the IBM Cloud.
 
     You can accomplish the transfer by using some of the listed migration strategies (MDM, ICOS, Aspera, etc.).
     {: important}
 
-1. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
-1. Migrate your remaining data.
+5. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
+6. Migrate your remaining data.
 
 For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}.
 
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-rep-glvm}
 
-GeoMirroring enables IBM i disk mirroring technology to multiple system environments and supports host-based and logical replication across geographically distant sites. Geomirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. For more information, see the following links:
+GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geomirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
 
 - [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: new_window}{: external}
 - [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: new_window}{: external}

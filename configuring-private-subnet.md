@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-01-28"
+lastupdated: "2020-04-13"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
@@ -29,10 +29,8 @@ subcollection: power-iaas
 {: help}
 {: support}
 
-You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **Name** and specify a **Classless inter-domain routing (CIDR)**. When you specify a CIDR, the **Gateway**, **IP range**, and **DNS server** are automatically populated.
+You can configure a private network subnet when you create a {{site.data.keyword.powerSysFull}}. You must give your subnet a **Name** and specify a **Classless inter-domain routing (CIDR)**. When you specify a CIDR, the **Gateway**, **IP range**, and **DNS server** are automatically populated. You must use CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
 {: shortdesc}
-
-You must use CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: new_window}{: external}.
 
 ```shell
 <IPv4 address>/number>
@@ -41,7 +39,7 @@ You must use CIDR notation when you choose the IP ranges for your private networ
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1-bits).
 
-The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the WDC04 colo. The subnet address and subnet broadcast address are reserved in both colos.
+The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* colo. The subnet address and subnet broadcast address are reserved in both colos.
 {: important}
 
 To create a new subnet, complete the following steps:
@@ -58,7 +56,7 @@ To create a new subnet, complete the following steps:
 
   ![Configuring a new subnet](./images/console-configure-private-network.png "Configuring a new subnet"){: caption="Figure 1. Configuring a new subnet" caption-side="bottom"}
 
-A **DNS server** value of `9.9.9.9` might not be reachable if you do not have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
+A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
 You can also create and configure a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
 
@@ -83,7 +81,7 @@ You must not use an IP range outside of the ranges that are defined by [RFC 1918
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (DAL13 and FRA04)
+| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (non-WDC04)
 | --------------- | ---------------------------- |---------------------------
 |      /22        |        1019                  |          1021
 |      /23        |         507                  |          509
