@@ -31,8 +31,6 @@ Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powe
 
 ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 2. Snapshot and clone API use cases" caption-side="bottom"}
 
-
-
 ## Taking a snapshot
 {: #volume-snapshot}
 
