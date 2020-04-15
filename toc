@@ -40,7 +40,6 @@ IBM Power Systems Virtual Servers
         capturing-exporting-vm.md
         importing-boot-image.md
         downloading-fixes.md
-        volume-snapshot-clone.md
 
     {: .topicgroup}
     Networking
