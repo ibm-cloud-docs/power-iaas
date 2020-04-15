@@ -58,13 +58,13 @@ When you toggle a public network off and then on, the IBM Cloud console regenera
 
 When you toggle a public network off and then on, a new Virtual Ethernet Adapter (VEA) is created on your VM. You must identify the network interface that the new VLAN is associated with before reconfiguring the IP adress.
 
-1. After you toggle a public network off and then on, look up the list of networks and write down the public network VLAN ID.
+1. After you toggle a public network off and then on, look up the list of networks and write down the public network VLAN ID. To find the public network VLAN ID, see [Get a network's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-network-s-current-state-or-information){: new_window}{: external}.
 
 2. Use the `lsdev -Cc adapter` command to generate the list of adapters.
 
 3. Use either the `ifconfig -a` or `netstat -in` command to see all of the network interfaces.
 
-4. To find the network interface that has the public network VLAN ID, enter `entstat -d ent*X* | grep VLAN` (where *X* is the adapter number).
+4. To find the network interface that has the public network VLAN ID, enter `entstat -d ent X | grep VLAN` (where *X* is the adapter number).
 
 To add a network interface (for example, *en0*) and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
