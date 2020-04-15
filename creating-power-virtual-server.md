@@ -41,7 +41,7 @@ To create and configure a {{site.data.keyword.powerSysFull}}, complete the follo
 
     <!-- ![The IBM Cloud catalog](./images/catalog-search-bar.png "The IBM Cloud catalog"){: caption="Figure 1. The IBM Cloud catalog" caption-side="bottom"} -->
 
-3. Give your service a name and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to you select the appropriate region for your service:
+3. Give your service a name and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service:
 
     <!-- ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"} -->
 
@@ -78,7 +78,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 2. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the IBM Cloud console allows you to select from a group of stock images or the list of images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. To see your boot images, go to **Boot images** after you provision the instance.
 
-    If you select IBM i as the boot image, the IBM console generates a list with the following licenses: *IBM i Cloud Storage Solution*, *IBM i Power HA*, and *Rational Dev Studio for IBM i*. Adding a license increases the service's cost.
+    If you select IBM i as the boot image, the IBM Cloud console generates a list with the following licenses: *IBM i Cloud Storage Solution*, *IBM i Power HA*, and *Rational Dev Studio for IBM i*. Adding a license increases the service's cost.
     {: important}
 
 3. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
