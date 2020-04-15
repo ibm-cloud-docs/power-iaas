@@ -34,7 +34,7 @@ Before you can install or upgrade an IBM i system through the network, you must 
 - The server must be able to share virtual optical images that use version 3 or later of the Network File System (NFS).
 - A volume list (`VOLUME_LIST`) file that contains the list of images to be loaded in the virtual optical device must exist in the image catalog directory. The `VFYIMGCLG` command is used to create the volume list file from the image catalog containing the images that you want to share. The following is an example of the command, `VFYIMGCLG IMGCLG(PUBS) TYPE(*OTHER) NFSSHR(*YES)`.
 
-The image catalog that is used must have an image catalog path name that is limited to 127 characters. Path name characters are limited to A-Z, a-z, 0-9, and / (slash). Each image file name is limited to 127 characters.
+The image catalog that is used must have an image catalog path name that is limited to 127 characters. Path name characters are limited to **A-Z**, ****a-z**, **0-9**, and **slash (/)**. Each image file name is limited to 127 characters.
 {: note}
 
 - A volume list has the following characteristics:

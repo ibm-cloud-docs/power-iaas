@@ -32,7 +32,7 @@ You can assign up to 127 storage volumes to an IBM i VM.
 {: note}
 
 ## Tips for working with the IBM i terminal
-{: #tips-ibmi}f
+{: #tips-ibmi}
 
 - The standard IBM i user is `QSECOFR/QSECOFR`.
 - IBM i uses function keys extensively. At the bottom of the terminal, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.

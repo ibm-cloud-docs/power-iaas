@@ -57,7 +57,7 @@ The {{site.data.keyword.powerSys_notm}} VPNaaS offering is in **beta**. You must
 3. In the subject field of the support ticket, enter the following (replacing the location with your own):
 
     Power Systems Virtual Server VPNaaS Beta Setup - Location: FRA04
-    {: screen}
+    {: codeblock}
 
 4. In the support ticket description field, provide the following information for your network:
 
