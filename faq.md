@@ -249,4 +249,4 @@ You can delete the service by clicking the overflow menu in the **Virtual server
 {: #support-ticket}
 {: faq}
 
-To open a support ticket, see [Getting help and support](/docs/infrastructure/power-iaas?topic=power-iaas-getting-help-and-support).
+To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

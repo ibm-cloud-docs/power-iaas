@@ -48,6 +48,7 @@ IBM Power Systems Virtual Servers
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
+        networking-vpnaas.md
         network-security.md
         network-architecture.md
 

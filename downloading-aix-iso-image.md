@@ -66,7 +66,7 @@ AIX installation DVDs are delivered as ISO image files, while other installation
 
 After you download an AIX installation DVD as an ISO image, you must copy the image to an existing AIX VM's file system. To copy the image, you must use Secure Copy Protocol (SCP). SCP is a protocol for securely transferring files between a local and a remote host or between two remote hosts.
 
-1. Copy the ISO image to an existing AIX VM's file system by using the [`scp`](https://www.ibm.com/support/knowledgecenter/ST5Q4U_1.5.2/com.ibm.storwize.v7000.unified.152.doc/usgr_usng_scp.html){: external} command.
+1. Copy the ISO image to an existing AIX VM's file system by using the [`scp`](https://www.ibm.com/support/knowledgecenter/ST5Q4U_1.5.2/com.ibm.storwize.v7000.unified.152.doc/usgr_usng_scp.html){: new_window}{: external} command.
 
     The `scp` command does not work unless you are on a public network.
     {: important}
@@ -76,18 +76,13 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
     ```
     {: codeblock}
 
-2. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: external} command to make the ISO image available as a file system by using the loopback device.
+2. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: new_window}{: external} command to make the ISO image available as a file system by using the loopback device.
 
     ```
     loopmount {-i imagefile | -l device}[-o mount options -m mountpoint]
     ```
     {: codeblock}
 
-3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html) command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd _path_  _software_to_install_`.
-
-    ```
-    installp [-R _path_] [-a |-a -c [-N]] [-_eLogFile_] [-V _Number_  [-_dDevice_] [-E] [-Y] [-b] [-S] [-B] [-D] [-I] [-p] [-Q] [-q] [ -v] [-X] [-F | -g] [-O { [r] [s] [u]}] [-t _SaveDirectory_ ] [-w] [-_zBlockSize_] { _FilesetName_ [_Level_]... | -f _ListFile_ | all}
-      ```
-    {: codeblock}
+3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html){: new_window}{: external} command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd path software_to_install`.
 
 4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line.

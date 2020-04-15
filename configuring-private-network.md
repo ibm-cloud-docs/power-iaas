@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-08"
 
-keywords: configuring network, direct link connectivity, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
+keywords: connectivity, configuring network, direct link, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
 
 subcollection: power-iaas
 
@@ -18,23 +18,24 @@ subcollection: power-iaas
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:preview: .preview}
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Configuring IBM Power Systems Virtual Servers
+# Configuring connectivity to IBM Power Systems Virtual Servers
 {: #configuring-power}
 
 You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
 {: shortdesc}
 
-To connect directly to the IBM Cloud Power infrastructure, see [Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services](#connecting-megaport).
+To connect directly to the IBM Cloud Power environment, see [Connecting directly to the IBM Cloud Power environment by using Megaport connectivity services](#connecting-megaport).
 {: note}
 
-## Connecting to the IBM Cloud classic infrastructure
+## Connecting to the IBM Cloud classic environment
 {: #connecting-classic}
 
-You can use one of the following options to connect to the IBM Cloud classic infrastructure. You can then use a secondary Direct Link connection to access the IBM Cloud Power infrastructure. Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
+You can use one of the following options to connect to the IBM Cloud classic environment. You can then use a secondary Direct Link connection to access the IBM Cloud Power environment. Your Power private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
 
 You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you create a new network.
 {: important}
@@ -58,21 +59,21 @@ You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud 
 
 **Using a Direct Link Connect connection and a VRA (customer implementation)**
 
-You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the IBM Power infrastructure from inside the IBM Cloud network For more information, see [Configuring Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link).
+You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the IBM Power environment from inside the IBM Cloud network For more information, see [Configuring Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link).
 
-## Connecting to the IBM Cloud Power infrastructure
+## Connecting to the IBM Cloud Power environment
 {: #connecting-power}
 
-After you establish a connection to the IBM Cloud classic infrastructure, you must use a separate Direct Link Connect connection to connect to the IBM Cloud Power infrastructure.
+After you establish a connection to the IBM Cloud classic environment, you must use a separate Direct Link Connect connection to connect to the IBM Cloud Power environment.
 
-* You must use [Direct Link Connect on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution) to connect to the IBM Cloud Power infrastructure.
-* This option provides high performance between the on-premises network and the IBM Cloud Power infrastructure.
+* You must use [Direct Link Connect on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution) to connect to the IBM Cloud Power environment.
+* This option provides high performance between the on-premises network and the IBM Cloud Power environment.
 * There are [specific IP addresses](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments) that you cannot use with the Direct Link Connect on Classic service.
 
-## Connecting directly to the IBM Cloud Power infrastructure by using Megaport connectivity services
+## Connecting directly to the IBM Cloud Power environment by using Megaport connectivity services
 {: #connecting-megaport}
 
-You can connect directly to the IBM Cloud Power infrastructure by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: new_window}{: external} to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against **IBM Power** to perform the network configuration. Remember to include the following pieces of information in your support ticket:
+You can connect directly to the IBM Cloud Power environment by using **IBM Cloud Power NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: new_window}{: external} to procure the connection (VxC) to **IBM Cloud Power Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against **IBM Power** to perform the network configuration. Remember to include the following pieces of information in your support ticket:
 
 ```
 Customer name and contact:

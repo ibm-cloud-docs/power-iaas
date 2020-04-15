@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-4-10"
+lastupdated: "2020-04-10"
 
 keywords: use case, application hosting, enterprise-level workload, bursting, scaling, db2 workloads
 

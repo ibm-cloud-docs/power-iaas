@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2019-4-10"
+lastupdated: "2019-04-10"
 
 keywords: use case, client needs, solution components, hybrid cloud journey, sandbox environment
 
