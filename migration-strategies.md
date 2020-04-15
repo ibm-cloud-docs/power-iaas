@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-keywords: migration strategies, ICOS, mass data migration, MDM, PowerVC, backup and restore, replication, Aspera, mksysb
+keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb
 
 subcollection: power-iaas
 
@@ -39,6 +39,9 @@ ICOS can be used as an intermediary location to store files from your on-premise
 {: #migration-mdm}
 
 MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
+
+The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
+{: note}
 
 ## PowerVC images and ICOS
 {: #migration-powervc-icos}
@@ -84,7 +87,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 ## Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party}
