@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-08"
 
-keywords: configuring network, direct link connectivity, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
+keywords: connectivity, configuring network, direct link, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
 
 subcollection: power-iaas
 
@@ -18,11 +18,12 @@ subcollection: power-iaas
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:preview: .preview}
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Configuring IBM Power Systems Virtual Servers
+# Configuring connectivity to IBM Power Systems Virtual Servers
 {: #configuring-power}
 
 You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
