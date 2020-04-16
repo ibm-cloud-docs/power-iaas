@@ -29,7 +29,7 @@ subcollection: power-iaas
 
 Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powerSysShort}} volume.
 
-![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 2. Snapshot and clone API use cases" caption-side="bottom"}
+![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
 
 ## Taking a snapshot
 {: #volume-snapshot}
