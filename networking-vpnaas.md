@@ -42,6 +42,8 @@ In short, you can use a VPN to:
 - Ensure private and low-cost connectivity to {{site.data.keyword.cloud_notm}} services.
 - Connect your cloud-based systems to services and workloads that are running on-premises.
 
+  ![Power Systems Virtual Server VPNaaS](./images/diagram-vpnaas.png "Power Systems Virtual Server VPNaaS"){: caption="Figure 1. Power Systems Virtual Server VPNaaS" caption-side="bottom"}
+
 ## VPN-as-a-service (VPNaaS)
 {: #understanding-vpn}
 
