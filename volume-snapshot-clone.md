@@ -29,7 +29,7 @@ subcollection: power-iaas
 
 Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powerSysShort}} volume.
 
-**Insert text here (Ravi)**
+**Insert comments here (Ravi)**
 
 ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
 
@@ -87,7 +87,7 @@ While performing a VM restore operation, you must ensure that you've quiesced al
 
 **Best practices**
 
-**Insert comments here(Chhavi)**
+**Insert comments here (Chhavi)**
 
 **Prerequisites**
 

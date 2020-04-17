@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Troubleshooting snapshot, clone and restore issues
-{: #troubleshoot-iaas-aix}
+{: #troubleshoot-iaas-snapshot}
 
 Learn how to troubleshoot {{site.data.keyword.powerSysShort}} snapshot, clone and restore issues.
 {: shortdesc}
@@ -47,4 +47,4 @@ To resolve this issue, enter the following commands:
 2. `recreatevg -y copyvg hdisk2`
 3. `mount /fs/<original-mount-point>`
 
-In this example, `hdisk2` refers to the cloned volume name and `copyvg` is the name to be given to the newly created volume group. The `recreatevg` command creates a new file system with the same name as the original but in the `/fs` path. For more information, see section B under [Possible Cause and Solution 2: The Disks Are Copies of Each Other](https://www.ibm.com/support/pages/resolving-lvm-and-hard-disk-pvid-issues){: new_window}{: external}.
+In this example, `hdisk2` refers to the cloned volume name and `copyvg` is the name to be given to the newly created volume group. The `recreatevg` command creates a new file system with the same name as the original but in the `/fs` path. For more information, see "Section B" under [Possible Cause and Solution 2: The Disks Are Copies of Each Other](https://www.ibm.com/support/pages/resolving-lvm-and-hard-disk-pvid-issues){: new_window}{: external}.
