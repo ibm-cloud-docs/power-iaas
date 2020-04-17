@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-04-17"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
 
@@ -84,7 +84,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-1}
-{: tab-title="Washington D.C. (WDC04)"}
+{: tab-title="Washington, D.C. (WDC04)"}
 
 | Management | Compute  | Storage   | Network   |
 | ---------  |--------- | --------- | --------- |
@@ -93,14 +93,14 @@ If you'd like to compare your current environment's performance to what's availa
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
 {: #hw-spec-2}
-{: tab-title="DAL13"}
+{: tab-title="Dallas (DAL13)"}
 
 | Management | Compute  | Storage   | Network   |
 | ---------  |--------- | --------- | --------- |
 |<ul><li>11 x HMC 7063-CR1 (POWER8)</li><li>2 x Power s922 (9009-22A) (20 x POWER9 cores + 1024 GB memory)</li></ul> | <ul><li>2 x Power E980 (9080-M9S)</li><li>50 x Power s922 (9009-22A)</li></ul> | <ul><li>2 x Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>1 x Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>6 x IBM SAN64B-6 (Brocade) </li><li>2 x IBM SAN256B-6 (Brocade)</li><li>4 x IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>2 x Cisco Nexus9000 N9K-C9364C  (Spine 10G)</li><li>6 x Cisco Nexus9000  9348GC-FXP  (Leaf 1G) </li><li>10 x Cisco Nexus9000 93180YC-FX   (Leaf 25G)</li><li>3 x  Cisco UCS - APIC controller</li><li>2 x Cisco ASR1001-HX Router</li><li>1 x Avocent ACS8032DAC-400</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 3. Hardware overview (Frankfurt, Germany and London, UK)" caption-side="top"}
+{: caption="Table 3. Hardware overview (Frankfurt, Germany, and London, United Kingdom)" caption-side="top"}
 {: #hw-spec-3}
 {: tab-title="Frankfurt and London (FRA04/FRA05/LON06)"}
 
