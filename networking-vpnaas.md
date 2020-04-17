@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-04-17"
 
 keywords: network vpnaas, ipsec, internet key exchange, juniper, cisco, strongswan
 
@@ -23,8 +23,8 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Understanding virtual private networks (VPNs)
-{: #understanding-vpn}
+# Understanding VPN-as-a-service (VPNaaS) for Power Systems Virtual Servers
+{: #understanding-vpnaas}
 
 With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (that was created within a {{site.data.keyword.powerSys_notm}} VPN gateway.
 {: shortdesc}
@@ -44,8 +44,8 @@ In short, you can use a VPN to:
 
   ![Power Systems Virtual Server VPNaaS](./images/diagram-vpnaas.png "Power Systems Virtual Server VPNaaS"){: caption="Figure 1. Power Systems Virtual Server VPNaaS" caption-side="bottom"}
 
-## VPN-as-a-service (VPNaaS)
-{: #understanding-vpn}
+## Requesting and configuring VPNaaS
+{: #understanding-vpnaas}
 
 To request and configure your VPN, complete the following steps:
 
