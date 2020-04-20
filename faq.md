@@ -86,6 +86,12 @@ The storage types vary by region and cannot be changed once the volume is create
 The boot image storage type is predefined and cannot be chosen.
 {: note}
 
+## How do I extend my AIX rootvg?
+{: #rootvg}
+{: faq}
+
+By default, the system deployes 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/nl/ssw_aix_72/e_commands/extendvg.html){: new_window}{: external} command to add a physical volume.
+
 ## What's the difference between capped and uncapped shared processor performance? How do they compare to dedicated processor performance?
 {: #processor}
 {: faq}
