@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Understanding VPN-as-a-service (VPNaaS) for Power Systems Virtual Servers
+# Understanding VPN-as-a-service (VPNaaS) for Power Systems Virtual Servers (beta)
 {: #understanding-vpnaas}
 
 With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (that was created within a {{site.data.keyword.powerSys_notm}} VPN gateway.
