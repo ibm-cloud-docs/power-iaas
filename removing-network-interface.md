@@ -58,6 +58,9 @@ When you toggle a public network off and then on, the IBM Cloud console regenera
 
 When you toggle a public network off and then on, a new Virtual Ethernet Adapter (VEA) is created on your VM. You must identify the network interface that the new VLAN is associated with before reconfiguring the IP adress.
 
+Every time you toggle a public network off and then on, the system creates multiple network interfaces. As a result, the `ifconfig -a` command will show several unused network interfaces after toggling the public network.
+{: note}
+
 1. After you toggle a public network off and then on, look up the list of networks and write down the public network VLAN ID. To find the public network VLAN ID, see [Get a network's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-network-s-current-state-or-information){: new_window}{: external}.
 
 2. Use the `lsdev -Cc adapter` command to generate the list of adapters.
