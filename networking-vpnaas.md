@@ -73,8 +73,13 @@ The {{site.data.keyword.powerSys_notm}} VPNaaS offering is in **beta**. You must
     1. **Power VS Gateway IP**
     2. **Power VS IPsec Policy**
     3. **Shared secret key (provided to the authorized recipient)**
+    4. **Local Identity IP**
+    5. **Remote Identity IP**
+    6. **GRE Tunnel IP**
+    7. **GRE Tunnel Source IP (Loop back IP configured in your firewall)**
+    8. **GRE Tunnel Destination IP**
 
-6. The {{site.data.keyword.powerSys_notm}} team configures routes to reach your on-premises subnets, thus making your {{site.data.keyword.powerSys_notm}} reachable from the on-premises assets using the VPNaaS service.
+6. The {{site.data.keyword.powerSys_notm}} team configures routes to reach your on-premises subnets, thus making your {{site.data.keyword.powerSys_notm}} reachable from the on-premises assets that are using the VPNaaS service.
 
 7. The {{site.data.keyword.powerSys_notm}} team tests connectivity and provides the results in the original support ticket.
 

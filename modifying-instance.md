@@ -79,7 +79,7 @@ If you'd like to attach or detach a volume, click **Manage existing volumes** an
 
 You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
 
-Resizing is not immediately available after you deploy a VM.
+Resizing is not immediately available after you deploy a VM. Also, you cannot resize a volume that has a snapshot associated with it.
 {: important}
 
 1. Go to the IBM Cloud console and click **Storage volumes**.
