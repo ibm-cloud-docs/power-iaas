@@ -77,27 +77,27 @@ If you'd like to compare your current environment's performance to what's availa
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
 * [IBM Power System E980 (9080-M9S) - Frankfurt only](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
-| Management | Compute  | Storage   | Network   |
-| ---------  |--------- | --------- | --------- |
-|<ul><li>1 x HMC 7063-CR1 (POWER8)</li><li>2 x IBM 821LC (1 CPU + 128 GB memory)</li><li>2 x Power s822 (24 x POWER8 cores + 1 TB memory)</li></ul> | <ul><li>2 x Power e880 (9080-MHE)</li><li>8 x Power s922 (9009-22A)</li></ul> |<ul><li>1 x Storwize V7000F(2076-AF6) dual controller</li><li>1 x Storwize V7000 (2076-624) dual controller </li><li>2 x IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>4 x Cisco Nexus9000 93180YC-EX (10G)</li><li>2 x Cisco Nexus9000 C9348GC-FXP (1G)</li><li>1 x Avocent ACS8048</li></ul> |
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller </li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-1}
 {: tab-title="Washington, D.C. (WDC04)"}
 
-| Management | Compute  | Storage   | Network   |
-| ---------  |--------- | --------- | --------- |
-|<ul><li>2 x HMC 7063-CR1 (POWER8)</li><li>2 x IBM 821LC (1CPU +  128 GB memory)</li><li>2 x Power s922 (9009-22A) (20 x POWER9 cores + 384 GB memory)</li></ul> | <ul><li>2 x Power e880 (9080-MHE)</li><li>16 x Power s922 (9009-22A)</li></ul> | <ul><li>2 x Storwize V7000F(2076-AF6) dual controller</li><li>2 x Storwize V7000 (2076-624) dual controller</li><li>2 x Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>1 x Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>4 x IBM SAN64B-6 (Brocade)</li><li>2 x IBM SAN256B-6 (Brocade)</li></ul> | <ul><li>2 x Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>6 x Cisco Nexus9000 C93180YC  (10G)</li><li>4 x Cisco Nexus9000 C93108TC-EX (1G)</li><li>3 x  Cisco UCS - APIC controller</li><li>2 x Cisco ASR1001-HX Router</li><li>1 x Avocent ACS8016</li></ul> |
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller</li><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
 {: #hw-spec-2}
 {: tab-title="Dallas (DAL13)"}
 
-| Management | Compute  | Storage   | Network   |
-| ---------  |--------- | --------- | --------- |
-|<ul><li>11 x HMC 7063-CR1 (POWER8)</li><li>2 x Power s922 (9009-22A) (20 x POWER9 cores + 1024 GB memory)</li></ul> | <ul><li>2 x Power E980 (9080-M9S)</li><li>50 x Power s922 (9009-22A)</li></ul> | <ul><li>2 x Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>1 x Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>6 x IBM SAN64B-6 (Brocade) </li><li>2 x IBM SAN256B-6 (Brocade)</li><li>4 x IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>2 x Cisco Nexus9000 N9K-C9364C  (Spine 10G)</li><li>6 x Cisco Nexus9000  9348GC-FXP  (Leaf 1G) </li><li>10 x Cisco Nexus9000 93180YC-FX   (Leaf 25G)</li><li>3 x  Cisco UCS - APIC controller</li><li>2 x Cisco ASR1001-HX Router</li><li>1 x Avocent ACS8032DAC-400</li></ul> |
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power E980 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Frankfurt, Germany, and London, United Kingdom)" caption-side="top"}
