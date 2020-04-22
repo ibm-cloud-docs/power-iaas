@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Understanding VPN-as-a-service (VPNaaS) for Power Systems Virtual Servers (beta)
 {: #understanding-vpnaas}
 
-With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (that was created within a {{site.data.keyword.powerSys_notm}}) VPN gateway).
+With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (the {{site.data.keyword.powerSys_notm}}) VPN gateway is pre-creatd and shares the necessary IPs).
 {: shortdesc}
 
 The {{site.data.keyword.powerSys_notm}} infrastructure consists of subnets and virtual server instances (VSIs). The {{site.data.keyword.powerSys_notm}} VPN gateway establishes an IPsec site-to-site link to an on-premises VPN gateway.
@@ -44,8 +44,8 @@ In short, you can use a VPN to:
 
 The following graphic depicts:
 
-- The IPSec tunnel end-point is in the VPN Gateway reachable from internet via IBM Cloud network.
-- Customer private networks to customer on-premises networks are routed via the IPsec tunnel.
+- The IPSec tunnel end-point is in the VPN gateway and is reachable from the internet via the IBM Cloud network.
+- Customer private networks to the customer on-premises network are routed via the IPsec tunnel.
 
   ![Power Systems Virtual Server VPNaaS](./images/diagram-vpnaas.png "Power Systems Virtual Server VPNaaS"){: caption="Figure 1. Power Systems Virtual Server VPNaaS" caption-side="bottom"}
 

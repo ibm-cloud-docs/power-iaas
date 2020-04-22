@@ -40,7 +40,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
     ![Finding your server details](./images/console-server-details.png "Finding your server details"){: caption="Figure 1. Finding your server details" caption-side="bottom"}
 
-3. A menu appears after you click the **Edit** icon. Here, you can change your instance's **Name**, **Entitled capacity**, **Memory (GB)** and **VM pinning** state.
+3. A menu appears after you click the **Edit** icon. Here, you can change your instance's **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
     If the VM is inactive, you can change the processor type to **Dedicated processor**, **Uncapped shared processor** or **Capped shared processor** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amounts are double.
     {: tip}
@@ -59,7 +59,7 @@ Learn how to add new storage volumes and modify existing ones. Currently, you ca
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
-If you'd like to attach or detach a volume, click **Manage existing volumes** and select the desired volume. You can also change the boot status of a volume by clicking the **Bootable** toggle. To add a volunme, you must complete the following steps:
+If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. You can also change the boot status of a volume by clicking the **Bootable** toggle. To add a volume, you must complete the following steps:
 
 1. Click **New volume** to add a storage volume.
 
@@ -77,16 +77,16 @@ If you'd like to attach or detach a volume, click **Manage existing volumes** an
 {: help}
 {: support}
 
-You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM.
 
-Resizing is not immediately available after you deploy a VM. Also, you cannot resize a volume that has a snapshot associated with it.
+Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
 {: important}
 
 1. Go to the IBM Cloud console and click **Storage volumes**.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-3. After you click the **Edit** icon, a menu appears. Select tne desired storage volume size. You can only increase the size of the storage volume.
+3. After you click the **Edit** icon, a menu appears. Select the wanted storage volume size. You can increase only the size of the storage volume.
 
     ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 2. Modifying your storage volume" caption-side="bottom"}
 
