@@ -42,7 +42,21 @@ In short, you can use a VPN to:
 - Ensure a dedicated private and low-cost stable alternative to internet-based connectivity to {{site.data.keyword.cloud_notm}} services.
 - Connect your IBM cloud-based systems to services and workloads that are running on-premises.
 
+The following graphic depicts:
+
+- The IPSec tunnel end-point is in the VPN Gateway reachable from internet via IBM Cloud network.
+- Customer private networks to customer on-premises networks are routed via the IPsec tunnel.
+
   ![Power Systems Virtual Server VPNaaS](./images/diagram-vpnaas.png "Power Systems Virtual Server VPNaaS"){: caption="Figure 1. Power Systems Virtual Server VPNaaS" caption-side="bottom"}
+
+Example network configuration:
+
+Customer VM Subnet1: 172.32.0.0/28   VLAN: 300
+Customer VM Subnet1: 172.10.0.0/28   VLAN: 301
+IPSec Tunnel Subnet: 100.64.64.0/30
+IPSec VPN Gateway IP: 161.100.1.50 (Public IP)
+Customer on-prem IPsec Gateway: 162.20.20.1
+{: screen}
 
 ## Requesting and configuring VPNaaS
 {: #configuring-vpnaas}
