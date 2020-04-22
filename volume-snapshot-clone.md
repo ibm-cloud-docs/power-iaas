@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-04-22"
 
 keywords: volume, snapshot, clone, restore, powervc
 
