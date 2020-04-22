@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-04-21"
 
 keywords: network vpnaas, ipsec, internet key exchange, juniper, cisco, strongswan
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Understanding VPN-as-a-service (VPNaaS) for Power Systems Virtual Servers (beta)
 {: #understanding-vpnaas}
 
-With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (that was created within a {{site.data.keyword.powerSys_notm}}) VPN gateway.
+With the {{site.data.keyword.powerSysShort}} service's virtual private network (VPN), you can connect an on-premises VPN gateway to an {{site.data.keyword.cloud}} VPN (that was created within a {{site.data.keyword.powerSys_notm}}) VPN gateway).
 {: shortdesc}
 
 The {{site.data.keyword.powerSys_notm}} infrastructure consists of subnets and virtual server instances (VSIs). The {{site.data.keyword.powerSys_notm}} VPN gateway establishes an IPsec site-to-site link to an on-premises VPN gateway.
@@ -39,13 +39,27 @@ There are many popular on-premises VPN solutions that are available for site-to-
 In short, you can use a VPN to:
 
 - Connect your on-premises systems to services and workloads that are running in the {{site.data.keyword.cloud_notm}}.
-- Ensure private and low-cost connectivity to {{site.data.keyword.cloud_notm}} services.
-- Connect your cloud-based systems to services and workloads that are running on-premises.
+- Ensure a dedicated private and low-cost stable alternative to internet-based connectivity to {{site.data.keyword.cloud_notm}} services.
+- Connect your IBM cloud-based systems to services and workloads that are running on-premises.
+
+The following graphic depicts:
+
+- The IPSec tunnel end-point is in the VPN Gateway reachable from internet via IBM Cloud network.
+- Customer private networks to customer on-premises networks are routed via the IPsec tunnel.
 
   ![Power Systems Virtual Server VPNaaS](./images/diagram-vpnaas.png "Power Systems Virtual Server VPNaaS"){: caption="Figure 1. Power Systems Virtual Server VPNaaS" caption-side="bottom"}
 
+Example network configuration:
+
+Customer VM Subnet1: 172.32.0.0/28   VLAN: 300
+Customer VM Subnet1: 172.10.0.0/28   VLAN: 301
+IPSec Tunnel Subnet: 100.64.64.0/30
+IPSec VPN Gateway IP: 161.100.1.50 (Public IP)
+Customer on-prem IPsec Gateway: 162.20.20.1
+{: screen}
+
 ## Requesting and configuring VPNaaS
-{: #understanding-vpnaas}
+{: #configuring-vpnaas}
 
 To request and configure your VPN, complete the following steps:
 
@@ -68,13 +82,18 @@ The {{site.data.keyword.powerSys_notm}} VPNaaS offering is in **beta**. You must
     3. **Subnets to be reached at your location (in CIDR notation)**
     4. **Subnets to be reached in the Power Systems Virtual Server environment (in CIDR notation)**
 
-5. The {{site.data.keyword.powerSys_notm}} side of the VPN is configured after the {{site.data.keyword.powerSys_notm}} team gets the request. After the initial configuration, the {{site.data.keyword.powerSys_notm}} sends you the following network information to complete the configuration on your network:
+5. The {{site.data.keyword.powerSys_notm}} side of the VPN is configured after the {{site.data.keyword.powerSys_notm}} team gets the request. After the initial configuration, the {{site.data.keyword.powerSys_notm}} team sends you the following network information to complete the configuration on your network:
 
     1. **Power VS Gateway IP**
     2. **Power VS IPsec Policy**
     3. **Shared secret key (provided to the authorized recipient)**
+    4. **Local Identity IP**
+    5. **Remote Identity IP**
+    6. **GRE Tunnel IP**
+    7. **GRE Tunnel Source IP (Loop back IP configured in your firewall)**
+    8. **GRE Tunnel Destination IP**
 
-6. The {{site.data.keyword.powerSys_notm}} team add routes to your on-premises subnets, making your {{site.data.keyword.powerSys_notm}} subnets reachable by using the VPN.
+6. The {{site.data.keyword.powerSys_notm}} team configures routes to reach your on-premises subnets, thus making your {{site.data.keyword.powerSys_notm}} reachable from the on-premises assets that are using the VPNaaS service.
 
 7. The {{site.data.keyword.powerSys_notm}} team tests connectivity and provides the results in the original support ticket.
 
