@@ -40,6 +40,7 @@ IBM Power Systems Virtual Servers
         capturing-exporting-vm.md
         importing-boot-image.md
         downloading-fixes.md
+        volume-snapshot-clone.md
 
     {: .topicgroup}
     Networking
@@ -47,6 +48,7 @@ IBM Power Systems Virtual Servers
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
+        networking-vpnaas.md
         network-security.md
         network-architecture.md
 
@@ -82,5 +84,6 @@ IBM Power Systems Virtual Servers
     {: .topicgroup}
     Troubleshooting
         troubleshoot-aix.md
+        troubleshoot-snapshot.md
     getting-help-and-support.md
     {: .navgroup-end}
