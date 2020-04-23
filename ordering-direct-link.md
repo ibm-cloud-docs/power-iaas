@@ -137,7 +137,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Washington, D.C., US</td>
-        <td>Washington DC 4</td>
+        <td>Washington DC 2</td>
         <td>Megaport</td>
       </tr>
       <tr>
@@ -202,7 +202,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>64999</td>
       </tr>
       <tr>
-        <td>Washington DC 4</td>
+        <td>Washington DC 2</td>
         <td>64999</td>
       </tr>
       <tr>
