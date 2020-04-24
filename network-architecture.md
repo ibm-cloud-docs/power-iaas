@@ -41,14 +41,14 @@ You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cl
 ## Private IPSec connection
 {: #private-ipsec}
 
-You can use the **IBM Cloud IPSec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance.
+You can use the **IBM Cloud IPSec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud.
 
   ![Power Systems Virtual Server private IPSec connection](./images/network-private-ipsec.png "Power Systems Virtual Server private IPSec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
 
 ## Private Direct Link connection
 {: #private-direct-link}
 
-You can use a **private Direct Link** connection to connect into your existing IBM Cloud network.
+You can use a **private Direct Link** connection to connect into your existing IBM Cloud network. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud.
 
   ![Power Systems Virtual Server private Direct Link connection](./images/network-private-direct-link.png "Power Systems Virtual Server private Direct Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
 
