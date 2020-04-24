@@ -35,20 +35,14 @@ Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFu
 
 ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
 
-To copy data from ICOS to your virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
+To copy data from ICOS to your AIX virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
 
-**AIX**
-
-Learn more about how to configure yum or pip on your AIX VM by following the links below. You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
+You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
 
 - [Configuring YUM and creating local repositories on IBM AIX](https://developer.ibm.com/technologies/systems/articles/configure-yum-on-aix/){: new_window}{: external}
 - [Python for AIX](http://www.aixtools.net/index.php/python){: new_window}{: external}
 
-**IBM i**
-
-Learn more about how to configure yum or pip on your IBM i VM by following the link below.
-
-- [Getting started with yum](https://bitbucket.org/ibmi/opensource/src/20192a55b76d99a839815f61100e427ac75cdd11/docs/yum/#markdown-header-online-install-instructions-without-acs-open-source-management-tool){: new_window}{: external}
+For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: new_window}{: external} to communicate with ICOS and transfer data.
 
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
