@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb
+keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
@@ -35,7 +35,7 @@ Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFu
 
 ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
 
-To copy a data-only volume from ICOS, you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
+To copy data from ICOS to your virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
 
 **AIX**
 
@@ -44,7 +44,7 @@ To copy a data-only volume from ICOS, you must install the [Amazon Web Services 
 
 **IBM i**
 
-[Getting started with yum](https://bitbucket.org/ibmi/opensource/src/20192a55b76d99a839815f61100e427ac75cdd11/docs/yum/#markdown-header-online-install-instructions-without-acs-open-source-management-tool){: new_window}{: external}
+- [Getting started with yum](https://bitbucket.org/ibmi/opensource/src/20192a55b76d99a839815f61100e427ac75cdd11/docs/yum/#markdown-header-online-install-instructions-without-acs-open-source-management-tool){: new_window}{: external}
 
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
