@@ -39,10 +39,14 @@ To copy data from ICOS to your virtual machine (VM), you must install the [Amazo
 
 **AIX**
 
+Learn more about how to configure yum or pip on your AIX VM by following the links below. You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
+
 - [Configuring YUM and creating local repositories on IBM AIX](https://developer.ibm.com/technologies/systems/articles/configure-yum-on-aix/){: new_window}{: external}
 - [Python for AIX](http://www.aixtools.net/index.php/python){: new_window}{: external}
 
 **IBM i**
+
+Learn more about how to configure yum or pip on your IBM i VM by following the link below.
 
 - [Getting started with yum](https://bitbucket.org/ibmi/opensource/src/20192a55b76d99a839815f61100e427ac75cdd11/docs/yum/#markdown-header-online-install-instructions-without-acs-open-source-management-tool){: new_window}{: external}
 
