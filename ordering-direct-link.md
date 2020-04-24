@@ -57,10 +57,10 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the <a href="#direct-link">configuration parameters</a> for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers who have an IBM Cloud private network in the Toronto 1 (*TOR01*), Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), and London 6 (*LON06*) data centers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
    {: note}
 
-7. Read the _Master Service Agreement_ and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
+7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
 
 8. Click **Create**. The following message is displayed when your request is submitted successfully:
 
@@ -77,7 +77,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
     ```
     Link Speed:                  1000 Mbps
-    Location:                    Washington 2
+    Location:                    Washington DC 2
     Network Provider:            MEGAPORT
     Direct Link Connect subnet:  10.254.0.24/30
     IBM Cloud IP Address:        10.254.0.25/30
@@ -132,12 +132,12 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Dallas, TX, US</td>
-        <td>Dallas 4</td>
-        <td>Megaport</td>
+        <td>Dallas 13</td>
+        <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
         <td>Washington, D.C., US</td>
-        <td>Washington 2</td>
+        <td>Washington DC 2</td>
         <td>Megaport</td>
       </tr>
       <tr>
@@ -198,11 +198,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <th>BGP ASN number</th>
       </tr>
       <tr>
-        <td>Dallas 4</td>
-        <td>64997</td>
+        <td>Dallas 13</td>
+        <td>64999</td>
       </tr>
       <tr>
-        <td>Washington 2</td>
+        <td>Washington DC 2</td>
         <td>64999</td>
       </tr>
       <tr>

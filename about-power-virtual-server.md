@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-04-17"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
 
@@ -66,36 +66,54 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power systems can host a {{site.data.keyword.powerSys_notm}}:
+The following IBM Power systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
-**Compute**
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+{: tip}
+
+**Data sheets**
 
 * [IBM Power System E880 (9119-MHE)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
 * [IBM Power System E980 (9080-M9S) - Frankfurt only](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
-**Storage**
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller </li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
+{: class="simple-tab-table"}
+{: tab-group="hardware"}
+{: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
+{: #hw-spec-1}
+{: tab-title="Washington, D.C. (WDC04)"}
 
-* Storewize V7000F(2076-AF6) Dual Controller
-* Storwize V7000 (2076-624) Dual Controller
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller</li><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+{: class="simple-tab-table"}
+{: tab-group="hardware"}
+{: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
+{: #hw-spec-2}
+{: tab-title="Dallas (DAL13)"}
 
-**Network**
-
-* Cisco Nexus9000 93180YC-EX (10G)
-* Cisco Nexus9000 C9348GC-FXP (1G)
-
-If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+| Compute  | Storage   | Network   |
+|--------- | --------- | --------- |
+|<ul><li>Power E980 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
+{: class="simple-tab-table"}
+{: tab-group="hardware"}
+{: caption="Table 3. Hardware overview (Frankfurt, Germany, and London, United Kingdom)" caption-side="top"}
+{: #hw-spec-3}
+{: tab-title="Frankfurt and London (FRA04/FRA05/LON06)"}
 
 ## Public and private networks
 {: #public-private-networks}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private network interfaces and or public network interface.
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface.
 
 **Public network**
 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
-* IBM configures the network infrastructure to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
-* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
+* IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
+* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect on Classic connection.
 * Protected by firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
@@ -104,8 +122,8 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 **Private network**
 
-* Allows the resources for your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as Bare Metal Servers, Kubernetes containers, or cloud storage.
-* Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
+* Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
+* Uses a Direct Link Connect on Classic connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
   For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).

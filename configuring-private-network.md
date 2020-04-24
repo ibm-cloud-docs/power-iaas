@@ -83,7 +83,7 @@ Service ID (VxC Identifier):
 Customer network subnet:
 Customer router IP Address:
 Power Systems Virtual Server customer network IP address:
-Power Systems Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
+Power Systems Virtual Server network ASN: 64999 for WDC04 and 64999 for DAL13
 Customer Network ASN:
 
 Customer subnets to be advertised:
@@ -96,7 +96,7 @@ Power Systems Virtual Server customer Private Network ID (3):
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSys_notm}} provides GRE tunneling to customers that are using the Frankfurt 4 (*FRA04*), Frankfurt 5 (*FRA05*), London 6 (*LON06*), and Toronto 1 (*TOR01*) data centers. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+{{site.data.keyword.powerSys_notm}} provides GRE tunneling for all locations except for Washington, D.C. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
 
 ```
 GRE Tunnel Configuration Request:
