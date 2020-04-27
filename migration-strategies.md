@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb
+keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
@@ -34,6 +34,15 @@ Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFu
 {: #migration-icos}
 
 ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
+
+To copy data from ICOS to your AIX virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
+
+You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
+
+- [Configuring YUM and creating local repositories on IBM AIX](https://developer.ibm.com/technologies/systems/articles/configure-yum-on-aix/){: new_window}{: external}
+- [Python for AIX](http://www.aixtools.net/index.php/python){: new_window}{: external}
+
+For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: new_window}{: external} to communicate with ICOS and transfer data.
 
 ## Mass Data Migration (MDM)
 {: #migration-mdm}

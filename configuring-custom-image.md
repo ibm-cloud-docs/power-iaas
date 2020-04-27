@@ -37,7 +37,7 @@ The basic steps that are involved in deploying an instance by using a custom ima
 
 1. Create the custom image.
 1. Store the image in your **Cloud Object Storage** account.
-2. Point the {{site.data.keyword.powerSys_notm}} console to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
+1. Point the {{site.data.keyword.powerSys_notm}} console to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
 
 ## Before you begin
 {: #before-you-begin-deploy}
