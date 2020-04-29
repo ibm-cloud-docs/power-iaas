@@ -245,7 +245,7 @@ IBM uses the same tools that are on an on-premises system.
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: new_window}{: external}.
 
-## How do I delete the service or a specific instance?
+## How do I delete (cancel) the service or a specific instance?
 {: #delete-service}
 {: faq}
 

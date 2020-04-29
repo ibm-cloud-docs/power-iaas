@@ -157,7 +157,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
     <td>
       Specify the machine type. The machine type that you select determines the
       number of cores and memory that is available. For more information about
-      hardware specifications, see <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en" target="_blank">E880</a>, 
+      hardware specifications, see <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en" target="_blank">E880</a>,
       <a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>, and
       <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Frankfurt only)</a>.
     </td>
