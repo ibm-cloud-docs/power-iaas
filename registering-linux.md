@@ -27,6 +27,7 @@ subcollection: power-iaas
 {: #using-linux}
 
 The {{site.data.keyword.powerSysShort}} service supports SUSE Linux Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
+{: shortdesc}
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
