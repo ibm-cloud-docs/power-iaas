@@ -30,7 +30,7 @@ Learn about popular Linux profiles when you provision a {{site.data.keyword.powe
 
 A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
 
-The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs).
+The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs):
 
 *cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
 {: tip}
