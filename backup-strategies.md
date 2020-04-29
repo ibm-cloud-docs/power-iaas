@@ -59,7 +59,7 @@ The typical IBM i customer uses the following flow to perform a backup:
 
 1. Use the 5770-ICC product to connect to COS (~2 times the disk capacity to hold the backup images).
 2. Connect to IBM's classic infrastructure by using Direct Link Connect.
-3. Create a Nginx reverse proxy. You can provision the reverse proxy from a virtual server instance (VSI) for bandwidth up to 1 GPbps. If more bandwidth is needed, you must use a bare metal server.
+3. Create a Nginx reverse proxy. You can provision the reverse proxy from an virtual server instance (x86) for bandwidth up to 1 GPbps. If more bandwidth is needed, you must use a bare metal server.
 4. Complete the back up to COS by choosing the speed and resiliency that is required.
 
 - [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: new_window}{: external}
