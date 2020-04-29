@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-27"
+lastupdated: "2020-04-29"
 
-keywords: linux, sles, compute, profiles,
+keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile
 
 subcollection: power-iaas
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
 
-A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance. In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
+A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
 
 The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs).
 
