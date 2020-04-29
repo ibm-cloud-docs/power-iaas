@@ -55,16 +55,16 @@ It's the user's responsibility to set up and maintain these environments. Rememb
 
 A common IBM i backup strategy is to use IBM® Backup, Recovery, and Media Services (BRMS) and IBM Cloud Storage Solutions (ICC). Together, these products automatically back up your LPARs to {{site.data.keyword.cos_full_notm}}. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including ICOS. In most cases, this process involves backing up to virtual tapes and image catalogs. Note, you might need extra storage for the LPAR to host the image catalogs until they are moved to ICOS.
 
+- [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: new_window}{: external}
+- [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}
+- [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external}
+
 The typical IBM i customer uses the following flow to perform a backup:
 
 1. Use the 5770-ICC product to connect to COS (~2 times the disk capacity to hold the backup images).
 2. Connect to IBM's classic infrastructure by using Direct Link Connect.
-3. Create a Nginx reverse proxy. You can provision the reverse proxy from an virtual server instance (x86) for bandwidth up to 1 GPbps. If more bandwidth is needed, you must use a bare metal server.
+3. Create a Nginx reverse proxy. You can provision the reverse proxy from a virtual server instance (x86) for bandwidth up to 1 Gbps. If more bandwidth is needed, you must use a bare metal server.
 4. Complete the back up to COS by choosing the speed and resiliency that is required.
-
-- [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: new_window}{: external}
-- [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}
-- [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external}
 
 ## Managed services and IBM Resiliency Services
 {: #managed-services}
