@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-27"
 
-keywords: network vpnaas, ipsec, internet key exchange, vpn
+keywords: vpn, connections ike, ipsec, internet key exchange, vpn, peer subnet, local subnet, gateway address
 
 subcollection: power-iaas
 

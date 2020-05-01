@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-21"
+lastupdated: "2020-04-27"
 
-keywords: network vpnaas, ipsec, internet key exchange, juniper, cisco, strongswan
+keywords: network vpnaas, ipsec, ike, juniper, cisco, vlan, strongswan
 
 subcollection: power-iaas
 
