@@ -40,7 +40,6 @@ IBM Power Systems Virtual Servers
         capturing-exporting-vm.md
         importing-boot-image.md
         downloading-fixes.md
-        volume-snapshot-clone.md
 
     {: .topicgroup}
     Networking
@@ -48,7 +47,6 @@ IBM Power Systems Virtual Servers
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
-        networking-vpnaas.md
         creating-vpn-connection.md
         network-security.md
         network-architecture.md
@@ -71,11 +69,6 @@ IBM Power Systems Virtual Servers
         removing-network-interface-ibmi.md
         ibmi-minimum-levels.md
         ibmi-license-info.md
-
-    {: .topicgroup}
-    Linux
-        registering-linux.md
-        linux-profiles.md
    {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -90,6 +83,5 @@ IBM Power Systems Virtual Servers
     {: .topicgroup}
     Troubleshooting
         troubleshoot-aix.md
-        troubleshoot-snapshot.md
     getting-help-and-support.md
     {: .navgroup-end}
