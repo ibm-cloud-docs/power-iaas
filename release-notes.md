@@ -29,6 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## 01 April 2020
 {: #april-2020}
 
+- The {{site.data.keyword.powerSys_notm}} service now offers lower latency direct connectivity to customers in all regions except for *Washington 2*. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
 - If you select IBM i as your boot image, the IBM Cloud console now generates a list with the following licenses: *IBM i Cloud Storage Solution*, *IBM i Power HA*, and *Rational Dev Studio for IBM i*. Adding a license increases the service's cost.
 - You can now provision a {{site.data.keyword.powerSys_notm}} in the *TOR01* data center.
 - You can now provision a {{site.data.keyword.powerSys_notm}} in the *LON06* data center.
