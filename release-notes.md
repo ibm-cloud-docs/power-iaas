@@ -34,7 +34,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - You can now provision a {{site.data.keyword.powerSys_notm}} in the *LON06* data center.
 - Added a virtual machine (VM) pinning policy (*none*, *soft*, or *hard*). You can choose to *soft pin* or *hard pin* a VM to the host where it is currently running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO and live partition migration. The default pinninig policy is *none*. You can add the **pinPolicy** parameter when:
 
-  VM pinning is currently available in all data centers except for *WDC* or *FRA04*.
+  VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
   {: preview}
 
     - [Creating a new PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#create-a-new-pvm-instance){: new_window}{: external}
