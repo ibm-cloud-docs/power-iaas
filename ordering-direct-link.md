@@ -202,7 +202,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>64999</td>
       </tr>
       <tr>
-        <td>Washington DC 2</td>
+        <td>Washington 2</td>
         <td>64999</td>
       </tr>
       <tr>
