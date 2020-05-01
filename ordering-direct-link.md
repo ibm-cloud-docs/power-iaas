@@ -57,7 +57,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the <a href="#direct-link">configuration parameters</a> for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer (not available in *Washingon 2*).
    {: note}
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
@@ -73,11 +73,11 @@ Order a second Direct Link Connect connection for backup purposes.
 
 10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
-11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
+11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key (if chosen) to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
     ```
     Link Speed:                  1000 Mbps
-    Location:                    Washington DC 2
+    Location:                    Washington 2
     Network Provider:            MEGAPORT
     Direct Link Connect subnet:  10.254.0.24/30
     IBM Cloud IP Address:        10.254.0.25/30
@@ -137,7 +137,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Washington, D.C., US</td>
-        <td>Washington DC 2</td>
+        <td>Washington 2</td>
         <td>Megaport</td>
       </tr>
       <tr>
