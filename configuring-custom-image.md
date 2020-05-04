@@ -134,7 +134,7 @@ Complete the following steps to provision a new instance by using a custom boot 
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
-| Storage type | **us-east (WDC04)**: Select whether you want **Standard** or **SSD** for the storage type.<br>**us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)**: Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
+| Storage type | Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
 | Region | Select either **us-east**, **us-south**, **eu-de**, or **eu-gb** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
@@ -144,7 +144,7 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 <!-- ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"} -->
 
-3. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
+1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
     If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
     {: tip}
