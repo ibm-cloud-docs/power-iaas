@@ -27,8 +27,10 @@ subcollection: power-iaas
 # Importing a boot image
 {: #importing-boot-image}
 
-You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the console. The storage types vary by region. The **us-east (WDC04)** region has **Standard** or **SSD** storage types. The **us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)** regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
+You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the console. All data centers use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
 {: shortdesc}
+
+If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
 
 You must first generate [Secret and Access keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.
 {: note}
@@ -73,7 +75,7 @@ Complete the following steps to import a boot image by using the IBM Cloud conso
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
-| Storage type | **us-east (WDC04)**: Select whether you want **Standard** or **SSD** for the storage type. <br> **us-south (DAL13)**, **us-east (TOR01-only)**, **eu-de (FRA04/FRA05)**, and **eu-gb (LON06)**: Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
+| Storage type | Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
 | Region | Select either **us-east**, **us-south**, or **eu-de** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object**.
 | Bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Storage Object name > Buckets**. |
