@@ -15,6 +15,7 @@ IBM Power Systems Virtual Servers
     Backup and migration strategies
         backup-strategies.md
         migration-strategies.md
+        system-migration.md
 
     {: .topicgroup}
     Security and compliance
