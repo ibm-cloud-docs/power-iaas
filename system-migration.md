@@ -44,7 +44,7 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 - Set the appropriate processor compatibility mode for logical partitions (LPARs) before and after migration.
 - Plan the virtual processor (VP) and entitlement for each LPAR to best fit your operation and performance requirements.
 - Follow the I/O consideration guide.
-- Consider engaging with [IBM Systems Lab Services](#lab-services) to ease the migration process.
+- Consider contacting [IBM Systems Lab Services](#lab-services) to ease the migration process.
 
 ## Migrating to an IBM POWER8 system
 {: power8-migration}
@@ -95,4 +95,4 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 ## Lab services
 {: #lab-services}
 
-[IBM Systems Lab Services](https://www.ibm.com/itinfrastructure/services/lab-services){: new_window}{: external} is available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own. If you need help with assessing the potential impact of a migration, benchmarking a system environment, or identifying ways to improve performance, contact [IBM Lab Services](mailto:ibmsls@us.ibm.com){: new_window}{: external}.
+[IBM Systems Lab Services](https://www.ibm.com/itinfrastructure/services/lab-services){: new_window}{: external} has service offerings available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own. If you need help with assessing the potential impact of a migration, benchmarking a system environment, or identifying ways to improve performance, contact [IBM Lab Services](mailto:ibmsls@us.ibm.com){: new_window}{: external}.
