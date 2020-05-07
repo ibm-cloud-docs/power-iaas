@@ -23,8 +23,17 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 # Release notes
 {: #release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSys_notm}} service.
+Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## 01 May 2020
+{: #may-2020}
+
+- Added the ability to [snapshot, clone and restore](https://cloud.ibm.com/apidocs/power-cloud#introduction){: new_window}{: external} a volume through the {{site.data.keyword.powerSys_notm}} service's API.
+- There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
+
+If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems. IN the event that your VM is shutdown, all of the minimum and maximum limits will update to new values.
+{: important}
 
 ## 01 April 2020
 {: #april-2020}
