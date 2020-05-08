@@ -27,7 +27,9 @@ subcollection: power-iaas
 # Snapshotting, cloning, and restoring a volume
 {: #volume-snapshot-clone}
 
-Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powerSysShort}} volume.
+Power VS offering provides storage based snapshot,restore, and clone capabilities. These interfaces are available as cloud APIs (REST). Note that these operations are initiated on the storage controller and calls will return to the user before it is completeled fully. As an example administrator can initiate a clone operation and start using the target disk/s before the copy from source to target disk/s are complete. Note that certain changes or operations are not possible till the clone is complete (example: resize of source or target disks is not allowed)
+
+This section covers more information about snapshotting, cloning, and restoring {{site.data.keyword.powerSysShort}} volume/s.
 
 ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
 
