@@ -29,16 +29,10 @@ subcollection: power-iaas
 
 Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powerSysShort}} volume.
 
-**Insert comments here (Ravi)**
-
 ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
 
 ## Taking a snapshot
 {: #volume-snapshot}
-
-**Best practices**
-
-**Insert comments here (Chhavi)**
 
 **Prerequisites**
 
@@ -61,10 +55,6 @@ Before you take a snapshot, ensure that all of the data is flushed to the disk. 
 ## Restoring a virtual machine (VM)
 {: #volume-restore}
 
-**Best practices**
-
-**Insert comments here (Chhavi)**
-
 **Prerequisites**
 
 While performing a VM restore operation, you must ensure that you've quiesced all of your applications and there are no active IO operations on the volume. If you perform the restore operation on a running VM with mounted disks, the operation might corrupt the file system, putting the VM in maintenance mode.
@@ -84,10 +74,6 @@ While performing a VM restore operation, you must ensure that you've quiesced al
 
 ## Cloning a volume
 {: #cloning-volume}
-
-**Best practices**
-
-**Insert comments here (Chhavi)**
 
 **Prerequisites**
 
