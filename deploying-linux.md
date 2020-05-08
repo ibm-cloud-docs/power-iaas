@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Deploying a Linux Virtual Server
+# Deploying a Linux virtual machine (VM)
 {: #linux-deployment}
 
 You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select **Linux** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
