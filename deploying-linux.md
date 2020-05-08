@@ -23,8 +23,8 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# SLES for SAP (HANA) compute profiles
-{: #linux-profiles}
+# Linux Virtual Server deployment
+{: #linux-deployment}
 
 Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
 {: shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-08"
 
 keywords: volume, snapshot, clone, restore, powervc
 
@@ -97,7 +97,6 @@ You **must** assign a storage template to all of the volumes you select as clone
 
 - Cloning multiple volumes in an available state
 - Cloning multiple volumes that are attached to the VM
-- Creating cloned volumes and assigning a different IO throttling rate by using the target storage template.
 
 **Restrictions and considerations**
 
