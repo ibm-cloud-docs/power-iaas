@@ -26,20 +26,20 @@ subcollection: power-iaas
 # Deploying a Linux Virtual Server
 {: #linux-deployment}
 
-You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select Linux** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
+You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select **Linux** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
 {: shortdesc}
 
-After you deploy your Linux VM, you must log in to obtain the wanted subscription from a Linux&trade; vendor. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#registering-sles).
+After you deploy your Linux VM, you must log in to obtain the wanted subscription from a Linux vendor. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#registering-sles).
 
 ## How to create an OVA format Linux image
 {: #ova-format}
 
-Learn how to create an OVA image of your Red Hat Linux and SUSE Linux operating system and import it into the {{site.data.keyword.powerSys_notm}} environment.
+Learn how to create an OVA image of a Red Hat Linux or SUSE Linux operating system and import it into the {{site.data.keyword.powerSys_notm}} environment.
 
 ### Using PowerVC to capture and import an OVA image
 {: #powervc-capture}
 
-If you have PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage (COS) account and import it into the {{site.data.keyword.powerSys_notm}} environment.
+If you've deployed PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage (COS) account and import it into the {{site.data.keyword.powerSys_notm}} environment.
 
 ### Capturing an image from VIOS
 {: #vios-capture}
