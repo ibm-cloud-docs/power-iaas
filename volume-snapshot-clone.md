@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-08"
+lastupdated: "2020-05-11"
 
-keywords: volume, snapshot, clone, restore, powervc
+keywords: volume snapshot, clone, restore
 
 subcollection: power-iaas
 
@@ -68,7 +68,7 @@ While performing a VM restore operation, you must ensure that you've quiesced al
 
 **Restrictions and considerations**
 
-- PowerVC takes a backup snapshot of all of the volumes that are intended to be restored before it performs the restore operation. The backup snapshot operation ensures that you can roll back the VM back to its original state if a failure happens during the restore operation.
+- The {{site.data.keyword.powerSys_notm}} service takes a backup snapshot of all of the volumes that are intended to be restored before it performs the restore operation. The backup snapshot operation ensures that you can roll back the VM back to its original state if a failure happens during the restore operation.
 - If the VM restore operation fails, the VM enters an **Error** state. You can either retry the restore operation or rollback the VM to its original volume state.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
 
@@ -86,7 +86,7 @@ You **must** assign a storage template to all of the volumes you select as clone
 
 **Restrictions and considerations**
 
-- When clone is performed on an in-use volume, PowerVC creates the consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
+- When clone is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates the consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
 - When `target-storage-template` is assigned, the clone volume is retyped to the `target-storage-template`. Retype is performed only if the template is retype capable.
 - When multiple source volumes are passed during `clone-volume` along with `target-volume-type-id`, all the volumes use the same `target-volume-type-id`.
 - When you use `target-volume-type-id`, it must use the same storage backend host controller as the source volume.
