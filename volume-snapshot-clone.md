@@ -20,6 +20,7 @@ subcollection: power-iaas
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
+{:preview: .preview}
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
@@ -30,7 +31,7 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysShort}} service provides storage-based snapshot, restore, and clone capabilities. These interfaces are available as cloud APIs (REST). It is important to note that these operations are initiated on the storage controller and calls return to the user before the are fully completed. For example, an administrator can initiate a clone operation and start utilizing the target disks before the copy procedure (from the source to target disks) is complete. Certain changes or operations are not possible until the clone operation is complete (resizing of the source or target disks is not allowed). To learn more about snapshotting, cloning, and restoring volumes inside the {{site.data.keyword.powerSys_notm}} environment, review the information in this topic.
 
 The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
-  {: preview}
+{: preview}
 
 ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
 
