@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-07"
+lastupdated: "2020-05-11"
 
-keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile, e980
+keywords: linux deployment, ova, powervc capture, vm capture from vios
 
 subcollection: power-iaas
 
@@ -23,23 +23,30 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Linux Virtual Server deployment
+# Deploying a Linux Virtual Server
 {: #linux-deployment}
 
-Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
+You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select Linux** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
 {: shortdesc}
 
-A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
+After you deploy your Linux VM, you must log in to obtain the wanted subscription from a Linux&trade; vendor. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#registering-sles).
 
-The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs). All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
+## How to create an OVA format Linux image
+{: #ova-format}
 
-*cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
-{: tip}
+Learn how to create an OVA image of your Red Hat Linux and SUSE Linux operating system and import it into the {{site.data.keyword.powerSys_notm}} environment.
 
-| Profile       | CPUs | RAM (GB) |
-| ------------- | ---- | -------- |
-| cp1-4x280     | 4    | 280      |
-| bp1-16x2250   | 16   | 2250     |
-| bp1-50x7000   | 50   | 7000     |
-| bp1-100x14000 | 100  | 14000    |
-{: caption="Table 1. Popular SLES for SAP profiles" caption-side="top"}
+### Using PowerVC to capture and import an OVA image
+{: #powervc-capture}
+
+If you have PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage (COS) account and import it into the {{site.data.keyword.powerSys_notm}} environment.
+
+### Capturing an image from VIOS
+{: #vios-capture}
+
+Download and use the **insert name of tool** to capture an image from VIOS of any client LPAR that is running on a host.
+
+You must shut down your LPAR for this method to work. Otherwise, you might encounter disk errors.
+{: important}
+
+**Paul inserts text**
