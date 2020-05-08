@@ -30,6 +30,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #may-2020}
 
 - Added the ability to [snapshot, clone and restore a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) through the {{site.data.keyword.powerSys_notm}} [API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
+
+  The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
+  {: preview}
+
 - There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
 
 If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems. In the event that your VM is shutdown, the core and processor minimum and maximums are reset to be based off of the new ratio.
