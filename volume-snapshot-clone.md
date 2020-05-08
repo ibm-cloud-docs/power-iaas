@@ -48,33 +48,13 @@ Learn more about snapshotting, cloning, and restoring a {{site.data.keyword.powe
 
 **Restrictions and considerations**
 
-- Parallel VM snapshots operations for the same shared volume is not allowed. 
-- You cannot restore a VM if you are taking a snapshot and there are clone (full-copy) *FlashCopy* operations that are running in the background. The FlashCopy operations must first complete.
-
-## Restoring a virtual machine (VM)
-{: #volume-restore}
-Restores all the volumes which are part of a VM snapshot. While restoring the VM, it creates a backup snapshot which can be used in case the restore operation fails. If the restore operation succeeds the backup snapshots are deleted. In case of failure, user can perform restore-retry to re-attempt the restore for the failed snapshot, or can perform restore-rollback to restore the VM using the backup snapshot. On restore failure VM enters an **Error** state.
-
-**Prerequisites**
-
-By default VM restore operations expects the VM to be in ShutOff state, to ensure there is no data corruption while performing restore.
-If the VM has volumes hosting external DB application, it is recommended that all your applications are quiesced, and there are no active IO transactions on the disk. This can lead to data corruption and put the VM in maintenance mode.
-
-**Use cases**
-
-- Restoring all of the volumes that are part of a VM snapshot
-- Running multiple VM restore operations (considering there are no shared volumes)
-- Retrying a VM restore operation if it originally failed
-- Rolling back a VM to its original volume state
-
-**Restrictions and considerations**
-
-- If restore operation is failed, it is recommended to get the issue analyzed by storage support administrator. Failed restore can leave behind incomplete fcmaps which requires manual cleanup before restore-rety is attempted.
-- If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
+- Parallel VM snapshot operations for the same shared volume are not allowed.
+- You cannot restore a VM if you are taking a snapshot and there are clone (full-copy) *FlashCopy* operations that are running in the background. The *FlashCopy* operations must first complete.
 
 ## Cloning a volume
 {: #cloning-volume}
-Cloning a volume creates the full copy. User can select multiple volumes and attempt a group clone. When multiple volumes are selected clone operations ensures that consistent data copy is created.
+
+Cloning a volume creates a full copy of the volume. You can select multiple volumes and attempt a group clone. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
 
 **Prerequisites**
 
@@ -87,4 +67,25 @@ You **must** assign a storage template to all of the volumes you select as clone
 
 **Restrictions and considerations**
 
-- When clone is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates the consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
+- When the clone operation is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
+
+## Restoring a virtual machine (VM)
+{: #volume-restore}
+
+The restore operation restores all of the volumes that are part of a VM snapshot. While restoring the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can perform the `restore-retry` operation to retry the restore operation. You can also perform the `restore-rollback` operation to roll back to the backup snapshot. When the restore operation fails, the VM enters an **Error** state.
+
+**Prerequisites**
+
+By default, the VM restore operations expect the VM to be **shutoff**. This ensures that there is no data corruption while performing the restore operation. If the VM has volumes that are hosting external database application, quiesce all of your applications and ensure that there are no active IO transactions on the disk. Failure to do this can lead to data corruption and put the VM in maintenance mode.
+
+**Use cases**
+
+- Restoring all of the volumes that are part of a VM snapshot
+- Running multiple VM restore operations (considering there are no shared volumes)
+- Retrying a VM restore operation if it originally failed
+- Rolling back a VM to its original volume state
+
+**Restrictions and considerations**
+
+- If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete `fcmaps`, which need to be manually cleaned up before you can the `restore-rety` operation.
+- If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
