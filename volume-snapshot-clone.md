@@ -91,7 +91,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
 ## Cloning a VM
 {: #cloning-vm}
 
-You can clone a VM by using the {{site.data.keyword.powerSys_notm}} API. By cloning a VM, you create a replica of an existing VM with the same configuration (processor, memory, volumes cloned, etc.)
+You can clone a VM by using the {{site.data.keyword.powerSys_notm}} API. By cloning a VM, you create a replica of an existing VM with the same configuration (processor, memory, volumes cloned, etc.).
 
 ## Restoring a VM
 {: #restoring-vm}

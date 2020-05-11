@@ -29,6 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## 01 May 2020
 {: #may-2020}
 
+- Created a new article on [Planning a workload migration to an IBM POWER8 or POWER9 system](/docs/power-iaas?topic=power-iaas-system-migration).
 - Added the ability to [snapshot, clone and restore a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) through the {{site.data.keyword.powerSys_notm}} [API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
 
   The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
