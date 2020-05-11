@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Snapshotting, cloning, and restoring a volume
+# Snapshotting, cloning, and restoring
 {: #volume-snapshot-clone}
 
 The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the {{site.data.keyword.powerSys_notm}} API lets you create delta snapshots, volume clones, and restore your disk if needed.
@@ -64,9 +64,10 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 
 **Restrictions and considerations**
 
-- Parallel VM snapshot operations from different virtual server nodes for the same shared volume are not allowed.
+- Parallel VM snapshot operations from different VM nodes for the same shared volume are not allowed.
 - You cannot restore a VM if you are taking a snapshot and there are clone (full-copy) *FlashCopy* operations that are running in the background. The *FlashCopy* operations must first complete.
 - Some of the attributes of source disks cannot be changed while the disks are in a snapshot relationship. For example, you cannot resize the source disks when there are snapshot relationships in place for those disks.
+- Volumes that are in a snapshot relationship cannot be detached from the VM.
 
 ## Cloning a volume
 {: #cloning-volume}
@@ -87,8 +88,13 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 - When the clone operation is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
 
-## Restoring a virtual machine (VM)
-{: #volume-restore}
+## Cloning a VM
+{: #cloning-vm}
+
+You can clone a VM by using the {{site.data.keyword.powerSys_notm}} API. By cloning a VM, you create a replica of an existing VM with the same configuration (processor, memory, volumes cloned, etc.)
+
+## Restoring a VM
+{: #restoring-vm}
 
 The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
 

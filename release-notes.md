@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-11"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -36,7 +36,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
 
-If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems. In the event that your VM is shutdown, the core and processor minimum and maximums are reset to be based off of the new ratio.
+If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
 {: important}
 
 ## 01 April 2020
