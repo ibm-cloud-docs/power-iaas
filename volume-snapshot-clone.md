@@ -28,7 +28,7 @@ subcollection: power-iaas
 # Snapshotting, cloning, and restoring
 {: #volume-snapshot-clone}
 
-The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the {{site.data.keyword.powerSys_notm}} API lets you create delta snapshots, volume clones, and restore your disk if needed.
+The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disk if needed.
 
 The {{site.data.keyword.powerSys_notm}} snapshot, clone, and restore capabilities are currently available only in *DAL13*.
 {: preview}
@@ -88,13 +88,8 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 - When the clone operation is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
 
-## Cloning a VM
-{: #cloning-vm}
-
-You can clone a VM by using the {{site.data.keyword.powerSys_notm}} API. By cloning a VM, you create a replica of an existing VM with the same configuration (processor, memory, volumes cloned, etc.).
-
-## Restoring a VM
-{: #restoring-vm}
+## Restoring a snapshot
+{: #restoring-snapshot}
 
 The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
 
@@ -115,3 +110,12 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 
 - If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete states, which might require a cleanup initiative from an IBM operation's team.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
+
+## Cloning a VM
+{: #cloning-vm}
+
+You can clone the entire source VM and deploy a target VM (based on the source VM). When doing so, you can customize the network information and VM resource configuration (CPU, memory, shared volumes, etc.).
+
+**Restrictions and considerations**
+
+- You can perform only a limited number of concurrent VM clone operations. If you get an error message, wait a few minutes and try again.
