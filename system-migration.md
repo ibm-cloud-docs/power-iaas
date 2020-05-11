@@ -32,7 +32,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
 
-IBM i customers must use IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an E880 (9119-MHE) must first upgrade the operating system (OS) to a current support level before migrating to the Cloud. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. To learn more, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
+IBM i customers must use IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an E880 (9119-MHE) must first upgrade the operating system (OS) to a current support level before migrating to the Cloud. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 ## Migration checklist
 {: #migration-checklist}
@@ -55,8 +55,8 @@ You need to migrate to a POWER8-supported level. To accomplish this migration, y
 
 1. Network Installation Manager (NIM) `alt disk` migration
 2. Migrate in-place, then either `mksysb`, `alt_disk_copy`, or Logical Partiion Mobility (LPM) (when going from a
-POWER6 or POWER7 system).
-3. Create a `mksysb` of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb`.
+POWER6 or POWER7 system)
+3. Create a `mksysb` of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb`
 
 **AIX 6.1 or 7.1**
 
@@ -80,7 +80,7 @@ Learn more about migrating workloads from an existing IBM POWER7 or POWER8 syste
 - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: new_window}{: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system.
 
     Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
-    {: note}
+    {: tip}
 
 - POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a POWER7 or POWER8 system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
 

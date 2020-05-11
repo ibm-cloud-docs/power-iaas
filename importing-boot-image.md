@@ -33,7 +33,7 @@ You can import an AIX or IBM i boot image by using the IBM Cloud CLI or the cons
 If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
 
 You must first generate [Secret and Access keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.
-{: note}
+{: important}
 
 ## Using the IBM Cloud CLI to import a boot image
 {: #cli-import-image}
@@ -62,7 +62,7 @@ Complete the following steps to import a boot image by using the IBM Cloud CLI. 
 Complete the following steps to import a boot image by using the IBM Cloud console.
 
   The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
-  {: important}
+  {: note}
 
 1. Click **Boot images**, then **Import image**.
 
