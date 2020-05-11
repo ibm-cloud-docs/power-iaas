@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-11"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -23,8 +23,22 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 # Release notes
 {: #release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSys_notm}} service.
+Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## 01 May 2020
+{: #may-2020}
+
+- Created a new article on [Planning a workload migration to an IBM POWER8 or POWER9 system](/docs/power-iaas?topic=power-iaas-system-migration).
+- Added [snapshot, clone and restore capabilities](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) to the {{site.data.keyword.powerSys_notm}} service. You can use these new capabilities by using the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
+
+  The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
+  {: preview}
+
+- There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
+
+If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
+{: important}
 
 ## 01 April 2020
 {: #april-2020}

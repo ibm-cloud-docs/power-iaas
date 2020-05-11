@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-29"
+lastupdated: "2020-05-11"
 
 keywords: linux, registering, subscription, sles, rhel
 

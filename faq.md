@@ -46,7 +46,7 @@ The supported AIX and IBM i operating system versions depend on the IBM Power Sy
 
 **AIX**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
@@ -101,7 +101,7 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 - **Uncapped shared**: shared among other clients
 - **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
-For more information, see [How does shared processor performance compare to dedicated processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
+There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/How%20does%20Shared%20Processor%20Performance%20Compare%20to%20Dedicated%20Processors){: new_window}{: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
 
 |Dedicated processors|
 |:-----------------|
