@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-29"
+lastupdated: "2020-05-11"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -80,6 +80,8 @@ You are charged different rates based on whether you export to the image catalog
 ## Using the IBM Cloud CLI to capture and export a VM
 {: #cli-capture-export}
 
+To learn more about using the IBM Cloud CLI to capture and export a VM, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).
+
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
 
     ```
@@ -102,5 +104,3 @@ You are charged different rates based on whether you export to the image catalog
         ibmcloud cos list-objects --bucket BUCKET_NAME [--delimiter DELIMITER] [--encoding-type METHOD] [--prefix PREFIX] [--starting-token TOKEN] [--page-size SIZE] [--max-items NUMBER] [--region REGION] [--json]
         ```
         {: codeblock}
-
-For more information, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli).

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-05-11"
 
-keywords: volume snapshot, clone, restore
+keywords: volume snapshot, clone, restore, api, flashcopy
 
 subcollection: power-iaas
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 # Snapshotting, cloning, and restoring
 {: #volume-snapshot-clone}
 
-The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disk if needed.
+The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
 
 The {{site.data.keyword.powerSys_notm}} snapshot, clone, and restore capabilities are currently available only in *DAL13*.
 {: preview}

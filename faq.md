@@ -3,8 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-09"
-keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning
+lastupdated: "2020-05-11"
+
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
 subcollection: power-iaas
 
@@ -34,7 +35,7 @@ subcollection: power-iaas
 
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
-This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} offering. You might notice differences in functionality between what's shown in the video and the current offering.
+This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
 
 ## What versions of AIX and IBM i operating systems (OS) are supported?
@@ -54,7 +55,7 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -121,7 +122,7 @@ There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores ro
 {: #proc-table-2}
 {: tab-title="Shared processors"}
 
-## How does my current environment compare to what's available through the Power Systems Virtual Server offering?
+## How does my current environment compare to what's available through the Power Systems Virtual Server service?
 {: #performance}
 {: faq}
 
@@ -186,6 +187,12 @@ Yes, {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment.
 {: faq}
 
 There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
+
+## Can you tell me more about your service's snapshotting, cloning, and restoring capabilities?
+{: #snapshot}
+{: faq}
+
+The {{site.data.keyword.powerSys_notm}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power System Virtual Servers?
 {: #connecting}
