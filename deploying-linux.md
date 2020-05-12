@@ -46,10 +46,30 @@ If you've deployed PowerVC in your on-premises environment, you can use it to [c
 
 The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: new_window}{: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/technologies/systems/articles/au-viosmapping/){: new_window}{: external}. **You must shut down your LPAR for this method to work. Otherwise, you might encounter disk errors.**
 
-The `create_ova` RPM also contains the `create_ova` manpage and license.
+The `create_ova` RPM also contains the `create_ova` man page and license.
 {: note}
 
-Once you've obtained the correct disk name (through virtual adapter mapping), you can create a virtual disk image and package the contents into an OVA. The following example contains a list of sample commands and output:
+To see the contents of the RPM package, enter the `rpm` command as shown in the following example:
+
+```
+# rpm -qlp /tmp/create_ova-1.0-2.aix7.2.ppc.rpm
+/opt/freeware/doc/create_ova-1.0
+/opt/freeware/doc/create_ova-1.0/create_ova.pdf
+/opt/freeware/licenses/create_ova-1.0
+/opt/freeware/licenses/create_ova-1.0/LICENSE
+/opt/ibm/sysmgt/cloudrdy
+/opt/ibm/sysmgt/cloudrdy/EXTRAS/pv-1.6.0-1.aix6.1.ppc.rpm
+/opt/ibm/sysmgt/cloudrdy/LICENSE
+/opt/ibm/sysmgt/cloudrdy/bin/cloud_setup
+/opt/ibm/sysmgt/cloudrdy/bin/create_ova
+/opt/ibm/sysmgt/cloudrdy/bin/print_ovf
+/opt/ibm/sysmgt/cloudrdy/doc/create_ova.pdf
+/usr/share/man/man1/create_ova.1
+```
+
+Once you obtain the correct disk name (through virtual adapter mapping), you can create a virtual disk image and package the contents into an OVA. After the RPM is installed, the man page and the executable (create_ova) are available in the normal paths. Note, a link is made to `/usr/bin/create_ova)`, so there is no need to set the user path. If you decide to perform an uninstall, any links, files, or directories that are tracked by RPM for this package are removed.
+
+The following example contains a list of sample commands and output:
 
 ```
 ssh (isotopes-vios2)
@@ -97,6 +117,6 @@ a ./rhel_20200511101424.img 41943040 blocks
 
 Done verifying resources.
 
-\# ls -l /datafs/rhel_20200511101424.ova.gz
+# ls -l /datafs/rhel_20200511101424.ova.gz
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/rhel_20200511101424.ova.gz
 ```
