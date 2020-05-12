@@ -56,7 +56,7 @@ A common IBM i backup strategy is to use IBM® Backup, Recovery, and Media Servi
 
 The typical IBM i customer uses the following flow to perform a backup:
 
-1. Use the 5770-ICC product to connect to ICOS (~2 times the disk capacity to hold the backup images).
+1. Use the 5733-ICC product to connect to ICOS (~2 times the disk capacity to hold the backup images).
 2. Connect to IBM's classic infrastructure by using Direct Link Connect.
 3. Create a Nginx reverse proxy. You can provision the reverse proxy from a virtual server instance (x86) for bandwidth up to 1 Gbps. If more bandwidth is needed, you must use a bare metal server.
 4. Complete the back up to COS by choosing the speed and resiliency that is required.
