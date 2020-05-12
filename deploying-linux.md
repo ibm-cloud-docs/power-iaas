@@ -29,7 +29,7 @@ subcollection: power-iaas
 You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select **Linux** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
 {: shortdesc}
 
-After you deploy your Linux VM, you must log in to obtain the wanted subscription from a Linux vendor. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#registering-sles).
+After you deploy your Linux VM, you must log in to obtain the wanted subscription from a Linux vendor. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-using-linux).
 
 ## How to create an OVA format Linux image
 {: #ova-format}
@@ -49,4 +49,4 @@ Download and use the **insert name of tool** to capture an image from VIOS of an
 You must shut down your LPAR for this method to work. Otherwise, you might encounter disk errors.
 {: important}
 
-**Paul inserts text**
+**Paul's text here**
