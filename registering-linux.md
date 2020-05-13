@@ -46,7 +46,3 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 {: #preparing-rhel}
 
 To use RHEL within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your RHEL image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL).
-
-## Linux networking information
-{: #linux-networking}
-
