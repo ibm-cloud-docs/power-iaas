@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-11"
+lastupdated: "2020-05-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -39,7 +39,7 @@ This video does not capture the latest updates to the {{site.data.keyword.powerS
 {: note}
 
 ## What versions of AIX and IBM i operating systems (OS) are supported?
-{: #os_versions}
+{: #os-versions}
 {: faq}
 {: support}
 
@@ -152,25 +152,25 @@ You can apply affinity and anti-affinity policies to both VMs and volumes. VM af
 You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
 ## Does IBM provide maintenance for the AIX or IBM i operating systems?
-{: #licensing_os}
+{: #licensing-os}
 {: faq}
 
 No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
 
 ## How does licensing work for the AIX and IBM i operating systems?
-{: #os_support}
+{: #os-support}
 {: faq}
 
 The license for the operating system is part of the overall cost for the service. You cannot use an existing license that you already purchased.
 
 ## How does third-party licensing work?
-{: #thridparty}
+{: #third-party}
 {: faq}
 
 Clients are responsible for third-party licensing.
 
 ## What are the hardware specifications?
-{: #hardwarespecs}
+{: #hardware-specs}
 {: faq}
 {: support}
 

@@ -38,7 +38,7 @@ Learn how to troubleshoot {{site.data.keyword.powerSysShort}} snapshot, clone an
 When you clone and attach a volume to the same PVM as the PVM containing the original volume, the PVIDs of both volumes are found to be the same on your AIX operating system.
 
 {: tsCauses}
-**Insert comments here (Chhavi)**
+There's a problem with the underlying technology that is supporting the clone feature.
 
 {: tsResolve}
 To resolve this issue, enter the following commands:
