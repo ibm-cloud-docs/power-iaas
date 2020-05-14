@@ -41,7 +41,7 @@
     "find power server storage types",
     "finding power server storage types",
     "identify power server storage types",
-    "identifing power server storage types",
+    "identifying power server storage types",
     "determine power server storage types",
     "determining power server storage types"
   ],
@@ -156,9 +156,9 @@
 
   "connecting":[
     "set up private network",
-    "how to set up private network",
-    "order Direct Link Connect",
-    "ordering Direct Link Connect",
+    "setting up private network",
+    "order direct link connect",
+    "ordering direct link connect",
     "configure private network",
     "configuring private network"
   ],
@@ -179,15 +179,17 @@
   "configuring":[
     "set up customer site access",
     "setting up customer site access",
-    "use VPN",
-    "using VPN",
+    "use vpn",
+    "using vpn",
+    "understand vpn",
+    "understanding vpn",
     "access private network",
     "accessing private network"
   ],
 
   "firewall":[
-    "set up firewall",
-    "setting up firewall",
+    "set up power iaas firewall",
+    "setting up power iaas firewall",
     "create firewall",
     "creating firewall",
     "provide firewall",
@@ -243,7 +245,7 @@
     "remove power iaas service",
     "removing power iaas service",
     "turn off power iaas service",
-    "turning off for AIX IBM i"
+    "turning off power iaas service"
   ],
 
   "support-ticket":[
