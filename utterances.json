@@ -1,0 +1,274 @@
+{
+  "training":[
+    "find power iaas training",
+    "finding power iaas training",
+    "learn power iaas",
+    "learning power iaas",
+    "understand power iaas",
+    "understanding power iaas"
+    ],
+
+  "os-versions":[
+     "find supported os",
+     "finding supported os",
+     "determine supported os",
+     "determining supported os",
+     "identify supported os",
+     "identifying supported os"
+   ],
+
+ "image":[
+    "use AIX image",
+    "using AIX image",
+    "use IBM i image",
+    "using IBM i image",
+    "bring your own",
+    "bringing your own",
+    "deploy a custom image",
+    "deploying a custom image"
+  ],
+
+"custom-image":[
+    "upload custom image",
+    "uploading custom image",
+    "import custom image",
+    "importing custom image",
+    "provide custom image",
+    "providing custom image"
+  ],
+
+  "storage":[
+    "find power server storage types",
+    "finding power server storage types",
+    "identify power server storage types",
+    "identifing power server storage types",
+    "determine power server storage types",
+    "determining power server storage types"
+  ],
+
+  "rootvg":[
+    "extend aix rootvg",
+    "extending aix rootvg",
+    "use aix extendvg",
+    "using aix extendvg",
+    "add power iaas volume",
+    "adding power iaas volume"
+  ],
+
+  "processor":[
+    "choose processor",
+    "choosing processor",
+    "pick processor",
+    "picking processor",
+    "select processor",
+    "selecting processor"
+  ],
+
+  "performance":[
+    "compare power server",
+    "comparing power server",
+    "evaluate power server",
+    "evaluating power server",
+    "choose power server",
+    "choosing power server"
+  ],
+
+  "vm-migration":[
+    "migrate virtual machine",
+    "migrating virtual machine",
+    "transfer virtual machine",
+    "transfering virtual machine",
+    "move virtual machine",
+    "moving virtual machine"
+  ],
+
+  "pinning":[
+    "pin virtual machine",
+    "pinning virtual machine",
+    "hard pin virtual machine",
+    "soft pin virtual machine",
+    "perform pin",
+    "performing pin"
+  ],
+
+  "affinity":[
+    "apply affinity policy",
+    "applying affinity policy",
+    "apply anti-affinity policy",
+    "applying anti-affinity policy",
+    "control virtual machine placement",
+    "grouping virtual machines",
+    "spreading virtual machines"
+  ],
+
+
+  "licensing-os":[
+    "maintain power server license",
+    "maintaining power server license",
+    "update power server license",
+    "updating power server license",
+    "manage power server license",
+    "managing power server license"
+  ],
+
+  "os-support":[
+    "find power iaas license",
+    "finding power iaas license",
+    "understand power iaas license",
+    "understanding power iaas license",
+    "learn power iaas licensing",
+    "learning power iaas licensing"
+  ],
+
+  "third-party":[
+    "understand third-party licensing",
+    "understanding third-party licensing",
+    "explain third-party licensing",
+    "explaining third-party licensing",
+    "learn third-party licensing",
+    "learning third-party licensing"
+  ],
+
+  "hardwarespecs":[
+    "understand hardware specifications",
+    "understanding hardware specifications",
+    "explain hardware specifications",
+    "explaining hardware specifications",
+    "learn hardware specifications",
+    "learning hardware specifications"
+  ],
+
+  "multi":[
+    "run in multi-tentant environment",
+    "running in multi-tentant environment",
+    "allow multi-tentant environment",
+    "work in multi-tentant environment",
+    "working in multi-tentant environment"
+  ],
+
+  "bare":[
+    "allow bare metal",
+    "provide bare metal",
+    "have bare metal",
+    "offer bare metal",
+    "offering bare metal"
+  ],
+
+  "connecting":[
+    "set up private network",
+    "how to set up private network",
+    "order Direct Link Connect",
+    "ordering Direct Link Connect",
+    "configure private network",
+    "configuring private network"
+  ],
+
+  "snapshot":[
+    "create snapshot",
+    "creating snapshot",
+    "capture snapshot",
+    "capturing snapshot",
+    "restore volume",
+    "restoring volume",
+    "clone volume",
+    "cloning volume",
+    "clone virtual machine",
+    "cloning virtual machine"
+  ],
+
+  "configuring":[
+    "set up customer site access",
+    "setting up customer site access",
+    "use VPN",
+    "using VPN",
+    "access private network",
+    "accessing private network"
+  ],
+
+  "firewall":[
+    "set up firewall",
+    "setting up firewall",
+    "create firewall",
+    "creating firewall",
+    "provide firewall",
+    "providing firewall"
+  ],
+
+  "gts-cloud-connect":[
+    "connect power iaas data centers",
+    "connecting power iaas data centers",
+    "link power iaas data centers",
+    "linking power iaas data centers",
+    "pair power iaas data centers",
+    "pairing power iaas data centers"
+  ],
+
+  "billing":[
+    "bill for inbound traffic",
+    "bill for outbound traffic",
+    "charge for bandwidth",
+    "charging for bandwidth",
+    "network cost"
+  ],
+
+  "monitoring":[
+    "monitor power iaas",
+    "monitoring power iaas",
+    "observe power iaas",
+    "observing power iaas",
+    "power iaas status",
+    "power iaas performance"
+  ],
+
+  "ibmi-performance":[
+    "provide capacity planning services",
+    "providing capacity planning services",
+    "provide performance planning",
+    "providing performance planning",
+    "offer capacity planning",
+    "offering capacity planning"
+  ],
+
+  "ibmi-certification":[
+    "find ibm i solution certification",
+    "finding ibm i solution certification",
+    "locate ibm i solution certification",
+    "locating ibm i solution certification",
+    "see ibm i solution certifaction"
+  ],
+
+  "delete-service":[
+    "delete power iaas service",
+    "deleting power iaas service",
+    "remove power iaas service",
+    "removing power iaas service",
+    "turn off power iaas service",
+    "turning off for AIX IBM i"
+  ],
+
+  "support-ticket":[
+    "open power iaas support ticket",
+    "opening power iaas support ticket",
+    "contact power iaas support",
+    "contacting power iaas support",
+    "notify power iaas support system",
+    "notifing power iaas support system"
+  ],
+
+  "troubleshoot-aix":[
+    "troubleshoot power iaas aix virtual machine",
+    "troubleshooting power iaas aix virtual machine",
+    "repair power iaas aix virtual machine",
+    "repairing power iaas aix virtual machine",
+    "fix power iaas aix virtual machine",
+    "fixing power iaas aix virtual machine"
+  ],
+
+  "troubleshoot-snapshot":[
+    "troubleshoot snapshot issues",
+    "troubleshooting snapshot issues",
+    "fix snapshot issues",
+    "fixing snapshot issues",
+    "repair snapshot issues",
+    "repairing snapshot issues",
+}
