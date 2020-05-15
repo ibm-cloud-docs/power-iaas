@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-keywords: migration strategies, icos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
+keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
@@ -30,29 +30,29 @@ subcollection: power-iaas
 Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-## IBM Cloud Object Storage (ICOS)
+## IBM Cloud Object Storage (COS)
 {: #migration-icos}
 
-ICOS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create ICOS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
+COS can be used as an intermediary location to store files from your on-premises environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create COS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: new_window}{: external}.
 
-To copy data from ICOS to your AIX virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
+To copy data from COS to your AIX virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli#aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
 
 You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
 
 - [Configuring YUM and creating local repositories on IBM AIX](https://developer.ibm.com/technologies/systems/articles/configure-yum-on-aix/){: new_window}{: external}
 - [Python for AIX](http://www.aixtools.net/index.php/python){: new_window}{: external}
 
-For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: new_window}{: external} to communicate with ICOS and transfer data.
+For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: new_window}{: external} to communicate with COS and transfer data.
 
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
-MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in ICOS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
+MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in COS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
 
 The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
 {: note}
 
-## PowerVC images and ICOS
+## PowerVC images and COS
 {: #migration-powervc-icos}
 
 If you have an environment with access to PowerVC, you can capture OVA images to easily migrate your data. The {{site.data.keyword.powerSys_notm}} offering allows you to provision a new virtual server based on an OVA image. To accomplish this, regardless of the operating system (OS), you must complete the following steps:
@@ -96,7 +96,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 ## Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, ICOS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party}
@@ -125,7 +125,7 @@ Learn about migration strategies that are specific to AIX systems.
 
 You can migrate your data by using the `mksysb` command:
 
-1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to ICOS.
+1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to COS.
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
@@ -160,7 +160,7 @@ Learn about migration strategies that are specific to IBM i systems.
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, ICOS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including ICOS.
+Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, COS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
@@ -169,7 +169,7 @@ The following steps detail how to migrate your OS and data from an on-premises s
 3. Create a virtual tape and *IMGCLG* on the on-premises system and perform an operating system save by entering, `GO LICPGM Option 40`.
 4. Transfer or FTP the images to the IBM Cloud.
 
-    You can accomplish the transfer by using some of the listed migration strategies (MDM, ICOS, Aspera, etc.).
+    You can accomplish the transfer by using some of the listed migration strategies (MDM, COS, Aspera, etc.).
     {: important}
 
 5. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
