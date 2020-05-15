@@ -199,7 +199,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Dallas 13</td>
-        <td>64999</td>
+        <td>64997</td>
       </tr>
       <tr>
         <td>Washington 2</td>

@@ -83,7 +83,7 @@ Service ID (VxC Identifier):
 Customer network subnet:
 Customer router IP Address:
 Power Systems Virtual Server customer network IP address:
-Power Systems Virtual Server network ASN: 64999 for WDC04 and 64999 for DAL13
+Power Systems Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
 Customer Network ASN:
 
 Customer subnets to be advertised:
