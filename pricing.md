@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-26"
 
-keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types
+keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
 subcollection: power-iaas
 

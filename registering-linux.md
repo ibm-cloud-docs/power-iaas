@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-11"
+lastupdated: "2020-05-26"
 
 keywords: linux, registering, subscription, sles, rhel, red hat, powervc
 

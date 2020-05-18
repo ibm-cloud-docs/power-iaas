@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-26"
 
-keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
+keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i
 
 subcollection: power-iaas
 
