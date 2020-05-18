@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Using Linux within the Power Systems Virtual Server service
 {: #using-linux}
 
-The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&trade; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
+The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&trade; Enterprise Server (SLES) 12 and Red Hat Enterprise Linux (RHEL) 8.
 {: shortdesc}
 
 To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that you do not want to have an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
