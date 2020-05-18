@@ -67,6 +67,13 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
+The following supported Linux operating system apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
+
+**Linux**
+
+- Red Hat Enterprise Linux (RHEL) 8
+- SUSE Linux Enterprise (SLES) 12
+
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
 
