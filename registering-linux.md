@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-05-11"
 
-keywords: linux, registering, subscription, sles, rhel
+keywords: linux, registering, subscription, sles, rhel, red hat, powervc
 
 subcollection: power-iaas
 
