@@ -61,12 +61,12 @@ The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or late
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-The following supported Linux operating system apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
+The following supported Linux operating systems apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
 
 **Linux**
 
-- Red Hat Enterprise Linux (RHEL) 8
-- SUSE Linux Enterprise (SLES) 12
+- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
+- SUSE Linux Enterprise (SLES): 12 and 15
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
