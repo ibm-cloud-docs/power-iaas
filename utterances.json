@@ -9,19 +9,19 @@
     ],
 
   "os-versions":[
-     "find supported os",
-     "finding supported os",
-     "determine supported os",
-     "determining supported os",
-     "identify supported os",
-     "identifying supported os"
+     "find supported power iaas os",
+     "finding supported power iaas os",
+     "determine supported power iaas os",
+     "determining supported power iaas os",
+     "identify supported power iaas os",
+     "identifying supported power iaas os"
    ],
 
  "image":[
-    "use AIX image",
-    "using AIX image",
-    "use IBM i image",
-    "using IBM i image",
+    "use AIX power iaas image",
+    "using AIX power iaas image",
+    "use IBM i power iaas image",
+    "using IBM i power iaas image",
     "bring your own",
     "bringing your own",
     "deploy a custom image",
@@ -56,12 +56,12 @@
   ],
 
   "processor":[
-    "choose processor",
-    "choosing processor",
-    "pick processor",
-    "picking processor",
-    "select processor",
-    "selecting processor"
+    "choose power iaas processor",
+    "choosing power iaas processor",
+    "pick power iaas processor",
+    "picking power iaas processor",
+    "select power iaas processor",
+    "selecting power iaas processor"
   ],
 
   "performance":[
@@ -74,21 +74,21 @@
   ],
 
   "vm-migration":[
-    "migrate virtual machine",
-    "migrating virtual machine",
-    "transfer virtual machine",
-    "transfering virtual machine",
-    "move virtual machine",
-    "moving virtual machine"
+    "migrate power iaas virtual machine",
+    "migrating power iaas virtual machine",
+    "transfer power iaas virtual machine",
+    "transfering power iaas virtual machine",
+    "move power iaas virtual machine",
+    "moving power iaas virtual machine"
   ],
 
   "pinning":[
-    "pin virtual machine",
-    "pinning virtual machine",
-    "hard pin virtual machine",
-    "soft pin virtual machine",
-    "perform pin",
-    "performing pin"
+    "pin power-iaas virtual machine",
+    "pinning power-iaas virtual machine",
+    "hard pin power-iaasvirtual machine",
+    "soft pin  power-iaas virtual machine",
+    "perform power-iaas pin",
+    "performing power-iaas pin"
   ],
 
   "affinity":[
@@ -121,79 +121,79 @@
   ],
 
   "third-party":[
-    "understand third-party licensing",
-    "understanding third-party licensing",
-    "explain third-party licensing",
-    "explaining third-party licensing",
-    "learn third-party licensing",
-    "learning third-party licensing"
+    "understand power iaas third-party licensing",
+    "understanding power iaas third-party licensing",
+    "explain power iaas third-party licensing",
+    "explaining power iaas third-party licensing",
+    "learn power iaas third-party licensing",
+    "learning power iaas third-party licensing"
   ],
 
   "hardwarespecs":[
-    "understand hardware specifications",
-    "understanding hardware specifications",
-    "explain hardware specifications",
-    "explaining hardware specifications",
-    "learn hardware specifications",
-    "learning hardware specifications"
+    "understand power iaas hardware specifications",
+    "understanding power iaas hardware specifications",
+    "explain power iaas hardware specifications",
+    "explaining power iaas hardware specifications",
+    "learn power iaas hardware specifications",
+    "learning power iaas hardware specifications"
   ],
 
   "multi":[
-    "run in multi-tentant environment",
-    "running in multi-tentant environment",
-    "allow multi-tentant environment",
-    "work in multi-tentant environment",
-    "working in multi-tentant environment"
+    "run in a power-iaas multi-tentant environment",
+    "running in power-iaas multi-tentant environment",
+    "allow power-iaas multi-tentant environment",
+    "work in power-iaas multi-tentant environment",
+    "working in power-iaas multi-tentant environment"
   ],
 
   "bare":[
-    "allow bare metal",
-    "provide bare metal",
-    "have bare metal",
-    "offer bare metal",
-    "offering bare metal"
+    "allow bare metal for power iaas",
+    "provide bare metal for power iaas",
+    "have bare metal for power iaas",
+    "offer bare metal for power iaas",
+    "offering bare metal for power iaas"
   ],
 
   "connecting":[
-    "set up private network",
-    "setting up private network",
-    "order direct link connect",
-    "ordering direct link connect",
-    "configure private network",
-    "configuring private network"
+    "set up power iaas private network",
+    "setting up power iaas private network",
+    "order direct link connect for power iaas",
+    "ordering direct link connect for power iaas",
+    "configure power iaas private network",
+    "configuring power iaas private network"
   ],
 
   "snapshot":[
-    "create snapshot",
-    "creating snapshot",
-    "capture snapshot",
-    "capturing snapshot",
-    "restore volume",
-    "restoring volume",
-    "clone volume",
-    "cloning volume",
-    "clone virtual machine",
-    "cloning virtual machine"
+    "create power iaas snapshot",
+    "creating power iaas snapshot",
+    "capture power iaas snapshot",
+    "capturing power iaas snapshot",
+    "restore power iaas volume",
+    "restoring power iaas volume",
+    "clone power iaas volume",
+    "cloning power iaas volume",
+    "clone power iaas virtual machine",
+    "cloning power iaas virtual machine"
   ],
 
   "configuring":[
     "set up customer site access",
     "setting up customer site access",
-    "use vpn",
-    "using vpn",
-    "understand vpn",
-    "understanding vpn",
-    "access private network",
-    "accessing private network"
+    "use power iaas vpn",
+    "using power iaas vpn",
+    "understand power iaas vpn",
+    "understanding power iaas vpn",
+    "access power iaas private network",
+    "accessing power iaas private network"
   ],
 
   "firewall":[
     "set up power iaas firewall",
     "setting up power iaas firewall",
-    "create firewall",
-    "creating firewall",
-    "provide firewall",
-    "providing firewall"
+    "create power iaas firewall",
+    "creating power iaas firewall",
+    "provide power iaas firewall",
+    "providing power iaas firewall"
   ],
 
   "gts-cloud-connect":[
@@ -206,11 +206,11 @@
   ],
 
   "billing":[
-    "bill for inbound traffic",
-    "bill for outbound traffic",
-    "charge for bandwidth",
-    "charging for bandwidth",
-    "network cost"
+    "bill for power iaas inbound traffic",
+    "bill for power iaas outbound traffic",
+    "charge for power iaas bandwidth",
+    "charging for power iaas bandwidth",
+    "network cost for power iaas"
   ],
 
   "monitoring":[
@@ -223,20 +223,20 @@
   ],
 
   "ibmi-performance":[
-    "provide capacity planning services",
-    "providing capacity planning services",
-    "provide performance planning",
-    "providing performance planning",
-    "offer capacity planning",
-    "offering capacity planning"
+    "provide power iaas capacity planning services",
+    "providing power iaas capacity planning services",
+    "provide power iaas performance planning",
+    "providing power iaas performance planning",
+    "offer power iaas capacity planning",
+    "offering power iaas capacity planning"
   ],
 
   "ibmi-certification":[
-    "find ibm i solution certification",
-    "finding ibm i solution certification",
-    "locate ibm i solution certification",
-    "locating ibm i solution certification",
-    "see ibm i solution certifaction"
+    "find ibm i solution certification for power iaas",
+    "finding ibm i solution certification for power iaas",
+    "locate ibm i solution certification for power iaas",
+    "locating ibm i solution certification for power iaas",
+    "see ibm i solution certifaction for power iaas"
   ],
 
   "delete-service":[
@@ -267,11 +267,11 @@
   ],
 
   "troubleshoot-snapshot":[
-    "troubleshoot snapshot issues",
-    "troubleshooting snapshot issues",
-    "fix snapshot issues",
-    "fixing snapshot issues",
-    "repair snapshot issues",
-    "repairing snapshot issues"
+    "troubleshoot power iaas snapshot issues",
+    "troubleshooting power iaas snapshot issues",
+    "fix snapshot power iaas issues",
+    "fixing snapshot power iaas issues",
+    "repair snapshot power iaas issues",
+    "repairing snapshot power iaas issues"
   ]
 }
