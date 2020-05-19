@@ -75,12 +75,12 @@ When connecting a colo to a colo by using Megaport, you might need a [Megaport C
 
   ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-megaport.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
 
-<!-- ## IBM Power colo to colo connection using GRE tunneling
+## IBM Power colo to colo connection using GRE tunneling
 {: #colo-to-colo-gre}
 
 You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
 
-  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-cloud.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"} -->
+  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-gre.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"}
 
 ## IBM dual colo connection
 {: #dual-colo}
