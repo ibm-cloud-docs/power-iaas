@@ -96,7 +96,7 @@ Power Systems Virtual Server customer Private Network ID (3):
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSys_notm}} provides GRE tunneling for all locations except for Washington, D.C. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case.
+{{site.data.keyword.powerSys_notm}} provides GRE tunneling for all locations except for Washington, D.C. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only.
 
 ```
 GRE Tunnel Configuration Request:
