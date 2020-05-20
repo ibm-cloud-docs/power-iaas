@@ -86,7 +86,7 @@
     "pin power-iaas virtual machine",
     "pinning power-iaas virtual machine",
     "hard pin power-iaasvirtual machine",
-    "soft pin  power-iaas virtual machine",
+    "soft pin power-iaas virtual machine",
     "perform power-iaas pin",
     "performing power-iaas pin"
   ],
