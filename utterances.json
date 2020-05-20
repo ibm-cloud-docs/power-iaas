@@ -47,10 +47,10 @@
   ],
 
   "rootvg":[
-    "extend aix rootvg",
-    "extending aix rootvg",
-    "use aix extendvg",
-    "using aix extendvg",
+    "extend aix rootvg in power-iaas",
+    "extending aix rootvg in power-iaas",
+    "use aix extendvg in power-iaas",
+    "using aix extendvg in power-iaas",
     "add power iaas volume",
     "adding power iaas volume"
   ],
