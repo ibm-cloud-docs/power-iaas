@@ -22,19 +22,19 @@
     "using AIX power iaas image",
     "use IBM i power iaas image",
     "using IBM i power iaas image",
-    "bring your own",
-    "bringing your own",
-    "deploy a custom image",
-    "deploying a custom image"
+    "bring your own power-iaas image",
+    "bringing your own power-iaas image",
+    "deploy a power-iaas custom image",
+    "deploying a power-iaas custom image"
   ],
 
 "custom-image":[
-    "upload custom image",
-    "uploading custom image",
-    "import custom image",
-    "importing custom image",
-    "provide custom image",
-    "providing custom image"
+    "upload power-iaas custom image",
+    "uploading power-iaas custom image",
+    "import power-iaas custom image",
+    "importing power-iaas custom image",
+    "provide power-iaas custom image",
+    "providing power-iaas custom image"
   ],
 
   "storage":[
@@ -47,10 +47,10 @@
   ],
 
   "rootvg":[
-    "extend aix rootvg",
-    "extending aix rootvg",
-    "use aix extendvg",
-    "using aix extendvg",
+    "extend aix rootvg in power-iaas",
+    "extending aix rootvg in power-iaas",
+    "use aix extendvg in power-iaas",
+    "using aix extendvg in power-iaas",
     "add power iaas volume",
     "adding power iaas volume"
   ],
@@ -86,19 +86,19 @@
     "pin power-iaas virtual machine",
     "pinning power-iaas virtual machine",
     "hard pin power-iaasvirtual machine",
-    "soft pin  power-iaas virtual machine",
+    "soft pin power-iaas virtual machine",
     "perform power-iaas pin",
     "performing power-iaas pin"
   ],
 
   "affinity":[
-    "apply affinity policy",
-    "applying affinity policy",
-    "apply anti-affinity policy",
-    "applying anti-affinity policy",
-    "control virtual machine placement",
-    "grouping virtual machines",
-    "spreading virtual machines"
+    "apply affinity policy in power-iaas",
+    "applying affinity policy in power-iaas",
+    "apply anti-affinity policy in power-iaas",
+    "applying anti-affinity policy in power-iaas",
+    "control virtual machine placement in power-iaas",
+    "grouping virtual machines in power-iaas",
+    "spreading virtual machines in power-iaas"
   ],
 
 
