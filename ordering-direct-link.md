@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-05-20"
 
-keywords: ordering direct link, dirct link location, bgp asn, iam service id
+keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link
 
 subcollection: power-iaas
 
@@ -228,3 +228,8 @@ Order a second Direct Link Connect connection for backup purposes.
   </dd>
   <dd></dd>
 </dl>
+
+## Deleting your Direct Link Connect on Classic connection
+{: deleting-direct-link}
+
+You can remove your Direct Link Connect on Classic connection by using the IBM Cloud console. Click the overflow menu in the **Actions** column next to the connection. After you submit a request to delete the connection, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
