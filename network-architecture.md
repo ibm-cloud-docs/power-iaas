@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-27"
+lastupdated: "2020-05-20"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
@@ -73,14 +73,14 @@ You can connect a colo to a colo by using **Direct Link and IBM Cloud Connect or
 
 When connecting a colo to a colo by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external}. If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between *DAL13* and *WDC04*. Please consult an IBM Cloud Connect or Megaport representative for specific network requirements.
 
-  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
+  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-megaport.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
 
-<!-- ## IBM Power colo to colo connection using GRE tunneling
+## IBM Power colo to colo connection using GRE tunneling
 {: #colo-to-colo-gre}
 
 You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
 
-  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-cloud.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"} -->
+  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-gre.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"}
 
 ## IBM dual colo connection
 {: #dual-colo}

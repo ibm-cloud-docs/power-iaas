@@ -33,7 +33,7 @@ The {{site.data.keyword.powerSysShort}} service provides the capability to captu
 The {{site.data.keyword.powerSys_notm}} snapshot, clone, and restore capabilities are currently available only in *DAL13*.
 {: preview}
 
-![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"}
+<!-- ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"} -->
 
 ## Taking a snapshot
 {: #volume-snapshot}
@@ -116,10 +116,10 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 - If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete states, which might require a cleanup initiative from an IBM operation's team.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
 
-## Cloning a VM
+<!-- ## Cloning a VM
 {: #cloning-vm}
 
 You can clone the entire source VM and deploy a target VM (based on the source VM). When doing so, you can customize the network information and VM resource configuration (CPU, memory, shared volumes, etc.).
 
 You can perform only a limited number of concurrent VM clone operations. If you get an error message, wait a few minutes and try again.
-{: important}
+{: important} -->
