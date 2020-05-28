@@ -5,7 +5,9 @@
     "learn power iaas",
     "learning power iaas",
     "understand power iaas",
-    "understanding power iaas"
+    "understanding power iaas",
+	"start with power virtual servers",
+	"training for power virtual server"
     ],
 
   "os-versions":[
@@ -13,17 +15,22 @@
      "finding supported power iaas os",
      "determine supported power iaas os",
      "determining supported power iaas os",
+	 "supported operating systems for power iaas",
+	 "operating systems supported by power virtual servers",
      "identify supported power iaas os",
+	 "supported power iaas operating systems",
      "identifying supported power iaas os"
    ],
 
  "image":[
     "use AIX power iaas image",
     "using AIX power iaas image",
+	"use ibm i image with power virtual servers",
     "use IBM i power iaas image",
     "using IBM i power iaas image",
     "bring your own power-iaas image",
     "bringing your own power-iaas image",
+	"use my own AIX image for power virtual servers",
     "deploy a power-iaas custom image",
     "deploying a power-iaas custom image"
   ],
@@ -32,7 +39,9 @@
     "upload power-iaas custom image",
     "uploading power-iaas custom image",
     "import power-iaas custom image",
+	"import power virtual servers custom images",
     "importing power-iaas custom image",
+	"formats to use when uploading a custom power iaas image",
     "provide power-iaas custom image",
     "providing power-iaas custom image"
   ],
@@ -42,7 +51,9 @@
     "finding power server storage types",
     "identify power server storage types",
     "identifying power server storage types",
+	"available storage types in the storage area network for power iaas",
     "determine power server storage types",
+	"find power iaas storage types",
     "determining power server storage types"
   ],
 
@@ -52,6 +63,8 @@
     "use aix extendvg in power-iaas",
     "using aix extendvg in power-iaas",
     "add power iaas volume",
+	"add volume to power iaas",
+	"aix rootvg in power virtual servers",
     "adding power iaas volume"
   ],
 
@@ -59,8 +72,10 @@
     "choose power iaas processor",
     "choosing power iaas processor",
     "pick power iaas processor",
+	"choose the best processors for power servers",
     "picking power iaas processor",
     "select power iaas processor",
+	"select a processor for power virtual servers",
     "selecting power iaas processor"
   ],
 
@@ -69,6 +84,7 @@
     "comparing power server",
     "evaluate power server",
     "evaluating power server",
+	"power systems performance report",
     "choose power server",
     "choosing power server"
   ],
@@ -76,17 +92,23 @@
   "vm-migration":[
     "migrate power iaas virtual machine",
     "migrating power iaas virtual machine",
+	"VM of power virtual server migration",
+	"migrate power iaas VM",
     "transfer power iaas virtual machine",
     "transfering power iaas virtual machine",
+	"migrate my power server VM from one data center to another",
     "move power iaas virtual machine",
     "moving power iaas virtual machine"
   ],
 
   "pinning":[
     "pin power-iaas virtual machine",
+	"what does VM pinning do",
     "pinning power-iaas virtual machine",
     "hard pin power-iaasvirtual machine",
     "soft pin power-iaas virtual machine",
+	"what's pinning for a VM",
+	"power virtual server pinning",
     "perform power-iaas pin",
     "performing power-iaas pin"
   ],
@@ -96,8 +118,11 @@
     "applying affinity policy in power-iaas",
     "apply anti-affinity policy in power-iaas",
     "applying anti-affinity policy in power-iaas",
+	"set an affinity or anti-affinity rule",
+	"apply an anti-affinity rule for power iaas",
     "control virtual machine placement in power-iaas",
     "grouping virtual machines in power-iaas",
+	"set an affinity rule in power server",
     "spreading virtual machines in power-iaas"
   ],
 
@@ -107,6 +132,9 @@
     "maintaining power server license",
     "update power server license",
     "updating power server license",
+	"maintenance for power iaas O/S",
+	"maintenance for the AIX operating systems",
+	"maintenance for the IBM i operating system",
     "manage power server license",
     "managing power server license"
   ],
@@ -116,17 +144,20 @@
     "finding power iaas license",
     "understand power iaas license",
     "understanding power iaas license",
+	"licensing work for the AIX o/s",
+	"licensing work for the IBM i operating system",
     "learn power iaas licensing",
     "learning power iaas licensing"
   ],
 
   "third-party":[
-    "understand power iaas third-party licensing",
+    "understand power iaas third party licensing",
     "understanding power iaas third-party licensing",
     "explain power iaas third-party licensing",
-    "explaining power iaas third-party licensing",
+    "explaining power iaas third party licensing",
     "learn power iaas third-party licensing",
-    "learning power iaas third-party licensing"
+    "learning power iaas third-party licensing",
+	"does third party license work with power iaas"
   ],
 
   "hardwarespecs":[
@@ -135,14 +166,18 @@
     "explain power iaas hardware specifications",
     "explaining power iaas hardware specifications",
     "learn power iaas hardware specifications",
+	"hardware specs for power virtual server",
+	"hardware specs for power servers",
     "learning power iaas hardware specifications"
   ],
 
   "multi":[
     "run in a power-iaas multi-tentant environment",
     "running in power-iaas multi-tentant environment",
+	"Power Systems Virtual Servers run in a multi tenant environment",
     "allow power-iaas multi-tentant environment",
     "work in power-iaas multi-tentant environment",
+	"use multi tentant environment for power servers",
     "working in power-iaas multi-tentant environment"
   ],
 
@@ -150,6 +185,7 @@
     "allow bare metal for power iaas",
     "provide bare metal for power iaas",
     "have bare metal for power iaas",
+	"use bare metal with Power Virtual Servers",
     "offer bare metal for power iaas",
     "offering bare metal for power iaas"
   ],
@@ -159,6 +195,7 @@
     "setting up power iaas private network",
     "order direct link connect for power iaas",
     "ordering direct link connect for power iaas",
+	"set up private networks between Virtual Servers and Power",
     "configure power iaas private network",
     "configuring power iaas private network"
   ],
@@ -166,11 +203,13 @@
   "snapshot":[
     "create power iaas snapshot",
     "creating power iaas snapshot",
+	"create snapshot for power servers",
     "capture power iaas snapshot",
     "capturing power iaas snapshot",
     "restore power iaas volume",
     "restoring power iaas volume",
     "clone power iaas volume",
+	"volume clones for power virtual servers",
     "cloning power iaas volume",
     "clone power iaas virtual machine",
     "cloning power iaas virtual machine"
@@ -180,8 +219,12 @@
     "set up customer site access",
     "setting up customer site access",
     "use power iaas vpn",
+	"power virtual server configration",
+	"Configuring Power Systems Virtual Servers",
+	"configure the power server",
     "using power iaas vpn",
     "understand power iaas vpn",
+	"set up customer site access to a private network with power servers",
     "understanding power iaas vpn",
     "access power iaas private network",
     "accessing power iaas private network"
@@ -189,9 +232,11 @@
 
   "firewall":[
     "set up power iaas firewall",
+	"firewall options are there around VPN connectivity for power servers",
     "setting up power iaas firewall",
     "create power iaas firewall",
     "creating power iaas firewall",
+	"use of firewalls in Power virtual servers",
     "provide power iaas firewall",
     "providing power iaas firewall"
   ],
@@ -199,8 +244,10 @@
   "gts-cloud-connect":[
     "connect power iaas data centers",
     "connecting power iaas data centers",
+	"connect a power server instance between two data centers",
     "link power iaas data centers",
     "linking power iaas data centers",
+	"connecting power servers n different data centers",
     "pair power iaas data centers",
     "pairing power iaas data centers"
   ],
@@ -210,29 +257,36 @@
     "bill for power iaas outbound traffic",
     "charge for power iaas bandwidth",
     "charging for power iaas bandwidth",
+	"invoicing for power virtual server bandwidth",
+	"Cloud Power environment bandwidth billing",
     "network cost for power iaas"
   ],
 
   "monitoring":[
     "monitor power iaas",
     "monitoring power iaas",
+	"monitoring services are available for power virtual servers",
     "observe power iaas",
     "observing power iaas",
+	"monitoring of power servers",
     "power iaas status",
     "power iaas performance"
   ],
 
   "ibmi-performance":[
     "provide power iaas capacity planning services",
+	"planning services for IBM i on IBM Cloud",
     "providing power iaas capacity planning services",
     "provide power iaas performance planning",
     "providing power iaas performance planning",
     "offer power iaas capacity planning",
+	"ibm i performance on cloud for power servers",
     "offering power iaas capacity planning"
   ],
 
   "ibmi-certification":[
     "find ibm i solution certification for power iaas",
+	"IBM i and solution certification",
     "finding ibm i solution certification for power iaas",
     "locate ibm i solution certification for power iaas",
     "locating ibm i solution certification for power iaas",
@@ -241,8 +295,12 @@
 
   "delete-service":[
     "delete power iaas service",
+	"delete the power server instance",
     "deleting power iaas service",
+	"cancel my power virtual servers",
+	"remove the power server",
     "remove power iaas service",
+	"cancel the power server instance",
     "removing power iaas service",
     "turn off power iaas service",
     "turning off power iaas service"
@@ -256,22 +314,29 @@
     "notify power iaas support system",
     "notifing power iaas support system"
   ],
-
-  "troubleshoot-aix":[
-    "troubleshoot power iaas aix virtual machine",
-    "troubleshooting power iaas aix virtual machine",
-    "repair power iaas aix virtual machine",
-    "repairing power iaas aix virtual machine",
-    "fix power iaas aix virtual machine",
-    "fixing power iaas aix virtual machine"
-  ],
-
-  "troubleshoot-snapshot":[
-    "troubleshoot power iaas snapshot issues",
-    "troubleshooting power iaas snapshot issues",
-    "fix snapshot power iaas issues",
-    "fixing snapshot power iaas issues",
-    "repair snapshot power iaas issues",
-    "repairing snapshot power iaas issues"
-  ]
+ 
+  "troubleshoot-hung-aix":[
+    "AIX virtual machine does not initially boot on power server",
+    "AIX VM won't boot on virtual power server",
+	"cant boot AIX VM for power iaas",
+	"set up NIM to boot on power server",
+	"setting up NIM to boot on virtual power server",
+	"AIX VM unable to boot on power-iaas"
+  ],	
+  
+  "troubleshoot-slow-aix": [
+     "AIX VM Tier 1 disk is running at a suboptimal level",
+	 "AIX VM NVMe-based flash storage has poor performance",
+	 "imporve performance for AIX VM on power server",
+	 "increase performance on AIX virtual machine running on power server",
+	 "improve disk performance for AIX VM on power server"
+  ], 
+  
+  "troubleshoot-clone":[
+    "PVIDs of both of my volumes are the same on my AIX operating system",
+    "PVIDs are both the same on my AIX O/S on power server",
+    "cloned and attached a volume to the same PVM on power iaas",
+    "issue with PVIDs after cloning on power iaas",
+    "PVID issue following cloning on AIX VM using power server"
+     ]
 }
