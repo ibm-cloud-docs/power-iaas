@@ -167,10 +167,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
   <tr>
     <td>Cores</td>
     <td>
-      Select the number of cores for the {{site.data.keyword.powerSys_notm}}. If
-      you select <strong>Shared processor</strong>, you can specify the number
-      of cores by 0.25 increments. For example, valid core values are 0.5, 1.25,
-      and 2.75. A virtual CPU (vCPU) is allocated for every 0.25 entitlement.
+      There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
     </td>
   </tr>
   <tr>

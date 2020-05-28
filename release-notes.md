@@ -29,6 +29,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## 01 May 2020
 {: #may-2020}
 
+- IBM i software keys were cleared out due to an IBM Cloud update. You must re-apply any IBM i software licenses through the {{site.data.keyword.powerSys_notm}} user interace. The following IBM i builds require updates:
+    - 7.4 MF99301 SI70544
+    - 7.3 MF99207 SI69686
+    - 7.2 SI71091
 - Created a new article on [Planning a workload migration to an IBM POWER8 or POWER9 system](/docs/power-iaas?topic=power-iaas-system-migration).
 - Added [snapshot, clone and restore capabilities](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) to the {{site.data.keyword.powerSys_notm}} service. You can use these new capabilities by using the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
 
@@ -53,8 +57,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
 
-    VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-    {: preview}
+VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
+{: preview}
 
 ## 01 March 2020
 {: #march-2020}
