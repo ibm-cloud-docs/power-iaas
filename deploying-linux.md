@@ -71,6 +71,9 @@ Once you obtain the correct disk name (through virtual adapter mapping), you can
 
 The following example contains a list of sample commands and output:
 
+You can upload this `ova.gz` file into your Cloud Object storage account. Once it is uploaded, you can go to Power Virtual Server interface and import the OVA image from your Cloud Object Storage account.
+{: important}
+
 ```
 ssh (isotopes-vios2)
 
@@ -120,6 +123,3 @@ Done verifying resources.
 # ls -l /datafs/rhel_20200511101424.ova.gz
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/rhel_20200511101424.ova.gz
 ```
-
-You can upload the `ova.gz` file into your Cloud Object storage account. Once it is uploaded, you can go to Power Virtual Server interface and import the OVA image from your Cloud Object Storage account.
-{: important}

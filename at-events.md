@@ -3,7 +3,7 @@
 copyright:
   years: 2019,2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-05-28"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
