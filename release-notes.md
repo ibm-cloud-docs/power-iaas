@@ -57,8 +57,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
 
-    VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-    {: preview}
+VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
+{: preview}
 
 ## 01 March 2020
 {: #march-2020}
