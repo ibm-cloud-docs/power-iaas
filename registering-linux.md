@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Using Linux within the Power Systems Virtual Server service
 {: #using-linux}
 
-The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&trade; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
+The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
 {: shortdesc}
 
 ## Registering and subscribing to SLES

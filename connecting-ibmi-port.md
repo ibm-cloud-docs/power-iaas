@@ -48,7 +48,7 @@ strtcpsvr server(*SSHD)
 ```
 {: pre}
 
-On a Linux&trade; or Mac system, you would run a command similar to the following example:
+On a Linux&reg; or Mac system, you would run a command similar to the following example:
 
 ```
 ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-29"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -99,7 +99,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
-{: #third-party}
+{: #third-party-vendors}
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
