@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-11"
+lastupdated: "2020-06-01"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,6 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## 01 June 2020
+{: #june-2020}
+
+- You can now deploy Linux on a {{site.data.keyword.powerSys_notm}}. To learn more, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
 
 ## 01 May 2020
 {: #may-2020}

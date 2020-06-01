@@ -47,7 +47,7 @@ You are charged different rates based on whether you export to the image catalog
 
 4. Give your captured image a **Name**.
 
-5. _(Optional)_ If you decide to export to COS, you are presented with more options:
+5. *(Optional)* If you decide to export to COS, you are presented with more options:
    1. Select the **Region**.
    2. Provide your [Access and Secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
    3. Select your **Bucket name** and **optional folders**.

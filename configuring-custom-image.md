@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-29"
+lastupdated: "2020-06-01"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -53,7 +53,7 @@ The supported AIX and IBM i operating system versions depend on the IBM Power Sy
 
 **AIX**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
@@ -65,14 +65,17 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
-- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+- [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
 The following supported Linux operating system apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
 
 **Linux**
 
-- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
+- Red Hat Enterprise Linux (RHEL): 8.0 and 8.1
 - SUSE Linux Enterprise (SLES): 12 and 15
+
+If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+{: important}
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
@@ -103,7 +106,7 @@ The following supported Linux operating system apply to all of the IBM Power Sys
 
   ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial]/docs/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
@@ -129,7 +132,7 @@ To view your credential information, such as your secret and access keys, click 
 {: help}
 {: support}
 
-Complete the following steps to provision a new instance by using a custom boot image. For more information about importing a custom boot image by using the IBM Cloud CLI, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image). Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
+Complete the following steps to provision a new instance by using a custom boot image. For more information about importing a custom boot image by using the IBM Cloud CLI, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image). Large boot images take time to successfully import. You might experience a delay before you receive a confirmation message.
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 

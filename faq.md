@@ -66,7 +66,10 @@ The following supported Linux operating systems apply to all of the IBM Power Sy
 **Linux**
 
 - Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
-- SUSE Linux Enterprise (SLES): 12 and 15
+- SUSE Linux Enterprise (SLES): 12, and 15
+
+If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+{: important}
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
