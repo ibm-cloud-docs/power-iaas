@@ -81,8 +81,7 @@ IBM Virtual I/O Server
 
 login: padmin
 padmin's Password:
-Last unsuccessful login: Mon May  4 19:00:57 CDT 2020 on ftp from aixbase.aus.stglabs.ibm.com
-Last login: Sun May 10 17:41:00 CDT 2020 on /dev/pts/0 from 9.160.20.99
+Last login: Sun May 10 17:41:00 CDT 2020 on /dev/pts/0
 
 $ lsmap -vadapter vhost18
 SVSA            Physloc                                      Client Partition ID
