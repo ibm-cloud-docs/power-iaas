@@ -29,6 +29,11 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
 {: shortdesc}
 
+The following Linux operating systems are supported on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+
+- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
+- SUSE Linux Enterprise (SLES): 12 and 15
+
 ## Registering and subscribing to SLES
 {: #registering-sles}
 
@@ -40,15 +45,19 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 1. To buy a SUSE subscription, see [How to Buy](https://www.suse.com/support/?id=SUSE_Linux_Enterprise_Server_for_SAP_Applications#how-to-buy){: new_window}{: external}.
 2. To register your system, see [Registering an Installed System](https://documentation.suse.com/sles/12-SP4/single-html/SLES-deployment/#sec-y2-sw-register){: new_window}{: external}.
 
-The following Linux operating systems are supported on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+## Registering and subscribing to RHEL
+{: #registering-rhel}
 
-- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
-- SUSE Linux Enterprise (SLES): 12 and 15
+(Add content similar to the SLES steps above)
 
-## Capturing and importing a RHEL image
+## Capturing and importing a RHEL or SUSE image
 {: #preparing-rhel}
 
-To use RHEL within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your RHEL image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL).
+To use either RHEL or SUSE within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL).
+
+For users that are unable or unwilling to use PowerVC for the purposes of image capture, there is a separate tool available for POWER systems OVA image capture.
+
+(Add the link to the create_ova capture technique)
 
 ## Linux networking
 {: #linux-networking}
