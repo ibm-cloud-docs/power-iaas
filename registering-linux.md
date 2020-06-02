@@ -59,6 +59,8 @@ You cannot contact the RHEL-based repository and download the appropriate softwa
 1. To buy a RHEL subscription, see [How to Buy](https://www.redhat.com/en/store/linux-platforms){: new_window}{: external}.
 2. To register your system, see [How to register and subscribe a system to the Red Hat Customer Portal](https://access.redhat.com/solutions/253273){: new_window}{: external}.
 
+For more information on moving Red Hat product subscriptions to the Cloud, see [Red Hat Cloud Access Frequently Asked Questions] (https://access.redhat.com/articles/3664231){: new_window}{: external}.
+
 ## Capturing and importing a RHEL or SUSE image
 {: #preparing-linux-image}
 
@@ -76,6 +78,7 @@ To connect a Linux virtual machine (VM) to the public internet, you must add a p
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find creative ways to share access to Internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
 
+# SNAT Router Configuration
 1. Deploy a RHEL 7 LPAR on a public network and create subnets (that need to use the SNAT function to get internet access).
 2. Use the following commands to allow private network traffic to be accessible for SNAT-ing (these commands assume that the network device for the public IP is `eth0`, and `eth1` for the private network).
 
@@ -89,3 +92,7 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 1. Find and edit the following line within the `/etc/sysctl.conf` file (replacing `0` with `1` if required): `net.ipv4.ip_forward = 1`.
 2. To perform the update to the `sysctl.conf` file, enter the following command: `sysctl -p /etc/sysctl.conf`.
 3. Finally, configure the source NAT by entering the following command: `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`.
+
+# Configuring Linux VMs to use SNAT Router
+1. Deploy Linux VMs that will be using the SNAT Router to access internet with the private network being being routed by the SNAT Router.
+2. Ensure that default router for the VM is set to the SNAT Router IP on the private network.
