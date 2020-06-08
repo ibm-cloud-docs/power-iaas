@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-08"
 
 keywords: linux deployment, ova, powervc capture, vm capture from vios
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-29"
+lastupdated: "2020-06-08"
 
 keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile, e980
 
