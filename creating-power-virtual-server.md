@@ -29,7 +29,7 @@ subcollection: power-iaas
 {: help}
 {: support}
 
-To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps:
+To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps. If you're creating and configuring a {{site.data.keyword.powerSys_notm}} to support an SAP NetWeaver workload, see [Setting up your Power System Virtual Server and Instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure).
 {: shortdesc}
 
 ## Creating a Power Systems Virtual Server service
