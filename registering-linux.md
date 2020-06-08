@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-06-08"
 
-keywords: linux, registering, subscription, sles, rhel, red hat, powervc
+keywords: linux, registering, subscription, sles, rhel, red hat, powervc, snat
 
 subcollection: power-iaas
 
@@ -75,18 +75,19 @@ To connect a Linux virtual machine (VM) to the public internet, you must add a p
 ## Configuring SNAT in the Power Systems Virtual Server environment by using RHEL
 {: #configuring-snat}
 
-Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find creative ways to share access to Internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
+Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to Internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
 
 # SNAT Router Configuration
 {: #snat-router-configuration}
 
 1. Deploy a RHEL 7 LPAR on a public network and create subnets (that need to use the SNAT function to get internet access).
-2. Use the following commands to allow private network traffic to be accessible for SNAT-ing (these commands assume that the network device for the public IP is `eth0`, and `eth1` for the private network).
+2. Use the following commands to allow private network traffic to be accessible for SNAT-ing (these commands assume that the network device for the public IP is `eth0`, and `eth1` for the private network):
 
 ```
 iptables -A FORWARD -i eth1 -j ACCEPT
 iptables -A FORWARD -o eth1 -j ACCEPT
 ```
+{: codeblock}
 
 You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file:
 
@@ -97,5 +98,5 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 # Configuring Linux VMs to use SNAT Router
 {: #linux-snat-router}
 
-1. Deploy Linux VMs that will be using the SNAT Router to access internet with the private network being being routed by the SNAT Router.
-2. Ensure that default router for the VM is set to the SNAT Router IP on the private network.
+1. Deploy Linux VMs that will be using the SNAT Router to access the internet with the private network being routed by the SNAT Router.
+2. Ensure that the default router for the VM is set to the SNAT Router IP on the private network.
