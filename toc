@@ -29,6 +29,7 @@ IBM Power Systems Virtual Servers
         use-case-oracle.md
 
     [Why IBM Power Systems Virtual Servers on IBM Cloud?](https://www.ibm.com/cloud/power-virtual-server)
+    [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers on IBM Cloud](https://cloud.ibm.com/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
