@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-08"
 
 keywords: linux, registering, subscription, sles, rhel, red hat, powervc
 
@@ -29,13 +29,12 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
 {: shortdesc}
 
-The following Linux operating systems are supported on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+The following Linux operating systems are supported with Cloud-init version **cloud-init-19.1-4.sles15.ibm.noarch** (refer to distro for support) on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
-- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
-- SUSE Linux Enterprise (SLES): 12, and 15
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise (SLES)
 
-If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
-{: important}
+For a list of cloud-init packages, see [PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
@@ -59,7 +58,7 @@ You cannot contact the RHEL-based repository and download the appropriate softwa
 1. To buy a RHEL subscription, see [How to Buy](https://www.redhat.com/en/store/linux-platforms){: new_window}{: external}.
 2. To register your system, see [How to register and subscribe a system to the Red Hat Customer Portal](https://access.redhat.com/solutions/253273){: new_window}{: external}.
 
-For more information on moving Red Hat product subscriptions to the Cloud, see [Red Hat Cloud Access Frequently Asked Questions] (https://access.redhat.com/articles/3664231){: new_window}{: external}.
+For more information on moving Red Hat product subscriptions to the Cloud, see [Red Hat Cloud Access Frequently Asked Questions](https://access.redhat.com/articles/3664231){: new_window}{: external}.
 
 ## Capturing and importing a RHEL or SUSE image
 {: #preparing-linux-image}
@@ -79,6 +78,8 @@ To connect a Linux virtual machine (VM) to the public internet, you must add a p
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find creative ways to share access to Internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
 
 # SNAT Router Configuration
+{: #snat-router-configuration}
+
 1. Deploy a RHEL 7 LPAR on a public network and create subnets (that need to use the SNAT function to get internet access).
 2. Use the following commands to allow private network traffic to be accessible for SNAT-ing (these commands assume that the network device for the public IP is `eth0`, and `eth1` for the private network).
 
@@ -94,5 +95,7 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 3. Finally, configure the source NAT by entering the following command: `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`.
 
 # Configuring Linux VMs to use SNAT Router
+{: #linux-snat-router}
+
 1. Deploy Linux VMs that will be using the SNAT Router to access internet with the private network being being routed by the SNAT Router.
 2. Ensure that default router for the VM is set to the SNAT Router IP on the private network.
