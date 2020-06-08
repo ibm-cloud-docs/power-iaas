@@ -38,7 +38,7 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
 
-## What versions of AIX and IBM i operating systems (OS) are supported?
+## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
 {: faq}
 {: support}
@@ -60,6 +60,16 @@ The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or late
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+
+The following supported Linux operating systems apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
+
+**Linux**
+
+- Red Hat Enterprise Linux (RHEL): 8.0, and 8.1
+- SUSE Linux Enterprise (SLES): 12, and 15
+
+If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+{: important}
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
@@ -151,17 +161,17 @@ You can apply affinity and anti-affinity policies to both VMs and volumes. VM af
 
 You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
-## Does IBM provide maintenance for the AIX or IBM i operating systems?
+## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux operating system.
 
-## How does licensing work for the AIX and IBM i operating systems?
+## How does licensing work for the AIX, IBM i, and Linux operating systems?
 {: #os-support}
 {: faq}
 
-The license for the operating system is part of the overall cost for the service. You cannot use an existing license that you already purchased.
+The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
 
 ## How does third-party licensing work?
 {: #third-party}

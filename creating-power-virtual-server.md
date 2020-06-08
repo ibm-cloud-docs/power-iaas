@@ -184,7 +184,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
     <td>Boot image</td>
     <td>
       Select a version of the IBM-provided AIX or IBM i operating system stock
-      image. If you want to use your own AIX or IBM i custom image, it must be
+      image. You can also bring your own Linux image (BYOI). If you want to use your own AIX or IBM i custom image, it must be
       at a supported technology level.<br>
       <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image"
         >Learn more</a><p>

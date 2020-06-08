@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-06-08"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -45,15 +45,15 @@ The basic steps that are involved in deploying an instance by using a custom ima
 Before you can use a custom image as the boot volume, review the following information:
 
 - You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
-- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_export_image_hmc.html){: new_window}{: external}.
-- Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: new_window}{: external} to capture a virtual server instance.
-- You must verify that your AIX or IBM i OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
+- Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: new_window}{: external} to capture a virtual server instance.
+- You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
 **AIX**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
@@ -65,7 +65,17 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
-- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+- [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+
+The following supported Linux operating system apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
+
+**Linux**
+
+- Red Hat Enterprise Linux (RHEL): 8.0 and 8.1
+- SUSE Linux Enterprise (SLES): 12 and 15
+
+If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+{: important}
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
@@ -80,23 +90,23 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 
     <!-- ![IBM Cloud Storage buckets](./images/console-create-bucket.png "IBM Cloud Storage buckets"){: caption="Figure 1. IBM Cloud Object Storage bucket" caption-side="bottom"} -->
 
-4. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms _resource instance_ and _service instance_ refer to the same concept, and can be used interchangeably.
+4. From here, you are automatically redirected to the service instance where you can start creating buckets. Your {{site.data.keyword.cos_short}} instances are listed under **Storage** in the **Resource List**. The terms *resource instance* and *service instance* refer to the same concept, and can be used interchangeably.
 
 5. Choose a unique name. All buckets in all regions across the globe share a single namespace. Ensure that you have the correct permissions to create a bucket.
 
     When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
     {: note}
 
-6. First, choose a wanted level of _resiliency_, and then a _location_ where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. _Cross Region_ resiliency spreads your data across several metropolitan areas, while _Regional_ resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
+6. First, choose a wanted level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
 
-7. Choose the bucket's _storage class_, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
+7. Choose the bucket's *storage class*, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
   ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera high-speed transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
@@ -122,13 +132,13 @@ To view your credential information, such as your secret and access keys, click 
 {: help}
 {: support}
 
-Complete the following steps to provision a new instance by using a custom boot image. For more information about importing a custom boot image by using the IBM Cloud CLI, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image). Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
+Complete the following steps to provision a new instance by using a custom boot image. For more information about importing a custom boot image by using the IBM Cloud CLI, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#cli-import-image). Large boot images take time to successfully import. You might experience a delay before you receive a confirmation message.
 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 
 2. After you click **Import**, refer to the following table to complete the **Import boot image** fields:
 
-    The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+    The **Image file name** field supports the following formats: *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*.
     {: important}
 
 | Field | Description |
@@ -146,5 +156,5 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
-    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
+    If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud console. Once there, access your **Cloud Object Storage** service instance. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object) for the Cloud Object Storage CLI command.
     {: tip}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-15"
+lastupdated: "2020-05-29"
 
 keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile, e980
 
@@ -23,11 +23,25 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# SLES for SAP (HANA) compute profiles
+# System Applications and Products in Data Processing (SAP) and Power Systems Virtual Servers
+{: #power-iaas-sap}
+
+The {{site.data.keyword.powerSysShort}} offering now supports SAP.
+
+## Implementing SAP NetWeaver in the Power Systems Virtual Server environment
+{: #sap-netweaver}
+
+You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system within the Power Systems Virtual Server environment. Select **AIX** or **SLES for SAP (NetWeaver) - Client supplied subscription** under **Operating system** in the IBM Cloud user interface, and deploy the virtual machine (VM). After you deploy the VM, you can deploy NetWeaver inside of it.
+
+When you select the **SLES for SAP (NetWeaver) - Client supplied subscription** option the **SLES for SAP** operating system is deployed inside the provisioned VM. You need to purchase the subscription for the **SLES for SAP** operating system and register it inside the VM by using the **SLES registration server**. For more information on purchasing and registering Linux subscriptions, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
+
+You can choose any sized resources (CPU, memory, etc.), when you deploy the VM for NetWeaver purposes.
+{: note}
+
+## SLES for SAP (HANA) compute profiles
 {: #linux-profiles}
 
 Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
-{: shortdesc}
 
 A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
 

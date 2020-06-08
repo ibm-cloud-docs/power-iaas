@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-26"
 
-keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment
+keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i
 
 subcollection: power-iaas
 
@@ -30,7 +30,7 @@ subcollection: power-iaas
 
 The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX or IBM i operating systems) to the public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that your operating system is secure.
 
-Current AIX and IBM i clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
+Current AIX, IBM i, and Linux clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
 {: #key-features}
@@ -42,10 +42,13 @@ The following are some of the key features for the {{site.data.keyword.powerSys_
 
 The {{site.data.keyword.powerSys_notm}} service uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
+The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
+{: note}
+
 ### Hybrid cloud environment
 {: #hybrid-cloud}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX or IBM i workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX and IBM i workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
+You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX or IBM i workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX, IBM i, and Linux workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
 
 ### Infrastructure customization
 {: #infra-customization}
@@ -62,6 +65,8 @@ You can configure and customize the following options when you create a {{site.d
 {: #bring-own-image}
 
 IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX or IBM i image that you've tested and deployed.
+
+The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only Red Hat and SUSE Linux OVA images are currently supported.
 
 ## Hardware specifications
 {: #hardware-specifications}

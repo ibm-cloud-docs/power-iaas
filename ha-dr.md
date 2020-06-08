@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-28"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -59,6 +59,6 @@ Licenses that are purchased outside a subscription model license are not eligibl
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by the {{site.data.keyword.cloud_notm}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to [Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started). You can use this process to restore your virtual server in case a critical failure occurs.
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by the {{site.data.keyword.cloud_notm}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage). You can use this process to restore your virtual server in case a critical failure occurs.
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might a take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.

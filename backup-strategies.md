@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-29"
 
-keywords: backup strategies, cos, brms, icc, veam for aix, ibm spectrum support, cloud_setup, direct link, reverse proxy
+keywords: backup strategies, cos, brms, icc, veam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
 subcollection: power-iaas
 
