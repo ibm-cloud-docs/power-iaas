@@ -29,7 +29,7 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
 {: shortdesc}
 
-The following Linux operating systems are supported with **cloud-init version 19.1-4** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+The following Linux operating systems are supported with Cloud-init version **cloud-init-19.1-4.sles15.ibm.noarch** (refer to distro for support) on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
 - Red Hat Enterprise Linux (RHEL)
 - SUSE Linux Enterprise (SLES)
