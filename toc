@@ -75,7 +75,7 @@ IBM Power Systems Virtual Servers
         registering-linux.md
         linux-profiles.md
         deploying-linux.md
-        [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers on IBM Cloud](https://cloud.ibm.com/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started)
+        [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers on IBM Cloud](https://cloud.ibm.com/docs/sap-netweaver/sap-size-server.html)
    {: .navgroup-end}
 
     {: .navgroup id="reference"}

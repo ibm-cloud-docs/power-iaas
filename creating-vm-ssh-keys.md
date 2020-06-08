@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2020-01-22"
+lastupdated: "2020-06-08"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -107,8 +107,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
-
-1.[Navigate to your console's device menu](/docs/ssh-keys?topic=virtual-servers-navigating-devices).
 
 1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
 
