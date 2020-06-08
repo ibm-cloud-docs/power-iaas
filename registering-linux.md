@@ -29,12 +29,12 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES) and Red Hat Enterprise Linux (RHEL).
 {: shortdesc}
 
-The following Linux operating systems are supported with Cloud-init version **cloud-init-19.1-4.sles15.ibm.noarch** (refer to distro for support) on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+The following Linux operating systems are supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
 - Red Hat Enterprise Linux (RHEL)
 - SUSE Linux Enterprise (SLES)
 
-For a list of cloud-init packages, see [PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
@@ -50,7 +50,7 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 ## Registering and subscribing to RHEL
 {: #registering-rhel}
 
-The {{site.data.keyword.powerSys_notm}} service does not provide a subscription to RHEL. You must purchase the RHEL subscription from RHEL and then enable it.
+The {{site.data.keyword.powerSys_notm}} service does not provide a subscription to RHEL. You must purchase the RHEL subscription from RHEL and then enable it. For more information on moving Red Hat product subscriptions to the IBM Cloud, see [Red Hat Cloud Access Frequently Asked Questions](https://access.redhat.com/articles/3664231){: new_window}{: external}.
 
 You cannot contact the RHEL-based repository and download the appropriate software packages without first enabling your RHEL Linux subscription.
 {: note}
@@ -58,26 +58,22 @@ You cannot contact the RHEL-based repository and download the appropriate softwa
 1. To buy a RHEL subscription, see [How to Buy](https://www.redhat.com/en/store/linux-platforms){: new_window}{: external}.
 2. To register your system, see [How to register and subscribe a system to the Red Hat Customer Portal](https://access.redhat.com/solutions/253273){: new_window}{: external}.
 
-For more information on moving Red Hat product subscriptions to the Cloud, see [Red Hat Cloud Access Frequently Asked Questions](https://access.redhat.com/articles/3664231){: new_window}{: external}.
-
 ## Capturing and importing a RHEL or SUSE image
 {: #preparing-linux-image}
 
-To use either RHEL or SUSE within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL).
-
-For users that are unable or unwilling to use PowerVC for the purposes of image capture, there is a separate tool available for [POWER systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture).
+To use either RHEL or SUSE within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you are cannot use PowerVC to capture an image, there is a separate tool available for [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture).
 
 ## Linux networking
 {: #linux-networking}
 
 To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that you do not want to have an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
-## Configuring SNAT in the Power Systems Virtual Server environment by using RHEL
+### Configuring SNAT in the Power Systems Virtual Server environment by using RHEL
 {: #configuring-snat}
 
-Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to Internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
+Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
 
-# SNAT Router Configuration
+### SNAT router configuration
 {: #snat-router-configuration}
 
 1. Deploy a RHEL 7 LPAR on a public network and create subnets (that need to use the SNAT function to get internet access).
@@ -95,8 +91,8 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 2. To perform the update to the `sysctl.conf` file, enter the following command: `sysctl -p /etc/sysctl.conf`.
 3. Finally, configure the source NAT by entering the following command: `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`.
 
-# Configuring Linux VMs to use SNAT Router
+### Configuring Linux VMs to use a SNAT router
 {: #linux-snat-router}
 
-1. Deploy Linux VMs that will be using the SNAT Router to access the internet with the private network being routed by the SNAT Router.
-2. Ensure that the default router for the VM is set to the SNAT Router IP on the private network.
+1. Deploy the Linux VMs that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
+2. Set the default router for your Linux VM to the SNAT router IP on the private network.
