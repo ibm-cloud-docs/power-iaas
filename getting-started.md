@@ -32,6 +32,8 @@ A {{site.data.keyword.powerSys_notm}} integrates your AIX, IBM i, and Linux capa
 
 You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs. With a {{site.data.keyword.powerSys_notm}}, you can create a hybrid cloud environment that allows you to easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}} service, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
+If you're implementing an environment to support an SAP NetWeaver workload, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Systems on IBM Cloud](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started).
+
 ## Terminology
 {: #terminology}
 
