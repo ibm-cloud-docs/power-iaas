@@ -70,15 +70,14 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-The following supported Linux operating system apply to all of the IBM Power Systems hardware used in the {{site.data.keyword.powerSys_notm}} service:
-
 **Linux**
 
-- Red Hat Enterprise Linux (RHEL): 8.0 and 8.1
-- SUSE Linux Enterprise (SLES): 12 and 15
+The following Linux operating systems are supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
-If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
-{: important}
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise (SLES)
+
+For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}
