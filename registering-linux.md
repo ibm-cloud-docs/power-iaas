@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: ""2020-06-10"
+lastupdated: "2020-06-10"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
