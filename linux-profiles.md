@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-06-10"
 
 keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile, e980
 
@@ -26,29 +26,29 @@ subcollection: power-iaas
 # System Applications and Products in Data Processing (SAP) and Power Systems Virtual Servers
 {: #power-iaas-sap}
 
-The {{site.data.keyword.powerSysShort}} offering now supports SAP.
+Learn more about SAP within the {{site.data.keyword.powerSysShort}} service.
 
 ## Implementing SAP NetWeaver in the Power Systems Virtual Server environment
 {: #sap-netweaver}
 
-You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system within the Power Systems Virtual Server environment. Select **AIX** or **SLES for SAP (NetWeaver) - Client supplied subscription** under **Operating system** in the IBM Cloud user interface, and deploy the virtual machine (VM). After you deploy the VM, you can deploy NetWeaver inside of it.
+You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system within the Power Systems Virtual Server environment. Select **AIX** or **SLES for SAP (NetWeaver) - Client supplied subscription** under **Operating system** in the {{site.data.keyword.powerSys_notm}} user interface, and deploy the virtual machine (VM). After you deploy the VM, you can deploy NetWeaver inside of it.
 
-When you select the **SLES for SAP (NetWeaver) - Client supplied subscription** option the **SLES for SAP** operating system is deployed inside the provisioned VM. You need to purchase the subscription for the **SLES for SAP** operating system and register it inside the VM by using the **SLES registration server**. For more information on purchasing and registering Linux subscriptions, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
+When you select the **SLES for SAP (NetWeaver) - Client supplied subscription** option, the **SLES for SAP** operating system is deployed inside the provisioned VM. You need to purchase the subscription for the **SLES for SAP** operating system and register it inside the VM by using the **SLES registration server**. For more information on purchasing and registering Linux subscriptions, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
 
-You can choose any sized resources (CPU, memory, etc.), when you deploy the VM for NetWeaver purposes.
+You can choose any sized resources (CPU, memory, etc.) when you deploy the VM for NetWeaver purposes.
 {: note}
 
 ## SLES for SAP (HANA) compute profiles
 {: #linux-profiles}
 
-Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SUSE Linux Enterprise Server (SLES) for SAP (HANA) as your operating system.
+Learn about popular Linux profiles when you provision a {{site.data.keyword.powerSys_notm}} and choose SLES for SAP (HANA) as your operating system.
 
-A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). In the IBM Cloud console, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
+A profile is a combination of instance attributes, such as cores and Random Access Memory (RAM), that can be instantiated quickly to start a virtual server instance (VSI). Inside the {{site.data.keyword.powerSys_notm}} user interface, you can choose from popular profile configurations or select from a list of profiles that best fit your needs. To view all of the profiles available, click **View all profiles** on the provisioning page.
 
 ## Popular profiles
 {: #popular-profiles}
 
-The following popular profiles are available for SLES for SAP (HANA) virtual machines (VMs). All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
+The following popular profiles are available for SLES for SAP (HANA) VMs. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
 
 *cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
 {: tip}
@@ -64,7 +64,7 @@ The following popular profiles are available for SLES for SAP (HANA) virtual mac
 ## All profiles
 {: #all-profiles}
 
-To see a list of all of the available profiles for SLES for SAP (HANA) virtual machines, click **View all profiles**. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
+To see a list of all of the available profiles for SLES for SAP (HANA) VMs, click **View all profiles**. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
 
 | Profile       | Cores    | RAM      | Production certified? |
 | ------------- | -------- | -------- | --------------------- |

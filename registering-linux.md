@@ -26,14 +26,10 @@ subcollection: power-iaas
 # Using Linux within the Power Systems Virtual Server service
 {: #using-linux}
 
-The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES).
+The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES). SLES is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service.
 {: shortdesc}
 
-The following Linux operating systems are supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
-
-- SUSE Linux Enterprise (SLES)
-
-For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+For additional support, refer to the distribution (distro). You can find a list of `cloud-init` packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
@@ -49,12 +45,12 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 ## Capturing and importing a SUSE image
 {: #preparing-linux-image}
 
-To use SUSE within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you are cannot use PowerVC to capture an image, there is a separate tool available for [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture).
+To use SUSE within the {{site.data.keyword.powerSys_notm}} service, you must use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window}{: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
 
 ## Linux networking
 {: #linux-networking}
 
-To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that you do not want to have an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
+To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
 ### Configuring SNAT in the Power Systems Virtual Server environment
 {: #configuring-snat}
@@ -64,8 +60,11 @@ Most organizations are allotted a limited number of publicly routable IP address
 ### SNAT router configuration
 {: #snat-router-configuration}
 
-1. Deploy a SLES 8 LPAR on a public network and create subnets (that need to use the SNAT function to get internet access).
-2. Use the following commands to allow private network traffic to be accessible for SNAT-ing (these commands assume that the network device for the public IP is `eth0`, and `eth1` for the private network):
+Complete these steps to accurately configure your SNAT router.
+
+1. Deploy a SLES 8 LPAR on a public network.
+2. Create subnets that require the SNAT function to get internet access.
+3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
 
 ```
 iptables -A FORWARD -i eth1 -j ACCEPT
@@ -73,10 +72,13 @@ iptables -A FORWARD -o eth1 -j ACCEPT
 ```
 {: codeblock}
 
+These commands assume that the network device for the public network is `eth0`, and `eth1` for the private network.
+{: important}
+
 You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file:
 
 1. Find and edit the following line within the `/etc/sysctl.conf` file (replacing `0` with `1` if required): `net.ipv4.ip_forward = 1`.
-2. To perform the update to the `sysctl.conf` file, enter the following command: `sysctl -p /etc/sysctl.conf`.
+2. Update the `sysctl.conf` file by entering the following command: `sysctl -p /etc/sysctl.conf`.
 3. Finally, configure the source NAT by entering the following command: `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`.
 
 ### Configuring Linux VMs to use a SNAT router

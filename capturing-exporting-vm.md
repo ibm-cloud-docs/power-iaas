@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
 
-You can capture and export an AIX or IBM i VM instance by using the IBM Cloud console or CLI. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM COS bucket.
+You can capture and export an AIX or IBM i VM instance by using the {{site.data.keyword.powerSys_notm}} user interface or CLI. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM COS bucket.
 {: shortdesc}
 
 When you capture and export a VM, you can choose the image catalog, COS, or both as destinations. The image catalog resides on the IBM Power storage area network (SAN). IBM's COS is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM COS System (formerly Cleversafe). You can always export your image in your image catalog to COS at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
@@ -36,7 +36,7 @@ When you capture and export a VM, you can choose the image catalog, COS, or both
 You are charged different rates based on whether you export to the image catalog or COS.
 {: note}
 
-## Using the IBM Cloud console to capture and export a VM
+## Using the Power Systems Virtual Server user interface to capture and export a VM
 {: #console-capture-export}
 
 1. Click the **Capture and export** icon in your **Virtual server instances** view. The icon is to the right of the **trash** icon.

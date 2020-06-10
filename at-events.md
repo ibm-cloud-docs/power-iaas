@@ -111,4 +111,4 @@ The following events are for working with data volumes in your {{site.data.keywo
 ## Viewing events
 {: #at-viewing-events}
 
-Events are available in all regions. The {{site.data.keyword.at_full_notm}} can have only one instance per region. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface (UI). To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
+Events are available in all regions. The {{site.data.keyword.at_full_notm}} can have only one instance per region. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
