@@ -74,7 +74,6 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 
 The following Linux operating systems are supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
-- Red Hat Enterprise Linux (RHEL)
 - SUSE Linux Enterprise (SLES)
 
 For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
