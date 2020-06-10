@@ -29,7 +29,7 @@ subcollection: power-iaas
 Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it.  You must remove and readd the AIX VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} AIX VM from a public network.
 {: shortdesc}
 
-When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address to complete this procedure.
+When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
 {: note}
 
 ## Removing a network interface from an AIX VM
@@ -69,7 +69,7 @@ Every time you toggle a public network off and then on, the system creates multi
 
 4. To find the network interface that has the public network VLAN ID, enter `entstat -d ent X | grep VLAN` (where *X* is the adapter number).
 
-To add a network interface (for example, *en0*) and point it to the new internal IP address (as shown on the IBM Cloud console), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
+To add a network interface (for example, *en0*) and point it to the new internal IP address (as shown in the {{site.data.keyword.powerSys_notm}} user interface), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
 ```
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0

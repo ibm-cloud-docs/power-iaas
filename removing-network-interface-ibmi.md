@@ -29,7 +29,7 @@ subcollection: power-iaas
 Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
 {: shortdesc}
 
-When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address to complete this procedure.
+When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
 {: note}
 
 ## Removing a network interface from an IBM i VM
@@ -56,14 +56,14 @@ menu. Select **Option 4** next to the interface you'd like to remove.
 ## Adding a network interface to an IBM i VM
 {: #add-nic-ibmi}
 
-When you toggle a public network off and then on, the IBM Cloud console regenerates new internal and external IP addresses. You need to check the IBM Cloud console for the new internal IP address (that maps to the external IP address). Point the new interface at the new internal IP address.
+When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address (that maps to the external IP address). Point the new interface at the new internal IP address.
 
 1. After you remove the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
 
     Most configurations require you to update only the first three fields.
     {: note}
 
-2. Add the new internal IP address you obtained from the IBM Cloud console (you can type over the quotation marks) to the **Internet address** field.
+2. Add the new internal IP address you obtained from the {{site.data.keyword.powerSys_notm}} user interface (you can type over the quotation marks) to the **Internet address** field.
 
 3. Add the new subnet mask to the **Subnet mask** field.
 

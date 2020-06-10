@@ -57,7 +57,7 @@ To verify that `cloud-init` configured your IP addresses correctly, type the `cg
 
 ![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 1. Verifying the cloud-init configuration" caption-side="bottom"}
 
-If you do not see the external IP address in the **Work with TCP/IP Interfaces** window, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the IBM Cloud console within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
+If you do not see the external IP address in the **Work with TCP/IP Interfaces** window, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
 Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 

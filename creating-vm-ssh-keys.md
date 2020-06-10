@@ -101,7 +101,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 ```
 {: screen}
 
-### Using the IBM Cloud console to create an AIX VM with a configured SSH key
+### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.

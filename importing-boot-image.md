@@ -54,12 +54,12 @@ Complete the following steps to import a boot image by using the IBM Cloud CLI. 
     ```
     {: codeblock}
 
-## Using the IBM Cloud console to import a boot image
+## Using the Power Systems Virtual Server user interface to import a boot image
 {: #console-import-image}
 {: help}
 {: support}
 
-Complete the following steps to import a boot image by using the IBM Cloud console.
+Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} user interface.
 
   The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
   {: note}
