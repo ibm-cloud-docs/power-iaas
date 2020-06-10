@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-06-10"
 
-keywords: linux deployment, ova, powervc capture, vm capture from vios
+keywords: linux deployment, ova, powervc capture, vios
 
 subcollection: power-iaas
 
