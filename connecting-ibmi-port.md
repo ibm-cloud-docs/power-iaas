@@ -72,6 +72,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
     ![Creating a PuTTY session](./images/putty-configure.png "Creating a PuTTY session"){: caption="Figure 1. Creating a PuTTY session" caption-side="bottom"}
 
 4. Select **Tunnels** under the **Connection** category.
+
 5. Add your **Source port** number and **Destination**. In this example, the user chose 50000 as the source port number.
 
     Do not change the source port numbers. When telnetting, avoid making the source port the same as the destination.
@@ -94,7 +95,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 
     ![Saving your session](./images/putty-save-session.png "Saving your session"){: caption="Figure 3. Saving your session" caption-side="bottom"}
 
-9.  Your saved session appears after you click **Save**. Load your session and click **Open** to start a PuTTY session to your system.
+9. Your saved session appears after you click **Save**. Load your session and click **Open** to start a PuTTY session to your system.
 
     ![Seeing your list of saved sessions](./images/putty-load-sesson.png "Seeing your list of saved sessions"){: caption="Figure 4. Seeing your list of saved sessions" caption-side="bottom"}
 

@@ -85,7 +85,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
     There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
     {: important}
 
-    ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 7. Selecting your processor and system" caption-side="bottom"}
+    ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 3. Selecting your processor and system" caption-side="bottom"}
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being *disabled*. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
 

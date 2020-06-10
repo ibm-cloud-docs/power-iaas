@@ -40,6 +40,7 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 {: note}
 
 1. To buy a SUSE subscription, see [How to Buy](https://www.suse.com/support/?id=SUSE_Linux_Enterprise_Server_for_SAP_Applications#how-to-buy){: new_window}{: external}.
+
 2. To register your system, see [Registering an Installed System](https://documentation.suse.com/sles/12-SP4/single-html/SLES-deployment/#sec-y2-sw-register){: new_window}{: external}.
 
 ## Capturing and importing a SUSE image
@@ -78,11 +79,14 @@ These commands assume that the network device for the public network is `eth0`, 
 You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file:
 
 1. Find and edit the following line within the `/etc/sysctl.conf` file (replacing `0` with `1` if required): `net.ipv4.ip_forward = 1`.
+
 2. Update the `sysctl.conf` file by entering the following command: `sysctl -p /etc/sysctl.conf`.
+
 3. Finally, configure the source NAT by entering the following command: `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`.
 
 ### Configuring Linux VMs to use a SNAT router
 {: #linux-snat-router}
 
 1. Deploy the Linux VMs that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
+
 2. Set the default router for your Linux VM to the SNAT router IP on the private network.

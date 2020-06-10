@@ -83,7 +83,6 @@ Learn more about migrating workloads from an existing IBM POWER7 or POWER8 syste
     {: tip}
 
 - POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a POWER7 or POWER8 system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
-
 - Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workload).
 
 To learn more about IBM POWER9 system performance and migration strategies, see the following articles:

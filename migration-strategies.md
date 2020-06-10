@@ -59,7 +59,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 
 1. Create an OVA image on your local system.
 2. Copy the OVA image to the IBM Cloud.
-3. [Deploy the OVA imamage and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image)
+3. [Deploy the OVA image and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image)
 
 ## Aspera Technologies
 {: #aspera-technologies}
