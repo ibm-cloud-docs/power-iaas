@@ -75,4 +75,4 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 
 7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
 
-![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}
+    ![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}

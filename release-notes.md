@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-06-10"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -27,12 +27,13 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
-## 01 June 2020
+## June 2020
 {: #june-2020}
 
 - You can now deploy Linux on a {{site.data.keyword.powerSys_notm}}. To learn more, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
+- The {{site.data.keyword.powerSys_notm}} service now includes [a highly available 5 Gbps connection](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) to IBM public cloud services.
 
-## 01 May 2020
+## May 2020
 {: #may-2020}
 
 - IBM i software keys were cleared out due to an IBM Cloud update. You must re-apply any IBM i software licenses through the {{site.data.keyword.powerSys_notm}} user interace. The following IBM i builds require updates:
@@ -50,7 +51,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
   {: important}
 
-## 01 April 2020
+## April 2020
 {: #april-2020}
 
 - The {{site.data.keyword.powerSys_notm}} service now offers lower latency direct connectivity to customers in all regions except for *Washington 2*. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
@@ -63,15 +64,15 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
 
-VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-{: preview}
+  VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
+  {: preview}
 
-## 01 March 2020
+## March 2020
 {: #march-2020}
 
 - You can now provision a {{site.data.keyword.powerSys_notm}} with a capped shared processor. For more information, see the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor) and [Processor types](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
 
-## 01 February 2020
+## February 2020
 {: #feb-2020}
 
 - You can now provision a {{site.data.keyword.powerSys_notm}} in the *FRA05* data center.
