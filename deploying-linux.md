@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Deploying a Linux virtual machine (VM)
 {: #linux-deployment}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SUSE Linux OVA images are currently supported.
+You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SUSE Linux Enterprise Server (SLES) OVA images are currently supported.
 {: shortdesc}
 
 You must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-using-linux).
@@ -34,7 +34,7 @@ You must obtain the subscription for Linux directly from the vendor. After you d
 ## How to create an OVA format Linux image
 {: #ova-format}
 
-Learn how to create an OVA image of a SUSE Linux (SLES) operating system and import it into the {{site.data.keyword.powerSys_notm}} environment. You can use PowerVC or VIOS to capture an image.
+Learn how to create an OVA image of a SLES operating system and import it into the {{site.data.keyword.powerSys_notm}} environment. You can use PowerVC or VIOS to capture an image.
 
 ### Using PowerVC to capture and import an OVA image
 {: #powervc-capture}
