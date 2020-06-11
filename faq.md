@@ -167,7 +167,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SUSE Linux OVA images are currently supported.
+The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported.
 
 ## How does third-party licensing work?
 {: #third-party}
