@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-15"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -63,7 +63,7 @@ Most organizations are allotted a limited number of publicly routable IP address
 
 Complete these steps to accurately configure your SNAT router.
 
-1. Deploy a SLES 8 LPAR on a public network.
+1. Deploy a SLES LPAR on a public network.
 2. Create subnets that require the SNAT function to get internet access.
 3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
 
