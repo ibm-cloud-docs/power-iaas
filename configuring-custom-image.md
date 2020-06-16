@@ -70,11 +70,11 @@ The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or lat
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-<!-- **Linux**
+**Linux**
 
 SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
 
-For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}. -->
+For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}

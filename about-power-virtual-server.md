@@ -42,8 +42,8 @@ The following are some of the key features for the {{site.data.keyword.powerSys_
 
 The {{site.data.keyword.powerSys_notm}} service uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
-<!-- The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
-{: note} -->
+The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
+{: note}
 
 ### Hybrid cloud environment
 {: #hybrid-cloud}

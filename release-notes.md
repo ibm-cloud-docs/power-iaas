@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## June 2020
 {: #june-2020}
 
-<!-- - You can now deploy Linux on a {{site.data.keyword.powerSys_notm}}. To learn more, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux). -->
+- You can now deploy Linux on a {{site.data.keyword.powerSys_notm}}. To learn more, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
 - The {{site.data.keyword.powerSys_notm}} service now includes [a highly available 5 Gbps connection](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) to IBM public cloud services.
 
 ## May 2020
