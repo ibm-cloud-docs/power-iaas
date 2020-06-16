@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-15"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -26,10 +26,17 @@ subcollection: power-iaas
 # Using Linux within the Power Systems Virtual Server service
 {: #using-linux}
 
-The {{site.data.keyword.powerSysShort}} service supports SUSE Linux&reg; Enterprise Server (SLES). SLES is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service.
-{: shortdesc}
+You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
-For additional support, refer to the distribution (distro). You can find a list of `cloud-init` packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+- `SLES 12 : Minimum level: SP5`
+- `SLES 15 : Minimum level SP1 + kernel 4.12.14-197.45-default`
+
+You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+
+While creating an OVA image, you must include the right `cloud-init` packages for the IBM Cloud environment. Please download the appropriate cloud-init package from from the following location, [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+
+You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. To see an example for a SLES15 fix level and procedure use the `sudo zypper update` command. You must verify that the distro (kernel) level contains these fixes or the resize option should be avoided or performed in conjunction with a VM stop/restart action.
+{: important}
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
@@ -63,7 +70,7 @@ Most organizations are allotted a limited number of publicly routable IP address
 
 Complete these steps to accurately configure your SNAT router.
 
-1. Deploy a SLES 8 LPAR on a public network.
+1. Deploy a SLES LPAR on a public network.
 2. Create subnets that require the SNAT function to get internet access.
 3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
 
