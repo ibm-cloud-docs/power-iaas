@@ -35,7 +35,7 @@ You must obtain the subscription for the Linux operating system directly from th
 
 When you create an OVA image, you must include the appropriate IBM Cloud environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
-You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. You can the `sudo zypper update` command to update all of the Linux packages. You must verify that the distro (kernel) level contains these Linux fixes. If not, you should avoid using the resize option altogether or perform it in conjunction with a VM stop/restart action.
+You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. You can use the `sudo zypper update` command to update all of the Linux packages. You must verify that the distro (kernel) level contains these Linux fixes. If not, you should avoid using the resize option altogether or perform it in conjunction with a VM stop/restart action.
 {: important}
 
 ## Registering and subscribing to SLES
