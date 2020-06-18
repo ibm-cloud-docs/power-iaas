@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="power-iaas" category="compute" audience="compute" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
+{: .toc subcollection="power-iaas" category="virtualservers" audience="compute" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
 IBM Power Systems Virtual Servers
 
     {: .navgroup id="learn"}
