@@ -30,7 +30,7 @@ subcollection: power-iaas
 
 The Power Systems virtual servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX or IBM i operating systems) to the public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that your operating system is secure.
 
-Current AIX and IBM i clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX and IBM i systems today can use their same tools, workflows, and enhancements in the cloud.
+Current AIX, IBM i, and Linux clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the cloud.
 
 ## Key features
 {: #key-features}
@@ -48,7 +48,7 @@ The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock ima
 ### Hybrid cloud environment
 {: #hybrid-cloud}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX or IBM i workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX and IBM i workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
+You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX or IBM i workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX, IBM i, or Linux workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
 
 ### Infrastructure customization
 {: #infra-customization}
