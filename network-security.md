@@ -52,6 +52,5 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 * 9475
 * 9476
 
-If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can **manually** open ports for you after the Power Systems™ Virtual Server security team approves it.
-
-Customer-specific firewall option is currently available by using an IBM Cloud firewall, such as Vyatta, vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture).
+[//]: # (If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can **manually** open ports for you after the Power Systems™ Virtual Server security team approves it.)
+[//]: # (Customer-specific firewall option is currently available by using an IBM Cloud firewall, such as Vyatta, vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture). )
