@@ -32,15 +32,14 @@ You can bring your own customized AIX or IBM i operating system (OS) image to de
 
   You cannot transfer an OS license from an on-premises system to a {{site.data.keyword.powerSys_notm}} that is running in the cloud environment. The license cost is factored into the overall hourly billing rate.
   {: note}
-  
-  When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time. 
-{: note}
+
+<!-- When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time. -->
 
 The basic steps that are involved in deploying an instance by using a custom image are:
 
 1. Create the custom image.
-1. Store the image in your **Cloud Object Storage** account.
-1. Point the {{site.data.keyword.powerSys_notm}} console to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
+2. Store the image in your **Cloud Object Storage** account.
+3. Point the {{site.data.keyword.powerSys_notm}} console to the image in the **Cloud Object Storage** and deploy the Virtual Server instance.
 
 ## Before you begin
 {: #before-you-begin-deploy}

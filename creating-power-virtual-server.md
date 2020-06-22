@@ -29,19 +29,21 @@ subcollection: power-iaas
 {: help}
 {: support}
 
-To create and configure a {{site.data.keyword.powerSysFull}}, complete the following steps. If you're creating and configuring a {{site.data.keyword.powerSys_notm}} to support an SAP NetWeaver workload, see [Setting up your Power System Virtual Server and Instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure).
+To create and configure an {{site.data.keyword.powerSysFull}}, complete the following steps.
 {: shortdesc}
+
+<!-- If you're creating and configuring a {{site.data.keyword.powerSys_notm}} to support a SAP NetWeaver workload, see [Setting up your Power System Virtual Server and Instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure). -->
 
 ## Creating a Power Systems Virtual Server service
 {: #creating-service}
 
-1. Log in to the [IBM Cloud catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window} with your IBM Cloud account credentials.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: new_window}{: external} with your IBM Cloud account credentials.
 
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the {{site.data.keyword.powerSys_notm}} tile.
 
     <!-- ![The IBM Cloud catalog](./images/catalog-search-bar.png "The IBM Cloud catalog"){: caption="Figure 1. The IBM Cloud catalog" caption-side="bottom"} -->
 
-3. Give your service a name and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service:
+3. Give your service a name and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
     <!-- ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"} -->
 

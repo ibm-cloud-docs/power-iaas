@@ -28,8 +28,8 @@ subcollection: power-iaas
 
 You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
-- `SLES 12 : Minimum level: SP5`
-- `SLES 15 : Minimum level SP1 + kernel 4.12.14-197.45-default`
+- `SLES 12 - Minimum level: SP4 + Kernel  4.12.14-95.54.1`
+- `SLES 15 - Minimum level: SP1 + kernel 4.12.14-197.45-default`
 
 The kernel versions listed above are required. You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. You can use the `sudo zypper update` command to update all of the Linux packages. You must verify that the distro (kernel) level contains these Linux fixes. If not, you should avoid using the resize option altogether or perform it in conjunction with a VM stop/restart action.
 {: important}
