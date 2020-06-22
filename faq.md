@@ -61,11 +61,11 @@ The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or late
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-<!-- **Linux**
+**Linux**
 
-SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:
+SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all {{site.data.keyword.powerSys_notm}} hardware:
 
-For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}. -->
+For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Can I use my own AIX or IBM i image?
 {: #image}
@@ -167,9 +167,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX 
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased.
-
-<!-- The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported. -->
+The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported.
 
 ## How does third-party licensing work?
 {: #third-party}
