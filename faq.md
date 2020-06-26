@@ -161,7 +161,7 @@ You can control the placement of a new volume in a particular storage provider b
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i ooperating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
 
 ## How does licensing work for the AIX or IBM i operating systems?
 {: #os-support}
