@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
-Infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical CISCO switches and routers.
+Infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical switches and routers.
 {: shortdesc}
 
 ## Default firewall ports
@@ -42,7 +42,7 @@ There are plans to add the ability to dynamically configure the firewall rules i
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
 
-The following firewall ports are also available for IBM i virtual machines (VM):
+The following firewall ports are also open, typically used for IBM i Logical Partitions (LPARs):
 
 * 2005
 * 2007
@@ -52,5 +52,4 @@ The following firewall ports are also available for IBM i virtual machines (VM):
 * 9475
 * 9476
 
-[//]: # (If you need extra ports to be opened, you must submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). Support representatives can **manually** open ports for you after the Power Systems™ Virtual Server security team approves it.)
-[//]: # (Customer-specific firewall option is currently available by using an IBM Cloud firewall, such as Vyatta, vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture). )
+If you need extra ports to be opened, you can consider customer-specific firewall option that is currently available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture).

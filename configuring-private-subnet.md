@@ -90,4 +90,4 @@ The number after the slash represents the bit length of the subnet mask. As a re
 |      /26        |          59                  |           61
 |      /27        |          27                  |           29
 |      /28        |          11                  |           13
-{: caption="Table 1. Understanding CIDR notation caption-side="bottom"}
+{: Caption="Table 1. Understanding CIDR notation caption" caption-side="bottom"}
