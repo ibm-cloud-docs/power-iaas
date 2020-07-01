@@ -72,7 +72,7 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Dallas and washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Dallas and Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 {: tip}
@@ -81,7 +81,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 * [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-* [IBM Power System E980 (9080-M9S) - Data centers other than Dallas and washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
+* [IBM Power System E980 (9080-M9S) - Data centers other than Dallas and Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
