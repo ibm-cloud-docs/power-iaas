@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Using Linux within the Power Systems Virtual Server service
 {: #using-linux}
 
-You can use the {{site.data.keyword.powerSys_notm}}) service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
+You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
 - `SLES 12 - Minimum level: SP4 + Kernel  4.12.14-95.54.1`
 - `SLES 15 - Minimum level: SP1 + kernel 4.12.14-197.45-default`
