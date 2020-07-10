@@ -64,7 +64,12 @@ You can configure and customize the following options when you create a {{site.d
 ### Bring your own image
 {: #bring-own-image}
 
-IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX or IBM i image that you've tested and deployed.
+IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX, IBM i or Linux image that you've tested and deployed.
+
+## Support for SAP NetWeaver or SAP HANA applications on IBM Power Systems Virtual Servers
+{: #support-SAPNetWeaver-or-SAPHANA}
+
+When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM i operating system and custome AIX and Linux images are not supported for SAP workloads. For information about the supported versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
 <!-- When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
 {: note} -->
