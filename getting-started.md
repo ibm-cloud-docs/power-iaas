@@ -22,17 +22,17 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Getting started tutorial
+# Getting started with IBM Power Systems Virtual Servers
 {: #getting-started}
 
-{{site.data.keyword.powerSysFull}} is an infrastructure as a service (IaaS) offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources into the cloud. Avoid the large capital expense or added risk when migrating your essential workloads and get started with a {{site.data.keyword.powerSys_notm}} today!
+IBM&reg; Power Systems&trade; Virtual Server is an infrastructure as a service (IaaS) offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources into the cloud. Avoid the large capital expense or added risk when migrating your essential workloads and get started with a {{site.data.keyword.powerSys_notm}} today!
 {: shortdesc}
 
 A {{site.data.keyword.powerSys_notm}} integrates your AIX, IBM i, or Linux capabilities into the {{site.data.keyword.cloud}} experience. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out.
 
 You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs. With a {{site.data.keyword.powerSys_notm}}, you can create a hybrid cloud environment that allows you to easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}} service, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver workload, see [Setting up your Power System Virtual Server instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure) in the SAP NetWeaver on IBM Power System Virtual Servers documentation. If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP HANA workload, See [Setting up your Power System Virtual Server instances](/docs/sap-hana-power?topic=sap-hana-power-provision_environment) in the SAP HANA on IBM Power Systems Virtual Servers documentation.
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver workload, see [Setting up your Power System Virtual Server instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) in the SAP NetWeaver on IBM Power System Virtual Servers documentation. If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP HANA workload, See [Setting up your Power System Virtual Server instances](/docs/sap-hana-power?topic=sap-hana-power-getting-started) in the SAP HANA on IBM Power Systems Virtual Servers documentation.
 
 ## Terminology
 {: #terminology}

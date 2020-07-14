@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Pricing for Power Systems Virtual Servers on IBM Cloud
+# Pricing for Power Systems Virtual Servers
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The IBM Power systems that can host Power Systems Virtual Servers have the following theoretical maximums:
+IBM&reg; Power Systems&trade; Virtual Server is offered in select regions with scale-out logical partitions (LPAR). The IBM Power systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
 - E880 (9119-MHE): 155 processors and 8,099 GB of memory
 - E980 (9080-M9S): 155 processors and 16,255 GB of memory
