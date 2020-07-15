@@ -234,4 +234,4 @@ Order a second Direct Link Connect connection for backup purposes.
 ## Deleting your Direct Link Connect on Classic connection
 {: deleting-direct-link}
 
-You can remove your Direct Link Connect on Classic connection by using the {{site.data.keyword.powerSys_notm}} user interface. Click the overflow menu in the **Actions** column next to the connection. After you submit a request to delete the connection, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
+You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.

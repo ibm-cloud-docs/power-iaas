@@ -69,7 +69,7 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 ## Support for SAP NetWeaver or SAP HANA applications on IBM Power Systems Virtual Servers
 {: #support-SAPNetWeaver-or-SAPHANA}
 
-When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided SUSE Enterprise Linux&reg; server (SLES) stock image. IBM i operating system and custome AIX and Linux images are not supported for SAP workloads. For information about the supported versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
+When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided SUSE Enterprise Linux&reg; server (SLES) stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For information about the supported versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
 <!-- When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
 {: note} -->
