@@ -55,7 +55,7 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -225,7 +225,7 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
 
 IBM Cloud Connect is only available to IBM clients within the US.
 {: important}
@@ -243,9 +243,9 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: #monitoring}
 {: faq}
 
-IBM does not provide status and performance monitoring for the IBM Cloud. Clients must use their own on-premises tools.
+IBM does not provide status and performance monitoring for the Power Systems Virtual Server. Clients must use their own on-premises tools.
 
-## What performance and capacity planning services do you provide for IBM i on IBM Cloud?
+## What performance and capacity planning services do you provide for IBM i?
 {: #ibmi-performance}
 {: faq}
 
