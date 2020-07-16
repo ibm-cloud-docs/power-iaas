@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Backup strategies for IBM Power Systems Virtual Servers
 {: #backup-strategies}
 
-Learn more about different AIX and IBM i backup strategies for the {{site.data.keyword.powerSysFull}} service.
+Learn more about different AIX and IBM i backup strategies for the IBM&reg; Power Systems&trade; Virtual Server service.
 {: shortdesc}
 
 ## Image capture

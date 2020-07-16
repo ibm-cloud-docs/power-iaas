@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Migration strategies for IBM Power Systems Virtual Servers
 {: #migration-strategies-power}
 
-Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
+Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}
 
 ## IBM Cloud Object Storage (COS)

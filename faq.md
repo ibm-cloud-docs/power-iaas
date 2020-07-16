@@ -38,12 +38,12 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
 
-## What versions of AIX and IBM i are supported?
+## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
 {: faq}
 {: support}
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
+The supported AIX, IBM i and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 **AIX**
 
@@ -67,7 +67,7 @@ SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init
 
 For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
-## Can I use my own AIX or IBM i image?
+## Can I use my own AIX, IBM i, or Linux image?
 {: #image}
 {: faq}
 {: support}
@@ -157,13 +157,13 @@ You can apply affinity and anti-affinity policies to both VMs and volumes. VM af
 
 You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
-## Does IBM provide maintenance for the AIX or IBM i operating systems?
+## Does IBM provide maintenance for the AIX, IBM i or Linux operating systems?
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i or Linux operating system.
 
-## How does licensing work for the AIX or IBM i operating systems?
+## How does licensing work for the AIX, IBM i or Linux operating systems?
 {: #os-support}
 {: faq}
 
