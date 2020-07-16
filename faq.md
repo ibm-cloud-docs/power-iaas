@@ -38,7 +38,7 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note}
 
-## What versions of AIX, IBM i, and Linux are supported?
+## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
 {: faq}
 {: support}
@@ -281,4 +281,4 @@ On an AIX VM, the following databases are supported:
 
 On a Linux VM, the following database is supported:
 
-  - SAP HANA Platform 2.0 SPS 04, or la
+  - SAP HANA Platform 2.0 SPS 04, or later
