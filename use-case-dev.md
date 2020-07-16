@@ -25,7 +25,7 @@ subcollection: power-iaas
 # AIX and IBM i development and test
 {: #use-case-dev-test}
 
-The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the {{site.data.keyword.cloud}}.
+The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the IBM Power Systems Virtual Server.
 {: shortdesc}
 
 ## Client needs
@@ -46,7 +46,7 @@ The client wants to create a temporary sandbox environment to perform testing an
 ## Technical solution
 {: #use-case-dev-solutions}
 
-- {{site.data.keyword.powerSysFull}}
+- IBM&reg; Power Systems&trade; Virtual Server
 - Direct Link Connect for optional connectivity into full {{site.data.keyword.cloud_notm}} or from  an on-premises environment
 - VPN and Direct Link Dedicated for on-premises connectivity
 - Cloud Object Storage for optional backup and custom image hosting or migration

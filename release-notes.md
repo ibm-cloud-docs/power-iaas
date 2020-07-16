@@ -27,16 +27,20 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## July 2020
+{: #july-2020}
+
+The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
 ## June 2020
 {: #june-2020}
 
 - You can now deploy Linux on a {{site.data.keyword.powerSys_notm}}. To learn more, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
-- The {{site.data.keyword.powerSys_notm}} service now includes [a highly available 5 Gbps connection](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) to IBM public cloud services.
+- The {{site.data.keyword.powerSys_notm}} service now includes [a highly available 5 Gbps connection](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 ## May 2020
 {: #may-2020}
 
-- IBM i software keys were cleared out due to an IBM Cloud update. You must re-apply any IBM i software licenses through the {{site.data.keyword.powerSys_notm}} user interace. The following IBM i builds require updates:
+- IBM i software keys were cleared out due to an IBM Cloud update. You must re-apply any IBM i software licenses through the {{site.data.keyword.powerSys_notm}} user interface. The following IBM i builds require updates:
     - 7.4 MF99301 SI70544
     - 7.3 MF99207 SI69686
     - 7.2 SI71091

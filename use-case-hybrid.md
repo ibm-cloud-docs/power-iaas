@@ -46,7 +46,7 @@ The client wants to use the {{site.data.keyword.cloud}} as a DR destination for 
 ## Solution components
 {: #use-case-hybrid-solutions}
 
-- {{site.data.keyword.powerSysFull}}
+- IBM&reg; Power Systems&trade; Virtual Server
 - PowerHA *(Optional)*
 - Direct Link Connect and Direct Link Dedicated *(Optional)*
 - Cloud Object Storage for custom image hosting

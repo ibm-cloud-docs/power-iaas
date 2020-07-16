@@ -58,8 +58,8 @@ The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It 
 If you have an environment with access to PowerVC, you can capture OVA images to easily migrate your data. The {{site.data.keyword.powerSys_notm}} offering allows you to provision a new virtual server based on an OVA image. To accomplish this, regardless of the operating system (OS), you must complete the following steps:
 
 1. Create an OVA image on your local system.
-2. Copy the OVA image to the IBM Cloud.
-3. [Deploy the OVA image and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image)
+2. Copy the OVA image to your **Cloud object storage** account.
+3. [Deploy the OVA image and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -129,7 +129,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
-For more information, see [Restoring an AIX mksysb image onto an IBM Cloud virtual machine (VM)](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+For more information, see [Restoring an AIX mksysb image onto a Power Systems Virtual Server instance)](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
@@ -160,7 +160,7 @@ Learn about migration strategies that are specific to IBM i systems.
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, COS, Aspera, NFS server, etc.) and then restored on the IBM Cloud instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
+Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, COS, Aspera, NFS server, etc.) and then restored on the IBM Power Systems Virtual Server instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 

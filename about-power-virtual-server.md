@@ -25,12 +25,12 @@ subcollection: power-iaas
 # What is a Power Systems Virtual Server?
 {: #about-virtual-server}
 
-IBM&reg; Power Systems&trade; Virtual Servers are colocated and connected with IBM Cloud&trade; to create Power Systems virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
+IBM&reg; Power Systems&trade; Virtual Servers are colocated and connected with IBM Cloud&trade;. The virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
 {:shortdesc}
 
-The Power Systems virtual servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems) to the public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that your operating system is secure.
+The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the Power Systems Virtual Server in the cloud, it is your responsibility to make sure that your operating system is secure.
 
-Current AIX, IBM i, and Linux clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the cloud.
+Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.
 
 ## Key features
 {: #key-features}
@@ -48,7 +48,7 @@ The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock ima
 ### Hybrid cloud environment
 {: #hybrid-cloud}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX, IBM i, or Linux workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the public cloud allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX, IBM i, or Linux workloads are running in the cloud, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
+You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX, IBM i, or Linux workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the Power Systems Virtual Server allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX, IBM i, or Linux workloads are running in the Power Systems Virtual Server, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
 
 ### Infrastructure customization
 {: #infra-customization}

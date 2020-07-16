@@ -47,7 +47,7 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 - By using the {{site.data.keyword.powerSys_notm}} service, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available.
 
-Licenses that are purchased outside a subscription model license are not eligible to be used in the {{site.data.keyword.cloud}} environment.
+Licenses that are purchased outside a subscription model license are not eligible to be used in the Power Systems Virtual Server.
 {: note}
 
 <!--* When you deploy PowerHA SystemMirror, you must verify that the Service IP address is defined as a private IP address. This Service IP address can be accessed by another {{site.data.keyword.powerSys_notm}} instance or from other {{site.data.keyword.cloud}} applications. You cannot use a public IP address because it cannot be moved from one interface to another interface within a virtual server or across different virtual servers. -->
@@ -59,6 +59,6 @@ Licenses that are purchased outside a subscription model license are not eligibl
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up by the {{site.data.keyword.cloud_notm}}. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage). You can use this process to restore your virtual server in case a critical failure occurs.
+Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up automatically. You can use the {{site.data.keyword.cloud_notm}} console to back up your virtual server to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage). You can use this process to restore your virtual server in case a critical failure occurs.
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might a take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.

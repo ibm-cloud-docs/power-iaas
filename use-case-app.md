@@ -48,7 +48,7 @@ The client wants to run an enterprise-level workload in the {{site.data.keyword.
 ## Solution components
 {: #use-case-app-solutions}
 
-- {{site.data.keyword.powerSysFull}}
+- IBM&reg; Power Systems&trade; Virtual Server
 - PowerHA *(optional)*
 - Mass data migration (MDM)
 - Direct Link and Direct Link Dedicated for on-premises connectivity
