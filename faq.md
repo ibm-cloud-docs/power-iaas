@@ -237,7 +237,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
-**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+**IBM Power Systems Virtual Server environment:** Inbound bandwidth is unlimited and not charged. Oandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
 ## What monitoring services are available?
 {: #monitoring}

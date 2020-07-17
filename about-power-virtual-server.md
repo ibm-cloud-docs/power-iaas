@@ -28,7 +28,7 @@ subcollection: power-iaas
 IBM&reg; Power Systems&trade; Virtual Servers are colocated and connected with IBM Cloud&trade;. The virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
 {:shortdesc}
 
-The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the Power Systems Virtual Server in the cloud, it is your responsibility to make sure that your operating system is secure.
+The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the Power Systems Virtual Server, it is your responsibility to make sure that your operating system is secure.
 
 Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.
 
