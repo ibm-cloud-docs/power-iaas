@@ -54,12 +54,12 @@ Before you create your first Power Systems Virtual Server instance, review the f
 
 5. *(Optional)* If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#steps-to-order-direct-link-connect) service. You cannot create a private network during the VM provisioning process. You must first use the {{site.data.keyword.powerSys_notm}} user interface, command line interface (CLI), or application programming interfaced (API) to [create one](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
-6. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} service.
+<!-- 6. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} service.
 
 The **AIX & IBM i in IBM (Public) Cloud** video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functionality between what's shown in the video and what's currently available.
 {: note}
 
-<iframe id= youtube-power-iaas title= "AIX & IBM i in the IBM (Public) Cloud" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/y5QaNdGJ6R0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id= youtube-power-iaas title= "AIX & IBM i in the IBM (Public) Cloud" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/y5QaNdGJ6R0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 ## Next steps
 {: #next-steps}

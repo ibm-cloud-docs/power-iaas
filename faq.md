@@ -28,7 +28,7 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
-## Where can I learn how to use a Power Systems Virtual Server?
+<!-- ## Where can I learn how to use a Power Systems Virtual Server?
 {: #training}
 {: faq}
 {: support}
@@ -36,7 +36,7 @@ subcollection: power-iaas
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note}
+{: note} -->
 
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
