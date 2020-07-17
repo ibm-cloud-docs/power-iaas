@@ -75,7 +75,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 
 Cloning a volume creates a full copy of the volume. You can select multiple volumes and initiate a group clone. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
 
-As soon as the call returns, you can start using the target disks. The clone operation will continue to copy data from the source disks to target disks in the background. Depending on the size of the source disks and the amount of data to copy, the clone operation can take a significant amount of time.
+The clone operation will continue to copy data from the source disks to target disks in the background. Depending on the size of the source disks and the amount of data to copy, the clone operation can take a significant amount of time.<br>
 
 You cannot modify the source or target disk attributes, such as disk size, while the clone operation is in progress.
 {: note}

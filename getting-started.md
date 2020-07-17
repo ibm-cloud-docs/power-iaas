@@ -22,17 +22,17 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Getting started tutorial
+# Getting started with IBM Power Systems Virtual Servers
 {: #getting-started}
 
-{{site.data.keyword.powerSysFull}} is an infrastructure as a service (IaaS) offering that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources into the cloud. Avoid the large capital expense or added risk when migrating your essential workloads and get started with a {{site.data.keyword.powerSys_notm}} today!
+IBM&reg; Power Systems&trade; Virtual Servers is a Power Systems infrastructure as a service (IaaS) offering with connectivity to the catalog of IBM Cloud Services that you can use to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources off-premises. Avoid the large capital expense or added risk when migrating your essential workloads and get started with a Power Systems Virtual Servers today!
 {: shortdesc}
 
-A {{site.data.keyword.powerSys_notm}} integrates your AIX, IBM i, or Linux capabilities into the {{site.data.keyword.cloud}} experience. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out.
+A Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabilities into infrastructure as a service. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out.
 
 You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs. With a {{site.data.keyword.powerSys_notm}}, you can create a hybrid cloud environment that allows you to easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}} service, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
-<!-- If you're implementing an environment to support an SAP NetWeaver workload, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Systems on IBM Cloud](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started). -->
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver workload, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) in the SAP NetWeaver on IBM Power System Virtual Servers documentation. If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP HANA workload, See [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started) in the SAP HANA on IBM Power Systems Virtual Servers documentation.
 
 ## Terminology
 {: #terminology}
@@ -54,12 +54,12 @@ Before you create your first Power Systems Virtual Server instance, review the f
 
 5. *(Optional)* If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must order the [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#steps-to-order-direct-link-connect) service. You cannot create a private network during the VM provisioning process. You must first use the {{site.data.keyword.powerSys_notm}} user interface, command line interface (CLI), or application programming interfaced (API) to [create one](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
-6. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} service.
+<!-- 6. *(Optional)* Watch the **AIX & IBM i in IBM (Public) Cloud** video to learn more about the {{site.data.keyword.powerSys_notm}} service.
 
 The **AIX & IBM i in IBM (Public) Cloud** video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functionality between what's shown in the video and what's currently available.
 {: note}
 
-<iframe id= youtube-power-iaas title= "AIX & IBM i in the IBM (Public) Cloud" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/y5QaNdGJ6R0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id= youtube-power-iaas title= "AIX & IBM i in the IBM (Public) Cloud" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/y5QaNdGJ6R0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 ## Next steps
 {: #next-steps}

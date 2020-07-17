@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Pricing for Power Systems Virtual Servers on IBM Cloud
+# Pricing for Power Systems Virtual Servers
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSysFull}} is offered in select regions with scale-out logical partitions (LPAR). The IBM Power systems that can host Power Systems Virtual Servers have the following theoretical maximums:
+IBM&reg; Power Systems&trade; Virtual Server is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
 - E880 (9119-MHE): 155 processors and 8,099 GB of memory
 - E980 (9080-M9S): 155 processors and 16,255 GB of memory
@@ -43,8 +43,8 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
 | ------------------------- | ---------------------------------- | -------------------------------------- |
-| 300 hours                 | (300 hours x $251)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
-| 430 hours                 | (430 hours x $339)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
+| 300 hours                 | (300 hours x $0.343)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
+| 430 hours                 | (430 hours x $0.465)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
 {: caption="Table 1. Monthly LPAR charges" caption-side="top"}
 

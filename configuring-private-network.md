@@ -59,7 +59,7 @@ You cannot use the same private subnet for both IBM Cloud Classic and IBM Cloud 
 
 **Using a Direct Link Connect connection and a VRA (customer implementation)**
 
-You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the IBM Power environment from inside the IBM Cloud network For more information, see [Configuring Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link).
+You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the IBM Power environment from inside the IBM Cloud network. For more information, see [Configuring Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link).
 
 ## Connecting to the IBM Cloud Power environment
 {: #connecting-power}

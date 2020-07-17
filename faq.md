@@ -28,7 +28,7 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
-## Where can I learn how to use a Power Systems Virtual Server?
+<!-- ## Where can I learn how to use a Power Systems Virtual Server?
 {: #training}
 {: faq}
 {: support}
@@ -36,14 +36,14 @@ subcollection: power-iaas
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note}
+{: note} -->
 
-## What versions of AIX and IBM i are supported?
+## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
 {: faq}
 {: support}
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
+The supported AIX, IBM i and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 **AIX**
 
@@ -55,7 +55,7 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -67,7 +67,7 @@ SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init
 
 For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
-## Can I use my own AIX or IBM i image?
+## Can I use my own AIX, IBM i, or Linux image?
 {: #image}
 {: faq}
 {: support}
@@ -157,13 +157,13 @@ You can apply affinity and anti-affinity policies to both VMs and volumes. VM af
 
 You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
-## Does IBM provide maintenance for the AIX or IBM i operating systems?
+## Does IBM provide maintenance for the AIX, IBM i or Linux operating systems?
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX or IBM i operating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i or Linux operating system.
 
-## How does licensing work for the AIX or IBM i operating systems?
+## How does licensing work for the AIX, IBM i or Linux operating systems?
 {: #os-support}
 {: faq}
 
@@ -225,7 +225,7 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and SaaS solution connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
 
 IBM Cloud Connect is only available to IBM clients within the US.
 {: important}
@@ -237,15 +237,15 @@ IBM Cloud Connect is only available to IBM clients within the US.
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
 
-**IBM Cloud Power environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+**IBM Power Systems Virtual Server environment:** Inbound bandwidth is unlimited and not charged. Oandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
 ## What monitoring services are available?
 {: #monitoring}
 {: faq}
 
-IBM does not provide status and performance monitoring for the IBM Cloud. Clients must use their own on-premises tools.
+IBM does not provide status and performance monitoring for the Power Systems Virtual Server. Clients must use their own on-premises tools.
 
-## What performance and capacity planning services do you provide for IBM i on IBM Cloud?
+## What performance and capacity planning services do you provide for IBM i?
 {: #ibmi-performance}
 {: faq}
 
@@ -268,3 +268,17 @@ You can delete the service by clicking the overflow menu in the **Virtual server
 {: faq}
 
 To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+## What are the supported databases that I can run on Power Systems Virtual Server?
+{: #support-databases}
+{: faq}
+
+On an AIX VM, the following databases are supported:
+
+  - IBM&reg; Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
+  - Oracle Database 12.1.0.2, or later
+  - SAP Adaptive Server Enterprise 16.0 SP03, or later
+
+On a Linux VM, the following database is supported:
+
+  - SAP HANA Platform 2.0 SPS 04, or later

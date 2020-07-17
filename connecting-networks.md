@@ -31,7 +31,7 @@ Learn more about connecting {{site.data.keyword.powerSysShort}} instances and ne
 ## Connecting a Power Systems Virtual Server instance between data centers (DAL13 to WDC04)
 {: #connecting-instance-colos}
 
-You can use **IBM Cloud Connect** to connect {{site.data.keyword.cloud_notm}} instances across data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure public cloud and software as a service (SaaS) solution connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
+You can use **IBM Cloud Connect** to connect {{site.data.keyword.cloud_notm}} instances across data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
 
 IBM Cloud Connect is only available to IBM clients within the US.
 {: important}
@@ -68,7 +68,7 @@ Learn more about how the IBM Cloud Connect team helps establish a **Direct Conne
 3. The IBM Cloud Connect team enters the **Service Key** into the Megaport portal to establish the VxC.
 4. The IBM Cloud Connect team creates the VxC. -->
 
-## Linking private subnets and networks in a Power System Virtual Server on the IBM Cloud
+## Linking private subnets and networks in a Power System Virtual Server
 {: #connecting-private-subnets}
 
  You can link private subnets within a colo that are on the same virtual LAN (VLAN). You must open a support ticket to link private subnets within a colo.

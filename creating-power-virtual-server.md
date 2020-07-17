@@ -29,7 +29,7 @@ subcollection: power-iaas
 {: help}
 {: support}
 
-To create and configure an {{site.data.keyword.powerSysFull}}, complete the following steps.
+To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complete the following steps.
 {: shortdesc}
 
 <!-- If you're creating and configuring a {{site.data.keyword.powerSys_notm}} to support a SAP NetWeaver workload, see [Setting up your Power System Virtual Server and Instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure). -->
@@ -239,3 +239,9 @@ Refer to the following table for more information on each {{site.data.keyword.po
     </td>
   </tr>
 </table>
+
+## Implementing SAP NetWeaver and SAP HANA in the Power Systems Virtual Server environment
+
+You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system within the {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run the SAP NetWeaver applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) in the SAP NetWeaver on IBM {{site.data.keyword.powerSys_notm}}s documentation.
+
+You can deploy SAP HANA on Linux operating system within the {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run the SAP HANA database on the {{site.data.keyword.powerSys_notm}} instances. For more information, see [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started) in the SAP HANA on IBM Power System Virtual Servers documentation.
