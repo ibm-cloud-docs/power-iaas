@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 IBM&reg; Power Systems&trade; Virtual Server is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
-- E880 (9119-MHE): 155 processors and 8,099 GB of memory
+- E880 (9119-MHE): 143 processors and 8,099 GB of memory
 - E980 (9080-M9S): 143 processors and 16,255 GB of memory
 - S922 (9009-22A): 15 processors and 959 GB of memory
 
