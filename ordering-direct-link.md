@@ -59,7 +59,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the <a href="#direct-link">configuration parameters</a> for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer (not available in *Washington 2*).
+   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
    {: note}
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
@@ -75,17 +75,17 @@ Order a second Direct Link Connect connection for backup purposes.
 
 10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
-11. The {{site.data.keyword.powerSys_notm}} provides the Megaport service key (if chosen) to the Direct Link team. The Megaport service key allows the Direct Link team to locate and activate the connection. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
+11. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
     ```
     Link Speed:                  1000 Mbps
-    Location:                    Washington 2
-    Network Provider:            MEGAPORT
+    Location:                    Washington 4
+    Network Provider:            IBM Power Virtual Server
     Direct Link Connect subnet:  10.254.0.24/30
     IBM Cloud IP Address:        10.254.0.25/30
     Customer IP Address:         10.254.0.26/30
     IBM Cloud ASN:               13884
-    Customer BGP ASN:            64999
+    Customer BGP ASN:            64995
     Network Identifier:          1748523-1
     Date Created:                2019-06-12T14:56:45-06:00
     ```
@@ -162,8 +162,7 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt><strong>Network Provider</strong></dt>
   <dt></dt>
   <dd>
-    You must select <strong>MEGAPORT</strong> or
-    <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
+    You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
   </dd>
   <dt><strong>Link Speed</strong></dt>
   <dt></dt>
@@ -188,7 +187,7 @@ Order a second Direct Link Connect connection for backup purposes.
     </p>
     <p>
       <strong>Important:</strong> Do not try to change the BGP ASN number to
-      <strong>64997</strong>. You must contact the IBM Power support team to
+      <strong>64995</strong>. You must contact the IBM Power support team to
       handle your request to change the BGP ASN number.
     </p>
     <table>
@@ -198,14 +197,9 @@ Order a second Direct Link Connect connection for backup purposes.
       <tr>
         <th>Direct Link Connect location</th>
         <th>BGP ASN number</th>
-      </tr>
       <tr>
-        <td>Dallas 13</td>
-        <td>64997</td>
-      </tr>
-      <tr>
-        <td>Washington 2</td>
-        <td>64999</td>
+        <td>Washington 4</td>
+        <td>64995</td>
       </tr>
       <tr>
         <td>Frankfurt 4<br/>Frankfurt 5</td>
