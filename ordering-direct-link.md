@@ -139,8 +139,8 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Washington, D.C., US</td>
-        <td>Washington 2</td>
-        <td>Megaport</td>
+        <td>Washington 4</td>
+        <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
         <td>Frankfurt, Germany, EU</td>
