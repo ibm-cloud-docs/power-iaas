@@ -198,7 +198,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <th>Direct Link Connect location</th>
         <th>BGP ASN number</th>
       <tr>
-        <td>Dallas 13 4</td>
+        <td>Dallas 13</td>
         <td>64999</td>
       </tr>
       <tr>
