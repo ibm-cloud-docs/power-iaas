@@ -27,8 +27,8 @@ subcollection: power-iaas
 
 IBM&reg; Power Systems&trade; Virtual Server is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
-- E880 (9119-MHE): 155 processors and 8,099 GB of memory
-- E980 (9080-M9S): 155 processors and 16,255 GB of memory
+- E880 (9119-MHE): 143 processors and 8,099 GB of memory
+- E980 (9080-M9S): 143 processors and 16,255 GB of memory
 - S922 (9009-22A): 15 processors and 959 GB of memory
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
@@ -75,19 +75,28 @@ The following tables show how different processor types affect the cost per syst
 
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
-| 1                      | $0.64 (dedicated)            | $467.20                  |
-| 1                      | $0.16 (uncapped shared)      | $116.80                  |
-| 1                      | $0.24 (capped shared)        | $175.20                  |
+| 1                      | $0.64 (dedicated)            | $353.028                  |
+| 1                      | $0.28 (uncapped shared)      | $88.257                  |
+| 1                      | $0.34 (capped shared)        | $132.422                  |
 {: caption="Table 1. S922 processor type pricing" caption-side="bottom"}
 
 <br>
 
-| Number of cores (E880/E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
-| 1                           | $1.73 (dedicated)            | $1262.90                 |
-| 1                           | $0.43 (uncapped shared)      | $313.90                  |
-| 1                           | $0.65 (capped shared)        | $474.50                  |
-{: caption="Table 2. E880/E980 processor type pricing" caption-side="bottom"}
+| 1                           | $1.52 (dedicated)            | $950.533                 |
+| 1                           | $0.54 (uncapped shared)      | $237.615                  |
+| 1                           | $0.70 (capped shared)        | $356.459                  |
+{: caption="Table 2. E880 processor type pricing" caption-side="bottom"}
+
+<br>
+
+| Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| --------------------------- | ---------------------------- | ------------------------ |
+| 1                           | $1.91 (dedicated)            | $1235.671                 |
+| 1                           | $0.64 (uncapped shared)      | $308.936                  |
+| 1                           | $0.85 (capped shared)        | $463.404                  |
+{: caption="Table 2. EE980 processor type pricing" caption-side="bottom"}
 
 ## End of billing
 {: #pricing-end-billing}
