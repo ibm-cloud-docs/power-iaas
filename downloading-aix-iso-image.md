@@ -87,7 +87,7 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
 
 4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line.
 
-## Installing Optional Software Products (AIX stock images)
+## Install Optional Software Products (AIX stock images)
 {: installing-AIX-stockimage}
 
 The AIX stock images have a local repository `(/usr/sys/inst.images)` which contains all available packages for the current level of the operating system. Any software that has not been automatically installed is considered as **optional** and is included with the operating system in the separate file system `/usr/sys/inst.images`. By creating a separate file system, the local repository prevents the expansion of `/usr` file system and can be safely removed if users wish to regain the additional space used by the local repository.
