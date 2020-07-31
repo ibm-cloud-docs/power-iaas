@@ -90,9 +90,9 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
 ## Installing Optional Software Products (AIX stock images)
 {: installing-AIX-stockimage}
 
-The AIX stock images have a local repository (/usr/sys/inst.images) which contains all available packages for the current level of the operating system. Any software that has not been automatically installed is considered as "optional" and is included with the operating system in the separate file system /usr/sys/inst.images. By creating a separate file system, the local repository prevents the expansion of /usr file system and can be safely removed if users wish to regain the additional space used by the local repository.
+The AIX stock images have a local repository `(/usr/sys/inst.images)` which contains all available packages for the current level of the operating system. Any software that has not been automatically installed is considered as **optional** and is included with the operating system in the separate file system `/usr/sys/inst.images`. By creating a separate file system, the local repository prevents the expansion of `/usr` file system and can be safely removed if users wish to regain the additional space used by the local repository.
 
-The optional software products found under /usr/sys/inst.images can be installed using either command-line or SMIT menu options. For more information on install options, visit the installp command guide.
+The optional software products found under `/usr/sys/inst.images` can be installed using either command-line or SMIT menu options. For more information on install options, visit the installp command guide.
 
 ### Exaples:
 {: example}
