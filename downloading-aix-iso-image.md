@@ -86,3 +86,28 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
 3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html){: new_window}{: external} command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd path software_to_install`.
 
 4. Upon the completion of the installation, the system generates an installation summary. Verify that the **Result** column shows success for all of the loaded files. You can also verify the installation's success by typing, `lslpp -aL`, at a command line.
+
+## Installing Optional Software Products (AIX stock images)
+{: install-AIX-Stock_image}
+
+The AIX stock images have a local repository (/usr/sys/inst.images) which contains all available packages for the current level of the operating system. Any software that has not been automatically installed is considered as "optional" and is included with the operating system in the separate file system /usr/sys/inst.images. By creating a separate file system, the local repository prevents the expansion of /usr file system and can be safely removed if users wish to regain the additional space used by the local repository.
+
+The optional software products found under /usr/sys/inst.images can be installed using either command-line or SMIT menu options. For more information on install options, visit the installp command guide.
+
+### Exaples:
+{: example}
+
+```
+To list all software products and installable options contained in the /usr/sys/inst.images local repository, type:
+
+installp -L -d /usr/sys/inst.images
+To install (and commit) all software within the Geographic Logical Volume Manager software package (located in the /usr/sys/inst.images directory) and expand file systems if necessary, type:
+
+installp -acXd /usr/sys/inst.images glvm.*
+To preview the installation of the bos.sysmgt.nim.master fileset (located in the /usr/sys/inst.images directory) and all requisite software, type:
+
+installp -pagXd /usr/sys/inst.images bos.sysmgt.nim.master
+To install software using the SMIT interactive interface, type:
+
+smit install
+```
