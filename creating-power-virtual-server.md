@@ -64,7 +64,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
-6. Click **New instance** under **Virtual server instances**.
+6. Click **Create instance** under **Virtual server instances**.
 
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
