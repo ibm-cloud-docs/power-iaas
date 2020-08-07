@@ -42,7 +42,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 3. A menu appears after you click the **Edit** icon. Here, you can change your instance's **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
-    If the VM is inactive, you can change the processor type to **Dedicated processor**, **Uncapped shared processor** or **Capped shared processor** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amounts are double.
+    If the VM is inactive, you can change the processor type to **Dedicated processor**, **Uncapped shared processor** or **Capped shared processor** and adjust the amount of memory however you'd like. The minimum and maximum values for **Memory (GB)** and **Entitled capacity** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of **Memory (GB)** and **Entitled capacity** are half of what was allocated at provisioning time, while their maximum amounts are double. If you modify the **Entitled capacity** of the VM when the VM is in active state, and the modification does not succeed, you must shut down the VM to modify the **Entitled capacity**. 
     {: tip}
 
     <!-- ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"} -->
