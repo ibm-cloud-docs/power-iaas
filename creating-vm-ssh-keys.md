@@ -102,7 +102,16 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 {: screen}
 
 ### Debugging the connection
+{: debug-connection}
 
+You can use the `-vvv` option to view the reasons for connection fail. Use this information to resolve the issue or contact support for possible assistance. Use the `-vvv` options to increase the verbosity of the ssh client session and this method generates a lot of data. It is advisable to use a script session to capture the ssh log files since they are also sent to **STDOUT**.
+
+Following is an example debug client session:
+```
+/usr/bin/script /tmp/ssh.{host}.debug
+/usr/bin/ssh -vvv {hostname / IP of ssh server}
+```
+After you end the ssh client debug session, close the script session by pressing *Ctrl+D* or *exit*.
 
 
 ### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
