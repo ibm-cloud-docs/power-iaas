@@ -38,7 +38,7 @@ The IPv6 interface that is used for VM management might be affected when you res
 {: help}
 {: support}
 
-You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. The following screen capture shows a user-deployed AIX _helper VM_ named **AIX-7200-03-03**:
+You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. The following screen capture shows a user-deployed AIX _helper VM_ named **power-systems-virtual-server1-2**:
 
 ![Defining an AIX helper VM](./images/console-aix-helper-vm.png "Defining an AIX helper VM"){: caption="Figure 1. Defining an AIX helper VM" caption-side="bottom"}
 

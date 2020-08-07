@@ -101,6 +101,10 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 ```
 {: screen}
 
+### Debugging the connection
+
+
+
 ### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
 {: #console-add-ssh}
 
