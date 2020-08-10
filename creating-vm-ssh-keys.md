@@ -131,8 +131,8 @@ If the SSH connection to the VM instance is failing, use the `-vvv` option of **
 
 Run the following commands to start an SSH client debug session:
 ```
-# /usr/bin/script /tmp/ssh.{*host*}.debug
-# /usr/bin/ssh -vvv {*hostname/IP_of_ssh_server*}
+# /usr/bin/script /tmp/ssh.{host}.debug
+# /usr/bin/ssh -vvv {hostname/IP_of_ssh_server}
 ```
 
 After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering **exit** command.
