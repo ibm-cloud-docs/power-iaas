@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Creating an AIX virtual machine (VM) with SSH keys for root login
 {: #create-vm}
 
-You can set up one or more SSH keys for root login when you create new AIX virtual machines (VM). The keys are loaded into the root's **authorized_keys** file. SSH keys allow you to securely log in to a VM. You must use the available operating system options to create SSH keys. To generate SSH keys on a Linux&reg; or Mac OS system, for example, you can use the standard `ssh-keygen` tool.
+You can set up one or more Secure Shell (SSH) keys for root login when you create new AIX virtual machines (VM). The keys are loaded into the root's **authorized_keys** file. SSH keys allow you to securely log in to a VM. You must use the available operating system options to create SSH keys. To generate SSH keys on a Linux&reg; or Mac OS system, for example, you can use the standard `ssh-keygen` tool.
 {: shortdesc}
 
 ## Generating an SSH key
@@ -38,7 +38,7 @@ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey
 ```
 
-To use an SSH key with a VM-create operation, you must first add the public key to the cloud instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the public key value with your own):
+To use an SSH key with a VM-create operation, you must first add the public key to the cloud instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
 
 ```
 ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
@@ -59,6 +59,29 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 {: #create-ssh-key}
 
 You can create an AIX VM instance with a configured SSH key by using the IBM Cloud CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: new_window}{: external}.
+
+### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
+{: #console-add-ssh}
+
+You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
+
+1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
+
+2. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
+
+    ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
+
+3. Click **New instance**.
+
+4. Under the **Virtual servers** section, select **Add SSH Keys**.
+
+    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 5. SSH key navigation" caption-side="bottom"}
+
+5. Enter a **Key name** and your previously generated **Public key**.
+
+6. Click **Add SSH key** to add the SSH key.
+
+7. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
 
 ### Using the IBM Cloud CLI to create an AIX VM with a configured SSH key
 {: #create-vm-cli}
@@ -104,35 +127,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 ### Debugging the connection
 {: debug-connection}
 
-You can use the `-vvv` option to view the reasons for connection fail. Use this information to resolve the issue or contact support for possible assistance. Use the `-vvv` options to increase the verbosity of the ssh client session and this method generates a lot of data. It is advisable to use a script session to capture the ssh log files since they are also sent to **STDOUT**.
+If the SSH connection to the VM instance is failing, use the `-vvv` option of **ssh** command to determine the reason of the connection failure. The `-vvv` option increase the verbosity of the ssh client session and generates a large amount of data. Therefore, use a script session to capture the ssh log data so that log data is also sent to the **Standard output (STDOUT) **.
 
-Following is an example debug client session:
+Run the following commands to start an SSH client debug session:
 ```
-/usr/bin/script /tmp/ssh.{host}.debug
-/usr/bin/ssh -vvv {hostname / IP of ssh server}
+# /usr/bin/script /tmp/ssh.{*host*}.debug
+# /usr/bin/ssh -vvv {*hostname/IP_of_ssh_server*}
 ```
-After you end the ssh client debug session, close the script session by pressing *Ctrl+D* or *exit*.
 
-
-### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
-{: #console-add-ssh}
-
-You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
-
-1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
-
-2. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
-
-    ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
-
-3. Click **New instance**.
-
-4. Under the **Virtual servers** section, select **Add SSH Keys**.
-
-    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 5. SSH key navigation" caption-side="bottom"}
-
-5. Enter a **Key name** and your previously generated **Public key**.
-
-6. Click **Add SSH key** to add the SSH key.
-
-7. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
+After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering **exit** command.
