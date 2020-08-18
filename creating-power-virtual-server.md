@@ -127,7 +127,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
           can use this option if you are concerned about a single-server outage
           that might affect all {{site.data.keyword.powerSys_notm}} instances.
         </dd>
-        <dt><strong>Numerical refix</strong></dt>
+        <dt><strong>Numerical prefix</strong></dt>
         <dd>
           Select this option to add numbers before the name of the virtual
           server. If, for example, the first {{site.data.keyword.powerSys_notm}}
