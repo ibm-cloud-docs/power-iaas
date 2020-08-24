@@ -149,7 +149,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>London, United Kingdom</td>
-        <td>London 6</td>
+        <td>London 4<br />London 6</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>

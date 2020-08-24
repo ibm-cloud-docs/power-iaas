@@ -53,7 +53,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 | Washington, D.C.       | us-east  | WDC04       |
 | Toronto, Canada        | eu-east  | TOR01       |
 | Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
-| London, United Kingdom | eu-gb    | LON06       |
+| London, United Kingdom | eu-gb    | LON04/LON06 |
 {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 4. Click **Create**. You are redirected to the **Resource List**.
