@@ -53,7 +53,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 | Washington, D.C.       | us-east  | WDC04       |
 | Toronto, Canada        | eu-east  | TOR01       |
 | Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
-| London, United Kingdom | eu-gb    | LON06       |
+| London, United Kingdom | eu-gb    | LON04/LON06 |
 {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 4. Click **Create**. You are redirected to the **Resource List**.
@@ -127,7 +127,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
           can use this option if you are concerned about a single-server outage
           that might affect all {{site.data.keyword.powerSys_notm}} instances.
         </dd>
-        <dt><strong>Numerical refix</strong></dt>
+        <dt><strong>Numerical prefix</strong></dt>
         <dd>
           Select this option to add numbers before the name of the virtual
           server. If, for example, the first {{site.data.keyword.powerSys_notm}}
@@ -196,6 +196,8 @@ Refer to the following table for more information on each {{site.data.keyword.po
       </p><p>
         For IBM i operating system licensing information, see
         <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.
+        </p><p>
+        You must deploy a maximum of 10 Power Systems Virtual Server VM instances from a single boot image. If you are planning to deploy more than 10 VM instances from the same boot image, you must make multiple copies of a boot image and deploy the VM instances in batches of 10.
       </p>
     </td>
   </tr>

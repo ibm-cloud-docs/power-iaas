@@ -46,7 +46,7 @@ If you've deployed PowerVC in your on-premises environment, you can use it to [c
 
 The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: new_window}{: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/technologies/systems/articles/au-viosmapping/){: new_window}{: external}. **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
 
-The `create_ova` RPM also contains the `create_ova` man page and license. You must install the RPM on VIOS.
+The `create_ova` RPM also contains the `create_ova` man page and license. You must install the RPM on VIOS releases which are prior to VIOS 3.1.2.0. The `create_ova` command is provided as a system command on VIOS release 3.1.2.0, or later.
 {: note}
 
 To see the contents of the RPM package, enter the `rpm` command as shown in the following example:
