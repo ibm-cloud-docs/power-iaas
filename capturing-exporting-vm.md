@@ -77,10 +77,10 @@ You are charged different rates based on whether you export to the image catalog
 
 <!-- ![Exporting the image in your image catalog to COS](./images/console-export-boot-cos.png "Exporting the image in your image catalog to COS"){: caption="Figure 6. Exporting the image in your image catalog to COS" caption-side="bottom"} -->
 
-## Using the IBM Cloud CLI to capture and export a VM
+## Using the CLI to capture and export a VM
 {: #cli-capture-export}
 
-To learn more about using the IBM Cloud CLI to capture and export a VM, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+To learn more about using the command-line interface to capture and export a VM, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
 

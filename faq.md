@@ -38,6 +38,13 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note} -->
 
+## Is IBM&reg; Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
+{: #on-cloud}
+{: faq}
+{: support}
+
+No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.
+
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
 {: faq}
@@ -206,7 +213,7 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 
 The {{site.data.keyword.powerSys_notm}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
 
-## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power System Virtual Servers?
+## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power Systems Virtual Servers?
 {: #connecting}
 {: faq}
 {: support}

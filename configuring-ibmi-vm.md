@@ -83,4 +83,4 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again. You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-6. Proceed to [Connecting to an IBM i Cloud virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi) to connect to your IBM i Cloud VM.
+6. Proceed to [connect to an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi).

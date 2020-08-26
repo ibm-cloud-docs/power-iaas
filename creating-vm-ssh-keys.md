@@ -38,7 +38,7 @@ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey
 ```
 
-To use an SSH key with a VM-create operation, you must first add the public key to the cloud instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
+To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSys_notm}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
 
 ```
 ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
@@ -58,9 +58,9 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ## Creating an AIX VM instance
 {: #create-ssh-key}
 
-You can create an AIX VM instance with a configured SSH key by using the IBM Cloud CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: new_window}{: external}.
+You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: new_window}{: external}.
 
-### Using the Power Systems Virtual Server user interface to create an AIX VM with a configured SSH key
+### Using the {{site.data.keyword.powerSys_notm}} user interface to create an AIX VM with a configured SSH key
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
@@ -83,7 +83,7 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
 7. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
 
-### Using the IBM Cloud CLI to create an AIX VM with a configured SSH key
+### Using the {{site.data.keyword.powerSys_notm}} CLI to create an AIX VM with a configured SSH key
 {: #create-vm-cli}
 
 You can create a new VM with the public key by using the following command (replacing the options with your own):

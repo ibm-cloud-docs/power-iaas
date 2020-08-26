@@ -26,13 +26,13 @@ subcollection: power-iaas
 # Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
 
-The client wants to use the {{site.data.keyword.cloud}} as a DR destination for their on-premises environment.
+The client wants to use the {{site.data.keyword.powerSysfull}} as a DR destination for their on-premises environment.
 {: shortdesc}
 
 ## Client needs
 {: #use-case-hybrid-needs}
 
-- A first step into using the {{site.data.keyword.cloud_notm}} before committing to end-to-end, mission-critical application hosting
+- A first step into using infrastructure as a service (IaaS) environment before committing to end-to-end, mission-critical application hosting
 - A mission-critical IBM Power environment with a DR solution to raise the level of security and reliability of their on-premises data center
 - A DR solution in a different geography
 
@@ -40,13 +40,13 @@ The client wants to use the {{site.data.keyword.cloud}} as a DR destination for 
 {: #use-case-hybrid-examples}
 
 - Client is in need of reducing risk by adding a DR destination without acquiring or growing their data center and capital investment
-- Client has a long-term strategy for cloud migration and can use their DR environment to gain {{site.data.keyword.cloud_notm}} experience, and prepare for a production rollout
-- Cloud to cloud DR site
+- Client has a long-term strategy for cloud migration and can use their DR environment to gain infrastructure as a service experience, and prepare for a production rollout
+- Remote to remote DR site
 
 ## Solution components
 {: #use-case-hybrid-solutions}
 
-- IBM&reg; Power Systems&trade; Virtual Server
+- {{site.data.keyword.powerSys_notm}}
 - PowerHA *(Optional)*
 - Direct Link Connect and Direct Link Dedicated *(Optional)*
 - Cloud Object Storage for custom image hosting

@@ -36,7 +36,7 @@ The kernel versions listed above are required. You must exercise caution when yo
 
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
-When you create an OVA image, you must include the appropriate IBM Cloud environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Registering and subscribing to SLES
 {: #registering-sles}
