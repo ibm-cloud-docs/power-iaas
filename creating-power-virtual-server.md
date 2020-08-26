@@ -197,7 +197,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
         For IBM i operating system licensing information, see
         <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.
         </p><p>
-        You must deploy a maximum of 10 Power Systems Virtual Server VM instances from a single boot image. If you are planning to deploy more than 10 VM instances from the same boot image, you must make multiple copies of a boot image and deploy the VM instances in batches of 10.
+        <!-- You must deploy a maximum of 10 Power Systems Virtual Server VM instances from a single boot image. If you are planning to deploy more than 10 VM instances from the same boot image, you must make multiple copies of a boot image and deploy the VM instances in batches of 10. -->
       </p>
     </td>
   </tr>
