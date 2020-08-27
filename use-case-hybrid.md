@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
 
-The client wants to use the {{site.data.keyword.powerSysfull}} as a DR destination for their on-premises environment.
+The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destination for their on-premises environment.
 {: shortdesc}
 
 ## Client needs
