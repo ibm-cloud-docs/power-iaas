@@ -157,6 +157,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>Toronto 1</td>
         <td>IBM Power Virtual Server</td>
       </tr>
+      <tr>
+        <td>Sydney, Australia</td>
+        <td>Sydney 4</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>
     </table>
   </dd>
   <dt><strong>Network Provider</strong></dt>
