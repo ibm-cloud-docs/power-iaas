@@ -25,13 +25,13 @@ subcollection: power-iaas
 # AIX and IBM i production application hosting
 {: #use-case-app-hosting}
 
-The client wants to run an enterprise-level workload in the {{site.data.keyword.cloud}}.
+The client wants to run an enterprise-level workload in an infrastructure as a service (IaaS) environment with the ability to leverage the IBM Cloud services.
 {: shortdesc}
 
 ## Client needs
 {: #use-case-app-needs}
 
-- Traditional cloud value
+- Traditional IaaS value
 - Modernize core business by using the {{site.data.keyword.cloud_notm}} portfolio
 - Flexible option to bursting and scaling their on-premises environment or to host temporary capacity
 - Interested in or have an evolving strategy for a consumption-based option

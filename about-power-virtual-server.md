@@ -25,10 +25,10 @@ subcollection: power-iaas
 # What is a Power Systems Virtual Server?
 {: #about-virtual-server}
 
-IBM&reg; Power Systems&trade; Virtual Servers are colocated and connected with IBM Cloud&trade;. The virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
+{{site.data.keyword.powerSysFull}} is a Power Systems enterprise infrastructure as a service (IaaS) offering. {{site.data.keyword.powerSys_notm}}s are physically located with low-latency connectivity to the IBM Cloud&trade; infrastructure. In the data centers, the {{site.data.keyword.powerSys_notm}}s are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or on-premises environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure. The virtual servers, also known as logical partitions (LPAR), run on IBM Power Systems hardware with the PowerVM hypervisor.
 {:shortdesc}
 
-The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the Power Systems Virtual Server, it is your responsibility to make sure that your operating system is secure.
+With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, it is your responsibility to make sure that your operating system is secure.
 
 Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.
 
@@ -44,11 +44,6 @@ The {{site.data.keyword.powerSys_notm}} service uses a monthly billing rate that
 
 The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
 {: note}
-
-### Hybrid cloud environment
-{: #hybrid-cloud}
-
-You can use the {{site.data.keyword.powerSys_notm}} service to run any AIX, IBM i, or Linux workloads off-premise from your existing Power Systems hardware infrastructure. Running your workloads in the Power Systems Virtual Server allows you to enjoy all of the advantages the cloud has to offer such as self-service, fast delivery, elasticity, and connectivity to other IBM Cloud services. Although your AIX, IBM i, or Linux workloads are running in the Power Systems Virtual Server, you still keep the same scalable, resilient, production-ready features that Power Systems hardware is known to provide.
 
 ### Infrastructure customization
 {: #infra-customization}

@@ -47,7 +47,7 @@ For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (573
 ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
-MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in COS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
+MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud Object Storage to be used by {{site.data.keyword.powerSys_notm}}. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in COS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: new_window}{: external}.
 
 The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
 {: note}
@@ -58,7 +58,7 @@ The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It 
 If you have an environment with access to PowerVC, you can capture OVA images to easily migrate your data. The {{site.data.keyword.powerSys_notm}} offering allows you to provision a new virtual server based on an OVA image. To accomplish this, regardless of the operating system (OS), you must complete the following steps:
 
 1. Create an OVA image on your local system.
-2. Copy the OVA image to your **Cloud object storage** account.
+2. Copy the OVA image to your **Cloud Object Storage** account.
 3. [Deploy the OVA image and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Aspera Technologies
@@ -96,7 +96,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 ## Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to the IBM Cloud. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
 
 ## Third-party vendors and tools
 {: #third-party-vendors}
@@ -160,14 +160,14 @@ Learn about migration strategies that are specific to IBM i systems.
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be transferred to the IBM Cloud by using some of the migration strategies described earlier (MDM, COS, Aspera, NFS server, etc.) and then restored on the IBM Power Systems Virtual Server instance. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
+Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be restored on the Power Systems Virtual Server instance by using some of the migration strategies, such as MDM, COS, Aspera, and NFS server. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
-1. Create your IBM i VM in the IBM Cloud.
+1. Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
 2. Create a virtual tape and *IMGCLG* on the deployed VM.
 3. Create a virtual tape and *IMGCLG* on the on-premises system and perform an operating system save by entering, `GO LICPGM Option 40`.
-4. Transfer or FTP the images to the IBM Cloud.
+4. Transfer or FTP the images to the {{site.data.keyword.powerSys_notm}}.
 
     You can accomplish the transfer by using some of the listed migration strategies (MDM, COS, Aspera, etc.).
     {: important}

@@ -31,7 +31,7 @@ Infrastructure provides virtual LAN (VLAN) isolation between different tenants, 
 ## Default firewall ports
 {: #firewall-ports}
 
-The public {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
+The {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
 There are plans to add the ability to dynamically configure the firewall rules in the future.
