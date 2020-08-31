@@ -164,11 +164,11 @@ You can apply affinity and anti-affinity policies to both VMs and volumes. VM af
 
 You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
 
-<!-- The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
+The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
 - If an additional storage provider is not available to fulfill the requested policy, you might receive an error that indicates the inability to locate a storage provider to create a volume by using the requested volume affinity policy.
 
-- If additional storage providers exist but the storage providers do not have sufficient space to fulfill the requested policy, you might receive an error that indicates the inability to locate a storage provider with enough free capacity to satisfy the requested volume size. -->
+- If additional storage providers exist but the storage providers do not have sufficient space to fulfill the requested policy, you might receive an error that indicates the inability to locate a storage provider with enough free capacity to satisfy the requested volume size.
 
 ## Does IBM provide maintenance for the AIX, IBM i or Linux operating systems?
 {: #licensing-os}
