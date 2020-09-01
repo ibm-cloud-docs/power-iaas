@@ -192,57 +192,40 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
     Select the link speed to meet your workload requirements. The recommended
     selection for the <strong>Speed</strong> field is 1 Gbps.
   </dd>
-  <dt><strong>BGP and connections</strong></dt>
+
+#### BGP and connections
+{: bgp-connections}
+
+  <dt><strong>Ports</strong></dt>
   <dt></dt>
   <dd>
     <p>
-      You must enter the BGP ASN number for the specific Direct Link Connect
-      location.
+      If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
+    </p>
+  <dt><strong>BGP peering subnet</strong></dt>
+  <dt></dt>
+  <dd>
+    <p>
+      Select <b>Auto-select IP</b> for Power Systems Virtual Server to auto-select an IP address from range 169.254.0.0/16, or manually enter addresses in a specific range to avoid conflict with an existing connection.
+    </p>
+  <dt><strong>BGP ASN</strong></dt>
+  <dt></dt>
+  <dd>
+    <p>
+      You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
     </p>
     <p>
       <strong>Important:</strong> Do not try to change the BGP ASN number to
       <strong>64995</strong>. You must contact the IBM Power support team to
       handle your request to change the BGP ASN number.
     </p>
-    <table>
-      <caption>
-        Table 2. BGP ASN number for specific locations
-      </caption>
-      <tr>
-        <th>Direct Link Connect location</th>
-        <th>BGP ASN number</th>
-      <tr>
-        <td>Dallas 13</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>Washington 4</td>
-        <td>64995</td>
-      </tr>
-      <tr>
-        <td>Frankfurt 4<br/>Frankfurt 5</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>London 6</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>Toronto 1</td>
-        <td>64999</td>
-      </tr>
-    </table>
-  </dd>
-  <dt><strong>Select VRF</strong></dt>
-  <dt></dt>
-  <dd>
-    Select the virtual routing and forwarding option for the connection. If your
-    account does not have a VRF identified, this field is not displayed. You can
-    still create the Direct Link Connect service without selecting a VRF.
   </dd>
   <dd></dd>
 </dl>
 
+#### Add connection (optional)
+
+Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
 
 ## Ordering Direct Link Connect on Classic
 {: #steps-to-order-direct-link-connect}
