@@ -261,7 +261,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 8. Click **Create**. The following message is displayed when your request is submitted successfully:
 
-   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 1. Direct Link Connect success message and ticket number" caption-side="bottom"}
+   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 2. Direct Link Connect success message and ticket number" caption-side="bottom"}
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
@@ -320,7 +320,7 @@ Order a second Direct Link Connect connection for backup purposes.
     Direct Link Connection option:
     <table>
       <caption>
-        Table 1. Direct Link Connection location options
+        Table 2. Direct Link Connection location options
       </caption>
       <tr>
         <th>Power Systems Virtual Server location</th>
@@ -392,7 +392,7 @@ Order a second Direct Link Connect connection for backup purposes.
     </p>
     <table>
       <caption>
-        Table 2. BGP ASN number for specific locations
+        Table 3. BGP ASN number for specific locations
       </caption>
       <tr>
         <th>Direct Link Connect location</th>
