@@ -289,8 +289,8 @@ To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=
 On an AIX VM, the following databases are supported:
 
   - IBM&reg; Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
-  - Oracle Database 12.1.0.2, or later
-  - SAP Adaptive Server Enterprise 16.0 SP03, or later
+  - Oracle Database version 12.1.0.2, or later
+  - SAP Adaptive Server Enterprise version 16.0 SP03, or later
 
 On a Linux VM, the following database is supported:
 
