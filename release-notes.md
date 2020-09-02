@@ -31,6 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #july-2020}
 
 The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
+
 ## June 2020
 {: #june-2020}
 
