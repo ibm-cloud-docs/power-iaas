@@ -104,9 +104,9 @@ You cannot toggle a public network off if there are no other defined networks.
 
 <!-- ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"} -->
 
-<!-- !## Detecting problems by using the System Reference Code (SRC)
-{: detect-problems-src}
+## Detecting problems by using the System Reference Code (SRC)
+{: detect-problems-using-src}
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code that describes the condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and know the solution.
 
-For the AIX stock images, the SRC number are most likely progress codes that notify about the stages involved in powering on and performing initial program load (IPL). For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: new_window}{: external}. For IBM i stock images, the SRC number might indicate progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: new_window}{: external} in IBM i documentation. -->
+<!-- For the AIX stock images, the SRC number are most likely progress codes that notify about the stages involved in powering on and performing initial program load (IPL). For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: new_window}{: external}. --> For IBM i stock images, the SRC number indicates progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: new_window}{: external} in IBM i documentation.
