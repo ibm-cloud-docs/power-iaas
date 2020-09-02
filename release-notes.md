@@ -47,9 +47,6 @@ The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HAN
 - Created a new article on [Planning a workload migration to an IBM POWER8 or POWER9 system](/docs/power-iaas?topic=power-iaas-system-migration).
 - Added [snapshot, clone and restore capabilities](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) to the {{site.data.keyword.powerSys_notm}} service. You can use these new capabilities by using the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
 
-  The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
-  {: preview}
-
 - There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
 
   If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
@@ -67,9 +64,6 @@ The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HAN
     - [Creating a new PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#create-a-new-pvm-instance){: new_window}{: external}
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
-
-  VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-  {: preview}
 
 ## March 2020
 {: #march-2020}
