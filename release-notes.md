@@ -31,6 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #july-2020}
 
 The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
+
 ## June 2020
 {: #june-2020}
 
@@ -46,9 +47,6 @@ The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HAN
     - 7.2 SI71091
 - Created a new article on [Planning a workload migration to an IBM POWER8 or POWER9 system](/docs/power-iaas?topic=power-iaas-system-migration).
 - Added [snapshot, clone and restore capabilities](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone) to the {{site.data.keyword.powerSys_notm}} service. You can use these new capabilities by using the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction).
-
-  The snapshot, clone, and restore capabilities are currently available only in *DAL13*.
-  {: preview}
 
 - There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
 
@@ -67,9 +65,6 @@ The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HAN
     - [Creating a new PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#create-a-new-pvm-instance){: new_window}{: external}
     - [Getting a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#get-a-pvm-instance-s-current-state-or-information){: new_window}{: external}
     - [Updating a PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#update-a-pcloud-pvm-instance){: new_window}{: external}
-
-  VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-  {: preview}
 
 ## March 2020
 {: #march-2020}
