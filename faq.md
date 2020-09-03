@@ -296,7 +296,7 @@ On a Linux VM, the following database is supported:
 
   - SAP HANA Platform 2.0 SPS 04, or later
 
-## How can I get the WebSphere Application Server versions that are delivered through the "Web Enablement for i" packages, which are available at no additional charge with IBM i?
+<!-- ## How can I get the WebSphere Application Server versions that are delivered through the "Web Enablement for i" packages, which are available at no additional charge with IBM i?
 {: web-enablement-for-ibmi}
 {: faq}
 
@@ -311,4 +311,4 @@ If you have an IBM i VM instance with LPP bundle in the Power Systems Virtual Se
 4. Find the required software that you can download, install, and use. For example:
 
   **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
-  **Web Enablement for i (5733-WE3)** - WebSphere V9
+  **Web Enablement for i (5733-WE3)** - WebSphere V9 -->
