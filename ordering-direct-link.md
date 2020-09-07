@@ -39,7 +39,7 @@ The Direct Link (2.0) provides the following advantages:
 Dircet Link 2.0 is available in all current locations except Washington, D.C. 04 and Toronto 1. For Washington, D.C. 04 and Toronto 1 locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
-The {{site.data.keyword.powerSys_notm}} offering now includes a highly available 5 Gbps connection to IBM Cloud services. The 5 Gbps connection is set up in a high availability (HA) configuration at **$0 for each customer per datacenter**. If desired, you can select the global routing option for these links at no cost. This change allows you to set up connectivity between the {{site.data.keyword.powerSys_notm}} service and other IBM Cloud resources without adding any additional costs. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration. To learn more about this offer, see [Getting started with IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} offering includes a highly available 5 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration. To learn more about this offer, see [Getting started with IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link){: new_window}{: external}.
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
@@ -97,7 +97,7 @@ To create a connection to the Power Systems Virtual Server instance by using the
     ```
     {: screen}
 
-11. 11.	Use the information from the Direct Link Connect case number to update the **Power Systems Virtual Server support case**:
+11. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
 The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
 {: note}
@@ -116,7 +116,7 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
     ```
     {: codeblock}
 
-12. The Power Systems Virtual Server support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
+12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
 ### Configuration parameters for ordering Direct Link Connect
 {:parameters-ordering-direct-link-connect}
