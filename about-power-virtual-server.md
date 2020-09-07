@@ -79,7 +79,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 **Data sheets**
 
-* [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: new_window}{: external}
+* [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
 * [IBM Power System E980 (9080-M9S) - Data centers other than Dallas and Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
