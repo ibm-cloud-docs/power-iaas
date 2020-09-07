@@ -28,7 +28,7 @@ subcollection: power-iaas
 Each LPP in the package (that comes with optional features) contains all of the features. For example, the **5770-BR1** solution includes the **Network Feature** and **Advanced Feature** in addition to the base product.
 {: shortdesc}
 
-The following LPP and OS features include all of the group **SWMA** products other than **Rational Development Studio (5770-WDS)** and **Infoprint Server (5722-IP1)**:
+<!-- The following LPP and OS features include all of the group **SWMA** products other than **Rational Development Studio (5770-WDS)** and **Infoprint Server (5722-IP1)**:
 
 - 5648-E77: Infoprint Fonts
 - 5722-IP1: InfoPrint Server for i
@@ -72,9 +72,9 @@ The following LPP and OS features include all of the group **SWMA** products oth
 - 5770-XE1: IBM i Access for Windows
 - 5770-XW1: IBM i Access Family - unlimited users included
 - 5798-FAX: IBM Facsimile Support for i
-- Zend
+- Zend -->
 
-<!-- The following LPP and OS features are included in the IBM i group Software Maintenance Agreement (SWMA) for the {{site.data.keyword.powerSys_notm}} offering:
+The following LPP and OS features are included in the IBM i group Software Maintenance Agreement (SWMA) for the {{site.data.keyword.powerSys_notm}} offering:
 
 - 5770-SS1 IBM I OS processor and includes unlimited users 
 - 5770-DG1: HTTP Server for i
@@ -127,13 +127,13 @@ To include LPPs to your VM instance that are not included in the IBM i group SWM
 
 3. Select the required licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through Power Systems Virtual Server:
 
-- IBM i Cloud Storage Solution
-- IBM i Power HA
-- IBM i DB2 Web Query for i
-- Rational Dev Studio for IBM i
+  - IBM i Cloud Storage Solution
+  - IBM i Power HA
+  - IBM i DB2 Web Query for i
+  - Rational Dev Studio for IBM i
 
-  Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these programs on your IBM i VM instance, you must order these licenses through Power Systems Virtual Server; you cannot use existing licenses in your VM instance.
+    Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these programs on your IBM i VM instance, you must order these licenses through Power Systems Virtual Server; you cannot use existing licenses in your VM instance.
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and accept the price.
 
-5. View the **Server details** pane to verify your instance modification. -->
+5. View the **Server details** pane to verify your instance modification.

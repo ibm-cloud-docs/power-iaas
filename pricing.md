@@ -55,6 +55,8 @@ In this example, the LPAR resources are increased (after reaching 300 hours in t
 
 The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
+The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, as another example, to use up to 128 GB for 2 cores you do not have to pay any premium memory price.
+
 ## Operating systems
 {: #pricing-operating-systems}
 
