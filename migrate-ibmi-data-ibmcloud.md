@@ -22,97 +22,101 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Migrating IBM i Data to IBM Cloud
-{: #migrating-ibmi-data-ibmcloud}
+# Configuring Mass Data Migration (MDM) on IBM i VM
+{: #configure-MDM-ibmivm}
 
-You can migrate the IBM i&reg; data to the IBM Cloud using an IBM Cloud Mass Data Migration device. The IBM i data is saved to virtual optical images in a Network File System (NFS) share located on the Mass Data Migration device at your data center. After you saved the data to virtual optical image, send the Mass Data Migration device back to IBM where your data will be moved to the IBM Cloud. You can accesse your data through IBM Cloud Object Storage.
+You can migrate data of IBM i&reg; virtual machines (VMs) to the IBM Cloud object storage by using an IBM Cloud MDM device. The IBM i VM data is copied or moved to virtual optical images in a Network File System (NFS) share located on the MDM device at your data center. After you save the data to virtual optical image, send the MDM device back to IBM. Your IBM i VM data is moved to the IBM Cloud Object Storage where you can access your data.
 
-## Prepare IBM Cloud for IBM i data
-{: #prepare-ibmcloud-for-ibmidata}
+## Setting up IBM Cloud Storage Object account
+{: #setup-ibmcloud-storageobject}
 
-You can set up your IBM Cloud Object Storage account for data migration and request a pre-configured storage device that can be used to move your data to IBM Cloud Object Storage. For More information, see [Getting started tutorial](/docs/mass-data-migration?topic=mass-data-migration-getting-started-tutorial).
+You can set up your IBM Cloud Object Storage account for data migration and request a pre-configured storage device that can be used to move your data to IBM Cloud Object Storage. For more information, see [Getting started tutorial](/docs/mass-data-migration?topic=mass-data-migration-getting-started-tutorial) on MDM and [Mass Data Migration overview](https://cloud.ibm.com/docs/mass-data-migration?topic=mass-data-migration-overview).
 
-## Prepare IBM Cloud Mass Data Migration device for IBM i data
-{: #massdata-migrationdevice-for-ibmi-data}
+## Configuring MDM device on IBM i VM
+{: #configure-MDMdevice-ibmiVM}
 
-After you receive the pre-configured storage device, see the [Mass Data Migration overview](/docs/mass-data-migration?topic=mass-data-migration-overview) and use the following checklist to complete the device setup.
+After you receive the pre-configured storage device, use the following checklist to complete the MDM device setup.
 
-1. [Connect the device](/docs/mass-data-migration?topic=mass-data-migration-connect-device)
+1. [Connect the MDM device to your IBM i VM](/docs/mass-data-migration?topic=mass-data-migration-connect-device).
 
-2. [Log in to the device user interface](/docs/mass-data-migration?topic=mass-data-migration-access-ui)
+2. [Update the network settings of the MDM device to connect it to your local network](/docs/mass-data-migration?topic=mass-data-migration-ip-settings).
 
-3. [Unlock the storage pool for the device](/docs/mass-data-migration?topic=mass-data-migration-unlock-storage-pool)
+3. [Log in to the MDM device user interface](/docs/mass-data-migration?topic=mass-data-migration-access-ui).
 
-4. See the [Managing access to the NFS share](/docs/mass-data-migration?topic=mass-data-migration-connect-nfs-share) topic to ensure the NFS shares are set up correctly for the IBM i. The directory (or a parent directory) which contains the virtual optical images must be shared with the following characteristics:
+4. [Unlock the storage pool of the MDM device](/docs/mass-data-migration?topic=mass-data-migration-unlock-storage-pool).
 
-   * Share with the following Internet Protocol (IP) addresses:
-     * IP address of the IBM i client.
-     * IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html).
-   * Share for read and write.
-    The IBM i IP address and the IBM i service tools server (LAN console connection) IP address can be the same.
-    {: note}
+5. [Ensure the NFS shares are set up correctly for the IBM i VM](/docs/mass-data-migration?topic=mass-data-migration-connect-nfs-share). The NFS directory (or a parent directory) that contains the virtual optical images must be shared with the following characteristics:
 
-## Prepare IBM i to use the Cloud Mass Data Migration device
-{: #prepate-ibmi}
+   * Share with the following IP addresses:
+     * IP address of the IBM i client VM.
+     * You can connect the IP address of the IBM i VM to the network share of the MDM device. If the IP address of the IBM i VM is different from the the IP address of the service tools server (LAN console connection), specify the service tools server IP address. <!--IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html)-->.
+   * You must connect to the network share of the MDM device with both read and writer access.
 
-### Requirements:
 
-To share virtual optical images with an IBM i client through an NFS server, the following requirements must be satisfied.
+## Preparing IBM i VM to use the MDM device
+{: #prepate-ibmiVM}
 
-* The IBM i NFS client must have a version 4 IP address.
-* The IBM i NFS client must have the NFS server share mounted over a local directory during the setup process.
-* The IBM i NFS client must have a 632B-003 virtual optical device that uses the IP address of the NFS server.
-* A directory under the NFS server share must contain images large enough to hold all the saved data for the IBM i client. The **Save** operations cannot dynamically create new images or extend the size of existing images, so understanding the size of the data generated by the save operation is important.
-* A directory under the NFS server share must have a volume list file that contains a list of images to be used by an IBM i client. The volume list file must have the following characteristics:
+To share virtual optical images with an IBM i VM by using an NFS server, the following requirements must be met.
+
+* The IBM i NFS VM must have IPv4 address.
+* The IBM i NFS VM must have the NFS server share mounted over a local directory during the setup process.
+* The IBM i NFS VM must have a 632B-003 virtual optical device that uses the IP address of the NFS server.
+* A directory under the NFS server share must contain images that have sufficient size to hold all the saved data for the IBM i VM. The **Save** operations cannot dynamically create new images or extend the size of existing images, so understanding the size of the data generated by the save operation is important.
+* A directory under the NFS server share must have a volume list file that contains a list of images to be used by an IBM i VM. The volume list file must have the following characteristics:
   * The file must be in the same directory as the image files.
   * The file must be named VOLUME_LIST.
-  * Each entry in the file is either an image file name with access intent or a comment.
+  * Each entry in the file is either an image file name with access information or a comment.
   * Image file names are limited to 127 characters.
-  * All characters following a hash symbol (#) are considered a comment and will be ignored.
-  * The order of the image file names in the volume list file indicate the order the images will be processed on the IBM i client.
+  * All characters following a hash symbol (#) are considered a comment and are ignored.
+  * The order of the image file names in the volume list file indicate the order of the images that are processed on the IBM i VM.
   * The file must contain ASCII characters.
 
-### IBM i Network File System client set up
-{: nfs-client-setup}
+### Setting up IBM i VM to use images on an NFS server
+{: setup-ibmivm-to-use-nfs-server}
 
-You can set up the IBM i client to use virtual optical images stored on an NFS server. The following example assumes that NFS server as *SERVER01* with IP address *'1.2.3.4'* has share */nfs/share01*
+You can set up the IBM i VM to use virtual optical images that are stored on an NFS server. The following example assumes that the NFS server (*SERVER01*) with IP address *'1.2.3.4'* has share */nfs/share01*. Complete the following steps to set up the IBM i VM to use the images on NFS server:
 
 1. Create a mount directory for the NFS server.
     `MKDIR DIR('/NFS')`
     `MKDIR DIR('/NFS/SERVER01')`
-2. Mount the NFS server root directory over the IBM i mount directory.
+2. Mount the NFS server root directory over the mount directory of the IBM i VM.
    `MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')`
 3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):
    i. Enter PASE.
        `CALL PGM(QP2TERM)`
    ii. Create a directory to contain the virtual image files.
        `mkdir /NFS/SERVER01/iImages`
-   iii. Change to the virtual image file directory.
+   iii. Change the directory to the virtual image file directory.
         `cd /NFS/SERVER01/iImages`
 
-   iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation so they must be created large enough to hold all the save data. Following example creates three 10GB images. 
-   Creating large files can take several minutes, do not exit PASE until each of the commands have sent a message that indicates it has completed.
+   iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each. 
+   Creating large files can take several minutes. Do not exit PASE until each of the commands have sent a completion message.
    {: note}
       `dd if=/dev/zero of=IMAGE01.ISO bs=1M count=10000`
       `dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000`
       `dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000`
 
-   v. Create volume list file **VOLUME_LIST**. The **W** at the end of each line indicates that image allows write access.
+   v. Create volume list file. 
       `rm VOLUME_LIST`
       `echo 'IMAGE01.ISO W' >> VOLUME_LIST`
       `echo 'IMAGE02.ISO W' >> VOLUME_LIST`
       `echo 'IMAGE03.ISO W' >> VOLUME_LIST`
 
+      The **W** at the end of each line indicates that image allows write access.
+
       * Verify the list.
         `cat VOLUME_LIST`
-      * The cat output should show a line for each of the image file names with the corresponding access intent.
+
+   vi. The output of this command displays a line for each of the image file names with the corresponding access information.
+
         `IMAGE01.ISO W`
         `IMAGE02.ISO W`
         `IMAGE03.ISO W`
 
-   vi. Press F3 to exit the PASE.
+   vii. Press F3 to exit the PASE.
 
 4. Create a device description for a virtual optical device.
+
 ```
    CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)
    RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')
@@ -134,28 +138,28 @@ If the images or VOLUME_LIST file is changed on the NFS server, the virtual opti
    INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(*NO)
 ```
 
-7. Virtual device **NFSDEV01** can now be used for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
+7. You can now use the **NFSDEV01** virtual device can now be used for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
 
-* To test the device, do the following to verify that a message queue can be saved and restored. Messages from the save and restore commands should indicate that one object was saved and one object was restored.
+   * To test the virtual device, do the following to verify that a message queue can be saved and restored. Messages from the save and restore commands must indicate that one object was saved and one object was restored.
 
-```
-    CRTMSGQ MSGQ(QTEMP/MSGQ)
-    SAVOBJ OBJ(MSGQ) LIB(QTEMP) DEV(NFSDEV01) CLEAR(*ALL)
-    RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
-```
+   ```
+       CRTMSGQ MSGQ(QTEMP/MSGQ)
+       SAVOBJ OBJ(MSGQ) LIB(QTEMP) DEV(NFSDEV01) CLEAR(*ALL)
+       RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
+   ```
 
-* The save contents of the virtual optical volume can also be displayed:
-   `DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)`
+   * The saved contents of the virtual optical volume can also be displayed by using the following command:
+     `DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)`
 
-## Save IBM i data to the Cloud Mass Data Migration device
-{: #save-ibmidata-to-migrationdevice}
+## Saving IBM i VM data to the MDM device
+{: #save-ibmidata-to-MDMdevice}
 
-Save the data to the 632B OPT device through normal save mechanisms. If you are going to restore from a network install server you can use a *SAVSYS* command. If you want to restore from a local *IMGCLG*, then you have to create distribution media with go *LICPGM* option 40.
+Save the data from the IBM i VM to the 632B optical device by using normal save mechanisms. If you plan to restore from a network install server, you can use a *SAVSYS* command. If you want to restore from a local *IMGCLG*, then you must create a distribution media by using **option 40** on the **GO LICPGM** menu.
 
-## Return the Cloud Mass Data Migration device to IBM
-{: #return-migrationdeviceto-IBM}
+## Returning the MDM device to IBM
+{: #return-MDMdevice-toIBM}
 
-Follow the [Returning the device](/docs/mass-data-migration?topic=mass-data-migration-return-device) process to complete the migration of IBM i data to your IBM Cloud Object Storage.
+Follow the [Returning the device](/docs/mass-data-migration?topic=mass-data-migration-return-device) process to complete the migration of IBM i VM data to your IBM Cloud Object Storage account.
 
 
 
