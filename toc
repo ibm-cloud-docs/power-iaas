@@ -1,13 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-<<<<<<< HEAD
 {: .toc subcollection="power-iaas" category="virtualservers" audience="compute" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
-IBM Power Systems Virtual Servers
-=======
-{: .toc subcollection="power-iaas" category="compute" audience="virtualservers" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
 Power Systems Virtual Servers
->>>>>>> draft
 
     {: .navgroup id="learn"}
     release-notes.md
