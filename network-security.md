@@ -52,7 +52,4 @@ The following firewall ports are also open, typically used for IBM i Logical Par
 * 9475
 * 9476
 
-The port 6443 will not be open for the WDC04 and DAL13 data centers. 
-{: note}
-
 If you need extra ports to be opened, you can consider customer-specific firewall option that is currently available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture).
