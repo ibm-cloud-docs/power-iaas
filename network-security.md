@@ -48,7 +48,6 @@ The following firewall ports are also open, typically used for IBM i Logical Par
 * 2007
 * 2010
 * 2012
-* 6443
 * 9470
 * 9475
 * 9476
