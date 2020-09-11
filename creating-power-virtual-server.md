@@ -61,7 +61,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
     <!-- ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"} -->
 
-5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}}    service under **Services**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
