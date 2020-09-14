@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:note: .note}
 {:external: .external}
 
-# Configuring Mass Data Migration (MDM) on AIX
+# Configuring IBM Cloud Mass Data Migration (MDM) on AIX
 {: #configuring-mdm}
 
 You can configure MDM on an IBM Power Systems&trade; PowerVM AIX LPAR. For more information, see [IBM Cloud Mass Data Migration](https://www.ibm.com/cloud/mass-data-migration){: new_window}{: external}.

@@ -42,18 +42,16 @@ There are plans to add the ability to dynamically configure the firewall rules i
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
 
-The following firewall ports are also open, typically used for IBM i Logical Partitions (LPARs):
+The following firewall ports are also open, typically used for IBM i logical partitions (LPARs):
 
 * 2005
 * 2007
 * 2010
 * 2012
-<!-- * 6443 -->
 * 9470
 * 9475
 * 9476
 
-<!-- The port 6443 will not be open for the WDC04 and DAL13 data centers. 
-{: note} -->
+The port 6443 is also open for miscellaneous purposes. This port will not be open for the WDC04 and DAL13 data centers.
 
 If you need extra ports to be opened, you can consider customer-specific firewall option that is currently available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-reference-architecture).
