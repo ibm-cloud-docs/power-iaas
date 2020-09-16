@@ -35,9 +35,9 @@ The {{site.data.keyword.at_full_notm}} records user-initiated activities that ch
 
 The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
 
-| Action                     | Description                     |
-|:---------------------------|:--------------------------------|
-| pcloud.cloud-instance.read | Read a Power Cloud Instance     |
+| Action                     | Description                                      |
+|:---------------------------|:-------------------------------------------------|
+| pcloud.cloud-instance.read | Read a Power Systems Virutal Server Instance     |
 
 ## List of events: Images
 {: #at-actions-images}
