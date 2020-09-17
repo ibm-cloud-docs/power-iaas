@@ -47,10 +47,10 @@ After you receive the pre-configured storage device, use the following checklist
 
 5. [Ensure the NFS shares are set up correctly for the IBM i VM](/docs/mass-data-migration?topic=mass-data-migration-connect-nfs-share). The NFS directory (or a parent directory) that contains the virtual optical images must be shared with the following characteristics:
 
-   * Share with the following IP addresses:
-     * IP address of the IBM i client VM.
-     * You can connect the IP address of the IBM i VM to the network share of the MDM device. If the IP address of the IBM i VM is different from the the IP address of the service tools server (LAN console connection), specify the service tools server IP address. <!--IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html)-->.
-   * You must connect to the network share of the MDM device with both read and writer access.
+* Share with the following IP addresses:
+  * IP address of the IBM i client VM.
+  * You can connect the IP address of the IBM i VM to the network share of the MDM device. If the IP address of the IBM i VM is different from the the IP address of the service tools server (LAN console connection), specify the service tools server IP address. <!--IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html)-->.
+  * You must connect to the network share of the MDM device with both read and writer access.
 
 
 ## Preparing IBM i VM to use the MDM device
@@ -77,55 +77,76 @@ To share virtual optical images with an IBM i VM by using an NFS server, the fol
 You can set up the IBM i VM to use virtual optical images that are stored on an NFS server. The following example assumes that the NFS server (*SERVER01*) with IP address *'1.2.3.4'* has share */nfs/share01*. Complete the following steps to set up the IBM i VM to use the images on NFS server:
 
 1. Create a mount directory for the NFS server.
-    `MKDIR DIR('/NFS')`
-    `MKDIR DIR('/NFS/SERVER01')`
+
+```
+MKDIR DIR('/NFS')
+MKDIR DIR('/NFS/SERVER01')
+```
+{: pre}
+
 2. Mount the NFS server root directory over the mount directory of the IBM i VM.
-   `MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')`
-3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):
-   i. Enter PASE.
-       `CALL PGM(QP2TERM)`
-   ii. Create a directory to contain the virtual image files.
+
+```
+MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
+```
+{: pre}
+
+3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):<br>
+
+   i. Enter PASE.<br>
+      `CALL PGM(QP2TERM)`
+
+   ii. Create a directory to contain the virtual image files.<br>
        `mkdir /NFS/SERVER01/iImages`
-   iii. Change the directory to the virtual image file directory.
+
+   iii. Change the directory to the virtual image file directory.<br>
         `cd /NFS/SERVER01/iImages`
 
-   iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each. 
+   iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each.
+
    Creating large files can take several minutes. Do not exit PASE until each of the commands have sent a completion message.
    {: note}
-      `dd if=/dev/zero of=IMAGE01.ISO bs=1M count=10000`
-      `dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000`
-      `dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000`
 
-   v. Create volume list file. 
-      `rm VOLUME_LIST`
-      `echo 'IMAGE01.ISO W' >> VOLUME_LIST`
-      `echo 'IMAGE02.ISO W' >> VOLUME_LIST`
-      `echo 'IMAGE03.ISO W' >> VOLUME_LIST`
+```
+      dd if=/dev/zero of=IMAGE01.ISO bs=1M count=10000
+      dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000
+      dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000
+```
 
-      The **W** at the end of each line indicates that image allows write access.
+   v. Create volume list file.<br>
 
-      * Verify the list.
-        `cat VOLUME_LIST`
+```
+      rm VOLUME_LIST
+      echo 'IMAGE01.ISO W' >> VOLUME_LIST
+      echo 'IMAGE02.ISO W' >> VOLUME_LIST
+      echo 'IMAGE03.ISO W' >> VOLUME_LIST
+```
+
+   The **W** at the end of each line indicates that image allows write access.
+
+   * Verify the list.<br>
+
+      `cat VOLUME_LIST`
 
    vi. The output of this command displays a line for each of the image file names with the corresponding access information.
 
-        `IMAGE01.ISO W`
-        `IMAGE02.ISO W`
-        `IMAGE03.ISO W`
+   `IMAGE01.ISO W`
+   `IMAGE02.ISO W`
+   `IMAGE03.ISO W`
 
    vii. Press F3 to exit the PASE.
 
 4. Create a device description for a virtual optical device.
 
-   `CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)`
-   `RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')`
+`CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)`
+`RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')`
 
 5. Vary on the virtual optical device.
 
 If the image files or VOLUME_LIST file is changed on the NFS server, the virtual optical device must be varied off and then varied back on to use the virtual images.
 {: note}
 
-   `VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(*DEV) STATUS(*ON)`
+`VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(*DEV) STATUS(*ON)`
 
 6. Use the device to initialize the image files as optical volumes.
 
@@ -137,19 +158,21 @@ If the image files or VOLUME_LIST file is changed on the NFS server, the virtual
    LODIMGCLGE IMGCLG(*DEV) IMGCLGIDX(1) DEV(NFSDEV01) 
    INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(*NO)
 ```
+{: pre}
 
 7. You can now use the **NFSDEV01** virtual device for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
 
-   * To test the virtual device, verify that a message queue can be saved and restored. Messages from the save and restore commands must indicate that one object was saved and one object was restored.
+* To test the virtual device, verify that a message queue can be saved and restored. Messages from the save and restore commands must indicate that one object was saved and one object was restored.
 
-   ```
-       CRTMSGQ MSGQ(QTEMP/MSGQ)
-       SAVOBJ OBJ(MSGQ) LIB(QTEMP) DEV(NFSDEV01) CLEAR(*ALL)
-       RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
-   ```
+```
+CRTMSGQ MSGQ(QTEMP/MSGQ)
+SAVOBJ OBJ(MSGQ) LIB(QTEMP) DEV(NFSDEV01) CLEAR(*ALL)
+RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
+```
+{: pre}
 
    * The saved contents of the virtual optical volume can also be displayed by using the following command:
-     `DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)`
+   `DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)`
 
 ## Saving IBM i VM data to the MDM device
 {: #save-ibmidata-to-MDMdevice}
