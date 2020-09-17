@@ -93,14 +93,24 @@ MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
 
 3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):<br>
 
-   i. Enter PASE.<br>
-      `CALL PGM(QP2TERM)`
+   i. Enter PASE.
 
-   ii. Create a directory to contain the virtual image files.<br>
-       `mkdir /NFS/SERVER01/iImages`
+```
+   CALL PGM(QP2TERM)
+```
+{: pre}
 
-   iii. Change the directory to the virtual image file directory.<br>
-        `cd /NFS/SERVER01/iImages`
+   ii. Create a directory to contain the virtual image files.
+
+```
+       mkdir /NFS/SERVER01/iImages
+```
+
+   iii. Change the directory to the virtual image file directory.
+
+```
+        cd /NFS/SERVER01/iImages
+```
 
    iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each.
 
@@ -124,22 +134,29 @@ MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
 
    The **W** at the end of each line indicates that image allows write access.
 
-   * Verify the list.<br>
+   * Verify the list.
 
-      `cat VOLUME_LIST`
+```
+      cat VOLUME_LIST
+```
 
    vi. The output of this command displays a line for each of the image file names with the corresponding access information.
 
-   `IMAGE01.ISO W`
-   `IMAGE02.ISO W`
-   `IMAGE03.ISO W`
+```
+   IMAGE01.ISO W
+   IMAGE02.ISO W
+   IMAGE03.ISO W
+```
+{: screen}
 
    vii. Press F3 to exit the PASE.
 
 4. Create a device description for a virtual optical device.
 
-`CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)`
-`RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')`
+```
+CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)
+RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')
+```
 
 5. Vary on the virtual optical device.
 
@@ -172,7 +189,10 @@ RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
 {: pre}
 
    * The saved contents of the virtual optical volume can also be displayed by using the following command:
-   `DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)`
+
+```
+   DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)
+```
 
 ## Saving IBM i VM data to the MDM device
 {: #save-ibmidata-to-MDMdevice}
@@ -183,7 +203,3 @@ Save the data from the IBM i VM to the 632B optical device by using normal save 
 {: #return-MDMdevice-toIBM}
 
 Follow the [Returning the device](/docs/mass-data-migration?topic=mass-data-migration-return-device) process to complete the migration of IBM i VM data to your IBM Cloud Object Storage account.
-
-
-
-

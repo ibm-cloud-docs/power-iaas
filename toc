@@ -65,6 +65,7 @@ Power Systems Virtual Servers
         configuring-ibmi-vm.md
         connecting-ibmi-port.md
         creating-network-install-server.md
+        migrate-ibmi-data-ibmi-vm.md
         removing-network-interface-ibmi.md
         ibmi-minimum-levels.md
         ibmi-license-info.md
