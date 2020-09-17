@@ -3,9 +3,9 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-07-29"
+lastupdated: "2020-09-17"
 
-keywords: IBM i, Migrate, IBM Cloud
+keywords: IBM i, Migrate
 
 subcollection: power-iaas
 
@@ -30,7 +30,7 @@ You can migrate data of IBM i&reg; virtual machines (VMs) to the IBM Cloud objec
 ## Setting up IBM Cloud Storage Object account
 {: #setup-ibmcloud-storageobject}
 
-You can set up your IBM Cloud Object Storage account for data migration and request a pre-configured storage device that can be used to move your data to IBM Cloud Object Storage. For more information, see [Getting started tutorial](/docs/mass-data-migration?topic=mass-data-migration-getting-started-tutorial) on MDM and [Mass Data Migration overview](https://cloud.ibm.com/docs/mass-data-migration?topic=mass-data-migration-overview).
+You can set up your IBM Cloud Object Storage account for data migration and request a pre-configured storage device that can be used to move your data to IBM Cloud Object Storage. For more information, see [Getting started tutorial](/docs/mass-data-migration?topic=mass-data-migration-getting-started-tutorial) on MDM and [Mass Data Migration overview](/docs/mass-data-migration?topic=mass-data-migration-overview).
 
 ## Configuring MDM device on IBM i VM
 {: #configure-MDMdevice-ibmiVM}
@@ -117,14 +117,14 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
 
 4. Create a device description for a virtual optical device.
 
-```
-   CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)
-   RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')
-```
+   `CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)`
+   `RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')`
 
-5. Vary on the virtual optical device. 
-If the images or VOLUME_LIST file is changed on the NFS server, the virtual optical device must be varied off and then varied back on to use the virtual images.
+5. Vary on the virtual optical device.
+
+If the image files or VOLUME_LIST file is changed on the NFS server, the virtual optical device must be varied off and then varied back on to use the virtual images.
 {: note}
+
    `VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(*DEV) STATUS(*ON)`
 
 6. Use the device to initialize the image files as optical volumes.
@@ -138,9 +138,9 @@ If the images or VOLUME_LIST file is changed on the NFS server, the virtual opti
    INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(*NO)
 ```
 
-7. You can now use the **NFSDEV01** virtual device can now be used for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
+7. You can now use the **NFSDEV01** virtual device for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
 
-   * To test the virtual device, do the following to verify that a message queue can be saved and restored. Messages from the save and restore commands must indicate that one object was saved and one object was restored.
+   * To test the virtual device, verify that a message queue can be saved and restored. Messages from the save and restore commands must indicate that one object was saved and one object was restored.
 
    ```
        CRTMSGQ MSGQ(QTEMP/MSGQ)
