@@ -35,9 +35,9 @@ The {{site.data.keyword.at_full_notm}} records user-initiated activities that ch
 
 The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
 
-| Action                     | Description                     |
-|:---------------------------|:--------------------------------|
-| pcloud.cloud-instance.read | Read a Power Cloud Instance     |
+| Action                     | Description                                      |
+|:---------------------------|:-------------------------------------------------|
+| pcloud.cloud-instance.read | Read a Power Systems Virutal Server Instance     |
 
 ## List of events: Images
 {: #at-actions-images}
@@ -111,4 +111,4 @@ The following events are for working with data volumes in your {{site.data.keywo
 ## Viewing events
 {: #at-viewing-events}
 
-Events are available in all regions. The {{site.data.keyword.at_full_notm}} can have only one instance per region. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
+The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. There are separate Activity Trackers for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
