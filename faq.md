@@ -296,17 +296,17 @@ On a Linux VM, the following database is supported:
 
   - SAP HANA Platform 2.0 SPS 04, or later
 
-## How can I get the WebSphere Application Server versions that are delivered through the **Web Enablement for i** packages, which are available at no additional charge with IBM i?
+## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
 {: web-enablement-for-ibmi}
 {: faq}
 
-If you have an IBM i VM instance with LPP bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server version that is available  in the Web Enablement for i at the Entitled System Support (ESS) website by completing the following steps:
+If you have an IBM i VM instance with the licensed program bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
 1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss).
 
 2. Sign in. If this is the first time you are using ESS, refer to the **Help** section on the left menu. Download and read the **ESS_Registration_IBM_Customers_Guidelines** PDF.
 
-3. From the left menu, go to **My Entitled Software > IBM i evaluation and NLV download**.
+3. Go to **My Entitled Software > IBM i evaluation and NLV download**.
 
 4. Find the required software that you can download, install, and use. For example:
 
