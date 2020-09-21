@@ -71,87 +71,87 @@ To share virtual optical images with an IBM i VM by using an NFS server, the fol
   * The order of the image file names in the volume list file indicate the order of the images that are processed on the IBM i VM.
   * The file must contain ASCII characters.
 
-### Setting up IBM i VM to use images on an NFS server
+## Setting up IBM i VM to use images on an NFS server
 {: setup-ibmivm-to-use-nfs-server}
 
 You can set up the IBM i VM to use virtual optical images that are stored on an NFS server. The following example assumes that the NFS server (*SERVER01*) with IP address *'1.2.3.4'* has share */nfs/share01*. Complete the following steps to set up the IBM i VM to use the images on NFS server:
 
 1. Create a mount directory for the NFS server.
 
-    ```
-    MKDIR DIR('/NFS')
-    MKDIR DIR('/NFS/SERVER01')
-    ```
-    {: codeblock}
+   ```
+   MKDIR DIR('/NFS')
+   MKDIR DIR('/NFS/SERVER01')
+   ```
+   {: codeblock}
 
 2. Mount the NFS server root directory over the mount directory of the IBM i VM.
 
-    ```
-    MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
-    ```
-    {: codeblock}
+   ```
+   MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
+   ```
+   {: codeblock}
 
 3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):<br>
 
    i. Enter PASE.
 
-      ```
-      CALL PGM(QP2TERM)
-      ```
-      {: codeblock}
+   ```
+   CALL PGM(QP2TERM)
+   ```
+   {: codeblock}
 
    ii. Create a directory to contain the virtual image files.
 
-      ```
-       mkdir /NFS/SERVER01/iImages
-      ```
-      {: codeblock}
+   ```
+   mkdir /NFS/SERVER01/iImages
+   ```
+   {: codeblock}
 
    iii. Change the directory to the virtual image file directory.
 
-      ```
-      cd /NFS/SERVER01/iImages
-      ```
-      {: codeblock}
+   ```
+   cd /NFS/SERVER01/iImages
+   ```
+   {: codeblock}
 
    iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each.
 
-      Creating large files can take several minutes. Do not exit PASE until each of the commands have sent a completion message.
-      {: note}
+   Creating large files can take several minutes. Do not exit PASE until each of the commands have sent a completion message.
+   {: note}
 
-      ```
-      dd if=/dev/zero of=IMAGE01.ISO bs=1M count=10000
-      dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000
-      dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000
-      ```
-      {: codeblock}
+   ```
+   dd if=/dev/zero of=IMAGE01.ISO bs=1M count=10000
+   dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000
+   dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000
+   ```
+   {: codeblock}
 
    v. Create volume list file.
 
-      ```
-      rm VOLUME_LIST
-      echo 'IMAGE01.ISO W' >> VOLUME_LIST
-      echo 'IMAGE02.ISO W' >> VOLUME_LIST
-      echo 'IMAGE03.ISO W' >> VOLUME_LIST
-      ```
-      {: codeblock}
+   ```
+   rm VOLUME_LIST
+   echo 'IMAGE01.ISO W' >> VOLUME_LIST
+   echo 'IMAGE02.ISO W' >> VOLUME_LIST
+   echo 'IMAGE03.ISO W' >> VOLUME_LIST
+   ```
+   {: codeblock}
 
    The **W** at the end of each line indicates that image allows write access.
 
-      * Verify the list.
+   * Verify the list.
 
-      ```
-      cat VOLUME_LIST
-      ```
+   ```
+   cat VOLUME_LIST
+   ```
 
    vi. The output of this command displays a line for each of the image file names with the corresponding access information.
 
-      ```
-      IMAGE01.ISO W
-      IMAGE02.ISO W
-      IMAGE03.ISO W
-      ```
-      {: screen}
+   ```
+   IMAGE01.ISO W
+   IMAGE02.ISO W
+   IMAGE03.ISO W
+   ```
+   {: screen}
 
    vii. Press F3 to exit the PASE.
 
