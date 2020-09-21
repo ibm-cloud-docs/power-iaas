@@ -71,7 +71,7 @@ To share virtual optical images with an IBM i VM by using an NFS server, the fol
   * The order of the image file names in the volume list file indicate the order of the images that are processed on the IBM i VM.
   * The file must contain ASCII characters.
 
-## Setting up IBM i VM to use images on an NFS server
+### Setting up IBM i VM to use images on an NFS server
 {: setup-ibmivm-to-use-nfs-server}
 
 You can set up the IBM i VM to use virtual optical images that are stored on an NFS server. The following example assumes that the NFS server (*SERVER01*) with IP address *'1.2.3.4'* has share */nfs/share01*. Complete the following steps to set up the IBM i VM to use the images on NFS server:
@@ -136,7 +136,7 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
       ```
       {: codeblock}
 
-      The **W** at the end of each line indicates that image allows write access.
+   The **W** at the end of each line indicates that image allows write access.
 
       * Verify the list.
 
