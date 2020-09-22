@@ -70,7 +70,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration.
 
-In some configurations, private networks communication is needed only between the  {{site.data.keyword.powerSys_notm}} instances and not from Direct Link. You must open a support ticket with [PowerVS support](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to configure the private network in {{site.data.keyword.powerSys_notm}} infrastructure. For example, if you add a subnet *172.10.10.0/24* from user interface, and use case requires communications between the VSIs attached to the subnet, you must open a support ticket providing subnet information displaced in user interface. For more information, see the example below.
+In some configurations, private network communication is needed only between the {{site.data.keyword.powerSys_notm}} instances and not from Direct Link. You must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}}s to configure the private network in {{site.data.keyword.powerSys_notm}} infrastructure. For example, if you add a subnet *172.10.10.0/24* from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet, you must open a support ticket and provide the following subnet information displayed in the user interface.
 
 | Name          | IP address   | Gateway     | MAC address    | VLAN ID | CIDR       |
 | ------------- | ------------ | ----------- | -------------- | ------- | ---------- |
@@ -88,13 +88,12 @@ You must not use an IP range outside of the ranges that are defined by [RFC 1918
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (non-WDC04)
-| --------------- | ---------------------------- |---------------------------
-|      /22        |        1019                  |          1021
-|      /23        |         507                  |          509
-|      /24        |         251                  |          253
-|      /25        |         123                  |          125
-|      /26        |          59                  |           61
-|      /27        |          27                  |           29
-|      /28        |          11                  |           13
+| CIDR block size | Available IP addresses (WDC04) | Available IP addresses |(non-WDC04)
+| --------------- | ------------------------------ | ---------------------- |
+|      /22        |        1019                    |          1021          |
+|      /23        |         507                    |           509          |
+|      /25        |         123                    |           125          |
+|      /26        |          59                    |            61          |
+|      /27        |          27                    |            29          |
+|      /28        |          11                    |            13          |
 {: Caption="Table 2. Understanding CIDR notation caption" caption-side="bottom"}

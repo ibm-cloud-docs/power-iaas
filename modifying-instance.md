@@ -94,6 +94,8 @@ Any volume that has been included in a snapshot cannot be resized. To resize a v
 
 5. To verify your new storage size, go back to **Storage volumes**.
 
+6. In an AIX VM instance, if you resize your boot storage volume, run the `chvg -g rootvg` command.
+
 ## Adding or removing a public network
 {: #adding-removing-network}
 
