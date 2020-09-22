@@ -85,14 +85,12 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        MKDIR DIR('/NFS')
        MKDIR DIR('/NFS/SERVER01')
        ```
-       {: codeblock}
 
 2. Mount the NFS server root directory over the mount directory of the IBM i VM.
 
        ```
        MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
        ```
-       {: codeblock}
 
 3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):
 
@@ -101,21 +99,18 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        ```
        CALL PGM(QP2TERM)
        ```
-      {: codeblock}
 
    ii. Create a directory to contain the virtual image files.
 
        ```
        mkdir /NFS/SERVER01/iImages
        ```
-       {: codeblock}
 
    iii. Change the directory to the virtual image file directory.
 
        ```
        cd /NFS/SERVER01/iImages
        ```
-       {: codeblock}
 
    iv. Create image files. The number of images and the size of the images cannot be changed during a *save* operation. so the image files must be created with sufficient size to hold all the saved data. Following example creates 3 images of 10GB size each.
 
@@ -127,7 +122,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        dd if=/dev/zero of=IMAGE02.ISO bs=1M count=10000
        dd if=/dev/zero of=IMAGE03.ISO bs=1M count=10000
        ```
-      {: codeblock}
 
    v. Create volume list file.
 
@@ -137,7 +131,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        echo 'IMAGE02.ISO W' >> VOLUME_LIST
        echo 'IMAGE03.ISO W' >> VOLUME_LIST
        ```
-       {: codeblock}
 
    The **W** at the end of each line indicates that image allows write access.
 
@@ -146,7 +139,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
          ```
          cat VOLUME_LIST
          ```
-         {: codeblock}
 
    vi. The output of this command displays a line for each of the image file names with the corresponding access information.
 
@@ -155,7 +147,7 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        IMAGE02.ISO W
        IMAGE03.ISO W
        ```
-       {: screen}
+   {: screen}
 
    vii. Press F3 to exit the PASE.
 
@@ -165,7 +157,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        CRTDEVOPT DEVD(NFSDEV01) RSRCNAME(*VRT) LCLINTNETA(*SRVLAN)
        RMTINTNETA('1.2.3.4') NETIMGDIR('/nfs/share01/iImages')
        ```
-       {: codeblock}
 
 5. Vary on the virtual optical device.
 
@@ -175,7 +166,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        ```
        VRYCFG CFGOBJ(NFSDEV01) CFGTYPE(*DEV) STATUS(*ON)
        ```
-       {: codeblock}
 
 6. Use the device to initialize the image files as optical volumes.
 
@@ -187,7 +177,6 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        LODIMGCLGE IMGCLG(*DEV) IMGCLGIDX(1) DEV(NFSDEV01) 
        INZOPT NEWVOL(IVOL01) DEV(NFSDEV01) CHECK(*NO)
        ```
-       {: codeblock}
 
 7. You can now use the **NFSDEV01** virtual device for native IBM i *save* and *restore* operations. Volume *IVOL01* `(image file '/nfs/share01/iImages/IMAGE01.ISO')` is mounted on device **NFSDEV01**.
 
@@ -198,14 +187,12 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
          SAVOBJ OBJ(MSGQ) LIB(QTEMP) DEV(NFSDEV01) CLEAR(*ALL)
          RSTOBJ OBJ(*ALL) SAVLIB(QTEMP) DEV(NFSDEV01)
          ```
-         {: codeblock}
 
    * The saved contents of the virtual optical volume can also be displayed by using the following command:
 
          ```
          DSPOPT VOL(IVOL01) DEV(NFSDEV01) DATA(*SAVRST) PATH(*ALL)
          ```
-         {: codeblock}
 
 ## Saving IBM i VM data to the MDM device
 {: #save-ibmidata-to-MDMdevice}
