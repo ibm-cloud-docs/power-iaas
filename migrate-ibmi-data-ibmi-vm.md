@@ -85,12 +85,14 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
        MKDIR DIR('/NFS')
        MKDIR DIR('/NFS/SERVER01')
        ```
+       {: pre}
 
 2. Mount the NFS server root directory over the mount directory of the IBM i VM.
 
        ```
        MOUNT TYPE(*NFS) MFS('1.2.3.4:/nfs/share01') MNTOVRDIR('/NFS/SERVER01')
        ```
+       {: pre}
 
 3. Create image information on the NFS server in the Portable Application Solutions Environment (PASE):
 
