@@ -51,7 +51,7 @@ After you receive the pre-configured storage device, use the following checklist
 
    * Share with the following IP addresses:
      * IP address of the IBM i client VM.
-     * You can connect the IP address of the IBM i VM to the network share of the MDM device. If the IP address of the IBM i VM is different from the the IP address of the service tools server (LAN console connection), specify the service tools server IP address. <!--IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html)-->.
+     * You can connect the IP address of the IBM i VM to the network share of the MDM device. If the IP address of the IBM i VM is different from the the IP address of the service tools server (LAN console connection), specify the service tools server IP address. <!--IP address of the IBM i client service tools server or the LAN console connection if it is different from the system IP address. For more information, see [Configuring the service tools server for DST](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzamh/rzamhsrvtoolsrvr4dst.html)-->
      * You must connect to the network share of the MDM device with both read and writer access.
 
 ## Preparing IBM i VM to use the MDM device
@@ -133,9 +133,7 @@ You can set up the IBM i VM to use virtual optical images that are stored on an 
     echo 'IMAGE03.ISO W' >> VOLUME_LIST
     ```
 
-   The **W** at the end of each line indicates that image allows write access.
-
-   * Verify the list.
+   The **W** at the end of each line indicates that image allows write access. You can verify the list by using following command.
 
       ```
       cat VOLUME_LIST

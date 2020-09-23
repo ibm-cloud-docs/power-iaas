@@ -59,6 +59,7 @@ Power Systems Virtual Servers
         rsct-rmc-aix.md
         configuring-aix-mdm.md
         provisioning-nim-server.md
+        backup-data-aix-vm.md
 
     {: .topicgroup}
     IBM i
