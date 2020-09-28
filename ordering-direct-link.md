@@ -174,9 +174,8 @@ Order a second Direct Link Connect connection for backup purposes.
     </dd>
 </br>
 
-    Direct Link 2.0 is available in all current locations except Toronto 1.
-    {: note}
-</br>
+  Direct Link 2.0 is available in all current locations except Toronto 1.
+  {: note}
 
   **Routing Option**
     Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
@@ -192,8 +191,6 @@ Order a second Direct Link Connect connection for backup purposes.
 </br>
 
 #### BGP and connections
-
-{: bgp-connections}
 
   **Ports**
     <p>
