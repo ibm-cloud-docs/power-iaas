@@ -55,8 +55,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
 2. Review the following basic Direct Link Connect networking concepts:
 
-    - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
-    - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
+   - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
+   - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
@@ -118,19 +118,24 @@ Order a second Direct Link Connect connection for backup purposes.
 12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
 ### Configuration parameters for ordering Direct Link Connect
-{:parameters-ordering-direct-link-connect}
+
+{: configuration-parameters}
 
 #### Configuration
-{: configuration}
 
-  <dl id="direct-link-connect">
-    <dt><strong>Direct Link Name</strong></dt>
-    <dd>Enter a name for your Direct Link Connect instance.</dd>
-    <dt><strong>Resource group</strong></dt>
-    <dd>Select the default group.</dd>
-    <dt><strong>Billing</strong></dt>
-    <dd>Select the Unmetered option.</dd>
-    <dt><strong>Location</strong></dt>
+  **Direct Link Name**
+    Enter a name for your Direct Link Connect instance.
+</br>
+
+  **Resource group**
+    Select the default group.
+</br>
+
+  **Billing**
+    Select the Unmetered option.
+</br>
+
+  **Location**
     <dd>
     Select the same location as the {{site.data.keyword.powerSys_notm}}
     instance. The following table identifies the
@@ -167,41 +172,40 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
     </table>
     </dd>
+</br>
 
-   Direct Link 2.0 is available in all current locations except Toronto 1.
-   {: note}
+    Direct Link 2.0 is available in all current locations except Toronto 1.
+    {: note}
+</br>
 
-  <dt><strong>Routing Option</strong></dt>
-  <dd>
-    Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
-  </dd>
-  <dt><strong>Network Provider</strong></dt>
-  <dd>
+  **Routing Option**
+    Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
+</br>
+
+  **Network Provider**
     You must select <strong>IBM POWER VS</strong> from the list.
-  </dd>
-  <dt><strong>Speed</strong></dt>
-  <dd>
+</br>
+
+  **Speed**
     Select the link speed to meet your workload requirements. The recommended
     selection for the <strong>Speed</strong> field is 1 Gbps.
-  </dd>
+</br>
 
 #### BGP and connections
 
 {: bgp-connections}
 
-   <dt><strong>Ports</strong></dt>
-   <dd>
+  **Ports**
     <p>
       If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
     </p>
-   <dt><strong>BGP peering subnet</strong></dt>
-   <dd>
+
+  **BGP peering subnet**
     <p>
-      Select <b>Auto-select IP</b> for Power Systems Virtual Server to auto-select an IP address from range 169.254.0.0/16, or manually enter addresses in a specific range to avoid conflict with an existing connection.
+      Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range 169.254.0.0/16, or manually enter addresses in a specific range to avoid conflict with an existing connection.
     </p>
 
-   <dt><strong>BGP ASN</strong></dt>
-   <dd>
+  **BGP ASN**
     <p>
       You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
     </p>
@@ -210,9 +214,8 @@ Order a second Direct Link Connect connection for backup purposes.
       <strong>64995</strong>. You must contact the IBM Power support team to
       handle your request to change the BGP ASN number.
     </p>
-  </dd>
-  <dd></dd>
-</dl>
+    </dd>
+</br>
 
 #### Add connection (optional)
 
