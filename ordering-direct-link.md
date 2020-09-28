@@ -55,19 +55,19 @@ Order a second Direct Link Connect connection for backup purposes.
 
 2. Review the following basic Direct Link Connect networking concepts:
 
-   - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
-   - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
+    - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
+    - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
-4. Click [Menu icon](../icons/icon_hamburger.svg "Menu icon") on the upper left, then click Interconnectivity.
+4. Click [Menu icon](./images/menuicon.png) on the upper left, then click **Interconnectivity**.
 
 5. Click **Order Direct Link** and select the **Direct Link Connect** option.
 
 6. Enter the [configuration parameters](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#direct-link) for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
-{: note}
+   The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+   {: note}
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the Master Service Agreement as it contains important technical information.
 
@@ -76,10 +76,10 @@ The {{site.data.keyword.powerSys_notm}} service offers lower latency direct conn
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your Power Systems Virtual Server instance.
 
-It can take up to three business days to complete the initial setup for the Direct Link connection request.
-{: note}
+   It can take up to three business days to complete the initial setup for the Direct Link connection request.
+   {: note}
 
-To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, add the **Direct Link Connect case number**.
+   To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, add the **Direct Link Connect case number**.
 
 10. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
@@ -99,8 +99,8 @@ To create a connection to the Power Systems Virtual Server instance by using the
 
 11. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
-The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-{: note}
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    {: note}
 
     ```
     Customer name:
@@ -114,7 +114,6 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
     Power Systems Virtual Server Private Network (subnet) Name (2):
     Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
-    {: codeblock}
 
 12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
@@ -124,19 +123,15 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
 #### Configuration
 {: configuration}
 
-<dl id="direct-link-connect">
-  <dt><strong>Direct Link Name</strong></dt>
-  <dt></dt>
-  <dd>Enter a name for your Direct Link Connect instance.</dd>
-  <dt><strong>Resource group</strong></dt>
-  <dt></dt>
-  <dd>Select the default group.</dd>
-  <dt><strong>Billing</strong></dt>
-  <dt></dt>
-  <dd>Select the Unmetered option.</dd>
-  <dt><strong>Location</strong></dt>
-  <dt></dt>
-  <dd>
+  <dl id="direct-link-connect">
+    <dt><strong>Direct Link Name</strong></dt>
+    <dd>Enter a name for your Direct Link Connect instance.</dd>
+    <dt><strong>Resource group</strong></dt>
+    <dd>Select the default group.</dd>
+    <dt><strong>Billing</strong></dt>
+    <dd>Select the Unmetered option.</dd>
+    <dt><strong>Location</strong></dt>
+    <dd>
     Select the same location as the {{site.data.keyword.powerSys_notm}}
     instance. The following table identifies the
     {{site.data.keyword.powerSys_notm}} instance location and the corresponding
@@ -151,8 +146,8 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
         <th>Network provider</th>
       </tr>
       <tr>
-        <td>Dallas, TX, US</td>
-        <td>Dallas 13</td>
+        <td>Washington, D.C., US</td>
+        <td>Washington 04</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
@@ -171,46 +166,42 @@ The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (AS
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-  </dd>
+    </dd>
 
-  Direct Link 2.0 is available in all current locations except Washington, D.C. 04 and Toronto 1.
-  {: note}
+   Direct Link 2.0 is available in all current locations except Toronto 1.
+   {: note}
 
   <dt><strong>Routing Option</strong></dt>
-  <dt></dt>
   <dd>
     Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
   </dd>
   <dt><strong>Network Provider</strong></dt>
-  <dt></dt>
   <dd>
     You must select <strong>IBM POWER VS</strong> from the list.
   </dd>
   <dt><strong>Speed</strong></dt>
-  <dt></dt>
   <dd>
     Select the link speed to meet your workload requirements. The recommended
     selection for the <strong>Speed</strong> field is 1 Gbps.
   </dd>
 
 #### BGP and connections
+
 {: bgp-connections}
 
-  <dt><strong>Ports</strong></dt>
-  <dt></dt>
-  <dd>
+   <dt><strong>Ports</strong></dt>
+   <dd>
     <p>
       If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
     </p>
-  <dt><strong>BGP peering subnet</strong></dt>
-  <dt></dt>
-  <dd>
+   <dt><strong>BGP peering subnet</strong></dt>
+   <dd>
     <p>
       Select <b>Auto-select IP</b> for Power Systems Virtual Server to auto-select an IP address from range 169.254.0.0/16, or manually enter addresses in a specific range to avoid conflict with an existing connection.
     </p>
-  <dt><strong>BGP ASN</strong></dt>
-  <dt></dt>
-  <dd>
+
+   <dt><strong>BGP ASN</strong></dt>
+   <dd>
     <p>
       You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
     </p>
