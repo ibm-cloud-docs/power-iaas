@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-09-17"
+lastupdated: "2020-09-22"
 
 keywords: IBM i, Migrate
 
