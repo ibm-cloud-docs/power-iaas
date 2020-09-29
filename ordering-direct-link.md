@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-28"
+lastupdated: "2020-09-29"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link
 
@@ -131,8 +131,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
 
-<dl id="direct-link">
-  <dt></dt>
+<dl id="direct-link-connect2.0">
   <dd>
     <table>
       <caption>
@@ -194,6 +193,11 @@ Order a second Direct Link Connect connection for backup purposes.
 #### Add connection (optional)
 
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
+
+## Deleting your Direct Link Connect on Classic connection
+{: deleting-direct-link}
+
+You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
 
 ## Ordering Direct Link Connect on Classic
 
@@ -395,8 +399,3 @@ Order a second Direct Link Connect connection for backup purposes.
   </dd>
   <dd></dd>
 </dl>
-
-## Deleting your Direct Link Connect on Classic connection
-{: deleting-direct-link}
-
-You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
