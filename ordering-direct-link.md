@@ -132,7 +132,10 @@ Order a second Direct Link Connect connection for backup purposes.
 - **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
 
 <dl id="direct-link-connect2.0">
+  <dt><strong>Location</strong></dt>
+  <dt></dt>
   <dd>
+    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
       <caption>
         Table 1. Direct Link Connection location options
@@ -170,6 +173,7 @@ Order a second Direct Link Connect connection for backup purposes.
     </table>
   </dd>
 </dl>
+
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
 
@@ -193,11 +197,6 @@ Order a second Direct Link Connect connection for backup purposes.
 #### Add connection (optional)
 
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
-
-## Deleting your Direct Link Connect on Classic connection
-{: deleting-direct-link}
-
-You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
 
 ## Ordering Direct Link Connect on Classic
 
@@ -285,10 +284,7 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt><strong>Location</strong></dt>
   <dt></dt>
   <dd>
-    Select the same location as the {{site.data.keyword.powerSys_notm}}
-    instance. The following table identifies the
-    {{site.data.keyword.powerSys_notm}} instance location and the corresponding
-    Direct Link Connection option:
+    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
       <caption>
         Table 2. Direct Link Connection location options
@@ -397,5 +393,11 @@ Order a second Direct Link Connect connection for backup purposes.
     account does not have a VRF identified, this field is not displayed. You can
     still create the Direct Link Connect service without selecting a VRF.
   </dd>
-  <dd></dd>
+
 </dl>
+
+## Deleting your Direct Link Connect on Classic connection
+
+{: deleting-direct-link}
+
+You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
