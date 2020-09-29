@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-28"
+lastupdated: "2020-09-29"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link
 
@@ -131,8 +131,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
 
-<dl id="direct-link">
-  <dt></dt>
+<dl id="direct-link-connect2.0">
   <dd>
     <table>
       <caption>
