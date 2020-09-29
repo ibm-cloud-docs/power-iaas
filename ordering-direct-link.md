@@ -219,7 +219,7 @@ Order a second Direct Link Connect connection for backup purposes.
     Do not try to change the BGP ASN number to
     <strong>64995</strong>. You must contact the IBM Power support team to
     handle your request to change the BGP ASN number.
-    {: .important}
+    {: important}
 </br>
 
 #### Add connection (optional)
