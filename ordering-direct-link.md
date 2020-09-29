@@ -60,7 +60,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
-4. Click ![Menu icon](../power-iaas/images/menu.svg "menu icon") on the upper left, then click **Interconnectivity**.
+4. Click ![Menu icon](../power-iaas/images/menu.svg "menu icon") icon on the upper left, then click **Interconnectivity**.
 
 5. Click **Order Direct Link** and select the **Direct Link Connect** option.
 
@@ -128,8 +128,6 @@ Order a second Direct Link Connect connection for backup purposes.
 - **Resource group** - Select the default group.
 
 - **Billing** - Select the Unmetered option.
-
-- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
 
 <dl id="direct-link-connect2.0">
   <dt><strong>Location</strong></dt>
