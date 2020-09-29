@@ -60,7 +60,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
-4. Click ![Menu icon](../icons/../power-iaas/images/menuicon.svg "menu icon") on the upper left, then click **Interconnectivity**.
+4. Click ![Menu icon](../power-iaas/images/menu.svg "menu icon") on the upper left, then click **Interconnectivity**.
 
 5. Click **Order Direct Link** and select the **Direct Link Connect** option.
 
@@ -170,7 +170,10 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
     </table>
   </dd>
+<<<<<<< HEAD
 </dl>
+=======
+>>>>>>> dd590b189a1afd23000dbc491dafc56422f77e1f
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
