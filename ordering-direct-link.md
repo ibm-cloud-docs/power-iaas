@@ -154,6 +154,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <th>Network provider</th>
       </tr>
       <tr>
+        <td>Dallas, TX, US</td>
+        <td>Dallas 12<br />Dallas 13</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>
+      <tr>
         <td>Washington, D.C., US</td>
         <td>Washington 04</td>
         <td>IBM Power Virtual Server</td>
@@ -182,7 +187,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
   **Routing Option**
 </br>
-    Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
+    Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
 </br>
 
   **Network Provider**
@@ -204,16 +209,17 @@ Order a second Direct Link Connect connection for backup purposes.
 
   **BGP peering subnet**
 </br>
-    Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range 169.254.0.0/16, or manually enter addresses in a specific range to avoid conflict with an existing connection.
+    Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 </br>
 
   **BGP ASN**
 </br>
     You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
 </br>
-    <strong>Important:</strong> Do not try to change the BGP ASN number to
+    Do not try to change the BGP ASN number to
     <strong>64995</strong>. You must contact the IBM Power support team to
     handle your request to change the BGP ASN number.
+    {: .important}
 </br>
 
 #### Add connection (optional)
@@ -322,7 +328,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Dallas, TX, US</td>
-        <td>Dallas 13</td>
+        <td>Dallas 12<br />Dallas 13</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
@@ -391,7 +397,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <th>Direct Link Connect location</th>
         <th>BGP ASN number</th>
       <tr>
-        <td>Dallas 13</td>
+        <td>Dallas 12<br />Dallas 13</td>
         <td>64999</td>
       </tr>
       <tr>
