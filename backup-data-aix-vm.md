@@ -27,6 +27,4 @@ subcollection: power-iaas
 # Backing up and restoring data in an AIX VM
 {: #backup-data-inAIX-VM}
 
-For a complete tutorial on backing up and restoring AIX VM data, see the following tutorial.
-
-- [Backing up and restoringdata in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backup_Tutorial.pdf)
+For a complete tutorial on backing up and restoring AIX VM data, see [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backup_Tutorial.pdf).
