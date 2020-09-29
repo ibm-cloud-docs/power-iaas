@@ -133,6 +133,7 @@ Order a second Direct Link Connect connection for backup purposes.
     instance. The following table identifies the
     {{site.data.keyword.powerSys_notm}} instance location and the corresponding
     Direct Link Connect option:
+    <dd>
     <table>
       <caption>
         Table 1. Direct Link Connection location options
@@ -168,6 +169,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
+    </dd>
 </br>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
