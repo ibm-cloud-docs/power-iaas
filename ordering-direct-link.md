@@ -170,11 +170,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
     </table>
   </dd>
-<<<<<<< HEAD
 </dl>
-=======
->>>>>>> dd590b189a1afd23000dbc491dafc56422f77e1f
-
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
 
