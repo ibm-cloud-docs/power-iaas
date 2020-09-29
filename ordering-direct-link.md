@@ -60,7 +60,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
-4. Click ![Menu icon](../icons/../power-iaas/images/menuicon.png "menu icon") on the upper left, then click **Interconnectivity**.
+4. Click ![Menu icon](../icons/../power-iaas/images/menuicon.svg "menu icon") on the upper left, then click **Interconnectivity**.
 
 5. Click **Order Direct Link** and select the **Direct Link Connect** option.
 
@@ -129,11 +129,11 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **Billing** - Select the Unmetered option.
 
-- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}
-    instance. The following table identifies the
-    {{site.data.keyword.powerSys_notm}} instance location and the corresponding
-    Direct Link Connect option:
-    <dd>
+<dl id="direct-link">
+  <dt><strong>Location</strong></dt>
+  <dt></dt>
+  <dd>
+    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
       <caption>
         Table 1. Direct Link Connection location options
@@ -150,7 +150,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Washington, D.C., US</td>
-        <td>Washington 04</td>
+        <td>Washington 4</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
@@ -169,15 +169,14 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-    </dd>
-</br>
+  </dd>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
 
 - **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
 
-- **Network Provider** - You must select <strong>IBM POWER VS</strong> from the list.
+- **Network Provider** - You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
 
 - **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the <strong>Speed</strong> field is 1 Gbps.
 
