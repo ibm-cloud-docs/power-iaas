@@ -196,9 +196,8 @@ Order a second Direct Link Connect connection for backup purposes.
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
 
 ## Ordering Direct Link Connect on Classic
+
 {: #steps-to-order-direct-link-connect}
-{: help}
-{: support}
 
 To order the Direct Link Connect on Classic service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 
