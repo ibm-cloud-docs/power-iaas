@@ -60,7 +60,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
-4. Click [Menu icon](./images/menuicon.png) on the upper left, then click **Interconnectivity**.
+4. Click [Menu icon](images/menuicon.png) on the upper left, then click **Interconnectivity**.
 
 5. Click **Order Direct Link** and select the **Direct Link Connect** option.
 
@@ -123,24 +123,13 @@ Order a second Direct Link Connect connection for backup purposes.
 
 #### Configuration
 
-  **Direct Link Name**
-</br>
-  Enter a name for your Direct Link Connect instance.
-</br>
+- **Direct Link Name** - Enter a name for your Direct Link Connect instance.
 
-  **Resource group**
-</br>
-  Select the default group.
-</br>
+- **Resource group** - Select the default group.
 
-  **Billing**
-</br>
-  Select the Unmetered option.
-</br>
+- **Billing** - Select the Unmetered option.
 
-  **Location**
-    <dd>
-    Select the same location as the {{site.data.keyword.powerSys_notm}}
+- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}
     instance. The following table identifies the
     {{site.data.keyword.powerSys_notm}} instance location and the corresponding
     Direct Link Connect option:
@@ -179,48 +168,27 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-    </dd>
 </br>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
 
-  **Routing Option**
-</br>
-    Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
-</br>
+- **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
 
-  **Network Provider**
-</br>
-  You must select <strong>IBM POWER VS</strong> from the list.
-</br>
+- **Network Provider** - You must select <strong>IBM POWER VS</strong> from the list.
 
-  **Speed**
-</br>
-  Select the link speed to meet your workload requirements. The recommended selection for the <strong>Speed</strong> field is 1 Gbps.
-</br>
+- **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the <strong>Speed</strong> field is 1 Gbps.
 
 #### BGP and connections
 
-  **Ports**
-</br>
-    If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
-</br>
+- **Ports** - If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
 
-  **BGP peering subnet**
-</br>
-    Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
-</br>
+- **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 
-  **BGP ASN**
-</br>
-    You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
-</br>
-    Do not try to change the BGP ASN number to
-    <strong>64995</strong>. You must contact the IBM Power support team to
-    handle your request to change the BGP ASN number.
-    {: important}
-</br>
+- **BGP ASN** - You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
+
+  Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
+  {: important}
 
 #### Add connection (optional)
 
