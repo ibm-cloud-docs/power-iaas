@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-09-29"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
@@ -49,7 +49,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 | Location               | Region   | Data center |
 | ---------------------- | -------- | ----------- |
-| Dallas, Texas          | us-south | DAL13       |
+| Dallas, Texas          | us-south | DAL12/DAL13 |
 | Washington, D.C.       | us-east  | WDC04       |
 | Toronto, Canada        | eu-east  | TOR01       |
 | Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
