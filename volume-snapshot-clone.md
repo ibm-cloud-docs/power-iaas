@@ -93,7 +93,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 - When the clone operation is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
 
-## clone volume process
+<!-- ## clone volume process
 
 The Clone volume process consists of three steps: Prepare, start and execute the volumes-clone request. These steps allow you to perform preparatory steps and to authorize the ongoing I/O operations on the source volumes. Breaking the clone volumes process into multiple steps provides consistent clone and reduces the VM quiesce time. The clone volume process consists the following steps:
 
@@ -164,7 +164,7 @@ Performs the remaining execution to create the cloned volumes from the available
 
 - **Delete a volume-clone request**
 
-  When a volumes-clone request is not required any longer, you can call the volumes-clone delete API to remove the data. You can delete a volumes-clone request only when the request status is in one of the finalized statuses: completed, failed, or cancelled state.
+  When a volumes-clone request is not required any longer, you can call the volumes-clone delete API to remove the data. You can delete a volumes-clone request only when the request status is in one of the finalized statuses: completed, failed, or cancelled state. -->
 
 ## Restoring a snapshot
 
