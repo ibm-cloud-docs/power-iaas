@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-09-22"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 

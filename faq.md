@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-09-30"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
