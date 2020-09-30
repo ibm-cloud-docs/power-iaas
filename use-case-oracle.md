@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Deploying an Oracle database in a IBM Power Systems Virtual Server
+# Deploying an Oracle database in IBM Power Systems Virtual Servers
 {: #use-case-oracle}
 
-Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}}.
+Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}} instance.
 {: shortdesc}
 
 These videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functionality between what's shown in the video and what's currently available.

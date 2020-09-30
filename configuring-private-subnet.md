@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-09-22"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
@@ -70,6 +70,13 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration.
 
+<!-- In some configurations, private network communication is needed only between the {{site.data.keyword.powerSys_notm}} instances and not from Direct Link. You must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}}s to configure the private network in {{site.data.keyword.powerSys_notm}} infrastructure. For example, if you add a subnet *172.10.10.0/24* from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet, you must open a support ticket and provide the following subnet information displayed in the user interface.
+
+| Name          | IP address   | Gateway     | MAC address    | VLAN ID | CIDR       |
+| ------------- | ------------ | ----------- | -------------- | ------- | ---------- |
+| powerns-net02 | 172.10.10.41 | 172.10.10.1 | ff:68:89:e9:22 | 3001    | 172.10.10.0/26 |
+{: Caption="Table 1. Example subnet information displayed in UI" caption-side="bottom"} -->
+
 You must also make sure that your {{site.data.keyword.powerSys_notm}} has a route to the {{site.data.keyword.cloud_notm}}. The default route might not be set up to route traffic to {{site.data.keyword.cloud_notm}} subnets, which are typically of the form, *10.xx.xx.xx*. Similarly, {{site.data.keyword.cloud_notm}} network-based x86 virtual switch interfaces (VSI) and other hosts might require an IP route to connect to a {{site.data.keyword.powerSys_notm}}.
 
 The gateway for {{site.data.keyword.powerSys_notm}} is also the gateway for the local subnet that is routed to the {{site.data.keyword.cloud_notm}} over {{site.data.keyword.cloud_notm}} Direct Link. The {{site.data.keyword.cloud_notm}} x86 VSI might need a static route to {{site.data.keyword.powerSys_notm}} subnets as well. The gateway for this route is the same as the gateway for the {{site.data.keyword.cloud_notm}} private network.
@@ -81,13 +88,12 @@ You must not use an IP range outside of the ranges that are defined by [RFC 1918
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (non-WDC04)
-| --------------- | ---------------------------- |---------------------------
-|      /22        |        1019                  |          1021
-|      /23        |         507                  |          509
-|      /24        |         251                  |          253
-|      /25        |         123                  |          125
-|      /26        |          59                  |           61
-|      /27        |          27                  |           29
-|      /28        |          11                  |           13
-{: Caption="Table 1. Understanding CIDR notation caption" caption-side="bottom"}
+| CIDR block size | Available IP addresses (WDC04) | Available IP addresses |(non-WDC04)
+| --------------- | ------------------------------ | ---------------------- |
+|      /22        |        1019                    |          1021          |
+|      /23        |         507                    |           509          |
+|      /25        |         123                    |           125          |
+|      /26        |          59                    |            61          |
+|      /27        |          27                    |            29          |
+|      /28        |          11                    |            13          |
+{: Caption="Table 2. Understanding CIDR notation caption" caption-side="bottom"}
