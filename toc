@@ -60,6 +60,7 @@ Power Systems Virtual Servers
         rsct-rmc-aix.md
         configuring-aix-mdm.md
         provisioning-nim-server.md
+        backup-data-aix-vm.md
 
 
     {: .topicgroup}
@@ -68,6 +69,7 @@ Power Systems Virtual Servers
         connecting-ibmi-port.md
         creating-network-install-server.md
         removing-network-interface-ibmi.md
+        migrate-ibmi-data-ibmi-vm.md
         ibmi-minimum-levels.md
         ibmi-license-info.md
 
