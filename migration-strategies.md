@@ -52,6 +52,10 @@ MDM provides a simple and secure way to physically transfer data (terabytes to p
 The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It takes between 2.5 and 3 hours to successfully transfer 1 TB of data.
 {: note}
 
+For steps to configure MDM on AIX and IBM i VMs, see the following tutorials:
+- [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](/docs/power-iaas?topic=power-iaas-configuring-mdm)
+- [Configuring Mass Data Migration (MDM) on IBM i VM](/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm)
+
 ## PowerVC images and COS
 {: #migration-powervc-icos}
 
