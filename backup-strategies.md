@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-29"
+lastupdated: "2020-10-05"
 
 keywords: backup strategies, cos, brms, icc, veam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
