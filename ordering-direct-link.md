@@ -133,12 +133,9 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **Billing** - Select the Unmetered option.
 
-<dl id="direct-link-connect2.0">
-  <dt><strong>Location</strong></dt>
-  <dt></dt>
-  <dd>
-    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-    <table>
+- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+
+<table>
       <caption>
         Table 1. Direct Link Connection location options
       </caption>
@@ -173,8 +170,6 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-  </dd>
-</dl>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
@@ -252,7 +247,7 @@ Order a second Direct Link Connect connection for backup purposes.
     IBM Cloud IP Address:        10.254.0.25/30
     Customer IP Address:         10.254.0.26/30
     IBM Cloud ASN:               13884
-    Customer BGP ASN:            64995
+    Customer BGP ASN:            64999
     Network Identifier:          1748523-1
     Date Created:                2019-06-12T14:56:45-06:00
     ```
