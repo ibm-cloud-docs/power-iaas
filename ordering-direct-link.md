@@ -27,11 +27,7 @@ subcollection: power-iaas
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a IBM&reg; Power Systems&trade; Virtual server. The Direct Link Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. The Direct Link Connect service is also used to connect your on-premises network to the IBM Cloud network by using the IBM Cloud Virtual Router Appliance (VRA). Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
-
-The Power Systems Virtual Server offering now includes a highly available 5 Gbps connection to IBM Cloud services. The 5 Gbps connection is set up in a high availability (HA) configuration at **$0 for each customer per datacenter**. If desired, you can select the global routing option for these links at no cost. This change allows you to set up connectivity between the Power Systems Virtual Server service and other IBM Cloud resources without adding any additional costs. Over the next few months, the Power Systems Virtual Server service plans to continue to evolve its network connectivity capabilities through further automation and integration. To learn more about this offer, see [Getting started with IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link){: new_window}{: external}.
-
-<!--You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
+You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
 {: shortdesc}
 
 The Direct Link (2.0) provides the following advantages:
@@ -133,12 +129,9 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **Billing** - Select the Unmetered option.
 
-<dl id="direct-link-connect2.0">
-  <dt><strong>Location</strong></dt>
-  <dt></dt>
-  <dd>
-    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-    <table>
+- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+
+<table>
       <caption>
         Table 1. Direct Link Connection location options
       </caption>
@@ -173,8 +166,6 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-  </dd>
-</dl>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
@@ -191,14 +182,14 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 
-- **BGP ASN** - You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
+- **BGP ASN** - You must enter 64999 as BGP ASN number for the specific Direct Link Connect location.
 
-  Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
-  {: important}
+  <!--Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
+  {: important}-->
 
 #### Add connection (optional)
 
-Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance. -->
+Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
 
 ## Ordering Direct Link Connect on Classic
 
@@ -329,18 +320,15 @@ Order a second Direct Link Connect connection for backup purposes.
     </table>
   </dd>
   <dt><strong>Network Provider</strong></dt>
-  <dt></dt>
   <dd>
     You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
   </dd>
   <dt><strong>Link Speed</strong></dt>
-  <dt></dt>
   <dd>
     Select the link speed to meet your workload requirements. The recommended
     selection for the <strong>Link Speed</strong> field is 1000 Mbps.
   </dd>
   <dt><strong>Routing Option</strong></dt>
-  <dt></dt>
   <dd>
     Select <strong>Local Routing (Free)</strong> to access all of the data centers that
     are connected at the location that you specified in the
@@ -348,7 +336,6 @@ Order a second Direct Link Connect connection for backup purposes.
     access all of the IBM Cloud data centers in the world.
   </dd>
   <dt><strong>BGP ASN</strong></dt>
-  <dt></dt>
   <dd>
     <p>
       You must enter the BGP ASN number for the specific Direct Link Connect
@@ -389,7 +376,6 @@ Order a second Direct Link Connect connection for backup purposes.
     </table>
   </dd>
   <dt><strong>Select VRF</strong></dt>
-  <dt></dt>
   <dd>
     Select the virtual routing and forwarding option for the connection. If your
     account does not have a VRF identified, this field is not displayed. You can

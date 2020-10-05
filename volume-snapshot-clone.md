@@ -70,7 +70,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 - Some of the attributes of source disks cannot be changed while the disks are in a snapshot relationship. For example, you cannot resize the source disks when there are snapshot relationships in place for those disks.
 - Volumes that are in a snapshot relationship cannot be detached from the VM.
 
-## Cloning a volume
+<!-- ## Cloning a volume
 {: #cloning-volume}
 
 Cloning a volume creates a full copy of the volume. You can select multiple volumes and initiate a group clone. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
@@ -93,21 +93,21 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 - When the clone operation is performed on an in-use volume, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the cloned volume copy by using the group snapshot.
 
-<!-- ## clone volume process
+**Steps**
 
-The Clone volume process consists of three steps: Prepare, start and execute the volumes-clone request. These steps allow you to perform preparatory steps and to authorize the ongoing I/O operations on the source volumes. Breaking the clone volumes process into multiple steps provides consistent clone and reduces the VM quiesce time. The clone volume process consists the following steps:
+The clone volume process consists of three steps: prepare, start, and execute the volumes-clone request. These steps allow you to perform preparatory steps and to authorize the ongoing I/O operations on the source volumes. Breaking the clone volumes process into multiple steps provides consistent clones and reduces the VM quiesce time. The clone volume process consists the following steps:
 
-### 1. create a new volumes-clone request and initiate the Prepare action
+### 1. Create a volumes-clone request and initiate the Prepare action
 
 - **Requirements**
 
   - Minimum of two volumes.
   - Minimum of one volume to be in the **in-use** state.
-  - requires a unique volumes-clone name.
+  - Requires a unique volumes-clone name.
 
 - **Status change**
 
-  When the preparatory actions are initiated, the initial status of request is preparing. When the preparatory actions are completed successfully, the status changes to prepared. If an error occurs during the preparatory actions, the status changes to failed. You can view the reasons for failure by using the [get volumes-clone detail](https://cloud.ibm.com/login?redirect=%2Fapidocs%2Fpower%2Dcloud#pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/login?redirect=%2Fapidocs%2Fpower%2Dcloud#pcloud-v2-volumesclone-getall) request. 
+  When the preparatory actions are initiated, the initial status of request is preparing. When the preparatory actions are completed successfully, the status changes to prepared. If an error occurs during the preparatory actions, the status changes to failed. You can view the reasons for failure by using the [get volumes-clone detail](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-getall) request.
 
   If you cancel the volumes-clone request, the status is changed to **cancelling**. You can cancel a volume clone request only when the volumes-clone request status is changed to **Prepared** state.
 
@@ -121,11 +121,11 @@ This step starts the consistency group to initiate the FlashCopy operation. As a
 
 - **Requirements**
 
-  - The volumes-clone request must be in the **prepared** state.
+  The volumes-clone request must be in the **prepared** state.
 
 - **Status change**
 
-  You can view the latest volumes-clone request status by using the [get volumes-clone detail](https://cloud.ibm.com/login?redirect=%2Fapidocs%2Fpower%2Dcloud#pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/login?redirect=%2Fapidocs%2Fpower%2Dcloud#pcloud-v2-volumesclone-getall) request. When the volumes-clone request is initiated, the initial status is **starting**. When the group snapshot is created, the request status changes to **available**. The start action for the volumes-clone request is synchronous and when the API call returns to the client, the volumes-clone request status changes to **available** unless an error occurred. If an error occurs during the start action, the status changes to **failed**. The reason for failure is specified in the error that is returned with the start action response. The prepared snapshot data is removed so that you can clone the same set of volumes again. If you cancel the start action for a volumes-clone request, status changes to **cancelling**. You can cancel a volumes-clone request when the volumes-clone request is in the **available** state.
+  You can view the latest volumes-clone request status by using the [get volumes-clone detail](https://cloud.ibm.com/apidocs/power-cloud##pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-getall) request. When the volumes-clone request is initiated, the initial status is **starting**. When the group snapshot is created, the request status changes to **available**. The start action for the volumes-clone request is synchronous and when the API call returns to the client, the volumes-clone request status changes to **available** unless an error occurred. If an error occurs during the start action, the status changes to **failed**. The reason for failure is specified in the error that is returned with the start action response. The prepared snapshot data is removed so that you can clone the same set of volumes again. If you cancel the start action for a volumes-clone request, status changes to **cancelling**. You can cancel a volumes-clone request when the volumes-clone request is in the **available** state.
 
 - **Output**
 
@@ -136,7 +136,7 @@ This step starts the consistency group to initiate the FlashCopy operation. As a
 Performs the remaining execution to create the cloned volumes from the available group snapshot. As a best practice, you must manually unquiesce the VM before you initiate the execute action for a volume-clone request.
 
 - **Requirements**
-  - The volumes-clone request must be in the **available** status.
+  The volumes-clone request must be in the **available** status.
 
 - **Status change**
 
@@ -150,11 +150,11 @@ Performs the remaining execution to create the cloned volumes from the available
 
 ### Additional volumes-clone APIs that can be used with volumes-clone requests
 
-- **Get Detail of a volumes-clone request**:
+- **Get Detail of a volumes-clone request**
 
   This API request returns detailed information about the status of the request. This request displays details of the list of source volumes that are getting cloned and the cloned volumes when the execute action is successfully completed.
 
-- **Get a list of all volumes-clone requests**:
+- **Get a list of all volumes-clone requests**
 
   The API request provide a list of all volumes-clone requests and the latest status for each request. The listed information does not provide detailed information about the source or cloned volumes.
 

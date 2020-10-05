@@ -27,10 +27,15 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+<!--## October 2020
+{: #october-2020}
+
+- You can now use the IBM Direct Link 2.0 service to create a seamless connection that allows access to IBM Cloud® resources from your {{site.data.keyword.powerSys_notm}} instance. -->
+
 ## September 2020
 {: #september-2020}
 
-- You can now choose LON04 (London, United Kingdom) and SYD04 (Sydney, Australia) data centers to deploy your {{site.data.keyword.powerSys_notm}}.
+- You can now choose *LON04*, *SYD04*, and *DAL12* data centers to deploy your {{site.data.keyword.powerSys_notm}}.
 - For IBM i and AIX VM instances, you can now view a [System Reference Code (SRC)](/docs/power-iaas?topic=power-iaas-modifying-server#detecting-problems-by-using-the-system-reference-code-src-) that describes information about a detected error.
 - You can now use the [Operations panel](/docs/power-iaas?topic=power-iaas-configuring-ibmi#managing-the-ibm-i-vm-instance) in the IBM i VM instance to manage advanced VM operations and configuration.
 - Added port 6443 in the list of open [firewall ports](/docs/power-iaas?topic=power-iaas-network-security#firewall-ports).
@@ -38,7 +43,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## July 2020
 {: #july-2020}
 
-The Power Systems Virtual Server instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
+The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
 
 ## June 2020
 {: #june-2020}
