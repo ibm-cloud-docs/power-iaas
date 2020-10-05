@@ -182,7 +182,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 
-- **BGP ASN** - You must enter the 64999 as BGP ASN number for the specific Direct Link Connect location.
+- **BGP ASN** - You must enter 64999 as BGP ASN number for the specific Direct Link Connect location.
 
   <!--Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
   {: important}-->
