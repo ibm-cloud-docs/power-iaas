@@ -28,7 +28,7 @@ subcollection: power-iaas
 {{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host Power Systems Virtual Servers have the following theoretical maximums:
 
 - E880 (9119-MHE): 143 processors and 8,099 GB of memory
-- E980 (9080-M9S): 143 processors and 16,255 GB of memory. Starting with DAL12 and DAL13 data centers, and in all the new data centers, E980 systems allow up to 23,547 GB of memory.
+- E980 (9080-M9S): 143 processors and 16,255 GB of memory. <!--Starting with DAL12 and DAL13 data centers, and in all the new data centers, E980 systems allow up to 23,547 GB of memory.-->
 - S922 (9009-22A): 15 processors and 959 GB of memory
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
