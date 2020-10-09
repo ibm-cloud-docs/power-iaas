@@ -97,7 +97,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 - *iCluster*
 - *MIMIX from Syncsort*
 
-## Back up and restore
+## Backup and restore
 {: #backup-restore}
 
 You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
@@ -156,6 +156,8 @@ Some alternative AIX migration strategies include:
 - The `savevg` and `restvg` AIX commands
 - Log shipping for databases
 
+For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg).
+
 ## IBM i migration strategies
 {: #migration-ibmi}
 
@@ -188,3 +190,5 @@ GeoMirroring enables IBM i disk mirroring technology on multiple system environm
 
 - [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: new_window}{: external}
 - [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: new_window}{: external}
+
+For a complete tutorial on migrating your IBM i workloads to Power Systems Virtual Servers, see [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw).
