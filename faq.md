@@ -312,3 +312,8 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
 
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9
+
+<!--## Can Power VC provide support for more than 1 language to VM Console for a single Novalink host?
+
+PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
+
