@@ -33,7 +33,7 @@ subcollection: power-iaas
 | E980 (9080-M9S)   |  143         | up to 16,255 GB |               |
 | E980 (9080-M9S)   |  143         | up to 23,970 GB | DAL 12, DAL 13|
 | S922 (9009-22A)   |  15          | up to 944 GB    |               |
-
+{: caption="Table 1. Theoritical maximum memorys" caption-side="bottom"}
 <!--. In DAL12 and DAL13 data centers, the E980 systems allow up to 23,547 GB of memory.-->
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
@@ -51,7 +51,7 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 | 300 hours                 | (300 hours x $0.343)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
 | 430 hours                 | (430 hours x $0.465)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
-{: caption="Table 1. Monthly LPAR charges" caption-side="top"}
+{: caption="Table 2. Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
@@ -103,7 +103,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 2. EE980 processor type pricing" caption-side="bottom"}
+{: caption="Table 3. EE980 processor type pricing" caption-side="bottom"}
 
 ## End of billing
 {: #pricing-end-billing}
