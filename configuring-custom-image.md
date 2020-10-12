@@ -49,7 +49,7 @@ Before you can use a custom image as the boot volume, review the following infor
 - Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: new_window}{: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
-For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg) and [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw).
+For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external} and [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}.
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 

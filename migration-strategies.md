@@ -156,7 +156,7 @@ Some alternative AIX migration strategies include:
 - The `savevg` and `restvg` AIX commands
 - Log shipping for databases
 
-For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg).
+For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external}.
 
 ## IBM i migration strategies
 {: #migration-ibmi}
@@ -183,7 +183,7 @@ The following steps detail how to migrate your OS and data from an on-premises s
 
 For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}.
 
-For a complete tutorial on migrating your IBM i workloads to Power Systems Virtual Servers, see [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw).
+For a complete tutorial on migrating your IBM i workloads to Power Systems Virtual Servers, see [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}.
 
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-rep-glvm}
