@@ -70,7 +70,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 - Some of the attributes of source disks cannot be changed while the disks are in a snapshot relationship. For example, you cannot resize the source disks when there are snapshot relationships in place for those disks.
 - Volumes that are in a snapshot relationship cannot be detached from the VM.
 
-<!-- ## Cloning a volume
+## Cloning a volume
 
 {: #cloning-volume}
 
@@ -165,7 +165,7 @@ Performs the remaining execution to create the cloned volumes from the available
 
 - **Delete a volume-clone request**
 
-  When a volumes-clone request is not required any longer, you can call the volumes-clone delete API to remove the data. You can delete a volumes-clone request only when the request status is in one of the finalized statuses: completed, failed, or cancelled state. -->
+  When a volumes-clone request is not required any longer, you can call the volumes-clone delete API to remove the data. You can delete a volumes-clone request only when the request status is in one of the finalized statuses: completed, failed, or cancelled state.
 
 ## Restoring a snapshot
 
