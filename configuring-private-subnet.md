@@ -81,7 +81,7 @@ If your private subnets are routed over a Direct Link, you must also make sure t
 
 The gateway for {{site.data.keyword.powerSys_notm}} is also the gateway for the local subnet that is routed to the {{site.data.keyword.cloud_notm}} over {{site.data.keyword.cloud_notm}} Direct Link. The {{site.data.keyword.cloud_notm}} x86 VSI might need a static route to {{site.data.keyword.powerSys_notm}} subnets as well. The gateway for this route is the same as the gateway for the {{site.data.keyword.cloud_notm}} private network.
 
-For more information, see tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external}.
+<!-- For more information, see tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external}. -->
 
 ## Using CIDR notation
 {: #cidr-notation}
