@@ -147,3 +147,7 @@ For more information, see [IBM Cloud Direct Link Connect](https://knowledgebase.
 5. Click **Next** and add the VXC. You can then proceed through the checkout process. IBM will verify the IBM Cloud Ticket number and send you a */30* or */31* Private IP to provision for BGP.
 
 6. See [Configure IBM Cloud Direct Link](https://cloud.ibm.com/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete your private connection to your IBM Cloud environment. -->
+
+<!-- For more information, see the following tutorials:
+-  [Site-to-site Virtual Private Network Connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}
+-  [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external} -->

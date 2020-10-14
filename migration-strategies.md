@@ -97,7 +97,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 - *iCluster*
 - *MIMIX from Syncsort*
 
-## Back up and restore
+## Backup and restore
 {: #backup-restore}
 
 You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
@@ -133,7 +133,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
-For more information, see [Restoring an AIX mksysb image onto a Power Systems Virtual Server instance)](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+For more information, see [Restoring an AIX mksysb image onto a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
@@ -155,6 +155,8 @@ Some alternative AIX migration strategies include:
 - `rsync` for non-database files
 - The `savevg` and `restvg` AIX commands
 - Log shipping for databases
+
+For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external}.
 
 ## IBM i migration strategies
 {: #migration-ibmi}
@@ -180,6 +182,8 @@ The following steps detail how to migrate your OS and data from an on-premises s
 6. Migrate your remaining data.
 
 For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}.
+
+For a complete tutorial on migrating your IBM i workloads to Power Systems Virtual Servers, see [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}.
 
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-rep-glvm}

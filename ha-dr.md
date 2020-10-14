@@ -56,6 +56,13 @@ Licenses that are purchased outside a subscription model license are not eligibl
 {:note}
 [Enterprise Edition monthly pricing options ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/common/ssi/cgi-bin/ssialias?infotype=AN&subtype=CA&htmlfid=897/ENUS219-286) -->
 
+## Disaster recovery mechanisms
+{: #dr-aix-ibmi}
+
+You can implement disaster recovery mechanism between two AIX virtual server instances in separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCYQ2FUWnfRUa1uQ7Oihw-aw){: new_window}{: external}.
+
+You can implement disaster recovery mechanisms between two IBM i virtual server instances by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC6h4H-DJXFUKdo5o_gC6u_w){: new_window}{: external}.
+
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 

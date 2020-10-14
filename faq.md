@@ -92,7 +92,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 {: faq}
 {: support}
 
-All regions use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types.
+All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types.
 
 If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
 
@@ -103,7 +103,7 @@ The boot image storage type is predefined and cannot be chosen.
 {: #rootvg}
 {: faq}
 
-By default, the system deployes 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/nl/ssw_aix_72/e_commands/extendvg.html){: new_window}{: external} command to add a physical volume.
+By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: new_window}{: external} command to add a physical volume.
 
 ## What's the difference between capped and uncapped shared processor performance? How do they compare to dedicated processor performance?
 {: #processor}
@@ -218,7 +218,7 @@ The {{site.data.keyword.powerSys_notm}} service provides the capability to captu
 {: faq}
 {: support}
 
-For more information, see [Ordering IBM Cloud Direct Link Connect for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+See the tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ).
 
 ## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
@@ -312,3 +312,8 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
 
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9
+
+<!--## Can Power VC provide support for more than 1 language to VM Console for a single Novalink host?
+
+PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
+

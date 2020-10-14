@@ -25,14 +25,27 @@ subcollection: power-iaas
 # Pricing for Power Systems Virtual Servers
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host Power Systems Virtual Servers have the following theoretical maximums:
+{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
 - E880 (9119-MHE): 143 processors and 8,099 GB of memory
-- E980 (9080-M9S): 143 processors and 16,255 GB of memory. <!--Starting with DAL12 and DAL13 data centers, and in all the new data centers, E980 systems allow up to 23,547 GB of memory.-->
+
+- E980 (9080-M9S): 143 processors and 16,255 GB of memory
+
 - S922 (9009-22A): 15 processors and 959 GB of memory
+
+<!-- |  Power Systems    |  Processors  |  Memory          |
+|-------------------|--------------|------------------|
+| E880 (9119-MHE)   |  143         | up to 7,972 GB   |
+| E980 (9080-M9S)   |  143         | up to 16,255 GB  |
+| S922 (9009-22A)   |  15          | up to 944 GB     |
+{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
+
+ In DAL12 and DAL13 data centers, the E980 systems allow up to 23,547 GB of memory.-->
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
 {: shortdesc}
+
+In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated price might be different than the actual price when you purchase the {{site.data.keyword.powerSys_notm}} service or instances based on the discounts and promotion codes.
 
 ## Monthly usage
 {: #pricing-monthly-usage}
@@ -46,7 +59,7 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 | 300 hours                 | (300 hours x $0.343)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
 | 430 hours                 | (430 hours x $0.465)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
-{: caption="Table 1. Monthly LPAR charges" caption-side="top"}
+{: caption="Table 2. Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
@@ -55,7 +68,7 @@ In this example, the LPAR resources are increased (after reaching 300 hours in t
 
 The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
-The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, as another example, to use up to 128 GB for 2 cores you do not have to pay any premium memory price.
+The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
 ## Operating systems
 {: #pricing-operating-systems}
@@ -71,7 +84,7 @@ The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock ima
 
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functionality, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
 
 The following tables show how different processor types affect the cost per system:
 
@@ -98,7 +111,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 2. EE980 processor type pricing" caption-side="bottom"}
+{: caption="Table 3. EE980 processor type pricing" caption-side="bottom"}
 
 ## End of billing
 {: #pricing-end-billing}

@@ -71,6 +71,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 - Volumes that are in a snapshot relationship cannot be detached from the VM.
 
 <!-- ## Cloning a volume
+
 {: #cloning-volume}
 
 Cloning a volume creates a full copy of the volume. You can select multiple volumes and initiate a group clone. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.

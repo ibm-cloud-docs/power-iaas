@@ -46,7 +46,7 @@ Importing and exporting images requires a considerable amount of processing powe
 
 It's the user's responsibility to set up and maintain these environments. Remember to check for any connectivity and bandwidth restrictions to the LPAR server. Your LPAR servers can also use {{site.data.keyword.cos_full_notm}} as a repository. 
 
-For a complete tutorial on backing up and restoring AIX VM data, see [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backup_Tutorial.pdf).
+For a complete tutorial on backing up and restoring AIX VM data, see [Backing up and restoring data in an AIX VM](https://ibm.seismic.com/Link/Content/DCX-4IyC0qpEWu1g6ZOcO2bw){: new_window}{: external}.
 
 ## IBM i backup strategies
 {: #backup-ibmi}
@@ -63,6 +63,8 @@ The typical IBM i customer uses the following flow to perform a backup:
    - [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: new_window}{: external}
    - [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: new_window}{: external}
    - [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: new_window}{: external}
+
+For a complete tutorial on backing up and restoring IBM i VM data, see [Backing up and restoring data in an IBM i VM](https://ibm.seismic.com/Link/Content/DCntVZ84qv0ky6GjJTBgygXQ){: new_window}{: external}.
 
 ## Using COS over IBM Cloud Direct Link
 {: #cos-over-directlink}
