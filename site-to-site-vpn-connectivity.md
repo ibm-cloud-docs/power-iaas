@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Site-to-site Virtual Private Network 
+# Site-to-site VPN connectivity
 {: vpn-connectivity}
 
-For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}.
+For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to Power Systems Virtual Server, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}.
