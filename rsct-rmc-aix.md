@@ -100,8 +100,6 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
-<!--*(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` command.-->
-
 6. *(Optional)* Restart RMC services:
 
    ```
