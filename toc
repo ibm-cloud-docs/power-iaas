@@ -51,7 +51,7 @@ Power Systems Virtual Servers
         network-security.md
         network-architecture.md
         site-to-site-vpn-connectivity.md
-        x86-based-systems.md
+        X86-based-systems.md
 
     {: .topicgroup}
     AIX
