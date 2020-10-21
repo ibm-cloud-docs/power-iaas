@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Configuring connectivity to {{site.data.keyword.powerSys_notm}}
 {: #configuring-power}
 
-You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration and set up Border Gateway Protocol (BGP). During the setup process, an IBM service representative works with you to enable your network to use the required Virtual Routing Function (VRF) capability. For more information, see [Configuring IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
+You can configure your subnet to interact with the {{site.data.keyword.cloud}} after you establish [Direct Link connectivity](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To get your IBM Cloud Direct Link connection to work, you need to perform some basic network configuration. For more information, see [Direct Link Connect for Power Systems Virtual Servers](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link). If you have two or more virtual machines (VMs), do not use an external IP for communication between them. You must use an internal IP.
 {: shortdesc}
 
 To connect directly to the {{site.data.keyword.powerSys_notm}} environment, see [Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services](#connecting-megaport).
@@ -147,7 +147,3 @@ For more information, see [IBM Cloud Direct Link Connect](https://knowledgebase.
 5. Click **Next** and add the VXC. You can then proceed through the checkout process. IBM will verify the IBM Cloud Ticket number and send you a */30* or */31* Private IP to provision for BGP.
 
 6. See [Configure IBM Cloud Direct Link](https://cloud.ibm.com/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#configure-ibm-cloud-direct-link) to complete your private connection to your IBM Cloud environment. -->
-
-<!-- For more information, see the following tutorials:
--  [Site-to-site Virtual Private Network Connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}
--  [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external} -->

@@ -70,7 +70,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 - Some of the attributes of source disks cannot be changed while the disks are in a snapshot relationship. For example, you cannot resize the source disks when there are snapshot relationships in place for those disks.
 - Volumes that are in a snapshot relationship cannot be detached from the VM.
 
-<!-- ## Cloning a volume
+<!--## Cloning a volume
 
 {: #cloning-volume}
 
