@@ -93,6 +93,9 @@ Power Systems Virtual Server customer Private Network ID (3):
 ```
 {: codeblock}
 
+Megaport connectivity services are avalable in all location except LON04 and SYD04.
+{: important}
+
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 

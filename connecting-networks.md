@@ -33,7 +33,7 @@ Learn more about connecting {{site.data.keyword.powerSysShort}} instances and ne
 
 You can use **IBM Cloud Connect** to connect {{site.data.keyword.cloud_notm}} instances across data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. Currently, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to order IBM Cloud Connect.
 
-IBM Cloud Connect is only available to IBM clients within the US.
+IBM Cloud Connect is only available to IBM clients within the US. Cloud connect is available in all locations except LON04 and SYD04.
 {: important}
 
 IBM Cloud Connect provides network interconnect from 230+ global point of presence (POP) locations for:
