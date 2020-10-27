@@ -41,11 +41,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the {{site.data.keyword.powerSys_notm}} tile.
 
-    <!-- ![The IBM Cloud catalog](./images/catalog-search-bar.png "The IBM Cloud catalog"){: caption="Figure 1. The IBM Cloud catalog" caption-side="bottom"} -->
-
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
-
-    <!-- ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"} -->
 
 | Location               | Region   | Data center |
 | ---------------------- | -------- | ----------- |
@@ -58,8 +54,6 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 4. Click **Create**. You are redirected to the **Resource List**.
-
-    <!-- ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"} -->
 
 5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
 
