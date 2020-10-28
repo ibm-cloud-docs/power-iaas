@@ -76,9 +76,7 @@ Order a second Direct Link Connect connection for backup purposes.
    It can take up to three business days to complete the initial setup for the Direct Link connection request.
    {: note}
 
-   To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, enter the following details.
-
-9. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
+9. The following network information is an example of what is displayed:
 
     ```
     Link Speed:                  1000 Mbps
@@ -98,6 +96,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
     The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
     {: note}
+
+   To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, enter the following details.
 
     ```
     Customer name:
