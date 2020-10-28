@@ -71,10 +71,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the Master Service Agreement as it contains important technical information.
 
-8. Click **Create**.
-
-   It can take up to three business days to complete the initial setup for the Direct Link connection request.
-   {: note}
+8. Click **Create**. It can take up to three business days to complete your Direct Link connection request.
 
 9. The following network information is an example of what is displayed:
 
@@ -92,12 +89,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     {: screen}
 
-10. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
-
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-    {: note}
-
-   To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, enter the following details.
+10. create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, enter the following details.
 
     ```
     Customer name:
@@ -111,6 +103,9 @@ Order a second Direct Link Connect connection for backup purposes.
     Power Systems Virtual Server Private Network (subnet) Name (2):
     Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
+
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    {: note}
 
 11. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
