@@ -43,15 +43,16 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
-  | Location               | Region   | Data center |
-  | ---------------------- | -------- | ----------- |
-  | Dallas, Texas          | us-south | DAL12/DAL13 |
-  | Washington, D.C.       | us-east  | WDC04       |
-  | Toronto, Canada        | eu-east  | TOR01       |
-  | Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
-  | London, United Kingdom | eu-gb    | LON04/LON06 |
-  | Sydney, Australia      | au-syd   | SYD04       |
-  {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+| Location               | Region   | Data center |
+| ---------------------- | -------- | ----------- |
+| Dallas, Texas          | us-south | DAL12/DAL13 |
+| Washington, D.C.       | us-east  | WDC04       |
+| Toronto, Canada        | eu-east  | TOR01       |
+| Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
+| London, United Kingdom | eu-gb    | LON04/LON06 |
+| Sydney, Australia      | au-syd   | SYD04       |
+| Tokyo, Japan           | ap-north | TOK04       |
+{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 4. Click **Create**. You are redirected to the **Resource List**.
 

@@ -157,7 +157,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>Sydney 4</td>
         <td>IBM Power Virtual Server</td>
       </tr>
-    </table>
+      <tr>
+        <td>Tokyo, Japan</td>
+        <td>Tokyo 4</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>    </table>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
