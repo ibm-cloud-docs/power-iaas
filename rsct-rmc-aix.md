@@ -54,7 +54,7 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 lin
 ### Diagnosing a missing IPv6 link local address
 {: #diagnosing-ipv6}
 
-Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 link local address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
+Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 global address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
 
 ```
 en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
@@ -83,7 +83,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
     3. Open the `/var/log/cloud-init-output.log` file.
     4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 link local address.
 
-3. Using the IPv6 address for the host, [restart the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
+3. Using the IPv6 address for the host, [refresh the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
 
     ```
     /opt/rsct/bin/rmcctrl -p
@@ -94,7 +94,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 4. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deployment that is not supported. Begin by rebuilding the node:
 
     ```
-    oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
+    odmdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
     ```
     {: codeblock}
 

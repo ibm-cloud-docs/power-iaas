@@ -36,11 +36,11 @@ subcollection: power-iaas
 |  Power Systems    |  Processors  |  Memory              |
 |-------------------|--------------|----------------------|
 | E880 (9119-MHE)   |  143         | up to 7,463 GB       |
-| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
+| E980 (9080-M9S)   |  143         | up to 15,307 GB      |
 | S922 (9009-22A)   |  15          | up to 942 GB         |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
- [^1] - In DAL12, DAL13 and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.
+ <!-- [^1] - In DAL12, DAL13 and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.-->
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
 {: shortdesc}
