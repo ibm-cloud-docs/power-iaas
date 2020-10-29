@@ -43,20 +43,55 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
-| Location               | Region   | Data center |
-| ---------------------- | -------- | ----------- |
-| Dallas, Texas          | us-south | DAL12/DAL13 |
-| Washington, D.C.       | us-east  | WDC04       |
-| Toronto, Canada        | eu-east  | TOR01       |
-| Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
-| London, United Kingdom | eu-gb    | LON04/LON06 |
-| Sydney, Australia      | au-syd   | SYD04       |
-| Tokyo, Japan           | ap-north | TOK04       |
-{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+    <table>
+      <caption>
+        Table 1. Power Systems Virtual Server data centers
+      </caption>
+      <tr>
+        <th>Location</th>
+        <th>Region</th>
+        <th>Data center</th>
+      </tr>
+      <tr>
+        <td>Dallas, Texas</td>
+        <td>us-south</td>
+        <td>DAL12/DAL13</td>
+      </tr>
+      <tr>
+        <td>Washington, D.C.</td>
+        <td>us-east</td>
+        <td>WDC04</td>
+      </tr>
+      <tr>
+        <td>Toronto, Canada</td>
+        <td>eu-east</td>
+        <td>TOR01</td>
+      </tr>
+      <tr>
+        <td>Frankfurt, Germany</td>
+        <td>eu-de</td>
+        <td>FRA04/FRA05</td>
+      </tr>
+      <tr>
+        <td>London, United Kingdom</td>
+        <td>eu-gb</td>
+        <td>LON04/LON06</td>
+      </tr>
+      <tr>
+        <td>Sydney, Australia</td>
+        <td>au-syd</td>
+        <td>SYD04</td>
+      </tr>
+      <tr>
+        <td>Tokyo, Japan</td>
+        <td>ap-north</td>
+        <td>TOK04</td>
+      </tr>
+    </table>
 
 4. Click **Create**. You are redirected to the **Resource List**.
 
-5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm} } service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
