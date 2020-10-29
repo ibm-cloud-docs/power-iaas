@@ -80,7 +80,7 @@ Order a second Direct Link Connect connection for backup purposes.
    It can take up to three business days to complete the initial setup for the Direct Link connection request.
    {: note}
 
-To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
+   To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
 
 10. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
