@@ -41,27 +41,57 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the {{site.data.keyword.powerSys_notm}} tile.
 
-    <!-- ![The IBM Cloud catalog](./images/catalog-search-bar.png "The IBM Cloud catalog"){: caption="Figure 1. The IBM Cloud catalog" caption-side="bottom"} -->
-
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
-    <!-- ![Selecting a service and region](./images/power-iaas-service-region.png "Selecting a service and region"){: caption="Figure 2. Selecting a service and region" caption-side="bottom"} -->
-
-| Location               | Region   | Data center |
-| ---------------------- | -------- | ----------- |
-| Dallas, Texas          | us-south | DAL12/DAL13 |
-| Washington, D.C.       | us-east  | WDC04       |
-| Toronto, Canada        | eu-east  | TOR01       |
-| Frankfurt, Germany     | eu-de    | FRA04/FRA05 |
-| London, United Kingdom | eu-gb    | LON04/LON06 |
-| Sydney, Australia      | au-syd   | SYD04       |
-{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+    <table>
+      <caption>
+        Table 1. Power Systems Virtual Server data centers
+      </caption>
+      <tr>
+        <th>Location</th>
+        <th>Region</th>
+        <th>Data center</th>
+      </tr>
+      <tr>
+        <td>Dallas, Texas</td>
+        <td>us-south</td>
+        <td>DAL12/DAL13</td>
+      </tr>
+      <tr>
+        <td>Washington, D.C.</td>
+        <td>us-east</td>
+        <td>WDC04</td>
+      </tr>
+      <tr>
+        <td>Toronto, Canada</td>
+        <td>eu-east</td>
+        <td>TOR01</td>
+      </tr>
+      <tr>
+        <td>Frankfurt, Germany</td>
+        <td>eu-de</td>
+        <td>FRA04/FRA05</td>
+      </tr>
+      <tr>
+        <td>London, United Kingdom</td>
+        <td>eu-gb</td>
+        <td>LON04/LON06</td>
+      </tr>
+      <tr>
+        <td>Sydney, Australia</td>
+        <td>au-syd</td>
+        <td>SYD04</td>
+      </tr>
+      <tr>
+        <td>Tokyo, Japan</td>
+        <td>ap-north</td>
+        <td>TOK04</td>
+      </tr>
+    </table>
 
 4. Click **Create**. You are redirected to the **Resource List**.
 
-    <!-- ![Creating a Power Systems Virtual Server service](./images/power-iaas-create-button.png "Creating a Power Systems Virtual Server service"){: caption="Figure 3. Creating a Power Systems Virtual Server service" caption-side="bottom"} -->
-
-5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm} } service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
@@ -79,9 +109,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-2. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a group of stock images or the list of stock images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. To view your boot images, go to **Boot images** after you provision the instance.
-
-  <!-->  The storage tiers in Power Systems Virtual Server are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the Tier 3 storage is currently set to 3 IOPS/GB, and the Tier 1 storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.-->
+2. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a group of stock images or the list of stock images in your catalog. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#storage-tiers).
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
@@ -103,7 +131,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
     <!-- ![Defining your network interfaces](./images/console-add-private-network.png "Defining your network interfaces"){: caption="Figure 8. Defining your network interfaces" caption-side="bottom"} -->
 
-5. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}.
+5. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
 Refer to the following table for more information on each {{site.data.keyword.powerSys_notm}} instance field.
 

@@ -93,6 +93,9 @@ Power Systems Virtual Server customer Private Network ID (3):
 ```
 {: codeblock}
 
+Megaport connectivity services are available in WDC04, DAL13, FRA05, and LON06 locations.
+{: important}
+
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 

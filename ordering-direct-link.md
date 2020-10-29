@@ -71,17 +71,9 @@ Order a second Direct Link Connect connection for backup purposes.
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the Master Service Agreement as it contains important technical information.
 
-8. Click **Create**. A message similar to the following image is displayed when your request is submitted successfully.
-   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 1. Direct Link Connect success message and ticket number" caption-side="bottom"}
+8. Click **Create**. It can take up to three business days to complete your Direct Link connection request.
 
-9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your Power Systems Virtual Server instance.
-
-   It can take up to three business days to complete the initial setup for the Direct Link connection request.
-   {: note}
-
-   To create a connection to the Power Systems Virtual Server instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, add the **Direct Link Connect case number**.
-
-10. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
+9. The following network information is an example of what is displayed:
 
     ```
     Link Speed:                  1000 Mbps
@@ -97,10 +89,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     {: screen}
 
-11. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
-
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-    {: note}
+10. create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server team. In the new case's description field, enter the following details.
 
     ```
     Customer name:
@@ -115,7 +104,10 @@ Order a second Direct Link Connect connection for backup purposes.
     Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
 
-12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    {: note}
+
+11. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
 ### Configuration parameters for ordering Direct Link Connect
 
@@ -165,7 +157,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>Sydney 4</td>
         <td>IBM Power Virtual Server</td>
       </tr>
-    </table>
+      <tr>
+        <td>Tokyo, Japan</td>
+        <td>Tokyo 4</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>    </table>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.
   {: note}
@@ -224,7 +220,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 8. Click **Create**. The following message is displayed when your request is submitted successfully:
 
-   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 2. Direct Link Connect success message and ticket number" caption-side="bottom"}
+   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 1. Direct Link Connect success message and ticket number" caption-side="bottom"}
 
 9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
 
