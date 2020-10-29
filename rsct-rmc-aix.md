@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-03-10"
+lastupdated: "2020-10-19"
 
 keywords: rsct, rmc, IPv6
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images
 {: #recommended-rsct-package}
 
-RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSys_notm}} offering, RSCT 3.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends you use [RSCT 3.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: new_window}{: external} for optimal performance.
+RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSys_notm}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends you use [RSCT 3.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: new_window}{: external} for optimal performance.
 {: shortdesc}
 
 The RSCT `nodeid` is not rebuilt if you are deploying an AIX VM from a network installation management (NIM) server without `cloud-init`, and RSCT is installed.
@@ -46,15 +46,15 @@ The RMC connection between your VM and the system management service is configur
 - You use the `mksysb restore` operation from an on-premises VM
 - You use `smitty` to remove the IPv6 interface
 
-## Diagnosing and recovering from a missing IPv6 address
+## Diagnosing and recovering from a missing IPv6 link local address
 {: #rsct-diagnosis-recovery}
 
-One of your AIX VM network interface controllers (NICs) must include an IPv6 address to connect to the Novalink host. If the desired NIC does not have an associated IPv6 address, you must perform a recovery procedure.
+One of your AIX VM network interface controllers (NICs) must include an IPv6 link local address to connect to the Novalink host. If the desired NIC does not have an associated IPv6 link local address, you must perform a recovery procedure.
 
-### Diagnosing a missing IPv6 address
+### Diagnosing a missing IPv6 link local address
 {: #diagnosing-ipv6}
 
-Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 address:
+Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 global address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
 
 ```
 en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
@@ -62,63 +62,59 @@ inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
 ```
 {: screen}
 
-If one of your NICs does not contain an IPv6 address, continue on to the next section.
+If one of your NICs does not contain an IPv6 link local address, continue on to the next section.
 
-### Using a Power Systems Virtual Server boot image to recover from a missing IPv6 address
+### Using a Power Systems Virtual Server boot image to recover from a missing IPv6 link local address
 {: #recovering-ipv6}
 
 1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: new_window}{: external}.
 
-    *3.1.x* is the **minimum** release that is supported by the {{site.data.keyword.powerSys_notm}} service. If you redeployed an AIX image with a package that is older than 3.1, you must upgrade RSCT first.
+    *3.2.1* is the **minimum** release that is supported by the {{site.data.keyword.powerSys_notm}} service. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
     {: important}
 
 2. If you still have the {{site.data.keyword.powerSys_notm}} deployed boot image, complete the following steps:
 
     1. Boot to the original {{site.data.keyword.powerSys_notm}} boot image.
-    2. Rerun the `ifconfig -a` command. The output includes the configured IPv6 address.
+    2. Rerun the `ifconfig -a` command. The output includes the configured IPv6 link local address.
 
-        If you removed the IPv6 address from the original boot image configuration, you can read the AIX `cloud-init` logs to find the IPv6 address.
+        If you removed the IPv6 link local address from the original boot image configuration, you can read the AIX `cloud-init` logs to find the IPv6 address.
         {: note}
 
     3. Open the `/var/log/cloud-init-output.log` file.
-    4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 address.
+    4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 link local address.
 
-3. Using the IPv6 address for the host, [restart the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
+3. Using the IPv6 address for the host, [refresh the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
 
     ```
-    /usr/sbin/rsct/bin/rmcctrl -z
-    /usr/sbin/rsct/bin/rmcctrl -A
-    /usr/sbin/rsct/bin/rmcctrl -p
+    /opt/rsct/bin/rmcctrl -p
+    /opt/rsct/rmcrefreshMD -s ctrmc
     ```
     {: codeblock}
 
 4. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deployment that is not supported. Begin by rebuilding the node:
 
     ```
-    oemdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
+    odmdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
     ```
     {: codeblock}
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
-6. *(Optional)* To build a new `nodeid`, run the `/opt/rsct/install/bin/recfgct` command.
+6. *(Optional)* Restart RMC services:
 
-7. *(Optional)* Restart RMC services:
+   ```
+   /usr/sbin/rsct/install/bin/recfgct
+   ```
 
-    ```
-    /usr/sbin/rsct/bin/rmcctrl -z
-    /usr/sbin/rsct/bin/rmcctrl -A
-    /usr/sbin/rsct/bin/rmcctrl -p
-    ```
-    {: codeblock}
+7. *(Optional)* To build a `nodeid`, run the `/opt/rsct/bin/rmcctrl -p` command if not already done in step 3.
 
 If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: tip}
 
-## Recovering from a missing IPv6 address when using your own boot image
+## Recovering from a missing IPv6 link local address when using your own boot image
 {: #recover-ipv6-own}
 
-Complete the following steps to recover from a missing IPv6 address:
+Complete the following steps to recover from a missing IPv6 link local address:
 
 1. Before you shut down the AIX VM, grab the IPv6 details.
 
@@ -128,17 +124,33 @@ Complete the following steps to recover from a missing IPv6 address:
 
 4. Confirm that the `nodeid` matches the output from `cat /etc/ct_node_id` and `cat /var/ct/cfg/ct_node_id`.
 
-5. Check the management node details (to be used on your disk later) by entering the following command, `lsrsrc ManagementServer hostname`.
+5. Power down the AIX VM and restart it by using your custom boot image.
 
-6. Power down the AIX VM and restart it by using your custom boot image.
+6. Re-create the same network configuration as on the IBM boot image by using `smitty`.
 
-7. Re-create the same network configuration as on the IBM boot image by using `smitty`.
+7. Validate that the RSCT packages are at least *3.2.1* or later by running the `lslpp -L rsct.*` command.
 
-8. Validate that the RSCT packages are at least *3.1* or later by running the `lslpp -L rsct.*` command.
+8. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will likely **not** match the data from the IBM boot image.
 
-9. Check what your boot OS management node is by entering, `lsrsrc ManagementServer hostname`.
+9. Delete the `/etc/ct_node_id` file.
 
-10. If your boot OS management node does not match the original IBM boot image, enter the following commands:
+10. Generate a `nodeid` to match the original boot ID. Start RMC again and wait 15 minutes.
+
+    ```
+    /usr/sbin/rsct/bin/rmcctrl
+    /usr/sbin/rsct/install/bin/recfgct – I value from /etc/ct_node_id (on the original IBM boot disk collected above)
+    ```
+    {: screen}
+
+11. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
+
+12. The output should be the same as the output from the IBM boot image.
+
+<!--Check the management node details (to be used on your disk later) by entering the following command, `lsrsrc ManagementServer hostname`. -->
+
+<!--Check what your boot OS management node is by entering, `lsrsrc ManagementServer hostname`.
+
+If your boot OS management node does not match the original IBM boot image, enter the following commands:
 
     ```
     Stop RMC
@@ -146,34 +158,19 @@ Complete the following steps to recover from a missing IPv6 address:
     ```
     {: codeblock}
 
-11. Use the `rmrsrc` command to remove your management node.
+Use the `rmrsrc` command to remove your management node.
 
     ```
     /opt/rsct/bin/rmrsrc -s 'Hostname = "hmc1.mydomain.mycompany.com"' ManagementServer
 
     where hmc1.mydomain.mycompany.com is the value returned on the lssrc command above.
     ```
-    {: screen}
+    {: screen} -->
 
-12. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will likely **not** match the data from the IBM boot image.
-
-13. Delete the `/etc/ct_node_id` file.
-
-14. Generate a `nodeid` to match the original boot ID.
-
-    ```
-    recfgct -i value from /etc/ct_node_id (on the original IBM boot disk collected above)
-    ```
-    {: screen}
-
-15. Start RMC again and wait 15 minutes.
+<!-- Start RMC again and wait 15 minutes.
 
     ```
     /usr/sbin/rsct/bin/rmcctrl -A
     /usr/sbin/rsct/bin/rmcctrl -p
     ```
-    {: codeblock}
-
-16. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
-
-17. The output should be the same as the output from the IBM boot image.
+    {: codeblock} -->
