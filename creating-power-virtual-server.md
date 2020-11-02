@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-29"
+lastupdated: "2020-11-02"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
@@ -53,37 +53,52 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <th>Data center</th>
       </tr>
       <tr>
-        <td>Dallas, Texas</td>
+        <td>Dallas, United States</td>
         <td>us-south</td>
-        <td>DAL12/DAL13</td>
+        <td>DAL13</td>
       </tr>
       <tr>
-        <td>Washington, D.C.</td>
+        <td>Dallas 12, United States</td>
+        <td>us-south</td>
+        <td>DAL12</td>
+      </tr>
+      <tr>
+        <td>Washington, D.C., United States</td>
         <td>us-east</td>
         <td>WDC04</td>
       </tr>
       <tr>
-        <td>Toronto, Canada</td>
+        <td>Toronto 01, Canada</td>
         <td>eu-east</td>
         <td>TOR01</td>
       </tr>
       <tr>
-        <td>Frankfurt, Germany</td>
+        <td>Frankfurt 01, Germany</td>
         <td>eu-de</td>
-        <td>FRA04/FRA05</td>
+        <td>FRA04</td>
       </tr>
       <tr>
-        <td>London, United Kingdom</td>
+        <td>Frankfurt 02, Germany</td>
+        <td>eu-de</td>
+        <td>FRA05</td>
+      </tr>
+      <tr>
+        <td>London 04, United Kingdom</td>
         <td>eu-gb</td>
-        <td>LON04/LON06</td>
+        <td>LON04</td>
       </tr>
       <tr>
-        <td>Sydney, Australia</td>
+        <td>London 06, United Kingdom</td>
+        <td>eu-gb</td>
+        <td>LON06</td>
+      </tr>
+      <tr>
+        <td>Sydney 04, Australia</td>
         <td>au-syd</td>
         <td>SYD04</td>
       </tr>
       <tr>
-        <td>Tokyo, Japan</td>
+        <td>Tokyo 04, Japan</td>
         <td>ap-north</td>
         <td>TOK04</td>
       </tr>
@@ -91,7 +106,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 4. Click **Create**. You are redirected to the **Resource List**.
 
-5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm} } service under **Services**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
@@ -102,7 +117,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 To begin, complete all of the fields under the **Virtual servers** section. If you select more than one instance, you are presented with additional options.
 
-  The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
+  The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
   {: tip}
 
   ![Creating a power virtual server instance](./images/console-create-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 2. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
