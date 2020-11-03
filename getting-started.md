@@ -32,7 +32,7 @@ In the data centers, the Power Systems Virtual Servers are separated from the re
 
 Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabilities into infrastructure as a service. That means you get fast, self-service provisioning, flexible management both on-premises and off, and access to a stack of enterprise IBM Cloud services – all with pay-as-you-use billing that lets you easily scale up and out. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}} service, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver workload, see [Getting started with SAP NetWeaver on {{site.data.keyword.powerSysFull}}](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started). If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP HANA workload, see [Getting started with SAP HANA on {{site.data.keyword.powerSysFull}}](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
 ## Terminology
 {: #terminology}
