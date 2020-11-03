@@ -33,11 +33,11 @@ subcollection: power-iaas
 
 - S922 (9009-22A): 15 processors and 959 GB of memory -->
 
-|  Power Systems    |  Processors  |  Memory                  |
-|-------------------|--------------|--------------------------|
-| E880 (9119-MHE)   |  143         | up to 7,463 GB           |
-| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]     |
-| S922 (9009-22A)   |  15          | up to 942 GB             |
+|  Power Systems    |  Processors  |  Memory                         |
+|-------------------|--------------|---------------------------------|
+| E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
+| E980 (9080-M9S)   |  143         | up to 15,307 GB <sup>[^1]</sup> |
+| S922 (9009-22A)   |  15          | up to 942 GB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 [^1] - In DAL12, DAL13 and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.

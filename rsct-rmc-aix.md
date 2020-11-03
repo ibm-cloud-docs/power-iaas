@@ -54,7 +54,7 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 lin
 ### Diagnosing a missing IPv6 link local address
 {: #diagnosing-ipv6}
 
-Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 global address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
+Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 link local address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
 
 ```
 en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
@@ -100,7 +100,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
-6. *(Optional)* Restart RMC services:
+6. *(Optional)* To create new nodeid and restart RMC services:
 
    ```
    /usr/sbin/rsct/install/bin/recfgct
@@ -132,19 +132,18 @@ Complete the following steps to recover from a missing IPv6 link local address:
 
 8. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will likely **not** match the data from the IBM boot image.
 
-9. Delete the `/etc/ct_node_id` file.
-
-10. Generate a `nodeid` to match the original boot ID. Start RMC again and wait 15 minutes.
+9. Generate a `nodeid` to match the original boot ID. Start RMC again and wait 15 minutes.
 
     ```
-    /usr/sbin/rsct/bin/rmcctrl
+    /usr/sbin/rsct/bin/rmcctrl -p
+    odmdelete -o CuAt  -q name=cluster0 (optional before the recfgct command)
     /usr/sbin/rsct/install/bin/recfgct – I value from /etc/ct_node_id (on the original IBM boot disk collected above)
     ```
     {: screen}
 
-11. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
+10. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
 
-12. The output should be the same as the output from the IBM boot image.
+11. The output should be the same as the output from the IBM boot image.
 
 <!--Check the management node details (to be used on your disk later) by entering the following command, `lsrsrc ManagementServer hostname`. -->
 
