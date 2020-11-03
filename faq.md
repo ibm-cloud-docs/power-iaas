@@ -317,7 +317,7 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
 
 PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
 
-## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers??
+## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
 {: ocp_on_powervs}
 {: faq}
 
