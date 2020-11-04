@@ -87,7 +87,7 @@ Yes. This function is known as **bring your own image**. For more information, s
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What are the available storage types in the storage area network (SAN)?
+<!--## What are the available storage types in the storage area network (SAN)?
 {: #storage}
 {: faq}
 {: support}
@@ -97,7 +97,7 @@ All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage t
 If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
 
 The boot image storage type is predefined and cannot be chosen.
-{: note}
+{: note}-->
 
 ## How do I extend my AIX rootvg?
 {: #rootvg}
