@@ -41,11 +41,9 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-SS1 IBM i Option 41 HA Switchable Resources
 - 5770-SS1 IBM i Option 42 HA Journal Performance
 - 5770-SS1 IBM i Options:  all other IBM i Options which are included with IBM i at no additional charge. Examples:
-
   - Option 8, AFP Compatibility Fonts
   - Option 12, Host Servers
   - Option 13, System Openness Includes
-
 - 5770-DG1: HTTP Server for i
 - 5770-JV1: Developer Kit for Java
 - 5770-NAE: Network Authentication Enablement for i
@@ -96,7 +94,7 @@ There are additional LPPs for IBM i which are available that can be included in 
   - IBM DB2 Web Query for i Standard Edition (5733-WQS) 
   - Rational Development Studio for IBM i (5770-WDS)
 
-    Each of the above programs are individually priced. The selected licensed programs are injected to your VM instance or install specific licensed program solutions on your VM instance. If you want to use these programs on your IBM i VM instance, you must order these licensed programs through Power Systems Virtual Server; you cannot use existing licenses in your VM instance.
+    Each of the above programs are individually priced. The selected licensed programs are injected to your VM instance or install specific licensed program solutions on your VM instance. If you want to use these programs on your IBM i VM instance, you must order these licensed programs through Power Systems Virtual Server you cannot use existing licenses in your VM instance.
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and to accept the price.
 
