@@ -33,7 +33,7 @@ You can configure a private network subnet when you create a IBM&reg; Power Syst
 {: shortdesc}
 
 ```shell
-<IPv4 address>/number>
+<IPv4 address>/<number>
 ```
 {: screen}
 
@@ -90,12 +90,12 @@ You must not use an IP range outside of the ranges that are defined by [RFC 1918
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC04) | Available IP addresses |(non-WDC04)
-| --------------- | ------------------------------ | ---------------------- |
-|      /22        |        1019                    |          1021          |
-|      /23        |         507                    |           509          |
-|      /25        |         123                    |           125          |
-|      /26        |          59                    |            61          |
-|      /27        |          27                    |            29          |
-|      /28        |          11                    |            13          |
-{: Caption="Table 1. Understanding CIDR notation caption" caption-side="bottom"}
+| CIDR block size | Available IP addresses (WDC04) | Available IP addresses (non-WDC04) |
+| --------------- | ------------------------------ | ---------------------------------- |
+|      /22        |        1019                    |          1021                      |
+|      /23        |         507                    |           509                      |
+|      /25        |         123                    |           125                      |
+|      /26        |          59                    |            61                      |
+|      /27        |          27                    |            29                      |
+|      /28        |          11                    |            13                      |
+{: Caption="Table 2. Understanding CIDR notation caption" caption-side="bottom"}

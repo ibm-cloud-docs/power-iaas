@@ -302,7 +302,7 @@ On a Linux VM, the following database is supported:
 
 If you have an IBM i VM instance with the licensed program bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
-1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss).
+1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: new_window}{: external}.
 
 2. Sign in. If this is the first time you are using ESS, refer to the **Help** section on the left menu. Download and read the **ESS_Registration_IBM_Customers_Guidelines** PDF.
 
@@ -317,3 +317,8 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
 
 PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
 
+## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
+{: ocp_on_powervs}
+{: faq}
+
+You can find complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
