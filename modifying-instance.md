@@ -51,6 +51,10 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. View the **Server details** pane to verify your instance modification.
 
+### DLPAR Ratios are 8X
+
+If the VM is inactive, you can change the processor type to **Dedicated processor**, **Uncapped shared processor** or **Capped shared processor**. You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for **Memory (GB)** and **Cores (CPUs)** are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of memory and core count is one fourth (0.25 times) of what was allocated at provisioning time, and the maximum amount of memory and core count is 8 times of what was allocated at provisioning time. For example, if you provision your VM instance with 2 core and 4 GB memory, you can scale down your VM instance to 0.5 cores and 1 GB when your VM is inactive. You can also scale up your VM instance to 16 cores and 32 GB memory during peak business time for your VM workloads. You can resize the memory and core only when the VM is shut down.
+
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
