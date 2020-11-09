@@ -41,7 +41,7 @@ subcollection: power-iaas
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 <b>1</b> - In DAL12, DAL13, and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.
-<b>2</b> - If the machine type is S922 and Operating system is IBM i, IBM i supports maximum of 4 cores per VM.
+<b>2</b> - If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
 {: shortdesc}
