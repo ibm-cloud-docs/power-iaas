@@ -31,7 +31,8 @@ subcollection: power-iaas
 When you select IBM i, in addition to the IBM i operating system, the following LPP and IBM i operating system features are included <!--in the IBM i group Software Maintenance Agreement (SWMA) for--> in the {{site.data.keyword.powerSys_notm}} offering:
 
 - 5770-SS1 IBM i processor and unlimited users 
-- 5770-SS1: IBM i Option 23, OptiConnect
+
+<!--- 5770-SS1: IBM i Option 23, OptiConnect
 - 5770-SS1: IBM i Option 44, Encrypted Backup Enablement
 - 5770-SS1: IBM i Option 45, Encrypted ASP Enablement
 - 5770-SS1 IBM i Option 18 Media & Storage Extensions
@@ -43,7 +44,8 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-SS1 IBM i Options:  all other IBM i Options which are included with IBM i at no additional charge. Examples:
   - Option 8, AFP Compatibility Fonts
   - Option 12, Host Servers
-  - Option 13, System Openness Includes
+  - Option 13, System Openness Includes-->
+
 - 5770-DG1: HTTP Server for i
 - 5770-JV1: Developer Kit for Java
 - 5770-NAE: Network Authentication Enablement for i
@@ -52,7 +54,7 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-TS1: Transform Services for i
 - 5770-UME: Universal Manageability Enablement for i
 - 5770-XE1: IBM i Access for Windows
-- 5733-ACS: IBM i Access Client Solutions
+<!--- 5733-ACS: IBM i Access Client Solutions -->
 - 5733-ARE: IBM Administration Runtime Expert
 - 5798-FAX: IBM Facsimile Support for i
 - 5770-SM1: IBM System Manager for i
@@ -75,9 +77,11 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-QU1: Query for i
 - 5770-ST1: Db2 Query Manager and SQL Dev Kit for i
 - 5733-XT2: XML Toolkit
-- 5770-XH2: IBM i Access for Web
-- 5770-XW1: IBM i Access Family
-<!-- - Passport Advantage: You can bring-your-own license to the Power Systems Virtual Server offering. For example, you can bring your current Rational Developer for i (RDi) license that is obtained by using Advanced Administration (AAS) or Passport Advantage (PPA) for the Power Systems Virtual Server offering. If you do not currently have a license, you can obtain a license by using Passport Advantage, and bring it to the Power Systems Virtual Server offering. Other examples are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).-->
+
+<!--- 5770-XH2: IBM i Access for Web
+- 5770-XW1: IBM i Access Family-->
+
+- Passport Advantage: You can bring-your-own license to the Power Systems Virtual Server offering. For example, you can bring your current Rational Developer for i (RDi) license that is obtained by using Advanced Administration (AAS) or Passport Advantage (PPA) for the Power Systems Virtual Server offering. If you do not currently have a license, you can obtain a license by using Passport Advantage, and bring it to the Power Systems Virtual Server offering. Other examples are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).
 
 Each LPP in the package contains all the features including the optional features. For example, the **5770-BR1** solution includes the **Network Feature** and the **Advanced Feature** in addition to the base product.
 
@@ -100,9 +104,9 @@ There are additional LPPs for IBM i which are available that can be included in 
 
 5. View the **Server details** pane to verify your instance modification.
 
-## Passport Advantage Software:
+<!--## Passport Advantage Software:
 {: passport-advantage}
 
 In general, IBM programs that are acquired via Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired via Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the Power Systems Virtual Server offering whether RDi was obtained through the Power Systems hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
 
-Other examples of IBM software acquired via Passport Advantage are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).
+Other examples of IBM software acquired via Passport Advantage are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).-->
