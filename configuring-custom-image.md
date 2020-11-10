@@ -142,7 +142,7 @@ Complete the following steps to provision a new instance by using a custom boot 
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
-| Storage type | Select whether you want **Tier 1** or **Tier 3** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types. <!--For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#storage-tiers).-->
+| Storage type | Select whether you want **Tier 1** or **Tier 3** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 | Region | Select either **us-east**, **us-south**, **eu-de**, or **eu-gb** for the region.|
 | Image file name | Enter the fully qualified path for the image file. The fully qualified path must be in this format, `endpoint/bucket_name/file_name`. You must use the private endpoint domain. For example, `s3.private.us-east.cloud-object-storage.appdomain.cloud/power-iaasprod-images-bucket/Aix_7200-03-02-1846_cldrdy_112018.gz`. You can identify the endpoint domain, bucket name, and file name by selecting **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage**.
 | Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
