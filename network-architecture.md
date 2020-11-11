@@ -36,7 +36,17 @@ IBM Cloud Connect is only available to IBM clients within the US. IBM clients ca
 
 You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cloud network. Inside the IBM Cloud network, you can use a IBM Cloud virtual machine (VM) as a jump server to connect to your Power Systems Virtual Server instance.
 
-  ![Power Systems Virtual Server private SSL connection](./images/network-private-ssl.png "Power Systems Virtual Server private SSL connection"){: caption="Figure 1. Power Systems Virtual Server private SSL connection" caption-side="bottom"}
+For more information view the following network diagram.
+
+  1. IBM Cloud SSL VPN service is used to connect the IBM Cloud network.
+
+  2. Inside the IBM Cloud network, a IBM Cloud virtual machine (VM) is used as a jump server. Jump server can be used as login server and/or as a proxy servers.
+
+  3. Connect to the Power Systems Virtual Server instance.
+
+  4. Direct Link Connect is used to connect IBM Power Systems to the IBM Cloud Network.
+
+  ![Power Systems Virtual Server private SSL connection](./images/Private-Connection-SSL-Jumphost-DirectLink-Connect.png "Power Systems Virtual Server private SSL connection"){: caption="Figure 1. Power Systems Virtual Server private SSL connection" caption-side="bottom"}
 
 ## Private IPSec connection
 {: #private-ipsec}
