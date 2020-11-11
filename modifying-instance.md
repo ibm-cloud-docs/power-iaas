@@ -51,9 +51,9 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. View the **Server details** pane to verify your instance modification.
 
-<!--### Resizing the VM core count and memory
+### Resizing the VM core count and memory
 
-* You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for Memory (GB) and Cores (CPUs) are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The minimum amount of memory and core count is one fourth (0.25 times) of what was allocated at provisioning time, and the maximum amount of memory and core count is 8 times of what was allocated at provisioning time. However, these minimum and maximum amounts must be within the permissible limits for core count and memory. For example, if you provision your VM instance with 4 core and 8 GB memory, you can scale down your VM instance to 1 cores and 2 GB when your VM is inactive. You can also scale up your VM instance to 32 cores and 64 GB memory during peak business time for your VM workloads. You can resize the memory and core only when the VM is shut down.-->
+* You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for Memory (GB) and Cores (CPUs) are recalculated based on the type of processor. When you choose to resize an active VM, you cannot change the processor type. The calculated minimum and maximum values 8 times of the specified values. However, these values must not exceed the minimum requirement of 0.25 core and 2GB memory and a maximum of available resources in the host. For example, if you provision your VM instance with 4 core and 8 GB memory, you can scale down your VM instance to 1 cores and 2 GB when your VM is inactive. You can also scale up your VM instance to 32 cores and 64 GB memory during peak business time for your VM workloads. In order to take effect the 8X ratios on the VM instances, You must shutdown the VM instance before resizing.
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
