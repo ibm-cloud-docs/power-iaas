@@ -37,11 +37,11 @@ subcollection: power-iaas
 |-------------------|--------------|---------------------------------|
 | E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
 | E980 (9080-M9S)   |  143         | up to 15,307 GB <sup>1</sup> |
-| S922 (9009-22A)   |  15          | up to 942 GB                    |
+| S922 (9009-22A) <sup>2</sup>   |  15          | up to 942 GB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 <b>1</b> - In DAL12, DAL13, and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.
-<!--<b>2</b> - If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.-->
+<b>2</b> - If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} service can meet any business workload requirement.
 {: shortdesc}
@@ -78,7 +78,7 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 The {{site.data.keyword.powerSys_notm}} service provides AIX and IBM i stock images. The operating system version levels of the stock images are subject to change.
 
-You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. <!--You cannot use an existing AIX or IBM i license for LPARs in a {{site.data.keyword.powerSys_notm}} instance. If you use a custom image or a stock image, you are charged the same price.-->The Pricing for AIX and IBM i is not determined by whether you use a custome image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. The Pricing for AIX and IBM i is not determined by whether you use a custome image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SUSE Linux Enterprise Server (SLES) OVA images are currently supported.
 

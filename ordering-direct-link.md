@@ -27,9 +27,7 @@ subcollection: power-iaas
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-Direct Link Connect is a separate service from the Power Systems Virtual Server service. For more information on Direct Link Connect, see Pricing for [IBM Cloud Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-pricing-for-ibm-cloud-dl&_ga=2.3918905.868163906.1604913674-212559138.1596775746) and [IBM Cloud Direct Link Connect on Classic](https://cloud.ibm.com/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link&_ga=2.241928971.868163906.1604913674-212559138.1596775746#pricing-table).
-
-You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with a IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. Direct Link Connect is a separate service from the {{site.data.keyword.powerSys_notm}} service. For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
+Direct Link Connect is a separate service from the Power Systems Virtual Server service. You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
 The Direct Link (2.0) provides the following advantages:
@@ -38,10 +36,12 @@ The Direct Link (2.0) provides the following advantages:
 - Support for connections to multiple IBM Cloud accounts from a single direct link.
 - Support for multiple VPCs (without classic access) from a single direct link within the same account.
 
+The {{site.data.keyword.powerSys_notm}} offering includes a highly available 5 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
+
 Dircet Link 2.0 is available in all current locations except Toronto 1. For Toronto 1 location, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
-The {{site.data.keyword.powerSys_notm}} offering now includes a highly available 5 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration. <!--To learn more about this offer, see [Getting started with IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link){: new_window}{: external}.-->
+For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
@@ -75,7 +75,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 8. Click **Create**. It can take up to several minutes to provision your Direct Link connection request.
 
-9. After your Direct Link connection request is provisioned, go to Interconnectivity > Direct Link. The Direct Link page lists all the existing Direct Link connections.
+9. After your Direct Link connection request is provisioned, go to **Interconnectivity** > **Direct Link**. The **Direct Link** page lists all the existing Direct Link connections.
 
 10. Click the newly provisioned Direct Link connection to identify the following details:
 
@@ -190,9 +190,11 @@ Order a second Direct Link Connect connection for backup purposes.
   <!--Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
   {: important}-->
 
-#### Add connection (optional)
+#### Add connection
 
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
+
+Although adding a connection is optional when you are ordering Direct Link Connect, you must add at least one connection later to successfully connect the {{site.data.keyword.powerSys_notm}} instance to the IBM Cloud network.
 
 ## Ordering Direct Link Connect on Classic
 
