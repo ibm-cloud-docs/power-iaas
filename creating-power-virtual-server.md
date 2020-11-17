@@ -32,8 +32,6 @@ subcollection: power-iaas
 To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complete the following steps.
 {: shortdesc}
 
-<!-- If you're creating and configuring a {{site.data.keyword.powerSys_notm}} to support a SAP NetWeaver workload, see [Setting up your Power System Virtual Server and Instances](/docs/sap-netweaver-power?topic=sap-netweaver-power-set-up-power-infrastructure). -->
-
 ## Creating a Power Systems Virtual Server service
 {: #creating-service}
 
@@ -130,7 +128,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 
 3. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
 
-    There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM
+    There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
     {: important}
 
     ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 3. Selecting your processor and system" caption-side="bottom"}
