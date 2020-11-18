@@ -50,7 +50,7 @@ No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a servi
 {: faq}
 {: support}
 
-The supported AIX, IBM i and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+The supported AIX, IBM i, and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 **AIX**
 
@@ -62,7 +62,7 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 with a plan to move to an IBM E880 (9119-MHE) must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or later. Clients running IBM i 7.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -176,7 +176,7 @@ The use of volume affinity policy (affinity or anti-affinity) requires the avail
 
 No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i or Linux operating system.
 
-## How does licensing work for the AIX, IBM i or Linux operating systems?
+## How does licensing work for the AIX, IBM i, or Linux operating systems?
 {: #os-support}
 {: faq}
 

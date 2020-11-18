@@ -27,10 +27,29 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
-<!--## October 2020
+## November 2020
+{: #november-2020}
+
+- The storage tiers (**Tier 1** and **Tier 3**) in {{site.data.keyword.powerSysShort}} are now based on I/O operations per second (IOPS). For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- In DAL12, DAL13, and TOK04 data centers, you can now provision up to 23,070 GB of memory for the E980 systems. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
+- Review the list of [License Program Products (LPP) and IBM i operating system features](/docs/power-iaas?topic=power-iaas-ibmi-lpps) that are included in the Power Systems Virtual Server offering.
+
+## October 2020
 {: #october-2020}
 
-- You can now use the IBM Direct Link 2.0 service to create a seamless connection that allows access to IBM Cloud® resources from your {{site.data.keyword.powerSys_notm}} instance. -->
+- You can now choose *TOK04* data center to deploy your {{site.data.keyword.powerSys_notm}}.
+- You can now use the IBM Direct Link Connect (2.0) service to create a seamless connection that allows access to IBM Cloud® resources from your {{site.data.keyword.powerSys_notm}} instance. For more information, see [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help).
+- The following tutorials are now available for your reference:
+  - [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCYQ2FUWnfRUa1uQ7Oihw-aw){: new_window}{: external}
+  - [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC6h4H-DJXFUKdo5o_gC6u_w){: new_window}{: external}
+  - [Backing up and restoring data in an AIX VM](https://ibm.seismic.com/Link/Content/DCX-4IyC0qpEWu1g6ZOcO2bw){: new_window}{: external}
+  - [Backing up and restoring data in an IBM i VM](https://ibm.seismic.com/Link/Content/DCntVZ84qv0ky6GjJTBgygXQ){: new_window}{: external}
+  - [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mdm){: new_window}{: external}
+  - [Configuring Mass Data Migration (MDM) on IBM i VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm){: new_window}{: external}
+  - [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external}
+  - [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}
+  - [Site-to-site VPN connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}
+  - [Integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external}
 
 ## September 2020
 {: #september-2020}
