@@ -152,9 +152,6 @@ Learn how to configure a [Universal Connection to IBM services](https://www.ibm.
 
 You can use the `SNDPTFORD` command to order and receive IBM-supplied fixes (or PTFs) for the IBM i environment and IBM-supplied applications. You can use this command over the electronic customer support configuration that uses TCP/IP connectivity through *Universal Connection*. You can use the `SNDPTFORD` command to order the following types of fixes and related information:
 
-The `SNDPTFORD` command does not currently work as expected within the {{site.data.keyword.powerSys_notm}} service.
-{: note}
-
 - Separate or accompanying cover letters
 - Individual fixes
 - Multiple fixes
