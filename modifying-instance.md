@@ -51,9 +51,10 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. View the **Server details** pane to verify your instance modification.
 
-<!--### Resizing the VM core count and memory
+### Resizing the VM core count and memory
+{: #resize-core-mem}
 
-* You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for Memory (GB) and Cores (CPUs) are recalculated based on the type of processor. When you resize an active VM, you cannot change the processor type. The calculated minimum and maximum values 8 times of the specified values. However, these values must not exceed the minimum requirement of 0.25 core and 2GB memory and a maximum of available resources in the host. For example, if you provision your VM instance with 4 core and 8 GB memory, you can scale down your VM instance to 1 core and 2 GB when your VM is inactive. You can also scale up your VM instance to 32 cores and 64 GB memory during peak business time for your VM workloads. The 8X ratios change is effective only when You shutdown the VM instance before you resize the core count and memory.-->
+You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for Memory (GB) and Cores (CPUs) are recalculated based on the type of processor. When you resize an active VM, you cannot change the processor type. The calculated maximum values for memory and core is 8 times of the specified values and the calculated minimum values for the memory and core is 1/8 times of the specified values. However, the calculated values must be within the minimum requirement of 0.25 core and 2 GB memory and must not exceed the total number of available resources in the host. For example, if you provision your VM instance with 4 core and 8 GB memory, you can scale down your VM instance to 0.5 cores and 2 GB memory when your VM is inactive. You can also scale up your VM instance to 32 cores and 64 GB memory during peak business time for your VM workloads. This change is effective only when You shutdown the VM instance before you resize the core count and memory.
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
