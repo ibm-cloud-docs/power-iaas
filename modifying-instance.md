@@ -42,7 +42,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 3. A menu appears after you click the **Edit** icon. Here, you can change your instance's **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
-    If the VM is inactive, you can change the processor type to Dedicated processor, Uncapped shared processor or Capped shared processor.
+    If the VM is inactive or shut down, you can change the processor type to Dedicated processor, Uncapped shared processor or Capped shared processor.
     {: tip}
 
     <!-- ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"} -->
@@ -54,7 +54,27 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 ### Resizing the VM core count and memory
 {: #resize-core-mem}
 
-You can also resize the VM's core count and memory to scale up and down as per your workload requirements. The minimum and maximum values for Memory (GB) and Cores (CPUs) are recalculated based on the type of processor. When you resize an active VM, you cannot change the processor type. The calculated maximum values for memory and core is 8 times of the specified values and the calculated minimum values for the memory and core is 1/8 times of the specified values. However, the calculated values must be within the minimum requirement of 0.25 core and 2 GB memory and must not exceed the total number of available resources in the host. For example, if you provision your VM instance with 4 core and 8 GB memory, you can scale down your VM instance to 0.5 cores and 2 GB memory when your VM is inactive. You can also scale up your VM instance to 32 cores and 64 GB memory during peak business time for your VM workloads. This change is effective only when You shutdown the VM instance before you resize the core count and memory.
+You can resize the VM's core count and memory to scale up and down as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize beyond the 8x and 1/8x boundaries, when the VM is shut down. The following table shows an example of recalculated values:
+
+| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+|---------------------- | ------------------------- | ------------------------- |
+|4 core and 8 GB memory | 0.5 cores and 2 GB memory | 32 cores and 64 GB memory |
+{: class="simple-tab-table"}
+{: tab-group="resize_core_memory"}
+{: caption="Table 1. Resizing VM core count and memory when the VM is active" caption-side="top"}
+{: #resize_core_memory-1}
+{: tab-title="When VM is active"}
+
+
+| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+|---------------------- | ------------------------- | ------------------------- |
+|4 core and 8 GB memory | Any value you specify that is greater than 0.25 cores, 2 GB memory | Any value you specify that is smaller than the available resources in the host |
+{: class="simple-tab-table"}
+{: tab-group="resize_core_memory"}
+{: caption="Table 1. Resizing VM core count and memory when the VM is shut down" caption-side="top"}
+{: #resize_core_memory-2}
+{: tab-title="When VM is shut down"}
+
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
