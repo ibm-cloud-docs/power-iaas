@@ -185,7 +185,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 
-- **BGP ASN** - You must enter 64999 as BGP ASN number for the specific Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995.
+- **BGP ASN** - You must enter 64999 as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995.
 
   <!--Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
   {: important}-->
@@ -407,84 +407,84 @@ To set up a highly available connectivity to the IBM Cloud network by using Dire
 
 2. In the **BGP and connections** configuration panel, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
 
-The following example shows the Direct Link ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link instance. That is, if you had selected <portname>-1-1 for the first Direct Link instance, you must select <portname>-2-1 or <portname>-2-2 for the second Direct Link instance that you want to set up for redundancy.
+  The following example shows the Direct Link ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link instance. That is, if you had selected <portname>-1-1 for the first Direct Link instance, you must select <portname>-2-1 or <portname>-2-2 for the second Direct Link instance that you want to set up for redundancy.
 
   ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link instance for redundancy.
+  For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link instance for redundancy.
 {: note}
 
-Border Gateway Protocol (BGP) sessions are configured for Direct Link Connect in such a way that when a fault is detected on a link, BGP routes traffic to alternate link. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link instance:
+  Border Gateway Protocol (BGP) sessions are configured for Direct Link Connect in such a way that when a fault is detected on a link, BGP routes traffic to alternate link. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link instance:
 
-  <table>
-    <caption>
-      Table 1. Port and Port groups for redundant Direct Link instances
-    </caption>
-    <tr>
-      <th>Data Center</th>
-      <th>Network Provider</th>
-      <th>Port group 1</th>
-      <th>Port group 2 for redundancy</th>
-    <tr>
-      <td>LON04</td>
-      <td>IBM Power VS</td>
-      <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-2</td>
-      <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-2</td>
-    </tr>
-    <tr>
-      <td>LON06</td>
-      <td>IBM Power VS</td>
-      <td>SL-LON06-IBMPOWERLAASLITE-1-1<br />SL-LON06-IBMPOWERLAASLITE-1-2</td>
-      <td>SL-LON06-IBMPOWERLAASLITE-2-1<br />SL-LON06-IBMPOWERLAASLITE-2-2</td>
-    </tr>
-    <tr>
-      <td>FRA05</td>
-      <td>IBM Power VS</td>
-      <td>SL-FRA05-IBM-PowerIaaSLite-1-1<br />SL-FRA05-IBM-PowerIaaSLite-1-2</td>
-      <td>SL-FRA05-IBM-PowerIaaSLite-2-1<br />SL-FRA05-IBM-PowerIaaSLite-2-2</td>
-    </tr>
-    <tr>
-      <td>FRA04</td>
-      <td>IBM Power VS</td>
-      <td>SL-FRA04-IBMPOWERLAASLITE-1-1<br />SL-FRA04-IBMPOWERLAASLITE-1-2</td>
-      <td>SL-FRA04-IBMPOWERLAASLITE-2-1<br />SL-FRA04-IBMPOWERLAASLITE-2-2</td>
-    </tr>
-    <tr>
-      <td>WDC04</td>
-      <td>IBM Power VS</td>
-      <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-1-2</td>
-      <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-2-2</td>
-    </tr>
-    <tr>
-      <td>DAL12</td>
-      <td>IBM Power VS</td>
-      <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-2</td>
-      <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-2</td>
-    </tr>
-    <tr>
-      <td>DAL13</td>
-      <td>IBM Power VS</td>
-      <td>SOFTLAYER-IBMPOWERIAASLITE-1-1<br />SOFTLAYER-IBMPOWERIAASLITE-1-2</td>
-      <td>SOFTLAYER-IBMPOWERIAASLITE-2-1<br />SOFTLAYER-IBMPOWERIAASLITE-2-2</td>
-    </tr>
-    <tr>
-      <td>SYD05</td>
-      <td>IBM Power VS</td>
-      <td>SL-SYD05-IBMPOWERIAASLITE-1- 1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
-      <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2<t/d>
-    </tr>
-    <tr>
-      <td>SYD04</td>
-      <td>IBM Power VS</td>
-      <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
-      <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2</td>
-    </tr>
-    <tr>
-      <td>TOK04</td>
-      <td>IBM Power VS</td>
-      <td>SL-TOK04-POWERIAASLITE-1-1-(ASR1)<br />SL-TOK04-POWERIAASLITE-1-2-(ASR1)</td>
-      <td>SL-TOK04-POWERIAASLITE-2-1<br />SL-TOK04-POWERIAASLITE-2-2</td>
-    </tr>
-  </table>
+    <table>
+      <caption>
+        Table 1. Port and Port groups for redundant Direct Link instances
+      </caption>
+      <tr>
+        <th>Data Center</th>
+        <th>Network Provider</th>
+        <th>Port group 1</th>
+        <th>Port group 2 for redundancy</th>
+      <tr>
+        <td>LON04</td>
+        <td>IBM Power VS</td>
+        <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-2</td>
+        <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-2</td>
+      </tr>
+      <tr>
+        <td>LON06</td>
+        <td>IBM Power VS</td>
+        <td>SL-LON06-IBMPOWERLAASLITE-1-1<br />SL-LON06-IBMPOWERLAASLITE-1-2</td>
+        <td>SL-LON06-IBMPOWERLAASLITE-2-1<br />SL-LON06-IBMPOWERLAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>FRA05</td>
+        <td>IBM Power VS</td>
+        <td>SL-FRA05-IBM-PowerIaaSLite-1-1<br />SL-FRA05-IBM-PowerIaaSLite-1-2</td>
+        <td>SL-FRA05-IBM-PowerIaaSLite-2-1<br />SL-FRA05-IBM-PowerIaaSLite-2-2</td>
+      </tr>
+      <tr>
+        <td>FRA04</td>
+        <td>IBM Power VS</td>
+        <td>SL-FRA04-IBMPOWERLAASLITE-1-1<br />SL-FRA04-IBMPOWERLAASLITE-1-2</td>
+        <td>SL-FRA04-IBMPOWERLAASLITE-2-1<br />SL-FRA04-IBMPOWERLAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>WDC04</td>
+        <td>IBM Power VS</td>
+        <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-1-2</td>
+        <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>DAL12</td>
+        <td>IBM Power VS</td>
+        <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-2</td>
+        <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-2</td>
+      </tr>
+      <tr>
+        <td>DAL13</td>
+        <td>IBM Power VS</td>
+        <td>SOFTLAYER-IBMPOWERIAASLITE-1-1<br />SOFTLAYER-IBMPOWERIAASLITE-1-2</td>
+        <td>SOFTLAYER-IBMPOWERIAASLITE-2-1<br />SOFTLAYER-IBMPOWERIAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>SYD05</td>
+        <td>IBM Power VS</td>
+        <td>SL-SYD05-IBMPOWERIAASLITE-1- 1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
+        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2<t/d>
+      </tr>
+      <tr>
+        <td>SYD04</td>
+        <td>IBM Power VS</td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>TOK04</td>
+        <td>IBM Power VS</td>
+        <td>SL-TOK04-POWERIAASLITE-1-1-(ASR1)<br />SL-TOK04-POWERIAASLITE-1-2-(ASR1)</td>
+        <td>SL-TOK04-POWERIAASLITE-2-1<br />SL-TOK04-POWERIAASLITE-2-2</td>
+      </tr>
+    </table>
 
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).

@@ -54,3 +54,21 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 
 ## Linux networking
 {: linux-networking}
+
+To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
+
+### Configuring SNAT in the Power Systems Virtual Server environment
+{: configure-snat-in-powervs}
+
+Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
+
+### SNAT router configuration
+{: snat-configuration}
+
+Complete these steps to accurately configure your SNAT router.
+
+1. Deploy a RHEL LPAR on a public network.
+
+2. Create subnets that require the SNAT function to get internet access.
+
+3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
