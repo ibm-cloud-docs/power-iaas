@@ -27,9 +27,7 @@ subcollection: power-iaas
 
 You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
-- RHEL 7.7 - Minimum level: TBD
-- RHEL 8.0 - Minimum level: TBD
-- RHEL 8.2 – Minimum level: TBD
+- RHEL 8.3 Batch Update 1
 
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
