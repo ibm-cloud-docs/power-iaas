@@ -45,6 +45,7 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Networking
         ordering-direct-link.md
+        cloud-connections.md
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
@@ -78,6 +79,7 @@ Power Systems Virtual Servers
     Linux
         registering-linux.md
         deploying-linux.md
+        using-linux-within-powervs.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
