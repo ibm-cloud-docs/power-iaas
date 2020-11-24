@@ -78,7 +78,7 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Linux
         registering-linux.md
-        using-linux-within-powervs.md
+        using-linux-rhel.md
         deploying-linux.md
     {: .navgroup-end}
 
