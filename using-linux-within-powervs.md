@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using Linux within the Power Systems Virtual Server
+# Using Linux within the Power Systems Virtual Server (RHEL)
 {: linux-with-powervs}
 
 You can use the Power Systems Virtual Server service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
@@ -40,7 +40,7 @@ When you create an OVA image, you must include the appropriate IBM Cloud environ
 
 The Power Systems Virtual Server service does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
 
-You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your SLES subscription.
+You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
 
 1. To buy a RHEL subscription, see **TBD**.
@@ -108,7 +108,7 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 
 2. Set the default router for your Linux VM to the SNAT router IP on the private network.
 
-# Deploying a Linux virtual machine (VM)
+## Deploying a Linux virtual machine (VM)
 {: deploy-linux-vm}
 
 You can use the Power Systems Virtual Server service to deploy a generic Linux&trade; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription.
