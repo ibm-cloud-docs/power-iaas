@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using Linux within the Power Systems Virtual Server service
+# Using SLES within the Power Systems Virtual Server service
 {: #using-linux}
 
 You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
@@ -94,6 +94,6 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 ### Configuring Linux VMs to use a SNAT router
 {: #linux-snat-router}
 
-1. Deploy the Linux VMs that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
+1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
 2. Set the default router for your Linux VM to the SNAT router IP on the private network.

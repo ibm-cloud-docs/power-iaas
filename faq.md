@@ -321,4 +321,4 @@ PowerVC does not provide capacity to support multiple language support for Clien
 {: ocp_on_powervs}
 {: faq}
 
-You can find complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.

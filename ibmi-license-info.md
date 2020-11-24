@@ -60,7 +60,7 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-MG1: IBM Managed System Services for i
 - 5770-AF1: Advanced Function Printing for i
 - 5761-AMT: Rational Application Management Toolset
-- 5770-AP1: Advanced DBCS Printer Support
+- 5761-AP1: Advanced DBCS Printer Support
 - 5733-B45: AFP Font Collection for i
 - 5770-BR1: Backup, Recovery and Media Services
 - 5761-DB1: System/38 Utilities
