@@ -78,8 +78,8 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Linux
         registering-linux.md
-        deploying-linux.md
         using-linux-within-powervs.md
+        deploying-linux.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
