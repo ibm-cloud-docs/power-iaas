@@ -51,7 +51,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. View the **Server details** pane to verify your instance modification.
 
-<!-- ### Resizing the VM core count and memory
+### Resizing the VM core count and memory
 {: #resize-core-mem}
 
 You can resize the VM's core count and memory to scale up and down as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize beyond the 8x and 1/8x boundaries, when the VM is shut down. The following table shows an example of recalculated values:
@@ -73,7 +73,7 @@ You can resize the VM's core count and memory to scale up and down as per your w
 {: tab-group="resize_core_memory"}
 {: caption="Table 1. Resizing VM core count and memory when the VM is shut down" caption-side="top"}
 {: #resize_core_memory-2}
-{: tab-title="When VM is shut down"}-->
+{: tab-title="When VM is shut down"}
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
