@@ -29,7 +29,7 @@ subcollection: power-iaas
 You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription.
 {: shortdesc}
 
-You must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-registering-linux#registering-sles) or [Registering and subscribing to RHEL](/docs/power-iaas?topic=power-iaas-using-rhel#subscribing-to-rhel)
+You must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-registering-linux#registering-sles) or [Registering and subscribing to RHEL](/docs/power-iaas?topic=power-iaas-using-rhel#subscribing-to-rhel).
 
 ## How to create an OVA format Linux image
 {: #ova-format}
@@ -101,7 +101,7 @@ Checking for resource group ROOTVG...
 Checking for resource group PIPEVIEWER...already installed.
 Checking /datafs space requirement...done
 
-Checking for resource group sles_20200511101424.img...
+Checking for resource group linux_20200511101424.img...
 20480+0 records in1.2MiB/s] [10.6MiB/s] [=======================================================================> ] 99% ETA 0:00:00
 20480+0 records out
   20GiB 0:32:15 [10.6MiB/s] [10.6MiB/s] [=======================================================================>] 100%
@@ -109,14 +109,15 @@ Checking for resource group sles_20200511101424.img...
 41943040+0 records out
 done
 
-Checking for resource group sles_20200511101424.ova.gz...
+Checking for resource group linux_20200511101424.ova.gz...
 Checking /datafs space requirement...done
-a ./sles_20200511101424.ovf 4 blocks
-a ./sles_20200511101424.img 41943040 blocks
+a ./linux_20200511101424.ovf 4 blocks
+a ./linux_20200511101424.img 41943040 blocks
   20GiB 0:49:23 [6.91MiB/s] [6.91MiB/s] [=======================================================================>] 100%
 
 Done verifying resources.
 
-# ls -l /datafs/sles_20200511101424.ova.gz
--rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/rsle_20200511101424.ova.gz
+# ls -l /datafs/linux_20200511101424.ova.gz
+-rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/linux_20200511101424.ova.gz
 ```
+{: screen}
