@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-05-20"
+lastupdated: "2020-12-02"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
@@ -56,8 +56,10 @@ Use the following network architecture for environment management from the publi
   1. Connect your enterprise network to the IBM Cloud network by using the [IBM Cloud IPSec VPN service](https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-setup-ipsec-vpn).
   2. In the IBM Cloud network, use an Edge Gateway device to connect to the Power Systems Virtual Server location. You must use an Edge Gateway (Vyatta or vSRX) router-based IPSec VPN. IBM Cloud IPSec service is option as well.
   3. Configure the GRE service on the IBM Power Systems Virtual Server network to establish a GRE tunnel and to enable bring-your-own-IP address (BYOIP) to the Power Server environment. A Virtual Router Appliance or equivalent is required in IBM Cloud because you cannot use a VPN connection to directly connect to the Power Systems Virtual Server instance.
+
     For tutorial on a site-to-site IPSec VPN using a Virtual Router Appliance (VRA), see [VPN into a secure private network](https://cloud.ibm.com/docs/virtual-router-appliance?topic=solution-tutorials-configuring-IPSEC-VPN ).
     {: note}
+
   4. Connect the Power Systems Virtual Server instance to the IBM Cloud network by using the Direct Link Connect service.
 
 ## Private Direct Link connection
@@ -123,7 +125,8 @@ You can connect to two colos from your on-premises environment after creating a 
 
 Use the following architecture diagram for connectivity between multiple Power Systems Virtual Server locations when high bandwidth is not required and high or variable latency can be tolerated. Client is responsible for deploying the configuration including Direct Link Connects, GRE tunnels, Proxies/Gatways etc. Infrastructure should be sized for the required performance.
 
-  1.When you have your VMs in more than one Power Systems Virtual Server locations that are provisioned for resiliency, PVS-Location1 to PVS-Location2 connectivity can occur  through the IBM Cloud network by using proxy servers. You also need GRE tunnels for the transit.
+  1. When you have your VMs in more than one Power Systems Virtual Server locations that are provisioned for resiliency, PVS-Location1 to PVS-Location2 connectivity can occur  through the IBM Cloud network by using proxy servers. You also need GRE tunnels for the transit.
   2. Configure Direct Link Connect with GRE configuration at both the Power Systems Virtual Server locations for connectivity with the IBM Cloud network. Network bandwidth and latency depends on Direct Link Connect service, proxy gateway, and IBM Cloud network.
+
     This configuration is under test. Therefore, you must test your configuration before using this architecture for production use.
     {: note}
