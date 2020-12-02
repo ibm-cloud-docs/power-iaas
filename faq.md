@@ -295,6 +295,7 @@ On an AIX VM, the following databases are supported:
 On a Linux VM, the following database is supported:
 
   - SAP HANA Platform 2.0 SPS 04, or later
+
 You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: new_window}{: external}.
 
 ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
