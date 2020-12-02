@@ -50,7 +50,7 @@ Power Systems Virtual Servers
         configuring-private-subnet.md
         connecting-networks.md
         network-security.md
-        network-architecture.md
+        network-architecture-WIP.md
         site-to-site-vpn-connectivity.md
         X86-based-systems.md
 
