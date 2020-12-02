@@ -72,7 +72,7 @@ When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Dallas and Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9080-M9S) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 {: tip}
@@ -81,11 +81,11 @@ If you'd like to compare your current environment's performance to what's availa
 
 * [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-* [IBM Power System E980 (9080-M9S) - Data centers other than Dallas and Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
+* [IBM Power System E980 (9080-M9S) - Data centers other Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
-| Compute  | Storage   | Network   |
-|--------- | --------- | --------- |
-|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller </li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
+| Compute     | Storage      | Network      |
+|------------ | ------------ | ------------ |
+| <ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 Gb SAN infrastructure</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -94,7 +94,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller</li><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+| <ul><li>Power e880 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 Gb SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -103,7 +103,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-|<ul><li>Power E980 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
+| <ul><li>Power E980 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>32 Gb SAN infrastructure</li> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Frankfurt, Germany, and London, United Kingdom)" caption-side="top"}
@@ -146,3 +146,4 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 <!-- The following figure displays the basic configuration for a public and private network:
 
 ![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"} -->
+
