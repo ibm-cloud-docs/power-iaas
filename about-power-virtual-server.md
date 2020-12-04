@@ -127,7 +127,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
-* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect on Classic connection.
+* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
 * Protected by firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
@@ -137,7 +137,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 **Private network**
 
 * Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
-* Uses a Direct Link Connect on Classic connection to connect to your IBM Cloud account network and resources.
+* Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
   For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
