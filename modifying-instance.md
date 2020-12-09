@@ -75,6 +75,8 @@ You can resize the VM's core count and memory to scale up and down as per your w
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
+If you want to resize the VMs that you have created before, you must shut down the VM, resize, and activate to enable 8x ratios of core count and memory. You must resize at least once when the VM is shutdown to enabel 8x ratios. 8x ratios are not enable by shutting down and activating the VM.
+
 ## Managing your storage volumes
 {: #modifying-volume-network}
 

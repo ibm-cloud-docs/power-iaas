@@ -170,7 +170,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr></table>
 
-  Direct Link 2.0 is available in all current locations except Toronto 1.
+  Direct Link 2.0 is available in all current locations except Toronto 1. Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
   {: note}
 
 - **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
@@ -324,6 +324,10 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
     </table>
   </dd>
+
+  Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
+  {: note}
+
   <dt><strong>Network Provider</strong></dt>
   <dd>
     You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
