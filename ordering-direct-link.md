@@ -283,6 +283,8 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt></dt>
   <dd>
     Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+    Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
+    {: note}
     <table>
       <caption>
         Table 2. Direct Link Connection location options
@@ -324,10 +326,6 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
     </table>
   </dd>
-
-  Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
-  {: note}
-
   <dt><strong>Network Provider</strong></dt>
   <dd>
     You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
