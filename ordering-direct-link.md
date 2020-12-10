@@ -125,7 +125,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <th>Network provider</th>
       </tr>
       <tr>
-        <td>Dallas, TX, US</td>
+        <td>Dallas 13, TX, US</td>
         <td>Dallas 13</td>
         <td>IBM Power Virtual Server</td>
       </tr>
@@ -135,17 +135,17 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
-        <td>Washington, D.C., US</td>
+        <td>Washington 04, D.C., US</td>
         <td>Washington DC 4</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
-        <td>Frankfurt 1, Germany, EU</td>
+        <td>Frankfurt 04, Germany</td>
         <td>Frankfurt 4</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
-        <td>Frankfurt 2, Germany, EU</td>
+        <td>Frankfurt 05, Germany</td>
         <td>Frankfurt 5</td>
         <td>IBM Power Virtual Server</td>
       </tr>
@@ -170,7 +170,9 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr></table>
 
-  Direct Link 2.0 is available in all current locations except Toronto 1. Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
+  - Direct Link 2.0 is available in all current locations except Toronto 1.
+
+  - Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs Frankfurt 05.
   {: note}
 
 - **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
@@ -283,8 +285,6 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt></dt>
   <dd>
     Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-    Each region or service requires its own Direct Link Connect. For example, If you want to connect to the VMs in Dallas 12 region, you must order a Direct Link for Dallas 12. This does not allow or enable connections to the VMs in any other service with in Dallas, example Dallas 13.
-    {: note}
     <table>
       <caption>
         Table 2. Direct Link Connection location options
@@ -325,6 +325,8 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
+    Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs Frankfurt 05.
+    {: note}
   </dd>
   <dt><strong>Network Provider</strong></dt>
   <dd>
