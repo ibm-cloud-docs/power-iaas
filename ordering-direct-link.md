@@ -283,7 +283,10 @@ Order a second Direct Link Connect connection for backup purposes.
   <dt><strong>Location</strong></dt>
   <dt></dt>
   <dd>
-    Select the same location as the {{site.data.keyword.powerSys_notm}}instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+    Select the same location as the {{site.data.keyword.powerSys_notm}}instance.</br>
+    Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs Frankfurt 05.
+    {: note}
+    The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
       <caption>
         Table 2. Direct Link Connection location options
@@ -324,8 +327,6 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
-    Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs Frankfurt 05.
-    {: important}
   </dd>
   <dt><strong>Network Provider</strong></dt>
   <dd>
