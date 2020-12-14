@@ -168,7 +168,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr></table>
 
   Direct Link 2.0 is available in all current locations except Toronto 1.</br>
-  Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
+  Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
   {: note}
 
 - **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
@@ -275,7 +275,7 @@ Order a second Direct Link Connect connection for backup purposes.
   <dd>Enter a name for your Direct Link Connect instance.</dd>
   <dt><strong>Location</strong></dt>
   <dt></dt>
-  <dd>Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, If you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05. </br>
+  <dd>Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05. </br>
   The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
       <caption>

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-30"
+lastupdated: "2020-12-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -59,6 +59,8 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
+
+  For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
 
 **IBM i**
 
