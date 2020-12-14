@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-11-23"
+lastupdated: "2020-12-14"
 
 keywords: 
 
@@ -101,4 +101,4 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 
 1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
-2. Set the default router for your Linux VM to the SNAT router IP on the private network.
+2. Assign the SNAT router IP (eth1 as per the previous example) on the private network as the default router on your newly created Linux VM.
