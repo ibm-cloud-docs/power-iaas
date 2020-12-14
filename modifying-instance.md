@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-29"
+lastupdated: "2020-12-14"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -75,7 +75,7 @@ You can resize the VM's core count and memory to scale up and down as per your w
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-If you want to resize an existing VM to 8x ratio created before 15 December 2020, you must shut down, resize, and activate the VM to enable 8x ratio of core count and memory. You must resize at least once when the VM is shutdown to enabel 8x ratio.
+If you want to resize an existing VM that is created before December 15 2020 to 8x ratio of core count and memory, you must shut down the VM, and then resize, and activate the VM. You must resize the VM at least once when the VM is shutdown to enabel 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio.
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
