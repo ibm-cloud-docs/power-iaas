@@ -130,7 +130,7 @@ Start the required TCP servers on your IBM i operating system by performing the 
 2. To start the IBM Navigator for i (iNav) and Digital Certificate Manager (DCM) GUIs, enter the following command:
 
     ```
-    strtcpsvr server(HTTP) HTTPSVR(ADMIN)
+    strtcpsvr server(*HTTP) HTTPSVR(*ADMIN)
 
     ```
     {: pre}
