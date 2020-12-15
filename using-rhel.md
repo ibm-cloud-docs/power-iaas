@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-11-23"
+lastupdated: "2020-12-14"
 
 keywords: 
 
@@ -29,6 +29,8 @@ You can use the Power Systems Virtual Server service to deploy a generic Red Hat
 
 - RHEL 8.3 Batch Update 1
 
+To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}.
+
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate IBM Cloud environment *cloud-init* packages. Download the appropriate *cloud-init* packages from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
@@ -53,17 +55,14 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 ## Linux networking
 {: linux-networking}
 
-To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information, see [Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: new_window}{: external} and [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
+To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
-### Configuring Source Network Address Translation (SNAT) in the Power Systems Virtual Server environment
-{: configure-snat-in-powervs}
+### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
+{: nat-configuration}
 
-Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: new_window}{: external}.
+Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: new_window}{: external}.
 
-### SNAT router configuration
-{: snat-configuration}
-
-Complete these steps to accurately configure your SNAT router:
+Complete these steps to accurately configure your Source NAT (SNAT) router:
 
 1. Deploy a RHEL LPAR on a public network.
 
@@ -104,4 +103,4 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 
 1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
-2. Set the default router for your Linux VM to the SNAT router IP on the private network.
+2. Assign the SNAT router IP (eth1 as per the previous example) on the private network as the default router on your newly created Linux VM.

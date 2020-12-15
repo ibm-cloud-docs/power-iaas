@@ -72,7 +72,7 @@ When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Dallas and Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9080-M9S) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 {: tip}
@@ -81,11 +81,11 @@ If you'd like to compare your current environment's performance to what's availa
 
 * [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-* [IBM Power System E980 (9080-M9S) - Data centers other than Dallas and Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
+* [IBM Power System E980 (9080-M9S) - Data centers other Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
 
-| Compute  | Storage   | Network   |
-|--------- | --------- | --------- |
-|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller </li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
+| Compute     | Storage      | Network      |
+|------------ | ------------ | ------------ |
+| <ul><li>Power E880 (9080-MHE)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN infrastructure</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -94,7 +94,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-|<ul><li>Power e880 (9080-MHE)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Storwize V7000F(2076-AF6) dual controller</li><li>Storwize V7000 (2076-624) dual controller</li><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+| <ul><li>Power E880 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -103,19 +103,19 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-|<ul><li>Power E980 (9080-M9S)</li><li>Power s922 (9009-22A)</li></ul> | <ul><li>Tier-1 9846-AF8 FlashSystem 9150 dual controller</li><li>Tier-3 9846-AF8 FlashSystem 9150 dual controller</li><li>IBM SAN64B-6 (Brocade)</li><li>IBM SAN256B-6 (Brocade)</li><li>IBM SAN64B-6 (Brocade)</li></ul> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
+| <ul><li>Power E980 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>32 Gb SAN infrastructure</li> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 3. Hardware overview (Frankfurt, Germany, and London, United Kingdom)" caption-side="top"}
+{: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-3}
-{: tab-title="Frankfurt and London (FRA04/FRA05/LON06)"}
+{: tab-title="Non-US (FRA04, FRA05, LON04, LON06, SYD04, TOK04, TOR01)"}
 
 ## Storage tiers
 {: #storage-tiers}
 
 For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
 
-Currently, the IOPS-based storage tiers are available only in TOK04 data center.
+Currently, the IOPS-based storage tiers are available only in TOK04, LON04, SYD04, DAL12, and TOR01 data center.
 {: note}
 
 ## Public and private networks
@@ -127,7 +127,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
-* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect on Classic connection.
+* Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
 * Protected by firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
@@ -137,7 +137,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 **Private network**
 
 * Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
-* Uses a Direct Link Connect on Classic connection to connect to your IBM Cloud account network and resources.
+* Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
   For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
@@ -146,3 +146,4 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 <!-- The following figure displays the basic configuration for a public and private network:
 
 ![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"} -->
+

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-30"
+lastupdated: "2020-12-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -45,12 +45,16 @@ This video does not capture the latest updates to the {{site.data.keyword.powerS
 
 No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.
 
-## What versions of AIX, IBM i, and Linux&reg; are supported?
+## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
 {: faq}
 {: support}
 
+<<<<<<< HEAD
 The supported AIX, IBM i, and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+=======
+The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+>>>>>>> draft
 
 **AIX**
 
@@ -59,6 +63,8 @@ The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later.
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
+
+  For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
 
 **IBM i**
 
@@ -70,9 +76,12 @@ The {{site.data.keyword.powerSys_notm}} service supports only IBM i 7.2, or late
 
 **Linux**
 
-SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all {{site.data.keyword.powerSys_notm}} hardware:
+The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
 
-For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+- SUSE Linux Enterprise (SLES) 12 and SLES 15
+- Red Hat Enterprise Linux (RHEL) 8.3 Batch Update 1
+
+To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}. For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
 
 ## Can I use my own AIX, IBM i, or Linux image?
 {: #image}
@@ -295,6 +304,8 @@ On an AIX VM, the following databases are supported:
 On a Linux VM, the following database is supported:
 
   - SAP HANA Platform 2.0 SPS 04, or later
+
+You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: new_window}{: external}.
 
 ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
 {: web-enablement-for-ibmi}
