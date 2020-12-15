@@ -271,10 +271,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
 <dl id="direct-link">
   <dt><strong>Direct Link Instance Name</strong></dt>
-  <dt></dt>
   <dd>Enter a name for your Direct Link Connect instance.</dd>
   <dt><strong>Location</strong></dt>
-  <dt></dt>
   <dd>Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05. </br>
   The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
     <table>
