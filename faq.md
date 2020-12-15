@@ -50,11 +50,7 @@ No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a servi
 {: faq}
 {: support}
 
-<<<<<<< HEAD
 The supported AIX, IBM i, and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
-=======
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
->>>>>>> draft
 
 **AIX**
 
