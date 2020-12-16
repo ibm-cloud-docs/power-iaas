@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-20"
+lastupdated: "2020-12-15"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
