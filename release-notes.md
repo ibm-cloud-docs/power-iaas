@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-06-20"
+lastupdated: "2020-12-15"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,6 +26,12 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## December 2020
+{: #december-2020}
+
+- You can now use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). For more information, see [Using RHEL within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-rhel-within-the-power-systems-virtual-server-service).
+- You can now choose *SAO01* data center to deploy your {{site.data.keyword.powerSys_notm}}.
 
 ## November 2020
 {: #november-2020}

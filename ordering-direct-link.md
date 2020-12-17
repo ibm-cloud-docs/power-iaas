@@ -165,9 +165,10 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>Tokyo 04, Japan</td>
         <td>Tokyo 4</td>
         <td>IBM Power Virtual Server</td>
-      </tr></table>
+      </tr>
+      </table>
 
-  Direct Link 2.0 is available in all current locations except Toronto 1.</br>
+  Direct Link 2.0 is available in all current locations except Toronto 1 and São Paulo 1.</br>
   Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
   {: note}
 
@@ -312,6 +313,11 @@ Order a second Direct Link Connect connection for backup purposes.
       <tr>
         <td>Sydney, Australia</td>
         <td>Sydney 4</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>
+      <tr>
+        <td>São Paulo, Brazil</td>
+        <td>São Paulo 1</td>
         <td>IBM Power Virtual Server</td>
       </tr>
     </table>
