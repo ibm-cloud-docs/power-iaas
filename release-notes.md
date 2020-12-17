@@ -31,6 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #december-2020}
 
 - You can now use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). For more information, see [Using RHEL within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-rhel-within-the-power-systems-virtual-server-service).
+- You can now choose *SAO01* data center to deploy your {{site.data.keyword.powerSys_notm}}.
 
 ## November 2020
 {: #november-2020}

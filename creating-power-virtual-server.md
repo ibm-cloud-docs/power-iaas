@@ -100,6 +100,11 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>ap-north</td>
         <td>TOK04</td>
       </tr>
+      <tr>
+        <td>São Paulo 01, Brazil</td>
+        <td>us-south</td>
+        <td>SAO01</td>
+      </tr>
     </table>
 
 4. Click **Create**. You are redirected to the **Resource List**.
