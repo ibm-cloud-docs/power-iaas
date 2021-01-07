@@ -22,7 +22,14 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Configuring your IBM i virtual machine (VM)
+# Opening console
+{: #opening-console}
+
+Click the console icon shown in the following image to open the IBM i console.
+
+  ![Open console](./console.png "open console"){: caption="Figure 1. Open console" caption-side="bottom"}
+
+## Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
 
 Complete the following instructions to configure your IBM i virtual machine (VM).
@@ -55,20 +62,20 @@ The `cloud-init` configuration process can take up to 5 minutes. **Do not restar
 
 To verify that `cloud-init` configured your IP addresses correctly, type the `cgftcp` command in the IBM i console window and choose `1`. If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
-  ![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 1. Verifying the cloud-init configuration" caption-side="bottom"}
+  ![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 2. Verifying the cloud-init configuration" caption-side="bottom"}
 
 If you do not see the external IP address in the **Work with TCP/IP Interfaces** window, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
 Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-  ![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 2. Using the DSPLICKEY command" caption-side="bottom"}
+  ![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 3. Using the DSPLICKEY command" caption-side="bottom"}
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
 By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
-  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 3. Changing the system value" caption-side="bottom"}
+  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 4. Changing the system value" caption-side="bottom"}
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
 {: note}
