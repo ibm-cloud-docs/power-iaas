@@ -49,7 +49,7 @@ Before you can use a custom image as the boot volume, review the following infor
 - Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: new_window}{: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
-For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external} and [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}.
+For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.box.com/s/u1sx8kyz60sl3as73926er12uupujdhi){: new_window}{: external} and [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.box.com/s/bafo60kbwpsztgenmjc4m1kozflax8uu){: new_window}{: external}.
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
@@ -66,11 +66,14 @@ The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later
 
 **IBM i**
 
-The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2, or later. Clients running IBM i 7.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
+The {{site.data.keyword.powerSys_notm}} offering supports only IBM i 7.2. Clients running IBM i 6.1, or earlier, must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+
+<!--IBM i 7.1 VMs support only 64 storage volumes per port. IBM i 7.2, and later, support up to 127 storage volumes per port.
+{: note} -->
 
 **Linux**
 

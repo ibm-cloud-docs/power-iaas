@@ -46,16 +46,16 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - You can now choose *TOK04* data center to deploy your {{site.data.keyword.powerSys_notm}}.
 - You can now use the IBM Direct Link Connect (2.0) service to create a seamless connection that allows access to IBM Cloud® resources from your {{site.data.keyword.powerSys_notm}} instance. For more information, see [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help).
 - The following tutorials are now available for your reference:
-  - [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCYQ2FUWnfRUa1uQ7Oihw-aw){: new_window}{: external}
-  - [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC6h4H-DJXFUKdo5o_gC6u_w){: new_window}{: external}
-  - [Backing up and restoring data in an AIX VM](https://ibm.seismic.com/Link/Content/DCX-4IyC0qpEWu1g6ZOcO2bw){: new_window}{: external}
-  - [Backing up and restoring data in an IBM i VM](https://ibm.seismic.com/Link/Content/DCntVZ84qv0ky6GjJTBgygXQ){: new_window}{: external}
+  - [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.box.com/s/h1fysd4ksyc4220znatl2fy29ykua8qn){: new_window}{: external}
+  - [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://ibm.box.com/s/fr86x4wbd9x5ou52x3pae75hz6km9yaj){: new_window}{: external}
+  - [Backing up and restoring data in an AIX VM](https://ibm.box.com/s/328nt1tt0ez3act1xya9awvphvenoxjm){: new_window}{: external}
+  - [Backing up and restoring data in an IBM i VM](https://ibm.box.com/s/soq6dpbejq1b272wt538ee0carxda2tv){: new_window}{: external}
   - [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mdm){: new_window}{: external}
   - [Configuring Mass Data Migration (MDM) on IBM i VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm){: new_window}{: external}
-  - [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DCKGNHzwbKXE6-IUmgU74fpg){: new_window}{: external}
-  - [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.seismic.com/Link/Content/DC75uh1J-gnEKyaO-Ceht-vw){: new_window}{: external}
-  - [Site-to-site VPN connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}
-  - [Integration with x86-based workloads](https://ibm.seismic.com/Link/Content/DC65uVvbW4B0iJV0NjlLSRrQ){: new_window}{: external}
+  - [Migrating AIX to IBM Power Systems Virtual Servers](https://ibm.box.com/s/u1sx8kyz60sl3as73926er12uupujdhi){: new_window}{: external}
+  - [Migrating IBM i to IBM Power Systems Virtual Servers](https://ibm.box.com/s/bafo60kbwpsztgenmjc4m1kozflax8uu){: new_window}{: external}
+  - [Site-to-site VPN connectivity](https://ibm.box.com/s/62bcbtmxxpv6nuwv6raymofzga6zzdfs){: new_window}{: external}
+  - [Integration with x86-based workloads](https://ibm.box.com/s/z4lwp9it6seeqkfdifgkorj8w24yworh){: new_window}{: external}
 
 ## September 2020
 {: #september-2020}
