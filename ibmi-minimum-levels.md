@@ -33,7 +33,7 @@ You must install the following program temporary fixes (PTFs) on your IBM i VM:
 
 If you are bringing your own IBM i custom image, you must install these PTFs and the software that is required for `cloud-init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.
 
-Follow the instructions described below to install cloud-init on IBM i 7.1:
+<!--Follow the instructions described below to install cloud-init on IBM i 7.1:
 
 1. Install the following required license programs:
    - 5733OPS with option base, 3, 4, 7 and 9
@@ -48,4 +48,4 @@ Follow the instructions described below to install cloud-init on IBM i 7.1:
 
 You also need the following PTFs to enable cloud-init on IBM i 7.1:
 - PTF groups: SF99123
-- Dependent PTFs: SI65636, SI64092, SI66737, SI65647, SI73750, SI63164 and SF99707
+- Dependent PTFs: SI65636, SI64092, SI66737, SI65647, SI73750, SI63164 and SF99707 -->

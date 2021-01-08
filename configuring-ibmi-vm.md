@@ -31,12 +31,12 @@ Complete the following instructions to configure your IBM i virtual machine (VM)
 You can assign up to 127 storage volumes to an IBM i VM.
 {: note}
 
-## Opening console
+<!--## Opening console
 {: #opening-console}
 
 Click the console icon shown in the following image to open the IBM i console.
 
-  ![open console](./console.png "open console"){: caption="Figure 1. Open console" caption-side="bottom"}
+  ![open console](./console.png "open console"){: caption="Figure 1. Open console" caption-side="bottom"} -->
 
 ## Tips for working with the IBM i terminal
 {: #tips-ibmi}
