@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 You must install the following program temporary fixes (PTFs) on your IBM i VM:
 
-- IBM i 7.1 - For more information see [Installing cloud-init on IBM 7.1](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels#installing-cloud-init-on-ibm-i-7-1)
+- IBM i 7.1 - See [Installing cloud-init on IBM 7.1](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-minimum-levels#installing-cloud-init-on-ibm-i-7-1)
 - IBM i 7.2 - 5770SS1 SI71091 (prereqs SLIC PTFs: MF66395, MF66394, MF66391)
 - IBM i 7.3 - MF99207 (TR7) and SI69686
 - IBM i 7.4 - MF99301 (TR1) and SI70544
