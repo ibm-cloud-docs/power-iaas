@@ -44,7 +44,7 @@ To open the IBM i console, complete the following steps:
   IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
   {: note}
 
-  ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console}
+  ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console" caption-side="bottom"}
 
 ## Tips for working with the IBM i console
 {: #tips-ibmi}
