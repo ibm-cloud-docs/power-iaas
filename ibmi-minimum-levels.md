@@ -29,7 +29,7 @@ You must install the following program temporary fixes (PTFs) on your IBM i VM:
 
 - IBM i 7.1 - Technology Refresh (TR) level and PTFs required:
   - IBM i 7.1 TR11
-  - C7192710 (The final 7.1 GA cumulative PTF level, generally available on July 28, 2017)
+  - C7192710 (The final 7.1 GA cumulative PTF level)
   - 7.1 HIPER Group PTF (SF99709) level 261 or later
   - PTFs 5770999: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795.
   - 5770SS1

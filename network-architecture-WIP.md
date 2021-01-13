@@ -40,7 +40,7 @@ You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cl
 
 Use the following network architecture for environment management from the public network. This model is not ideal for production workloads.
 
-  1. Connect your enterprise network to the IBM Cloud network by using secure socket layer(SSL) virtual private network(VPN) service.
+  1. Connect to IBM Cloud network via Public network by using secure socket layer(SSL) virtual private network(VPN) service.
   2. In the IBM Cloud network, use an IBM Cloud virtual server instance as a jump server. Jump server can be used as login server or as a proxy server.
   3. Connect the Power Systems Virtual Server instance to the IBM Cloud network by using the Direct Link Connect service.
 
