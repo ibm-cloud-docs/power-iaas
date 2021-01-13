@@ -29,7 +29,7 @@ subcollection: power-iaas
 Before you open a support ticket against the {{site.data.keyword.powerSysShort}} service, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
 {: shortdesc}
 
-## Opening a support case with IBM cloud
+## Opening a support case with IBM Cloud
 {: support-case-IBM-cloud}
 
 To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
@@ -41,7 +41,7 @@ To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, co
 5. Search for your impacted Power Systems Virtual Server resource, and click **Next**.
 6. Enter **Power Systems Virtual Server** in the **Subject** field and a detailed description of the problem in the **Description** field.
 7. Attach any helpful files, decide whether you want email updates, and click **Next**.
-8. Review your support ticket summary, and click Submit case.
+8. Review your support ticket summary, and click **Submit case**.
 
 ## Opening support cases with IBM
 {: support-case-IBM}
