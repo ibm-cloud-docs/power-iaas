@@ -27,13 +27,11 @@ subcollection: power-iaas
 
 You must install the following program temporary fixes (PTFs) on your IBM i VM:
 
-- IBM i 7.1 - Technology Refresh (TR) level and PTFs required:
-  - IBM i 7.1 TR11
-  - C7192710 (The final 7.1 GA cumulative PTF level)
-  - 7.1 HIPER Group PTF (SF99709) level 261 or later
-  - PTFs 5770999: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795.
-  - 5770SS1
-  - SI74413
+- IBM i 7.1 Technology Refresh (TR) 11
+  - C7192710 (IBM i 7.1 cumulative PTF level)
+  - IBM i 7.1 HIPER Group PTF (SF99709) level 261, or later
+  - 5770999 (PTFs: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795)
+  - 5770SS1 (PTF:SI74413)
 - IBM i 7.2 - 5770SS1 SI71091 (prereqs SLIC PTFs: MF66395, MF66394, MF66391)
 - IBM i 7.3 - MF99207 (TR7) and SI69686
 - IBM i 7.4 - MF99301 (TR1) and SI70544
