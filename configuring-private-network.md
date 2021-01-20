@@ -95,7 +95,7 @@ Megaport connectivity services are available in WDC04, DAL13, FRA05, LON06, and 
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-{{site.data.keyword.powerSys_notm}} provides GRE tunneling for all locations except for Washington, D.C. Customers can optionally request a GRE tunnel configuration by adding the request to their {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only.
+You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only.
 
 ```
 GRE Tunnel Configuration Request:
