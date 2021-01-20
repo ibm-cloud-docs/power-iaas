@@ -75,6 +75,9 @@ The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. C
 IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, support up to 127 storage volumes per VM.
 {: note}
 
+Currently, IBM i 7.1 VMs are supported only support only in DAL12 data centers.
+{: important}
+
 **Linux**
 
 SUSE Linux Enterprise (SLES) is supported with `cloud-init` version **cloud-init-19.1-4.sles15.ibm.noarch** on all IBM Power Systems hardware that is used in the {{site.data.keyword.powerSys_notm}} service:

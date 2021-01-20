@@ -28,7 +28,7 @@ subcollection: power-iaas
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
 
-IBM i 7.1 VMs support only 64 storage volumes per port. IBM i 7.2, and later, VMs support up to 127 storage volumes per port..
+IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
 {: note}
 
 ## Working with the IBM i console
