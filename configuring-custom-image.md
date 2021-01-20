@@ -75,7 +75,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. C
 IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, support up to 127 storage volumes per VM.
 {: note}
 
-Currently, IBM i 7.1 VMs are supported only support only in DAL12 data centers.
+Currently, IBM i 7.1 VMs are supported only in DAL12 data center.
 {: important}
 
 **Linux**
