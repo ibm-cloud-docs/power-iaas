@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-11-02"
 
-keywords: Cloud connections, subnet, VPC, IBM cloud 
+keywords: Cloud connections, subnet, VPC, IBM cloud
 
 subcollection: power-iaas
 
@@ -42,10 +42,10 @@ To create a new Cloud connection, complete the following steps:
 4. Select the Power Systems Virtual Server service you’d like to assign a Cloud connection.
 5. Click **Cloud connections** in the left navigation pane, and click **Create new connection**.
 6. Specify a connection name and select a connection speed. Default connection speed is 5 Gbps.
-7. If you need access to other data centers outside your PowerVS region, you must select the global routing option. For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
+7. If you need access to other data centers outside your Power Systems Virtual Server region, you must select the global routing option. For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 8. Select **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
-  a. **Classic Infrastructure**: Allows you to connect to IBM Cloud classic resources. Only one classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
-  b. **VPC**:Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
+   * **Classic Infrastructure**: Allows you to connect to IBM Cloud classic resources. Only one classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
+   * **VPC**:Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
 9. Review the summary and click the check box to accept the terms and conditions.
 10. Click **Create** to create a new Cloud connection.
 
