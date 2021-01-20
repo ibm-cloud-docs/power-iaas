@@ -44,15 +44,15 @@ To create a new Cloud connection, complete the following steps:
 6. Specify a connection name and select a connection speed. Default connection speed is 5 Gbps.
 7. If you need access to other data centers outside your PowerVS region, you must select the global routing option. For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 8. Select **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
-   a. **Classic Infrastructure**: Allows you to connect to IBM Cloud classic resources. Only one classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses.  For more information, see [GRE tunneling](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
-   b. **VPC**:Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
+  a. **Classic Infrastructure**: Allows you to connect to IBM Cloud classic resources. Only one classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
+  b. **VPC**:Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
 9. Review the summary and click the check box to accept the terms and conditions.
 10. Click **Create** to create a new Cloud connection.
 
 ## Configuring Cloud connections
 {: configure-cloud-connections}
 
-If you created a Power Systems Virtual Servers service that contains 2 default Cloud connections, you also have an initial subnet connected to those connections. You can view the attached subnets and add or remove subnets in the Cloud Connection details page. When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see[Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+If you created a Power Systems Virtual Servers service that contains 2 default Cloud connections, you also have an initial subnet connected to those connections. You can view the attached subnets and add or remove subnets in the Cloud Connection details page. When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 Any changes to bandwidth might affect pricing.
 {: note}
@@ -74,15 +74,13 @@ To configure Cloud connections, complete the following steps:
 ## Attaching subnets to Cloud Connections
 {: attach-subnet}
 
-You must route Power Systems Virtual Server private network subnets over IBM Cloud™ Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
+You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
 
 The **Connection details** page contains the list of attached subnets.
 
 ![Attached subnets](images/attach-subnet.png "Attached subnets"){: caption="Figure 3. Attached subnets" caption-side="bottom"}
 
 When you create a subnet or edit details of a subnet, you can attach an existing Cloud connection to the subnet. For steps to create a subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
-
-##. Power Systems Virtual Server Network HA
 
 ## Configuring and adding a private network subnet
 
@@ -98,19 +96,14 @@ The first IP address is always reserved for the gateway in all data centers. The
 To create a new subnet, complete the following steps:
 
 1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com/).
-
 2. Select the menu icon and select **Resource List**.
-
 3. Click the arrow next to **Services**.
-
 4. Select the Power Systems Virtual Server service you'd like to assign a subnet.
-
 5. Click **Subnets** in the left navigation pane, then **Add subnet**.
 
     ![Configuring a subnet](images/Configuring-new-subnet.png "Configuring a subnet"){: caption="Figure 4. Configuring a subnet" caption-side="bottom"}
 
 6. Optionally, select an existing cloud connection to which you want to attach this subnet. If you have set up another Cloud connection for redundancy purposes, you can select the second Cloud connection as well.
-
 7. Click **Create subnet**.
 
 A DNS server value of 9.9.9.9 might not be reachable if you don't have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of 127.0.0.1 to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
