@@ -158,8 +158,8 @@ To migrate your VM from one data center to another, you must capture and export 
 
 You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
 
-VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
-{: preview}
+<!--VM pinning is currently available in all data centers except for *WDC04* or *FRA04*.
+{: preview}-->
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
