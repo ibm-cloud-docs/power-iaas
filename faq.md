@@ -223,7 +223,7 @@ The {{site.data.keyword.powerSys_notm}} service provides the capability to captu
 {: faq}
 {: support}
 
-See the tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.box.com/s/u6zsjcr9f2lpgme01marpo69crkduwdx).
+See the tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://ibm.box.com/s/vtklt25oyte8f0j8rd7v5w2hl9dur6cf).
 
 ## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
