@@ -46,64 +46,67 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         Table 1. Power Systems Virtual Server data centers
       </caption>
       <tr>
+        <th>Geography</th>
         <th>Location</th>
         <th>Region</th>
-        <th>Data center</th>
+        <th>IBM Power infrastructure zone</th>
+        <th>IBM Power infrastructure data center</th>
       </tr>
       <tr>
-        <td>Dallas, United States</td>
+        <td>America</td>
+        <td>Dallas, USA</td>
         <td>us-south</td>
-        <td>DAL13</td>
+        <td>us-south-2<br/>us-south-3</td>
+        <td>DAL12<br/>DAL13</td>
       </tr>
       <tr>
-        <td>Dallas 12, United States</td>
-        <td>us-south</td>
-        <td>DAL12</td>
-      </tr>
-      <tr>
-        <td>Washington, D.C., United States</td>
+        <td>America</td>
+        <td>Washington DC, USA</td>
         <td>us-east</td>
+        <td>us-east-1</td>
         <td>WDC04</td>
       </tr>
       <tr>
-        <td>Toronto 01, Canada</td>
-        <td>eu-east</td>
+        <td>America</td>
+        <td>Brazil</td>
+        <td>br-sao</td>
+        <td>br-sao-1</td>
+        <td>SAO01</td>
+      </tr>
+      <tr>
+        <td>America</td>
+        <td>Toronto, Canada</td>
+        <td>ca-tor</td>
+        <td>ca-tor-1</td>
         <td>TOR01</td>
       </tr>
       <tr>
-        <td>Frankfurt 01, Germany</td>
+        <td>Europe</td>
+        <td>Frankfurt</td>
         <td>eu-de</td>
-        <td>FRA04</td>
+        <td>eu-de-1<br/>eu-de-2</td>
+        <td>FRA04<br/>FRA05</td>
       </tr>
       <tr>
-        <td>Frankfurt 02, Germany</td>
-        <td>eu-de</td>
-        <td>FRA05</td>
-      </tr>
-      <tr>
-        <td>London 04, United Kingdom</td>
+        <td>Europe</td>
+        <td>London</td>
         <td>eu-gb</td>
-        <td>LON04</td>
+        <td>eu-gb-1<br/>eu-gb-3</td>
+        <td>LON04<br/>LON06</td>
       </tr>
       <tr>
-        <td>London 06, United Kingdom</td>
-        <td>eu-gb</td>
-        <td>LON06</td>
-      </tr>
-      <tr>
-        <td>Sydney 04, Australia</td>
+        <td>Asia Pacific</td>
+        <td>Sydney</td>
         <td>au-syd</td>
+        <td>au-syd-2</td>
         <td>SYD04</td>
       </tr>
       <tr>
-        <td>Tokyo 04, Japan</td>
-        <td>ap-north</td>
+        <td>Asia Pacific</td>
+        <td>Tokyo</td>
+        <td>jp-tok</td>
+        <td>jp-tok-2</td>
         <td>TOK04</td>
-      </tr>
-      <tr>
-        <td>São Paulo 01, Brazil</td>
-        <td>us-south</td>
-        <td>SAO01</td>
       </tr>
     </table>
 
