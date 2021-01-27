@@ -56,28 +56,28 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>America</td>
         <td>Dallas, USA</td>
         <td>us-south</td>
-        <td>us-south-2<br/>us-south-3</td>
+        <td>DAL12<br/>us-south</td>
         <td>DAL12<br/>DAL13</td>
       </tr>
       <tr>
         <td>America</td>
         <td>Washington DC, USA</td>
         <td>us-east</td>
-        <td>us-east-1</td>
+        <td>us-east</td>
         <td>WDC04</td>
       </tr>
       <tr>
         <td>America</td>
         <td>São Paulo, Brazil</td>
         <td>br-sao</td>
-        <td>br-sao-1</td>
+        <td>SAO01</td>
         <td>SAO01</td>
       </tr>
       <tr>
         <td>America</td>
         <td>Toronto, Canada</td>
         <td>ca-tor</td>
-        <td>ca-tor-1</td>
+        <td>TOR01</td>
         <td>TOR01</td>
       </tr>
       <tr>
@@ -91,21 +91,21 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>Europe</td>
         <td>London, UK</td>
         <td>eu-gb</td>
-        <td>eu-gb-1<br/>eu-gb-3</td>
+        <td>LON04<br/>LON06</td>
         <td>LON04<br/>LON06</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
         <td>Sydney, Australia</td>
         <td>au-syd</td>
-        <td>au-syd-2</td>
+        <td>SYD04</td>
         <td>SYD04</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
         <td>Tokyo, Japan</td>
         <td>jp-tok</td>
-        <td>jp-tok-2</td>
+        <td>TOK04</td>
         <td>TOK04</td>
       </tr>
     </table>
