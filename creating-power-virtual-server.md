@@ -68,7 +68,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
       </tr>
       <tr>
         <td>America</td>
-        <td>Brazil</td>
+        <td>São Paulo, Brazil</td>
         <td>br-sao</td>
         <td>br-sao-1</td>
         <td>SAO01</td>
@@ -82,28 +82,28 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
       </tr>
       <tr>
         <td>Europe</td>
-        <td>Frankfurt</td>
+        <td>Frankfurt, Germany</td>
         <td>eu-de</td>
         <td>eu-de-1<br/>eu-de-2</td>
         <td>FRA04<br/>FRA05</td>
       </tr>
       <tr>
         <td>Europe</td>
-        <td>London</td>
+        <td>London, UK</td>
         <td>eu-gb</td>
         <td>eu-gb-1<br/>eu-gb-3</td>
         <td>LON04<br/>LON06</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
-        <td>Sydney</td>
+        <td>Sydney, Australia</td>
         <td>au-syd</td>
         <td>au-syd-2</td>
         <td>SYD04</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
-        <td>Tokyo</td>
+        <td>Tokyo, Japan</td>
         <td>jp-tok</td>
         <td>jp-tok-2</td>
         <td>TOK04</td>
