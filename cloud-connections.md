@@ -91,7 +91,8 @@ You can configure a private network subnet when you create an IBM Power Systems 
 ```
 {: codeblock}
 
-The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* colo. The subnet address and subnet broadcast address are reserved in both colos.
+The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* Power Iaas locations. The subnet address and subnet broadcast address are reserved in all Power Iaas locations.
+{: important}
 
 To create a new subnet, complete the following steps:
 

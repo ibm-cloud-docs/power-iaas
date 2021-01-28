@@ -46,7 +46,7 @@ To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, co
 ## Opening support cases with IBM
 {: support-case-IBM}
 
-If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: new_window}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. You must use the IBM customer number that was provided during the subscription process for the IBM Power Systems Virtual Server service. Complete all of the required information, and click **Submit Case**.
+If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: new_window}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.
 
  
 <!--   1. Choose **Compute: Power Systems Virtual Server** from the **Offering** field.
