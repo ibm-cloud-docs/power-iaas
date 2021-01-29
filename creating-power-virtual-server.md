@@ -50,7 +50,8 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <th>Location</th>
         <th>Region</th>
         <th>IBM Power infrastructure zone</th>
-        <th>IBM Power infrastructure data center</th>
+        <th>Colocated IBM Cloud Classic infrastructure data center</th>
+        <th>Colocated IBM Cloud VPC infrastructure zone</th>
       </tr>
       <tr>
         <td>America</td>
@@ -58,6 +59,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>us-south</td>
         <td>DAL12<br/>us-south</td>
         <td>DAL12<br/>DAL13</td>
+        <td>us-south-2<br/>us-south-3</td>
       </tr>
       <tr>
         <td>America</td>
@@ -65,6 +67,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>us-east</td>
         <td>us-east</td>
         <td>WDC04</td>
+        <td>us-east-1</td>
       </tr>
       <tr>
         <td>America</td>
@@ -72,6 +75,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>br-sao</td>
         <td>SAO01</td>
         <td>SAO01</td>
+        <td>br-sao-1</td>
       </tr>
       <tr>
         <td>America</td>
@@ -79,6 +83,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>ca-tor</td>
         <td>TOR01</td>
         <td>TOR01</td>
+        <td>ca-tor-1</td>
       </tr>
       <tr>
         <td>Europe</td>
@@ -86,6 +91,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>eu-de</td>
         <td>eu-de-1<br/>eu-de-2</td>
         <td>FRA04<br/>FRA05</td>
+        <td>eu-de-2<br/>eu-de-3</td>
       </tr>
       <tr>
         <td>Europe</td>
@@ -93,6 +99,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>eu-gb</td>
         <td>LON04<br/>LON06</td>
         <td>LON04<br/>LON06</td>
+        <td>eu-gb-1</br>eu-gb-3</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
@@ -100,6 +107,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>au-syd</td>
         <td>SYD04</td>
         <td>SYD04</td>
+        <td>au-syd-2</td>
       </tr>
       <tr>
         <td>Asia Pacific</td>
@@ -107,6 +115,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>jp-tok</td>
         <td>TOK04</td>
         <td>TOK04</td>
+        <td>jp-tok-2</td>
       </tr>
     </table>
 
