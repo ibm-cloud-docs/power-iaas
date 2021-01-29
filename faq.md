@@ -329,3 +329,9 @@ PowerVC does not provide capacity to support multiple language support for Clien
 {: faq}
 
 You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+
+## What is the network lateny over Direct Link?
+{: network_latency}
+{: faq}
+
+Network latency over Direct link is less than 1ms in every location
