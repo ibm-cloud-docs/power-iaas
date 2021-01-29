@@ -51,10 +51,10 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 5. View the **Server details** pane to verify your instance modification.
 
-### Resizing the VM core count and memory
+### Resizing the virtual machine core count and memory
 {: #resize-core-mem}
 
-You can resize the VM's core count and memory to scale up and down as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize beyond the 8x and 1/8x boundaries, when the VM is shut down. The following table shows an example of recalculated values:
+You can scale up and scale down the core count and memory of the virtual machine (VM) as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
 
 | Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
@@ -68,14 +68,14 @@ You can resize the VM's core count and memory to scale up and down as per your w
 
 | Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
-|4 core and 8 GB memory | Any value you specify that is greater than 0.25 cores, 2 GB memory | Any value you specify that is smaller than the available resources in the host |
+|4 core and 8 GB memory | You can specify any value that is greater than 0.25 cores, 2 GB memory | You can specify any value that is smaller than the available resources in the host |
 {: class="simple-tab-table"}
 {: tab-group="resize_core_memory"}
 {: caption="Table 1. Resizing VM core count and memory when the VM is shut down" caption-side="top"}
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-If you want to resize an existing VM that is created before December 15 2020 to 8x ratio of core count and memory, you must shut down the VM, and then resize, and activate the VM. You must resize the VM at least once when the VM is shutdown to enabel 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio.
+If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shutdown to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
