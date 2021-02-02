@@ -25,4 +25,4 @@ subcollection: power-iaas
 # Site-to-site VPN connectivity
 {: vpn-connectivity}
 
-For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to Power Systems Virtual Server, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://ibm.box.com/s/13qv6uo9ylhla6zh7ernerb49pko1160){: new_window}{: external}.
+For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to Power Systems Virtual Server, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
