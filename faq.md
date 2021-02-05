@@ -334,4 +334,4 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: network_latency}
 {: faq}
 
-Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understnding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 
+Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 

@@ -31,7 +31,7 @@ You must install the following program temporary fixes (PTFs) depending on the v
   - C7192710 (IBM i 7.1 cumulative PTF level)
   - IBM i 7.1 HIPER Group PTF (SF99709) level 261, or later
   - 5770999 (PTFs: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795)
-  - 5770SS1 (PTF:SI74413)
+  - 5770SS1 (PTF: SI74413)
 - IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391)
 - IBM i 7.3 - MF99207 (TR7) and SI69686
 - IBM i 7.4 - MF99301 (TR1) and SI70544
