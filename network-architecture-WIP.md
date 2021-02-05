@@ -95,7 +95,7 @@ You can connect your IBM Power on-premise environment to a colo by using **IBM C
 
   ![Power Systems Virtual Server private on-premises to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 5. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
 
-## IBM Power colo to colo connection using Megaport
+## IBM Power IaaS location connectivity using IBM Cloud network backbone and proxy routers
 {: #colo-to-colo-megaport}
 
 You can connect a colo to a colo by using **Direct Link and IBM Cloud Connect or Megaport**.
