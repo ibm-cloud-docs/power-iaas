@@ -114,3 +114,15 @@ You can also create and configure a private network subnet by using the IBM CLI.
 ```
 ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "startIP-endIP[,startIP-endIP]" [--dns-servers "DNS1 DNS2"] [--gateway GATEWAY] [--json]
 ```
+
+## Setting up high availability over Cloud Connections
+{: ha-availability-cloud-connections}
+
+IBM Cloud Direct Link (2.0) is not a redundant service by default. You must order a separate Direct Link Connect (2.0) instance for redundancy.
+
+To setup highly available connectivity to the IBM Cloud network by using Direct Link Connect by completing the following steps:
+
+1. Create two cloud connections for your Power Systems Virtual Servers.
+2. Attach subnets to the primary and redundant cloud connections.
+
+When subnet are attached to cloud connections, PowerNS supports routing the subnets over the Cloud Connections and BGP configuration which provides the redundant paths.
