@@ -185,7 +185,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SLES OVA images are currently supported.
+The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. RHEL and SLES OVA images are currently supported.
 
 ## How does third-party licensing work?
 {: #third-party}
@@ -329,3 +329,9 @@ PowerVC does not provide capacity to support multiple language support for Clien
 {: faq}
 
 You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+
+## What is the network latency over Direct Link?
+{: network_latency}
+{: faq}
+
+Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 

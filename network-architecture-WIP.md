@@ -40,14 +40,14 @@ You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cl
 
 Use the following network architecture for environment management from the public network. This model is not ideal for production workloads.
 
-  1. Connect your enterprise network to the IBM Cloud network by using secure socket layer(SSL) virtual private network(VPN) service.
+  1. Connect to IBM Cloud network via Public network by using secure socket layer(SSL) virtual private network(VPN) service.
   2. In the IBM Cloud network, use an IBM Cloud virtual server instance as a jump server. Jump server can be used as login server or as a proxy server.
   3. Connect the Power Systems Virtual Server instance to the IBM Cloud network by using the Direct Link Connect service.
 
 ## Private IPSec connection
 {: #private-ipsec}
 
-You can use the **IBM Cloud IPSec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud. For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://ibm.seismic.com/Link/Content/DCcdornqWne0KxP7QGfCZ9Gw){: new_window}{: external}.
+You can use the **IBM Cloud IPSec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud. For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
 
   ![Power Systems Virtual Server private IPSec connection](./images/Private-IPSec-VPN+DL+EdgeGW.png "Power Systems Virtual Server private IPSec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
 
@@ -95,7 +95,7 @@ You can connect your IBM Power on-premise environment to a colo by using **IBM C
 
   ![Power Systems Virtual Server private on-premises to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 5. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
 
-## IBM Power colo to colo connection using Megaport
+## IBM Power IaaS location connectivity using IBM Cloud network backbone and proxy routers
 {: #colo-to-colo-megaport}
 
 You can connect a colo to a colo by using **Direct Link and IBM Cloud Connect or Megaport**.

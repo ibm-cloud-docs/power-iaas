@@ -28,22 +28,30 @@ subcollection: power-iaas
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}
 
-You can assign up to 127 storage volumes to an IBM i VM.
+IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
 {: note}
 
-<!--## Opening console
+## Working with the IBM i console
 {: #opening-console}
 
-Click the console icon shown in the following image to open the IBM i console.
+To open the IBM i console, complete the following steps:
 
-  ![open console](./console.png "open console"){: caption="Figure 1. Open console" caption-side="bottom"} -->
+1. Go to **Virtual server instance** in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance.
+2. Click the **Open console** icon in the top of the Server details pane.
 
-## Tips for working with the IBM i terminal
+  ![Open console](./images/open-console.png "Open console"){: caption="Figure 1. Open console" caption-side="bottom"}
+
+  IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
+  {: note}
+
+  ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console" caption-side="bottom"}
+
+## Tips for working with the IBM i console
 {: #tips-ibmi}
 
 - The standard IBM i user is `QSECOFR/QSECOFR`.
-- IBM i uses function keys extensively. At the bottom of the terminal, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.
-- If you see a red **X** in the terminal during the configuration process, use your keyboard's **CONTROL** button to exit.
+- IBM i uses function keys extensively. At the bottom of the console, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.
+- If you see a red **X** in the console during the configuration process, use your keyboard's **CONTROL** button to exit.
 - You can use **CONTROL+W** to end a hung session. If this happens, you must perform a bypass by clicking **PF18** and logging on again.
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
@@ -62,20 +70,20 @@ The `cloud-init` configuration process can take up to 5 minutes. **Do not restar
 
 To verify that `cloud-init` configured your IP addresses correctly, type the `cfgtcp` command in the IBM i console window and choose `1`. If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
-  ![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 2. Verifying the cloud-init configuration" caption-side="bottom"}
+  ![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 3. Verifying the cloud-init configuration" caption-side="bottom"}
 
 If you do not see the external IP address in the **Work with TCP/IP Interfaces** window, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
 Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-  ![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 3. Using the DSPLICKEY command" caption-side="bottom"}
+  ![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 4. Using the DSPLICKEY command" caption-side="bottom"}
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
 By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
-  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 4. Changing the system value" caption-side="bottom"}
+  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
 {: note}
