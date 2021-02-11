@@ -54,5 +54,4 @@ To install Cloud-Init on IBM i 7.1, complete the following steps:
 3. Run the following command before you capture the VM:
    `CALL PGM(QSYS/QAENGCHG) PARM(*ENABLECI)`
 
-
    <!--If you are using your own custom image of IBM i 7.2, and later, you must install the required PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.-->
