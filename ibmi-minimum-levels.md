@@ -32,6 +32,7 @@ You must install the following program temporary fixes (PTFs) depending on the v
   - IBM i 7.1 HIPER Group PTF (SF99709) level 261, or later
   - 5770999 (PTFs: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795, MF68346)
   - 5770SS1 (PTF: SI74413, SI75274, SI75050)
+  - SF99572 710 JAVA level 43 or later
 - IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391)
 - IBM i 7.3 - MF99207 (TR7) and SI69686
 - IBM i 7.4 - MF99301 (TR1) and SI70544
@@ -53,8 +54,3 @@ To install Cloud-Init on IBM i 7.1, complete the following steps:
    - Dependent PTFs:  MF61937 (apply permanently), SI69146, SI65636, SI64092, SI66737, SI65647, SI73750, SI63164, and SI74413
 3. Run the following command before you capture the VM:
    `CALL PGM(QSYS/QAENGCHG) PARM(*ENABLECI)`
-<<<<<<< HEAD
-
-   <!--If you are using your own custom image of IBM i 7.2, and later, you must install the required PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}.-->
-=======
->>>>>>> draft
