@@ -30,9 +30,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## February 2021
 {: #feb-2021}
 
-- You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#cloning-volume).
-- You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information see [Resizing the virtual machine core count and memory](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).
-- The Power Systems Virtual Server offering now supports IBM i 7.1.
+- You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#cloning-volume).
+- You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).
+- The Power Systems Virtual Server offering now supports IBM i 7.1. For more information, see [Minimium PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 ## December 2020
 {: #december-2020}
