@@ -75,7 +75,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>br-sao</td>
         <td>SAO01</td>
         <td>SAO01</td>
-        <td>br-sao-1</td>
+        <td></td>
       </tr>
       <tr>
         <td>America</td>
@@ -83,7 +83,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>ca-tor</td>
         <td>TOR01</td>
         <td>TOR01</td>
-        <td>ca-tor-1</td>
+        <td></td>
       </tr>
       <tr>
         <td>Europe</td>
