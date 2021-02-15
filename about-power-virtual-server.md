@@ -115,7 +115,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
 
-Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data center.
+Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
 {: note}
 
 ## Public and private networks
