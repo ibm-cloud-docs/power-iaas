@@ -75,22 +75,16 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 
 The clone operation creates a full copy of the volume. You can select multiple volumes and initiate a group clone operation. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
 
-The clone operation will continue to copy data from the source disks to target disks in the background. Depending on the size of the source disks and the amount of data to be copied, the clone operation can take a significant amount of time.<br>
+The clone operation continues to copy data from the source disks to target disks in the background. Depending on the size of the source disks and the amount of data to be copied, the clone operation can take a significant amount of time.<br>
 
 You cannot modify the source or target disk attributes, such as disk size, while the clone operation is in progress.
 {: note}
 
-**Best practices**
+**Best practice**: Quiesce all of the applications on the volume that you want to clone.
 
-- It is recommended that you quiesce all of the applications on the volume that you want to clone.
+**Use case**: You can perform the clone operation on multiple volumes that are attached to the VM and that are in an available state.
 
-**Use case**
-
-You can perform the clone operation on multiple volumes that are attached to the VM and that are in an available state.
-
-**Restrictions and considerations**
-
-- When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
+**Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
 
 **Steps**
 
@@ -99,9 +93,9 @@ Performing the clone operation on a volume consists of three steps: prepare, sta
 ### 1. Create a volumes-clone request and initiate the Prepare action
 
 - **Requirements**
-  - Minimum of two volumes.
-  - Minimum of one volume to be in the **in-use** state.
-  - A unique volumes-clone name.
+  - Minimum of two volumes
+  - Minimum of one volume to be in the **in-use** state
+  - A unique volumes-clone name
 
 - **Status change**
   When the preparatory actions are initiated, the initial status of the volumes clone request is set to **Preparing**. When the preparatory actions are completed successfully, the status changes to **Prepared**. If an error occurs during the preparatory actions, the status changes to **Failed**. You can view the reasons for the failure by using the [get volumes-clone detail](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-getall) request.
@@ -151,7 +145,7 @@ Performs the remaining execution action to create the cloned volumes from the av
 
 - **Cancel a volumes-clone request**
 
-  This API request removes the group snapshot. If the volumes-clone request is in the Executing state, any artifacts that are created by the clone operation process are removed. If you cancel the volumes-clone request, initial status of the volumes-clone request is set to **Cancelling** and then it is changed to **Cancelled** state when all the clean-up work is completed successfully.
+  This API request removes the group snapshot. If the volumes-clone request is in the **Executing** state, any artifacts that are created by the clone operation process are removed. If you cancel the volumes-clone request, initial status of the volumes-clone request is set to **Cancelling** and then it is changed to **Cancelled** state when all the clean-up work is completed successfully.
 
 - **Delete a volume-clone request**
 
