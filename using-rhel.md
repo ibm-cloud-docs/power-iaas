@@ -33,7 +33,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
-When you create an OVA image, you must include the appropriate IBM Cloud environment *cloud-init* packages. Download the appropriate *cloud-init* packages from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}. For installation and configuration instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
+When you create an OVA image, you must include the appropriate IBM Cloud environment *cloud-init* packages. Download the appropriate cloud-init and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm) to convert the RHEL 8.3 Qcow2 images to OVA image.
 {: note}
