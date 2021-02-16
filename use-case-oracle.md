@@ -28,19 +28,19 @@ subcollection: power-iaas
 Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}} instance.
 {: shortdesc}
 
-These videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functionality between what's shown in the video and what's currently available.
+The following videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functionality between what's shown in the video and what's currently available.
 {: important}
 
 ## Modernizing an Oracle database
 {: #modernizing-oracle}
 
-The following video captures how to deploy an Oracle database in the {{site.data.keyword.powerSys_notm}}.
+For details, see this video on [deploying Oracle database in the {{site.data.keyword.powerSys_notm}}](https://ibm.ent.box.com/s/88iu375nuqd591w0ehorgcgtqfx7drfy).
 
-<iframe id="youtube-modernizing" title="Modernizing an Oracle database" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--<iframe id="youtube-modernizing" title="Modernizing an Oracle database" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
 ## Building a new Oracle environment from a custom AIX image
 {: #building-oracle}
 
-The following video captures how to export a custom AIX image on-premises and redeploy it in the {{site.data.keyword.powerSys_notm}} to build a new Oracle environment.
+For details on how to export a custom AIX image on-premises and redeploy it in the {{site.data.keyword.powerSys_notm}} to build a new Oracle environment, see this video on [building a new Oracle environment from a custom AIX image](https://ibm.ent.box.com/s/rp4oigbmtf5olo0hvfc6s3ze8ejd07yt).
 
-<iframe id="youtube-building" title="Building a new Oracle environment from a custom AIX image" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/soMU3sUrV7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--<iframe id="youtube-building" title="Building a new Oracle environment from a custom AIX image" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/soMU3sUrV7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->

@@ -59,7 +59,7 @@ Licenses that are purchased outside a subscription model license are not eligibl
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}
 
-You can implement disaster recovery mechanism between two AIX virtual server instances in separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: new_window}{: external}.
+You can implement disaster recovery mechanism between two AIX virtual server instances in separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: new_window}{: external}. For information about Transmission Control Protocol (TCP) tuning to improve wide area network (WAN) connection performance between AIX Virtual Machines, see [this support page](https://www.ibm.com/support/pages/node/6410510). 
 
 You can implement disaster recovery mechanisms between two IBM i virtual server instances by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: new_window}{: external}.
 
