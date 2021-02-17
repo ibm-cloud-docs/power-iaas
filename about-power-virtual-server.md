@@ -108,7 +108,9 @@ If you'd like to compare your current environment's performance to what's availa
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-3}
-{: tab-title="Non-US (FRA04, FRA05, LON04, LON06, SYD04, TOK04, TOR01, SAO01)"}
+{: tab-title="Non-US* "}
+
+- * Non-US data centers  are FRA04, FRA05, LON04, LON06, SYD04, TOK04, TOR01, MON 01, and SAO01. For more information on data centers list, see [Creating a Power Systems Virtual Serer service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 ## Storage tiers
 {: #storage-tiers}
