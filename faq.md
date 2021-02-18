@@ -164,7 +164,7 @@ You can choose to *soft pin* or *hard pin* a VM to the host where it is running.
 
 You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-You can control the placement of a new volume in a particular storage provider based on an existing volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing volume.
+You can control the placement of a new volume in a particular storage provider based on an existing PVM instance (VM) or volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing PVM instance or volume.
 
 The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
