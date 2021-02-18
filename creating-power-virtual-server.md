@@ -86,6 +86,14 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td></td>
       </tr>
       <tr>
+        <td>America</td>
+        <td>Montreal, Canada</td>
+        <td>ca-mon</td>
+        <td>MON01</td>
+        <td>MON01</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>Europe</td>
         <td>Frankfurt, Germany</td>
         <td>eu-de</td>
