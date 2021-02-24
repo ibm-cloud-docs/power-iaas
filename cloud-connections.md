@@ -130,14 +130,14 @@ When subnets are attached to cloud connections, PowerNS supports routing the sub
 ## Generic Routing Encapsulation (GRE) tunnel
 {: gre-tunnel}
 
-A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers in IBM Cloud uses GRE link to enable connectivity to IBM Cloud VMware Network and other destinations via a router appliance.
+A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers uses GRE link to enable connectivity to IBM Cloud VMware Network and other destinations via a router appliance.
 
-GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associate IPs, destination IP and GRE subnet is required. 
+GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associate IPs, destination IP and GRE subnet are required.
 
 GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
 
 GRE tunnel BGP ASNs are as follows:
 
-- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC)
+- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC).
 - For other ASRs ASN number is 64999.
 - Customer ASN for GRE BGP is 64880.

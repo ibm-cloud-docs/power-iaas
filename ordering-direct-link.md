@@ -86,6 +86,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     Customer name:
     Customer account ID:
+    Data center details:
     Direct Link Connect subnet:
     IBM Cloud IP address:
     Power Systems Virtual Server network IP address:
