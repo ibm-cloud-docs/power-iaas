@@ -36,30 +36,30 @@ If you are creating a new service, you will automatically receive two 5 Gbps Clo
 
 To create a new Cloud connection, complete the following steps:
 
-1. Sign into the **IBM Cloud Portal**.
+1. Sign in to the **IBM Cloud Portal**.
 2. Select the menu icon and select **Resource List**.
 3. Click the arrow next to **Services**.
 4. Select the Power Systems Virtual Server service you’d like to assign a Cloud connection.
-5. Click **Cloud connections** in the left navigation pane, and click **Create new connection**.
+5. Click **Cloud connections** in the left navigation window, and click **Create new connection**.
 6. Specify a connection name and select a connection speed. Default connection speed is 5 Gbps.
 7. If you need access to other data centers outside your Power Systems Virtual Server region, you must select the global routing option. For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 8. Select **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
    * **Classic Infrastructure**: Allows you to connect to IBM Cloud classic resources. Only one classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
-   * **VPC**:Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
-9. Review the summary and click the check box to accept the terms and conditions.
+   * **VPC**: Allows you to connect to your account’s Virtual Private Cloud (VPC) resources. You must select the required VPC connection from the list of available connections.
+9. Review the summary and click the checkbox to accept the terms and conditions.
 10. Click **Create** to create a new Cloud connection.
 
 ## Configuring Cloud connections
 {: configure-cloud-connections}
 
-If you created a Power Systems Virtual Servers service that contains 2 default Cloud connections, you also have an initial subnet connected to those connections. You can view the attached subnets and add or remove subnets in the Cloud Connection details page. When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+If you created a Power Systems Virtual Servers service that contains two default Cloud connections, you also have an initial subnet that is connected to those connections. You can view the attached subnets and add or remove subnets in the Cloud Connection details page. When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 Any changes to bandwidth might affect pricing.
 {: note}
 
 To configure Cloud connections, complete the following steps:
 
-1. In the Power Systems Virtual Services dashboard, click **Cloud connections** in the left navigation pane.
+1. In the Power Systems Virtual Services dashboard, click **Cloud connections** in the left navigation window.
 
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
 
@@ -91,7 +91,7 @@ You can configure a private network subnet when you create an IBM Power Systems 
 ```
 {: codeblock}
 
-The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* Power Iaas locations. The subnet address and subnet broadcast address are reserved in all Power Iaas locations.
+The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* Power IaaS locations. The subnet address and subnet broadcast address are reserved in all Power IaaS locations.
 {: important}
 
 To create a new subnet, complete the following steps:
@@ -100,7 +100,7 @@ To create a new subnet, complete the following steps:
 2. Select the menu icon and select **Resource List**.
 3. Click the arrow next to **Services**.
 4. Select the Power Systems Virtual Server service you'd like to assign a subnet.
-5. Click **Subnets** in the left navigation pane, then **Add subnet**.
+5. Click **Subnets** in the left navigation window, then **Add subnet**.
 
     ![Configuring a subnet](images/Configuring-new-subnet.png "Configuring a subnet"){: caption="Figure 4. Configuring a subnet" caption-side="bottom"}
 
@@ -120,9 +120,24 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 IBM Cloud Direct Link (2.0) is not a redundant service by default. You must order a separate Direct Link Connect (2.0) instance for redundancy.
 
-To setup highly available connectivity to the IBM Cloud network by using Direct Link Connect by completing the following steps:
+To set up highly available connectivity to the IBM Cloud network by using Direct Link Connect, complete the following steps:
 
 1. Create two cloud connections for your Power Systems Virtual Servers.
 2. Attach subnets to the primary and redundant cloud connections.
 
-When subnet are attached to cloud connections, PowerNS supports routing the subnets over the Cloud Connections and BGP configuration which provides the redundant paths.
+When subnets are attached to cloud connections, PowerNS supports routing the subnets over the Cloud Connections and BGP configuration, which provides the redundant paths.
+
+## Generic Routing Encapsulation (GRE) tunnel
+{: gre-tunnel}
+
+A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers in IBM Cloud uses GRE link to enable connectivity to IBM Cloud VMware Network and other destinations via a router appliance.
+
+GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associate IPs, destination IP and GRE subnet is required. 
+
+GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
+
+GRE tunnel BGP ASNs are as follows:
+
+- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC)
+- For other ASRs ASN number is 64999.
+- Customer ASN for GRE BGP is 64880.

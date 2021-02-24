@@ -27,10 +27,10 @@ subcollection: power-iaas
 # Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-Direct Link Connect is a separate service from the Power Systems Virtual Server service. You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
+Direct Link Connect is a separate service from the Power Systems Virtual Server. You must use [Direct Link](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect 2.0 service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
-The Direct Link (2.0) provides the following advantages:
+The Direct Link Connect (2.0) provides the following advantages:
 
 - Metered billing, which lowers the barrier of entry to IBM Cloud.
 - Support for connections to multiple IBM Cloud accounts from a single direct link.
@@ -38,7 +38,7 @@ The Direct Link (2.0) provides the following advantages:
 
 The {{site.data.keyword.powerSys_notm}} offering includes a highly available 5 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
-Direcet Link 2.0 is available in all current locations except Toronto 1 and São Paulo 1. For Toronto 1 and São Paulo 1 location, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
+Direcet Link Connect 2.0 is available in all current locations except Toronto 1 and São Paulo 1. For Toronto 1 and São Paulo 1 location, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
@@ -408,20 +408,20 @@ You can remove your Direct Link Connect on Classic connection by [opening a supp
 
 Your Direct Link connections are location-specific. IBM Cloud Direct Link is not a redundant service by default.  You must order a separate Direct Link Connect instance for redundancy.
 
-To set up a highly available connectivity to the IBM Cloud network by using Direct Link Connect, complete the following steps:
+To set up a highly available connectivity on the IBM Cloud network by using Direct Link Connect, complete the following steps:
 
 1. Order two instances of Direct Link Connect (2.0) or Direct Link Connect on Classic. For each instance of Direct Link Connect, you can order an additional instance for redundancy. For instructions, see [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic).
 
-2. In the **BGP and connections** configuration panel, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
+2. In the **BGP and connections** configuration panel, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both Direct Link Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
 
-  The following example shows the Direct Link ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link instance. That is, if you had selected <portname>-1-1 for the first Direct Link instance, you must select <portname>-2-1 or <portname>-2-2 for the second Direct Link instance that you want to set up for redundancy.
+  The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you had selected <portname>-1-1 for the first Direct Link Connect instance, you must select <portname>-2-1 or <portname>-2-2 for the second Direct Link Connect instance that you want to use to set up redundancy.
 
   ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-  For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link instance for redundancy.
+  For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
 {: note}
 
-  Border Gateway Protocol (BGP) sessions are configured for Direct Link Connect in such a way that when a fault is detected on a link, BGP routes traffic to alternate link. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link instance:
+  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
     <table>
       <caption>
