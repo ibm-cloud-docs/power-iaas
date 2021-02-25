@@ -255,7 +255,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
     <td>Boot image</td>
     <td>
       Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">deploy your own custom image</a> of AIX, IBM i, or Linux.<br> 
-      For SAP HANA and SAP NetWeaver, see <a href="/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server">Provisioning your IBM Power Virtual Server</a>
+      For SAP HANA and SAP NetWeaver, see <a href="/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server">Provisioning your IBM Power Virtual Server</a>.
       <p>
         <strong>Important</strong>: When you use an AIX stock image as the boot
         volume, a console session is required for the initial setting of the
