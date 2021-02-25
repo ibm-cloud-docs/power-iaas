@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-09-23"
+lastupdated: "2021-02-11"
 
 keywords: volume snapshot, clone, restore, api, flashcopy
 
