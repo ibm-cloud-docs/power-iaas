@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2020, 2021
 
-lastupdated: "2020-11-23"
+lastupdated: "2021-02-25"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -86,6 +86,7 @@ Order a second Direct Link Connect connection for backup purposes.
     ```
     Customer name:
     Customer account ID:
+    Data center details:
     Direct Link Connect subnet:
     IBM Cloud IP address:
     Power Systems Virtual Server network IP address:
