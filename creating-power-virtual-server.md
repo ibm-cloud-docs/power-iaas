@@ -254,7 +254,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
   <tr>
     <td>Boot image</td>
     <td>
-      Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">deploy your own custom image</a> of AIX, IBM i, or Linux.<br> 
+      Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">deploy your own custom image</a> of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the <a href="https://forums.centos.org/">CentOS forum</a> or <a href="https://forums.centos.org/app.php/help/faq">FAQ</a> page. <br>
       To provision Power Systems Virtual Server instance that supports SAP HANA and SAP NetWeaver applications, see <a href="/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server">Provisioning your IBM Power Virtual Server</a>.
       <p>
         <strong>Important</strong>: When you use an AIX stock image as the boot
