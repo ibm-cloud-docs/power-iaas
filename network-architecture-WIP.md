@@ -47,7 +47,7 @@ Use the following network architecture for environment management from the publi
 ## Private IPsec connection
 {: #private-ipsec}
 
-You can use the **IBM Cloud IPsec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance. As a part of this networking scenario, there is a GRE tunnel between a switch inside the Power colo and the edge gateway inside the IBM Cloud. For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
+You can use IBM Cloud VRA to provide site to site IPSec VPN connectivity. As a part of this networking scenario, there is a GRE tunnel between a virtual router inside the Power IaaS and the edge gateway (VRA) inside the IBM Cloud. For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
 
   ![Power Systems Virtual Server private IPsec connection](./images/Private-IPSec-VPN+DL+EdgeGW.png "Power Systems Virtual Server private IPsec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
 
@@ -65,7 +65,7 @@ Use the following network architecture for environment management from the publi
 ## Private Direct-Link connection
 {: #private-direct-link}
 
-You can use a **private Direct-Link** connection to connect into your existing IBM Cloud network. As a part of this networking scenario, there is a GRE tunnel between a switch inside the Power colo and the edge gateway inside the IBM Cloud.
+You can use a IBM Cloud Direct-Link to connect into your existing IBM Cloud network and reach Power IaaS. As a part of this networking scenario, there is a GRE tunnel between a switch inside the Power IaaS and the edge gateway inside the IBM Cloud.
 
   ![Power Systems Virtual Server private Direct-Link connection](./images/Private-connection-using-DL+DLconnect+EdgeGW.png "Power Systems Virtual Server private Direct-Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
 
@@ -75,10 +75,10 @@ Use the following network architecture for enterprise connectivity when you donâ
   2. In the IBM Cloud network, use an Edge Gateway device to connect and to control routing between IBM Cloud and the Power Systems Virtual Server location.
   3. Connect the IBM Power Systems Virtual Server to the IBM Cloud network by using the Direct Link Connect service.
 
-## IBM Cloud Connect (or Megaport) to data center connection
+## IBM Cloud Connect to data center connection
 {: #cloud-to-colo}
 
-You can connect to the IBM Cloud Power environment by using **IBM Cloud Connect or Megaport**. As stated previously, IBM Cloud Connect is only available to IBM clients within the US.
+You can connect to the IBM Cloud Power environment by using **IBM Cloud Connect**. IBM Cloud Connect is managed connectivity service that uses Megaport. As stated previously, IBM Cloud Connect is only available to IBM clients within the US.
 
   ![Power Systems Virtual Server data center connection](./images/BYOIPusingDL+DLconnect+EdgeGW.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
 
@@ -88,19 +88,19 @@ You can connect to the IBM Cloud Power environment by using **IBM Cloud Connect 
   4. [Configure the GRE service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling) on the IBM Power Systems Virtual Server network to establish a GRE tunnel and to enable bring-your-own-IP address (BYOIP) to the Power Server environment. A Virtual Router Appliance or equivalent is required in IBM Cloud because you cannot use a VPN connection to directly connect to the Power Systems Virtual Server instance.
     For tutorial on a site-to-site IPSec VPN using a Virtual Router Appliance (VRA), see [VPN into a secure private network](https://cloud.ibm.com/docs/virtual-router-appliance?topic=solution-tutorials-configuring-IPSEC-VPN).
 
-## IBM Power on-premises environment to colo connection
+## IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport
 {: #onprem-to-colo}
 
-You can connect your IBM Power on-premises environment to a colo by using **IBM Cloud Connect or Megaport**.
+You can connect your IBM Power on-premises environment to a Power IaaS by using **IBM Cloud Connect or Megaport** as shown in the following diagram.
 
   ![Power Systems Virtual Server private on-premises to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 5. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
 
-## IBM Power IaaS location connectivity by using IBM Cloud network backbone and proxy routers
+## IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers
 {: #colo-to-colo-megaport}
 
-You can connect a colo to a colo by using **Direct Link and IBM Cloud Connect or Megaport**.
+You can connect multiple Power Systems Virtual Server locations by using **Direct Link**, or **IBM Cloud Connect**, or **Megaport**.
 
-When connecting a colo to a colo by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external}. If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between *DAL13* and *WDC04*. Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
+When connecting a Power IaaS Loaction-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external} unless network connectivity is through a customer router. <!--If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between *DAL13* and *WDC04*-->. Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
 
   ![Power Systems Virtual Server colo to colo connection](./images/Locations-connectivity-byusing-cloud-connect-or-megaport.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
 
@@ -116,10 +116,10 @@ You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
 
   ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-gre.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"} -->
 
-## IBM dual colo connection
+## IBM Power IaaS location connectivity by using IBM Cloud Connect or Megaport
 {: #dual-colo}
 
-You can connect to two colos from your on-premises environment after creating a **Direct-Link connection and by using IBM Cloud Connect or Megaport**.
+You can connect to multiple Power Systems Virtual Server locations from your on-premises environment after creating a **Direct-Link connection and by using IBM Cloud Connect or Megaport**.
 
   ![Power Systems Virtual Server private dual colo connection](./images/PowerVS-IaaS-Locations-connectivity-via-IBMCloud-Classic.png "Power Systems Virtual Server private dual colo connection"){: caption="Figure 8. Power Systems Virtual Server private dual Colo connection" caption-side="bottom"}
 
@@ -128,5 +128,5 @@ Use the following architecture diagram for connectivity between multiple Power S
   1. When you have your VMs in more than one Power Systems Virtual Server locations that are provisioned for resiliency, PVS-Location1 to PVS-Location2 connectivity can occur through the IBM Cloud network by using proxy servers. You also need GRE tunnels for the transit.
   2. Configure Direct Link Connect with [GRE configuration](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling) at both the Power Systems Virtual Server locations for connectivity with the IBM Cloud network. Network bandwidth and latency depend on Direct Link Connect service, proxy gateway, and IBM Cloud network.
 
-  This configuration is under test. Therefore, you must test your configuration before using this architecture for production use.
-  {: note}
+In Power Systems Virtual Server locations connectivity by using backbone, only one gateway or proxy is sufficient if Direct Links are configured with Global Routing. This configuration is under test. Therefore, you must test your configuration before using this architecture for production use.
+{: note}
