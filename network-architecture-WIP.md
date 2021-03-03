@@ -130,3 +130,4 @@ Use the following architecture diagram for connectivity between multiple Power S
 
 In Power Systems Virtual Server locations connectivity by using backbone, only one gateway or proxy is sufficient if Direct Links are configured with Global Routing. This configuration is under test. Therefore, you must test your configuration before using this architecture for production use.
 {: .note}
+

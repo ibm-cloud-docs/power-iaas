@@ -77,3 +77,35 @@ To add a network interface (for example, *en0*) and point it to the new internal
 {: codeblock}
 
 If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: new_window}{: external}.
+
+## Moving data to the cloud
+{: move-data-to-cloud}
+
+Depending on your network bandwidth and size constraints, data moving process may be as simple as creating an *OVA* or *mksysb* (root volume group) and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate their data volume groups by using the **restvg** command option.
+
+Following are the few options for backing up data (on premise) and moving the data to IBM Power Systems Virtual Server.
+
+### Migrating volume group data using savevg
+{: migrate-data-using-savevg}
+
+A volume group is a collection of physical volumes of varying sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media on it are organized into physical partitions of a size you specify when you create the volume group. Built-in AIX *savevg* and *restvg* commands are used to backup and restore non-rootvg volume groups. The *savevg* and *restvg* commands can simplify the creation of your new volume groups and file systems on your new VM.
+
+The *savevg* command finds and backs up all the files belonging to a specified volume group. The volume group must be varied-on, and the file systems must be mounted. The *savevg* command uses the data file created by the *mkvgdata* command.
+
+Following is the command to find and backup all the files that belongs to a perticular Volume group (VG).
+
+```
+# savevg –f <destination path> -i <non root vg files to be backed up>
+```
+{: codeblock}
+
+Example:
+
+```
+# savevg –f /home/admin01/datavg_bkup –i  datavg
+```
+
+### Using *mkvgdata* and *restvg* for multiple volume backups
+{: multiple-volume-backups}
+
+Small systems might require only one data volume group to contain all the physical volumes which house non-root volume data. You might want to create separate volume groups, for security reasons, because each volume group can have its own security permissions. Separate volume groups also make maintenance easier because groups other than the one being serviced can remain active.
