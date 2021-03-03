@@ -109,3 +109,43 @@ Example:
 {: multiple-volume-backups}
 
 Small systems might require only one data volume group to contain all the physical volumes which house non-root volume data. You might want to create separate volume groups, for security reasons, because each volume group can have its own security permissions. Separate volume groups also make maintenance easier because groups other than the one being serviced can remain active.
+
+The following options runs the *mkvgdata* command for each online volume group. This generates output for a volume group in `/tmp/vgdata`. The resulting output is then tar'd and stored in the `/backup` file system directory. This allows information regarding all volume groups, logical volumes, and file systems to be included in a single image. The resulting image can be transferred or even stored within a *mksysb* backup (if `/backup` resides on *rootvg*).
+
+Use the following command to recreate the volume groups, logical volumes and file systems:
+
+```
+# tar -xvf /backup/vgdata.tar
+```
+Now edit `/tmp/vgdata/{volume group name}/{volume group name}.data file` and look for the line with `VG_SOURCE_DISK_LIST=`. Change the line to have the *hdisks*, *vpaths* or *hdiskpowers* based on requirement.
+
+```
+# restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data
+```
+
+### Migrating raw partitions using dd
+{: migrating-raw-partitions}
+
+The output file of *savevg* can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volume(s) in the volume group. So, the prescribed method of moving volume data using savevg covers many use cases.  However, there are environments where data is of a magnitude larger than several TBs and may present a disadvantage when considering transference and/or restoration procedures.
+
+The *savevg* command can be used to backup your volume groups. All logical volume information is archived, as well as JFS and JFS2 mounted file systems. However, this command cannot be used to backup raw logical volumes.
+
+Following are the methods to backup content of a file system (and to later restore):
+
+- Unmount the file system.
+- Save the raw logical volume content into a file by using:
+  
+  ```
+  # dd if=/dev/lvname of=/file/system/lvname.dd
+  ```
+  {: codeblock}
+
+This creates a copy of logical volume **lvname** to a file **lvname.dd** in file system `/file/system`. Make sure that wherever you write your output file to (in the example above to /file/system) has enough disk space available to hold a full copy of the logical volume. If the logical volume is 100 GB, you need 100 GB file system space for the copy.
+
+On the destination server, recreate the logical volume and the file system. Using an unmounted file system, run the following dd command to restore the backup copy:
+
+```
+# dd if=/file/system/lvname.dd of=/dev/lvname
+```
+
+Afterwards, mounting the file system will provide access to the contents of the original file system.
