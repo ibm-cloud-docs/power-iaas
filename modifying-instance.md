@@ -121,8 +121,8 @@ Any volume that has been included in a snapshot cannot be resized. To resize a v
 
 6. In an AIX VM instance, if you resize your boot storage volume, run the `chvg -g rootvg` command.
 
-To apply or verify an IBM i software key, the VM must be active and in running state. If you already ran a resize operation, you must wait until the resize operation complete and VM returns to OK status.
-{: note}
+<!--To apply or verify an IBM i software key, the VM must be active and in running state. If you already ran a resize operation, you must wait until the resize operation complete and VM returns to OK status.
+{: note}-->
 
 ## Adding or removing a public network
 {: #adding-removing-network}

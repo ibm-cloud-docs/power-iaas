@@ -85,10 +85,10 @@ Depending on your network bandwidth and size constraints, data moving process is
 
 Following are the options for backing up data (on premise) and moving the data to IBM {{site.data.keyword.powerSys_notm}}.
 
-### Migrating volume group data using savevg
+<!--### Migrating volume group data using savevg
 {: migrate-data-using-savevg}
 
-A volume group is a collection of physical volumes of varying sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media on it are organized into physical partitions of a size that you specify when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to backup and restore non-root volume groups. <!--The *savevg* and *restvg* commands can simplify the creation of your new volume groups and file systems on your new VM.-->
+A volume group is a collection of physical volumes of varying sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media on it are organized into physical partitions of a size that you specify when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to backup and restore non-root volume groups. <!--The *savevg* and *restvg* commands can simplify the creation of your new volume groups and file systems on your new VM.
 
 The *savevg* command finds and backs up all the files belonging to a specified volume group. The volume group must be varied-on, and the file systems must be mounted. The *savevg* command uses the data file created by the *mkvgdata* command.
 
@@ -127,7 +127,7 @@ Now edit `/tmp/vgdata/{volume group name}/{volume group name}.data file` and loo
 ### Migrating raw partitions using dd
 {: migrating-raw-partitions}
 
-The output file of *savevg* can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volume(s) in the volume group. <!-- So, the prescribed method of moving volume data using savevg covers many use cases.  However, there are environments where data is of a magnitude larger than several TBs and may present a disadvantage when considering transference and/or restoration procedures. -->
+The output file of *savevg* can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volume(s) in the volume group. <!-- So, the prescribed method of moving volume data using savevg covers many use cases.  However, there are environments where data is of a magnitude larger than several TBs and may present a disadvantage when considering transference and/or restoration procedures.
 
 You can use the *savevg* command to backup volume groups. All logical volume information is archived, as well as JFS and JFS2 mounted file systems. However, *savevg* command cannot be used to backup raw logical volumes.
 
@@ -152,4 +152,4 @@ Run the following dd command to restore the backup copy:
 ```
 {: codeblock}
 
-After you run the dd command, mounting the file system provides access to the contents of the original file system.
+After you run the dd command, mounting the file system provides access to the contents of the original file system.-->
