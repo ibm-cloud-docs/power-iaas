@@ -26,12 +26,17 @@ subcollection: power-iaas
 {: linux-with-powervs}
 
 You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
-
+<!--
 - RHEL 8.1
 - RHEL 8.2
 - RHEL 8.3
+- RHEL 8.3 Batch Update 1
 
-These RHEL versions include the latest cloud-init version (March 2021, or later versions). To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}.
+These RHEL versions include the latest cloud-init version (March 2021, or later versions). To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}. -->
+
+- RHEL 8.3 Batch Update 1
+
+To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}.
 
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
