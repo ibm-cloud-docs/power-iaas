@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-12-15"
+lastupdated: "2021-02-18"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -27,6 +27,10 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## March 2021
+{: #mar-2021}
+
+- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
 ## February 2021
 {: #feb-2021}
 
