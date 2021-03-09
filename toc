@@ -45,11 +45,12 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Networking
         ordering-direct-link.md
+        cloud-connections-CLI.md
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
         network-security.md
-        network-architecture.md
+        network-architecture-WIP.md
         site-to-site-vpn-connectivity.md
         X86-based-systems.md
 
