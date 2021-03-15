@@ -36,6 +36,13 @@ When you capture and export a VM, you can choose the image catalog, COS, or both
 You are charged different rates based on whether you export to the image catalog or COS.
 {: note}
 
+Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (written) to the disk by running the following command:
+
+```
+CHGASPACT OPTION(*FRCWRT)
+```
+{: codeblock}
+
 ## Using the Power Systems Virtual Server user interface to capture and export a VM
 {: #console-capture-export}
 

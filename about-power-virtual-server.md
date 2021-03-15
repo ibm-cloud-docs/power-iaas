@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2020, 2021
 
-lastupdated: "2020-06-10"
+lastupdated: "2021-03-12"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i
 
@@ -30,7 +30,7 @@ subcollection: power-iaas
 
 With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, it is your responsibility to make sure that your operating system is secure.
 
-Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.
+<!--Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.-->
 
 ## Key features
 {: #key-features}
@@ -68,6 +68,11 @@ When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP
 
 <!-- When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
 {: note} -->
+
+### Support for deploying a Red Hat OpenShift Cluster
+{: #support-redhat-openshift}
+
+When you are deploying a Red Hat OpenShift Cluster (bring your own Red Hat OpenShift and Linux subscription) on {{site.data.keyword.powerSys_notm}}, it is easy to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}}. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, and including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
 
 ## Hardware specifications
 {: #hardware-specifications}
@@ -118,8 +123,8 @@ For a complete list of supported data centers, see [Creating a Power Systems Vir
 
 For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
 
-Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
-{: note}
+<!--Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
+{: note}-->
 
 ## Public and private networks
 {: #public-private-networks}
