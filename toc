@@ -45,7 +45,6 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Networking
         ordering-direct-link.md
-        cloud-connections-CLI.md
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
