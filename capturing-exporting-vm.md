@@ -43,6 +43,8 @@ CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
 
+For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/chgaspact.htm){: new_window}{: external}.
+
 ## Using the Power Systems Virtual Server user interface to capture and export a VM
 {: #console-capture-export}
 
