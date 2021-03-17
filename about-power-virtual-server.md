@@ -72,7 +72,7 @@ When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP
 ### Support for deploying a Red Hat OpenShift Cluster
 {: #support-redhat-openshift}
 
-When you are deploying a Red Hat OpenShift Cluster (bring your own Red Hat OpenShift and Linux subscription) on {{site.data.keyword.powerSys_notm}}, it is easy to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}}. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, and including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easy to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}}. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
 
 ## Hardware specifications
 {: #hardware-specifications}
