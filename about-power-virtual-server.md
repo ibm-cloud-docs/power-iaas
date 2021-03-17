@@ -66,13 +66,8 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 
 When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided SUSE Enterprise Linux&reg; server (SLES) stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For information about the supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
-<!-- When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
-{: note} -->
-
-### Support for deploying a Red Hat OpenShift Cluster
-{: #support-redhat-openshift}
-
-When you are deploying a Red Hat OpenShift Cluster (bring your own Red Hat OpenShift and Linux subscription) on {{site.data.keyword.powerSys_notm}}, it is easy to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}}. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, and including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
+{: note} 
 
 ## Hardware specifications
 {: #hardware-specifications}
