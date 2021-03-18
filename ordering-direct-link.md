@@ -190,7 +190,9 @@ Order a second Direct Link Connect connection for backup purposes.
 
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
 
-Although adding a connection is optional when you are ordering Direct Link Connect, you must add at least one connection later to successfully connect the {{site.data.keyword.powerSys_notm}} instance to the IBM Cloud network.
+Although adding a connection is optional when you are ordering Direct Link Connect, you must add at least one connection later to successfully connect the {{site.data.keyword.powerSys_notm}} instance to the IBM Cloud network. 
+
+Power Systems Virtual Servers Direct Link 2.0 service provides connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the global routing attribute to reach VPC network outside the local region.
 
 ## Ordering Direct Link Connect on Classic
 

@@ -41,6 +41,8 @@ ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] 
 ```
 {: codeblock}
 
+Cloud connections provides connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the global routing attribute to reach VPC network outside the local region.
+
 For more information on parameters, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
 
 <!--1. Sign in to the **IBM Cloud Portal**.
