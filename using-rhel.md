@@ -26,24 +26,19 @@ subcollection: power-iaas
 {: linux-with-powervs}
 
 You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
-<!--
+
 - RHEL 8.1
 - RHEL 8.2
 - RHEL 8.3
 
 Ensure that you have the the latest cloud-init version as on March 2021 for all the supported RHEL versions.
 {: note}
--->
-
-- RHEL 8.3
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}.
 
 You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
-<!--When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}. -->
-
-When you create an OVA image, you must include the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
+When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm) to convert the RHEL 8.3 Qcow2 images to OVA image.
 {: note}
