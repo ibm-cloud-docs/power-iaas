@@ -25,20 +25,20 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server service
 {: linux-with-powervs}
 
-You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
+You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
 - RHEL 8.1
 - RHEL 8.2
 - RHEL 8.3
 
-Ensure that you have the the latest cloud-init version as on March 2021 for all the supported RHEL versions.
+Ensure that you have the latest cloud-init version as on March 2021 for all the supported RHEL versions. If some of the RHEL versions (for example, RHEL 8.1 and RHEL 8.2) become out of support, you must obtain extended support from Red Hat. Follow the requirements of extended support and apply patches or updates as recommended by Red Hat. For more information about extended support, see [RHEL Extended Update Support (EUS) Overview](https://access.redhat.com/articles/rhel-eus){: new_window}{: external}.
 {: note}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}.
 
-You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+You must obtain the subscription for the Linux® operating system directly from the vendor. After you deploy your Linux® VM, you must log in to the VM and register it with the Linux® vendor’s satellite server. To reach the Linux® vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
-When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
+When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm) to convert the RHEL 8.3 Qcow2 images to OVA image.
 {: note}
@@ -51,7 +51,7 @@ The Power Systems Virtual Server service does not provide a subscription to RHEL
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
 
-1. To buy a RHEL subscription, see [Red Hat Enterprise Linux Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: new_window}{: external}.
+1. To buy a RHEL subscription, see [Red Hat Enterprise Linux® Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: new_window}{: external}.
 
 2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index){: new_window}{: external}.
 
@@ -63,7 +63,7 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 ## Linux networking
 {: linux-networking}
 
-To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
+To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: nat-configuration}
@@ -111,4 +111,4 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 
 1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
-2. Assign the SNAT router IP (eth1 as per the previous example) on the private network as the default router on your newly created Linux VM.
+2. Assign the SNAT router IP (eth1 as in the previous example) on the private network as the default router on your newly created Linux VM.
