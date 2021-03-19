@@ -27,6 +27,7 @@ Power Systems Virtual Servers
         use-case-app.md
         use-case-hybrid.md
         use-case-oracle.md
+        use-case-redhat-openshift.md
     [Why IBM Power Systems Virtual Servers?](https://www.ibm.com/cloud/power-virtual-server)
     {: .navgroup-end}
 
@@ -45,6 +46,7 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Networking
         ordering-direct-link.md
+        cloud-connections-CLI.md
         configuring-private-network.md
         configuring-private-subnet.md
         connecting-networks.md
