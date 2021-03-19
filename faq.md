@@ -75,9 +75,9 @@ The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Cl
 The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
 
 - SUSE Linux Enterprise (SLES) 12 and SLES 15
-- Red Hat Enterprise Linux (RHEL) 8.3 Batch Update 1
+- Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
 
-To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}. For additional support, refer to the distribution (distro). You can find a list of cloud-init packages at [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: new_window}{: external}.
+To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
 ## Can I use my own AIX, IBM i, or Linux image?
 {: #image}

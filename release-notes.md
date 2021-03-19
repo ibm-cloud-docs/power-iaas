@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## March 2021
 {: #mar-2021}
 
-<!--- You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM). For more information, see [Using RHEL within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-rhel-within-the-power-systems-virtual-server-service).-->
+- You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM) on a VM instance. For more information, see [Using RHEL within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-rhel-within-the-power-systems-virtual-server-service).
 - {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
 
 ## February 2021

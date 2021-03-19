@@ -42,6 +42,7 @@ Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (wr
 CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
+{: .pre}
 
 For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/chgaspact.htm){: new_window}{: external}.
 

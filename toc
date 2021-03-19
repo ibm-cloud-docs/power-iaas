@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="power-iaas" category="virtualservers" audience="compute" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
+{: .toc subcollection="power-iaas" category="virtualservers" audience="service" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
 Power Systems Virtual Servers
 
     {: .navgroup id="learn"}
@@ -49,7 +49,7 @@ Power Systems Virtual Servers
         configuring-private-subnet.md
         connecting-networks.md
         network-security.md
-        network-architecture-WIP.md
+        network-architecture.md
         site-to-site-vpn-connectivity.md
         X86-based-systems.md
 
