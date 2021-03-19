@@ -45,9 +45,7 @@ For details on how to export a custom AIX image on-premises and redeploy it in t
 
 <!--<iframe id="youtube-building" title="Building a new Oracle environment from a custom AIX image" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/soMU3sUrV7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
-## Cloud Native Development and Application Modernization by using Red Hat OpenShift on Power Virtual Server
+<!--## Cloud Native Development and Application Modernization by using Red Hat OpenShift on Power Virtual Server
 {: #app-modernization-using-RedHat-openshift}
 
-Cloud-native applications are the applications that are **born in the cloud**, meaning they take full advantage of a microservice-based architecture and use containers and a corresponding container orchestration platform. Red Hat OpenShift is the industry’s leading enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.
-
-
+Cloud-native applications are the applications that are **born in the cloud**, meaning they take full advantage of a microservice-based architecture and use containers and a corresponding container orchestration platform. Red Hat OpenShift is the industry’s leading enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.-->
