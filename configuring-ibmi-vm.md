@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2020, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2021-03-19"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -83,7 +83,16 @@ Lastly, enter the `DSPLICKEY` command to verify that the `cloud-init` injected t
 
 By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
-  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
+For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
+{: note}
+
+To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords complete the following steps:
+
+1. Click the VM instance to view the **Server details** pane and click **Operations**.
+2. Choose **(21) Active dedicated service tools** option from the displayed list under the **Job operations**.
+3. Click **Run action**.
+
+<!--  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
 {: note}
@@ -98,7 +107,7 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again. You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
 
-6. Proceed to [Connect to an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi) to connect to your IBM i Cloud VM.
+6. Proceed to [Connect to an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi) to connect to your IBM i Cloud VM. -->
 
 ## Managing the IBM i VM instance
 {: manage-IBMi-VM}
