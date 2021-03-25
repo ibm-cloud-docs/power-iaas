@@ -115,7 +115,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: #hw-spec-3}
 {: tab-title="Non-US"}
 
-For a complete list of supported data centers, see [Creating a Power Systems Virtual Serer service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
 
 ## Storage tiers
