@@ -28,6 +28,7 @@ Power Systems Virtual Servers
         use-case-hybrid.md
         use-case-oracle.md
         use-case-redhat-openshift.md
+
     [Why IBM Power Systems Virtual Servers?](https://www.ibm.com/cloud/power-virtual-server)
     {: .navgroup-end}
 
