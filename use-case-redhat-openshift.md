@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-## Cloud Native Development and Application Modernization by using Red Hat OpenShift on Power Virtual Server
+# Cloud Native Development and Application Modernization by using Red Hat OpenShift on Power Virtual Server
 {: #app-modernization-using-RedHat-openshift}
 
 Cloud-native applications are the applications that are **born in the cloud**, meaning they take full advantage of a microservice-based architecture and use containers and a corresponding container orchestration platform. Red Hat&reg; OpenShift&reg; is the industry’s leading enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.
