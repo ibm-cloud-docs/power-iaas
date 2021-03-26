@@ -51,7 +51,7 @@ To open the IBM i console, complete the following steps:
 
 - The standard IBM i user is `QSECOFR/QSECOFR`.
 - IBM i uses function keys extensively. At the bottom of the console, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.
-- If you see a red **X** in the console during the configuration process, use your keyboard's **CONTROL** button to exit.
+- If you see a red **X** in the console during the configuration process, use your keyboard's **CONTROL** button to exit.  Note that the **CONTROL** button is not guranteed to work.  If this happens then use the **RESET** button instead.  An RFE is open for this: https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&CR_ID=139386
 - You can use **CONTROL+W** to end a hung session. If this happens, you must perform a bypass by clicking **PF18** and logging on again.
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
