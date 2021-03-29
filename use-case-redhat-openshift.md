@@ -27,7 +27,9 @@ subcollection: power-iaas
 
 Cloud-native applications are the applications that are **born in the cloud**, meaning they take full advantage of a microservice-based architecture and use containers and a corresponding container orchestration platform. Red Hat&reg; OpenShift&reg; is the industry’s leading enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.
 
-By packaging and running existing monolithic applications within Red Hat OpenShift Container Platform, enterprises can achieve a lower infrastructure footprint, lower maintenance and support costs, and easier portability across a range of cloud infrastructure and platform services.
+<!--By packaging and running existing monolithic applications within Red Hat OpenShift Container Platform, enterprises can achieve a lower infrastructure footprint, lower maintenance and support costs, and easier portability across a range of cloud infrastructure and platform services.-->
+
+In addition to developing new cloud-native applications, IT organizations are modernizing older, monolithic core business applications to support the faster delivery of new function to the business.
 
 For information on application modernization on Power, see [Field Guide to Application Modernization on Power Systems](https://www.ibm.com/downloads/cas/D9POQ3YR){: new_window}{: external}.
 
