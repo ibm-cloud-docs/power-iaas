@@ -71,4 +71,4 @@ You can use the service access roles to define what users can do with {{site.dat
 ## User access scenarios
 {: #user-access-scenarios}
 
-See [Managing access to resources](/docs/iam?topic=iam-iammanidaccser) for information on how to manage or assign access by using IAM policies.
+See [Managing access to resources](/docs/account?topic=account-assign-access-resources) for information on how to manage or assign access by using IAM policies.
