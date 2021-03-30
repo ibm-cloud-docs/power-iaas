@@ -125,6 +125,14 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>TOK04</td>
         <td>jp-tok-2</td>
       </tr>
+      <tr>
+        <td>Asia Pacific</td>
+        <td>Osaka, Japan</td>
+        <td>jp-osa</td>
+        <td>OSA21</td>
+        <td>OSA21</td>
+        <td></td>
+      </tr>
     </table>
 
 4. Click **Create**. You are redirected to the **Resource List**.

@@ -73,7 +73,7 @@ To configure Cloud connections, complete the following steps:
 
 4. Make the required changes, review the pricing changes, and click **Save edits**.
 
-## Attaching subnets to Cloud Connections
+## 
 {: attach-subnet}
 
 You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.

@@ -168,14 +168,14 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
-## Moving data to the cloud
+<!--## Moving data to the cloud
 {: move-data-to-cloud}
 
 Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate their data volume groups by using the **restvg** command.
 
 Following are the options for backing up data (on premise) and moving the data to IBM {{site.data.keyword.powerSys_notm}}.
 
-<!--### Migrating volume group data using *savevg* command
+### Migrating volume group data using *savevg* command
 {: migrate-data-using-savevg}
 
 A volume group is a collection of physical volumes of varying sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media on it are organized into physical partitions of a size that you specify when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to backup and restore non-root volume groups. The *savevg* and *restvg* commands simplifies the creation of your new volume groups and file systems on your new VM.
