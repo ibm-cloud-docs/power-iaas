@@ -38,7 +38,7 @@ Before you can download an ISO image of an AIX installation DVD, you must have a
 ## Using the ESS website to download an ISO image
 {: #downloading-ess-iso}
 
-To download an ISO image from the ESS website, complete the following steps. If you have issues related to ESS entitlement or image availability, you can contact ESS support through [Contacts page](https://www.ibm.com/servers/eserver/ess/OpenServlet.wss). <!--You can open an SF case against AIX support if you run into any issues. -->See [Handling AIX filesets](https://www-01.ibm.com/support/docview.wss?uid=ibm10871636){: external} for information on handling AIX fileset requisite issues.
+To download an ISO image from the ESS website, complete the following steps. If you have issues related to ESS entitlement or image availability, you can contact ESS support through [Contacts page](https://www.ibm.com/servers/eserver/ess/OpenServlet.wss). See [Handling AIX filesets](https://www-01.ibm.com/support/docview.wss?uid=ibm10871636){: external} for information on handling AIX fileset requisite issues.
 
 1. Go to the ESS website and log in with your IBM ID.
 2. Click **Register customer number** in the navigation pane and enter your IBM Cloud customer number in **Customer Number (include country code)**. Decide whether you want to register your customer number permanently and click **Submit**.
