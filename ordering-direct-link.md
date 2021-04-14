@@ -36,12 +36,32 @@ The Direct Link Connect (2.0) provides the following advantages:
 - Support for connections to multiple IBM Cloud accounts from a single direct link.
 - Support for multiple VPCs (without classic access) from a single direct link within the same account.
 
-The {{site.data.keyword.powerSys_notm}} offering includes a highly available 5 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
+The {{site.data.keyword.powerSys_notm}} offering includes a highly available 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
 Direcet Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
+
+## Routing considerations
+{: routing-considerations}
+
+If the traffic from Virtual Switch Interface (VSI) is sent to a public IP address on on-premises, you might need a special configuration in VPC if the VSI has a public floating IP. Otherwise, the traffic goes through the VSI public interface, not private interface.
+
+Given that on-premises addresses must be:
+
+The Internet Assigned Numbers Authority (IANA) has reserved the following three blocks private IP address ranges for private networks:
+Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
+Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
+Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
+
+Or
+
+Virtual Private Cloud (VPC) VM must not have floating IP.
+
+Or
+
+[Add delegate-vpc route to VPC default routing table to the on-premises public subnet](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
