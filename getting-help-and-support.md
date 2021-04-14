@@ -29,7 +29,7 @@ subcollection: power-iaas
 Before you open a support ticket against the {{site.data.keyword.powerSysShort}} service, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
 {: shortdesc}
 
-## Opening a support case with IBM Cloud
+## Opening operating system related cases with IBM Cloud
 {: support-case-IBM-cloud}
 
 To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
@@ -43,7 +43,7 @@ To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, co
 7. Attach any helpful files, decide whether you want email updates, and click **Next**.
 8. Review your support ticket summary, and click **Submit case**.
 
-## Opening support cases with IBM
+## Opening Operating System (AIX or IBMi) related cases with IBM Support
 {: support-case-IBM}
 
 If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: new_window}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.

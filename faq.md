@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-02-18"
+lastupdated: "2021-04-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -332,3 +332,9 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: faq}
 
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 
+
+## Are we notified about any planned maintenance activities?
+{: planned_maintenance_activity}
+{: faq}
+
+For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.

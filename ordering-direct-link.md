@@ -90,11 +90,18 @@ Order a second Direct Link Connect connection for backup purposes.
     Direct Link Connect subnet:
     IBM Cloud IP address:
     Power Systems Virtual Server network IP address:
+    Direct Link Connect VLAN:
     IBM Cloud ASN:
     Power Systems Virtual Server network ASN:
     Power Systems Virtual Server Private Network (subnet) Name (1):
     Power Systems Virtual Server Private Network (subnet) Name (2):
     Power Systems Virtual Server Private Network (subnet) Name (3):
+    Direct Link Connect 2.0 Virtual Connections:
+    Classic Network Virtual Connection: Yes/No
+    VPC Virtual Connection 1: VPC name and ID
+    VPC Virtual Connection 2: VPC name and ID
+    VPC Virtual Connection 3: VPC name and ID
+    Screen shot of Direct Link 2.0 Connect
     ```
 
     The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
