@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Minimium PTF levels for IBM i
+# Minimum PTF levels for IBM i
 {: #minimum-levels}
 
 You must install the following program temporary fixes (PTFs) depending on the version of IBM i that you are using:
