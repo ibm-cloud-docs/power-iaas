@@ -171,7 +171,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 ## Moving data to the cloud
 {: move-data-to-cloud}
 
-Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate by using the **restvg** command.
+Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate the data volume groups of the VM by using the **restvg** command.
 
 You can use following methods to back up your on-premise data and move the data to IBM {{site.data.keyword.powerSys_notm}}.
 
@@ -185,7 +185,7 @@ The *savevg* command finds and backs up all files that belong to a specified vol
 Use the following command to find and back up all files in a specific volume group.
 
 ```
-# savevg –f <*destination path*> -i <*non root vg files to be backed up*>
+# savevg –f <destination path> -i <non root vg files to be backed up>
 ```
 {: codeblock}
 
@@ -218,6 +218,8 @@ Run the following command to recreate the volume groups, logical volumes, and fi
 
 Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and look for the line with `VG_SOURCE_DISK_LIST=`. Change the line to have the *hdisks*, *vpaths*, or *hdiskpowers* based on your requirement.
 
+For example:
+
 ```
 # restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data
 ```
@@ -225,9 +227,9 @@ Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and
 ### Migrating raw partitions by using the dd command
 {: migrating-raw-partitions}
 
-The output file of the *savevg* command can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volumes in the volume group. The prescribed method of moving volume data by using *savevg* covers many use cases. However, there are environments where data is of a magnitude larger than several TBs and may present a disadvantage when considering transference and restoration procedures.
+The output file of the *savevg* command can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volumes in the volume group. If the environments have data more than several TBs, the prescribed method of moving volume data by using *savevg* may present a disadvantage when considering transference and restoration procedures.
 
-You can use the *savevg* command to back up volume groups. All logical volume information, Journaled File System (JFS), and JFS2 mounted file systems. However, you can not use the *savevg* command to back up raw logical volumes.
+You can use the *savevg* command to back up volume groups. All logical volume information, Journaled File System (JFS), and JFS2 mounted file systems are archived. However, you can not use the *savevg* command to back up raw logical volumes.
 
 Use the following methods to back up and restore content of a file system:
 
