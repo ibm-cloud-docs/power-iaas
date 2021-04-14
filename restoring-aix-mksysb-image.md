@@ -168,7 +168,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
-<!--## Moving data to the cloud
+## Moving data to the cloud
 {: move-data-to-cloud}
 
 Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate the data volume groups of the VM by using the **restvg** command.
@@ -250,4 +250,4 @@ On the destination server, recreate the logical volume and the file system. If y
 ```
 {: codeblock}
 
-After you run the dd command, mounting the file system provides access to the contents of the original file system.-->
+After you run the dd command, mounting the file system provides access to the contents of the original file system.
