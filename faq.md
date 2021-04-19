@@ -38,7 +38,7 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note} -->
 
-## Is IBM&reg; Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
+## Is IBM Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
 {: #on-cloud}
 {: faq}
 {: support}
