@@ -48,7 +48,7 @@ For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct L
 
 If the traffic from {site.data.keyword.powerSys_notm}} to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in Virtual Private Cloud (VPC). Otherwise, the traffic goes through the virtual machine's public interface instead of private interface.
 
-For proper VPC configuration, the on-preise IP address must meet the following requirements:
+For proper VPC configuration, the on-premise IP address must meet the following requirements:
 
 - The private IP address range for private network must be with in the following blocks that are reserved by Internet Assigned Numbers Authority (IANA):
   - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
