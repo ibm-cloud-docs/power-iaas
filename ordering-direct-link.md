@@ -54,7 +54,7 @@ For proper VPC configuration, the on-preise IP address must meet the following r
   - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
   - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
   - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
-- VPC virtual server instane must not have floating IP.
+- VM instances within the VPC must not have floating IP.
 - You must have created a route with the *Delegate-VPC* action in the VPC default routing table to the on-premise public subnet. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
 
 ## Ordering Direct Link Connect 2.0
