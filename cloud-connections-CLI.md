@@ -194,21 +194,15 @@ GRE tunnel BGP ASNs are as follows:
 - For other ASRs ASN number is 64999.
 - Customer ASN for GRE BGP is 64880.
 
-### GRE Configuring Example
-{: gre-configure-example}
-
-
 ## Migrating existing configuration
 {: migrate-existing-configuration}
 
-Your exisitng network configuration can continue to be managed by using Power VS support ticket process and is not required to be migrated to Power VS Network.
+Your exisitng network configuration can continue to be managed by using Power Systems Virtual Server support ticket process and is not required to be migrated to Power Systems Virtual Server Network.
 
-If you want use the new features offered by Network Automation, you can migrate by creating a Power VS operations support ticket.
+If you want use the new features offered by Network Automation, you can migrate by creating a Power Systems Virtual Server operations support ticket.
 
 ### Pre-requisites for network configuration migration
 {: pre-req-migration-to-network}
 
-1. Migration is disruptive and requires a maintenance window.
-2. Migration might require network configuration changes in your configuration.
-
-
+1. If you want to migrate your network configuration, you might need a maintenance window.
+2. Network configuration migration might require network configuration changes in on premise configuration
