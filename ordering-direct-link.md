@@ -36,26 +36,12 @@ The Direct Link Connect (2.0) provides the following advantages:
 - Support for connections to multiple IBM Cloud accounts from a single direct link.
 - Support for multiple VPCs (without classic access) from a single direct link within the same account.
 
-The Power Systems Virtual Server offering includes a highly available 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
+The Power Systems Virtual Server offering includes a highly available up to 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
 Direcet Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
-
-## Routing considerations
-{: routing-considerations}
-
-If the traffic from {site.data.keyword.powerSys_notm}} to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in Virtual Private Cloud (VPC). Otherwise, the traffic goes through the virtual machine's public interface instead of private interface.
-
-For proper VPC configuration, the on-premise IP address must meet the following requirements:
-
-- The private IP address range for private network must be with in the following blocks that are reserved by Internet Assigned Numbers Authority (IANA):
-  - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
-  - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
-  - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
-- VM instances within the VPC must not have floating IP.
-- You must have created a route with the *Delegate-VPC* action in the VPC default routing table to the on-premise public subnet. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
@@ -524,3 +510,17 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
     </table>
 
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+
+## Routing considerations for VPC
+{: routing-considerations}
+
+If the traffic from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of private interface.
+
+For proper VPC configuration, the on-premise IP address must meet the following requirements:
+
+- The IP address range for private network must be with in the following blocks that are reserved by Internet Assigned Numbers Authority (IANA):
+  - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
+  - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
+  - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
+- VM instances within the VPC must not have floating IP.
+- You must create a route with the *Delegate-VPC* action in the VPC default routing table to the on-premise public subnet. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
