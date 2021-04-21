@@ -38,6 +38,9 @@ The Direct Link Connect (2.0) provides the following advantages:
 
 The Power Systems Virtual Server offering includes a highly available up to 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
+10Gbps connection is available only on the Direct Link Connect 2.0
+{: important}
+
 Direcet Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
