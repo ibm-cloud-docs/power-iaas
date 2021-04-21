@@ -59,6 +59,7 @@ Power Systems Virtual Servers
     AIX
         creating-vm-ssh-keys.md
         restoring-aix-mksysb-image.md
+        aix-migration-steps.md
         downloading-aix-iso-image.md
         removing-network-interface.md
         rsct-rmc-aix.md

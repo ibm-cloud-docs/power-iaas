@@ -38,7 +38,7 @@ To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [A
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
 {: note} -->
 
-## Is IBM&reg; Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
+## Is IBM Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
 {: #on-cloud}
 {: faq}
 {: support}
@@ -284,7 +284,7 @@ You can delete the service by clicking the overflow menu in the **Virtual server
 
 To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-## What are the supported databases that I can run on Power Systems Virtual Server?
+## What are the supported databases that I can run for SAP on Power Systems Virtual Server?
 {: #support-databases}
 {: faq}
 

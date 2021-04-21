@@ -193,3 +193,16 @@ GRE tunnel BGP ASNs are as follows:
 - Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC).
 - For other ASRs ASN number is 64999.
 - Customer ASN for GRE BGP is 64880.
+
+## Migrating existing configuration
+{: migrate-existing-configuration}
+
+Your exisitng network configuration can continue to be managed by using Power Systems Virtual Server support ticket process and is not required to be migrated to Power Systems Virtual Server Network.
+
+If you want use the new features offered by Network Automation, you can migrate by creating a Power Systems Virtual Server operations support ticket.
+
+### Pre-requisites for network configuration migration
+{: pre-req-migration-to-network}
+
+1. If you want to migrate your network configuration, you might need a maintenance window.
+2. Network configuration migration might require network configuration changes in on premise configuration
