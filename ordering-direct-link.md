@@ -1,15 +1,9 @@
 ---
 
 copyright:
-<<<<<<< HEAD
-  years: 2019, 2020, 2021
-
-lastupdated: "2021-02-25"
-=======
   years: 2019, 2021
 
 lastupdated: "2021-04-21"
->>>>>>> draft
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
