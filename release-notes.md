@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-21"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,11 +26,6 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
-
-## April 2021
-{: #apr-2021}
-
-- The Power Systems Virtual Server offering now includes a highly available up to 10 Gbps connection to IBM Cloud services.
 
 ## March 2021
 {: #mar-2021}
