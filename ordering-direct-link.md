@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2021
 
-lastupdated: "2020-11-23"
+lastupdated: "2021-04-21"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -32,9 +32,9 @@ Direct Link Connect is a separate service from the Power Systems Virtual Server.
 
 The Direct Link Connect (2.0) provides the following advantages:
 
-- Metered billing, which lowers the barrier of entry to IBM Cloud.
 - Support for connections to multiple IBM Cloud accounts from a single direct link.
 - Support for multiple VPCs (without classic access) from a single direct link within the same account.
+- Automated Direct Link 2.0 Configuration in IBM Cloud Classic and VPC.
 
 The Power Systems Virtual Server offering includes a highly available up to 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
