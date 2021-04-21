@@ -284,7 +284,7 @@ You can delete the service by clicking the overflow menu in the **Virtual server
 
 To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-## What are the supported databases that I can run on Power Systems Virtual Server?
+## What are the supported databases that I can run for SAP on Power Systems Virtual Server?
 {: #support-databases}
 {: faq}
 
