@@ -72,7 +72,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. C
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. <!--IBM i 7.1 and IBM i 7.2 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees might apply.-->
+IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.1 and IBM i 7.2 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees might apply.
 {: note}
 
 Currently, IBM i 7.1 VMs are supported only in DAL12 data center.
