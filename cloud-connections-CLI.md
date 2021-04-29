@@ -29,7 +29,7 @@ subcollection: power-iaas
 Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include classic and VPC network. Cloud connections create a Direct Link Connect (2.0) offering instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct-Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
 
 Maximum number of Cloud Connections per account is limited to 2 connections.
-{: Important}
+{: important}
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
@@ -193,4 +193,4 @@ If you want to use the new features that are offered by Network Automation, you 
 ## Power Systems Virtual Servers Service Instances support with Cloud Connections
 {: powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a Service Ticket.
+Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
