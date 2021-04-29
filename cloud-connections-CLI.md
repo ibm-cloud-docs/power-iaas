@@ -31,6 +31,11 @@ Cloud connections provide an automated way to connect your {{site.data.keyword.p
 Maximum number of Cloud Connections per account is limited to 2 connections.
 {: important}
 
+## Power Systems Virtual Servers Service Instances support with Cloud Connections
+{: powervs-support-cloud-connections}
+
+Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
 ## Creating Cloud connections
 {: #create-cloud-connections}
 
@@ -47,6 +52,9 @@ ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] 
 Cloud connections provide connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the global routing attribute to reach VPC network outside the local region.
 
 For more information on parameters, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
+
+Cloud connections is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1 
+{: note}
 
 ## Configuring Cloud connections
 {: #configure-Cloud-connections}
@@ -190,7 +198,3 @@ If you want to use the new features that are offered by Network Automation, you 
 1. If you want to migrate your network configuration, you might need a maintenance window.
 2. Network configuration migration might require network configuration changes in on-premises configuration
 
-## Power Systems Virtual Servers Service Instances support with Cloud Connections
-{: powervs-support-cloud-connections}
-
-Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
