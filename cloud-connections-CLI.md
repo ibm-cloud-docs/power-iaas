@@ -190,4 +190,4 @@ If you want to use the new features that are offered by network automation, you 
 ## Power Systems Virtual Servers Service instances support with Cloud Connections
 {: powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple services under the same account. However, only a single service is supported to use a Cloud Connection. If you need a configuration where multiple service instances are created under the same account and the services must share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple services under the same account. However, only a single service can use a Cloud Connection at a time. If you need a configuration where multiple service instances are created under the same account and the services must share a Cloud connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
