@@ -34,7 +34,7 @@ Maximum number of Cloud connections per account is limited to 2 connections.
 ## Creating Cloud connections
 {: #create-cloud-connections}
 
-If you are creating a new service, you automatically receive two 10 Gbps Cloud connections at no cost. After the first two connections, charges apply based on speed and number of connections that you choose to have.
+If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost. After the first two connections, charges apply based on speed and number of connections that you choose to have.
 {: note}
 
 Use the following command to create a Cloud connection:
