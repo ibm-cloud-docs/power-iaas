@@ -40,7 +40,7 @@ You must obtain the subscription for the Linux® operating system directly from 
 
 When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
-You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm) to convert the RHEL 8.3 Qcow2 images to OVA image. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
+You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues) within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
 {: note}
 
 ## Registering and subscribing to RHEL

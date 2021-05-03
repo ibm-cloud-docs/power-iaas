@@ -79,9 +79,9 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 The {{site.data.keyword.powerSys_notm}} service provides AIX and IBM i stock images. The operating system version levels of the stock images are subject to change.
 
-You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. The Pricing for AIX and IBM i is not determined by whether you use a custome image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the VM instance. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Only SUSE Linux Enterprise Server (SLES) OVA images are currently supported.
+The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Both Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) OVA images are supported.
 
 ## Processor types
 {: #pricing-processor}

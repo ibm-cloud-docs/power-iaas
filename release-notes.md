@@ -27,6 +27,9 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## May 2021
+
+- Power Systems Virtual Server now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](docs/sap?topic=sap-power-vs-sles-hana).
 ## March 2021
 {: #mar-2021}
 
