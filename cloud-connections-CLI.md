@@ -31,10 +31,10 @@ Cloud connections provide an automated way to connect your {{site.data.keyword.p
 Maximum number of Cloud connections per account is limited to 2 connections.
 {: important}
 
-## Power Systems Virtual Servers Service Instances support with Cloud Connections
+## Power Systems Virtual Servers Service instances support with Cloud connections
 {: powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple services under the same account. Cloud Connections support only one service to utilize a Cloud connection. If you want a configuration where multiple service instances are created under same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
