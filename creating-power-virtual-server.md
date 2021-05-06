@@ -35,7 +35,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 ## Creating a Power Systems Virtual Server service
 {: #creating-service}
 
-1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: new_window}{: external} with your IBM Cloud account credentials.
+1. Log in to the [IBM catalog](https://cloud.ibm.com/catalog){: new_window}{: external} with your credentials.
 
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the {{site.data.keyword.powerSys_notm}} tile.
 
@@ -280,7 +280,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
     <td>Attached volumes</td>
     <td>
       You can either create a new data volume or attach an existing one that you
-      defined in your IBM Cloud account.
+      defined in your account.
       <dl>
         <dt><strong>Creating a new data volume</strong></dt>
         <dd>
@@ -293,7 +293,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
         <dd>
           You can select an existing data volume from the
           <b>Attached volumes</b> list. If a previously used data volume does
-          not appear, it might exist under a different IBM Cloud account.
+          not appear, it might exist under a different account or resource instance.
         </dd>
       </dl>
     </td>

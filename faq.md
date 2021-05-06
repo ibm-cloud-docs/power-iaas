@@ -36,14 +36,21 @@ subcollection: power-iaas
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note} -->
+{: note}
 
-## Is IBM Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
+## Is IBM Power Systems Virtual Servers located on IBM Cloud?
 {: #on-cloud}
 {: faq}
 {: support}
 
-No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.
+No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.-->
+
+## What is IBM Power Systems Virtual Server?
+{: #what-is-powervs}
+{: faq}
+{: support}
+
+IBM Power Systems Virtual Server is a hosted infrastructure offering that allows youto quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 ## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
