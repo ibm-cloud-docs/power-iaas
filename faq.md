@@ -50,7 +50,7 @@ No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a servi
 {: faq}
 {: support}
 
-IBM Power Systems Virtual Server is a hosted infrastructure offering that allows youto quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+IBM Power Systems Virtual Server is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 ## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
