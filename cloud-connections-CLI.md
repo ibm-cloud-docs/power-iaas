@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2021-03-02"
+lastupdated: "2021-05-06"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -39,7 +39,7 @@ Power Systems Virtual Server supports multiple services under the same account. 
 ## Creating Cloud connections
 {: #create-cloud-connections}
 
-If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost. After the first two connections, charges apply based on speed and number of connections that you choose to have.
+If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost. 
 {: note}
 
 Use the following command to create a Cloud connection:

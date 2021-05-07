@@ -453,62 +453,68 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       <tr>
         <td>LON04</td>
         <td>IBM Power VS</td>
-        <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-2</td>
-        <td>IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-2</td>
+        <td>SL-LON04-IBMPOWERIAASLITE-1-1<br />SL-LON04-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-LON04-IBMPOWERIAASLITE-2-1<br />SL-LON04-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>LON06</td>
         <td>IBM Power VS</td>
-        <td>SL-LON06-IBMPOWERLAASLITE-1-1<br />SL-LON06-IBMPOWERLAASLITE-1-2</td>
-        <td>SL-LON06-IBMPOWERLAASLITE-2-1<br />SL-LON06-IBMPOWERLAASLITE-2-2</td>
+        <td>SL-LON06-IBMPOWERIAASLITE-1-1<br />SL-LON06-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-LON06-IBMPOWERIAASLITE-2-1<br />SL-LON06-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>FRA05</td>
         <td>IBM Power VS</td>
-        <td>SL-FRA05-IBM-PowerIaaSLite-1-1<br />SL-FRA05-IBM-PowerIaaSLite-1-2</td>
-        <td>SL-FRA05-IBM-PowerIaaSLite-2-1<br />SL-FRA05-IBM-PowerIaaSLite-2-2</td>
+        <td>SL-FRA05-IBMPOWERIAASLITE-1-1<br />SL-FRA05-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-FRA05-IBMPOWERIAASLITE-2-1<br />SL-FRA05-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>FRA04</td>
         <td>IBM Power VS</td>
-        <td>SL-FRA04-IBMPOWERLAASLITE-1-1<br />SL-FRA04-IBMPOWERLAASLITE-1-2</td>
-        <td>SL-FRA04-IBMPOWERLAASLITE-2-1<br />SL-FRA04-IBMPOWERLAASLITE-2-2</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>WDC04</td>
         <td>IBM Power VS</td>
-        <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-1-2</td>
-        <td>NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-2-2</td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-1-1</td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-2-1</td>
       </tr>
       <tr>
         <td>DAL12</td>
         <td>IBM Power VS</td>
-        <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-2</td>
-        <td>IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-1<br />IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-2</td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>DAL13</td>
         <td>IBM Power VS</td>
-        <td>SOFTLAYER-IBMPOWERIAASLITE-1-1<br />SOFTLAYER-IBMPOWERIAASLITE-1-2</td>
-        <td>SOFTLAYER-IBMPOWERIAASLITE-2-1<br />SOFTLAYER-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>SYD05</td>
         <td>IBM Power VS</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-1- 1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
+        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
         <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2<t/d>
       </tr>
       <tr>
         <td>SYD04</td>
         <td>IBM Power VS</td>
-        <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
+        <td>-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
         <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2</td>
       </tr>
       <tr>
         <td>TOK04</td>
         <td>IBM Power VS</td>
-        <td>SL-TOK04-POWERIAASLITE-1-1-(ASR1)<br />SL-TOK04-POWERIAASLITE-1-2-(ASR1)</td>
-        <td>SL-TOK04-POWERIAASLITE-2-1<br />SL-TOK04-POWERIAASLITE-2-2</td>
+        <td>SL-TOK04-IBMPOWERIAASLITE-1-1<br />SL-TOK04-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2</td>
+      </tr>
+      <tr>
+        <td>OSA21</td>
+        <td>IBM Power VS</td>
+        <td>SL-OSA21-IBMPOWERIAASLITE-1-1<br />SL-OSA21-IBMPOWERIAASLITE-1-2</td>
+        <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
       </tr>
     </table>
 
