@@ -31,10 +31,10 @@ Cloud connections provide an automated way to connect your {{site.data.keyword.p
 Maximum number of Cloud connections per account is limited to 2 connections.
 {: important}
 
-## Power Systems Virtual Servers Service Instances support with Cloud Connections
+## Power Systems Virtual Servers service instances support with Cloud connections
 {: powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple services under the same account. Power VS Cloud Connections support only one service to utilize a Cloud Connection. If customer requires a configuration where multiple service instances are created under same account and there is need to share a Cloud Connection among them, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple services under the same account. Cloud Connections support only one service to utilize a Cloud connection. If you want a configuration where multiple service instances are created under same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
@@ -67,18 +67,21 @@ Any changes to bandwidth might affect pricing.
 You can configure Cloud connections by using the following commands:
 
 1. Use the following command to list all the Cloud connections:
+
 ```
 ibmcloud pi connections [--long] [--json]
 ```
 {: codeblock}
 
 2. Use the following command to get the information about the network that is attached to your Cloud connection:
+
 ```
 ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
 ```
 {: codeblock}
 
 3. Use the following command to update the Cloud connection:
+
 ```
 ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
 ```

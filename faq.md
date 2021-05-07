@@ -36,14 +36,21 @@ subcollection: power-iaas
 To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
 
 This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note} -->
+{: note}
 
-## Is IBM Power Systems&trade; Virtual Servers located on IBM Cloud&trade;?
+## Is IBM Power Systems Virtual Servers located on IBM Cloud?
 {: #on-cloud}
 {: faq}
 {: support}
 
-No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.
+No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.-->
+
+## What is IBM Power Systems Virtual Server?
+{: #what-is-powervs}
+{: faq}
+{: support}
+
+IBM Power Systems Virtual Server is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 ## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
@@ -162,9 +169,11 @@ You can choose to *soft pin* or *hard pin* a VM to the host where it is running.
 {: #affinity}
 {: faq}
 
-You can apply affinity and anti-affinity policies to both VMs and volumes. VM affinity and anti-affinity rules allow you to spread a group of VMs across different hosts or keep them on a specific host.
+You can apply affinity and anti-affinity policies to both VMs and volumes.
 
-You can control the placement of a new volume in a particular storage provider based on an existing PVM instance (VM) or volume by using volume affinity. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing PVM instance or volume.
+**VM affinity and anti-affinity policy** allows you to spread a group of VMs across different hosts or keep them on a specific host.
+
+**Volume affinity and anti-affinity policy** allows you to control the placement of a new volume in a particular storage provider based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing PVM instance or volume. 
 
 The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
