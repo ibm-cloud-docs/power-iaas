@@ -53,13 +53,13 @@ Cloud connections provide connectivity to IBM Cloud Classic network in addition 
 
 For more information on parameters, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
 
-Cloud connections is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1 
+Cloud connections are available in all current locations except Toronto 1, Montreal 1, and São Paulo 1 
 {: note}
 
 ## Configuring Cloud connections
 {: #configure-Cloud-connections}
 
-If you created a Power Systems Virtual Servers service that contains two default Cloud connections, you have an initial subnet that is connected to those connections. You can view the attached subnets and add or remove subnets in the Cloud Connection details page. When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+<!--If you created a Power Systems Virtual Servers service that contains two default Cloud connections, you have an initial subnet that is connected to those connections.--> When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 Any changes to bandwidth might affect pricing.
 {: note}
@@ -92,7 +92,7 @@ For more information on parameters, see [Update a Cloud connection](/docs/power-
 ## Attaching subnets to Cloud connections
 {: #attach-subnet}
 
-You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
+If you attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection. <!--You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.-->
 
 - Use the following command to attach a subnet to Cloud connection:
 
