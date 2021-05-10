@@ -59,7 +59,7 @@ Cloud connections are available in all current locations except Toronto 1, Montr
 ## Configuring Cloud connections
 {: #configure-Cloud-connections}
 
-<!--If you created a Power Systems Virtual Servers service that contains two default Cloud connections, you have an initial subnet that is connected to those connections.--> When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 Any changes to bandwidth might affect pricing.
 {: note}
