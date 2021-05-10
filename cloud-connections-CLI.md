@@ -66,26 +66,26 @@ Any changes to bandwidth might affect pricing.
 
 You can configure Cloud connections by using the following commands:
 
-1. Use the following command to list all the Cloud connections:
+  1. Use the following command to list all the Cloud connections:
 
-```
-ibmcloud pi connections [--long] [--json]
-```
-{: codeblock}
+  ```
+  ibmcloud pi connections [--long] [--json]
+  ```
+  {: codeblock}
 
-2. Use the following command to get the information about the network that is attached to your Cloud connection:
+  2. Use the following command to get the information about the network that is attached to your Cloud connection:
 
-```
-ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
-```
-{: codeblock}
+  ```
+  ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
+  ```
+  {: codeblock}
 
-3. Use the following command to update the Cloud connection:
+  3. Use the following command to update the Cloud connection:
 
-```
-ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
-```
-{: codeblock}
+  ```
+  ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
+  ```
+  {: codeblock}
 
 For more information on parameters, see [Update a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#connection-update).
 
