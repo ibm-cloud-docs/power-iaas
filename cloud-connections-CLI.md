@@ -42,7 +42,7 @@ Power Systems Virtual Server supports multiple services under the same account. 
 If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost. 
 {: note}
 
-Use the following command to create a Cloud connection:
+Run the following command to create a Cloud connection:
 
 ```
 ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] [<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpcID "ID">] [--json]
@@ -66,26 +66,26 @@ Any changes to bandwidth might affect pricing.
 
 You can configure Cloud connections by using the following commands:
 
-  1. Use the following command to list all the Cloud connections:
+- Run the following command to list all the Cloud connections:
 
-  ```
-  ibmcloud pi connections [--long] [--json]
-  ```
-  {: codeblock}
+   ```
+   ibmcloud pi connections [--long] [--json]
+   ```
+   {: codeblock}
 
-  2. Use the following command to get the information about the network that is attached to your Cloud connection:
+- Run the following command to get the information about the network that is attached to your Cloud connection:
 
-  ```
-  ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
-  ```
-  {: codeblock}
+   ```
+   ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
+   ```
+   {: codeblock}
 
-  3. Use the following command to update the Cloud connection:
+- Run the following command to update the Cloud connection:
 
-  ```
-  ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
-  ```
-  {: codeblock}
+   ```
+   ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
+   ```
+   {: codeblock}
 
 For more information on parameters, see [Update a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#connection-update).
 
@@ -94,7 +94,7 @@ For more information on parameters, see [Update a Cloud connection](/docs/power-
 
 If you attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection. <!--You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.-->
 
-- Use the following command to attach a subnet to Cloud connection:
+- Run the following command to attach a subnet to Cloud connection:
 
 ```
 ibmcloud pi connection-attach-network CONNECTION_ID --network NETWORK_ID [--json]
@@ -128,7 +128,7 @@ A DNS server value of 9.9.9.9 might not be reachable if you do not have a public
 ## Deleting a Cloud connection
 {: #delte-Cloud-connection}
 
-Use the following command to delete the Cloud connection:
+Run the following command to delete the Cloud connection:
 
 ```
 ibmcloud pi connection-delete CONNECTION_ID
