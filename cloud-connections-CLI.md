@@ -53,7 +53,7 @@ Cloud connections provide connectivity to IBM Cloud Classic network in addition 
 
 For more information on parameters, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
 
-Cloud connections are available in all current locations except Toronto 1, Montreal 1, and São Paulo 1 
+Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1 and Washington 4.
 {: note}
 
 ## Configuring Cloud connections
