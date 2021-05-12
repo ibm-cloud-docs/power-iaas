@@ -34,12 +34,12 @@ Maximum number of Cloud connections per account is limited to 2 connections.
 ## Power Systems Virtual Servers service instances support with Cloud connections
 {: powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple services under the same account. Cloud Connections support only one service to utilize a Cloud connection. If you want a configuration where multiple service instances are created under same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple services under the same account. Cloud Connections support only one service to utilize a Cloud connection. If you want a configuration in which multiple service instances are created under same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
 
-If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost. 
+If you are creating a new service, you automatically receive two Cloud connections of up to 10 Gbps network transmission speed at no cost.
 {: note}
 
 Run the following command to create a Cloud connection:
@@ -49,38 +49,38 @@ ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] 
 ```
 {: codeblock}
 
-Cloud connections provide connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the global routing attribute to reach VPC network outside the local region.
+Cloud connections provide connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in **Local Routing** or **Global Routing** attribute. You must use the **Global Routing** attribute to reach VPC network outside the local region.
 
 For more information on parameters, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
 
-Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1 and Washington 4.
+Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 4.
 {: note}
 
 ## Configuring Cloud connections
 {: #configure-Cloud-connections}
 
-When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+When you create or edit a subnet, you can also attach an existing Cloud connection. For information about adding a private network subnet, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 Any changes to bandwidth might affect pricing.
 {: note}
 
 You can configure Cloud connections by using the following commands:
 
-- Run the following command to list all the Cloud connections:
+- To list all the Cloud connections, run the following command:
 
    ```
    ibmcloud pi connections [--long] [--json]
    ```
    {: codeblock}
 
-- Run the following command to get the information about the network that is attached to your Cloud connection:
+- To get the information about the network that is attached to your Cloud connection, run the following command:
 
    ```
    ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
    ```
    {: codeblock}
 
-- Run the following command to update the Cloud connection:
+- To update the Cloud connection, run the following command:
 
    ```
    ibmcloud pi conu CONNECTION_NAME [--speed SPEED] [--type TYPE[<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpc "NAME, VPC-ID">] [--json]
@@ -94,14 +94,14 @@ For more information on parameters, see [Update a Cloud connection](/docs/power-
 
 If you attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection. <!--You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.-->
 
-- Run the following command to attach a subnet to Cloud connection:
+- To attach a subnet to Cloud connection, run the following command:
 
 ```
 ibmcloud pi connection-attach-network CONNECTION_ID --network NETWORK_ID [--json]
 ```
 {: codeblock}
 
-When you create a subnet or edit details of a subnet, you can attach an existing Cloud connection to the subnet. For steps to create a subnet, see [Configuring and adding a private network subnet](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet).
+When you create a subnet or edit details of a subnet, you can attach an existing Cloud connection to the subnet. For steps to create a subnet, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 ## Configuring and adding a private network subnet
 {: #congure-add-private-network}
@@ -113,7 +113,7 @@ You can configure a private network subnet when you create an IBM Power Systems 
 ```
 {: codeblock}
 
-The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* Power IaaS locations. The subnet address and subnet broadcast address are reserved in all Power IaaS locations.
+The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) in only the *WDC04* Power infrastructure locations. The subnet address and subnet broadcast address are reserved in all Power infrastructure locations.
 {: important}
 
 You can create and configure a private network subnet by using the following command:
@@ -162,11 +162,11 @@ GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel sou
 ### GRE configuration example
 {: gre-configuration-example}
 
-If you choose your destination IP address as 10.148.252.83, which is private IP of your VRA (VRA -IBM Cloud vSRX, Vyatta or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
+If you choose your destination IP address as 10.148.252.83, which is private IP of your VRA (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
 
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you choose)
-Power VS source IP: 172.16.3.1 mask 255.255.255.255
+PowerVS source IP: 172.16.3.1 mask 255.255.255.255
 PowerVS tunnel IP: 172.16.3.5
 
 You must configure the GRE tunnel in your VRA as follows:
