@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2021-05-10"
+lastupdated: "2021-05-12"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -164,18 +164,24 @@ GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel sou
 
 If you choose your destination IP address as 10.148.252.83, which is private IP of your VRA (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
 
+```
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you choose)
 PowerVS source IP: 172.16.3.1 mask 255.255.255.255
 PowerVS tunnel IP: 172.16.3.5
+```
+{: codeblock}
 
 You must configure the GRE tunnel in your VRA as follows:
 
+```
 GRE Destination IP: 172.16.1.1/32 (PowerVS Tunnel End-point Destination IP)
 VRA source IP     : 10.148.252.83
 VRA tunnel IP     : 172.16.3.6
 VRA ASN           : 64880
 PowerVS ASN       : 64999
+```
+{: codeblock}
 
 You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel.
 
