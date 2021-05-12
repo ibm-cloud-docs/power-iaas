@@ -101,7 +101,7 @@ ibmcloud pi connection-attach-network CONNECTION_ID --network NETWORK_ID [--json
 ```
 {: codeblock}
 
-When you create a subnet or edit details of a subnet, you can attach an existing Cloud connection to the subnet. For steps to create a subnet, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+When you create a subnet or edit details of a subnet, you can attach an existing Cloud connection to the subnet. You can attach only private network subnets to a Cloud connection. For steps to create a subnet, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 ## Configuring and adding a private network subnet
 {: #congure-add-private-network}
