@@ -29,7 +29,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 ## May 2021
 
-- Power Systems Virtual Server now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](docs/sap?topic=sap-power-vs-sles-hana).
+- You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-managing-cloud-connections) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources.
+- Power Systems Virtual Server now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](/docs/sap?topic=sap-power-vs-sles-hana).
+
+
 ## March 2021
 {: #mar-2021}
 
