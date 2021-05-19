@@ -1,4 +1,4 @@
-# Power Systems Virtual Server on IBM Cloud
+# Power Systems Virtual Server
 IBM® Power Systems™ Virtual Server on IBM Cloud uses the existing IBM Cloud platform to create Power Systems virtual servers, also known as logical partitions (LPAR), that run on IBM Power Systems hardware with the PowerVM hypervisor.
 
 The Power Systems Virtual Servers are a form of infrastructure as a service (IaaS). With the Power Systems Virtual Server service, you can quickly create and deploy one or multiple virtual servers that are running either the AIX or IBM i operating systems in a public cloud. After you provision the virtual server in the cloud, it is your responsibility to make sure that the AIX or IBM i operating system is secure.
