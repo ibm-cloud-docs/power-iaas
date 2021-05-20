@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2021
 
-lastupdated: "2021-05-12"
+lastupdated: "2021-05-20"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
