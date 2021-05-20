@@ -101,7 +101,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| <ul><li>Power E880 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+|<ul><li>Power E880 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -110,7 +110,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| <ul><li>Power E980 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>32 Gb SAN infrastructure</li> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
+|<ul><li>Power E980 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>32 Gb SAN infrastructure</li> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
