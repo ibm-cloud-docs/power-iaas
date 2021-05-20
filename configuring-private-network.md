@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2021
 
-lastupdated: "2020-04-08"
+lastupdated: "2021-05-12"
 
 keywords: connectivity, configuring network, direct link, classic infrastructure, power infrastructure, network, megaport, vxc, gre tunneling
 
@@ -95,7 +95,7 @@ Megaport connectivity services are available in WDC04, DAL13, DAL12, LON06, TOR0
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only.
+You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only. This information applies when you are configuring GRE tunnels manually. If you are using Cloud connections, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 ```
 GRE Tunnel Configuration Request:
