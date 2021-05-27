@@ -167,8 +167,8 @@ If you choose your destination IP address as 10.148.252.83, which is private IP 
 ```
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you choose)
-PowerVS source IP: 172.16.3.1 mask 255.255.255.255
-PowerVS tunnel IP: 172.16.3.5
+PowerVS source IP : 172.16.3.1 mask 255.255.255.255
+PowerVS tunnel IP : 172.16.3.5
 ```
 {: codeblock}
 
