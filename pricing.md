@@ -87,13 +87,13 @@ For detailed usage and billing information, you can refer to the part number in 
 | EC_VIRTUAL_PROCESSOR_CORE_HOURS     | Enterprise shared capped processor per core-hour      |
 | IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
-| IBMICOS_APPLICATION_INSTANCES     | IBM cloud storage solutions for IBM i license per core-hour      |
-| IBMIRDS_APPLICATION_INSTANCES     | IBM rational development studio for IBM i license per users-hour      |
-| IBMI_DBIIWQ_APPLICATION_INSTANCE_HOURS     | IBM i Db2 Web Query core-hour      |
-| BHHANA_APPLICATION_INSTANCE_HOURS     | Balanced for OLAP HANA application instance hour       |
+| IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
+| IBMIRDS_APPLICATION_INSTANCES     | IBM Rational Development Studio for IBM i license per users-hour      |
+| IBMI_DBIIWQ_APPLICATION_INSTANCE_HOURS     | IBM Db2 Web Query for i core-hour      |
+| BHHANA_APPLICATION_INSTANCE_HOURS     | Balanced for Online analytical processing (OLAP) HANA application instance hour       |
 | COREHANA_APPLICATION_INSTANCE_HOURS     | Core HANA application instance hour      |
-| MEMHANA_APPLICATION_INSTANCE_HOURS     | Memory HANA Application instance hour      |
-| UMHHANA_APPLICATION_INSTANCE_HOURS     | Ultra Memory HANA for OLTP application instance hour      |
+| MEMHANA_APPLICATION_INSTANCE_HOURS     | Memory HANA application instance hour      |
+| UMHHANA_APPLICATION_INSTANCE_HOURS     | Ultra Memory HANA for Online analytical processing (OLAP) application instance hour      |
 | IBMIOS_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P10 license per core-hour      |
 | IBMIOS_PTHIRTY_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P30 license per core-hour      |
 | IBMILPP_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i LPP P10 license per core-hour      |
