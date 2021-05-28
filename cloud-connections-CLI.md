@@ -45,7 +45,7 @@ If you are creating a new service, you automatically receive two Cloud connectio
 Run the following command to create a Cloud connection:
 
 ```
-ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] [<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpcID "ID">] [--json]
+ibmcloud pi connection-create CONNECTION_NAME --speed SPEED [--global-routing GLOBAL-ROUTING] [--metered METERED] [--json]
 ```
 {: codeblock}
 
@@ -73,10 +73,10 @@ You can configure Cloud connections by using the following commands:
    ```
    {: codeblock}
 
-- To get the information about the network that is attached to your Cloud connection, run the following command:
+- To view details of a Cloud connection, run the following command:
 
    ```
-   ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
+   ibmcloud pi connection CONNECTION_ID [--json]
    ```
    {: codeblock}
 
