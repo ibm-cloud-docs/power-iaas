@@ -175,7 +175,7 @@ PowerVS tunnel IP : 172.16.3.5
 You must configure the GRE tunnel in your VRA as follows:
 
 ```
-GRE Destination IP: 172.16.1.1/32 (PowerVS Tunnel End-point Destination IP)
+GRE Destination IP: 172.16.3.1/32 (PowerVS Tunnel End-point Destination IP)
 VRA source IP     : 10.148.252.83
 VRA tunnel IP     : 172.16.3.6
 VRA ASN           : 64880
