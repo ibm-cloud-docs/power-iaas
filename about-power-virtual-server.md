@@ -79,7 +79,7 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9080-M9S) (Dallas and Washington only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S) (Data centers other than Washington). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
 {: tip}
@@ -92,7 +92,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| <ul><li>Power E880 (9080-MHE)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN infrastructure</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
+| <ul><li>Power S922 (9009-22A)</li><li>Power E980 (9080-MHE)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN infrastructure</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -101,7 +101,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| <ul><li>Power E880 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+| <ul><li>Power E880 (9119-MHE)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -124,6 +124,9 @@ For a complete list of supported data centers, see [Creating a Power Systems Vir
 {: #storage-tiers}
 
 For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
+
+**Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPS of your storage workload.
+{: note}
 
 <!--Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
 {: note}-->

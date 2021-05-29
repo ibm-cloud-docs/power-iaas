@@ -523,7 +523,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 ## Routing considerations for VPC
 {: routing-considerations}
 
-If the traffic from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of private interface.
+If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
 
 For proper VPC configuration, the on-premise IP address must meet the following requirements:
 
@@ -532,4 +532,4 @@ For proper VPC configuration, the on-premise IP address must meet the following 
   - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
   - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
 - VM instances within the VPC must not have floating IP.
-- You must create a route with the *Delegate-VPC* action in the VPC default routing table to the on-premise public subnet. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
+- You must create a route to the on-premise public subnet in the VPC default routing table by using the *Delegate-VPC* action. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).

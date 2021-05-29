@@ -45,7 +45,7 @@ If you are creating a new service, you automatically receive two Cloud connectio
 Run the following command to create a Cloud connection:
 
 ```
-ibmcloud pi connection-create CONNECTION_NAME -speed SPEED [--vps ] [--classic] [<--gre-tunnel "CIDR DEST-IP SOURCE-IP">] ...[--global-routing GLOBAL-ROUTING] [<--vpcID "ID">] [--json]
+ibmcloud pi connection-create CONNECTION_NAME --speed SPEED [--global-routing GLOBAL-ROUTING] [--metered METERED] [--json]
 ```
 {: codeblock}
 
@@ -73,10 +73,10 @@ You can configure Cloud connections by using the following commands:
    ```
    {: codeblock}
 
-- To get the information about the network that is attached to your Cloud connection, run the following command:
+- To view details of a Cloud connection, run the following command:
 
    ```
-   ibmcloud pi connection-network CONNECTION_ID --network NETWORK_ID [--json]
+   ibmcloud pi connection CONNECTION_ID [--json]
    ```
    {: codeblock}
 
@@ -167,15 +167,15 @@ If you choose your destination IP address as 10.148.252.83, which is private IP 
 ```
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you choose)
-PowerVS source IP: 172.16.3.1 mask 255.255.255.255
-PowerVS tunnel IP: 172.16.3.5
+PowerVS source IP : 172.16.3.1 mask 255.255.255.255
+PowerVS tunnel IP : 172.16.3.5
 ```
 {: codeblock}
 
 You must configure the GRE tunnel in your VRA as follows:
 
 ```
-GRE Destination IP: 172.16.1.1/32 (PowerVS Tunnel End-point Destination IP)
+GRE Destination IP: 172.16.3.1/32 (PowerVS Tunnel End-point Destination IP)
 VRA source IP     : 10.148.252.83
 VRA tunnel IP     : 172.16.3.6
 VRA ASN           : 64880
