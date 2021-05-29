@@ -106,4 +106,4 @@ On the destination server, recreate the logical volume and the file system. If y
 ```
 {: codeblock}
 
-After you run the dd command, mounting the file system provides access to the contents of the original file system.
+
