@@ -39,6 +39,7 @@ Power Systems Virtual Servers
         creating-power-virtual-server.md
         configuring-custom-image.md
         modifying-instance.md
+        manage-placement-groups.md
         capturing-exporting-vm.md
         importing-boot-image.md
         downloading-fixes.md
