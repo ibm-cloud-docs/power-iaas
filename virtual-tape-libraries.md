@@ -29,4 +29,3 @@ subcollection: power-iaas
 {: #virtual-tape-libraries}
 
 Virtual tape libraries are used to backup virtual server instances.
-{: shortdesc}
