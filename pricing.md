@@ -84,7 +84,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
 | IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
 | SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
-| EC_VIRTUAL_PROCESSOR_CORE_HOURS     | Enterprise shared capped processor per core-hour      |
+| EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      |
 | IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
 | IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |

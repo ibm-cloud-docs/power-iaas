@@ -38,7 +38,7 @@ You must install the following program temporary fixes (PTFs) depending on the v
 
 If you are using your own IBM i custom image of IBM i 7.1, and later, you must install these PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: new_window}{: external}. For IBM i 7.1, you must perform the following instructions in addition to installing the required PTFs.
 
-# Required PTFs for iSCSI Virtual Tape Library (VTL)
+## Required PTFs for iSCSI Virtual Tape Library (VTL)
 {: ptfs-iscsi-vtl}
 
 You must install the following program temporary fixes (PTFs) depending on the version of IBM i that you are using:
