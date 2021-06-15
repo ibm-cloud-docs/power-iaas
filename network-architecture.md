@@ -1,9 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2020, 2021
+  years: 2019, 2021
 
-lastupdated: "2021-05-10
+lastupdated: "2021-05-10"
+
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
 subcollection: power-iaas
