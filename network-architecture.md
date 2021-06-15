@@ -75,7 +75,7 @@ You can connect to the IBM Cloud Power environment by using **IBM Cloud Direct L
   2. Connect the IBM Power Systems Virtual Server by using Direct Link Connect to the IBM Cloud network.
   3. [Configure the GRE service](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling) on the IBM Power Systems Virtual Server network to establish a GRE tunnel to the Power Server environment and to enable the bring-your-own-IP address (BYOIP) feature. A VRA or equivalent is required in IBM Cloud.
 
-  ![Power Systems Virtual Server to Customer data center connection](./images/BYOIPusingDL+DLconnect+EdgeGW.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
+  ![Power Systems Virtual Server to Customer data center connection](./images/Connectivity-Customer-Data-Center-using-IBM-Cloud-DL.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
 
 <!--## IBM Power IaaS locations connectivity by using IBM Cloud Connect or Megaport
 {: #onprem-to-poweriaas}
