@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2021-06-22"
 
 keywords: managing placement groups, placement groups, add placement group, delete placement group
 
@@ -31,15 +31,15 @@ VM placement groups provide you control over the host or server on which a new V
 You can apply an affinity or anti-affinity policy to each VM instance within a placement group. After you create a placement group, you can provision a new VM instance into the placement group and ensure that the VM instance is not on the same server as any of your other VM instances. When you provision VMs with an affinity group then all VMs will be launched on the same server. When you provision VMs with an anti-affinity group then all VMs will be launched on different servers. 
 <!--You can manage placement groups by using the Placement groups page or the Server details page in the IBM Power Systems Virtual Server console.-->
 
-You cannot change the policy or name of a placement group after creating it. You can only add or remove member instances.
-When you can create a VM and add it to a placement group, ensure that the placement group does not contain members in a **Build** state. Concurrently creating VMs within the placement groups is not supported. All the VMs will deploy in an error state when you are executing concurrent deployments with the placement group.
-{: note}
-
 ## Creating placement groups
 {: #creating-placement-groups}
 
 You can create placmenet groups and provision VM's in this placment group. The VMs in this group can be set to have affinity or anti-affinity with each other. Use the following API to create a placement group:
 [Create a new data volume](/apidocs/power-cloud#pcloud-placementgroups-post).
+
+You cannot change the policy or name of a placement group after creating it. You can only add or remove member instances.
+When you can create a VM and add it to a placement group, ensure that the placement group does not contain members in a **Build** state. Concurrently creating VMs within the placement groups is not supported. All the VMs will deploy in an error state when you are executing concurrent deployments with the placement group.
+{: note}
 
 ## Get all server placement groups
 {: #all-placement-groups}

@@ -29,7 +29,7 @@ subcollection: power-iaas
 Before you open a support ticket against the {{site.data.keyword.powerSysShort}} service, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
 {: shortdesc}
 
-## Opening operating system related cases with IBM Cloud
+## PowerVS infrastructure cases
 {: support-case-IBM-cloud}
 
 To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
