@@ -193,11 +193,13 @@ Refer to the following table for more information on each {{site.data.keyword.po
     <td>Number of Instances</td>
     <td>
       Specify the number of instances that you want to create for the
-      {{site.data.keyword.powerSys_notm}}. If you choose the Machine type as E880 or E980, you can choose [anti-affinity policy](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity) with maximum of 2 VM instances.<br>
+      {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VM instance. If you choose the Machine type as E880 or E980, you can choose [anti-affinity policy](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity) with maximum of 2 VM instances.<br>
        If you specify more than one instance, you can select the following naming conventions and colo rules:
       <dl>
         <dt><strong>No preference</strong></dt>
         <dd>Select this option if you do not have a hosting preference.</dd>
+        <dt><strong>Same server</strong></dt>
+        <dd>Select this option to host all instances on the same server.</dd>
         <dt><strong>Different Server</strong></dt>
         <dd>
           Select this option to host each instance on a different server. You
