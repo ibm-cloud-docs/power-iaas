@@ -65,6 +65,9 @@ You can delete an existing placement group. You can delete placement groups at a
 You can add VMs to the placement group you have created. The VMs that you add to the placement group must be in an **Active** state. Use the following API to add a server to a placement group:
 [Create a new data volume](/apidocs/power-cloud#pcloud-placementgroups-members-post).
 
+When adding a server to placement group, the request may not be completed due to a conflict (409) with the placement group affinity policy. In this case you may need to open a DLPAR operations support ticket.
+{: note}
+
 ## Remove server from placement group
 {: #remove-server-pgroup}
 

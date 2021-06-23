@@ -41,7 +41,6 @@ Power Systems Virtual Servers
         modifying-instance.md
         manage-placement-groups.md
         capturing-exporting-vm.md
-        virtual-tape-libraries.md
         importing-boot-image.md
         downloading-fixes.md
         volume-snapshot-clone.md
