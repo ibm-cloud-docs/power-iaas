@@ -31,6 +31,9 @@ You can capture and export an AIX or IBM i VM instance by using the {{site.data.
 
 When you capture and export a VM, you can choose the image catalog, COS, or both as destinations. The image catalog resides on the IBM Power storage area network (SAN). IBM's COS is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM COS System (formerly Cleversafe). You can always export your image in your image catalog to COS at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
 
+<!--You can capture only a single VM image at a time. If you attempt capturing another VM image when one is still in progress, you receive an error.
+{: note}-->
+
 <!-- **You cannot extend a volume that has snapshots. If your volume has snapshots, you must first delete it, then perform a resize**. -->
 
 You are charged different rates based on whether you export to the image catalog or COS.

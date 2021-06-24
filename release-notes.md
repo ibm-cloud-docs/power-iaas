@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-05-20"
+lastupdated: "2021-06-23"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -27,6 +27,10 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## June 2021
+
+- You can now use [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) to add your servers into groups and apply affinity or anti-affinity policies.
+  
 ## May 2021
 
 - You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-managing-cloud-connections) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources.
@@ -89,7 +93,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## July 2020
 {: #july-2020}
 
-The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/sap-netweaver-power?topic=sap-netweaver-power-getting-started) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/sap-hana-power?topic=sap-hana-power-getting-started).
+The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/en/power-systems-vs?topic=gs-getting-started-sap-netweaver-power-systems-virtual-servers) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/en/power-systems-vs?topic=gs-getting-started-sap-hana-power-systems-virtual-servers).
 
 ## June 2020
 {: #june-2020}

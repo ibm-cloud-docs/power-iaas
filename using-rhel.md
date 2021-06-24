@@ -64,6 +64,11 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 {: linux-networking}
 
 To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
+When you are configuring the SNAT in a private network, ensure that the csum offloads are disabled. Use the following command to disable the csum offloads:
+```
+  ethtool -K rx off
+```
+VMs using the NAT configuration require MTU that is smaller than 1500 to account for GRE headers. An MTU value of 1450 is recommended.
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: nat-configuration}

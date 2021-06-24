@@ -38,10 +38,10 @@ The Direct Link Connect (2.0) provides the following advantages:
 
 The Power Systems Virtual Server offering includes a highly available up to 10 Gbps connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
 
-10Gbps connection is available only on the Direct Link Connect 2.0
+10 Gbps connection is available only on the Direct Link Connect 2.0.
 {: important}
 
-Direcet Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
+Direct Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
@@ -523,7 +523,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 ## Routing considerations for VPC
 {: routing-considerations}
 
-If the traffic from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of private interface.
+If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
 
 For proper VPC configuration, the on-premise IP address must meet the following requirements:
 
@@ -532,4 +532,4 @@ For proper VPC configuration, the on-premise IP address must meet the following 
   - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
   - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
 - VM instances within the VPC must not have floating IP.
-- You must create a route with the *Delegate-VPC* action in the VPC default routing table to the on-premise public subnet. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
+- You must create a route to the on-premise public subnet in the VPC default routing table by using the *Delegate-VPC* action. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).

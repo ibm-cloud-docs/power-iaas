@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2021
 
-lastupdated: "2020-04-10"
+lastupdated: "2021-06-10"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -38,10 +38,10 @@ You can assign IAM authorizations based on the following criteria:
 
 For more information about IAM, review the following information:
 
-- [Getting started with IAM](/docs/iam?topic=iam-getstarted#getstarted)
-- [Managing resource groups](/docs/resources?topic=resources-rgs)
-- [Setting up access groups](/docs/iam?topic=iam-groups)
-- [IAM concepts](/docs/iam?topic=iam-iamoverview)
+- [Getting started with IAM](/docs/account?topic=account-access-getstarted)
+- [Managing resource groups](/docs/account?topic=account-rgs)
+- [Setting up access groups](/docs/account?topic=account-groups)
+- [IAM concepts](/docs/account?topic=account-iamoverview)
 
 ## Platform access roles
 {: #platform-access-roles}
