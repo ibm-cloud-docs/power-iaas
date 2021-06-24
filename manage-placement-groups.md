@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-06-22"
+lastupdated: "2021-06-24"
 
 keywords: managing placement groups, placement groups, add placement group, delete placement group
 
@@ -57,7 +57,7 @@ You can view details of a specific placement group. Use the following API to dis
 {: #delete-placement-group}
 
 You can delete an existing placement group. You can delete placement groups at any time even if they contain members. Use the following API to delete a server to a placement group:
-[elete server placement group](/apidocs/power-cloud#pcloud-placementgroups-delete).
+[Delete server placement group](/apidocs/power-cloud#pcloud-placementgroups-delete).
   
 ## Add server to placement group
 {: #add-server-pgroup}
