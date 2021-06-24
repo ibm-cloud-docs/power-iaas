@@ -93,7 +93,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## July 2020
 {: #july-2020}
 
-The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Getting started with SAP NetWeaver on IBM Power Systems Virtual Servers](/docs/en/power-systems-vs?topic=gs-getting-started-sap-netweaver-power-systems-virtual-servers) and [Getting started with SAP HANA on IBM Power Systems Virtual Servers](/docs/en/power-systems-vs?topic=gs-getting-started-sap-hana-power-systems-virtual-servers).
+The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and SAP HANA workload. For more information, see [Deploying your infrastructure](/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
 ## June 2020
 {: #june-2020}
