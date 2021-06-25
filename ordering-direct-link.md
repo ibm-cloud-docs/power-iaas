@@ -512,11 +512,11 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       </tr>
     </table>
 
-  -The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10gbps speed. 
-  -For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can use only upto 5 Gbps speed.  
-  {: note} 
+- The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10 Gbps speed. 
+- Ports that are GRE capable can only use upto 5 Gbps speed.  
+{: note} 
   
-3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
 
