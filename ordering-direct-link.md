@@ -511,7 +511,6 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
         <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
       </tr>
     </table>
-<sup>1</sup> These ports are not GRE capable.
 
 1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
