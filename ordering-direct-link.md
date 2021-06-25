@@ -471,8 +471,8 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       <tr>
         <td>FRA04</td>
         <td>IBM Power VS</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2<br />*PowerVS-FRA04-10G-NOGRE-1-1</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2<br />*PowerVS-FRA04-10G-NOGRE-1-2</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2<br />PowerVS-FRA04-10G-NOGRE-1-1<sup>1</sup></td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2<br />*PowerVS-FRA04-10G-NOGRE-1-2<sup>*</sup></td>
       </tr>
       <tr>
         <td>WDC04</td>
