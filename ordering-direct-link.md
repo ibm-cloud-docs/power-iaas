@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-26"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -439,7 +439,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
   For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
   {: note}
 
-  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
+  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
     <table>
       <caption>
@@ -512,11 +512,10 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       </tr>
     </table>
 
-- The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10 Gbps speed. 
-- Ports that are GRE capable can only use upto 5 Gbps speed.  
-{: note} 
+  The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10 Gbps speed.
+  {: note} 
   
-1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
 
