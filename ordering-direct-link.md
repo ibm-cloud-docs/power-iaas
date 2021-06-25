@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-25"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -437,7 +437,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
   ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
 
   For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
-{: note}
+  {: note}
 
   Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
@@ -511,7 +511,8 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
         <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
       </tr>
     </table>
-
+  The ports denoted with <sup>1</sup> indicates that they are not GRE capable.
+  {: note} 
 1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
