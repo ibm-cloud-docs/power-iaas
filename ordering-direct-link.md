@@ -471,38 +471,32 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       <tr>
         <td>FRA04</td>
         <td>IBM Power VS</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2<br />PowerVS-FRA04-10G-NOGRE-1-1*</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2<br />PowerVS-FRA04-10G-NOGRE-1-2*</td>
       </tr>
       <tr>
         <td>WDC04</td>
         <td>IBM Power VS</td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-1-1</td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-2-1</td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-1-1<br />PowerVS-WDC04-10G-NOGRE-1-1*</td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-2-1<br />PowerVS-WDC04-10G-NOGRE-1-2*</td>
       </tr>
       <tr>
         <td>DAL12</td>
         <td>IBM Power VS</td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL12-10G-NOGRE-1-1*</td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL12-10G-NOGRE-1-2*</td>
       </tr>
       <tr>
         <td>DAL13</td>
         <td>IBM Power VS</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-      <tr>
-        <td>SYD05</td>
-        <td>IBM Power VS</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2<t/d>
+        <td>SL-DAL13-IBMPOWERIAASLITE-1-1<br />SL-DAL13-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL13-10G-NOGRE-1-1*</td>
+        <td>SL-DAL13-IBMPOWERIAASLITE-2-1<br />SL-DAL13-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL13-10G-NOGRE-1-2*</td>
       </tr>
       <tr>
         <td>SYD04</td>
         <td>IBM Power VS</td>
-        <td>-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2<br />PowerVS-SYD04-10G-NOGRE-1-1*</td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2<br />PowerVS-SYD04-10G-NOGRE-1-2*</td>
       </tr>
       <tr>
         <td>TOK04</td>
@@ -516,9 +510,12 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
         <td>SL-OSA21-IBMPOWERIAASLITE-1-1<br />SL-OSA21-IBMPOWERIAASLITE-1-2</td>
         <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
       </tr>
+      <tr>
+        <td>* These ports are not GRE capable.</td>
+      </tr>
     </table>
 
-3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
 {: routing-considerations}
