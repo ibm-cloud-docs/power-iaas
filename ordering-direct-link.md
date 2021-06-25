@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-26"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -511,11 +511,14 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
         <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
       </tr>
     </table>
+
   The ports denoted with <sup>1</sup> indicates that they are not GRE capable.
   {: note} 
-1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+  
+3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
+
 {: routing-considerations}
 
 If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
