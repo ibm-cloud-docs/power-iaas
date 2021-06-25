@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-04-21"
+lastupdated: "2021-06-26"
 
 keywords: ordering direct link, dirct link location, bgp asn, iam service id, delete direct link, high availability
 
@@ -437,9 +437,9 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
   ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
 
   For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
-{: note}
+  {: note}
 
-  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
+  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
     <table>
       <caption>
@@ -471,44 +471,38 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       <tr>
         <td>FRA04</td>
         <td>IBM Power VS</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2<br />PowerVS-FRA04-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2<br />PowerVS-FRA04-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>WDC04</td>
         <td>IBM Power VS</td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-1-1</td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-2-1</td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-1-1<br />PowerVS-WDC04-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-WDC04-IBMPOWERIAASLITE-2-1<br />PowerVS-WDC04-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>DAL12</td>
         <td>IBM Power VS</td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL12-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL12-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>DAL13</td>
         <td>IBM Power VS</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-      <tr>
-        <td>SYD05</td>
-        <td>IBM Power VS</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-1-1<br />SL-SYD05-IBMPOWERIAASLITE-1- 2</td>
-        <td>SL-SYD05-IBMPOWERIAASLITE-2-1<br />SL-SYD05-IBMPOWERIAASLITE-2-2<t/d>
+        <td>SL-DAL13-IBMPOWERIAASLITE-1-1<br />SL-DAL13-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL13-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-DAL13-IBMPOWERIAASLITE-2-1<br />SL-DAL13-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL13-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>SYD04</td>
         <td>IBM Power VS</td>
-        <td>-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2<br />PowerVS-SYD04-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2<br />PowerVS-SYD04-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>TOK04</td>
         <td>IBM Power VS</td>
-        <td>SL-TOK04-IBMPOWERIAASLITE-1-1<br />SL-TOK04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2</td>
+        <td>SL-TOK04-IBMPOWERIAASLITE-1-1<br />SL-TOK04-IBMPOWERIAASLITE-1-2<br />PowerVS-TOK04-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2<br />PowerVS-TOK04-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>OSA21</td>
@@ -518,9 +512,13 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
       </tr>
     </table>
 
+  The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10 Gbps speed.
+  {: note} 
+  
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
+
 {: routing-considerations}
 
 If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.

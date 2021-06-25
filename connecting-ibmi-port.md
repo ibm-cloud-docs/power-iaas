@@ -41,7 +41,9 @@ Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.co
 
 The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL to allow ACS to connect over public IP.
 
-Start the **SSHD** server on the VM:
+Before you use an SSH tunnel, you must create a user profile with `USRCLS(*SECOFR)` specified or enable the `QSECOFR` user profile. To enable the `QSECOFR` user profile, edit the `/QOpenSys/QIBM/ProdData/SC1/OpenSSH/etc/sshd_config` configuration file, and uncomment `PermitRootLogin yes`.
+ 
+After the `QSECOFR` user profile is enabled, start the SSHD server on the VM:
 
 ```
 strtcpsvr server(*SSHD)
