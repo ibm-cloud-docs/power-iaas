@@ -502,7 +502,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
         <td>TOK04</td>
         <td>IBM Power VS</td>
         <td>SL-TOK04-IBMPOWERIAASLITE-1-1<br />SL-TOK04-IBMPOWERIAASLITE-1-2<br />PowerVS-TOK04-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2<br />PowerVS-TOK04-10G-NOGRE-1-1<sup>x</sup></td>
+        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2<br />PowerVS-TOK04-10G-NOGRE-1-2<sup>x</sup></td>
       </tr>
       <tr>
         <td>OSA21</td>
