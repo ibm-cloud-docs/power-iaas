@@ -65,14 +65,16 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 
 To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
-When you are configuring an SNAT Gateway between your public and private networks, ensure that the checksum offloading is disabled. You must set the MTU value to 1450 on the network interface that is connected to the private network. To ensure the interface checksum offloading and MTU settings are persistent across VM restarts, you need to modify the network interface configuration files for your interface.
+When you are configuring an SNAT Gateway between your public and private networks, ensure that the checksum offloading is disabled. You must set the MTU value to 1450 on the network interface that is connected to the private network. To ensure the interface checksum offloading and MTU settings are persistent across VM restarts, you need to modify the network interface configuration files for your interface. 
+
+Checksum offloading must be disabled on the private network interface of SNAT Gateway and is of the type `ibmveth`. You do not need to change the checksum offloading for public interface. Power VS VMs are deployed with ibmveth interfaces only.
+{: note}
+
+You can verify that the interface type is `ibmveth` by using the following command: 
 
 ```
 ethtool -i <interface name> | grep driver
 ```
-
-Checksum offloading must be disabled on the private network interface of SNAT Gateway and is of the type ibmveth. You do not need to change the checksum offloading for the public interface. You can ensure that the interface is ibmveth interface type use the following command:  Power VS VMs are deployed with ibmveth interfaces only.
-{: note}
 
 The following instructions are applicable to both RHEL 8 and SLES SP15. Some instructions differ between RHEL and SLES, the differences are noted in the steps. If additional help is needed to configure the network interfaces, refer to the Red Hat or SLES documentation.
 
