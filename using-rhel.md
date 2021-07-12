@@ -78,30 +78,33 @@ The following instructions are applicable to both RHEL 8 and SLES SP15. Some ins
 
 1. Identify the name of the private interface you with to modify. Use the following command to identify the interface names based on the IP address that is assigned to the interface:
 
-```
-ip -4 a s (for ipv4)
-ip -6 a s (for ip6)
-```
+  ```
+  ip -4 a s (for ipv4)
+  ip -6 a s (for ip6)
+  ```
+  {: codeblock}
 
 2. Edit the `ifcfg-<NIC>` file (NIC is the interface name that is identified in step 1).
 
   a. The path to this file differs between RHEL and SLES:
-
-```
-    RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
-    SLES:  /etc/sysconfig/network/ifcfg-<NIC>
-```
+  
+     ```
+      RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
+      SLES:  /etc/sysconfig/network/ifcfg-<NIC>
+    ```
+    {: codeblock}
   
   b. Add or modify the following lines:
 
-```
-   For RHEL:
+     ```
+     For RHEL:
        MTU=1450
        ETHTOOL_OPTS="-K <NIC> rx off"
-   For SLES:
+     For SLES:
        MTU='1450'
        ETHTOOL_OPTIONS='-K <NIC> rx off'
-```
+     ```
+     {: codeblock}
 
 3. Restart the VM.
 
@@ -118,12 +121,12 @@ ip -6 a s (for ip6)
  The `ibmveth` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
  {: note}
 
-Verify the MTU value by running the following command:
+  Verify the MTU value by running the following command:
   
- ```
- ip link show eth0
- eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
- ```
+   ```
+    ip link show eth0
+    eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
+   ```
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: nat-configuration}
