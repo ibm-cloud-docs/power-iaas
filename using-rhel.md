@@ -67,56 +67,61 @@ To connect a Linux® virtual machine (VM) to the public internet, you must add a
 
 When you are configuring an SNAT Gateway between your public and private networks, ensure that the checksum offloading is disabled. You must set the MTU value to 1450 on the network interface that is connected to the private network. To ensure the interface checksum offloading and MTU settings are persistent across VM restarts, you need to modify the network interface configuration files for your interface.
 
+```
+ethtool -i <interface name> | grep driver
+```
+
 Checksum offloading must be disabled on the private network interface of SNAT Gateway and is of the type ibmveth. You do not need to change the checksum offloading for the public interface. You can ensure that the interface is ibmveth interface type use the following command:  Power VS VMs are deployed with ibmveth interfaces only.
 {: note}
-
-```ethtool -i <interface name> | grep driver
-```
 
 The following instructions are applicable to both RHEL 8 and SLES SP15. Some instructions differ between RHEL and SLES, the differences are noted in the steps. If additional help is needed to configure the network interfaces, refer to the Red Hat or SLES documentation.
 
 1. Identify the name of the private interface you with to modify. Use the following command to identify the interface names based on the IP address that is assigned to the interface:
 
-```ip -4 a s (for ipv4)
-ip -6 a s (for ip6).
+```
+ip -4 a s (for ipv4)
+ip -6 a s (for ip6)
 ```
 
 2. Edit the `ifcfg-<NIC>` file (NIC is the interface name that is identified in step 1).
 
   a. The path to this file differs between RHEL and SLES:
 
-      RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
-      SLES:  /etc/sysconfig/network/ifcfg-<NIC>
+```
+    RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
+    SLES:  /etc/sysconfig/network/ifcfg-<NIC>
+```
   
   b. Add or modify the following lines:
 
-      For RHEL:
-       ```MTU=1450
+```
+   For RHEL:
+       MTU=1450
        ETHTOOL_OPTS="-K <NIC> rx off"
-       ```
-      For SLES:
-      ```MTU='1450'
+   For SLES:
+       MTU='1450'
        ETHTOOL_OPTIONS='-K <NIC> rx off'
-      ```
+```
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. Verify the checksum offloading by running the following command:
 
-   Verify the checksum offloading by running the following command:
-
-  ```$ ethtool -k eth0
+  ```
+  ethtool -k eth0
   Features for eth0:
   rx-checksumming: off
   tx-checksumming: off
   <cut>
   ```
 
- Note: The `ibmveth` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
+ The `ibmveth` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
+ {: note}
 
-  Verify the MTU value by running the following command:
+Verify the MTU value by running the following command:
   
- ```$ ip link show eth0
+ ```
+ ip link show eth0
  eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
  ```
 
