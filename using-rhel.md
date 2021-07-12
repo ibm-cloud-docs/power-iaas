@@ -51,11 +51,11 @@ The Power Systems Virtual Server service does not provide a subscription to RHEL
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
 
-1. To buy a RHEL subscription, see [Red Hat Enterprise Linux® Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: new_window}{: external}.
+1. To buy an RHEL subscription, see [Red Hat Enterprise Linux® Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: new_window}{: external}.
 
 2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index){: new_window}{: external}.
 
-## Capturing and importing a RHEL image
+## Capturing and importing an RHEL image
 {: import-rhel-image}
 
 To use RHEL within the Power Systems Virtual Server service, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
@@ -64,11 +64,61 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 {: linux-networking}
 
 To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
-When you are configuring the SNAT in a private network, ensure that the csum offloads are disabled. Use the following command to disable the csum offloads:
+
+When you are configuring an SNAT Gateway between your public and private networks, ensure that the checksum offloading is disabled. You must set the MTU value to 1450 on the network interface that is connected to the private network. To ensure the interface checksum offloading and MTU settings are persistent across VM restarts, you need to modify the network interface configuration files for your interface.
+
+Checksum offloading must be disabled on the private network interface of SNAT Gateway and is of the type ibmveth. You do not need to change the checksum offloading for the public interface. You can ensure that the interface is ibmveth interface type use the following command:  Power VS VMs are deployed with ibmveth interfaces only.
+{: note}
+
+```ethtool -i <interface name> | grep driver
 ```
-  ethtool -K rx off
+
+The following instructions are applicable to both RHEL 8 and SLES SP15. Some instructions differ between RHEL and SLES, the differences are noted in the steps. If additional help is needed to configure the network interfaces, refer to the Red Hat or SLES documentation.
+
+1. Identify the name of the private interface you with to modify. Use the following command to identify the interface names based on the IP address that is assigned to the interface:
+
+```ip -4 a s (for ipv4)
+ip -6 a s (for ip6).
 ```
-VMs using the NAT configuration require MTU that is smaller than 1500 to account for GRE headers. An MTU value of 1450 is recommended.
+
+2. Edit the `ifcfg-<NIC>` file (NIC is the interface name that is identified in step 1).
+
+  a. The path to this file differs between RHEL and SLES:
+
+      RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
+      SLES:  /etc/sysconfig/network/ifcfg-<NIC>
+  
+  b. Add or modify the following lines:
+
+      For RHEL:
+       ```MTU=1450
+       ETHTOOL_OPTS="-K <NIC> rx off"
+       ```
+      For SLES:
+      ```MTU='1450'
+       ETHTOOL_OPTIONS='-K <NIC> rx off'
+      ```
+
+3. Restart the VM.
+
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
+
+   Verify the checksum offloading by running the following command:
+
+  ```$ ethtool -k eth0
+  Features for eth0:
+  rx-checksumming: off
+  tx-checksumming: off
+  <cut>
+  ```
+
+ Note: The `ibmveth` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
+
+  Verify the MTU value by running the following command:
+  
+ ```$ ip link show eth0
+ eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
+ ```
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: nat-configuration}
@@ -77,7 +127,7 @@ Most organizations are allotted a limited number of publicly routable IP address
 
 Complete these steps to accurately configure your Source NAT (SNAT) router:
 
-1. Deploy a RHEL LPAR on a public network.
+1. Deploy an RHEL LPAR on a public network.
 
 2. Create subnets that require the SNAT function to get internet access.
 

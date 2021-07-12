@@ -85,7 +85,7 @@ To view or edit Cloud connections, complete the following steps:
 
 3. Click the **Edit details** icon.
 
-4. Modify the changes, review the pricing changes, and click **Save edits**.
+4. Modify the details, review the pricing changes, and click **Save edits**.
 
 ## Deleting a Cloud connection
 {: #delte-Cloud-connection}
