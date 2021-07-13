@@ -135,6 +135,38 @@ The following instructions are applicable to both RHEL 8 and SLES SP15. Some ins
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: new_window}{: external}.
 
+Before running the iptables commands, you can complete the following steps to ensure that the configurations persist after reboot.
+
+1. Use the following command to list all the zones:
+   ```
+   firewall-cmd --get-zones
+   block dmz drop external home internal nm-shared public trusted work
+   ```
+   {: codeblock}
+
+2. Use the following command to list which interfaces belong to which zone:
+   ```
+   firewall-cmd --zone=public --list-all
+   ```
+
+3. To turn on masquerade which will be persistent across reboot, run the following command:
+	 ```
+   firewall-cmd --zone=public --add-masquerade --permanent
+   success
+   ```
+   {: codeblock}
+
+4. Restart `firewalld`:
+	 ```
+   systemctl restart firewalld
+   ```
+
+5. Verify if the configuration is successful:
+	 ```
+   #sudo firewall-cmd --zone=public --query-masquerade
+   yes
+   ```
+
 Complete these steps to accurately configure your Source NAT (SNAT) router:
 
 1. Deploy an RHEL LPAR on a public network.
