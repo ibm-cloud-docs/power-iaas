@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Managing Cloud connections
 {: Cloud-connections}
 
-Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include Classic and VPC network. Cloud connections create a Direct Link Connect (2.0) offering instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
+Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include Classic and VPC network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
 
 Maximum number of Cloud connections per account is limited to two connections.
 {: important}
@@ -37,6 +37,9 @@ To perform the following operations on CLI, see [Create a Cloud connection](/doc
 {: powervs-support-cloud-connections}
 
 Power Systems Virtual Server supports multiple services under the same account. However, a Cloud connection can be used only by a single service instance. If you want to create a configuration with multiple service instances under the same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+When you are performing multiple Cloud connection tasks, it is possible that numerous actions within a task can cause timeout. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the command actions again and the status is updated to completed.
+{: note}
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
@@ -50,7 +53,7 @@ To create a Cloud connection, complete the following steps:
 
 2. In the <wintitle>Cloud connections</wintitle> page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. Default connection speed is 5 Gbps.
+3. Specify a connection name and select a connection speed. Maximum connection speed is 5 Gbps. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information on Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
@@ -114,7 +117,7 @@ When subnets are attached to Cloud connections, the Power Systems Virtual Server
 ## Configuring Generic Routing Encapsulation (GRE) tunnel
 {: #configure-gre-tunnel}
 
-A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers use GRE tunnel to enable connectivity to IBM Cloud VMware network and other destinations by using a router appliance.
+A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers use GRE tunnel to enable connectivity to IBM Cloud VMware network and other destinations by using a router appliance. GRE tunnel enables BYOIP and transiting through IBM Cloud Classic Network.
 
 GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associated IP's, destination IP and GRE subnet are required.
 
