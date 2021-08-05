@@ -25,14 +25,14 @@ subcollection: power-iaas
 {:support: data-reuse='support'}
 
 # Moving data to the cloud
-{: move-data-to-cloud}
+{: #move-data-to-cloud}
 
 Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate the data volume groups of the VM by using the **restvg** command.
 
 You can use following methods to back up your on-premise data and move the data to IBM {{site.data.keyword.powerSys_notm}}.
 
 ## Migrating volume group data by using the *savevg* command
-{: migrate-data-using-savevg}
+{: #migrate-data-using-savevg}
 
 A volume group is a collection of physical volumes of various sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media are organized into physical partitions of a size that you specify when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to back up and restore non-root volume groups. The *savevg* and *restvg* commands simplify the creation of your new volume groups and file systems on your new VM.
 
@@ -52,7 +52,7 @@ For example:
 ```
 
 ## Backing up multiple volume groups by using the *mkvgdata* and *restvg* commands
-{: multiple-volume-backups}
+{: #multiple-volume-backups}
 
 Small systems might require only one data volume group to contain all the physical volumes for the non-root volume data. You might want to create separate volume groups, for security reasons, because each volume group can have its own security permissions. Separate volume groups are easier to maintain because if a volume group stops working, other volume groups can remain active.
 
@@ -81,7 +81,7 @@ For example:
 ```
 
 ## Migrating raw partitions by using the dd command
-{: migrating-raw-partitions}
+{: #migrating-raw-partitions}
 
 The output file of the *savevg* command can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volumes in the volume group. If the environments have data more than several TBs, the prescribed method of moving volume data by using *savevg* may present a disadvantage when considering transference and restoration procedures.
 

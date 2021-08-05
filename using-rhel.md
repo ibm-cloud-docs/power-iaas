@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Using RHEL within the Power Systems Virtual Server service
-{: linux-with-powervs}
+{: #linux-with-powervs}
 
 You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
@@ -44,7 +44,7 @@ You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to
 {: note}
 
 ## Registering and subscribing to RHEL
-{: subscribing-to-rhel}
+{: #subscribing-to-rhel}
 
 The Power Systems Virtual Server service does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
 
@@ -56,12 +56,12 @@ You cannot contact the Red Hat-based repository and download the appropriate sof
 2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index){: new_window}{: external}.
 
 ## Capturing and importing an RHEL image
-{: import-rhel-image}
+{: #import-rhel-image}
 
 To use RHEL within the Power Systems Virtual Server service, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: new_window} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
 
 ## Linux networking
-{: linux-networking}
+{: #linux-networking}
 
 To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
@@ -131,7 +131,7 @@ The following instructions are applicable to both RHEL 8 and SLES SP15. Some ins
    ```
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
-{: nat-configuration}
+{: #nat-configuration}
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: new_window}{: external}.
 
@@ -204,7 +204,7 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
   ```
 
 ### Configuring Linux VMs to use a SNAT router
-{: use-snat-router}
+{: #use-snat-router}
 
 1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
