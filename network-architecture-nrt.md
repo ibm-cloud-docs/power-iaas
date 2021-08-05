@@ -34,8 +34,8 @@ IBM Cloud Connect is only available to IBM clients within the US. IBM clients ca
 {{site.data.keyword.powerSysShort}} network architectures consist of one or more of the following:
 
 * IBM Cloud infrastructure environment networks - While the three infrastructure environment networks offer different features and are managed separately, they can be connected to each other to provide layer 3 IPv4 traffic flow. 
-    * Classic - network resources include VLANs, subnets and SSL VPN access, however, bring your own IP is not supported. See [Network security architecture](https://www.ibm.com/cloud/architecture/architectures/network-security-arch/){:external} for a description of the Classic network components.
-    * Virtual Private Cloud - network resources include subnets, floating IPs, security groups and VPN gateways, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). Bring your own IP is supported. See [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){:external} for a one hour course on VPC networking.
+    * Classic - network resources include VLANs, subnets and SSL VPN access, however, bring your own IP is not supported. See [Network security architecture](https://www.ibm.com/cloud/architecture/architectures/network-security-arch/){: external} for a description of the Classic network components.
+    * Virtual Private Cloud - network resources include subnets, floating IPs, security groups and VPN gateways, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). Bring your own IP is supported. See [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){: external} for a one hour course on VPC networking.
     * Power Systems - network resources include subnets and bring your own IP is supported.
 * Overlay - Overlay networks exist in the IBM Cloud VMware Shared and VMware Dedicated offerings and while technically they are hosted in the IBM Cloud classic infrastructure environment, they are implemented in VMware NSX and, therefore, under your direct control, including the IP addressing schema, so bring your own IP is supported. Overlay networks cannot be routed by the IBM Cloud infrastructure environment networks, therefore, access is via tunnels. 
 * External:
@@ -62,7 +62,7 @@ Multiple deployment topologies, described in this document, can be layered to cr
 ## Connect to on-premise
 {: #network-reference-architecture-onprem}
 
-In this deployment topology [Megaport](https://www.megaport.com/){:external} or IBM Cloud Connect is used to provide connectivity from your remote networks to your Power subnets.
+In this deployment topology [Megaport](https://www.megaport.com/){: external} or IBM Cloud Connect is used to provide connectivity from your remote networks to your Power subnets.
 
 ![Connect to on-premise](./images/network-connect-to-onprem.svg "Connect to on-premise"){: caption="Figure 1. Connect to on-premise" caption-side="bottom"}
 
@@ -79,7 +79,7 @@ The key features of this connect to classic topology are as follows:
 ## Connecting Power virtual server environments 
 {: #network-reference-architecture-pvs2pvs}
 
-In this deployment topology [Megaport](https://www.megaport.com/){:external} or IBM Cloud Connect is used to provide connectivity between Power virtual server environments.
+In this deployment topology [Megaport](https://www.megaport.com/){: external} or IBM Cloud Connect is used to provide connectivity between Power virtual server environments.
 
 ![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 2. Connecting Power virtual server environments" caption-side="bottom"}
 
@@ -131,7 +131,7 @@ The key features of this connect to classic topology are as follows:
   * The XCR advertises your VPC subnets to the Power router.
 * The XCR is operated by the IBM Cloud team and you have no direct access or control:
   * The XCR will filter the following networks from the BGP advertisements from the Power router as they are used by the endpoint networks: 169.254.0.0/16, 224.0.0.0/4, 166.9.0.0/16 and any IP ranges assigned to your VPC subnets.
-* The implicit router function in VPC provides routing functions to each VPC and allows each VPC to have access to its own copy of the IPv4 address space. The MPLS VPN allows for federating Direct Link, and Classic infrastructure environment. See [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){:external} for a full description.
+* The implicit router function in VPC provides routing functions to each VPC and allows each VPC to have access to its own copy of the IPv4 address space. The MPLS VPN allows for federating Direct Link, and Classic infrastructure environment. See [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external} for a full description.
 * Endpoint networks - Service and infrastructure services endpoint networks are not accessible from your Power subnets. Virtual private endpoints are also not accessible from your Power subnets:
   * Service endpoints - allow connection to IBM Cloud services available through DNS names in the cloud.ibm.com domain and resolve to 166.9.x.x addresses.
   * Infrastructure services - allow connection to IBM Cloud services from the adn.networklayer.com domain and resolve to 161.26.0.0/16 addresses. Services that you can reach include:
