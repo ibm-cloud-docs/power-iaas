@@ -26,19 +26,20 @@ subcollection: power-iaas
 # Managing VPN connections
 {: #VPN-connections}
 
-Virtual Private Networking (VPN) access enables you to manage your Power Systems Virtual Servers remotely and securely over the IBM Cloud® private network. You can use VPN to log in to the private network, complete your work, and log out.
+Use Virtual Private Networking (VPN) to manage your Power Systems Virtual Servers remotely and securely over the IBM Cloud® private network. You can use VPN to log in to the private network, complete your work, and log out.
 
 With VPN access, you can:
-•Establish a VPN connection to the private network via SSL, or IPsec.
-•Access your Virtual Servers through its primary private IP address by SSH or RDP.
-•Connect to your Virtual Server’s IPMI IP address for low-level server management or rescue needs.
 
-Each of your account can be given VPN access and can be limited regarding the subnets to which it needs access. You must have VPN access enabled and a VPN password specified before attempting to log in to VPN services.
+- Establish a VPN connection to the private network via SSL, or IPsec.
+- Access your Virtual Servers through the primary private IP address by SSH or RDP.
+- Connect to your Virtual Server’s IPMI IP address for low-level server management or rescue needs.
 
-A maximum of four VPN coonections are supported for one account. Maximum number of policies (IKE and IPSEC) is limited to four.
+Each of your accounts can be given VPN access and can be limited regarding the subnets to which it needs access. You must have VPN access that is enabled and a VPN password that is specified before you attempt to log in to VPN services.
+
+A maximum of four VPN connections are supported for one account. Maximum number of policies (IKE and IPsec) is limited to four.
 {: important}
 
-To learn more about using the command-line interface to for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
+To learn more about using the command-line interface for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
 ## Creating VPN connections
 {: #creating-VPN-connections}
@@ -71,19 +72,19 @@ To learn more about using the command-line interface to for VPN connections, see
     ```
     {: codeblock}
 
-- To view allowable and default values for attributes when creating IKE and IPSec policies for a VPN connection, use the following command.
+- To view allowable and default values for attributes when you are creating IKE and IPSec policies for a VPN connection, use the following command.
 
     ```
     ibmcloud pi vpn-connection-options [--json]
     ```
     {: codeblock}
 
-## Creating IKE and IPsec Policies
+## Creating IKE and IPsec policies
 {: #creating-IKE-policies}
 
-When you create your VPN connection, you must select IKE policy and IPsec policy. IBM will provide default IKE policy and IPSEC policy. You can also create your policies based on your requirements.
+When you create your VPN connection, you must select IKE policy and IPsec policy. IBM provides default IKE policy and IPsec policy. You can also create your policies based on your requirements.
 
-### Adding a VPN IKE policies
+### Adding a VPN IKE policy
 {: #adding-IKE-policies}
 
 - To add an IKE policy, use the following command:
@@ -98,7 +99,7 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
     ibmcloud pi vpn-ike-policy IKE_POLICY_ID [--json]
     ```
 
-- To list all IKE policies associated to the VPN connection, use the following command:
+- To list all IKE policies that are associated to the VPN connection, use the following command:
 
     ```
     ibmcloud pi vpn-ike-policies [--json]
@@ -137,13 +138,13 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
     ibmcloud pi vpn-ipsec-policies [--json]
     ```
 
-- To update an IPSec policies, use the following command:
+- To update an IPSec policy, use the following command:
 
     ```
     ibmcloud pi vpn-ipsec-policy-update IPSEC_POLICY_ID  [--name NEW_NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dhgroup DH_GROUP] [--presharedkey KEY] [--pfs=True|False] [--json]
     ```
 
-- To delete an IPSec policies, use the following command:
+- To delete an IPSec policy, use the following command:
 
     ```
     ibmcloud pi vpn-ipsec-policy-delete IPSEC_POLICY_ID
@@ -154,7 +155,7 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
 
 If you created a Power Systems Virtual Servers service that contains VPN connections, you also have Local subnets and Peer subnets that are connected to the VPN connection.
 
-- To attach a local subnet a sepcific VPN connection, use the following command:
+- To attach a local subnet a specific VPN connection, use the following command:
 
     ```
     ibmcloud pi vpn-connection-local-subnet-attach VPN_CONNECTION_ID --local-subnet-id ID [--json]
@@ -175,14 +176,14 @@ When you create subnet or edit details of subnet, you can attach an existing VPN
     ibmcloud pi vpn-connection-peer-subnet-attach VPN_CONNECTION_ID --peer-subnet-cidr CIDR [--json]
     ```
 
-- To detach a peer subnet from a VPN connections, use the following command:
+- To detach a peer subnet from a VPN connection, use the following command:
 
     ```
 
     ibmcloud pi vpn-connection-peer-subnet-detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
     ```
 
-- To view the list of peer subnets attached to a specific VPN connection, use the following command:
+- To view the list of peer subnets that are attached to a specific VPN connection, use the following command:
 
     ```
     ibmcloud pi vpn-connection-peer-subnets VPN_CONNECTION_ID [--json]
