@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-05"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Managing VPN connections
-{: VPN-connections}
+{: #VPN-connections}
 
 Virtual Private Networking (VPN) access enables you to manage your Power Systems Virtual Servers remotely and securely over the IBM Cloud® private network. You can use VPN to log in to the private network, complete your work, and log out.
 
@@ -41,6 +41,7 @@ A maximum of four VPN coonections are supported for one account. Maximum number 
 To learn more about using the command-line interface to for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
 ## Creating VPN connections
+{: #creating-VPN-connections}
 
 - To create a new VPN connection, use the following command.
 
@@ -78,10 +79,12 @@ To learn more about using the command-line interface to for VPN connections, see
     {: codeblock}
 
 ## Creating IKE and IPsec Policies
+{: #creating-IKE-policies}
 
 When you create your VPN connection, you must select IKE policy and IPsec policy. IBM will provide default IKE policy and IPSEC policy. You can also create your policies based on your requirements.
 
 ### Adding a VPN IKE policies
+{: #adding-IKE-policies}
 
 - To add an IKE policy, use the following command:
 
@@ -114,6 +117,7 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
     ```
 
 ### Adding and configuring IPSec policy
+{: #adding-IPsec-policies}
 
 - To add an IPSec policy, use the following command:
 
@@ -146,6 +150,7 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
     ```
 
 ## Attaching subnets to VPN connections
+{: #attach_subnets_VPN}
 
 If you created a Power Systems Virtual Servers service that contains VPN connections, you also have Local subnets and Peer subnets that are connected to the VPN connection.
 
