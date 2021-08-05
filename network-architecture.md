@@ -23,7 +23,6 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Network architecture diagrams
-
 {: #network-reference-architecture}
 
 Use the following diagrams to understand the {{site.data.keyword.powerSysShort}} network architecture. This is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
@@ -33,7 +32,6 @@ IBM Cloud Connect is only available to IBM clients within the US. IBM clients ca
 {: important}
 
 ## Private SSL connection
-
 {: #private-ssl}
 
 You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cloud network.
@@ -47,7 +45,6 @@ Use the following network architecture for environment management by using the p
   ![Power Systems Virtual Server private SSL connection](./images/Private-Connection-SSL-Jumphost-DirectLink-Connect.png "Power Systems Virtual Server private SSL connection"){: caption="Figure 1. Power Systems Virtual Server private SSL connection" caption-side="bottom"}
 
 ## Private IPsec connection
-
 {: #private-ipsec}
 
 You can use IBM Cloud Virtual Router Appliance (VRA) for site-to-site IPSec VPN connectivity. In this networking scenario, a Generic Routing Encapsulation (GRE) tunnel exists between a virtual router in the Power IaaS and the Edge Gateway (VRA) inside the IBM Cloud. For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
@@ -66,7 +63,6 @@ Use the following network architecture for environment management by using the p
   ![Power Systems Virtual Server private IPsec connection](./images/Private-IPSec-VPN+DL+EdgeGW.png "Power Systems Virtual Server private IPsec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
 
 ## Power IaaS Connectivity from Customer Data Center using IBM Cloud Direct Link
-
 {: #cloud-to-poweriaas}
 
 You can connect to the IBM Cloud Power environment by using **IBM Cloud Direct Link**. Any [Direct Link](/docs/dl?topic=dl-dl-about#overview-of-direct-link-offerings) offering can be used for this connectivity.
@@ -85,7 +81,6 @@ You can connect your IBM Power on-premises environment to a Power IaaS by using 
   ![IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport](./images/network-onprem-colo.png "IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport"){: caption="Figure 5. IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport" caption-side="bottom"}-->
 
 ## IBM Power IaaS locations connectivity by using IBM Cloud Connect or Megaport
-
 {: #poweriaas-to-poweriaas-megaport}
 
 You can connect multiple Power Systems Virtual Server locations by using **IBM Cloud Connect** or **Megaport**. IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use MegaPort or Cloud Connect to connect Power IaaS directly from your Enterprise Data Center.
@@ -107,7 +102,6 @@ You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
   ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-gre.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"} -->
 
 ## IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers
-
 {: #dual-poweriaas}
 
 You can connect to multiple Power Systems Virtual Server locations from your on-premises environment after creating a Direct-Link connection and by using IBM Cloud Connect or Megaport.

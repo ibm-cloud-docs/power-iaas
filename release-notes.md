@@ -28,10 +28,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: shortdesc}
 
 ## June 2021
+{: #jun-2021}
 
 - You can now use [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) to add your servers into groups and apply affinity or anti-affinity policies.
   
 ## May 2021
+{: #may-2021}
 
 - You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-managing-cloud-connections) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources.
 - Power Systems Virtual Server now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](/docs/sap?topic=sap-power-vs-sles-hana).

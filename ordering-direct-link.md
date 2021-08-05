@@ -48,8 +48,6 @@ For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct L
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
-{: #help}
-{: support}
 
 To order the Direct Link Connect 2.0 service that creates a connection to the Power Systems Virtual Server instance, complete the following steps:
 
@@ -415,14 +413,12 @@ Order a second Direct Link Connect connection for backup purposes.
 </dl>
 
 ## Deleting your Direct Link Connect on Classic connection
-
-{: deleting-direct-link}
+{: #deleting-direct-link}
 
 You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
 
 ## Setting up high availability over Direct Link Connect
-
-{: ha-availability}
+{: #ha-availability}
 
 Your Direct Link connections are location-specific. IBM Cloud Direct Link is not a redundant service by default.  You must order a separate Direct Link Connect instance for redundancy.
 
@@ -518,8 +514,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
-
-{: routing-considerations}
+{: #routing-considerations}
 
 If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
 

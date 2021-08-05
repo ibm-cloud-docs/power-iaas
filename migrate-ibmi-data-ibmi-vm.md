@@ -23,13 +23,11 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Configuring Mass Data Migration (MDM) on IBM i VM
-
 {: #configure-MDM-ibmivm}
 
 You can migrate data of IBM i&reg; virtual machines (VMs) to the IBM Cloud object storage by using an IBM Cloud MDM device. The IBM i VM data is copied or moved to virtual optical images in a Network File System (NFS) share located on the MDM device at your data center. After you save the data to virtual optical image, send the MDM device back to IBM. Your IBM i VM data is moved to the IBM Cloud Object Storage where you can access your data.
 
 ## Setting up IBM Cloud Storage Object account
-
 {: #setup-ibmcloud-storageobject}
 
 You can set up your IBM Cloud Object Storage account for data migration and request a pre-configured storage device that can be used to move your data to IBM Cloud Object Storage. For more information, see [Getting started tutorial](/docs/mass-data-migration?topic=mass-data-migration-getting-started-tutorial) on MDM and [Mass Data Migration overview](/docs/mass-data-migration?topic=mass-data-migration-overview).
@@ -55,7 +53,6 @@ After you receive the pre-configured storage device, use the following checklist
      * You must connect to the network share of the MDM device with both read and writer access.
 
 ## Preparing IBM i VM to use the MDM device
-
 {: #prepate-ibmiVM}
 
 To share virtual optical images with an IBM i VM by using an NFS server, the following requirements must be met.
@@ -74,8 +71,7 @@ To share virtual optical images with an IBM i VM by using an NFS server, the fol
   * The file must contain ASCII characters.
 
 ## Setting up IBM i VM to use images on an NFS server
-
-{: setup-ibmivm-to-use-nfs-server}
+{: #setup-ibmivm-to-use-nfs-server}
 
 You can set up the IBM i VM to use virtual optical images that are stored on an NFS server. The following example assumes that the NFS server (*SERVER01*) with IP address *'1.2.3.4'* has share */nfs/share01*. Complete the following steps to set up the IBM i VM to use the images on NFS server:
 
