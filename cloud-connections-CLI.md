@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Managing Cloud connections
-{: Cloud-connections}
+{: #Cloud-connections}
 
 Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include Classic and VPC network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
 
@@ -34,7 +34,7 @@ Maximum number of Cloud connections per account is limited to two connections.
 To perform the following operations on CLI, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
 
 ## Power Systems Virtual Servers service instances support with Cloud connections
-{: powervs-support-cloud-connections}
+{: #powervs-support-cloud-connections}
 
 Power Systems Virtual Server supports multiple services under the same account. However, a Cloud connection can be used only by a single service instance. If you want to create a configuration with multiple service instances under the same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
@@ -124,7 +124,7 @@ GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server
 GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP, and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
 
 ### GRE configuration example
-{: gre-configuration-example}
+{: #gre-configuration-example}
 
 If you choose your destination IP address as 10.148.252.83, which is private IP of your VRA (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
 
@@ -156,14 +156,14 @@ You must configure VRA with BGP protocol for route advertising for the subnets t
 - Customer ASN for GRE BGP is 64880.-->
 
 ## Migrating existing configuration
-{: migrate-existing-configuration}
+{: #migrate-existing-configuration}
 
 Your existing network configuration can continue to be managed by using Power Systems Virtual Server support ticket process and is not required to be migrated to Power Systems Virtual Server network.
 
 If you want to use the new features that are offered by network automation, you can migrate by creating a Power Systems Virtual Server operations support ticket.
 
 ### Pre-requisites for network configuration migration
-{: pre-req-migration-to-network}
+{: #pre-req-migration-to-network}
 
 1. If you want to migrate your network configuration, you might need a maintenance window.
 2. Network configuration migration might require network configuration changes in on-premises configuration.
