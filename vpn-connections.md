@@ -3,9 +3,9 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-05-20"
+lastupdated: "2021-07-12"
 
-keywords: Cloud connections, subnet, VPC, IBM cloud
+keywords: VPN connections, IKE policies, IPsec policies
 
 subcollection: power-iaas
 
@@ -23,144 +23,162 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Managing Cloud connections
-{: Cloud-connections}
+# Managing VPN connections
+{: VPN-connections}
 
-Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include Classic and VPC network. Cloud connections create a Direct Link Connect (2.0) offering instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
+Virtual Private Networking (VPN) access enables you to manage your Power Systems Virtual Servers remotely and securely over the IBM Cloud® private network. You can use VPN to log in to the private network, complete your work, and log out.
 
-Maximum number of Cloud connections per account is limited to two connections.
+With VPN access, you can:
+•Establish a VPN connection to the private network via SSL, or IPsec.
+•Access your Virtual Servers through its primary private IP address by SSH or RDP.
+•Connect to your Virtual Server’s IPMI IP address for low-level server management or rescue needs.
+
+Each of your account can be given VPN access and can be limited regarding the subnets to which it needs access. You must have VPN access enabled and a VPN password specified before attempting to log in to VPN services.
+
+A maximum of four VPN coonections are supported for one account. Maximum number of policies (IKE and IPSEC) is limited to four.
 {: important}
 
-To perform the following operations on CLI, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
+To learn more about using the command-line interface to for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
-## Power Systems Virtual Servers service instances support with Cloud connections
-{: powervs-support-cloud-connections}
+## Creating VPN connections
 
-Power Systems Virtual Server supports multiple services under the same account. However, a Cloud connection can be used only by a single service instance. If you want to create a configuration with multiple service instances under the same account and the multiple service instances must share a Cloud connection, the configuration can be requested by opening a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+- To create a new VPN connection, use the following command.
 
-## Creating Cloud connections
-{: #create-cloud-connections}
+    ```
+    ibmcloud pi vpn-connection-create VPN_CONNECTION_NAME --mode Policy|Route --peer-gateway-address PEER_GATEWAY  --peer-subnet-cidrs "CIDR1 [CIDRn]" --connection-state=True|False --ike-policy-id IKE_POLICY_ID --ipsec-policy-id IPSEC_POLICY_ID --local-subnet-ids "ID1 [IDn]" [--json]
+    ```
+    {: codeblock}
 
-If you are provisioning a new Power Systems Virtual Server service, the Cloud connections (network automation) speed is limited to 5 Gbps only.
-{: note}
+- To view details of a VPN connection, use the following command.
 
-To create a Cloud connection, complete the following steps:
+    ```
+    ibmcloud pi vpn-connection VPN_CONNECTION_ID [--json]
+    ```
+    {: codeblock}
 
-1. Go to the Power Systems Virtual Server user interface and click **Cloud connections**.
+- To update a VPN connection, use the following command.
 
-2. In the <wintitle>Cloud connections</wintitle> page, click **Create connection**.
+    ```
+    ibmcloud pi vpn-connection-update VPN_CONNECTION_ID [--name VPN_CONNECTION_NAME] [--peer-gateway-address PEER_GATEWAY] [--connection-state=True|False] [--ike-policy-id IKE_POLICY_ID] [--ipsec-policy-id IPSEC_POLICY_ID] [--json]
+    ```
+    {: codeblock}
 
-3. Specify a connection name and select a connection speed. Default connection speed is 5 Gbps.
+- To delete a VPN connection, use the following command.
 
-4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
-   For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
+    ```
+    ibmcloud pi vpn-connection-delete VPN_CONNECTION_ID
+    ```
+    {: codeblock}
 
-5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
-   * **Classic Infrastructure**: You can connect to IBM Cloud classic resources. Only one Classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
-   * **VPC**: You can connect to your account’s Virtual Private Cloud (VPC) resources. You must select the VPC connection from the list of available connections. You can connect multiple VPCs to a Cloud Connection.
-   Cloud connections provide connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the Global routing option to reach VPC network outside the local region.
+- To view allowable and default values for attributes when creating IKE and IPSec policies for a VPN connection, use the following command.
 
-6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see (/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
-If you attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
-You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
-{: note}
+    ```
+    ibmcloud pi vpn-connection-options [--json]
+    ```
+    {: codeblock}
 
-7. Review the summary and the terms and conditions.
+## Creating IKE and IPsec Policies
 
-8. Click **Create** to create a Cloud connection.
+When you create your VPN connection, you must select IKE policy and IPsec policy. IBM will provide default IKE policy and IPSEC policy. You can also create your policies based on your requirements.
 
-Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 4.
-{: note}
+### Adding a VPN IKE policies
 
-## Modifying Cloud connections
-{: #configure-Cloud-connections}
+- To add an IKE policy, use the following command:
 
-When you create or edit a subnet, you can also attach an existing Cloud connection. For more information about adding a private network subnet, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+    ```
+    ibmcloud pi vpn-ike-policy-add IKE_POLICY_NAME --version VERSION --authentication AUTHENTICATION --encryption ENCRYPTION --dhgroup DH_GROUP --presharedkey KEY [--json]
+    ```
 
-To view or edit Cloud connections, complete the following steps:
+- To View an IKE policy, use the following command:
 
-1. In the Power Systems Virtual Services dashboard, click **Cloud connections** in the left navigation window.
+    ```
+    ibmcloud pi vpn-ike-policy IKE_POLICY_ID [--json]
+    ```
 
-2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
+- To list all IKE policies associated to the VPN connection, use the following command:
 
-3. Click the **Edit details** icon.
+    ```
+    ibmcloud pi vpn-ike-policies [--json]
+    ```
 
-4. Modify the details, review the pricing changes, and click **Save edits**.
+- To update an IKE policy, use the following command:
 
-## Deleting a Cloud connection
-{: #delte-Cloud-connection}
+    ```
+    ibmcloud pi vpn-ike-policy-update IKE_POLICY_ID  [--name NEW_NAME] [--version VERSION] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dhgroup DH_GROUP] [--presharedkey KEY] [--json]
+    ```
 
-To delete a Cloud connection, complete the following steps:
+- To delete an IKE policy, use the following command:
 
-1. In the Power Systems Virtual Services dashboard, click **Cloud connections** in the left navigation window.
+    ```
+    ibmcloud pi vpn-ike-policy-delete IKE_POLICY_ID
+    ```
 
-2. You can see the list of Cloud connections that are currently configured. Click the **Delete** icon in the last column of the table to delete to a specific Cloud connection.
+### Adding and configuring IPSec policy
 
-If you delete the Cloud connection, subnets that are attached to Cloud connection are automatically detached.
-{: note}
+- To add an IPSec policy, use the following command:
 
-## Setting up high availability over Cloud Connections
-{: #ha-availability-cloud-connections}
+    ```
+    ibmcloud pi vpn-ipsec-policy-add IPSEC_POLICY_NAME --authentication AUTHENTICATION --encryption ENCRYPTION --dhgroup DH_GROUP --pfs [--json]
+    ```
 
-IBM Cloud Direct Link (2.0) is not a redundant service by default. You must order a separate Direct Link Connect (2.0) instance for redundancy.
+- To view an IPSec policy, use the following command:
 
-To set up highly available connectivity to the IBM Cloud network by using Direct Link Connect, complete the following steps:
+    ```
+    ibmcloud pi vpn-ipsec-policy IPSEC_POLICY_ID [--json]
+    ```
 
-1. Create two Cloud connections for your Power Systems Virtual Server.
-2. Attach subnets to the primary and redundant Cloud connections.
+- To list all IPSec policies, use the following command:
 
-When subnets are attached to Cloud connections, the Power Systems Virtual Server supports routing the subnets over the Cloud connections and BGP configuration, which provides the redundant paths.
+    ```
+    ibmcloud pi vpn-ipsec-policies [--json]
+    ```
 
-## Configuring Generic Routing Encapsulation (GRE) tunnel
-{: #configure-gre-tunnel}
+- To update an IPSec policies, use the following command:
 
-A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers use GRE tunnel to enable connectivity to IBM Cloud VMware network and other destinations by using a router appliance.
+    ```
+    ibmcloud pi vpn-ipsec-policy-update IPSEC_POLICY_ID  [--name NEW_NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dhgroup DH_GROUP] [--presharedkey KEY] [--pfs=True|False] [--json]
+    ```
 
-GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associated IP's, destination IP and GRE subnet are required.
+- To delete an IPSec policies, use the following command:
 
-GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP, and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
+    ```
+    ibmcloud pi vpn-ipsec-policy-delete IPSEC_POLICY_ID
+    ```
 
-### GRE configuration example
-{: gre-configuration-example}
+## Attaching subnets to VPN connections
 
-If you choose your destination IP address as 10.148.252.83, which is private IP of your VRA (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
+If you created a Power Systems Virtual Servers service that contains VPN connections, you also have Local subnets and Peer subnets that are connected to the VPN connection.
 
-```
-GRE Destination IP: 10.148.252.83 (VRA private IP)
-GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you choose)
-PowerVS source IP : 172.16.3.1 mask 255.255.255.255
-PowerVS tunnel IP : 172.16.3.5
-```
-{: codeblock}
+- To attach a local subnet a sepcific VPN connection, use the following command:
 
-You must configure the GRE tunnel in your VRA as follows:
+    ```
+    ibmcloud pi vpn-connection-local-subnet-attach VPN_CONNECTION_ID --local-subnet-id ID [--json]
+    ```
 
-```
-GRE Destination IP: 172.16.3.1/32 (PowerVS Tunnel End-point Destination IP)
-VRA source IP     : 10.148.252.83
-VRA tunnel IP     : 172.16.3.6
-VRA ASN           : 64880
-PowerVS ASN       : 64999
-```
-{: codeblock}
+- To detach a local subnet from a VPN connection, use the following command:
 
-You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel.
+    ```
+    ibmcloud pi vpn-connection-local-subnet-detach VPN_CONNECTION_ID --local-subnet-id ID
+    ```
 
-<!--GRE tunnel BGP ASNs are as follows:
+You must route Power Systems Virtual Server private network subnets over VPN connections to allow access to your Power Systems Virtual Server over private network.
+When you create subnet or edit details of subnet, you can attach an existing VPN connection to the subnet.
 
-- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC).
-- For other ASRs ASN number is 64999.
-- Customer ASN for GRE BGP is 64880.-->
+- To attach a peer subnet to a specific VPN connection, use the following command:
 
-## Migrating existing configuration
-{: migrate-existing-configuration}
+    ```
+    ibmcloud pi vpn-connection-peer-subnet-attach VPN_CONNECTION_ID --peer-subnet-cidr CIDR [--json]
+    ```
 
-Your existing network configuration can continue to be managed by using Power Systems Virtual Server support ticket process and is not required to be migrated to Power Systems Virtual Server network.
+- To detach a peer subnet from a VPN connections, use the following command:
 
-If you want to use the new features that are offered by network automation, you can migrate by creating a Power Systems Virtual Server operations support ticket.
+    ```
 
-### Pre-requisites for network configuration migration
-{: pre-req-migration-to-network}
+    ibmcloud pi vpn-connection-peer-subnet-detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
+    ```
 
-1. If you want to migrate your network configuration, you might need a maintenance window.
-2. Network configuration migration might require network configuration changes in on-premises configuration.
+- To view the list of peer subnets attached to a specific VPN connection, use the following command:
+
+    ```
+    ibmcloud pi vpn-connection-peer-subnets VPN_CONNECTION_ID [--json]
+    ```
