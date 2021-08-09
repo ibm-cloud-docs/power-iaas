@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-09-05"
+lastupdated: "2021-09-08"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -44,40 +44,9 @@ To learn more about using the command-line interface for VPN connections, see [I
 ## Creating VPN connections
 {: #creating-VPN-connections}
 
-- To create a new VPN connection, use the following command.
+You can create a new VPN connection by using the `ibmcloud pi vpn-connection-create` command. For more information on creating, viewing, updating, or deleting a VPN section, see [VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
-    ```
-    ibmcloud pi vpn-connection-create VPN_CONNECTION_NAME --mode Policy|Route --peer-gateway-address PEER_GATEWAY  --peer-subnet-cidrs "CIDR1 [CIDRn]" --connection-state=True|False --ike-policy-id IKE_POLICY_ID --ipsec-policy-id IPSEC_POLICY_ID --local-subnet-ids "ID1 [IDn]" [--json]
-    ```
-    {: codeblock}
-
-- To view details of a VPN connection, use the following command.
-
-    ```
-    ibmcloud pi vpn-connection VPN_CONNECTION_ID [--json]
-    ```
-    {: codeblock}
-
-- To update a VPN connection, use the following command.
-
-    ```
-    ibmcloud pi vpn-connection-update VPN_CONNECTION_ID [--name VPN_CONNECTION_NAME] [--peer-gateway-address PEER_GATEWAY] [--connection-state=True|False] [--ike-policy-id IKE_POLICY_ID] [--ipsec-policy-id IPSEC_POLICY_ID] [--json]
-    ```
-    {: codeblock}
-
-- To delete a VPN connection, use the following command.
-
-    ```
-    ibmcloud pi vpn-connection-delete VPN_CONNECTION_ID
-    ```
-    {: codeblock}
-
-- To view allowable and default values for attributes when you are creating IKE and IPSec policies for a VPN connection, use the following command.
-
-    ```
-    ibmcloud pi vpn-connection-options [--json]
-    ```
-    {: codeblock}
+You can view allowable and default values for attributes when you are creating IKE and IPsec policies for a VPN connection.
 
 ## Creating IKE and IPsec policies
 {: #creating-IKE-policies}
@@ -87,104 +56,19 @@ When you create your VPN connection, you must select IKE policy and IPsec policy
 ### Adding a VPN IKE policy
 {: #adding-IKE-policies}
 
-- To add an IKE policy, use the following command:
+You add an IKE policy by using the `ibmcloud pi vpn-ike-policy-add` command. For more information on adding, viewing, updating, or deleting an IKE policy, see [VPN IKE policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
 
-    ```
-    ibmcloud pi vpn-ike-policy-add IKE_POLICY_NAME --version VERSION --authentication AUTHENTICATION --encryption ENCRYPTION --dhgroup DH_GROUP --presharedkey KEY [--json]
-    ```
-
-- To View an IKE policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ike-policy IKE_POLICY_ID [--json]
-    ```
-
-- To list all IKE policies that are associated to the VPN connection, use the following command:
-
-    ```
-    ibmcloud pi vpn-ike-policies [--json]
-    ```
-
-- To update an IKE policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ike-policy-update IKE_POLICY_ID  [--name NEW_NAME] [--version VERSION] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dhgroup DH_GROUP] [--presharedkey KEY] [--json]
-    ```
-
-- To delete an IKE policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ike-policy-delete IKE_POLICY_ID
-    ```
-
-### Adding and configuring IPSec policy
+### Adding and configuring IPsec policy
 {: #adding-IPsec-policies}
 
-- To add an IPSec policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ipsec-policy-add IPSEC_POLICY_NAME --authentication AUTHENTICATION --encryption ENCRYPTION --dhgroup DH_GROUP --pfs [--json]
-    ```
-
-- To view an IPSec policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ipsec-policy IPSEC_POLICY_ID [--json]
-    ```
-
-- To list all IPSec policies, use the following command:
-
-    ```
-    ibmcloud pi vpn-ipsec-policies [--json]
-    ```
-
-- To update an IPSec policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ipsec-policy-update IPSEC_POLICY_ID  [--name NEW_NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dhgroup DH_GROUP] [--presharedkey KEY] [--pfs=True|False] [--json]
-    ```
-
-- To delete an IPSec policy, use the following command:
-
-    ```
-    ibmcloud pi vpn-ipsec-policy-delete IPSEC_POLICY_ID
-    ```
+You add an IKE policy by using the `ibmcloud pi vpn-ipsec-policy-add` command. For more information on adding, viewing, updating, or deleting an IPsec policy, see the [VPN IPsec policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
 
 ## Attaching subnets to VPN connections
 {: #attach_subnets_VPN}
 
 If you created a Power Systems Virtual Servers service that contains VPN connections, you also have Local subnets and Peer subnets that are connected to the VPN connection.
 
-- To attach a local subnet a specific VPN connection, use the following command:
-
-    ```
-    ibmcloud pi vpn-connection-local-subnet-attach VPN_CONNECTION_ID --local-subnet-id ID [--json]
-    ```
-
-- To detach a local subnet from a VPN connection, use the following command:
-
-    ```
-    ibmcloud pi vpn-connection-local-subnet-detach VPN_CONNECTION_ID --local-subnet-id ID
-    ```
-
 You must route Power Systems Virtual Server private network subnets over VPN connections to allow access to your Power Systems Virtual Server over private network.
 When you create subnet or edit details of subnet, you can attach an existing VPN connection to the subnet.
 
-- To attach a peer subnet to a specific VPN connection, use the following command:
-
-    ```
-    ibmcloud pi vpn-connection-peer-subnet-attach VPN_CONNECTION_ID --peer-subnet-cidr CIDR [--json]
-    ```
-
-- To detach a peer subnet from a VPN connection, use the following command:
-
-    ```
-
-    ibmcloud pi vpn-connection-peer-subnet-detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
-    ```
-
-- To view the list of peer subnets that are attached to a specific VPN connection, use the following command:
-
-    ```
-    ibmcloud pi vpn-connection-peer-subnets VPN_CONNECTION_ID [--json]
-    ```
+For more information on attaching or detaching subnets, see the [VPN subnets](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connection-local-subnets).
