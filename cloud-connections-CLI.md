@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-05-20"
+lastupdated: "2021-08-09"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Managing Cloud connections
-{: #Cloud-connections}
+{: #cloud-connections}
 
 Cloud connections provide an automated way to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources that include Classic and VPC network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network.
 
@@ -119,7 +119,7 @@ When subnets are attached to Cloud connections, the Power Systems Virtual Server
 
 A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers use GRE tunnel to enable connectivity to IBM Cloud VMware network and other destinations by using a router appliance. GRE tunnel enables BYOIP and transiting through IBM Cloud Classic Network.
 
-GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end) and destination IP. To configure GRE tunnel and associated IP's, destination IP and GRE subnet are required.
+GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end), GRE subnet, and destination IP. You can configure GRE tunnel when creating a Cloud connection by using the GUI, see [Creating Cloud connections](/docs/power-iaas?topic=power-iaas-Cloud-connections#create-cloud-connections). You can also configure the GRE tunnel by using the CLI when creating the cloud connection. For more information see [Creating Cloud connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#connection-update).
 
 GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP, and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
 
