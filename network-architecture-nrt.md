@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Network architecture diagrams
-{: #network-reference-architecture}
+{: #network-architecture-diagrams}
 
 This documentation describes typical network architectures used in {{site.data.keyword.powerSysShort}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
