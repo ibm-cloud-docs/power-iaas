@@ -151,12 +151,7 @@ To begin, complete all of the fields under the **Virtual servers** section. If y
 The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
 {: tip}
 
-<<<<<<< HEAD
 ![Creating a power virtual server instance](./images/console-create-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 2. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
-=======
-
-      ![Creating a power virtual server instance](./images/console-create-virtual-instance.png "Creating a power virtual server instance"){: caption="Figure 2. Creating a Power Systems Virtual Server instance" caption-side="bottom"}
->>>>>>> c2aaf1a47311dcbe15ba27ba53865be8baec71ec
 
 1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
@@ -259,11 +254,7 @@ Refer to the following table for more information on each {{site.data.keyword.po
   <tr>
     <td>Memory</td>
     <td>
-      Select the amount of memory for the {{site.data.keyword.powerSys_notm}}.
-      If you choose to use more than 64 GBs of memory per core, you are charged
-      a higher price. For example, when you choose one core with 128 GBs of
-      memory, you are charged the regular price for the first 64 GBs. After the
-      first 64 GBs (64 - 128 GBs), you are charged a higher price.
+      Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price.
     </td>
   </tr>
   <tr>

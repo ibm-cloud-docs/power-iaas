@@ -30,6 +30,7 @@ You can use the Power Systems Virtual Server service to deploy a generic Red Hat
 - RHEL 8.1
 - RHEL 8.2
 - RHEL 8.3
+- RHEL 8.4
 
 Ensure that you have the latest cloud-init version as on March 2021 for all the supported RHEL versions. If some of the RHEL versions (for example, RHEL 8.1 and RHEL 8.2) become out of support, you must obtain extended support from Red Hat. Follow the requirements of extended support and apply patches or updates as recommended by Red Hat. For more information about extended support, see [RHEL Extended Update Support (EUS) Overview](https://access.redhat.com/articles/rhel-eus){: new_window}{: external}.
 {: note}
