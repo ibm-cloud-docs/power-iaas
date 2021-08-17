@@ -61,8 +61,8 @@ Complete the following steps to import a boot image by using the {{site.data.key
 
 Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} user interface.
 
-  The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
-  {: note}
+The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+{: note}
 
 1. Click **Boot images**, then **Import image**.
 

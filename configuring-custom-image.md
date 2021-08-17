@@ -30,8 +30,8 @@ subcollection: power-iaas
 You can bring your own customized AIX or IBM i operating system (OS) image to deploy within a IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}
 
-  You cannot transfer an OS license from an on-premises system to a {{site.data.keyword.powerSys_notm}}. The license cost is factored into the overall hourly billing rate.
-  {: note}
+You cannot transfer an OS license from an on-premises system to a {{site.data.keyword.powerSys_notm}}. The license cost is factored into the overall hourly billing rate.
+{: note}
 
 The basic steps that are involved in deploying an instance by using a custom image are:
 

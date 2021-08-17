@@ -134,16 +134,16 @@ You can now create an AIX boot disk from the source _mksysb_ archive. To create 
 
 After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
-  ![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 15. Running the alt_disk_mksysb command" caption-side="bottom"}
+![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 15. Running the alt_disk_mksysb command" caption-side="bottom"}
 
 Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
 
-  ![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 16. Performing a check by using the bootlist command" caption-side="bottom"}
+![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 16. Performing a check by using the bootlist command" caption-side="bottom"}
 
 When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
 The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
 
-  ![AIX login prompt](./images/terminal-aix-login.png "AIX login prompt"){: caption="Figure 17. AIX login prompt" caption-side="bottom"}
+![AIX login prompt](./images/terminal-aix-login.png "AIX login prompt"){: caption="Figure 17. AIX login prompt" caption-side="bottom"}
 
 You have successfully restored the AIX _mksysb_ archive and the environment is ready for your use.
 
@@ -156,15 +156,15 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
 1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.
 
-    ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
+![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
 
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
 
-    ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
+![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
 
-    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
+![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
 
