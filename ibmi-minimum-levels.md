@@ -57,7 +57,7 @@ You must install the following program temporary fixes (PTFs) depending on the v
   - To enable configuration by using SQL, install PTF SI74765, SI74766, SI74847, SI75048
   - To enable IPsec and VPN, install PTF SI72885, SI73867, SI73822, SI73823
 
-For more information on the required PTFs and configuration procedures, see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20i%20Support%20for%20iSCSI%20VTL%201.0.pdf) document.
+For more information on the required PTFs and configuration procedures, see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl) document.
 ## Installing Cloud-Init on IBM i VM
 {: install-cloud-init-ibmi-7.1}
 
