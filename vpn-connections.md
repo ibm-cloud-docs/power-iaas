@@ -48,6 +48,9 @@ You can create a new VPN connection by using the `ibmcloud pi vpn-connection-cre
 
 You can view allowable and default values for attributes when you are creating IKE and IPsec policies for a VPN connection.
 
+IKE Policy version 2 is not compatible with policy-based vpn connections.  Attempting to combine the two will result in an error.
+{: warning}
+
 ## Creating IKE and IPsec policies
 {: #creating-IKE-policies}
 
