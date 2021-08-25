@@ -119,7 +119,7 @@ When subnets are attached to Cloud connections, the Power Systems Virtual Server
 
 A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall or a router and another network appliance) in a point-to-point logical link. Power Systems Virtual Servers use GRE tunnel to enable connectivity to IBM Cloud VMware network and other destinations by using a router appliance. GRE tunnel enables BYOIP and transiting through IBM Cloud Classic Network.
 
-GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end), GRE subnet, and destination IP. You can configure GRE tunnel when creating a Cloud connection by using the GUI, see [Creating Cloud connections](/docs/power-iaas?topic=power-iaas-Cloud-connections#create-cloud-connections). You can also configure the GRE tunnel by using the CLI when creating the cloud connection. For more information see [Creating Cloud connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#connection-update).
+GRE tunnel configuration requires tunnel source IP (Power Systems Virtual Server router end), GRE subnet, and destination IP. You can configure GRE tunnel when creating a Cloud connection by using the GUI, see [Creating Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections). You can also configure the GRE tunnel by using the CLI when creating the cloud connection. For more information see [Creating Cloud connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#connection-update).
 
 GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel source IP, local IP, and remote IP. First half of the subnet IP range (s1) is used for source IPs and second half for local and remote IPs (s2). GRE tunnel uses first IP from s1 for source IP, local IP is first IP of s2 and remote IP is second IP of s2.
 
@@ -147,7 +147,7 @@ PowerVS ASN       : 64999
 ```
 {: codeblock}
 
-You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel.
+You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel. The ASN numbers are pre assigned in the Power Systems Virtual Servers and you cannot choose any other number.
 
 <!--GRE tunnel BGP ASNs are as follows:
 
