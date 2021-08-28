@@ -173,6 +173,11 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
+        <td>Sydney 05, Australia (Available from August 30th)</td>
+        <td>Sydney 5</td>
+        <td>IBM Power Virtual Server</td>
+      </tr>
+      <tr>
         <td>Tokyo 04, Japan</td>
         <td>Tokyo 4</td>
         <td>IBM Power Virtual Server</td>
@@ -335,7 +340,7 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       <tr>
         <td>Sydney, Australia</td>
-        <td>Sydney 4</td>
+        <td>Sydney 4<br />Sydney 5</td>
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
