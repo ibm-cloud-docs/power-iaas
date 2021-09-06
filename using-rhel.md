@@ -66,63 +66,64 @@ To use RHEL within the Power Systems Virtual Server service, you can use the [IB
 
 To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: new_window}{: external}.
 
-When you are configuring an SNAT Gateway between your public and private networks, ensure that the checksum offloading is disabled. You must set the MTU value to 1450 on the network interface that is connected to the private network. To ensure the interface checksum offloading and MTU settings are persistent across VM restarts, you need to modify the network interface configuration files for your interface. 
+When you are configuring a Source NAT (SNAT) gateway between your public and private networks, ensure that the TCP checksum offload option is disabled. You must also set the maximum transmission unit (MTU) value to 1450 on the network interface that is connected to the private network. To ensure that the interface checksum offloading and MTU settings of the network interface are persistent whenever the virtual machine is restarted, you need to modify the configuration files of your network interface.
 
-Checksum offloading must be disabled on the private network interface of SNAT Gateway and is of the type `ibmveth`. You do not need to change the checksum offloading for public interface. Power VS VMs are deployed with ibmveth interfaces only.
+The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
 {: note}
 
-You can verify that the interface type is `ibmveth` by using the following command: 
+You can verify that the device interface type is `ibmveth` by using the following command: 
 
 ```
 ethtool -i <interface name> | grep driver
 ```
 
-The following instructions are applicable to both RHEL 8 and SLES SP15. Some instructions differ between RHEL and SLES, the differences are noted in the steps. If additional help is needed to configure the network interfaces, refer to the Red Hat or SLES documentation.
+The following instructions are applicable to both RHEL version 8.1, and later and SLES version SP15. Some instructions vary depending on whether you are using RHEL or SLES. These differences are specified in the following procedure. If you need additional help to configure network interfaces, refer to the Red Hat or SLES documentation.
 
-1. Identify the name of the private interface you with to modify. Use the following command to identify the interface names based on the IP address that is assigned to the interface:
+1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
 
   ```
-  ip -4 a s (for ipv4)
-  ip -6 a s (for ip6)
+  ip -4 a s (for IPv4 address)
+  ip -6 a s (for IPv6 address)
   ```
   {: codeblock}
 
-2. Edit the `ifcfg-<NIC>` file (NIC is the interface name that is identified in step 1).
+2. Edit the `ifcfg-<NIC>` file (where NIC is the network interface name that is identified in step 1).
 
-  a. The path to this file differs between RHEL and SLES:
+    - The path to this file varies depending on whether you are using RHEL or SLES:
   
-     ```
+    ```
       RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
       SLES:  /etc/sysconfig/network/ifcfg-<NIC>
     ```
     {: codeblock}
   
-  b. Add or modify the following lines:
+    - Add or modify the following lines:
 
-     ```
+    ```
      For RHEL:
        MTU=1450
        ETHTOOL_OPTS="-K <NIC> rx off"
      For SLES:
        MTU='1450'
        ETHTOOL_OPTIONS='-K <NIC> rx off'
-     ```
+    ```
      {: codeblock}
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. Verify the checksum offloading by running the following command:
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
+    - Verify the checksum offloading setting by running the following command:
 
-  ```
-  ethtool -k eth0
-  Features for eth0:
-  rx-checksumming: off
-  tx-checksumming: off
-  <cut>
-  ```
+      ```
+       ethtool -k eth0
+       Features for eth0:
+       rx-checksumming: off
+       tx-checksumming: off
+       <cut>
+      ```
 
- The `ibmveth` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
- {: note}
+The `ethtool` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
+{: note}
 
   Verify the MTU value by running the following command:
   
@@ -136,7 +137,7 @@ The following instructions are applicable to both RHEL 8 and SLES SP15. Some ins
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: new_window}{: external}.
 
-Before running the iptables commands, you can complete the following steps to ensure that the configurations persist after reboot.
+Before running the `iptables` commands, complete the following steps to ensure that the configuration settings persist after the virtual machine is restarted.
 
 1. Use the following command to list all the zones:
    ```
@@ -145,24 +146,24 @@ Before running the iptables commands, you can complete the following steps to en
    ```
    {: codeblock}
 
-2. Use the following command to list which interfaces belong to which zone:
+2. Use the following command to list the network interfaces for zones:
    ```
    firewall-cmd --zone=public --list-all
    ```
 
-3. To turn on masquerade which will be persistent across reboot, run the following command:
+3. To turn on the masquerade option that will set the configuration settings persist after the reboot operations, run the following command:
 	 ```
    firewall-cmd --zone=public --add-masquerade --permanent
    success
    ```
    {: codeblock}
 
-4. Restart `firewalld`:
+4. Restart the system firewall:
 	 ```
    systemctl restart firewalld
    ```
 
-5. Verify if the configuration is successful:
+5. Verify whether the configuration is successful:
 	 ```
    #sudo firewall-cmd --zone=public --query-masquerade
    yes
