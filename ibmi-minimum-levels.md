@@ -41,7 +41,7 @@ If you are using your own IBM i custom image of IBM i 7.1, and later, you must i
 ## Required PTFs for iSCSI Virtual Tape Library (VTL)
 {: ptfs-iscsi-vtl}
 
-You must install the program temporary fixes (PTFs) depending on the version of IBM i that you are using. The PTF's for each release, along with the configuration procedures can be found in this [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20i%20Support%20for%20iSCSI%20VTL%201.1.pdf) document.  
+You must install the program temporary fixes (PTFs) depending on the version of IBM i that you are using. To view PTF's for each release, along with the configuration procedures see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl).  
 
 ## Installing Cloud-Init on IBM i VM
 {: install-cloud-init-ibmi-7.1}
