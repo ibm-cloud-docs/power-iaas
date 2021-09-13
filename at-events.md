@@ -37,7 +37,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 
 | Action                     | Description                                      |
 |:---------------------------|:-------------------------------------------------|
-| pcloud.cloud-instance.read | Read a Power Systems Virutal Server Instance     |
+| pcloud.event.read | Read a Power Systems Virutal Server Instance     |
 
 ## List of events: Images
 {: #at-actions-images}
@@ -81,6 +81,12 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 | pcloud.pvm-instance.unknown   | Unknown action on a Power virtual server instance     |
 | pcloud.pvm-instance.monitor   | Console access to a Power virtual server instance     |
 | pcloud.pvm-instance.capture   | Capture a Power virtual server instance into an image |
+| pcloud.pvm-instance.immediate-shutdown     | Immediate shutdown a Power virtual server instance|
+| pcloud.pvm-instance.clone   | Clone a Power virtual server instance |
+| pcloud.pvm-instance.snapshot     |  Create a Power virtual server instance Snapshot |
+| pcloud.pvm-instance.network.read      |  Read a Power virtual server instance Network |
+| pcloud.pvm-instance.network.create     |  Create a Power virtual server instance Network  |
+| pcloud.pvm-instance.network.delete      |  Delete a Power virtual server instance Network  |
 
 ## List of events: SSH keys
 {: #at-actions-ssh}
@@ -89,7 +95,6 @@ The following events are for working with your account and SSH keys in your {{si
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
-| pcloud.tenant.read       | Read your Tenant Information|
 | pcloud.ssh-key.read      | Read an SSH key or SSH keys |
 | pcloud.ssh-key.create    | Create an SSH key           |
 | pcloud.ssh-key.update    | Update an SSH key           |
@@ -107,6 +112,142 @@ The following events are for working with data volumes in your {{site.data.keywo
 | pcloud.volume.update     | Update a Volume            |
 | pcloud.volume.delete     | Delete a Volume            |
 | pcloud.volume.configure  | Attach or Detach a Volume   |
+
+## List of events: Storage capacity
+{: #at-storage-capacity}
+
+The following events are for working with storage capacity in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.storage-capacity.read       | Read Storage Capacity     |
+
+## List of events: Storage pools
+{: #at-storage-pools}
+
+The following events are for working with storage pools in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.system-pools.read       | Read System Pools Information     |
+
+## List of events: Tenant
+{: #at-tenants}
+
+The following events are for working with tenants in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.tenant.read       |  Read your Tenant Information |
+| pcloud.tenant-ssh.read   |   Read SSH Key or SSH Keys |
+| pcloud.tenant-ssh.create  |   Create an SSH Key  |
+| pcloud.tenant-ssh.update  | Update an SSH Key |
+| pcloud.tenant-ssh.delete   |  Delete an SSH Key  |
+
+## List of events: Job
+{: #at-job}
+
+The following events are for working with jobs in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.job.read       |  Read a Job or all Jobs |
+| pcloud.job.create  |   Create a Job  |
+| pcloud.job.delete   |  Delete a Job  |
+
+## List of events: Network ports
+{: #at-network-ports}
+
+The following events are for working with network ports in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.port.read       |  Read a Network Port or all Network Ports |
+| pcloud.port.create  |   Create a Network Port   |
+| pcloud.port.update  |   Update a Network Port   |
+| pcloud.port.delete   | Delete a Network Port  |
+
+## List of events: SAP
+{: #at-sap}
+
+The following events are for working with SAP in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.sap.read       |  Read SAP Information |
+| pcloud.sap.create  |   Create an SAP PVM Instance   |
+
+## List of events: Cloud Connections
+{: #at-cloud-connection}
+
+The following events are for working with Cloud connections in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.cloud-connection.read       |  Read a Cloud Connection or all Cloud Connections  |
+| pcloud.cloud-connection.create     |   Create a Cloud Connection    |
+| pcloud.cloud-connection.update     |   Update a Cloud Connection    |
+| pcloud.cloud-connection.delete       |   Delete a Cloud Connection    |
+
+## List of events: Placement Groups
+{: #at-placement-groups}
+
+The following events are for working with placement groups in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.placement-groups.read       |  Read a Placement Group or all Placement Groups  |
+| pcloud.placement-groups.create     |   Create a Placement Group     |
+| pcloud.placement-groups.update     |   Update a Placement Group     |
+| pcloud.placement-groups.delete       |   Delete a Placement Group     |
+
+## List of events: IKE Policy
+{: #at-ike-policy}
+
+The following events are for working with IKE Policy in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.ike-policy.read       |  Read an IKE Policy   |
+| pcloud.ike-policy.create     |   Create an IKE Policy      |
+| pcloud.ike-policy.update     |   Update an IKE Policy      |
+| pcloud.ike-policy.delete       |   Delete an IKE Policy      |
+
+## List of events: IKE Policy
+{: #at-ike-policy}
+
+The following events are for working with IKE Policy in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.ike-policy.read       |  Read an IKE Policy   |
+| pcloud.ike-policy.create     |   Create an IKE Policy      |
+| pcloud.ike-policy.update     |   Update an IKE Policy      |
+| pcloud.ike-policy.delete       |   Delete an IKE Policy      |
+
+## List of events: IPSec Policy
+{: #at-ipsec-policy}
+
+The following events are for working with IPSec Policy in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.ipsec-policy.read       |  Read an IPSec Policy   |
+| pcloud.ipsec-policy.create     |   Create an IPSec Policy      |
+| pcloud.ipsec-policy.update     |   Update an IPSec Policy      |
+| pcloud.ipsec-policy.delete       |   Delete an IPSec Policy      |
+
+## List of events: VPN Connection
+{: #at-vpn-connection}
+
+The following events are for working with VPN Connection in your {{site.data.keyword.powerSys_notm}} instance.
+
+| Action                   | Description                 |
+|:-------------------------|:----------------------------|
+| pcloud.vpn-connection.read       |  Read a VPN Connection or all VPN Connections   |
+| pcloud.vpn-connection.create     |   Create an VPN Connection       |
+| pcloud.vpn-connection.update     |   Update an VPN Connection       |
+| pcloud.vpn-connection.delete       |   Delete an VPN Connection       |
 
 ## Viewing events
 {: #at-viewing-events}
