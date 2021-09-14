@@ -35,6 +35,9 @@ If you previously deployed a VM on an old storage type (**SSD** or **standard**)
 You must first generate [Secret and Access keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.
 {: important}
 
+New API (version 2) and CLI are added for Image Import feature. The new API and CLI enhancements provide improved resiliency, performance, and scalability of {{site.data.keyword.powerSysFull}} Image Import feature. To view the new API for Image Import, see [Create a new image from available images in COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post).
+{: note}
+
 ## Using the {{site.data.keyword.powerSys_notm}} CLI to import a boot image
 {: #cli-import-image}
 

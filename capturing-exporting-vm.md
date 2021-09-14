@@ -26,12 +26,12 @@ subcollection: power-iaas
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
 
-You can capture and export an AIX or IBM i VM instance by using the {{site.data.keyword.powerSys_notm}} user interface or CLI. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (COS) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM COS bucket.
+You can capture and export an AIX or IBM i VM instance by using the {{site.data.keyword.powerSys_notm}} user interface or CLI. A VM is captured as **a volume backed image**. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (Cloud Object Storage) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
 {: shortdesc}
 
 When you capture and export a VM, you can choose the image catalog, COS, or both as destinations. The image catalog resides on the IBM Power storage area network (SAN). IBM's COS is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM COS System (formerly Cleversafe). You can always export your image in your image catalog to COS at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
 
-You can capture only a single VM image at a time. If you attempt capturing another VM image when one is still in progress, you receive an error.
+You can capture only a single VM image at a time. If you attempt to capture another VM image when one image capture is still in progress, an error is displayed. New API (version 2) and CLI are added for VM Capture and Image Export features. The new API and CLI enhancements provide improved resiliency, performance, and scalability of {{site.data.keyword.powerSysFull}} VM Capture and Image Export features. To view the new API for VM Capture, see [Capture a PVM instance and create a deployable image (version 2)](/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post). To view the new API for Image Export, see [Add image export job to the jobs queue (version 2)](/apidocs/power-cloud#pcloud-v2-images-export-post).
 {: note}
 
 <!-- **You cannot extend a volume that has snapshots. If your volume has snapshots, you must first delete it, then perform a resize**. -->
