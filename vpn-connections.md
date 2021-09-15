@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Managing VPN connections
 {: #VPN-connections}
 
-With the Power Systems™ Virtual Server provided virtual private network (VPN) service, you can connect an on-premises VPN gateway to an IBM Cloud™ VPN (that was created within a Power Systems Virtual Server VPN gateway). You can use VPN to log in to the private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
+You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN gateway by using the VPN service that is provided by IBM Power Systems Virtual Server. You can use VPN to log in to the private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
 
 With VPN access, you can:
 
@@ -34,7 +34,7 @@ With VPN access, you can:
 - Access your Virtual Servers through the primary private IP address by using Secure Shell (SSH) or Remote Desktop Protocol (RDP).
 - Connect to your Virtual Server’s Intelligent Platform Management Interface (IPMI) IP address for low-level server management or rescue needs.
 
-The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs).  You can use VPN as a service with your existing VSIs and private networks. If you have not created at least one VSI or private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). Each of your IBM Cloud accounts can be provided with VPN access and it can be limited to the subnets that need VPN access. Ensure that the VPN access is enabled and a VPN password is specified before you attempt to log in to VPN services. You can use VPN for Virtual Private Cloud (VPC) to securely connect your VPC to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/pvpc?topic=vpc-vpn-onprem-example).
+The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs).  You can use VPN as a service with your existing VSIs and private networks. To create a VSI or a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). Each of your IBM Cloud accounts can be provided with VPN access and it can be limited to the subnets that need VPN access. Ensure that the VPN access is enabled and a VPN password is specified before you attempt to log in to VPN services. You can use VPN for Virtual Private Cloud (VPC) to securely connect your VPC to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/pvpc?topic=vpc-vpn-onprem-example).
 
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported.
 {: important}
