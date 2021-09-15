@@ -75,11 +75,11 @@ You can scale up and scale down the core count and memory of the virtual machine
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shutdown to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
+If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shut down to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types.
+Learn how to add new storage volumes and modify existing ones. Previously you could not mix Tier 1 and Tier 3 storage types, but with volume affinity and anti-affinity you can now mix volume tiers on the same PVM instance.  
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
