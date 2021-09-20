@@ -41,6 +41,9 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
+Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
+{: note}
+
     <table>
       <caption>
         Table 1. Power Systems Virtual Server data centers
@@ -113,8 +116,8 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
         <td>Asia Pacific</td>
         <td>Sydney, Australia</td>
         <td>au-syd</td>
-        <td>SYD04</td>
-        <td>SYD04</td>
+        <td>SYD04<br/>SYD05</td>
+        <td>SYD04<br/>SYD05</td>
         <td>au-syd-2</td>
       </tr>
       <tr>
@@ -135,13 +138,13 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
       </tr>
     </table>
 
-4. Click **Create**. You are redirected to the **Resource List**.
+1. Click **Create**. You are redirected to the **Resource List**.
 
-5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
+2. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
-6. Click **Create instance** under **Virtual server instances**.
+3. Click **Create instance** under **Virtual server instances**.
 
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
