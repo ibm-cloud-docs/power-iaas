@@ -79,12 +79,14 @@ If you want to resize an existing VM that was created before 15 December 2020 to
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. Previously you could not mix Tier 1 and Tier 3 storage types, but with volume affinity and anti-affinity you can now mix volume tiers on the same PVM instance.  
+Learn how to add new storage volumes and modify existing ones. You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false.
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
-If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. You can also change the boot status of a volume by clicking the **Bootable** toggle. To add a volume, you must complete the following steps:
+You can now attach mixed storage to a PVM instance. For more information, see [How to set a PVM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage)
+
+If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. 
 
 1. Click **New volume** to add a storage volume.
 
