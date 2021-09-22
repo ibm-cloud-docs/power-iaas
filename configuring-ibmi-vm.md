@@ -76,9 +76,7 @@ If you do not see the external IP address in the **Work with TCP/IP Interfaces**
 
 Lastly, enter the `WRKLICINF` command and F11 to display the usage information to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-![Using the DSPLICKEY command](./images/terminal-ibmi-dsplickey.png "DSPLICKEY command"){: caption="Figure 4. Using the DSPLICKEY command" caption-side="bottom"}
-
-If you have not applied License Keys for the operating system or any IBM i Licensed Program Products (LPP), follow the instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: new_window}{: external} document.
+If License Keys for the operating system or any IBM i Licensed Program Products (LPP) have not been applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: new_window}{: external} document.
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
