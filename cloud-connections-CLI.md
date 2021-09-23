@@ -72,7 +72,7 @@ You must route Power Systems Virtual Server private network subnets over IBM Clo
 
 8. Click **Create** to create a Cloud connection.
 
-Cloud connections are available in all current locations except Montreal 1, São Paulo 1, and Washington 4.
+Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 4.
 {: note}
 
 ## Modifying Cloud connections
