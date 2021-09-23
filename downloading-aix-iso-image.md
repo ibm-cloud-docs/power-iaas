@@ -33,7 +33,7 @@ The ESS customer number registration process can take several days.
 ## Before you begin
 {: #before-you-begin-ess}
 
-Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: new_window}{: external} and your IBM Cloud customer number. If you bought entitlement through [Passport Advantage](https://www.ibm.com/software/passportadvantage/){: external}, Entitled Systems Support (ESS) will not recognize your customer number. In this case, you need to get the customer number that the entitlement is being purchased under and go to Passport Advantage to download the files under the **5737-D09** product ID.
+Before you can download an ISO image of an AIX installation DVD, you must have an [IBM ID](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776){: new_window}{: external} and your IBM Cloud customer number. If you bought entitlement through [Passport Advantage](https://www.ibm.com/software/passportadvantage/){: external}, Entitled Systems Support (ESS) will not recognize your customer number. In this case, you need to get the customer number that the entitlement is being purchased under and go to Passport Advantage to download the files under the **5737-D09** product ID. Meanwhile, you can also purchase and download other optional software products for AIX through Passport Advantage, such as IBM Open XL C/C++ and Fortran compilers, under the **5725-C72** and **5725-C74** product ID. For informtaion on using Passport advantage, see [Passport Advantage](https://www.ibm.com/docs/en/b2b-integrator/6.0.1?topic=items-passport-advantage){: new_window}{: external}.
 
 ## Using the ESS website to download an ISO image
 {: #downloading-ess-iso}

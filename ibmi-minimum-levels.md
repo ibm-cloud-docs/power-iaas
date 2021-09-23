@@ -42,23 +42,8 @@ If you are using your own IBM i custom image of IBM i 7.1, and later, you must i
 ## Required PTFs for iSCSI Virtual Tape Library (VTL)
 {: ptfs-iscsi-vtl}
 
-You must install the following program temporary fixes (PTFs) depending on the version of IBM i that you are using:
+You must install the program temporary fixes (PTFs) depending on the version of IBM i that you are using. To view PTF's for each release, along with the configuration procedures see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl).  
 
-- IBM i 7.2 technology refresh 9 (MF99109)
-  - Backup or Recovery group PTF SF99715 level 63, November 23 2020 update.
-  - To enable configuration by using SQL, install PTF SI74769, SI74732, SI74731, SI74760, SI74711, SI74712
-  - To enable IPsec and VPN, install PTF SI73743, SI73865, SI73821, SI73820
-
-- IBM i 7.3 technology refresh 9 (MF99209)
-  - Backup or Recovery group PTF SF99724 level 43, November 23 2020 update
-  - To enable configuration by using SQL, install PTF SI74768, SI74727, SI74761, SI74610, SI74611
-  - To enable IPsec and VPN, install PTF SI73742, SI73866, SI73817, SI73816
-
-- IBM i 7.4 technology refresh 3 (MF99303)
-  - To enable configuration by using SQL, install PTF SI74765, SI74766, SI74847, SI75048
-  - To enable IPsec and VPN, install PTF SI72885, SI73867, SI73822, SI73823
-
-For more information on the required PTFs and configuration procedures, see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl) document.
 ## Installing Cloud-Init on IBM i VM
 {: install-cloud-init-ibmi-7.1}
 

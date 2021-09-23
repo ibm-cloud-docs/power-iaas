@@ -50,7 +50,7 @@ No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a servi
 {: faq}
 {: support}
 
-IBM Power Systems Virtual Server is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+IBM Power Systems Virtual Server is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment that is built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 ## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
@@ -106,7 +106,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 
 All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
-If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
+If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM continues to run by using the old storage type. You can also add new disks from those legacy tiers.
 
 The boot image storage type is predefined and cannot be chosen.
 {: note}
@@ -173,13 +173,19 @@ You can apply affinity and anti-affinity policies to both VMs and volumes.
 
 **VM affinity and anti-affinity policy** allows you to spread a group of VMs across different hosts or keep them on a specific host.
 
-**Volume affinity and anti-affinity policy** allows you to control the placement of a new volume in a particular storage provider based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing PVM instance or volume. 
+Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
 The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
 - If an additional storage provider is not available to fulfill the requested policy, you might receive an error that indicates the inability to locate a storage provider to create a volume by using the requested volume affinity policy.
 
 - If additional storage providers exist but the storage providers do not have sufficient space to fulfill the requested policy, you might receive an error that indicates the inability to locate a storage provider with enough free capacity to satisfy the requested volume size.
+
+## How to set a PVM instance to allow attaching mixed storage?
+{: #mixed_storage}
+{: faq}
+
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false. The PVM instance *storagePoolAffinity* property is set to true by default when the PVM instance is deployed and can be changed only by using the modify PVM instance API. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put). Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. See [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put) API for more details.
 
 ## Does IBM provide maintenance for the AIX, IBM i or Linux operating systems?
 {: #licensing-os}

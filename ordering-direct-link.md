@@ -48,8 +48,6 @@ For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct L
 
 ## Ordering Direct Link Connect 2.0
 {: #order-direct-link-connect-2.0}
-{: #help}
-{: support}
 
 To order the Direct Link Connect 2.0 service that creates a connection to the Power Systems Virtual Server instance, complete the following steps:
 
@@ -71,8 +69,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the [configuration parameters](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#direct-link) for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-   The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
-   {: note}
+  The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+  {: note}
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the Master Service Agreement as it contains important technical information.
 
@@ -107,8 +105,8 @@ Order a second Direct Link Connect connection for backup purposes.
     Screen shot of Direct Link 2.0 Connect
     ```
 
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-    {: note}
+  The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+  {: note}
 
 12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
@@ -173,7 +171,7 @@ Order a second Direct Link Connect connection for backup purposes.
         <td>IBM Power Virtual Server</td>
       </tr>
       <tr>
-        <td>Sydney 05, Australia (Available from August 30th)</td>
+        <td>Sydney 05, Australia</td>
         <td>Sydney 5</td>
         <td>IBM Power Virtual Server</td>
       </tr>
@@ -189,9 +187,9 @@ Order a second Direct Link Connect connection for backup purposes.
       </tr>
       </table>
 
-  Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, and São Paulo 1.</br>
-  Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
-  {: note}
+Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, and São Paulo 1.</br>
+Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
+{: note}
 
 - **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
 - **Network Provider** - You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
@@ -420,14 +418,12 @@ Order a second Direct Link Connect connection for backup purposes.
 </dl>
 
 ## Deleting your Direct Link Connect on Classic connection
-
-{: deleting-direct-link}
+{: #deleting-direct-link}
 
 You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
 
 ## Setting up high availability over Direct Link Connect
-
-{: ha-availability}
+{: #ha-availability}
 
 Your Direct Link connections are location-specific. IBM Cloud Direct Link is not a redundant service by default.  You must order a separate Direct Link Connect instance for redundancy.
 
@@ -523,8 +519,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
-
-{: routing-considerations}
+{: #routing-considerations}
 
 If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
 

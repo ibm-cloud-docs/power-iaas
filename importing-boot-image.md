@@ -30,10 +30,17 @@ subcollection: power-iaas
 You can import an AIX or IBM i boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
 {: shortdesc}
 
-If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM will continue to run using the old storage type. You can also add new disks from those legacy tiers.
+If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM continues to run by using the old storage type. You can also add new disks from those legacy tiers.
 
 You must first generate [Secret and Access keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys) to import a boot image.
 {: important}
+
+A new {{site.data.keyword.powerSysFull}} Job feature is introduced to track long running asynchronous operations like VM Capture, Image Export, and Image Import. As part of this feature, new version of API and CLI enhancements are introduced for the Image Import operation. To view the new API for Image Import, see [Create a new image from available images in COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post). CLI enhancements include changes to the existing [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import) command and a new [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
+
+The new IBM® Power Systems™ Virtual Server VM Capture, Image Export, and Image Import features are restricted to one operation at a time per IBM® Power Systems™ Virtual Server Service. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
+
+You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands within the sunset period.
+{: note}
 
 ## Using the {{site.data.keyword.powerSys_notm}} CLI to import a boot image
 {: #cli-import-image}
@@ -61,8 +68,8 @@ Complete the following steps to import a boot image by using the {{site.data.key
 
 Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} user interface.
 
-  The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
-  {: note}
+The **Image file name** field supports the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
+{: note}
 
 1. Click **Boot images**, then **Import image**.
 

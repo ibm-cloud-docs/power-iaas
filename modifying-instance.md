@@ -52,7 +52,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 ### Resizing the virtual machine core count and memory
 {: #resize-core-mem}
 
-You can scale up and scale down the core count and memory of the virtual machine (VM) as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
+You can scale up and scale down the core count and memory of the virtual machine (VM) as per your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of eight times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. However, you cannot resize the memory and core count to less than 0.25 cores and 2 GB memory. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
 
 | Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
@@ -73,22 +73,24 @@ You can scale up and scale down the core count and memory of the virtual machine
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shutdown to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
+If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shut down to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. Currently, you cannot mix **Tier 1** and **Tier 3** storage types.
+Learn how to add new storage volumes and modify existing ones. You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false.
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
-If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. You can also change the boot status of a volume by clicking the **Bootable** toggle. To add a volume, you must complete the following steps:
+You can now attach mixed storage to a PVM instance. For more information, see [How to set a PVM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage)
+
+If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. 
 
 1. Click **New volume** to add a storage volume.
 
 2. Enter the **Name**, **Type**, and **Size** of the storage volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
 
-    Volume affinity allows you to control the placement of a new volume in a particular storage provider based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider as an existing PVM instance or volume. You can set the volume affinity policy against a PVM instance or a volume. You cannot specify both. For more information, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) API and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
+    You can use storage affinity to control the placement of a new volume in a particular storage provider (pool) based on an affinity policy. When you set the affinity policy to **affinity** for creating a new volume, you can specify an existing PVM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using PVM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume. When you set the affinity policy to **anti-affinity** for creating a new volume, you can specify one or more existing PVM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where the anti-affinity object(s) reside. Two new properties *antiAffinityPVMInstances* and *antiAffinityVolumes* are added for create volume feature. These two new properties are used for specifying anti-affinity objects only. You can specify only one object type for affinity or anti-affinity object(s), either PVM Instance(s) or Volume(s). For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post). For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity)
     {: note}
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
@@ -100,7 +102,7 @@ If you'd like to attach or detach a volume, click **Manage existing volumes** an
 {: help}
 {: support}
 
-You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM. For IBM i 7.3 and 7.4 versions, you can resize volume to increase the volume size, but this requires an IPL to recognize the new volume size. If you can not take the down time you can add additional volumes. You can attach maximum of 127 volumes to the VM.
+You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM. For IBM i 7.3 and 7.4 versions, you can resize volume to increase the volume size, but this requires an IPL to recognize the new volume size. If you can not take the down time, you can add additional volumes. You can attach maximum of 127 volumes to the VM.
 
 Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
 {: important}
