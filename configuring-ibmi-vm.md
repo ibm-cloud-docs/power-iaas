@@ -39,12 +39,12 @@ To open the IBM i console, complete the following steps:
 1. Go to **Virtual server instance** in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance.
 2. Click the **Open console** icon in the top of the Server details pane.
 
-  ![Open console](./images/open-console.png "Open console"){: caption="Figure 1. Open console" caption-side="bottom"}
+    ![Open console](./images/open-console.png "Open console"){: caption="Figure 1. Open console" caption-side="bottom"}
 
-  IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
-  {: note}
+    IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
+    {: note}
 
-  ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console" caption-side="bottom"}
+    ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console" caption-side="bottom"}
 
 ## Tips for working with the IBM i console
 {: #tips-ibmi}
@@ -132,21 +132,21 @@ You can use the **Operations** panel to manage advanced VM operations and config
 
      - **(22) Dump restart** - Copies main storage data and processor data to the disk. Run this function only when a MSD operation is necessary, for example, after a suspended (system hang) condition or after an operating system failure.
 
-  You must not shut down the system before the MSD operation. This action can cause data loss.
-  {: note}
+      You must not shut down the system before the MSD operation. This action can cause data loss.
+      {: note}
 
 4. In the **Operations** pane, in the **Boot operations** tab, configure one of the following options according to your requirements:
 
    Boot operations:
 
      - **Server boot mode**
-       - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
-       - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
-       - **C-** Reserved for hardware service use only.
-       - **D-** Perform an IPL operation from a media other than the load-source disk. perform an alternate IPL operation for code installation support.
+         - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
+         - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
+         - **C-** Reserved for hardware service use only.
+         - **D-** Perform an IPL operation from a media other than the load-source disk. perform an alternate IPL operation for code installation support.
 
-    - **Server operating mode**
-      - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
-      - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** panel or the control panel to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to make changes to the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm).
+     - **Server operating mode**
+         - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
+         - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** panel or the control panel to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to make changes to the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm).
 
 5. Click **Run Action**.

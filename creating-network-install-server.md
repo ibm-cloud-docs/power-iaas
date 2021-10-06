@@ -29,7 +29,8 @@ subcollection: power-iaas
 
 Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs. To share virtual optical images through a network, the network installation server must meet the following requirements:
 
-**Requirements**
+## Requirements
+{: #ibmi-nw-server-req}
 
 - The server must be able to share virtual optical images that use version 3 or later of the Network File System (NFS).
 - A volume list (`VOLUME_LIST`) file that contains the list of images to be loaded in the virtual optical device must exist in the image catalog directory. The `VFYIMGCLG` command is used to create the volume list file from the image catalog containing the images that you want to share. The following is an example of the command, `VFYIMGCLG IMGCLG(PUBS) TYPE(*OTHER) NFSSHR(*YES)`.
@@ -52,6 +53,7 @@ The image catalog that is used must have an image catalog path name that is limi
 Changes to the `VOLUME_LIST` file are not active until the next time the client device is varied off and on.
 {: tip}
 
-**Configuration**
+## Configuration
+{: #ibmi-nw-server-config}
 
 To complete the configuration of an IBM i network installation server, see [Virtual optical storage using the Network File System](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzam4/rzam4virtualopstoragenfs.htm){: new_window}{: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: new_window}{: external}.

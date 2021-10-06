@@ -77,7 +77,7 @@ Any sample client code that works with COS should also work through a [reverse p
 
 IBM Power Systems that are running AIX 7.2 TL3, or later, have a script located in the path, `/usr/samples/nim/cloud_setup`. The `cloud_setup` command installs the command line environment for cloud storage services.
 
-```
+```text
 cloud_setup [-I | G | C] [-v]
 
 -I: Install the necessary RPMs for universal CLI (supports COS).
@@ -92,7 +92,7 @@ cloud_setup [-I | G | C] [-v]
 
 3. Once installed, you must configure `awscli` for access to COS and provide the correct region (where youre bucket COS is defined) in the `aws --endpoint-url` s3 command. In the following example, the **us-east** region is used:
 
-```
+```text
 # export PATH=$PATH:/opt/freeware/bin
 
 # aws configure

@@ -107,7 +107,7 @@ To modify an existing IKE policy, click the policy name followed by **Edit detai
 
 You can see a list of your IPsec policies by going to **IPsec policies**. Here, you can add a new policy if needed.
 
-  ![IPsec policies](./images/console-ipsec-policies.png "IPsec policies"){: caption="Figure 7. IPsec policies" caption-side="bottom"}
+    ![IPsec policies](./images/console-ipsec-policies.png "IPsec policies"){: caption="Figure 7. IPsec policies" caption-side="bottom"}
 
 To modify an existing IPsec policy, click the policy name followed by **Edit policy**. Each IPsec policy consists of the following configuration parameters:
 
@@ -118,4 +118,4 @@ To modify an existing IPsec policy, click the policy name followed by **Edit pol
 - **Diffie-Hellman (DH) group**: 2, 5, 14
 - **Key lifetime**: The amount of time your key lasts
 
-  ![IPsec policy details](./images/console-ipsec-details.png "IPsec details"){: caption="Figure 8. IPsec details" caption-side="bottom"}
+    ![IPsec policy details](./images/console-ipsec-details.png "IPsec details"){: caption="Figure 8. IPsec details" caption-side="bottom"}

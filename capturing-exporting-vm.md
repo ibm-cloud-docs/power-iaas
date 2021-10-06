@@ -45,7 +45,7 @@ You are charged different rates based on whether you export to the image catalog
 
 Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (written) to the disk by running the following command:
 
-```
+```text
 CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
@@ -100,7 +100,7 @@ To learn more about using the command-line interface to capture and export a VM,
 
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
 
-    ```
+    ```text
     ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volumes "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
     ```
     {: codeblock}
@@ -109,14 +109,14 @@ To learn more about using the command-line interface to capture and export a VM,
 
     - To see your newly exported image in the image catalog, use the `ibmcloud pi image-list-catalog` command:
 
-        ```
+        ```text
         ibmcloud pi image-list-catalog [--long] [--json]
         ```
         {: codeblock}
 
     - To see your newly exported image in COS, use the `ibmcloud cos list-objects` command:
 
-        ```
+        ```text
         ibmcloud cos list-objects --bucket BUCKET_NAME [--delimiter DELIMITER] [--encoding-type METHOD] [--prefix PREFIX] [--starting-token TOKEN] [--page-size SIZE] [--max-items NUMBER] [--region REGION] [--json]
         ```
         {: codeblock}

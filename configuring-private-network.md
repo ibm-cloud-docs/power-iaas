@@ -40,7 +40,8 @@ You can use one of the following options to connect to the IBM Cloud classic env
 You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you create a new network.
 {: important}
 
-**Using an SSL VPN with a jump server**
+### Using an SSL VPN with a jump server
+{: #using-ssl-jump-server}
 
 You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect to your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use an {{site.data.keyword.cloud_notm}} virtual machine (VM) as a jump server to connect to your {{site.data.keyword.powerSysShort}} instance.
 
@@ -48,7 +49,8 @@ You can use the {{site.data.keyword.cloud_notm}} **SSL VPN service** to connect 
 * Because VPN connections are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance, you must use a jump server.
 * See [Setting up an SSL VPN](/docs/iaas-vpn?topic=iaas-vpn-setup-ssl-vpn-connections) and [Ordering a Virtual Router Appliance](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra).
 
-**Using an IPSec VPN and a VRA (customer implementation)**
+### Using an IPSec VPN and a VRA (customer implementation)
+{: #using-ipsec-vpn-vra}
 
 You can use your own **IPSec VPN** to connect to your existing {{site.data.keyword.cloud_notm}} network. Inside the {{site.data.keyword.cloud_notm}} network, you can use a Direct Link Connect connection to connect to your {{site.data.keyword.powerSys_notm}} instance. You must use a [VRA](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started#order-vra) as VPN connects are unable to connect directly to the {{site.data.keyword.powerSys_notm}} instance.
 
@@ -57,7 +59,8 @@ The IPSec VPN referenced here is not the one offered by IBM.
 
 You cannot use the same private subnet for both IBM Cloud Classic and {{site.data.keyword.powerSys_notm}} instances. These offerings are not colocated and their networks are not linked. You must order a Direct Link Connection.
 
-**Using a Direct Link Connect connection and a VRA (customer implementation)**
+### Using a Direct Link Connect connection and a VRA (customer implementation)
+{: #using-dl-vra}
 
 You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Ordering IBM Cloud Direct Link Connect](docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
 
@@ -71,7 +74,7 @@ After you establish a connection to the IBM Cloud Classic environment, you must 
 
 You can connect directly to the {{site.data.keyword.powerSys_notm}} environment by using **IBM {{site.data.keyword.powerSys_notm}} NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: new_window}{: external} to procure the connection (VxC) to **{{site.data.keyword.powerSys_notm}} Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to perform the network configuration. Remember to include the following pieces of information in your support ticket:
 
-```
+```text
 Customer name and contact:
 Customer account ID
 Service ID (VxC Identifier):
@@ -97,7 +100,7 @@ Megaport connectivity services are available in WDC04, DAL13, DAL12, LON06, TOR0
 
 You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only. This information applies when you are configuring GRE tunnels manually. If you are using Cloud connections, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel).
 
-```
+```text
 GRE Tunnel Configuration Request:
 Customer name:
 Customer account ID:

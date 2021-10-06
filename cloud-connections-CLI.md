@@ -51,7 +51,7 @@ To create a Cloud connection, complete the following steps:
 
 1. Go to the Power Systems Virtual Server user interface and click **Cloud connections**.
 
-2. In the <wintitle>Cloud connections</wintitle> page, click **Create connection**.
+2. In the **Cloud connections** page, click **Create connection**.
 
 3. Specify a connection name and select a connection speed. Maximum connection speed is 5 Gbps. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
@@ -128,7 +128,7 @@ GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel sou
 
 If you choose your destination IP address as 10.148.252.83, which is a private IP of your vRealize Automation (VRA) (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
 
-```
+```text
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you chose)
 PowerVS source IP : 172.16.3.1 mask 255.255.255.255
@@ -138,7 +138,7 @@ PowerVS tunnel IP : 172.16.3.5
 
 You must configure the GRE tunnel in your VRA as follows:
 
-```
+```text
 GRE Destination IP: 172.16.3.1/32 (PowerVS Tunnel End-point Destination IP)
 VRA source IP     : 10.148.252.83
 VRA tunnel IP     : 172.16.3.6

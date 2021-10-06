@@ -61,8 +61,8 @@ The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
 
-  For more information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
-  {: note}
+For more information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
+{: note}
 
 **IBM i**
 
@@ -109,7 +109,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported w
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-  ![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
+![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
 
 Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
@@ -128,9 +128,9 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-  ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 3. Your new service credential" caption-side="bottom"}
+    ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 3. Your new service credential" caption-side="bottom"}
 
-To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
+    To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 
 ## Using a custom boot image to provision a new instance
 {: #upload-custom-boot}

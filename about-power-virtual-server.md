@@ -151,10 +151,10 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
 * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
 * Protected by firewall and supports the following secure network protocols:
-  * SSH
-  * HTTPS
-  * Ping
-  * IBM i 5250 terminal emulation with SSL (port 992)
+    * SSH
+    * HTTPS
+    * Ping
+    * IBM i 5250 terminal emulation with SSL (port 992)
 
 ### Private network
 

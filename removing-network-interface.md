@@ -39,14 +39,14 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 
 1. Use the `ifconfig` command to remove the network interface from the AIX VM. In the following example, *en0* is the public interface.
 
-    ```
+    ```text
     ifconfig en0 down detach
     ```
     {: codeblock}
 
 2. Next, run the `rmdev` command to remove the device from the AIX system.
 
-    ```
+    ```text
     rmdev -dl en0
     ```
     {: codeblock}
@@ -71,7 +71,7 @@ Every time you toggle a public network off and then on, the system creates multi
 
 To add a network interface (for example, *en0*) and point it to the new internal IP address (as shown in the {{site.data.keyword.powerSys_notm}} user interface), you can use `smitty mktcpip`. You can also use the AIX command line to perform the same task by using the [mktcpip command](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/m_commands/mktcpip.html){: new_window}{: external} (replacing the values with your own):
 
-```
+```text
 /usr/sbin/mktcpip -h power-systems-virtual-instance -a 192.168.103.12 -m 255.255.255.240 -i en0 -t N/A -g 192.168.103.1 -D 0.0.0.0
 ```
 {: codeblock}

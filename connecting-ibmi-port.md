@@ -45,14 +45,14 @@ Before you use an SSH tunnel, you must create a user profile with `USRCLS(*SECOF
  
 After the `QSECOFR` user profile is enabled, start the SSHD server on the VM:
 
-```
+```text
 strtcpsvr server(*SSHD)
 ```
 {: pre}
 
 On a Linux&reg; or Mac system, you would run a command similar to the following example:
 
-```
+```text
 ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
 ```
 {: pre}
@@ -124,22 +124,21 @@ Start the required TCP servers on your IBM i operating system by performing the 
 
 1. To allow SSH connections, enter the following command:
 
-    ```
+    ```text
     strtcpsvr server(*SSHD)
     ```
     {: pre}
 
 2. To start the IBM Navigator for i (iNav) and Digital Certificate Manager (DCM) GUIs, enter the following command:
 
-    ```
+    ```text
     strtcpsvr server(*HTTP) httpsvr(*ADMIN)
-
     ```
     {: pre}
 
 3. To get a 5250 console from ACS, start Telnet:
 
-    ```
+    ```text
     strtcpsvr server(*TELNET)
     ```
     {: pre}
@@ -164,14 +163,14 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
 
  7. Go to the IBM i VM and start the telnet server for the console:
 
-    ```
+    ```text
     strtcpsvr server(*TELNET)
     ```
     {: pre}
 
 After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
 
-```
+```text
 https://127.0.0.1:2005/ibm/console/login.do?action=secure
 ```
 {: pre}
