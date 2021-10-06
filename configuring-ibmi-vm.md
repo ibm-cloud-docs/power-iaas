@@ -118,37 +118,35 @@ You can use the **Operations** panel to manage advanced VM operations and config
 2. Click **Operations**. The **Operations** button is available only for the IBM i VM instances.
 3. In the **Operations** panel, in the **Job operations** tab, click one of the following actions as per your requirements:
 
-  #### Job operations
-  {: job-operations}
+   Job operations:
 
-  - **(21) Activate dedicated service tools** – Activates dedicated service tools (DST) and makes it available on the system console display. You can use DST from the system console display to work with Licensed Internal Code (LIC), disk units, configuration and resources, and to verify devices and communications.
+     - **(21) Activate dedicated service tools** – Activates dedicated service tools (DST) and makes it available on the system console display. You can use DST from the system console display to work with Licensed Internal Code (LIC), disk units, configuration and resources, and to verify devices and communications.
 
-  - **(34) Retry Dump** – Retries a failed main storage dump (MSD) operation. You can run this function when the VM instance is hung during the MSD operation or when you want to reattempt the initial program load (IPL) operation without losing the original dump information.
+     - **(34) Retry Dump** – Retries a failed main storage dump (MSD) operation. You can run this function when the VM instance is hung during the MSD operation or when you want to reattempt the initial program load (IPL) operation without losing the original dump information.
 
-  - **(66) Enable remote service** - Activates the communications port that is used by a remote service session or operations console.
+     - **(66) Enable remote service** - Activates the communications port that is used by a remote service session or operations console.
 
-  - **(67) Disk unit IOP reset/reload** - Initiates an I/O processor (IOP) dump operation and a disk unit IOP reset or reload operation. The function is enabled only when specific system reference codes (SRCs) are displayed on the control panel and the associated IOP supports a reset or reload operation. This function is not available for all system types.
+     - **(67) Disk unit IOP reset/reload** - Initiates an I/O processor (IOP) dump operation and a disk unit IOP reset or reload operation. The function is enabled only when specific system reference codes (SRCs) are displayed on the control panel and the associated IOP supports a reset or reload operation. This function is not available for all system types.
 
-  - **(70) IOP Control storage dump** - Saves the contents of the service processor control storage into a non-volatile storage for potential use from an error log file.
+     - **(70) IOP Control storage dump** - Saves the contents of the service processor control storage into a non-volatile storage for potential use from an error log file.
 
-  - **(22) Dump restart** - Copies main storage data and processor data to the disk. Run this function only when a MSD operation is necessary, for example, after a suspended (system hang) condition or after an operating system failure.
+     - **(22) Dump restart** - Copies main storage data and processor data to the disk. Run this function only when a MSD operation is necessary, for example, after a suspended (system hang) condition or after an operating system failure.
 
   You must not shut down the system before the MSD operation. This action can cause data loss.
   {: note}
 
 4. In the **Operations** pane, in the **Boot operations** tab, configure one of the following options according to your requirements:
 
-  #### Boot operations
-  {: boot-operations}
+   Boot operations:
 
-  - **Server boot mode**
-    - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
-    - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
-    - **C-** Reserved for hardware service use only.
-    - **D-** Perform an IPL operation from a media other than the load-source disk. perform an alternate IPL operation for code installation support.
+     - **Server boot mode**
+       - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
+       - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
+       - **C-** Reserved for hardware service use only.
+       - **D-** Perform an IPL operation from a media other than the load-source disk. perform an alternate IPL operation for code installation support.
 
-  - **Server operating mode**
-    - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
-    - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** panel or the control panel to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to make changes to the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm).
+    - **Server operating mode**
+      - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
+      - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** panel or the control panel to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to make changes to the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm).
 
 5. Click **Run Action**.
