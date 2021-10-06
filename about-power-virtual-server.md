@@ -99,7 +99,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| Power S922 (9009-22A)&nbsp; Power E980 (9080-MHE) | Flash storage from IBM FS9000 series devices&nbsp; V7000 SSD (no new VMs)&nbsp; 32 GB SAN infrastructure | Cisco Nexus9000 93180YC-EX (10G)&nbsp; Cisco Nexus9000 C9348GC-FXP (1G)&nbsp; Avocent ACS8048 |
+| Power S922 (9009-22A), Power E980 (9080-MHE) | Flash storage from IBM FS9000 series devices&nbsp; V7000 SSD (no new VMs)&nbsp; 32 GB SAN infrastructure | Cisco Nexus9000 93180YC-EX (10G)&nbsp; Cisco Nexus9000 C9348GC-FXP (1G)&nbsp; Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -162,8 +162,8 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-  For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
-  {: note}
+For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+{: note}
 
 <!-- The following figure displays the basic configuration for a public and private network:
 
