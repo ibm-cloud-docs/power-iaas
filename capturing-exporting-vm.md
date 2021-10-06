@@ -49,6 +49,7 @@ Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (wr
 CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
+
 {: .pre}
 
 ## Using the Power Systems Virtual Server user interface to capture and export a VM
