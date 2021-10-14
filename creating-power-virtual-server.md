@@ -44,99 +44,99 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
 {: note}
 
-    <table>
-      <caption>
-        Table 1. Power Systems Virtual Server data centers
-      </caption>
-      <tr>
-        <th>Geography</th>
-        <th>Location</th>
-        <th>Region</th>
-        <th>IBM Power infrastructure zone</th>
-        <th>Colocated IBM Cloud Classic infrastructure data center</th>
-        <th>Colocated IBM Cloud VPC infrastructure zone</th>
-      </tr>
-      <tr>
-        <td>America</td>
-        <td>Dallas, USA</td>
-        <td>us-south</td>
-        <td>DAL12<br/>us-south</td>
-        <td>DAL12<br/>DAL13</td>
-        <td>us-south-2<br/>us-south-3</td>
-      </tr>
-      <tr>
-        <td>America</td>
-        <td>Washington DC, USA</td>
-        <td>us-east</td>
-        <td>us-east</td>
-        <td>WDC04</td>
-        <td>us-east-1</td>
-      </tr>
-      <tr>
-        <td>America</td>
-        <td>São Paulo, Brazil</td>
-        <td>br-sao</td>
-        <td>SAO01</td>
-        <td>SAO01</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>America</td>
-        <td>Toronto, Canada</td>
-        <td>ca-tor</td>
-        <td>TOR01</td>
-        <td>TOR01</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>America</td>
-        <td>Montreal, Canada</td>
-        <td>ca-mon</td>
-        <td>MON01</td>
-        <td>MON01</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Europe</td>
-        <td>Frankfurt, Germany</td>
-        <td>eu-de</td>
-        <td>eu-de-1<br/>eu-de-2</td>
-        <td>FRA04<br/>FRA05</td>
-        <td>eu-de-2<br/>eu-de-3</td>
-      </tr>
-      <tr>
-        <td>Europe</td>
-        <td>London, UK</td>
-        <td>eu-gb</td>
-        <td>LON04<br/>LON06</td>
-        <td>LON04<br/>LON06</td>
-        <td>eu-gb-1</br>eu-gb-3</td>
-      </tr>
-      <tr>
-        <td>Asia Pacific</td>
-        <td>Sydney, Australia</td>
-        <td>au-syd</td>
-        <td>SYD04<br/>SYD05</td>
-        <td>SYD04<br/>SYD05</td>
-        <td>au-syd-2</td>
-      </tr>
-      <tr>
-        <td>Asia Pacific</td>
-        <td>Tokyo, Japan</td>
-        <td>jp-tok</td>
-        <td>TOK04</td>
-        <td>TOK04</td>
-        <td>jp-tok-2</td>
-      </tr>
-      <tr>
-        <td>Asia Pacific</td>
-        <td>Osaka, Japan</td>
-        <td>jp-osa</td>
-        <td>OSA21</td>
-        <td>OSA21</td>
-        <td></td>
-      </tr>
-    </table>
+<table>
+  <caption>
+    Table 1. Power Systems Virtual Server data centers
+    </caption>
+    <tr>
+      <th>Geography</th>
+      <th>Location</th>
+      <th>Region</th>
+      <th>IBM Power infrastructure zone</th>
+      <th>Colocated IBM Cloud Classic infrastructure data center</th>
+      <th>Colocated IBM Cloud VPC infrastructure zone</th>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>Dallas, USA</td>
+      <td>us-south</td>
+      <td>DAL12<br/>us-south</td>
+      <td>DAL12<br/>DAL13</td>
+      <td>us-south-2<br/>us-south-3</td>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>Washington DC, USA</td>
+      <td>us-east</td>
+      <td>us-east</td>
+      <td>WDC04</td>
+      <td>us-east-1</td>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>São Paulo, Brazil</td>
+      <td>br-sao</td>
+      <td>SAO01</td>
+      <td>SAO01</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>Toronto, Canada</td>
+      <td>ca-tor</td>
+      <td>TOR01</td>
+      <td>TOR01</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>Montreal, Canada</td>
+      <td>ca-mon</td>
+      <td>MON01</td>
+      <td>MON01</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Europe</td>
+      <td>Frankfurt, Germany</td>
+      <td>eu-de</td>
+      <td>eu-de-1<br/>eu-de-2</td>
+      <td>FRA04<br/>FRA05</td>
+      <td>eu-de-2<br/>eu-de-3</td>
+    </tr>
+    <tr>
+      <td>Europe</td>
+      <td>London, UK</td>
+      <td>eu-gb</td>
+      <td>LON04<br/>LON06</td>
+      <td>LON04<br/>LON06</td>
+      <td>eu-gb-1</br>eu-gb-3</td>
+    </tr>
+    <tr>
+      <td>Asia Pacific</td>
+      <td>Sydney, Australia</td>
+      <td>au-syd</td>
+      <td>SYD04<br/>SYD05</td>
+      <td>SYD04<br/>SYD05</td>
+      <td>au-syd-2</td>
+    </tr>
+    <tr>
+      <td>Asia Pacific</td>
+      <td>Tokyo, Japan</td>
+      <td>jp-tok</td>
+      <td>TOK04</td>
+      <td>TOK04</td>
+      <td>jp-tok-2</td>
+    </tr>
+    <tr>
+      <td>Asia Pacific</td>
+      <td>Osaka, Japan</td>
+      <td>jp-osa</td>
+      <td>OSA21</td>
+      <td>OSA21</td>
+      <td></td>
+    </tr>
+</table>
 
 1. Click **Create**. You are redirected to the **Resource List**.
 
