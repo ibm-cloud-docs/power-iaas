@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="power-iaas" category="virtualservers" audience="service" href="/docs/power-iaas?topic=power-iaas-getting-started#getting-started" path="power-iaas"}
+{: .toc subcollection="power-iaas" category="virtualservers" audience="service" href="/docs/power-iaas" path="power-iaas"}
 Power Systems Virtual Servers
 
     {: .navgroup id="learn"}
