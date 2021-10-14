@@ -5,9 +5,7 @@
     "section_devtools": {
       "api": "/apidocs/power-cloud",
       "cli": "/docs/power-iaas-cli-plugin",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group",
-	    "SAP HANA and SAP NetWeaver": "/docs/sap?topic=sap-power-vs-planning-items",
-	    "Red Hat OCP on Power Systems Virtual Servers": "https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/"
+      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
     },
     "section_recommended": [
       {
@@ -24,10 +22,15 @@
         "title": "FAQ",
         "description": "Frequently Asked Questions",
         "href": "/docs/power-iaas?topic=power-iaas-power-iaas-faqs"
+      },
+      {
+        "title": "SAP HANA and SAP NetWeaver",
+        "description": "Plan and provision Power Systems Virtual Servers for SAP HANA and SAP NetWeaver",
+        "href": "/docs/sap?topic=sap-power-vs-planning-items"
       }
     ],
     "section_learn": {
-      "developer": "https://developer.ibm.com/depmodels/cloud/",
+      "developer": "https://developer.ibm.com/components/ibm-power/",
       "architecture": "https://www.ibm.com/cloud/architecture/architectures/power/overview/",
       "training": "https://www.ibm.com/training/cloud",
       "community": "https://community.ibm.com/community/user/publiccloud/home"
