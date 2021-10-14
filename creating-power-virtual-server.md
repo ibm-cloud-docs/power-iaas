@@ -118,7 +118,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
       <td>au-syd</td>
       <td>SYD04<br/>SYD05</td>
       <td>SYD04<br/>SYD05</td>
-      td>au-syd-2</td>
+      <td>au-syd-2</td>
     </tr>
     <tr>
       <td>Asia Pacific</td>
