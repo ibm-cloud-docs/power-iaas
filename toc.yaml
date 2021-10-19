@@ -1,0 +1,135 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: power-iaas
+    category: virtualservers
+    audience: service
+    href: /docs/power-iaas
+    console-page: /catalog/services/power-systems-virtual-server
+    product-page: https://www.ibm.com/cloud/power-virtual-server
+    path: power-iaas
+    label: Power Systems Virtual Servers
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries: 
+  - navgroup: 
+      id: learn
+      topics:
+      - getting-started.md
+      - release-notes.md
+      - about-power-virtual-server.md
+      - pricing.md
+      - ha-dr.md
+      - topicgroup: 
+              label: Backup and migration strategies
+              topics: 
+              - backup-strategies.md
+              - migration-strategies.md
+              - system-migration.md
+      - topicgroup: 
+              label: Security and compliance
+              topics: 
+              - gdpr.md
+      - topicgroup: 
+              label: Use cases
+              topics: 
+              - use-case-dev.md
+              - use-case-app.md
+              - use-case-hybrid.md
+              - use-case-oracle.md
+              - use-case-redhat-openshift.md
+      - link: 
+              label: Why IBM Power Systems Virtual Servers?
+              href: https://www.ibm.com/cloud/power-virtual-server
+
+  - navgroup: 
+      id: tutorial
+      topics: 
+      - topic-1.md
+      - topic-2.md
+      - topic: topic-3.md
+        navtitle: A shorter navtitle 
+
+  - navgroup: 
+      id: howto
+      topics:
+      - topicgroup: 
+            label: Managing, creating, and deploying
+            topics:
+              - managing-resources-and-users.md
+              - creating-power-virtual-server.md
+              - configuring-custom-image.md
+              - modifying-instance.md
+              - manage-placement-groups.md
+              - capturing-exporting-vm.md
+              - importing-boot-image.md
+              - downloading-fixes.md
+              - volume-snapshot-clone.md
+      - topicgroup: 
+            label: Networking
+            topics:
+              - ordering-direct-link.md
+              - cloud-connections-CLI.md
+              - vpn-connections.md
+              - configuring-private-network.md
+              - configuring-private-subnet.md
+              - connecting-networks.md
+              - network-security.md
+              - network-architecture.md
+              - site-to-site-vpn-connectivity.md
+              - X86-based-systems.md
+      - topicgroup: 
+            label: AIX
+            topics:
+              - creating-vm-ssh-keys.md
+              - restoring-aix-mksysb-image.md
+              - aix-migration-steps.md
+              - downloading-aix-iso-image.md
+              - removing-network-interface.md
+              - rsct-rmc-aix.md
+              - configuring-aix-mdm.md
+              - provisioning-nim-server.md
+      - topicgroup: 
+            label: IBM i
+            topics:
+              - configuring-ibmi-vm.md
+              - connecting-ibmi-port.md
+              - creating-network-install-server.md
+              - removing-network-interface-ibmi.md
+              - migrate-ibmi-data-ibmi-vm.md
+              - ibmi-minimum-levels.md
+              - ibmi-license-info.md
+      - topicgroup: 
+            label: Linux
+            topics:
+              - registering-linux.md
+              - using-rhel.md
+              - deploying-linux.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics: 
+      - link: 
+              label: API reference
+              href: https://cloud.ibm.com/apidocs/power-cloud
+      - topicgroup:
+          label: Command reference
+          topics:
+          - /docs/power-iaas-cli-plugin
+      - at-events.md
+
+  - navgroup:
+      id: help
+      topics: 
+      - faq.md
+      - topicgroup: 
+          label: Troubleshooting
+          topics: 
+          - troubleshoot-aix.md
+          - troubleshoot-snapshot.md
+      - getting-help-and-support.md
