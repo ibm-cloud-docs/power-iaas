@@ -53,7 +53,7 @@ For complete tutorials on migrating your AIX and IBM i workloads to Power System
 
 The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
 
-**AIX**
+### AIX
 
 The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
@@ -64,7 +64,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later
 For more information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
 {: note}
 
-**IBM i**
+### IBM i
 
 The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: new_window}{: external}.
 
@@ -78,7 +78,7 @@ IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 
 Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01, and DAL13 will be available soon. All other data centers are currently supported.
 {: important}
 
-**Linux**
+### Linux
 
 SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
 
@@ -142,7 +142,6 @@ Complete the following steps to provision a new instance by using a custom boot 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 
 2. After you click **Import**, refer to the following table to complete the **Import boot image** fields:
-
     The **Image file name** field supports the following formats: *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*.
     {: important}
 
@@ -150,15 +149,12 @@ Complete the following steps to provision a new instance by using a custom boot 
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
 | Storage type | Select whether you want **Tier 1** or **Tier 3** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
-| Region | Select either **us-east**, **us-south**, **br-sao**, **ca-tor**, **ca-mon**, **eu-de**, or **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region.|
+| Region | Select either **us-east**, **us-south**, **br-sao**, **ca-tor**, **ca-mon**, **eu-de**, or **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region. |
 | Image file name | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are *tar* and *ova*. You can compress image files by using *gzip*. The supported file name extensions are *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.
 | Bucket name | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. Optional folders can be added during an [export image](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export) operation to Cloud Object Storage. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
-<!--| Cloud Object Storage bucket name | To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |-->
-| Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
-| Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
-{: caption="Table 1. Importing a boot image" caption-side="bottom"}
-
-<!-- ![Configuring your custom boot image](./images/console-boot-image-fields.png "Configuring your custom boot image"){: caption="Figure 7. Configuring your custom boot image" caption-side="bottom"} -->
+| Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field. |
+| Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field. |
+{: caption="Table 1. Importing a boot image" caption-side="bottom"} 
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 

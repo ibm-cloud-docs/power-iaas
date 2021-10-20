@@ -44,99 +44,19 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
 {: note}
 
-<table>
-  <caption>
-    Table 1. Power Systems Virtual Server data centers
-    </caption>
-    <tr>
-      <th>Geography</th>
-      <th>Location</th>
-      <th>Region</th>
-      <th>IBM Power infrastructure zone</th>
-      <th>Colocated IBM Cloud Classic infrastructure data center</th>
-      <th>Colocated IBM Cloud VPC infrastructure zone</th>
-    </tr>
-    <tr>
-      <td>America</td>
-      <td>Dallas, USA</td>
-      <td>us-south</td>
-      <td>DAL12<br/>us-south</td>
-      <td>DAL12<br/>DAL13</td>
-      <td>us-south-2<br/>us-south-3</td>
-    </tr>
-    <tr>
-      <td>America</td>
-      <td>Washington DC, USA</td>
-      <td>us-east</td>
-      <td>us-east</td>
-      <td>WDC04</td>
-      <td>us-east-1</td>
-    </tr>
-    <tr>
-      <td>America</td>
-      <td>São Paulo, Brazil</td>
-      <td>br-sao</td>
-      <td>SAO01</td>
-      <td>SAO01</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>America</td>
-      <td>Toronto, Canada</td>
-      <td>ca-tor</td>
-      <td>TOR01</td>
-      <td>TOR01</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>America</td>
-      <td>Montreal, Canada</td>
-      <td>ca-mon</td>
-      <td>MON01</td>
-      <td>MON01</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Europe</td>
-      <td>Frankfurt, Germany</td>
-      <td>eu-de</td>
-      <td>eu-de-1<br/>eu-de-2</td>
-      <td>FRA04<br/>FRA05</td>
-      <td>eu-de-2<br/>eu-de-3</td>
-    </tr>
-    <tr>
-      <td>Europe</td>
-      <td>London, UK</td>
-      <td>eu-gb</td>
-      <td>LON04<br/>LON06</td>
-      <td>LON04<br/>LON06</td>
-      <td>eu-gb-1</br>eu-gb-3</td>
-    </tr>
-    <tr>
-      <td>Asia Pacific</td>
-      <td>Sydney, Australia</td>
-      <td>au-syd</td>
-      <td>SYD04<br/>SYD05</td>
-      <td>SYD04<br/>SYD05</td>
-      <td>au-syd-2</td>
-    </tr>
-    <tr>
-      <td>Asia Pacific</td>
-      <td>Tokyo, Japan</td>
-      <td>jp-tok</td>
-      <td>TOK04</td>
-      <td>TOK04</td>
-      <td>jp-tok-2</td>
-    </tr>
-    <tr>
-      <td>Asia Pacific</td>
-      <td>Osaka, Japan</td>
-      <td>jp-osa</td>
-      <td>OSA21</td>
-      <td>OSA21</td>
-      <td></td>
-    </tr>
-</table>
+| Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+| America | Dallas, USA | us-south | DAL12 \n us-south | DAL12 \n DAL13 | us-south-2 \n us-south-3 |
+| America | Washington DC, USA | us-east | us-east | WDC04 | us-east-1 |
+| America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |
+| America | Toronto, Canada | ca-tor | TOR01 | TOR01 | - |
+| America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
+| Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
+| Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
+| Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 |
+| Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
+| Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | - |
+{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+
 
 1. Click **Create**. You are redirected to the **Resource List**.
 
@@ -186,17 +106,15 @@ Refer to the following table for more information on each {{site.data.keyword.po
 
 | Field | Description |
 |----------|---------|
-| Number of Instances | Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VM instance. If you choose the Machine type as E880 or E980, you can choose [anti-affinity policy](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity) with maximum of 2 VM instances.<br> If you specify more than one instance, you can select the following naming conventions and colo rules: <br>**No preference**: Select this option if you do not have a hosting preference.<br>**Same server** : Select this option to host all instances on the same server. <br>**Different server** :  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances.<br>**Numerical prefix** : Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is <em>Austin</em> the next name for the virtual instance is <em>1Austin</em>.<br>**Numerical postfix** : Select this option to host all instances on the same serverSelect this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is <em>Austin1</em>. <br>**VM pinning** : Select this option to pin your virtual machine. You can choose either a <em>soft</em> or <em>hard</em> pinning policy.<br><a href="https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning" target="_blank">Learn more</a>.<br><strong>Note:</strong> When you create multiple instances of the virtual server, you must select <strong>On</strong> from the <strong>Shareable</strong> field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS you cannot have shareable data volumes.|
-| Machine type | Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en" target="_blank">E880 (Dallas only)</a>,<a href="https://www.ibm.com/downloads/cas/KQ4BOJ3N" target="_blank">S922</a>, and <a href="http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only" target="_blank">E980 (Data centers other than Dallas and Washington)</a>. |
+| Number of Instances | Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VM instance. If you choose the Machine type as E880 or E980, you can choose [anti-affinity policy](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity) with maximum of 2 VM instances. \n  If you specify more than one instance, you can select the following naming conventions and colo rules: \n **No preference**: Select this option if you do not have a hosting preference. \n **Same server** : Select this option to host all instances on the same server. \n **Different server** :  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. \n **Numerical prefix** : Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *1Austin*. \n **Numerical postfix** : Select this option to host all instances on the same serverSelect this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *Austin1*. \n **VM pinning** : Select this option to pin your virtual machine. You can choose either a *soft* or *hard* pinning policy. \n [Learn more](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#pinning). \n **Note:** When you create multiple instances of the virtual server, you must select **On** from the **Shareable** field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS you cannot have shareable data volumes.|
+| Machine type | Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see [E880 (Dallas only)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: new_window}{: external}, [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}. |
 | Cores | There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. |
 | Memory | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price. |
-| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also <a href="/docs/power-iaas?topic=power-iaas-deploy-custom-image">deploy your own custom image</a> of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the <a href="https://forums.centos.org/">CentOS forum</a> or <a href="https://forums.centos.org/app.php/help/faq">FAQ</a> page. <br>To provision Power Systems Virtual Server instance that supports SAP HANA and SAP NetWeaver applications, see <a href="/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server">Provisioning your IBM Power Virtual Server</a>.<br>**Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being <i>disabled</i>.<br> For IBM i operating system licensing information, see <a href="/docs/power-iaas?topic=power-iaas-ibmi-lpps">IBM i License Program Products (LPP) and Operating System (OS) feature bundles</a>.<!-- You must deploy a maximum of 10 Power Systems Virtual Server VM instances from a single boot image. If you are planning to deploy more than 10 VM instances from the same boot image, you must make multiple copies of a boot image and deploy the VM instances in batches of 10. -->|
-| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account.<br>**Creating a new data volume**: Click <strong>Add</strong> to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click <strong>On</strong> under <strong>Shareable</strong>. <br>**Attaching an existing data Volume**: You can select an existing data volume from the <b>Attached volumes</b> list. If a previously used data volume does not appear, it might exist under a different account or resource instance.|
-| Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option.<br><a href="/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks" target="_blank">Learn more</a>|
-| Private Networks | Click <strong>Add</strong> to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see <a href="/docs/power-iaas?topic=power-iaas-configuring-subnet" target="_blank">Configure private network</a>.|
-{: caption="Table 2. Power Systems Virtual Server instance fields" caption-side="top"}
-
-
+| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: new_window}{: external} or [FAQ](https://forums.centos.org/app.php/help/faq){: new_window}{: external} page. \n To provision Power Systems Virtual Server instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your IBM Power Virtual Server](/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server). \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
+| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Creating a new data volume**: Click **Add** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attaching an existing data Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
+| Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks) |
+| Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
+{: caption="Table 2. Power Systems Virtual Server instance fields" caption-side="bottom"}
 
 ## Implementing SAP NetWeaver and SAP HANA in the Power Systems Virtual Server environment
 

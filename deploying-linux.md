@@ -51,7 +51,7 @@ The `create_ova` RPM also contains the `create_ova` man page and license. You mu
 
 To see the contents of the RPM package, enter the `rpm` command as shown in the following example:
 
-```
+```text
 # rpm -qlp /tmp/create_ova-1.0-2.aix7.2.ppc.rpm
 /opt/freeware/doc/create_ova-1.0
 /opt/freeware/doc/create_ova-1.0/create_ova.pdf
@@ -72,7 +72,7 @@ Once you obtain the correct disk name (through virtual adapter mapping), you can
 You can upload the `ova.gz` file into your Cloud Object storage account. Once you upload it, go to the {{site.data.keyword.powerSys_notm}} user interface and import the OVA image from your Cloud Object Storage account.
 {: important}
 
-```
+```text
 ssh (isotopes-vios2)
 
 IBM Virtual I/O Server
@@ -120,4 +120,3 @@ Done verifying resources.
 # ls -l /datafs/linux_20200511101424.ova.gz
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/linux_20200511101424.ova.gz
 ```
-{: screen}
