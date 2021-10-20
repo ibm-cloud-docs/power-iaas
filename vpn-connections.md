@@ -45,6 +45,35 @@ To learn more about using the command-line interface (CLI) for VPN connections, 
 
 Power Systems Virtual Server supports multiple service instances from the same account. However, only a single service instance can use a VPN connection. If you want to configure a setup with multiple service instances for the same account, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
+## Connecting to your on-premises network
+{: #vpn-connecting-onpremise}
+
+You can configure your VPN gateway to connect to your on-premises network.
+
+Create a VPN gateway in your Power Virtual Server Service Instance and create a VPN connection between the Power Virtual Server Service Instance and the peer gateway of the on-premises network by specifying the following information:
+
+- Connection name - Enter a name for the connection, such as onprem-connection.
+- Peer gateway address - Specify the IP address of the VPN gateway for the on-premises network.
+- Preshared key - Specify the authentication key of the VPN gateway for the on-premises network.
+- Local subnets - Specify one or more subnets in the Power Virtual Server Service Instance you want to connect through the VPN tunnel.
+- Peer subnets - Specify one or more subnets in the on-premises network you want to connect through the VPN tunnel.
+
+For the Internet Key Exchange (IKE) and IPsec security parameters, select Auto so the cloud gateway uses auto-negotiation to automatically establish the connection with the on-premises gateway.
+
+The gateway status appears as Pending while the VPN gateway is being created, and the status changes to Available after the gateway is created.
+{: tip}
+
+### Configuring the on-premises VPN gateway
+
+The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service Instance. The configuration depends on the type of VPN gateway. See the following topics for details.
+
+- [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
+- [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
+
+### Checking the status of the secure connection
+
+You can test the connection by doing a ping from a virtual server instance to a server in the on-premises network.
+
 ## Creating VPN connections
 {: #creating-VPN-connections}
 
