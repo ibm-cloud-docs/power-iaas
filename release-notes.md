@@ -80,16 +80,16 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - You can now choose *TOK04* data center to deploy your {{site.data.keyword.powerSys_notm}}.
 - You can now use the IBM Direct Link Connect (2.0) service to create a seamless connection that allows access to IBM Cloud® resources from your {{site.data.keyword.powerSys_notm}} instance. For more information, see [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help).
 - The following tutorials are now available for your reference:
-  - [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: new_window}{: external}
-  - [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: new_window}{: external}
-  - [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf){: new_window}{: external}
-  - [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: new_window}{: external}
-  - [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mdm){: new_window}{: external}
-  - [Configuring Mass Data Migration (MDM) on IBM i VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm){: new_window}{: external}
-  - [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: new_window}{: external}
-  - [Migrating IBM i to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: new_window}{: external}
-  - [Site-to-site VPN connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}
-  - [Integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf){: new_window}{: external}
+    - [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: new_window}{: external}
+    - [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: new_window}{: external}
+    - [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf){: new_window}{: external}
+    - [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: new_window}{: external}
+    - [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mdm){: new_window}{: external}
+    - [Configuring Mass Data Migration (MDM) on IBM i VM](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm){: new_window}{: external}
+    - [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: new_window}{: external}
+    - [Migrating IBM i to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: new_window}{: external}
+    - [Site-to-site VPN connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}
+    - [Integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf){: new_window}{: external}
 
 ## September 2020
 {: #september-2020}
@@ -122,8 +122,8 @@ The {{site.data.keyword.powerSys_notm}} instance supports the SAP NetWeaver and 
 
 - There is now a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs.
 
-  If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
-  {: important}
+    If you resize your VM, the core-to-vCPU ratio updates to the new value for all operating systems.
+    {: important}
 
 ## April 2020
 {: #april-2020}

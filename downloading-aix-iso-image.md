@@ -71,17 +71,15 @@ After you download an AIX installation DVD as an ISO image, you must copy the im
     The `scp` command does not work unless you are on a public network.
     {: important}
 
-    ```
+    ```text
     scp [Options][[User@]From_Host:]Source_File [[User@]To_Host:][Destination_File]
     ```
-    {: codeblock}
 
 2. Run the [`loopmount`](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/l_commands/loopmount.html){: new_window}{: external} command to make the ISO image available as a file system by using the loopback device.
 
-    ```
+    ```text
     loopmount {-i imagefile | -l device}[-o mount options -m mountpoint]
     ```
-    {: codeblock}
 
 3. Use the [`installp`](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/i_commands/installp.html){: new_window}{: external} command to install the image in a compatible installation package. The following command and flags are most commonly used during installations, `installp -agXd path software_to_install`.
 
@@ -99,24 +97,24 @@ The optional software products found under the `/usr/sys/inst.images` file syste
 
 - To list all the software products and installable filesets in the `/usr/sys/inst.images` file system, enter the following command:
 
-```
+```text
  installp -L -d /usr/sys/inst.images
 ```
 
 - To install and commit all software within the Geographic Logical Volume Manager software package (located in the `/usr/sys/inst.images` directory) and expand the file systems if necessary, enter the following command:
 
-```
+```text
  installp -acXd /usr/sys/inst.images glvm.*
 ```
 
 - To preview the installation of the bos.sysmgt.nim.master fileset (located in the `/usr/sys/inst.images` directory) and all requisite software, enter the following command:
 
-```
+```text
  installp -pagXd /usr/sys/inst.images bos.sysmgt.nim.master
 ```
 
 - To install software by using the SMIT interface, enter the following command:
 
-```
+```text
  smit install
 ```

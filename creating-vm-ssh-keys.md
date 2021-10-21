@@ -53,7 +53,6 @@ ibmcloud pi key testkey
 Name      Key                                          CreationDate
 testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ```
-{: screen}
 
 ## Creating an AIX VM instance
 {: #create-ssh-key}
@@ -91,7 +90,6 @@ You can create a new VM with the public key by using the following command (repl
 ```text
 ibmcloud pi instance-create keytest-vm --image AIX-7200-03-03 --memory 5 --networks "cloud.ibm.com" --processors 1 --processor-type shared --key-name testkey
 ```
-{: codeblock}
 
 In this example, the `ibmcloud pi instance-create` command created a new AIX VM with an IP address of _172.16.7.16_. You can now SSH to the AIX VM from a connected system, which is configured with the private key for `testkey`.
 
@@ -113,7 +111,6 @@ In this example, the `ibmcloud pi instance-create` command created a new AIX VM 
     # oslevel -s
     7200-03-03-1914
     ```
-    {: screen}
 
 You can find the `testkey` value in the **authorized_keys** file:
 
@@ -121,7 +118,6 @@ You can find the `testkey` value in the **authorized_keys** file:
 cat .ssh/authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey
 ```
-{: screen}
 
 ### Debugging the connection
 {: debug-connection}

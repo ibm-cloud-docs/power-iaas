@@ -36,39 +36,39 @@ IBM Cloud Connect is only available to IBM clients within the US. IBM clients ca
 
 You can use the **IBM Cloud SSL VPN** service to connect to your existing IBM Cloud network. View the following network architecture diagram.
 
-  ![Power Systems Virtual Server private SSL connection](./images/Private-Connection-SSL-Jumphost-DirectLink-Connect.png "Power Systems Virtual Server private SSL connection"){: caption="Figure 1. Power Systems Virtual Server private SSL connection" caption-side="bottom"}
+    ![Power Systems Virtual Server private SSL connection](./images/Private-Connection-SSL-Jumphost-DirectLink-Connect.png "Power Systems Virtual Server private SSL connection"){: caption="Figure 1. Power Systems Virtual Server private SSL connection" caption-side="bottom"}
 
-  1. IBM Cloud SSL VPN service is used to connect your enterprise network to the IBM Cloud network.
-  2. Inside the IBM Cloud network, a IBM Cloud virtual machine (VM) is used as a jump server. Jump server can be used as login server or as a proxy servers.
-  3. Connect to the Power Systems Virtual Server instance by using Direct Link Connect.
+1. IBM Cloud SSL VPN service is used to connect your enterprise network to the IBM Cloud network.
+2. Inside the IBM Cloud network, a IBM Cloud virtual machine (VM) is used as a jump server. Jump server can be used as login server or as a proxy servers.
+3. Connect to the Power Systems Virtual Server instance by using Direct Link Connect.
 
 ## Private IPSec connection
 {: #private-ipsec}
 
 You can use the **IBM Cloud IPSec VPN** service to connect into your existing IBM Cloud network. Inside the IBM Cloud network, you can use the IBM Cloud VRA to connect to your Power Systems Virtual Server instance. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud. For a complete tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
 
-  ![Power Systems Virtual Server private IPSec connection](./images/network-private-ipsec.png "Power Systems Virtual Server private IPSec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
+![Power Systems Virtual Server private IPSec connection](./images/network-private-ipsec.png "Power Systems Virtual Server private IPSec connection"){: caption="Figure 2. Power Systems Virtual Server private IPSec connection" caption-side="bottom"}
 
 ## Private Direct Link connection
 {: #private-direct-link}
 
 You can use a **private Direct Link** connection to connect into your existing IBM Cloud network. As a part of this networking scenario, there is a GRE tunnel beteween a switch inside the Power colo and the edge gateway inside the IBM Cloud.
 
-  ![Power Systems Virtual Server private Direct Link connection](./images/network-private-direct-link.png "Power Systems Virtual Server private Direct Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
+![Power Systems Virtual Server private Direct Link connection](./images/network-private-direct-link.png "Power Systems Virtual Server private Direct Link connection"){: caption="Figure 3. Power Systems Virtual Server private Direct Link connection" caption-side="bottom"}
 
 ## IBM Cloud Connect (or Megaport) to data center connection
 {: #cloud-to-colo}
 
 You can connect to the IBM Cloud Power environment by using **IBM Cloud Connect or Megaport**. As stated previously, IBM Cloud Connect is only available to IBM clients within the US.
 
-  ![Power Systems Virtual Server data center connection](./images/network-cloud-colo.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
+![Power Systems Virtual Server data center connection](./images/network-cloud-colo.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
 
 ## IBM Power on-premise environment to colo connection
 {: #onprem-to-colo}
 
 You can connect your IBM Power on-premise environment to a colo by using **IBM Cloud Connect or Megaport**.
 
-  ![Power Systems Virtual Server private on-premises to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 5. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
+![Power Systems Virtual Server private on-premises to colo connection](./images/network-onprem-colo.png "Power Systems Virtual Server private on-premises to colo connection"){: caption="Figure 5. Power Systems Virtual Server private on-premise to Colo connection" caption-side="bottom"}
 
 ## IBM Power colo to colo connection using Megaport
 {: #colo-to-colo-megaport}
@@ -77,7 +77,7 @@ You can connect a colo to a colo by using **Direct Link and IBM Cloud Connect or
 
 When connecting a colo to a colo by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: new_window}{: external}. If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between *DAL13* and *WDC04*. Please consult an IBM Cloud Connect or Megaport representative for specific network requirements.
 
-  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-megaport.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
+![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-megaport.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 6. Power Systems Virtual Server Colo to Colo connection (Megaport)" caption-side="bottom"}
 
 <!-- ## IBM Power colo to colo connection using GRE tunneling
 {: #colo-to-colo-gre}
@@ -91,4 +91,4 @@ You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
 
 You can connect to two colos from your on-premises environment after creating a **Direct Link connection and by using IBM Cloud Connect or Megaport**.
 
-  ![Power Systems Virtual Server private dual colo connection](./images/network-dual-colo.png "Power Systems Virtual Server private dual colo connection"){: caption="Figure 8. Power Systems Virtual Server private dual Colo connection" caption-side="bottom"}
+![Power Systems Virtual Server private dual colo connection](./images/network-dual-colo.png "Power Systems Virtual Server private dual colo connection"){: caption="Figure 8. Power Systems Virtual Server private dual Colo connection" caption-side="bottom"}

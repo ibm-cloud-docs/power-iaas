@@ -30,7 +30,7 @@ subcollection: power-iaas
 
 When you select IBM i, in addition to the IBM i operating system, the following LPP and IBM i operating system features are included <!--in the IBM i group Software Maintenance Agreement (SWMA) for--> in the {{site.data.keyword.powerSys_notm}} offering:
 
-- 5770-SS1 IBM i processor and unlimited users 
+- 5770-SS1 IBM i processor and unlimited users
 - 5770-SS1: IBM i Option 23, OptiConnect
 - 5770-SS1: IBM i Option 44, Encrypted Backup Enablement
 - 5770-SS1: IBM i Option 45, Encrypted ASP Enablement
@@ -41,9 +41,9 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-SS1 IBM i Option 41 HA Switchable Resources
 - 5770-SS1 IBM i Option 42 HA Journal Performance
 - 5770-SS1 IBM i Options:  all other IBM i Options which are included with IBM i at no additional charge. Examples:
-  - Option 8, AFP Compatibility Fonts
-  - Option 12, Host Servers
-  - Option 13, System Openness Includes
+    - Option 8, AFP Compatibility Fonts
+    - Option 12, Host Servers
+    - Option 13, System Openness Includes
 - 5770-DG1: HTTP Server for i
 - 5770-JV1: Developer Kit for Java
 - 5770-NAE: Network Authentication Enablement for i

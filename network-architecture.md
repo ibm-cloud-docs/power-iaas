@@ -124,4 +124,3 @@ In Power Systems Virtual Server locations connectivity by using network backbone
 
 ![IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers](./images/PowerVS-IaaS-Locations-connectivity-via-IBMCloud-Classic.png "IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers"){: caption="Figure 8. IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers" caption-side="bottom"}
 
-  

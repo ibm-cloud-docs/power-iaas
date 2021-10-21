@@ -57,11 +57,10 @@ One of your AIX VM network interface controllers (NICs) must include an IPv6 lin
 
 Enter the `ifconfig -a` command on your AIX VM terminal to see whether one of your NICs shows an IPv6 link local address (`2001:1234:5723:ABCD:5678:D14E:DBCA:0764/64`). The following example is a NIC without an associated IPv6 link local address:
 
-```
+```text
 en0: flags=1e084863,480<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST,GROUPRT,64BIT,CHECKSUM_OFFLOAD(ACTIVE),CHAIN>
 inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
 ```
-{: screen}
 
 If one of your NICs does not contain an IPv6 link local address, continue on to the next section.
 
@@ -86,24 +85,22 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 3. Using the IPv6 address for the host, [refresh the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: new_window}{: external}:
 
-    ```
+    ```text
     /opt/rsct/bin/rmcctrl -p
     /opt/rsct/rmcrefreshMD -s ctrmc
     ```
-    {: codeblock}
 
 4. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deployment that is not supported. Begin by rebuilding the node:
 
-    ```
+    ```text
     odmdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
     ```
-    {: codeblock}
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
 6. *(Optional)* To create new nodeid and restart RMC services:
 
-   ```
+   ```text
    /usr/sbin/rsct/install/bin/recfgct
    ```
 
@@ -135,12 +132,11 @@ Complete the following steps to recover from a missing IPv6 link local address:
 
 9. Generate a `nodeid` to match the original boot ID. Start RMC again and wait 15 minutes.
 
-    ```
+    ```text
     /usr/sbin/rsct/bin/rmcctrl -p
     odmdelete -o CuAt  -q name=cluster0 (optional before the recfgct command)
     /usr/sbin/rsct/install/bin/recfgct – I value from /etc/ct_node_id (on the original IBM boot disk collected above)
     ```
-    {: screen}
 
 10. Run the `/usr/sbin/rsct/bin/lsnodeid` command.
 

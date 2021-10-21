@@ -58,8 +58,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
 2. Review the following basic Direct Link Connect networking concepts:
 
-   - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
-   - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
+    - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
+    - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
 
 3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
 
@@ -69,8 +69,8 @@ Order a second Direct Link Connect connection for backup purposes.
 
 6. Enter the [configuration parameters](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#direct-link) for your IBM Cloud Direct Link Connect order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
-  The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
-  {: note}
+    The {{site.data.keyword.powerSys_notm}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT**.
+    {: note}
 
 7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the Master Service Agreement as it contains important technical information.
 
@@ -84,7 +84,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 11. Create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, enter the following details.
 
-    ```
+    ```text
     Customer name:
     Customer account ID:
     Data center details:
@@ -105,8 +105,8 @@ Order a second Direct Link Connect connection for backup purposes.
     Screen shot of Direct Link 2.0 Connect
     ```
 
-  The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-  {: note}
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    {: note}
 
 12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
@@ -121,88 +121,33 @@ Order a second Direct Link Connect connection for backup purposes.
 - **Billing** - Select the Unmetered option.
 - **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}} instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
 
-<table>
-      <caption>
-        Table 1. Direct Link Connection location options
-      </caption>
-      <tr>
-        <th>Power Systems Virtual Server location</th>
-        <th>Direct Link Connect location</th>
-        <th>Network provider</th>
-      </tr>
-      <tr>
-        <td>Dallas 13, TX, US</td>
-        <td>Dallas 13</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Dallas 12, TX, US</td>
-        <td>Dallas 12</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Washington 04, D.C., US</td>
-        <td>Washington DC 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Frankfurt 04, Germany</td>
-        <td>Frankfurt 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Frankfurt 05, Germany</td>
-        <td>Frankfurt 5</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>London 04, United Kingdom</td>
-        <td>London 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>London 06, United Kingdom</td>
-        <td>London 6</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Sydney 04, Australia</td>
-        <td>Sydney 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Sydney 05, Australia</td>
-        <td>Sydney 5</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Tokyo 04, Japan</td>
-        <td>Tokyo 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Osaka 21, Japan</td>
-        <td>Osaka 21</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      </table>
+| Power Systems Virtual Server location | Direct Link Connect location | Network provider |
+| Dallas 13, TX, US | Dallas 13 | IBM Power Virtual Server |
+| Dallas 12, TX, US | Dallas 12 | IBM Power Virtual Server |
+| Washington 04, D.C., US | Washington DC 4 | IBM Power Virtual Server |
+| Frankfurt 04, Germany | Frankfurt 4 | IBM Power Virtual Server |
+| Frankfurt 05, Germany | Frankfurt 5 | IBM Power Virtual Server |
+| London 04, United Kingdom | London 4 | IBM Power Virtual Server |
+| London 06, United Kingdom | London 6 | IBM Power Virtual Server |
+| Sydney 04, United Kingdom | Sydney 4 | IBM Power Virtual Server |
+| Sydney 05, United Kingdom | Sydney 5 | IBM Power Virtual Server |
+| Tokyo 04, Japan | Tokyo 4 | IBM Power Virtual Server |
+| Osaka 21, Japan | Osaka 21 | IBM Power Virtual Server |
+{: caption="Table 1. Direct Link Connection location options" caption-side="bottom"}
 
 Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, and São Paulo 1.</br>
 Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
 {: note}
 
-- **Routing Option** - Select <strong>Local Routing (Free)</strong> to access all the data centers that are connected at the location that you specified in the <strong>Location</strong> field. Select <strong>Global Routing</strong> to access all the IBM Cloud data centers in the world.
-- **Network Provider** - You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
-- **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the <strong>Speed</strong> field is 1 Gbps.
+- **Routing Option** - Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all the IBM Cloud data centers in the world.
+- **Network Provider** - You must select **IBM POWER VIRTUAL SERVER**> from the list.
+- **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps.
 
 #### BGP and connections
 
 - **Ports** - If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
 - **BGP ASN** - You must enter 64999 as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995.
-
-  <!--Do not try to change the BGP ASN number to <strong>64995</strong>. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
-  {: important}-->
 
 #### Add connection
 
@@ -236,7 +181,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 5. Click **Order Direct Link Connect on Classic** to see the order form.
 
-6. Enter the <a href="#direct-link">configuration parameters</a> for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
+6. Enter the [configuration parameters](#direct-link-connect-configuration-parameters) for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
 
    The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
    {: note}
@@ -256,7 +201,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 11. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
 
-    ```
+    ```text
     Link Speed:                  1000 Mbps
     Location:                    Washington 4
     Network Provider:            IBM Power Virtual Server
@@ -268,14 +213,13 @@ Order a second Direct Link Connect connection for backup purposes.
     Network Identifier:          1748523-1
     Date Created:                2019-06-12T14:56:45-06:00
     ```
-    {: screen}
 
 12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
 
     The **Power Systems Virtual Server network ASN** is the same as your **BGP ASN**. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your [Power Systems Virtual Server private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) name.
     {: note}
 
-    ```
+    ```text
     Customer name:
     Customer account ID:
     Direct Link Connect subnet:
@@ -287,135 +231,44 @@ Order a second Direct Link Connect connection for backup purposes.
     Power Systems Virtual Server Private Network (subnet) Name (2):
     Power Systems Virtual Server Private Network (subnet) Name (3):
     ```
-    {: codeblock}
 
 13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
-<dl id="direct-link">
-  <dt><strong>Direct Link Instance Name</strong></dt>
-  <dd>Enter a name for your Direct Link Connect instance.</dd>
-  <dt><strong>Location</strong></dt>
-  <dd>Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05. </br>
-  The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-    <table>
-      <caption>
-        Table 2. Direct Link Connection location options
-      </caption>
-      <tr>
-        <th>Power Systems Virtual Server location</th>
-        <th>Direct Link Connect location</th>
-        <th>Network provider</th>
-      </tr>
-      <tr>
-        <td>Dallas, TX, US</td>
-        <td>Dallas 12<br />Dallas 13</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Washington, D.C., US</td>
-        <td>Washington 4</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Frankfurt, Germany, EU</td>
-        <td>Frankfurt 4<br />Frankfurt 5</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>London, United Kingdom</td>
-        <td>London 4<br />London 6</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Toronto, Canada</td>
-        <td>Toronto 1</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Montreal, Canada</td>
-        <td>Montreal 1</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>Sydney, Australia</td>
-        <td>Sydney 4<br />Sydney 5</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-      <tr>
-        <td>São Paulo, Brazil</td>
-        <td>São Paulo 1</td>
-        <td>IBM Power Virtual Server</td>
-      </tr>
-    </table>
-  </dd>
-  <dt><strong>Network Provider</strong></dt>
-  <dd>
-    You must select <strong>IBM POWER VIRTUAL SERVER</strong> from the list.
-  </dd>
-  <dt><strong>Link Speed</strong></dt>
-  <dd>
-    Select the link speed to meet your workload requirements. The recommended
-    selection for the <strong>Link Speed</strong> field is 1000 Mbps.
-  </dd>
-  <dt><strong>Routing Option</strong></dt>
-  <dd>
-    Select <strong>Local Routing (Free)</strong> to access all of the data centers that
-    are connected at the location that you specified in the
-    <strong>Location</strong> field. Select <strong>Global Routing</strong> to
-    access all of the IBM Cloud data centers in the world.
-  </dd>
-  <dt><strong>BGP ASN</strong></dt>
-  <dd>
-    <p>
-      You must enter the BGP ASN number for the specific Direct Link Connect
-      location.
-    </p>
-    <p>
-      <strong>Important:</strong> Do not try to change the BGP ASN number to
-      <strong>64995</strong>. You must contact the IBM Power support team to
-      handle your request to change the BGP ASN number.
-    </p>
-    <table>
-      <caption>
-        Table 3. BGP ASN number for specific locations
-      </caption>
-      <tr>
-        <th>Direct Link Connect location</th>
-        <th>BGP ASN number</th>
-      <tr>
-        <td>Dallas 12<br />Dallas 13</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>Washington 4</td>
-        <td>64995</td>
-      </tr>
-      <tr>
-        <td>Frankfurt 4<br />Frankfurt 5</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>London 6</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>Toronto 1</td>
-        <td>64999</td>
-      </tr>
-      <tr>
-        <td>Montreal 1</td>
-        <td>64999</td>
-      </tr>
-    </table>
-  </dd>
-  <dt><strong>Select VRF</strong></dt>
-  <dd>
-    Select the virtual routing and forwarding option for the connection. If your
-    account does not have a VRF identified, this field is not displayed. You can
-    still create the Direct Link Connect service without selecting a VRF.
-  </dd>
+### Direct Link Connect configuration parameters
+{: #Direct-link-connect-config-par}
 
-</dl>
+**Direct Link Instance name** - Enter a name for your Direct Link Connect instance.
+**Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
+The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+
+| Power Systems Virtual Server location | Direct Link Connect location | Network provider |
+| Dallas, TX, US | Dallas 12 \n Dallas 13 | IBM Power Virtual Server |
+| Washington, D.C., US | Washington 4 | IBM Power Virtual Server |
+| Frankfurt, Germany, EU | Frankfurt 4 \n Frankfurt 5 | IBM Power Virtual Server |
+| London, United Kingdom | London 4 \n London 6 | IBM Power Virtual Server |
+| Toronto, Canada | Toronto 1 | IBM Power Virtual Server |
+| Montreal, Canada | Montreal 1 | IBM Power Virtual Server |
+| Sydney, Australia | Sydney 4 \n Sydney 5 | IBM Power Virtual Server |
+| São Paulo, Brazil | São Paulo 1 | IBM Power Virtual Server |
+{: caption="Table 2. Direct Link Connect on Classic location" caption-side="bottom"}
+
+**Network Provider** - You must select **IBM POWER VIRTUAL SERVER** from the list.
+**Link Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Link Speed** field is 1000 Mbps.
+**Routing option** - Select **Local Routing (Free)** to access all of the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all of the IBM Cloud data centers in the world.
+**BGP ASN** - You must enter the BGP ASN number for the specific Direct Link Connect location.
+    Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
+    {: important}
+
+    | Direct Link Connect location | BGP ASN number |
+    | Dallas 12 \n Dallas 13 | 64999 |
+    | Washington 4 | 64995 |
+    | Frankfurt 4 \n Frankfurt 5 | 64999 |
+    | London 6 | 64999 |
+    | Toronto 1 | 64999 |
+    | Montreal 1 | 64999 |
+    {: caption="Table 3. BGP ASN number for specific locations" caption-side="bottom"}
+
+**Select VRF** - Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.
 
 ## Deleting your Direct Link Connect on Classic connection
 {: #deleting-direct-link}
@@ -433,89 +286,31 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 
 2. In the **BGP and connections** configuration panel, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both Direct Link Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
 
-  The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you had selected <portname>-1-1 for the first Direct Link Connect instance, you must select <portname>-2-1 or <portname>-2-2 for the second Direct Link Connect instance that you want to use to set up redundancy.
+    The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you had selected **-1-1** for the first Direct Link Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance that you want to use to set up redundancy.
 
-  ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
+    ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-  For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
-  {: note}
+    For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
+    {: note}
 
-  Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
+    Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
-    <table>
-      <caption>
-        Table 1. Port and Port groups for redundant Direct Link instances
-      </caption>
-      <tr>
-        <th>Data Center</th>
-        <th>Network Provider</th>
-        <th>Port group 1</th>
-        <th>Port group 2 for redundancy</th>
-      <tr>
-        <td>LON04</td>
-        <td>IBM Power VS</td>
-        <td>SL-LON04-IBMPOWERIAASLITE-1-1<br />SL-LON04-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-LON04-IBMPOWERIAASLITE-2-1<br />SL-LON04-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-      <tr>
-        <td>LON06</td>
-        <td>IBM Power VS</td>
-        <td>SL-LON06-IBMPOWERIAASLITE-1-1<br />SL-LON06-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-LON06-IBMPOWERIAASLITE-2-1<br />SL-LON06-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-      <tr>
-        <td>FRA05</td>
-        <td>IBM Power VS</td>
-        <td>SL-FRA05-IBMPOWERIAASLITE-1-1<br />SL-FRA05-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-FRA05-IBMPOWERIAASLITE-2-1<br />SL-FRA05-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-      <tr>
-        <td>FRA04</td>
-        <td>IBM Power VS</td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-1-1<br />SL-FRA04-IBMPOWERIAASLITE-1-2<br />PowerVS-FRA04-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-FRA04-IBMPOWERIAASLITE-2-1<br />SL-FRA04-IBMPOWERIAASLITE-2-2<br />PowerVS-FRA04-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>WDC04</td>
-        <td>IBM Power VS</td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-1-1<br />PowerVS-WDC04-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-WDC04-IBMPOWERIAASLITE-2-1<br />PowerVS-WDC04-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>DAL12</td>
-        <td>IBM Power VS</td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-1-1<br />SL-DAL12-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL12-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-DAL12-IBMPOWERIAASLITE-2-1<br />SL-DAL12-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL12-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>DAL13</td>
-        <td>IBM Power VS</td>
-        <td>SL-DAL13-IBMPOWERIAASLITE-1-1<br />SL-DAL13-IBMPOWERIAASLITE-1-2<br />PowerVS-DAL13-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-DAL13-IBMPOWERIAASLITE-2-1<br />SL-DAL13-IBMPOWERIAASLITE-2-2<br />PowerVS-DAL13-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>SYD04</td>
-        <td>IBM Power VS</td>
-        <td>SL-SYD04-IBMPOWERIAASLITE-1-1<br />SL-SYD04-IBMPOWERIAASLITE-1-2<br />PowerVS-SYD04-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-SYD04-IBMPOWERIAASLITE-2-1<br />SL-SYD04-IBMPOWERIAASLITE-2-2<br />PowerVS-SYD04-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>TOK04</td>
-        <td>IBM Power VS</td>
-        <td>SL-TOK04-IBMPOWERIAASLITE-1-1<br />SL-TOK04-IBMPOWERIAASLITE-1-2<br />PowerVS-TOK04-10G-NOGRE-1-1<sup>x</sup></td>
-        <td>SL-TOK04-IBMPOWERIAASLITE-2-1<br />SL-TOK04-IBMPOWERIAASLITE-2-2<br />PowerVS-TOK04-10G-NOGRE-1-2<sup>x</sup></td>
-      </tr>
-      <tr>
-        <td>OSA21</td>
-        <td>IBM Power VS</td>
-        <td>SL-OSA21-IBMPOWERIAASLITE-1-1<br />SL-OSA21-IBMPOWERIAASLITE-1-2</td>
-        <td>SL-OSA21-IBMPOWERIAASLITE-2-1<br />SL-OSA21-IBMPOWERIAASLITE-2-2</td>
-      </tr>
-    </table>
+    | Data Center | Network provider | Port group 1 | Port group 2 for redundancy |
+    | LON04 | IBM Power VS | SL-LON04-IBMPOWERIAASLITE-1-1 \n SL-LON04-IBMPOWERIAASLITE-1-2 | SL-LON04-IBMPOWERIAASLITE-2-1 \n SL-LON04-IBMPOWERIAASLITE-2-2 |
+    | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
+    | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERIAASLITE-1-1 \n SL-FRA05-IBMPOWERIAASLITE-1-2 | SL-FRA05-IBMPOWERIAASLITE-2-1 \ SL-FRA05-IBMPOWERIAASLITE-2-2 |
+    | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1 [^x] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2 [^x] |
+    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1 [^x] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2 [^x] |
+    | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1 [^x] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2 [^x] |
+    | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1 [^x] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2 [^x] |
+    | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1 [^x] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2 [^x] |
+    | TOK04 | IBM Power VS | SL-TOK04-IBMPOWERIAASLITE-1-1 \n SL-TOK04-IBMPOWERIAASLITE-1-2 \n PowerVS-TOK04-10G-NOGRE-1-1 [^x] | SL-TOK04-IBMPOWERIAASLITE-2-1 \n SL-TOK04-IBMPOWERIAASLITE-2-2 \n PowerVS-TOK04-10G-NOGRE-1-2 [^x] |
+    | OSA21 | IBM Power VS | SL-OSA21-IBMPOWERIAASLITE-1-1 \n SL-OSA21-IBMPOWERIAASLITE-1-2 | SL-OSA21-IBMPOWERIAASLITE-2-1 \n SL-OSA21-IBMPOWERIAASLITE-2-2 |
+    {: caption="Table 4. Port and Port groups for redundant Direct Link instances" caption-side="bottom"}
 
-  The ports denoted with <sup>x</sup> indicates that they are not GRE capable but support 10 Gbps speed.
-  {: note} 
-  
+    [^x]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    
+
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
@@ -526,8 +321,8 @@ If the traffic is sent from Power Systems Virtual Server to your on-premise publ
 For proper VPC configuration, the on-premise IP address must meet the following requirements:
 
 - The IP address range for private network must be with in the following blocks that are reserved by Internet Assigned Numbers Authority (IANA):
-  - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
-  - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
-  - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
+    - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
+    - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
+    - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
 - VM instances within the VPC must not have floating IP.
 - You must create a route to the on-premise public subnet in the VPC default routing table by using the *Delegate-VPC* action. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).

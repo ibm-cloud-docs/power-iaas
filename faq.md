@@ -59,27 +59,21 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 
 The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
-**AIX**
-
-The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+**AIX** - The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
 
-  For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
+For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
 
-**IBM i**
-
-The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
+**IBM i** - The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
 
-**Linux**
-
-The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
+**Linux** - The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
 
 - SUSE Linux Enterprise (SLES) 12 and SLES 15
 - Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
@@ -305,13 +299,13 @@ To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=
 
 On an AIX VM, the following databases are supported:
 
-  - IBM&reg; Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
-  - Oracle Database version 12.1.0.2, or later
-  - SAP Adaptive Server Enterprise version 16.0 SP03, or later
+   - IBM Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
+   - Oracle Database version 12.1.0.2, or later
+   - SAP Adaptive Server Enterprise version 16.0 SP03, or later
 
 On a Linux VM, the following database is supported:
 
-  - SAP HANA Platform 2.0 SPS 04, or later
+   - SAP HANA Platform 2.0 SPS 04, or later
 
 You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: new_window}{: external}.
 

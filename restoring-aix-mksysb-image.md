@@ -59,8 +59,8 @@ Running the `df -g` command displays information about the total space and avail
 
 If your disk is not at the correct size, complete the following steps:
 
-  You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
-  {: note}
+    You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
+    {: note}
 
 1. Create a file system to hold the _mksysb_ archive.
 
@@ -82,7 +82,7 @@ If your disk is not at the correct size, complete the following steps:
 
 6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
-  ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
+    ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
 
 After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
 
@@ -123,14 +123,9 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
 You can now create an AIX boot disk from the source _mksysb_ archive. To create an AIX boot disk from the source _mksysb_ archive, run the `alt_disk_mksysb` command with the following options:
 
-<dl>
-  <dt><strong>-m</strong></dt>
-  <dd>Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
-  <dt><strong>-d</strong></dt>
-  <dd>Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named <em>hdisk2</em>.</dd>
-  <dt><strong>-c</strong></dt>
-  <dd> Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.</dd>
-</dl>
+**-m**: Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.
+**-d**: Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named `hdisk2`.
+**-c**: Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.
 
 After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
@@ -155,15 +150,12 @@ In the previous section, we used a separate image volume for storing the source 
 After the completion of the `alt_disk_mksysb` command, you can detach the staging volume (`mksysbvg`) from the _helper VM_. Before you detach the staging volume, you must close all available file systems by unmounting them. If no action is required, then it is safe to remove the volume group definition from the _helper VM_.
 
 1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.
-
 ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
 
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
-
 ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
-
 ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.

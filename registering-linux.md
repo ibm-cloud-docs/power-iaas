@@ -74,11 +74,10 @@ Complete these steps to accurately configure your SNAT router.
 2. Create subnets that require the SNAT function to get internet access.
 3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
 
-```
+```text
 iptables -A FORWARD -i eth1 -j ACCEPT
 iptables -A FORWARD -o eth1 -j ACCEPT
 ```
-{: codeblock}
 
 These commands assume that the network device for the public network is `eth0`, and `eth1` for the private network.
 {: important}
