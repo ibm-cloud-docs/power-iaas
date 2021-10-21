@@ -45,6 +45,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 {: note}
 
 | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+| --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
 | America | Dallas, USA | us-south | DAL12 \n us-south | DAL12 \n DAL13 | us-south-2 \n us-south-3 |
 | America | Washington DC, USA | us-east | us-east | WDC04 | us-east-1 |
 | America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |

@@ -126,6 +126,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
 
 | Power Systems Virtual Server location | Direct Link Connect location | Network provider |
+| ------------------------------------- | ---------------------------- | ---------------- |
 | Dallas 13, TX, US | Dallas 13 | IBM Power Virtual Server |
 | Dallas 12, TX, US | Dallas 12 | IBM Power Virtual Server |
 | Washington 04, D.C., US | Washington DC 4 | IBM Power Virtual Server |
@@ -253,6 +254,7 @@ The following table identifies the {{site.data.keyword.powerSys_notm}} instance 
 
 
 | Power Systems Virtual Server location | Direct Link Connect location | Network provider |
+| ------------------------------------- | ---------------------------- | ---------------- |
 | Dallas, TX, US | Dallas 12 \n Dallas 13 | IBM Power Virtual Server |
 | Washington, D.C., US | Washington 4 | IBM Power Virtual Server |
 | Frankfurt, Germany, EU | Frankfurt 4 \n Frankfurt 5 | IBM Power Virtual Server |
@@ -277,6 +279,7 @@ Do not try to change the BGP ASN number to **64995**. You must contact the IBM P
 
 
 | Direct Link Connect location | BGP ASN number |
+| ---------------------------- | -------------- |
 | Dallas 12 \n Dallas 13 | 64999 |
 | Washington 4 | 64995 |
 | Frankfurt 4 \n Frankfurt 5 | 64999 |
@@ -314,6 +317,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
     Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
     | Data Center | Network provider | Port group 1 | Port group 2 for redundancy |
+    | ----------- | ---------------- | ------------ | --------------------------- |
     | LON04 | IBM Power VS | SL-LON04-IBMPOWERIAASLITE-1-1 \n SL-LON04-IBMPOWERIAASLITE-1-2 | SL-LON04-IBMPOWERIAASLITE-2-1 \n SL-LON04-IBMPOWERIAASLITE-2-2 |
     | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
     | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERIAASLITE-1-1 \n SL-FRA05-IBMPOWERIAASLITE-1-2 | SL-FRA05-IBMPOWERIAASLITE-2-1 \ SL-FRA05-IBMPOWERIAASLITE-2-2 |
