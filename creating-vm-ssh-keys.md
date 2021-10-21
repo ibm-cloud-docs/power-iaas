@@ -93,24 +93,24 @@ ibmcloud pi instance-create keytest-vm --image AIX-7200-03-03 --memory 5 --netwo
 
 In this example, the `ibmcloud pi instance-create` command created a new AIX VM with an IP address of _172.16.7.16_. You can now SSH to the AIX VM from a connected system, which is configured with the private key for `testkey`.
 
-    ```text
-    ssh root@172.16.7.16
-    Enter passphrase for key '/home/keytest/.ssh/id_rsa':
-    Last login: Fri Jul 26 16:53:22 CDT 2019 on ssh from 10.150.0.11
-    *******************************************************************************
-    *                                                                             *
-    *                                                                             *
-    *  Welcome to AIX Version 7.2!                                                *
-    *                                                                             *
-    *                                                                             *
-    *  Please see the README file in /usr/lpp/bos for information pertinent to    *
-    *  this release of the AIX Operating System.                                  *
-    *                                                                             *
-    *                                                                             *
-    *******************************************************************************
-    # oslevel -s
-    7200-03-03-1914
-    ```
+```text
+ssh root@172.16.7.16
+Enter passphrase for key '/home/keytest/.ssh/id_rsa':
+Last login: Fri Jul 26 16:53:22 CDT 2019 on ssh from 10.150.0.11
+*******************************************************************************
+*                                                                             *
+*                                                                             *
+*  Welcome to AIX Version 7.2!                                                *
+*                                                                             *
+*                                                                             *
+*  Please see the README file in /usr/lpp/bos for information pertinent to    *
+*  this release of the AIX Operating System.                                  *
+*                                                                             *
+*                                                                             *
+*******************************************************************************
+# oslevel -s
+7200-03-03-1914
+```
 
 You can find the `testkey` value in the **authorized_keys** file:
 

@@ -272,18 +272,18 @@ The following table identifies the {{site.data.keyword.powerSys_notm}} instance 
 
 **BGP ASN** - You must enter the BGP ASN number for the specific Direct Link Connect location.
 
-    Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
-    {: important}
+Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
+{: important}
 
 
-    | Direct Link Connect location | BGP ASN number |
-    | Dallas 12 \n Dallas 13 | 64999 |
-    | Washington 4 | 64995 |
-    | Frankfurt 4 \n Frankfurt 5 | 64999 |
-    | London 6 | 64999 |
-    | Toronto 1 | 64999 |
-    | Montreal 1 | 64999 |
-    {: caption="Table 3. BGP ASN number for specific locations" caption-side="bottom"}
+| Direct Link Connect location | BGP ASN number |
+| Dallas 12 \n Dallas 13 | 64999 |
+| Washington 4 | 64995 |
+| Frankfurt 4 \n Frankfurt 5 | 64999 |
+| London 6 | 64999 |
+| Toronto 1 | 64999 |
+| Montreal 1 | 64999 |
+{: caption="Table 3. BGP ASN number for specific locations" caption-side="bottom"}
 
 
 **Select VRF** - Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.

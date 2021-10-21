@@ -118,11 +118,11 @@ The following instructions are applicable to both RHEL version 8.1, and later an
 The `ethtool` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
 {: note}
 
-    Verify the MTU value by running the following command:
-    ```text
-    ip link show eth0
-    eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
-    ```
+Verify the MTU value by running the following command:
+```text
+ip link show eth0
+eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
+```
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: #nat-configuration}
