@@ -41,13 +41,11 @@ Causes: The AIX boot disk might be corrupted.
 Resolve: If the AIX VM does not boot, you must provision an additional AIX VM and use it as a Network Installation Management (NIM) server. Without a NIM server, you cannot debug the boot issue and must reimage your disk.
 
 1. Determine the hostname and IP address of the system by using the following two commands, `hostname` and `ifconfig -a`.
-
 ![Determining your hostname and IP address](./images/terminal-aix-hostname.png "Determining your hostname and IP address"){: caption="Figure 1. Determining your hostname and IP address" caption-side="bottom"}
 
 2. Using the information from the previous step, add an entry for your hostname and IP address into `/etc/hosts`. For example, `echo "192.168.0.15 aix-7100-05-04" >> /etc/hosts`.
 
 3. Run the following command, `nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no`.
-
 ![Creating a NIM master](./images/terminal-aix-nim.png "Creating a NIM master"){: caption="Figure 2. Creating a NIM master" caption-side="bottom"}
 
 4. Once completed, the NIM master file set has been installed and the basic resource objects created. The administrator is now able to add more NIM clients and define resources.
@@ -77,7 +75,7 @@ In the output of these `lsattr` commands, you'll see either **True** or **True+*
 
 You can set your disk's **queue_depth** to *64* and change the algorithm to **shortest_queue** with a **no_reserve policy** by using the following command:
 
-```
+```text
 chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
 ```
 {: codeblock}

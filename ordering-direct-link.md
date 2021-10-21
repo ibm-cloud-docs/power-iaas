@@ -116,10 +116,14 @@ Order a second Direct Link Connect connection for backup purposes.
 
 #### Configuration
 
-- **Direct Link Name** - Enter a name for your Direct Link Connect instance.
-- **Resource group** - Select the default group.
-- **Billing** - Select the Unmetered option.
-- **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}} instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+**Direct Link Name** - Enter a name for your Direct Link Connect instance.
+
+**Resource group** - Select the default group.
+
+**Billing** - Select the Unmetered option.
+
+**Location** - Select the same location as the {{site.data.keyword.powerSys_notm}} instance. The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+
 
 | Power Systems Virtual Server location | Direct Link Connect location | Network provider |
 | Dallas 13, TX, US | Dallas 13 | IBM Power Virtual Server |
@@ -135,13 +139,17 @@ Order a second Direct Link Connect connection for backup purposes.
 | Osaka 21, Japan | Osaka 21 | IBM Power Virtual Server |
 {: caption="Table 1. Direct Link Connection location options" caption-side="bottom"}
 
+
 Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, and São Paulo 1.</br>
 Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
 {: note}
 
-- **Routing Option** - Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all the IBM Cloud data centers in the world.
-- **Network Provider** - You must select **IBM POWER VIRTUAL SERVER**> from the list.
-- **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps.
+
+**Routing Option** - Select **Local Routing (Free)** to access all the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all the IBM Cloud data centers in the world.
+
+**Network Provider** - You must select **IBM POWER VIRTUAL SERVER** from the list.
+
+**Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps.
 
 #### BGP and connections
 
@@ -238,8 +246,11 @@ Order a second Direct Link Connect connection for backup purposes.
 {: #Direct-link-connect-config-par}
 
 **Direct Link Instance name** - Enter a name for your Direct Link Connect instance.
+
 **Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
+
 The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
+
 
 | Power Systems Virtual Server location | Direct Link Connect location | Network provider |
 | Dallas, TX, US | Dallas 12 \n Dallas 13 | IBM Power Virtual Server |
@@ -252,12 +263,18 @@ The following table identifies the {{site.data.keyword.powerSys_notm}} instance 
 | São Paulo, Brazil | São Paulo 1 | IBM Power Virtual Server |
 {: caption="Table 2. Direct Link Connect on Classic location" caption-side="bottom"}
 
+
 **Network Provider** - You must select **IBM POWER VIRTUAL SERVER** from the list.
+
 **Link Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Link Speed** field is 1000 Mbps.
+
 **Routing option** - Select **Local Routing (Free)** to access all of the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all of the IBM Cloud data centers in the world.
+
 **BGP ASN** - You must enter the BGP ASN number for the specific Direct Link Connect location.
+
     Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
     {: important}
+
 
     | Direct Link Connect location | BGP ASN number |
     | Dallas 12 \n Dallas 13 | 64999 |
@@ -267,6 +284,7 @@ The following table identifies the {{site.data.keyword.powerSys_notm}} instance 
     | Toronto 1 | 64999 |
     | Montreal 1 | 64999 |
     {: caption="Table 3. BGP ASN number for specific locations" caption-side="bottom"}
+
 
 **Select VRF** - Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.
 
@@ -309,7 +327,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
     {: caption="Table 4. Port and Port groups for redundant Direct Link instances" caption-side="bottom"}
 
     [^x]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    
+
 
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 

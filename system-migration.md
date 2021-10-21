@@ -49,18 +49,14 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 ## Migrating to an IBM POWER8 system
 {: power8-migration}
 
-**AIX 5.3 and earlier**
-
-You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
+**AIX 5.3 and earlier** - You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
 
 1. Network Installation Manager (NIM) `alt disk` migration
 2. Migrate in-place, then either `mksysb`, `alt_disk_copy`, or Logical Partiion Mobility (LPM) (when going from a
 POWER6 or POWER7 system)
 3. Create a `mksysb` of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb`
 
-**AIX 6.1 or 7.1**
-
-You have the option of doing an AIX update to a supported level instead of a migration. If you are on AIX 6.1, you must migrate to 7.1 to get POWER8 capabilities. To accomplish this migration, there are three options:
+**AIX 6.1 or 7.1** - You have the option of doing an AIX update to a supported level instead of a migration. If you are on AIX 6.1, you must migrate to 7.1 to get POWER8 capabilities. To accomplish this migration, there are three options:
 
 1. If you are at a level that supports POWER8 and if the system is LPM-capable, use LPM to move to the POWER8 system.
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
@@ -68,9 +64,7 @@ You have the option of doing an AIX update to a supported level instead of a mig
 
 Learn more about transitioning to an IBM POWER8 system by downloading [Transitioning to POWER8: Migration Paths for AIX systems to POWER8](http://www14.software.ibm.com/webapp/set2/sas/f/best/Transitioning_to_POWER8.pdf){: new_window}{: external}.
 
-**IBM i V6R1, or later**
-
-For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: new_window}{: external} to learn how to safely migrate data to an IBM POWER8 system.
+**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: new_window}{: external} to learn how to safely migrate data to an IBM POWER8 system.
 
 ## Migrating to an IBM POWER9 system
 {: power9-migration}

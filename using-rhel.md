@@ -73,33 +73,27 @@ The TCP checksum offload option must be disabled on the private network interfac
 
 You can verify that the device interface type is `ibmveth` by using the following command: 
 
-```
+```text
 ethtool -i <interface name> | grep driver
 ```
 
 The following instructions are applicable to both RHEL version 8.1, and later and SLES version SP15. Some instructions vary depending on whether you are using RHEL or SLES. These differences are specified in the following procedure. If you need additional help to configure network interfaces, refer to the Red Hat or SLES documentation.
 
 1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
-
-  ```
-  ip -4 a s (for IPv4 address)
-  ip -6 a s (for IPv6 address)
-  ```
-  {: codeblock}
-
+    ```text
+    ip -4 a s (for IPv4 address)
+    ip -6 a s (for IPv6 address)
+    ```
 2. Edit the `ifcfg-<NIC>` file (where NIC is the network interface name that is identified in step 1).
 
     - The path to this file varies depending on whether you are using RHEL or SLES:
-  
-    ```
+    ```text
       RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
       SLES:  /etc/sysconfig/network/ifcfg-<NIC>
     ```
-    {: codeblock}
-  
     - Add or modify the following lines:
 
-    ```
+    ```text
      For RHEL:
        MTU=1450
        ETHTOOL_OPTS="-K <NIC> rx off"
@@ -107,14 +101,13 @@ The following instructions are applicable to both RHEL version 8.1, and later an
        MTU='1450'
        ETHTOOL_OPTIONS='-K <NIC> rx off'
     ```
-     {: codeblock}
 
 3. Restart the VM.
 
 4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
     - Verify the checksum offloading setting by running the following command:
 
-      ```
+      ```text
        ethtool -k eth0
        Features for eth0:
        rx-checksumming: off
@@ -125,12 +118,11 @@ The following instructions are applicable to both RHEL version 8.1, and later an
 The `ethtool` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
 {: note}
 
-  Verify the MTU value by running the following command:
-  
-   ```
+    Verify the MTU value by running the following command:
+    ```text
     ip link show eth0
     eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
-   ```
+    ```
 
 ### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
 {: #nat-configuration}
@@ -140,31 +132,29 @@ Most organizations are allotted a limited number of publicly routable IP address
 Before running the `iptables` commands, complete the following steps to ensure that the configuration settings persist after the virtual machine is restarted.
 
 1. Use the following command to list all the zones:
-   ```
+   ```text
    firewall-cmd --get-zones
    block dmz drop external home internal nm-shared public trusted work
    ```
-   {: codeblock}
 
 2. Use the following command to list the network interfaces for zones:
-   ```
+   ```text
    firewall-cmd --zone=public --list-all
    ```
 
 3. To turn on the masquerade option that will set the configuration settings persist after the reboot operations, run the following command:
-	 ```
+   ```text
    firewall-cmd --zone=public --add-masquerade --permanent
    success
    ```
-   {: codeblock}
 
 4. Restart the system firewall:
-	 ```
+   ```text
    systemctl restart firewalld
    ```
 
 5. Verify whether the configuration is successful:
-	 ```
+   ```text
    #sudo firewall-cmd --zone=public --query-masquerade
    yes
    ```
@@ -177,33 +167,33 @@ Complete these steps to accurately configure your Source NAT (SNAT) router:
 
 3. Use the following commands to allow private network traffic to be accessible for SNAT-ing:
 
-  ```
-  iptables -A FORWARD -i eth1 -j ACCEPT
-  iptables -A FORWARD -o eth1 -j ACCEPT
-  ```
+   ```text
+   iptables -A FORWARD -i eth1 -j ACCEPT
+   iptables -A FORWARD -o eth1 -j ACCEPT
+   ```
 
-  These commands assume that the network device for the public network is eth0, and eth1 for the private network.
-  {: important}
+   These commands assume that the network device for the public network is eth0, and eth1 for the private network.
+   {: important}
 
 You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file:
 
 1. Find and edit the following line within the */etc/sysctl.conf* file (replacing 0 with 1 if required):
 
-  ```
-  net.ipv4.ip_forward = 1
-  ```
+    ```text
+    net.ipv4.ip_forward = 1
+    ```
 
 2. Update the *sysctl.conf* file by entering the following command:
 
-  ```
-  sysctl -p /etc/sysctl.conf
-  ```
+    ```text
+    sysctl -p /etc/sysctl.conf
+    ```
 
 3. Finally, configure the source NAT by entering the following command:
 
-  ```
-  iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-  ```
+    ```text
+    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+    ```
 
 ### Configuring Linux VMs to use a SNAT router
 {: #use-snat-router}
