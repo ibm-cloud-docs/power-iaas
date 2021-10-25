@@ -27,4 +27,4 @@ subcollection: power-iaas
 # Virtual tape libraries
 {: #virtual-tape-libraries}
 
-Virtual tape libraries are used to backup virtual server instances.
+Virtual tape libraries are used to backup virtual server instances. If you are using the IBM i operating system in your on-premise environment and you use some form of way to back up your solution, you can use the DSI Restore VTL solution on Power Systems Virtual Servers. DSI Restore is a deduplicating backup and recovery virtual appliance. The Power Systems Virtual Servers replicates the on-premise solution by providing you a software virtual tape library (VTL) appliance that can be dynamically provisioned in the IBM Cloud. For more information, see [Power Virtual Server VTL Overview](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_VTL_Overview.pdf ){: external}.
