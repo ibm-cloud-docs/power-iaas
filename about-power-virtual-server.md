@@ -10,20 +10,19 @@ keywords: power systems, infrastructure as a service, multiple virtual servers, 
 subcollection: power-iaas
 
 ---
-# What is a Power Systems Virtual Server?
 
-{: #about-virtual-server}
-
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
 {:tip: .tip}
-{:note: .note}
 {:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{:note: .note}
+{:term: .term}
+
+# What is a Power Systems Virtual Server?
+{: #about-virtual-server}
 
 {{site.data.keyword.powerSysFull}} is a Power Systems offering. The Power Systems Virtual Servers are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure. The virtual servers, also known as logical partitions (LPAR), run on IBM Power Systems hardware with the PowerVM hypervisor.
 {: shortdesc}
@@ -35,13 +34,11 @@ With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and
 <!--Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.-->
 
 ## Key features
-
 {: #key-features}
 
 The following are some of the key features for the {{site.data.keyword.powerSys_notm}} service.
 
 ### Straightforward billing
-
 {: #straightforward-billing}
 
 The {{site.data.keyword.powerSys_notm}} service uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
@@ -50,7 +47,6 @@ The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock ima
 {: note}
 
 ### Infrastructure customization
-
 {: #infra-customization}
 
 You can configure and customize the following options when you create a {{site.data.keyword.powerSys_notm}}:
@@ -62,13 +58,11 @@ You can configure and customize the following options when you create a {{site.d
 * Network interfaces
 
 ### Bring your own image
-
 {: #bring-own-image}
 
 IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX, IBM i or Linux image that you have tested and deployed.
 
 ### Support for SAP NetWeaver or SAP HANA applications
-
 {: #support-SAPNetWeaver-or-SAPHANA}
 
 When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For information about the supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs). For more information, see [Deploying your infrastructure](/docs/sap?topic=sap-power-vs-planning-items).
@@ -77,25 +71,23 @@ When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver
 {: note}
 
 ### Support for deploying a Red Hat OpenShift Cluster
-
 {: #support-redhat-openshift}
 
-When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
 ## Hardware specifications
-
 {: #hardware-specifications}
 
 The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
-If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 {: tip}
 
 ### Data sheets
 
-* [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
-* [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-* [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
+* [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external}
+* [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
+* [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
@@ -124,11 +116,10 @@ If you'd like to compare your current environment's performance to what's availa
 {: #hw-spec-3}
 {: tab-title="Non-US* "}
 
-For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
 
 ## Storage tiers
-
 {: #storage-tiers}
 
 For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
@@ -140,7 +131,6 @@ For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage
 {: note}-->
 
 ## Public and private networks
-
 {: #public-private-networks}
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface.

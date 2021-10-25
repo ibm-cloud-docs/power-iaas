@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -72,7 +71,7 @@ After you establish a connection to the IBM Cloud Classic environment, you must 
 ## Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services
 {: #connecting-megaport}
 
-You can connect directly to the {{site.data.keyword.powerSys_notm}} environment by using **IBM {{site.data.keyword.powerSys_notm}} NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: new_window}{: external} to procure the connection (VxC) to **{{site.data.keyword.powerSys_notm}} Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to perform the network configuration. Remember to include the following pieces of information in your support ticket:
+You can connect directly to the {{site.data.keyword.powerSys_notm}} environment by using **IBM {{site.data.keyword.powerSys_notm}} NNI Private Ports @ Megaport** connectivity services. Before you engage [Megaport](https://portal.megaport.com){: external} to procure the connection (VxC) to **{{site.data.keyword.powerSys_notm}} Port @ Megaport**, IBM provides a Service ID (VxC identifier). You must also open a [secondary ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to perform the network configuration. Remember to include the following pieces of information in your support ticket:
 
 ```text
 Customer name and contact:
@@ -131,9 +130,9 @@ The benefit to creating IBM Direct Link by using Megaport:
 ### Deploying a VXC
 {: deploying-vxc}
 
-For more information, see [IBM Cloud Direct Link Connect](https://knowledgebase.megaport.com/cloud-connectivity/ibm-cloud-direct-link-connect/){: new_window}{: external}.
+For more information, see [IBM Cloud Direct Link Connect](https://knowledgebase.megaport.com/cloud-connectivity/ibm-cloud-direct-link-connect/){: external}.
 
-1. Open the [Megaport Portal](https://portal.megaport.com){: new_window}{: external}.
+1. Open the [Megaport Portal](https://portal.megaport.com){: external}.
 
 2. Create an IBM Direct Link Connect Virtual Cross Connect (VXC). Provision a VXC in the Portal to your chosen IBM Direct Link Connect peering location. To create an IBM Direct Link VXC in the Portal, click **+Connection** on the Megaport to which you want to attach your VXC.
 

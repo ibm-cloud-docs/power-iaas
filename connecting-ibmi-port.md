@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
 lastupdated: "2020-04-13"
 
@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,7 +33,7 @@ For a complete list of firewall ports that are available for IBM i VMs, see [Net
 ## Installing and configuring IBM i Access Client Solutions (ACS)
 {: installing-acs}
 
-Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
+Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: external}.
 
 ## Using SSH tunneling to allow ACS to connect over the public IP
 {: #ssh-tunneling}
@@ -65,7 +64,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
+1. Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
 
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 
@@ -175,7 +174,7 @@ https://127.0.0.1:2005/ibm/console/login.do?action=secure
 ```
 {: pre}
 
-To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which IBM COS requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: new_window}{: external}.
+To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which IBM COS requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: external}.
 
 ### Configuring ACS
 {: #configuring-acs}

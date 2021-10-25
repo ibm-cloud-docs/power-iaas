@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,7 +33,7 @@ Before you open a support ticket against the {{site.data.keyword.powerSysShort}}
 
 To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
 
-1. Log in to the [IBM Cloud](https://cloud.ibm.com/catalog){: new_window}{: external} with your IBM Cloud account credentials.
+1. Log in to the [IBM Cloud](https://cloud.ibm.com/catalog){: external} with your IBM Cloud account credentials.
 2. In the menu bar, click **Support**.
 3. Under **Contact Support**, click **Create a case**.
 4. In the **Create a case** page, select **Your resources**.
@@ -46,15 +45,5 @@ To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, co
 ## Opening Operating System (AIX or IBMi) related cases with IBM Support
 {: support-case-IBM}
 
-If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: new_window}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.
+If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: external}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.
 
- 
-<!--   1. Choose **Compute: Power Systems Virtual Server** from the **Offering** field.
-
-      ![Selecting the Power Systems Virtual Server service](./images/console-support-select.png "Selecting the Power Systems Virtual Server service"){: caption="Figure 2. Selecting the Power Systems Virtual Server service" caption-side="bottom"}
-
-   1. Enter **Power Systems Virtual Server** in the **Subject** field and a detailed description of the problem.
-
-   2. Attach any helpful files, decide whether you want email updates, and submit your support ticket.
-
-      ![Submitting your support ticket](./images/console-support-description.png "Submitting your support ticket"){: caption="Figure 3. Submitting your support ticket" caption-side="bottom"} -->

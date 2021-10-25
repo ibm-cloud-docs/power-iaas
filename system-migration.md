@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -32,7 +31,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
 
-IBM i customers must use IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
+IBM i customers must use IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 ## Migration checklist
 {: #migration-checklist}
@@ -62,16 +61,16 @@ POWER6 or POWER7 system)
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
 3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
 
-Learn more about transitioning to an IBM POWER8 system by downloading [Transitioning to POWER8: Migration Paths for AIX systems to POWER8](http://www14.software.ibm.com/webapp/set2/sas/f/best/Transitioning_to_POWER8.pdf){: new_window}{: external}.
+Learn more about transitioning to an IBM POWER8 system by downloading [Transitioning to POWER8: Migration Paths for AIX systems to POWER8](http://www14.software.ibm.com/webapp/set2/sas/f/best/Transitioning_to_POWER8.pdf){: external}.
 
-**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: new_window}{: external} to learn how to safely migrate data to an IBM POWER8 system.
+**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system.
 
 ## Migrating to an IBM POWER9 system
 {: power9-migration}
 
 Learn more about migrating workloads from an existing IBM POWER7 or POWER8 system to a POWER9 system. Before you begin your migration, review the information in this section.
 
-- The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: new_window}{: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system.
+- The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system.
 
     Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
     {: tip}
@@ -81,11 +80,11 @@ Learn more about migrating workloads from an existing IBM POWER7 or POWER8 syste
 
 To learn more about IBM POWER9 system performance and migration strategies, see the following articles:
 
-- [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: new_window}{: external}
-- [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: new_window}{: external}
-- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}
+- [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
+- [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
+- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
 ## Lab services
 {: #lab-services}
 
-[IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: new_window}{: external} has service offerings available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own. If you need help with assessing the potential impact of a migration, benchmarking a system environment, or identifying ways to improve performance, contact [IBM Lab Services](mailto:ibmsls@us.ibm.com){: new_window}{: external}.
+[IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: external} has service offerings available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own. If you need help with assessing the potential impact of a migration, benchmarking a system environment, or identifying ways to improve performance, contact [IBM Lab Services](mailto:ibmsls@us.ibm.com){: external}.

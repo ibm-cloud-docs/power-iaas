@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,7 +28,7 @@ Cloud-native applications are the applications that are **born in the cloud**, w
 
 By packaging and running existing monolithic applications within Red Hat OpenShift Container Platform, enterprises can achieve a lower infrastructure footprint, lower maintenance and support costs, and easier portability across a range of cloud infrastructure and platform services.
 
-For information on application modernization on Power Systems, see [Field Guide to Application Modernization on IBM Power Systems](https://www.ibm.com/downloads/cas/D9POQ3YR){: new_window}{: external}.
+For information on application modernization on Power Systems, see [Field Guide to Application Modernization on IBM Power Systems](https://www.ibm.com/downloads/cas/D9POQ3YR){: external}.
 
-For information on deploying Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} and tutorials to explore the platform, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+For information on deploying Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} and tutorials to explore the platform, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 

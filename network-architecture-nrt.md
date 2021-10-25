@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -183,7 +182,7 @@ The key features of this IPsec VPN topology are as follows:
 * Static routes or a routing protocol, such as BGP, is used to share routes between your gateway on your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your Power subnets.
 * A Generic Routing Encapsulation (GRE) tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
 
-For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}.
+For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
 While not shown on the diagram, x86 servers can be deployed onto the subnets contained within the associated and non-associated VLANs to build complex topologies such as 3 tier architectures. 
 
@@ -221,7 +220,7 @@ The key features of this Direct Link topology are as follows:
     * The IBM Cloud services network isn't accessible directly from remote networks including your Power subnets.
 * The services networks are only accessible from your subnets assigned to you in your Classic infrastructure environment. The services networks are not accessible from your external networks or your Power subnets.
 
-For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: new_window}{: external}:.
+For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}:.
 
 
 

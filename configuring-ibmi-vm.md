@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019, 2020, 2021
+  years: 2019, 2021
 
 lastupdated: "2021-03-19"
 
@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -76,14 +75,14 @@ If you do not see the external IP address in the **Work with TCP/IP Interfaces**
 
 Lastly, enter the `WRKLICINF` command and F11 to display the usage information to verify that the `cloud-init` injected the license keys correctly. After you verify your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-If License Keys for the operating system or any IBM i Licensed Program Products (LPP) have not been applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: new_window}{: external} document.
+If License Keys for the operating system or any IBM i Licensed Program Products (LPP) have not been applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
 By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
-For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
+For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
 
 To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords complete the following steps:
@@ -92,9 +91,8 @@ To change the System Service Tools (SST) and Dedicated Service Tools (DST) passw
 2. Choose **(21) Active dedicated service tools** option from the displayed list under the **Job operations**.
 3. Click **Run action**.
 
-<!--  ![Changing the system value](./images/terminal-ibmi-ipl.png "Changing the system value"){: caption="Figure 5. Changing the system value" caption-side="bottom"}
 
-For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: new_window}{: external}.
+For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
 
 1. Enter the  `wrksysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.

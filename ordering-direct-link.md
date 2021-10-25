@@ -321,16 +321,27 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
     | LON04 | IBM Power VS | SL-LON04-IBMPOWERIAASLITE-1-1 \n SL-LON04-IBMPOWERIAASLITE-1-2 | SL-LON04-IBMPOWERIAASLITE-2-1 \n SL-LON04-IBMPOWERIAASLITE-2-2 |
     | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
     | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERIAASLITE-1-1 \n SL-FRA05-IBMPOWERIAASLITE-1-2 | SL-FRA05-IBMPOWERIAASLITE-2-1 \n SL-FRA05-IBMPOWERIAASLITE-2-2 |
-    | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^x] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^x] |
-    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^x] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^x] |
-    | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1[^x] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^x] |
-    | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^x] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^x] |
-    | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^x] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^x] |
-    | TOK04 | IBM Power VS | SL-TOK04-IBMPOWERIAASLITE-1-1 \n SL-TOK04-IBMPOWERIAASLITE-1-2 \n PowerVS-TOK04-10G-NOGRE-1-1[^x] | SL-TOK04-IBMPOWERIAASLITE-2-1 \n SL-TOK04-IBMPOWERIAASLITE-2-2 \n PowerVS-TOK04-10G-NOGRE-1-2[^x] |
+    | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^footnote1] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^footnote2] |
+    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote4] |
+    | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1[^footnote5] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote6] |
+    | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^footnote7] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^footnote8] |
+    | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^footnote9] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^footnote10] |
+    | TOK04 | IBM Power VS | SL-TOK04-IBMPOWERIAASLITE-1-1 \n SL-TOK04-IBMPOWERIAASLITE-1-2 \n PowerVS-TOK04-10G-NOGRE-1-1[^footnote11] | SL-TOK04-IBMPOWERIAASLITE-2-1 \n SL-TOK04-IBMPOWERIAASLITE-2-2 \n PowerVS-TOK04-10G-NOGRE-1-2[^footnote12] |
     | OSA21 | IBM Power VS | SL-OSA21-IBMPOWERIAASLITE-1-1 \n SL-OSA21-IBMPOWERIAASLITE-1-2 | SL-OSA21-IBMPOWERIAASLITE-2-1 \n SL-OSA21-IBMPOWERIAASLITE-2-2 |
     {: caption="Table 4. Port and Port groups for redundant Direct Link instances" caption-side="bottom"}
 
-    [^x]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote1]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote2]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote3]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote4]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote5]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote6]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote7]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote8]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote9]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote10]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote11]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote12]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
 
 
 3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).

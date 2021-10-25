@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -38,7 +37,6 @@ The new IBM® Power Systems™ Virtual Server VM Capture, Image Export, and Imag
 You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands within the sunset period.
 {: note}
 
-<!-- **You cannot extend a volume that has snapshots. If your volume has snapshots, you must first delete it, then perform a resize**. -->
 
 You are charged different rates based on whether you export to the image catalog or COS.
 {: note}
@@ -70,14 +68,10 @@ CHGASPACT OPTION(*FRCWRT)
 
 6. Click **Capture and export**.
 
-    <!-- ![Capturing and exporting a VM](./images/console-capture-export-fields.png "Capturing and exporting a VM"){: caption="Figure 2. Capturing and exporting a VM" caption-side="bottom"} -->
-
 7. If the capture and export is successful, you are presented with a confirmation message.
 
     If you select large volumes, the export process can take a significantly long period of time.
     {: important}
-
-    <!-- ![Capture and export success!](./images/console-capture-export-success.png "Capture and export success!"){: caption="Figure 3. Capture and export success!" caption-side="bottom"} -->
 
 8. Find your newly exported image by completing either one of the following tasks:
 
@@ -87,11 +81,7 @@ CHGASPACT OPTION(*FRCWRT)
 
     ![Finding your newly captured volume backed image in your image catalog](./images/console-capture-export-boot.png "Finding your newly captured volume backed image in your image catalog"){: caption="Figure 1. Finding your newly captured image in your image catalog" caption-side="bottom"}
 
-    <!-- ![Finding your newly captured volume backed image in your COS bucket](./images/console-capture-export-cos.png "Finding your newly captured image in your COS bucket"){: caption="Figure 2. Finding your newly captured image in your COS bucket" caption-side="bottom"} -->
-
 9. *(Optional)* If you'd like to export your volume backed image from your image catalog to COS, select it and click the **Capture and export** icon.
-
-<!-- ![Exporting the image in your image catalog to COS](./images/console-export-boot-cos.png "Exporting the image in your image catalog to COS"){: caption="Figure 6. Exporting the image in your image catalog to COS" caption-side="bottom"} -->
 
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}

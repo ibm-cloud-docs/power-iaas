@@ -133,7 +133,6 @@ The following tables show how different processor types affect the cost per syst
 | 1                      | $0.34 (capped shared)        | $132.422                  |
 {: caption="Table 1. S922 processor type pricing" caption-side="bottom"}
 
-\n
 
 | Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
@@ -142,7 +141,6 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.70 (capped shared)        | $356.459                  |
 {: caption="Table 2. E880 processor type pricing" caption-side="bottom"}
 
-\n
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |

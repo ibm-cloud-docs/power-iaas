@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -27,6 +26,7 @@ subcollection: power-iaas
 {: #cloud-connections}
 
 You can use Cloud connections to automatically connect your {{site.data.keyword.powerSys_notm}} instances to IBM Cloud resources including the IBM Cloud Classic network and the Virtual Private Cloud (VPC) network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent and higher-throughput connectivity, while keeping network traffic within the IBM Cloud network.
+{: shortdesc}
 
 You can have a maximum of two Cloud connections per account.
 {: important}
@@ -148,12 +148,6 @@ PowerVS ASN       : 64999
 {: codeblock}
 
 You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel. The ASN numbers are pre assigned in the Power Systems Virtual Servers and you cannot choose any other number.
-
-<!--GRE tunnel BGP ASNs are as follows:
-
-- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC).
-- For other ASRs ASN number is 64999.
-- Customer ASN for GRE BGP is 64880.-->
 
 ## Migrating existing network configuration
 {: #migrate-existing-configuration}

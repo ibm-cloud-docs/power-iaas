@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -57,7 +56,7 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ## Creating an AIX VM instance
 {: #create-ssh-key}
 
-You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: new_window}{: external}.
+You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: external}.
 
 ### Using the {{site.data.keyword.powerSys_notm}} user interface to create an AIX VM with a configured SSH key
 {: #console-add-ssh}
@@ -111,6 +110,7 @@ Last login: Fri Jul 26 16:53:22 CDT 2019 on ssh from 10.150.0.11
 # oslevel -s
 7200-03-03-1914
 ```
+{. screen}
 
 You can find the `testkey` value in the **authorized_keys** file:
 

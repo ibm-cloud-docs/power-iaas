@@ -11,16 +11,15 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
 {:tip: .tip}
-{:note: .note}
 {:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{:note: .note}
+{:term: .term}
 
 # Activity tracker events
 {: #at-events}
@@ -200,18 +199,6 @@ The following events are for working with placement groups in your {{site.data.k
 | pcloud.placement-groups.create     |   Create a Placement Group     |
 | pcloud.placement-groups.update     |   Update a Placement Group     |
 | pcloud.placement-groups.delete       |   Delete a Placement Group     |
-
-## List of events: IKE Policy
-{: #at-ike-policy}
-
-The following events are for working with IKE Policy in your {{site.data.keyword.powerSys_notm}} instance.
-
-| Action                   | Description                 |
-|:-------------------------|:----------------------------|
-| pcloud.ike-policy.read       |  Read an IKE Policy   |
-| pcloud.ike-policy.create     |   Create an IKE Policy      |
-| pcloud.ike-policy.update     |   Update an IKE Policy      |
-| pcloud.ike-policy.delete       |   Delete an IKE Policy      |
 
 ## List of events: IKE Policy
 {: #at-ike-policy}

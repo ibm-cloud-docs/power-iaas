@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,11 +28,6 @@ subcollection: power-iaas
 {: #volume-snapshot-clone}
 
 The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
-
-<!-- !The {{site.data.keyword.powerSys_notm}} snapshot, clone, and restore capabilities are currently available only in *DAL13*, *WDC*, *FRA04*, and *FRA05*.
-{: preview} -->
-
-<!-- ![Snapshot and clone API use cases](./images/snapshot-clone-use-cases.png "Snapshot and clone API use cases"){: caption="Figure 1. Snapshot and clone API use cases" caption-side="bottom"} -->
 
 ## Taking a snapshot
 {: #volume-snapshot}
@@ -150,7 +144,6 @@ Performs the remaining execution action to create the cloned volumes from the av
     When a volumes-clone request is not required any longer, you can call the **volumes-clone delete** API to remove the data. You can delete a volumes-clone request only when the request status is in one of the finalized statuses: **Completed**, **Failed**, or **Cancelled** state.
 
 ## Restoring a snapshot
-
 {: #restoring-snapshot}
 
 The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.

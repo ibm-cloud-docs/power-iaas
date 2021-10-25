@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2021
 
 lastupdated: "2020-12-11"
 
@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
