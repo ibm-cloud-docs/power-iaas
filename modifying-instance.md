@@ -75,6 +75,7 @@ You can scale up and scale down the core count and memory of the virtual machine
 {: tab-title="When VM is shut down"}
 
 If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shut down to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
+
 ## Managing your storage volumes
 {: #modifying-volume-network}
 

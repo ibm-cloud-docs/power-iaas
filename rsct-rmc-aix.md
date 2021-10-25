@@ -3,8 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-10-18
-"
+lastupdated: "2021-10-18"
 
 keywords: rsct, rmc, IPv6
 
