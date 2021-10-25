@@ -37,6 +37,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 | Action                     | Description                                      |
 |:---------------------------|:-------------------------------------------------|
 | pcloud.event.read | Read a Power Systems Virutal Server Instance     |
+{: caption="Table 1. List of events: Read" caption-side="top"}
 
 ## List of events: Images
 {: #at-actions-images}
@@ -50,6 +51,7 @@ The following events are for working with images in your {{site.data.keyword.pow
 | pcloud.image.update        | Update an Image                 |
 | pcloud.image.delete        | Delete an Image                 |
 | pcloud.image.capture       | Exports an Image                |
+{: caption="Table 2. List of events: Images" caption-side="top"}
 
 ## List of events: Networks
 {: #at-actions-networks}
@@ -62,6 +64,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | pcloud.network.create      | Create a new Network (Public/Private) |
 | pcloud.network.update      | Update a Network                      |
 | pcloud.network.delete      | Delete a Network                      |
+{: caption="Table 3. List of events: Network" caption-side="top"}
 
 ## List of events: Power Systems Virtual Server
 {: #at-actions-servers}
@@ -86,6 +89,7 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 | pcloud.pvm-instance.network.read      |  Read a Power virtual server instance Network |
 | pcloud.pvm-instance.network.create     |  Create a Power virtual server instance Network  |
 | pcloud.pvm-instance.network.delete      |  Delete a Power virtual server instance Network  |
+{: caption="Table 4. List of events: Power Systems Virtual Server" caption-side="top"}
 
 ## List of events: SSH keys
 {: #at-actions-ssh}
@@ -98,6 +102,7 @@ The following events are for working with your account and SSH keys in your {{si
 | pcloud.ssh-key.create    | Create an SSH key           |
 | pcloud.ssh-key.update    | Update an SSH key           |
 | pcloud.ssh-key.delete    | Delete an SSH key           |
+{: caption="Table 5. List of events: SSH keys" caption-side="top"}
 
 ## List of events: Data volumes
 {: #at-actions-volumes}
@@ -111,6 +116,7 @@ The following events are for working with data volumes in your {{site.data.keywo
 | pcloud.volume.update     | Update a Volume            |
 | pcloud.volume.delete     | Delete a Volume            |
 | pcloud.volume.configure  | Attach or Detach a Volume   |
+{: caption="Table 6. List of events: Data volumes" caption-side="top"}
 
 ## List of events: Storage capacity
 {: #at-storage-capacity}
@@ -120,6 +126,7 @@ The following events are for working with storage capacity in your {{site.data.k
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | pcloud.storage-capacity.read       | Read Storage Capacity     |
+{: caption="Table 7. List of events: Storage capacity" caption-side="top"}
 
 ## List of events: Storage pools
 {: #at-storage-pools}
@@ -129,6 +136,7 @@ The following events are for working with storage pools in your {{site.data.keyw
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | pcloud.system-pools.read       | Read System Pools Information     |
+{: caption="Table 8. List of events: Storage pools" caption-side="top"}
 
 ## List of events: Tenant
 {: #at-tenants}
@@ -142,6 +150,7 @@ The following events are for working with tenants in your {{site.data.keyword.po
 | pcloud.tenant-ssh.create  |   Create an SSH Key  |
 | pcloud.tenant-ssh.update  | Update an SSH Key |
 | pcloud.tenant-ssh.delete   |  Delete an SSH Key  |
+{: caption="Table 9. List of events: Tenant" caption-side="top"}
 
 ## List of events: Job
 {: #at-job}
@@ -153,6 +162,7 @@ The following events are for working with jobs in your {{site.data.keyword.power
 | pcloud.job.read       |  Read a Job or all Jobs |
 | pcloud.job.create  |   Create a Job  |
 | pcloud.job.delete   |  Delete a Job  |
+{: caption="Table 10. List of events: Job" caption-side="top"}
 
 ## List of events: Network ports
 {: #at-network-ports}
@@ -165,6 +175,7 @@ The following events are for working with network ports in your {{site.data.keyw
 | pcloud.port.create  |   Create a Network Port   |
 | pcloud.port.update  |   Update a Network Port   |
 | pcloud.port.delete   | Delete a Network Port  |
+{: caption="Table 11. List of events: Network ports" caption-side="top"}
 
 ## List of events: SAP
 {: #at-sap}
@@ -175,8 +186,9 @@ The following events are for working with SAP in your {{site.data.keyword.powerS
 |:-------------------------|:----------------------------|
 | pcloud.sap.read       |  Read SAP Information |
 | pcloud.sap.create  |   Create an SAP PVM Instance   |
+{: caption="Table 12. List of events: SAP" caption-side="top"}
 
-## List of events: Cloud Connections
+## List of events: Cloud connections
 {: #at-cloud-connection}
 
 The following events are for working with Cloud connections in your {{site.data.keyword.powerSys_notm}} instance.
@@ -187,6 +199,7 @@ The following events are for working with Cloud connections in your {{site.data.
 | pcloud.cloud-connection.create     |   Create a Cloud Connection    |
 | pcloud.cloud-connection.update     |   Update a Cloud Connection    |
 | pcloud.cloud-connection.delete       |   Delete a Cloud Connection    |
+{: caption="Table 13. List of events: Cloud connections" caption-side="top"}
 
 ## List of events: Placement Groups
 {: #at-placement-groups}
@@ -199,6 +212,7 @@ The following events are for working with placement groups in your {{site.data.k
 | pcloud.placement-groups.create     |   Create a Placement Group     |
 | pcloud.placement-groups.update     |   Update a Placement Group     |
 | pcloud.placement-groups.delete       |   Delete a Placement Group     |
+{: caption="Table 14. List of events: Placement groups" caption-side="top"}
 
 ## List of events: IKE Policy
 {: #at-ike-policy}
@@ -211,6 +225,7 @@ The following events are for working with IKE Policy in your {{site.data.keyword
 | pcloud.ike-policy.create     |   Create an IKE Policy      |
 | pcloud.ike-policy.update     |   Update an IKE Policy      |
 | pcloud.ike-policy.delete       |   Delete an IKE Policy      |
+{: caption="Table 15. List of events: IKE policy" caption-side="top"}
 
 ## List of events: IPSec Policy
 {: #at-ipsec-policy}
@@ -223,6 +238,7 @@ The following events are for working with IPSec Policy in your {{site.data.keywo
 | pcloud.ipsec-policy.create     |   Create an IPSec Policy      |
 | pcloud.ipsec-policy.update     |   Update an IPSec Policy      |
 | pcloud.ipsec-policy.delete       |   Delete an IPSec Policy      |
+{: caption="Table 16. List of events: IPSec policy" caption-side="top"}
 
 ## List of events: VPN Connection
 {: #at-vpn-connection}
@@ -235,6 +251,7 @@ The following events are for working with VPN Connection in your {{site.data.key
 | pcloud.vpn-connection.create     |   Create an VPN Connection       |
 | pcloud.vpn-connection.update     |   Update an VPN Connection       |
 | pcloud.vpn-connection.delete       |   Delete an VPN Connection       |
+{: caption="Table 17. List of events: VPN Connection" caption-side="top"}
 
 ## Viewing events
 {: #at-viewing-events}

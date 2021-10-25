@@ -31,7 +31,7 @@ For a complete list of firewall ports that are available for IBM i VMs, see [Net
 {: important}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)
-{: installing-acs}
+{: #installing-acs}
 
 Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: external}.
 

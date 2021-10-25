@@ -31,8 +31,6 @@ With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and
 
 ![Power Systems Virtual Server responsibility assignment matrix](./images/RACI_matrix.png "Power Systems Virtual Server responsibility assignment matrix"){: caption="Figure 1. Power Systems Virtual Server responsibility assignment matrix" caption-side="bottom"}
 
-<!--Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.-->
-
 ## Key features
 {: #key-features}
 
@@ -84,6 +82,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: tip}
 
 ### Data sheets
+{: #data-sheets}
 
 * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
@@ -127,15 +126,13 @@ For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage
 **Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPS of your storage workload.
 {: note}
 
-<!--Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
-{: note}-->
-
 ## Public and private networks
 {: #public-private-networks}
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface.
 
 ### Public network
+{: #public-network}
 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
@@ -147,6 +144,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
     * IBM i 5250 terminal emulation with SSL (port 992)
 
 ### Private network
+{: #private-network}
 
 * Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
@@ -154,7 +152,3 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}
-
-<!-- The following figure displays the basic configuration for a public and private network:
-
-![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"} -->

@@ -48,8 +48,6 @@ CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
 
-{: .pre}
-
 ## Using the Power Systems Virtual Server user interface to capture and export a VM
 {: #console-capture-export}
 

@@ -306,7 +306,7 @@ On a Linux VM, the following database is supported:
 You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
 ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
-{: web-enablement-for-ibmi}
+{: #web-enablement-for-ibmi}
 {: faq}
 
 If you have an IBM i VM instance with the licensed program bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
@@ -322,24 +322,21 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9
 
-<!--## Can Power VC provide support for more than 1 language to VM Console for a single Novalink host?
-
-PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
-
 ## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
 {: ocp_on_powervs}
 {: faq}
 
 You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
+
 ## What is the network latency over Direct Link?
-{: network_latency}
+{: #network_latency}
 {: faq}
 
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 
 
 ## Are we notified about any planned maintenance activities?
-{: planned_maintenance_activity}
+{: #planned_maintenance_activity}
 {: faq}
 
 For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.

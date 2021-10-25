@@ -29,7 +29,7 @@ Before you open a support ticket against the {{site.data.keyword.powerSysShort}}
 {: shortdesc}
 
 ## PowerVS infrastructure cases
-{: support-case-IBM-cloud}
+{: #support-case-IBM-cloud}
 
 To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
 
@@ -43,7 +43,7 @@ To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, co
 8. Review your support ticket summary, and click **Submit case**.
 
 ## Opening Operating System (AIX or IBMi) related cases with IBM Support
-{: support-case-IBM}
+{: #support-case-IBM}
 
 If you are facing any operating system-specific issues, you can directly engage with the IBM support. Go to the [IBM Support portal](https://www.ibm.com/mysupport/s/?language=en_US){: external}, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.
 

@@ -97,7 +97,7 @@ There are additional LPPs for IBM i which are available that can be included in 
 5. View the **Server details** pane to verify your instance modification.
 
 ## Passport Advantage Software
-{: passport-advantage}
+{: #passport-advantage}
 
 In general, IBM programs that are acquired via Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired via Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the Power Systems Virtual Server offering whether RDi was obtained through the Power Systems hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
 
