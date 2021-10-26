@@ -45,11 +45,13 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 {: note}
 
 ### Best practices
+{: #best-practice1}
 
 - Before you take a snapshot, ensure that all of the data is flushed to the disk. If you take a snapshot on a running virtual machine (VM) and did not flush the file system, you might lose some content that is residing in memory.
 - It is recommended that you quiesce all of the applications on the snapshot volume.
 
 ### Use cases
+{: #use-case1}
 
 - Taking a snapshot of a VM targeting only the boot volume
 - Taking a snapshot of a VM targeting only data volumes
@@ -58,6 +60,7 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 - Taking multiple snapshots of different VMs at the same time
 
 ### Restrictions and considerations
+{: #restrict-consider1}
 
 - Parallel VM snapshot operations from different VM nodes for the same shared volume are not allowed.
 - You cannot restore a VM if you are taking a snapshot and there are clone (full-copy) *FlashCopy* operations that are running in the background. The *FlashCopy* operations must first complete.
@@ -98,6 +101,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
     A new volumes-clone ID is generated along with the volumes-clone object.
 
 ### 2. Start the volumes-clone request
+{: #start-vol-clone-req}
 
 This step allows the consistency group to initiate the FlashCopy operation. As a best practice, you must manually quiesce the VM before initiating the start action of a volumes-clone request.
 
@@ -111,6 +115,7 @@ This step allows the consistency group to initiate the FlashCopy operation. As a
     The volumes-clone request is updated to v**iew the current status**.
 
 ### 3. Execute the volumes-clone request
+{: #execute-vol-clone}
 
 Performs the remaining execution action to create the cloned volumes from the available group snapshot. As a best practice, you must manually unquiesce the VM before you initiate the execute action of a volumes-clone request.
 
@@ -126,6 +131,7 @@ Performs the remaining execution action to create the cloned volumes from the av
     The volumes-clone request is updated to **view the current status**.
 
 #### Additional volumes-clone APIs that can be used with volumes-clone requests
+{: #add-vol-clone-api}
 
 - **Get details of a volumes-clone request**
 
@@ -149,12 +155,14 @@ Performs the remaining execution action to create the cloned volumes from the av
 The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
 
 ### Best practices
+{: #best-practice-vol}
 
 During the restore operation, **it is critical that your source disks be quiesced**. Your source disks cannot be in use. Shut down all of your applications, including file systems and volume managers. If you are running an AIX VM, make sure that the disks are freed from the LVM by varying it off.
 
 If you plan to restore the boot disks, **your VM must be shut down**. If the VM has volumes that are hosting external database applications, quiesce all of your applications and ensure that there are no active IO transactions on the disk. Failure to do so can lead to data corruption and put the VM in maintenance mode.
 
 ### Use cases
+{: #use-case-vol}
 
 - Restoring all of the volumes that are part of a VM snapshot
 - Running multiple VM restore operations
@@ -162,6 +170,7 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 - Rolling back a VM to its original volume state
 
 ### Restrictions and considerations
+{: #restrict-consider}
 
 - If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete states, which might require a cleanup initiative from an IBM operation's team.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).

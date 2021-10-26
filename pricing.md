@@ -97,6 +97,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
 | IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
+{: caption="Table 3. Part numbers" caption-side="bottom"}
 
 
 ## Base instances
@@ -131,7 +132,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                      | $0.64 (dedicated)            | $353.028                  |
 | 1                      | $0.28 (uncapped shared)      | $88.257                  |
 | 1                      | $0.34 (capped shared)        | $132.422                  |
-{: caption="Table 1. S922 processor type pricing" caption-side="bottom"}
+{: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
 
 | Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -139,7 +140,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.52 (dedicated)            | $950.533                 |
 | 1                           | $0.54 (uncapped shared)      | $237.615                  |
 | 1                           | $0.70 (capped shared)        | $356.459                  |
-{: caption="Table 2. E880 processor type pricing" caption-side="bottom"}
+{: caption="Table 5. E880 processor type pricing" caption-side="bottom"}
 
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -147,7 +148,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 3. EE980 processor type pricing" caption-side="bottom"}
+{: caption="Table 6. EE980 processor type pricing" caption-side="bottom"}
 
 ## End of billing
 {: #pricing-end-billing}
@@ -156,3 +157,4 @@ The monthly billing cycle ends when you delete the LPAR. If you scale your infra
 
 You are still charged if the VM is in a *suspended state*. When your VM is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VM's core count and memory.
 {: important}
+

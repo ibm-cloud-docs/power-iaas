@@ -79,13 +79,16 @@ ethtool -i <interface name> | grep driver
 The following instructions are applicable to both RHEL version 8.1, and later and SLES version SP15. Some instructions vary depending on whether you are using RHEL or SLES. These differences are specified in the following procedure. If you need additional help to configure network interfaces, refer to the Red Hat or SLES documentation.
 
 1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
+
     ```text
     ip -4 a s (for IPv4 address)
     ip -6 a s (for IPv6 address)
     ```
+
 2. Edit the `ifcfg-<NIC>` file (where NIC is the network interface name that is identified in step 1).
 
     - The path to this file varies depending on whether you are using RHEL or SLES:
+  
     ```text
       RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
       SLES:  /etc/sysconfig/network/ifcfg-<NIC>

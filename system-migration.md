@@ -46,7 +46,7 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 - Consider contacting [IBM Systems Lab Services](#lab-services) to ease the migration process.
 
 ## Migrating to an IBM POWER8 system
-{: power8-migration}
+{: #power8-migration}
 
 **AIX 5.3 and earlier** - You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
 
@@ -66,12 +66,11 @@ Learn more about transitioning to an IBM POWER8 system by downloading [Transitio
 **IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system.
 
 ## Migrating to an IBM POWER9 system
-{: power9-migration}
+{: #power9-migration}
 
 Learn more about migrating workloads from an existing IBM POWER7 or POWER8 system to a POWER9 system. Before you begin your migration, review the information in this section.
 
 - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system.
-
     Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
     {: tip}
 
