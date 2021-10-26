@@ -45,6 +45,7 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
 4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that
 menu. Select **Option 4** next to the interface you'd like to remove.
     ![Removing a network interface](./images/terminal-ibmi-remove-nic.png "Removing a network interface"){: caption="Figure 1. Revmoing a network interface" caption-side="bottom"}
+    
 5. You must vary off the Line description (LIND) after you remove the interface.
 
 ## Adding a network interface to an IBM i VM
