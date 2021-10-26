@@ -64,6 +64,7 @@ The gateway status appears as Pending while the VPN gateway is being created, an
 {: tip}
 
 ### Configuring the on-premises VPN gateway
+{: #configure-onpremise-vpngateway}
 
 The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service Instance. The configuration depends on the type of VPN gateway. See the following topics for details.
 
@@ -71,6 +72,7 @@ The next step is to configure your on-premises VPN gateway peer to connect to yo
 - [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
 
 ### Checking the status of the secure connection
+{: #check-secure-connection}
 
 You can test the connection by doing a ping from a virtual server instance to a server in the on-premises network.
 

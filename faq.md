@@ -26,23 +26,6 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
-<!-- ## Where can I learn how to use a Power Systems Virtual Server?
-{: #training}
-{: faq}
-{: support}
-
-To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: external} video.
-
-This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note}
-
-## Is IBM Power Systems Virtual Servers located on IBM Cloud?
-{: #on-cloud}
-{: faq}
-{: support}
-
-No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.-->
-
 ## What is IBM Power Systems Virtual Server?
 {: #what-is-powervs}
 {: faq}

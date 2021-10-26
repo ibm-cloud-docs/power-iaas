@@ -44,8 +44,6 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
     If the VM is inactive or shut down, you can change the processor type to Dedicated processor, Uncapped shared processor or Capped shared processor.
     {: tip}
 
-    <!-- ![Modifying your server details](./images/console-modify-server-details.png "Modifying your server details"){: caption="Figure 2. Modifying your server details" caption-side="bottom"} -->
-
 4. Check the service agreement box and click **Order** to complete the instance modification process and accept the price.
 
 5. View the **Server details** pane to verify your instance modification.
@@ -97,8 +95,6 @@ If you'd like to attach or detach a volume, click **Manage existing volumes** an
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
 
-<!-- ![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"} -->
-
 ### Resizing a storage volume
 {: #resizing-volume}
 {: help}
@@ -139,10 +135,8 @@ You can remove or add a public network by clicking the **Public networks** toggl
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
-<!-- ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"} -->
-
 ## Detecting problems by using the System Reference Code (SRC)
-{: detect-problems-using-src}
+{: #detect-problems-using-src}
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 

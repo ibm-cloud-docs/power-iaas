@@ -67,13 +67,14 @@ To create a Cloud connection, complete the following steps:
    Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.
 
 6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
+
 If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
 You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
 {: note}
 
-7. Review the summary and the terms and conditions information.
+1. Review the summary and the terms and conditions information.
 
-8. Click **Create** to create a Cloud connection.
+2. Click **Create** to create a Cloud connection.
 
 Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 4.
 {: note}
@@ -163,5 +164,4 @@ If you want to use the new features that are offered by network automation, you 
 {: #pre-req-migration-to-network}
 
 * If you want to migrate your network configuration, you might need to plan a maintenance window.
-
 * Network configuration migration might require network configuration changes in on-premises configuration.

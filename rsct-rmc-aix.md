@@ -140,31 +140,3 @@ Complete the following steps to recover from a missing IPv6 link local address:
 
 11. The output should be the same as the output from the IBM boot image.
 
-<!--Check the management node details (to be used on your disk later) by entering the following command, `lsrsrc ManagementServer hostname`. -->
-
-<!--Check what your boot OS management node is by entering, `lsrsrc ManagementServer hostname`.
-
-If your boot OS management node does not match the original IBM boot image, enter the following commands:
-
-    ```
-    Stop RMC
-    rmcctrl -K
-    ```
-    {: codeblock}
-
-Use the `rmrsrc` command to remove your management node.
-
-    ```
-    /opt/rsct/bin/rmrsrc -s 'Hostname = "hmc1.mydomain.mycompany.com"' ManagementServer
-
-    where hmc1.mydomain.mycompany.com is the value returned on the lssrc command above.
-    ```
-    {: screen} -->
-
-<!-- Start RMC again and wait 15 minutes.
-
-    ```
-    /usr/sbin/rsct/bin/rmcctrl -A
-    /usr/sbin/rsct/bin/rmcctrl -p
-    ```
-    {: codeblock} -->

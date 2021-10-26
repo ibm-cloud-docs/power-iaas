@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -41,7 +40,7 @@ The Power Systems Virtual Server offering includes a highly available up to 10 G
 10 Gbps connection is available only on the Direct Link Connect 2.0.
 {: important}
 
-Direct Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: new_window}{: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
+Direct Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
@@ -61,7 +60,7 @@ Order a second Direct Link Connect connection for backup purposes.
     - [Direct Link Connect concepts](/docs/dl?topic=dl-dl-about)
     - [Direct link prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites)
 
-3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: new_window}{: external} account. 
+3. Log in to your [IBM Cloud](https://cloud.ibm.com/login){: external} account.
 
 4. Click ![Menu icon](../power-iaas/images/menu.svg "menu icon") icon on the upper left, then click **Interconnectivity**.
 
@@ -111,10 +110,10 @@ Order a second Direct Link Connect connection for backup purposes.
 12. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance.
 
 ### Configuration parameters for ordering Direct Link Connect
-
-{: configuration-parameters}
+{: #configuration-parameters}
 
 #### Configuration
+{: #config-dl}
 
 **Direct Link Name** - Enter a name for your Direct Link Connect instance.
 
@@ -159,6 +158,7 @@ Each location requires its own Direct Link Connect. For example, if you order a 
 - **BGP ASN** - You must enter 64999 as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995.
 
 #### Add connection
+{: #add-connection-classicvp}
 
 Select [Classic or VPC](/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure) depending on the type of network reach you want and depending on how you want Direct Link to connect to the IBM Cloud resources. You can create multiple network connections for a Direct Link Connect instance.
 
@@ -167,7 +167,6 @@ Although adding a connection is optional when you are ordering Direct Link Conne
 Power Systems Virtual Servers Direct Link 2.0 service provides connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. You must use the global routing attribute to reach VPC network outside the local region.
 
 ## Ordering Direct Link Connect on Classic
-
 {: #steps-to-order-direct-link-connect}
 
 To order the Direct Link Connect on Classic service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
@@ -184,7 +183,7 @@ Order a second Direct Link Connect connection for backup purposes.
    - [Direct Link Connect on Classic limitations](/docs/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
    - [Strict limitations on IP assignments](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
 
-3. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: new_window}{: external} with your IBM Cloud account credentials.
+3. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM Cloud account credentials.
 
 4. Search for **Direct Link Connect on Classic**.
 
@@ -244,7 +243,7 @@ Order a second Direct Link Connect connection for backup purposes.
 13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
 ### Direct Link Connect configuration parameters
-{: #Direct-link-connect-config-par}
+{: #direct-link-connect-config-par}
 
 **Direct Link Instance name** - Enter a name for your Direct Link Connect instance.
 
@@ -359,3 +358,4 @@ For proper VPC configuration, the on-premise IP address must meet the following 
     - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
 - VM instances within the VPC must not have floating IP.
 - You must create a route to the on-premise public subnet in the VPC default routing table by using the *Delegate-VPC* action. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
+

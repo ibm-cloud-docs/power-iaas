@@ -220,7 +220,7 @@ The key features of this Direct Link topology are as follows:
     * The IBM Cloud services network isn't accessible directly from remote networks including your Power subnets.
 * The services networks are only accessible from your subnets assigned to you in your Classic infrastructure environment. The services networks are not accessible from your external networks or your Power subnets.
 
-For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}:.
+For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
 
 

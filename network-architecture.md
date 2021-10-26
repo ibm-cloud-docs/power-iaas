@@ -78,34 +78,21 @@ You can connect to the IBM Cloud Power environment by using **IBM Cloud Direct L
 
 ![Power Systems Virtual Server to Customer data center connection](./images/Connectivity-Customer-Data-Center-using-IBM-Cloud-DL.png "Power Systems Virtual Server data center connection"){: caption="Figure 4. Power Systems Virtual Server data center connection" caption-side="bottom"}
 
-<!--## IBM Power IaaS locations connectivity by using IBM Cloud Connect or Megaport
-{: #onprem-to-poweriaas}
-
-You can connect your IBM Power on-premises environment to a Power IaaS by using **IBM Cloud Connect or Megaport** as shown in the following diagram.
-
-  ![IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport](./images/network-onprem-colo.png "IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport"){: caption="Figure 5. IBM Power on-premises environment to Power IaaS connection by using IBM Cloud Connect or Megaport" caption-side="bottom"}-->
 
 ## IBM Power IaaS locations connectivity by using IBM Cloud Connect or Megaport
 {: #poweriaas-to-poweriaas-megaport}
 
 You can connect multiple Power Systems Virtual Server locations by using **IBM Cloud Connect** or **Megaport**. IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use MegaPort or Cloud Connect to connect Power IaaS directly from your Enterprise Data Center.
 
-When connecting a Power IaaS Loaction-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: external} unless network connectivity is through a customer router. <!--If you want to route to more than one location from your colo, you must use an MCR (unless your router can perform this function). In some cases, an MCR is not required. For example, you only need one Megaport port open to perform a data replication between *DAL13* and *WDC04*--> Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
+When connecting a Power IaaS Loaction-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://knowledgebase.megaport.com/megaport-cloud-router/what-is-mcr/){: external} unless network connectivity is through a customer router. Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
 
 Use the following network architecture for connectivity between multiple Power Systems Virtual Server locations.
 
 1. When you have your VMs in more than one Power Systems Virtual Server locations that are provisioned for resiliency, PVS-Location1 to PVS-Location2 connectivity can occur outside of IBM Cloud network. You can establish connectivity between the Power Systems Virtual Server locations by using Megaport or IBM Cloud Connect (available only in the United States).
 
-2. IBM Cloud Connect must be used when you want a fully managed service for connectivity between Power Systems Virtual Server locations. IBM Cloud Connect provides connectivity not only to IBM Cloud or the Power Systems Virtual Server locations, but also provides fully managed connectivity in multi-cloud scenarios. <!--Although you are responsible for the final connectivity, IBM Network Services can also provide this as a service with Cloud Connect.-->
+2. IBM Cloud Connect must be used when you want a fully managed service for connectivity between Power Systems Virtual Server locations. IBM Cloud Connect provides connectivity not only to IBM Cloud or the Power Systems Virtual Server locations, but also provides fully managed connectivity in multi-cloud scenarios. 
 
 ![IBM Power IaaS location connectivity by using IBM Cloud Connect or Megaport](./images/Locations-connectivity-byusing-cloud-connect-or-megaport.png "IBM Power IaaS location connectivity by using IBM Cloud Connect or Megaport"){: caption="Figure 6. IBM Power IaaS location connectivity by using Direct Link, IBM Cloud Connect, or Megaport" caption-side="bottom"}
-
-<!-- ## IBM Power colo to colo connection using GRE tunneling
-{: #colo-to-colo-gre}
-
-You can connect a colo to a colo by using **Direct Link** and GRE tunnels.
-
-  ![Power Systems Virtual Server colo to colo connection](./images/network-colo-to-colo-gre.png "Power Systems Virtual Server Colo to Colo connection"){: caption="Figure 7. Power Systems Virtual Server Colo to Colo (GRE Tunneling)" caption-side="bottom"} -->
 
 ## IBM Power IaaS locations connectivity by using IBM Cloud network backbone and proxy routers
 {: #dual-poweriaas}

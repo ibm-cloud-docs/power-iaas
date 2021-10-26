@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,8 +34,6 @@ The following videos do not capture the latest updates to the {{site.data.keywor
 {: #modernizing-oracle}
 
 For details, see this video on [deploying Oracle database in the {{site.data.keyword.powerSys_notm}}](https://ibm.biz/HybridOracleDBonPOWER9-Part1).
-
-<!--<iframe id="youtube-modernizing" title="Modernizing an Oracle database" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/gE0evmmvUVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
 ## Building a new Oracle environment from a custom AIX image
 {: #building-oracle}

@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads
-{: powervs-integration-x86-workloads}
+{: #powervs-integration-x86-workloads}
 
 For a complete tutorial on the following scenarios, see [IBM Power Systems Virtual Server integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf){: external}:
 - x86 VSI communication with a {{site.data.keyword.powerSys_notm}} instance
