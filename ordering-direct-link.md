@@ -152,6 +152,7 @@ Each location requires its own Direct Link Connect. For example, if you order a 
 **Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps.
 
 #### BGP and connections
+{: #bgp-connection}
 
 - **Ports** - If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
@@ -308,7 +309,7 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
 
     The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you had selected **-1-1** for the first Direct Link Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance that you want to use to set up redundancy.
 
-    ![BGP and connections](images/bgp-connections.png){: Caption="Figure 1. BGP and connections" caption-side="bottom"}
+    ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
 
     For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
     {: note}

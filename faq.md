@@ -306,7 +306,7 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
     **Web Enablement for i (5733-WE3)** - WebSphere V9
 
 ## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
-{: ocp_on_powervs}
+{: #ocp_on_powervs}
 {: faq}
 
 You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.

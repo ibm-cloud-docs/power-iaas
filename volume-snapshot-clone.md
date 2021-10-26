@@ -86,6 +86,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
 **Steps**: Performing the clone operation on a volume consists of three steps: prepare, start, and execute the volumes-clone request. These steps allow you to perform preparatory actions and to authorize the ongoing I/O operations on the source volumes. Breaking the clone operation on a volume into multiple steps provides consistent clones and reduces the VM quiesce time. The clone operation on a volume consists the following steps:
 
 ### 1. Create a volumes-clone request and initiate the Prepare action
+{: #create-vol-clone req}
 
 - **Requirements**
     - Minimum of two volumes

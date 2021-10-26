@@ -222,6 +222,3 @@ The key features of this Direct Link topology are as follows:
 
 For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
-
-
-
