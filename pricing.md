@@ -34,7 +34,7 @@ subcollection: power-iaas
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
-[^1]: In DAL12, DAL13, and TOK04 data centers, the E980 systems allow up to 23,070 GB of memory.
+[^1]: In DAL12, DAL13, OSA21, SAO01, SAO04, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
 [^2]: If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
