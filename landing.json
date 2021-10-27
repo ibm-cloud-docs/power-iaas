@@ -25,8 +25,13 @@
       },
       {
         "title": "SAP HANA and SAP NetWeaver",
-        "description": "Plan and provision Power Systems Virtual Servers for SAP HANA and SAP NetWeaver",
+        "description": "Plan and provision Power Systems Virtual Servers for SAP HANA and SAP NetWeaver.",
         "href": "/docs/sap?topic=sap-power-vs-planning-items"
+      },
+      {
+        "title": "SAP HANA and SAP NetWeaver",
+        "description": "Explore a collection of documentation sections for each SAP offering.",
+        "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
       }
     ],
     "section_learn": {
