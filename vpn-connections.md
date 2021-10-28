@@ -31,9 +31,9 @@ You can connect an on-premises virtual private network (VPN) gateway to an IBM C
 With VPN access, you can:
 
 - Ensure private and low-cost connectivity to IBM Cloud services.
-- Access your Virtual Servers through the primary private IP address by using Secure Shell (SSH) and your other on-premises applications that are running on your on-premises host.
+- Access your Virtual Servers through the private IP address by using Secure Shell (SSH) and your other on-premises applications that are running on your on-premises host.
 
-The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). Each of your IBM Cloud accounts can be provided with VPN access and it can be limited to the subnets that need VPN access. Ensure that the VPN access is enabled and a VPN password is specified before you attempt to log in to VPN services. You can use VPN to securely connect your Power Virtual Server Service Instance to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
+The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server Service Instance to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
 
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported.
 {: important}
@@ -48,7 +48,21 @@ Power Systems Virtual Server supports multiple service instances from the same a
 ## Connecting to your on-premises network
 {: #vpn-connecting-onpremise}
 
-You can configure your VPN gateway to connect to your on-premises network.
+You can configure your VPN to connect to your on-premises network by following these steps in the Power Virtual Server CLI or API.
+
+1. Create an IKE Policy, see [Creating IKE and IPsec policies](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
+2. Create an IPSec Policy, see [Creating IKE and IPsec policies](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
+3. Create a VPN connection, , see [Creating VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-VPN-connections).
+4. Configure your on-premise IPSec Gateway enduring IKE Policy, IPSec Policy, and VPN Connection parameters that are compatible.
+
+### Configuring the on-premises VPN gateway
+{: #configure-onpremise-vpngateway}
+
+The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service Instance. The configuration depends on the type of VPN gateway. See the following topics for details.
+
+- [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
+- [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
+- Connecting to a IBM Cloud VPC VPN Gateway peer
 
 Create a VPN gateway in your Power Virtual Server Service Instance and create a VPN connection between the Power Virtual Server Service Instance and the peer gateway of the on-premises network by specifying the following information:
 
@@ -62,14 +76,6 @@ For the Internet Key Exchange (IKE) and IPsec security parameters, select Auto s
 
 The gateway status appears as Pending while the VPN gateway is being created, and the status changes to Available after the gateway is created.
 {: tip}
-
-### Configuring the on-premises VPN gateway
-{: #configure-onpremise-vpngateway}
-
-The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service Instance. The configuration depends on the type of VPN gateway. See the following topics for details.
-
-- [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
-- [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
 
 ### Checking the status of the secure connection
 {: #check-secure-connection}
@@ -86,6 +92,22 @@ You can view allowable and default values for attributes when you are creating I
 IKE policy version 2 is not compatible with policy-based VPN connections. If you attempt to add an IKE policy version 2 to a policy-based VPN connection, an error is displayed.
 {: important}
 
+This is the display of an example VPN connection:
+
+```ID                      1471c65163dd44daa969cf3edddd20a8
+Name                    rs-vpc-vpn01
+Status                  active
+Mode                    route
+Local Gateway Address   169.48.225.198
+Peer Gateway Address    130.198.12.241
+VPN Gateway Address     169.48.225.198
+IKE Policy              ID: a757fb8d0a324e4abe0589bc17fbad7c, Name: rs-ike-1
+IPSec Policy            ID: befd77bd25a04c388c43ccb3973966be, Name: rs-ipsec-1
+Peer Subnets            10.245.0.0/27
+Networks                cb36a4e8-23d1-4ddc-b6c0-cf640ae0456d
+Dead Peer Detection     Action: restart, Interval: 10, Threshold: 5
+```
+
 ## Creating IKE and IPsec policies
 {: #creating-IKE-policies}
 
@@ -98,12 +120,36 @@ You can use the default or custom IKE policies to define security parameters tha
 
 You can add an IKE policy by using the `ibmcloud pi vpn-ike-policy-add` command. For more information about adding, viewing, updating, or deleting an IKE policy by using CLI, see [VPN IKE policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
 
+This is the display of an example IKE Policy. Note that Pre-shared key is not displayed for an IKE policy.
+
+```Ibmcloud pi vpn-ike-policy a757fb8d0a324e4abe0589bc17fbad7c
+ID               a757fb8d0a324e4abe0589bc17fbad7c
+Name             rs-ike-1
+Version          2
+Authentication   sha-256
+Encryption       aes-256-cbc
+Dh Group         2
+Key Lifetime     28800
+```
+
 ### Adding and configuring IPsec policy to a VPN connection
 {: #adding-IPsec-policies}
 
 You can use the default or custom IPsec policies to define security parameters that will be used during Phase 2 of IKE negotiation. In this phase, the VPN and peer device use the security association that is established during Phase 1 of IKE negotiation to negotiate what traffic to send and how to authenticate and encrypt that traffic.
 
 You can add an IPsec policy by using the `ibmcloud pi vpn-ipsec-policy-add` command. For more information on adding, viewing, updating, or deleting an IPsec policy by using CLI, see [VPN IPsec policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
+
+This is the display of an example IPSec Policy:
+
+```Ibmcloud pi vpn-ips-policy befd77bd25a04c388c43ccb3973966be
+ID                        befd77bd25a04c388c43ccb3973966be
+Name                      rs-ipsec-1
+Authentication            hmac-sha-256-128
+Encryption                aes-256-cbc
+Dh Group                  2
+Perfect Forward Secrecy   true
+Key Lifetime              28800
+```
 
 ## Attaching subnets to VPN connections
 {: #attach_subnets_VPN}
@@ -117,3 +163,5 @@ You must route Power Systems Virtual Server private network subnets over VPN con
 When you create a subnet or edit details of a subnet, you can attach an existing VPN connection to the subnet.
 
 For more information about attaching or detaching subnets by using CLI, see [VPN subnets](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connection-local-subnets).
+
+## Power Virtual Server VPNaaS configuration planning worksheet
