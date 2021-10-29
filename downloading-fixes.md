@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -27,12 +26,12 @@ subcollection: power-iaas
 # Downloading fixes and updates
 {: #downloading-fixes-updates}
 
-You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: new_window}{: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
+You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
 If you'd like to download fixes and updates, you must perform one of the following:
 
-- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the `suma` command or the [SNDPTFORD command](#sndptford-command).
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
 - Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
 - Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-suma).
 
@@ -52,33 +51,25 @@ When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master,
 
 To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes), `/usr/esa/bin/verifyConnectivity -tw`. If the tests fail, work with your network security team to determine why you are unable to access the servers.
 
-You can access the SUMA configuration by running the [suma command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/s_commands/suma.html){: new_window}{: external} or by using the `SMIT suma` fast path. When you create a SUMA policy, you must specify a request type that specifies the type of download.
-
-**PTF**<br>
-Specifies a request to download a program temporary fix (PTF), such as U813941. Only certain PTFs can be downloaded as an individual file set. This limitation applies to PTFs that contain either the *bos.rte.install* or *bos.alt_disk_install.rte* file sets as well as those that are released in between Service Packs (SP). Otherwise, you must download the technology level (TL) or SP.
-
-**TL**<br>
-Specifies a request to download a specific TL (such as 7200-02).
-
-**SP**<br>
-Specifies a request to download a specific SP (such as 7200-02-00).
-
-**Latest**<br>
-Specifies a request to download the latest fixes. This value returns the latest SP or TL as specified in the **FilterML** attribute.
+You can access the SUMA configuration by running the [suma command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/s_commands/suma.html){: external} or by using the `SMIT suma` fast path. When you create a SUMA policy, you must specify one of the following request types that specifies the type of download:
+- **PTF**: Specifies a request to download a program temporary fix (PTF), such as U813941. Only certain PTFs can be downloaded as an individual file set. This limitation applies to PTFs that contain either the *bos.rte.install* or *bos.alt_disk_install.rte* file sets as well as those that are released in between Service Packs (SP). Otherwise, you must download the technology level (TL) or SP.
+- **TL**: Specifies a request to download a specific TL (such as 7200-02).
+- **SP**: Specifies a request to download a specific SP (such as 7200-02-00).
+- **Latest**: Specifies a request to download the latest fixes. This value returns the latest SP or TL as specified in the **FilterML** attribute.
 
 ### Configuring SUMA to use the proxy settings
 {: #configuring-aix-proxy}
 
 Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet. To verify that the LPAR is connected to the internet, enter the following command:
 
-```
+```text
 suma -x -a Action=Preview -a RqType=LatestCopy
 ```
 {: codeblock}
 
-The `suma` command allows you to preview only the download operation. When you run this command, files are not downloaded. If the LPAR is not authenticated to access the internet, the command returns an error message. For information on troubleshooting SUMA error messages, see [Troubleshooting SUMA error messages](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html#serv_update_mgt__section_troubleshoot_suma){: new_window}{: external}.
+The `suma` command allows you to preview only the download operation. When you run this command, files are not downloaded. If the LPAR is not authenticated to access the internet, the command returns an error message. For information on troubleshooting SUMA error messages, see [Troubleshooting SUMA error messages](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html#serv_update_mgt__section_troubleshoot_suma){: external}.
 
-```
+```text
 0500-013 Failed to retrieve list from fix server.
 ```
 {: screen}
@@ -120,32 +111,29 @@ The `suma` command can be used to perform various operations on a SUMA task or p
 
 To create and save a SUMA task by using the command line, enter the following command:
 
-```
+```text
 suma -w -a DisplayName=‘ AIX72TL2SP2‘ -a FilterML=‘7200-00‘
 ```
-{: codeblock}
 
 The command returns a task ID after the successful creation of a SUMA task:
 
-```
+```text
 Task ID 10 created.
 ```
-{: screen}
 
 To create and schedule a task that downloads the latest fixes and adds a policy label through the **DisplayName** field (useful when you are listing policies through SMIT), enter the following command:
 
-```
+```text
 suma -s "30 2 15 * *" -a RqType=Latest   \
     -a DisplayName="Latest fixes - 15th Monthly"
 ```
-{: codeblock}
 
 ## Using the Electronic Service Agent (ESA) to download fixes and updates for IBM i VMs
 {: #downloading-fixes-ibmi}
 {: help}
 {: support}
 
-Learn how to configure a [Universal Connection to IBM services](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: new_window}{: external}. If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server) to download fixes and updates. You can also use the `SNDPTFORD` command and a network installation server to do the same.
+Learn how to configure a [Universal Connection to IBM services](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzaji/rzaji_setup.htm){: external}. If you don't want to assign a public IP to an IBM i VM, you can use a multi-hop connection (proxy server) to download fixes and updates. You can also use the `SNDPTFORD` command and a network installation server to do the same.
 
 ### The SNDPTFORD command
 {: #sndptford-command}
@@ -163,16 +151,14 @@ You can use the `SNDPTFORD` command to order and receive IBM-supplied fixes (or 
 
 For example, the following command sends a request for PTF numbers SI12345 and SI12346:
 
-```
+```text
 SNDPTFORD PTFID((SI12345) (SI12346))
 ```
-{: codeblock}
 
-For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/cl/sndptford.htm){: new_window}{: external} and [Ordering fixes by using the Send PTF Order command](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzam8/rzam8fixobtainsndptford.htm){: new_window}{: external}. If you can't put your IBM i VM on the network, set up a network install server as instructed in the next section.
+For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/cl/sndptford.htm){: external} and [Ordering fixes by using the Send PTF Order command](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzam8/rzam8fixobtainsndptford.htm){: external}. If you can't put your IBM i VM on the network, set up a network install server as instructed in the next section.
 
 ### Setting up an IBM i network install server
 {: #ibmi-network-server}
 
 Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.
 
-<!-- The [Create Service Configuration (`CRTSRVCFG`)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY){: new_window}{: external} command creates the service configuration needed for all service and support applications: Electronic Customer Support (ECS) and Electronic Service Agent. Connectivity options are available from either local or remote systems or logical partitions. Primary or backup configurations can be created for the service configuration. To configure an IBM i proxy server by using the `CRTSRVCFG` command, see [Proxy server (PROXY)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/crtsrvcfg.htm#CRTSRVCFG.PROXY){: new_window}{: external}. -->

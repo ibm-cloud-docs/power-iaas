@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,19 +38,19 @@ Learn how to create an OVA image of a Linux operating system and import it into 
 ### Using PowerVC to capture and import an OVA image
 {: #powervc-capture}
 
-If you've deployed PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: new_window}{: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage account and import it into the {{site.data.keyword.powerSys_notm}} environment.
+If you've deployed PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage account and import it into the {{site.data.keyword.powerSys_notm}} environment.
 
 ### Capturing an image from VIOS
 {: #vios-capture}
 
-The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: new_window}{: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/technologies/systems/articles/au-viosmapping/){: new_window}{: external}. **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
+The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/technologies/systems/articles/au-viosmapping/){: external}. **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
 
 The `create_ova` RPM also contains the `create_ova` man page and license. You must install the RPM on VIOS releases which are prior to VIOS 3.1.2.0. The `create_ova` command is provided as a system command on VIOS release 3.1.2.0, or later.
 {: note}
 
 To see the contents of the RPM package, enter the `rpm` command as shown in the following example:
 
-```
+```text
 # rpm -qlp /tmp/create_ova-1.0-2.aix7.2.ppc.rpm
 /opt/freeware/doc/create_ova-1.0
 /opt/freeware/doc/create_ova-1.0/create_ova.pdf
@@ -72,7 +71,7 @@ Once you obtain the correct disk name (through virtual adapter mapping), you can
 You can upload the `ova.gz` file into your Cloud Object storage account. Once you upload it, go to the {{site.data.keyword.powerSys_notm}} user interface and import the OVA image from your Cloud Object Storage account.
 {: important}
 
-```
+```text
 ssh (isotopes-vios2)
 
 IBM Virtual I/O Server
@@ -120,4 +119,3 @@ Done verifying resources.
 # ls -l /datafs/linux_20200511101424.ova.gz
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/linux_20200511101424.ova.gz
 ```
-{: screen}

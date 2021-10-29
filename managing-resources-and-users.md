@@ -11,7 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -56,6 +56,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Operator             | View instances and list instances.                                                                      |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
+{: caption="Table 1. IAM platform access roles" caption-side="bottom"}
 
 ## Service access roles
 {: #service-access-roles}
@@ -65,8 +66,8 @@ You can use the service access roles to define what users can do with {{site.dat
 | Service access role | Description of actions |
 |-----------|-------------------------|
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make any changes to the resources. |
-| Manager | You can configure all resources. The following are some of the actions you can perform:<ul><li>Create instances</li><li>Increase storage volume sizes</li><li>Create SSH keys</li><li>Modify network settings</li><li>Create boot images</li><li>Delete storage volumes</li>
-</ul>
+| Manager | You can configure all resources. The following are some of the actions you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
+{: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
 ## User access scenarios
 {: #user-access-scenarios}

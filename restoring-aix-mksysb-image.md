@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,7 +33,7 @@ The IPv6 interface that is used for VM management might be affected when you res
 {: important}
 
 ## Defining an AIX Helper VM
-{: defining-aix-helper-vm}
+{: #defining-aix-helper-vm}
 {: help}
 {: support}
 
@@ -59,8 +58,8 @@ Running the `df -g` command displays information about the total space and avail
 
 If your disk is not at the correct size, complete the following steps:
 
-  You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
-  {: note}
+    You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
+    {: note}
 
 1. Create a file system to hold the _mksysb_ archive.
 
@@ -82,7 +81,7 @@ If your disk is not at the correct size, complete the following steps:
 
 6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
-  ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
+    ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
 
 After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
 
@@ -123,14 +122,9 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
 You can now create an AIX boot disk from the source _mksysb_ archive. To create an AIX boot disk from the source _mksysb_ archive, run the `alt_disk_mksysb` command with the following options:
 
-<dl>
-  <dt><strong>-m</strong></dt>
-  <dd>Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.</dd>
-  <dt><strong>-d</strong></dt>
-  <dd>Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named <em>hdisk2</em>.</dd>
-  <dt><strong>-c</strong></dt>
-  <dd> Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.</dd>
-</dl>
+**-m**: Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.
+**-d**: Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named `hdisk2`.
+**-c**: Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.
 
 After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
@@ -155,99 +149,12 @@ In the previous section, we used a separate image volume for storing the source 
 After the completion of the `alt_disk_mksysb` command, you can detach the staging volume (`mksysbvg`) from the _helper VM_. Before you detach the staging volume, you must close all available file systems by unmounting them. If no action is required, then it is safe to remove the volume group definition from the _helper VM_.
 
 1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.
-
-![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
+    ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
 
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
-
-![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
+    ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
-
-![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
+    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
-
-<!--## Moving data to the cloud
-{: move-data-to-cloud}
-
-Depending on your network bandwidth and size constraints, data moving process is as simple as creating an *OVA* or *mksysb* (root volume group) image, and a set of *savevg* images for data volumes. By using an *OVA* or *mksysb* image, you can build or provision a VM and then proceed to migrate the data volume groups of the VM by using the **restvg** command.
-
-You can use following methods to back up your on-premise data and move the data to IBM {{site.data.keyword.powerSys_notm}}.
-
-### Migrating volume group data by using the *savevg* command
-{: migrate-data-using-savevg}
-
-A volume group is a collection of physical volumes of various sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media are organized into physical partitions of a size that you specify when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to back up and restore non-root volume groups. The *savevg* and *restvg* commands simplify the creation of your new volume groups and file systems on your new VM.
-
-The *savevg* command finds and backs up all files that belong to a specified volume group. The volume group must be varied-on, and the file systems must be mounted. The *savevg* command uses the data file created by the *mkvgdata* command.
-
-Use the following command to find and back up all files in a specific volume group.
-
-```
-# savevg –f <destination path> -i <non root vg files to be backed up>
-```
-{: codeblock}
-
-For example:
-
-```
-# savevg –f /home/admin01/datavg_bkup –i  datavg
-```
-
-### Backing up multiple volume groups by using the *mkvgdata* and *restvg* commands
-{: multiple-volume-backups}
-
-Small systems might require only one data volume group to contain all the physical volumes for the non-root volume data. You might want to create separate volume groups, for security reasons, because each volume group can have its own security permissions. Separate volume groups are easier to maintain because if a volume group stops working, other volume groups can remain active.
-
-Run the following commands to back up multiple volume groups:
-
-```
-# lsvg -o | xargs -i mkvgdata {}
-# tar -cvf /backup/vgdata.tar /tmp/vgdata
-```
-{: codeblock}
-
-Run the *mkvgdata* command for each online volume group to generate output file that contains information about the volume group in `/tmp/vgdata` directory. The resulting output file is compressed and stored in the `/backup` file system directory. This output file contains information regarding all volume groups, logical volumes, and file systems that can be used as a single image. The resulting image can be transferred or stored within an *mksysb* backup if the `/backup` directory is located on *rootvg*.
-
-Run the following command to recreate the volume groups, logical volumes, and file systems:
-
-```
-# tar -xvf /backup/vgdata.tar
-```
-
-Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and look for the line with `VG_SOURCE_DISK_LIST=`. Change the line to have the *hdisks*, *vpaths*, or *hdiskpowers* based on your requirement.
-
-For example:
-
-```
-# restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data
-```
-
-### Migrating raw partitions by using the dd command
-{: migrating-raw-partitions}
-
-The output file of the *savevg* command can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volumes in the volume group. If the environments have data more than several TBs, the prescribed method of moving volume data by using *savevg* may present a disadvantage when considering transference and restoration procedures.
-
-You can use the *savevg* command to back up volume groups. All logical volume information, Journaled File System (JFS), and JFS2 mounted file systems are archived. However, you can not use the *savevg* command to back up raw logical volumes.
-
-Use the following methods to back up and restore content of a file system:
-
-1. Unmount the file system.
-2. Save the raw logical volume content into a file by running the following command:
-
-```
-  # dd if=/dev/lvname of=/file/system/lvname.dd
-```
-{: codeblock}
-
-This command creates a copy of logical volume **lvname** to a file **lvname.dd** in file system `/file/system`. Make sure that the specified directory where the output file is stored (`/file/system` in the example) has enough disk space available to hold a full copy of the logical volume. If the logical volume is 100 GB, you need 100 GB file system space for the logical volume copy.
-
-On the destination server, recreate the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
-
-```
-# dd if=/file/system/lvname.dd of=/dev/lvname
-```
-{: codeblock}
-
-After you run the dd command, mounting the file system provides access to the contents of the original file system.-->

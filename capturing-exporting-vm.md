@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -38,18 +37,16 @@ The new IBM® Power Systems™ Virtual Server VM Capture, Image Export, and Imag
 You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands within the sunset period.
 {: note}
 
-<!-- **You cannot extend a volume that has snapshots. If your volume has snapshots, you must first delete it, then perform a resize**. -->
 
 You are charged different rates based on whether you export to the image catalog or COS.
 {: note}
 
 Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (written) to the disk by running the following command:
 
-```
+```text
 CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
-{: .pre}
 
 For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/chgaspact.htm){: new_window}{: external}.
 
@@ -71,14 +68,10 @@ For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/
 
 6. Click **Capture and export**.
 
-    <!-- ![Capturing and exporting a VM](./images/console-capture-export-fields.png "Capturing and exporting a VM"){: caption="Figure 2. Capturing and exporting a VM" caption-side="bottom"} -->
-
 7. If the capture and export is successful, you are presented with a confirmation message.
 
     If you select large volumes, the export process can take a significantly long period of time.
     {: important}
-
-    <!-- ![Capture and export success!](./images/console-capture-export-success.png "Capture and export success!"){: caption="Figure 3. Capture and export success!" caption-side="bottom"} -->
 
 8. Find your newly exported image by completing either one of the following tasks:
 
@@ -88,11 +81,7 @@ For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/
 
     ![Finding your newly captured volume backed image in your image catalog](./images/console-capture-export-boot.png "Finding your newly captured volume backed image in your image catalog"){: caption="Figure 1. Finding your newly captured image in your image catalog" caption-side="bottom"}
 
-    <!-- ![Finding your newly captured volume backed image in your COS bucket](./images/console-capture-export-cos.png "Finding your newly captured image in your COS bucket"){: caption="Figure 2. Finding your newly captured image in your COS bucket" caption-side="bottom"} -->
-
 9. *(Optional)* If you'd like to export your volume backed image from your image catalog to COS, select it and click the **Capture and export** icon.
-
-<!-- ![Exporting the image in your image catalog to COS](./images/console-export-boot-cos.png "Exporting the image in your image catalog to COS"){: caption="Figure 6. Exporting the image in your image catalog to COS" caption-side="bottom"} -->
 
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
@@ -101,7 +90,7 @@ To learn more about using the command-line interface to capture and export a VM,
 
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
 
-    ```
+    ```text
     ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volumes "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
     ```
     {: codeblock}
@@ -110,14 +99,14 @@ To learn more about using the command-line interface to capture and export a VM,
 
     - To see your newly exported image in the image catalog, use the `ibmcloud pi image-list-catalog` command:
 
-        ```
+        ```text
         ibmcloud pi image-list-catalog [--long] [--json]
         ```
         {: codeblock}
 
     - To see your newly exported image in COS, use the `ibmcloud cos list-objects` command:
 
-        ```
+        ```text
         ibmcloud cos list-objects --bucket BUCKET_NAME [--delimiter DELIMITER] [--encoding-type METHOD] [--prefix PREFIX] [--starting-token TOKEN] [--page-size SIZE] [--max-items NUMBER] [--region REGION] [--json]
         ```
         {: codeblock}

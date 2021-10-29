@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -27,6 +26,7 @@ subcollection: power-iaas
 {: #cloud-connections}
 
 You can use Cloud connections to automatically connect your {{site.data.keyword.powerSys_notm}} instances to IBM Cloud resources including the IBM Cloud Classic network and the Virtual Private Cloud (VPC) network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent and higher-throughput connectivity, while keeping network traffic within the IBM Cloud network.
+{: shortdesc}
 
 You can have a maximum of two Cloud connections per account.
 {: important}
@@ -51,7 +51,7 @@ To create a Cloud connection, complete the following steps:
 
 1. Go to the Power Systems Virtual Server user interface and click **Cloud connections**.
 
-2. In the <wintitle>Cloud connections</wintitle> page, click **Create connection**.
+2. In the **Cloud connections** page, click **Create connection**.
 
 3. Specify a connection name and select a connection speed. Maximum connection speed is 5 Gbps. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
@@ -59,18 +59,22 @@ To create a Cloud connection, complete the following steps:
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
 5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
+   
    * **Classic Infrastructure**: You can connect to IBM Cloud classic resources. Only one Classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
+  
    * **VPC**: You can connect to your account’s Virtual Private Cloud (VPC) resources. You must select the VPC connection from the list of available connections. You can connect multiple VPCs to a Cloud Connection.
+  
    Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.
 
 6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
+
 If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
 You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
 {: note}
 
-7. Review the summary and the terms and conditions information.
+1. Review the summary and the terms and conditions information.
 
-8. Click **Create** to create a Cloud connection.
+2. Click **Create** to create a Cloud connection.
 
 Cloud connections are available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 4.
 {: note}
@@ -128,7 +132,7 @@ GRE tunnel subnet supports addressing for GRE tunnels. It is used for tunnel sou
 
 If you choose your destination IP address as 10.148.252.83, which is a private IP of your vRealize Automation (VRA) (VRA -IBM Cloud vSRX, Vyatta, or VMWare NSX Edge) and GRE subnet as 172.16.3.0/29:
 
-```
+```text
 GRE Destination IP: 10.148.252.83 (VRA private IP)
 GRE Subnet:       : 172.16.3.0/29 (GRE subnet that you chose)
 PowerVS source IP : 172.16.3.1 mask 255.255.255.255
@@ -138,7 +142,7 @@ PowerVS tunnel IP : 172.16.3.5
 
 You must configure the GRE tunnel in your VRA as follows:
 
-```
+```text
 GRE Destination IP: 172.16.3.1/32 (PowerVS Tunnel End-point Destination IP)
 VRA source IP     : 10.148.252.83
 VRA tunnel IP     : 172.16.3.6
@@ -148,12 +152,6 @@ PowerVS ASN       : 64999
 {: codeblock}
 
 You must configure VRA with BGP protocol for route advertising for the subnets to reach over the GRE tunnel. The ASN numbers are pre assigned in the Power Systems Virtual Servers and you cannot choose any other number.
-
-<!--GRE tunnel BGP ASNs are as follows:
-
-- Power ASR side ASN is 64995 in WDC(64999 for Nexus in WDC).
-- For other ASRs ASN number is 64999.
-- Customer ASN for GRE BGP is 64880.-->
 
 ## Migrating existing network configuration
 {: #migrate-existing-configuration}

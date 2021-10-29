@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019,2020
+  years: 2019, 2020
 
 lastupdated: "2020-04-13"
 
@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -32,9 +31,9 @@ For a complete list of firewall ports that are available for IBM i VMs, see [Net
 {: important}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)
-{: installing-acs}
+{: #installing-acs}
 
-Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: new_window}{: external}.
+Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.com/support/pages/ibm-i-access-client-solutions){: external}.
 
 ## Using SSH tunneling to allow ACS to connect over the public IP
 {: #ssh-tunneling}
@@ -45,14 +44,14 @@ Before you use an SSH tunnel, you must create a user profile with `USRCLS(*SECOF
  
 After the `QSECOFR` user profile is enabled, start the SSHD server on the VM:
 
-```
+```text
 strtcpsvr server(*SSHD)
 ```
 {: pre}
 
 On a Linux&reg; or Mac system, you would run a command similar to the following example:
 
-```
+```text
 ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
 ```
 {: pre}
@@ -65,7 +64,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY](https://www.putty.org/){: new_window}{: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
+1. Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
 
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 
@@ -124,22 +123,21 @@ Start the required TCP servers on your IBM i operating system by performing the 
 
 1. To allow SSH connections, enter the following command:
 
-    ```
+    ```text
     strtcpsvr server(*SSHD)
     ```
     {: pre}
 
 2. To start the IBM Navigator for i (iNav) and Digital Certificate Manager (DCM) GUIs, enter the following command:
 
-    ```
-    strtcpsvr server(*HTTP) httpsvr (*ADMIN)
-
+    ```text
+    strtcpsvr server(*HTTP) httpsvr(*ADMIN)
     ```
     {: pre}
 
 3. To get a 5250 console from ACS, start Telnet:
 
-    ```
+    ```text
     strtcpsvr server(*TELNET)
     ```
     {: pre}
@@ -164,19 +162,19 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
 
  7. Go to the IBM i VM and start the telnet server for the console:
 
-    ```
+    ```text
     strtcpsvr server(*TELNET)
     ```
     {: pre}
 
 After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
 
-```
+```text
 https://127.0.0.1:2005/ibm/console/login.do?action=secure
 ```
 {: pre}
 
-To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which IBM COS requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: new_window}{: external}.
+To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which IBM COS requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: external}.
 
 ### Configuring ACS
 {: #configuring-acs}

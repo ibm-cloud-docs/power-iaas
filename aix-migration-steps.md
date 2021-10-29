@@ -40,14 +40,14 @@ The *savevg* command finds and backs up all files that belong to a specified vol
 
 Use the following command to find and back up all files in a specific volume group.
 
-```
+```text
 # savevg –f <destination path> -i <non root vg files to be backed up>
 ```
 {: codeblock}
 
 For example:
 
-```
+```text
 # savevg –f /home/admin01/datavg_bkup –i  datavg
 ```
 
@@ -58,7 +58,7 @@ Small systems might require only one data volume group to contain all the physic
 
 Run the following commands to back up multiple volume groups:
 
-```
+```text
 # lsvg -o | xargs -i mkvgdata {}
 # tar -cvf /backup/vgdata.tar /tmp/vgdata
 ```
@@ -68,7 +68,7 @@ To generate an output file that contains information about the volume group, run
 
 Run the following command to re-create the volume groups, logical volumes, and file systems:
 
-```
+```text
 # tar -xvf /backup/vgdata.tar
 ```
 
@@ -76,7 +76,7 @@ Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and
 
 For example:
 
-```
+```text
 # restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data
 ```
 
@@ -92,7 +92,7 @@ Use the following methods to back up and restore contents of a file system:
 1. Unmount the file system.
 2. Save the raw logical volume content into a file by running the following command:
 
-```
+```text
   # dd if=/dev/lvname of=/file/system/lvname.dd
 ```
 {: codeblock}
@@ -101,7 +101,7 @@ This command creates a copy of the logical volume named **lvname** to a file nam
 
 On the destination server, re-create the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
 
-```
+```text
 # dd if=/file/system/lvname.dd of=/dev/lvname
 ```
 {: codeblock}

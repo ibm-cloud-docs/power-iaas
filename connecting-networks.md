@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -48,25 +47,6 @@ With IBM Cloud Connect, IBM clients have access to:
 - Public cloud providers (IBM Cloud, Azure, AWS, Oracle, Alibaba, Salesforce, etc.)
 - IBM services like **Watson** and **zCloud**.
 - **IBM GNPP Accessible Services & Transports** like ATT, Verizon, Orange, and Equinix.
-
-<!-- ### Network connectivity between Dallas and Ashburn
-{: #connecting-powerio-connectivity}
-
-Learn more about how the IBM Cloud Connect team helps establish a **Direct Connection** between Cloud Connect (Megaport) and the IBM Power infrastructure.
-
-**Dallas, TX (DAL13)**
-
-1. The Power IaaS Direct Connection (DC) is located in **CyrusOne** and uses the standard **Megaport Port**.
-2. The Power IaaS team creates a **Service Key** and provides it to the IBM Cloud Connect delivery team to establish the VxC (one **Service Key** per VxC).
-3. The IBM Cloud Connect team enters the **Service Key** into the Megaport portal to establish the VxC.
-4. The IBM Cloud Connect team creates the VxC.
-
-**Ashburn, VA (WDC04)**
-
-1. The Power IaaS DC is in **Digital Realty** and uses the **ServiceExchange Port**.
-2. The Power IaaS team creates a **Service Key** and provides it to the IBM Delivery team to establish the VxC (one **Service Key** per VxC).
-3. The IBM Cloud Connect team enters the **Service Key** into the Megaport portal to establish the VxC.
-4. The IBM Cloud Connect team creates the VxC. -->
 
 ## Linking private subnets and networks in a Power System Virtual Server
 {: #connecting-private-subnets}

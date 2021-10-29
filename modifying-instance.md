@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -74,6 +73,7 @@ You can scale up and scale down the core count and memory of the virtual machine
 {: tab-title="When VM is shut down"}
 
 If you want to resize an existing VM that was created before 15 December 2020 to 8x ratio of core count and memory, you must first shut down the VM, resize the VM, and then activate the VM. You must resize the VM at least once when the VM is shut down to enable 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of core count and memory.
+
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
@@ -90,19 +90,22 @@ If you'd like to attach or detach a volume, click **Manage existing volumes** an
 
 2. Enter the **Name**, **Type**, and **Size** of the storage volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
 
-    You can use storage affinity to control the placement of a new volume in a particular storage provider (pool) based on an affinity policy. When you set the affinity policy to **affinity** for creating a new volume, you can specify an existing PVM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using PVM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume. When you set the affinity policy to **anti-affinity** for creating a new volume, you can specify one or more existing PVM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where the anti-affinity object(s) reside. Two new properties *antiAffinityPVMInstances* and *antiAffinityVolumes* are added for create volume feature. These two new properties are used for specifying anti-affinity objects only. You can specify only one object type for affinity or anti-affinity object(s), either PVM Instance(s) or Volume(s). For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post). For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity)
+    You can use storage affinity to control the placement of a new volume in a particular storage provider (pool) based on an affinity policy. When you set the affinity policy to **affinity** for creating a new volume, you can specify an existing PVM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using PVM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume. When you set the affinity policy to **anti-affinity** for creating a new volume, you can specify one or more existing PVM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside. Two new properties *antiAffinityPVMInstances* and *antiAffinityVolumes* are added for create volume feature. These two new properties are used for specifying anti-affinity objects only. You can specify only one object type for affinity or anti-affinity objects, either PVM Instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post). For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity)
     {: note}
 
 3. Click **Next**, agree to the service agreement, and submit your **Order**.
-
-<!--![Managing your existing volumes](./images/console-modify-attached-volume.png "Managing your existing volumes"){: caption="Figure 3. Managing your existing volumes" caption-side="bottom"}-->
 
 ### Resizing a storage volume
 {: #resizing-volume}
 {: help}
 {: support}
 
-You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM. For IBM i 7.3 and 7.4 versions, you can resize volume to increase the volume size, but this requires an IPL to recognize the new volume size. If you can not take the down time, you can add additional volumes. You can attach maximum of 127 volumes to the VM.
+You can resize a storage volume after its initial creation. To delete a volume, its status must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM. For IBM i 7.3 and 7.4 versions, you can resize volume to increase the volume size, but this requires an initial program load (IPL) to recognize the new volume size. 
+
+Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see  [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you perform an IPL operation before the resize operation is complete, an additional IPL is required. 
+{: important}
+
+If you cannot take the downtime, you can add additional volumes. You can attach maximum of 127 volumes to the VM.
 
 Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
 {: important}
@@ -132,11 +135,9 @@ You can remove or add a public network by clicking the **Public networks** toggl
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
-<!-- ![Toggling a public network on or off](./images/console-public-network-toggle.png "Toggling a public network on or off"){: caption="Figure 4. Toggling a public network on or off" caption-side="bottom"} -->
-
 ## Detecting problems by using the System Reference Code (SRC)
-{: detect-problems-using-src}
+{: #detect-problems-using-src}
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: new_window}{: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: new_window}{: external}.
+For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.

@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,8 +27,7 @@ subcollection: power-iaas
 Server placement groups provide you control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, you can build high availability within a data center, even though your virtual servers are isolated from each other.
 {: shortdesc}
 
-You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. Ensure that the new VM instance is not on the same server as any of your other VM instances. When you provision VMs with an affinity policy, all VMs are launched on the same server. When you provision VMs with an anti-affinity policy, all VMs are launched on different servers. 
-<!--You can manage placement groups by using the Placement groups page or the Server details page in the IBM Power Systems Virtual Server console.-->
+You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. Ensure that the new VM instance is not on the same server as any of your other VM instances. When you provision VMs with an affinity policy, all VMs are launched on the same server. When you provision VMs with an anti-affinity policy, all VMs are launched on different servers.
 
 ## Creating server placement groups
 {: #creating-placement-groups}

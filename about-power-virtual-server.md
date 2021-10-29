@@ -11,16 +11,15 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
 {:tip: .tip}
-{:note: .note}
 {:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{:note: .note}
+{:term: .term}
 
 # What is a Power Systems Virtual Server?
 {: #about-virtual-server}
@@ -31,8 +30,6 @@ subcollection: power-iaas
 With the {{site.data.keyword.powerSys_notm}} service, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for Power Systems Virtual Servers:
 
 ![Power Systems Virtual Server responsibility assignment matrix](./images/RACI_matrix.png "Power Systems Virtual Server responsibility assignment matrix"){: caption="Figure 1. Power Systems Virtual Server responsibility assignment matrix" caption-side="bottom"}
-
-<!--Current AIX, IBM i, and Linux&reg; clients can use the {{site.data.keyword.powerSys_notm}} service for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. {{site.data.keyword.powerSys_notm}} clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i, and Linux systems today can use their same tools, workflows, and enhancements in the Power Systems Virtual Server.-->
 
 ## Key features
 {: #key-features}
@@ -69,30 +66,31 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For information about the supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs). For more information, see [Deploying your infrastructure](/docs/sap?topic=sap-power-vs-planning-items).
 
 When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
-{: note} 
+{: note}
 
 ### Support for deploying a Red Hat OpenShift Cluster
 {: #support-redhat-openshift}
 
-When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
 ## Hardware specifications
 {: #hardware-specifications}
 
 The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), and IBM Power System E980 (9080-M9S). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
-If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 {: tip}
 
-**Data sheets**
+### Data sheets
+{: #data-sheets}
 
-* [IBM Power System E880 (9119-MHE) - Dallas and Washington only](https://www.ibm.com/downloads/cas/EE476WAP){: new_window}{: external}
-* [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: new_window}{: external}
-* [IBM Power System E980 (9080-M9S) - Data centers other than Washington](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external}
+* [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external}
+* [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
+* [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| <ul><li>Power S922 (9009-22A)</li><li>Power E980 (9080-MHE)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN infrastructure</li></ul> | <ul><li>Cisco Nexus9000 93180YC-EX (10G)</li><li>Cisco Nexus9000 C9348GC-FXP (1G)</li><li>Avocent ACS8048</li></ul> |
+| * Power S922 (9009-22A) \n * Power E980 (9080-MHE) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -101,7 +99,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| <ul><li>Power E880 (9119-MHE)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>V7000 SSD (no new VMs)</li><li>32 GB SAN</li> | <ul><li>Cisco Nexus9000 C9336PQ  (Spine 10G)</li><li>Cisco Nexus9000 C93180YC (10G)</li><li>Cisco Nexus9000 C93108TC-EX (1G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8016</li></ul> |
+| * Power E880 (9119-MHE) \n * Power S922 (9009-22A)  | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus9000 C9336PQ  (Spine 10G) \n * Cisco Nexus9000 C93180YC (10G) \n * Cisco Nexus9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -110,14 +108,14 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-|<ul><li>Power E980 (9080-M9S)</li><li>Power S922 (9009-22A)</li></ul> | <ul><li>Flash storage from IBM FS9000 series devices</li><li>32 Gb SAN infrastructure</li> | <ul><li>Cisco Nexus9000 N9K-C9364C (Spine 10G)</li><li>Cisco Nexus9000 9348GC-FXP (Leaf 1G) </li><li>Cisco Nexus9000 93180YC-FX (Leaf 25G)</li><li>Cisco UCS - APIC controller</li><li>Cisco ASR1001-HX Router</li><li>Avocent ACS8032DAC-400</li></ul> |
+| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-3}
 {: tab-title="Non-US"}
 
-For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
 
 ## Storage tiers
@@ -128,15 +126,13 @@ For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage
 **Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPS of your storage workload.
 {: note}
 
-<!--Currently, the IOPS-based storage tiers are available in all locations except WDC04 and DAL13 data centers.
-{: note}-->
-
 ## Public and private networks
 {: #public-private-networks}
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface.
 
-**Public network**
+### Public network
+{: #public-network}
 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
@@ -147,16 +143,12 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
     * Ping
     * IBM i 5250 terminal emulation with SSL (port 992)
 
-**Private network**
+### Private network
+{: #private-network}
 
 * Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-  For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
-  {: note}
-
-<!-- The following figure displays the basic configuration for a public and private network:
-
-![Displays how network traffic flows for public or private connection](/images/power-iaas-network1.svg "Displays how network traffic flows for public or private connection"){: caption="Figure 1. Private and public network configuration" caption-side="bottom"} -->
-
+For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+{: note}

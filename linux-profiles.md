@@ -11,7 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -27,6 +26,7 @@ subcollection: power-iaas
 {: #power-iaas-sap}
 
 Learn more about SAP within the {{site.data.keyword.powerSysShort}} service.
+{. shortdesc}
 
 ## Implementing SAP NetWeaver in the Power Systems Virtual Server environment
 {: #sap-netweaver}
@@ -48,7 +48,7 @@ A profile is a combination of instance attributes, such as cores and Random Acce
 ## Popular profiles
 {: #popular-profiles}
 
-The following popular profiles are available for SLES for SAP (HANA) VMs. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
+The following popular profiles are available for SLES for SAP (HANA) VMs. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external} with **Tier 1** storage.
 
 *cp* stands for **Compute profile**, while *bp* indicates a **Balanced profile**.
 {: tip}
@@ -64,7 +64,7 @@ The following popular profiles are available for SLES for SAP (HANA) VMs. All of
 ## All profiles
 {: #all-profiles}
 
-To see a list of all of the available profiles for SLES for SAP (HANA) VMs, click **View all profiles**. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: new_window}{: external} with **Tier 1** storage.
+To see a list of all of the available profiles for SLES for SAP (HANA) VMs, click **View all profiles**. All of the profiles are dedicated cores that are running on an [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external} with **Tier 1** storage.
 
 | Profile       | Cores    | RAM      | Production certified? |
 | ------------- | -------- | -------- | --------------------- |

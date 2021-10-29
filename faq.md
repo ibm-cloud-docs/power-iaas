@@ -10,8 +10,6 @@ keywords: faq, virtual server, network bandwidth, private network setup, multi-t
 subcollection: power-iaas
 
 ---
-
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,23 +26,6 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
-<!-- ## Where can I learn how to use a Power Systems Virtual Server?
-{: #training}
-{: faq}
-{: support}
-
-To learn more about how to use a {{site.data.keyword.powerSys_notm}}, see the [AIX & IBM i in IBM (Public) Cloud](https://www.youtube.com/watch?v=y5QaNdGJ6R0&feature=youtu.be){: new_window}{: external} video.
-
-This video does not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice differences in functionality between what's shown in the video and the current offering.
-{: note}
-
-## Is IBM Power Systems Virtual Servers located on IBM Cloud?
-{: #on-cloud}
-{: faq}
-{: support}
-
-No, {{site.data.keyword.powerSys_notm}} is a colocated infrastructure as a service (IaaS) offering with low-latency connectivity to the full catalog of IBM Cloud offerings.-->
-
 ## What is IBM Power Systems Virtual Server?
 {: #what-is-powervs}
 {: faq}
@@ -59,32 +40,26 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 
 The supported AIX, IBM i, and Linux operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
-**AIX**
+**AIX** - The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
-The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1 and AIX 7.2 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
+- [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
+- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 
-- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: new_window}{: external}
-- [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: new_window}{: external}
-- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: new_window}{: external}
+For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
-  For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: new_window}{: external}.
+**IBM i** - The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-**IBM i**
-
-The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: new_window}{: external}.
-
-- [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: new_window}{: external}
+- [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
-- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: new_window}{: external}
+- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-**Linux**
-
-The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
+**Linux** - The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
 
 - SUSE Linux Enterprise (SLES) 12 and SLES 15
 - Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
 
-To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: new_window}{: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: new_window}{: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: new_window}{: external}.
+To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
 ## Can I use my own AIX, IBM i, or Linux image?
 {: #image}
@@ -115,7 +90,7 @@ The boot image storage type is predefined and cannot be chosen.
 {: #rootvg}
 {: faq}
 
-By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: new_window}{: external} command to add a physical volume.
+By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
 
 ## What's the difference between capped and uncapped shared processor performance? How do they compare to dedicated processor performance?
 {: #processor}
@@ -127,7 +102,7 @@ When deploying a VM, customers can choose between **dedicated**, **capped shared
 - **Uncapped shared**: shared among other clients
 - **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
-There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: new_window}{: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
+There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external} and [Processor pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-processor).
 
 |Dedicated processors|
 |:-----------------|
@@ -151,7 +126,7 @@ There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores ro
 {: #performance}
 {: faq}
 
-If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: new_window}{: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: new_window}{: external}.
+If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 
 ## How do I migrate my VM from one data center to another (WDC04 to DAL13)?
 {: #vm-migration}
@@ -265,7 +240,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 {: support}
 
-**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: new_window}{: external}.
+**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
 
 **IBM Power Systems Virtual Server environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
@@ -285,7 +260,7 @@ IBM uses the same tools that are on an on-premises system.
 {: #ibmi-certification}
 {: faq}
 
-You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: new_window}{: external}.
+You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
 
 ## How do I delete (cancel) the service or a specific instance?
 {: #delete-service}
@@ -304,24 +279,22 @@ To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=
 {: faq}
 
 On an AIX VM, the following databases are supported:
-
-  - IBM&reg; Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
-  - Oracle Database version 12.1.0.2, or later
-  - SAP Adaptive Server Enterprise version 16.0 SP03, or later
+- IBM Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
+- Oracle Database version 12.1.0.2, or later
+- SAP Adaptive Server Enterprise version 16.0 SP03, or later
 
 On a Linux VM, the following database is supported:
+- SAP HANA Platform 2.0 SPS 04, or later
 
-  - SAP HANA Platform 2.0 SPS 04, or later
-
-You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: new_window}{: external}.
+You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
 ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
-{: web-enablement-for-ibmi}
+{: #web-enablement-for-ibmi}
 {: faq}
 
 If you have an IBM i VM instance with the licensed program bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
-1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: new_window}{: external}.
+1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: external}.
 
 2. Sign in. If this is the first time you are using ESS, refer to the **Help** section on the left menu. Download and read the **ESS_Registration_IBM_Customers_Guidelines** PDF.
 
@@ -332,24 +305,21 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9
 
-<!--## Can Power VC provide support for more than 1 language to VM Console for a single Novalink host?
-
-PowerVC does not provide capacity to support multiple language support for Client VM console feature.-->
-
 ## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
-{: ocp_on_powervs}
+{: #ocp_on_powervs}
 {: faq}
 
-You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: new_window}{: external}.
+You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+
 
 ## What is the network latency over Direct Link?
-{: network_latency}
+{: #network_latency}
 {: faq}
 
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 
 
 ## Are we notified about any planned maintenance activities?
-{: planned_maintenance_activity}
+{: #planned_maintenance_activity}
 {: faq}
 
 For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
