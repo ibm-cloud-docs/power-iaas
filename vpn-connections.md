@@ -3,7 +3,7 @@
 copyright:
   years: 2021
 
-lastupdated: "2021-10-20"
+lastupdated: "2021-10-29"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Managing VPN connections
 {: #VPN-connections}
 
-You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN gateway by using the VPN service that is provided by IBM Power Systems Virtual Server. You can use VPN to connect to the private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
+You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN service. You can use the VPN to connect to the Power Virtual Server private networks, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
 
 With VPN access, you can:
 
@@ -34,7 +34,7 @@ With VPN access, you can:
 
 The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server Service Instance to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
 
-A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported. Currently VPN for Power Systems Virtual Servers is supported in TOR01, SYD05, TOK04, and OSA21 data centers. 
+A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported. Currently, VPN for Power Systems Virtual Servers is supported in TOR01, SYD05, TOK04, and OSA21 data centers. 
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
@@ -50,9 +50,9 @@ Power Systems Virtual Server supports multiple service instances from the same a
 You can configure your VPN to connect to your on-premises network by following these steps in the Power Virtual Server CLI or API.
 
 1. Create an IKE Policy, see [Creating IKE and IPsec policies](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
-2. Create an IPSec Policy, see [Creating IKE and IPsec policies](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
-3. Create a VPN connection, , see [Creating VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-VPN-connections).
-4. Configure your on-premise IPSec Gateway enduring IKE Policy, IPSec Policy, and VPN Connection parameters that are compatible.
+2. Create an IPsec Policy, see [Creating IKE and IPsec policies](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
+3. Create a VPN connection, see [Creating VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-VPN-connections).
+4. Configure your on-premises IPsec Gateway enduring IKE Policy, IPsec Policy, and VPN Connection parameters that are compatible.
 
 ### Configuring the on-premises VPN gateway
 {: #configure-onpremise-vpngateway}
@@ -91,7 +91,7 @@ You can view allowable and default values for attributes when you are creating I
 IKE policy version 2 is not compatible with policy-based VPN connections. If you attempt to add an IKE policy version 2 to a policy-based VPN connection, an error is displayed.
 {: important}
 
-This is the display of an example VPN connection:
+The display of an example VPN connection is as follows:
 
 ```ID                      1471c65163dd44daa969cf3edddd20a8
 Name                    rs-vpc-vpn01
@@ -119,7 +119,7 @@ You can use the default or custom IKE policies to define security parameters tha
 
 You can add an IKE policy by using the `ibmcloud pi vpn-ike-policy-add` command. For more information about adding, viewing, updating, or deleting an IKE policy by using CLI, see [VPN IKE policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
 
-This is the display of an example IKE Policy. Note that Pre-shared key is not displayed for an IKE policy.
+The display of an example IKE Policy is as follows. Pre-shared key is not displayed for an IKE policy.
 
 ```Ibmcloud pi vpn-ike-policy a757fb8d0a324e4abe0589bc17fbad7c
 ID               a757fb8d0a324e4abe0589bc17fbad7c
@@ -138,7 +138,7 @@ You can use the default or custom IPsec policies to define security parameters t
 
 You can add an IPsec policy by using the `ibmcloud pi vpn-ipsec-policy-add` command. For more information on adding, viewing, updating, or deleting an IPsec policy by using CLI, see [VPN IPsec policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
 
-This is the display of an example IPSec Policy:
+The display of an example IPsec Policy is as follows:
 
 ```Ibmcloud pi vpn-ips-policy befd77bd25a04c388c43ccb3973966be
 ID                        befd77bd25a04c388c43ccb3973966be
