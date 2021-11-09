@@ -118,9 +118,8 @@ toc:
       - link: 
               label: API reference
               href: https://cloud.ibm.com/apidocs/power-cloud
-      - link:
-          label: Command reference
-          href: /docs/cli?topic=power-iaas-cli-plugin-power-iaas-cli-reference
+      - topic: /cli/power-iaas-cli-plugin
+        navtitle: Command reference
       - at-events.md
 
   - navgroup:
