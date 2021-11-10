@@ -51,9 +51,8 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 **AIX 5.3 and earlier** - You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
 
 1. Network Installation Manager (NIM) `alt disk` migration.
-2. Migrate in-place, then either `mksysb`, `alt_disk_copy`, or Logical Partiion Mobility (LPM) (when going from a
-POWER6 or POWER7 system).
-3. Create a `mksysb` of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb`.
+2. Migrate in-place, then either `mksysb`, `alt_disk_copy`, or Logical Partition Mobility (LPM) (when migrating from a POWER6 or POWER7 system).
+3. Create a `mksysb` image of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb` image.
 
 **AIX 6.1 or 7.1** - You have the option of doing an AIX update to a supported level instead of a migration. If you are on AIX 6.1, you must migrate to 7.1 to get POWER8 capabilities. To accomplish this migration, there are three options:
 

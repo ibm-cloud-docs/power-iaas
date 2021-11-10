@@ -42,8 +42,7 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
 
 2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you'd like to remove. All of that communication that is going over the route is terminated after you remove it.
 3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you'd like to deactivate on the **NETSTAT \*IFC** screen.
-4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that
-menu. Select **Option 4** next to the interface you'd like to remove.
+4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you'd like to remove.
     ![Removing a network interface](./images/terminal-ibmi-remove-nic.png "Removing a network interface"){: caption="Figure 1. Revmoing a network interface" caption-side="bottom"}
     
 5. You must vary off the Line description (LIND) after you remove the interface.

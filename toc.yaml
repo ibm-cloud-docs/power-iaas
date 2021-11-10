@@ -46,14 +46,6 @@ toc:
               href: https://www.ibm.com/cloud/power-virtual-server
 
   - navgroup: 
-      id: tutorial
-      topics: 
-      - topic-1.md
-      - topic-2.md
-      - topic: topic-3.md
-        navtitle: A shorter navtitle 
-
-  - navgroup: 
       id: howto
       topics:
       - topicgroup: 
@@ -116,11 +108,11 @@ toc:
       id: reference
       topics: 
       - link: 
-              label: API reference
-              href: https://cloud.ibm.com/apidocs/power-cloud
+          label: API reference
+          href: https://cloud.ibm.com/apidocs/power-cloud
       - link:
           label: Command reference
-          href: /docs/power-iaas-cli-plugin
+          href: /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
       - at-events.md
 
   - navgroup:
