@@ -38,7 +38,7 @@ To perform the following operations by using CLI, see [Create a Cloud connection
 
 Power Systems Virtual Server supports multiple service instances from the same account. However, only a single service instance can use a Cloud connection. If you want to configure a setup with multiple service instances for the same account and if you want these multiple service instances to share a Cloud connection, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-When you are performing multiple Cloud connection tasks, numerous actions within a task can timeout. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the commands again and the status will be updated to complete.
+When you perform multiple Cloud connection tasks, numerous actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the commands again and the status will be updated to complete.
 {: note}
 
 ## Creating Cloud connections
@@ -53,10 +53,10 @@ To create a Cloud connection, complete the following steps:
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. Maximum connection speed is 5 Gbps. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
-   For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
+For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
 5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
    
@@ -91,6 +91,9 @@ To view or edit Cloud connections, complete the following steps:
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
 
 3. Click the **Edit details** icon.
+
+   If you have created a cloud connection with 5 Gbps speed, you cannot increase the speed limit to 10 Gbps. 
+   {: note}
 
 4. Modify the details, review the pricing changes, and click **Save edits**.
 

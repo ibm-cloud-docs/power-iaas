@@ -74,14 +74,17 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 
 2. After you click **Import**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.
 
-    ![Completing the boot image fields](./images/console-boot-image-fields.png "Completing the boot image fields"){: caption="Figure 1. Completing the boot image fields" caption-side="bottom"}
-
 3. Find your newly uploaded boot image in **Boot images**.
 
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want displayed in your catalog.|
 | Storage type | Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
+| Storage pool | Boot volmues created with this custom image will be placed in the storage pool that you specify. For more information on storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-server#adding-managing-volume).| 
+| Auto-select pool | Select **Auto-select pool**, to create the storage volume automatically in a pool with sufficient capacity. |
+| Affinity | When you set the affinity policy to **affinity** for creating a new volume, you can select an existing PVM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. |
+| Anti-affinity | When you select the affinity policy to **anti-affinity** for creating a new volume, you can specify one or more existing PVM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.|
+| Source details (Cloud storage) | |
 | Region | Select either **us-east**, **us-south**, **br-sao**, **ca-tor**, **ca-mon**, **eu-de**, or **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region.|
 | Image file name | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are *tar* and *ova*. You can compress image files by using *gzip*. The supported file name extensions are *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`. 
 | Bucket name | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. Optional folders can be added during an [export image](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export) operation to Cloud Object Storage. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
