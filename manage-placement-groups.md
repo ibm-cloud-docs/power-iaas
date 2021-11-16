@@ -40,6 +40,16 @@ You cannot change the policy or name of a placement group after it is created. Y
 When you can create a VM and add it to a placement group, ensure that the placement group does not contain member instances that are in a **Build** state. You cannot concurrently create VMs within placement groups. All VMs deploy in an error state when you are running concurrent deployments in a placement group.
 {: note}
 
+To create a new placement group, complete the following steps:
+
+1. Go to the Power Systems Virtual Server user interface and click **Server placement groups**.
+2. In the **Server placement groups** page, click **Create group**.
+3. Specify a name for the new placement group. Select a colocation policy to specify whether all the VMs under this placement group must reside in the same server or in a different server. 
+4. Click **Create**.
+
+In the **Server placement groups** page, the table displays all placement groups for this Power Virtual Server instance. The table also indicates the number of VMs in each group and also the colocation policy. 
+
+
 ## Server Placement group APIs
 {: #all-placement-groups}
 
@@ -56,5 +66,15 @@ You can use the following for managing server placement groups:
 You can add VMs to a server placement group. The VMs that you add to the server placement group must be in an **Active** state. Use the following API to add a server to a placement group:
 [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
 
-When you add a VM to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support)
+When you add a VM to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+{: note}
+
+To add a VM to a placement group, complete the following steps:
+
+1. Go to the Power Systems Virtual Server user interface and click **Server placement groups**.
+2. In the **Server placement groups** page, click the placement group name in the table that you want to add the VM to.
+3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. Or add an existing VM to the placement. 
+4. Click **Add existing VM** to add an existing VM to the placement group. Select one or more VMs from the table and add it to the placement group. You can add a maximum of 10 VMs to one placement group. 
+
+VMs that you select must be on the same server or different server depending on the colocation policy of the placement group. A VM can belong to only one placement group and VMs that are already placed in a different placement group is disabled in the table. 
 {: note}
