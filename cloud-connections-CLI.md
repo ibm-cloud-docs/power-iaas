@@ -56,7 +56,7 @@ To create a Cloud connection, complete the following steps:
 3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
-For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
+   For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
 5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
    

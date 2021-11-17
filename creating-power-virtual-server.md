@@ -40,31 +40,30 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
 3. Specify a name for your service and choose where you'd like to deploy your {{site.data.keyword.powerSys_notm}} instance. See the following table to select the appropriate location for your service.
 
-Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
-{: note}
+    Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
+    {: note}
 
-| Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
-| --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
-| America | Dallas, USA | us-south | DAL12 \n us-south | DAL12 \n DAL13 | us-south-2 \n us-south-3 |
-| America | Washington DC, USA | us-east | us-east | WDC04 | us-east-1 |
-| America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |
-| America | Toronto, Canada | ca-tor | TOR01 | TOR01 | - |
-| America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
-| Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
-| Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
-| Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 |
-| Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
-| Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | - |
-{: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+    | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+    | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
+    | America | Dallas, USA | us-south | DAL12 \n us-south | DAL12 \n DAL13 | us-south-2 \n us-south-3 |
+    | America | Washington DC, USA | us-east | us-east | WDC04 | us-east-1 |
+    | America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |
+    | America | Toronto, Canada | ca-tor | TOR01 | TOR01 | - |
+    | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
+    | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
+    | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
+    | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 |
+    | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
+    | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | - |
+    {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
+4. Click **Create**. You are redirected to the **Resource List**.
 
-1. Click **Create**. You are redirected to the **Resource List**.
-
-2. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
+5. From the **Resource List**, select your {{site.data.keyword.powerSys_notm}} service under **Services**.
 
     ![The IBM Cloud Resource List](./images/power-iaas-resource-list.png "The IBM Cloud Resource List"){: caption="Figure 1. The IBM Cloud Resource List" caption-side="bottom"}
 
-3. Click **Create instance** under **Virtual server instances**.
+6. Click **Create instance** under **Virtual server instances**.
 
 ## Configuring a Power Systems Virtual Server instance
 {: #configuring-instance}
