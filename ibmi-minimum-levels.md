@@ -29,10 +29,10 @@ You must install the following program temporary fixes (PTFs) depending on the v
     - C7192710 (IBM i 7.1 cumulative PTF level)
     - IBM i 7.1 HIPER Group PTF (SF99709) level 261, or later
     - 5770999 (PTFs: MF67822, MF67656, MF67836, MF67706, MF67715, MF67792, MF67794, MF67795, MF68346)
-    - 5770SS1 (PTF: SI74413, SI75274, SI75050)
-- IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391)
-- IBM i 7.3 - MF99207 (TR7) and SI69686
-- IBM i 7.4 - MF99301 (TR1) and SI70544
+    - 5770SS1 (PTF: SI74413, SI75274, SI75050, SI77414, MF68346)
+- IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272)
+- IBM i 7.3 - MF99207 (TR7) and SI69686, SI77412, SI77206
+- IBM i 7.4 - MF99301 (TR1) and SI70544, SI77411, SI77202
 
 If you are using your own IBM i custom image of IBM i 7.1, and later, you must install these PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}. For IBM i 7.1, you must perform the following instructions in addition to installing the required PTFs.
 
