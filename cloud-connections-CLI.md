@@ -53,7 +53,7 @@ To create a Cloud connection, complete the following steps:
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
@@ -92,8 +92,8 @@ To view or edit Cloud connections, complete the following steps:
 
 3. Click the **Edit details** icon.
 
-   If you have created a cloud connection with 5 Gbps speed, you cannot increase the speed limit to 10 Gbps. 
-   {: note}
+If you have an existing cloud connection with 5 Gbps or lesser speed, you cannot increase the speed limit to 10 Gbps. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.
+{: note}
 
 4. Modify the details, review the pricing changes, and click **Save edits**.
 
