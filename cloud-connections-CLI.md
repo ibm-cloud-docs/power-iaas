@@ -44,16 +44,13 @@ When you perform multiple Cloud connection tasks, numerous actions within a task
 ## Creating Cloud connections
 {: #create-cloud-connections}
 
-The Cloud connections (network automation) speed is limited to 5 Gbps if you are provisioning a new Power Systems Virtual Server service.
-{: note}
-
 To create a Cloud connection, complete the following steps:
 
 1. Go to the Power Systems Virtual Server user interface and click **Cloud connections**.
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
+3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation. If you have reached the maximum limit of Cloud connections for your account, and need to reduce the speed from 10 Gbps then you need to delete a connection and create another one with the desired speed. 
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
