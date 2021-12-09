@@ -36,7 +36,7 @@ To perform the following operations by using CLI, see [Create a Cloud connection
 ## Power Systems Virtual Servers service instances support with Cloud connections
 {: #powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple service instances from the same account. However, only a single service instance can use a Cloud connection. If you want to configure a setup with multiple service instances for the same account and if you want these multiple service instances to share a Cloud connection, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple service instances from the same account. However, any given Cloud Connection can be used by only one service instance. If you want to configure a setup with multiple service instances for the same account and if you want these multiple service instances to share a Cloud connection, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 When you perform multiple Cloud connection tasks, numerous actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the commands again and the status will be updated to complete.
 {: note}
@@ -50,7 +50,7 @@ To create a Cloud connection, complete the following steps:
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. You can select 5 Gbps or 10 Gbps as the connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed. You cannot modify the speed after creating the cloud connection when the speed is set to 10 Gbps at the time of creation. If you need to reduce the speed from 10 Gbps and you have reached the maximum limit of Cloud connections for your account, then you must delete an existing connection and create a new connection with the required speed. 
+3. Specify a connection name and select a connection speed. Maximum connection speed is 10 Gbps. If you select 10 Gbps as the required speed, then GRE tunnelling option is disabled. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed. You can select 10 Gbps speed only when creating a new connection. You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation. If you need to reduce the speed from 10 Gbps and you have reached the maximum limit of Cloud connections for your account, then you must delete an existing connection and create a new connection with the required speed. 
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.

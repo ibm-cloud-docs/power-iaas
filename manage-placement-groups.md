@@ -24,10 +24,10 @@ subcollection: power-iaas
 # Managing server placement groups
 {: #placement-groups}
 
-Server placement groups provide you control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, you can build high availability within a data center, even though your virtual servers are isolated from each other.
+Server placement groups provide you control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, you can build high availability within a data center.
 {: shortdesc}
 
-You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. Ensure that the new VM instance is not on the same server as any of your other VM instances. When you provision VMs with an affinity policy, all VMs are launched on the same server. When you provision VMs with an anti-affinity policy, all VMs are launched on different servers.
+You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. When you set a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When you set a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers.
 
 ## Creating server placement groups
 {: #creating-placement-groups}
@@ -36,9 +36,6 @@ You can create server placement groups and provision VMs in this placement group
 [Create a server placement group](/apidocs/power-cloud#pcloud-placementgroups-post).
 
 You cannot change the policy or name of a placement group after it is created. You can only add or remove VMs within the placement group.
-
-When you can create a VM and add it to a placement group, ensure that the placement group does not contain member instances that are in a **Build** state. You cannot concurrently create VMs within placement groups. All VMs deploy in an error state when you are running concurrent deployments in a placement group.
-{: note}
 
 To create a new placement group, complete the following steps:
 
