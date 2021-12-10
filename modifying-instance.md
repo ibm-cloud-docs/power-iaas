@@ -101,7 +101,7 @@ If you want to attach or detach a volume, complete the following steps:
 
     For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
 
-    In the API for create volume feature two new properties *antiAffinityVMInstances* and *antiAffinityVolumes* are added. These two new properties are used for specifying anti-affinity objects only. You can specify only one object type for affinity or anti-affinity objects, either VM Instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
+    In the API for create volume feature two new properties *antiAffinityVMInstances* and *antiAffinityVolumes* have been added. These properties are used only to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM Instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
     {: note}
 
 7.  Click **Create and Attach**.

@@ -69,8 +69,8 @@ When you add a VM to the server placement group, the request might not be comple
 To add a VM to a placement group, complete the following steps:
 
 1. Go to the Power Systems Virtual Server user interface and click **Server placement groups**.
-2. In the **Server placement groups** page, click the placement group name in the table that you want to add the VM to.
-3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. Or add an existing VM to the placement. 
+2. In the **Server placement groups** page, from the placement group table select a placement group name that you want to add the VM.
+3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. You can also add an existing VM to the placement group. 
 4. Click **Add existing VM** to add an existing VM to the placement group. Select one or more VMs from the table and add it to the placement group. You can add a maximum of 10 VMs to one placement group. 
 
 VMs that you select must be on the same server or different server depending on the colocation policy of the placement group. A VM can belong to only one placement group and VMs that are already placed in a different placement group is disabled in the table. 
