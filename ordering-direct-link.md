@@ -156,7 +156,7 @@ Each location requires its own Direct Link Connect. For example, if you order a 
 
 - **Ports** - If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
 - **BGP peering subnet** - Select **Auto-select IP** for Power Systems Virtual Server to auto-select an IP address from range *169.254.0.0/16*, or manually enter addresses in a specific range to avoid conflict with an existing connection.
-- **BGP ASN** - You must enter 64999 as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995.
+- **BGP ASN** - You must enter 64999 as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated in the table 3. For example, BGP ASN number for WDC04 location is 64995. For Direct Link Connect 2.0 10Gbps ports that are not GRE capable, you must use the BGP ASN number 64997.
 
 #### Add connection
 {: #add-connection-classicvp}
@@ -295,6 +295,7 @@ Do not try to change the BGP ASN number to **64995**. You must contact the IBM P
 {: #deleting-direct-link}
 
 You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
+You can remove the Direct Link Connect (2.0) connection from your account, but you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to remove the configuration from the Power Systems Virtual Server network infrastructure.
 
 ## Setting up high availability over Direct Link Connect
 {: #ha-availability}

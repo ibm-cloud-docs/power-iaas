@@ -29,7 +29,7 @@ Server placement groups provide you control over the host or server on which a n
 
 You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. When you set a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When you set a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers.
 
-You can use the user interface for placement groups only when the number of VMs in your account are lesser than 100. If your account has more than 100 VMs, then you must use the CLI or API to create placement groups.
+You can use the user interface for placement groups only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to create placement groups.
 {: important}
 
 ## Creating server placement groups
