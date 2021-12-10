@@ -81,6 +81,9 @@ The total due per month is dynamically updated in the **Order Summary** based on
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
+    You can use the user interface for storage pools only when the number of VMs in your account are lesser than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
+    {: important}
+
     Select one of the following Storage pool selection options: 
     - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity. 
   
