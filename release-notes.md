@@ -30,6 +30,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #dec-2021}
 
 - You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the Power Systems Virtual Server GUI.
+- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the Power Systems Virtual Server GUI.
+- You can now set [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the Power Systems Virtual Server GUI.
+- You can now set [affinity policy for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the Power Systems Virtual Server GUI.
 
 ## October 2021
 {: #oct-2021}
