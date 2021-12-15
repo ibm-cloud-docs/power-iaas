@@ -81,15 +81,15 @@ The total due per month is dynamically updated in the **Order Summary** based on
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
-    You can use the user interface for storage pools only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
+    You can use the user interface to set the affinity policies for storage pools only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
     {: important}
 
-    Select one of the following Storage pool selection options: 
-    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity. 
+    Select one of the following Storage pool options: 
+    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool for the storage tier with sufficient capacity. 
   
-    - **Affinity**: Use Affinity to identify the storage pool to use based on an existing PVM instance (VM) or volume from your account. The new storage volume(s) for the VM will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.  
+    - **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing PVM instance (VM) or storage volume from your account. The new storage volume(s) for the VM will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.  
   
-    - **Anti-affinity**: Use Anti-affinity to identify one or more storage pools that you want excluded from getting selected based on one or more existing PVM instances (VMs) or volumes from your account. The storage pools where the list of anti-affinity object(s) reside will not be selected when choosing a storage pool to create the new storage volume(s) for the VM. If you are using PVM instance(s) as the anti-affinity object(s) the storage pool that will get excluded are based on each PVM instance’s root (boot) volume provided.
+    - **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot voulmes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volume(s), the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified.
 
     For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
 
@@ -130,3 +130,5 @@ Refer to the following table for more information on each {{site.data.keyword.po
 {: #sap_netweaver_hana}
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
+
+On IBM Power Systems E950 and E980 that are running in a multiple VM environment with at least one SAP HANA production system, you can deploy up to sixteen VMs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VM instance must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VMs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
