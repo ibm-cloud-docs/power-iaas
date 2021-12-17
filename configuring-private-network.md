@@ -61,13 +61,13 @@ You cannot use the same private subnet for both IBM Cloud Classic and {{site.dat
 ### Using a Direct Link Connect connection and a VRA (customer implementation)
 {: #using-dl-vra}
 
-You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Ordering IBM Cloud Direct Link Connect](docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
+You can use a **Direct Link Connect connection and a VRA** to connect to your existing {{site.data.keyword.cloud_notm}} network. You must use a second Direct Link Connect connection to connect to the {{site.data.keyword.powerSys_notm}} environment. For more information, see [Ordering IBM Cloud Direct Link Connect](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
 
 
 ## Connecting to the {{site.data.keyword.powerSys_notm}} environment
 {: #connecting-power}
 
-After you establish a connection to the IBM Cloud Classic environment, you must use a separate Direct Link Connect connection to connect to the {{site.data.keyword.powerSys_notm}} environment. You must use [Direct Link Connect](docs/dl?topic=dl-dl-about) to connect to the {{site.data.keyword.powerSys_notm}} environment. This option provides high performance between the on-premises network and the {{site.data.keyword.powerSys_notm}} environment.
+After you establish a connection to the IBM Cloud Classic environment, you must use a separate Direct Link Connect connection to connect to the {{site.data.keyword.powerSys_notm}} environment. You must use [Direct Link Connect](/docs/dl?topic=dl-dl-about) to connect to the {{site.data.keyword.powerSys_notm}} environment. This option provides high performance between the on-premises network and the {{site.data.keyword.powerSys_notm}} environment.
 
 ## Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services
 {: #connecting-megaport}

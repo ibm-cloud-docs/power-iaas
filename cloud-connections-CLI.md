@@ -36,16 +36,13 @@ To perform the following operations by using CLI, see [Create a Cloud connection
 ## Power Systems Virtual Servers service instances support with Cloud connections
 {: #powervs-support-cloud-connections}
 
-Power Systems Virtual Server supports multiple service instances from the same account. However, only a single service instance can use a Cloud connection. If you want to configure a setup with multiple service instances for the same account and if you want these multiple service instances to share a Cloud connection, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple service instances from the same account. However, any given Cloud Connection can be used by only one service instance. If you want to configure a setup with multiple service instances for the same account and if you want these multiple service instances to share a Cloud connection, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-When you are performing multiple Cloud connection tasks, numerous actions within a task can timeout. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the commands again and the status will be updated to complete.
+When you perform multiple Cloud connection tasks, numerous actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the changed status might not be reflected immediately. You can run the commands again and the status will be updated to complete.
 {: note}
 
 ## Creating Cloud connections
 {: #create-cloud-connections}
-
-The Cloud connections (network automation) speed is limited to 5 Gbps if you are provisioning a new Power Systems Virtual Server service.
-{: note}
 
 To create a Cloud connection, complete the following steps:
 
@@ -53,7 +50,12 @@ To create a Cloud connection, complete the following steps:
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. Maximum connection speed is 5 Gbps. If required, 10 Gbps Direct Link can be requested by opening a service ticket. For more information about Direct Link, see [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+3. Specify a connection name and select a connection speed. You must ensure that the following rules are applicable for setting the speed:
+   - Maximum connection speed is 10 Gbps. 
+   - You can select 10 Gbps speed only when you are creating a new connection.
+   - If you select 10 Gbps as the required speed, the GRE tunnelling option is disabled. 
+   - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
+   - You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
 
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
@@ -65,6 +67,8 @@ To create a Cloud connection, complete the following steps:
    * **VPC**: You can connect to your account’s Virtual Private Cloud (VPC) resources. You must select the VPC connection from the list of available connections. You can connect multiple VPCs to a Cloud Connection.
   
    Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.
+
+   If you do not have the authorization to create a cloud connection, a direct link is created. The created direct link is not operational, and it must be authorized by the IBM cloud account user who has the required authority via the IBM Cloud console portal. Two direct links cannot be created under one account, even from different regions.
 
 6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
 
@@ -91,6 +95,9 @@ To view or edit Cloud connections, complete the following steps:
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
 
 3. Click the **Edit details** icon.
+
+If you have an existing cloud connection with 5 Gbps or lesser speed, you cannot increase the speed limit to 10 Gbps. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.
+{: note}
 
 4. Modify the details, review the pricing changes, and click **Save edits**.
 

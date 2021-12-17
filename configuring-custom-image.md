@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2021
 
-lastupdated: "2020-12-14"
+lastupdated: "2021-11-25"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -44,7 +44,7 @@ The basic steps that are involved in deploying an instance by using a custom ima
 Before you can use a custom image as the boot volume, review the following information:
 
 - You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
-- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.2/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: external} and [Exporting images](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The Power Systems Virtual Servers does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes. 
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The Power Systems Virtual Servers does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes. 
 - Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
@@ -67,7 +67,7 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/rzahy/rzahymig-po.htm){: external}.
+The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.2?topic=considerations-migrating-i-72-from-54-61-71){: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -82,7 +82,7 @@ Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01,
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}.
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}

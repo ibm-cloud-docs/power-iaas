@@ -58,7 +58,7 @@ To create a new subnet, complete the following steps:
 7. You must provide the **DNS server** value.
     A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
-8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over Cloud Connections](/docs/power-iaas?topic= topic=power-iaas-managing-cloud-connections#ha-availability-cloud-connections).
+8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
 9. Click **Create subnet**.
 

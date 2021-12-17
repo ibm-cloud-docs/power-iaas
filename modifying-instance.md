@@ -77,23 +77,34 @@ If you want to resize an existing VM that was created before 15 December 2020 to
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-Learn how to add new storage volumes and modify existing ones. You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false.
+Learn how to add new storage volumes and modify existing ones. You can now attach storage volumes to a VM instance from different storage tiers and pools, other than the storage pool the VM instance's root (boot) volume is deployed in. To accomplish this you must modify the VM instance and set the new VM instance *storagePoolAffinity* property to false. You can now attach mixed storage to a VM instance. For more information, see [How to set a VM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage).
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
-You can now attach mixed storage to a PVM instance. For more information, see [How to set a PVM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage)
+If you want to attach or detach a volume, complete the following steps: 
 
-If you'd like to attach or detach a volume, click **Manage existing volumes** and select the wanted volume. 
+1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
 
-1. Click **New volume** to add a storage volume.
+2. Under Attached volumes section, click **Attach volume** to add a storage volume from the list.
 
-2. Enter the **Name**, **Type**, and **Size** of the storage volume. You can also select whether to make it **Shareable** and set an **Affinity policy**.
+3. To detach a storage volume, click **Detach** in the table.
 
-    You can use storage affinity to control the placement of a new volume in a particular storage provider (pool) based on an affinity policy. When you set the affinity policy to **affinity** for creating a new volume, you can specify an existing PVM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using PVM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume. When you set the affinity policy to **anti-affinity** for creating a new volume, you can specify one or more existing PVM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside. Two new properties *antiAffinityPVMInstances* and *antiAffinityVolumes* are added for create volume feature. These two new properties are used for specifying anti-affinity objects only. You can specify only one object type for affinity or anti-affinity objects, either PVM Instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post). For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity)
+4. You can also create a new storage volume.
+
+5. Enter the **Name**, **Tier**, **Number of volumes**, and **Size** of the storage volume. You can also toggle the Shareable switch to the On position to allow multiple virtual instances to write data to the same data volume. 
+   
+6. Select one of the following Storage pool options: 
+   - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity. 
+   - **Affinity**: Use this option to select an existing VM instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using VM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume. 
+   - **Anti-affinity**: Use this option to specify one or more existing VM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside. 
+
+    For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
+
+    In the API for create volume feature two new properties *antiAffinityVMInstances* and *antiAffinityVolumes* have been added. These properties are used only to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM Instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
     {: note}
 
-3. Click **Next**, agree to the service agreement, and submit your **Order**.
+7.  Click **Create and Attach**.
 
 ### Resizing a storage volume
 {: #resizing-volume}

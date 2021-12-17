@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-12-13"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,7 +26,16 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## December 2021
+{: #dec-2021}
+
+- You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the Power Systems Virtual Server GUI.
+- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the Power Systems Virtual Server GUI.
+- You can now set [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the Power Systems Virtual Server GUI.
+- You can now set [affinity policy for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the Power Systems Virtual Server GUI.
+
 ## October 2021
+{: #oct-2021}
 
 - You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN service. 
 - You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-tape-libraries) to backup IBM i data. 
@@ -36,7 +45,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - You can now use [Capturing and exporting a virtual machine](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm) to view the new Job feature and view restrictions for VM capture, image import, and image export.
 - You can now use [Mixed storage](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage) to attach storage volumes to a PVM instance from different storage tiers and pools.
-- You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections) to create a Cloud connection using the Power Systems Virtual Server GUI.
 
 ## June 2021
 {: #jun-2021}

@@ -36,7 +36,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 
 | Action                     | Description                                      |
 |:---------------------------|:-------------------------------------------------|
-| pcloud.event.read | Read a Power Systems Virutal Server Instance     |
+| pcloud.event.read | Read a Power Systems Virtual Server Instance     |
 {: caption="Table 1. List of events: Read" caption-side="top"}
 
 ## List of events: Images
@@ -47,7 +47,7 @@ The following events are for working with images in your {{site.data.keyword.pow
 | Action                     | Description                     |
 |:---------------------------|:--------------------------------|
 | pcloud.image.read          | Read an Image or all Images     |
-| pcloud.image.create        | Create a new Image              |
+| pcloud.image.create        | Create an Image              |
 | pcloud.image.update        | Update an Image                 |
 | pcloud.image.delete        | Delete an Image                 |
 | pcloud.image.capture       | Exports an Image                |
@@ -61,7 +61,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | Action                     | Description                           |
 |:---------------------------|:--------------------------------------|
 | pcloud.network.read        | Read a Network or all Networks        |
-| pcloud.network.create      | Create a new Network (Public/Private) |
+| pcloud.network.create      | Create a Network (Public or Private) |
 | pcloud.network.update      | Update a Network                      |
 | pcloud.network.delete      | Delete a Network                      |
 {: caption="Table 3. List of events: Network" caption-side="top"}
@@ -79,11 +79,11 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 | pcloud.pvm-instance.delete    | Delete a Power virtual server instance                |
 | pcloud.pvm-instance.start     | Start a Power virtual server instance                 |
 | pcloud.pvm-instance.stop      | Stop a Power virtual server instance                  |
-| pcloud.pvm-instance.renew     | Reboot a Power virtual server instance                |
+| pcloud.pvm-instance.renew     | Restart a Power virtual server instance                |
 | pcloud.pvm-instance.unknown   | Unknown action on a Power virtual server instance     |
 | pcloud.pvm-instance.monitor   | Console access to a Power virtual server instance     |
 | pcloud.pvm-instance.capture   | Capture a Power virtual server instance into an image |
-| pcloud.pvm-instance.immediate-shutdown     | Immediate shutdown a Power virtual server instance|
+| pcloud.pvm-instance.immediate-shutdown     | Shut down a Power virtual server instance immediately |
 | pcloud.pvm-instance.clone   | Clone a Power virtual server instance |
 | pcloud.pvm-instance.snapshot     |  Create a Power virtual server instance Snapshot |
 | pcloud.pvm-instance.network.read      |  Read a Power virtual server instance Network |
@@ -227,18 +227,18 @@ The following events are for working with IKE Policy in your {{site.data.keyword
 | pcloud.ike-policy.delete       |   Delete an IKE Policy      |
 {: caption="Table 15. List of events: IKE policy" caption-side="top"}
 
-## List of events: IPSec Policy
+## List of events: IPsec Policy
 {: #at-ipsec-policy}
 
-The following events are for working with IPSec Policy in your {{site.data.keyword.powerSys_notm}} instance.
+The following events are for working with IPsec Policy in your {{site.data.keyword.powerSys_notm}} instance.
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
-| pcloud.ipsec-policy.read       |  Read an IPSec Policy   |
-| pcloud.ipsec-policy.create     |   Create an IPSec Policy      |
-| pcloud.ipsec-policy.update     |   Update an IPSec Policy      |
-| pcloud.ipsec-policy.delete       |   Delete an IPSec Policy      |
-{: caption="Table 16. List of events: IPSec policy" caption-side="top"}
+| pcloud.ipsec-policy.read       |  Read an IPsec Policy   |
+| pcloud.ipsec-policy.create     |   Create an IPsec Policy      |
+| pcloud.ipsec-policy.update     |   Update an IPsec Policy      |
+| pcloud.ipsec-policy.delete       |   Delete an IPsec Policy      |
+{: caption="Table 16. List of events: IPsec policy" caption-side="top"}
 
 ## List of events: VPN Connection
 {: #at-vpn-connection}
@@ -248,12 +248,12 @@ The following events are for working with VPN Connection in your {{site.data.key
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | pcloud.vpn-connection.read       |  Read a VPN Connection or all VPN Connections   |
-| pcloud.vpn-connection.create     |   Create an VPN Connection       |
-| pcloud.vpn-connection.update     |   Update an VPN Connection       |
-| pcloud.vpn-connection.delete       |   Delete an VPN Connection       |
+| pcloud.vpn-connection.create     |   Create a VPN Connection       |
+| pcloud.vpn-connection.update     |   Update a VPN Connection       |
+| pcloud.vpn-connection.delete       |   Delete a VPN Connection       |
 {: caption="Table 17. List of events: VPN Connection" caption-side="top"}
 
 ## Viewing events
 {: #at-viewing-events}
 
-The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. There are separate Activity Trackers for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
+The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. Separate Activity Trackers are available for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
