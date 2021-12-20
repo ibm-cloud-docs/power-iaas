@@ -95,7 +95,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-1}
-{: tab-title="Washington, D.C. (WDC04)"}
+{: tab-title="Washington, D.C. (WDC04,WDC06)"}
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |

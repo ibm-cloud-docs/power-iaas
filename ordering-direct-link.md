@@ -40,7 +40,7 @@ The Power Systems Virtual Server offering includes a highly available up to 10 G
 10 Gbps connection is available only on the Direct Link Connect 2.0.
 {: important}
 
-Direct Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, and São Paulo 1. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
+Direct Link Connect 2.0 is available in all current locations except Toronto 1, Montreal 1, São Paulo 1, and Washington 06. For these locations, you must use [IBM Cloud Direct Link on Classic](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link){: external}. Moreover, if you are using Direct Link Connect on Classic in any current location, you can continue to use it with Power Systems Virtual Server. If you want to use Direct Link Connect 2.0, you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information on Direct Link Connect, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) and [IBM Cloud Direct Link Connect on Classic](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect).
@@ -140,7 +140,7 @@ Order a second Direct Link Connect connection for backup purposes.
 {: caption="Table 1. Direct Link Connection location options" caption-side="bottom"}
 
 
-Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, and São Paulo 1.</br>
+Direct Link 2.0 is available in all current locations except Toronto 1, Montreal 01, São Paulo 1, and Washington 06.</br>
 Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
 {: note}
 
