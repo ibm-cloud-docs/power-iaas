@@ -129,6 +129,7 @@ Order a second Direct Link Connect connection for backup purposes.
 | Dallas 13, TX, US | Dallas 13 | IBM Power Virtual Server |
 | Dallas 12, TX, US | Dallas 12 | IBM Power Virtual Server |
 | Washington 04, D.C., US | Washington DC 4 | IBM Power Virtual Server |
+| Washington 05, D.C., US | Washington DC 5 | IBM Power Virtual Server |
 | Frankfurt 04, Germany | Frankfurt 4 | IBM Power Virtual Server |
 | Frankfurt 05, Germany | Frankfurt 5 | IBM Power Virtual Server |
 | London 04, United Kingdom | London 4 | IBM Power Virtual Server |
