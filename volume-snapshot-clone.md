@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Snapshotting, cloning, and restoring
+# Snapshots, cloning, and restoring
 {: #volume-snapshot-clone}
 
 The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
@@ -38,11 +38,19 @@ There are several use cases for the snapshot feature. For example, an administra
 
 1. Initiate the snapshot API with the source disks where the middleware information resides.
 2. Upgrade the middleware.
-3. If the upgrade fails, restore the source disks by using the snapshot created in the previous step.
-4. If the upgrade succeeds, delete the snapshot created in the first step.
+3. If the upgrade fails, restore the source disks by using the snapshot that is created in the previous step.
+4. If the upgrade succeeds, delete the snapshot that is created in the first step.
 
 You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on a different set of disks.
 {: note}
+
+### Metering of snapshot and pricing
+{: #metering-snapshot}
+
+Each snapshot that you create is monitored hourly and charged depending on the disk space that is used by the snapshot. For example, if you have **M** disks in Tier 1 that are attached to the VM, then only four disks (600 GB) are being used as source disks for the snapshots. In this case, the following charges are applicable:
+
+- If you create one snapshot, you are charged for the disk space that is used by **M** disks plus 30% of disk space in Tier 1. That is, space of **M** disks + 180 GB (30% of 600 GB). 
+- If you create one more snapshot by using the same disks, for the next hour you will be charged for disk space that is used by **M** disks + (30% of 600 GB) + (30% of 600 GB) of disk space in Tier 1.
 
 ### Best practices
 {: #best-practice1}
