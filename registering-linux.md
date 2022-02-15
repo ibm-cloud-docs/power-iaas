@@ -59,6 +59,61 @@ To use SLES within the {{site.data.keyword.powerSys_notm}} service, you can use 
 
 To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based NAT gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information, see [19.6 Basic Router Setup](https://documentation.suse.com/sles/15-SP1/html/SLES-all/cha-network.html#sec-network-router){: external} and [Linux NAT(Network Address Translation) Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: external}.
 
+When you are configuring a Source NAT (SNAT) gateway between your public and private networks, ensure that the TCP checksum offload option is disabled. You must also set the maximum transmission unit (MTU) value to 1450 on the network interface that is connected to the private network. To ensure that the interface checksum offloading and MTU settings of the network interface are persistent whenever the virtual machine is restarted, you need to modify the configuration files of your network interface.
+
+The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
+{: note}
+
+You can verify that the device interface type is `ibmveth` by using the following command: 
+
+```text
+ethtool -i <interface name> | grep driver
+```
+
+The following instructions are applicable to SLES version SP15. If you need additional help to configure network interfaces, refer to the SLES documentation.
+
+1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
+
+    ```text
+    ip -4 a s (for IPv4 address)
+    ip -6 a s (for IPv6 address)
+    ```
+
+2. Edit the `ifcfg-<NIC>` file (where NIC is the network interface name that is identified in step 1).
+
+    ```text
+       SLES:  /etc/sysconfig/network/ifcfg-<NIC>
+    ```
+    - Add or modify the following lines:
+
+    ```text
+     For SLES:
+       MTU='1450'
+       ETHTOOL_OPTIONS='-K <NIC> rx off'
+    ```
+
+3. Restart the VM.
+
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
+    - Verify the checksum offloading setting by running the following command:
+
+      ```text
+       ethtool -k eth0
+       Features for eth0:
+       rx-checksumming: off
+       tx-checksumming: off
+       <cut>
+      ```
+
+The `ethtool` command sets both the rx-checksumming and tx-checksumming options to off when one of these options is disabled.
+{: note}
+
+Verify the MTU value by running the following command:
+```text
+ip link show eth0
+eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
+```
+
 ### Configuring SNAT in the Power Systems Virtual Server environment
 {: #configuring-snat}
 
