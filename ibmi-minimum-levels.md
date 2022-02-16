@@ -36,11 +36,6 @@ You must install the following program temporary fixes (PTFs) depending on the v
 
 If you are using your own IBM i custom image of IBM i 7.1, and later, you must install these PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}. For IBM i 7.1, you must perform the following instructions in addition to installing the required PTFs.
 
-## Required PTFs for iSCSI Virtual Tape Library (VTL)
-{: #ptfs-iscsi-vtl}
-
-You must install the program temporary fixes (PTFs) depending on the version of IBM i that you are using. To view PTF's for each release, along with the configuration procedures see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl).  
-
 ## Installing Cloud-Init on IBM i VM
 {: #install-cloud-init-ibmi-7.1}
 
@@ -57,3 +52,16 @@ To install Cloud-Init on IBM i 7.1, complete the following steps:
    - Dependent PTFs:  MF61937 (apply permanently), SI69146, SI65636, SI64092, SI66737, SI65647, SI73750, SI63164, and SI74413
 3. Run the following command before you capture the VM:
    `CALL PGM(QSYS/QAENGCHG) PARM(*ENABLECI)`
+
+## Required PTFs for iSCSI Virtual Tape Library (VTL)
+{: #ptfs-iscsi-vtl}
+
+You must install the program temporary fixes (PTFs) depending on the version of IBM i that you are using. To view PTF's for each release, along with the configuration procedures see [IBM i Support for iSCSI VTL](https://www.ibm.com/support/pages/ibm-i-removable-media-support-iscsi-vtl). 
+
+## Best practices for utilizing IBM i stock images 
+{: #best-practice-stock-images}
+
+1.	When you select an IBM i stock image, you must verify that the latest group of PTFs are installed, especially the Hiper and Security group. For more information, see [IBM i Group PTFs with level](https://www.ibm.com/support/pages/ibm-i-group-ptfs-level). 
+2.	Refer to [IBM PSIRT blog](https://www.ibm.com/blogs/psirt/) for the latest Product Security Incident Response. 
+3.	You can subscribe to valuable product notifications at [My Notifications](https://www.ibm.com/support/pages/node/253211).
+
