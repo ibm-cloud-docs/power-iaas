@@ -27,7 +27,7 @@ subcollection: power-iaas
 As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with your {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-The {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to alert you of abnormal activity and to comply with regulatory audit requirements. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [IBM Cloud Activity Tracker with LogDNA](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started#getting-started).
+The {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to alert you of abnormal activity and to comply with regulatory audit requirements. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with IBM Cloud Activity Tracker](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 ## List of events: Read
 {: #at-actions-read}
@@ -256,4 +256,4 @@ The following events are for working with VPN Connection in your {{site.data.key
 ## Viewing events
 {: #at-viewing-events}
 
-The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. Separate Activity Trackers are available for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
+The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. Separate Activity Trackers are available for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Launching the UI through the IBM Cloud UI](/ddocs/activity-tracker?topic=activity-tracker-launch#launch_cloud_ui).
