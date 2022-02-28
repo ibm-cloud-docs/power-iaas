@@ -63,7 +63,7 @@ You can use the following for managing server placement groups:
 ## Add VMs to a server placement group
 {: #add-server-pgroup}
 
-You can add VMs to a server placement group. The VMs that you add to the server placement group must be in an **Active** state. Use the following API to add a server to a placement group:
+You can add VMs to a server placement group. The VMs that you add to the server placement group must be in an **Active** state. You cannot add a VM to a server placement group that contains a VM that is in **Build** state. In this case, after you create a VM you must wait for the VM to be in **Active** state and then add another VM in the server placement group. Use the following API to add a server to a placement group:
 [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
 
 When you add a VM to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
