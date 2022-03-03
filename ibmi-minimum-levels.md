@@ -34,7 +34,8 @@ You must install the following program temporary fixes (PTFs) depending on the v
 - IBM i 7.3 - MF99207 (TR7) and SI69686, SI77412, SI77206
 - IBM i 7.4 - MF99301 (TR1) and SI70544, SI77411, SI77202
 
-If you are using your own IBM i custom image of IBM i 7.1, and later, you must install these PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}. For IBM i 7.1, you must perform the following instructions in addition to installing the required PTFs.
+For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. You can also use the `SNDPTFORD` command to send PTFs to your system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}. If you are using your own IBM i custom image of IBM i 7.1, and later, you must install these PTFs and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}. For IBM i 7.1, you must perform the following instructions in addition to installing the required PTFs. 
+You can find an overview of IBM i fix concepts and terms, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}
 
 ## Installing Cloud-Init on IBM i VM
 {: #install-cloud-init-ibmi-7.1}
