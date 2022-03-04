@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Planning a workload migration to an IBM POWER8 or POWER9 system
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. The {{site.data.keyword.powerSys_notm}} service uses three different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), and S922 (9009-22A). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
 The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
@@ -93,7 +93,7 @@ Learn more about migrating workloads from an existing IBM POWER system to a POWE
 
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
-| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 Compatibility mode only)1. \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 Compatibility mode only)|
+| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 Compatibility mode only)1. \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 Compatibility mode only) |
 
 {: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 

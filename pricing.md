@@ -32,7 +32,7 @@ subcollection: power-iaas
 | E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
-| E1080 (1080-HEX)   |  240          | up to 64 TB                    |
+| E1080 (9080-HEX)   |  240          | up to 64 TB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
