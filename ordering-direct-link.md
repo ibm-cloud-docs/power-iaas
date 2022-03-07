@@ -223,12 +223,6 @@ Do not try to change the BGP ASN number to **64995**. You must contact the IBM P
 
 **Select VRF** - Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.
 
-## Deleting your Direct Link Connect on Classic connection
-{: #deleting-direct-link}
-
-You can remove your Direct Link Connect on Classic connection by [opening a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the Power Systems Virtual Server support team to remove the appropriate resources.
-You can remove the Direct Link Connect (2.0) connection from your account, but you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to remove the configuration from the Power Systems Virtual Server network infrastructure.
-
 ## Setting up high availability over Direct Link Connect
 {: #ha-availability}
 
