@@ -48,6 +48,10 @@ Order a second Direct Link Connect connection for backup purposes.
 1. Follow Direct Link Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with the following exceptions:
 
    * For **Location**, select the same location as the {{site.data.keyword.powerSys_notm}} instance.
+
+      For a list of Direct Link Connect Power VS locations, see [Providers and locations](/docs/dl?topic=dl-locations#connect-locations).
+      {: note}
+
    * For **Provider**, select **IBM POWER VIRTUAL SERVER** from the list.
    * For **Speed**, select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps. 
    
