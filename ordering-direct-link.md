@@ -43,7 +43,6 @@ To order Direct Link Connect to create a connection to a Power Systems Virtual S
 Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
-1. Verify that your IBM Cloud account has the correct authorizations to order Direct Link Connect.
 1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations) and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability) if these situations apply to your deployment.  
 1. Follow Direct Link Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with the following exceptions:
 
@@ -61,17 +60,14 @@ Order a second Direct Link Connect connection for backup purposes.
    * For the BGP section:
 
       *  For **BGP peering subnet**, you can select **Auto-select IP** to auto-select an IP address from range `169.254.0.0/16`, or manually enter addresses in a specific range to avoid conflict with an existing connection.
-      * For **BGP ASN**, you must enter `64999` as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For Direct Link Connect 10 Gbps ports that are not GRE-capable, you must use the BGP ASN number `64997`.
+      * For **BGP ASN**, you must enter `64999` as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For Direct Link Connect 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
 
    The Direct Link Connect service provides connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. 
    {: note}
 
-1. After your Direct Link connection request is provisioned, go to **Interconnectivity** > **Direct Link**. The **Direct Link** page lists all the existing Direct Link connections.
-1. Click the newly provisioned Direct Link connection to identify the following details:
-
-   ![Direct Link Connect 2.0 details](images/dl2-status.png "Direct Link Connect 2.0 details"){: caption="Figure 1. Direct Link Connect 2.0 details" caption-side="bottom"}
-
-1. Create a [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+1. After your Direct Link connection order is submitted, go to **Interconnectivity** > **Direct Link** to view the status of your order. The **Direct Link** page lists all existing Direct Link connections. 
+  
+1. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
@@ -90,8 +86,7 @@ Order a second Direct Link Connect connection for backup purposes.
     Classic Network Virtual Connection: Yes/No
     VPC Virtual Connection 1: VPC name and ID
     VPC Virtual Connection 2: VPC name and ID
-    VPC Virtual Connection 3: VPC name and ID
-    Screen shot of Direct Link 2.0 Connect
+    VPC Virtual Connection 3: VPC name and ID 
     ```
 
     The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support case. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
@@ -102,9 +97,15 @@ The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct L
 ## Ordering Direct Link Connect on Classic
 {: #steps-to-order-direct-link-connect}
 
-To order the Direct Link Connect on Classic service that creates a connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
 
-Order a second Direct Link Connect connection for backup purposes.
+{: shortdesc}
+
+Currently, there isn't a migration path from Direct Link on Classic offerings to Direct Link (2.0). You must order a Direct Link (2.0) Connect connection.
+{: note}
+
+To order a Direct Link Connect on Classic connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
+
+Order a second Direct Link on Classic Connect connection for backup purposes.
 {: tip}
 
 1. Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
@@ -196,7 +197,6 @@ The following table identifies the {{site.data.keyword.powerSys_notm}} instance 
 | Sydney, Australia | Sydney 4 \n Sydney 5 | IBM Power Virtual Server |
 | São Paulo, Brazil | São Paulo 1 | IBM Power Virtual Server |
 {: caption="Table 2. Direct Link Connect on Classic location" caption-side="bottom"}
-
 
 **Network Provider** - You must select **IBM POWER VIRTUAL SERVER** from the list.
 
