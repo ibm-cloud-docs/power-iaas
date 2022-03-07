@@ -44,7 +44,7 @@ Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
 1. Verify that your IBM Cloud account has the correct authorizations to order Direct Link Connect.
-1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). 
+1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). Also review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations) and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability) if these environments are applicable to your deployment.  
 1. Follow Direct Link Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with the following exceptions:
 
    * For **Location**, select the same location as the {{site.data.keyword.powerSys_notm}} instance.
@@ -227,21 +227,24 @@ Do not try to change the BGP ASN number to **64995**. You must contact the IBM P
 {: #ha-availability}
 
 Your Direct Link connections are location-specific. IBM Cloud Direct Link is not a redundant service by default.  You must order a separate Direct Link Connect instance for redundancy.
+{: shortdesc}
 
-To set up a highly available connectivity on the IBM Cloud network by using Direct Link Connect, complete the following steps:
+To set up a high availablity through Direct Link Connect, complete the following steps:
 
-1. Order two instances of Direct Link Connect (2.0) or Direct Link Connect on Classic. For each instance of Direct Link Connect, you can order an additional instance for redundancy. For instructions, see [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic).
+1. Order two instances of Direct Link Connect, or Direct Link Connect on Classic. For each instance of Direct Link Connect, you can order an additional instance for redundancy. For instructions, see [Ordering Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic).
 
-2. In the **BGP and connections** configuration panel, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both Direct Link Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
+   In the **BGP** section, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both Direct Link Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
 
-    The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with 1-1 and 1-2 belong to a port group, and the ports ending with 2-1 and 2-2 belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you had selected **-1-1** for the first Direct Link Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance that you want to use to set up redundancy.
+    The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with `1-1` and `1-2` belong to a port group, and the ports ending with `2-1` and `2-2` belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you select **-1-1** for the first Direct Link Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance.
 
     ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
 
     For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
     {: note}
 
-    Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections use the new ports that are not GRE capable. Ports that are GRE capable can only use upto 5 Gbps speed. Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
+    Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can only use up to a 5 Gbps speed. 
+
+   Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
 
     | Data Center | Network provider | Port group 1 | Port group 2 for redundancy |
     | ----------- | ---------------- | ------------ | --------------------------- |
@@ -257,33 +260,32 @@ To set up a highly available connectivity on the IBM Cloud network by using Dire
     | OSA21 | IBM Power VS | SL-OSA21-IBMPOWERIAASLITE-1-1 \n SL-OSA21-IBMPOWERIAASLITE-1-2 | SL-OSA21-IBMPOWERIAASLITE-2-1 \n SL-OSA21-IBMPOWERIAASLITE-2-2 |
     {: caption="Table 4. Port and Port groups for redundant Direct Link instances" caption-side="bottom"}
 
-    [^footnote1]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote2]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote3]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote4]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote5]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote6]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote7]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote8]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote9]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote10]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote11]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
-    [^footnote12]: The ports denoted with ^x indicates that they are not GRE capable but support 10 Gbps speed.
+    [^footnote1]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote2]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote3]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote4]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote5]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote6]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote7]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote8]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote9]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote10]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote11]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote12]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
 
-
-3. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#help) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
 
 ## Routing considerations for VPC
 {: #routing-considerations}
 
-If the traffic is sent from Power Systems Virtual Server to your on-premise public IP address and if the virtual server instance has public floating IP, you might need a special configuration in VPC. If you do not do that special configuration, the traffic goes through the virtual machine's public interface instead of private interface.
+If traffic is sent from Power Systems Virtual Server to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
+{: shortdesc}
 
-For proper VPC configuration, the on-premise IP address must meet the following requirements:
+For proper VPC configuration, the on-premises IP address must meet the following requirements:
 
-- The IP address range for private network must be with in the following blocks that are reserved by Internet Assigned Numbers Authority (IANA):
-    - Class A — 10.0.0.0 — 10.255.255.255 (16,777,216 total hosts)
-    - Class B — 172.16.0.0 — 172.31.255.255 (1,048,576 total hosts)
-    - Class C — 192.168.0.0 — 192.168.255.255 (65,536 total hosts)
-- VM instances within the VPC must not have floating IP.
-- You must create a route to the on-premise public subnet in the VPC default routing table by using the *Delegate-VPC* action. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
-
+- The IP address range for a private network must be within the following blocks, which are reserved by the Internet Assigned Numbers Authority (IANA):
+    - Class A — `10.0.0.0` — `10.255.255.255` (16,777,216 total hosts)
+    - Class B — `172.16.0.0` — `172.31.255.255` (1,048,576 total hosts)
+    - Class C — `192.168.0.0` — `192.168.255.255` (65,536 total hosts)
+- VM instances within the VPC must not have a floating IP.
+- Use the **Delegate-VPC** action to create a route to the on-premises public subnet in the VPC default routing table. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
