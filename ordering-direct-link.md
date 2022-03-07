@@ -44,7 +44,7 @@ Order a second Direct Link Connect connection for backup purposes.
 {: tip}
 
 1. Verify that your IBM Cloud account has the correct authorizations to order Direct Link Connect.
-1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). Also review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations) and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability) if these environments are applicable to your deployment.  
+1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations) and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability) if these situations apply to your deployment.  
 1. Follow Direct Link Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with the following exceptions:
 
    * For **Location**, select the same location as the {{site.data.keyword.powerSys_notm}} instance.
@@ -71,7 +71,7 @@ Order a second Direct Link Connect connection for backup purposes.
 
    ![Direct Link Connect 2.0 details](images/dl2-status.png "Direct Link Connect 2.0 details"){: caption="Figure 1. Direct Link Connect 2.0 details" caption-side="bottom"}
 
-1. Create a [Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+1. Create a [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
