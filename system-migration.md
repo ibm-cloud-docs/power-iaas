@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Planning a workload migration to an IBM POWER8 or POWER9 system
+# Planning a workload migration to an IBM POWER8, POWER9, or POWER10 system
 {: #system-migration}
 
 When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
