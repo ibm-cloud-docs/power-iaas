@@ -87,18 +87,19 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 
 Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
 
-**AIX and IBM i** - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before starting your migration.
+**AIX and IBM i** - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before starting your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
 
 **Linux** - You need to migrate to a POWER10-supported level. To accomplish this migration, the following Linux distributions are supported:
 
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
-| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 Compatibility mode only)1. \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 Compatibility mode only) |
+| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 Compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 Compatibility mode only) |
 
 {: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
 To learn more about IBM POWER10 system performance and migration strategies, see the following articles:
 
+- [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}

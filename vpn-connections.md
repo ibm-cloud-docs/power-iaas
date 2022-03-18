@@ -49,9 +49,9 @@ Power Systems Virtual Server supports multiple service instances from the same a
 
 You can configure your VPN to connect to your on-premises network by following these steps in the Power Systems Virtual Server CLI or API.
 
-1. [Create an IKE policy](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
-2. [Create an IPsec policy](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-IKE-policies).
-3. [Create a VPN connection](/docs/power-iaas-cli-plugin?topic=power-iaas-VPN-connections#creating-VPN-connections).
+1. [Create an IKE policy](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
+2. [Create an IPsec policy](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
+3. [Create a VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-VPN-connections).
 4. Configure your on-premises IPsec gateway enduring IKE policy, IPsec policy, and VPN connection parameters that are compatible.
 
 ### Configuring the on-premises VPN gateway
