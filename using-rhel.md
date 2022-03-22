@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server service
 {: #linux-with-powervs}
 
-You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
+You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
 - RHEL 8.1
 - RHEL 8.2

@@ -79,6 +79,9 @@ If you want to resize an existing VM that was created before 15 December 2020 to
 
 Learn how to add new storage volumes and modify existing ones. You can now attach storage volumes to a VM instance from different storage tiers and pools, other than the storage pool the VM instance's root (boot) volume is deployed in. To accomplish this you must modify the VM instance and set the new VM instance *storagePoolAffinity* property to false. You can now attach mixed storage to a VM instance. For more information, see [How to set a VM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage).
 
+You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. After you delete the original volume, allow one hour before creating a new volume with the same name.
+{: note}
+
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
