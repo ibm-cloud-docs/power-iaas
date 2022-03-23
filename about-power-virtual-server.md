@@ -76,7 +76,7 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), IBM Power System E980 (9080-M9S), and IBM Power System E1080 (9080-HEX). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), IBM Power System E980 (9080-M9S)<!--, and IBM Power System E1080 (9080-HEX)-->. For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 {: tip}
@@ -87,11 +87,11 @@ If you'd like to compare your current environment's performance to what's availa
 * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
+<!--* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}-->
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) <!--\n * Power E1080 (9080-HEX)--> | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -100,7 +100,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| * Power E880 (9119-MHE) \n * Power S922 (9009-22A) \n * Power E1080 (9080-HEX) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus9000 C9336PQ  (Spine 10G) \n * Cisco Nexus9000 C93180YC (10G) \n * Cisco Nexus9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
+| * Power E880 (9119-MHE) \n * Power S922 (9009-22A) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus9000 C9336PQ  (Spine 10G) \n * Cisco Nexus9000 C93180YC (10G) \n * Cisco Nexus9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -109,7 +109,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) \n * Power E1080 (9080-HEX) | * Flash storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
+| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}

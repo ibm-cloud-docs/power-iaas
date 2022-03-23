@@ -60,7 +60,7 @@ The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-- [E1080 (1080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
+<!--- [E980 (1080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}-->
 
 For more information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 {: note}
@@ -70,7 +70,7 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 
 The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.2?topic=considerations-migrating-i-72-from-54-61-71){: external}.
 
-- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S), and E1080 (1080-HEX) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, and E980 (1080-HEX) software maps-->](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
