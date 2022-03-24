@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2022
 
-lastupdated: "2021-12-13"
+lastupdated: "2022-03-24"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -25,6 +25,12 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## March 2022
+{: #march-2022}
+
+- The Power Systems Virtual Server now supports [AIX 7.3](/docs/power-iaas?topic=power-iaas-deploy-custom-image#aix-details).
+- You can view best practices and guidelines on [AIX backup performance on IBM Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-backup-strategies#backup-aix).
 
 ## December 2021
 {: #dec-2021}
