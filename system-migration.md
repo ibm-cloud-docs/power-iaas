@@ -23,13 +23,13 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Planning a workload migration to an IBM POWER8 or POWER9 system
+# Planning a workload migration to an IBM POWER8, POWER9, or POWER10 system
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. The {{site.data.keyword.powerSys_notm}} service uses three different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), and S922 (9009-22A). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. <!--The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX).--> The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), and S922 (9009-22A). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
-The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
+For AIX, the {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
 
 IBM i customers must use IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
@@ -81,6 +81,28 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 - [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+
+<!--## Migrating to an IBM POWER10 system
+{: #power10-migration}
+
+Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
+
+**AIX and IBM i** - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
+
+**Linux** - You must migrate your Linux operating system level to a Power10-supported level. To accomplish this migration, the following Linux distributions are supported:
+
+|  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
+|-------------------|--------------|
+| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+
+{: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
+
+To learn more about IBM POWER10 system performance and migration strategies, see the following articles:
+
+- [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
+- [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
+- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}-->
 
 ## Lab services
 {: #lab-services}

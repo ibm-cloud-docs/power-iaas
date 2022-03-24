@@ -92,13 +92,13 @@ Power Systems Virtual Server customer Private Network ID (3):
 ```
 {: codeblock}
 
-Megaport connectivity services are available in WDC04, DAL13, DAL12, LON06, TOR01, FRA05, SYD05, and OSA21 data centers.
+Megaport connectivity services are available in WDC04, WDC06, DAL13, DAL12, LON06, MON01, TOR01, FRA05, SYD05, SYD04 (via SYD05), and OSA21 data centers.
 {: important}
 
 ## Generic Routing Encapsulation (GRE) tunneling
 {: #gre-tunneling}
 
-You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only. This information applies when you are configuring GRE tunnels manually. If you are using Cloud connections, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel).
+You can optionally request a GRE tunnel configuration by adding the request to the {{site.data.keyword.powerSys_notm}} support case. The GRE capability is available on **IBM Power Virtual Server** Direct Link Connect only. This information applies when you are configuring GRE tunnels manually. If you are using Cloud connections, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 ```text
 GRE Tunnel Configuration Request:

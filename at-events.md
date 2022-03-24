@@ -24,12 +24,19 @@ subcollection: power-iaas
 # Activity tracker events
 {: #at-events}
 
-As a security officer, auditor, or manager, you can use the **Activity Tracker** service to track how users and applications interact with your {{site.data.keyword.powerSysFull}}.
+As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} service in {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-The {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to alert you of abnormal activity and to comply with regulatory audit requirements. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [IBM Cloud Activity Tracker with LogDNA](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started#getting-started).
+{{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.atracker_short}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-## List of events: Read
+{{site.data.keyword.powerSysFull}} automatically generates events so that you can track activity on your service.
+
+
+## Management events
+{: #at-actions-management}
+
+
+### Instance events
 {: #at-actions-read}
 
 The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
@@ -39,7 +46,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 | pcloud.event.read | Read a Power Systems Virtual Server Instance     |
 {: caption="Table 1. List of events: Read" caption-side="top"}
 
-## List of events: Images
+### Images events
 {: #at-actions-images}
 
 The following events are for working with images in your {{site.data.keyword.powerSys_notm}} instance.
@@ -53,7 +60,7 @@ The following events are for working with images in your {{site.data.keyword.pow
 | pcloud.image.capture       | Exports an Image                |
 {: caption="Table 2. List of events: Images" caption-side="top"}
 
-## List of events: Networks
+### Network events
 {: #at-actions-networks}
 
 The following events are for working with networks in your {{site.data.keyword.powerSys_notm}} instance.
@@ -66,7 +73,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | pcloud.network.delete      | Delete a Network                      |
 {: caption="Table 3. List of events: Network" caption-side="top"}
 
-## List of events: Power Systems Virtual Server
+### Power Systems Virtual Server events
 {: #at-actions-servers}
 
 The following events are for working with each {{site.data.keyword.powerSys_notm}} instance.
@@ -86,12 +93,12 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 | pcloud.pvm-instance.immediate-shutdown     | Shut down a Power virtual server instance immediately |
 | pcloud.pvm-instance.clone   | Clone a Power virtual server instance |
 | pcloud.pvm-instance.snapshot     |  Create a Power virtual server instance Snapshot |
-| pcloud.pvm-instance.network.read      |  Read a Power virtual server instance Network |
-| pcloud.pvm-instance.network.create     |  Create a Power virtual server instance Network  |
-| pcloud.pvm-instance.network.delete      |  Delete a Power virtual server instance Network  |
+| pcloud.pvm-instance-network.read      |  Read a Power virtual server instance Network |
+| pcloud.pvm-instance-network.create     |  Create a Power virtual server instance Network  |
+| pcloud.pvm-instance-network.delete      |  Delete a Power virtual server instance Network  |
 {: caption="Table 4. List of events: Power Systems Virtual Server" caption-side="top"}
 
-## List of events: SSH keys
+### SSH keys events
 {: #at-actions-ssh}
 
 The following events are for working with your account and SSH keys in your {{site.data.keyword.powerSys_notm}} instance.
@@ -104,7 +111,7 @@ The following events are for working with your account and SSH keys in your {{si
 | pcloud.ssh-key.delete    | Delete an SSH key           |
 {: caption="Table 5. List of events: SSH keys" caption-side="top"}
 
-## List of events: Data volumes
+### Data volumes events
 {: #at-actions-volumes}
 
 The following events are for working with data volumes in your {{site.data.keyword.powerSys_notm}} instance.
@@ -118,7 +125,7 @@ The following events are for working with data volumes in your {{site.data.keywo
 | pcloud.volume.configure  | Attach or Detach a Volume   |
 {: caption="Table 6. List of events: Data volumes" caption-side="top"}
 
-## List of events: Storage capacity
+### Storage capacity events
 {: #at-storage-capacity}
 
 The following events are for working with storage capacity in your {{site.data.keyword.powerSys_notm}} instance.
@@ -128,7 +135,7 @@ The following events are for working with storage capacity in your {{site.data.k
 | pcloud.storage-capacity.read       | Read Storage Capacity     |
 {: caption="Table 7. List of events: Storage capacity" caption-side="top"}
 
-## List of events: Storage pools
+### Storage pools events
 {: #at-storage-pools}
 
 The following events are for working with storage pools in your {{site.data.keyword.powerSys_notm}} instance.
@@ -138,7 +145,9 @@ The following events are for working with storage pools in your {{site.data.keyw
 | pcloud.system-pools.read       | Read System Pools Information     |
 {: caption="Table 8. List of events: Storage pools" caption-side="top"}
 
-## List of events: Tenant
+
+
+### Tenant events
 {: #at-tenants}
 
 The following events are for working with tenants in your {{site.data.keyword.powerSys_notm}} instance.
@@ -152,7 +161,7 @@ The following events are for working with tenants in your {{site.data.keyword.po
 | pcloud.tenant-ssh.delete   |  Delete an SSH Key  |
 {: caption="Table 9. List of events: Tenant" caption-side="top"}
 
-## List of events: Job
+### List of events: Job
 {: #at-job}
 
 The following events are for working with jobs in your {{site.data.keyword.powerSys_notm}} instance.
@@ -164,7 +173,7 @@ The following events are for working with jobs in your {{site.data.keyword.power
 | pcloud.job.delete   |  Delete a Job  |
 {: caption="Table 10. List of events: Job" caption-side="top"}
 
-## List of events: Network ports
+### List of events: Network ports
 {: #at-network-ports}
 
 The following events are for working with network ports in your {{site.data.keyword.powerSys_notm}} instance.
@@ -177,7 +186,7 @@ The following events are for working with network ports in your {{site.data.keyw
 | pcloud.port.delete   | Delete a Network Port  |
 {: caption="Table 11. List of events: Network ports" caption-side="top"}
 
-## List of events: SAP
+### List of events: SAP
 {: #at-sap}
 
 The following events are for working with SAP in your {{site.data.keyword.powerSys_notm}} instance.
@@ -188,7 +197,7 @@ The following events are for working with SAP in your {{site.data.keyword.powerS
 | pcloud.sap.create  |   Create an SAP PVM Instance   |
 {: caption="Table 12. List of events: SAP" caption-side="top"}
 
-## List of events: Cloud connections
+### List of events: Cloud Connections
 {: #at-cloud-connection}
 
 The following events are for working with Cloud connections in your {{site.data.keyword.powerSys_notm}} instance.
@@ -201,7 +210,7 @@ The following events are for working with Cloud connections in your {{site.data.
 | pcloud.cloud-connection.delete       |   Delete a Cloud Connection    |
 {: caption="Table 13. List of events: Cloud connections" caption-side="top"}
 
-## List of events: Placement Groups
+### List of events: Placement Groups
 {: #at-placement-groups}
 
 The following events are for working with placement groups in your {{site.data.keyword.powerSys_notm}} instance.
@@ -214,7 +223,7 @@ The following events are for working with placement groups in your {{site.data.k
 | pcloud.placement-groups.delete       |   Delete a Placement Group     |
 {: caption="Table 14. List of events: Placement groups" caption-side="top"}
 
-## List of events: IKE Policy
+### List of events: IKE Policy
 {: #at-ike-policy}
 
 The following events are for working with IKE Policy in your {{site.data.keyword.powerSys_notm}} instance.
@@ -227,7 +236,7 @@ The following events are for working with IKE Policy in your {{site.data.keyword
 | pcloud.ike-policy.delete       |   Delete an IKE Policy      |
 {: caption="Table 15. List of events: IKE policy" caption-side="top"}
 
-## List of events: IPsec Policy
+### List of events: IPSec Policy
 {: #at-ipsec-policy}
 
 The following events are for working with IPsec Policy in your {{site.data.keyword.powerSys_notm}} instance.
@@ -240,7 +249,7 @@ The following events are for working with IPsec Policy in your {{site.data.keywo
 | pcloud.ipsec-policy.delete       |   Delete an IPsec Policy      |
 {: caption="Table 16. List of events: IPsec policy" caption-side="top"}
 
-## List of events: VPN Connection
+### List of events: VPN Connection
 {: #at-vpn-connection}
 
 The following events are for working with VPN Connection in your {{site.data.keyword.powerSys_notm}} instance.
@@ -256,4 +265,6 @@ The following events are for working with VPN Connection in your {{site.data.key
 ## Viewing events
 {: #at-viewing-events}
 
-The {{site.data.keyword.at_full_notm}} can have only one instance per geographic location. Separate Activity Trackers are available for North America, Europe, and Sydney geographic locations. To view events, you must access the {{site.data.keyword.at_full_notm}} web user interface. To learn more, see [Starting the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch#launch_step2).
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. For more information, see [Cloud services locations](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations).
+
+{{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch). 

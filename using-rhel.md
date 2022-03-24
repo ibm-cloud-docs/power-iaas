@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server service
 {: #linux-with-powervs}
 
-You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service does not provide any RHEL stock images. You must bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
+You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. The following versions of Linux are supported:
 
 - RHEL 8.1
 - RHEL 8.2
@@ -76,7 +76,7 @@ You can verify that the device interface type is `ibmveth` by using the followin
 ethtool -i <interface name> | grep driver
 ```
 
-The following instructions are applicable to both RHEL version 8.1, and later and SLES version SP15. Some instructions vary depending on whether you are using RHEL or SLES. These differences are specified in the following procedure. If you need additional help to configure network interfaces, refer to the Red Hat or SLES documentation.
+The following instructions are applicable to RHEL version 8.1, and later. If you need additional help to configure network interfaces, refer to the Red Hat documentation.
 
 1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
 
@@ -87,11 +87,8 @@ The following instructions are applicable to both RHEL version 8.1, and later an
 
 2. Edit the `ifcfg-<NIC>` file (where NIC is the network interface name that is identified in step 1).
 
-    - The path to this file varies depending on whether you are using RHEL or SLES:
-  
     ```text
       RHEL:  /etc/sysconfig/network-scripts/ifcfg-<NIC>
-      SLES:  /etc/sysconfig/network/ifcfg-<NIC>
     ```
     - Add or modify the following lines:
 
@@ -99,9 +96,6 @@ The following instructions are applicable to both RHEL version 8.1, and later an
      For RHEL:
        MTU=1450
        ETHTOOL_OPTS="-K <NIC> rx off"
-     For SLES:
-       MTU='1450'
-       ETHTOOL_OPTIONS='-K <NIC> rx off'
     ```
 
 3. Restart the VM.

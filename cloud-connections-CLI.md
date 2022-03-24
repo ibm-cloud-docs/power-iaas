@@ -80,9 +80,6 @@ You must route Power Systems Virtual Server private network subnets over IBM Clo
 
 2. Click **Create** to create a Cloud connection.
 
-Cloud connections is available in all current locations except Toronto 1 (TOR01) and Washington 6 (WDC06).
-{: note}
-
 ## Modifying Cloud connections
 {: #configure-Cloud-connections}
 
