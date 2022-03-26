@@ -56,7 +56,6 @@ toc:
               - configuring-custom-image.md
               - modifying-instance.md
               - manage-placement-groups.md
-              - virtual-tape-libraries.md
               - capturing-exporting-vm.md
               - importing-boot-image.md
               - downloading-fixes.md
