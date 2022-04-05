@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-03-24"
+lastupdated: "2022-04-05"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -25,6 +25,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
+
+## April 2022
+{: #apr-2022}
+
+- Snapshots that are created is monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#metering-snapshot).
 
 ## March 2022
 {: #march-2022}

@@ -44,14 +44,14 @@ There are several use cases for the snapshot feature. For example, an administra
 You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on a different set of disks.
 {: note}
 
-<!--### Metering and pricing of snapshot 
+### Metering and pricing of snapshot 
 {: #metering-snapshot}
 
 Each snapshot that you create is monitored every hour and charged depending on the disk space that is requested for the snapshot. The space that is utilized by a snapshot is charged at 30% of the base rate. For example, if you have **M** disks on a VM that add up to 600 GB of space, and those **M** disks are used as source disks for snapshots, the following charges are applicable:
 
 - If you create one snapshot, you are charged for the disk space that is used by the base 600 GB of **M** disks plus 30% of 600 GB of disk space. That is, 600 GB (space of M disks) + 180 GB (30% of 600 GB) = 780 GB of disk space. 
 - If you create one more snapshot by using same disks, you will be charged for disk space that is used by **M** disks (600 GB) + (30% of 600 GB) + (30% of 600 GB) = 960 GB of disk space.
-- The pricing that is charged for the snapshot is based on the storage tier that contains the source volumes: Tier 1 or Tier 3.-->
+- The pricing that is charged for the snapshot is based on the storage tier that contains the source volumes: Tier 1 or Tier 3.
 
 ### Best practices
 {: #best-practice1}
