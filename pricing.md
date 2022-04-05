@@ -149,7 +149,14 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 6. EE980 processor type pricing" caption-side="bottom"}
+{: caption="Table 6. E980 processor type pricing" caption-side="bottom"}
+
+<!--| Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| --------------------------- | ---------------------------- | ------------------------ |
+| 1                           | $1.862 (dedicated)            | $1359.26                 |
+| 1                           | $0.4655 (uncapped shared)      | $339.82                  |
+| 1                           | $0.6983 (capped shared)        | $509.72                  |
+{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}-->
 
 ## End of billing
 {: #pricing-end-billing}
