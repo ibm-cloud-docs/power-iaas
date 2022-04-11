@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-03-07"
+lastupdated: "2022-04-11"
 
 keywords: direct link
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Ordering Direct Link Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-Use [{{site.data.keyword.dl_short}} Connect](/docs/dl) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
+Use [{{site.data.keyword.dl_short}} Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
 The Direct Link Connect offering provides the following advantages:
@@ -30,7 +30,7 @@ The Power Systems Virtual Server offering includes a highly available (up to 10 
 A 10 Gbps connection is available only for the Direct Link (2.0) Connect offering.
 {: important}
 
-Direct Link (2.0) Connect is available in all current locations. If you are using Direct Link Connect on Classic (1.0) in any current location, you can continue to use it with Power Systems Virtual Server. If you plan to use Direct Link Connect, you must order a new connection.
+Direct Link (2.0) Connect is available in all current locations. If you plan to use Direct Link Connect 2.0 you must order a new Direct Link Connect 2.0 connection.
 {: note}
 
 For more information, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) or [IBM Cloud Direct Link Connect on Classic](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
@@ -93,88 +93,6 @@ Order a second Direct Link Connect connection for backup purposes.
     {: note}
 
 The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance. 
-
-## Ordering Direct Link Connect on Classic
-{: #steps-to-order-direct-link-connect}
-
-
-{: shortdesc}
-
-Currently, there isn't a migration path from Direct Link on Classic offerings to Direct Link (2.0). You must order a Direct Link (2.0) Connect connection.
-{: note}
-
-To order a Direct Link Connect on Classic connection to the {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
-
-Order a second Direct Link on Classic Connect connection for backup purposes.
-{: tip}
-
-1. Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the Direct Link Connect service.
-
-2. Review the following basic Direct Link Connect networking concepts:
-
-   - [Direct Link Connect on Classic concepts](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link)
-   - [Direct Link Connect on Classic details](/docs/direct-link?topic=direct-link-about-ibm-cloud-direct-link#direct-link-connect-solution)
-   - [Direct Link Connect on Classic limitations](/docs/direct-link?topic=direct-link-known-limitations#ibm-cloud-direct-link-exchange-and-direct-link-connect-limitations)
-   - [Strict limitations on IP assignments](/docs/direct-link?topic=direct-link-configure-ibm-cloud-direct-link#strict-limitations-on-ip-assignments)
-
-3. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM Cloud account credentials.
-
-4. Search for **Direct Link Connect on Classic**.
-
-5. Click **Order Direct Link Connect on Classic** to see the order form.
-
-6. Enter the [configuration parameters](#direct-link-connect-configuration-parameters) for your IBM Cloud Direct Link Connect on Classic order. As you complete the fields for creating the Direct Link Connect service, the price is automatically updated to reflect your selections.
-
-   The {{site.data.keyword.powerSysShort}} service offers lower latency direct connectivity to customers. You must select **IBM POWER VIRTUAL SERVER** as the **Network Provider** instead of **MEGAPORT** to take advantage of this offer.
-   {: note}
-
-7. Read the *Master Service Agreement* and select the checkbox. You must read and understand the _Master Service Agreement_ as it contains important technical information.
-
-8. Click **Create**. The following message is displayed when your request is submitted successfully:
-
-   ![Direct Link Connect success message and ticket number](./images/console-direct-link-message.png "Direct Link Connect success message and ticket number"){: caption="Figure 1. Direct Link Connect success message and ticket number" caption-side="bottom"}
-
-9. Click the **Case number** link for the Direct Link Connect service. The information in the case number is used to identify the Direct Link Connect information for connecting your {{site.data.keyword.powerSys_notm}} instance.
-
-   It can take up to three business days to complete the initial setup for the Direct Link connection request.
-   {: note}
-
-10. To create a connection to the {{site.data.keyword.powerSys_notm}} instance by using the Direct Link Connect service, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against the {{site.data.keyword.powerSys_notm}} team. In the new case's description field, add the **Direct Link Connect case number**.
-
-11. When the Direct Link Connect connection is established, the Direct Link Connect case is closed. The following network information is an example of what is displayed:
-
-    ```text
-    Link Speed:                  1000 Mbps
-    Location:                    Washington 4
-    Network Provider:            IBM Power Virtual Server
-    Direct Link Connect subnet:  10.254.0.24/30
-    IBM Cloud IP Address:        10.254.0.25/30
-    Customer IP Address:         10.254.0.26/30
-    IBM Cloud ASN:               13884
-    Customer BGP ASN:            64995
-    Network Identifier:          1748523-1
-    Date Created:                2019-06-12T14:56:45-06:00
-    ```
-
-12. Use the information from the Direct Link Connect case number to update the **{{site.data.keyword.powerSys_notm}} support case**:
-
-    The **Power Systems Virtual Server network ASN** is the same as your **BGP ASN**. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support ticket. The IBM Cloud network team also generates the IP addresses. Your private network name is your [Power Systems Virtual Server private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) name.
-    {: note}
-
-    ```text
-    Customer name:
-    Customer account ID:
-    Direct Link Connect subnet:
-    IBM Cloud IP address:
-    Power Systems Virtual Server network IP address:
-    IBM Cloud ASN:
-    Power Systems Virtual Server network ASN:
-    Power Systems Virtual Server Private Network (subnet) Name (1):
-    Power Systems Virtual Server Private Network (subnet) Name (2):
-    Power Systems Virtual Server Private Network (subnet) Name (3):
-    ```
-
-13. The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
 
 ### Direct Link Connect configuration parameters
 {: #direct-link-connect-config-par}
