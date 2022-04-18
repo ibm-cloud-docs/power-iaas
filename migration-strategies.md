@@ -157,6 +157,17 @@ Some alternative AIX migration strategies include:
 
 For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
 
+### Migrating from AIX 7.1 to higher versions
+{: #migration-aix-versions}
+
+To migrate your resources from AIX 7.1 to higher AIX versions within Power Systems Virtual Servers, you must use the network boot option. Migration requires the VM to boot from the operating systems kernel level you are migrating to. To accomplish this, you need to configure the nim (network boot) server. To define the nim server with resources for migration, complete the following steps:
+
+1. Define the VM as a nim master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
+2. Create an lpp_source by using an image repository that contains the images. Stock images already contain the ISO and lpps that are found on the base media, so create the lpp_source and nim resources from here: [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
+3. Customize any additional installation resources.
+4. Define the AIX 7.1 VM as a nim client.
+5. Perform the installation for nim migration.
+
 ## IBM i migration strategies
 {: #migration-ibmi}
 
