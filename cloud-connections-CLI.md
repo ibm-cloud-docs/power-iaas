@@ -72,13 +72,16 @@ To create a Cloud connection, complete the following steps:
 
 6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
 
-If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
-You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
+      If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
+      You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
+      {: note}
+
+7. Review the summary and the terms and conditions information.
+
+8. Click **Create** to create a Cloud connection.
+
+Cloud connections is not supported on WDC06 data center.
 {: note}
-
-1. Review the summary and the terms and conditions information.
-
-2. Click **Create** to create a Cloud connection.
 
 ## Modifying Cloud connections
 {: #configure-Cloud-connections}
