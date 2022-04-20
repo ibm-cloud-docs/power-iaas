@@ -28,31 +28,9 @@ subcollection: power-iaas
 
 Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs. To share virtual optical images through a network, the network installation server must meet the following requirements:
 
-## Requirements
-{: #ibmi-nw-server-req}
-
-- The server must be able to share virtual optical images that use version 3 or later of the Network File System (NFS).
-- A volume list (`VOLUME_LIST`) file that contains the list of images to be loaded in the virtual optical device must exist in the image catalog directory. The `VFYIMGCLG` command is used to create the volume list file from the image catalog containing the images that you want to share. The following is an example of the command, `VFYIMGCLG IMGCLG(PUBS) TYPE(*OTHER) NFSSHR(*YES)`.
-
-The image catalog that is used must have an image catalog path name that is limited to 127 characters. Path name characters are limited to **A-Z**, ****a-z**, **0-9**, and **slash (/)**. Each image file name is limited to 127 characters.
-{: note}
-
-- A volume list has the following characteristics:
-    - ASCII format
-    - Must be called `VOLUME_LIST`
-    - File names are limited to 127 characters
-    - No tabs or line feeds can be used in the path name
-    - Each line is either an image file name or a comment
-    - All entries are ended by the end of a line
-    - Provides the order that the image files will be processed on the client system
-    - All characters following the number sign (*#*) are considered comments until the end of the line
-    - Comments can be added after the number sign (*#*) and must be followed by an end of line (EOL) character
-    - Can be created with the `VFYIMGCLG` command and `NFSSHR(*YES)` parameter or manually by using an ASCII editor
-
-Changes to the `VOLUME_LIST` file are not active until the next time the client device is varied off and on.
-{: tip}
-
 ## Configuration
 {: #ibmi-nw-server-config}
 
 To complete the configuration of an IBM i network installation server, see [Virtual optical storage using the Network File System](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzam4/rzam4virtualopstoragenfs.htm){: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: external}.
+
+Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second Power Systems Virtual Server Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
