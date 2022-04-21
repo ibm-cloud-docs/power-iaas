@@ -168,7 +168,7 @@ To migrate your resources from AIX 7.1 to higher AIX versions within Power Syste
 4. Define the AIX 7.1 VM as a NIM client.
 5. Perform the installation for NIM migration.
 
-For more information on creating and defining a NIM master, setting an LPP source and spot, see Migrating from AIX 7.1.
+For more information on creating and defining a NIM master, setting an LPP source and spot, see [Migrating from AIX 7.1](https://cloud.ibm.com/media/docs/downloads/power-iaas/Migration_from_AIX7_1.pdf){: external}.
 
 ## IBM i migration strategies
 {: #migration-ibmi}
