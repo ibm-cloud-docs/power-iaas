@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Deploying a Linux virtual machine (VM)
 {: #linux-deployment}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription.
+You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications.
 {: shortdesc}
 
 You must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-using-linux#registering-sles) or [Registering and subscribing to RHEL](/docs/power-iaas?topic=power-iaas-linux-with-powervs#subscribing-to-rhel).
