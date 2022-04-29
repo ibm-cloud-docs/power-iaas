@@ -57,10 +57,19 @@ To create a Cloud connection, complete the following steps:
    - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
    - You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
 
+<<<<<<< Updated upstream
 4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
 5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
+=======
+4. If you need access to other data centers outside your Power Systems Virtual Server region, select the **Enable global routing** check-box.
+   For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
+
+5. Select the **Enable IBM Transit Gateway** check-box, to provide connectivity between different services on IBM Cloud. IBM Transit Gateway enables you to connect your Power Systems Virtual Servers across multiple data centers. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
+   
+6. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
+>>>>>>> Stashed changes
    
    * **Classic Infrastructure**: You can connect to IBM Cloud classic resources. Only one Classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
   
@@ -70,15 +79,25 @@ To create a Cloud connection, complete the following steps:
 
    If you do not have the authorization to create a cloud connection, a direct link is created. The created direct link is not operational, and it must be authorized by the IBM cloud account user who has the required authority via the IBM Cloud console portal. Two direct links cannot be created under one account, even from different regions.
 
+<<<<<<< Updated upstream
 6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
+=======
+7. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
+>>>>>>> Stashed changes
 
       If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
       You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
       {: note}
 
+<<<<<<< Updated upstream
 7. Review the summary and the terms and conditions information.
 
 8. Click **Create** to create a Cloud connection.
+=======
+8. Review the summary and the terms and conditions information.
+
+9.  Click **Create** to create a Cloud connection.
+>>>>>>> Stashed changes
 
 Cloud connections is not supported on WDC06 data center.
 {: note}
