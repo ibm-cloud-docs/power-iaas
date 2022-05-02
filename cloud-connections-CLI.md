@@ -50,56 +50,41 @@ To create a Cloud connection, complete the following steps:
 
 2. In the **Cloud connections** page, click **Create connection**.
 
-3. Specify a connection name and select a connection speed. You must ensure that the following rules are applicable for setting the speed:
+3. **Resource details** \n
+   a. Specify a connection name and select a connection speed. You must ensure that the following rules are applicable for setting the speed:
    - Maximum connection speed is 10 Gbps. 
    - You can select 10 Gbps speed only when you are creating a new connection.
    - If you select 10 Gbps as the required speed, the GRE tunnelling option is disabled. 
    - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
    - You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
 
-<<<<<<< Updated upstream
-4. If you need access to other data centers outside your Power Systems Virtual Server region, toggle the **Global routing** switch to the on position.
+   b. If you need access to other data centers outside your Power Systems Virtual Server region, select the **Enable global routing** check-box.
    For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
-5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
-=======
-4. If you need access to other data centers outside your Power Systems Virtual Server region, select the **Enable global routing** check-box.
-   For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
-
-5. Select the **Enable IBM Transit Gateway** check-box, to provide connectivity between different services on IBM Cloud. IBM Transit Gateway enables you to connect your Power Systems Virtual Servers across multiple data centers. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
+   c. Select the **Enable IBM Transit Gateway** check-box, to provide connectivity between different services on IBM Cloud. IBM Transit Gateway enables you to connect your Power Systems Virtual Servers across multiple data centers. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
    
-6. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
->>>>>>> Stashed changes
+4. **Virtual connections** \n
+   You can establish connection between multiple Power Systems Virtual Server services across different Data centers by using  Transit Gateway. You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable the virtual connections. Select the check-box to continue. This is required if you have selected the **Enable IBM Transit Gateway** check-box in the previous step.
+
+<!--5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
    
    * **Classic Infrastructure**: You can connect to IBM Cloud classic resources. Only one Classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
   
    * **VPC**: You can connect to your account’s Virtual Private Cloud (VPC) resources. You must select the VPC connection from the list of available connections. You can connect multiple VPCs to a Cloud Connection.
   
-   Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.
+   Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.-->
 
-   If you do not have the authorization to create a cloud connection, a direct link is created. The created direct link is not operational, and it must be authorized by the IBM cloud account user who has the required authority via the IBM Cloud console portal. Two direct links cannot be created under one account, even from different regions.
-
-<<<<<<< Updated upstream
-6. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
-=======
-7. Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
->>>>>>> Stashed changes
+5. **Subnets** \n Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
 
       If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
       You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.
       {: note}
 
-<<<<<<< Updated upstream
-7. Review the summary and the terms and conditions information.
+6. Review the summary and the terms and conditions information.
 
-8. Click **Create** to create a Cloud connection.
-=======
-8. Review the summary and the terms and conditions information.
+7.  Click **Create** to create a Cloud connection.
 
-9.  Click **Create** to create a Cloud connection.
->>>>>>> Stashed changes
-
-Cloud connections is not supported on WDC06 data center.
+Cloud connections is not supported on WDC06 data center. \n If you do not have the authorization to create a cloud connection, a direct link is created. The created direct link is not operational, and it must be authorized by the IBM cloud account user who has the required authority via the IBM Cloud console portal. Two direct links cannot be created under one account, even from different regions.
 {: note}
 
 ## Modifying Cloud connections
@@ -113,12 +98,14 @@ To view or edit Cloud connections, complete the following steps:
 
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
 
-3. Click the **Edit details** icon.
+3. If Transit Gateway is enabled for the Cloud connection, you can view the **Managed with IBM Transit Gateway** details. 
+
+4. Click the **Edit details** icon.
 
 If you have an existing cloud connection with 5 Gbps or lesser speed, you cannot increase the speed limit to 10 Gbps. You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.
 {: note}
 
-4. Modify the details, review the pricing changes, and click **Save edits**.
+5. Modify the details, review the pricing changes, and click **Save edits**.
 
 ## Deleting a Cloud connection
 {: #delte-Cloud-connection}
