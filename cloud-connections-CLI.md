@@ -53,6 +53,7 @@ To create a Cloud connection, complete the following steps:
 3. **Resource details**
    
     a. Specify a connection name and select a connection speed. You must ensure that the following rules are applicable for setting the speed:
+    
         - Maximum connection speed is 10 Gbps. 
         - You can select 10 Gbps speed only when you are creating a new connection.
         - If you select 10 Gbps as the required speed, the GRE tunnelling option is disabled. 
