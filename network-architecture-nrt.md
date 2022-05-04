@@ -86,14 +86,14 @@ Complete the following steps to implement this scenario:
         - The PowerVS router advertises your PowerVS subnets to the Classic infrastructure environment. 
         - The Classic infrastructure advertises only your IBM Cloud Classic private subnets to the PowerVS router. 
         - The Classic infrastructure filters the following networks from the BGP advertisements coming from the PowerVS router because these IP addresses are used by the services networks: 10.0.0.0/14, 10.198.0.0/15, 10.200.0.0/14, 169.254.0.0/16, 224.0.0.0/4 and any IP ranges that are assigned to your IBM Cloud Classic private subnets.
-        You can use the 10.x.x.x range if there is not a conflict with an IBM Cloud backend 10.x.x.x service. You must contact support if you want to use NAT'ing or IP aliasing to resolve the IP conflict. However, IBM does not recommend using the 10.x.x.x range when you create a new network.
-        {: important}
+          You can use the 10.x.x.x range if there is not a conflict with an IBM Cloud backend 10.x.x.x service. You must contact support if you want to use NAT'ing or IP aliasing to resolve the IP conflict. However, IBM does not recommend using the 10.x.x.x range when you create a new network.
+          {: important}
 
 3. Identify the IBM Cloud Classic private subnets and the IP address schema that is assigned to you when you ordered bare metal or virtual server instances that are hosted on your IBM Cloud Classic private subnets and connect to the required resources and services.
-All the routers in all Classic infrastructure data centers and points of presence across the global IBM Cloud backbone are connected to the PowerVS router by using the Direct Link Connect VRF-enabled connection. 
+    All the routers in all Classic infrastructure data centers and points of presence across the global IBM Cloud backbone are connected to the PowerVS router by using the Direct Link Connect VRF-enabled connection. 
 
-Each IBM Cloud Direct Link service is not redundant. However, diversity can be engineered using multiple direct links and BGP. See [Models for diversity and redundancy in Direct Link (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link)
-{: note}
+    Each IBM Cloud Direct Link service is not redundant. However, diversity can be engineered using multiple direct links and BGP. See [Models for diversity and redundancy in Direct Link (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link)
+    {: note}
 
 ## Connecting to VPC by using Direct Link Connect
 {: #network-reference-architecture-vpc}
@@ -105,13 +105,15 @@ In this deployment topology, a Direct Link 2.0 is used to connect your {{site.da
 Complete the following steps to implement this scenario:
 
 1. Define the IP address schema of your PowerVS subnets in your PowerVS environment. Your PowerVS instances are hosted on these PowerVS subnets. Ensure that you do not overlap the PowerVS subnets with your IBM Cloud Classic private subnets or the IP addressing schema used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+
 2. Order a [Direct Link Connect (2.0)](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0) or provision a [Cloud Connection](/docs/power-iaas?topic=power-iaas-cloud-connections) instance from the PowerVS interface to connect the PowerVS router to the IBM Cloud Classic infrastructure environment. This connection is established and operated by the IBM Cloud team and you have no direct access or control.
-   When this connection is established, the Border Gateway Protocol (BGP) is configured by the IBM Cloud team in the following way:
-    - The PowerVS router advertises your PowerVS subnets to the router in the VPC infrastructure environment. 
-    - The router in the VPC infrastructure environment advertises only your IBM Cloud VPC subnets to the PowerVS router. 
-    - The router in the VPC infrastructure environment filters the following networks from the BGP advertisements coming from the PowerVS router because these IP addresses are used by the endpoint networks: 169.254.0.0/16, 224.0.0.0/4, 166.9.0.0/16 and any IP ranges that are assigned to your IBM Cloud VPC subnets.
+    When this connection is established, the Border Gateway Protocol (BGP) is configured by the IBM Cloud team in the following way:
+        - The PowerVS router advertises your PowerVS subnets to the router in the VPC infrastructure environment.
+        - The router in the VPC infrastructure environment advertises only your IBM Cloud VPC subnets to the PowerVS router.
+        - The router in the VPC infrastructure environment filters the following networks from the BGP advertisements coming from the PowerVS router because these IP addresses are used by the endpoint networks: 169.254.0.0/16, 224.0.0.0/4, 166.9.0.0/16 and any IP ranges that are assigned to your IBM Cloud VPC subnets.
+
 3. Identify the IBM Cloud VPC subnets and the IP address schema that is assigned to you when you ordered VPC services. The XCR connects to the endpoint networks by using the VPC implicit router that provides routing functions to each VPC and allows each VPC to have access to its own copy of the IPv4 address space. The Multi-Protocol Label Switching (MPLS) VPN works with Direct Link and Classic infrastructure environment. For more information, see [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external}.
-You cannot access endpoint networks (services and infrastructure services) and virtual private endpoints (VPE) from your PowerVS subnets. The type of endpoint networks are as follows:
+    You cannot access endpoint networks (services and infrastructure services) and virtual private endpoints (VPE) from your PowerVS subnets. The type of endpoint networks are as follows:
     - Service endpoints - allow connection to IBM Cloud services available through DNS names in the cloud.ibm.com domain and resolve to 166.9.x.x addresses.
     - Infrastructure services - allow connection to IBM Cloud services from the adn.networklayer.com domain and resolve to 161.26.0.0/16 addresses. Services that you can reach include:
       - DNS resolvers - 161.26.0.10 and 161.26.0.11 (Windows VS seems to be setup with 161.26.0.7 and Linux with 161.26.0.7 and 161.26.0.8)
@@ -124,6 +126,8 @@ You cannot access endpoint networks (services and infrastructure services) and v
 Each IBM Cloud Direct Link service is not redundant, however, diversity can be engineered using multiple direct links and BGP. See [Models for diversity and redundancy in Direct Link (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link)
 
 ## Connecting to IBM Cloud Services
+{: #network-architecture-cloud-services}
+
 TBD
 
 ## Connecting to on-premise by using Megaport
@@ -147,9 +151,9 @@ Megaport connectivity services are available in WDC04, DAL13, DAL12, LON06, TOR0
 Complete the following steps to implement this scenario:
 1. Define the IP address schema of your PowerVS subnets in your PowerVS environment. Your PowerVS instances are hosted on these PowerVS subnets. Ensure that you do not overlap the PowerVS subnets with your IBM Cloud Classic private subnets or the IP addressing schema used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 2. Procure the [Megaport](https://www.megaport.com/){: external} VXC connections to connect your on-premise (remote) networks to the Megaport network.
-    - Open a support ticket against Power Systems Virtual Server to receive a service ID or a virtual cross-connect (VxC) identifier from IBM. 
+    - Open a support ticket against Power Systems Virtual Server to receive a service ID or a virtual cross-connect (VxC) identifier from IBM.
     - Engage with Megaport to procure the connection (VxC) to Power Systems Virtual Server Port @ Megaport.
-    Although a single data center connection between the on-premises network and Megaport network is possible, best practice is to select two different port locations to provide redundancy.
+        Although a single data center connection between the on-premises network and Megaport network is possible, best practice is to select two different port locations to provide redundancy.
 3. Open a support ticket against Power Systems Virtual Server team to perform the network configuration to connect the Megaport network to the PowerVS router by using VXCs. Remember to include the following pieces of information in your support ticket:
     
     ```text
@@ -184,9 +188,9 @@ The key features of this connect to classic topology are as follows:
 
 1. Define the IP address schema of your PowerVS subnets in your PowerVS environment. Your PowerVS instances are hosted on these PowerVS subnets. Ensure that you do not overlap the PowerVS subnets with your IBM Cloud Classic private subnets or the IP addressing schema used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 2. Procure the [Megaport](https://www.megaport.com/){: external} VXC connections to connect your on-premise (remote) networks to the Megaport network.
-    - Open a support ticket against Power Systems Virtual Server to receive a service ID or a virtual cross-connect (VxC) identifier from IBM. 
-    - Engage with Megaport to procure the connection (VxC) to Power Systems Virtual Server Port @ Megaport.
-    When connecting a Power IaaS Loaction-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://docs.megaport.com/mcr/creating-mcr/){: external} unless network connectivity is through a customer router. Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
+      - Open a support ticket against Power Systems Virtual Server to receive a service ID or a virtual cross-connect (VxC) identifier from IBM.
+      - Engage with Megaport to procure the connection (VxC) to Power Systems Virtual Server Port @ Megaport.
+        When connecting a Power IaaS Loaction-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://docs.megaport.com/mcr/creating-mcr/){: external} unless network connectivity is through a customer router. Consult an IBM Cloud Connect or Megaport representative for specific network requirements.
 3. Open a support ticket against Power Systems Virtual Server team to perform the network configuration to connect the Megaport network to the PowerVS router by using VXCs. Remember to include the following pieces of information in your support ticket:
     ```text
     Customer name and contact:
@@ -251,7 +255,8 @@ Complete the following steps to implement this scenario:
    The IBM Cloud Classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your Classic environment.
     - Your PowerVS subnets advertised by the PowerVS router.
-However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your PowerVS subnets.
+
+   However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your PowerVS subnets.
 3. Configure a Generic Routing Encapsulation (GRE) tunnel between the gateway appliance and the PowerVS router as the PowerVS router will not have routes for your remote networks advertised to it through the IBM Cloud-side router. Within the GRE tunnel, static routes are configured between the PowerVS router and the gateway appliance. For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel).
 
 For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
@@ -288,9 +293,10 @@ Complete the following steps to implement this scenario:
    The IBM Cloud Classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your Classic environment.
     - Your PowerVS subnets advertised by the PowerVS router.
-However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your PowerVS subnets.
+
+   However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your PowerVS subnets.
 3. Configure a Generic Routing Encapsulation (GRE) tunnel between the gateway appliance and the PowerVS router as the PowerVS router will not have routes for your remote networks advertised to it through the IBM Cloud-side router. Within the GRE tunnel, static routes are configured between the PowerVS router and the gateway appliance. For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel).
-4. Set up a separate Direct Link 2.0 connection between your remote network (on-premise) and IBM Cloud Classic infrastructure environment. See [Getting started with IBM Cloud Direct Link (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl), however, key elements of IBM Cloud Direct Link (2.0) include the following: 
+4. Set up a separate Direct Link 2.0 connection between your remote network (on-premise) and IBM Cloud Classic infrastructure environment. See [Getting started with IBM Cloud Direct Link (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl), however, key elements of IBM Cloud Direct Link (2.0) include the following:
     - Requires BGP to establish the routes to a customer's remote network.
     - Each IBM Cloud Direct Link service is not redundant, however, diversity can be enabled over multiple direct links along with BGP.
     - Ensure that IP subnet overlaps do not exist between the infrastructure environments and the remote networks.
