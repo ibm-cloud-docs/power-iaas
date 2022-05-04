@@ -69,6 +69,27 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
+## What versions of stock images are available? 
+{: #stock-images}
+{: faq}
+{: support}
+
+Power Systems Virtual Server provides a single stock image for each major version (example: Technology Level) of the Operating System that is enabled through the offering. PowerVS typically provides stock images for the last three major versions of the supported Operating Systems. Any update to the OS stock image is planned only when the image level is certified for PowerVM&trade; environment.
+
+## When are the stock images removed from the catalog?
+{: #remove-stock-images}
+{: faq}
+{: support}
+
+PowerVS offering periodically removes unsupported and older stock images. You are notified 3 weeks before the images are removed. 
+
+## What happens to VMs deployed using stock images that are being removed?
+{: #vm-stock-images}
+{: faq}
+{: support}
+
+VMs deployed by using stock images that are being removed can continue to operate without any issues. You are recommended to follow Operating system vendor’s guidelines to update the OS as needed. 
+
 ## What formats should I use when uploading a custom image?
 {: #custom-image}
 {: faq}
