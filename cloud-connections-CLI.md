@@ -69,14 +69,6 @@ To create a Cloud connection, complete the following steps:
    
    You can establish connection between multiple Power Systems Virtual Server services across different Data centers by using  Transit Gateway. You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable the virtual connections. Select the check-box to continue. This is required if you have selected the **Enable IBM Transit Gateway** check-box in the previous step.
 
-<!--5. Select the **Endpoint destination** as follows to select the network connection to attach to the Direct Link gateway:
-   
-   * **Classic Infrastructure**: You can connect to IBM Cloud classic resources. Only one Classic infrastructure connection is allowed per Direct Link gateway. You can also request a Generic Routing Encapsulation (GRE) tunnel configuration by specifying the GRE destination and GRE subnet IP addresses. For more information, see [GRE tunneling](/docs/power-iaas?topic=power-iaas-configuring-power#gre-tunneling).
-  
-   * **VPC**: You can connect to your account’s Virtual Private Cloud (VPC) resources. You must select the VPC connection from the list of available connections. You can connect multiple VPCs to a Cloud Connection.
-  
-   Cloud connections provide connectivity to IBM Cloud Classic network in addition to the VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in Local Routing or Global Routing attribute. You must use the Global routing option to reach the VPC network that is outside the local region.-->
-
 5. **Subnets** 
    
       Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
