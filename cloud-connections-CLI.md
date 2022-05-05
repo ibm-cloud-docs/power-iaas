@@ -54,11 +54,11 @@ To create a Cloud connection, complete the following steps:
    
     a. Specify a connection name and select a connection speed. You must ensure that the following rules are applicable for setting the speed:
     
-        - Maximum connection speed is 10 Gbps. 
-        - You can select 10 Gbps speed only when you are creating a new connection.
-        - If you select 10 Gbps as the required speed, the GRE tunnelling option is disabled. 
-        - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
-        - You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
+      - Maximum connection speed is 10 Gbps. 
+      - You can select 10 Gbps speed only when you are creating a new connection.
+      - If you select 10 Gbps as the required speed, the GRE tunnelling option is disabled. 
+      - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
+      - You cannot modify the speed after you have created the cloud connection when the speed is set to 10 Gbps at the time of creation.
 
     b. If you need access to other data centers outside your Power Systems Virtual Server region, select the **Enable global routing** check-box.
     For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
