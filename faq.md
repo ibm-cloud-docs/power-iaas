@@ -74,14 +74,14 @@ Yes. This function is known as **bring your own image**. For more information, s
 {: faq}
 {: support}
 
-Power Systems Virtual Server provides a single stock image for each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering. PowerVS typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for PowerVM&trade; environment.
+For each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering, Power Systems Virtual Server provides a single stock image. PowerVS typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for PowerVM&trade; environment.
 
 ## When are stock images removed from the catalog?
 {: #remove-stock-images}
 {: faq}
 {: support}
 
-PowerVS offering periodically removes unsupported and older stock images. You will be notified three weeks before the images are removed. 
+Any unsupported and older stock images are peridoically removed from the offering. You will be notified three weeks before the images are removed. 
 
 ## What happens to VMs deployed using stock images that are being removed?
 {: #vm-stock-images}
