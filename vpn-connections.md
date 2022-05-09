@@ -211,7 +211,7 @@ For more information about attaching or detaching subnets by using CLI, see the 
 
 In addition to the subnet restrictions specified in [Configuring and adding a private network subnet](/docs/power-iaas-cli-plugin?topic=power-iaas-configuring-subnet), VPNaaS has the following restrictions:
 
-a. Subnets that represent `10.xx.xx.xx/8` is not supported.
+a. Subnets with `10.xx.xx.xx/8` address are not supported.
 
 b. These additional subnets are restricted: TBD.
 
