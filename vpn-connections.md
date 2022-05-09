@@ -59,6 +59,8 @@ You can configure your VPN to connect to your on-premises network by following t
 
 The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service instance. The configuration depends on the type of VPN gateway. See the following topics for details.
 
+Any configurations that are not listed in this section are not supported by PowerVS. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+
 - [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
 - [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
 - [Connecting to a IBM Cloud VPC VPN Gateway peer](/docs/vpc?topic=vpc-vpn-overview)
@@ -206,4 +208,14 @@ To create, attach, or detach a local subnet or a peer subnet to a VPN connection
 3. In the **VPN connection details** page, click **Attach another +** option to attach other local and peer subnets. Click **Detach** to detach the existing local and peer subnets from the VPN connection.
 
 For more information about attaching or detaching subnets by using CLI, see the CLI reference for [VPN subnets](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connection-local-subnets).
+
+In addition to the subnet restrictions noted in [Configuring and adding a private network subnet](/docs/power-iaas-cli-plugin?topic=power-iaas-configuring-subnet), VPNaaS has the following restrictions:
+
+a. Subnets that represent `10.xx.xx.xx/8` is not supported.
+
+b. These additional subnets are restricted: TBD.
+
+c. You might get a "subnet not available" message while creating subnets in certain locations. Choose a different subnet to resolve this issue.
+
+
 
