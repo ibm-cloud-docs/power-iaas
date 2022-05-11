@@ -28,7 +28,7 @@ subcollection: power-iaas
 You can use Cloud connections to automatically connect your {{site.data.keyword.powerSys_notm}} instances to IBM Cloud resources including the IBM Cloud Classic network and the Virtual Private Cloud (VPC) network. Cloud connections create a Direct Link Connect (2.0) instance to connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources. The speed and reliability of the Direct Link connection extends the network of your organization data center and offers more consistent and higher-throughput connectivity, while keeping network traffic within the IBM Cloud network.
 {: shortdesc}
 
-You can have a maximum of two Cloud connections per account.
+You can have a maximum of two Cloud connections per account per region-zone.
 {: important}
 
 To perform the following operations by using CLI, see [Create a Cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection).
