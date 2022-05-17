@@ -76,7 +76,7 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), and IBM Power System E980 (9080-M9S)<!--, and IBM Power System E1080 (9080-HEX)-->. For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), IBM Power System E980 (9080-M9S)<!--, and IBM Power System E1080 (9080-HEX)-->. For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}} service, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} service, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 {: tip}
@@ -91,7 +91,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) <!--\n * Power E1080 (9080-HEX)--> | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -114,7 +114,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-3}
-{: tab-title="Non-US* "}
+{: tab-title="Non-US"}
 
 For a complete list of supported data centers, see [Creating a Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
@@ -153,3 +153,4 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}
+

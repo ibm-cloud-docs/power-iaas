@@ -81,7 +81,7 @@ For each major version (example: Technology Level) of the operating system (OS) 
 {: faq}
 {: support}
 
-Any unsupported and older stock images are peridoically removed from the offering. You will be notified three weeks before the images are removed. 
+Any unsupported and older stock images are periodically removed from the offering. You will be notified three weeks before the images are removed. 
 
 ## What happens to VMs deployed using stock images that are being removed?
 {: #vm-stock-images}
