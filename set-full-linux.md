@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-18"
 
 keywords: full linux, set full linux
 
