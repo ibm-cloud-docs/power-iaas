@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-05-18"
+lastupdated: "2022-05-20"
 
 keywords: full linux, set full linux
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Full Linux subscription for Power Systems Virtual Servers
-{: #full-linux-subscription}
+{: #set-full-linux}
 
 Full Linux subscription provides stock images for RHEL, SLES, SAP, and non-SAP applications. 
 {: shortdesc}
