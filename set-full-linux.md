@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2022-05-20"
 
-keywords: full linux, set full linux
+keywords: full Linux, set full Linux
 
 subcollection: power-iaas
 
@@ -22,24 +22,26 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Full Linux subscription for Power Systems Virtual Servers
-{: #set-full-linux}
+# Full Linux&reg subscription for Power Systems Virtual Servers
+{: #set-full-Linux}
 
-Full Linux subscription provides stock images for RHEL, SLES, SAP, and non-SAP applications. 
+Full Linux&reg subscription provides stock images for RHEL, SLES, SAP, and non-SAP applications. 
 {: shortdesc}
 
-Power Systems Virtual Server provides three versions of the operating system (OS) stock images. You can also utilize full Linux subscription to obtain Power patches or updates hosted on IBM satellite server within IBM Cloud environement. Charges are applicable to use the keys against the IBM satelite server to receive the patches. 
+Power Systems Virtual Server provides three versions of the operating system (OS) stock images. You can also use full Linux&reg subscription to obtain Power fixes or updates that are hosted on IBM satellite server within IBM Cloud environment. Charges are applicable to use the keys against the IBM satellite server to receive the fixes. 
 
-## Setting up full Linux subscription
-{: #set-full-linux}
+## Setting up full Linux&reg subscription
+{: #set-full-Linux}
 
-To set up full Linux subscription for your account, complete the following steps.
+To set up full Linux&reg subscription for your account, complete the following steps.
 
-1. [Cloud connection configuration](/docs/power-iaas?topic=full-linux-subscription#configure-cloud-connection)
-2. [Proxy creation and configuration](/docs/power-iaas?topic=full-linux-subscription#configure-cloud-connection)
-3. Power Virtual Machine (PVM) creation and configuration
-      a.	RHEL
-      b.	SLES subscription-mana
+1. [Cloud connection configuration](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
+2. [Proxy creation and configuration](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy)
+3. [Power virtual machine (PVM) creation and configuration](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm)
+
+    a.	RHEL
+
+    b.	SLES subscription-mana
 4. Proxy configuration
 5. Virtual server cloudinit script (RHEL and SLES)
 
@@ -47,8 +49,8 @@ To set up full Linux subscription for your account, complete the following steps
 ### Configure a Cloud connection
 {: #configure-cloud-connection}
 
--	Ensure that you set up a cloud connection between a private network that will be attached to the Cloud connection and the private server. 
--	Each environment will need its own cloud connection.
+-	Ensure that you set up a cloud connection between a private network that is attached to the Cloud connection and the private server. 
+-	Each environment needs its own cloud connection.
 - You will need the details of this private network for further configuration.
 
 For more information on creating a Cloud connection, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -56,63 +58,62 @@ For more information on creating a Cloud connection, see [Managing Cloud connect
 ### Creating and configuring a proxy
 {: #create-proxy}
 
-Create and configure a proxy setup by following the instructions in [Configuring an HTTP proxy](/docs/satellite?topic=satellite-config-http-proxy&mhsrc=ibmsearch_a&mhq=proxy). This proxy will be set up in an virtual private cloud (VPC) environement. 
+Create and configure a proxy setup by following the instructions in [Configuring an HTTP proxy](/docs/satellite?topic=satellite-config-http-proxy&mhsrc=ibmsearch_a&mhq=proxy). This proxy is set up in a virtual private cloud (VPC) environment. 
 
-1. Once the proxy has been deployed, log into VPC and select [security groups](/docs/vpc?topic=vpc-using-security-groups). 
-2. Select the security group attached to your proxy and add 443, 8443, 80, and 3128. Ensure that the IP being asked is the subnet CIDR of your private network powervs vm. The subnet CIDR can be found in the IBM cloud site by going to the region zone, then selecting subnets, finding the subnet you will be using, and copying the CIDR.
+1. Once you deploy the proxy, log in to VPC and select [security groups](/docs/vpc?topic=vpc-using-security-groups). 
+2. Select the security group that is attached to your proxy and add 443, 8443, 80, and 3128. Ensure that the IP being asked is the subnet CIDR of your private network PowerVS VM. The subnet CIDR can be found in the IBM cloud site by going to the region zone, then selecting subnets, finding the subnet that you will be using, and copying the CIDR.
 3. A proxy can also be established within the Classic infrastructure.
-4. Once the proxy is spawned, log in and locate the subnet cidr.
+4. Once the proxy is created, log in and locate the subnet CIDR.
   
-   a. To log in, go to terminal and run the following command
-        `	ssh root@”public IP of proxy`
+   a. To log in, go to terminal and run the `ssh root@”public IP of proxy` command.
 
-   b. Run `route -n`, the subnet of your proxy is listed below the private gateway. Example subnet: 10.240.65.0, 10.209.155.192.
+   b. Run `route -n`, the subnet of your proxy is listed after the private gateway. Example subnets: 10.240.65.0, 10.209.155.192.
 
-   c. To get the CIDR, run `ip route`. Example CIDR: 10.240.65.0/24, 10.209.155.192/26.
+   c. To get the CIDR, run `ip route`. Example CIDR's: 10.240.65.0/24, 10.209.155.192/26.
 
-   d. Note the CIDR as you will need it in step 3 to establish connections from the VM to the proxy.
+   d. Note the CIDR number as you need it in [step 3](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm) to establish connections from the VM to the proxy.
 
 ### Creating and configuring a Power virtual machine
-{: #create-proxy}
+{: #create-power-vm}
 
-1.	Create a PVM instance via PowerVS UI, CLI, or API with the following requirements:
+1.	Create a PVM instance via PowerVS UI, CLI, or API with the following requirements.
       
     a.	SSH key
 
     b.	Public network
 
-    c.	Private network from Step 1
+    c.	Private network from [step 1](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
 
 2.	For RHEL:
 
-    a. Log into your vm in a teminal instance with the external IP using the command:
-            `ssh root@”External IP”`.
+    a. Log in to your VM in a terminal instance with the external IP by using the `ssh root@”External IP` command.
 
     b. You must set up a proxy connection.
 
-      - Sudo su root, if not root already
+      - Run the `Sudo su root` command.
   
-      -	ip route add “subnet of proxy(CIDR)” via “private powervs vm gateway
+      -	Run `ip route` command and add subnet of proxy (CIDR) via private PowerVS VM gateway.
           
-        - the CIDR subnet is the value found in the end of step 1
-        - the private vm gateway can be found in the IBM cloud site and selecting your powervs vm
+          - The CIDR subnet is the value that is found at the end of [step 1](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection).
+          - You can view the private VM gateway in the [IBM Cloud](https://cloud.ibm.com){: external} website by selecting your PowerVS VM.
 
-    If your VM is restarted, these IP routes will be removed and will need to be added again
+    If your VM is restarted, these IP routes are removed and they need to be added again.
     {: note}
 
 3. For SLES:
 
-    a. Using a command line (terminal), SSH to your SLES PVM instance using the PVM’s external IP address.
+    a. In the command-line interface (terminal), SSH to your SLES PVM instance by using the PVM’s external IP address.
 
-      -	ssh root@<external IP address> i.e., ssh root@1.2.3.4
+      -	`ssh root@<external IP address>`  Example: ssh root@1.2.3.4
 
-    b. Add network route to connect the PVM to the proxy configured in Step 2.
+    b. Add a network route to connect the PVM to the proxy configured in [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
 
-      - ip route add “CIDR subnet of proxy” via “private gateway of PVM”
+      - Run the `ip route` command and add CIDR subnet of proxy via private gateway of PVM.
   
-        -	The CIDR subnet of the proxy is the value found at the end of Step 2.
-        -	The private gateway of PVM can be found in the server details of the PVM
-                  i.e, ip route add 1.5.3.9/24 via 5.9.7.1
+        -	The CIDR subnet of the proxy is the value found at the end of [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
+        -	You can view the private gateway of PVM in the server details of the PVM
+
+          Run `ip route` command and add 1.5.3.9/24 via 5.9.7.1
     
-    If your VM is restarted, these IP routes will be removed and will need to be added again.
+    If your VM is restarted, these IP routes are removed and they need to be added again.
     {: note}
