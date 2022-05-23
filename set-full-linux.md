@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Full Linux&reg; subscription for Power Systems Virtual Servers
+# Full Linux subscription for Power Systems Virtual Servers
 {: #set-full-Linux}
 
 Full Linux&reg; subscription provides stock images for RHEL, SLES, SAP, and non-SAP applications. 
@@ -30,7 +30,7 @@ Full Linux&reg; subscription provides stock images for RHEL, SLES, SAP, and non-
 
 Power Systems Virtual Server provides three versions of the operating system (OS) stock images. You can also use full Linux&reg; subscription to obtain Power fixes or updates that are hosted on IBM satellite server within IBM Cloud environment. Charges are applicable to use the keys against the IBM satellite server to receive the fixes. 
 
-## Setting up full Linux&reg; subscription
+## Setting up full Linux subscription
 {: #set-full-Linux}
 
 To set up full Linux&reg; subscription for your account, complete the following steps.
