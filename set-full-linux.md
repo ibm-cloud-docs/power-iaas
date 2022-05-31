@@ -35,24 +35,24 @@ Power Systems Virtual Server provides three versions of the operating system (OS
 
 To set up full Linux&reg; subscription for your account, complete the following steps.
 
-1. [Configure a Cloud connection](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
+1. [Configuring a Cloud connection](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
 2. [Creating and configuring a proxy](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy)
 3. [Creating and configuring a Power virtual machine (PVM)](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm)
 
     a.	RHEL
 
     b.	SLES
-4. [Proxy configuration](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-proxy)
+4. [Configuring a Proxy](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-proxy)
 5. [Virtual server cloudinit script (RHEL and SLES)](/docs/power-iaas?topic=power-iaas-set-full-Linux#virtual-server)
 
 
-### Configure a Cloud connection
+### Configuring a Cloud connection
 {: #configure-cloud-connection}
 
 Create a Cloud connection with the following parameters:
 
 -	Ensure that you set up a cloud connection between a private network that is attached to the Cloud connection and the private server. 
--	Each environment needs its own cloud connection.
+-	Each region zone needs its own cloud connection.
 - You need the details of this private network for further configuration.
 
 For more information on creating a Cloud connection, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -63,7 +63,7 @@ For more information on creating a Cloud connection, see [Managing Cloud connect
 Create and configure a proxy setup by following the instructions in [Configuring an HTTP proxy](/docs/satellite?topic=satellite-config-http-proxy&mhsrc=ibmsearch_a&mhq=proxy). This proxy is set up in a virtual private cloud (VPC) environment. 
 
 1. Once you deploy the proxy, log in to VPC and select [security groups](/docs/vpc?topic=vpc-using-security-groups). 
-2. Select the security group that is attached to your proxy and add 443, 8443, 80, and 3128. Ensure that the IP being asked is the subnet CIDR of your private network PowerVS VM. To view the subnet CIDR in the IBM Cloud website go to the region zone. Go to subnets and find the subnet that you will be using, and copy the CIDR.
+2. Navigate to security groups by going to [IBM Cloud](https://cloud.ibm.com){: external} > VPC Infrastructure > Networks > Security groups. Select the security group that is attached to your proxy and add 443, 8443, 80, and 3128. Ensure that the IP being asked is the subnet CIDR of your private network PowerVS VM. To view the subnet CIDR in the IBM Cloud website go to the region zone. Go to subnets and find the subnet that you will be using, and copy the CIDR.
 3. A proxy can also be established within the Classic infrastructure.
 4. Once the proxy is created, log in and locate the subnet CIDR.
   
@@ -112,7 +112,7 @@ Create and configure a proxy setup by following the instructions in [Configuring
 
       - Run the `ip route` command and add CIDR subnet of proxy via private gateway of PVM.
   
-        -	The CIDR subnet of the proxy is the value found at the end of [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
+        -	The CIDR subnet of the proxy is the value that is found at the end of [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
         -	You can view the private gateway of PVM in the server details of the PVM.
 
           Run `ip route` command and add 1.5.3.9/24 via 5.9.7.1
@@ -120,7 +120,7 @@ Create and configure a proxy setup by following the instructions in [Configuring
     If your VM is restarted, these IP routes are removed and they need to be added again.
     {: note}
 
-### Proxy configuration
+### Configuring a Proxy
 {: #configure-proxy}
 
 Set up a proxy configuration, by completing the following steps:
@@ -128,7 +128,7 @@ Set up a proxy configuration, by completing the following steps:
 1. Log in to your proxy server, by using the `ssh root@<public IP of proxy>` command.
 2. Ensure that another IP route is created within the proxy. This IP route allows the IPs that are within the range of the created private IP gateway for your VM to this proxy gateway.
 
-    - Run the `ip route` command and add a private PowerVS VM gateway ranges(CIDR) via gateway of proxy.
+    - Run the `ip route` command and add CIDR of private network in Step 1 via gateway of proxy.
       
       - You can view the private VM gateway in the [IBM Cloud](https://cloud.ibm.com){: external} website. Select the PowerVS VM that you have created in [step 3](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm), and go to the attached private network. The CIDR is listed as the last variable.
       - Run the `route -n` command to view the gateway of the proxy.
@@ -155,14 +155,14 @@ Set up a proxy configuration, by completing the following steps:
 You can customize your RHEL and SLES VMs by running the cloud-init script.
 
 1. Log in to your RHEL or SLES VM, by using the `ssh root@<External IP”>` command.
-2. To leverage the proxy, you need to export the following environment variables: 
+2. To use the proxy, you need to export the following environment variables: 
    -	export http_proxy=http://<private_ip_of_proxy_vm>: 3128
    -	export https_proxy=http://<private_ip_of_proxy_vm>:3128
    
    You need to set the environment variables every time you log in to the VM so that the location of the proxy is identified.
    {: note}
 
-3. A readme file is generated in the `/usr/share/powervs-fls-readme.md` directory. However, the readme file will contain information from this documentation, it should also provide some variables needed to run the cloud-init script .
+3. A readme file is generated in the `/usr/share/powervs-fls-readme.md` directory. The readme file contains information from this documentation. However, it also provides some variables that are needed to run the cloud-init script.
 4. The cloud-init script is located in `/usr/local/bin/`.
   
    a. Run the script as _root_. You can switch the user to _root_ by using the `sudo su root` command.
@@ -171,14 +171,18 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
     `. /usr/local/bin/rhel-cloud-init.sh -a Activation_Key -u Capsule_server_url -p Proxy_IP_and_port -o Org -t Deployment type`
         
-        -a = activation key
-    	-u = the url of the RHEL capsule server you are registering against
-    	-p = ”private_ip_of_powervs_vm”:3128
-    	-o = organization associated with activation key
-    	-t = deployment type of this vm(RHEL, RHEL-SAP, RHEL-SAP-NETWEAVER)
+      -a = activation key
+
+      -u = the url of the RHEL capsule server you are registering against
+
+      -p = ”private_ip_of_powervs_vm”:3128
+
+      -o = organization associated with activation key
+
+      -t = deployment type of this vm(RHEL, RHEL-SAP, RHEL-SAP-NETWEAVER)
 
 5. For SLES, run the following command: 
    
     `. /usr/local/bin/sles-cloud-init.sh -s <RMT_SERVER>`
       
-      	-s = the url of the sles RMT server you are registering against
+    -s = the url of the SLES RMT server you are registering against
