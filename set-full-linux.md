@@ -67,7 +67,7 @@ Create and configure a proxy setup by following the instructions in [Configuring
 3. A proxy can also be established within the Classic infrastructure.
 4. Once the proxy is created, log in and locate the subnet CIDR.
   
-   a. To log in, go to terminal and run the `ssh root@<public IP of proxy>` command.
+   a. To log in, open command-line interface(CLI) and run the `ssh root@<public IP of proxy>` command.
 
    b. Run `route -n`, the subnet of your proxy is listed after the private gateway. Example subnets are: 10.240.65.0, 10.209.155.192.
 
@@ -88,7 +88,7 @@ Create and configure a proxy setup by following the instructions in [Configuring
 
 2.	For RHEL:
 
-    a. Log in to your VM in a terminal instance with the external IP by using the `ssh root@<External IP>` command.
+    a. Log in to your VM in a CLI instance with the external IP by using the `ssh root@<External IP>` command.
 
     b. You must set up a proxy connection.
 
@@ -104,7 +104,7 @@ Create and configure a proxy setup by following the instructions in [Configuring
 
 3. For SLES:
 
-    a. In the command-line interface (terminal), SSH to your SLES PVM instance by using the PVM’s external IP address.
+    a. In the CLI, SSH to your SLES PVM instance by using the PVM’s external IP address.
 
       -	`ssh root@<external IP address>`  Example: ssh root@1.2.3.4
 
