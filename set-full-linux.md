@@ -136,7 +136,7 @@ Set up a proxy configuration, by completing the following steps:
 You can customize your RHEL and SLES VMs by running the cloud-init script.
 
 1. Log in to your RHEL or SLES VM, by using the `ssh root@<External IP”>` command.
-2. A readme file is generated in the `/usr/share/powervs-fls-readme.md` directory. The readme file contains information from this documentation. However, it also provides some variables that are needed to run the cloud-init script.
+2. A readme file is generated in the `/usr/share/powervs-fls/powervs-fls-readme.md` directory. The readme file contains information from this documentation. However, it also provides some variables that are needed to run the cloud-init script.
 3. The cloud-init script is located in `/usr/local/bin/`.
   
    a. Run the script as _root_. You can switch the user to _root_ by using the `sudo su root` command.
