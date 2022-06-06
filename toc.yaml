@@ -55,6 +55,7 @@ toc:
               - creating-power-virtual-server.md
               - configuring-custom-image.md
               - modifying-instance.md
+              - virtual-applianes-catalog.md
               - manage-placement-groups.md
               - capturing-exporting-vm.md
               - importing-boot-image.md
