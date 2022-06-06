@@ -149,7 +149,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
       -u = the url of the RHEL capsule server you are registering against
 
-      -p = ”private_ip_of_powervs_vm”:3128
+      -p = "private_ip_of_powervs_vm":3128
 
       -o = organization associated with activation key
 
@@ -157,6 +157,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
 4. For SLES, run the following command: 
    
-    `. /usr/local/bin/sles-cloud-init.sh -s <RMT_SERVER>`
+    `. /usr/local/bin/sles-cloud-init.sh -s RMT_Server_address -p private_ip_of_proxy_vm:3128`
       
     -s = the url of the SLES RMT server you are registering against
+    -p = "private_ip_of_powervs_vm":3128
