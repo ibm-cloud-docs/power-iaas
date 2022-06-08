@@ -63,15 +63,15 @@ To create a Cloud connection, complete the following steps:
     b. If you need access to other data centers outside your Power Systems Virtual Server region, select the **Enable global routing** check-box.
     For example, you might use global routing to share workloads between dispersed IBM Cloud resources, such Dallas to Tokyo, or Dallas to Frankfurt.
 
-    c. Select the **Enable IBM Transit Gateway** check-box, to provide connectivity between different services on IBM Cloud. IBM Transit Gateway enables you to connect your Power Systems Virtual Servers across multiple data centers. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
+    c. Select the **Enable IBM Transit Gateway** checkbox to interconnect your Power Systems Virtual Servers to the IBM Cloud Classic and Virtual Private Cloud (VPC) infrastructures, keeping traffic within the IBM Cloud network. IBM Transit Gateway connects the private networks such as Classic, VPC, Direct Link, and so on. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
    
 4. **Virtual connections**
    
-   You can establish connection between multiple Power Systems Virtual Server services across different Data centers by using  Transit Gateway. You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable the virtual connections. Select the check-box to continue. This is required if you have selected the **Enable IBM Transit Gateway** check-box in the previous step.
+    You can establish connection between multiple Power Systems Virtual Server services across different data centers by using Transit Gateway. You can create virtual connections that are directly attached to the Direct Link gateway or you can choose to connect a TGW and then create a connection on the TGW to your networks (VPC, Classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable the virtual connections. Select the checkbox to continue. This setting is required if you have selected the **Enable IBM Transit Gateway** check-box in the previous step.
 
 5. **Subnets** 
    
-      Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
+      Click **Attach existing** to attach an existing subnet to the Cloud connection. GRE tunnel requires that a Cloud connection must be attached to a subnet. You can create a new subnet in the **Subnets** window. If you enable Transit Gateway, you must configure GRE tunnel by using the IBM Cloud Transit Gateway interface. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table lists all the subnets that are attached to the Cloud connection.
 
       If you want to attach a subnet to Cloud connection, the network traffic is routed over the Cloud connection.
       You must route Power Systems Virtual Server private network subnets over IBM Cloud Direct Link to allow connectivity between Power Systems Virtual Server instances and the IBM Cloud network.

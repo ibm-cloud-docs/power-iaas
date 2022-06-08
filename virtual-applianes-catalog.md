@@ -27,14 +27,14 @@ subcollection: power-iaas
 # Virtual appliances
 {: #virtual-appliances}
 
-Virtual appliances enable you to use additional services within Power Systems Virtual Servers like virtual tape libraries. Enable independent software vendors (ISVs) to participate in the Power as a service ecosystem with bundled capacity and revenue sharing. 
+Virtual appliances provides additional services within Power Systems Virtual Servers like virtual tape libraries. By using virtual appliances, independent software vendors (ISVs) can participate in the Power-as-a-service ecosystem with bundled capacity and revenue sharing. 
 
 ## Onboarding your virtual server images for Power Systems Virtual Servers
 {: #onboard-vsi}
 
 Independent software vendors can sell software on the IBM Cloud platform by enrolling in the Partner Center and completing the onboarding process from the IBM Cloud catalog. For more information, see [Selling on IBM Cloud](/docs/sell?topic=sell-selling-clouds){: external}.
 
-As part of the onboarding process for selling Power Virtual Server software, sellers are required to provide a public (shareable) virtual server image asset. To provide a public virtual server image for Power Systems Virtual Server, complete the following steps:
+As part of the onboarding process for selling Power Systems Virtual Server software, sellers must provide a public (shareable) virtual server image asset. To provide a public virtual server image for Power Systems Virtual Server, complete the following steps:
 
 1.	Create your [Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 2.	Create an instance of [IBM Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) and upload your image to a bucket.
