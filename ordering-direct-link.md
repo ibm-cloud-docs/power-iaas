@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-04-11"
+lastupdated: "2022-05-19"
 
 keywords: direct link
 
@@ -13,59 +13,71 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Ordering Direct Link Connect for Power Systems Virtual Servers
+# Ordering {{site.data.keyword.dl_short}} Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-Use [{{site.data.keyword.dl_short}} Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with IBM&reg; Power Systems&trade; Virtual Server. The Direct Link Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance.
+Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {site.data.keyword.powerSys}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
-The Direct Link Connect offering provides the following advantages:
+{{site.data.keyword.dl_short}} (2.0) Connect provides the following advantages:
 
-- Support for connections to multiple IBM Cloud accounts from a single direct link.
-- Support for multiple VPCs (without classic access) from a single direct link within the same account.
-- Automated Direct Link configuration in IBM Cloud classic infrastructure and VPC.
+- Support for connections to multiple {{site.data.keyword.cloud_notm}} accounts from a single direct link.
+- Support for multiple VPCs (without classic access) from a single direct link within the same account. 
 
-The Power Systems Virtual Server offering includes a highly available (up to 10 Gbps) connection to IBM Cloud services at no cost for each customer per data center. If desired, you can select the global routing option for these links at no cost. Over the next few months, the {{site.data.keyword.powerSys_notm}} service plans to continue to evolve its network connectivity capabilities through further automation and integration.
+## Before you begin
+{: #before-you-begin-direct-link-connect}
 
-A 10 Gbps connection is available only for the Direct Link (2.0) Connect offering.
-{: important}
+Before you order {{site.data.keyword.dl_short}} Connect, make sure that you review the following considerations and have satisfied any prerequisites:
 
-Direct Link (2.0) Connect is available in all current locations. If you plan to use Direct Link Connect 2.0 you must order a new Direct Link Connect 2.0 connection.
-{: note}
+* Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the {{site.data.keyword.dl_short}} (2.0) Connect service.
+* Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
+* {{site.data.keyword.cloud_notm}} highly recommends that you establish a second, diverse direct link to prevent outages, whether unplanned, or planned due to maintenance. 
+* A 10 Gbps connection is available only using the {{site.data.keyword.dl_short}} (2.0) Connect offering. 
+* {{site.data.keyword.dl_short}} (2.0) Connect is available in all current locations. 
+* Currently, there isn't a migration path from {{site.data.keyword.dl_short}} on Classic (1.0) to {{site.data.keyword.dl_short}} (2.0). You must order a new {{site.data.keyword.dl_short}} (2.0) Connect connection.
 
-For more information, see [Pricing for IBM Cloud Direct Link](/docs/dl?topic=dl-pricing-for-ibm-cloud-dl) or [IBM Cloud Direct Link Connect on Classic](/docs/direct-link?topic=direct-link-pricing-for-ibm-cloud-direct-link).
+## Pricing
+{: #direct-link-connect-pricing}
 
-## Ordering Direct Link (2.0) Connect
+The {{site.data.keyword.powerSys_notm}} offering includes a highly available connection to {{site.data.keyword.cloud_notm}} services at no cost for each customer per data center. You can also select the global routing option for these direct links at no cost. 
+
+## Ordering {{site.data.keyword.dl_short}} (2.0) Connect
 {: #order-direct-link-connect-2.0}
 
-To order Direct Link Connect to create a connection to a Power Systems Virtual Server instance, complete the following steps:
+To order {{site.data.keyword.dl_short}} Connect, complete the following steps: 
 
-Order a second Direct Link Connect connection for backup purposes.
-{: tip}
+1. Follow {{site.data.keyword.dl_short}} Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with these exceptions:
 
-1. Review and complete Direct Link Connect [planning considerations](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#before-you-begin-connect). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations) and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability) if these situations apply to your deployment.  
-1. Follow Direct Link Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with the following exceptions:
+   * In the **Gateway** section, select the same location as the {{site.data.keyword.powerSys_notm}} instance. Each location requires its own direct link. For example, if you order a direct link for Frankfurt 04, you cannot establish connection to the VMs in Frankfurt 05.
 
-   * For **Location**, select the same location as the {{site.data.keyword.powerSys_notm}} instance.
+      For the list of {{site.data.keyword.dl_short}} Connect PowerVS locations, see [Providers and locations](/docs/dl?topic=dl-locations#connect-locations).
+      {: important}
 
-      For a list of Direct Link Connect Power VS locations, see [Providers and locations](/docs/dl?topic=dl-locations#connect-locations).
-      {: note}
+      * For **Routing**, select **Local** to access all of the data centers that are connected at the location that you specified. Select **Global** to access all of the {{site.data.keyword.cloud_notm}} data centers in the world.
+      * For **Provider**, select **IBM POWER VS** from the list.
+      * For **Speed**, select the link speed to meet your workload requirements. The recommended speed is 1 Gbps. 
+      * For the list of **Ports**, select a port that has the least number of connections. If you have multiple direct links, you must choose different ports for each connection.  
 
-   * For **Provider**, select **IBM POWER VIRTUAL SERVER** from the list.
-   * For **Speed**, select the link speed to meet your workload requirements. The recommended selection for the **Speed** field is 1 Gbps. 
-   
-      **Ports** - If you have multiple Direct Link connections, you must choose different ports for each connection. Otherwise, you can choose a port that has the least number of connections.
-
-   * For **Billing**, select the **Unmetered** option.
-   * For the BGP section:
+   * In the **Billing** section, select **Unmetered**.
+   * In the **BGP** section: 
 
       *  For **BGP peering subnet**, you can select **Auto-select IP** to auto-select an IP address from range `169.254.0.0/16`, or manually enter addresses in a specific range to avoid conflict with an existing connection.
-      * For **BGP ASN**, you must enter `64999` as BGP ASN number for Direct Link Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For Direct Link Connect 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
+      * For **BGP ASN**, enter `64999` as the BGP ASN number for the {{site.data.keyword.dl_short}} Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
+      * Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number. 
 
-   The Direct Link Connect service provides connectivity to IBM Cloud Classic network in addition to VPC network. You can access all of the Classic network locations irrespective of Direct Link 2.0 gateway in local or global routing attribute. 
-   {: note}
+      | Direct Link Connect site | BGP ASN |
+      | ---------------------------- | -------------- |
+      | Dallas 12  \n Dallas 13 | 64999 |
+      | Washington 4 | 64995 |
+      | Frankfurt 4  \n Frankfurt 5 | 64999 |
+      | London 6 | 64999 |
+      | Toronto 1 | 64999 |
+      | Montreal 1 | 64999 |
+      {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"} 
+      
+1. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
 
-1. After your Direct Link connection order is submitted, go to **Interconnectivity** > **Direct Link** to view the status of your order. The **Direct Link** page lists all existing Direct Link connections. 
+   After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections. 
   
 1. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
@@ -89,82 +101,32 @@ Order a second Direct Link Connect connection for backup purposes.
     VPC Virtual Connection 3: VPC name and ID 
     ```
 
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The IBM Cloud network team generates the **IBM Cloud ASN** and adds it to the IBM Cloud support case. The IBM Cloud network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
-    {: note}
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The {{site.data.keyword.cloud_notm}} network team generates the **{{site.data.keyword.cloud_notm}} ASN** and adds it to the {{site.data.keyword.cloud_notm}} support case. The {{site.data.keyword.cloud_notm}} network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    {: important}
 
-The {{site.data.keyword.powerSys_notm}} support case is closed when the Direct Link Connect connection is configured to communicate with your Power Systems Virtual Server instance. 
-
-### Direct Link Connect configuration parameters
-{: #direct-link-connect-config-par}
-
-**Direct Link Instance name** - Enter a name for your Direct Link Connect instance.
-
-**Location** - Select the same location as the {{site.data.keyword.powerSys_notm}}instance. Each location requires its own Direct Link Connect. For example, if you order a Direct Link for Frankfurt 04, you can not establish connection to the VMs in Frankfurt 05.
-
-The following table identifies the {{site.data.keyword.powerSys_notm}} instance location and the corresponding Direct Link Connection option:
-
-
-| Power Systems Virtual Server location | Direct Link Connect location | Network provider |
-| ------------------------------------- | ---------------------------- | ---------------- |
-| Dallas, TX, US | Dallas 12 \n Dallas 13 | IBM Power Virtual Server |
-| Washington, D.C., US | Washington 4 | IBM Power Virtual Server |
-| Frankfurt, Germany, EU | Frankfurt 4 \n Frankfurt 5 | IBM Power Virtual Server |
-| London, United Kingdom | London 4 \n London 6 | IBM Power Virtual Server |
-| Toronto, Canada | Toronto 1 | IBM Power Virtual Server |
-| Montreal, Canada | Montreal 1 | IBM Power Virtual Server |
-| Sydney, Australia | Sydney 4 \n Sydney 5 | IBM Power Virtual Server |
-| São Paulo, Brazil | São Paulo 1 | IBM Power Virtual Server |
-{: caption="Table 2. Direct Link Connect on Classic location" caption-side="bottom"}
-
-**Network Provider** - You must select **IBM POWER VIRTUAL SERVER** from the list.
-
-**Link Speed** - Select the link speed to meet your workload requirements. The recommended selection for the **Link Speed** field is 1000 Mbps.
-
-**Routing option** - Select **Local Routing (Free)** to access all of the data centers that are connected at the location that you specified in the **Location** field. Select **Global Routing** to access all of the IBM Cloud data centers in the world.
-
-**BGP ASN** - You must enter the BGP ASN number for the specific Direct Link Connect location.
-
-Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
-{: important}
-
-
-| Direct Link Connect location | BGP ASN number |
-| ---------------------------- | -------------- |
-| Dallas 12 \n Dallas 13 | 64999 |
-| Washington 4 | 64995 |
-| Frankfurt 4 \n Frankfurt 5 | 64999 |
-| London 6 | 64999 |
-| Toronto 1 | 64999 |
-| Montreal 1 | 64999 |
-{: caption="Table 3. BGP ASN number for specific locations" caption-side="bottom"}
-
-
-**Select VRF** - Select the virtual routing and forwarding option for the connection. If your account does not have a VRF identified, this field is not displayed. You can still create the Direct Link Connect service without selecting a VRF.
-
-## Setting up high availability over Direct Link Connect
+    The {{site.data.keyword.powerSys_notm}} support case is closed when the {{site.data.keyword.dl_short}} Connect connection is configured to communicate with your Power Systems Virtual Server instance. 
+ 
+## Setting up high availability over {{site.data.keyword.dl_short}} Connect
 {: #ha-availability}
 
-Your Direct Link connections are location-specific. IBM Cloud Direct Link is not a redundant service by default.  You must order a separate Direct Link Connect instance for redundancy.
+Your {{site.data.keyword.dl_short}} connections are location-specific. By default, {{site.data.keyword.cloud_notm}} {{site.data.keyword.dl_short}} is not a redundant service. You must order a separate {{site.data.keyword.dl_short}} Connect instance for redundancy.
 {: shortdesc}
 
-To set up a high availablity through Direct Link Connect, complete the following steps:
+To set up a high availability through {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
-1. Order two instances of Direct Link Connect, or Direct Link Connect on Classic. For each instance of Direct Link Connect, you can order an additional instance for redundancy. For instructions, see [Ordering Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic).
+1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
-   In the **BGP** section, select a port from a separate port group for the redundant Direct Link Connect instance than the existing instance. Both Direct Link Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
+   In the **BGP** section, select a port from a separate port group for the redundant {{site.data.keyword.dl_short}} Connect instance. Both {{site.data.keyword.dl_short}} Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
 
-    The following example shows the Direct Link Connect ports for the DAL12 data center. The ports ending with `1-1` and `1-2` belong to a port group, and the ports ending with `2-1` and `2-2` belong to another port group. For a Direct Link Connect instance, if you have selected a port from the first port group, you must select a port from the other port group for the redundant Direct Link Connect instance. That is, if you select **-1-1** for the first Direct Link Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance.
+    The following example shows the {{site.data.keyword.dl_short}} Connect ports for the DAL12 data center. The ports that end with `1-1` and `1-2` belong to one port group, and the ports ending with `2-1` and `2-2` belong to another port group. If you select a port from the first port group, you must select a port from the second port group for the redundant {{site.data.keyword.dl_short}} Connect instance. That is, if you select **-1-1** for the first {{site.data.keyword.dl_short}} Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance.
 
     ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-    For Direct Link Connect on Classic, you can select the port only when you order a second Direct Link Connect instance for redundancy.
-    {: note}
+    Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternate {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed. 
 
-    Border Gateway Protocol (BGP) sessions are configured for the Direct Link Connect service in such a way that when a fault is detected on a Direct Link Connect instance, the BGP routes traffic to an alternate Direct Link Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can only use up to a 5 Gbps speed. 
+    Refer to the following table to identify the ports and port groups that you must select for the redundant {{site.data.keyword.dl_short}} Connect instance:
 
-   Refer to the following table to identify the ports and port groups that you must select for the redundant Direct Link Connect instance:
-
-    | Data Center | Network provider | Port group 1 | Port group 2 for redundancy |
+    | Data center | Network provider | Port group 1 | Port group 2 for redundancy |
     | ----------- | ---------------- | ------------ | --------------------------- |
     | LON04 | IBM Power VS | SL-LON04-IBMPOWERIAASLITE-1-1 \n SL-LON04-IBMPOWERIAASLITE-1-2 | SL-LON04-IBMPOWERIAASLITE-2-1 \n SL-LON04-IBMPOWERIAASLITE-2-2 |
     | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
@@ -176,27 +138,27 @@ To set up a high availablity through Direct Link Connect, complete the following
     | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^footnote9] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^footnote10] |
     | TOK04 | IBM Power VS | SL-TOK04-IBMPOWERIAASLITE-1-1 \n SL-TOK04-IBMPOWERIAASLITE-1-2 \n PowerVS-TOK04-10G-NOGRE-1-1[^footnote11] | SL-TOK04-IBMPOWERIAASLITE-2-1 \n SL-TOK04-IBMPOWERIAASLITE-2-2 \n PowerVS-TOK04-10G-NOGRE-1-2[^footnote12] |
     | OSA21 | IBM Power VS | SL-OSA21-IBMPOWERIAASLITE-1-1 \n SL-OSA21-IBMPOWERIAASLITE-1-2 | SL-OSA21-IBMPOWERIAASLITE-2-1 \n SL-OSA21-IBMPOWERIAASLITE-2-2 |
-    {: caption="Table 4. Port and Port groups for redundant Direct Link instances" caption-side="bottom"}
+    {: caption="Table 2. Port and Port groups for redundant {{site.data.keyword.dl_short}} instances" caption-side="bottom"}
 
-    [^footnote1]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote2]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote3]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote4]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote5]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote6]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote7]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote8]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote9]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote10]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote11]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
-    [^footnote12]: The ports denoted with ^x indicates that they are not GRE capable, but support 10 Gbps speed.
+    [^footnote1]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote2]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote3]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote4]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote5]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote6]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote7]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote8]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote9]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote10]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote11]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote12]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
-1. Select the remaining options and create the Direct Link Connect instance as described in [Ordering Direct Link (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0) or [Ordering Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ordering-direct-link-connect-on-classic) (Step 8 onwards).
+1. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
 ## Routing considerations for VPC
 {: #routing-considerations}
 
-If traffic is sent from Power Systems Virtual Server to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
+If traffic is sent from the Power Systems Virtual Server to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
 {: shortdesc}
 
 For proper VPC configuration, the on-premises IP address must meet the following requirements:
@@ -206,4 +168,6 @@ For proper VPC configuration, the on-premises IP address must meet the following
     - Class B — `172.16.0.0` — `172.31.255.255` (1,048,576 total hosts)
     - Class C — `192.168.0.0` — `192.168.255.255` (65,536 total hosts)
 - VM instances within the VPC must not have a floating IP.
-- Use the **Delegate-VPC** action to create a route to the on-premises public subnet in the VPC default routing table. For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
+- Use the **Delegate-VPC** action to create a route to the on-premises public subnet in the VPC default routing table. 
+
+For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
