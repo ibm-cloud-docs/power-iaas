@@ -24,10 +24,13 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Virtual appliances
+# Managing virtual appliances
 {: #virtual-appliances}
 
-Virtual appliances provides additional services within Power Systems Virtual Servers like virtual tape libraries. By using virtual appliances, independent software vendors (ISVs) can participate in the Power-as-a-service ecosystem with bundled capacity and revenue sharing. 
+Virtual appliance is bring your own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of choice) for quick deployment of Power Systems Virtual Server (PowerVS) workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is directly handled by the ISVs for the virtual appliances. 
+
+With virtual appliances, you can use additional services within PowerVS like virtual tape libraries. For more information, see [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-appliances#virtual-tape-libraries).
+ 
 
 ## Onboarding your virtual server images for Power Systems Virtual Servers
 {: #onboard-vsi}
@@ -44,4 +47,4 @@ As part of the onboarding process for selling Power Systems Virtual Server softw
 ## Virtual tape libraries
 {: #virtual-tape-libraries}
 
-Virtual tape libraries are devices that are commonly used to backup IBM i data. The Power Systems Virtual Servers replicates the on-premises solution by providing a software virtual tape library (VTL) appliance that can be dynamically provisioned in the IBM Cloud. FalconStor Restore provides a deduplicated, scalable backup solution and is the only IBM certified on-premises and PowerVS VTL solution for IBM i. For more information, see [Power Virtual Server VTL Overview](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_VTL_Overview.pdf){: external}.
+Virtual tape libraries are devices that are commonly used to backup IBM i data. The Power Systems Virtual Servers replicates the on-premises solution by providing a software-virtual tape library (VTL) appliance that can be dynamically provisioned in the IBM Cloud. FalconStor Restore provides a deduplicated, scalable backup solution and is the only IBM certified on-premises and PowerVS VTL solution for IBM i. For more information, see [Power Virtual Server VTL Overview](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_VTL_Overview.pdf){: external}.
