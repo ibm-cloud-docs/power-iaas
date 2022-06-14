@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2022
 
-lastupdated: "2021-06-23"
+lastupdated: "2022-06-13"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
@@ -11,15 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Network architecture diagrams
 {: #network-architecture-diagrams}
@@ -304,20 +296,19 @@ Complete the following steps to implement this scenario:
 
 For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
-## Connecting two Power virtual server environments by using Transit Gateway
+## Connecting two Power Systems Virtual Server environments by using Transit Gateway
 {: #network-reference-architecture-tgw}
 
-In this deployment topology Cloud connection through IBM Transit Gateway is used to provide connectivity between Power virtual server environments located at two different data centers. With Transit Gateway you can also interconnect your Power Systems Virtual Servers to the IBM Cloud classic and Virtual Private Cloud (VPC) infrastructures, keeping traffic within the IBM Cloud network. IBM Transit Gateway enables you to connect your otherwise disconnected private networks such as classic, VPC, Direct Link. In addition, you can establish connection between multiple Power Systems Virtual Server services across different data centers.
+In this deployment topology, a connection through IBM Cloud Transit Gateway is used to provide connectivity between Power virtual server environments located at two different data centers. With Transit Gateway you can also interconnect your Power Systems Virtual Servers to the IBM Cloud classic and Virtual Private Cloud (VPC) infrastructures, keeping traffic within the IBM Cloud network. IBM Transit Gateway enables you to connect your otherwise disconnected private networks such as classic, VPC, Direct Link. In addition, you can establish connection between multiple Power Systems Virtual Server services across different data centers.
 
 The following network architecture allows connectivity between multiple Power Systems Virtual Server locations with high availability (HA) and disaster recovery (DR) solutions.
 
 ![Transit Gateway](./images/network-tgw.svg "Transit Gateway"){: caption="Figure 8. Transit Gateway" caption-side="bottom"}
 
-The key features of this topology are as follows:
+key features are as follows:
 
    - Access and connectivity between two different PowerVS locations in the same region (for example DAL12 to DAL13) to support HA via replication. 
-   - Access and connectivity between two different PowerVS locations in different regions (for example DAL12 to WDC06) to support DRvia replication. 
-   - Access and connectivity between on-premises and PowerVS locations by using GRE Tunneling.
+   - Access and connectivity between two different PowerVS locations in different regions (for example DAL12 to WDC06) to support DR via replication. 
 
 Complete the following steps to implement this scenario:
 1.	Create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable the virtual connections.
