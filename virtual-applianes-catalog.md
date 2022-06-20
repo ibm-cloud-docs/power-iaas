@@ -43,8 +43,8 @@ As part of the onboarding process for selling Power Systems Virtual Server softw
 2.	Create an instance of [IBM Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) and upload your image to a bucket.
 3.	Create your [HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 4.	[Open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) so that the Power Systems Virtual Server product management team can convert your image into a stock image. Include your HMAC credentials and bucket details in the support case.
-
+<!--
 ## Virtual tape libraries
 {: #virtual-tape-libraries}
 
-Virtual tape libraries are devices that are commonly used to backup IBM i data. The Power Systems Virtual Servers replicates the on-premises solution by providing a software-virtual tape library (VTL) appliance that can be dynamically provisioned in the IBM Cloud. FalconStor Restore provides a deduplicated, scalable backup solution and is the only IBM certified on-premises and PowerVS VTL solution for IBM i. For more information, see [Power Virtual Server VTL Overview](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_VTL_Overview.pdf){: external}.
+Virtual tape libraries are devices that are commonly used to backup IBM i data. The Power Systems Virtual Servers replicates the on-premises solution by providing a software-virtual tape library (VTL) appliance that can be dynamically provisioned in the IBM Cloud. FalconStor Restore provides a deduplicated, scalable backup solution and is the only IBM certified on-premises and PowerVS VTL solution for IBM i. For more information, see [Power Virtual Server VTL Overview](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_VTL_Overview.pdf){: external}.-->
