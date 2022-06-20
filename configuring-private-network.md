@@ -34,7 +34,7 @@ To connect directly to the {{site.data.keyword.powerSys_notm}} environment, see 
 ## Connecting to the IBM Cloud classic environment
 {: #connecting-classic}
 
-You can use one of the following options to connect to the IBM Cloud classic environment. You can then use a secondary Direct Link connection to access the {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP Ranges](/docs/security-groups?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges).
+You can use one of the following options to connect to the IBM Cloud classic environment. You can then use a secondary Direct Link connection to access the {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} private subnet cannot be in the `169.254.0.0/16`, or `224.0.0.0/4` ranges. These ranges are blocked. For more information, see [IBM Cloud IP ranges](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
 You can use the `10.x.x.x` range if there is not a conflict with an {{site.data.keyword.cloud_notm}} backend `10.x.x.x` service. You must contact support if you'd like to use *NAT'ing* or IP aliasing to resolve the IP conflict. That being said, IBM does not recommend using the `10.x.x.x` range when you create a new network.
 {: important}

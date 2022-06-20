@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Ordering {{site.data.keyword.dl_short}} Connect for Power Systems Virtual Servers
 {: #ordering-direct-link-connect}
 
-Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSys}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
+Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSysShort}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
 {{site.data.keyword.dl_short}} (2.0) Connect provides the following advantages:
