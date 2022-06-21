@@ -27,15 +27,15 @@ subcollection: power-iaas
 # Managing virtual appliances
 {: #virtual-appliances}
 
-Virtual appliance is bring your own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of choice) for quick deployment of Power Systems Virtual Server (PowerVS) workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is directly handled by the ISVs for the virtual appliances. 
+Virtual appliance is bring-your-own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of Power Systems Virtual Server workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is handled directly by the ISVs for virtual appliances. 
 
-With virtual appliances, you can use additional services within PowerVS like virtual tape libraries. For more information, see [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-appliances#virtual-tape-libraries).
+With virtual appliances, you can use additional services within Power Systems Virtual Server such as virtual tape libraries. For more information, see [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-appliances#virtual-tape-libraries).
  
 
 ## Onboarding your virtual server images for Power Systems Virtual Servers
 {: #onboard-vsi}
 
-Independent software vendors can sell software on the IBM Cloud platform by enrolling in the Partner Center and completing the onboarding process from the IBM Cloud catalog. For more information, see [Selling on IBM Cloud](/docs/sell?topic=sell-selling-clouds){: external}.
+Independent software vendors can sell software on the IBM Cloud platform by enrolling their account in the Partner Center and by completing the onboarding process from the IBM Cloud catalog. If you are an ISV and want to sell your software, see [Selling on IBM Cloud](/docs/sell?topic=sell-selling-clouds){: external}.
 
 As part of the onboarding process for selling Power Systems Virtual Server software, sellers must provide a public (shareable) virtual server image asset. To provide a public virtual server image for Power Systems Virtual Server, complete the following steps:
 
