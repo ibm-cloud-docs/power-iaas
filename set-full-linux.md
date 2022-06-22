@@ -30,6 +30,26 @@ Full Linux&reg; subscription provides Red Hat Enterprise Linux (RHEL) and SUSE L
 
 Power Systems Virtual Server provides three versions of stock images for each operating system (OS). You can also use the full Linux&reg; subscription feature to get OS interim fixes and updates for Power servers that are hosted on the IBM satellite server within the IBM Cloud environment. Extra charges apply if you use the activation keys in the IBM Cloud Satellite to receive the interim fixes.
 
+Full Linux subscription is supported on the following OS versions: 
+  
+SLES:
+
+   - SLES 15 SP2 (SAP only)
+
+   - SLES 15 SP3 (General and SAP)
+
+   - SLES 15 SP4 (General and SAP - when available)
+
+   - And newer versions
+
+RHEL:
+
+   - RHEL 8.4 (General and SAP)
+
+   - RHEL 8.6 (General and SAP - when available)
+
+   - And newer versions
+
 ## Setting up full Linux&reg; subscription
 {: #set-full-Linux}
 
@@ -91,9 +111,9 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
 2.	In the proxy instance CLI, start an SSH connection to your RHEL or SLES PVM instance by using the PVM’s external IP address in the following command:
 
-      	`ssh root@<external IP address>`  
+	`ssh root@<external IP address>`  
       
-        Example: ssh root@1.2.3.4
+    Example: ssh root@1.2.3.4
 
 3.  Add a network route from the PVM instance to the proxy instance that you configured in [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
 
@@ -134,7 +154,7 @@ Set up a proxy configuration, by completing the following steps:
   
    You must have root authority to run these commands. After the installation completes, the squid config file is stored in the `/etc/squid/squid.conf` location. 
 
-   b. Use the configuration provided in the [Example File](Add the example file that is provided in the doc as a downloadable file) for your reference.
+   b. Use the configuration provided in the [Example File](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_FLS_Example_Configuration.pdf) for your reference.
 
 ### Step 5: Customizing the VMs by using the cloud-init script (RHEL and SLES)
 {: #virtual-server}
@@ -166,3 +186,14 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
       -s = the URL of the SLES Repository Mirroring Tool (RMT) server that you are using for registration
 
       -p = "private_ip_of_powervs_vm":3128
+
+      If the system is already registered, you need to de-register the system before registering again by running the following two commands:
+      `SUSEConnect --de-register`
+
+      `SUSEConnect –cleanup`
+
+      If the registration fails and the following note appears in the logs:
+
+      `Could not register with SLES RMT servers, Please verify connection to the proxy server. If proxy is verified, it may be an issue with SLES RMT servers undergoing maintenance. If so, please try executing the command again within a few minutes`
+
+      Then it could be a network issue and you should attempt to register again at a later time.
