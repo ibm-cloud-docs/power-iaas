@@ -71,13 +71,13 @@ To view or edit IBM Cloud connections, complete the following steps:
 
 1. From the {{site.data.keyword.powerSys_notm}} dashboard, click **Cloud connections** in the left navigation pane.
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
-3. If a transit gateway is enabled for the connection, you can view the **Managed with IBM Transit Gateway** details. 
-4. Click the **Edit details** icon.
+<!--3. If a transit gateway is enabled for the connection, you can view the **Managed with IBM Transit Gateway** details. -->
+3. Click the **Edit details** icon.
 
    If you have an existing IBM Cloud connection with a speed of 5 Gbps or less, you cannot increase the speed limit to 10 Gbps. Also, you cannot modify an IBM Cloud connection with 10 Gbps to be GRE-capable by reducing the speed.
    {: note}
 
-5. Modify the details, review the pricing changes, and click **Save edits**.
+4. Modify the details, review the pricing changes, and click **Save edits**.
 
 ## Deleting an IBM Cloud connection
 {: #delete-cloud-connection}
@@ -90,7 +90,7 @@ To delete an IBM Cloud connection, complete the following steps:
    
 1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
-   If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached.
+   If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached. <!--If {{site.data.keyword.tg_full_notm}} is enabled for your Cloud connection, then you must delete the Cloud connection (Direct Link) from the {{site.data.keyword.tg_full_notm}} interface before deleting the Cloud connection. >
    {: note}
 
 ## Setting up high availability over IBM Cloud connections
