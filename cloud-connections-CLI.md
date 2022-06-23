@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2022
 
-lastupdated: "2022-06-13"
+lastupdated: "2022-06-23"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -19,7 +19,7 @@ subcollection: power-iaas
 You can use {{site.data.keyword.cloud}} connections to connect your {{site.data.keyword.powerSys_notm}} instances to {{site.data.keyword.cloud_notm}} resources on {{site.data.keyword.cloud_notm}} classic network and Virtual Private Cloud (VPC) infrastructures. {{site.data.keyword.cloud_notm}} connections create a {{site.data.keyword.dl_short}} (2.0) Connect instance to connect your {{site.data.keyword.powerSys_notm}} instances to the {{site.data.keyword.cloud_notm}} resources. The speed and reliability of the {{site.data.keyword.dl_short}} connection extends your {{site.data.keyword.powerSys_notm}} network to the IBM Cloud network and offers more consistent and higher-throughput connectivity, while keeping network traffic within the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-You can have a maximum of two {{site.data.keyword.cloud_notm}} connections per account and per {{site.data.keyword.powerSys_notm}} data center.
+You can have a maximum of two {{site.data.keyword.cloud_notm}} ({{site.data.keyword.powerSys_notm}} Direct Link Connect) per account per {{site.data.keyword.powerSys_notm}} data center. To create a {{site.data.keyword.powerSys_notm}} {{site.data.keyword.cloud_notm}} you must have the required access to create the connections.
 {: important}
 
 ## Support for {{site.data.keyword.powerSys_notm}} service instances with {{site.data.keyword.cloud_notm}} connections
@@ -48,16 +48,17 @@ To create an {{site.data.keyword.cloud_notm}} connection, complete the following
    
    b. Select **Enable global routing** if you need access to other data centers outside your {{site.data.keyword.powerSys_notm}} region. For example, you can use global routing to share workloads between dispersed {{site.data.keyword.cloud_notm}} resources, such as Dallas to Tokyo, or Dallas to Frankfurt. If you want to enable IBM Transit Gateway for the Cloud connection, then global routing option is not required.
    
-   c. Select **Enable IBM Transit Gateway** to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures and to keep traffic within {{site.data.keyword.cloud_notm}}. {{site.data.keyword.tg_full_notm}} connects the private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
-4. In the **Virtual connections** section, you can establish a connection between multiple {{site.data.keyword.powerSys_notm}} services across different data centers by using an {{site.data.keyword.tg_full_notm}}. You can create virtual connections that are directly attached to the {{site.data.keyword.dl_short}} gateway, or you can choose to connect an {{site.data.keyword.tg_full_notm}} and then create a connection from it to your networks (VPC, classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable virtual connections. Select the virtual connections checkbox to continue. This setting is required if you selected the **Enable IBM Transit Gateway** checkbox in the previous step.
-5. In the **Subnets** section, click **Attach existing** to attach an existing subnet to the connection. A GRE tunnel requires that a connection be attached to a subnet. You can create a new subnet. If you enable {{site.data.keyword.tg_full_notm}}, you can configure the GRE tunnel by using the {{site.data.keyword.tg_full_notm}} interface. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table in this topic lists all the subnets that are attached to the IBM Cloud connection.
+   <!--c. Select **Enable IBM Transit Gateway** to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures and to keep traffic within {{site.data.keyword.cloud_notm}}. {{site.data.keyword.tg_full_notm}} connects the private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).-->
+<!--4. In the **Virtual connections** section, you can establish a connection between multiple {{site.data.keyword.powerSys_notm}} services across different data centers by using an {{site.data.keyword.tg_full_notm}}. You can create virtual connections that are directly attached to the {{site.data.keyword.dl_short}} gateway, or you can choose to connect an {{site.data.keyword.tg_full_notm}} and then create a connection from it to your networks (VPC, classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable virtual connections. Select the virtual connections checkbox to continue. This setting is required if you selected the **Enable IBM Transit Gateway** checkbox in the previous step.-->
+
+4. In the **Subnets** section, click **Attach existing** to attach an existing subnet to the connection. A GRE tunnel requires that a connection be attached to a subnet. You can create a new subnet. If you enable {{site.data.keyword.tg_full_notm}}, you can configure the GRE tunnel by using the {{site.data.keyword.tg_full_notm}} interface. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table in this topic lists all the subnets that are attached to the IBM Cloud connection.
 
    Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the service instance to communicate.
    {: note}
 
-6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
+5. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
 
-IBM Cloud connections are not supported on the `WDC06` data center. When you create an IBM Cloud connection without having the required authorization, a {{site.data.keyword.dl_short}} is created instead. This {{site.data.keyword.dl_short}} is not operational, and must be authorized by the IBM Cloud account user who has the required authority. Two {{site.data.keyword.dl_short}}s cannot be created under one account, even from different regions.
+IBM Cloud connections are not supported on the `WDC06` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link will be generated. This Direct Link is not operational and must be authorized by the IBM Cloud account user who has the required authority via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
 {: note}
 
 ## Modifying IBM Cloud connections
@@ -86,7 +87,7 @@ To delete an IBM Cloud connection, complete the following steps:
    
    You can see the list of IBM Cloud connections that are currently configured. 
    
- 1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
+1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
    If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached.
    {: note}

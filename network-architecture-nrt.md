@@ -57,7 +57,7 @@ These use cases describe the following deployment topologies:
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through the IBM classic infrastructure by using private SSL connection and a jump server. This is a specific use case for connecting to the classic environment so that the SSL VPN connection can be used to access your {{site.data.keyword.powerSys_notm}}s for operations and administration tasks.
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through the IBM Cloud classic infrastructure by using an internet IPsec VPN connection.  This use case describes how to connect to the classic environment so that an IPsec VPN connection can be used to access your classic and {{site.data.keyword.powerSys_notm}}s. Typically, this network architecture is used for small production environments or proof-of-concept, development, and test purposes.
 * Connecting {{site.data.keyword.powerSys_notm}} to an on-premises network through an IBM Cloud classic infrastructure by using a private {{site.data.keyword.dl_short}}. A {{site.data.keyword.dl_short}} enables your remote networks to connect to IBM Cloud over a private connection that does not use public networks.
-* * Connecting two {{site.data.keyword.powerSys_notm}} through an IBM Cloud classic infrastructure by using {{site.data.keyword.tg_full_notm}}. A connection through {{site.data.keyword.tg_full_notm}} is used to provide connectivity between {{site.data.keyword.powerSys_notm}} environments located at two different data centers
+<!--* Connecting two {{site.data.keyword.powerSys_notm}} through an IBM Cloud classic infrastructure by using {{site.data.keyword.tg_full_notm}}. A connection through {{site.data.keyword.tg_full_notm}} is used to provide connectivity between {{site.data.keyword.powerSys_notm}} environments located at two different data centers-->
 
 Multiple topologies, described in this document, can be layered to create a topology that suits your deployment needs.
 
@@ -305,7 +305,7 @@ Complete the following steps to implement this scenario:
 
 For tutorials based on some of the topologies described, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
-## Connecting two {{site.data.keyword.powerSys_notm}} environments by using IBM Cloud Transit Gateway
+<!--## Connecting two {{site.data.keyword.powerSys_notm}} environments by using IBM Cloud Transit Gateway
 {: #network-reference-architecture-tgw}
 
 In this deployment topology, a connection through IBM Cloud Transit Gateway is used to provide connectivity between Power virtual server environments located at two different data centers. With IBM Cloud Transit Gateway, you can also interconnect your {{site.data.keyword.powerSys_notm}}s to the IBM Cloud classic and VPC infrastructures, keeping traffic within the IBM Cloud network. Transit Gateway enables you to connect your otherwise disconnected private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. In addition, you can establish connection between multiple {{site.data.keyword.powerSys_notm}} services across different data centers.
@@ -325,4 +325,4 @@ Complete the following steps to implement this scenario:
 2.	[Create an IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) with Transit Gateway enabled.
 3.	Connect your {{site.data.keyword.powerSys_notm}}s that are located in data center 1 and data center 2 through the IBM Cloud network by using a transit gateway. 
 
-After the transit gateway connection is established, different IBM Cloud networks are connected to each other.
+After the transit gateway connection is established, different IBM Cloud networks are connected to each other.-->
