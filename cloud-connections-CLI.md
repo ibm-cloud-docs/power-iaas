@@ -84,7 +84,7 @@ To delete an IBM Cloud connection, complete the following steps:
    
 2. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
-   If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached. <!--If {{site.data.keyword.tg_full_notm}} is enabled for your Cloud connection, then you must delete the Cloud connection (Direct Link) from the {{site.data.keyword.tg_full_notm}} interface before deleting the Cloud connection. >
+   If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached. <!--If {{site.data.keyword.tg_full_notm}} is enabled for your Cloud connection, then you must delete the Cloud connection (Direct Link) from the {{site.data.keyword.tg_full_notm}} interface before deleting the Cloud connection. -->
    {: note}
 
 ## Setting up high availability over IBM Cloud connections
