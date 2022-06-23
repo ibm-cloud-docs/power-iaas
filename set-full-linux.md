@@ -38,17 +38,9 @@ SLES:
 
    - SLES 15 SP3 (General and SAP)
 
-   - SLES 15 SP4 (General and SAP - when available)
-
-   - And newer versions
-
 RHEL:
 
    - RHEL 8.4 (General and SAP)
-
-   - RHEL 8.6 (General and SAP - when available)
-
-   - And newer versions
 
 ## Setting up full Linux&reg; subscription
 {: #set-full-Linux}
