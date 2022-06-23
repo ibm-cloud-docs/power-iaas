@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Connecting Power Systems Virtual Server instances and networks
+# Connecting networks by using IBM Cloud Connect
 {: #connecting-networks}
 
 Learn more about connecting {{site.data.keyword.powerSysShort}} instances and networks.

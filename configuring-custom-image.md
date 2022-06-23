@@ -55,7 +55,7 @@ The supported AIX and IBM i operating system versions depend on the IBM Power Sy
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. <!--IBM&trade; Power System E1080 (9080-HEX) supports AIX 7.1 and later versions.-->
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
@@ -68,9 +68,9 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.2?topic=considerations-migrating-i-72-from-54-61-71){: external}.
+The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.2?topic=considerations-migrating-i-72-from-54-61-71){: external}. <!--IBM&trade; Power System E1080 (9080-HEX) supports only IBM i 7.3 and later versions.-->
 
-- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, and E980 (1080-HEX) software maps-->](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S) <!--, and E980 (1080-HEX)--> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
@@ -83,7 +83,7 @@ Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01,
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}.
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. <!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
 
 ## Creating an IBM Cloud Object Storage bucket
 {: #cloud-storage-bucket}

@@ -55,6 +55,7 @@ toc:
               - creating-power-virtual-server.md
               - configuring-custom-image.md
               - modifying-instance.md
+              - virtual-applianes-catalog.md
               - manage-placement-groups.md
               - capturing-exporting-vm.md
               - importing-boot-image.md
@@ -66,11 +67,10 @@ toc:
               - ordering-direct-link.md
               - cloud-connections-CLI.md
               - vpn-connections.md
-              - configuring-private-network.md
               - configuring-private-subnet.md
               - connecting-networks.md
               - network-security.md
-              - network-architecture.md
+              - network-architecture-nrt.md
               - site-to-site-vpn-connectivity.md
               - X86-based-systems.md
       - topicgroup: 
@@ -100,6 +100,7 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
+              - set-full-linux.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.

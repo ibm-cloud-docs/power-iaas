@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Planning a workload migration to an IBM POWER8, POWER9, or POWER10 system
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. <!--The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX).--> The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), and S922 (9009-22A). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A)<!--, and E1080 (9080-HEX)-->. The {{site.data.keyword.powerSys_notm}} service uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), and S922 (9009-22A). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
 For AIX, the {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
