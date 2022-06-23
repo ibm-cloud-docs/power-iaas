@@ -46,12 +46,7 @@ To create an {{site.data.keyword.cloud_notm}} connection, complete the following
       - You cannot modify a Cloud connection with 10 Gbps to be GRE capable by reducing the speed.  
       - You cannot modify the speed of an IBM Cloud connection when the speed is set to 10 Gbps at the time of creation.
    
-   b. Select **Enable global routing** if you need access to other data centers outside your {{site.data.keyword.powerSys_notm}} region. For example, you can use global routing to share workloads between dispersed {{site.data.keyword.cloud_notm}} resources, such as Dallas to Tokyo, or Dallas to Frankfurt.<!-- If you want to enable IBM Transit Gateway for the Cloud connection, then global routing option is not required.-->
-   
-   <!--c. Select **Enable IBM Transit Gateway** to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures and to keep traffic within {{site.data.keyword.cloud_notm}}. {{site.data.keyword.tg_full_notm}} connects the private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
-   {{site.data.keyword.tg_full_notm}} is currently available in WDC04 and DAL12 data centers.-->
-<!--4. In the **Virtual connections** section, you can establish a connection between multiple {{site.data.keyword.powerSys_notm}} services across different data centers by using an {{site.data.keyword.tg_full_notm}}. You can create virtual connections that are directly attached to the {{site.data.keyword.dl_short}} gateway, or you can choose to connect an {{site.data.keyword.tg_full_notm}} and then create a connection from it to your networks (VPC, classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable virtual connections. Select the virtual connections checkbox to continue. This setting is required if you selected the **Enable IBM Transit Gateway** checkbox in the previous step.-->
-
+   b. Select **Enable global routing** if you need access to other data centers outside your {{site.data.keyword.powerSys_notm}} region. For example, you can use global routing to share workloads between dispersed {{site.data.keyword.cloud_notm}} resources, such as Dallas to Tokyo, or Dallas to Frankfurt.
 4. In the **Subnets** section, click **Attach existing** to attach an existing subnet to the connection. A GRE tunnel requires that a connection be attached to a subnet. You can create a new subnet. <!--If you enable {{site.data.keyword.tg_full_notm}}, you can configure the GRE tunnel by using the {{site.data.keyword.tg_full_notm}} interface. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). -->The table in this topic lists all the subnets that are attached to the IBM Cloud connection.
 
    Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the service instance to communicate.
@@ -71,7 +66,6 @@ To view or edit IBM Cloud connections, complete the following steps:
 
 1. From the {{site.data.keyword.powerSys_notm}} dashboard, click **Cloud connections** in the left navigation pane.
 2. Click the Cloud connection that you want to configure. The corresponding **Connection details** page appears.
-<!--3. If a transit gateway is enabled for the connection, you can view the **Managed with IBM Transit Gateway** details. -->
 3. Click the **Edit details** icon.
 
    If you have an existing IBM Cloud connection with a speed of 5 Gbps or less, you cannot increase the speed limit to 10 Gbps. Also, you cannot modify an IBM Cloud connection with 10 Gbps to be GRE-capable by reducing the speed.
@@ -88,7 +82,7 @@ To delete an IBM Cloud connection, complete the following steps:
    
    You can see the list of IBM Cloud connections that are currently configured. 
    
-   1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
+2. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
    If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached. <!--If {{site.data.keyword.tg_full_notm}} is enabled for your Cloud connection, then you must delete the Cloud connection (Direct Link) from the {{site.data.keyword.tg_full_notm}} interface before deleting the Cloud connection. >
    {: note}
