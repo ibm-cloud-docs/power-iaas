@@ -162,7 +162,9 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
    a. For	RHEL, run the following command:
 
     `. /usr/local/bin/rhel-cloud-init.sh -a Activation_Key -u Capsule_server_url -p Proxy_IP_and_port -o Org -t Deployment type`
-        
+    
+     For information about variables that are required to run the cloud-init script, see the readme file that is generated in Step 2 (`/usr/share/powervs-fls/powervs-fls-readme.md` location).
+
       -a = activation key
 
       -u = the URL of the RHEL capsule server you are registering against
