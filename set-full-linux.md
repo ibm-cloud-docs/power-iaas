@@ -42,7 +42,7 @@ RHEL:
 
    - RHEL 8.4 (General and SAP)
 
-In the full Linux&reg; subscription feature, the OS filename for Linux-Client supplied subscription starts with `Linux-RHEL` or `Linux-SLES`.
+The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL…` or `SLES...`.
 
 ## Setting up full Linux&reg; subscription
 {: #set-full-Linux}
