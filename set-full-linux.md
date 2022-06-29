@@ -148,8 +148,11 @@ Set up a proxy configuration, by completing the following steps:
   
    You must have root authority to run these commands. After the installation completes, the squid config file is stored in the `/etc/squid/squid.conf` location. 
 
-   b. Use the configuration provided in the following example for your reference.
-
+   b. Use the configuration provided in the following example for your reference. Values represented in the example configuration denote the following:
+      - acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy will accept. 
+      - acl ibmprivate dst 161.26.0.0/16 and acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to, this is the location of the RHEL satellite servers and SLES RMT servers.
+      - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your Power Systems Virtual Server VM to the squid proxy.
+      
       ```text
       # Recommended minimum configuration:
       #
@@ -228,13 +231,13 @@ Set up a proxy configuration, by completing the following steps:
       refresh_pattern ^gopher:        1440    0%      1440
       refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
       refresh_pattern .               0       20%     4320
-      ##########################################################################
-      o	Save the file and start squid
-      	sudo systemctl start squid
-      	To stop squid, the command is: sudo systemctl stop squid
-      	To restart squid, the command is: sudo systemctl restart squid
       ```
-
+   c. Save the squid config file and start squid by using the following command.
+      `sudo systemctl start squid`
+   d. Stop squid by using the following command.
+      `sudo systemctl stop squid`
+   e. Restart squid by using the following command.
+      `sudo systemctl restart squid`
 
 ### Step 5: Customizing the VMs by using the cloud-init script (RHEL and SLES)
 {: #virtual-server}
