@@ -42,7 +42,7 @@ RHEL:
 
    - RHEL 8.4 (General and SAP)
 
-The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL…` or `SLES...`.
+The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
 ## Setting up full Linux&reg; subscription
 {: #set-full-Linux}
@@ -232,12 +232,12 @@ Set up a proxy configuration, by completing the following steps:
       refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
       refresh_pattern .               0       20%     4320
       ```
-   c. Save the squid config file and start squid by using the following command.
-      `sudo systemctl start squid`
-   d. Stop squid by using the following command.
-      `sudo systemctl stop squid`
-   e. Restart squid by using the following command.
-      `sudo systemctl restart squid`
+   c. Save the squid config file and start squid by using the `sudo systemctl start squid` command.
+      
+   d. You can stop squid by using the `sudo systemctl stop squid` command.
+      
+   e. You can restart squid by using the `sudo systemctl restart squid` command.
+      
 
 ### Step 5: Customizing the VMs by using the cloud-init script (RHEL and SLES)
 {: #virtual-server}
