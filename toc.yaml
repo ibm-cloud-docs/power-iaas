@@ -70,7 +70,7 @@ toc:
               - configuring-private-subnet.md
               - connecting-networks.md
               - network-security.md
-              - network-architecture-nrt.md
+              - network-architecture.md
               - site-to-site-vpn-connectivity.md
               - X86-based-systems.md
       - topicgroup: 
