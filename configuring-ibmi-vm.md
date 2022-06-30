@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2022
 
-lastupdated: "2021-03-19"
+lastupdated: "2022-06-30"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
