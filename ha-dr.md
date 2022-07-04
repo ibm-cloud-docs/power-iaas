@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-04"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
