@@ -72,7 +72,7 @@ You can use the service access roles to define what users can do with {{site.dat
 ## Additional access roles
 {: #additional-access-roles}
 
-{{site.data.keyword.powerSys_notm}} Cloud Connections requires access to Direct Link, {{site.data.keyword.powerSys_notm}} Services, Transit Gateway service and VPC. Additional access may be required as well based on the customers resource access requirements.
+{{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, Virtual Private Cloud, and so on. You may require additional access based on your resource requirements. For example, to create a Cloud connection you will need Editor access to Direct Link service.
 
 The following table displays the additional access roles required for the corresponding type of services that is allowed by {{site.data.keyword.powerSys_notm}}:
 
