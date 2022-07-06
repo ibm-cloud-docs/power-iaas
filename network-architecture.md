@@ -19,7 +19,7 @@ subcollection: power-iaas
 This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysShort}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
 
-{{site.data.keyword.dl_full_notm}} (2.0) Connect is only available to IBM clients within the United States. IBM clients can always contact Megaport connectivity services directly to procure their services.
+{{site.data.keyword.dl_full_notm}} (2.0) Connect is available in all current locations. IBM clients can always contact Megaport connectivity services directly to procure their services.
 {: important}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
