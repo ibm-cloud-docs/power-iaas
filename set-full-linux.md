@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-05-30"
+lastupdated: "2022-06-27"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -42,7 +42,7 @@ RHEL:
 
    - RHEL 8.4 (General and SAP)
 
-In the full Linux&reg; subscription feature, the OS filename for Linux-Client supplied subscription starts with `Linux-RHEL` or `Linux-SLES`.
+The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
 ## Setting up full Linux&reg; subscription
 {: #set-full-Linux}
@@ -148,7 +148,96 @@ Set up a proxy configuration, by completing the following steps:
   
    You must have root authority to run these commands. After the installation completes, the squid config file is stored in the `/etc/squid/squid.conf` location. 
 
-   b. Use the configuration provided in the [Example File](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_FLS_Example_Configuration.pdf) for your reference.
+   b. Use the configuration provided in the following example for your reference. Values represented in the example configuration denote the following:
+      - acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy will accept. 
+      - acl ibmprivate dst 161.26.0.0/16 and acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to, this is the location of the RHEL satellite servers and SLES RMT servers.
+      - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your Power Systems Virtual Server VM to the squid proxy.
+      
+      ```text
+      # Recommended minimum configuration:
+      #
+
+      # Example rule allowing access from your local networks.
+      # Adapt to list your (internal) IP networks from where browsing
+      # should be allowed
+      acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
+      acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
+      acl localnet src 192.168.0.0/16 # RFC1918 possible internal network
+      acl localnet src fc00::/7       # RFC 4193 local private network range
+      acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
+
+      acl ibmprivate dst 161.26.0.0/16
+      acl ibmprivate dst 166.8.0.0/14
+
+      acl SSL_ports port 443 8443
+      acl Safe_ports port 80          # http
+      acl Safe_ports port 21          # ftp
+      acl Safe_ports port 443         # https
+      acl Safe_ports port 8443        # https-new
+      acl Safe_ports port 70          # gopher
+      acl Safe_ports port 210         # wais
+      acl Safe_ports port 1025-65535  # unregistered ports
+      acl Safe_ports port 280         # http-mgmt
+      acl Safe_ports port 488         # gss-http
+      acl Safe_ports port 591         # filemaker
+      acl Safe_ports port 777         # multiling http
+      acl CONNECT method CONNECT
+
+      #
+      # Recommended minimum Access Permission configuration:
+      #
+      # Deny requests to certain unsafe ports
+      http_access deny !Safe_ports
+
+      # Deny CONNECT to other than secure SSL ports
+      http_access deny CONNECT !SSL_ports
+
+      # Only allow cachemgr access from localhost
+      http_access allow localhost manager
+      http_access deny manager
+
+      # We strongly recommend the following be uncommented to protect innocent
+      # web applications running on the proxy server who think the only
+      # one who can access services on "localhost" is a local user
+      #http_access deny to_localhost
+
+      #
+      # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+      #
+
+      # Example rule allowing access from your local networks.
+      # Adapt localnet in the ACL section to list your (internal) IP networks
+      # from where browsing should be allowed
+      http_access allow localnet
+      http_access allow localhost
+
+      # And finally deny all other access to this proxy
+      # http_access deny all
+      http_access allow ibmprivate
+
+      # Squid normally listens to port 3128
+      http_port 3128
+
+      # Uncomment and adjust the following to add a disk cache directory.
+      #cache_dir ufs /var/spool/squid 100 16 256
+
+      # Leave coredumps in the first cache dir
+      coredump_dir /var/spool/squid
+
+      #
+      # Add any of your own refresh_pattern entries above these.
+      #
+      refresh_pattern ^ftp:           1440    20%     10080
+      refresh_pattern ^gopher:        1440    0%      1440
+      refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
+      refresh_pattern .               0       20%     4320
+      ```
+   c. Save the squid config file and start squid by using the `sudo systemctl start squid` command.
+      
+   d. You can stop squid by using the `sudo systemctl stop squid` command.
+      
+   e. You can restart squid by using the `sudo systemctl restart squid` command.
+      
 
 ### Step 5: Customizing the VMs by using the cloud-init script (RHEL and SLES)
 {: #virtual-server}
@@ -162,7 +251,9 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
    a. For	RHEL, run the following command:
 
     `. /usr/local/bin/rhel-cloud-init.sh -a Activation_Key -u Capsule_server_url -p Proxy_IP_and_port -o Org -t Deployment type`
-        
+    
+     For information about the cloud-init script options and values, refer to the readme file that is generated in step 2 (`/usr/share/powervs-fls/powervs-fls-readme.md` location).
+
       -a = activation key
 
       -u = the URL of the RHEL capsule server you are registering against

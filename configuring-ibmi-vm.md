@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2022
 
-lastupdated: "2021-03-19"
+lastupdated: "2022-06-30"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -36,9 +36,7 @@ IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, VMs 
 To open the IBM i console, complete the following steps:
 
 1. Go to **Virtual server instance** in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance.
-2. Click the **Open console** icon in the top of the Server details pane.
-
-    ![Open console](./images/open-console.png "Open console"){: caption="Figure 1. Open console" caption-side="bottom"}
+2. Click **VM actions** in the server details pane and select **Open console** from the drop-down list.
 
     IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
     {: note}
@@ -55,14 +53,16 @@ To open the IBM i console, complete the following steps:
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
 - If you are using a Mac computer, the **Page Down** key is the same as **FN + Down Arrow**.
-- Use **PF18** to bypass the **Dedicated Service Tools (DST) Sign On** screen if it appears.
+- Change the password on the **Dedicated Service Tools (DST) Sign On** screen. Use **PF5** to change the DST password.
+- On the next screen, select **Option 1** to **Perform an IPL**. The sign-on screen appears after the IPL completes. Change the system `QSECOFR` ID password. New security rules require at least a 15-character password.
+- `CRTUSRPRF` and `CHGUSRPRF` will also use these new security rules. 
 
 ## Licenses and configuring your network
 {: #license-network}
 
 You must install the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels) on your IBM i VM.
 
-After you deploy an IBM i VM and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** to display each license agreement. Click **Next...** and **PF15** to show more items. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
+After you deploy an IBM i VM and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** on each license agreement to display them. Click **PF14** to accept each agreement. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 {: important}
