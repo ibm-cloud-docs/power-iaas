@@ -59,7 +59,7 @@ To create an {{site.data.keyword.cloud_notm}} connection, complete the following
 
 6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
 
-{{site.data.keyword.tg_full_notm}} is currently not supported on the `WDC06` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link will be generated. This Direct Link is not operational and must be authorized by the IBM Cloud account user who has the required authority via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
+IBM Power Virtual System Cloud Connections are currently not supported on the `WDC06` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link will be generated. This Direct Link is not operational and must be authorized by the IBM Cloud account user who has the required authority via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
 {: note}
 
 ## Modifying IBM Cloud connections
