@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2022
 
-lastupdated: "2022-07-15"
+lastupdated: "2022-07-22"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
