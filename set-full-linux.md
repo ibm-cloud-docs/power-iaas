@@ -41,6 +41,7 @@ SLES:
 RHEL:
 
    - RHEL 8.4 (General and SAP)
+   - RHEL 8.6 (General)
 
 The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
