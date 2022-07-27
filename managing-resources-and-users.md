@@ -69,7 +69,7 @@ You can use the service access roles to define what users can do with {{site.dat
 | Manager | You can configure all resources. The following are some of the actions you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
-## Access roles requirements for PowerVS
+## Access roles requirements for Power System Virtual Server
 {: #access-roles-requirement}
 
 {{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, Virtual Private Cloud, and so on. You may require additional access based on your resource requirements. For example, to create a Cloud connection you will need Editor access to Direct Link service.
