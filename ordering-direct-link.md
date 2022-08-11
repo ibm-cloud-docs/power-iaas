@@ -68,7 +68,8 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
       | Dallas 12  \n Dallas 13 | 64999 |
-      | Washington 4 \n Washington 6 | 64995 |
+      | Washington 4 | 64995 |
+      | Washington 6 | 64999 |
       | Frankfurt 4  \n Frankfurt 5 | 64999 |
       | London 6 | 64999 |
       | Toronto 1 | 64999 |
