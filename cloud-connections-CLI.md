@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2022
 
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-12"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -20,7 +20,6 @@ You can use {{site.data.keyword.cloud}} connections to connect your {{site.data.
 {: shortdesc}
 
 You can have a maximum of two {{site.data.keyword.cloud_notm}} ({{site.data.keyword.powerSys_notm}} Direct Link Connect) per account per {{site.data.keyword.powerSys_notm}} data center. To create a {{site.data.keyword.powerSys_notm}} {{site.data.keyword.cloud_notm}} you must have the required access to create the connections. For more information, see [Access roles requirements for Power System Virtual Server](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
-
 {: important}
 
 ## Support for {{site.data.keyword.powerSys_notm}} service instances with {{site.data.keyword.cloud_notm}} connections
