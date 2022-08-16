@@ -46,7 +46,7 @@ The Power Systems Virtual Server always has at least one defined shared processo
 
 You can specify host affinity and the anti-affinity between two or more of their shared processor pool with the shared processor pool Placement Groups. For more information see {Configuring Shared Processor Pool Placement Group}.
 
-# Pricing for Shared Processor Pool
+## Pricing for Shared Processor Pool
 
 {:price-spp}
 
@@ -59,7 +59,7 @@ The Shared Processor Pool feature helps to manage CPU cores only. Pricing for me
 
 The Total estimated cost page will not show SPP reserved cores-related costs due to service level estimator limitations.
 
-# Configuring Shared Processor Pool
+## Configuring Shared Processor Pool
 
 {: configure-spp}
 
@@ -75,7 +75,7 @@ You can specify the full name and size of the Shared Processor Pool and choose t
 
 When you define the above three parameters, the backend processing of PowerVC and Novalink is used to determine the best host within the specified host group to place the new SPP where the host group is a grouping of a host of the same system type, such as s922, e980, and so on.
 
-## Create a new SPP
+### Create a new SPP
 
 {: create-spp}
 
@@ -92,7 +92,7 @@ When you define the above three parameters, the backend processing of PowerVC an
 
 4. Click on Create.
 
-## Update or delete an SPP
+### Update or delete an SPP
 
 {: update-delete-spp}
 
@@ -104,7 +104,7 @@ You can update or delete the following in an existing SPP:
 * The number of reserved cores - The amount can be increased (dependent on available resources) or decreased (dependent on currently allocated resources).
 * Delete an existing SPP – Make sure there are no virtual machines deployed inside the SPP.
 
-# Managing a virtual machine inside Shared Processor Pool
+## Managing a virtual machine inside Shared Processor Pool
 
 {: manage-vm-inside-spp}
 
@@ -118,13 +118,13 @@ Within a pool, the sum of all the virtual machine's entitled capacity and reserv
 
 When there is any planned maintenance activity or a need to perform a remote restart, ensure that the virtual machines are linked to a Shared Processor Pool as per your requirements.
 
-## Deploying a PVM instance into an SPP
+### Deploying a PVM instance into an SPP
 
 {:deploy-pvm-in-spp}
 
 Refer to [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) for deploying a virtual machine into an SPP.
 
-# Configuring Shared Processor Pool Placement Group
+## Configuring Shared Processor Pool Placement Group
 
 {: configure-SPP-PG}
 
@@ -143,7 +143,7 @@ The following table explains how the host selection is determined based on the d
 |Same server (Affinity)|New SPP configured on same host as determined by the existing PG SPP members|New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink|The new SPP is automatically added as a member of the PG policy|
 |Different server (Anti-affinity) |Configure the new SPP on a different host than all host identified by all the existing PG members|New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink.|The new SPP is automatically added as a member of the PG policy |
 
-## Create a new SPP PG
+### Create a new SPP Placement Group
 
 {:create-new-pg}
 
@@ -161,7 +161,7 @@ Your name should be a minimum of 2 characters and a maximum of 12 characters. Al
 5.Click create.
 You get notified when the new SPP PG is created.
 
-## Add an SPP inside the SPP PG
+### Add an SPP inside the SPP PG
 
 {:add-spp-inside-spp-pg}
 
@@ -179,7 +179,7 @@ You can add an SPP as a member to an existing SPP Placement Group. If the PG pol
 
 You get notified when the new SPP PG is created.
 
-## Delete an SPP PG
+### Delete an SPP PG
 
 {:delete-spp-pg}
 You can navigate to the SPP PG from the Shared processor pool > Pool placement groups tab. Click on the SPP PG you want to delete to open the details page and click on the delete icon to delete the SPP PG.
