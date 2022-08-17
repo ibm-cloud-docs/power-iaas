@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-08-12"
+lastupdated: "2022-08-17"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG, 
 
@@ -33,18 +33,20 @@ Unlike a virtual machine with a dedicated and defined maximum amount of processi
 
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
-|-----------|-----------|-----------|-----------|-----------|
+|-----|-----------|-----------|-----------|-----------|
 |No|Maximum cores 5 \n Mode = Uncapped \n Entitled capacity = 1|Maximum cores 6 \n Mode = Uncapped \n Entitled capacity = 1|NA|5+5 = 11|
 |Yes|Maximum cores 5|Maximum cores 6|Maximum cores 6|Determined by reserved cores in pool = 6|
+{: class="simple-table"}
+{: caption="Table 1. "SPP helps to reduce the licensing cost" caption-side="top"}
 
 The benefits of using an SPP are as follows:
 
-* Allows you to control how much you will spend on licensing costs by reducing the number of software licenses by limiting the number of processors an uncapped partition can use.
-* You have a better overall ability to manage processor resources.
+1. Allows you to control how much you will spend on licensing costs by reducing the number of software licenses by limiting the number of processors an uncapped partition can use.
+2. You have a better overall ability to manage processor resources.
 
 The Power Systems Virtual Server always has at least one defined shared processor pool as the default pool. You can add up to 63 more Shared Processor Pools in a single Power System Virtual Server service instance. The Shared Processor Pool is used and shared by a set of virtual machines of the same machine type (host). You can move the VMs from one workspace to another on the same or a different host. For more information see {Configuring Shared Processor Pool}.
 
-You can specify host affinity and the anti-affinity between two or more of their shared processor pool with the shared processor pool Placement Groups. For more information see {Configuring Shared Processor Pool Placement Group}.
+You can specify host affinity and the anti-affinity between two or more of their shared processor pool with the shared processor pool Placement Groups. For more information, see [Configuring Shared Processor Pool Placement Group](/docs/power-iaas?topic=power-iaas-managing-shared-processor-pool#configuring-shared-processor-pool-placement-group).
 
 ## Pricing for Shared Processor Pool
 
@@ -54,10 +56,9 @@ You pay for the following:
 
 * SPP reserved cores using the Shared Capped part number.
 * Cores of virtual machines deployed into the SPP using Shared Uncapped part number
-The Shared Processor Pool feature helps to manage CPU cores only. Pricing for memory and storage remains the same as before.
-{: note}
 
-The Total estimated cost page will not show SPP reserved cores-related costs due to service level estimator limitations.
+The Shared Processor Pool feature helps to manage CPU cores only. Pricing for memory and storage remains the same as before. The Total estimated cost page will not show SPP reserved cores-related costs due to service level estimator limitations.
+{: note}
 
 ## Configuring Shared Processor Pool
 
@@ -82,14 +83,12 @@ When you define the above three parameters, the backend processing of PowerVC an
 1. Click on Shared processor pools under Compute.
 2. Click on Create pool.
 3. Refer to the Define the following preferences as per your requirements: on the Create new shared processor pool window:
-
 |Field|Description|
 |----|----|
 |Name|Enter a name that is unique within your cloud account.\n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
 |Add to a pool placement group|Check this radio button if you want to add a pool placement group that are already created. You can keep it unchecked if you want to create a pool placement group later.|
-|Select machine type|see as Creating a Power Systems Virtual Server |
+|Select machine type|Specify the machine type. For more information about hardware specifications, see [E880 (Dallas only)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: external}, [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
 |Reserved processing cores|There is a core-to-vCPU ratio of 1:1 by default that you can customize. For shared processors pool, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. |
-
 4. Click on Create.
 
 ### Update or delete an SPP
@@ -118,7 +117,7 @@ Within a pool, the sum of all the virtual machine's entitled capacity and reserv
 
 When there is any planned maintenance activity or a need to perform a remote restart, ensure that the virtual machines are linked to a Shared Processor Pool as per your requirements.
 
-### Deploying a PVM instance into an SPP
+### Deploying a virtual machine into an SPP
 
 {:deploy-pvm-in-spp}
 
@@ -137,11 +136,24 @@ You should set the following to define an SPP PG:
 The following table explains how the host selection is determined based on the different options of SPP PG policy selection:
 
 |SPP PG Policy|Host selection|Result|
-|-------|---------|------------|--------------|
-||If SPP PG is non-empty|If SPP PG is empty||
-|--------------|---------------|-------------|-----------------------|
-|Same server (Affinity)|New SPP configured on same host as determined by the existing PG SPP members|New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink|The new SPP is automatically added as a member of the PG policy|
-|Different server (Anti-affinity) |Configure the new SPP on a different host than all host identified by all the existing PG members|New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink.|The new SPP is automatically added as a member of the PG policy |
+|-------------|--------------|------|
+|Same server (Affinity)|New SPP configured on same host as determined by the existing PG SPP members|The new SPP is automatically added as a member of the PG policy|
+|Different server (Anti-affinity) |Configure the new SPP on a different host than all host identified by all the existing PG members|The new SPP is automatically added as a member of the PG policy |
+{: class="simple-tab-table"}
+{: tab-group="host_selection"}
+{: caption="Table 1. "Determination of host selection when Placement Group is empty and non-empty" caption-side="top"}
+{: #host_selection-1}
+{: tab-title="When SPP PG is non-empty"}
+
+|SPP PG Policy|Host selection|Result|
+|-------------|--------------|------|
+|Same server (Affinity)|New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink|The new SPP is automatically added as a member of the PG policy|
+|Different server (Anti-affinity) |New SPP will be configured on a host that is selected based on the backend processing of PowerVC and Novalink.|The new SPP is automatically added as a member of the PG policy |
+{: class="simple-tab-table"}
+{: tab-group="host_selection"}
+{: caption="Table 1. "Determination of host selection when Placement Group is empty and non-empty" caption-side="top"}
+{: #host_selection-2}
+{: tab-title="When SPP PG is empty"}
 
 ### Create a new SPP Placement Group
 
@@ -151,14 +163,12 @@ The following table explains how the host selection is determined based on the d
 2. Click on Pool placement groups tab.
 3. Click on Create group.
 4. On the Create new pool placement group window enter the following:
-
-|Field|Description|
-|----------------|--------------------------------------------------------|
-|Name|Enter a name that is unique within your cloud account.
-Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
+|Field|Description                                             |
+|-----|--------------------------------------------------------|
+|Name |Enter a name that is unique within your cloud account. \n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
 |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
+5. Click create.
 
-5.Click create.
 You get notified when the new SPP PG is created.
 
 ### Add an SPP inside the SPP PG
@@ -182,4 +192,5 @@ You get notified when the new SPP PG is created.
 ### Delete an SPP PG
 
 {:delete-spp-pg}
+
 You can navigate to the SPP PG from the Shared processor pool > Pool placement groups tab. Click on the SPP PG you want to delete to open the details page and click on the delete icon to delete the SPP PG.
