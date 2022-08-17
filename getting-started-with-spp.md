@@ -80,7 +80,7 @@ When you define the above three parameters, the backend processing of PowerVC an
 
 {: create-spp}
 
-1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface.
+1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click on **Create pool**.
 3. On the **Create new shared processor pool** window, define the following preferences as per your requirements :
 
@@ -125,7 +125,7 @@ When there is any planned maintenance activity or a need to perform a remote res
 
 To add virtual machines to an SPP that you have already created, complete the following steps:
 
-1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface.
+1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click on **Create instance**.
 3. Fill in the input fileds under the **General** tile as per your requirement.
 4. Select the checkbox Add to a **shared processor pool**.
@@ -168,7 +168,7 @@ The following table explains how the host selection is determined based on the d
 
 {:create-new-pg}
 
-1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface.
+1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click on **Pool placement groups** tab.
 3. Click on **Create group**.
 4. On the Create new pool placement group window enter the following:
@@ -187,7 +187,7 @@ You get notified when the new SPP PG is created.
 
 You can add an SPP as a member to an existing SPP Placement Group. If the PG policy is ‘affinity,’ then all SPP added as a member of the PG must reside on the same host. If the PG policy is ‘anti-affinity,’ then the SPP will get added. No host check is needed.
 
-1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface.
+1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click on **Pool placement groups** tab.
 3. Click on the existing pool placement group under which you want to add the SPP.
 4. Select between the two options:
