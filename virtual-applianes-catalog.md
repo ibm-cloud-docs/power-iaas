@@ -29,7 +29,7 @@ subcollection: power-iaas
 
 Virtual appliance is bring-your-own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of Power Systems Virtual Server workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is handled directly by the ISVs for virtual appliances. 
  
-
+With virtual appliances, you can use additional services within Power Systems Virtual Server such as virtual tape libraries. For more information, see [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
 ## Onboarding your virtual server images for Power Systems Virtual Servers
 {: #onboard-vsi}
 

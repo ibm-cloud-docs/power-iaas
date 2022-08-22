@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-07-22"
+lastupdated: "2022-08-22"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,11 +26,17 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}} service.
 {: shortdesc}
 
+## August 2022
+{: #aug-2022}
+
+- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration “as a Service” for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
+
 ## July 2022
 {: #jul-2022}
 
 - You can use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC). See [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
 - {{site.data.keyword.powerSys_notm}} now supports full Linux subscription on RHEL 8.6. See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+
 ## June 2022
 {: #jun-2022}
 
