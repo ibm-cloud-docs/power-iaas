@@ -79,6 +79,8 @@ The total due per month is dynamically updated in the **Order Summary** based on
 
 2. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. When you select a custom image, the new PVM instance(s) will be deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
+    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads]().
+
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second Power Systems Virtual Server Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
@@ -141,3 +143,36 @@ For example, you create a VM with the name TEST-VM and you delete this VM later.
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
 On IBM Power Systems E950 and E980 that are running in a multiple VM environment with at least one SAP HANA production system, you can deploy up to sixteen VMs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VM instance must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VMs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
+
+## configuring a VM for EPIC workloads
+
+{: #configure-vm-epic}
+
+You can configure your virtual machine (VM) instance to deploy on epic workloads when you select AIX as your operating system.
+
+To configure a VM instance for epic workloads, select the checkbox **Configure for Epic workloads** on the **Boot image** tile. You can also verify a VM to be epic by checking the corresponding VM details page. On the VM details page the **Deployment type** should be **Epic**.
+
+The billing will show shared capped cores even though the VMs are running dedicated cores. The VMs details page will show dedicated cores.
+{: note}
+
+Choosing an epic workload on Power System Virtual Server allows you to reduce your cost to a great extent as you pay for shared cores, and you get dedicated cores. The following table explains the scenario that shows the benefits the user gets upon choosing an epic workload:
+
+|VM deployed on|Storage volume|Core type|Machine type|Cost|
+|-----|------|-----|-----|-----|
+|Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|You pay for the \n combination you choose|
+|Epic|Always Tier1|Always Dedicated|Always E980|You pay for \n Shared uncapped and get \n Dedicated cores|
+
+You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
+
+1. Epic supports AIX 7.2 and above. You cannot choose AIX 7.1
+2. Storage volume supported is Tier 1. You can change or attach tier 3, leading to performance issues.
+3. Machine type supported as e980. You cannot select s922.
+4. The core type is supported as dedicated. You can switch to other types, leading to performance issues.
+
+On the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3. You might face performance issue if you do so.
+
+{:important}
+
+For the VMs that are epic and in shut down state, you should not change the core type to other than dedicated. You might face performance issue if you do so.
+
+{:important}
