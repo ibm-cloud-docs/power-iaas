@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## August 2022
 {: #aug-2022}
 
-- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration “as a Service” for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
+- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration as a Service for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
 
 ## July 2022
 {: #jul-2022}
