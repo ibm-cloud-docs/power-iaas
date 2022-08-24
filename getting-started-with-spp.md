@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Managing Shared processor pool
+# Managing shared processor pool
 
 {: #manage-SPP}
 
@@ -177,6 +177,7 @@ Perform the following steps to create a new SPP PG:
 2. Click on **Pool placement groups** tab.
 3. Click on **Create group**.
 4. On the **Create new pool placement group** window enter the following:
+
 |Field|Description                                             |
 |-----|--------------------------------------------------------|
 |Name |Enter a name that is unique within your cloud account. \n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
