@@ -144,7 +144,7 @@ You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP H
 
 On IBM Power Systems E950 and E980 that are running in a multiple VM environment with at least one SAP HANA production system, you can deploy up to sixteen VMs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VM instance must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VMs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
-## configuring a VM for EPIC workloads
+## Configuring a VM for EPIC workloads
 
 {: #configure-vm-epic}
 
@@ -161,6 +161,7 @@ Choosing an epic workload on Power System Virtual Server allows you to reduce yo
 |-----|------|-----|-----|-----|
 |Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|You pay for the \n combination you choose|
 |Epic|Always Tier1|Always Dedicated|Always E980|You pay for \n Shared uncapped and get \n Dedicated cores|
+{: caption="Table 2. Benefits on choosing to deploy a VM on epic" caption-side="bottom"}
 
 You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
 
@@ -170,9 +171,7 @@ You get to choose to configure for epic only when you select AIX as your operati
 4. The core type is supported as dedicated. You can switch to other types, leading to performance issues.
 
 On the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3. You might face performance issue if you do so.
-
 {:important}
 
 For the VMs that are epic and in shut down state, you should not change the core type to other than dedicated. You might face performance issue if you do so.
-
 {:important}
