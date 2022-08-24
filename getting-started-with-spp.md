@@ -56,7 +56,7 @@ You pay for the following:
 * SPP reserved cores using the Shared Capped part number.
 * Virtual server instance cores deployed into the SPP using Shared Uncapped part number.
 
-The SPP helps manage CPU cores only. Pricing for memory and storage remains the same as before. The total estimated cost page will not show SPP reserved cores-related costs due to service level estimator limitations.
+The SPP helps manage CPU cores only. Pricing for memory and storage remains the same as before. The total estimated cost page will not show SPP reserved cores-related costs due to service level estimator limitations. For more information on pricing, see [Pricing for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 {: note}
 
 ## Configuring Shared processor pool
