@@ -84,16 +84,15 @@ Perform the following steps to create a new SPP:
 1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click on **Create pool**.
 3. On the **Create new shared processor pool** window, define the following preferences as per your requirements:
+  |Field|Description|
+  |----|----|
+  |Name|Enter a name that is unique within your cloud account.\n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
+  |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has required affinity relations to other pools, it is recommended to deploy the pool directly into the placement group. Note that the pool placement group must be created first. This prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
+  |Select machine type|Specify the machine type. For more information about hardware specifications, see [E880 (Dallas only)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: external}, [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
+  |Reserved processing cores|There is a core-to-vCPU ratio of 1:1 by default. |
+  {: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
 
-|Field|Description|
-|----|----|
-|Name|Enter a name that is unique within your cloud account.\n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
-|Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has required affinity relations to other pools, it is recommended to deploy the pool directly into the placement group. Note that the pool placement group must be created first. This prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
-|Select machine type|Specify the machine type. For more information about hardware specifications, see [E880 (Dallas only)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: external}, [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
-|Reserved processing cores|There is a core-to-vCPU ratio of 1:1 by default. |
-{: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
-
-4. Click on Create.
+4. Click on **Create**.
 
 ### Update or delete a shared processor pool
 
@@ -177,12 +176,11 @@ Perform the following steps to create a new SPP PG:
 2. Click on **Pool placement groups** tab.
 3. Click on **Create group**.
 4. On the **Create new pool placement group** window enter the following:
-
-|Field|Description                                             |
-|-----|--------------------------------------------------------|
-|Name |Enter a name that is unique within your cloud account. \n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
-|Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
-{: caption="Table 4. Create a new SPP PG field description" caption-side="top"}
+  |Field|Description                                             |
+  |-----|--------------------------------------------------------|
+  |Name |Enter a name that is unique within your cloud account. \n Your name should be a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and only underscore (‘_’) as a special character is allowed.|
+  |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
+  {: caption="Table 4. Create a new SPP PG field description" caption-side="top"}
 
 5. Click **Create**.
 
