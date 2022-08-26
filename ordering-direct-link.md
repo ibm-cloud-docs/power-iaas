@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2022
 
-lastupdated: "2022-05-19"
+lastupdated: "2022-08-26"
 
 keywords: direct link
 
@@ -69,17 +69,18 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
       | ---------------------------- | -------------- |
       | Dallas 12  \n Dallas 13 | 64999 |
       | Washington 4 | 64995 |
+      | Washington 6 | 64999 |
       | Frankfurt 4  \n Frankfurt 5 | 64999 |
       | London 6 | 64999 |
       | Toronto 1 | 64999 |
       | Montreal 1 | 64999 |
       {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"} 
       
-2. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
+1. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
 
    After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections. 
   
-3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+1. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
@@ -132,7 +133,8 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
     | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERIAASLITE-1-1 \n SL-FRA05-IBMPOWERIAASLITE-1-2 | SL-FRA05-IBMPOWERIAASLITE-2-1 \n SL-FRA05-IBMPOWERIAASLITE-2-2 |
     | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^footnote1] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^footnote2] |
-    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote4] |
+    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-WDC04-IBMPOWERIAASLITE-2-1 \n SL-WDC04-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC04-10G-NOGRE-1-2[^footnote4] |
+    | WDC06 | IBM Power VS | SL-WDC06-IBMPOWERIAASLITE-1-1 \n SL-WDC06-IBMPOWERIAASLITE-1-2 \n PowerVS-WDC06-10G-NOGRE-1-1[^footnote13] | SL-WDC06-IBMPOWERIAASLITE-2-1 \n SL-WDC06-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC06-10G-NOGRE-1-2[^footnote14] |
     | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1[^footnote5] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote6] |
     | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^footnote7] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^footnote8] |
     | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^footnote9] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^footnote10] |
@@ -152,8 +154,10 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     [^footnote10]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote11]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote12]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
-2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
+1. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
 ## Routing considerations for VPC
 {: #routing-considerations}
