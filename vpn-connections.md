@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 
-lastupdated: "2021-12-13"
+lastupdated: "2022-08-30"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -213,7 +213,25 @@ In addition to the subnet restrictions specified in [Configuring and adding a pr
 
 a. Subnets with `10.xx.xx.xx/8` address are not supported.
 
-b. These additional subnets are restricted: TBD.
+b. These additional subnets are restricted:
+     `10.8.0.0/14`
+     `10.45.0.0/16`
+     `10.63.0.0/16`
+     `10.65.0.0/16`
+     `10.72.0.0/16`
+     `10.74.0.0/15`
+     `10.95.96.0/20`
+     `10.114.0.0/15`
+     `10.123.0.0/16`
+     `10.128.0.0/13`
+     `10.136.0.0/13`
+     `10.150.0.0/15`
+     `10.184.0.0/13`
+     `10.192.0.0/13`
+     `10.208.0.0/12`
+     `10.240.0.0/14`
+     `10.21.1.0/26`
+     `10.182.28.192/26`
 
 c. You might get a "subnet not available" message while creating subnets in certain locations. Choose a different subnet to resolve this issue.
 
