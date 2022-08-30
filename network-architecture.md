@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-06-16"
+lastupdated: "2022-08-30"
 
-keywords: networking diagrams, network architecture, private ssl, private ipsec, {{site.data.keyword.dl_short}}, colocation, data center, cloud connect, megaport
+keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
 subcollection: power-iaas
 
@@ -250,7 +250,7 @@ This deployment topology leverages the IBM Cloud classic infrastructure gateway 
 Complete the following steps to implement this scenario:
 
 1. [Set up an IBM Cloud gateway appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started) to establish an IPsec VPN connection from your remote location to the IBM Cloud classic infrastructure.
-2. Complete all steps that are mentioned in [Connect to classic infrastructure by using IBM Cloud (2.0) {{site.data.keyword.dl_short}}](/docs/gateway-appliance?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-privatessl). This includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
+2. Complete all steps that are mentioned in [Connect to classic infrastructure by using IBM Cloud (2.0) {{site.data.keyword.dl_short}}](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-classic). This includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
 
    The IBM Cloud classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your classic environment.
