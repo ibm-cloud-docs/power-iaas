@@ -33,7 +33,7 @@ A Shared Processor Pool (SPP) is a pool of processor capacity shared between a g
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
 |-----|-----------|-----------|-----------|-----------|
-|No|Maximum cores 5 \n Mode = Uncapped \n Entitled capacity = 1|Maximum cores 6 \n Mode = Uncapped \n Entitled capacity = 1|NA|5+5 = 11|
+|No|Maximum cores 5 \n Mode = Uncapped \n Entitled capacity = 1|Maximum cores 6 \n Mode = Uncapped \n Entitled capacity = 1|NA|5+6 = 11|
 |Yes|Maximum cores 5|Maximum cores 6|Maximum cores 6|Determined by reserved cores in pool = 6|
 {: class="simple-table"}
 {: caption="Table 1. SPP helps to reduce the licensing cost" caption-side="bottom"}
