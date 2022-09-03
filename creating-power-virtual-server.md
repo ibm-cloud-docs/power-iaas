@@ -148,7 +148,7 @@ On IBM Power Systems E950 and E980 that are running in a multiple VM environment
 
 {: #configure-vm-epic}
 
-You can configure your virtual machine (VM) instance to deploy on epic workloads when you select AIX as your operating system.
+You can configure your virtual machine (VM) instance to deploy epic workloads when you select AIX as your operating system.
 
 To configure a VM instance for epic workloads, select the checkbox **Configure for Epic workloads** on the **Boot image** tile. You can also verify a VM to be epic by checking the corresponding VM details page. On the VM details page the **Deployment type** should be **Epic**.
 
