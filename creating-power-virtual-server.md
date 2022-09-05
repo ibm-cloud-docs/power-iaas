@@ -160,7 +160,7 @@ Choosing an epic workload on Power System Virtual Server allows you to reduce yo
 |VM deployed on|Storage volume|Core type|Machine type|Cost|
 |-----|------|-----|-----|-----|
 |Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|You pay for the \n combination you choose|
-|Epic|Always Tier1|Always Dedicated|Always E980|You pay for \n Shared uncapped and get \n Dedicated cores|
+|Epic|Always Tier1|Always Dedicated|Always E980|You get \n Dedicated cores|
 {: caption="Table 2. Benefits on choosing to deploy a VM on epic" caption-side="bottom"}
 
 You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
