@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2022-08-23"
+lastupdated: "2022-09-06"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
@@ -144,34 +144,29 @@ You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP H
 
 On IBM Power Systems E950 and E980 that are running in a multiple VM environment with at least one SAP HANA production system, you can deploy up to sixteen VMs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VM instance must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VMs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
-## Configuring a VM for EPIC workloads
+## Configuring a VM for Epic workloads
 
 {: #configure-vm-epic}
 
-You can configure your virtual machine (VM) instance to deploy epic workloads when you select AIX as your operating system.
+You can configure your virtual machine (VM) instance to deploy Epic workloads when you select AIX as your operating system.
 
-To configure a VM instance for epic workloads, select the checkbox **Configure for Epic workloads** on the **Boot image** tile. You can also verify a VM to be epic by checking the corresponding VM details page. On the VM details page the **Deployment type** should be **Epic**.
+To configure a VM instance for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify a VM deployed on epic by checking the corresponding VM details page. On the VM details page, the **Deployment type** field must be se to **Epic**.
 
-The billing will show shared capped cores even though the VMs are running dedicated cores. The VMs details page will show dedicated cores.
-{: note}
+- In the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3 to avoid performance issues.
+- For the VMs that are epic and in shut-down state, you should not change the core type to any value other than dedicated to avoid performance issues.
+{:important}
 
-Choosing an epic workload on Power System Virtual Server allows you to reduce your cost to a great extent as you pay for shared cores, and you get dedicated cores. The following table explains the scenario that shows the benefits the user gets upon choosing an epic workload:
+The following table explains the difference in configuration of a non-Epic and an Epic workload:
 
-|VM deployed on|Storage volume|Core type|Machine type|Cost|
-|-----|------|-----|-----|-----|
-|Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|You pay for the \n combination you choose|
-|Epic|Always Tier1|Always Dedicated|Always E980|You get \n Dedicated cores|
-{: caption="Table 2. Benefits on choosing to deploy a VM on epic" caption-side="bottom"}
+|VM deployed on|Storage volume|Core type|Machine type|
+|-----|------|-----|-----|
+|Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|
+|Epic|Always Tier1|Always Dedicated|Always E980|
+{: caption="Table 2. Configuration difference of a non-Epic and an Epic workload" caption-side="bottom"}
 
 You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
 
-1. Epic supports AIX 7.2 and above. You cannot choose AIX 7.1
-2. Storage volume supported is Tier 1. You can change or attach tier 3, leading to performance issues.
-3. Machine type supported as e980. You cannot select s922.
-4. The core type is supported as dedicated. You can switch to other types, leading to performance issues.
-
-On the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3. You might face performance issue if you do so.
-{:important}
-
-For the VMs that are epic and in shut down state, you should not change the core type to other than dedicated. You might face performance issue if you do so.
-{:important}
+1. Epic supports AIX 7.2 and later. You cannot choose AIX 7.1.
+2. Supported storage Storage volume is Tier 1. You can change or attach tier 3 that might lead, to performance issues.
+3. Supported machine type is e980. You cannot select s922.
+4. Supported core type is dedicated. You can switch to other types that might lead, to performance issues.
