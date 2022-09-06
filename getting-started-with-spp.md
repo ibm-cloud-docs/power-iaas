@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Managing shared processor pool
+# Managing Shared processor pool
 
 {: #manage-SPP}
 
@@ -45,7 +45,7 @@ The benefits of using an SPP are as follows:
 
 The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs in a single {{site.data.keyword.powerSys_notm}} workspace. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
 
-You can specify the host affinity and anti-affinity between two or more SPPs with shared processor pool placement groups. For more information, see [Configuring shared processor pool placement group](/docs/power-iaas?topic=power-iaas-managing-shared-processor-pool#configuring-shared-processor-pool-placement-group).
+You can specify the host affinity and anti-affinity between two or more SPPs with Shared processor pool placement groups. For more information, see [Configuring Shared processor pool placement group](/docs/power-iaas?topic=power-iaas-managing-shared-processor-pool#configuring-shared-processor-pool-placement-group).
 
 ## Pricing for Shared processor pool
 
@@ -83,7 +83,7 @@ Create an SPP with the following steps:
 
 1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click **Create pool**.
-3. In the **Create new shared processor pool** window, define the following preferences based on your requirements:
+3. In the **Create new Shared processor pool** window, define the following preferences based on your requirements:
   |Field|Description|
   |----|----|
   |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
@@ -106,7 +106,7 @@ You can update or delete the following details in an existing SPP:
 * Update number of cores - You can update the number of reserved cores based on resource availability and allocation.
 * Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no virtual server instances exist in the SPP. The virtual server instances if present, must be deleted or moved out with a support ticket.
 
-## Managing a virtual server instance inside shared processor pool
+## Managing a virtual server instance inside Shared processor pool
 
 {: manage-vm-inside-spp}
 
@@ -117,7 +117,7 @@ When you deploy multiple virtual server instances simultaneously, a new server p
 
 During any planned maintenance activity or when you want to do a remote restart, ensure that the virtual server instances are linked to an SPP based on your requirements.
 
-### Deploy a virtual server instance into a shared processor pool
+### Deploy a virtual server instance into a Shared processor pool
 
 {:deploy-pvm-in-spp}
 
@@ -126,7 +126,7 @@ To add virtual server instances to an SPP that are already created, complete the
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click **Create instance**.
 3. Complete the input fields under the **General** tile based on your requirement.
-4. Select the checkbox Add to a **shared processor pool**.
+4. Select the checkbox Add to a **Shared processor pool**.
 5. Select a shared processor pool that is already created.
 6. Continue with the rest of the process to create a virtual server instance. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
@@ -134,7 +134,7 @@ To add virtual server instances to an SPP that are already created, complete the
 
 {: configure-SPP-PG}
 
-You can configure an SPP with the shared processor pool placement group (SPP PG) to control the host in which SPPs are deployed.
+You can configure an SPP with the Shared processor pool placement group (SPP PG) to control the host in which SPPs are deployed.
 
 SPP PGs are different from server placement groups. They serve the same purpose but cannot combine resource types.
 {:Note}
@@ -186,11 +186,11 @@ Create an SPP PG with the following steps:
 
 You get notified when the new SPP PG is created.
 
-### Add an SPP inside the SPP PG
+### Add a Shared processor pool inside the placement group
 
 {:add-spp-inside-spp-pg}
 
-An SPP can be added as a member to an existing pool placement group if the host of the SPP follows the affinity policy of the group. If the PG policy is set to **Same server** (affinity), then all SPPs that are added as a member of the placement group must stay on the same host. If the PG policy is set to **Different server** (anti-affinity), then the SPP is deployed on a different host than all the other group members.
+An SPP can be added as a member to an existing SPP PG if the host of the SPP follows the affinity policy of the group. If the PG policy is set to **Same server** (affinity), then all SPPs that are added as a member of the placement group must stay on the same host. If the PG policy is set to **Different server** (anti-affinity), then the SPP is deployed on a different host than all the other group members.
 
 Add an SPP inside the SPP PG with the following steps:
 
