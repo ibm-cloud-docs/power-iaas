@@ -154,6 +154,7 @@ To configure a VM instance for Epic workloads, select the **Configure for Epic w
 
 - In the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3 to avoid performance issues.
 - For the VMs that are epic and in shut-down state, you should not change the core type to any value other than dedicated to avoid performance issues.
+
 {:important}
 
 The following table explains the difference in configuration of a non-Epic and an Epic workload:
