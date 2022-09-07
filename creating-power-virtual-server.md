@@ -152,8 +152,8 @@ You can configure your virtual machine (VM) instance to deploy Epic workloads wh
 
 To configure a VM instance for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify a VM deployed on epic by checking the corresponding VM details page. On the VM details page, the **Deployment type** field must be se to **Epic**.
 
-- In the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3 to avoid performance issues.
-- For the VMs that are epic and in shut-down state, you should not change the core type to any value other than dedicated to avoid performance issues.
+In the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3 to avoid performance issues.
+For the VMs that are epic and in shut-down state, you should not change the core type to any value other than dedicated to avoid performance issues.
 
 {:important}
 
