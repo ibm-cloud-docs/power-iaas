@@ -168,6 +168,6 @@ The following table explains the difference in configuration of a non-Epic and a
 You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
 
 1. Epic supports AIX 7.2 and later. You cannot choose AIX 7.1.
-2. Supported storage Storage volume is Tier 1. You can change or attach tier 3 that might lead, to performance issues.
+2. Supported storage volume is Tier 1. You can change or attach tier 3 that might lead, to performance issues.
 3. Supported machine type is e980. You cannot select s922.
 4. Supported core type is dedicated. You can switch to other types that might lead, to performance issues.
