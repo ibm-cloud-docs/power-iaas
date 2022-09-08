@@ -67,13 +67,16 @@ SPP is a separate resource within a {{site.data.keyword.powerSys_notm}} workspac
 
 The SPP and your {{site.data.keyword.powerSys_notm}} workspace are linked and thus shared resource pools are not visible from different accounts. You can create one or more SPPs per workspace.
 
-You can specify the full name and size of the SPP and choose the host type to deploy the SPP. Create an SPP by specifying the following parameters:
+Create an SPP by specifying the following parameters:
 
 * A unique name
 * Host group or the machine type
 * Number of processors to reserve.
 
 When you define the three parameters, a backend processing determines the best host for the new SPP.
+
+When you fail to configure an SPP successfully on the host, the SPP will not have any allocated processing cores. You need to delete such SPPs manually as they do not get cleaned up automatically.
+{:note}
 
 ### Create a Shared processor pool
 
