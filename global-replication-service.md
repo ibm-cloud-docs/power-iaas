@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Getting started with Global replication service
 {: #getting-started-GRS}
 
-The {{site.data.keyword.powerSys}} provides a set of APIs through which you can enable disaster recovery (DR) solution for your virtual server instances . The storage replication uses the Global Mirror Change volume technology. 
+The {{site.data.keyword.powerSysFull}} provides a set of APIs through which you can enable disaster recovery (DR) solution for your virtual server instances . The storage replication uses the Global Mirror Change volume technology. 
 {: shortdesc}
 
 Global replication service (GRS) aims not to automate the complete DR solution end to end but to provide API and CLI interfaces to create the recipe for the DR solution.
@@ -36,7 +36,7 @@ The scope of the GRS service is to create and manage replicated resources that i
 
 {: locations-GRS}
 
-You can use the GRS location APIs to check about the locations that supports storage replication and their mapped location. For more information, see [GRS Location API docs]().
+You can use the GRS location APIs to check about the locations that supports storage replication and their mapped location. For more information, see [GRS Location API docs (dummy link)]().
 
 ## Pricing for Global replication service
 
@@ -84,7 +84,7 @@ In addition to creating replication-enabled volumes, there are other actions tha
 {: configure-primary-site}
 
 Configure the primary site with the following steps:
-1. Create a replication enabled volumes using the [API request]().
+1. Create a replication enabled volumes using the [API request(dummy link)]().
     The new field `replicationEnabled` is true in the background to create new replication-enabled volumes when you call the API request.
 
 2. Create a virtual server instance with replication-enabled volumes using the {{site.data.keyword.powerSys_notm}} user interface.
@@ -95,7 +95,7 @@ Configure the primary site with the following steps:
 
     You can provide a mix of replication and non-replication-enabled volumes for a virtual server instance if they belong to the same storage pool.  All the existing storage pool affinity rules also apply for replication-enabled volumes.
 
-3. Create a volume-group (consistency group) with the desired replication enabled volumes using the [API request]().
+3. Create a volume-group (consistency group) with the desired replication enabled volumes using the [API request(dummy link)]().
     A new resource, “volume group,” is introduced in Power System Virtual Sever to support the life cycle of consistency groups.  You can create or update multiple volume groups with required volumes based on your requirement. 
 
     You can add volumes to a consistency group before or after attaching the consistency groups to a virtual server instance. The attached volumes of a virtual server instance can also belong to different volume groups.
@@ -112,10 +112,51 @@ Configure the secondary site with the following steps:
 3. Create a standby virtual server instance that have onboarded auxiliary volumes using the API request.
     You can create a standby virtual server instance with onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
     
-4. Stop and Start volume groups to enable failover and failback operations using the volume-group action API.
-<!-- <Failover failback info> -->
+4. Stop and Start volume groups to enable failover and failback operations using the volume-group [action API(dummy link)](). For more information about failover and failback, see [Performing a failover and failBack operation(dummy link)]().
+
+## Onboarding auxiliary volumes
+{: onboard-aux-vol}
+
+The auxiliary volumes exist on the storage controller of the secondary site. You must use (onboard) the auxiliary volumes in the Power System Virtual Server workspace to manage them from the secondary site.
+
+You must submit the following fields for an onboarding request:
+1. Enter the CRN of the virtual server instance. 
+2. Select the **auxVolumeName** indicator for a volume to get the auxiliary volume name from primary site.
+
+Onboard operation is an asynchronous operation that can take some time, depending upon the number of volumes. You can use GetOnboarding API to check the status of the operation.
+
+The onboarding operation creates  the following:
+1. A new volume ID for auxiliary volumes.
+2. When the master volume is a part of a volume group, it also creates the new volume-group ID for the existing consistency group on the storage host and add the newly created volume IDs to the group ID.
+
+Volume ID and group ID for volume pair will differ on both sites, but consistency group name would be the same for the mater-aux volume pair.
+{: Note}
+
+## Performing a failover and failBack operation
+{: perform-fail-over-back}
+
+You can perform a failover by stopping volume-group with access as true. This action provides read access to volumes from the secondary site making the volumes accessible from the secondary site.
+
+You can start a volume group with primary as `aux` to switch roles, enabling input and output operation for current workloads.
+
+You can do a failback operation by switching the volume group role back to primary. You need to perform the following steps to perform a failback operation:
+1. Stop the volume group.
+
+2. Start the volume group with primary as `master`.
 
 
+## Impacts on other {{site.data.keyword.powerSys_notm}} operations
+{:impacts-on-powervs}
+
+The impacts on other {{site.data.keyword.powerSys_notm}} operations due to global replication service are as follows:
+
+1. There are no changes in image interfaces and no replication support for images.
+2. There are no changes in the operation interface and storage pool affinity rules for virtual server instances. The replication and non-replication enabled volumes now support volume attachment and detachment.
+3. Snapshot and capture are allowed for a virtual server instance with replication and non-replication enabled volumes if the volumes are from the same storage pool.
+4. You can perform snapshots and capture a virtual server instance using non-replication enabled volumes internally though volumes of a virtual server instanceare replication enabled.
+5. All volume operations are allowed except when the volume is a part of a volume group, like extending volume size.
+6. Cloned volumes are replication enabled if source volume is replication enabled.
+7. The cloned volumes are replication enabled when the source volume is replication enabled.
 
 
 
