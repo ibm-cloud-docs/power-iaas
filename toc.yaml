@@ -63,6 +63,7 @@ toc:
               - importing-boot-image.md
               - downloading-fixes.md
               - volume-snapshot-clone.md
+              - global-replication-service.md
       - topicgroup: 
             label: Networking
             topics:
