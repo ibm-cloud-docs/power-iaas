@@ -77,14 +77,14 @@ When you create a replication-enabled volume that uses {{site.data.keyword.power
 {: class="simple-table"}
 {: caption="Table 1. Scenario that explains how primary and secondary site is created" caption-side="bottom"}
 
-In addition to creating replication-enabled volumes, you must complete other actions on primary and secondary sites to configure the GRS. You can check whether volume is master or auxiliary volume. For more information, see [How can I check whether volume is primary or auxiliary volume?](/docs/power-iaas?topic=power-iaas-getting-started-GRS#check-for-primary-vol)
+In addition to creating replication-enabled volumes, you must complete other actions on primary and secondary sites to configure the GRS. You can check whether volume is master or auxiliary volume. For more information, see [How can I check whether volume is primary or auxiliary volume?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#check-for-primary-vol)
 
 ## Configuring the primary site
 {: #configure-primary-site}
 
 Configure the primary site with the following steps:
 1. Create a replication enabled volumes by using the [API request(dummy link)]().
-    The new field `replicationEnabled` is true in the background to create new replication-enabled volumes when you call the API request. You can convert existing volumes to replication enabled volumes. For more information, see [How do I convert existing volumes to replication enabled volumes?](/docs/power-iaas?topic=power-iaas-getting-started-GRS#convert-to-replication-vol)  
+    The new field `replicationEnabled` is true in the background to create new replication-enabled volumes when you call the API request. You can convert existing volumes to replication enabled volumes. For more information, see [How do I convert existing volumes to replication enabled volumes?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#convert-to-replication-vol)  
 
 2. Create a virtual server instance with replication-enabled volumes by using the {{site.data.keyword.powerSys_notm}} user interface.
     You must provision a new virtual server instance by using the created replication-enabled volumes. You can also attach the replication-enabled volumes post creation of a virtual server instance.
