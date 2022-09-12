@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-03-24"
+lastupdated: "2022-09-12"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -347,3 +347,21 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 {: faq}
 
 For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
+
+## How do I convert existing volumes to replication enabled volumes?
+{: #convert-to-replication-vol}
+{: faq}
+
+You can  retype the volume to toggle the `replicationEnable` flag of the volume using this [API()](). This is possible only when the storage host of existing volume supports replication.
+
+## How can I check whether volume is already replication enabled?
+{: #check-for-replication-vol}
+{: faq}
+
+You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
+
+## How can I check whether volume is primary or auxiliary volume?
+{: #check-for-primary-vol}
+{: faq}
+
+Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicationEnabled` is true and `isAuxiliary` is false then volume is a primary volume.
