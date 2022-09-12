@@ -13,7 +13,8 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with Global replication service
+# Managing Global replication service
+
 {: #getting-started-GRS}
 
 The {{site.data.keyword.powerSysFull}} provides a set of APIs through which you can enable disaster recovery (DR) solution for your virtual server instances . The storage replication uses the Global Mirror Change volume technology. 
@@ -40,20 +41,21 @@ You can use the GRS location APIs to check about the locations that supports sto
 
 ## Pricing for Global replication service
 
-{:pricing-GRS}
+{: pricing-GRS}
+
 Global Replication Service involves duplication of storage volumes across sites. The replication enabled volumes are charged based on following two components:
 1. When both primary and secondary sites are up, and running.
 2. When one site is up, and running.
 
 ### Pricing details when both sites are up, and running
-{:pricing-both-sites-up}
+{: pricing-both-sites-up}
 
 The pricing details when both primary and secondary sites are up, and running is calculated as follows: 
 - Volume infrastructure cost: When you create a replication of disk(s) of size `X GB` on the primary site, a disk space of `2X GB` from the primary site is charged based on your tier selection. No charges are applicable for auxiliary volumes from the mapped replication site.
 - Replication capability cost: You are charged `$Y/GB` for the `X GB`  of the disk replicated from the primary site through a new part number `GLOBAL_REPLICATION_STORAGE_GIGABYTE_HOURS`.
 
 ### Pricing details when one sites is down
-{:pricing-one-site-down}
+{: pricing-one-site-down}
 
 Consider a scenario where the site 1 is down, and site 2 is up and running then metering is possible from site 2 and vice versa. The pricing details for site 2 is calculated as follows:
 - Volume infrastructure cost:  
@@ -62,7 +64,7 @@ Consider a scenario where the site 1 is down, and site 2 is up and running then 
 - Replication capability cost:  You do not pay any charge for any replication-enabled volume in the site 2 when the site 1 is down.
 
 ## Configuring the Global replication service
-{configure-GRS}
+{: configure-GRS}
 
 The GRS involves two sites where storage replication is enabled. These two sites are fixed and mapped into one-to-one relationship mode in both directions.
 When you create a replication-enabled volume using Power System Virtual Server APIs on site 1, then it creates two volumes in the background:
@@ -104,7 +106,7 @@ Configure the primary site with the following steps:
 {: configure-secondary-site}
 
 Configure the secondary site with the following steps:
-1. Onboard the auxiliary volume using the API request.
+1. Onboard the auxiliary volume using the [API request(dummy link)](). For more information about onboarding see [Onboarding auxiliary volumes](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes)
 
 2. Collect the auxiliary volume names from the primary site and onboard them to manage from secondary sites. 
     This operation will provide the new volumes IDs and volume-group Ids (if applicable). The volume IDs and volume-group Ids help to manage the failover and failback operations.
@@ -132,7 +134,7 @@ The onboarding operation creates  the following:
 Volume ID and group ID for volume pair will differ on both sites, but consistency group name would be the same for the mater-aux volume pair.
 {: Note}
 
-## Performing a failover and failBack operation
+## Performing a failover and failback operation
 {: perform-fail-over-back}
 
 You can perform a failover by stopping volume-group with access as true. This action provides read access to volumes from the secondary site making the volumes accessible from the secondary site.
@@ -158,6 +160,16 @@ The impacts on other {{site.data.keyword.powerSys_notm}} operations due to globa
 6. Cloned volumes are replication enabled if source volume is replication enabled.
 7. The cloned volumes are replication enabled when the source volume is replication enabled.
 
+## Limitations of Global replication service
 
+{: limitations-GRS}
+
+The limitations of GRS are as follows:
+
+- You must set the bootable flag explicitly on onboarded volumes if required.
+- You cannot perform a snapshot restore in auxiliary volumes as it is not allowed.
+- The update volume-group operation can fail when there is a mismatch in volume-group and volume replication states. If the volume group is in an error state, then the user can use the volume-group action API to reset the volume group status for availability.
+- When you switch the volume-group role, it can take a few minutes (max 5 minutes) to update the primary role for the remote volume.
+- Some fields of volume and volume group on the secondary site might not match with actual storage host data when you perform out-of-band operations on the primary site. You can use volume group storage details and volume remote copy APIs to check the actual data.
 
 
