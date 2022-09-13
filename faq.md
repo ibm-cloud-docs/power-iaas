@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -364,4 +364,4 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: #check-for-primary-vol}
 {: faq}
 
-Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicationEnabled` is true and `isAuxiliary` is false then volume is a primary volume.
+Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicationEnabled` is true and `isAuxiliary` is false then volume is a master volume.

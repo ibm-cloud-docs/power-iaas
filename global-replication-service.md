@@ -81,7 +81,7 @@ When you create a replication-enabled volume that uses {{site.data.keyword.power
 {: class="simple-table"}
 {: caption="Table 1. Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
-In addition to creating replication-enabled volumes, you must complete other actions on primary and secondary sites to enable the Disaster Recovery solution. You can check whether a volume is master or auxiliary volume. For more information, see [How can I check whether a volume is primary or auxiliary volume?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#check-for-primary-vol)
+In addition to creating replication-enabled volumes, you must complete other actions on primary and secondary sites to enable the Disaster Recovery solution. You can check whether a volume is master or auxiliary volume. For more information, see [How can I check whether a volume is master or auxiliary volume?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#check-for-primary-vol)
 
 ## Actions on the primary site
 {: #configure-primary-site}
@@ -119,13 +119,13 @@ Actions that you must do to enable GRS on the secondary site are as follows:
 {: #onboard-aux-vol}
 
 The auxiliary volumes exist on the storage controller of the secondary site that you can onboard in the Power System Virtual Server workspace to manage them from the secondary site. Collect the following information from the primary site and enter them in the onboarding request to onboard the auxiliary volumes:
-1. CRN of the {{site.data.keyword.powerSys_notm}} instance where the master volumes are located (primary site). 
-2. Auxiliary volume name of primary site. Get the name from the **auxVolumeName** field.
+1. Fetch the CRN of the {{site.data.keyword.powerSys_notm}} workspace instance where the master volumes are located (primary site). 
+2. Fetch the names from **auxVolumeName** field of master volumes from primary site to onboard a list of names of auxiliary volume. 
 
 Onboard operation is an asynchronous operation that can take some time, depending upon the number of volumes. You can use [GetOnboarding API(dummy link)]() to check the status of the operation.
 
-The onboarding operation creates a new volume ID for auxiliary volumes.
-When the master volume (in primary site) is a part of a volume group, the onboarding operation creates a new volume group ID for the existing volume group on the storage host and adds the new auxiliary volume IDs to the new group ID.
+The onboarding operation creates a new volume ID for each onboarded auxiliary volume.
+When the master volume (in primary site) is a part of a volume group, the onboarding operation creates a new volume group ID for the existing volume group on the storage host. It adds the new auxiliary volume IDs to the new group ID.
 
 Volume IDs and group ID for master-aux volume pair are different on primary and secondary sites. However, you can check other fields such as **materVolumeName**, **auxVolumeName**, and **consistencyGroupName** to identify mater-aux volume pair.
 {: Note}
@@ -146,11 +146,10 @@ You can do a failback operation by switching the volume group role back to prima
 
 The impacts on other {{site.data.keyword.powerSys_notm}} operations due to global replication service are as follows:
 
-1. No changes in image interfaces and no replication support for images.
-2. No changes in the operation interface and storage pool affinity rules for virtual server instances. The replication and non-replication-enabled volumes now support volume attachment and detachment.
-3. Snapshot and capture are allowed for a virtual server instance with replication and non-replication-enabled volumes when the volumes are from the same storage pool. The snapshot and capture is done by using the non-replication-enabled volumes internally even though the volumes of a virtual server instance are replication-enabled.
-5. All volume operations are allowed except when the volume is a part of a volume group, like extending volume size.
-7. The cloned volumes are replication-enabled when the source volume is replication-enabled.
+- No changes in image interfaces and no replication support for images.
+- No changes in the operation interface and storage pool affinity rules for virtual server instances. The replication and non-replication-enabled volumes now support volume attachment and detachment.
+- Snapshot and capture are allowed for a virtual server instance with replication and non-replication-enabled volumes when the volumes are from the same storage pool. The snapshot and capture is done by using the non-replication-enabled volumes internally even though the volumes of a virtual server instance are replication-enabled.
+- The cloned volumes are replication-enabled when the source volume is replication-enabled.
 
 ## Limitations of Global replication service
 {: #limitations-GRS}
@@ -159,6 +158,7 @@ The limitations of GRS are as follows:
 
 - You must set the bootable flag explicitly on onboarded volumes if required.
 - You cannot perform a snapshot restore in auxiliary volumes as it is not allowed.
-- The update volume-group operation can fail when there is a mismatch in volume-group and volume replication states. If the volume group is in an error state, then the user can use the volume-group action API to reset the volume group status for availability.
+- The update volume-group operation can fail upon a mismatch in volume-group and volume replication states. If the volume group is in an error state, then the user can use the volume-group action API to reset the volume group status for availability.
 - When you switch the volume-group role, it can take a few minutes (max 5 minutes) to update the primary role for the remote volume.
 - Some fields of volume and volume group on the secondary site might not match with actual storage host data when you perform out-of-band operations on the primary site. You can use volume group storage details and volume remote copy APIs to check the actual data.
+- All volume operations are allowed except when the volume is a part of a volume group, such as extending volume size.
