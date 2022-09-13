@@ -61,7 +61,7 @@ The pricing details when both primary and secondary sites are up, and running is
 Consider a scenario where one site (site 1) fails due to a catastrophe. The other site (site 2) is up and running then metering is possible from site 2 and vice versa. The pricing details for site 2 are calculated as follows:
 - Volume infrastructure cost:
     - When you create a replication of disk of size `X GB` on the site 2, a disk space of `2X GB` from the site 2 is charged based on your tier selection.
-    - When site 1 is down, auxiliary volumes are charged for a double size, as you do not pay for corresponding primary volumes on site 1.
+    - When site 1 is down, auxiliary volumes are charged for a double size, as you do not pay for corresponding master volumes on site 1.
 - Replication capability cost:  You do not pay any charge for any replication-enabled volume in the site 2 when the site 1 is down.
 
 ## Setting up the Global replication service
@@ -156,9 +156,17 @@ The impacts on other {{site.data.keyword.powerSys_notm}} operations due to globa
 
 The limitations of GRS are as follows:
 
-- You must set the bootable flag explicitly on onboarded volumes if required.
 - You cannot perform a snapshot restore in auxiliary volumes as it is not allowed.
 - The update volume-group operation can fail upon a mismatch in volume-group and volume replication states. If the volume group is in an error state, then the user can use the volume-group action API to reset the volume group status for availability.
 - When you switch the volume-group role, it can take a few minutes (max 5 minutes) to update the primary role for the remote volume.
-- Some fields of volume and volume group on the secondary site might not match with actual storage host data when you perform out-of-band operations on the primary site. You can use volume group storage details and volume remote copy APIs to check the actual data.
+- Some fields of volume and volume group on the secondary site might not match with actual storage host data when you perform `outofband` operations on the primary site. You can use volume group storage details and volume remote copy APIs to check the actual data.
+- `OutOfBand` operations like volume resize and deletion are reflected on the storage host of the remote site usually in few minutes. However, it can take longer, maximum one day, to sync across the upper software stack of {{site.data.keyword.powerSys_notm}} on the remote site.
 - All volume operations are allowed except when the volume is a part of a volume group, such as extending volume size.
+
+## Best practices for Global replication service
+{: #best-practices-GRS}
+
+- You must set the bootable flag explicitly on onboarded volumes if required.
+- Start the onboarding of auxiliary volumes only when the master volumes and volume-group are in `consistent_copying` state.
+- When you add or remove a master or auxiliary volume from a volume-group from one site then, you must perform the same operation from other site to keep the data is in sync.
+- It is recommended to delete the volumes from primary and secondary site. Volume is charged when auxiliary volume is deleted but not the master volume.
