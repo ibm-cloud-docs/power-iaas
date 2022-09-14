@@ -75,7 +75,7 @@ Create an SPP by specifying the following parameters:
 
 When you define the three parameters, a backend processing determines the best host for the new SPP.
 
-When you fail to configure an SPP successfully on the host, the SPP will not have any allocated processing cores. You need to delete such SPPs manually as they do not get cleaned up automatically.
+When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. You need to delete such SPPs manually as they do not get cleaned up automatically.
 {:note}
 
 ### Create a Shared processor pool
