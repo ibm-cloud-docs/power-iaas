@@ -169,6 +169,9 @@ The following table explains the difference in configuration of a non-Epic and a
 |Epic|Always Tier1|Always Dedicated|Always E980|
 {: caption="Table 2. Configuration difference of a non-Epic and an Epic workload" caption-side="bottom"}
 
+The epic VMs are not pinned by default that you can use internally for non production usage. You must consider pinning the production epic VMs to avoid performance issues.
+{:note}
+
 You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
 
 1. Epic supports AIX 7.2 and later. You cannot choose AIX 7.1.
