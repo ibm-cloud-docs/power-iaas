@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2021-01-31"
+lastupdated: "2022-09-15"
 
 keywords: help and support, support ticket, faq, create new case
 
@@ -25,13 +25,13 @@ subcollection: power-iaas
 # Getting help and support
 {: #getting-help-and-support}
 
-Before you open a support ticket against the {{site.data.keyword.powerSysShort}} service, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
+Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
 {: shortdesc}
 
 ## PowerVS infrastructure cases
 {: #support-case-IBM-cloud}
 
-To open a support ticket for the {{site.data.keyword.powerSys_notm}} service, complete the following steps:
+To open a support ticket for {{site.data.keyword.powerSys_notm}}, complete the following steps:
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/catalog){: external} with your IBM Cloud account credentials.
 2. In the menu bar, click **Support**.

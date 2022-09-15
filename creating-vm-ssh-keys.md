@@ -65,15 +65,13 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
 1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
 
-2. From the **Resource List**, select your service under **Services** to go to the **Manage** pane.
+2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm} user interface.
 
-    ![IBM Cloud Resource List](./images/power-iaas-resource-list.png "IBM Cloud Resource List"){: caption="Figure 3. IBM Cloud Resource List" caption-side="bottom"}
-
-3. Click **New instance**.
+3. Click **Create instance**.
 
 4. Under the **Virtual servers** section, select **Add SSH Keys**.
 
-    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 5. SSH key navigation" caption-side="bottom"}
+    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 1. SSH key navigation" caption-side="bottom"}
 
 5. Enter a **Key name** and your previously generated **Public key**.
 

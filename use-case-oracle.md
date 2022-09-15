@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-03-12"
+lastupdated: "2021-09-15"
 
 keywords: use case, Oracle, database, demos
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}} instance.
 {: shortdesc}
 
-The following videos do not capture the latest updates to the {{site.data.keyword.powerSys_notm}} service. You might notice significant differences in functions between what is shown in the video and what's currently available.
+The following videos do not capture the latest updates to {{site.data.keyword.powerSys_notm}}. You might notice significant differences in functions between what is shown in the video and what's currently available.
 {: important}
 
 ## Modernizing an Oracle database

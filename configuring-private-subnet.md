@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2020-10-05"
+lastupdated: "2022-09-15"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
@@ -49,7 +49,7 @@ To create a new subnet, complete the following steps:
 
 3. Click the arrow next to **Services**.
 
-4. Select the Power Systems Virtual Server service you'd like to assign a subnet.
+4. Select the {{site.data.keyword.powerSys_notm}} workspace you'd like to assign a subnet.
 
 5. Click **Subnets** in the left navigation pane, then **Add subnet**.
 

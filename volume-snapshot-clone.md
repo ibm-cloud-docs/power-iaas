@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2021-02-11"
+lastupdated: "2021-09-15"
 
 keywords: volume snapshot, clone, restore, api, flashcopy
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 # Snapshots, cloning, and restoring
 {: #volume-snapshot-clone}
 
-The {{site.data.keyword.powerSysShort}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
+{{site.data.keyword.powerSysShort}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
 
 ## Taking a snapshot
 {: #volume-snapshot}
@@ -90,7 +90,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 **Use case**: You can perform the clone operation on multiple volumes that are attached to the VM and that are in an available state.
 
-**Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} service creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
+**Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
 
 **Steps**: Performing the clone operation on a volume consists of three steps: prepare, start, and execute the volumes-clone request. These steps allow you to perform preparatory actions and to authorize the ongoing I/O operations on the source volumes. Breaking the clone operation on a volume into multiple steps provides consistent clones and reduces the VM quiesce time. The clone operation on a volume consists the following steps:
 
@@ -162,7 +162,7 @@ Performs the remaining execution action to create the cloned volumes from the av
 ## Restoring a snapshot
 {: #restoring-snapshot}
 
-The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} service creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
+The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
 
 ### Best practices
 {: #best-practice-vol}

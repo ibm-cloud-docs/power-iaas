@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2020-06-15"
+lastupdated: "2022-09-15"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -22,10 +22,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using SLES within the Power Systems Virtual Server service
+# Using SLES within the Power Systems Virtual Server
 {: #using-linux}
 
-You can use the {{site.data.keyword.powerSys_notm}} service to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
+You can use {{site.data.keyword.powerSys_notm}} to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. {{site.data.keyword.powerSys_notm}} provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
 
 - `SLES 12 - Minimum level: SP4 + Kernel  4.12.14-95.54.1`
 - `SLES 15 - Minimum level: SP1 + kernel 4.12.14-197.45-default`
@@ -40,7 +40,7 @@ When you create an OVA image, you must include the appropriate {{site.data.keywo
 ## Registering and subscribing to SLES
 {: #registering-sles}
 
-The {{site.data.keyword.powerSys_notm}} service does not provide a subscription to SLES. You must purchase the SLES subscription from SUSE and then enable it.
+{{site.data.keyword.powerSys_notm}} does not provide a subscription to SLES. You must purchase the SLES subscription from SUSE and then enable it.
 
 You cannot contact the SUSE-based repository and download the appropriate software packages without first enabling your SLES subscription.
 {: note}
@@ -52,7 +52,7 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 ## Capturing and importing a SLES image
 {: #preparing-linux-image}
 
-To use SLES within the {{site.data.keyword.powerSys_notm}} service, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
+To use SLES within the {{site.data.keyword.powerSys_notm}}, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
 
 ## Linux networking
 {: #linux-networking}
