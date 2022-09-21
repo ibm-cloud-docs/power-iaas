@@ -153,28 +153,28 @@ On IBM Power Systems E950 and E980 that are running in a multiple VM environment
 
 You can configure your virtual machine (VM) instance to deploy Epic workloads when you select AIX as your operating system.
 
-To configure a VM instance for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify a VM deployed on epic by checking the corresponding VM details page. On the VM details page, the **Deployment type** field must be se to **Epic**.
+To configure a VM instance for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify whether the deployed VM supports Epic workloads by checking the corresponding VM details page. On the VM details page, the **Deployment type** field must be se to **Epic**.
 
-In the VM details page for the VMs that are epic, you should not create or attach volumes from tier 3 to avoid performance issues.
+In the VM details page, for the VMs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues.
 {:important}
 
-For the VMs that are epic and in shut-down state, you should not change the core type to any value other than dedicated to avoid performance issues.
+For the VMs on which Epic workloads are supported and are in shut-down state, you must not change the core type to any value other than dedicated to avoid performance issues.
 {:important}
 
-The following table explains the difference in configuration of a non-Epic and an Epic workload:
+The following table explains the difference in VM configuration that may or may not support Epic workloads:
 
-|VM deployed on|Storage volume|Core type|Machine type|
+|VM deployed for|Storage volume|Core type|Machine type|
 |-----|------|-----|-----|
-|Non-epic|tier1 or tier3|Shared uncapped or \n Shared capped or \n Dedicated|S922 or E980|
-|Epic|Always Tier1|Always Dedicated|Always E980|
-{: caption="Table 2. Configuration difference of a non-Epic and an Epic workload" caption-side="bottom"}
+|Non-epic workloads|Tier 1 or Tier 3|Shared uncapped, \n shared capped, or \n dedicated|S922 or E980|
+|Epic workloads|Always Tier 1|Always dedicated|Always E980|
+{: caption="Table 2. VM configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
 
 The epic VMs are not pinned by default that you can use internally for non production usage. You must consider pinning the production epic VMs to avoid performance issues.
 {:note}
 
-You get to choose to configure for epic only when you select AIX as your operating system. The other combinations that get selected by default are as follows:
+You can choose to configure a VM for Epic workloads only when you select AIX as your operating system. The other conditions that apply are as follows:
 
-1. Epic supports AIX 7.2 and later. You cannot choose AIX 7.1.
-2. Supported storage volume is Tier 1. You can change or attach tier 3 that might lead, to performance issues.
-3. Supported machine type is e980. You cannot select s922.
-4. Supported core type is dedicated. You can switch to other types that might lead, to performance issues.
+1. Epic workloads is supported on AIX 7.2, and later. You cannot choose AIX 7.1.
+2. Supported storage volume is Tier 1. You can change or attach Tier 3 storage volume. This lead, to performance issues.
+3. Supported machine type is E980. You cannot select S922.
+4. Supported core type is dedicated. You can switch to other core type, but it might lead, to performance issues.
