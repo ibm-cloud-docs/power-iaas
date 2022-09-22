@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -364,7 +364,7 @@ For planned maintenance and disruptive changes, the Power Systems Virtual Server
 {: #convert-to-replication-vol}
 {: faq}
 
-You can  retype the volume to toggle the `replicationEnable` flag of the volume using this [API()](). This is possible only when the storage host of existing volume supports replication.
+You can  retype the volume to toggle the `replicationEnable` flag of the volume using. This is possible only when the storage host of existing volume supports replication.
 
 ## How can I check whether volume is already replication enabled?
 {: #check-for-replication-vol}
@@ -377,3 +377,11 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: faq}
 
 Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicationEnabled` is true and `isAuxiliary` is false then volume is a master volume.
+
+## How can I check the serial number of my virtual server instance?
+{: #check-serial-no}
+{: faq}
+
+The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value. 
+
+You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
