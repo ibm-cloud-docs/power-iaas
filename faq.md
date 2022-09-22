@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-05-17"
+lastupdated: "2022-09-22"
 
-keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete service, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
 subcollection: power-iaas
 
@@ -40,7 +40,7 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 
 The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, or E1080 (9080-HEX)-->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
-**AIX** - The {{site.data.keyword.powerSys_notm}} service supports only AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+**AIX** - {{site.data.keyword.powerSys_notm}} supports AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
@@ -49,13 +49,13 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 
 For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
-**IBM i** - The {{site.data.keyword.powerSys_notm}} service supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+**IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, and E1080 (9080-HEX)--> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-**Linux** - The {{site.data.keyword.powerSys_notm}} service supports the following Linux distributions:
+**Linux** - {{site.data.keyword.powerSys_notm}} supports the following Linux distributions:
 
 - SUSE Linux Enterprise (SLES) 12 and SLES 15
 - Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
@@ -144,7 +144,7 @@ There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores ro
 {: #proc-table-2}
 {: tab-title="Shared processors"}
 
-## How does my current environment compare to what's available through the Power Systems Virtual Server service?
+## How does my current environment compare to what's available through the Power Systems Virtual Server?
 {: #performance}
 {: faq}
 
@@ -194,7 +194,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the service. You cannot use an existing license that you already purchased. The {{site.data.keyword.powerSys_notm}} service does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. RHEL and SLES OVA images are currently supported.
+The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. {{site.data.keyword.powerSys_notm}} does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. RHEL and SLES OVA images are currently supported.
 
 You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
@@ -223,11 +223,11 @@ Yes, {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment.
 
 There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
-## Can you tell me more about your service's snapshotting, cloning, and restoring capabilities?
+## Can you tell me more about the snapshotting, cloning, and restoring capabilities?
 {: #snapshot}
 {: faq}
 
-The {{site.data.keyword.powerSys_notm}} service provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power Systems Virtual Servers?
 {: #connecting}
@@ -286,13 +286,25 @@ IBM uses the same tools that are on an on-premises system.
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
 
-## How do I delete (cancel) the service or a specific instance?
+## How do I delete a workspace?
 {: #delete-service}
 {: faq}
 
-You can delete the service by clicking the overflow menu in the **Virtual server instances** page and selecting **Delete service**. To delete an instance, click the trash icon after you select the wanted instance.
+To delete a workspace (and all its resources), use the left navigation to navigate the workspace page. Find the workspace to be deleted and click on the overflow menu on the top right corner of the tile. Click **Delete** and confirm the request from the pull-down menu by typing *Delete* in the text field. Finally, click the red **Delete** button to initiate the request.
 
-## How do I open a support ticket for the Power Systems Virtual Server service?
+## How do I delete a single virtual server instance?
+{: #delete-service-instance}
+{: faq}
+
+There are two methods to delete a virtual server instance. Both deletion methods are manual processes. There is no way to delete all VSIs without deleting the workspace or deleting a subset of the virtual server instance.
+
+- Delete a single virtual server instance from the Virtual server instances page.
+Click on the overflow menu (icon with 3 vertical dots) on the far right of each virtual server instance entry on the table. From the pull-down menu, click **Delete** to open the delete confirmation modal. Click **Delete instance** to initiate the deletion request. This action cannot be undone.
+
+- Delete a single virtual server instance from the its details page.
+Navigate to the virtual server instance's details page by clicking on the virtual server instance name on the table on the Virtual server instances page. Find and click on the trash icon on the top right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+
+## How do I open a support ticket for the Power Systems Virtual Server workspace?
 {: #support-ticket}
 {: faq}
 
@@ -347,3 +359,29 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 {: faq}
 
 For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
+
+## How do I convert existing volumes to replication enabled volumes?
+{: #convert-to-replication-vol}
+{: faq}
+
+You can  retype the volume to toggle the `replicationEnable` flag of the volume using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volume supports replication.
+
+## How can I check whether volume is already replication enabled?
+{: #check-for-replication-vol}
+{: faq}
+
+You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
+
+## How can I check whether volume is master or auxiliary volume?
+{: #check-for-primary-vol}
+{: faq}
+
+Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicationEnabled` is true and `isAuxiliary` is false then volume is a master volume.
+
+## How can I check the serial number of my virtual server instance?
+{: #check-serial-no}
+{: faq}
+
+The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value. 
+
+You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.

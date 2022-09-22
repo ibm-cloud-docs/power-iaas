@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-07-06"
+lastupdated: "2022-09-15"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -61,7 +61,7 @@ The following table displays the IAM platform access roles and the corresponding
 ## Service access roles
 {: #service-access-roles}
 
-You can use the service access roles to define what users can do with {{site.data.keyword.powerSys_notm}} service functions. The following table displays the IAM service access roles and the corresponding actions a user can complete with {{site.data.keyword.powerSys_notm}}:
+You can use the service access roles to define what users can do with {{site.data.keyword.powerSys_notm}} functions. The following table displays the IAM service access roles and the corresponding actions a user can complete with {{site.data.keyword.powerSys_notm}}:
 
 | Service access role | Description of actions |
 |-----------|-------------------------|

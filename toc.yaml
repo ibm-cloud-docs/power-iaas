@@ -57,11 +57,13 @@ toc:
               - modifying-instance.md
               - virtual-applianes-catalog.md
               - manage-placement-groups.md
-              - virtual-tape-libraries.md 
+              - getting-started-with-spp.md
+              - virtual-tape-libraries.md
               - capturing-exporting-vm.md
               - importing-boot-image.md
               - downloading-fixes.md
               - volume-snapshot-clone.md
+              - global-replication-service.md
       - topicgroup: 
             label: Networking
             topics:

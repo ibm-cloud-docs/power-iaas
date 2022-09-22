@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2021
+  years: 2020, 2022
 
-lastupdated: "2021-07-22"
+lastupdated: "2022-09-15"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -21,10 +21,10 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using RHEL within the Power Systems Virtual Server service
+# Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-You can use the Power Systems Virtual Server service to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The Power Systems Virtual Server service provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
+You can use the {{site.data.keyword.powerSys_notm}} to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
 
 - RHEL 8.1
 - RHEL 8.2
@@ -47,7 +47,7 @@ You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to
 ## Registering and subscribing to RHEL
 {: #subscribing-to-rhel}
 
-The Power Systems Virtual Server service does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
+{{site.data.keyword.powerSys_notm}} does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
 
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
@@ -59,16 +59,16 @@ You cannot contact the Red Hat-based repository and download the appropriate sof
 ## Capturing and importing an RHEL image
 {: #import-rhel-image}
 
-To use RHEL within the Power Systems Virtual Server service, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
+To use RHEL within {{site.data.keyword.powerSys_notm}}, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license (BYOL). If you cannot use PowerVC to capture an image, see the [Power Systems OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
 
 ## Linux networking
 {: #linux-networking}
 
-To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a Power Systems Virtual Server. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: external}.
+To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: external}.
 
 When you are configuring a Source NAT (SNAT) gateway between your public and private networks, ensure that the TCP checksum offload option is disabled. You must also set the maximum transmission unit (MTU) value to 1450 on the network interface that is connected to the private network. To ensure that the interface checksum offloading and MTU settings of the network interface are persistent whenever the virtual machine is restarted, you need to modify the configuration files of your network interface.
 
-The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
+The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM {{site.data.keyword.powerSys_notm}} VMs are deployed by using ibmveth devices only.
 {: note}
 
 You can verify that the device interface type is `ibmveth` by using the following command: 

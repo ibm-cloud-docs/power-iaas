@@ -35,8 +35,8 @@ Full Linux subscription is supported on the following OS versions:
 SLES:
 
    - SLES 15 SP2 (SAP only)
-
    - SLES 15 SP3 (General and SAP)
+   - SLES 15 SP4 (General)
 
 RHEL:
 

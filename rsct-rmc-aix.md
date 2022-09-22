@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2021-10-18"
+lastupdated: "2022-09-15"
 
 keywords: rsct, rmc, IPv6
 
@@ -67,7 +67,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: external}.
 
-    *3.2.1* is the **minimum** release that is supported by the {{site.data.keyword.powerSys_notm}} service. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
+    *3.2.1* is the **minimum** release that is supported by {{site.data.keyword.powerSys_notm}}. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
     {: important}
 
 2. If you still have the {{site.data.keyword.powerSys_notm}} deployed boot image, complete the following steps:

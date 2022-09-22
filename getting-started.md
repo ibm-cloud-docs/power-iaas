@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-05-07"
+lastupdated: "2022-09-13"
 
 keywords: getting started, infrastructure as a service, iaas, before you begin, terminology, video, how-to
 
@@ -29,7 +29,7 @@ subcollection: power-iaas
 
 In the data centers, the Power Systems Virtual Servers are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or on-premises environments. This infrastructure design enables Power Systems Virtual Servers to maintain key enterprise software certification and support as the Power Systems Virtual Server architecture is identical to certified on-premises infrastructure.
 
-Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabilities in an off-premises environment distinct from the IBM Cloud. You get fast, self-service provisioning, flexible management both on-premises and off-premises, and similar to on-premises it can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing that lets you easily scale up and out. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}} service, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
+Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabilities in an off-premises environment distinct from the IBM Cloud. You get fast, self-service provisioning, flexible management both on-premises and off-premises, and similar to on-premises it can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing that lets you easily scale up and out. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}}, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
 
 If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
@@ -38,7 +38,7 @@ If you are creating or configuring a Red Hat OpenShift Cluster on Power Systems 
 ## Terminology
 {: #terminology}
 
-Before you create a virtual server, you must understand the difference in terminology between a {{site.data.keyword.powerSys_notm}} **service** and a {{site.data.keyword.powerSys_notm}} **instance**. Think of the {{site.data.keyword.powerSys_notm}} **service** as a container for all {{site.data.keyword.powerSys_notm}} **instances** at a specific geographic region. The {{site.data.keyword.powerSys_notm}} **service** is available from the **Resource list** in the {{site.data.keyword.powerSys_notm}} user interface. The service can contain multiple {{site.data.keyword.powerSys_notm}} **instances**. For example, you can have two {{site.data.keyword.powerSys_notm}} **services**, one in Dallas, Texas, and another in Washington, D.C. Each service can contain multiple {{site.data.keyword.powerSys_notm}} **instances**.
+Before you create a virtual server, you must understand the difference in terminology between a {{site.data.keyword.powerSys_notm}} **workspace** and a {{site.data.keyword.powerSys_notm}} **instance**. Think of the {{site.data.keyword.powerSys_notm}} **workspace** as a container for all {{site.data.keyword.powerSys_notm}} **instances** at a specific geographic region. The {{site.data.keyword.powerSys_notm}} **workspace** is available from the **Resource list** in the {{site.data.keyword.powerSys_notm}} user interface. The workspace can contain multiple {{site.data.keyword.powerSys_notm}} **instances**. For example, you can have two {{site.data.keyword.powerSys_notm}} **workspaces**, one in Dallas, Texas, and another in Washington, D.C. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} **instances**.
 
 ## Before you begin
 {: #before-you-begin}

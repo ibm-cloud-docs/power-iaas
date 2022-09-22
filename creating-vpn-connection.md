@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2020, 2022
 
-lastupdated: "2020-12-11"
+lastupdated: "2022-09-15"
 
 keywords: vpn, connections ike, ipsec, internet key exchange, vpn, peer subnet, local subnet, gateway address
 
@@ -25,9 +25,9 @@ subcollection: power-iaas
 # Creating VPN connections
 {: #creating-vpn-connections}
 
-VPN connections is a separate service from the Power Systems Virtual Server service. You can use VPN connetions to configure your private network with IBM® Power Systems™ Virtual Server. The VPN coneections creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. {: shortdesc}
+VPN connections is a separate service from the {{site.data.keyword.powerSys_notm}} workspace. You can use VPN connetions to configure your private network with IBM® Power Systems™ Virtual Server. The VPN coneections creates a seamless connection that allows access to {{site.data.keyword.cloud}} resources from your {{site.data.keyword.powerSys_notm}} instance. {: shortdesc}
 
-Create a VPN connection within the {{site.data.keyword.powerSysShort}} service by following the step-by-stpe procedure described below.
+Create a VPN connection within the {{site.data.keyword.powerSysShort}} workspace by following the step-by-stpe procedure described below.
 
 1. Go to **VPN connections** and click **Create connection**.
 

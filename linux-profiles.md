@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2022
 
-lastupdated: "2020-06-10"
+lastupdated: "2022-09-15"
 
 keywords: linux, sles, compute, profiles, sap, hana, compute profile, balanced profile, e980
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # System Applications and Products in Data Processing (SAP) and Power Systems Virtual Servers
 {: #power-iaas-sap}
 
-Learn more about SAP within the {{site.data.keyword.powerSysShort}} service.
+Learn more about SAP within {{site.data.keyword.powerSysShort}}.
 {. shortdesc}
 
 ## Implementing SAP NetWeaver in the Power Systems Virtual Server environment
@@ -33,7 +33,7 @@ Learn more about SAP within the {{site.data.keyword.powerSysShort}} service.
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system within the Power Systems Virtual Server environment. Select **AIX** or **SLES for SAP (NetWeaver) - Client supplied subscription** under **Operating system** in the {{site.data.keyword.powerSys_notm}} user interface, and deploy the virtual machine (VM). After you deploy the VM, you can deploy NetWeaver inside of it.
 
-When you select the **SLES for SAP (NetWeaver) - Client supplied subscription** option, the **SLES for SAP** operating system is deployed inside the provisioned VM. You need to purchase the subscription for the **SLES for SAP** operating system and register it inside the VM by using the **SLES registration server**. For more information on purchasing and registering Linux subscriptions, see [Using Linux within the Power Systems Virtual Server service](/docs/power-iaas?topic=power-iaas-using-linux).
+When you select the **SLES for SAP (NetWeaver) - Client supplied subscription** option, the **SLES for SAP** operating system is deployed inside the provisioned VM. You need to purchase the subscription for the **SLES for SAP** operating system and register it inside the VM by using the **SLES registration server**. For more information on purchasing and registering Linux subscriptions, see [Using Linux within the Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux).
 
 You can choose any sized resources (CPU, memory, etc.) when you deploy the VM for NetWeaver purposes.
 {: note}

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2019-10-14"
+  years: 2019, 2022
+lastupdated: "2022-09-15"
 
-keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data, export data, data retention, gdpr
+keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
 
 subcollection: power-iaas
 
@@ -31,20 +31,19 @@ With the GDPR, IBM&reg; Power Systems&trade; Virtual Server clients can rely on 
 ## Online retention of client data
 {: #data-retention}
 
-Client data is retained during the client's use of the service (that is, until the client's contract termination or expiration) by default. Additionally, clients can define shorter retention periods for some of their data within the service to align with their own organizational retention policies. All client data is removed from the online service **1 business day** after the client's contract termination or expiration.
+Client data is retained during the client's use of the workspace (that is, until the client's contract termination or expiration) by default. Additionally, clients can define shorter retention periods for some of their data within the workspace to align with their own organizational retention policies. All client data is removed from the workspace **1 business day** after the client's contract termination or expiration.
 
 ## Backup retention of client data
 {: #backup-retention}
 
-The {{site.data.keyword.powerSys_notm}} service does not provide backups of client data.
+{{site.data.keyword.powerSys_notm}} does not provide backups of client data.
 
 ## Destruction of client data
 {: #data-destruction}
 
-The {{site.data.keyword.powerSys_notm}} service gives the client the ability to delete all online client data at their request or termination of the service. The secure destruction of all client data happens at the *end of life* of the associated infrastructure or cloud service.
+{{site.data.keyword.powerSys_notm}} gives the client the ability to delete all online client data at their request or termination of the workspace. The secure destruction of all client data happens at the *end of life* of the associated infrastructure or cloud service.
 
 ## Export of client data
 {: #data-export}
 
-IBM contractually commits, as required by various industry and government regulations, that we will provide clients the capability to export their data, or that IBM will provide the client with export copies of their data upon request. The {{site.data.keyword.powerSys_notm}} service
-gives clients the ability to export data on their own.
+IBM contractually commits, as required by various industry and government regulations, that we will provide clients the capability to export their data, or that IBM will provide the client with export copies of their data upon request. {{site.data.keyword.powerSys_notm}} gives clients the ability to export data on their own.

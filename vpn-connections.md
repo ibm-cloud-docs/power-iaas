@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 
-lastupdated: "2021-12-13"
+lastupdated: "2022-09-15"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -32,17 +32,17 @@ With VPN access, you can:
 - Ensure private and low-cost connectivity to IBM Cloud services.
 - Access your Virtual Servers through the private IP address by using Secure Shell (SSH) and your other on-premises applications that are running on your on-premises host.
 
-The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server Service Instance to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
+The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server workspace to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
 
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported. Currently, VPN for Power Systems Virtual Servers is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, and TOK04 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
-## Power Systems Virtual Servers service instances support with VPN
+## Power Systems Virtual Servers workspace support with VPN
 {: #powervs-support-vpn}
 
-Power Systems Virtual Server supports multiple service instances from the same account. However, only a single service instance can use a VPN connection. If you want to configure a VPN connection for multiple service instances for the same account, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple sworkspace from the same account. However, only a single workspace can use a VPN connection. If you want to configure a VPN connection for multiple sworkspaces for the same account, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Connecting to your on-premises network
 {: #vpn-connecting-onpremise}
@@ -57,7 +57,7 @@ You can configure your VPN to connect to your on-premises network by following t
 ### Configuring the on-premises VPN gateway
 {: #configure-onpremise-vpngateway}
 
-The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server Service instance. The configuration depends on the type of VPN gateway. See the following topics for details.
+The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server workspace. The configuration depends on the type of VPN gateway. See the following topics for details.
 
 Any configurations that are not listed in this section are not supported by PowerVS. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
 
@@ -162,7 +162,7 @@ To create a VPN connection, complete the following steps:
     - **IKE policy**: Use the default IKE policy or specify a custom IKE policy to define security parameters that will be used during Phase 1 of IKE negotiation.
     - **IPsec policy**: Use the default IPsec policy or specify a custom IPsec policy to define security parameters that will be used during Phase 2 of IKE negotiation.
     - **Mode**: Select either **Route-based mode** or **Policy-based mode** to determine how the traffic is sent through the VPN tunnel. You cannot edit the mode of the VPN connection after you create the VPN connection.
-    - **Local subnets**: Specify one or more subnets in the Power Virtual Server Service Instance that you want to connect through the VPN tunnel.
+    - **Local subnets**: Specify one or more subnets in the Power Virtual Server workspace that you want to connect through the VPN tunnel.
     - **Peer subnets**: Specify one or more subnets in the on-premises network that you want to connect through the VPN tunnel.
     - **Dead peer detection**: Shows the dead peer detection settings for the VPN connection. You can use the settings information to detect a dead IKE peer. These settings are displayed for informational purpose only; you cannot modify these settings.
 4. Review the estimated cost and click **Create**.
@@ -194,7 +194,7 @@ Dead Peer Detection     Action: restart, Interval: 10, Threshold: 5
 ## Attaching subnets to VPN connections
 {: #attach_subnets_VPN}
 
-If you create a Power Systems Virtual Servers service that contains VPN connections, you must also have Local subnets and Peer subnets that are connected to the VPN connection. When you create a VPN connection, ensure that a local subnet and a peer subnet are attached to the VPN connection.
+If you create a Power Systems Virtual Servers workspace that contains VPN connections, you must also have Local subnets and Peer subnets that are connected to the VPN connection. When you create a VPN connection, ensure that a local subnet and a peer subnet are attached to the VPN connection.
 
 For achieving redundancy between colocated VM and VPC, you must have two subnets that are attached to different VPNs. Both these subnets must be a part of the colocated VM.
 {: note}
@@ -213,7 +213,25 @@ In addition to the subnet restrictions specified in [Configuring and adding a pr
 
 a. Subnets with `10.xx.xx.xx/8` address are not supported.
 
-b. These additional subnets are restricted: TBD.
+b. These additional subnets are restricted:
+     `10.8.0.0/14`
+     `10.45.0.0/16`
+     `10.63.0.0/16`
+     `10.65.0.0/16`
+     `10.72.0.0/16`
+     `10.74.0.0/15`
+     `10.95.96.0/20`
+     `10.114.0.0/15`
+     `10.123.0.0/16`
+     `10.128.0.0/13`
+     `10.136.0.0/13`
+     `10.150.0.0/15`
+     `10.184.0.0/13`
+     `10.192.0.0/13`
+     `10.208.0.0/12`
+     `10.240.0.0/14`
+     `10.21.1.0/26`
+     `10.182.28.192/26`
 
 c. You might get a "subnet not available" message while creating subnets in certain locations. Choose a different subnet to resolve this issue.
 

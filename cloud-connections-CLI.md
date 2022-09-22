@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2022
 
-lastupdated: "2022-08-26"
+lastupdated: "2022-09-13"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -22,10 +22,10 @@ You can use {{site.data.keyword.cloud}} connections to connect your {{site.data.
 You can have a maximum of two {{site.data.keyword.cloud_notm}} ({{site.data.keyword.powerSys_notm}} Direct Link Connect) per account per {{site.data.keyword.powerSys_notm}} data center. To create a {{site.data.keyword.powerSys_notm}} {{site.data.keyword.cloud_notm}} you must have the required access to create the connections. For more information, see [Access roles requirements for Power System Virtual Server](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
 {: important}
 
-## Support for {{site.data.keyword.powerSys_notm}} service instances with {{site.data.keyword.cloud_notm}} connections
+## Support for {{site.data.keyword.powerSys_notm}} workspaces with {{site.data.keyword.cloud_notm}} connections
 {: #powervs-support-cloud-connections}
 
-{{site.data.keyword.powerSys_notm}} supports multiple service instances from the same account. However, any given {{site.data.keyword.cloud_notm}} connection can be used by only one service instance. If you want to configure a setup with multiple service instances for the same account and if you want these service instances to share an {{site.data.keyword.cloud_notm}} connection, open an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+{{site.data.keyword.powerSys_notm}} supports multiple workspaces from the same account. However, any given {{site.data.keyword.cloud_notm}} connection can be used by only one workspace. If you want to configure a setup with multiple workspaces for the same account and if you want these workspaces to share an {{site.data.keyword.cloud_notm}} connection, open an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 When you perform multiple {{site.data.keyword.cloud_notm}} connection tasks, actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the status might not change immediately.
 {: note}
@@ -54,11 +54,11 @@ To create an {{site.data.keyword.cloud_notm}} connection, complete the following
    You need to configure IBM Cloud Transit Gateway in `WDC06` manually. Select **Transit Gateway** as the network connection type instead of **Direct resources** while creating {{site.data.keyword.dl_short}} (2.0) Connect to use IBM Cloud Transit Gateway. Complete your connection by submitting an IBM Support case to the {{site.data.keyword.powerSys_notm}} team. For more information, see [Ordering Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
    {: note}
 
-4. In the **Virtual connections** section, you can establish a connection between multiple {{site.data.keyword.powerSys_notm}} services across different data centers by using an {{site.data.keyword.tg_full_notm}}. You can create virtual connections that are directly attached to the {{site.data.keyword.dl_short}} gateway, or you can choose to connect an {{site.data.keyword.tg_full_notm}} and then create a connection from it to your networks (VPC, classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable virtual connections. Select the virtual connections checkbox to continue. This setting is required if you selected the **Enable IBM Transit Gateway** checkbox in the previous step.
+4. In the **Virtual connections** section, you can establish a connection between multiple {{site.data.keyword.powerSys_notm}} workspaces across different data centers by using an {{site.data.keyword.tg_full_notm}}. You can create virtual connections that are directly attached to the {{site.data.keyword.dl_short}} gateway, or you can choose to connect an {{site.data.keyword.tg_full_notm}} and then create a connection from it to your networks (VPC, classic). You must create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/login?redirect=%2Finterconnectivity%2Ftransitconnection){: external} to enable virtual connections. Select the virtual connections checkbox to continue. This setting is required if you selected the **Enable IBM Transit Gateway** checkbox in the previous step.
 
 5. In the **Subnets** section, click **Attach existing** to attach an existing subnet to the connection. A GRE tunnel requires that a connection be attached to a subnet. You can create a new subnet. If you enable {{site.data.keyword.tg_full_notm}}, you can configure the GRE tunnel by using the {{site.data.keyword.tg_full_notm}} interface. For more information, see [Configuring subnets](/docs/power-iaas?topic=power-iaas-configuring-subnet). The table in this topic lists all the subnets that are attached to the IBM Cloud connection.
 
-   Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the service instance to communicate.
+   Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the workspace to communicate.
    {: note}
 
 6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
