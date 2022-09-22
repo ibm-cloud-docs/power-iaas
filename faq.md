@@ -364,7 +364,7 @@ For planned maintenance and disruptive changes, the Power Systems Virtual Server
 {: #convert-to-replication-vol}
 {: faq}
 
-You can  retype the volume to toggle the `replicationEnable` flag of the volume using. This is possible only when the storage host of existing volume supports replication.
+You can  retype the volume to toggle the `replicationEnable` flag of the volume using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volume supports replication.
 
 ## How can I check whether volume is already replication enabled?
 {: #check-for-replication-vol}
@@ -372,7 +372,7 @@ You can  retype the volume to toggle the `replicationEnable` flag of the volume 
 
 You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
 
-## How can I check whether volume is primary or auxiliary volume?
+## How can I check whether volume is master or auxiliary volume?
 {: #check-for-primary-vol}
 {: faq}
 

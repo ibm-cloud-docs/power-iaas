@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-22"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -21,7 +21,7 @@ Disasters are unplanned events that cause severe damage, incur a loss to our bus
 
 The {{site.data.keyword.powerSysFull}} provides a set of APIs that can enable disaster recovery (DR) solution for your virtual server instances. IBM Cloud infrastructure internally uses Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication, and advance network configuration for fast data transfer.
 
-A new resource `Volume Group` is introduced to enable, disable, and manage storage replication consistency group. Volume group holds the set of volumes that needs to be recovered at the time of disaster. To make the volume DR capable, you must add the volume in the volume group. Failover and failback operations are triggered by using the volume group start and stop operations. 
+A new resource volume group is introduced to enable, disable, and manage storage replication consistency group. Volume group holds the set of volumes that needs to be recovered at the time of disaster. To make the volume DR capable, you must add the volume in the volume group. Failover and failback operations are triggered by using the volume group start and stop operations. 
 
 GRS aims to automate the complete DR solution and provide the API and CLI interfaces to create the recipe for the DR solution. GRS currently does not have any user interface.
 
@@ -71,8 +71,6 @@ The following table explains how to determine the primary and secondary site bas
 {: class="simple-table"}
 {: caption="Table 1. Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
-The volume APIs provide more properties for replication. You can check whether a volume is master or auxiliary volume. For more information, see [How can I check whether a volume is master or auxiliary volume?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#check-for-primary-vol)
-
 ## Preparation for disaster recovery
 {: #dr-prep}
 
@@ -81,30 +79,33 @@ When you have the virtual server instances with data volume running workloads, y
 ### Actions on the primary site
 {: #configure-primary-site}
 
-Complete the following steps to enable DR on the primary site:
-1. Create a replication-enabled volume by providing `replicationEnabled` parameter as `True` in the [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) request.
-    Verify that the volume has master and auxiliary volume name on successful creation.
+To enable DR on the primary site, complete the following steps:
+1. Create a replication-enabled volume by providing `replicationEnabled` flag as `True` in the [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) request body.
+    
+    To know more about the replication properties of a volume, see the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#convert-to-replication-vol)
 
-    <!-- You can convert existing volumes to replication-enabled volumes. For more information, see [How do I convert existing volumes to replication-enabled volumes?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#convert-to-replication-vol). -->
-
-2. Create a virtual server instance with replication-enabled volumes by using the {{site.data.keyword.powerSys_notm}} user interface.
+2. Create a virtual server instance with replication-enabled volumes by using {{site.data.keyword.powerSys_notm}} interface.
+    
     The boot volumes of virtual server instances that you create are always set to non-replication enabled. You can provide a mix of replication and non-replication-enabled volumes for a virtual server instance if they belong to the same storage pool. All the existing storage pool affinity rules apply for replication-enabled volumes.
     {:note}
 
-3. Create a volume group (consistency group) with the replication-enabled volumes that you have created by using the [Create a new volume group](/apidocs/power-cloud#pcloud-volumegroups-post) request.
-    Verify that the volume group is created successfully and it is in consistent copying state by using [get storage details of volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get) request.
+3. Create a volume group (consistency group) by using the [create a new volume group](/apidocs/power-cloud#pcloud-volumegroups-post) API with the replication-enabled volumes that you have created before. 
+
+    Verify that the volume group is created successfully and it is in consistent copying state by using [get storage details of volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get) API.
 
 ### Actions on the secondary site
 {: #configure-secondary-site}
 
-Complete the following steps to enable GRS on the secondary site:
-1. Onboard the auxiliary volume by using the [onboard auxiliary volumes to target site)](/apidocs/power-cloud#pcloud-volume-onboarding-post). 
-    For more information about onboarding, see [Onboarding auxiliary volumes](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes).
+To enable DR on the secondary site, complete the following steps:
+1. Onboard the auxiliary volume by using the [onboard auxiliary volumes](/apidocs/power-cloud#pcloud-volume-onboarding-post) API. 
+    
+    For more information about onboarding operation, see [Onboarding auxiliary volumes](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes).
 
 2. Create a standby virtual server instance with onboarded auxiliary volumes.
+    
     You can create a standby virtual server instance with onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
     
-Now you have the setup ready for DR. Check [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
+Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
 
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}
@@ -116,20 +117,20 @@ You must have the editor access on the source and target {{site.data.keyword.pow
 
 Collect the following information from the primary site to request for onboarding the auxiliary volumes on the secondary site:
 1. Fetch the Cloud Resource Name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance where the master volumes are located (primary site). 
-2. Fetch the names from **auxVolumeName** field of master volumes from primary site to onboard a list of names of auxiliary volume. 
+2. Fetch the auxiliary volume names from **auxVolumeName** field of master volumes from primary site for onboarding.
 
 The onboarding operation creates a volume ID for each onboarded auxiliary volume. When the master volume (in primary site) is a part of a volume group, the onboarding operation creates a volume group ID for the existing volume group on the storage host. It adds the new auxiliary volume IDs to the new group ID.
 
 Volume IDs and group ID for master-aux volume pair are different on primary and secondary sites. However, you can check other fields such as **materVolumeName**, **auxVolumeName**, and **consistencyGroupName** to identify mater-aux volume pair.
 
-The onboarding operation is an asynchronous operation that can take some time that depends upon the number of volumes. Use the [Get the information of volume onboarding operation](/apidocs/power-cloud#pcloud-volume-onboarding-get) request to check the status of the operation.
+The onboarding operation is an asynchronous operation that can take some time that depends upon the number of volumes. Use the [Get the information of volume onboarding operation](/apidocs/power-cloud#pcloud-volume-onboarding-get) request to check the status of the onboarding operation.
 
 ## Performing a failover and failback operation
 {: #perform-fail-over-back}
 
-When you want to access the auxiliary volumes from the secondary site upon a primary site failure, you must stop the volume-group by using [Perform an action (start stop reset) on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] request that set the **access** parameter to true.
+When you want to access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume-group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API with **access** flag as true.
 
-When the site is back, you can start the volume group by using [Perform an action (start stop reset) on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] request. The failback operation resumes the replication back to primary site. Any input and output that is performed on remote site is lost.
+When the site is back, you can start the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API. The failback operation resumes the replication back to primary site. Any input and output that is performed on remote site is lost.
 
 ## Impacts on other {{site.data.keyword.powerSys_notm}} operations
 {: #impacts-on-powervs}
@@ -148,15 +149,15 @@ The limitations of GRS are as follows:
 
 - You cannot perform a snapshot restore operation in auxiliary volumes.
 - The volume-group update operation can fail upon a mismatch in volume-group and volume replication states. If the volume group is in an error state, you can use the volume-group action API to reset the volume group status for availability.
-- When you delete a volume from site 1 (primary site), the replicated volume that is managed in site 2 (secondary site) moves to error state in an interval of 24 hours.
-- When the volume is resized from site 1, the replicated-enabled volume on site 2 is also resized after an interval of 24 hours.
+- When you delete a volume from a site, the replicated volume that is managed on its corresponding remote site moves to error state in an interval of 24 hours.
+- When the volume is resized from a site, the replicated-enabled volume on its corresponding remote site is also resized after an interval of 24 hours.
 - When you perform any operation on a volume that is deleted, it fails.
 
 ## Best practices for Global replication service
 {: #best-practices-GRS}
 
 - You must set the bootable flag explicitly on onboarded volumes, if required.
-- Start the onboarding of auxiliary volumes only when the master volumes and volume-group are in `consistent_copying` state.
+- Start the onboarding of auxiliary volumes only when the master volumes and volume-group are in consistent copying state.
 - When you add or remove a master or auxiliary volume from a volume-group from one site, you must perform the same operation from other site to keep the data is in sync.
 - You must delete the volumes from primary and secondary site. Volumes are charged when you delete auxiliary volume but fail to delete the master volume.
-- You must use site 1 (primary site) for all the volume operations and perform operations on auxiliary volume on site 2 (secondary site) only during failover.
+- You must use primary site for all the volume operations and perform operations on auxiliary volume on secondary site only during failover.
