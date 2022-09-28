@@ -26,6 +26,17 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}}.
 {: shortdesc}
 
+## September 2022
+{: #sept-2022}
+
+- You can share a group of processors between multiple virtual machines that allows you to group your applications together using the shared processor pool. For more information, see [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+
+- {{site.data.keyword.powerSys_notm}} allows you to automate the complete data recovery solution using the API and CLI interfaces of global replication service. For more information, see [Managing global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
+
+- You can choose to deploy Epic workloads on a VM for more cost savings. For more information, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
+
+- Full Linux subscription on {{site.data.keyword.powerSys_notm}} now supports SLES 15 SP4 (General).
+
 ## August 2022
 {: #aug-2022}
 
