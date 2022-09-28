@@ -1,6 +1,6 @@
 {
     "title": "Power Systems Virtual Servers docs",
-    "lastupdated": "2021-10-13",
+    "lastupdated": "2022-09-22",
     "introduction": "With the Power Systems Virtual Server, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems).",
     "section_devtools": {
       "api": "/apidocs/power-cloud",
@@ -44,19 +44,19 @@
       "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
       "tiles": [
         {
-          "date": "24 September 2021",
-          "title": "Cloud Connections",
-          "description": "You can now use Cloud connections to create a Cloud connection using the Power Systems Virtual Server GUI."
+          "date": "22 September 2022",
+          "title": "Shared processor pool",
+          "description": "Share a group of processors between multiple virtual machines that allows you to group your applications together using the shared processor pool."
         },
         {
-          "date": "24 September 2021",
-          "title": "Mixed storage",
-          "description": "You can now use mixed storage to attach storage volumes to a PVM instance from different storage tiers and pools."
+          "date": "22 September 2022",
+          "title": "Global replication service",
+          "description": "Automate the complete data recovery solution using the API and CLI interfaces of global replication service."
         },
         {
-          "date": "24 September 2021",
-          "title": "Capturing and exporting a virtual machine",
-          "description": "You can now capture and export a virtual machine to view the new Job feature and view restrictions for VM capture, image import, and image export."
+          "date": "22 September 2022",
+          "title": "Configure and deploy Epic workloads",
+          "description": "Deploy Epic workloads on a VM for more cost savings."
         }
       ]
     }
