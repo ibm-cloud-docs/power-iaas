@@ -133,7 +133,7 @@ In this deployment topology, [Megaport](https://www.megaport.com/){: external} o
 
 ![Connect to on-premises](./images/network-connect-to-onprem.svg "Connect to on-premises"){: caption="Figure 3. Connect to on-premises" caption-side="bottom"}
 
-{{site.data.keyword.dl_short}} Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport or {{site.data.keyword.dl_short}} (2.0) Connect to connect your on-premises network to {{site.data.keyword.powerSys_notm}} directly.
+IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your on-premises network to {{site.data.keyword.powerSys_notm}} directly.
 
 Review the following characteristics about Megaport connectivity services:
     * Megaport operates a global network infrastructure that enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
@@ -180,7 +180,7 @@ In this deployment topology, [Megaport](https://www.megaport.com/){: external} o
 
 ![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 4. Connecting Power virtual server environments" caption-side="bottom"}
 
-{{site.data.keyword.dl_short}} (2.0) Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport or {{site.data.keyword.dl_short}} Connect to connect your on-premises network to {{site.data.keyword.powerSys_notm}} directly.
+IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your on-premises network to {{site.data.keyword.powerSys_notm}} directly.
 
 The key features of this Connect-to-classic topology are as follows:
 
