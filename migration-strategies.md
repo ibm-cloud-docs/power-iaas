@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2021-03-25"
+lastupdated: "2022-10-10"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -95,6 +95,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 - *Oracle Goldengate*
 - *iCluster*
 - *MIMIX from Syncsort*
+- *Maxava HA*
 
 ## Backup and restore
 {: #backup-restore}
