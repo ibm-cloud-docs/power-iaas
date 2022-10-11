@@ -110,6 +110,7 @@ Customers can use third-party tools to perform data migration. The following thi
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
+- *Maxava HA*
 
 ## IBM teams and managed services
 {: #teams-managed-services}
