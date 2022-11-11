@@ -77,6 +77,8 @@ Lastly, enter the `WRKLICINF` command and F11 to display the usage information t
 
 If License Keys for the operating system or any IBM i Licensed Program Products (LPP) have not been applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
+If this is an upgraded system that contained License Keys before, please allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
+
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
@@ -94,18 +96,6 @@ To change the System Service Tools (SST) and Dedicated Service Tools (DST) passw
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
-
-1. Enter the  `wrksysval qipltype` command and change the value to **1**. The `wrksysval qipltype` command changes the `sysval QIPLTYPE` value.
-
-2. Enter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i operating system (OS).
-
-3. At the DST console on restart, enter `QSECOFR/QSECOFR` and change the password.
-
-4. Enter the `wrksysval qipltype` command and change the value to **0**.
-
-5. Reenter the `pwrdwnsys` command with the `RESTART` parameter to restart the IBM i OS again. You can now log in, run `STRSST`, and manage the newly attached disk as the password is manageable.
-
-6. Proceed to [Connect to an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-connect-ibmi) to connect to your IBM i Cloud VM. -->
 
 ## Managing the IBM i VM instance
 {: #manage-IBMi-VM}

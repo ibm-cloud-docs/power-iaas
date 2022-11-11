@@ -34,7 +34,7 @@ With VPN access, you can:
 
 The Power Systems Virtual Server infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server workspace to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
 
-A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported on each data center. Currently, VPN for Power Systems Virtual Servers is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, TOK04, and WDC06 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
+A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported on each data center. Currently, VPN for Power Systems Virtual Servers is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, and TOK04 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
@@ -59,7 +59,7 @@ You can configure your VPN to connect to your on-premises network by following t
 
 The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server workspace. The configuration depends on the type of VPN gateway. See the following topics for details.
 
-Any configurations that are not listed in this section are not supported by PowerVS. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+Any configurations that are not listed in this section are not supported by {{site.data.keyword.powerSys_notm}}. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs/power-iaas?topic=power-iaas-vpn-connectivity) with redundant VPN connections. VPNaaS is supported only for light non-production workloads such as development or test.
 
 - [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
 - [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
