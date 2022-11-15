@@ -158,6 +158,58 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.6983 (capped shared)        | $509.72                  |
 {: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}-->
 
+## Storage types
+{: #storage-type}
+
+The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
+- **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at time of metering. The following table shows an example how you are billed based on your volume creation:
+|Volume size you create|You are billed|
+|----------|--------------|
+|10 GB|10 GB|
+|10+5 GB|15 GB|
+{: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+
+- **Image backing volumes**:These volumes are part of a boot image that resides in the customers cloud instance boot image catalog. You are billed based on the total volume size(s) contained in the image. 
+
+When the image has a single backing volume then, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) all the image backing volumes. The following table shows an example how you are billed based on your boot volume:
+
+|Image volume size |Single or multiple backing|You are billed|
+|----------|--------------|-------------|
+|20 GB|Single backing volume|20 GB|
+|volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
+{: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+
+- **Deployed VM volumes**: These volumes created from deploying an image. The deployed VMs will get a copy of all the volumes contained in the image. Any additional data volumes that get attached to the deployed VM are already accounted under Data Volumes. The following table shows an example how you are billed based on the VMs that you deploy:
+|Image backing volume|You are billed|
+|----------|--------------|
+|20 GB|20 GB|
+|20 GB + 30 GB|50 GB|
+{: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+
+### Use case of account billable storage
+The following use case shows how you are billed based on the storage that you use (assuming tier 1):
+
+Data Volumes:
+data-volume-1 size 20 GB, ‘available’ (not attached to any VM)
+data-volume-2 size 25 GB ‘in-use’ (attached to VM vm-1)
+data-volume-3 size 100 GB ‘in-use’ (attached to VM vm-1)
+data-volume-4 size 30 GB ‘available’
+data-volume-5 size 60GB ‘in-use’ (attached to VM vm-2)
+
+Boot Images:
+AIX-71-01 (1 backing volume size 30 GB), total image size 30 GB
+IBMi-74-001 (2 backing volumes, 1 size 100 GB and 1 size 30 GB), total image size 130 GB
+SLES-15-1 ( 1 backing volume size 40 GB), total image size if 40 GB
+
+Deployed VMs:
+vm-1 deployed AIX-71 plus has data-volume-2 and data-volume-3 attached. vm-1 will add an additional 30 GB of billable storage (volumes created from copying the deployed AIX-71 image),  data volumes already billed under Data volumes.
+vm-2 deployed IBMi-74-001 plus has data-volume-5 attached vm-2 will add an additional 130 GB of billable storage (volumes created from copying the deployed IBMi-74-001 image), data volume already billed under Data volumes.
+
+Total billable storage = 595 GB
+Data volumes: 235 GB
+Image volumes: 200 GB
+Deployed VMs: 160 GB
+
 ## End of billing
 {: #pricing-end-billing}
 
