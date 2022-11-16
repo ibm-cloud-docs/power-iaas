@@ -25,7 +25,7 @@ This topic describes typical network architectures that are used in the {{site.d
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/vpc?topic=power-iaas-about-virtual-server#public-private-networks).  
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks).  
 
 {{site.data.keyword.powerSys_notm}} network architectures consist of one or more of the following networks:
 
