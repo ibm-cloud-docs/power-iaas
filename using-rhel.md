@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-When you opt not to register for a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux), you can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or bring your own Linux image (in OVA format), with your own Linux subscription from a Linux vendor.
+If you opt not to register for a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux), you can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or bring your own Linux image (in OVA format), provided that you also provide your own Linux subscription from a Linux vendor.
 {: shortdesc}
 
 To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](docs/power-iaas?topic=power-iaas-deploy-custom-image).
