@@ -206,9 +206,9 @@ The following use case shows how you are billed based on the storage that you us
   vm-2 deployed IBMi-74-001 plus has data-volume-5 attached vm-2 will add an additional 130 GB of billable storage (volumes created from copying the deployed IBMi-74-001 image), data volume already billed under Data volumes.
 
 Total billable storage = 595 GB
-Data volumes: 235 GB
-Image volumes: 200 GB
-Deployed VMs: 160 GB
+  - Data volumes: 235 GB
+  - Image volumes: 200 GB
+  - Deployed VMs: 160 GB
 
 ## End of billing
 {: #pricing-end-billing}
