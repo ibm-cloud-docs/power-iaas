@@ -36,7 +36,7 @@ To register for the full Linux subscription, you must select one of the stock op
 
    - SLES 15 SP2 (SAP only)
    - SLES 15 SP3 (General and SAP)
-   - SLES 15 SP4 (General)
+   - SLES 15 SP4 (General and SAP)
 
 **RHEL**:
 
