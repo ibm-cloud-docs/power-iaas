@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-09-15"
+lastupdated: "2022-11-17"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -25,7 +25,12 @@ subcollection: power-iaas
 # Using SLES within the Power Systems Virtual Server
 {: #using-linux}
 
-You can use {{site.data.keyword.powerSys_notm}} to deploy a generic Linux™ virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. {{site.data.keyword.powerSys_notm}} provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
+When you opt not to register for a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux), you can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or bring your own Linux image (in OVA format), with your own Linux subscription from a Linux vendor.
+{: shortdesc}
+
+To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](docs/power-iaas?topic=power-iaas-deploy-custom-image).
+
+The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of SLES are supported:
 
 - `SLES 12 - Minimum level: SP4 + Kernel  4.12.14-95.54.1`
 - `SLES 15 - Minimum level: SP1 + kernel 4.12.14-197.45-default`

@@ -85,6 +85,7 @@ Power Systems Virtual Servers
 
     {: .topicgroup}
     Linux
+        set-full-linux.md
         registering-linux.md
         using-rhel.md
         deploying-linux.md
