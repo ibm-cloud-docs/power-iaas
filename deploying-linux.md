@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-18"
 
 keywords: linux deployment, ova, powervc capture, vios
 
@@ -22,11 +22,14 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Deploying a Linux virtual machine (VM)
+# Creating a custom Linux image in OVA format
 {: #linux-deployment}
 
 You can use {{site.data.keyword.powerSys_notm}} workspace to deploy a generic Linux&reg; virtual machine (VM). When you are provisioning a VM, select **Linux-Client supplied subscription** for your operating system (the OS filename for Linux-Client supplied subscription starts with `Linux-RHEL` or `Linux-SUSE`). The {{site.data.keyword.powerSys_notm}} workspace provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. Power Systems Virtual Server also supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. For more information, see [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 {: shortdesc}
+
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
+{:note:}
 
 You must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-using-linux#registering-sles) or [Registering and subscribing to RHEL](/docs/power-iaas?topic=power-iaas-linux-with-powervs#subscribing-to-rhel).
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2022
 
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-18"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-If you opt not to register for a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux), you can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or bring your own Linux image (in OVA format), provided that you also provide your own Linux subscription from a Linux vendor.
+You can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format). For support, you can use your own Linux subscription from a Linux vendor or choose to register for a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux), (an additional charge will apply).
 {: shortdesc}
 
 To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](docs/power-iaas?topic=power-iaas-deploy-custom-image).
@@ -36,6 +36,9 @@ The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock ima
 - RHEL 8.3
 - RHEL 8.4
 - RHEL 8.6
+
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
+{:note:}
 
 Ensure that you have the latest cloud-init version as on March 2021 for all the supported RHEL versions. If some of the RHEL versions (for example, RHEL 8.1 and RHEL 8.2) become out of support, you must obtain extended support from Red Hat. Follow the requirements of extended support and apply patches or updates as recommended by Red Hat. For more information about extended support, see [RHEL Extended Update Support (EUS) Overview](https://access.redhat.com/articles/rhel-eus){: external}.
 {: note}
