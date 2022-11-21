@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-21"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -205,8 +205,8 @@ The following table shows the use case on how you are billed based on the storag
 | Name     | Size    | State/Description      |
 |----------|---------|------------------------|
 |AIX-71-01|30 GB|1 backing volume|
-||IBMi-74-001| 100 GB + 30 GB|2 backing volumes|
-||SLES-15-1|40 GB|1 backing volume|
+|IBMi-74-001| 100 GB + 30 GB|2 backing volumes|
+|SLES-15-1|40 GB|1 backing volume|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
 {: caption="Table 11. Account billable for storage use case" caption-side="top"}
@@ -215,8 +215,8 @@ The following table shows the use case on how you are billed based on the storag
 
 | Name     | Size    | State/Description    |
 |----------|---------|----------------------|
-||vm-1 deployed AIX-71|30 GB|Volume of AIX-71 + \n data-volume-2 + \n data-volume-3 \n (volumes created from copying \n the deployed AIX-71 image, \n data volumes already billed \n under Data volumes.)|
-|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5  \n (volumes created from copying \n the deployed AIX-71 image, \n data volumes already billed \n under Data volumes.)|
+|vm-1 deployed AIX-71|30 GB|Volume of AIX-71 + \n data-volume-2 + \n data-volume-3 \n (volumes created from copying \n the deployed AIX-71 image, \n Data volumes are already accounted.)|
+|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5  \n (volumes created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
 {: caption="Table 12. Account billable for storage use case" caption-side="top"}
