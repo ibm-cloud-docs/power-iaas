@@ -187,25 +187,44 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
   {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
 
 ### Use case of account billable storage
-The following use case shows how you are billed based on the storage that you use (assuming tier 1):
+The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
-**Data Volumes**:
-  - data-volume-1 size 20 GB, in `available` state (not attached to any VM)
-  - data-volume-2 size 25 GB in `in-use` state (attached to VM vm-1)
-  - data-volume-3 size 100 GB in `in-use` state (attached to VM vm-1)
-  - data-volume-4 size 30 GB in `available` state
-  - data-volume-5 size 60 GB in `in-use` state (attached to VM vm-2)
+| Name     | Size    | State/Description      |
+|----------|---------|------------------------|
+|data-volume-1|20 GB|Available|
+|data-volume-2|25 GB|In-use (attached to vm-1)|
+|data-volume-3|100 GB|In-use (attached to vm-1)|
+|data-volume-4|30 GB|Available|
+|data-volume-5|60 GB|In-use (attached to vm-2)|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 10. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-1}
+{: tab-title="Data volumes of 235 GB"}
 
-**Boot Images**:
-  - AIX-71-01 (1 backing volume size 30 GB), total image size 30 GB
-  - IBMi-74-001 (2 backing volumes, 1 size 100 GB and 1 size 30 GB), total image size 130 GB
-  - SLES-15-1 ( 1 backing volume size 40 GB), total image size if 40 GB
+| Name     | Size    | State/Description      |
+|----------|---------|------------------------|
+|AIX-71-01|30 GB|1 backing volume|
+||IBMi-74-001| 100 GB + 30 GB|2 backing volumes|
+||SLES-15-1|40 GB|1 backing volume|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 11. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-2}
+{: tab-title="Boot volumes of 200 GB"}
 
-**Deployed VMs**:
-  - vm-1 deployed AIX-71 plus has data-volume-2 and data-volume-3 attached. vm-1 will add an additional 30 GB of   billable storage (volumes created from copying the deployed AIX-71 image),  data volumes already billed under Data volumes.
-  - vm-2 deployed IBMi-74-001 plus has data-volume-5 attached vm-2 will add an additional 130 GB of billable storage (volumes created from copying the deployed IBMi-74-001 image), data volume already billed under Data volumes.
+| Name     | Size    | State/Description    |
+|----------|---------|----------------------|
+||vm-1 deployed AIX-71|30 GB|Volume of AIX-71 + \n data-volume-2 + \n data-volume-3 \n (volumes created from copying \n the deployed AIX-71 image, \n data volumes already billed \n under Data volumes.)|
+|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5  \n (volumes created from copying \n the deployed AIX-71 image, \n data volumes already billed \n under Data volumes.)|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 12. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-3}
+{: tab-title="Deployed VMs of 160 GB"}
 
 Total billable storage = 595 GB
+
   - Data volumes: 235 GB
   - Image volumes: 200 GB
   - Deployed VMs: 160 GB
