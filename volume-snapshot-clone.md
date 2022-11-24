@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2021-09-15"
+lastupdated: "2022-11-24"
 
 keywords: volume snapshot, clone, restore, api, flashcopy
 
@@ -93,6 +93,9 @@ You cannot modify the source or target disk attributes, such as disk size, while
 **Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
 
 **Steps**: Performing the clone operation on a volume consists of three steps: prepare, start, and execute the volumes-clone request. These steps allow you to perform preparatory actions and to authorize the ongoing I/O operations on the source volumes. Breaking the clone operation on a volume into multiple steps provides consistent clones and reduces the VM quiesce time. The clone operation on a volume consists the following steps:
+
+When any of the prepare, start, or clone step fails then you must first perform cancel clone and then re-run all the three step.
+{: important}
 
 ### 1. Create a volumes-clone request and initiate the Prepare action
 {: #create-vol-clone req}

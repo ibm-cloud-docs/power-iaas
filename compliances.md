@@ -1,9 +1,11 @@
+---
+
 copyright:
-  years: 2022
+  years: 2019, 2022
 
 lastupdated: "2022-11-24"
 
-keywords: Compliances, HIPAA, IISO 27017, SOC1 Type 1, SOC1 Type 2, SOC2 Type 2
+keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015, 
 
 subcollection: power-iaas
 
