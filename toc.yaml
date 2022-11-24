@@ -33,6 +33,7 @@ toc:
               label: Security and compliance
               topics: 
               - gdpr.md
+              - compliances.md
       - topicgroup: 
               label: Use cases
               topics: 
