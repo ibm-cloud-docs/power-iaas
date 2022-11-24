@@ -142,6 +142,10 @@ PowerVS ASN       : 64999
 ```
 {: codeblock}
 
+In general, the overlay and underlay network should not be on the same subnet, so to make sure your configuration is valid on your gateway appliance for the above, you can change the subnet mask of the GRE subnet from /29 to /30 so that it excludes 172.16.3.1 from the overlay network.{: note}
+
+By default, gateway appliances will send traffic for the 172 network to the default gateway, which is generally the public subnet gateway of the gateway appliance. Make sure to add a static route for the destination "PowerVS Source IP" to be sent to the private subnet gateway of the gateway appliance.{: note}
+
 You must configure the VRA with BGP protocol for route advertising so that the subnets can reach through the GRE tunnel. The ASN numbers are pre-assigned in the {{site.data.keyword.powerSys_notm}}s and you can't choose another number.
 
 ## Migrating an existing network configuration

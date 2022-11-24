@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-07-22"
+lastupdated: "2022-11-17"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -25,30 +25,30 @@ subcollection: power-iaas
 # Full Linux&reg; subscription for Power Systems Virtual Servers
 {: #set-full-Linux}
 
-Full Linux&reg; subscription provides Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) stock images that can be used for SAP and non-SAP applications. 
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}
 
-Power Systems Virtual Server provides three versions of stock images for each operating system (OS). You can also use the full Linux&reg; subscription feature to get OS interim fixes and updates for Power servers that are hosted on the IBM satellite server within the IBM Cloud environment. Extra charges apply if you use the activation keys in the IBM Cloud Satellite to receive the interim fixes.
+The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-Full Linux subscription is supported on the following OS versions: 
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. The following OS versions support a full Linux subscription:
   
-SLES:
+**SLES**:
 
    - SLES 15 SP2 (SAP only)
    - SLES 15 SP3 (General and SAP)
-   - SLES 15 SP4 (General)
+   - SLES 15 SP4 (General and SAP)
 
-RHEL:
+**RHEL**:
 
    - RHEL 8.4 (General and SAP)
    - RHEL 8.6 (General)
 
-The full Linux&reg; subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
+The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
-## Setting up full Linux&reg; subscription
+## Setting up full Linux subscription
 {: #set-full-Linux}
 
-To set up full Linux&reg; subscription for your account, complete the following steps:
+To set up full Linux subscription for your account, complete the following steps:
 
 1. [Configuring a Cloud connection](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
 2. [Creating a proxy](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy)

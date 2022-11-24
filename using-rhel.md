@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2022
 
-lastupdated: "2022-09-15"
+lastupdated: "2022-11-24"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -24,7 +24,14 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-You can use the {{site.data.keyword.powerSys_notm}} to deploy a generic Red Hat Enterprise Linux® (RHEL) virtual machine (VM). When you are provisioning a VM, select **Linux – Client supplied subscription** for your operating system. The {{site.data.keyword.powerSys_notm}} provides few Linux stock images for SAP HANA and SAP NetWeaver applications. You can also bring your own Linux image (OVA format) and subscription. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. The following versions of Linux are supported:
+You can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
+{: shortdesc}
+
+For support, you can use your own Linux subscription from a Linux vendor or choose to register for a full Linux&reg; subscription, (an additional charge will apply). For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for Power Systems Virtual Servers](docs/power-iaas?topic=power-iaas-set-full-Linux).
+
+To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](docs/power-iaas?topic=power-iaas-deploy-custom-image).
+
+The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
 
 - RHEL 8.1
 - RHEL 8.2
@@ -32,12 +39,15 @@ You can use the {{site.data.keyword.powerSys_notm}} to deploy a generic Red Hat 
 - RHEL 8.4
 - RHEL 8.6
 
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
+{: note}
+
 Ensure that you have the latest cloud-init version as on March 2021 for all the supported RHEL versions. If some of the RHEL versions (for example, RHEL 8.1 and RHEL 8.2) become out of support, you must obtain extended support from Red Hat. Follow the requirements of extended support and apply patches or updates as recommended by Red Hat. For more information about extended support, see [RHEL Extended Update Support (EUS) Overview](https://access.redhat.com/articles/rhel-eus){: external}.
 {: note}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}.
 
-You must obtain the subscription for the Linux® operating system directly from the vendor. After you deploy your Linux® VM, you must log in to the VM and register it with the Linux® vendor’s satellite server. To reach the Linux® vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+You must obtain the subscription for the Linux operating system directly from the vendor when you do not choose to use full Linux subscription for {{site.data.keyword.powerSys_notm}}. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
@@ -52,7 +62,7 @@ You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
 
-1. To buy an RHEL subscription, see [Red Hat Enterprise Linux® Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: external}.
+1. To buy an RHEL subscription, see [Red Hat Enterprise Linux Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: external}.
 
 2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index){: external}.
 
@@ -64,7 +74,7 @@ To use RHEL within {{site.data.keyword.powerSys_notm}}, you can use the [IBM Pow
 ## Linux networking
 {: #linux-networking}
 
-To connect a Linux® virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: external}.
+To connect a Linux virtual machine (VM) to the public internet, you must add a public network when you provision a {{site.data.keyword.powerSys_notm}}. You must set up a Linux-based Network Address Translation (NAT) gateway on a public-facing Linux VM if you have Linux VMs that do not need an internet-facing external IP address. For more information on NAT router, [Linux NAT Router Explained](https://www.slashroot.in/linux-nat-network-address-translation-router-explained){: external}.
 
 When you are configuring a Source NAT (SNAT) gateway between your public and private networks, ensure that the TCP checksum offload option is disabled. You must also set the maximum transmission unit (MTU) value to 1450 on the network interface that is connected to the private network. To ensure that the interface checksum offloading and MTU settings of the network interface are persistent whenever the virtual machine is restarted, you need to modify the configuration files of your network interface.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2021-09-15"
+lastupdated: "2022-11-21"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -117,7 +117,7 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-{{site.data.keyword.powerSys_notm}} does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. Both Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) OVA images are supported.
+The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](docs/power-iaas?topic=power-iaas-linux-deployment).
 
 ## Processor types
 {: #pricing-processor}
@@ -157,6 +157,77 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.4655 (uncapped shared)      | $339.82                  |
 | 1                           | $0.6983 (capped shared)        | $509.72                  |
 {: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}-->
+
+## Storage types
+{: #storage-type}
+
+The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
+- **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
+  |Volume size you create|You are billed|
+  |----------------------|--------------|
+  |10 GB|10 GB|
+  |10+5 GB|15 GB|
+  {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+
+- **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image. 
+
+  When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
+
+  |Image volume size |Single or multiple backing|You are billed|
+  |------------------|--------------------------|--------------|
+  |20 GB|Single backing volume|20 GB|
+  |volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
+  {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+
+- **Deployed VM volumes**: These volumes are created when you deploy a VM with an image. The deployed VMs will get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
+  |Image backing volume|You are billed|
+  |--------------------|--------------|
+  |20 GB|20 GB|
+  |20 GB + 30 GB|50 GB|
+  {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+
+### Use case of account billable storage
+The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
+
+| Name     | Size    | State/Description      |
+|----------|---------|------------------------|
+|data-volume-1|20 GB|Available|
+|data-volume-2|25 GB|In-use (attached to vm-1)|
+|data-volume-3|100 GB|In-use (attached to vm-1)|
+|data-volume-4|30 GB|Available|
+|data-volume-5|60 GB|In-use (attached to vm-2)|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 10. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-1}
+{: tab-title="Data volumes of 235 GB"}
+
+| Name     | Size    | State/Description      |
+|----------|---------|------------------------|
+|AIX-71-01|30 GB|1 backing volume|
+|IBMi-74-001| 100 GB + 30 GB|2 backing volumes|
+|SLES-15-1|40 GB|1 backing volume|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 11. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-2}
+{: tab-title="Boot volumes of 200 GB"}
+
+| Name     | Size    | State/Description    |
+|----------|---------|----------------------|
+|vm-1 deployed AIX-71|30 GB|Volume of AIX-71 + \n data-volume-2 + \n data-volume-3 \n (volumes created from copying \n the deployed AIX-71 image, \n Data volumes are already accounted.)|
+|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5  \n (volumes created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)|
+{: class="simple-tab-table"}
+{: tab-group="storage"}
+{: caption="Table 12. Account billable for storage use case" caption-side="top"}
+{: #storage-spec-3}
+{: tab-title="Deployed VMs of 160 GB"}
+
+Total billable storage = 595 GB
+
+  - Data volumes: 235 GB
+  - Image volumes: 200 GB
+  - Deployed VMs: 160 GB
 
 ## End of billing
 {: #pricing-end-billing}

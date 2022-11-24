@@ -20,6 +20,7 @@ Power Systems Virtual Servers
     {: .topicgroup}
     Security and compliance
         gdpr.md
+        compliances.md
 
     {: .topicgroup}
     Use cases
@@ -85,6 +86,7 @@ Power Systems Virtual Servers
 
     {: .topicgroup}
     Linux
+        set-full-linux.md
         registering-linux.md
         using-rhel.md
         deploying-linux.md
