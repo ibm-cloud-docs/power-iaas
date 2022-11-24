@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2022
 
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-24"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
