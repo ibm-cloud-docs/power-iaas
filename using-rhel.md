@@ -27,9 +27,9 @@ subcollection: power-iaas
 You can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}
 
-For support, you can use your own Linux subscription from a Linux vendor or choose to register for a full Linux&reg; subscription, (an additional charge will apply). For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for Power Systems Virtual Servers](docs/power-iaas?topic=power-iaas-set-full-Linux).
+For support, you can use your own Linux subscription from a Linux vendor or choose to register for a full Linux&reg; subscription, (an additional charge will apply). For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](docs/power-iaas?topic=power-iaas-deploy-custom-image).
+To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
 

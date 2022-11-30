@@ -60,8 +60,6 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
 3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
 
-Learn more about transitioning to an IBM POWER8 system by downloading [Transitioning to POWER8: Migration Paths for AIX systems to POWER8](http://www14.software.ibm.com/webapp/set2/sas/f/best/Transitioning_to_POWER8.pdf){: external}.
-
 **IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system.
 
 ## Migrating to an IBM POWER9 system
