@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-08"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Pricing for Power Systems Virtual Servers
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
+{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums: 
 
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
