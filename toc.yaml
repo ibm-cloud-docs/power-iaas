@@ -34,6 +34,7 @@ toc:
               topics: 
               - gdpr.md
               - compliances.md
+              - Integrate_hpcs.md
       - topicgroup: 
               label: Use cases
               topics: 

@@ -1,0 +1,39 @@
+---
+
+copyright:
+  years: 2022
+
+lastupdated: "2022-12-07"
+
+keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
+
+subcollection: power-iaas
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Integrating {{site.data.keyword.powerSys_notm}} with Hyper Protect Crypto Services
+{: #integrate-hpcs}
+
+IBM Cloud® Hyper Protect Crypto Services (HPCS) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
+{: shortdesc}
+
+## Using HPCS for AIX
+{: #AIX-hpcs}
+
+You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
+
+The `keysvrmgr` command manages the Object Data Manager (ODM) database entries that are associated with the encryption key server when the logical or physical volume uses the key server key-protection method for encryption. For more information, see [keysvrmgr Command](https://www.ibm.com/docs/en/aix/7.3?topic=k-keysvrmgr-command){: external}
+
+The `hdcryptmgr` command helps to manage the cryptographic management of logical volumes (LV) and physical volumes (PV). For more information, see [hdcryptmgr Command](https://www.ibm.com/docs/en/aix/7.3?topic=h-hdcryptmgr-command){: external}
+
+## Using HPCS for Linux
+{: #Linux-hpcs}
+
+You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to protect Linux Unified Key Setup (LUKS) encryption keys from being compromised. The HPCS acts as the single point of control to enable or disable access to data across the enterprise. The HPCS does this by successively wrapping encryption keys, with the ultimate control being a master key that resides in a hardware security module (HSM). 
+
+For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/){: external}
+
+For any additional support, [contact IBM](mailto:zaas.client.acceleration@ibm.com).
+
