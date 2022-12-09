@@ -30,5 +30,4 @@ By packaging and running existing monolithic applications within Red Hat OpenShi
 
 For information on application modernization on Power Systems, see [Field Guide to Application Modernization on IBM Power Systems](https://www.ibm.com/downloads/cas/D9POQ3YR){: external}.
 
-For information on deploying Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} and tutorials to explore the platform, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
-
+For information on deploying Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} and tutorials to explore the platform, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/?mhsrc=ibmsearch_a&mhq=%20Deploying%20Red%20Hat%20OpenShift%20Container%20Platform%20on%20Power%20Virtual%20Servers){: external}.
