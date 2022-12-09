@@ -22,7 +22,7 @@ IBM Cloud® Hyper Protect Crypto Services (HPCS) is a dedicated key management s
 ## Using Hyper Protect Crypto Services for AIX
 {: #AIX-hpcs}
 
-HPCS is supported with AIX 7.3 TL1
+HPCS is supported with AIX 7.3 TL1 for AIX logical volume encryption.
 {: note}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.

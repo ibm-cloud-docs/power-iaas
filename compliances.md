@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-11-24"
+lastupdated: "2022-12-09"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015, 
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Comprehensive compliances for {{site.data.keyword.powerSys_notm}}
+# {{site.data.keyword.powerSys_notm}} compliance certifications
 {: #compliances-list}
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
@@ -39,19 +39,31 @@ SOC 2 audits, based on the AICPA Trust Service Principles and Criteria, gauge se
 
 [Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC 1 and  and SOC 2 reports.
 
-The following SOC certifications are supported in {{site.data.keyword.powerSys_notm}}:
+The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
 -   SOC1 Type 1 
 -   SOC1 Type 2
--   SOC2 Type 2
-
+<!-- 
 ## HIPAA
 {: HIPAA-cert}
 
-The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. If you or your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. By using this setting, you can filter on HIPAA Enabled services in the catalog, indicate to IBM that your account stores protected health information (PHI), and digitally accept the IBM Business Associate Addendum for covered entities. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa).
+The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. If you or your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. By using this setting, you can filter on HIPAA Enabled services in the catalog, indicate to IBM that your account stores protected health information (PHI), and digitally accept the IBM Business Associate Addendum for covered entities. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa). -->
 
 ## ISO 27017:2015
 {: ISO-cert}
 
 The International Organization for Standardization (ISO) is an independent, non-governmental organization with a membership of 164 national standards bodies. ISO develops international standards that are voluntary, consensus-based and market relevant. The goal is to ensure that products and services are safe, reliable and of good quality.
 
-The {{site.data.keyword.powerSys_notm}} provides services that are delivered from global data centres that are a component of the IBM Cloud IaaS ISO27001:2015 certification. For more information, see [ISO 27017 - IBM Cloud infrastructure certificate](https://www.ibm.com/downloads/cas/GLL9ZBZX){: external}.
+The {{site.data.keyword.powerSys_notm}} provides services that are delivered from global data centres that are a component of the IBM Cloud™ IaaS ISO27001:2015 certification. For more information, see [ISO 27017 - IBM Cloud infrastructure certificate](https://www.ibm.com/downloads/cas/GLL9ZBZX){: external}. 
+<!-- Include new link to be provide by Dimitrios. certification covers a family of 4 standards (will include in the separate note). -->
+
+## PCI-DSS 
+{: pci-dss-compliance}
+
+To ensure consistent standards for merchants, the Payment Card Industry Security Standards Council established the Payment Card Industry (PCI) data security standards. These standards incorporate best practices to protect cardholder data, and they often require validation from a third-party Qualified Service Assessor (QSA). IBM is a Level 1 Service Provider for PCI DSS.
+
+You are responsible for the storing, processing, and transmission of cardholder data and may create cardholder data environments (CDEs) that can store, transmit, or process cardholder data using IBM Cloud Platform services. You can use the IBM Cloud Attestation of Compliances (AOC) when you seek your own PCI DSS certifications. It is your responsibility to document and operate CDEs and applications built using IBM Cloud Platform services in a PCI DSS-compliant manner.
+
+Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request a PCI DSS Attestation of Compliance (AOC) and/or a Service Responsibility Matrix (SRM) guide for {{site.data.keyword.powerSys_notm}}.
+
+You can build PCI DSS compliant environments and applications using IBM Cloud. For more information, see [IBM Cloud
+PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
