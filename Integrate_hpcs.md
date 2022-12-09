@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-09"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -19,8 +19,11 @@ subcollection: power-iaas
 IBM Cloud® Hyper Protect Crypto Services (HPCS) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
 {: shortdesc}
 
-## Using HPCS for AIX
+## Using Hyper Protect Crypto Services for AIX
 {: #AIX-hpcs}
+
+HPCS is supported with AIX 7.3 TL1
+{: note}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
 
@@ -28,12 +31,15 @@ The `keysvrmgr` command manages the Object Data Manager (ODM) database entries t
 
 The `hdcryptmgr` command helps to manage the cryptographic management of logical volumes (LV) and physical volumes (PV). For more information, see [hdcryptmgr Command](https://www.ibm.com/docs/en/aix/7.3?topic=h-hdcryptmgr-command){: external}
 
-## Using HPCS for Linux
+## Using Hyper Protect Crypto Services for Linux
 {: #Linux-hpcs}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to protect Linux Unified Key Setup (LUKS) encryption keys from being compromised. The HPCS acts as the single point of control to enable or disable access to data across the enterprise. The HPCS does this by successively wrapping encryption keys, with the ultimate control being a master key that resides in a hardware security module (HSM). 
 
 For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/){: external}
 
-For any additional support, [contact IBM](mailto:zaas.client.acceleration@ibm.com).
+## Additional support for configuring Hyper Protect Crypto Services
+{: #support-hpcs}
+
+For any additional information and assistance using HPCS for AIX or Linux, [contact IBM](mailto:zaas.client.acceleration@ibm.com).
 
