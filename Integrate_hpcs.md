@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-12-09"
+lastupdated: "2022-12-13"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Integrating {{site.data.keyword.powerSys_notm}} with Hyper Protect Crypto Services
 {: #integrate-hpcs}
 
-IBM Cloud® Hyper Protect Crypto Services (HPCS) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
+[IBM Cloud® Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-overview) (HPCS) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
 {: shortdesc}
 
 ## Using Hyper Protect Crypto Services for AIX

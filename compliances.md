@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-12-09"
+lastupdated: "2022-12-13"
 
-keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015, 
+keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
 subcollection: power-iaas
 
@@ -35,13 +35,11 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
-SOC 2 audits, based on the AICPA Trust Service Principles and Criteria, gauge service organization internal controls implemented to protect customer-owned data. SOC 2 reports provide details about the nature of those internal controls.
-
-[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC 1 and  and SOC 2 reports.
+[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC 1 reports.
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
--   SOC1 Type 1 
--   SOC1 Type 2
+-   SOC 1 Type 1 
+-   SOC 1 Type 2
 <!-- 
 ## HIPAA
 {: HIPAA-cert}
@@ -61,7 +59,7 @@ The {{site.data.keyword.powerSys_notm}} provides services that are delivered fro
 
 To ensure consistent standards for merchants, the Payment Card Industry Security Standards Council established the Payment Card Industry (PCI) data security standards. These standards incorporate best practices to protect cardholder data, and they often require validation from a third-party Qualified Service Assessor (QSA). IBM is a Level 1 Service Provider for PCI DSS.
 
-You are responsible for the storing, processing, and transmission of cardholder data and may create cardholder data environments (CDEs) that can store, transmit, or process cardholder data using IBM Cloud Platform services. You can use the IBM Cloud Attestation of Compliances (AOC) when you seek your own PCI DSS certifications. It is your responsibility to document and operate CDEs and applications built using IBM Cloud Platform services in a PCI DSS-compliant manner.
+You are responsible for the storing, processing, and transmission of cardholder data and may create cardholder data environments (CDEs) that can store, transmit, or process cardholder data using IBM Cloud Platform services. You can use the IBM Cloud Attestation of Compliance (AOC) when you seek your own PCI DSS certifications. It is your responsibility to document and operate CDEs and applications built using IBM Cloud Platform services in a PCI DSS-compliant manner.
 
 Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request a PCI DSS Attestation of Compliance (AOC) and/or a Service Responsibility Matrix (SRM) guide for {{site.data.keyword.powerSys_notm}}.
 
