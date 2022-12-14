@@ -21,6 +21,7 @@ Power Systems Virtual Servers
     Security and compliance
         gdpr.md
         compliances.md
+        Integrate_hpcs.md
 
     {: .topicgroup}
     Use cases

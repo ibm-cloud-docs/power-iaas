@@ -41,7 +41,7 @@ Learn how to create an OVA image of a Linux operating system and import it into 
 ### Using PowerVC to capture and import an OVA image
 {: #powervc-capture}
 
-If you've deployed PowerVC in your on-premises environment, you can use it to [capture any supported LPAR](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.0/com.ibm.powervc.standard.help.doc/powervc_capturing_hmc.html){: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage account and import it into the {{site.data.keyword.powerSys_notm}} environment.
+If you've deployed PowerVC in your on-premises environment, you can use it to [Capture a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.3?topic=images-capturing-virtual-machine){: external} and create an OVA image. After you create the OVA image, upload it to your Cloud Object Storage account and import it into the {{site.data.keyword.powerSys_notm}} environment.
 
 ### Capturing an image from VIOS
 {: #vios-capture}

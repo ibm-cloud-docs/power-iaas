@@ -38,8 +38,8 @@ To copy data from COS to your AIX virtual machine (VM), you must install the [Am
 
 You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or later, that simplifies the installation of yum, pip, and the AWS CLI. You can find the script at: `/usr/samples/nim/cloud_setup`.
 
-- [Configuring YUM and creating local repositories on IBM AIX](https://developer.ibm.com/technologies/systems/articles/configure-yum-on-aix/){: external}
-- [Python for AIX](http://www.aixtools.net/index.php/python){: external}
+- [Uses of AIX toolbox for open source software](https://www.ibm.com/support/pages/node/882892){: external}
+- [Python for AIX](https://www.ibm.com/support/pages/node/883796){: external}
 
 For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: external} to communicate with COS and transfer data.
 
