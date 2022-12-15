@@ -52,6 +52,7 @@ The US Health Insurance Portability and Accountability Act (HIPAA) and the Healt
 The International Organization for Standardization (ISO) is an independent, non-governmental organization with a membership of 164 national standards bodies. ISO develops international standards that are voluntary, consensus-based and market relevant. The goal is to ensure that products and services are safe, reliable and of good quality.
 
 The {{site.data.keyword.powerSys_notm}} provides services that are delivered from global data centres that are a component of the IBM Cloud™ IaaS ISO certification. The ISO certification covers a family of 4 standards as follows:
+
   - ISO/IEC 27001:2013 
   - ISO/IEC 27017:2015 
   - ISO/IEC 27018:2019 
