@@ -44,19 +44,14 @@
       "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
       "tiles": [
         {
-          "date": "22 September 2022",
-          "title": "Shared processor pool",
-          "description": "Share a group of processors between multiple virtual machines that allows you to group your applications together using the shared processor pool."
+          "date": "14 December 2022",
+          "title": "Power Systems Virtual Server compliance certifications",
+          "description": "The Power Systems Virtual Server provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards."
         },
         {
-          "date": "22 September 2022",
-          "title": "Global replication service",
-          "description": "Automate the complete data recovery solution using the API and CLI interfaces of global replication service."
-        },
-        {
-          "date": "22 September 2022",
-          "title": "Configure and deploy Epic workloads",
-          "description": "Deploy Epic workloads on a VM for more cost savings."
+          "date": "14 December 2022",
+          "title": "Integrating Power Systems Virtual Server with Hyper Protect Crypto Services",
+          "description": "Integrate HPCS with Power Systems Virtual Server to securely store and protect encryption key information for AIX and Linux."
         }
       ]
     }
