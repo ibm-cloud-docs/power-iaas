@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2022
 
-lastupdated: "2022-08-22"
+lastupdated: "2022-12-15"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -25,6 +25,13 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}}.
 {: shortdesc}
+
+## December 2022
+{: #dec-2022}
+
+- Get the list of internationally recognized {{site.data.keyword.powerSys_notm}} compliance certifications. For more information, see [Power Systems Virtual Server compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list).
+
+- You can integrate Hyper Protect Crypto Services (HPCS) with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with HPCS](/docs/power-iaas?topic=power-iaas-integrate-hpcs).
 
 ## September 2022
 {: #sept-2022}
