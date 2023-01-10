@@ -176,7 +176,8 @@ IKE policy version 2 is not compatible with policy-based VPN connections. If you
 
 The display of an example VPN connection is as follows:
 
-```ID                      1471c65163dd44daa969cf3edddd20a8
+```text
+ID                      1471c65163dd44daa969cf3edddd20a8
 Name                    rs-vpc-vpn01
 Status                  active
 Mode                    route
