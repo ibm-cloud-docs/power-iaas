@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2022
+  years: 2020, 2023
 
-lastupdated: "2022-11-24"
+lastupdated: "2023-01-10"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -24,12 +24,16 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-You can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
+You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}
 
-For support, you can use your own Linux subscription from a Linux vendor or choose to register for a full Linux&reg; subscription, (an additional charge will apply). For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+You can choose from the following options:
+- Register for a full Linux subscription.
+- Use your own Linux subscription from a Linux vendor.
 
-To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+
+If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
 
@@ -54,10 +58,8 @@ When you create an OVA image, ensure that the image includes the correct version
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues) within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
 {: note}
 
-## Registering and subscribing to RHEL
+## Registering and purchasing subscription to RHEL
 {: #subscribing-to-rhel}
-
-{{site.data.keyword.powerSys_notm}} does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
 
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
