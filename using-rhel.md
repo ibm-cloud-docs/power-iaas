@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2022
+  years: 2020, 2023
 
-lastupdated: "2022-11-24"
+lastupdated: "2023-01-10"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -24,12 +24,16 @@ subcollection: power-iaas
 # Using RHEL within the Power Systems Virtual Server
 {: #linux-with-powervs}
 
-You can deploy a Linux&trade; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
+You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}
 
-For support, you can use your own Linux subscription from a Linux vendor or choose to register for a full Linux&reg; subscription, (an additional charge will apply). For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+You can choose from the following options:
+- Register for a full Linux subscription.
+- Use your own Linux subscription from a Linux vendor.
 
-To provision a Linux VM with your subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+
+If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
 
@@ -47,17 +51,15 @@ Ensure that you have the latest cloud-init version as on March 2021 for all the 
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}.
 
-You must obtain the subscription for the Linux operating system directly from the vendor when you do not choose to use full Linux subscription for {{site.data.keyword.powerSys_notm}}. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues) within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
 {: note}
 
-## Registering and subscribing to RHEL
+## Registering and purchasing subscription to RHEL
 {: #subscribing-to-rhel}
-
-{{site.data.keyword.powerSys_notm}} does not provide a subscription to RHEL. You must purchase the RHEL subscription from Red Hat and then enable it.
 
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
 {: note}
