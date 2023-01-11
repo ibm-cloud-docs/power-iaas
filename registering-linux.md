@@ -47,7 +47,7 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
 The kernel versions listed above are required. You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. You can use the `sudo zypper update` command to update all of the Linux packages. You must verify that the distro (kernel) level contains these Linux fixes. If not, you should avoid using the resize option altogether or perform it in conjunction with a VM stop/restart action.
 {: important}
 
-You must obtain the subscription for the Linux operating system directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: external}.
 
