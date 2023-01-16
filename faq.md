@@ -57,8 +57,14 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 
 **Linux** - {{site.data.keyword.powerSys_notm}} supports the following Linux distributions:
 
-- SUSE Linux Enterprise (SLES) 12 and SLES 15
-- Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
+- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
+- Red Hat Enterprise Linux (RHEL) 8.4 or later
+
+For SAP workloads:
+
+- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
+- Red Hat Enterprise Linux (RHEL) 8.2 or later 
+
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
