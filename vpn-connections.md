@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2023
 
-lastupdated: "2022-01-16"
+lastupdated: "2023-01-16"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
