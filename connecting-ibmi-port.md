@@ -60,6 +60,8 @@ ssh -L 50000:localhost:23 -L 2001:localhost:2001  -L 449:localhost:449 -L 8470:l
 You might have to type  `sudo` in front of the `ssh` command if the system denies you permission.
 {: note}
 
+For further information on information and mapping, see [TCP/IP Ports Required for IBM i Access and Related Functions](https://www.ibm.com/support/pages/node/644775){: external} and also [Port Assignments with Operations Console](https://www.ibm.com/support/pages/ibm-iseries-port-assignments-operations-console){: external}.
+
 If you are on a Windows&reg; system, continue with [Setting up and configuring PuTTY on a Windows system](#configure-putty), otherwise see [Starting TCP servers](#start-tcp-servers).
 
 ## Setting up and configuring PuTTY on a Windows system
