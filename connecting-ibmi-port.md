@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-04-13"
+lastupdated: "2023-01-17"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -45,6 +45,7 @@ Before you use an SSH tunnel, you must create a user profile with `USRCLS(*SECOF
 After the `QSECOFR` user profile is enabled, start the SSHD server on the VM:
 
 ```text
+endtcpsvr server(*SSHD)instance(*all)
 strtcpsvr server(*SSHD)
 ```
 {: pre}
@@ -52,7 +53,7 @@ strtcpsvr server(*SSHD)
 On a Linux&reg; or Mac system, you would run a command similar to the following example:
 
 ```text
-ssh -L 50000:localhost:23 -L 2001:localhost:2001 -L 2005:localhost:2005 -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
+ssh -L 50000:localhost:23 -L 2001:localhost:2001  -L 449:localhost:449 -L 8470:localhost:8470 -L 8471:localhost:8471 -L 8472:localhost:8472 -L 2007:localhost:2007 -L 8473:localhost:8473 -L 8474:localhost:8474 -L 8475:localhost:8475 -L 8476:localhost:8476 -L 2003:localhost:2003 -L 2300:localhost:2300 -L 2323:localhost:2323 -L 3001:localhost:3001 -L 3002:localhost:3002 -L 2005:localhost:2005  -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 <myuser>@<myIPaddress>
 ```
 {: pre}
 
