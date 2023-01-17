@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-01-16"
+lastupdated: "2023-01-17"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG, 
 
@@ -32,7 +32,7 @@ The following table shows how an SPP is used to reduce the licensing cost when y
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
 |-----|-----------|-----------|-----------|-----------|
 |No|Maximum cores = 5 \n Mode = Dedicated|Maximum cores = 6 \n Mode = Dedicated|NA|5+6 = 11|
-|Yes|Maximum cores = 5 \n Mode = Shared/Uncapped \n Entitled capacity = 4.25|Maximum cores = 6 \n Mode = Shared/Uncapped \n Entitled capacity = 5.25|Maximum cores = 6|6, Determined by reserved cores in pool|
+|Yes|Maximum cores = 5 \n Mode = Shared/Uncapped \n Entitled capacity = 4.25|Maximum cores = 6 \n Mode = Shared/Uncapped \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by reserved cores in pool|
 {: class="simple-table"}
 {: caption="Table 1. SPP helps to reduce the licensing cost" caption-side="bottom"}
 
