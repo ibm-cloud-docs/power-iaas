@@ -172,8 +172,8 @@ You can edit the VPN connection options after creating a VPN connection. Click t
 To create, view, update, or delete a VPN connection by using CLI, see the CLI reference for [VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
 
 When you delete a virtual server instance, it deletes the private networks (subnets) and other resources. It would help if you considered the following:
-   -  You must delete VPN connections before deleting the virtual server instance. 
-   -  When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
+-  You must delete VPN connections before deleting the virtual server instance. 
+-  When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
 {: note}
 
 IKE policy version 2 is not compatible with policy-based VPN connections. If you attempt to add an IKE policy version 2 to a policy-based VPN connection, an error is displayed.
