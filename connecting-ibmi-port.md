@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-17"
+lastupdated: "2023-01-18"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
