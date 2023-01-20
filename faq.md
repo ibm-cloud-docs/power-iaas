@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-22"
+lastupdated: "2023-01-16"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -57,8 +57,14 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 
 **Linux** - {{site.data.keyword.powerSys_notm}} supports the following Linux distributions:
 
-- SUSE Linux Enterprise (SLES) 12 and SLES 15
-- Red Hat Enterprise Linux (RHEL) 8.1, 8.2, 8.3
+- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
+- Red Hat Enterprise Linux (RHEL) 8.4 or later
+
+For SAP workloads:
+
+- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
+- Red Hat Enterprise Linux (RHEL) 8.2 or later 
+
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
@@ -101,7 +107,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 {: faq}
 {: support}
 
-All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. A VM cannot have disks from both storage types while provisioning. But, you can add a volume of the other storage types after the VM has been provisioned. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
 If you previously deployed a VM on an old storage type (**SSD** or **standard**), no action is required. Your VM continues to run by using the old storage type. You can also add new disks from those legacy tiers.
 

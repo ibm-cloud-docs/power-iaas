@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2023
 
-lastupdated: "2022-09-13"
+lastupdated: "2023-01-16"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -94,8 +94,10 @@ To delete an IBM Cloud connection, complete the following steps:
    
    1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
-   If you delete the IBM Cloud connection, subnets that are attached to the connection are automatically detached. If {{site.data.keyword.tg_full_notm}} is enabled for your Cloud connection, then you must delete the Cloud connection (Direct Link) from the {{site.data.keyword.tg_full_notm}} interface before deleting the Cloud connection.
-   {: note}
+When you delete a virtual server instance, it deletes the private networks (subnets) and other resources. It would help if you considered the following:
+-  You must delete the Cloud Connection (Direct Link) from the IBM Cloud Transit Gateway interface before deleting the Cloud Connection. 
+-  When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
+{: note}
 
 ## Setting up high availability over IBM Cloud connections
 {: #ha-availability-cloud-connections}
