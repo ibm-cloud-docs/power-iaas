@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-02-24"
+lastupdated: "2023-01-23"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -35,7 +35,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
 
-2. Click the **Edit** icon in the **Server details** pane.
+2. Click the **Edit details** in the server details pane.
 
     ![Finding your server details](./images/console-server-details.png "Finding your server details"){: caption="Figure 1. Finding your server details" caption-side="bottom"}
 
@@ -128,9 +128,7 @@ Any volume that has been included in a snapshot cannot be resized. To resize a v
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-3. After you click the **Edit** icon, a menu appears. Select the wanted storage volume size. You can increase only the size of the storage volume.
-
-    ![Modifying your storage volume](./images/console-modify-volume.png "Modifying your storage volume"){: caption="Figure 2. Modifying your storage volume" caption-side="bottom"}
+3. Click on **Edit** to select the desired storage volume size in the **Modify storage volume** window. You can increase only the size of the storage volume.
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
