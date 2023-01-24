@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-06-10"
+lastupdated: "2023-01-23"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -58,7 +58,7 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 
 You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: external}.
 
-### Using the {{site.data.keyword.powerSys_notm}} user interface to create an AIX VM with a configured SSH key
+### Using the Power System Virtual Server user interface to create an AIX VM with a configured SSH key
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
@@ -70,8 +70,6 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 3. Click **Create instance**.
 
 4. Under the **Virtual servers** section, select **Add SSH Keys**.
-
-    ![SSH key navigation](./images/console-ssh-new.png "SSH key navigation"){: caption="Figure 1. SSH key navigation" caption-side="bottom"}
 
 5. Enter a **Key name** and your previously generated **Public key**.
 
