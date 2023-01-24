@@ -67,39 +67,31 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-1. Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
+Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
+
+1. Open **Session** under **Category:**.
 
 2. Enter your system's **IP address** and select **SSH** as the **Connection type**.
 
 3. Enter **22** as the port number.
 
-    ![Creating a PuTTY session](./images/putty-configure.png "Creating a PuTTY session"){: caption="Figure 1. Creating a PuTTY session" caption-side="bottom"}
+4. Under the **Connection** category, select **Connection**>**SSH**>**Tunnels**.
 
-4. Select **Tunnels** under the **Connection** category.
-
-5. Add your **Source port** number and **Destination**. In this example, the user chose 50000 as the source port number.
+5. Add your **Source port** number and **Destination**. For example, you  can chose 50000 as the source port number.
 
     Do not change the source port numbers. When telnetting, avoid making the source port the same as the destination.
     {: tip}
 
-    ![Basic options for your PuTTY session](./images/putty-ssh-tunneling.png "Basic options for your PuTTY session"){: caption="Figure 2. Basic options for your PuTTY session" caption-side="bottom"}
-
 6. Click **Add** to add your source port to the forwarded port list.
 
-    You need to add all of the following ports: 23, 449, 8470, 8471, 8472, 8473, 8474, 8475 and 8476.
+    You need to repeat step **3** to step **6** to add all of the following ports: 23, 449, 8470, 8471, 8472, 8473, 8474, 8475 and 8476.
     {: important}
-
-    ![Options controlling SSH port forwarding](./images/putty-add-ssh-tunnel.png "Options controlling SSH port forwarding"){: caption="Figure 3. Options controlling SSH port forwarding" caption-side="bottom"}
 
 7. After you add all of the necessary port numbers, check your populated list.
 
-    ![Forwarded port list](./images/putty-ssh-tunneling-list.png "Forwarded port list"){: caption="Figure 2. Forwarded port list" caption-side="bottom"}
-
 8. Click back on the **Session** category and give your session a name under **Saved Sessions**. Click **Save**.
 
-    ![Saving your session](./images/putty-save-session.png "Saving your session"){: caption="Figure 3. Saving your session" caption-side="bottom"}
-
-9. Your saved session appears after you click **Save**. Load your session and click **Open** to start a PuTTY session to your system.
+9. Your saved session appears under **Saved Sessions** after you click **Save**. Select your session and click **Open** to start a PuTTY session to your system.
 
     ![Seeing your list of saved sessions](./images/putty-load-sesson.png "Seeing your list of saved sessions"){: caption="Figure 4. Seeing your list of saved sessions" caption-side="bottom"}
 
@@ -107,15 +99,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 
 11. Configure you ACS client or **IBM i Access for Windows Client** to use the SSH tunnel. In both clients, you must select **Configure** from the **Communications** menu.
 
-    ![ACS communications menu](./images/putty-acs.png "ACS communications menu"){: caption="Figure 5. ACS communications menu" caption-side="bottom"}
-
-    ![PC5250 communications menu](./images/putty-pc5250.png "PC5250 communications menu"){: caption="Figure 6. PC5250 communications menu" caption-side="bottom"}
-
 12. Change the IP address to *127.0.0.1* on **port 23**.
-
-    ![ACS connections](./images/putty-acs-destination.png "ACS connections"){: caption="Figure 7. ACS connections" caption-side="bottom"}
-
-    ![Configuring PC5250](./images/putty-pc5250-destination.png "Configuring PC5250"){: caption="Figure 8. Configuring PC5250" caption-side="bottom"}
 
 13. Press **OK** to save the changes. The client restarts and connects.
 
@@ -184,8 +168,6 @@ To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which 
 
 After starting ACS, create a system configuration (*sysconfig*).
 
-1. Configure a server for *localhost*. In this example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
-
-    ![Changing the port number](./images/system-ibmi-localhost.png "Changing the port number"){: caption="Figure 9. Changing the port number" caption-side="bottom"}
+1. Configure a server for *localhost*. For example, **port 50000** is forwarding to **port 23**. Go into the 5250 session configuration and change the port from **23** to **50000**.
 
 2. Return to the IBM i terminal and enter your credentials, including *System*, *User*, and *Password*.
