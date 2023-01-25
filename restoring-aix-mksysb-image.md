@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-24"
+lastupdated: "2023-01-25"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -62,8 +62,6 @@ If your disk is not at the correct size, complete the following steps:
 1. Create a file system to hold the _mksysb_ archive.
 
 2. Click **Add new** under **Attached volumes**.
-
-    ![Adding a volume](./images/console-attach-volume.png "Adding a volume"){: caption="Figure 5. Adding a volume" caption-side="bottom"}
 
 3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
 
