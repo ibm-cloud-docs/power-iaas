@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2023-02-02"
 
 keywords: help and support, support ticket, faq, create new case
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Getting help and support
 {: #getting-help-and-support}
 
-Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
+Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs) and [Getting support](/docs/get-support?topic=get-support-using-avatar&interface=ui).
 {: shortdesc}
 
 ## PowerVS infrastructure cases
