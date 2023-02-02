@@ -87,7 +87,7 @@ There are additional LPPs for IBM i which are available that can be included in 
 
    - IBM i Cloud Storage Solutions (5773-ICC)
    - IBM i Power HA (5770-HAS)
-   - IBM DB2 Web Query for i Standard Edition (5733-WQS) 
+   - IBM DB2 Web Query for i Standard Edition (5733-WQS). Note that this product installs as and keys are applied to product ID 5733-WQX. 
    - Rational Development Studio for IBM i (5770-WDS)
 
     Each of the above programs are individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance, if you want to use these programs on your IBM i VM instance, you must order these licensed programs through Power Systems Virtual Server you cannot use existing licenses in your VM instance.
