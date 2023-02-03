@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-04"
 
 keywords: direct link
 
@@ -67,7 +67,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
-      | Dallas 10 \n Dallas 12  \n Dallas 13 | 64999 |
+      | Dallas 10 \n Dallas 12  \n Dallas 13 | 4206000072 \n 64999 \n 64999 |
       | Washington 4 | 64995 |
       | Washington 6 | 64999 |
       | Frankfurt 4  \n Frankfurt 5 | 64999 |
