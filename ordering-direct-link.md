@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-08-26"
+lastupdated: "2023-02-03"
 
 keywords: direct link
 
@@ -67,7 +67,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
-      | Dallas 12  \n Dallas 13 | 64999 |
+      | Dallas 10 \n Dallas 12  \n Dallas 13 | 64999 |
       | Washington 4 | 64995 |
       | Washington 6 | 64999 |
       | Frankfurt 4  \n Frankfurt 5 | 64999 |
@@ -135,6 +135,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^footnote1] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^footnote2] |
     | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-WDC04-IBMPOWERIAASLITE-2-1 \n SL-WDC04-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC04-10G-NOGRE-1-2[^footnote4] |
     | WDC06 | IBM Power VS | SL-WDC06-IBMPOWERIAASLITE-1-1 \n SL-WDC06-IBMPOWERIAASLITE-1-2 \n PowerVS-WDC06-10G-NOGRE-1-1[^footnote13] | SL-WDC06-IBMPOWERIAASLITE-2-1 \n SL-WDC06-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC06-10G-NOGRE-1-2[^footnote14] |
+    | DAL10 | IBM Power VS | SL-DAL10-IBMPOWERIAASLITE-1-1 \n SL-DAL10-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL10-10G-NOGRE-1-1[^footnote5] | SL-DAL10-IBMPOWERIAASLITE-2-1 \n SL-DAL10-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL10-10G-NOGRE-1-2[^footnote6] |
     | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1[^footnote5] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote6] |
     | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^footnote7] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^footnote8] |
     | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^footnote9] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^footnote10] |
