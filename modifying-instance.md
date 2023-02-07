@@ -37,8 +37,6 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 2. Click the **Edit details** in the server details pane.
 
-    ![Finding your server details](./images/console-server-details.png "Finding your server details"){: caption="Figure 1. Finding your server details" caption-side="bottom"}
-
 3. A menu appears after you click the **Edit** icon. Here, you can change your instance's **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
     If the VM is inactive or shut down, you can change the processor type to Dedicated processor, Uncapped shared processor or Capped shared processor.
