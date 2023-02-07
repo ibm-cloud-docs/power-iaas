@@ -74,11 +74,11 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
 
 4. Click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
 
-The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
-{: tip}
+    The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
+    {: tip}
     
-You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request for migration to a different host, the serial numbers will change, and the IBM i license will not work.
-{: important}
+    You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request for migration to a different host, the serial numbers will change, and the IBM i license will not work.
+    {: important}
 
 5. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
@@ -94,8 +94,6 @@ You must pin the IBM i virtual server instances that use the IBM i licenses. If 
 
     There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
     {: important}
-
-    ![Selecting your processor and system](./images/console-profile.png "Selecting your processor and system"){: caption="Figure 2. Selecting your processor and system" caption-side="bottom"}
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being *disabled*. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
 
