@@ -400,4 +400,4 @@ Power System Virtual Server uses a caching mechanism for some resources that may
 
 You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
 
-When the cache refreshes beyond four minutes, the Power System Virtual Server may not display the updated information in a rare scenario with heavy traffic conditions. In such cases, an error message shows the same message. However, a subsequent page refresh will retrieve the updated information.
+The cache refreshes beyond four minutes in a rare scenario with heavy traffic conditions. The Power System Virtual Server might not display updated information temporarily. Instead, a message indicating the same is displayed. However, a subsequent page refresh will retrieve the information.
