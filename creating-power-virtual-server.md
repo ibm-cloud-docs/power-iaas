@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-15"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
@@ -70,9 +70,15 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
 
 2. In the catalog's search box, type **Power Systems Virtual Server** and click the **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
 
-3. Click **Virtual server instances** on the left navigation of the {{site.data.keyword.powerSys_notm}} user interface.
+3. Click **Select workspace** on the left navigation under **Workspace** of the {{site.data.keyword.powerSys_notm}} user interface to select from a list of previously created workspace. 
+   If you do not have a workspace, click **Create a workspace**.
 
-4. Click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
+4. Click **Virtual server instances**.
+   
+    Make sure you select the desired workspace to display all the virtual server instances you have already created. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page on [What should I do If I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#ui-not-updated).
+    {: important}
+
+5. Click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
 
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
     {: tip}
@@ -80,9 +86,9 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
     You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request for migration to a different host, the serial numbers will change, and the IBM i license will not work.
     {: important}
 
-5. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
+6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-6. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. When you select a custom image, the new PVM instance(s) will be deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. When you select a custom image, the new PVM instance(s) will be deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
@@ -90,14 +96,14 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second Power Systems Virtual Server Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-7. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
+8. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
 
     There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
     {: important}
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being *disabled*. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
 
-8. You can use the user interface to set the affinity policies for storage pools only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
+9.  You can use the user interface to set the affinity policies for storage pools only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
 
     Select one of the following Storage pool options: 
     - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool for the storage tier with sufficient capacity. 
@@ -111,12 +117,12 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
     If you add volumes to be created and attached to your new VM during creation then all the volumes will be placed in the same selected storage pool. Volumes can be created in different storage pools after the VM has been provisioned.
     {: note}
     
-9. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
+10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-10. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+11. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
 Refer to the following table for more information on each {{site.data.keyword.powerSys_notm}} instance field.
 

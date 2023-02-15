@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-16"
+lastupdated: "2023-02-15"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -391,3 +391,11 @@ Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicati
 The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value. 
 
 You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
+
+## What should I do If I do not see the latest information in the UI?
+{: #ui-not-updated}
+{: faq}
+
+Power System Virtual Server uses a caching mechanism for some resources that may lead to the display of outdated information for some time. It can take four minutes to update the information in an improbable scenario.
+
+You can continuously refresh the page to trigger an update to the cached data, eventually leading to the updated information's display. 
