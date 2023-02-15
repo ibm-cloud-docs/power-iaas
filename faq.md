@@ -398,4 +398,6 @@ You must pin the IBM i virtual server instances that use the IBM i licenses. If 
 
 Power System Virtual Server uses a caching mechanism for some resources that may lead to the display of outdated information for some time. It can take four minutes to update the information in an improbable scenario.
 
-You can continuously refresh the page to trigger an update to the cached data, eventually leading to the updated information's display. 
+You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
+
+When the cache refreshes beyond four minutes, the Power System Virtual Server may not display the updated information in a rare scenario with heavy traffic conditions. In such cases, an error message shows the same message. However, a subsequent page refresh will retrieve the updated information.
