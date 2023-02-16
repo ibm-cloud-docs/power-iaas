@@ -391,3 +391,14 @@ Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicati
 The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value. 
 
 You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
+
+## What should I do If I do not see the latest information in the UI?
+{: #ui-not-updated}
+{: faq}
+
+Consider the following if you do not see an update in the User Interface(UI):
+
+1. Power System Virtual Server utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
+2. In some scenarios out-dated information may be shown while the cache is updated, for approximately four minutes.
+3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
+4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, Power System Virtual Server UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
