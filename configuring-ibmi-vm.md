@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-06-30"
+lastupdated: "2023-01-24"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -40,8 +40,6 @@ To open the IBM i console, complete the following steps:
 
     IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
     {: note}
-
-    ![IBM i console](./images/ibm-i-console.png "IBM i console"){: caption="Figure 2. IBM i console" caption-side="bottom"}
 
 ## Tips for working with the IBM i console
 {: #tips-ibmi}

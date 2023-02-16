@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-03-12"
+lastupdated: "2023-01-25"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -37,9 +37,7 @@ The IPv6 interface that is used for VM management might be affected when you res
 {: help}
 {: support}
 
-You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. The following screen capture shows a user-deployed AIX _helper VM_ named **power-systems-virtual-server1-2**:
-
-![Defining an AIX helper VM](./images/console-aix-helper-vm.png "Defining an AIX helper VM"){: caption="Figure 1. Defining an AIX helper VM" caption-side="bottom"}
+You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. 
 
 Before you can copy an AIX `mksysb` archive, determine the amount of space the _helper VM_ needs to hold the _mksysb_ image. In the following example, the _mksysb_ image (`gdrh10v1.sysb`) is roughly 5.8 GB:
 
@@ -64,8 +62,6 @@ If your disk is not at the correct size, complete the following steps:
 1. Create a file system to hold the _mksysb_ archive.
 
 2. Click **Add new** under **Attached volumes**.
-
-    ![Adding a volume](./images/console-attach-volume.png "Adding a volume"){: caption="Figure 5. Adding a volume" caption-side="bottom"}
 
 3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
 
@@ -107,11 +103,7 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
 1. Click **Add new** under **Attached volumes**.
 
-    ![Displaying storage information](./images/console-attach-volume.png "Displaying storage information"){: caption="Figure 12. Displaying storage information" caption-side="bottom"}
-
-2. Create a data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. In the following example, the name **AIX-7200-03-03-altdisk** is the volume name:
-
-    ![Displaying storage information](./images/console-create-volume-alt.png "Displaying storage information"){: caption="Figure 13. Displaying storage information" caption-side="bottom"}
+2. Create a data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. For example, you can enter the volume name as **AIX-7200-03-03-altdisk**.
 
 3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the _helper VM_, log on to the VM. Use the `cfgmgr` and `lspv` commands on the _helper VM_ to show the new disk. The new disk is named `hdisk2`.
 
@@ -155,6 +147,5 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
     ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
-    ![Detaching the volume](./images/console-detach-volume.png "Detaching the volume"){: caption="Figure 20. Detaching the volume" caption-side="bottom"}
 
 4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.

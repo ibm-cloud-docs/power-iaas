@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2023-01-23"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -37,8 +37,6 @@ After you purchase the software, you can download it from [Entitled Software Sup
 Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment.
 
 - When you are creating the virtual servers that are part of the PowerHA SystemMirror cluster, you must select **Different Server** from the **Colocation Rules** field. Selecting **Different Server** ensures that the different logical partitions (LPARs) that will be a part of the PowerHA SystemMirror cluster are not deployed on the same host.
-
-![Displays colocation rules field](./images/console-colocation-rules.png "Displaying the colocation rules field"){: caption="Figure 1. Displaying the colocation rules field" caption-side="bottom"}
 
 - You must select **On** from the **Shareable** field when you create storage volumes for the virtual severs that are part of the PowerHA SystemMirror cluster.
 

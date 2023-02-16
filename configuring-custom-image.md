@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2023-01-23"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -108,8 +108,6 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported w
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-![Creating a Cloud Object Storage bucket](./images/console-create-bucket-fields.png "Creating a Cloud Object Storage bucket"){: caption="Figure 1. Creating a Cloud Object Storage bucket" caption-side="bottom"}
-
 Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
@@ -119,13 +117,9 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** pane.
 
-    ![Uploading your custom image to the Cloud Object Storage bucket](./images/console-new-credential.png "Uploading your custom image to the Cloud Object Storage bucket"){: caption="Figure 2. Uploading your custom image to the Cloud Object Storage bucket" caption-side="bottom"}
-
 3. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
 
 4. Find your new service credential in the service credentials table.
-
-    ![Your new service credential](./images/console-service-credential.png "Your new service credential"){: caption="Figure 3. Your new service credential" caption-side="bottom"}
 
     To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 

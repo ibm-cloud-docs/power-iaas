@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-05-11"
+lastupdated: "2023-01-23"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -78,8 +78,6 @@ For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/
    - If you chose to capture and export your volume backed image to COS, go to your COS bucket.
 
    - If you chose to capture and export your volume backed image to the image catalog, go to **Boot images**.
-
-    ![Finding your newly captured volume backed image in your image catalog](./images/console-capture-export-boot.png "Finding your newly captured volume backed image in your image catalog"){: caption="Figure 1. Finding your newly captured image in your image catalog" caption-side="bottom"}
 
 9. *(Optional)* If you'd like to export your volume backed image from your image catalog to COS, select it and click the **Capture and export** icon.
 
