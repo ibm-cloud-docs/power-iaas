@@ -47,7 +47,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
 
     | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
     | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
-    | America | Dallas, USA | us-south | DAL12 \n us-south | DAL12 \n DAL13 | us-south-2 \n us-south-3 |
+    | America | Dallas, USA | us-south | DAL10 \n DAL12 \n us-south | DAL10 \n DAL12 \n DAL13 | us-south-1 \n us-south-2 \n us-south-3 |
     | America | Washington DC, USA | us-east | us-east \n WDC06 | WDC04 \n WDC06 | us-east-1 \n us-east-2 |
     | America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |
     | America | Toronto, Canada | ca-tor | TOR01 | TOR01 | - |
