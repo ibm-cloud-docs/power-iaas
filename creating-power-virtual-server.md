@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-15"
+lastupdated: "2023-02-16"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
