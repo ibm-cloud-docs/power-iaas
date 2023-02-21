@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-12-15"
+lastupdated: "2023-02-16"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -25,6 +25,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}}.
 {: shortdesc}
+
+## February 2023
+{: #feb-2023}
+
+- Added a new data center DAL10 in the exsisting list of Power Systems Virtual Server data centers. For more information, see [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 ## December 2022
 {: #dec-2022}
