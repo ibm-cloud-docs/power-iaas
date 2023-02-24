@@ -55,21 +55,18 @@ You can customize your notifications to stop getting notifications or stop getti
 1.	Access the **Event logs** page from the user interface. For more information, see Accessing the event logs.
 2.	Click **Log notification settings** on the top right corner of the page.
 3.	Toggle the notification button to on or off based on your requirement.
-
-| Toggle notification button status |	Description |
-|-----|------|
-| On	| Shows notification based on other subset parameters that you can choose. |
-| Off | All notifications are disabled |
-{: class="simple-tab-table"}
-{: caption="Table 1. Notification toggle button options" caption-side="top"}
-{: #noti-toggle}
-
+    | Toggle notification button status |	Description |
+    |-----|------|
+    | On	| Shows notification based on other subset parameters that you can choose. |
+    | Off | All notifications are disabled |
+    {: class="simple-tab-table"}
+    {: caption="Table 1. Notification toggle button options" caption-side="top"}
+    {: #noti-toggle}
 4.	When the notification toggle is set to on, you can further toggle the workspace notification button to on or off based on your requirements.
-
-| Toggle workspace notification button status |	Description |
-|---------|----------|
-| On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
-| Off |	The following condition applies: \n * Shows notifications for events requested/performed by you for the current workspace. \n * Hides notifications based on events requested/performed by concurrent users in the same workspace. |
-{: class="simple-tab-table"}
-{: caption="Workspace notification toglle button options" caption-side="top"}
-{: #workspace-noti-toggle}
+    | Toggle workspace notification button status |	Description |
+    |---------|----------|
+    | On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
+    | Off |	The following condition applies: \n * Shows notifications for events requested/performed by you for the current workspace. \n * Hides notifications based on events requested/performed by concurrent users in the same workspace. |
+    {: class="simple-tab-table"}
+    {: caption="Workspace notification toglle button options" caption-side="top"}
+    {: #workspace-noti-toggle}
