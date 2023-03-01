@@ -36,7 +36,7 @@ The scope of the GRS service is to create and manage replicated resources that i
 ## Additional information
 {: #additional-info-GRS}
 
-If you need a more detailed information on Gobal Replication Service, see [Global Replication Services Solution using IBM Power Virtual Server](/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
+If you need a more detailed information on Gobal Replication Service, see [Global Replication Services Solution using IBM Power Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
 
 ## Locations that support global replication service
 {: #locations-GRS}
