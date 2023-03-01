@@ -38,10 +38,10 @@ You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to protec
 
 For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/){: external}
 
-### HPCS for Linux virtual server instances
-{: #Linux-vm-hpcs}
+### Key protect for Linux virtual server instances
+{: #Linux-vm-kp}
 
-The {{site.data.keyword.powerSys_notm}} instances that runs on Linux operating system are integrated with IBM Cloud Key Protect service. For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/){: external}
+The {{site.data.keyword.powerSys_notm}} instances that runs on Linux operating system are integrated with IBM Cloud Key Protect service. For more information on IBM® Key Protect for IBM Cloud, see [IBM Key Protect docs](/docs/key-protect)
 
 ## Additional support for configuring Hyper Protect Crypto Services
 {: #support-hpcs}
