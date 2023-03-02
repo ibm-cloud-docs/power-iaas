@@ -265,6 +265,6 @@ The following events are for working with VPN Connection in your {{site.data.key
 ## Viewing events
 {: #at-viewing-events}
 
-Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. For more information, see [Cloud services locations](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations).
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs for all North America and South America data centers from Dallas, all Europe data centers from Frankfurt, Sydney data center from Sydney, and all Japan data center from Tokyo. For a list of locations where Power Systems Virtual Server services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
 {{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch). 
