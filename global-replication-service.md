@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022
+  years: 2022, 2023
 
-lastupdated: "2022-09-22"
+lastupdated: "2023-02-24"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -32,6 +32,11 @@ The scope of the GRS service is to create and manage replicated resources that i
 - APIs to manage volume groups through create, update, delete, start, and stop operations.
 - Virtual server instance life-cycle operations by using replicated volumes.
 - Onboard auxiliary volume on secondary site for volume recovery.
+
+## Additional information
+{: #additional-info-GRS}
+
+If you need a more detailed information on Gobal Replication Service, see [Global Replication Services Solution using IBM Power Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
 
 ## Locations that support global replication service
 {: #locations-GRS}
