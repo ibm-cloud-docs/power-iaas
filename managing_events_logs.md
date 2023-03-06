@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-06"
 
 keywords: power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -27,14 +27,13 @@ subcollection: power-iaas
 The {{site.data.keyword.powerSysFull}} logs all the events and notifications from the IBM cloud console. You can access them from the **Event logs** page in the user interface.
 {: shortdesc}
 
-Consider the following if you wish to access the event logs and notifications:
+Consider the following for the event logs and notifications:
 
-* The **Event logs** page shows a maximum of 400 latest entries. For more information, see [Accessing the event logs](/docs/power-iaas?topic=manage-event-logs#access-event-logs).  
-* The **Event logs** page shows events from the current and previous months regardless of your chosen timeframe.
-* The events are tied to a workspace. Select a workspace to see the respective workspace event logs and notifications.
-* You can choose to enable or disable notifications for events for all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=manage-event-logs#set-event-logs).
+* The **Event logs** page shows a maximum of 400 latest entries from the current and previous months. For more information, see [Accessing the event logs](/docs/power-iaas?topic=power-iaas-manage-event-logs#access-event-logs).  
+* You can choose to enable or disable notifications for events for all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=power-iaas-manage-event-logs#set-event-logs).
 * If you have disabled the notifications, you can still access the logs from the **Events logs** page.
-* You can also enable or disable notifications from concurrent users within the same workspace.
+* You can also enable or disable notifications from concurrent users within the same workspace. 
+* The custom notification settings you choose gets tied to your user account and is applicable for all workspaces.
  
 ## Accessing the event logs
 {: #access-event-logs}
@@ -52,9 +51,9 @@ You can access a maximum of 400 events from the current and previous month in th
 
 You can customize your notifications to stop getting notifications or stop getting notifications from other concurrent users in the same workspace. To customize the log notification settings, perform the following steps:
 
-1.	Access the **Event logs** page from the user interface. For more information, see Accessing the event logs.
+1.	Access the **Event logs** page from the user interface. For more information, see [Accessing the event logs](/docs/power-iaas?topic=power-iaas-manage-event-logs#access-event-logs).
 2.	Click **Log notification settings** on the top right corner of the page.
-3.	Toggle the notification button to on or off based on your requirement.
+3.	Toggle the **Show notifications based on the settings below** button to on or off based on your requirement.
     | Toggle notification button status |	Description |
     |-----|------|
     | On	| Shows notification based on other subset parameters that you can choose. |
@@ -62,7 +61,7 @@ You can customize your notifications to stop getting notifications or stop getti
     {: class="simple-tab-table"}
     {: caption="Table 1. Notification toggle button options" caption-side="top"}
     {: #noti-toggle}
-4.	When the notification toggle is set to on, you can further toggle the workspace notification button to on or off based on your requirements.
+4.	When the **Show notifications based on the settings below** button toggle is set to on, you can further toggle the **Show for events requested by others** button to on or off based on your requirements.
     | Toggle workspace notification button status |	Description |
     |---------|----------|
     | On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
