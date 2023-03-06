@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-06"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -13,11 +13,14 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Integrating {{site.data.keyword.powerSys_notm}} with Hyper Protect Crypto Services
+# Integrating {{site.data.keyword.powerSys_notm}} with IBM Key Management Services
 {: #integrate-hpcs}
 
-[IBM Cloud® Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-overview) (HPCS) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
+IBM provides two key management services that integrates with {{site.data.keyword.powerSys_notm}}:
 {: shortdesc}
+
+  1. [IBM Cloud® Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto?topic=hs-crypto-overview) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with Power Systems Virtual Server to securely store and protect encryption key information for AIX and Linux
+  2. [IBM® Key Protect (KP)](/docs/key-protect) is a full-service multi-tenant encryption solution that allows data to be secured and stored in IBM Cloud™ using the latest envelope encryption techniques. You can integrate KP with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
 
 ## Using Hyper Protect Crypto Services for AIX
 {: #AIX-hpcs}
@@ -38,10 +41,10 @@ You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS to protec
 
 For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/){: external}
 
-### Key protect for Linux virtual server instances
+## Key protect for Linux virtual server instances
 {: #Linux-vm-kp}
 
-The {{site.data.keyword.powerSys_notm}} instances that runs on Linux operating system are integrated with IBM Cloud Key Protect service. For more information on IBM® Key Protect for IBM Cloud, see [IBM Key Protect docs](/docs/key-protect)
+The {{site.data.keyword.powerSys_notm}} instances that runs on Linux operating system are integrated with IBM Cloud Key Protect service. For more information on IBM Key Protect for IBM Cloud, see [IBM Key Protect docs](/docs/key-protect)
 
 ## Additional support for configuring Hyper Protect Crypto Services
 {: #support-hpcs}
