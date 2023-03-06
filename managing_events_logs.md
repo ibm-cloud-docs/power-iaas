@@ -69,3 +69,4 @@ You can customize your notifications to stop getting notifications or stop getti
     {: class="simple-tab-table"}
     {: caption="Workspace notification toglle button options" caption-side="top"}
     {: #workspace-noti-toggle}
+5. Click **Save**.
