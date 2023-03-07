@@ -29,7 +29,7 @@ The {{site.data.keyword.powerSysFull}} logs all the events and notifications fro
 
 Consider the following for the event logs and notifications:
 
-* The **Event logs** page shows a maximum of 400 latest entries from the current and previous months. For more information, see [Accessing the event logs](/docs/power-iaas?topic=power-iaas-manage-event-logs#access-event-logs).  
+* The **Event logs** page shows a maximum of 400 latest entries from the current and previous months.  
 * You can choose to enable or disable notifications for events for all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=power-iaas-manage-event-logs#set-event-logs).
 * If you have disabled the notifications, you can still access the logs from the **Events logs** page.
 * You can also enable or disable notifications from concurrent users within the same workspace. 
