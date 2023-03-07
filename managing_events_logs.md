@@ -30,10 +30,10 @@ The {{site.data.keyword.powerSysFull}} logs all the events and notifications fro
 Consider the following for the event logs and notifications:
 
 * The **Event logs** page shows a maximum of 400 latest entries from the current and previous months.  
-* You can choose to enable or disable notifications for events for all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=power-iaas-manage-event-logs#set-event-logs).
+* You can choose to enable or disable notifications for events on all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=power-iaas-manage-event-logs#set-event-logs).
 * If you have disabled the notifications, you can still access the logs from the **Events logs** page.
-* You can also enable or disable notifications from concurrent users within the same workspace. 
-* The custom notification settings you choose gets tied to your user account and is applicable for all workspaces.
+* You can customize notifications, enabling or disabling notifications from concurrent users within the same workspace. 
+* The custom notification settings you choose gets tied to your user account and apply to all workspaces.
  
 ## Accessing the event logs
 {: #access-event-logs}
@@ -67,6 +67,6 @@ You can customize your notifications to stop getting notifications or stop getti
     | On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
     | Off |	The following condition applies: \n * Shows notifications for events requested/performed by you for the current workspace. \n * Hides notifications based on events requested/performed by concurrent users in the same workspace. |
     {: class="simple-tab-table"}
-    {: caption="Workspace notification toglle button options" caption-side="top"}
+    {: caption="Table 2. Workspace notification toglle button options" caption-side="top"}
     {: #workspace-noti-toggle}
 5. Click **Save**.
