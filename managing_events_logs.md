@@ -54,6 +54,7 @@ You can customize your notifications to stop getting notifications or stop getti
 1.	Access the **Event logs** page from the user interface. For more information, see [Accessing the event logs](/docs/power-iaas?topic=power-iaas-manage-event-logs#access-event-logs).
 2.	Click **Log notification settings** on the top right corner of the page.
 3.	Toggle the **Show notifications based on the settings below** button to on or off based on your requirement.
+
     | Toggle notification button status |	Description |
     |-----|------|
     | On	| Shows notification based on other subset parameters that you can choose. |
@@ -62,6 +63,7 @@ You can customize your notifications to stop getting notifications or stop getti
     {: caption="Table 1. Notification toggle button options" caption-side="top"}
     {: #noti-toggle}
 4.	When the **Show notifications based on the settings below** button toggle is set to on, you can further toggle the **Show for events requested by others** button to on or off based on your requirements.
+
     | Toggle workspace notification button status |	Description |
     |---------|----------|
     | On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
