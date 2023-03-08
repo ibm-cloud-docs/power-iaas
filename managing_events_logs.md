@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-06"
+lastupdated: "2023-03-08"
 
 keywords: power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -58,7 +58,6 @@ You can customize your notifications to stop getting notifications or stop getti
     |-----|------|
     | On	| Shows notification based on other subset parameters that you can choose. |
     | Off | All notifications are disabled |
-    {: class="simple-tab-table"}
     {: caption="Table 1. Notification toggle button options" caption-side="top"}
     {: #noti-toggle}
 
@@ -67,8 +66,7 @@ You can customize your notifications to stop getting notifications or stop getti
     |---------|----------|
     | On | Shows notification based on events requested/performed by concurrent users in the same workspace. |
     | Off |	The following condition applies: \n * Shows notifications for events requested/performed by you for the current workspace. \n * Hides notifications based on events requested/performed by concurrent users in the same workspace. |
-    {: class="simple-tab-table"}
     {: caption="Table 2. Workspace notification toglle button options" caption-side="top"}
     {: #workspace-noti-toggle}
-    
+
 5. Click **Save**.
