@@ -77,10 +77,10 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
 7. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
 
-### Using the {{site.data.keyword.powerSys_notm}} CLI to create an AIX VM with a configured SSH key
+### Creating an AIX VM with a configured SSH key
 {: #create-vm-cli}
 
-You can create a new VM with the public key by using the following command (replacing the options with your own):
+You can create a new VM with the public key by using the {{site.data.keyword.powerSys_notm}} CLI with the following command (replacing the options with your own):
 
 ```text
 ibmcloud pi instance-create keytest-vm --image AIX-7200-03-03 --memory 5 --networks "cloud.ibm.com" --processors 1 --processor-type shared --key-name testkey
@@ -106,7 +106,6 @@ Last login: Fri Jul 26 16:53:22 CDT 2019 on ssh from 10.150.0.11
 # oslevel -s
 7200-03-03-1914
 ```
-{. screen}
 
 You can find the `testkey` value in the **authorized_keys** file:
 
