@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## March 2023
 {: #mar-2023}
 
-- **Update on new SAP HANA large t-shirt profiles feature**\n
+- **Update on new SAP HANA large t-shirt profiles feature**:
   IBM supports SLES15 SP4 for SAP and RHEL8.6 for SAP OS images with all other features on all t-shirt profiles with less than 64 cores. These SLES15 SP4 for SAP and RHEL8.6 for SAP OS images are in the process of being updated to support the larger t-shirt profiles. Until further notice please use the larger t-shirt profiles with the SLES15 SP3 for SAP OS image or the RHEL8.4 for SAP OS image. For more information, see the SAP documentation on [OS for IBM Power Virtual Servers](/docs/sap?topic=sap-compute-os-design-considerations#os-power).
 
 ## February 2023
