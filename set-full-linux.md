@@ -45,6 +45,9 @@ To register for the full Linux subscription, you must select one of the stock op
 
 The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
+{: note}
+
 ## Setting up full Linux subscription
 {: #set-full-Linux}
 
