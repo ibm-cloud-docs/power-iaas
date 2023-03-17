@@ -226,9 +226,9 @@ The following table shows the use case on how you are billed based on the storag
 
 Total billable storage = 595 GB
 
-  - Data volumes: 235 GB
-  - Image volumes: 200 GB
-  - Deployed VMs: 160 GB
+- Data volumes: 235 GB
+- Image volumes: 200 GB
+- Deployed VMs: 160 GB
 
 ## Pricing for VPN connection
 {: #pricing-vpn}
