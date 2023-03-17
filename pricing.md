@@ -235,7 +235,7 @@ Total billable storage = 595 GB
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X (24 hours X 30 days).
+IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
 
 ## End of billing
 {: #pricing-end-billing}
