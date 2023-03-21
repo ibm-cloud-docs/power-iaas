@@ -141,7 +141,7 @@ Review the following characteristics about Megaport connectivity services:
     * Megaport has a number of cloud service providers including IBM Cloud.
     * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC (by using the Megaport portal or API) allows you to connect into the Power virtual server environment and, optionally, the classic/VPC infrastructure environments or other clouds.
 
-Megaport connectivity services are available in WDC04, WDC06, DAL13, DAL12, LON06, MON01, FRA05, SYD05, and OSA21 data centers.
+Megaport connectivity services are available in DAL12, DAL13, FRA05, LON06, MON01, SYD05, OSA21, WDC04, and WDC06 data centers.
 {: important}
 
 Complete the following steps to implement this scenario:
