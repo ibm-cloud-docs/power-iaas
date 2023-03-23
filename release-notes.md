@@ -37,7 +37,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - **{{site.data.keyword.powerSys_notm}} cost estimator**:
   Effective 3/23/23, two of the latest large SAP HANA t-shirt profiles `mh1-90x16200` and `mh1-100x18000` are available options in the [cost estimator](https://cloud.ibm.com/power/overview#estimator){: external}. In April 2023, the latest largest profile `mh1-125x22500` will also be available in the estimator.
 
- - **Access your event logs and notifications**:
+- **Access your event logs and notifications**:
   You can now access your event logs and notification from the **Event logs** page on the Power System Virtual Server user interface. For more information, see [Managing events logs and notifications](/docs/power-iaas?topic=power-iaas-manage-event-logs)
 
 ## February 2023
