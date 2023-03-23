@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-23"
+lastupdated: "2023-03-10"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -58,7 +58,7 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 
 You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from an on-premises system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/navigation/welcome.html){: external}.
 
-### Using the Power System Virtual Server user interface to create an AIX VM with a configured SSH key
+### Creating an AIX VM with a configured SSH key using UI
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
@@ -77,10 +77,10 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
 7. Complete the rest of the fields to successfully create a new instance with a configured SSH key.
 
-### Using the {{site.data.keyword.powerSys_notm}} CLI to create an AIX VM with a configured SSH key
+### Creating an AIX VM with a configured SSH key using CLI
 {: #create-vm-cli}
 
-You can create a new VM with the public key by using the following command (replacing the options with your own):
+You can create a new VM with the public key with the following command (replacing the options with your own):
 
 ```text
 ibmcloud pi instance-create keytest-vm --image AIX-7200-03-03 --memory 5 --networks "cloud.ibm.com" --processors 1 --processor-type shared --key-name testkey
@@ -106,7 +106,6 @@ Last login: Fri Jul 26 16:53:22 CDT 2019 on ssh from 10.150.0.11
 # oslevel -s
 7200-03-03-1914
 ```
-{. screen}
 
 You can find the `testkey` value in the **authorized_keys** file:
 

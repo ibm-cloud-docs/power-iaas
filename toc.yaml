@@ -66,6 +66,7 @@ toc:
               - downloading-fixes.md
               - volume-snapshot-clone.md
               - global-replication-service.md
+              - managing_events_logs.md
       - topicgroup: 
             label: Networking
             topics:
