@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-23"
 
 keywords: power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -34,6 +34,7 @@ Consider the following points when you are working with the event logs and notif
 * If you disable the notifications, you can still access the logs from the **Event logs** page.
 * You can customize notifications; for example you can enable or disable notifications from concurrent users within the same workspace. 
 * Your changes to the notification settings are associated with your user account and apply to all workspaces.
+* Your every action or operation does not create a log that you can view in the Event logs page.
  
 ## Accessing the event logs
 {: #access-event-logs}
