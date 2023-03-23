@@ -65,7 +65,7 @@ You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM
 
 1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission#infrapermission) and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
 
-2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm} user interface.
+2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm}} user interface.
 
 3. Click **Create instance**.
 
