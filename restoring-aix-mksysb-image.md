@@ -326,10 +326,52 @@ In the previous section, we used a separate image volume for storing the source 
 After the completion of the `alt_disk_mksysb` command, you can detach the staging volume (`mksysbvg`) from the _helper VM_. Before you detach the staging volume, you must close all available file systems by unmounting them. If no action is required, then it is safe to remove the volume group definition from the _helper VM_.
 
 1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.
-    ![Using the varyoffvg and exportvg commands](./images/terminal-varyoffvg.png "Displaying storage information"){: caption="Figure 18. Displaying storage information" caption-side="bottom"}
+ 
+Using the varyoffvg and exportvg commands:
+
+```
+root @aix-7200-03-03: / 
+ :> svg - mksysbvg
+mksys bvg:
+LV NAME         TYPE        LPs         PPs         PVs         LV STATE        MOUNT POINT
+logl v00        jfs2l og    1           1           1           closed/syncd    N/A
+fsl v00         jfs2        576         576         1           closed/syncd    /mksysb
+root@aix-7200-03-03: / 
+ :>varyoff vg nksysbvg 
+root@aix-7200-03-03: / 
+ :>export vg mksysbvg 
+root@ai x-7200-03-03: / 
+ :> svg
+old_root vg
+root vg
+root@aix-7200-03-03: /
+ :> spv
+hdi sko          00f6db0a6c7aece5            old_root vg
+hdi sk1          00c25ab0062fa576            root vg            active
+hdi sk2          00c25ab0056a002a            none
+root @aix-7200-03-03: /
+ :>
+```
 
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
     ![Removing the disk definition](./images/terminal-rmdev.png "Removing the disk definition"){: caption="Figure 19. Removing the disk definition" caption-side="bottom"}
+
+```
+root @ai x-7200-03-03: /
+ :> spv
+hdi sk0         00f6db0a6c7aece5            old_root vg
+hdi sk1         00c25ab0062fa576            root vg             active
+hdi sk2         00c25ab0056a002a            None
+root@aix-7200-03-03: / 
+ :>rmdev - dl hdi sk2
+hdi sk2 deleted
+root@aix-7200-03-03: /
+ :>l spv
+hdi sk0         00f6db0a6c7aece5            old_root vg
+hdi sk1         00c25ab0062fa576            root vg             active
+root@aix-7200-03-03: /
+ :>
+```
 
 3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
 
