@@ -129,7 +129,17 @@ mksysbvg
 
 1. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
-    ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
+```
+#crfs -v jfs2 -a size=18g -m/mksysb -g mksysbvg
+File system created successfully.
+18873588 kilobytes total on disk space.
+New File System size Is 37748736
+# mount /mksysb
+# df -g /mksysb
+Filesystem      GB blocks       Free        %Used       Iused       %Iused      Mounted on
+/dev/fslv00         18.00      12.26          32%           6           1%      /mksysb
+#
+```
 
 After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
 
@@ -138,7 +148,14 @@ Log on to the source VM where the source `mksysb` resides and copy the image to 
 If you did not decide on a private access option, or chose a different option for your internal IP access, your steps might vary.
 {: note}
 
-![Running the cksurr command](./images/terminal-cksurr.png "Running the cksurr command"){: caption="Figure 10. Running the cksurr command" caption-side="bottom"}
+Running the cksurr command:
+```
+ : >cksurr gdrh10v1.sysb
+371420133 5806899200 gdrh10v1.sysb
+ : >scp gdrh10v1.sysb root@192.168.111.3:/mksysb/gdrh10v1.sysb
+ root@192.168.111.3's password:
+ gdrh10v1.sysb                                            100%
+ ```
 
 ## Creating the alternate disk image volume
 {: #creating-alternate-volume}
@@ -147,9 +164,22 @@ Log on to the helper VM and verify that the image under `/mksysb` has an identic
 
 To determine the necessary volume size of the alternate disk, examine the contents of the `bosinst.data` file within the mksysb archive. The `bosinst.data` file in the archive contains stanza information that indicates the minimum space that is required to restore the _mksysb_. An easy way to accomplish this is to usfe the `restore` command to extract the `./images/bosinst.data` file from the _mksysb_ archive.
 
-Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the _helper VM_.
+Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the _helper VM.
 
-![The restore -qf command](./images/terminal-qf.png "The restore -qf command"){: caption="Figure 11. The restore -qf command" caption-side="bottom"}
+The restore -qf command:
+<!-- check for errors -->
+```
+# restore -qf gdrh10v1.sysb ./bosinst.data
+x ./bosinst.data
+# grep -p target_disk_data bosinst.data
+target_disk_data:
+        PVID = 00c04e279d9ce46e
+   PHYSICAL_LOCATION = U9117.MMC.0604E27-v9-c3-T1-L8100000000000000
+        CONNECTION = vscsl0//810000000000
+        LOCATION =
+        SIZE_MB = 20480
+        HDI SKNAME = hdisk0
+```
 
 To create and attach a new volume to **AIX-7200-03-03**, complete the following steps:
 
@@ -159,7 +189,16 @@ To create and attach a new volume to **AIX-7200-03-03**, complete the following 
 
 3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the _helper VM_, log on to the VM. Use the `cfgmgr` and `lspv` commands on the _helper VM_ to show the new disk. The new disk is named `hdisk2`.
 
-    ![Displaying storage information](./images/terminal-cfgmgr.png "Displaying storage information"){: caption="Figure 14. Displaying storage information" caption-side="bottom"}
+Displaying storage information:
+
+```
+# cfgmgr
+# lspv
+hdisk0      00f6db0a6c7aece5        rootvg      active
+hdisk1      00c25ab0056a002a        mksysbvg    active
+hdisk2      none                    None
+#
+```
 
 ## Restoring the alternate disk mksysb
 {: #restoring-alternate-disk}
@@ -172,16 +211,110 @@ You can now create an AIX boot disk from the source _mksysb_ archive. To create 
 
 After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
 
-![Running the alt_disk_mksysb command](./images/terminal-alt-disk-mksysb.png "Running the alt_disk_mksysb command"){: caption="Figure 15. Running the alt_disk_mksysb command" caption-side="bottom"}
+```
+# alt_disk_mksysb -c /dev/vty0 -d hdi sk2 -m/mksysb/gdrh10v1.sysb
+Restoring/image.data from mksysb i mage.
+Checking disk sizes.
+Creating cloned rootvg volume group and associated logical volumes. 
+Creating logical volume alt_hd5.
+Creating logical volume alt_hd6.
+Creating logical volume alt_hd8.
+Creating logical volume alt_hd4.
+Creating logical volume alt_hd2.
+Creating logical volume alt_hd9var. 
+Creating logical volume alt_hd3.
+Creating logical volume alt_hd1.
+Creating logical volume alt_hd10opt.
+Creating logical volume alt_hd11admin.
+Creating logical volume alt_lg_dumpl v.
+Creating logical volume alt_livedump.
+Creating / alt_inst/ file system 
+Creating / alt_inst/admin file system 
+Creating / alt_inst/home file system 
+Creating / alt_inst/opt file system 
+Creating / alt_inst/tmp file system 
+Creating / alt_inst/usr file system
+Creating / alt_inst/var file system
+Creating / alt_inst/var/adm/ras/livedump file system 
+Restoring mksysb image to alternate disk(s).
+Linking to 64bit kernel.
+Changing logical volume names in volume group descriptor area. 
+Fixing LV control blocks...
+forced unmount of /alt_inst/var/adm/ras/livedump
+forced unmount of /alt_inst/var/adm/ras/livedump
+forced unmount of /alt_inst/var 
+forced unmount of /alt_inst/var 
+forced unmount of /alt_inst/usr 
+forced unmount of /alt_inst/usr 
+forced unmount of /alt_inst/tmp 
+forced unmount of /alt_inst/tmp 
+forced unmount of /alt_inst/opt 
+forced unmount of /alt_inst/opt 
+forced unmount of /alt_inst/home 
+forced unmount of /alt_inst/home 
+forced unmount of /alt_inst/admin 
+forced unmount of /alt_inst/admin 
+forced unmount of /alt_inst
+forced unmount of /alt_inst
+Fixing file system superblocks...
+Bootlist is set to the boot disk: hdisk2 bl v=hd5
+#
+```
 
 Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
 
-![Performing a check by using the bootlist command](./images/terminal-bootlist.png "Performing a check by using the bootlist command"){: caption="Figure 16. Performing a check by using the bootlist command" caption-side="bottom"}
+Perform a check by using the bootlist command:
+```
+# bootlist -m normal -o
+hdisk2 blv=hd5 pathid=0
+hdisk2 blv=hd5 pathid=1
+hdisk2 blv=hd5 pathid=2
+hdisk2 blv=hd5 pathid=3
+# lspv
+hdisk0      00f6db0a6c7aece5        rootvg      active
+hdisk1      00c25ab0056a002a        mksysbvg    active
+hdisk2      00c25ab0062fa576        altinst_rootvg
+#
+```
 
 When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
 The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
 
-![AIX login prompt](./images/terminal-aix-login.png "AIX login prompt"){: caption="Figure 17. AIX login prompt" caption-side="bottom"}
+AIX login prompt:
+
+```
+Last login: Sun Jul 21 08:09:27 2019 on /dev/pts/0 from 10. 150. 0.8
+***********************************************************************************************
+*                                                                                             *
+*                                                                                             *
+*       Welcome to AIX Version 7.2!                                                           *
+*                                                                                             *
+*       Please see the README file in /usr/lpp/bos for information pertinent to this release  *
+*       of the AIX Operating System                                                           *
+*                                                                                             *
+************************************************************************************************
+[YOU HAVE NEW MAIL]
+root@ai x-7200-03-03: /
+ :> spv
+hdisko      00f6db0a6c7aece5        old_root vg
+hdisk1      00c25ab0062fa576        root vg         active
+hdisk2      00c25ab0056a002a        mksysbvg        active
+root@ai x-7200-03-03: /
+ :> sfs-a
+Name                    Nodename    Mount Pt                VFS     Size          Options   Auto    Accounting
+/dev/hd4                --          /                       jfs2    21823488        --      yes     no
+/dev/hd1                --          /home                   jfs2    65536           --      yes     no
+/dev/hd2                --          /usr                    jfs2    4390912         --      yes     no
+/dev/hd9var             --          /var                    jfs2    458752          --      yes     no
+/dev/hd3                --          /tmp                    jfs2    786432          --      yes     no
+/dev/hd11admin          --          /admin                  jfs2    262144          --      yes     no
+/proc                   --          /proc                   procfs  --              --      yes     no
+/dev/hd10opt            --          /opt                    jfs2    2097152         --      yes     no
+/dev/livedump           --          /var/adm/ras/livedump   jfs2    524288          --      yes     no
+/dev/fslv00             --          /mksysb                 jfs2    37748736        --      no      no
+root@ai x-7200-03-03: /
+ :>
+```
 
 You have successfully restored the AIX _mksysb_ archive and the environment is ready for your use.
 
