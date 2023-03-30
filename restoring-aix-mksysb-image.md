@@ -43,9 +43,36 @@ Before you can copy an AIX `mksysb` archive, determine the amount of space the _
 
 ![Determining the space needed](./images/terminal-volume-space.png "Determining the space needed"){: caption="Figure 2. Determining the space needed" caption-side="bottom"}
 
+```
+:>ls - gdrh10v1.sysb
+-rw-r--r--  1 root   system    5806899200 Jul 18 2017 gdrh10v1.sysb
+```
+{: codeblock}
+
 Next, you must identify a _helper VM_ file system with enough space to hold the mksysb image. If such a file system does not exist, you can attach a data volume as a _staging area_. To display information about a volume group, use the `lsvg` command.
 
 ![Using the lsvg command](./images/terminal-lsvg-rootvg.png "Using the lsvg command"){: caption="Figure 3. Using the lsvg command" caption-side="bottom"}
+
+```
+# lsvg root vg
+VOLUME GROUP:       rootvg                  VG IDENTIFIER:      00f6db0a00004c000000016b94f
+VG STATE:           active                  PP SIZE:            32 megabyte(s)
+VG PERMISSION:      read/write              TOTAL PPS:          639 (20448 megabytes)
+MAX LVS:            256                     FREE PPS:           477 (15264 megabytes)
+LVs:                12                      USED PPs:           162 (5184 megabytes)
+OPEN LVs:           11                      QUORUM:             2 (Enabled)
+TOTAL PVs:          1                       VG DESCRIPTIONS:    2
+STALE PVs:          0                       STALE PPs:          0
+ACTIVE PVs:         1                       AUTO ON:            yes
+MAX PPs per VG:     32512
+MAX PPs per PV:     1016                    MAX PVs:            32
+LTG size(Dynamic):  512 kilobyte(s)         AUTO SYNC:          no
+HOT SPARE:          no                      BB POLICY:          relocatable
+PV RESTRICTION:     none                    INFINITE RETY:      no
+DISK BLOCK SIZE:    512                     CRITICAL VG:        no
+FS SYNC OPTION:     no                      CRITICAL PVs:       no
+#
+```
 
 Running the `df -g` command displays information about the total space and available space on a file system. In this instance, the `rootvg` volume group has enough space for creating a new file system, expanding an existing one, and storing the _mksysb_ source image.
 
