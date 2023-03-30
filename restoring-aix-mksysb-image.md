@@ -39,9 +39,7 @@ The IPv6 interface that is used for VM management might be affected when you res
 
 You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. 
 
-Before you can copy an AIX `mksysb` archive, determine the amount of space the _helper VM_ needs to hold the _mksysb_ image. In the following example, the _mksysb_ image (`gdrh10v1.sysb`) is roughly 5.8 GB:
-
-![Determining the space needed](./images/terminal-volume-space.png "Determining the space needed"){: caption="Figure 2. Determining the space needed" caption-side="bottom"}
+Before you can copy an AIX `mksysb` archive, determine the amount of space the _helper VM_ needs to hold the _mksysb_ image. In the following example, the _mksysb_ image (`gdrh10v1.sysb`) is roughly 5.8 GB. Determining the space needed as follow:
 
 ```
 :>ls - gdrh10v1.sysb
@@ -50,8 +48,6 @@ Before you can copy an AIX `mksysb` archive, determine the amount of space the _
 {: codeblock}
 
 Next, you must identify a _helper VM_ file system with enough space to hold the mksysb image. If such a file system does not exist, you can attach a data volume as a _staging area_. To display information about a volume group, use the `lsvg` command.
-
-![Using the lsvg command](./images/terminal-lsvg-rootvg.png "Using the lsvg command"){: caption="Figure 3. Using the lsvg command" caption-side="bottom"}
 
 ```
 # lsvg root vg
@@ -76,15 +72,30 @@ FS SYNC OPTION:     no                      CRITICAL PVs:       no
 
 Running the `df -g` command displays information about the total space and available space on a file system. In this instance, the `rootvg` volume group has enough space for creating a new file system, expanding an existing one, and storing the _mksysb_ source image.
 
-![Displaying the storage information](./images/terminal-df-y.png "Displaying the storage information"){: caption="Figure 4. Displaying the storage information" caption-side="bottom"}
+The storage information is shown as follow:
+
+```
+# df -g
+Filesystem          GB blocks       Free        %Used       Iused       %Iused      Mounted on
+/dev/hd4                0.09        0.06        41%         2619        17%         /
+/dev/hd2                2.16        0.26        89%        36565        37%         /usr
+/dev/hd9var             0.19        0.16        17%          953         3%         /var
+/dev/hd3                0.22        0.22         1%           33         1%         /tmp
+/dev/hd1                0.03        0.03         2%            7         1%         /home
+/dev/hd11admin          0.12        0.12         1%            5         1%         /admin
+/proc                      -           -          -            -         -          /proc
+/dev/hd10opt            0.44        0.05        90%        11651        49%         /opt
+/dev/||vedump           0.25        0.25         1%            4         1%         /var/admin/ras/||vedump
+#
+```
 
 ## Attaching a new (disk) volume
 {: #attaching-new-volume}
 
 If your disk is not at the correct size, complete the following steps:
 
-    You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
-    {: note}
+You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
+{: note}
 
 1. Create a file system to hold the _mksysb_ archive.
 
@@ -94,15 +105,29 @@ If your disk is not at the correct size, complete the following steps:
 
 4. After successfully attaching the _mksysbfs_ volume to the _helper VM_, log in to the VM. The volume appears as a new hdisk. Run the `lspv` and `cfgmgr` commands on the _helper VM_ to configure and show the new disk. The new disk is labeled as _hdisk1_.
 
-    ![Using the lspv command](./images/terminal-lspv-new.png "Using the lspv command"){: caption="Figure 6. Using the lspv command" caption-side="bottom"}
+```
+# lspv
+hdlsk0        00f6db0ac6c7aece5        rootvg        active
+```
 
-    ![Using the cfgmgr command](./images/terminal-cfgmgr-new.png "Using the cfgmgr command"){: caption="Figure 7. Using the cfgmgr command" caption-side="bottom"}
+```
+# cfgmr
+#lspv
+hdlsk0        00f6db0ac6c7aece5        rootvg        active
+hdlsk1        none                     none        
+#
+```
 
 5. Create an _AIX Volume Group_ by running the `mkvg` command. On the _helper VM_, _mksysbvg_ is the volume group name.
 
-    ![Running the mkvg command](./images/terminal-mkvg.png "Running the mkvg command"){: caption="Figure 8. Running the mkvg command" caption-side="bottom"}
+```
+mkvg -fy mksysbvg hdlsk1
+0516-1254 mkvg: Changing the PVID in the ODM.
+mksysbvg
+#
+```
 
-6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
+1. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
     ![Creating a file system and mounting it](./images/terminal-crfs.png "Creating a file system and mounting it"){: caption="Figure 9. Creating a file system and mounting it" caption-side="bottom"}
 
