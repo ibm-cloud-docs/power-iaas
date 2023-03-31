@@ -332,7 +332,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
     root @aix-7200-03-03: / 
      :>lsvg -l mksysbvg
     mksysbvg:
-    LV NAME         TYPE        LPs         PPs         PVs         LV STATE        MOUNT POINT
+    LV NAME        TYPE        LPs         PPs         PVs         LV STATE        MOUNT POINT
     loglv00        jfs2l og    1           1           1           closed/syncd    N/A
     fslv00         jfs2        576         576         1           closed/syncd    /mksysb
     root@aix-7200-03-03: / 
@@ -350,7 +350,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
     hdi sk2          00c25ab0056a002a            none
     root @aix-7200-03-03: /
      :>
-        ```
+    ```
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
 
     ```
