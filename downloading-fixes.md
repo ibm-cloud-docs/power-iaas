@@ -108,6 +108,9 @@ Complete the following steps to configure SUMA to use the proxy settings:
 
 4. Run the `smit suma_config_base` command to access the SUMA base configuration SMIT interface. Verify the fields that are shown in the **Base Configuration** screen capture.
 
+For the **Fixserver protocol** field, *https* is the only option. For the **Download protocol** field, *http* is the default option. You can change the default option to *https* for a secure connection. If you set the **Download protocol** to *https*, the downloads are slower but more secure because *HTTP* provides multi-threaded performance and *HTTPS* provides single-threaded performance.
+{: important}
+
   Base configuration SMIT:
 
   ```
@@ -127,9 +130,6 @@ Complete the following steps to configure SUMA to use the proxy settings:
   Maximum log file size (MB)                                [1]                       #
   Download timeout (seconds)                                [180]                     #
   ```
-
-For the **Fixserver protocol** field, *https* is the only option. For the **Download protocol** field, *http* is the default option. You can change the default option to *https* for a secure connection. If you set the **Download protocol** to *https*, the downloads are slower but more secure because *HTTP* provides multi-threaded performance and *HTTPS* provides single-threaded performance.
-{: important}
 
 ### SUMA tasks and the command line
 {: #suma-tasks-cli}
