@@ -105,41 +105,41 @@ You must also complete these steps if you want to store the mksysb image in a da
 
 4. After successfully attaching the _mksysbfs_ volume to the _helper VM_, log in to the VM. The volume appears as a new hdisk. Run the `lspv` and `cfgmgr` commands on the _helper VM_ to configure and show the new disk. The new disk is labeled as _hdisk1_.
 
-```
-# lspv
-hdlsk0        00f6db0ac6c7aece5        rootvg        active
-```
+    ```
+    # lspv
+    hdlsk0        00f6db0ac6c7aece5        rootvg        active
+    ```
 
-```
-# cfgmr
-#lspv
-hdlsk0        00f6db0ac6c7aece5        rootvg        active
-hdlsk1        none                     none        
-#
-```
+    ```
+    # cfgmr
+    #lspv
+    hdlsk0        00f6db0ac6c7aece5        rootvg        active
+    hdlsk1        none                     none        
+    #
+    ```
 
 5. Create an _AIX Volume Group_ by running the `mkvg` command. On the _helper VM_, _mksysbvg_ is the volume group name.
 
-```
-mkvg -fy mksysbvg hdlsk1
-0516-1254 mkvg: Changing the PVID in the ODM.
-mksysbvg
-#
-```
+    ```
+    mkvg -fy mksysbvg hdlsk1
+    0516-1254 mkvg: Changing the PVID in the ODM.
+    mksysbvg
+    #
+    ```
 
 6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
-```
-#crfs -v jfs2 -a size=18g -m/mksysb -g mksysbvg
-File system created successfully.
-18873588 kilobytes total on disk space.
-New File System size Is 37748736
-# mount /mksysb
-# df -g /mksysb
-Filesystem      GB blocks       Free        %Used       Iused       %Iused      Mounted on
-/dev/fslv00         18.00      12.26          32%           6           1%      /mksysb
-#
-```
+    ```
+    #crfs -v jfs2 -a size=18g -m/mksysb -g mksysbvg
+    File system created successfully.
+    18873588 kilobytes total on disk space.
+    New File System size Is 37748736
+    # mount /mksysb
+    # df -g /mksysb
+    Filesystem      GB blocks       Free        %Used       Iused       %Iused      Mounted on
+    /dev/fslv00         18.00      12.26          32%           6           1%      /mksysb
+    #
+    ```
 
 After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
 
