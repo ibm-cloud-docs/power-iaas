@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-25"
+lastupdated: "2023-03-31"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
