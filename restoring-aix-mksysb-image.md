@@ -104,12 +104,14 @@ You must also complete these steps if you want to store the mksysb image in a da
 3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
 
 4. After successfully attaching the _mksysbfs_ volume to the _helper VM_, log in to the VM. The volume appears as a new hdisk. Run the `lspv` and `cfgmgr` commands on the _helper VM_ to configure and show the new disk. The new disk is labeled as _hdisk1_.
+    Using the lspv command:
 
     ```
     # lspv
     hdlsk0        00f6db0ac6c7aece5        rootvg        active
     ```
-
+    Using the cfgmr command:
+    
     ```
     # cfgmr
     #lspv
