@@ -86,13 +86,47 @@ Complete the following steps to configure SUMA to use the proxy settings:
    3. Select **Create/Change Primary Service Configuration** and press **Enter**.
    4. Set the following fields in the SMIT interface:
 
-      ![Configuring proxy settings](./images/terminal-configuring-proxy-settings.svg "Configuring proxy settings"){: caption="Figure 1. Configuring proxy settings" caption-side="bottom"}
+    Configuring proxy settings:
+
+    ```
+    Type or select values in entry fields.
+    Press Enter AFTER making all desired changes.
+                                                              [Entry Fields]
+      Connectin type                                        [HTTP_Proxy]
+      Test service configuration                            [Yes]
+
+      If type is DIRECT_INTERNET, no entry required.
+
+      If type is HTTP_PROXY,
+            IP address                                      [xx.xx.xx.xx]
+            Port number                                     [5026]
+            Authentication user ID                          []
+            Authentication password requested interactively
+    ```  
 
       Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
 
 4. Run the `smit suma_config_base` command to access the SUMA base configuration SMIT interface. Verify the fields that are shown in the **Base Configuration** screen capture.
 
-    ![Base configuration SMIT](./images/terminal-base-configuration-smit.svg "Base configuration SMIT"){: caption="Figure 2. Base configuration SMIT" caption-side="bottom"}
+  Base configuration SMIT:
+
+  ```
+                      Base Configuration
+
+  Type or select values in entry fields.
+  Press Enter AFTER making all desired changes.
+                                                              [Entry Fields]
+  Screen output verbosity                                   [Info/Warnings/Errors]  +
+  Logfile output verbosity                                  [Verbose]               +
+  Notification email verbosity                              [Info/Warnings/Errors]  +
+  Remove superseeded filesets on Clean?                      Yes                    +
+  Remove duplicate base levels on Clean?                     Yes                    +
+  Remove conflicting updates on Clean?                       Yes                    +
+  Fixserver protocol                                        https                   +
+  Download protocol                                         http                    +
+  Maximum log file size (MB)                                [1]                       #
+  Download timeout (seconds)                                [180]                     #
+  ```
 
 For the **Fixserver protocol** field, *https* is the only option. For the **Download protocol** field, *http* is the default option. You can change the default option to *https* for a secure connection. If you set the **Download protocol** to *https*, the downloads are slower but more secure because *HTTP* provides multi-threaded performance and *HTTPS* provides single-threaded performance.
 {: important}
