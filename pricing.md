@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-31"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -43,6 +43,9 @@ It's important to note that a system's theoretical maximum depends on the data c
 {: shortdesc}
 
 In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated price might be different than the actual price when you purchase the {{site.data.keyword.powerSys_notm}} or instances based on the discounts and promotion codes.
+
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for biling. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+{: important}
 
 ## Monthly usage
 {: #pricing-monthly-usage}
