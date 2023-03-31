@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-24"
+lastupdated: "2023-03-31"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -67,7 +67,28 @@ The `cloud-init` configuration process can take up to 5 minutes. **Do not restar
 
 To verify that `cloud-init` configured your IP addresses correctly, type the `cfgtcp` command in the IBM i console window and choose `1`. If the two IP addresses match the internal IP addresses of your VM, the `cloud-init` configuration ran successfully.
 
-![Verifying the cloud-init configuration](./images/terminal-ibmi-cfgtcp.png "Verifying the cloud-init configuration"){: caption="Figure 3. Verifying the cloud-init configuration" caption-side="bottom"}
+Verifying the cloud-init configuration:
+
+```
+                    Work with TCP/IP Interfaces
+                                                                      System: KCW73A
+Type options, press Enter. 
+  1=Add   2=Change    4=Remove    5=Display   9=Start   10=End
+
+          Internet          Subnet            Line                Line
+Opt       Address           Mask              Description         Type
+___       10.1.1.5          255.255.255.192   CLOUDINIT1          *ELAN
+___       127.0.0.1         255.0.0.0         *LOOPBACK           *NONE
+___       192.168.128.138   255.255.255.248   CLOUDINIT2          *ELAN
+
+ 
+
+   
+
+                                                                              Bottom
+F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
+F12=Cancel    F17=Top         F18=Bottom
+```
 
 If you do not see the external IP address in the **Work with TCP/IP Interfaces** window, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
