@@ -45,6 +45,9 @@ To open a support ticket for {{site.data.keyword.powerSys_notm}}, complete the f
 ## Opening Operating System (AIX or IBM i) related cases with IBM Support
 {: #support-case-IBM}
 
-If you are facing any AIX or IBM i operating system-specific issue, directly engage with IBM Support.
+If you are facing any AIX or IBM i operating system-specific issue, It is recommended that you directly engage with the operating system support using the portal as follows.
 
-For IBM support, go to the [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US){: external} portal, click **Open a case**, and for the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**. Complete all of the required information, and click **Submit Case**.
+1. Log in to the [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US){: external} portal using your IBM id.
+2. Click **Open a case**. 
+3. On the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**.
+4. Complete all the other required information, and click **Submit Case**.
