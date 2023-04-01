@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-31"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -50,6 +50,9 @@ In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated pri
 {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
+
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for biling. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+{: important}
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
 | ------------------------- | ---------------------------------- | -------------------------------------- |
@@ -126,6 +129,9 @@ The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. Y
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
 Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for biling. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+{: important}
 
 The following tables show how different processor types affect the cost per system:
 
