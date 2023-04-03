@@ -356,7 +356,7 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
 
     ```
-    root @ai x-7200-03-03: /
+    root @aix-7200-03-03: /
      :>lspv
     hdi sk0         00f6db0a6c7aece5            old_root vg
     hdi sk1         00c25ab0062fa576            root vg             active
