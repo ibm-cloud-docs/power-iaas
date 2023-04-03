@@ -84,7 +84,9 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
 6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
 7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
-    ![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}
+    
+Adding a network interface:
+
     ```
                                 Add TCP/IP Interface (ADDTCPIFC)
 
