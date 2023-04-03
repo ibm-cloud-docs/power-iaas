@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-03"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -113,23 +113,23 @@ For the **Fixserver protocol** field, *https* is the only option. For the **Down
 
 Base configuration SMIT:
 
-  ```
-                      Base Configuration
+```
+                     Base Configuration
 
-  Type or select values in entry fields.
-  Press Enter AFTER making all desired changes.
+Type or select values in entry fields.
+Press Enter AFTER making all desired changes.
                                                               [Entry Fields]
-  Screen output verbosity                                   [Info/Warnings/Errors]  +
-  Logfile output verbosity                                  [Verbose]               +
-  Notification email verbosity                              [Info/Warnings/Errors]  +
-  Remove superseeded filesets on Clean?                      Yes                    +
-  Remove duplicate base levels on Clean?                     Yes                    +
-  Remove conflicting updates on Clean?                       Yes                    +
-  Fixserver protocol                                        https                   +
-  Download protocol                                         http                    +
-  Maximum log file size (MB)                                [1]                       #
-  Download timeout (seconds)                                [180]                     #
-  ```
+Screen output verbosity                                   [Info/Warnings/Errors]  +
+Logfile output verbosity                                  [Verbose]               +
+Notification email verbosity                              [Info/Warnings/Errors]  +
+Remove superseeded filesets on Clean?                      Yes                    +
+Remove duplicate base levels on Clean?                     Yes                    +
+Remove conflicting updates on Clean?                       Yes                    +
+Fixserver protocol                                        https                   +
+Download protocol                                         http                    +
+Maximum log file size (MB)                                [1]                       #
+Download timeout (seconds)                                [180]                     #
+```
 
 ### SUMA tasks and the command line
 {: #suma-tasks-cli}
