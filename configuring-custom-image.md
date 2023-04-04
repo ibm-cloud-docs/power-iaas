@@ -85,7 +85,7 @@ Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01,
 
 SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented as follows:
 - [Installing and configuring cloud-init on SLES](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-sles){: external}.
-- [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel)
+- [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
 <!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
