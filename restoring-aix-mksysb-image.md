@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-04"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -42,7 +42,7 @@ You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksy
 Before you can copy an AIX `mksysb` archive, determine the amount of space the _helper VM_ needs to hold the _mksysb_ image. In the following example, the _mksysb_ image (`gdrh10v1.sysb`) is roughly 5.8 GB. Determining the space needed as follow:
 
 ```
-:>ls - gdrh10v1.sysb
+:>ls -l gdrh10v1.sysb
 -rw-r--r--  1 root   system    5806899200 Jul 18 2017 gdrh10v1.sysb
 ```
 {: codeblock}
@@ -50,21 +50,21 @@ Before you can copy an AIX `mksysb` archive, determine the amount of space the _
 Next, you must identify a _helper VM_ file system with enough space to hold the mksysb image. If such a file system does not exist, you can attach a data volume as a _staging area_. To display information about a volume group, use the `lsvg` command.
 
 ```
-# lsvg root vg
-VOLUME GROUP:       rootvg                  VG IDENTIFIER:      00f6db0a00004c000000016b94f
+# lsvg rootvg
+VOLUME GROUP:       rootvg                  VG IDENTIFIER:      00f6db0a00004c000000016b94f02
 VG STATE:           active                  PP SIZE:            32 megabyte(s)
-VG PERMISSION:      read/write              TOTAL PPS:          639 (20448 megabytes)
-MAX LVS:            256                     FREE PPS:           477 (15264 megabytes)
+VG PERMISSION:      read/write              TOTAL PPs:          639 (20448 megabytes)
+MAX LVs:            256                     FREE PPs:           477 (15264 megabytes)
 LVs:                12                      USED PPs:           162 (5184 megabytes)
 OPEN LVs:           11                      QUORUM:             2 (Enabled)
-TOTAL PVs:          1                       VG DESCRIPTIONS:    2
+TOTAL PVs:          1                       VG DESCRIPTIORS:    2
 STALE PVs:          0                       STALE PPs:          0
 ACTIVE PVs:         1                       AUTO ON:            yes
 MAX PPs per VG:     32512
 MAX PPs per PV:     1016                    MAX PVs:            32
 LTG size(Dynamic):  512 kilobyte(s)         AUTO SYNC:          no
 HOT SPARE:          no                      BB POLICY:          relocatable
-PV RESTRICTION:     none                    INFINITE RETY:      no
+PV RESTRICTION:     none                    INFINITE RETRY:      no
 DISK BLOCK SIZE:    512                     CRITICAL VG:        no
 FS SYNC OPTION:     no                      CRITICAL PVs:       no
 #
@@ -108,15 +108,15 @@ You must also complete these steps if you want to store the mksysb image in a da
 
     ```
     # lspv
-    hdlsk0        00f6db0ac6c7aece5        rootvg        active
+    hdisk0        00f6db0acc7aece5        rootvg        active
     ```
     Using the cfgmr command:
     
     ```
     # cfgmr
     #lspv
-    hdlsk0        00f6db0ac6c7aece5        rootvg        active
-    hdlsk1        none                     none        
+    hdisk0        00f6db0acc7aece5        rootvg        active
+    hdisk1        none                     none        
     #
     ```
 
@@ -132,7 +132,7 @@ You must also complete these steps if you want to store the mksysb image in a da
 6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
 
     ```
-    #crfs -v jfs2 -a size=18g -m/mksysb -g mksysbvg
+    #crfs -v jfs2 -a size=18G -m/mksysb -g mksysbvg
     File system created successfully.
     18873588 kilobytes total on disk space.
     New File System size Is 37748736
@@ -150,9 +150,9 @@ Log on to the source VM where the source `mksysb` resides and copy the image to 
 If you did not decide on a private access option, or chose a different option for your internal IP access, your steps might vary.
 {: note}
 
-Running the cksurr command:
+Running the cksum command:
 ```
- : >cksurr gdrh10v1.sysb
+ : >cksum gdrh10v1.sysb
 371420133 5806899200 gdrh10v1.sysb
  : >scp gdrh10v1.sysb root@192.168.111.3:/mksysb/gdrh10v1.sysb
  root@192.168.111.3's password:
@@ -176,8 +176,8 @@ x ./bosinst.data
 # grep -p target_disk_data bosinst.data
 target_disk_data:
         PVID = 00c04e279d9ce46e
-   PHYSICAL_LOCATION = U9117.MMC.0604E27-v9-c3-T1-L8100000000000000
-        CONNECTION = vscsl0//810000000000
+   PHYSICAL_LOCATION = U9117.MMC.0604E27-V9-C3-T1-L8100000000000000
+        CONNECTION = vscsi0//810000000000
         LOCATION =
         SIZE_MB = 20480
         HDI SKNAME = hdisk0
@@ -215,7 +215,7 @@ After you run the `alt_disk_mksysb` command, the terminal displays information s
 
 ```
 # alt_disk_mksysb -c /dev/vty0 -d hdi sk2 -m/mksysb/gdrh10v1.sysb
-Restoring/image.data from mksysb i mage.
+Restoring/image.data from mksysb image.
 Checking disk sizes.
 Creating cloned rootvg volume group and associated logical volumes. 
 Creating logical volume alt_hd5.
@@ -228,16 +228,16 @@ Creating logical volume alt_hd3.
 Creating logical volume alt_hd1.
 Creating logical volume alt_hd10opt.
 Creating logical volume alt_hd11admin.
-Creating logical volume alt_lg_dumpl v.
+Creating logical volume alt_lg_dumpiv.
 Creating logical volume alt_livedump.
-Creating / alt_inst/ file system 
-Creating / alt_inst/admin file system 
-Creating / alt_inst/home file system 
-Creating / alt_inst/opt file system 
-Creating / alt_inst/tmp file system 
-Creating / alt_inst/usr file system
-Creating / alt_inst/var file system
-Creating / alt_inst/var/adm/ras/livedump file system 
+Creating /alt_inst/ file system 
+Creating /alt_inst/admin file system 
+Creating /alt_inst/home file system 
+Creating /alt_inst/opt file system 
+Creating /alt_inst/tmp file system 
+Creating /alt_inst/usr file system
+Creating /alt_inst/var file system
+Creating /alt_inst/var/adm/ras/livedump file system 
 Restoring mksysb image to alternate disk(s).
 Linking to 64bit kernel.
 Changing logical volume names in volume group descriptor area. 
@@ -285,7 +285,7 @@ The device configuration can take several minutes. Upon its completion, the syst
 AIX login prompt:
 
 ```
-Last login: Sun Jul 21 08:09:27 2019 on /dev/pts/0 from 10. 150. 0.8
+Last login: Sun Jul 21 08:09:27 2019 on /dev/pts/0 from 10.150.0.8
 ***********************************************************************************************
 *                                                                                             *
 *                                                                                             *
@@ -296,13 +296,13 @@ Last login: Sun Jul 21 08:09:27 2019 on /dev/pts/0 from 10. 150. 0.8
 *                                                                                             *
 ************************************************************************************************
 [YOU HAVE NEW MAIL]
-root@ai x-7200-03-03: /
+root@aix-7200-03-03: /
  :> spv
-hdisko      00f6db0a6c7aece5        old_root vg
-hdisk1      00c25ab0062fa576        root vg         active
+hdisko      00f6db0a6c7aece5        old_rootvg
+hdisk1      00c25ab0062fa576        rootvg          active
 hdisk2      00c25ab0056a002a        mksysbvg        active
-root@ai x-7200-03-03: /
- :> sfs-a
+root@aix-7200-03-03: /
+ :> sfs -a
 Name                    Nodename    Mount Pt                VFS     Size          Options   Auto    Accounting
 /dev/hd4                --          /                       jfs2    21823488        --      yes     no
 /dev/hd1                --          /home                   jfs2    65536           --      yes     no
@@ -314,7 +314,7 @@ Name                    Nodename    Mount Pt                VFS     Size        
 /dev/hd10opt            --          /opt                    jfs2    2097152         --      yes     no
 /dev/livedump           --          /var/adm/ras/livedump   jfs2    524288          --      yes     no
 /dev/fslv00             --          /mksysb                 jfs2    37748736        --      no      no
-root@ai x-7200-03-03: /
+root@aix-7200-03-03: /
  :>
 ```
 
@@ -331,43 +331,43 @@ After the completion of the `alt_disk_mksysb` command, you can detach the stagin
 
     Using the varyoffvg and exportvg commands:
     ```
-    root @aix-7200-03-03: / 
+    root@aix-7200-03-03: / 
      :>lsvg -l mksysbvg
     mksysbvg:
     LV NAME        TYPE        LPs         PPs         PVs         LV STATE        MOUNT POINT
     loglv00        jfs2l og    1           1           1           closed/syncd    N/A
     fslv00         jfs2        576         576         1           closed/syncd    /mksysb
     root@aix-7200-03-03: / 
-     :>varyoff vg mksysbvg 
+     :>varyoffvg mksysbvg 
     root@aix-7200-03-03: / 
-    :>export vg mksysbvg 
-    root@ai x-7200-03-03: / 
+    :>exportvg mksysbvg 
+    root@aix-7200-03-03: / 
      :>lsvg
-    old_root vg
-    root vg
+    old_rootvg
+    rootvg
     root@aix-7200-03-03: /
      :>lspv
-    hdi sko          00f6db0a6c7aece5            old_root vg
-    hdi sk1          00c25ab0062fa576            root vg            active
-    hdi sk2          00c25ab0056a002a            none
-    root @aix-7200-03-03: /
+    hdisk0          00f6db0a6c7aece5            old_rootvg
+    hdisk1          00c25ab0062fa576            rootvg            active
+    hdisk2          00c25ab0056a002a            none
+    root@aix-7200-03-03: /
      :>
     ```
 2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
 
     ```
-    root @aix-7200-03-03: /
-     :>lspv
-    hdi sk0         00f6db0a6c7aece5            old_root vg
-    hdi sk1         00c25ab0062fa576            root vg             active
-    hdi sk2         00c25ab0056a002a            None
-    root@aix-7200-03-03: / 
-    :>rmdev - dl hdi sk2
-    hdi sk2 deleted
     root@aix-7200-03-03: /
      :>lspv
-    hdi sk0         00f6db0a6c7aece5            old_root vg
-    hdi sk1         00c25ab0062fa576            root vg             active
+    hdisk0         00f6db0a6c7aece5            old_rootvg
+    hdisk1         00c25ab0062fa576            rootvg             active
+    hdisk2         00c25ab0056a002a            None
+    root@aix-7200-03-03: / 
+    :>rmdev - dl hdisk2
+    hdisk2 deleted
+    root@aix-7200-03-03: /
+     :>lspv
+    hdisk0         00f6db0a6c7aece5            old_rootvg
+    hdisk1         00c25ab0062fa576            rootvg             active
     root@aix-7200-03-03: /
      :>
     ```

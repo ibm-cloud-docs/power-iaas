@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-04"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -92,7 +92,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
     Type or select values in entry fields.
     Press Enter AFTER making all desired changes.
                                                                [Entry Fields]
-      Connectin type                                          [HTTP_Proxy]
+      Connection type                                          [HTTP_Proxy]
       Test service configuration                              [Yes]
 
       If type is DIRECT_INTERNET, no entry required.
@@ -101,7 +101,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
             IP address                                        [xx.xx.xx.xx]
             Port number                                       [5026]
             Authentication user ID                            []
-            Authentication password requested interactively
+            Authentication password requested interactively.
     ```  
 
     Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
@@ -122,7 +122,7 @@ Press Enter AFTER making all desired changes.
 Screen output verbosity                                   [Info/Warnings/Errors]  +
 Logfile output verbosity                                  [Verbose]               +
 Notification email verbosity                              [Info/Warnings/Errors]  +
-Remove superseeded filesets on Clean?                      Yes                    +
+Remove superseded filesets on Clean?                      Yes                    +
 Remove duplicate base levels on Clean?                     Yes                    +
 Remove conflicting updates on Clean?                       Yes                    +
 Fixserver protocol                                        https                   +
