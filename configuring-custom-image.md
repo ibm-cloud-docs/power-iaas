@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-04"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -83,7 +83,12 @@ Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01,
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. <!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented as follows:
+- [Installing and configuring cloud-init on SLES](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-sles){: external}.
+- [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel)
+
+
+<!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
 {: note}
