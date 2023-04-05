@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-04-04"
+lastupdated: "2023-04-05"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -50,7 +50,12 @@ Before you can use a custom image as the boot volume, review the following infor
 
 For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external} and [Migrating IBM i to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). To view a list of the supported AIX and IBM i operating system technology levels, see the following system software maps:
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), or E980 (9080-M9S - Frankfurt only). 
+
+If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
+{: important}
+
+To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 ### AIX
 {: #aix-details}
