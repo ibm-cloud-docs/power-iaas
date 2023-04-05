@@ -77,9 +77,6 @@ The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. C
 IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.1 and IBM i 7.2 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
 {: note}
 
-Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01, and DAL13 will be available soon. All other data centers are currently supported.
-{: important}
-
 ### Linux
 {: #linux-details}
 
