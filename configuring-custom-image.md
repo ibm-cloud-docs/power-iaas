@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-04"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -77,13 +77,15 @@ The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. C
 IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.1 and IBM i 7.2 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
 {: note}
 
-Support for IBM i 7.1 VMs in the data centers LON04, SYD04, SYD05, SAO01, TOR01, and DAL13 will be available soon. All other data centers are currently supported.
-{: important}
-
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. <!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented as follows:
+- [Installing and configuring cloud-init on SLES](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-sles){: external}.
+- [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
+
+
+<!--IBM&trade; Power System E1080 (9080-HEX) supports only RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.-->
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
 {: note}

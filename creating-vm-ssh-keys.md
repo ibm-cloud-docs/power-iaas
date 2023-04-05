@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-10"
+lastupdated: "2023-03-29"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -126,3 +126,12 @@ Run the following commands to start an SSH client debug session:
 ```
 
 After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering **exit** command.
+
+## Additional support information
+{: extra-info-aix-vm}
+
+Refer to the following support pages for additional information for different use cases:
+
+- [Debugging sshd without impacting existing sshd sessions](https://www.ibm.com/support/pages/node/631957){: external}
+- [Using IPSec rules to filter network traffic](https://www.ibm.com/support/pages/node/6590907){: external}
+- [Downloading and installing or upgrading OpenSSL and OpenSSH](https://www.ibm.com/support/pages/node/720655){: external}

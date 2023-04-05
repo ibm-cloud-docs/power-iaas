@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-03-03"
+lastupdated: "2023-04-03"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -43,7 +43,29 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
 2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you'd like to remove. All of that communication that is going over the route is terminated after you remove it.
 3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you'd like to deactivate on the **NETSTAT \*IFC** screen.
 4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you'd like to remove.
-    ![Removing a network interface](./images/terminal-ibmi-remove-nic.png "Removing a network interface"){: caption="Figure 1. Revmoing a network interface" caption-side="bottom"}
+    Removing a network interface:
+
+    ```
+                        Work with TCP/IP Interfaces
+                                                                        System: RCHASSLH
+    Type options, press Enter. 
+    1=Add   2=Change    4=Remove    5=Display   9=Start   10=End
+
+              Internet          Subnet            Line                Line
+    Opt       Address           Mask              Description         Type
+    ___       9.5.186.23        255.255.255.0     SITETRN             *TRLAN
+    ___       9.5.186.222       255.255.255.0     SITETRN             *TRLAN
+    _4_       10.10.10.1        255.255.255.0     SITETRN             *TRLAN
+    ___       127.0.0.1         255.0.0.0         *LOOPBACK           *NONE
+
+    
+
+    
+
+                                                                                  Bottom
+    F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
+    F12=Cancel    F17=Top         F18=Bottom
+    ```
     
 5. You must vary off the Line description (LIND) after you remove the interface.
 
@@ -62,5 +84,26 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
 6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
 7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
-    ![Adding a network interface](./images/terminal-ibmi-add-nic.png "Adding a network interface"){: caption="Figure 2. Adding a network interface" caption-side="bottom"}
+    
+Adding a network interface:
+
+    ```
+                                Add TCP/IP Interface (ADDTCPIFC)
+
+    Type choices, press Enter
+   
+    Internet address.   .   .   .   .   .   .   .   .   . > .   .  
+    Line description.   .   .   .   .   .   .   .   .   .   ____________    Name, *LOOPBACK..
+    Subnet mask .   .   .   .   .   .   .   .   .   .   .   ____________
+    Associated local interface. .   .   .   .   .   .   .   *NONE
+    Type of service.    .   .   .   .   .   .   .   .   .   *NORMAL         *MINDELAY, *MAXTHRPUT..
+    Maximum transmission unit.  .   .   .   .   .   .   .   *LIND           576-16388, *LIND
+    Autostart.  .   .   .   .   .   .   .   .   .   .   .   *YES            *YES,   *NO
+    PVC logical channel identifier. .   .   .   .   .   .   ____________    001-FFF
+                                 + for more values          ____________
+    X.25 idle circuit timeout.  .   .   .   .   .   .   .   60              1-600
+    X.25 maximum virtual circuits.  .   .   .   .   .   .   64              0-64
+    X.25 DDN interface. .   .   .   .   .   .   .   .   .   *NO             *YES,   *NO
+    TRLAN bit sequencing.   .   .   .   .   .   .   .   .   *MSB            *MSB,   *LSB
+    ```
     
