@@ -30,7 +30,7 @@ You can set up one or more SSH keys for root login when you create virtual serve
 
 You can use the `ssh-keygen` tool to generate SSH keys. To generate an SSH key, complete the following steps:
 
-1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the Manage Users classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](TBD).
+1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the `Manager` service access role, can generate SSH keys. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 2. Run the `ssh-keygen` command in your on-premises workstation. The following example generates a standard 2048-bit RSA key. The command prompts you for the location to store the key (default is $HOME/.ssh/) as well as a passphrase to secure the SSH key.
 
 ```text
