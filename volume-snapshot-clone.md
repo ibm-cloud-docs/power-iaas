@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-11-24"
+lastupdated: "2023-04-10"
 
 keywords: volume snapshot, clone, restore, api, flashcopy
 
@@ -187,3 +187,4 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 
 - If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete states, which might require a cleanup initiative from an IBM operation's team.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
+- If you encounter a failure while submitting multiple volume clone requests on the same volume, you should either delete any previous requests or start and execute the previous volume clone request.
