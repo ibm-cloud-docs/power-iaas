@@ -59,7 +59,6 @@ Power Systems Virtual Servers
         vpn-connections.md
         configuring-private-network.md
         configuring-private-subnet.md
-        connecting-networks.md
         network-security.md
         network-architecture.md
         site-to-site-vpn-connectivity.md

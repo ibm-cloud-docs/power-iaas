@@ -75,7 +75,6 @@ toc:
               - cloud-connections-CLI.md
               - vpn-connections.md
               - configuring-private-subnet.md
-              - connecting-networks.md
               - network-security.md
               - network-architecture.md
               - site-to-site-vpn-connectivity.md
