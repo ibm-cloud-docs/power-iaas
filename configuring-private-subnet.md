@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "20223-04-19"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
@@ -58,11 +58,11 @@ To create a new subnet, complete the following steps:
 7. You must provide the **DNS server** value.
     A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
-8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
+8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
 9. Click **Create subnet**.
 
-You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach Cloud connections to each of the subnets in the **Attached cloud connections** section. 
+You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section. 
 
 You can also create and configure a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
 
@@ -76,7 +76,10 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration.
 
-In some configurations, private network communication is needed only between the {{site.data.keyword.powerSys_notm}} instances and not from Direct Link. You must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}}s to configure the private network in {{site.data.keyword.powerSys_notm}} infrastructure. For example, if you add a subnet *172.10.10.0/24* from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet, you must open a support ticket and provide the following subnet information that is displayed in the user interface.
+When you have cloud connections or VPNaaS configured, you can create private networks automatically by attaching private network subnet to cloud connections.
+However, when private network communication is required between the two {{site.data.keyword.powerSys_notm}} instances and not from/to IBM Cloud network. You must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network configuration.
+
+For example, if you add a subnet *172.10.10.0/24* from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet, you must open a support ticket and provide the following subnet information that is displayed in the user interface.
 
 | Name          | IP address   | Gateway     | MAC address    | VLAN ID | CIDR       |
 | ------------- | ------------ | ----------- | -------------- | ------- | ---------- |
