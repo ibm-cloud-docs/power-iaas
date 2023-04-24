@@ -180,5 +180,5 @@ When you attempt to resize the memory of a deployed virtual server instance thro
 
 `Example`:When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3GB.
 
-In the current cloud environment, it may take upto 1.5hrs approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires will fail, until all referencing tables are updated.
+In the current cloud environment, it may take upto 1.5 hours approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires will fail, until all referencing tables are updated.
 {: important}
