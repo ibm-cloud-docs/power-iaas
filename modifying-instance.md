@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-23"
+lastupdated: "2023-04-24"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -151,3 +151,34 @@ You cannot toggle a public network off if there are no other defined networks.
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
 For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+
+## Use cases
+{: #use-case-resize-vm}
+
+The different scenarios that you may face while requesting for resizing a {{site.data.keyword.powerSys_notm}} instance's memory and CPU are listed below.
+
+### You request for resizing both memory and CPU fails
+{: #resize-mem-cpu-fail}
+
+When you attempt to resize the memory as well as CPU of a deployed virtual server instance through a single request it may fail due to the following reasons:
+- There is no free memory available on the host.
+- There is no free memory available on the logical partition as the resources on it are running.
+- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request.
+- You have made multiple attempts for resizing.
+- Currently, there is no preference for memory or CPU on what should be resized first. Considering, the memory request is processed first and it fails; the CPU resizing will fail automatically.  
+
+`Example`: When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3.2 GB for running resources in it), then there is a possibility that both the CPU and memory resize will fail.
+
+### You request for resizing the memory but you get a partial resize
+{: #resize-mem-cpu-partial}
+
+When you attempt to resize the memory of a deployed virtual server instance through a single request it may partially resize or in the worst scenarios even fail due to the following reasons:
+- There is no free memory available on the host will result in failed request.
+- There is no free memory available on the logical partition as the resources on it are running will result in failed request.
+- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request will result in a partial resize.
+- You have made multiple attempts for resizing will result in a failed request.
+
+`Example`:When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3GB.
+
+In the current cloud environment, it may take upto 1.5hrs approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires will fail, until all referencing tables are updated.
+{: important}
