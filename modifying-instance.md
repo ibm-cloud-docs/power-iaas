@@ -155,7 +155,7 @@ For an IBM i VM, the SRC number can be progress code, operation code, or softwar
 ## Use cases
 {: #use-case-resize-vm}
 
-The different scenarios that you may face while requesting for resizing a {{site.data.keyword.powerSys_notm}} instance's memory and CPU are listed below.
+The different scenarios that you may face while requesting for resizing a {{site.data.keyword.powerSys_notm}} instance's memory are listed below.
 
 ### You request for resizing both memory and CPU fails
 {: #resize-mem-cpu-fail}
