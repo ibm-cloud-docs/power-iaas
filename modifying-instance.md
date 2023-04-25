@@ -172,11 +172,11 @@ When you attempt to resize the memory as well as CPU of a deployed virtual serve
 ### You request for resizing the memory but you get a partial resize
 {: #resize-mem-cpu-partial}
 
-When you attempt to resize the memory of a deployed virtual server instance through a single request it may partially resize or in the worst scenarios even fail due to the following reasons:
+When you attempt to resize the memory of a deployed virtual server instance through a request, it may partially resize or in the worst scenarios even fail due to the following reasons:
 - There is no free memory available on the host will result in failed request.
-- There is no free memory available on the logical partition as the resources on it are running will result in failed request.
-- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request will result in a partial resize.
-- You have made multiple attempts for resizing will result in a failed request.
+- There is no free memory available on the logical partition as the resources are running on it. This will result in a failed request.
+- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request. This will result in a partial resize.
+- You have made multiple attempts for resizing. This will result in a failed request.
 
 `Example`:When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3GB.
 
