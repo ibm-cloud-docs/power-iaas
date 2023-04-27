@@ -137,7 +137,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^footnote1] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^footnote2] |
     | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-WDC04-IBMPOWERIAASLITE-2-1 \n SL-WDC04-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC04-10G-NOGRE-1-2[^footnote4] |
     | WDC06 | IBM Power VS | SL-WDC06-IBMPOWERIAASLITE-1-1 \n SL-WDC06-IBMPOWERIAASLITE-1-2 \n PowerVS-WDC06-10G-NOGRE-1-1[^footnote13] | SL-WDC06-IBMPOWERIAASLITE-2-1 \n SL-WDC06-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC06-10G-NOGRE-1-2[^footnote14] |
-    | WDC07 | IBM Power VS | SL-WDC07-IBMPOWERIAASLITE-1-1 \n SL-WDC07-IBMPOWERIAASLITE-1-2 \n PowerVS-WDC07-10G-NOGRE-1-1[^footnote15] | SL-WDC07-IBMPOWERIAASLITE-2-1 \n SL-WDC07-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC06-10G-NOGRE-1-2[^footnote14] |
+    | WDC07 | IBM Power VS | SL-WDC07-IBMPOWERIAASLITE-1-1 \n SL-WDC07-IBMPOWERIAASLITE-1-2 \n PowerVS-WDC07-10G-NOGRE-1-1[^footnote15] | SL-WDC07-IBMPOWERIAASLITE-2-1 \n SL-WDC07-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC06-10G-NOGRE-1-2[^footnote16] |
     | DAL10 | IBM Power VS | SL-DAL10-IBMPOWERIAASLITE-1-1 \n SL-DAL10-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL10-10G-NOGRE-1-1[^footnote5] | SL-DAL10-IBMPOWERIAASLITE-2-1 \n SL-DAL10-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL10-10G-NOGRE-1-2[^footnote6] |
     | DAL12 | IBM Power VS | SL-DAL12-IBMPOWERIAASLITE-1-1 \n SL-DAL12-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL12-10G-NOGRE-1-1[^footnote5] | SL-DAL12-IBMPOWERIAASLITE-2-1 \n SL-DAL12-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL12-10G-NOGRE-1-2[^footnote6] |
     | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^footnote7] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^footnote8] |
@@ -161,6 +161,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     [^footnote12]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote15]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote15]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
 1. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
