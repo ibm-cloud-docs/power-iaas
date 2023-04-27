@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-23"
+lastupdated: "2023-04-27"
 
 keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
 
@@ -48,15 +48,15 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
     | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
     | America | Dallas, USA | us-south | DAL10 \n DAL12 \n us-south | DAL10 \n DAL12 \n DAL13 | us-south-1 \n us-south-2 \n us-south-3 |
-    | America | Washington DC, USA | us-east | us-east \n WDC06 | WDC04 \n WDC06 | us-east-1 \n us-east-2 |
-    | America | São Paulo, Brazil | br-sao | SAO01 | SAO01 | - |
-    | America | Toronto, Canada | ca-tor | TOR01 | TOR01 | - |
+    | America | Washington DC, USA | us-east | us-east \n WDC06 \n WDC07| WDC04 \n WDC06 \n WDC07| us-east-1 \n us-east-2 \n us-east-3|
+    | America | São Paulo, Brazil | br-sao | SAO01 \n SAO04| SAO01 \n SAO04| br-sao-1 \n br-sao-2 |
+    | America | Toronto, Canada | ca-tor | TOR01 | TOR01 | ca-tor-1 |
     | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
     | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
     | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
-    | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | - |
+    | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
     {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
 
 5. Click **Create**. You are redirected to the **Workspaces** page where you can select your desired or existing workspace.
