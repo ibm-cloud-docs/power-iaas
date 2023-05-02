@@ -63,6 +63,7 @@ Power Systems Virtual Servers
         network-architecture.md
         site-to-site-vpn-connectivity.md
         X86-based-systems.md
+        getting-started-PER.md
 
     {: .topicgroup}
     AIX
