@@ -131,33 +131,35 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 
     | Data center | Network provider | Port group 1 | Port group 2 for redundancy |
     | ----------- | ---------------- | ------------ | --------------------------- |
-    | LON04 | IBM Power VS | SL-LON04-IBMPOWERIAASLITE-1-1 \n SL-LON04-IBMPOWERIAASLITE-1-2 | SL-LON04-IBMPOWERIAASLITE-2-1 \n SL-LON04-IBMPOWERIAASLITE-2-2 |
-    | LON06 | IBM Power VS | SL-LON06-IBMPOWERIAASLITE-1-1 \n SL-LON06-IBMPOWERIAASLITE-1-2 | SL-LON06-IBMPOWERIAASLITE-2-1 \n SL-LON06-IBMPOWERIAASLITE-2-2 |
-    | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERIAASLITE-1-1 \n SL-FRA05-IBMPOWERIAASLITE-1-2 | SL-FRA05-IBMPOWERIAASLITE-2-1 \n SL-FRA05-IBMPOWERIAASLITE-2-2 |
-    | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERIAASLITE-1-1 \n SL-FRA04-IBMPOWERIAASLITE-1-2 \n PowerVS-FRA04-10G-NOGRE-1-1[^footnote1] | SL-FRA04-IBMPOWERIAASLITE-2-1 \n SL-FRA04-IBMPOWERIAASLITE-2-2 \n PowerVS-FRA04-10G-NOGRE-1-2[^footnote2] |
-    | WDC04 | IBM Power VS | SL-WDC04-IBMPOWERIAASLITE-1-1 \n PowerVS-WDC04-10G-NOGRE-1-1[^footnote3] | SL-WDC04-IBMPOWERIAASLITE-2-1 \n SL-WDC04-IBMPOWERIAASLITE-2-2 \n PowerVS-WDC04-10G-NOGRE-1-2[^footnote4] |
+    | LON04 | IBM Power VS | IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-1 \n IBM POWER VS-CLOUD EXCHANGE SL-LON04-1-2 | IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-1 \n IBM POWER VS-CLOUD EXCHANGE SL-LON04-2-2 |
+    | LON06 | IBM Power VS | SL-LON06-IBMPOWERLAASLITE-1-1 \n SL-LON06-IBMPOWERLAASLITE-1-2 \n xPowerVS-LON04-10G-NOGRE-1-1[^footnote1] | SL-LON06-IBMPOWERLAASLITE-2-1 \n SL-LON06-IBMPOWERLAASLITE-2-2 \n xPowerVS-LON04-10G-NOGRE-1-2[^footnote2] |
+    | FRA05 | IBM Power VS | SL-FRA05-IBMPOWERLAASLITE-1-1 \n SL-FRA05-IBMPOWERLAASLITE-1-2 \n xPowerVS-FRA05-10G-NOGRE-1-1[^footnote3] | SL-FRA05-IBMPOWERLAASLITE-2-1 \n SL-FRA05-IBMPOWERLAASLITE-2-2 \n xPowerVS-FRA05-10G-NOGRE-1-2[^footnote4] |
+    | FRA04 | IBM Power VS | SL-FRA04-IBMPOWERLAASLITE-1-1 \n SL-FRA04-IBMPOWERLAASLITE-1-2 \n xPowerVS-FRA04-10G-NOGRE-1-1[^footnote5] | SL-FRA04-IBMPOWERLAASLITE-2-1 \n SL-FRA04-IBMPOWERLAASLITE-2-2 \n xPowerVS-FRA04-10G-NOGRE-1-2[^footnote6] |
+    | WDC04 | IBM Power VS | NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-1-2 \n xPowerVS-WDC04-10G-NOGRE-1-1[^footnote7] | NNI-LINK-SL-WDC04-IBMPOWERLAASLITE-2-2 n xPowerVS-WDC04-10G-NOGRE-1-2[^footnote8] |
     | WDC06 | IBM Power VS | IBM POWER VS-CLOUD EXCHANGE SL-WDC06-1-1 \n IBM POWER VS-CLOUD EXCHANGE SL-WDC06-1-2 | IBM POWER VS-CLOUD EXCHANGE SL-WDC06-2-1 \n IBM POWER VS-CLOUD EXCHANGE SL-WDC06-2-2 |
-    | WDC07 | IBM Power VS | SL-WDC07-IBMPOWERIAASLITE-1-1 \n SL-WDC07-IBMPOWERIAASLITE-1-2 | SL-WDC07-IBMPOWERIAASLITE-2-1 \n SL-WDC07-IBMPOWERIAASLITE-2-2 |
-    | DAL10 | IBM Power VS | SL-DAL10-IBMPOWERIAASLITE-1-1 \n SL-DAL10-IBMPOWERIAASLITE-1-2 | SL-DAL10-IBMPOWERIAASLITE-2-1 \n SL-DAL10-IBMPOWERIAASLITE-2-2 |
-    | DAL12 | IBM Power VS | IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-1 \n IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-2 \n xPowerVS-DAL12-10G-NOGRE-1-1[^footnote16] | IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-1 \n IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-2 \n xPowerVS-DAL12-10G-NOGRE-1-2[^footnote17] |
-    | DAL13 | IBM Power VS | SL-DAL13-IBMPOWERIAASLITE-1-1 \n SL-DAL13-IBMPOWERIAASLITE-1-2 \n PowerVS-DAL13-10G-NOGRE-1-1[^footnote7] | SL-DAL13-IBMPOWERIAASLITE-2-1 \n SL-DAL13-IBMPOWERIAASLITE-2-2 \n PowerVS-DAL13-10G-NOGRE-1-2[^footnote8] |
-    | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERIAASLITE-1-1 \n SL-SYD04-IBMPOWERIAASLITE-1-2 \n PowerVS-SYD04-10G-NOGRE-1-1[^footnote9] | SL-SYD04-IBMPOWERIAASLITE-2-1 \n SL-SYD04-IBMPOWERIAASLITE-2-2 \n PowerVS-SYD04-10G-NOGRE-1-2[^footnote10] |
-    | TOK04 | IBM Power VS | SL-TOK04-IBMPOWERIAASLITE-1-1 \n SL-TOK04-IBMPOWERIAASLITE-1-2 \n PowerVS-TOK04-10G-NOGRE-1-1[^footnote11] | SL-TOK04-IBMPOWERIAASLITE-2-1 \n SL-TOK04-IBMPOWERIAASLITE-2-2 \n PowerVS-TOK04-10G-NOGRE-1-2[^footnote12] |
-    | OSA21 | IBM Power VS | SL-OSA21-IBMPOWERIAASLITE-1-1 \n SL-OSA21-IBMPOWERIAASLITE-1-2 | SL-OSA21-IBMPOWERIAASLITE-2-1 \n SL-OSA21-IBMPOWERIAASLITE-2-2 |
-    | SAO04 | IBM Power VS | SL-SAO04-IBMPOWERIAASLITE-1-1 \n SL-SAO04-IBMPOWERIAASLITE-1-2 | SL-SAO04-IBMPOWERIAASLITE-2-1 \n SL-SAO04-IBMPOWERIAASLITE-2-2 |
+    | WDC07 | IBM Power VS | SL-WDC07-IBMPOWERLAASLITE-1-1 \n SL-WDC07-IBMPOWERLAASLITE-1-2 | SL-WDC07-IBMPOWERLAASLITE-2-1 \n SL-WDC07-IBMPOWERLAASLITE-2-2 |
+    | DAL10 | IBM Power VS | SL-DAL10-IBMPOWERLAASLITE-1-1 \n SL-DAL10-IBMPOWERLAASLITE-1-2 | SL-DAL10-IBMPOWERLAASLITE-2-1 \n SL-DAL10-IBMPOWERLAASLITE-2-2 |
+    | DAL12 | IBM Power VS | IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-1 \n IBM POWER VS-CLOUD EXCHANGE SL-DAL12-1-2 \n xPowerVS-DAL12-10G-NOGRE-1-1[^footnote9] | IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-1 \n IBM POWER VS-CLOUD EXCHANGE SL-DAL12-2-2 \n xPowerVS-DAL12-10G-NOGRE-1-2[^footnote10] |
+    | DAL13 | IBM Power VS | SOFTLAYER-IBMPOWERIAASLITE-1-1 \n SOFTLAYER-IBMPOWERIAASLITE-1-2 \n xPowerVS-DAL13-10G-NOGRE-1-1[^footnote11] | SOFTLAYER-IBMPOWERIAASLITE-2-1 \n SOFTLAYER-IBMPOWERIAASLITE-2-2 \n xPowerVS-DAL13-10G-NOGRE-1-2[^footnote12] |
+    | SYD04 | IBM Power VS | SL-SYD04-IBMPOWERLAASLITE-1-1 \n SL-SYD04-IBMPOWERLAASLITE-1-2 \n xPowerVS-SYD04-10G-NOGRE-1-1[^footnote13] | SL-SYD04-IBMPOWERLAASLITE-2-1 \n SL-SYD04-IBMPOWERLAASLITE-2-2 \n xPowerVS-SYD04-10G-NOGRE-1-2[^footnote14] |
+    | TOK04 | IBM Power VS | SL-TOK01-ZENLAYER-3-1 \n 01675-TK4-X-I-0002 \n TKY/TKY/LE-275454 | SL-TOK01-ZENLAYER-4-1|
+    | OSA21 | IBM Power VS | SL-OSA01-ATTOKYO-1-1 | SL-OSA01-ATTOKYO-2-1 |
+    | SAO04 | IBM Power VS | SL-SAO04-POWERVSCX-1-1 \n SL-SAO04-POWERVSCX-1-2 | SL-SAO04-POWERVSCX-2-1 \n SL-SAO04-POWERVSCX-2-2 |
     {: caption="Table 2. Port and Port groups for redundant {{site.data.keyword.dl_short}} instances" caption-side="bottom"}
 
     [^footnote1]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote2]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote3]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote4]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote5]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote6]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote7]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote8]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote9]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote10]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote11]: This port is not GRE capable, but supports a speed of 10 Gbps.
-    [^footnote12]: This port is not GRE capable, but supports a speed of 10 Gbps.
-    [^footnote17]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
 2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
