@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-02"
+lastupdated: "2023-05-03"
 
 keywords: direct link, order DL, ordering DL
 
@@ -158,6 +158,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     [^footnote9]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote10]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote11]: This port is not GRE capable, but supports a speed of 10 Gbps.
+    [^footnote12]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
