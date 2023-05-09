@@ -34,20 +34,20 @@ You can choose from the following options:
 
 If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, select your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of SLES are supported:
 
-- `SLES 12 - Minimum level: SP4 + Kernel  4.12.14-95.54.1`
-- `SLES 15 - Minimum level: SP1 + kernel 4.12.14-197.45-default`
+* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
+* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
+* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
+* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+* SLES 15 SP3 general purpose (SLES15-SP3)
+* SLES 15 SP4 general purpose (SLES15-SP4)
+* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
+* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
-{: note}
-
-The kernel versions listed above are required. You must exercise caution when you use the Linux VM resize option (especially the resize reduction of a resource). There are Linux kernel fixes that are required. If you do not integrate these Linux kernel fixes, the VM will go into an **Error** state requiring help from IBM support. You can use the `sudo zypper update` command to update all of the Linux packages. You must verify that the distro (kernel) level contains these Linux fixes. If not, you should avoid using the resize option altogether or perform it in conjunction with a VM stop/restart action.
-{: important}
-
-If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [IBM PowerVC packages](http://public.dhe.ibm.com/systems/virtualization/powervc/){: external}.
 
