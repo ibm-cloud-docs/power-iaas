@@ -33,22 +33,22 @@ The full Linux subscription also provides, via activation keys, access to OS int
 To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. The following OS versions support a full Linux subscription:
   
 **SUSE**:
-  * SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
-  * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
-  * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
-  * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-  * SLES 15 SP3 general purpose (SLES15-SP3)
-  * SLES 15 SP4 general purpose (SLES15-SP4)
-  * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
-  * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
+* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
+* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
+* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
+* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+* SLES 15 SP3 general purpose (SLES15-SP3)
+* SLES 15 SP4 general purpose (SLES15-SP4)
+* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
+* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 
 **Red Hat**:
-  * RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
-  * RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
-  * RHEL 8.4 general purpose (RHEL8-SP4)
-  * RHEL 8.6 general purpose (RHEL8-SP6)
-  * RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
-  * RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) 
+* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
+* RHEL 8.4 general purpose (RHEL8-SP4)
+* RHEL 8.6 general purpose (RHEL8-SP6)
+* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) 
 
 
 The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
