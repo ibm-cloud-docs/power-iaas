@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-15"
+lastupdated: "2023-05-09"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -49,22 +49,58 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 
 For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
+AIX stock images currently available when you create a VM are:
+
+* AIX 7.3 TL1 SP1
+* AIX 7.2 TL5 SP5
+* AIX 7.1 TL5 SP9[^SP9]
+
+[^SP9]: Extended Support for an additional charge is available for AIX 7.1 (end of support was 30 April 2023).
+
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, and E1080 (9080-HEX)--> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-**Linux** - {{site.data.keyword.powerSys_notm}} supports the following Linux distributions:
+IBM i stock images currently available when you create a VM are:
 
-- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
-- Red Hat Enterprise Linux (RHEL) 8.4 or later
+* IBM i 7.5 TR1
+* IBM i 7.4 TR7
+* IBM i 7.3 TR13 
+* IBM i 7.2 TR13
+* IBM i 7.1 TR13
+
+**Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux):
+
+Red Hat
+* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
+* RHEL 8.4 general purpose (RHEL8-SP4)
+* RHEL 8.6 general purpose (RHEL8-SP6)
+* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+
+SUSE
+* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
+* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
+* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
+* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+* SLES 15 SP3 general purpose (SLES15-SP3)
+* SLES 15 SP4 general purpose (SLES15-SP4)
+* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
+* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
+
+
+If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for following Linux distributions:
+
+General purpose:
+* SLES 12 SP4 or later and SLES 15 SP1 or later
+* RHEL 8.4 or later
 
 For SAP workloads:
-
-- SUSE Linux Enterprise (SLES) 12 SP4 or later and SLES 15 SP1 or later
-- Red Hat Enterprise Linux (RHEL) 8.2 or later 
-
+* SLES 12 SP4 or later and SLES 15 SP1 or later
+* RHEL 8.1 or later
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
