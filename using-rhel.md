@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-01-10"
+lastupdated: "2023-05-09"
 
 keywords: rhel, using RHEL with PowerVS, Linux
 
@@ -33,25 +33,20 @@ You can choose from the following options:
 
 If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, you can select either an IBM stock image or your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, select your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
 
-- RHEL 8.1
-- RHEL 8.2
-- RHEL 8.3
-- RHEL 8.4
-- RHEL 8.6
-
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
-{: note}
-
-Ensure that you have the latest cloud-init version as on March 2021 for all the supported RHEL versions. If some of the RHEL versions (for example, RHEL 8.1 and RHEL 8.2) become out of support, you must obtain extended support from Red Hat. Follow the requirements of extended support and apply patches or updates as recommended by Red Hat. For more information about extended support, see [RHEL Extended Update Support (EUS) Overview](https://access.redhat.com/articles/rhel-eus){: external}.
-{: note}
+* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
+* RHEL 8.4 general purpose (RHEL8-SP4)
+* RHEL 8.6 general purpose (RHEL8-SP6)
+* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) 
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}.
 
-If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
