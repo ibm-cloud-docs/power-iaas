@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Integrating {{site.data.keyword.powerSys_notm}} with IBM Key Management Services
 {: #integrate-hpcs}
 
-IBM® provides two key management services that integrates with {{site.data.keyword.powerSysFull}}:
+IBM provides two key management services that integrates with {{site.data.keyword.powerSysFull}}:
 {: shortdesc}
 
 1. [IBM Cloud® Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto?topic=hs-crypto-overview) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with Power Systems Virtual Server to securely store and protect encryption key information for AIX and Linux.
@@ -25,7 +25,7 @@ IBM® provides two key management services that integrates with {{site.data.keyw
 ## Using Hyper Protect Crypto Services (HPCS) and {{site.data.keyword.keymanagementserviceshort}} for AIX
 {: #AIX-hpcs}
 
-HPCS and {{site.data.keyword.keymanagementserviceshort}} is supported with AIX 7.3 TL1 for AIX logical volume encryption.
+HPCS and {{site.data.keyword.keymanagementserviceshort}} are supported with AIX 7.3 TL1 for AIX logical volume encryption.
 {: note}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS and {{site.data.keyword.keymanagementserviceshort}} to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
