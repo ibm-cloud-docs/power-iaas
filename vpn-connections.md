@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2023
 
-lastupdated: "2023-03-30"
+lastupdated: "2023-05-15"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -45,7 +45,7 @@ To learn more about using the command-line interface (CLI) for VPN connections, 
 ## Power Systems Virtual Servers workspace support with VPN
 {: #powervs-support-vpn}
 
-Power Systems Virtual Server supports multiple sworkspace from the same account. However, only a single workspace can use a VPN connection. If you want to configure a VPN connection for multiple workspaces for the same account, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+Power Systems Virtual Server supports multiple workspaces from the same account. However, only a single workspace can use a VPN connection. If you want to configure a VPN connection for multiple workspaces for the same account, open a [Service Ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Connecting to your on-premises network
 {: #vpn-connecting-onpremise}
