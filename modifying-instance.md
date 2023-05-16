@@ -165,7 +165,7 @@ When you attempt to resize the memory as well as CPU of a deployed virtual serve
 - There is no free memory available on the logical partition as the resources on it are running.
 - The free memory available on the logical partition is less than that of the desired value indicated in the resizing request.
 - You have made multiple attempts for resizing.
-- Currently, there is no preference for memory or CPU on what should be resized first. Considering, the memory request is processed first and it fails; the CPU resizing will fail automatically.  
+- Currently, there is no preference for memory or CPU on what should be resized first. If the first request being processed fails, the second one will also fail automatically.  
 
 `Example`: When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3.2 GB for running resources in it), then there is a possibility that both the CPU and memory resize will fail.
 
