@@ -46,15 +46,15 @@ The following network architecture diagrams explains how the PER is integrated i
 
 The network traffic in a PER environment can flow in the following two ways:
 - Accessing classisc infrastructure thruogh Transit Gateway.
-  `1` - Traffic from ACI tenants is forwarded to the PER.
-  `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
+  - `1` - Traffic from ACI tenants is forwarded to the PER.
+  - `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
    
 - Accessing cloud services and pinging each other
-  `1`	- Traffic from ACI tenants is forwarded to the PER.
-  `4`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
-  `3`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
-<!-- what is the full form of PPR? -->
-  `2` - Traffic from PER is now  forwarded to IBM Cloud PPRs for final delivery.
+  - `1`	- Traffic from ACI tenants is forwarded to the PER.
+  - `4`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
+  - `3`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
+  - `2` - Traffic from PER is now  forwarded to IBM Cloud PPRs for final delivery.
+  <!-- what is the full form of PPR? -->
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is carried out by Cisco as per the intent defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
 
