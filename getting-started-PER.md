@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-17"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit gateway, IBM PER
 
@@ -49,7 +49,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
    
-- Accessing cloud services and pinging each other
+- Accessing cloud services that can access each other resources.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
   - `4`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
   - `3`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
