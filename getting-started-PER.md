@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-05-17"
+lastupdated: "2023-05-18"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit gateway, IBM PER
 
@@ -32,7 +32,7 @@ A Power Edge Router (PER) is a high-performance virtual router offered by IBM Cl
 
 PER improves network communication across different parts of IBM network. This new system will replace the current Direct Link-based network connectivity.
 
-The PER system will create a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easier for different parts of IBM network to communicate with each other. Specifically, IBM have added a new pair of routers to each {{site.data.keyword.powerSys_notm}} pod (a collection of virtual servers instance) with an aggregate connectivity of 400 Gbps.
+The PER system will create a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easier for different parts of IBM network to communicate with each other. Specifically, IBM has added a new pair of routers to each {{site.data.keyword.powerSys_notm}} pod (a collection of virtual servers instance) with an aggregate connectivity of 400 Gbps.
 
 These new routers (PERs) will associate specific {{site.data.keyword.powerSys_notm}} networks (which are like individual workspaces) with unique MPLS route distinguishers (RDs), making it easier for different networks to communicate with each other across the IBM Cloud MPLS backbone.
 
@@ -49,7 +49,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
    
-- Accessing cloud services that can access each other resources.
+- Accessing cloud services that can access each other's resources.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
   - `4`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
   - `3`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
@@ -62,7 +62,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centers is
 {:create-per-workspace}
 
 <!-- Q: Does a user gets the option to choose b/w PER or a non-PER workspace? -->
-A PER workspace is same as the non-PER workspace except that the PER workspace will have two additional attributes as follows:
+A PER workspace is same as the non-PER workspace except that the PER workspace does not allow to create any VPN or Cloud Connections. Additionally, a PER workspace will have two additional attributes as follows:
 1.	Route distinguisher (RD)
 2.	Route target (RT)
 <!-- Q: How do I check back that my workspace have these 2 attr? -->
