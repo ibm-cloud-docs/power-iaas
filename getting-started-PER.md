@@ -42,10 +42,10 @@ One of the benefits of the PER system is that it will make it easier for {{site.
 
 The following network architecture diagrams explains how the PER is integrated in the IBM Cloud environment:
 
-![Power Edge Router network architechture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architechture diagram"){: caption="Figure 1. Power Edge Router network architechture diagram" caption-side="bottom"}
+![Power Edge Router network architechture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architecture diagram"){: caption="Figure 1. Power Edge Router network architechture diagram" caption-side="bottom"}
 
 The network traffic in a PER environment can flow in the following two ways:
-- Accessing classisc infrastructure through Transit Gateway.
+- Accessing classic infrastructure through Transit Gateway.
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
    
@@ -56,7 +56,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `2` - Traffic from PER is now  forwarded to IBM Cloud PPRs for final delivery.
   <!-- what is the full form of PPR? -->
 
-The automation of ACI, PER, and NAT Services provisioning in IBM data centers is carried out by Cisco as per the intent defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
+The automation of ACI, PER, and NAT Services provisioning in IBM data centres is carried out by Cisco as per the intent defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
 
 ## Creating a PER workspace
 {:create-per-workspace}
@@ -79,7 +79,7 @@ You can attach, detach, update network using the subnets page in a PER workspace
 
 You must use Transit Gateway only to configure the Virtual connections, as opposed to using cloud connections.
 
-In a PER workspace you can do the following:
+In a PER workspace, you can do the following:
 1.	Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your virtual server instance.
 
