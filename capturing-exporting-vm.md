@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-01-23"
+lastupdated: "2023-05-15"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -30,11 +30,18 @@ You can capture and export an AIX or IBM i VM instance by using the {{site.data.
 
 When you capture and export a VM, you can choose the image catalog, Cloud Object Storage, or both as destinations. The image catalog is on the IBM Power storage area network (SAN). IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your image catalog to Cloud Object Storage at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
 
-A new {{site.data.keyword.powerSysFull}} Job feature is introduced to track long running asynchronous operations like VM capture, image export, and image import. As part of this feature, new version of API and CLI enhancements are introduced for VM capture and image export operations. To view the new API for VM Capture, see [Capture a PVM instance and create a deployable image (version 2)](/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post). To view the new API for image export, see [Add image export job to the jobs queue (version 2)](/apidocs/power-cloud#pcloud-v2-images-export-post). CLI enhancements include changes to the existing [`ibmcloud pi instance-capture`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture) command and a new [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
+The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
 
-The new VM Capture, Image Export, and Image Import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}}. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
+As part of this Job feature, new version of API and CLI enhancements are introduced for VM capture and image export operations. To view the new APIs, see the following:
+- API for VM capture - [Capture a PVM instance and create a deployable image (version 2)](/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post). 
+- API for image export - [Add image export job to the jobs queue (version 2)](/apidocs/power-cloud#pcloud-v2-images-export-post). 
+  
+CLI enhancements include changes to the existing [`ibmcloud pi instance-capture`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture) command and a new [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
 
-You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands before the earlier APIs are withdrawn from service.
+The new VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
+{: important}
+
+You can use the {{site.data.keyword.powerSys_notm}} legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands before the earlier APIs are withdrawn from service.
 {: note}
 
 
@@ -47,8 +54,6 @@ Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (wr
 CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
-
-For more information, see [Change ASP Activity (CHGASPACT)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/chgaspact.htm){: new_window}{: external}.
 
 ## Using the Power Systems Virtual Server user interface to capture and export a VM
 {: #console-capture-export}

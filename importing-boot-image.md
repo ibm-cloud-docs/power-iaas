@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2023-05-15"
 
 keywords: boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -32,9 +32,14 @@ You can import an AIX or IBM i boot image by using the {{site.data.keyword.power
 Image import requires HMAC keys (access, secret) in order to access your IBM Cloud Object Storage bucket. If you have not already generated your HMAC keys you can follow the instructions in [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
-A new {{site.data.keyword.powerSysFull}} Job feature is introduced to track long running asynchronous operations like VM Capture, Image Export, and Image Import. As part of this feature, new version of Power Cloud API and CLI enhancements have been introduced for these operations. To view the new Power Cloud API for Image Import, see [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post). CLI enhancements include changes to the existing [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import) command and a new [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
+The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
 
-The new {{site.data.keyword.powerSys_notm}} VM Capture, Image Export, and Image Import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation for VM Capture, Image Export, and Image Import cannot be submitted until the previous operation is complete.
+As part of this Job feature, new version of Power Cloud API and CLI enhancements have been introduced for these operations. To view the new API and CLIs, see the following:
+- API for image import - [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post).- CLI enhancements include changes to the existing [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import) command.
+- New [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
+
+The new {{site.data.keyword.powerSys_notm}} VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
+{: important}
 
 You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Capture, Image Export, and Image Import until 1 October 2022. You must plan to transition to the new IBM® Power Systems™ Virtual Server REST APIs or CLI commands within the sunset period.
 {: note}
