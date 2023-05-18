@@ -45,14 +45,14 @@ The following network architecture diagrams explains how the PER is integrated i
 ![Power Edge Router network architechture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architechture diagram"){: caption="Figure 1. Power Edge Router network architechture diagram" caption-side="bottom"}
 
 The network traffic in a PER environment can flow in the following two ways:
-- Accessing classisc infrastructure thruogh Transit Gateway.
+- Accessing classisc infrastructure through Transit Gateway.
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services using Transit Gateway
    
 - Accessing cloud services that can access each other's resources.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
-  - `4`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
-  - `3`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
+  - `3`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for translation of destination addresses to ADN and CSE networks.
+  - `4`	- The translated traffic from NAT is forwarded to PER which performs SR/MPLS handoff to exchange information for all prefixes in all VRFs via BGP EVPN session. 
   - `2` - Traffic from PER is now  forwarded to IBM Cloud PPRs for final delivery.
   <!-- what is the full form of PPR? -->
 
@@ -83,7 +83,7 @@ In a PER workspace you can do the following:
 1.	Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your virtual server instance.
 
-### Using IBM cloud services in a PER workpace
+### Using IBM cloud services in a PER workspace
 {: cloud-services-per}
 
 From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage(COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0` to `161.26.0.16`.
@@ -91,7 +91,7 @@ From your PER workspace, you can create a virtual server instance and attach sub
 You will need to attach Transit Gateway if you wish to connect your workspace with the Virtual Private Cloud (VPC) and classic infrastructure.
 {: important}
 
-### Attaching Transit Gateway to a PER workpace
+### Attaching Transit Gateway to a PER workspace
 {: tgw-per}
 
 You will need the Transit Gateway to connect with VPC and classic infrastructure. To attach a virtual server instance from PER workspace with Transit Gateway complete the steps mentioned in [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
