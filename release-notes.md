@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-23"
+lastupdated: "2023-05-18"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -23,8 +23,13 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 # Release notes
 {: #release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysShort}}.
+Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## April 2023
+{: #apr-2023}
+
+- IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo). 
 
 ## March 2023
 {: #mar-2023}
