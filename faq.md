@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-15"
+lastupdated: "2023-05-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -238,9 +238,9 @@ The license for the AIX and IBM i operating systems is part of the overall cost 
 
 You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor provided subscription.
+{{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-See the [various versions of OSs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) that {site.data.keyword.powerSys_notm}} supports.
+See the [various versions of OSs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) that {{site.data.keyword.powerSys_notm}} supports.
 
 ## How does third-party licensing work?
 {: #third-party}
