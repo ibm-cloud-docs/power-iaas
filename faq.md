@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -234,9 +234,13 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. {{site.data.keyword.powerSys_notm}} does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. RHEL and SLES OVA images are currently supported.
+The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
 
 You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+{{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
+
+See the [various versions of OSs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) that {{site.data.keyword.powerSys_notm}} supports.
 
 ## How does third-party licensing work?
 {: #third-party}
