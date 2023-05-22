@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-05-15"
+lastupdated: "2023-05-22"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -13,10 +13,10 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Integrating {{site.data.keyword.powerSys_notm}} with IBM Key Management Services
+# Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services
 {: #integrate-hpcs}
 
-IBM provides two key management services that integrates with {{site.data.keyword.powerSysFull}}:
+IBM provides two Cloud key management services that integrate with {{site.data.keyword.powerSysFull}} workloads:
 {: shortdesc}
 
 1. [IBM Cloud® Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto?topic=hs-crypto-overview) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with Power Systems Virtual Server to securely store and protect encryption key information for AIX and Linux.
@@ -25,7 +25,7 @@ IBM provides two key management services that integrates with {{site.data.keywor
 ## Using Hyper Protect Crypto Services (HPCS) and {{site.data.keyword.keymanagementserviceshort}} for AIX
 {: #AIX-hpcs}
 
-HPCS and {{site.data.keyword.keymanagementserviceshort}} are supported with AIX 7.3 TL1 for AIX logical volume encryption.
+HPCS and {{site.data.keyword.keymanagementserviceshort}} are supported by AIX 7.3 TL1 for AIX logical volume encryption.
 {: note}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS and {{site.data.keyword.keymanagementserviceshort}} to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
@@ -44,4 +44,4 @@ For more information, see [Protect LUKS encryption keys with IBM Cloud Hyper Pro
 ## Additional support for configuring Hyper Protect Crypto Services or {{site.data.keyword.keymanagementserviceshort}}
 {: #support-hpcs}
 
-For any additional information and assistance using HPCS or {{site.data.keyword.keymanagementserviceshort}} for AIX or Linux, [contact IBM](mailto:zaas.client.acceleration@ibm.com).
+For any additional information and assistance on HPCS or {{site.data.keyword.keymanagementserviceshort}} for AIX or Linux, [contact IBM](mailto:zaas.client.acceleration@ibm.com).
