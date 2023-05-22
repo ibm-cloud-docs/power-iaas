@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-18"
+lastupdated: "2023-05-22"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,10 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-## April 2023
-{: #apr-2023}
+## May 2023
+{: #may-2023}
 
-- IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo). 
+- IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo).
+- IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX workloads. For more information, see [Using Key Protect for AIX](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
 
 ## March 2023
 {: #mar-2023}
