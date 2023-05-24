@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-24"
 
 keywords: full Linux, set full Linux, proxy
 
