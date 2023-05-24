@@ -218,7 +218,7 @@ To create, attach, or detach a local subnet or a peer subnet to a VPN connection
 
 For more information about attaching or detaching subnets by using CLI, see the CLI reference for [VPN subnets](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connection-local-subnets).
 
-In addition to the subnet restrictions specified in [Configuring and adding a private network subnet](/docs/power-iaas-cli-plugin?topic=power-iaas-configuring-subnet), VPNaaS has the following restrictions:
+In addition to the subnet restrictions specified in [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet), VPNaaS has the following restrictions:
 
 a. Subnets with `10.xx.xx.xx/8` address are not supported.
 
