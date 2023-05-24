@@ -174,15 +174,16 @@ Set up a proxy configuration, by completing the following steps:
       acl localnet src 192.168.0.0/16 # RFC1918 possible internal network
       acl localnet src fc00::/7       # RFC 4193 local private network range
       acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
-
+      acl localnet src all
       acl ibmprivate dst 161.26.0.0/16
       acl ibmprivate dst 166.8.0.0/14
-
-      acl SSL_ports port 443 8443
+      acl FTP_ports port 21 20 1025-65535
+      acl SSL_ports port 443
       acl Safe_ports port 80          # http
       acl Safe_ports port 21          # ftp
       acl Safe_ports port 443         # https
-      acl Safe_ports port 8443        # https-new
+      acl Safe_ports port 22
+      acl Safe_ports port 8443        
       acl Safe_ports port 70          # gopher
       acl Safe_ports port 210         # wais
       acl Safe_ports port 1025-65535  # unregistered ports
@@ -210,11 +211,9 @@ Set up a proxy configuration, by completing the following steps:
       # one who can access services on "localhost" is a local user
       #http_access deny to_localhost
 
-      #
       # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
-      #
+      ## Example rule allowing access from your local networks.
 
-      # Example rule allowing access from your local networks.
       # Adapt localnet in the ACL section to list your (internal) IP networks
       # from where browsing should be allowed
       http_access allow localnet
@@ -222,9 +221,9 @@ Set up a proxy configuration, by completing the following steps:
 
       # And finally deny all other access to this proxy
       # http_access deny all
-      http_access allow ibmprivate
 
       # Squid normally listens to port 3128
+      #http_port 10.220.54.36:3128
       http_port 3128
 
       # Uncomment and adjust the following to add a disk cache directory.
@@ -239,7 +238,7 @@ Set up a proxy configuration, by completing the following steps:
       refresh_pattern ^ftp:           1440    20%     10080
       refresh_pattern ^gopher:        1440    0%      1440
       refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
-      refresh_pattern .               0       20%     4320
+      refresh_pattern .                 0     20%     4320
       ```
    c. Save the squid config file and start squid by using the `sudo systemctl start squid` command.
       
