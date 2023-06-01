@@ -449,3 +449,9 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 1.  Faster copy of stock image to your private project.
 2.  The stock image cannot be exported. One can do VM capture and export on a deployed VM that uses the stock image.
 3.  Storage pool and tier of a stock image shows "Empty" (API) or "All" (GUI) as VM can be deployed to any tier/pool by using the stock image.
+
+## Can I select a specific resource group when I create a cloud connection?
+{: #cc-res-group}
+{: faq}
+
+NO.  When you create a cloud connection using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you chosse a specific resource group.
