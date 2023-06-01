@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-31"
+lastupdated: "2023-06-01"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -32,7 +32,7 @@ subcollection: power-iaas
 | E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
-<!--| E1080 (9080-HEX)   |  240          | up to 64 TB                    |-->
+| E1080 (9080-HEX)   |  240          | up to 64 TB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
@@ -158,12 +158,12 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.85 (capped shared)        | $463.404                  |
 {: caption="Table 6. E980 processor type pricing" caption-side="bottom"}
 
-<!--| Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| --------------------------- | ---------------------------- | ------------------------ |
+| Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $1.862 (dedicated)            | $1359.26                 |
-| 1                           | $0.4655 (uncapped shared)      | $339.82                  |
-| 1                           | $0.6983 (capped shared)        | $509.72                  |
-{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}-->
+| 1                           | $0.4655 (uncapped shared)     | $339.82                  |
+| 1                           | $0.6983 (capped shared)       | $509.72                  |
+{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}
 
 ## Storage types
 {: #storage-type}

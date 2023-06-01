@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-02-15"
+lastupdated: "2023-06-01"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i, what is power VS
 
@@ -76,7 +76,7 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), IBM Power System E980 (9080-M9S)<!--, and IBM Power System E1080 (9080-HEX)-->. For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their data sheets and the hardware overview table.
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: IBM Power System E880 (9119-MHE) (Dallas 13 only), IBM Power System S922 (9009-22A), IBM Power System S922 (9009-22G), IBM Power System E980 (9080-M9S), and IBM Power System E1080 (9080-HEX). For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their data sheets and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}}, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}. For a more condensed comparison, see [IBM Power Systems CPW performance data comparison](https://www.itechsol.com/wp-content/uploads/2018/07/IBM-Power-Systems-CPW-Performance-Data-Comparison-P7-vs-P8-vs-P9-rev3-July-2018.pdf){: external}.
 {: tip}
@@ -87,7 +87,7 @@ If you'd like to compare your current environment's performance to what's availa
 * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external}
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-<!--* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}-->
+* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
 
 <!-- add Power E1080 (9080-HEX) in table 1 below-->
 
