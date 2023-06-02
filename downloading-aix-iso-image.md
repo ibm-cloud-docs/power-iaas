@@ -42,7 +42,7 @@ To download an ISO image from the ESS website, complete the following steps. If 
 1. Go to the ESS website and log in with your IBM ID.
 2. Click **Register customer number** in the navigation pane and enter your IBM Cloud customer number in **Customer Number (include country code)**. Decide whether you want to register your customer number permanently and click **Submit**.
 
-    The first IBM ID to register a customer number becomes the primary contact for that customer number. If you attempt to register a customer number that already has a primary contact, you're offered the option of sending a request. The request goes to the customer number's primary contact and asks for access. You are not given access until the primary contact responds to that request.
+    The first IBM ID to register a customer number becomes the primary contact for that customer number. If you attempt to register a customer number that already has a primary contact, you're offered the option of sending a request. The request goes to the customer number's primary contact and asks for access. You are not given access until the primary contact responds to that request. You can find the contact details on the [ESS support page](https://www.ibm.com/docs/en/entitled-systems-support?topic=information-ess-support){: external}.
     {: note}
 
 3. After IBM has registered the customer number or server, click **Software downloads** under **My entitled software** in the navigation pane.
