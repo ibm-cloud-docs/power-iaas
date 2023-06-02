@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2019-12-09"
+lastupdated: "2023-06-02"
 
 keywords: aix iso, install media, entitled software support, ess
 
