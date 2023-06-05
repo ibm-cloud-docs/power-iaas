@@ -31,7 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 -  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account through the use of an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#stock-image-copy-improve).
 
-  We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you will be unable to export stock images. However, you might observe that API/CLI will be allowing the image export for some data centers during this roll-out period (tentative completion by June XX, 2023).
+  We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you will notice that the export option for stock images is no longer available because you are using the reference of the stock image.
 
 ## May 2023
 {: #may-2023}
