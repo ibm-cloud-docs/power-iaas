@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-22"
+lastupdated: "2023-06-05"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -25,6 +25,13 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## June 2023
+{: #jun-2023}
+
+-  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account through the use of an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#stock-image-copy-improve).
+
+  We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you will be unable to export stock images. However, you might observe that API/CLI will be allowing the image export for some data centers during this roll-out period (tentative completion by June XX, 2023).
 
 ## May 2023
 {: #may-2023}

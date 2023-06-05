@@ -318,7 +318,7 @@ None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any optio
 {: #poweha-toolkit}
 {: faq}
 
-The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell it does the following:
+The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell, it does the following:
 - Automates the memory flush
 - Create the volumes-clone
 - Attach the clones to a host
@@ -497,14 +497,14 @@ Consider the following if you do not see an update in the User Interface(UI):
 3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
 4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, Power System Virtual Server UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
 
-## Why I cannot see the storage pool and tier of my boot images in the UI?
+## Why I cannot see the storage pool and tier of my boot images?
 {: #stock-image-copy-improve}
 {: faq}
 
 IBM improved the performance of copying a stock image into customers' accounts. As a result of this new feature, the newly copied stock image acts like an image reference, where volumes are not accessible to the user. The improved process now offers:
 1.  Faster copy of stock image to your private project.
 2.  The stock image cannot be exported. One can do VM capture and export on a deployed VM that uses the stock image.
-3.  Storage pool and tier of a stock image shows "Empty" (API) or "All" (GUI) as VM can be deployed to any tier/pool by using the stock image.
+3.  Storage pool and tier of a stock image shows "Empty" (API) or "Any" (UI) as VM can be deployed to any tier/pool by using the stock image.
 
 ## Can I select a specific resource group when I create a cloud connection?
 {: #cc-res-group}
