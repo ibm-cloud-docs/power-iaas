@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -272,6 +272,62 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 {: faq}
 
 {{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
+
+## Whate are the key differences between a snapshot and clone?
+{: #snap-vs-clone}
+{: faq}
+
+The key differences are as follows:
+
+| Context | Snapshot | Clone |
+|-|-|-|
+| Definion | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed/manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
+| Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
+| Ease of creation | Easy and quick process| Three-step process and takes long time|
+| Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
+
+See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#volume-snapshot-clone) for more detailed information.
+
+## Is there any UI to perform snapshot or clone operations?
+{: #snap-clone-ui}
+{: faq}
+
+None. You should use the API and CLI to perform snapshot or clone operations. Using the {{site.data.keyword.powerSys_notm}} API and command line interface (CLI) you can create, restore, delete and attach the snap-shots and volume-clones.
+
+**APIs to create snapshot and clone**
+- [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
+- [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
+
+**CLIs to create snapshot and clone**
+- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
+- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
+
+## Are there any intial snapshot requirement in terms of storage?
+{: #snap-storage-req}
+{: faq}
+
+None. The storage is allocated on demand.
+
+## Does the snapshot and volume clone supports any safeguard policy?
+{: #snap-clone-safeguard}
+{: faq}
+
+None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
+
+## Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?
+{: #poweha-toolkit}
+{: faq}
+
+The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell it does the following:
+- Automates the memory flush
+- Create the volumes-clone
+- Attach the clones to a host
+- Start the host
+- kicki-off the backups
+- Move the BRMS data back to the production VM before shutting down the backup VM
+- Remove the cloned volumes.
+
+It also allows you to quickly create an intermediate snap-shot then a volumes-clone before entering the long-running volume detach or attach phase. You have the ability to pause the process immediately before attaching volumes.
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power Systems Virtual Servers?
 {: #connecting}
