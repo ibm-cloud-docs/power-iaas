@@ -163,7 +163,9 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.862 (dedicated)            | $1359.26                 |
 | 1                           | $0.4655 (uncapped shared)     | $339.82                  |
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
-{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}
+{: caption="Table 7. E1080 processor type pricing" caption-side="bottom"}
+
+<!-- I would need caption="Table 8. S1022 processor type pricing" caption-side="bottom" -->
 
 ## Storage types
 {: #storage-type}
