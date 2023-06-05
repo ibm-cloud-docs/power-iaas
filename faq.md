@@ -454,4 +454,4 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #cc-res-group}
 {: faq}
 
-NO.  When you create a cloud connection using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you chosse a specific resource group.
+NO. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
