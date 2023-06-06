@@ -37,7 +37,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #may-2023}
 
 - IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo).
-- IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX workloads. For more information, see [Using Key Protect for AIX](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
+- IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating Power Systems Virtual Server with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
 
 ## March 2023
 {: #mar-2023}
