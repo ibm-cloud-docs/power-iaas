@@ -274,7 +274,7 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 
 {{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
 
-## Whate are the key differences between a snapshot and clone?
+## What are the key differences between a snapshot and clone?
 {: #snap-vs-clone}
 {: faq}
 
@@ -303,7 +303,7 @@ None. You should use the API and CLI to perform snapshot or clone operations. Us
 - [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
 - [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
 
-## Are there any intial snapshot requirement in terms of storage?
+## Are there any initial snapshot requirement in terms of storage?
 {: #snap-storage-req}
 {: faq}
 
