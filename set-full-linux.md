@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-05-24"
+lastupdated: "2023-06-08"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -160,6 +160,7 @@ Set up a proxy configuration, by completing the following steps:
    b. Use the configuration provided in the following example for your reference. Values represented in the example configuration denote the following:
       - acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy will accept. 
       - acl ibmprivate dst 161.26.0.0/16 and acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to, this is the location of the RHEL satellite servers and SLES RMT servers.
+      - acl SSL_ports port 443 8443 : Ports used for communication with RHEL satellite servers and SLES RMT servers.
       - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your Power Systems Virtual Server VM to the squid proxy.
       
       ```text
