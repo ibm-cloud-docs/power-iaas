@@ -179,7 +179,7 @@ Set up a proxy configuration, by completing the following steps:
       acl ibmprivate dst 161.26.0.0/16
       acl ibmprivate dst 166.8.0.0/14
       acl FTP_ports port 21 20 1025-65535
-      acl SSL_ports port 443
+      acl SSL_ports port 443 8443
       acl Safe_ports port 80          # http
       acl Safe_ports port 21          # ftp
       acl Safe_ports port 443         # https
