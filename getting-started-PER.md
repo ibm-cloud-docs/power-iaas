@@ -65,7 +65,8 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - Currently, you can only choose DAL10 as the datacenter to create a PER workspace. 
 - You can establish a connection between colocated workspaces if one colo is PER enabled (DAL10) and second colo (DAL12 / DAL13) uses Direct Link. Both colocated workspace should be connected to the same Transit Gateway.
 - You can route traffic to another PER workspace from DAL 10 if the target workspace is also enabled with PER and attached to a global routing enabled Transit Gateway.
-- If the PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit gateway to achieve end to end connectivity from your on-premise to the PER workspace.
+- If the PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit gateway to achieve end to end connectivity from your on-premises to the PER workspace.
+- You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - While creating a Transit Gateway, you can calculate your Transit Gateway charges from the cost estimator based on your egress data and number of connections. Find the cost estimator in IBM Cloud console.
 
 ## Creating a PER workspace
@@ -105,7 +106,7 @@ You need the Transit Gateway to connect with VPC and classic infrastructure. To 
 
 Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created in a PER enabled workspace. You can also add VPC and Classic infrastructures as connection. 
 
-The multiple connections that you add under Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
+The multiple connections that you add under Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resources.
 <!-- Check correctness -->
 
 Make sure that the classic infrastructure is VRF enabled before you attach it to the Transit Gateway.
