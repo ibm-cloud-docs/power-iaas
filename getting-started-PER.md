@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-05-22"
+lastupdated: "2023-06-15"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit gateway, IBM PER
 
@@ -51,12 +51,22 @@ The network traffic in a PER environment can flow in the following two ways:
    
 - Accessing cloud services that can access each other's resources.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
-  - `3`	- Traffic from PER is forwarded to the NAT services provided by Cisco Catalyst 8300 Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
+  - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
   - `4`	- The converted traffic from NAT is forwarded to PER. 
   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
   <!-- what is the full form of PPR? -->
 
-The automation of ACI, PER, and NAT Services provisioning in IBM data centres is carried out by Cisco with the intent that is defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
+The automation of ACI, PER, and NAT Services provisioning in IBM data centres is carried with the intent that is defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
+
+## Considerations for leveraging PER
+{:leverage-per}
+
+- You cannot create cloud connection and VPN connection in a PER workspace.
+- Currently, you can only choose DAL10 as the datacenter to create a PER workspace. 
+- You can establish a connection between colocated workspaces if one colo is PER enabled (DAL10) and second colo (DAL12 / DAL13) uses Direct Link. Both colocated workspace should be connected to the same Transit Gateway.
+- You can route traffic to another PER workspace from DAL 10 if the target workspace is also enabled with PER and attached to a global routing enabled Transit Gateway.
+- If the PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit gateway to achieve end to end connectivity from your on-premise to the PER workspace.
+- While creating a Transit Gateway, you can calculate your Transit Gateway charges from the cost estimator based on your egress data and number of connections. Find the cost estimator in IBM Cloud console.
 
 ## Creating a PER workspace
 {:create-per-workspace}
@@ -74,9 +84,11 @@ You can attach, detach, update network by using the subnets page in a PER worksp
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using cloud connections.
 
-In a PER workspace, you can do the perform the following actions:
-1.	Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
+In a PER workspace, you can perform the following actions:
+1.  Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your virtual server instance.
+3.  Connect to your on-premise network by creating a Direct Link and attaching it with the Transit Gateway present in the PER workspace.
+
 
 ### Using IBM cloud services in a PER workspace
 {: cloud-services-per}
