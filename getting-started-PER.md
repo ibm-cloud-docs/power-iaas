@@ -34,7 +34,7 @@ PER improves network communication across different parts of IBM network. This n
 
 The PER system creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of IBM network to communicate with each other. Specifically, IBM added a pair of routers to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are basically modular datacenters) with an aggregate connectivity of 400 Gbps. 
 
-IBM is sequentially rolling out PER and currently available in only DAL10.
+IBM is sequentially rolling out PER and currently available in only `DAL10`.
 {: note}
 
 These new routers (PERs) associate specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
