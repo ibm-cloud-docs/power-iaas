@@ -57,7 +57,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
   - `4`	- The converted traffic from NAT is forwarded to PER. 
   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
-  <!-- what is the full form of PPR? -->
+  <!-- what is the full form of PPR? POD to POD router. Where a pod is a modular datacenter which are generally organized/kept as racks -->
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centres is carried with the intent that is defined by the IBM {{site.data.keyword.powerSys_notm}} team. 
 
