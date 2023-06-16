@@ -71,6 +71,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - The pricing of PER is no higher than current Direct Link solution, although you need to pay a one-time costs that are associated with upgrading legacy {{site.data.keyword.powerSys_notm}} workspace to PER workspace. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
 - The PER workspace supports VPNaaS.
+- When you create private networks in a PER workspace, a maximum of one DNS server can be specified. 
 
 ## Miigration to PER
 {: migrate-per}
