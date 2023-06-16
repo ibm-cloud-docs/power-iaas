@@ -56,6 +56,7 @@ Power Systems Virtual Servers
     Networking
         ordering-direct-link.md
         cloud-connections-CLI.md
+        getting-started-PER.md
         vpn-connections.md
         configuring-private-network.md
         configuring-private-subnet.md
@@ -63,7 +64,6 @@ Power Systems Virtual Servers
         network-architecture.md
         site-to-site-vpn-connectivity.md
         X86-based-systems.md
-        getting-started-PER.md
 
     {: .topicgroup}
     AIX
