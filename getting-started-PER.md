@@ -101,7 +101,7 @@ In a PER workspace, you can perform the following actions:
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your PER workspace
 3.  Connect to your on-premises network by creating a Direct Link and attaching it with the Transit Gateway present in the PER workspace.
 
-You cannot delete a PER workspaces that have Transit Gateway connections until those Transit Gateway connections are deleted first.
+You cannot delete a PER workspaces that have Transit Gateway connections. You must delete the Transit Gateway connections first.
 
 ### Using IBM cloud services in a PER workspace
 {: cloud-services-per}
