@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-06-16"
+lastupdated: "2023-06-19"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:support: data-reuse='support'}
 <!-- {{site.data.keyword.powerSys_notm}} -->
 
-# Getting Started with Power Edge Router
+# Getting started with Power Edge Router
 {: #per}
 
 A Power Edge Router (PER) is a high-performance physical router that is offered by IBM Cloud&reg; provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
@@ -82,7 +82,7 @@ The automated migration of your existing network is not supported. But if your w
 
 Your existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-The existing connections continue to use ASR1K routers. When you migrate to PER, you can use ASK9k routers.
+The existing non PER workspace (non PER connections) continue to use existing routers. When you migrate to a PER enable workspace, you can get to use the high performance routers.
 
 ## Creating a PER workspace
 {: create-per-workspace}
