@@ -69,8 +69,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - You can establish a connection between collocated workspaces if one colo is PER enabled (`DAL10`) and second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When the PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
-- The pricing of PER is no higher than current Direct Link solution, although you need to pay a one-time costs that are associated with upgrading legacy {{site.data.keyword.powerSys_notm}} workspace to PER workspace. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
-- The PER workspace supports VPNaaS.
+- There is no additional pricing of PER. When you create a new PER workspace, you are charged with regular pricing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified. 
 
 ## Miigration to PER
@@ -82,7 +81,7 @@ The automated migration of your existing network is not supported. But if your w
 
 Your existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-The existing non PER workspace (non PER connections) continue to use existing routers. When you migrate to a PER enable workspace, you can get to use the high performance routers.
+The existing non-PER workspace continues to utilize existing routers. You will be able to utilize the high-performance routers when you migrate to or create a PER-enabled workspace.
 
 ## Creating a PER workspace
 {: create-per-workspace}

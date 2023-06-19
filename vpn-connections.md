@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2023
 
-lastupdated: "2023-05-15"
+lastupdated: "2023-05-16"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -37,7 +37,7 @@ The Power Systems Virtual Server infrastructure consists of subnets and virtual 
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection is supported on each data center. Currently, VPN for Power Systems Virtual Servers is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, and TOK04 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
 {: important}
 
-Due to your bandwidth variation when connecting via a shared VPN gateway, performance will vary. For workloads that require the transfer of large data volumes, you should consider using a side-to-side VPN configuration using your own dedicated gateway devices. For more information see [Configuring the on-premises VPN gateway](/docs/power-iaas?topic=power-iaas-VPN-connections#configure-onpremise-vpngateway).
+Due to your bandwidth variation when connecting via a shared VPN gateway, performance will vary. For workloads that require the transfer of large data volumes, you should consider using a site-to-site VPN configuration using your own dedicated gateway devices. For more information see [Configuring the on-premises VPN gateway](/docs/power-iaas?topic=power-iaas-VPN-connections#configure-onpremise-vpngateway).
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
