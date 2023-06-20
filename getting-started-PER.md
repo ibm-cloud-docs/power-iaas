@@ -77,7 +77,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 
 PER is not supported on existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, create a new workspace with `DAL10` as datacenter.
 
-The automated migration of your existing network is not supported. But if your workspaces is in `DAL10` and uses Transit Gateway based Cloud Connection, you are able to easily connect into new PER network instances.
+The automated migration of your existing network is not supported. But if your existing workspaces is in `DAL10` and uses Transit Gateway based Cloud Connection, you are able to easily connect into new PER network instances.
 
 Your existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
