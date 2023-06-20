@@ -95,6 +95,9 @@ You can create, delete, attach, detach, update private networks by using the Sub
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using Cloud Connection.
 
+In a PER workspace, **Cloud Connections** and **VPN connections** option are not available in the left navigation of the user interface.
+{: note}
+
 In a PER workspace, you can perform the following actions:
 1.  Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your PER workspace
