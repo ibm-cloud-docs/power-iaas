@@ -138,7 +138,10 @@ The AIX and IBM i operating systems operate on PER workspaces in the same way th
 ### Full Linux support on PER
 {: aix-ibmi-per}
 
-Follow these instructions on a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
+If you are using a non-PER workspace, you can use `RHEL84`, `SLES SP2`, `SLES SP3` images for registration. For more detailed information, see [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+{: note}
+
+The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PER workspace for registration. Follow these instructions on a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
 1.  Create a private network.
   1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
   2.  Click **Subnets** under **Networking** in the left navigation menu.
@@ -150,11 +153,12 @@ Follow these instructions on a PER-enabled workspace to let the virtual server i
 2. Create a virtual server instance. See, [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify if the registration is successful with the following commands:
+  For SUSE:
    ```
    SUSEConnect -s
    ```
    {: codeblock}
-
+  For RHEL:
    ```
    subscription-manager status
    ```
