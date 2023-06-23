@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-06-19"
+lastupdated: "2023-06-23"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -64,7 +64,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 ## Considerations for using PER
 {: leverage-per}
 
-- You cannot create cloud connection and VPN connection in a PER workspace.
+- You cannot create cloud connection and VPN connection on a PER workspace.
 - Currently, you can only choose `DAL10` as the datacenter to create a PER workspace. 
 - You can establish a connection between collocated workspaces if one colo is PER enabled (`DAL10`) and second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When the PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
@@ -77,9 +77,9 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 
 PER is not supported on existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, create a new workspace with `DAL10` as datacenter.
 
-The automated migration of your existing network is not supported. But if your existing workspaces is in `DAL10` and uses Transit Gateway based Cloud Connection, you are able to easily connect into new PER network instances.
+The automated migration of your existing network is not supported. But if your existing workspaces are in `DAL10` and uses Transit Gateway based Cloud Connection, you are able to easily connect into new PER network instances.
 
-Your existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
+Your existing {{site.data.keyword.powerSys_notm}} workspace continues to support Cloud Connection and VPNaaS.
 
 The existing non-PER workspace continues to utilize existing routers. You will be able to utilize the high-performance routers when you migrate to or create a PER-enabled workspace.
 
@@ -91,17 +91,17 @@ To create a PER workspace, follow the steps that are mentioned in [Creating a Po
 You can check whether a workspace is PER enabled by selecting the workspace and view workspace's details. The PER enabled workspace shows an information message on PER and Transit Gateway.
 {: note}
 
-You can create, delete, attach, detach, update private networks by using the Subnets and Virtual server instances pages in a PER workspace the same as a non-PER workspace. However, private networks in PER workspaces in a PER enabled datacenter, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) to perform a desired operation.
+You can create, delete, attach, detach, update private networks by using the Subnets and Virtual server instances pages on a PER workspace the same as a non-PER workspace. However, private networks on PER workspaces in a PER enabled datacenter, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) to perform a desired operation.
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using Cloud Connection.
 
-In a PER workspace, **Cloud Connections** and **VPN connections** option are not available in the left navigation of the user interface.
+On a PER workspace, **Cloud Connections** and **VPN connections** options are not available in the left navigation of the user interface.
 {: note}
 
-In a PER workspace, you can perform the following actions:
+On a PER workspace, you can perform the following actions:
 1.  Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
 2.	Effortlessly attach a connection to IBM cloud network by attaching the Transit Gateway with your PER workspace
-3.  Connect to your on-premises network by creating a Direct Link and attaching it with the Transit Gateway present in the PER workspace.
+3.  Connect to your on-premises network by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
 
 You cannot delete a PER workspaces that have Transit Gateway connections. You must delete the Transit Gateway connections first.
 
@@ -113,19 +113,54 @@ From your PER workspace, you can create a virtual server instance and attach sub
 You need to attach Transit Gateway if you want to connect your workspace with the VPC and classic infrastructure.
 {: important}
 
-### Attaching Transit Gateway to a PER workspace
+### Attaching Transit Gateway on PER workspace
 {: tgw-per}
 
 You need the Transit Gateway to connect with VPC and classic infrastructure. To attach a virtual server instance from PER workspace with Transit Gateway, complete the steps that are mentioned in [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
 
-Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created in a PER enabled workspace. You can also add VPC and Classic infrastructures as connection. 
+Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER enabled workspace. You can also add VPC and Classic infrastructures as connection. 
 
 The multiple connections that you add under Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}
 
-## CLI and API support for PER
+## OS support on PER workspace
+{: os-per}
+
+AIX, IBM i, and Linux operating systems are supported on a PER workspace.
+
+### AIX and IBM i support on PER
+{: aix-ibmi-per}
+
+The AIX and IBM i operating systems operate on PER workspaces in the same way that they do on non-PER workspaces.
+
+### Full Linux support on PER
+{: aix-ibmi-per}
+
+Follow these instructions on a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
+1.  Create a private network.
+  1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
+  2.  Click **Subnets** under **Networking** in the left navigation menu.
+  3.  Click **Create subnet**.
+  4.  Enter a unique name and CIDR.
+      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result. 
+  5.  Enter `161.26.0.10` in the **DNS server** field.
+
+2. Create a virtual server instance. See, [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
+3. Attach the private network that you have created in step 1.
+4. Verify if the registration is successful with the following commands:
+   ```
+   SUSEConnect -s
+   ```
+   {: codeblock}
+
+   ```
+   subscription-manager status
+   ```
+   {: codeblock}
+
+## CLI and API support on PER
 {: cli-api-per}
 
 PER uses the existing {{site.data.keyword.powerSys_notm}} networks APIs and CLIs.
