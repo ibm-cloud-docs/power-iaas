@@ -158,6 +158,7 @@ The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PE
    SUSEConnect -s
    ```
    {: codeblock}
+   
   For RHEL:
    ```
    subscription-manager status
