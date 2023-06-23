@@ -138,7 +138,7 @@ The AIX and IBM i operating systems operate on PER workspaces in the same way th
 ### Full Linux support on PER
 {: aix-ibmi-per}
 
-If you are using a non-PER workspace, you can use `RHEL84`, `SLES SP2`, `SLES SP3` images for registration. For more detailed information, see [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
 {: note}
 
 The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PER workspace for registration. Follow these instructions on a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
@@ -158,7 +158,7 @@ The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PE
    SUSEConnect -s
    ```
    {: codeblock}
-   
+
   For RHEL:
    ```
    subscription-manager status
