@@ -55,6 +55,7 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
+              - creating-ssh-key.md
               - configuring-custom-image.md
               - modifying-instance.md
               - virtual-applianes-catalog.md
@@ -72,9 +73,9 @@ toc:
             topics:
               - ordering-direct-link.md
               - cloud-connections-CLI.md
+              - getting-started-PER.md
               - vpn-connections.md
               - configuring-private-subnet.md
-              - connecting-networks.md
               - network-security.md
               - network-architecture.md
               - site-to-site-vpn-connectivity.md

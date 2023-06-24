@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-04-24"
+lastupdated: "2023-06-20"
 
 keywords: storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -90,6 +90,9 @@ If you want to attach or detach a volume, complete the following steps:
 2. Under Attached volumes section, click **Attach volume** to add a storage volume from the list.
 
 3. To detach a storage volume, click **Detach** in the table.
+    
+    The user interface may display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay in order to see if the volume has been successfully detached. Another detach request should be made if the volume is still not disconnected.
+    {: note}
 
 4. You can also create a new storage volume.
 

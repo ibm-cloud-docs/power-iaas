@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-05"
+lastupdated: "2023-06-20"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -33,11 +33,15 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
   We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you will notice that the export option for stock images is no longer available because you are using the reference of the stock image.
 
+- IBM {{site.data.keyword.powerSys_notm}} is sequentially rolling out Power Edge Router (PER) and is currently available in only `DAL10` datacenter. 
+  The goal of the Power Edge Router (PER) is to replace our current DirectLink-based connectivity between the PowerVS environment and the rest of IBM Cloud with direct connections to the IBM Cloud backbone network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+
 ## May 2023
 {: #may-2023}
 
 - IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo).
 - IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating Power Systems Virtual Server with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
+- Effective 1 May 2023, AIX 7.1 on {{site.data.keyword.powerSys_notm}} is covered for software support. In {{site.data.keyword.powerSys_notm}}, starting March 2024, Service Extension pricing is automatically added to the AIX charge for AIX 7.1 usage. AIX 7.1 Service Extension was announced on January 24, 2023. For more information see, [Service Extension for IBM AIX 7.1](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/4/877/ENUSZS23-0004/index.html&lang=en&request_locale=en){: external}.
 
 ## March 2023
 {: #mar-2023}

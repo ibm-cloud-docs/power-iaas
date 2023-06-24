@@ -39,6 +39,7 @@ Power Systems Virtual Servers
     Managing, creating, and deploying
         managing-resources-and-users.md
         creating-power-virtual-server.md
+        creating-ssh-key.md
         configuring-custom-image.md
         modifying-instance.md
         manage-placement-groups.md
@@ -55,10 +56,10 @@ Power Systems Virtual Servers
     Networking
         ordering-direct-link.md
         cloud-connections-CLI.md
+        getting-started-PER.md
         vpn-connections.md
         configuring-private-network.md
         configuring-private-subnet.md
-        connecting-networks.md
         network-security.md
         network-architecture.md
         site-to-site-vpn-connectivity.md

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-11-24"
+lastupdated: "2023-06-05"
 
 keywords: volume snapshot, clone, restore, api, flashcopy
 
@@ -27,7 +27,15 @@ subcollection: power-iaas
 # Snapshots, cloning, and restoring
 {: #volume-snapshot-clone}
 
-{{site.data.keyword.powerSysShort}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks.
+{{site.data.keyword.powerSysShort}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the {{site.data.keyword.powerSys_notm}} APIs lets you create delta snapshots, volume clones, and restore your disks.
+
+**APIs to create snapshot and clone**
+- [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
+- [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
+
+**CLIs to create snapshot and clone**
+- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
+- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
 
 ## Taking a snapshot
 {: #volume-snapshot}
@@ -187,3 +195,14 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 
 - If the restore operation fails, reach out to your storage support administrator. A failed restore operation can leave behind incomplete states, which might require a cleanup initiative from an IBM operation's team.
 - If you choose to restore a shared volume on one VM, you cannot perform the snapshot, restore, clone, or capture operations on the other VMs that are using the shared volume (while the restore operation is running).
+- If you encounter a failure while submitting multiple volume clone requests on the same volume, you should either delete any previous requests or start and execute the previous volume clone request.
+
+## Frequently asked questions
+{: #snap-clone-faqs}
+
+Here are some of the following frequently asked questions on snapshots and clonning that are documented on the faq page:
+- [What are the key differences between a snapshot and clone?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-vs-clone)
+- [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-clone-ui)
+- [Are there any initial snapshot requirement in terms of storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-storage-req)
+- [Does the snapshot and volume clone supports any safeguard policy?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-clone-safeguard)
+- [Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#poweha-toolkit)

@@ -38,14 +38,15 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 {: faq}
 {: support}
 
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, or E1080 (9080-HEX)-->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!-- , E1080 (9080-HEX), or S1022 (9105-22A) -->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 **AIX** - {{site.data.keyword.powerSys_notm}} supports AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-<!--- [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}-->
+<!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
+- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604245){: external} -->
 
 For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
@@ -57,7 +58,7 @@ AIX stock images currently available when you create a VM are:
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!--, and E1080 (9080-HEX)--> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!-- , E1080 (9080-HEX), and S1022 (9105-22A) --> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
@@ -272,6 +273,62 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 {: faq}
 
 {{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
+
+## What are the key differences between a snapshot and clone?
+{: #snap-vs-clone}
+{: faq}
+
+The key differences are as follows:
+
+| Context | Snapshot | Clone |
+|-|-|-|
+| Definion | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed/manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
+| Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
+| Ease of creation | Easy and quick process| Three-step process and takes long time|
+| Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
+
+See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#volume-snapshot-clone) for more detailed information.
+
+## Is there any UI to perform snapshot or clone operations?
+{: #snap-clone-ui}
+{: faq}
+
+None. You should use the API and CLI to perform snapshot or clone operations. Using the {{site.data.keyword.powerSys_notm}} API and command line interface (CLI) you can create, restore, delete and attach the snap-shots and volume-clones.
+
+**APIs to create snapshot and clone**
+- [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
+- [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
+
+**CLIs to create snapshot and clone**
+- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
+- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
+
+## Are there any initial snapshot requirement in terms of storage?
+{: #snap-storage-req}
+{: faq}
+
+None. The storage is allocated on demand.
+
+## Does the snapshot and volume clone supports any safeguard policy?
+{: #snap-clone-safeguard}
+{: faq}
+
+None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
+
+## Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?
+{: #poweha-toolkit}
+{: faq}
+
+The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell, it does the following:
+- Automates the memory flush
+- Create the volumes-clone
+- Attach the clones to a host
+- Start the host
+- kicki-off the backups
+- Move the BRMS data back to the production VM before shutting down the backup VM
+- Remove the cloned volumes.
+
+It also allows you to quickly create an intermediate snap-shot then a volumes-clone before entering the long-running volume detach or attach phase. You have the ability to pause the process immediately before attaching volumes.
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power Systems Virtual Servers?
 {: #connecting}
