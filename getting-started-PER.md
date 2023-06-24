@@ -79,9 +79,9 @@ PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces.
 
 The automated migration of your existing network is not supported. But if your existing workspaces are in `DAL10` and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
 
-Your existing {{site.data.keyword.powerSys_notm}} workspace continues to support Cloud Connection and VPNaaS.
+Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-The existing non-PER workspace continue to utilize existing routers. To utilize the PER solution's high-performance routers, you will need migrate your existing workspaces or create new PER-enabled workspaces.
+Existing non-PER workspaces continue to utilize existing routers. To utilize the PER solution's high-performance routers, you will need migrate your existing workspaces or create new PER-enabled workspaces.
 
 ## Creating a PER workspace
 {: create-per-workspace}
