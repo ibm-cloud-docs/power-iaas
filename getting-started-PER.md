@@ -114,7 +114,7 @@ From your PER workspace, you can create a virtual server instance and attach sub
 You need to attach to the Transit Gateway if you want to connect your workspace with the VPC and classic infrastructure.
 {: important}
 
-### Attaching Transit Gateway on PER workspace
+### Attaching Transit Gateway to a PER workspace
 {: tgw-per}
 
 Transit Gateway is required to connect with VPC and classic infrastructure. To attach a virtual server instance from a PER workspace with Transit Gateway, complete the steps that are mentioned in [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
@@ -134,7 +134,7 @@ AIX, IBM i, and Linux operating systems are supported in a PER workspace.
 ### AIX and IBM i support on PER
 {: aix-ibmi-per}
 
-The AIX and IBM i operating systems operate on PER workspaces in the same way that they do on non-PER workspaces.
+AIX and IBM i operating systems operate in PER workspaces in the same way that they do in non-PER workspaces.
 
 ### Full Linux Subscription with PER
 {: aix-ibmi-per}
@@ -142,7 +142,7 @@ The AIX and IBM i operating systems operate on PER workspaces in the same way th
 See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
 {: note}
 
-The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PER workspace. Follow these instructions on a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
+Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER workspace. Follow these instructions for a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
 1.  Create a private network.
   1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
   2.  Click **Subnets** under **Networking** in the left navigation menu.
@@ -154,13 +154,14 @@ The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PE
 2. Create a virtual server instance. See, [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify if the registration is successful with the following commands:
-  For SUSE:
+  
+ For SUSE:
    ```
    SUSEConnect -s
    ```
    {: codeblock}
 
-  For RHEL:
+ For RHEL:
    ```
    subscription-manager status
    ```
@@ -169,8 +170,8 @@ The full Linux subscription `RHEL86` and `SLES15 SP4` images can be used on a PE
 ## CLI and API support with PER
 {: cli-api-per}
 
-PER uses the existing {{site.data.keyword.powerSys_notm}} networks APIs and CLIs.
+PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and CLIs.
 
-See the {{site.data.keyword.powerSys_notm}} documentation on
+For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
