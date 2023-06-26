@@ -22,6 +22,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Migration strategies for IBM Power Systems Virtual Servers
 {: #migration-strategies-power}
@@ -86,7 +87,7 @@ FalconStor StorSafe VTL for on-premise provides flexible deployment options for 
 
 Services to assist in migration are available from IBM, FalconStor, and Authorized Migration Partners. Please reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
 
-If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor StorSafe VTL for IBM Deployment Guide](extension://bfdogplmndidlpjfhoijckpakkdjkkil/pdf/viewer.html?file=https%3A%2F%2Ffalconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud%2FFalconStor%2520VTL%2520for%2520IBM%2520Deployment%2520Guide.pdf){: external}.
+If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
 
 For more information on FalconStor StorSafe VTL, see [www.falconstor.com](https://www.falconstor.com/){: external}.
 
