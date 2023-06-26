@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2022-10-10"
+lastupdated: "2023-06-26"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -28,6 +28,67 @@ subcollection: power-iaas
 
 Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}
+
+## FalconStor StorSafe VTL
+{: storsafe-vtl}
+
+StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive and data recovery (DR). 
+
+StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both on-premises and in the cloud, as well as enable simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Legacy tapes can be handled similarly. Here are some of the features of StorSafe VTL:
+
+- Non-disruptive and secure process that can scale to PB-sized workloads.
+- Deduplication & replication improves performance and reduces storage capacity.
+- The same tool for on-premise and cloud that enables both workload and tape migrations.
+- System and application data is deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
+- Replicated tapes land in Cloud Object Storage (COS) and can be used by the cloud VTL as a backup baseline without copying the data.
+- Migration leverages existing backup processes and tools leveraging existing environment and knowledge. 
+- Data replication can occur over time as part of the backups with final sync replication completed fast during regular backup windows.
+- FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost COS storage for its repository.
+
+### Migrating an IBM i system
+{: mig-storsafe-ibmi}
+
+See this video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}}. 
+
+![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen}
+
+You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/catalog). In the search field, enter *FalconStor StorSafe VTL for PowerVS Cloud* or *FalconStor StorSafe VTL for Power On-Premises*.
+
+#### Video transcript
+{: #video-transcript-ui}
+{: notoc}
+
+in the cloud migration as a service use case the stores say vtl captures a backup of the IBM I system running at the customer site that backup is replicated to an instance of the storesafe vtl running in the IBM or MSP Cloud once the replication between the two store-safe vtls is complete a restore to a cloud resident ibmi virtual system completes the migration after it has been migrated from the customer site to the IBM or MSB Cloud the IBM I system
+will continue to be backed up to the cloud resident stores safe VTO Falcon store has worked with industry experts to detail the best practices and to enable partners and msps to execute IBM I migrations to the cloud easily and consistently there are seven steps that are necessary to migrate an ibmi system to an IBM or MSP Cloud the first thing to note in this diagram is that there are two sites the customer site and IBM Cloud each
+runs an instance of the store safe VTO our goal is to migrate machine C from the customer site to the IBM or MSP Cloud skillfully the migration process is comprised of easily repeatable seven steps here is a screen from storesight that shows two store-shaped vtls one named mdms which is at the customer site and one named Store Safe 1112 which resides in the IBM Cloud here's a drill down on the storesafe server named mdms at the customer site which shows vital
+kpis at a glance and here are the virtual tapes present on the storesafe vtl named mdms they are online and ready to be used stores site can see across all local and remote instances of storesafe here is the screen of a tape on the storesafe server named storesafe 11112 which resides in the IBM Cloud the first step in migrating machine C to the MSP or IBM cloud is to prepare it at the customer site by running a custom script
+note that in this diagram in the upper left hand corner the IBM I server is labeled machine C so here we are looking at the green screen console of machine C and we begin the migration process with an rst lib or restore Library command soz once that has run to completion we can change our current library to Falcon store which was successful so we can do an end system or end sys on machine C at the customer site and once that is completed we could start up
+tcpip on machine C so we can talk to the store safe vtl at the customer site and we assign the address 10.7.2.54 to machine C and once we see that the TCP IP interface that is up and running we run another custom script called bldmigd SLO now that the machine C at the customer site has been prepped it's time to do the save 21 operation which will create a second tape in the store safe vtl once again looking at the green screen
+console of machine C we do an nsys or nsystem command we start up TCP IP again and after TCP IP is configured we do the go save command specifically we will want go save 21 which will save an entire system onto a second tape at this point the save 21 operation has completed successfully which resulted in the creation of a second tape on the store safe vtl at the customer site now that both tapes have been created on the store safe vtl running at the customer
+site they are replicated using asynchronous replication over tcpip to a second store safe instance that is running in the IBM or MSP Cloud all instances of Store Safe running at the customer site or within the MSP or IBM Cloud are easily managed from the store site dashboard here store site is displaying all the deduplicated tapes on a store safe vtl server named mdms which resides at the customer site and here is store site looking at the tapes on a store save vtl that is running in the MSP or IBM Cloud now that the two tapes have been replicated to the instance of storesafe that is running in the IBM or MSP Cloud it's time to do a restore of the boot manager onto machine a machine a will only temporarily be needed to complete this migration process the role of machine a is to run the BLD boot EnV script which will put machine B's boot image onto an NFS share on machine a which resides in the IBM or MSP Cloud here we are at the green screen console of machine a we are about to run the BLD boot EnV script which has successfully executed so the n NFS boot image is now ready for machine B to use in the next step in the final stages of migrating machine C from the customer site to the IBM or MSP Cloud we first stand up a temporary IBM I server called machine B once machine B is up and running run the CFG is CS ITP script to apply the required ptfs onto machine B for supporting iSCSI and then configure the store safe vtl here we're able to assign the TCP IP address to machine B and install the licensed internal code then the operating system and any licensed programs machine B is now up running and healthy the last step is for machine B to do a restored 21 operation which will overwrite itself so that it becomes identical to machine C that was running at the customer site so here we are the green screen console of machine B and we performed a go restore operation and that will be a restore 21 of the system and user data and here's the console on machine B telling us what is going to happen next after the restore 21 operation completes machine C is fully and skillfully migrated from the customer site to the MSP or IBM cloud so there you have it a complete IBM I system being migrated to the cloud in seven steps with the help of best practices and scripts to help you do the
+job reliably and conveniently.
+
+### FalconStor StorSafe VTL for Cloud
+{: storsafe-cloud}
+
+FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from IBM catalogue with one click. 
+
+### FalconStor StorSafe VTL for On-Premises
+{: storsafe-onprem}
+
+FalconStor StorSafe VTL for on-premise provides flexible deployment options for the user:
+-	It can be installed on any X86 server that is on [Falconstor certification matrix](https://www.falconstor.com/support/certification-matrix/server-hardware/){: external}.
+-	It can be installed as a VM in Hypervisors such as VMware, HyperV, Xen and KVM.
+-	It can be installed inside {{site.data.keyword.powerSys_notm}} as an LPAR.
+
+### Migration Services
+{: mig-services}
+
+Services to assist in migration are available from IBM, FalconStor, and Authorized Migration Partners. Please reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
+
+If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor StorSafe VTL for IBM Deployment Guide](extension://bfdogplmndidlpjfhoijckpakkdjkkil/pdf/viewer.html?file=https%3A%2F%2Ffalconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud%2FFalconStor%2520VTL%2520for%2520IBM%2520Deployment%2520Guide.pdf){: external}.
+
+For more information on FalconStor StorSafe VTL, see [www.falconstor.com](https://www.falconstor.com/){: external}.
 
 ## IBM Cloud Object Storage (COS)
 {: #migration-icos}
