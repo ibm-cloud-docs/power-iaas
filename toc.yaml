@@ -71,13 +71,13 @@ toc:
       - topicgroup: 
             label: Networking
             topics:
-              - ordering-direct-link.md
-              - cloud-connections-CLI.md
-              - getting-started-PER.md
-              - vpn-connections.md
-              - configuring-private-subnet.md
-              - network-security.md
               - network-architecture.md
+              - configuring-private-subnet.md
+              - ordering-direct-link.md
+              - cloud-connections-CLI.md              
+              - getting-started-PER.md
+              - vpn-connections.md              
+              - network-security.md              - 
               - site-to-site-vpn-connectivity.md
               - X86-based-systems.md
       - topicgroup: 

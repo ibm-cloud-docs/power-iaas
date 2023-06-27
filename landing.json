@@ -44,14 +44,14 @@
       "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
       "tiles": [
         {
-          "date": "23 March 2023",
-          "title": "New data center DAL10",
-          "description": "A new data center DAL10 is added in the exsisting list of Power Systems Virtual Server data centers."
+          "date": "22 June 2023",
+          "title": "Power Edge Router (PER) in Power Systems Virtual Server data centers",
+          "description": "PER provided high-performance routers and advance networking solutions"
         },
         {
-          "date": "23 March 2023",
-          "title": "Access your event logs and notifications",
-          "description": "You can now access your event logs and notification from the Event logs page."
+          "date": "22 June 2023",
+          "title": "Eliminate stock image copies",
+          "description": "An enhancement that eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account through the use of an image reference."
         }
       ]
     }
