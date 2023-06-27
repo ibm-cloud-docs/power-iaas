@@ -115,9 +115,7 @@ Complete the following steps to implement this scenario:
       - Ubuntu and Debian mirrors - mirrors.adn.networklayer.com or `161.26.0.6`
       - NTP - time.adn.networklayer.com or `161.26.0.6`. This is the same IP address as the Ubuntu and Debian mirrors.
       - IBM Cloud Object Storage
-    - VPEs services. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
-   
-        If you want to access the endpoint network, use a VPC virtual server instance to proxy the endpoint services.
+
 4. Create Virtual Private Endpoints (VPEs) for services of interest such as DNS, NTP, and IBM Cloud Object Storage. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
 5. If you want to access the endpoint network, use a VPC virtual server instance to proxy the any required endpoint services that do not support VPEs.
 
