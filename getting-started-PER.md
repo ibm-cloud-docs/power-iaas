@@ -171,9 +171,9 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 
 There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes those various application scenarios:
 
-| Scenarios | {{site.data.keyword.powerSys_notm}} DL w/o TGW| {{site.data.keyword.powerSys_notm}} DL with TGW |{{site.data.keyword.powerSys_notm}} PER Enabled|
+| Scenarios | {{site.data.keyword.powerSys_notm}} DL without Transit Gateway| {{site.data.keyword.powerSys_notm}} DL with Transit Gateway |{{site.data.keyword.powerSys_notm}} PER workspace|
 |-----------|-------------------|---------------------|-------------------|
-| IBM Cloud local VPC and Classic resources access (x86 VMs etc.)|	DL local routing [^footnote1] |	TGW local routing	TGW local |
+| IBM Cloud local VPC and Classic resources access (x86 VMs etc.)|	DL local routing [^footnote1] |	TGW local routing	| TGW local routing|
 | IBM Cloud remote VPC resource access	| DL global routing [^footnote2] |	TGW global routing	| TGW globa	routing |
 | {{site.data.keyword.powerSys_notm}} multi-location connectivity for HA DR etc.	| DL + vSRX [^footnote3] | TGW global routing | 	TGW global routing |
 | {{site.data.keyword.powerSys_notm}} multi-location connectivity (unipart)	| DL + classic + VPC	[^footnote7]| TGW global routing (improved connection) |	TGW global routing | 
