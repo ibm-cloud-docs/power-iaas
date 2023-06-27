@@ -248,7 +248,33 @@ IBM charges with the base price hourly per connection. The base price varies per
 ## Pricing for Power Edge Router
 {: per-pricing}
 
-There is no additional pricing for the use of PER. When you create a new PER workspace, you are charged regular {{site.data.keyword.powerSys_notm}} pricing. To calculate pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+As a {{site.data.keyword.powerSys_notm}} user, you are charged based on the Transit Gateway connections that you use:
+- New Transit Gateway that you create in a PER workspace.
+- Existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
+
+Here are some more PER charges based on the following Transit Gateway specifics:
+- Routing option
+- Number of connections
+
+The following table shows the charges based on the routing option that you select:
+| Routing type | Charges |
+|--------------|---------|
+|Local routing data transfer | No charges |
+|Global routing data transfer | $0.009405 GB/month|
+{: caption="Table 13. TGW charges based on routing" caption-side="top"}
+
+The following table shows the charges based on the number of connections that you create:
+| Number of connections | Charges |
+|--------------|---------|
+|1 - 4 | No charges |
+|5 - 20 | $9.405 GB/month|
+|21 - 50 |$7.315 GB/month|
+|51+ | $4.7025 GB/moth|
+{: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
+
+<!-- no. of connection charges is GB/month? -->
+
+To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
 
 ## End of billing
 {: #pricing-end-billing}

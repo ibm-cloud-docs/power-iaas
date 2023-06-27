@@ -59,8 +59,8 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - You can establish a connection between collocated workspaces if one colo is PER enabled (`DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
-- There is no additional pricing for the use of PER. When you create a new PER workspace, you are charged regular {{site.data.keyword.powerSys_notm}} pricing. To calculate pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
-- When you create private networks in a PER workspace, a maximum of one DNS server can be specified. 
+- When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
+- See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#per-pricing) to learn more about PER pricing.
 
 ## Migrating to PER
 {: migrate-per}
