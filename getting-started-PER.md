@@ -11,17 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{{site.data.keyword.attribute-definition-list}}
 <!-- {{site.data.keyword.powerSys_notm}} -->
 
 # Getting started with the Power Edge Router
@@ -175,3 +165,39 @@ PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
+
+## Various application scenarios
+{: scenarios-per}
+
+There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes those various application scenarios:
+
+| Scenarios | {{site.data.keyword.powerSys_notm}} DL w/o TGW| {{site.data.keyword.powerSys_notm}} DL with TGW |{{site.data.keyword.powerSys_notm}} PER Enabled|
+|-----------|-------------------|---------------------|-------------------|
+| IBM Cloud local VPC and Classic resources access (x86 VMs etc.)|	DL local routing [^footnote1] |	TGW local routing	TGW local |
+| IBM Cloud remote VPC resource access	| DL global routing [^footnote2] |	TGW global routing	| TGW globa	routing |
+| {{site.data.keyword.powerSys_notm}} multi-location connectivity for HA DR etc.	| DL + vSRX [^footnote3] | TGW global routing | 	TGW global routing |
+| {{site.data.keyword.powerSys_notm}} multi-location connectivity (unipart)	| DL + classic + VPC	[^footnote7]| TGW global routing (improved connection) |	TGW global routing | 
+| {{site.data.keyword.powerSys_notm}} GRS	(Global Replication Service) | DL + Megaport [^footnote6]	| TGW global routing 	(to test) | TGW global routing |
+| On-premise to {{site.data.keyword.powerSys_notm}} connectivity	| DL + vSRX [^footnote4] |	TGW global routing | TGW global routing |
+|{{site.data.keyword.powerSys_notm}} to Cloud Services (COS, DNS, NTP etc.)	| Use proxy server [^footnote5] | - | Use NAT to reach services |			
+| Aggregate Bandwidth shared by all customers, between {{site.data.keyword.powerSys_notm}} and IBM Cloud	| 60 Gb/s [^footnote8]	| 60 Gb/s [^footnote9]	| 400 Gb/s |
+|User Experience	| Ok | Better	| Excellent |
+{: caption="Table 1. Various application scenarios" caption-side="bottom"}
+
+[^footnote1]: No charges apply.
+[^footnote2]: No charges apply.
+[^footnote3]: Involves cost, complexity, and low performance. Considering Megaport
+is used for DL2DL connection.
+[^footnote4]: Involves cost, complexity, and low performance. Other options, includes on-premise over DL to classic to PowerVS over DL to classic
+[^footnote5]: Involves cost and complexity
+[^footnote6]: Involves high cost
+[^footnote7]: Combination no longer in use.
+[^footnote8]: Typical speed.
+[^footnote9]: Typical speed.
+
+<!-- Assumptions:
+(cost, complexity, perf) = Involves cost, complexity and low performance.
+(costly) = High cost
+(moved away) = Obsolete/deprecated/no longer in use?
+Remarks statements
+ -->
