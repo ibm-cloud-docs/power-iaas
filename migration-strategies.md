@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-26"
+lastupdated: "2023-06-27"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -11,7 +11,7 @@ subcollection: power-iaas
 
 ---
 
-<!-- {:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -21,7 +21,8 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
-{:support: data-reuse='support'} -->
+{:support: data-reuse='support'}
+{:video: .video}
 {{site.data.keyword.attribute-definition-list}}
 
 # Migration strategies for IBM Power Systems Virtual Servers
