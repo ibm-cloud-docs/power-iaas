@@ -109,7 +109,7 @@ You can back up your on-premises environment and restore it to {{site.data.keywo
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
-- *Falconstor StorSafe VTL*
+- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl)
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
