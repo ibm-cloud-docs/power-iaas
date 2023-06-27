@@ -108,15 +108,18 @@ Complete the following steps to implement this scenario:
         - The router in the VPC infrastructure advertises only your IBM Cloud VPC subnets to the {{site.data.keyword.powerSys_notm}} router.
         - The router in the VPC infrastructure filters the following networks from the BGP advertisements coming from the {{site.data.keyword.powerSys_notm}} router because these IP addresses are used by the endpoint networks: `169.254.0.0/16`, `224.0.0.0/4`, `166.9.0.0/16`, and any IP ranges that are assigned to your IBM Cloud VPC subnets.
 3. Identify the IBM Cloud VPC subnets and the IP address schema that is assigned to you when you ordered VPC services. The XCR connects to the endpoint networks by using the VPC implicit router that provides routing functions to each VPC, and allows each VPC to have access to its own copy of the IPv4 address space. The Multi-Protocol Label Switching (MPLS) VPN works with {{site.data.keyword.dl_short}} and classic infrastructure environments. For more information, see [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external}.
-    You cannot access endpoint networks (services and infrastructure services) and Virtual Private Endpoints (VPEs) from your {{site.data.keyword.powerSys_notm}} subnets. The types of endpoint networks are as follows:
+    You cannot access some endpoint networks (services and infrastructure services) from your {{site.data.keyword.powerSys_notm}} subnets. The types of endpoint networks are as follows:
     - Service endpoints - Allows connection to IBM Cloud services available through DNS names in the cloud.ibm.com domain and resolves to `166.9.x.x` addresses.
     - Infrastructure services - Allows connection to IBM Cloud services from the adn.networklayer.com domain and resolves to `161.26.0.0/16` addresses. Services that you can reach include:
       - DNS resolvers - `161.26.0.10` and `161.26.0.11` (Windows VS is set up with `161.26.0.7`; Linux with `161.26.0.7` and `161.26.0.8`)
       - Ubuntu and Debian mirrors - mirrors.adn.networklayer.com or `161.26.0.6`
       - NTP - time.adn.networklayer.com or `161.26.0.6`. This is the same IP address as the Ubuntu and Debian mirrors.
       - IBM Cloud Object Storage
-    - VPEs - Enables connection to supported IBM Cloud services by using the IP addresses allocated from a subnet within your VPC. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services). Two infrastructure services of interest are NTP and IBM Cloud Object Storage.
-4. If you want to access the endpoint network, use a VPC virtual server instance to proxy the endpoint services. For example, a virtual server that is running Nginx can proxy HTTPS to and from IBM Cloud Object Storage. A virtual server that is running NTP services (synchronized with time.adn.networklayer.com) can be used as a time source for {{site.data.keyword.powerSys_notm}} instances.
+    - VPEs services. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
+   
+        If you want to access the endpoint network, use a VPC virtual server instance to proxy the endpoint services.
+4. Create Virtual Private Endpoints (VPEs) for services of interest such as DNS, NTP, and IBM Cloud Object Storage. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
+5. If you want to access the endpoint network, use a VPC virtual server instance to proxy the any required endpoint services that do not support VPEs.
 
 Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
