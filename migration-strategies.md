@@ -11,7 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
+<!-- {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{:support: data-reuse='support'} -->
 {{site.data.keyword.attribute-definition-list}}
 
 # Migration strategies for IBM Power Systems Virtual Servers
