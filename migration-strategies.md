@@ -50,13 +50,13 @@ StorSafe VTL is software that emulates physical tape drives and libraries to opt
 ### Migrating an IBM i system
 {: mig-storsafe-ibmi}
 
-See this video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}}. 
+See the video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}. 
 
-![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen}
+<!-- ![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen} -->
 
-You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/catalog). In the search field, enter *FalconStor StorSafe VTL for PowerVS Cloud* or *FalconStor StorSafe VTL for Power On-Premises*.
+You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/catalog). In the search field, enter `FalconStor StorSafe VTL for PowerVS Cloud` or `FalconStor StorSafe VTL for Power On-Premises`.
 
-#### Video transcript
+<!-- #### Video transcript
 {: #video-transcript-ui}
 {: notoc}
 
@@ -68,7 +68,7 @@ note that in this diagram in the upper left hand corner the IBM I server is labe
 tcpip on machine C so we can talk to the store safe vtl at the customer site and we assign the address 10.7.2.54 to machine C and once we see that the TCP IP interface that is up and running we run another custom script called bldmigd SLO now that the machine C at the customer site has been prepped it's time to do the save 21 operation which will create a second tape in the store safe vtl once again looking at the green screen
 console of machine C we do an nsys or nsystem command we start up TCP IP again and after TCP IP is configured we do the go save command specifically we will want go save 21 which will save an entire system onto a second tape at this point the save 21 operation has completed successfully which resulted in the creation of a second tape on the store safe vtl at the customer site now that both tapes have been created on the store safe vtl running at the customer
 site they are replicated using asynchronous replication over tcpip to a second store safe instance that is running in the IBM or MSP Cloud all instances of Store Safe running at the customer site or within the MSP or IBM Cloud are easily managed from the store site dashboard here store site is displaying all the deduplicated tapes on a store safe vtl server named mdms which resides at the customer site and here is store site looking at the tapes on a store save vtl that is running in the MSP or IBM Cloud now that the two tapes have been replicated to the instance of storesafe that is running in the IBM or MSP Cloud it's time to do a restore of the boot manager onto machine a machine a will only temporarily be needed to complete this migration process the role of machine a is to run the BLD boot EnV script which will put machine B's boot image onto an NFS share on machine a which resides in the IBM or MSP Cloud here we are at the green screen console of machine a we are about to run the BLD boot EnV script which has successfully executed so the n NFS boot image is now ready for machine B to use in the next step in the final stages of migrating machine C from the customer site to the IBM or MSP Cloud we first stand up a temporary IBM I server called machine B once machine B is up and running run the CFG is CS ITP script to apply the required ptfs onto machine B for supporting iSCSI and then configure the store safe vtl here we're able to assign the TCP IP address to machine B and install the licensed internal code then the operating system and any licensed programs machine B is now up running and healthy the last step is for machine B to do a restored 21 operation which will overwrite itself so that it becomes identical to machine C that was running at the customer site so here we are the green screen console of machine B and we performed a go restore operation and that will be a restore 21 of the system and user data and here's the console on machine B telling us what is going to happen next after the restore 21 operation completes machine C is fully and skillfully migrated from the customer site to the MSP or IBM cloud so there you have it a complete IBM I system being migrated to the cloud in seven steps with the help of best practices and scripts to help you do the
-job reliably and conveniently.
+job reliably and conveniently. -->
 
 ### FalconStor StorSafe VTL for Cloud
 {: storsafe-cloud}
