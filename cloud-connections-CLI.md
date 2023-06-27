@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2023
 
-lastupdated: "2023-02-03"
+lastupdated: "2023-06-27"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -24,8 +24,6 @@ You can have a maximum of two {{site.data.keyword.cloud_notm}} ({{site.data.keyw
 
 ## Support for {{site.data.keyword.powerSys_notm}} workspaces with {{site.data.keyword.cloud_notm}} connections
 {: #powervs-support-cloud-connections}
-
-{{site.data.keyword.powerSys_notm}} supports multiple workspaces from the same account. However, any given {{site.data.keyword.cloud_notm}} connection can be used by only one workspace. If you want to configure a setup with multiple workspaces for the same account and if you want these workspaces to share an {{site.data.keyword.cloud_notm}} connection, open an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 When you perform multiple {{site.data.keyword.cloud_notm}} connection tasks, actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the status might not change immediately.
 {: note}
