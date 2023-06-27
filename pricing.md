@@ -245,6 +245,11 @@ When you use a VPN connection, you are billed monthly.
 
 IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
 
+## Pricing for Power Edge Router
+{: per-pricing}
+
+There is no additional pricing for the use of PER. When you create a new PER workspace, you are charged regular {{site.data.keyword.powerSys_notm}} pricing. To calculate pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+
 ## End of billing
 {: #pricing-end-billing}
 
