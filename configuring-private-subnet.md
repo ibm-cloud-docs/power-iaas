@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "20223-04-19"
+lastupdated: "20223-06-27"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
@@ -77,14 +77,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration.
 
 When you have cloud connections or VPNaaS configured, you can create private networks automatically by attaching private network subnet to cloud connections.
-However, when you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances and not from/to IBM Cloud network, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network configuration.
-
-For example, if you add a subnet *172.10.10.0/24* from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet, you must open a support ticket and provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface.
-
-| Name          |  Gateway     | VLAN ID | CIDR       |
-| ------------- |  ----------- | ------- | ---------- |
-| powerns-net02 |  172.10.10.1 | 3001    | 172.10.10.0/26 |
-{: caption="Table 1. Example subnet information displayed in UI" caption-side="bottom"}
+This establishes communication between virtual servers instances on the same private subnet in a {{site.data.keyword.BluDirectLink}} workspace. However, when you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances that are not in the same private network, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network configuration.
 
 If your private subnets are routed over a Direct Link, you must also make sure that your {{site.data.keyword.powerSys_notm}} has a route to the {{site.data.keyword.cloud_notm}}. The default route might not be set up to route traffic to {{site.data.keyword.cloud_notm}} subnets, which are typically of the form, *10.xx.xx.xx*. Similarly, {{site.data.keyword.cloud_notm}} network-based x86 virtual switch interfaces (VSI) and other hosts might require an IP route to connect to a {{site.data.keyword.powerSys_notm}}.
 
