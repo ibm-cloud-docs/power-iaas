@@ -56,9 +56,9 @@ Power Systems Virtual Servers
     Networking
         network-architecture.md
         configuring-private-subnet.md
-        ordering-direct-link.md
         cloud-connections-CLI.md             
         getting-started-PER.md
+        ordering-direct-link.md
         vpn-connections.md             
         network-security.md
         site-to-site-vpn-connectivity.md
