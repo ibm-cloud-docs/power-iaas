@@ -71,7 +71,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
-## Networking considerations
+<!-- ## Networking considerations
 {: #networking-considerations}
 
 You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration.
@@ -83,7 +83,9 @@ If your private subnets are routed over a Direct Link, you must also make sure t
 
 The gateway for {{site.data.keyword.powerSys_notm}} is also the gateway for the local subnet that is routed to the {{site.data.keyword.cloud_notm}} over {{site.data.keyword.cloud_notm}} Direct Link. The {{site.data.keyword.cloud_notm}} x86 VSI might need a static route to {{site.data.keyword.powerSys_notm}} subnets as well. The gateway for this route is the same as the gateway for the {{site.data.keyword.cloud_notm}} private network.
 
-For more information, see tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf){: external}.
+For more information, see tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf){: external}. -->
+
+<!-- ☝️commented out the old content as it was blending old connection requirements with the newer things like cloud connections. It also talks about setting up routing between two Power Virtual Server instances (workspaces), and using Direct Links, etc. -->
 
 ## Using CIDR notation
 {: #cidr-notation}
