@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2022-10-10"
+lastupdated: "2023-06-27"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -22,6 +22,8 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Migration strategies for IBM Power Systems Virtual Servers
 {: #migration-strategies-power}
@@ -107,11 +109,58 @@ You can back up your on-premises environment and restore it to {{site.data.keywo
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
+- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl)
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
 - *Maxava HA*
 
+### FalconStor StorSafe VTL
+{: storsafe-vtl}
+
+StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive and data recovery (DR). 
+
+StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both on-premises and in the cloud, as well as enable simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Legacy tapes can be handled similarly. Here are some of the features of StorSafe VTL:
+
+- Non-disruptive and secure process that can scale to PB-sized workloads.
+- Deduplication & replication improves performance and reduces storage capacity.
+- The same tool for on-premise and cloud that enables both workload and tape migrations.
+- System and application data is deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
+- Replicated tapes land in Cloud Object Storage (COS) and can be used by the cloud VTL as a backup baseline without copying the data.
+- Migration leverages existing backup processes and tools leveraging existing environment and knowledge. 
+- Data replication can occur over time as part of the backups with final sync replication completed fast during regular backup windows.
+- FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost COS storage for its repository.
+
+#### Migrating an IBM i system
+{: mig-storsafe-ibmi}
+
+See the video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}. 
+
+<!-- ![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen} -->
+
+You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/catalog). In the search field, enter `FalconStor StorSafe VTL for PowerVS Cloud` or `FalconStor StorSafe VTL for Power On-Premises`.
+
+#### FalconStor StorSafe VTL for Cloud
+{: storsafe-cloud}
+
+FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from IBM catalogue with one click. 
+
+#### FalconStor StorSafe VTL for On-Premises
+{: storsafe-onprem}
+
+FalconStor StorSafe VTL for on-premise provides flexible deployment options for the user:
+-	It can be installed on any X86 server that is on [Falconstor certification matrix](https://www.falconstor.com/support/certification-matrix/server-hardware/){: external}.
+-	It can be installed as a VM in Hypervisors such as VMware, HyperV, Xen and KVM.
+-	It can be installed inside {{site.data.keyword.powerSys_notm}} as an LPAR.
+
+#### Migration Services
+{: mig-services}
+
+Services to assist in migration are available from IBM, FalconStor, and Authorized Migration Partners. Please reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
+
+If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
+
+For more information on FalconStor StorSafe VTL, see [www.falconstor.com](https://www.falconstor.com/){: external}.
 ## IBM teams and managed services
 {: #teams-managed-services}
 
