@@ -109,7 +109,7 @@ You cannot delete PER workspaces that have Transit Gateway connections. You must
 ### Using IBM cloud services in a PER workspace
 {: cloud-services-per}
 
-From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage (COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0` to `161.26.0.16`.
+From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage (COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0/16`. See [IaaS endpoints](/docs/vpc?topic=vpc-service-endpoints-for-vpc#infrastructure-as-a-service-iaas-endpoints) for more information.
 
 You need to attach to the Transit Gateway if you want to connect your workspace with the VPC and classic infrastructure.
 {: important}
