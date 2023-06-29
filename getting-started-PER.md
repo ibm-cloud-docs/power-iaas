@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-06-24"
+lastupdated: "2023-06-29"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -11,8 +11,16 @@ subcollection: power-iaas
 
 ---
 
-{{{site.data.keyword.attribute-definition-list}}
-<!-- {{site.data.keyword.powerSys_notm}} -->
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Getting started with the Power Edge Router
 {: #per}
@@ -20,7 +28,7 @@ subcollection: power-iaas
 A Power Edge Router (PER) is a high-performance router, offered by IBM Cloud&reg;, that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}
 
-PER improves network communication across different parts of IBM network. This new solution replaces the current Direct Link-based network connectivity.
+PER improves network communication across different parts of IBM network. This new solution is a better alternative than the current Direct Link-based network connectivity.
 
 The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is comprised of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are modular datacenters). 
 
@@ -60,6 +68,8 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
+- A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
+- You cannot create a non-PER workspace in a PER enabled workspace. However, you can still use your old non-PER workspaces that are existing in a PER workspace and created before PER rollout.
 - See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
@@ -166,10 +176,10 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
 
-## Various application scenarios
+## Various sample application scenarios
 {: scenarios-per}
 
-There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes those various application scenarios:
+There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes some of the various possible application scenarios:
 
 | Scenarios | {{site.data.keyword.powerSys_notm}} DL without Transit Gateway| {{site.data.keyword.powerSys_notm}} DL with Transit Gateway |{{site.data.keyword.powerSys_notm}} PER workspace|
 |-----------|-------------------|---------------------|-------------------|

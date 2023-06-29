@@ -263,13 +263,13 @@ The following table shows the charges based on the routing option that you selec
 |Global routing data transfer | $0.009405 GB/month|
 {: caption="Table 13. TGW charges based on routing" caption-side="top"}
 
-The following table shows the charges based on the number of connections that you create:
+The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
 | Number of connections | Charges |
 |--------------|---------|
 |1 - 4 | No charges |
-|5 - 20 | $9.405 GB/month|
-|21 - 50 |$7.315 GB/month|
-|51+ | $4.7025 GB/moth|
+|5 - 20 | $9.405 |
+|21 - 50 |$7.315 |
+|51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
 
 <!-- no. of connection charges is GB/month? -->
