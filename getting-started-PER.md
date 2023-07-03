@@ -69,7 +69,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
-- You cannot create a non-PER workspace in a PER enabled workspace. However, you can still use your old non-PER workspaces that are existing in a PER workspace and created before PER rollout.
+- You cannot create a non-PER workspace in a PER enabled datacenter. However, you can still use your old non-PER workspaces that are existing in a PER enabled datacenter that are created before PER rollout.
 - See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
