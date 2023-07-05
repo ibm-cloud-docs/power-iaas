@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -75,6 +75,8 @@ The typical IBM i customer uses the following flow to back up LPARs and objects:
    - [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external}
 
 For a complete tutorial on backing up and restoring IBM i VM data, see [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: external}.
+
+For additional IBM i backup strategies, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
 
 ## Using Cloud Object Storage
 {: #cos-over-directlink}
