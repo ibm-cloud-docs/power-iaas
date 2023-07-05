@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-06-29"
+lastupdated: "2023-07-05"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -25,12 +25,10 @@ subcollection: power-iaas
 # Getting started with the Power Edge Router
 {: #per}
 
-A Power Edge Router (PER) is a high-performance router, offered by IBM Cloud&reg;, that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
+A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}
 
-PER improves network communication across different parts of IBM network. This new solution is a better alternative than the current Direct Link-based network connectivity.
-
-The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is comprised of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are modular datacenters). 
+PER improves network communication across different parts of IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is comprised of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are modular datacenters). 
 
 The PER solution is currently available in `DAL10`. PER will be deployed in other datacenters over time.
 {: note}
