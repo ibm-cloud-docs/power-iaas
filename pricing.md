@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-29"
+lastupdated: "2023-07-05"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -260,7 +260,7 @@ The following table shows the charges based on the routing option that you selec
 | Routing type | Charges |
 |--------------|---------|
 |Local routing data transfer | No charges |
-|Global routing data transfer | $0.009405 GB/month|
+|Global routing data transfer | $0.009405 GB|
 {: caption="Table 13. TGW charges based on routing" caption-side="top"}
 
 The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
@@ -272,9 +272,8 @@ The following table shows the charges based on the number of connections (includ
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
 
-<!-- no. of connection charges is GB/month? -->
-
-To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+{: important}
 
 ## End of billing
 {: #pricing-end-billing}
