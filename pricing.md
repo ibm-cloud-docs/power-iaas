@@ -69,9 +69,9 @@ For detailed usage and billing information, you can refer to the part number in 
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
-| ES_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 shared uncapped processor per core-hour      |
-| ED_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 dedicated processor per core-hour      |
-| MS_GIGABYTE_HOURS     | RAM gigabyte-hour      |
+<!-- | ES_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 shared uncapped processor per core-hour      | -->
+<!-- | ED_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 dedicated processor per core-hour      |
+| MS_GIGABYTE_HOURS     | RAM gigabyte-hour      | -->
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
@@ -82,7 +82,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
 | IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
 | SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
-| EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      |
+<!-- | EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      | -->
 | IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
 | IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
@@ -128,7 +128,7 @@ The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. Y
 
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
 {: important}
