@@ -35,7 +35,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - IBM {{site.data.keyword.powerSys_notm}} is sequentially rolling out Power Edge Router (PER) solution that is currently available in `DAL10` datacenter.
   
-  This new solution is a better alternative than the current Direct Link-based network connectivity to connect between the {{site.data.keyword.powerSys_notm}} environment and the rest of IBM Cloud with direct connections to the IBM Cloud backbone network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+  PER improves network communication across different parts of IBM network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
 
 ## May 2023
 {: #may-2023}
