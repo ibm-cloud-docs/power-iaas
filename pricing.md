@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-06"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -29,9 +29,9 @@ subcollection: power-iaas
 
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
-| E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
+<!-- | E880 (9119-MHE)   |  143         | up to 7,463 GB                  | -->
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
@@ -143,12 +143,12 @@ The following tables show how different processor types affect the cost per syst
 {: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
 
-| Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+<!-- | Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.52 (dedicated)            | $950.533                 |
 | 1                           | $0.54 (uncapped shared)      | $237.615                  |
 | 1                           | $0.70 (capped shared)        | $356.459                  |
-{: caption="Table 5. E880 processor type pricing" caption-side="bottom"}
+{: caption="Table 5. E880 processor type pricing" caption-side="bottom"} -->
 
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -156,14 +156,14 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 6. E980 processor type pricing" caption-side="bottom"}
+{: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
 
 <!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $1.862 (dedicated)            | $1359.26                 |
 | 1                           | $0.4655 (uncapped shared)     | $339.82                  |
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
-{: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
+{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"} -->
 
 <!-- I would need caption="Table 8. S1022 processor type pricing" caption-side="bottom" -->
 

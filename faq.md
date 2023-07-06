@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-05"
+lastupdated: "2023-07-06"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -38,12 +38,12 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 {: faq}
 {: support}
 
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!-- , E1080 (9080-HEX), or S1022 (9105-22A) -->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), <!-- E880 (9119-MHE),  -->E980 (9080-M9S)<!-- , E1080 (9080-HEX), or S1022 (9105-22A) -->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
 **AIX** - {{site.data.keyword.powerSys_notm}} supports AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
-- [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external}
+<!-- - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external} -->
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 <!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
 - [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604245){: external} -->
@@ -58,7 +58,7 @@ AIX stock images currently available when you create a VM are:
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-- [S922 (9009-22A), E880 (9119-MHE), E980 (9080-M9S)<!-- , E1080 (9080-HEX), and S1022 (9105-22A) --> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+- [S922 (9009-22A), <!-- E880 (9119-MHE),  -->E980 (9080-M9S)<!-- , E1080 (9080-HEX), and S1022 (9105-22A) --> software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
