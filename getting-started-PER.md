@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-07"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -174,7 +174,7 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
 
-## Various sample application scenarios
+<!-- ## Various sample application scenarios
 {: scenarios-per}
 
 There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes some of the various possible application scenarios:
@@ -201,11 +201,5 @@ is used for DL2DL connection.
 [^footnote6]: Involves high cost
 [^footnote7]: Combination no longer in use.
 [^footnote8]: Typical speed.
-[^footnote9]: Typical speed.
+[^footnote9]: Typical speed. -->
 
-<!-- Assumptions:
-(cost, complexity, perf) = Involves cost, complexity and low performance.
-(costly) = High cost
-(moved away) = Obsolete/deprecated/no longer in use?
-Remarks statements
- -->
