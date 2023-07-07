@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-06-24"
+lastupdated: "2023-07-07"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -11,6 +11,7 @@ subcollection: power-iaas
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,19 +21,14 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-<!-- {{site.data.keyword.powerSys_notm}} -->
 
 # Getting started with the Power Edge Router
 {: #per}
 
-A Power Edge Router (PER) is a high-performance router, offered by IBM Cloud&reg;, that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
+A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}
 
-PER improves network communication across different parts of IBM network. This new solution replaces the current Direct Link-based network connectivity.
-
-The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is comprised of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are modular datacenters). 
+PER improves network communication across different parts of IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is comprised of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Datacenter that are modular datacenters). 
 
 The PER solution is currently available in `DAL10`. PER will be deployed in other datacenters over time.
 {: note}
@@ -69,8 +65,10 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - You can establish a connection between collocated workspaces if one colo is PER enabled (`DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
-- There is no additional pricing for the use of PER. When you create a new PER workspace, you are charged regular {{site.data.keyword.powerSys_notm}} pricing. To calculate pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
-- When you create private networks in a PER workspace, a maximum of one DNS server can be specified. 
+- When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
+- A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
+- You cannot create a non-PER workspace in a PER enabled datacenter. However, you can still use your old non-PER workspaces that are existing in a PER enabled datacenter that are created before PER rollout.
+- See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
 {: migrate-per}
@@ -109,7 +107,7 @@ You cannot delete PER workspaces that have Transit Gateway connections. You must
 ### Using IBM cloud services in a PER workspace
 {: cloud-services-per}
 
-From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage (COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0` to `161.26.0.16`.
+From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage (COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0/16`. See [IaaS endpoints](/docs/vpc?topic=vpc-service-endpoints-for-vpc#infrastructure-as-a-service-iaas-endpoints) for more information.
 
 You need to attach to the Transit Gateway if you want to connect your workspace with the VPC and classic infrastructure.
 {: important}
@@ -175,3 +173,33 @@ PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
+
+<!-- ## Various sample application scenarios
+{: scenarios-per}
+
+There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes some of the various possible application scenarios:
+
+| Scenarios | {{site.data.keyword.powerSys_notm}} DL without Transit Gateway| {{site.data.keyword.powerSys_notm}} DL with Transit Gateway |{{site.data.keyword.powerSys_notm}} PER workspace|
+|-----------|-------------------|---------------------|-------------------|
+| IBM Cloud local VPC and Classic resources access (x86 VMs etc.)|	DL local routing [^footnote1] |	TGW local routing	| TGW local routing|
+| IBM Cloud remote VPC resource access	| DL global routing [^footnote2] |	TGW global routing	| TGW globa	routing |
+| {{site.data.keyword.powerSys_notm}} multi-location connectivity for HA DR etc.	| DL + vSRX [^footnote3] | TGW global routing | 	TGW global routing |
+| {{site.data.keyword.powerSys_notm}} multi-location connectivity (unipart)	| DL + classic + VPC	[^footnote7]| TGW global routing (improved connection) |	TGW global routing | 
+| {{site.data.keyword.powerSys_notm}} GRS	(Global Replication Service) | DL + Megaport [^footnote6]	| TGW global routing 	(to test) | TGW global routing |
+| On-premise to {{site.data.keyword.powerSys_notm}} connectivity	| DL + vSRX [^footnote4] |	TGW global routing | TGW global routing |
+|{{site.data.keyword.powerSys_notm}} to Cloud Services (COS, DNS, NTP etc.)	| Use proxy server [^footnote5] | - | Use NAT to reach services |			
+| Aggregate Bandwidth shared by all customers, between {{site.data.keyword.powerSys_notm}} and IBM Cloud	| 60 Gb/s [^footnote8]	| 60 Gb/s [^footnote9]	| 400 Gb/s |
+|User Experience	| Ok | Better	| Excellent |
+{: caption="Table 1. Various application scenarios" caption-side="bottom"}
+
+[^footnote1]: No charges apply.
+[^footnote2]: No charges apply.
+[^footnote3]: Involves cost, complexity, and low performance. Considering Megaport
+is used for DL2DL connection.
+[^footnote4]: Involves cost, complexity, and low performance. Other options, includes on-premise over DL to classic to PowerVS over DL to classic
+[^footnote5]: Involves cost and complexity
+[^footnote6]: Involves high cost
+[^footnote7]: Combination no longer in use.
+[^footnote8]: Typical speed.
+[^footnote9]: Typical speed. -->
+
