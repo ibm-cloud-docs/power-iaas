@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022
+  years: 2022, 2023
 
-lastupdated: "2022-08-22"
+lastupdated: "2023-06-27"
 
 keywords: virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide 
 
@@ -33,3 +33,8 @@ For more information on how to create and configure an {{site.data.keyword.power
 
 The link is an external link that redirects to a PDF file.
 {:note}
+
+## Migrating using Falconstor StorSafe VTL
+{storsafe-migr}
+
+See [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl) for migration steps.

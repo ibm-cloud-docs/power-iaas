@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-01"
+lastupdated: "2023-07-06"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -23,10 +23,10 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Planning a workload migration to an IBM Power8, Power9, or Power10 system
+# Planning a workload migration to an IBM® Power® Systems
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E880 (9119-MHE), E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: <!-- E880 (9119-MHE),  -->E980 (9080-M9S), S922 (9009-22A), and E1080 (9080-HEX). For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
 For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and Power processor family can help determine which migration path to follow.
@@ -45,7 +45,7 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 - Follow the I/O consideration guide.
 - Consider contacting [IBM Systems Lab Services](#lab-services) to ease the migration process.
 
-## Migrating to an IBM POWER8 system
+<!-- ## Migrating to an IBM POWER8 system
 {: #power8-migration}
 
 **AIX 5.3 and earlier** - You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
@@ -60,18 +60,20 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
 3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
 
-**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system.
+**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system. -->
+
+<!-- Obsolete Power 8 content -->
 
 ## Migrating to an IBM POWER9 system
 {: #power9-migration}
 
-Learn more about migrating workloads from an existing IBM POWER7 or POWER8 system to a POWER9 system. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from your older IBM POWER System to a POWER9 System. Before you begin your migration, review the information in this section.
 
 - The support website [Fix Central](https://www.ibm.com/support/fixcentral/){: external} provides updates for IBM i and AIX. Where possible, update your LPAR operating system to the recommended levels before you migrate to a newer system.
     Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
     {: tip}
 
-- POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a POWER7 or POWER8 system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
+- POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
 - Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workload).
 
 To learn more about IBM POWER9 system performance and migration strategies, see the following articles:
@@ -80,7 +82,7 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
-## Migrating to an IBM POWER10 system
+<!-- ## Migrating to an IBM POWER10 system
 {: #power10-migration}
 
 Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
@@ -100,8 +102,9 @@ To learn more about IBM POWER10 system performance and migration strategies, see
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
-- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
+- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external} -->
 
+<!-- new power 10 content. p10 systems not enabled in DCs yet as of July 06, 23 -->
 ## Lab services
 {: #lab-services}
 

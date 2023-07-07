@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-01"
+lastupdated: "2023-07-06"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -29,9 +29,9 @@ subcollection: power-iaas
 
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
-| E880 (9119-MHE)   |  143         | up to 7,463 GB                  |
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
+<!-- | E880 (9119-MHE)   |  143         | up to 7,463 GB                  | -->
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
@@ -69,9 +69,9 @@ For detailed usage and billing information, you can refer to the part number in 
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
-| ES_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 shared uncapped processor per core-hour      |
-| ED_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 dedicated processor per core-hour      |
-| MS_GIGABYTE_HOURS     | RAM gigabyte-hour      |
+<!-- | ES_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 shared uncapped processor per core-hour      | -->
+<!-- | ED_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 dedicated processor per core-hour      |
+| MS_GIGABYTE_HOURS     | RAM gigabyte-hour      | -->
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
@@ -82,7 +82,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
 | IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
 | SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
-| EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      |
+<!-- | EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      | -->
 | IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
 | IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
@@ -128,7 +128,7 @@ The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. Y
 
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E880/E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
 {: important}
@@ -143,12 +143,12 @@ The following tables show how different processor types affect the cost per syst
 {: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
 
-| Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+<!-- | Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.52 (dedicated)            | $950.533                 |
 | 1                           | $0.54 (uncapped shared)      | $237.615                  |
 | 1                           | $0.70 (capped shared)        | $356.459                  |
-{: caption="Table 5. E880 processor type pricing" caption-side="bottom"}
+{: caption="Table 5. E880 processor type pricing" caption-side="bottom"} -->
 
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -156,14 +156,14 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
 | 1                           | $0.64 (uncapped shared)      | $308.936                  |
 | 1                           | $0.85 (capped shared)        | $463.404                  |
-{: caption="Table 6. E980 processor type pricing" caption-side="bottom"}
+{: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
 
 <!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $1.862 (dedicated)            | $1359.26                 |
 | 1                           | $0.4655 (uncapped shared)     | $339.82                  |
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
-{: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
+{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"} -->
 
 <!-- I would need caption="Table 8. S1022 processor type pricing" caption-side="bottom" -->
 
@@ -244,6 +244,36 @@ Total billable storage = 595 GB
 When you use a VPN connection, you are billed monthly.
 
 IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
+
+## Pricing for Power Edge Router
+{: per-pricing}
+
+As a {{site.data.keyword.powerSys_notm}} user, you are charged based on the Transit Gateway connections that you use:
+- New Transit Gateway that you create in a PER workspace.
+- Existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
+
+Here are some more PER charges based on the following Transit Gateway specifics:
+- Routing option
+- Number of connections
+
+The following table shows the charges based on the routing option that you select:
+| Routing type | Charges |
+|--------------|---------|
+|Local routing data transfer | No charges |
+|Global routing data transfer | $0.009405 GB|
+{: caption="Table 13. TGW charges based on routing" caption-side="top"}
+
+The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
+| Number of connections | Charges |
+|--------------|---------|
+|1 - 4 | No charges |
+|5 - 20 | $9.405 |
+|21 - 50 |$7.315 |
+|51+ | $4.7025 |
+{: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
+
+The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+{: important}
 
 ## End of billing
 {: #pricing-end-billing}

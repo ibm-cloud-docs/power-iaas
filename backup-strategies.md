@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-11-16"
+lastupdated: "2023-07-05"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -66,10 +66,9 @@ A common IBM i backup strategy is to use IBM® Backup, Recovery, and Media Servi
 
 The typical IBM i customer uses the following flow to back up LPARs and objects:
 
-1. Use the 5733-ICC product to connect to Cloud Object Storage (~2 times the disk capacity to hold the backup images).
-2. Connect to IBM's classic infrastructure by using Direct Link Connect.
-3. Create a Nginx reverse proxy. You can provision the reverse proxy from a virtual server instance (x86) for bandwidth up to 1 Gbps. If more bandwidth is needed, you must use a bare metal server.
-4. Complete the back up to Cloud Object Storage by choosing the speed and resiliency that is required.
+1. Use the 5733-ICC product to connect to Cloud Object Storage (COS) (~2 times the disk capacity to hold the backup images).
+2. Connect to IBM COS by following the steps mentioned in [Using Cloud Object Storage](/docs/power-iaas?topic=power-iaas-backup-strategies#cos-over-directlink).
+4. Complete the back up to COS by choosing the speed and resiliency that is required.
 
    - [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: external}
    - [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}
@@ -77,14 +76,27 @@ The typical IBM i customer uses the following flow to back up LPARs and objects:
 
 For a complete tutorial on backing up and restoring IBM i VM data, see [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: external}.
 
-## Using Cloud Object Storage over IBM Cloud Direct Link
+For additional IBM i backup strategies, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
+
+## Using Cloud Object Storage
 {: #cos-over-directlink}
 
-IBM Cloud customers who purchase Cloud Object Storage and Direct Link can make remote connections to Cloud Object Storage private endpoints. This type of connection extends the advantages of private service endpoints, so they can be used by client systems outside of IBM Cloud facilities.
+The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
 
-HTTPS (secure HTTP) Cloud Object Storage requests are initiated from a client at a remote site. They're transmitted securely through IBM Cloud Direct Link, targeting one of a cluster of reverse proxy servers deployed in a customer’s IBM Cloud account. From there, requests are passed to a Cloud Object Storage private endpoint, processed, and then the results returned to the remote calling client.
+1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the COS direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+2.  In a non-PER workspace that are in a multi-zone region (MZR) the best way to connect to COS is as follows:
+    1. Create a [Virtual Private Cloud (VPC) with subnet(s)](/docs/vpc?topic=vpc-subnets-configure&interface=ui#subnets-create-ui) in the same region as your {{site.data.keyword.powerSys_notm}} workspace.
+    2. Create a [Virtual Private Endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) (VPE).
+    3. Connect the VPC to a [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui#tg-ui-creating-transit-gateway).
+    4. [Create a cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) to connect the non-PER {{site.data.keyword.powerSys_notm}} workspace to the same transit gateway. 
+    
+    The {{site.data.keyword.powerSys_notm}} would then use the VPE's IP address to connect to COS. If the VPE has multiple IP addresses, you can set up custom DNS and a custom hostname to connect to COS.
+3.  Deploy a Nginx reverse proxy server in either the classic or VPC infrastructure.
 
-Any sample client code that works with Cloud Object Storage must also work through a [reverse proxy server](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy). The only change that is required is that, instead of targeting a Cloud Object Storage private endpoint URL published by IBM, the client targets the IP address or URL of the reverse proxy server. Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
+    Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
+
+### Cloud Object Storage on AIX
+{: cos-aix}
 
 IBM Power Systems that are running AIX 7.2 TL3, or later, have a script that is located in the path, `/usr/samples/nim/cloud_setup`. The `cloud_setup` command installs the command-line environment for cloud storage services.
 
