@@ -71,7 +71,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
-<## Networking considerations
+## Networking considerations
 {: #networking-considerations}
 
 Network communication between virtual server instances on the same private network is enabled by using a PER enabled workspace. This works by attaching the subnet to a cloud connection and transit gateway, routing over a Direct Link, or configuring VPNaaS. If you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances and are not using one of these methods, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network communication.
