@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-06"
+lastupdated: "2023-07-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -342,7 +342,8 @@ See the tutorial on [IBM Power Systems Virtual Server integration with x86-based
 {: faq}
 {: support}
 
-For more information, see [Configuring IBM Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-configuring-power).
+For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to Power Systems Virtual Server, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?
 {: #firewall}
