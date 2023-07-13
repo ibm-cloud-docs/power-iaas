@@ -59,6 +59,9 @@ To create an {{site.data.keyword.cloud_notm}} connection, complete the following
    Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the workspace to communicate.
    {: note}
 
+  If the Cloud connection is attached to a transit gateway, the following subnet ranges are not supported `10.0.0.0/14`, `10.200.0.0/14`, `10.198.0.0/15` and `10.254.0.0/16`. Please ensure, when attaching subnets to the cloud connection, you avoid subnets in these ranges (if used with a transit gateway).
+  {: note}
+
 6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
 
 IBM Power Virtual System Cloud Connections are currently not supported on the `WDC06` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link will be generated. This Direct Link is not operational and must be authorized by the IBM Cloud account user who has the required authority via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
