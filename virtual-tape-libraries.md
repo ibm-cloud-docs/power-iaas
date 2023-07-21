@@ -35,6 +35,6 @@ The link is an external link that redirects to a PDF file.
 {:note}
 
 ## Migrating using Falconstor StorSafe VTL
-{storsafe-migr}
+{: storsafe-migr}
 
 See [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl) for migration steps.
