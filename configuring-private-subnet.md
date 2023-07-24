@@ -74,7 +74,13 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ## Networking considerations
 {: #networking-considerations}
 
-Network communication between virtual server instances on the same private network is enabled by using a PER enabled workspace. This works by attaching the subnet to a cloud connection and transit gateway, routing over a Direct Link, or configuring VPNaaS. If you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances and are not using one of these methods, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network communication.
+You can establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances with any one of the following four approaches:
+1.	Use a PER enabled workspace. See, [Getting started with PER](/docs/power-iaas?topic=power-iaas-per).
+2.	Create and attach the subnet to a cloud connection and transit gateway.
+3.	Setup routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
+4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+In case you are not using none of the four approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
+
 
 For example, if you add a subnet `172.10.10.0/24` from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet without the use of the other methods listed above, you must open a support ticket and provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface.
 
