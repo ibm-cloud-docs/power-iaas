@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "20223-07-07"
+lastupdated: "20223-07-24"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
 
