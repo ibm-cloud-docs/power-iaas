@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2023-07-25"
 
 keywords: rsct, rmc, IPv6
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images
 {: #recommended-rsct-package}
 
-RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSys_notm}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends you use [RSCT 3.2.6.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: external} for optimal performance.
+RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSys_notm}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends that you use [RSCT 3.2.6.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: external} for optimal performance.
 {: shortdesc}
 
 The RSCT `nodeid` is not rebuilt if you are deploying an AIX VM from a network installation management (NIM) server without `cloud-init`, and RSCT is installed.
@@ -37,7 +37,7 @@ The RSCT `nodeid` is not rebuilt if you are deploying an AIX VM from a network i
 
 The [RMC subsystem](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_undrmc.html){: external} is the scalable backbone of RSCT that provides a generalized framework for managing resources within a single system or a cluster. Its generalized framework is used by cluster management tools to monitor, query, modify, and control cluster resources. RMC provides a single monitoring and management infrastructure for both RSCT peer domains and management domains.
 
-The AIX VM's RMC status is presented in the {{site.data.keyword.powerSys_notm}} dashboard as a health status. The RMC health status can be either **OK** or **Warning**. **Warning** statuses happen when the RMC subsystem between your VM and the management system is not connected.
+The AIX VM's RMC status is presented in the {{site.data.keyword.powerSys_notm}} dashboard as a health status. The RMC health status can be either `OK` or `Warning`. Warning statuses happen when the RMC subsystem between your VM and the management system is not connected.
 
 The RMC connection between your VM and the system management service is configured when you create the AIX VM. When you deploy an AIX VM, the IPv6 management interface is injected into the VM. If you remove or overwrite this interface, an RMC connection is not possible. The following procedures can cause the injected IPv6 management interface to be lost after you deploy the AIX VM:
 
@@ -67,7 +67,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: external}.
 
-    *3.2.1* is the **minimum** release that is supported by {{site.data.keyword.powerSys_notm}}. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
+    {{site.data.keyword.powerSys_notm}} supports *3.2.1* ass the minimum release. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
     {: important}
 
 2. If you still have the {{site.data.keyword.powerSys_notm}} deployed boot image, complete the following steps:
@@ -79,16 +79,17 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
         {: note}
 
     3. Open the `/var/log/cloud-init-output.log` file.
-    4. Use the `grep` command to search for the IP injection. There is an IPv4 address and an IPv6 link local address.
+    4. Use the `grep` command to search for the IP injection. 
+        There is an IPv4 address and an IPv6 link local address.
 
 3. Using the IPv6 address for the host, [refresh the RMC services](https://www.ibm.com/support/pages/fixing-no-rmc-connection-error){: external}:
 
     ```text
     /opt/rsct/bin/rmcctrl -p
-    /opt/rsct/rmcrefreshMD -s ctrmc
+    /opt/rsct/bin/rmcrefreshMD -s ctrmc
     ```
 
-4. *(Optional)* If you altered the *node ID* (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deployment that is not supported. Begin by rebuilding the node:
+4. *(Optional)* If you altered the `nodeid` (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from an on-premises deployment that is not supported. Begin by rebuilding the node:
 
     ```text
     odmdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
@@ -96,7 +97,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 5. *(Optional)* On the AIX VM, enter the `cat /etc/ct_node_id` command and save the output.
 
-6. *(Optional)* To create new nodeid and restart RMC services:
+6. *(Optional)* To create new `nodeid` and restart RMC services:
 
    ```text
    /usr/sbin/rsct/install/bin/recfgct
