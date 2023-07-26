@@ -54,7 +54,7 @@ To register for the full Linux subscription, you must select one of the stock op
 The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
 ## Setting up full Linux subscription
-{: #set-full-Linux}
+{: #setup-full-Linux}
 
 To set up full Linux subscription for your account, complete the following steps:
 
