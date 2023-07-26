@@ -98,7 +98,6 @@ toc:
               - connecting-ibmi-port.md
               - creating-network-install-server.md
               - removing-network-interface-ibmi.md
-              - migrate-ibmi-data-ibmi-vm.md
               - ibmi-minimum-levels.md
               - ibmi-license-info.md
       - topicgroup: 
