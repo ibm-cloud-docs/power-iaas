@@ -71,15 +71,21 @@ toc:
       - topicgroup: 
             label: Networking
             topics:
-              - network-architecture.md
-              - configuring-private-subnet.md
-              - cloud-connections-CLI.md              
-              - getting-started-PER.md
-              - ordering-direct-link.md
-              - vpn-connections.md              
-              - network-security.md
-              - site-to-site-vpn-connectivity.md
-              - X86-based-systems.md
+              - network-overview.md
+                  - topicgroup: 
+                        label: Networking for Cloud
+                        topics:
+                          - network-architecture.md
+                          - configuring-private-subnet.md
+                  - topicgroup: 
+                        label: Networking for Cloud
+                          - cloud-connections-CLI.md              
+                          - getting-started-PER.md
+                          - ordering-direct-link.md
+                          - vpn-connections.md              
+                          - network-security.md
+                          - site-to-site-vpn-connectivity.md
+                          - X86-based-systems.md
       - topicgroup: 
             label: AIX
             topics:
