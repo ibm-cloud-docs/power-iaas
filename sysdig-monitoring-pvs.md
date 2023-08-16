@@ -19,6 +19,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 {:deprecated: .deprecated}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 <!-- {{site.data.keyword.powerSys_notm}} -->
 
 
