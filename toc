@@ -93,10 +93,15 @@ Power Systems Virtual Servers
         deploying-linux.md
     {: .navgroup-end}
 
+    {: .topicgroup}
+    Observability
+        sysdig-monitoring-pvs.md
+        at-events.md
+    {: .navgroup-end}
+
     {: .navgroup id="reference"}
     [API reference](https://cloud.ibm.com/apidocs/power-cloud)
     [CLI reference](/power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference)
-    at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
