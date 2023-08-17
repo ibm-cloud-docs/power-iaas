@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-08-16"
+lastupdated: "2023-08-17"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -24,10 +24,10 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 
 
-# Monitoring metrics for {{site.data.keyword.powerSysFull}
+# Monitoring metrics for {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
-{{site.data.keyword.mon_full}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
 ## Platform metrics overview
@@ -49,15 +49,21 @@ To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} 
 ## Viewing metrics
 {: #sysdig-view}
 
+Various ways you can launch the Sysdig web UI to see the metrics dashboards:
+1.  Launch the Sysdig web UI from the {{site.data.keyword.powerSys_notm}} UI.
+2.  Launching Sysdig web UI from the Observability page.
+
+
+[Validate with Anu]{: tag-dark-teal}
 ### Launching Sysdig web UI from the {{site.data.keyword.powerSys_notm}} UI
 {: #sysdig-view-ui}
 
-<to do>
+[Validate with Anu]{: tag-dark-teal}
 
 ### Launching Sysdig web UI from the Observability page
 {: #sysdig-view-ob}
 
-<to do>
+[Validate with Anu]{: tag-dark-teal}
 
 ## serviceName metrics dictionary
 {: #sysdig-metrics-dictionary}
