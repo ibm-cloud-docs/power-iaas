@@ -68,7 +68,8 @@ Various ways you can launch the Sysdig web UI to see the metrics dashboards:
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
 
-CPU utilisation
+### CPU utilisation
+{: cpu-metric}
 
 The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
 | Metadata | Description |
@@ -79,7 +80,8 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 | `Segment By` | `-` |
 {: caption="Table 1: CPU utilization metrics of a VM" caption-side="top"}
 
-Memory utilisation
+### Memory utilisation
+{: mem-metric}
 
 The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
@@ -90,7 +92,8 @@ The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 | `Segment By` | `-` |
 {: caption="Table 2: Memory utilisation metrics of a VM" caption-side="top"}
 
-Incoming network bytes
+### Incoming network bytes
+{: in-net-metric}
 
 The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
 | Metadata | Description |
@@ -101,7 +104,8 @@ The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 | `Segment By` | `-` |
 {: caption="Table 3: Incoming byte metrics of a VM per network interface " caption-side="top"}
 
-Outgoing network bytes
+### Outgoing network bytes
+{: out-net-metric}
 
 The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
 | Metadata | Description |
@@ -112,7 +116,8 @@ The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 | `Segment By` | `-` |
 {: caption="Table 4: Outgoing byte metrics of a VM per network interface " caption-side="top"}
 
-Disk read bytes
+### Disk read bytes
+{: disk-rd-metric}
 
 The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
@@ -123,7 +128,8 @@ The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance.
 | `Segment By` | `-` |
 {: caption="Table 5: Total disk read bytes metrics at a VM" caption-side="top"}
 
-Disk write bytes
+### Disk write bytes
+{: disk-wrt-metric}
 
 The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
