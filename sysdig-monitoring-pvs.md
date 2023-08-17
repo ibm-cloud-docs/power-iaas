@@ -65,11 +65,12 @@ Various ways you can launch the Sysdig web UI to see the metrics dashboards:
 
 [Validate with Anu]{: tag-dark-teal}
 
-## serviceName metrics dictionary
+## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
 
-PVM CPU utilisation
-The CPU utilization of a pvm instance in percentage.
+CPU utilisation
+
+The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_cpu_util`|
@@ -78,8 +79,9 @@ The CPU utilization of a pvm instance in percentage.
 | `Segment By` | `-` |
 {: caption="Table 1: CPU utilization metrics of a VM" caption-side="top"}
 
-PVM memory utilisation
-The memory utilisation of a PVM instance.
+Memory utilisation
+
+The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | ` ibm_power_iaas_pvm_instance_mem_util`|
@@ -88,8 +90,9 @@ The memory utilisation of a PVM instance.
 | `Segment By` | `-` |
 {: caption="Table 2: Memory utilisation metrics of a VM" caption-side="top"}
 
-PVM Incoming Network Bytes
-The incoming bytes of a PVM instance per network interface.
+Incoming network bytes
+
+The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_incoming_bytes`|
@@ -98,8 +101,9 @@ The incoming bytes of a PVM instance per network interface.
 | `Segment By` | `-` |
 {: caption="Table 3: Incoming byte metrics of a VM per network interface " caption-side="top"}
 
-PVM Outgoing Network Bytes
-The outgoing bytes of a PVM instance per network interface.
+Outgoing network bytes
+
+The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_outgoing_bytes`|
@@ -108,8 +112,9 @@ The outgoing bytes of a PVM instance per network interface.
 | `Segment By` | `-` |
 {: caption="Table 4: Outgoing byte metrics of a VM per network interface " caption-side="top"}
 
-PVM Disk Read Bytes
-The total disk read bytes at PVM instance.
+Disk read bytes
+
+The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_read_bytes`|
@@ -118,8 +123,9 @@ The total disk read bytes at PVM instance.
 | `Segment By` | `-` |
 {: caption="Table 5: Total disk read bytes metrics at a VM" caption-side="top"}
 
-PVM Disk Write Bytes
-The total disk write bytes at PVM instance.
+Disk write bytes
+
+The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_write_bytes`|
