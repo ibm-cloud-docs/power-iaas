@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-21"
 
 keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -45,7 +45,7 @@ You can also find a script that ships (as a sample command) with AIX 7.2 TL3, or
 
 For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (5733-ICC)](https://www.ibm.com/support/pages/ibm-cloud-storage-solutions-i){: external} to communicate with COS and transfer data.
 
-## Mass Data Migration (MDM)
+<!-- ## Mass Data Migration (MDM)
 {: #migration-mdm}
 
 MDM provides a simple and secure way to physically transfer data (terabytes to petabytes) to the IBM Cloud Object Storage to be used by {{site.data.keyword.powerSys_notm}}. As part of the MDM process, IBM sends the client an MDM-approved device, who uploads their on-premises data to the device and sends it back. IBM then transfers and stores the content in COS for later retrieval from within the {{site.data.keyword.powerSys_notm}} environment. To learn more, see [Mass Data Migration: FAQ](https://www.ibm.com/cloud/mass-data-migration/faq){: external}.
@@ -55,7 +55,8 @@ The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It 
 
 For steps to configure MDM on AIX and IBM i VMs, see the following tutorials:
 - [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](/docs/power-iaas?topic=power-iaas-configuring-mdm)
-- [Configuring Mass Data Migration (MDM) on IBM i VM](/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm)
+- [Configuring Mass Data Migration (MDM) on IBM i VM](/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm) -->
+<!-- Removed MDM topic as per Mark Martin's input. -->
 
 ## PowerVC images and COS
 {: #migration-powervc-icos}
