@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-05-22"
+lastupdated: "2023-08-23"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -27,6 +27,9 @@ IBM provides two Cloud key management services that integrate with {{site.data.k
 
 HPCS and {{site.data.keyword.keymanagementserviceshort}} are supported by AIX 7.3 TL1 for AIX logical volume encryption.
 {: note}
+
+Power-AIX integration for PKCS11 / TDE integration for Oracle/DB2 workloads is not available at this time. There is no impact to the volume-level encryption for AIX, Power-Linux with HPCS.
+{: important}
 
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS and {{site.data.keyword.keymanagementserviceshort}} to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
 
