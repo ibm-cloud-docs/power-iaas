@@ -28,6 +28,9 @@ IBM provides two Cloud key management services that integrate with {{site.data.k
 HPCS and {{site.data.keyword.keymanagementserviceshort}} are supported by AIX 7.3 TL1 for AIX logical volume encryption.
 {: note}
 
+Power-AIX integration for PKCS11 / TDE integration for Oracle/DB2 workloads is not available at this time. There is no impact to the volume-level encryption for AIX, Power-Linux with HPCS.
+{: important}
+
 You can use {{site.data.keyword.powerSys_notm}} to integrate with HPCS and {{site.data.keyword.keymanagementserviceshort}} to leverage for encryption of AIX file systems with `keysvrmgr` and `hdcryptmgr` command.
 
 The `keysvrmgr` command manages the Object Data Manager (ODM) database entries that are associated with the encryption key server when the logical or physical volume uses the key server key-protection method for encryption. For more information, see [keysvrmgr Command](https://www.ibm.com/docs/en/aix/7.3?topic=k-keysvrmgr-command){: external}.
