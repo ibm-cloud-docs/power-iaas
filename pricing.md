@@ -69,9 +69,6 @@ For detailed usage and billing information, you can refer to the part number in 
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
-<!-- | ES_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 shared uncapped processor per core-hour      | -->
-<!-- | ED_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 dedicated processor per core-hour      |
-| MS_GIGABYTE_HOURS     | RAM gigabyte-hour      | -->
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
@@ -82,7 +79,6 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
 | IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
 | SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
-<!-- | EC_VIRTUAL_PROCESSOR_CORE_HOURS     | E880 Enterprise shared capped processor per core-hour      | -->
 | IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
 | IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
