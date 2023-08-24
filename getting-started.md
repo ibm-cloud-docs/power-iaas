@@ -33,7 +33,7 @@ Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabili
 
 If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
-If you are creating or configuring a Red Hat OpenShift Cluster on Power Systems Virtual Server, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/components/ibm-power/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+If you are creating or configuring a Red Hat OpenShift Cluster on Power Systems Virtual Server, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
 ## Terminology
 {: #terminology}
