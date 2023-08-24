@@ -155,4 +155,3 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}
-
