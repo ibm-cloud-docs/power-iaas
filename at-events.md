@@ -272,6 +272,11 @@ Events are automatically forwarded to North America, Europe, Tokyo, or Sydney ge
 ## Activity tracker sample response format
 {: #at-response-sample}
 
+The new response format used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
+
+The CADF standard is significant in auditing security in cloud environments as it defines a comprehensive event model that includes the necessary information for certifying, managing, and auditing the security of applications and services in the cloud.
+{: note}
+
 The following code snippets shows the differences between the old and new activity tracker response format.
 
 `New response format`
