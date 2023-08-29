@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-08-17"
+lastupdated: "2023-08-29"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -95,13 +95,12 @@ The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 ### Incoming network bytes
 {: in-net-metric}
 
-The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
+The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface (or per mac address).
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_incoming_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
-| `Segment By` | `-` |
 {: caption="Table 3: Incoming byte metrics of a VM per network interface " caption-side="top"}
 
 ### Outgoing network bytes
@@ -113,31 +112,28 @@ The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_outgoing_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
-| `Segment By` | `-` |
 {: caption="Table 4: Outgoing byte metrics of a VM per network interface " caption-side="top"}
 
 ### Disk read bytes
 {: disk-rd-metric}
 
-The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance.
+The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_read_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
-| `Segment By` | `-` |
 {: caption="Table 5: Total disk read bytes metrics at a VM" caption-side="top"}
 
 ### Disk write bytes
 {: disk-wrt-metric}
 
-The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance.
+The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_write_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
-| `Segment By` | `-` |
 {: caption="Table 6: Total disk write bytes metrics at a VM" caption-side="top"}
 
 
@@ -145,12 +141,29 @@ The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance.
 ## Attributes for segmentation
 {: #sysdig-attributes}
 
-required?
+Question: what are segmentation attributes?
 
 ### Global attributes
 {: #sysdig-attributes-global}
 
-required?
+The following attributes are available for segmenting all of the metrics listed above
+
+| Attribute | Attribute Name | Attribute Description | Valid values |
+|-----------|----------------|-----------------------|--------------|
+| `Cloud type` | `ibm_ctype` | Type of Cloud         | Valid values are `public`, `dedicated`, or `local`. |
+| `Location` | `ibm_location` | Location of the monitored resource | You can specify a region, a data center, or `global`. |
+| `Resource` | `ibm_resource` |  |  |
+| `Resource name` | `ibm_resource_name` |  |  |
+| `Resource group` | `ibm_resource_group_name` | Resource group that is associated to the service instance. | Choose a resource group from the ones that are available in your account. |
+| `Resource group ID` | `ibm_resource_group_id` |
+| `Resource type` | `ibm_resource_type` |  | |
+| `Scope` | `ibm_scope` | The extent of the data samples that are considered  | You can choose the scope to be the account, an organization, or a space GUID that is associated with this metric. |
+| `Service name` | `ibm_service_name` | Name of the service that generates this metric | `ibm_eventstreams` |
+| `Service instance` | `ibm_service_instance` |  |  |
+| `Service instance name` | `ibm_service_instance_name` |  |  |
+| `Virtual server instance mac addrees` | `ibm_power_iaas_pvm_instance_network_mac_address` |  |  |
+
+{: caption="Global segmentation attributes" caption-side="top"}
 
 ### Additional attributes
 {: #sysdig-attributes-add}
