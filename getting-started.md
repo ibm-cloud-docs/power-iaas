@@ -33,10 +33,7 @@ Power Systems Virtual Servers integrates your AIX, IBM i, or Linux&reg; capabili
 
 If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
 
-If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see the following possible deployment methods: <!-- IPI is not applicable to PPCAS -->
-- IPI (Installer-provisioned installation) - Includes all the necessary infrastructure services within the Red Hat OpenShift cluster and provides a turn-key solution. Choose this for a automated and faster installation. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with IPI](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/installing/installing-on-ibm-power-virtual-server){: external}.
-- UPI (User Provisioned Infrastructure) - Uses the pre-existing install process that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with UPI](https://docs.openshift.com/container-platform/4.13/installing/installing_platform_agnostic/installing-platform-agnostic.html){: external}.
-- Additionally, IBM developers have created a set of playbooks to help you get started with a UPI install. You can use this as-is, or take as examples. For more information, see the [Github Playbooks](https://github.com/ocp-power-automation/ocp4-upi-powervs){: external}.
+If you are creating or configuring a Red Hat OpenShift Cluster on Power Systems Virtual Server, see [Cloud native development and application modernization by using Red Hat OpenShift on Power Systems Virtual Server](/docs/power-iaas?topic=ppc-aas-app-modernization-using-RedHat-openshift).
 
 ## Terminology
 {: #terminology}

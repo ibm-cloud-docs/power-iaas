@@ -169,3 +169,8 @@ The following attributes are available for segmenting all of the metrics listed 
 {: #sysdig-attributes-add}
 
 required?
+serv ins name
+mac add
+res grp name
+
+ser ins, mac add
