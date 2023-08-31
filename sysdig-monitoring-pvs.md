@@ -73,20 +73,20 @@ The two different ways to access the *Sysdig* web user interface to see the metr
 {: #sysdig-view-ui}
 
 From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user interface, perform the following steps:
-  1.  click **workspaces**.
-  2.  Select the workspace for which a monitoring instance is present.
-  3.  From the **workspace details** page, click **Launch monitoring**.
+1.  click **workspaces**.
+2.  Select the workspace for which a monitoring instance is present.
+3.  From the **workspace details** page, click **Launch monitoring**.
 
 ### Accessing *Sysdig* dashboard from the Observability page
 {: #sysdig-view-ob}
 
 Perform the following steps:
- 1.  Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
- 2.  Expand the left navigation window.
- 3.  Click **Resource list**.
- 4.  Click **Observability** **>** **Monitoring**.
- 5.  Click the desired instance.
- 6.  Click **Launch monitoring**.
+1.  Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
+2.  Expand the left navigation window.
+3.  Click **Resource list**.
+4.  Click **Observability** **>** **Monitoring**.
+5.  Click the desired instance.
+6.  Click **Launch monitoring**.
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
