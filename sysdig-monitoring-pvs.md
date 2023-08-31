@@ -45,27 +45,49 @@ Before you enable {{site.data.keyword.mon_full_notm}} on your platform, consider
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.powerSys_notm}} instance is provisioned.
 {: important}
 
-## Enabling platform metrics
-{: #sysdig-enable-metrics}
+## Creating an IBM Cloud monitoring instance
+{: #sysdig-create-monitor}
+
+Create an IBM Cloud Monitoring instance and enable the platform metrics to get and operational visibility into the performance and health of applications, services and infrastructure.
+
+Perform the following steps:
+1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
+2. Search for **IBM Cloud monitoring** and select it.
+3. Select your location and enter your custom values for **Service name** and other fields.
+   To monitor platform metrics, select the location where your {{site.data.keyword.powerSys_notm}} instance is provisioned.
+{: important}
+4. Select the **Enable** indicator for **IBM platform metrics**.
+5. Select the license agreements indicator and Click **Create**.
+
+You can also create the IBM Cloud Monitoring instance from the **Integration (Optional)** section when you create an workspace, if no IBM Cloud Monitoring instance is already created for that region.
 
 ## Viewing metrics
 {: #sysdig-view}
 
-Various ways you can launch the Sysdig web UI to see the metrics dashboards:
-1.  Launch the Sysdig web UI from the {{site.data.keyword.powerSys_notm}} UI.
-2.  Launching Sysdig web UI from the Observability page.
-
+There are two different ways by which you can launch the Sysdig web user interface to see the metrics dashboards:
+- Launch the Sysdig web user interface from the {{site.data.keyword.powerSys_notm}} user interface.
+   
+- Launching Sysdig web user interface from the Observability page.
 
 [Validate with Anu]{: tag-dark-teal}
 ### Launching Sysdig web UI from the {{site.data.keyword.powerSys_notm}} UI
 {: #sysdig-view-ui}
 
-[Validate with Anu]{: tag-dark-teal}
+From the left naviagtion menu of the {{site.data.keyword.powerSys_notm}} user interface, perform the following steps:
+    1.  click **Workspaces**.
+    2.  Select the workpsace for which a monitoring instace is present.
+    3.  From the **Workspace details** page, click **Launch monitoring**.
 
 ### Launching Sysdig web UI from the Observability page
 {: #sysdig-view-ob}
 
-[Validate with Anu]{: tag-dark-teal}
+Perform the following steps:
+ 1.  Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
+ 2.  Expand the left navigation pannel.
+ 3.  Click **Resource list**.
+ 4.  Click **Observability** **>** **Monitoring**.
+ 5.  Click the desired instance.
+ 6.  Click on **Launch monitoring**.
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
@@ -177,11 +199,11 @@ res grp name
 
 ser ins, mac add -->
 
-## Limitations from IBM Monitoring
+## Limitations from IBM Cloud monitoring
 {: #sysdig-limits}
 
-Sysdig predefined some limits around metrics ingestion. When limits are hit, rate-limited requests will respond with a 503 Service Unavailable. Following are some limitations:
-- Sysdig only accepts data within a specific time range, called the window of acceptance. This is currently fixed to 5 minutes.
-- Sample Rate limit: Default is 1M samples per Metric Frequency per service owner.
-- Request rate limit is 10k requests per Metric Frequency per service owner and batch limit is 10k samples/ request. Hence samples will be pushed in a batch.
-- Concurrent Request limit is 100 requests at any time.
+There are some predefined limits around metrics ingestion. When limits are hit, rate-limited requests will respond with a `503 Service Unavailable`. Following are the limitations:
+- **Time range**:IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance. This is currently fixed to 5 minutes.
+- **Sample Rate limit**: Default is 1M samples per Metric Frequency per service owner.
+- **Request rate limit**: Request rate limit is 10k requests per Metric Frequency per service owner and batch limit is 10k samples/ request. Hence samples will be pushed in a batch.
+- **Concurrent Request limit**: Concurrent Request limit is 100 requests at any time.
