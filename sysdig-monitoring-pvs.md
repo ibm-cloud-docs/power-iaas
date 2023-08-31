@@ -101,6 +101,7 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 | `Metric Name` | `ibm_power_iaas_pvm_instance_cpu_util`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `percent` |
+| `Segment by`  | `Service instance`, `Resource type`|
 {: caption="Table 1: CPU utilization metrics of a VM" caption-side="top"}
 
 ### Memory utilisation
@@ -112,6 +113,7 @@ The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 | `Metric Name` | ` ibm_power_iaas_pvm_instance_mem_util`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `percent` |
+| `Segment by`  | `Service instance`, `Resource type`|
 {: caption="Table 2: Memory utilisation metrics of a VM" caption-side="top"}
 
 ### Incoming network bytes
@@ -123,6 +125,7 @@ The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_incoming_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
+| `Segment by`  | `Service instance`, `Resource type`, `Virtual server instance mac addrees`|
 {: caption="Table 3: Incoming byte metrics of a VM per network interface " caption-side="top"}
 
 ### Outgoing network bytes
@@ -134,6 +137,7 @@ The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_outgoing_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
+| `Segment by`  | `Service instance`, `Resource type`, `Virtual server instance mac addrees`|
 {: caption="Table 4: Outgoing byte metrics of a VM per network interface " caption-side="top"}
 
 ### Disk read bytes
@@ -145,6 +149,7 @@ The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_read_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
+| `Segment by`  | `Service instance`, `Resource type`|
 {: caption="Table 5: Total disk read bytes metrics at a VM" caption-side="top"}
 
 ### Disk write bytes
@@ -156,6 +161,7 @@ The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance level
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_write_bytes`|
 | `Metric Type` | `counter` |
 | `Value Type`  | `byte` |
+| `Segment by`  | `Service instance`, `Resource type`|
 {: caption="Table 6: Total disk write bytes metrics at a VM" caption-side="top"}
 
 
@@ -185,19 +191,12 @@ The following attributes are available for segmenting all of the metrics listed 
 The following attributes are available as additional attributes for segmenting all of the metrics listed above in metrics dictionary:
 | Attribute | Attribute Name | Attribute Description | Valid values |
 |-----------|----------------|-----------------------|--------------|
-| `Service instance` | `ibm_service_instance` | The extent of the data samples that are considered | Valid value is the Power System Virtual Server instance ID |
-| `Service instance name` | `ibm_service_instance_name` | The extent of the data samples that are considered | Valid value is the defined name of the virtual server instance |
-| `Resource type` | `ibm_resource_type` | The type of resource from which metric is collected | Valid values is `pvm-instance` |
-| `Resource name` | `ibm_resource_name` | Name of the virtual server instance whose metric is collected | Valid value is the name of the virtual server instance |
+| `Service instance` | `ibm_service_instance` | The workspace ID | Valid value is the Power System Virtual Server workspace ID |
+| `Service instance name` | `ibm_service_instance_name` | The workspace name | Valid value is the defined name of the workspace |
+| `Resource type` | `ibm_resource_type` | The virtual server instance ID | Valid values is virtual server instance ID |
+| `Resource name` | `ibm_resource_name` | Name of the virtual server instance | Valid value is the name of the virtual server instance |
 | `Virtual server instance mac addrees` | `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the virtual server instance whose metrics is collected  | Valid value is `xx.xx.xx.xx` |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
-
-<!-- required?
-serv ins name
-mac add
-res grp name
-
-ser ins, mac add -->
 
 ## Limitations from IBM Cloud monitoring
 {: #sysdig-limits}
@@ -207,3 +206,14 @@ There are some predefined limits around metrics ingestion. When limits are hit, 
 - **Sample Rate limit**: Default is 1M samples per Metric Frequency per service owner.
 - **Request rate limit**: Request rate limit is 10k requests per Metric Frequency per service owner and batch limit is 10k samples/ request. Hence samples will be pushed in a batch.
 - **Concurrent Request limit**: Concurrent Request limit is 100 requests at any time.
+
+## Additional information
+{: #sysdig-add-info}
+
+- Learn more about the Sysdig dasboard user interface, see [About the Dashboard UI](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/using-dashboards/about-the-dashboard-ui/){: external}.
+- See the [IBM Cloud Mornitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started) documentation in IBM Cloud.
+
+<!-- IBM Service instance id( workspace id) , ibm resource id(vm id) ==> segmented by
+Network — + MAC address
+Global : all attributtes except MAC address
+Addition =-==MAC address -->
