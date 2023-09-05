@@ -12,19 +12,6 @@
     "deploying a power-iaas custom image"
   ],
 
-  "storage":[
-    "find power server storage types",
-    "finding power server storage types",
-    "identify power server storage types",
-    "identifying power server storage types",
-    "available storage types in the storage area network for power iaas",
-    "determine power server storage types",
-    "find power iaas storage types",
-    "power systems storage",
-    "storage for Power Systems Virtual Server",
-    "determining power server storage types"
-  ],
-
   "rootvg":[
     "extend aix rootvg in power-iaas",
     "extending aix rootvg in power-iaas",
