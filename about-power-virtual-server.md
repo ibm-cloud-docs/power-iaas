@@ -87,13 +87,13 @@ If you'd like to compare your current environment's performance to what's availa
 <!-- * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external} -->
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-<!-- * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
-* [IBM Power System S1022 (9105-22A)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external} -->
+* [IBM Power System S1022 (9105-22A)](){: external} [Data sheets ink rquired]{: tag-dark-teal}
+<!-- * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}  -->
 <!-- update 9105-22A reference and verify 1080 & 1022 applicability in table 1 -->
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * S1022 (9105-22A) (Aavailable in WDC07)| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
