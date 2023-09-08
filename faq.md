@@ -528,6 +528,4 @@ To automate the MTU configuration, you need to customize your cloud-init network
 
 Both AIX and IBM i supports custom cloud-init configurations at the time of {{site.data.keyword.powerSys_notm}} instace (VM) deployment. 
 
-You can customize the cloud-init configurations only through the {site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post). 
-
-
+You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
