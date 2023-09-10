@@ -516,9 +516,8 @@ NO. When you create a cloud connection by using {{site.data.keyword.powerSys_not
 {: #mtu-max}
 {: faq}
 
-The maximum MTU supported on {{site.data.keyword.powerSys_notm}} for public network interface is 1476 bytes.
-
-For interface on the subnets attached to VPN {{site.data.keyword.powerSys_notm}} supports larger MTU of 9000 bytes. 
+The {{site.data.keyword.powerSys_notm}} supports a smaller MTU size of 1476 bytes that is needed for public network interface and for interface on the subnets attached to VPN. 
+For other {{site.data.keyword.powerSys_notm}} networks, a larger MTU of 9000 bytes is supported.
 
 ## Can I automate the Maximum Transmission Unit (MTU) configuration?
 {: #mtu-config}
