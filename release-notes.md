@@ -35,7 +35,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 **Introduction of {{site.data.keyword.powerSys_notm}} S1022 Nodes**
 : Initially, these six high-performance nodes is rolled out in `WDC07` data center. As we progress, additional S1022 nodes will be made available not only in `WDC07` but also in other data centers. 
 
-SAP HANA and Netweaver are currently not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
+SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
 {: note}
 
 
