@@ -29,9 +29,9 @@ subcollection: power-iaas
 
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
-| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
+| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
-| S1022 (9105-22A) [^3]|                |                                 |
+| S1022 (9105-22A) [^3]|     33         |       up to 1984 GB             |
 <!-- | E880 (9119-MHE)   |  143         | up to 7,463 GB                  | -->
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
@@ -150,12 +150,11 @@ The following tables show how different processor types affect the cost per syst
 
 | Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
-| 1                           | $1.862 (dedicated)            | $1359.26                 |
-| 1                           | $0.4655 (uncapped shared)     | $339.82                  |
-| 1                           | $0.6983 (capped shared)       | $509.72                  |
-{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"}
+| 1                           | $0.58 (dedicated)            | $424.25                 |
+| 1                           | $0.15 (uncapped shared)     | $106.06                  |
+| 1                           | $0.22 (capped shared)       | $159.14                  |
+{: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
 
-[Table-6 review required]{: tag-teal}
 
 <!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
