@@ -511,22 +511,3 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: faq}
 
 NO. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
-
-## What is the Maximum Transmission Unit (MTU) size supported in {{site.data.keyword.powerSys_notm}} networks?
-{: #mtu-max}
-{: faq}
-
-The {{site.data.keyword.powerSys_notm}} supports a smaller MTU size of 1476 bytes that is needed for public network interface and for interface on the subnets attached to VPN. 
-For other {{site.data.keyword.powerSys_notm}} networks, a larger MTU of 9000 bytes is supported.
-
-## Can I automate the Maximum Transmission Unit (MTU) configuration?
-{: #mtu-config}
-{: faq}
-
-Yes, you can automate the network configurations such as the Maximum Transmission Unit (MTU).
-
-To automate the MTU configuration, you need to customize your cloud-init network configuration. For more information, see the [Cloud-init docs on network configuration](https://cloudinit.readthedocs.io/en/latest/reference/network-config-format-v1.html){: external}.
-
-Both AIX and IBM i supports custom cloud-init configurations at the time of {{site.data.keyword.powerSys_notm}} instace (VM) deployment. 
-
-You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
