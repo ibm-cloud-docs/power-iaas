@@ -104,7 +104,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: #hw-spec-1}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
-[^1]: SAP HANA & Netweaver are not certified for S1022 systems and hence is limited to non-production workloads.
+[^1]: SAP Netweaver is not certified for S1022 systems and hence is limited to non-production workloads.
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
