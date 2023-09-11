@@ -38,9 +38,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
 {: note}
 
-
-<!-- **Addition of New Global Replication Service data center pair**
-: {{site.data.keyword.powerSys_notm}} have expanded the Global Replication Service (GRS) capabilities by adding a new datacenter pair - `DAL13` and `WDC04`. This enhancement is currently available on the Tier 1 storage support within the GRS framework. See, the documentation: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS). -->
+- **Addition of New Global Replication Service data center pair**
+: {{site.data.keyword.powerSys_notm}} have expanded the Global Replication Service (GRS) capabilities by adding a new datacenter pair - `DAL13` and `WDC04`. This enhancement is currently available on the Tier 1 storage support within the GRS framework. See, the documentation: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ## June 2023
 {: #jun-2023}
