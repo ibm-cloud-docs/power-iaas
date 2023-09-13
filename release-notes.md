@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-11"
+lastupdated: "2023-09-13"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -37,6 +37,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
   SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
   {: note}
+
+- **IBM i 7.3 service extension pricing**
+: Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at end of normal support and will be in service extension. Service extension pricing will be automatically added to the IBM i charge for IBM i 7.3 usage.
 
 - **Addition of New Global Replication Service data center pair**
 : {{site.data.keyword.powerSys_notm}} have expanded the Global Replication Service (GRS) capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is currently available on the Tier 1 storage support within the GRS framework. See, the documentation: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
