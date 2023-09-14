@@ -27,10 +27,10 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 # Monitoring metrics for {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
-You can monitor various platform metrics of {{site.data.keyword.powerSysFull}} with IBM Cloud® Monitoring dashboards that is operated by Sysdig in partnership with IBM.
+You can monitor various platform metrics of {{site.data.keyword.powerSysFull}} with IBM Cloud® Monitoring dashboards that are operated by Sysdig in partnership with IBM.
 {:shortdesc}
 
-{{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Measure the platform metrics such as compute, storage, networks at a {{site.data.keyword.powerSys_notm}} intsnace level.
+{{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Measure the platform metrics such as compute, storage, networks at a {{site.data.keyword.powerSys_notm}} instance level.
 
 ## Platform metrics overview
 {: #sysdig-ov}
@@ -52,7 +52,7 @@ To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} 
 
 Create an IBM Cloud monitoring instance and enable the platform metrics to get and operational visibility into the performance and health of applications, services, and infrastructure.
 
-Perform the following steps:
+To creating an IBM Cloud monitoring instance, perform the following steps:
 1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
 2. Search for **IBM Cloud monitoring** and select it.
 3. Select your location and enter your custom values for **Service name** and other fields.
@@ -67,10 +67,10 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 {: #sysdig-view}
 
 The two different ways to access the Sysdig web user interface to see the metrics dashboards are as follows:
-- Launch the Sysdig web user interface from the {{site.data.keyword.powerSys_notm}} user interface.
-- Accessing Sysdig web user interface from the **Observability** page.
+- Access the Sysdig web user interface from the {{site.data.keyword.powerSys_notm}} user interface.
+- Access the Sysdig web user interface from the **Observability** page.
 
-To view data in your dashboard, the platform metrics should be enabled and you should boot a {{site.data.keyword.powerSys_notm}} instance atleast once. To enable platform metrics, see: [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+To view data in your dashboard, the platform metrics must be enabled and you must boot a {{site.data.keyword.powerSys_notm}} instance at least one time. To enable platform metrics, see: [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 {: important}
 
 ### Accessing Sysdig dashboard from the {{site.data.keyword.powerSys_notm}} interface
@@ -84,7 +84,7 @@ From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user in
 ### Accessing Sysdig dashboard from the Observability page
 {: #sysdig-view-ob}
 
-Perform the following steps:
+To access the dashboard, perform the following steps:
 1.  Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
 2.  Expand the left navigation window.
 3.  Click **Resource list**.
@@ -122,7 +122,7 @@ The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
 ### Incoming network bytes
 {: in-net-metric}
 
-The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface (or per mac address).
+The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface (or per MAC address).
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_incoming_bytes`|
@@ -158,7 +158,7 @@ The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 ### Disk write bytes
 {: disk-wrt-metric}
 
-The total disk write bytes at {{site.data.keyword.powerSys_notm}} instance level.
+The total disks write bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_write_bytes`|
@@ -177,7 +177,7 @@ Question: what are segmentation attributes?
 ### Global attributes
 {: #sysdig-attributes-global}
 
-The following attributes are available for segmenting all the metrics that are listed above in the metrics dictionary:
+The following global attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 
 | Metric label name | Metric description | Valid values |
 |----------------|-----------------------|--------------|
@@ -191,23 +191,23 @@ The following attributes are available for segmenting all the metrics that are l
 ### Additional attributes
 {: #sysdig-attributes-add}
 
-The following attributes are available as additional attributes for segmenting all of the metrics listed above in the metrics dictionary:
+The following additional attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 | Metric label name | Metric description | Valid values |
 |----------------|-----------------------|--------------|
 | `ibm_service_instance` | The workspace ID | Valid value is the Power System {{site.data.keyword.powerSys_notm}} workspace ID |
 | `ibm_service_instance_name` | The workspace name | Valid value is the defined name of the workspace |
-| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource | Valid values is "{{site.data.keyword.powerSys_notm}} instance" |
-| `ibm_resource` | The {{site.data.keyword.powerSys_notm}} instance ID | Valid value is the alphanumer id |
-| `ibm_resource_name` | Name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance | Valid values is {{site.data.keyword.powerSys_notm}} ID |
-| `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface attached to the {{site.data.keyword.powerSys_notm}} instance | Valid value is an IP address |
+| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource | Valid value is "{{site.data.keyword.powerSys_notm}} instance" |
+| `ibm_resource` | The {{site.data.keyword.powerSys_notm}} instance ID | Valid value is the alphanumeric ID |
+| `ibm_resource_name` | Name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is {{site.data.keyword.powerSys_notm}} ID |
+| `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid value is an IP address |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
 
 ## Considerations from IBM Cloud monitoring
 {: #sysdig-limits}
 
 There are some predefined limits around metrics ingestion. When limits are hit, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
-- **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance. This is fixed to 5 minutes.
-- **{{site.data.keyword.powerSys_notm}} instances booted once**: The platform metrics are visible on the dashboard provided you have booted a {{site.data.keyword.powerSys_notm}} instance atleast once.
+- **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
+- **{{site.data.keyword.powerSys_notm}} instances booted once**: The platform metrics are visible on the dashboard when you boot a {{site.data.keyword.powerSys_notm}} instance at least one time.
 - **Instance in error state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in error state is not available in the dashboard.
 
 ## Additional information
