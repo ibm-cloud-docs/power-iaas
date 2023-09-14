@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-06"
+lastupdated: "2023-09-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -246,8 +246,8 @@ IBM charges with the base price hourly per connection. The base price varies per
 {: per-pricing}
 
 As a {{site.data.keyword.powerSys_notm}} user, you are charged based on the Transit Gateway connections that you use:
-- New Transit Gateway that you create in a PER workspace.
-- Existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
+- When you create new Transit Gateway in a PER workspace to connect on-premise, classic, or any other cloud services. Local Transit Gateway is not charged for egress.  
+- When you attach existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
 
 Here are some more PER charges based on the following Transit Gateway specifics:
 - Routing option
@@ -263,8 +263,8 @@ The following table shows the charges based on the routing option that you selec
 The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
 | Number of connections | Charges |
 |--------------|---------|
-|1 - 4 | No charges |
-|5 - 20 | $9.405 |
+|1 - 3 | No charges |
+|4 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}

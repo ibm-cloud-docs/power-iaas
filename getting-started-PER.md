@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-07-07"
+lastupdated: "2023-09-14"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -68,7 +68,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
 - You cannot create a non-PER workspace in a PER enabled datacenter. However, you can still use your old non-PER workspaces that are existing in a PER enabled datacenter that are created before PER rollout.
-- See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
+- In certain situations, local connection charges may apply when connecting from an on-premise location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to leverage the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
 {: migrate-per}
