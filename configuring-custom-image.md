@@ -60,7 +60,9 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.2 and later versions.
+The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
+
+Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.2 or later when installed by using direct I/O and AIX 7.1 when installed with virtual I/O.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
@@ -74,12 +76,13 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.4?topic=considerations-migrating-i-72-from-54-61-71){: external}. Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions.
-- [S922 (9009-22A) and E980 (9080-M9S) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
-- [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
-- [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
+The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.4?topic=considerations-migrating-i-72-from-54-61-71){: external}. 
 
-IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.1 and IBM i 7.2 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
+Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. See [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external} for more information.
+  
+Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
+
+IBM i 7.1 virtual machines (VMs) supports only 64 storage volumes per VM. IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.1, IBM i 7.2, and IBM i 7.3 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
 {: note}
 
 ### Linux
@@ -90,7 +93,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported w
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
-Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
+Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: - - RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
 {: note}
