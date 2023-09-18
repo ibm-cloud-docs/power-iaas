@@ -93,7 +93,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported w
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
-Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: - - RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
+Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
 {: note}
