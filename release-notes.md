@@ -26,6 +26,18 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## September 2023
+{: #sep-2023}
+
+- **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
+: Initially, these six high-performance nodes is rolled out in `WDC07` data center. As we progress, additional S1022 nodes will be made available not only in `WDC07` but also in other data centers. 
+
+  SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
+  {: note}
+
+- **IBM i 7.3 service extension pricing**
+: Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at end of normal support and will be in service extension. Service extension pricing will be automatically added to the IBM i charge for IBM i 7.3 usage.
+
 ## June 2023
 {: #jun-2023}
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-06"
+lastupdated: "2023-09-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -29,8 +29,9 @@ subcollection: power-iaas
 
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
-| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1] |
+| E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
+| S1022 (9105-22A) [^3]|     33         |       up to 1984 GB             |
 <!-- | E880 (9119-MHE)   |  143         | up to 7,463 GB                  | -->
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
@@ -38,6 +39,8 @@ subcollection: power-iaas
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
 [^2]: If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
+
+[^3]: Power System S1022 is available only in WDC07
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 {: shortdesc}
@@ -138,15 +141,6 @@ The following tables show how different processor types affect the cost per syst
 | 1                      | $0.34 (capped shared)        | $132.422                  |
 {: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
-
-<!-- | Number of cores (E880) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| --------------------------- | ---------------------------- | ------------------------ |
-| 1                           | $1.52 (dedicated)            | $950.533                 |
-| 1                           | $0.54 (uncapped shared)      | $237.615                  |
-| 1                           | $0.70 (capped shared)        | $356.459                  |
-{: caption="Table 5. E880 processor type pricing" caption-side="bottom"} -->
-
-
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.91 (dedicated)            | $1235.671                 |
@@ -154,14 +148,21 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.85 (capped shared)        | $463.404                  |
 {: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
 
+| Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| --------------------------- | ----------------------------- | ------------------------ |
+| 1                           | $0.58 (dedicated)            | $424.25                 |
+| 1                           | $0.15 (uncapped shared)     | $106.06                  |
+| 1                           | $0.22 (capped shared)       | $159.14                  |
+{: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
+
+
 <!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $1.862 (dedicated)            | $1359.26                 |
 | 1                           | $0.4655 (uncapped shared)     | $339.82                  |
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
-{: caption="Table 6. E1080 processor type pricing" caption-side="bottom"} -->
+{: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
-<!-- I would need caption="Table 8. S1022 processor type pricing" caption-side="bottom" -->
 
 ## Storage types
 {: #storage-type}
@@ -245,8 +246,8 @@ IBM charges with the base price hourly per connection. The base price varies per
 {: per-pricing}
 
 As a {{site.data.keyword.powerSys_notm}} user, you are charged based on the Transit Gateway connections that you use:
-- New Transit Gateway that you create in a PER workspace.
-- Existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
+- When you create new Transit Gateway in a PER workspace to connect on-premise, classic, or any other cloud services. Local Transit Gateway is not charged for egress.  
+- When you attach existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
 
 Here are some more PER charges based on the following Transit Gateway specifics:
 - Routing option
@@ -262,8 +263,8 @@ The following table shows the charges based on the routing option that you selec
 The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
 | Number of connections | Charges |
 |--------------|---------|
-|1 - 4 | No charges |
-|5 - 20 | $9.405 |
+|1 - 3 | No charges |
+|4 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
