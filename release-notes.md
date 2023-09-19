@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-13"
+lastupdated: "2023-09-19"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -33,7 +33,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 : You can now seamlessly monitor your platform metrics within the IBM Cloud environment using the IBM Cloud Monitoring service. For detailed instructions on how to access and utilize this integration, please refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
-: Initially, these six high-performance nodes is rolled out in `WDC07` data center. As we progress, additional S1022 nodes will be made available not only in `WDC07` but also in other data centers. 
+: The P10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
 
   SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
   {: note}
