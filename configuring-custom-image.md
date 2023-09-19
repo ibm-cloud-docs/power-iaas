@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-18"
+lastupdated: "2023-09-19"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -62,11 +62,11 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 
 The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
 
-Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.2 or later when installed by using direct I/O and AIX 7.1 when installed with virtual I/O.
+Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604245){: external}
+- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
 
 <!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external} -->
 
