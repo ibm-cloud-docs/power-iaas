@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-14"
+lastupdated: "2023-09-20"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -32,7 +32,7 @@ You can monitor various platform metrics of {{site.data.keyword.powerSysFull}} w
 
 {{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Measure the platform metrics such as compute, storage, networks at a {{site.data.keyword.powerSys_notm}} instance level.
 
-The data center that sysdig currently supports are `WDC06`, `SYD05`, `WDC04`, and `DAL13`.
+The data center that Sysdig currently supports are `WDC06`, `SYD05`, `WDC04`, and `DAL13`.
 {: note}
 
 ## Platform metrics overview
@@ -83,6 +83,7 @@ From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user in
 1.  click **workspaces**.
 2.  Select the workspace for which a monitoring instance is present.
 3.  From the **workspace details** page, click **Launch monitoring**.
+   <!-- CONFIRM Launch monitoring or Open dashboard -->
 
 ### Accessing Sysdig dashboard from the Observability page
 {: #sysdig-view-ob}
@@ -93,7 +94,7 @@ To access the dashboard, perform the following steps:
 3.  Click **Resource list**.
 4.  Click **Observability** **>** **Monitoring**.
 5.  Click the desired instance.
-6.  Click **Launch monitoring**.
+6.  Click **Open dashboard**.
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
@@ -212,6 +213,10 @@ There are some predefined limits around metrics ingestion. When limits are hit, 
 - **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
 - **{{site.data.keyword.powerSys_notm}} instances booted once**: The platform metrics are visible on the dashboard when you boot a {{site.data.keyword.powerSys_notm}} instance at least one time.
 - **Instance in error state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in error state is not available in the dashboard.
+- **Instance in shut-off state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in shut-off state is available in the dashboard provided they were booted once before.
+- **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
+- **100 % memory utilization error**: When the memory utilisation can not be determined due to various reason such as {{site.data.keyword.powerSys_notm}} instance in inactive or warning state, the memory utilizations shows 100%.
+- **Metrics availibility after deletion**: The time for which metrics is going to be retained for the deleted {{site.data.keyword.powerSys_notm}} instance and deleted workspace is one hour.
 
 ## Additional information
 {: #sysdig-add-info}
