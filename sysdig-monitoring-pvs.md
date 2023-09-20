@@ -20,8 +20,9 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 {:preview: .preview}
 {:external: target="_blank" .external}
 {{site.data.keyword.attribute-definition-list}}
-<!-- {{site.data.keyword.powerSys_notm}} -->
-
+<!-- {{site.data.keyword.powerSys_notm}} - Power System Virtual Server-->
+<!-- {{site.data.keyword.mon_full_notm}} - IBM Cloud Monitoring -->
+<!-- {{site.data.keyword.cloud_notm}} - IBM Cloud -->
 
 
 # Monitoring metrics for {{site.data.keyword.powerSys_notm}}
@@ -50,19 +51,18 @@ Before you enable {{site.data.keyword.mon_full_notm}} on your platform, consider
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.powerSys_notm}} instance is provisioned.
 {: important}
 
-## Creating an IBM Cloud monitoring instance
+## Creating an {{site.data.keyword.mon_full_notm}} instance
 {: #sysdig-create-monitor}
 
-Create an IBM Cloud monitoring instance and enable the platform metrics to get and operational visibility into the performance and health of applications, services, and infrastructure.
-
-To creating an IBM Cloud monitoring instance, perform the following steps:
+Create an {{site.data.keyword.mon_full_notm}} instance and enable the platform metrics to capture various performance metrics.
+To creating an {{site.data.keyword.mon_full_notm}} instance, perform the following steps:
 1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
-2. Search for **IBM Cloud monitoring** and select it.
+2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
 3. Select your location and enter your custom values for **Service name** and other fields.
-   To monitor platform metrics, select the location where your {{site.data.keyword.powerSys_notm}} instance is provisioned.
-{: important}
-4. Select the **Enable** indicator for **IBM platform metrics**.
-5. Select the license agreements indicator and click **Create**.
+  To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
+  {: important}
+5. Select the **Enable** indicator for **IBM platform metrics**.
+6. Select the license agreements indicator and click **Create**.
 
 You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no IBM Cloud monitoring instance is already created for that region.
 
@@ -73,7 +73,7 @@ The two different ways to access the Sysdig web user interface to see the metric
 - Access the Sysdig web user interface from the {{site.data.keyword.powerSys_notm}} user interface.
 - Access the Sysdig web user interface from the **Observability** page.
 
-To view data in your dashboard, the platform metrics must be enabled and you must boot a {{site.data.keyword.powerSys_notm}} instance at least one time. To enable platform metrics, see: [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+To view data in your dashboard, of {{site.data.keyword.mon_full_notm}} instance the platform metrics must be enabled. To enable platform metrics, see: [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 {: important}
 
 ### Accessing Sysdig dashboard from the {{site.data.keyword.powerSys_notm}} interface
@@ -83,7 +83,8 @@ From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user in
 1.  click **workspaces**.
 2.  Select the workspace for which a monitoring instance is present.
 3.  From the **workspace details** page, click **Launch monitoring**.
-   <!-- CONFIRM Launch monitoring or Open dashboard -->
+      The {{site.data.keyword.mon_full_notm}} dashboard opens.
+4.  Click **Dashboards** > **Dasboard Library** > **IBM** and select your dashboard to view.
 
 ### Accessing Sysdig dashboard from the Observability page
 {: #sysdig-view-ob}
@@ -95,6 +96,8 @@ To access the dashboard, perform the following steps:
 4.  Click **Observability** **>** **Monitoring**.
 5.  Click the desired instance.
 6.  Click **Open dashboard**.
+      The {{site.data.keyword.mon_full_notm}} dashboard opens.
+7.  Click **Dashboards** > **Dasboard Library** > **IBM** and select your dashboard to view.    
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
@@ -186,9 +189,9 @@ The following global attributes are available for segmenting all the metrics tha
 | Metric label name | Metric description | Valid values |
 |----------------|-----------------------|--------------|
 | `ibm_ctype` | Type of Cloud    | Valid value is `public`. |
-| `ibm_location` | Location of the monitored resource | You can specify a region or a data center |
-| `ibm_resource_group_name` | Resource group that is associated to the service instance | Choose a resource group from the ones that are available in your account |
-| `ibm_scope` | The extent of the data samples that are considered  | The valid value is the IBM Cloud account ID |
+| `ibm_location` | Location of the monitored resource | Valid values are all the supported data center such as `WDC06`. |
+| `ibm_resource_group_name` | Resource group that is associated to the service instance | Valid values are all the resource groups that are available in your account. |
+| `ibm_scope` | The extent of the data samples that are considered  | The valid value is the IBM Cloud account ID. |
 | `ibm_service_name` | Name of the service that generates this metric | The valid value is `power-iaas` |
 {: caption="Table 7: Global segmentation attributes" caption-side="top"}
 
@@ -200,9 +203,9 @@ The following additional attributes are available for segmenting all the metrics
 |----------------|-----------------------|--------------|
 | `ibm_service_instance` | The workspace ID | Valid value is the Power System {{site.data.keyword.powerSys_notm}} workspace ID |
 | `ibm_service_instance_name` | The workspace name | Valid value is the defined name of the workspace |
-| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource | Valid value is "{{site.data.keyword.powerSys_notm}} instance" |
-| `ibm_resource` | The {{site.data.keyword.powerSys_notm}} instance ID | Valid value is the alphanumeric ID |
-| `ibm_resource_name` | Name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is {{site.data.keyword.powerSys_notm}} ID |
+| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource for which metric is available | Currently valid value is "pvm-instance" |
+| `ibm_resource` | The {{site.data.keyword.powerSys_notm}} instance ID based on ibm_resource_type| Currently valid value is the "pvm-instance" ID |
+| `ibm_resource_name` | Name of the {{site.data.keyword.powerSys_notm}} instance based on ibm_resource_type | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is {{site.data.keyword.powerSys_notm}} ID |
 | `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid value is an IP address |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
 
@@ -215,9 +218,8 @@ There are some predefined limits around metrics ingestion. When limits are hit, 
 - **Instance in error state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in error state is not available in the dashboard.
 - **Instance in shut-off state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in shut-off state is available in the dashboard provided they were booted once before.
 - **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
-- **100 % memory utilization error**: When the memory utilisation can not be determined due to various reason such as {{site.data.keyword.powerSys_notm}} instance in inactive or warning state, the memory utilizations shows 100%.
-- **Metrics availibility after deletion**: The time for which metrics is going to be retained for the deleted {{site.data.keyword.powerSys_notm}} instance and deleted workspace is one hour.
-
+- **100 % memory utilization error even though no workload is there**: When the memory utilisation can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations may show 100%.
+- **Metrics availibility after deletion**: Based on the IBM cloud monitoring retention policy user can see the historical platfomr data of PVS. For more info see
 ## Additional information
 {: #sysdig-add-info}
 
