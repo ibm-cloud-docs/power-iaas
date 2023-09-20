@@ -245,26 +245,20 @@ IBM charges with the base price hourly per connection. The base price varies per
 ## Pricing for Power Edge Router
 {: per-pricing}
 
-As a {{site.data.keyword.powerSys_notm}} user, you are charged based on the Transit Gateway connections that you use:
-- When you create new Transit Gateway in a PER workspace to connect on-premise, classic, or any other cloud services. Local Transit Gateway is not charged for egress.  
-- When you attach existing Transit Gateways that add {{site.data.keyword.powerSys_notm}} workspace to their existing connection.
-
-Here are some more PER charges based on the following Transit Gateway specifics:
-- Routing option
-- Number of connections
+There are no additional charges for PER. However, you are charged based on the number of Transit Gatway connections and routing options.
 
 The following table shows the charges based on the routing option that you select:
 | Routing type | Charges |
 |--------------|---------|
 |Local routing data transfer | No charges |
-|Global routing data transfer | $0.009405 GB|
+|Global routing data transfer | $0.011 GB|
 {: caption="Table 13. TGW charges based on routing" caption-side="top"}
 
-The following table shows the charges based on the number of connections (includes all types of connection such as DL, VPC, etc.) that you create:
+The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
 |--------------|---------|
-|1 - 3 | No charges |
-|4 - 20 | $9.405 |
+|1 - 4 | No charges |
+|5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
