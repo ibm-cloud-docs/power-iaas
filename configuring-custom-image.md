@@ -44,13 +44,13 @@ The basic steps that are involved in deploying an instance by using a custom ima
 Before you can use a custom image as the boot volume, review the following information:
 
 - You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
-- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The Power Systems Virtual Servers does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes. 
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your on-premise environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The Power Systems Virtual Servers does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes. 
 - Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
 For complete tutorials on migrating your AIX and IBM i workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external} and [Migrating IBM i to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), or E980 (9080-M9S - Frankfurt only). 
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}. 
 
 If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
 {: important}
@@ -60,9 +60,12 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports only AIX 7.1, or later. When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
+The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S). 
 
 Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
+
+When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
+
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
