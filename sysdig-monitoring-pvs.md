@@ -220,6 +220,29 @@ There are some predefined limits around metrics ingestion. When limits are hit, 
 - **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
 - **100 % memory utilization error even though no workload is there**: When the memory utilisation can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations may show 100%.
 - **Metrics availibility after deletion**: Based on the IBM cloud monitoring retention policy user can see the historical platfomr data of PVS. For more info see
+
+## Use cases for metrics availability
+{: #use-case-metrics}
+
+Following are some of the use cases that show the availability of different metrics.
+
+Use cases based on state of {{site.data.keyword.powerSys_notm}} instance.
+|{{site.data.keyword.powerSys_notm}} \n instance state| CPU and memory \n utilization metrics | Storage metrics| Network metrics|
+|--------------|-------------|----------------|------------|
+| Error due to unsuccessful \n deployment| No| No| No|
+| Error due to other reasons \n after successful deployment| Yes| Yes| Yes|
+| Warning| Yes| Yes| Yes|
+| Shutoff| Yes| Yes| Yes|
+
+Use cases based on the state of the host (machine).
+| Host state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
+|----------------------|-----------------|------------------|-----------------|
+| Maintenance | Yes | Yes | Yes |
+| Unknown/Error/Attention| No | No | No |
+| Backend services downtime | No [^1] | No [^1] | No [^1] |
+
+[^1]: Metrics are unavailable during the downtime interval.
+
 ## Additional information
 {: #sysdig-add-info}
 
