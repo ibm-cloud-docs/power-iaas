@@ -32,6 +32,9 @@ You can monitor various platform metrics of {{site.data.keyword.powerSysFull}} w
 
 {{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Measure the platform metrics such as compute, storage, networks at a {{site.data.keyword.powerSys_notm}} instance level.
 
+The data center that sysdig currently supports are `WDC06`, `SYD05`, `WDC04`, and `DAL13`.
+{: note}
+
 ## Platform metrics overview
 {: #sysdig-ov}
 {: #platform_metrics}
