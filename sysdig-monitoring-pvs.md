@@ -214,17 +214,21 @@ The following additional attributes are available for segmenting all the metrics
 
 There are some predefined limits around metrics ingestion. When limits are hit, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
 - **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
-- **{{site.data.keyword.powerSys_notm}} instances booted once**: The platform metrics are visible on the dashboard when you boot a {{site.data.keyword.powerSys_notm}} instance at least one time.
-- **Instance in error state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in error state is not available in the dashboard.
-- **Instance in shut-off state**: Metric data of a {{site.data.keyword.powerSys_notm}} instance in shut-off state is available in the dashboard provided they were booted once before.
+- **Metrics available/unavailable**: The following table shows the possible cause for metrics being available or unavilable in the dashboard:
+  |Metric is available|Metric is unavailable|
+  |------------------|---------------|
+  |Metric is available for {{site.data.keyword.powerSys_notm}} instance in shut-off state is available in the dashboard provided they were booted once before. |The {{site.data.keyword.powerSys_notm}} instance is not booted at least one time.|
+  |Based on the IBM cloud monitoring retention policy you can see the historical platform data of {{site.data.keyword.powerSys_notm}} instance even after deletion. For more information, see: [Sysdig docs on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.|The {{site.data.keyword.powerSys_notm}} instance that are in error state.|
+  
 - **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
-- **100 % memory utilization error even though no workload is there**: When the memory utilisation can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations may show 100%.
-- **Metrics availibility after deletion**: Based on the IBM cloud monitoring retention policy user can see the historical platfomr data of PVS. For more info see
+- **100 % memory utilization**: When the memory utilisation can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations may show 100%.
+
+refinement required
 
 ## Use cases for metrics availability
 {: #use-case-metrics}
 
-Following are some of the use cases that show the availability of different metrics.
+The following are some of the use cases that show the availability of different metrics.
 
 Use cases based on state of {{site.data.keyword.powerSys_notm}} instance.
 |{{site.data.keyword.powerSys_notm}} \n instance state| CPU and memory \n utilization metrics | Storage metrics| Network metrics|
