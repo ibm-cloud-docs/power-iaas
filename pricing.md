@@ -245,7 +245,7 @@ IBM charges with the base price hourly per connection. The base price varies per
 ## Pricing for Power Edge Router
 {: per-pricing}
 
-There are no additional charges for PER. However, you are charged based on the number of Transit Gatway connections and routing options.
+There are no additional charges for PER, however, you are charged based on the number of Transit Gateway connections and routing options.
 
 The following table shows the charges based on the routing option that you select:
 | Routing type | Charges |
@@ -263,7 +263,7 @@ The following table shows the charges based on the number of connections includi
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
 
-The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in IBM Cloud console.
+The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in the IBM Cloud console.
 {: important}
 
 ## End of billing
