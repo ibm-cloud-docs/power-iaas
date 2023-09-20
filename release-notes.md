@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #sep-2023}
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
-: The P10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
+: The Power®10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
 
   SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
   {: note}
