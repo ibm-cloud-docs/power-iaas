@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -60,11 +60,11 @@ To creating an {{site.data.keyword.mon_full_notm}} instance, perform the followi
 To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
 {: important}
 
-  1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
-  2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
-  3. Select your location and enter your custom values for **Service name** and other fields.  
-  4. Select the **Enable** indicator for **IBM platform metrics**.
-  5. Select the license agreements indicator and click **Create**.
+1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
+2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
+3. Select your location and enter your custom values for **Service name** and other fields.  
+4. Select the **Enable** indicator for **IBM platform metrics**.
+5. Select the license agreements indicator and click **Create**.
 
 You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no IBM Cloud monitoring instance is already created for that region.
 
