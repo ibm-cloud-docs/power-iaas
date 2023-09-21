@@ -56,12 +56,13 @@ To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} 
 
 Create an {{site.data.keyword.mon_full_notm}} instance and enable the platform metrics to capture various performance metrics.
 To creating an {{site.data.keyword.mon_full_notm}} instance, perform the following steps:
+
+To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
+{: important}
+
   1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
   2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
-  3. Select your location and enter your custom values for **Service name** and other fields.
-    To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
-    {: important}
-    
+  3. Select your location and enter your custom values for **Service name** and other fields.  
   4. Select the **Enable** indicator for **IBM platform metrics**.
   5. Select the license agreements indicator and click **Create**.
 
