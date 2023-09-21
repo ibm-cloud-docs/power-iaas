@@ -56,13 +56,14 @@ To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} 
 
 Create an {{site.data.keyword.mon_full_notm}} instance and enable the platform metrics to capture various performance metrics.
 To creating an {{site.data.keyword.mon_full_notm}} instance, perform the following steps:
-1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
-2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
-3. Select your location and enter your custom values for **Service name** and other fields.
-  To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
-  {: important}
-5. Select the **Enable** indicator for **IBM platform metrics**.
-6. Select the license agreements indicator and click **Create**.
+  1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
+  2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
+  3. Select your location and enter your custom values for **Service name** and other fields.
+    To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
+    {: important}
+    
+  4. Select the **Enable** indicator for **IBM platform metrics**.
+  5. Select the license agreements indicator and click **Create**.
 
 You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no IBM Cloud monitoring instance is already created for that region.
 
@@ -73,7 +74,7 @@ The two different ways to access the Sysdig web user interface to see the metric
 - Access the Sysdig web user interface from the {{site.data.keyword.powerSys_notm}} user interface.
 - Access the Sysdig web user interface from the **Observability** page.
 
-To view data in your dashboard, of {{site.data.keyword.mon_full_notm}} instance the platform metrics must be enabled. To enable platform metrics, see: [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+To view metrics in your dashboard, the platform metrics of the {{site.data.keyword.mon_full_notm}} instance must be enabled.
 {: important}
 
 ### Accessing Sysdig dashboard from the {{site.data.keyword.powerSys_notm}} interface
@@ -117,7 +118,7 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 ### Memory utilization
 {: mem-metric}
 
-The memory utilization of a {{site.data.keyword.powerSys_notm}} instance.
+The memory utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_mem_util`|
