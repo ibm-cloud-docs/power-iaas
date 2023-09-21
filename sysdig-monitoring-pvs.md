@@ -84,7 +84,7 @@ From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user in
 2.  Select the workspace for which a monitoring instance is present.
 3.  From the **workspace details** page, click **Launch monitoring**.
       The {{site.data.keyword.mon_full_notm}} dashboard opens.
-4.  Click **Dashboards** > **Dasboard Library** > **IBM** and select your dashboard to view.
+4.  Click **Dashboards** > **Dashboard Library** > **IBM** and select your dashboard to view.
 
 ### Accessing Sysdig dashboard from the Observability page
 {: #sysdig-view-ob}
@@ -97,12 +97,12 @@ To access the dashboard, perform the following steps:
 5.  Click the desired instance.
 6.  Click **Open dashboard**.
       The {{site.data.keyword.mon_full_notm}} dashboard opens.
-7.  Click **Dashboards** > **Dasboard Library** > **IBM** and select your dashboard to view.    
+7.  Click **Dashboards** > **Dashboard Library** > **IBM** and select your dashboard to view.    
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
 
-### CPU utilisation
+### CPU utilization
 {: cpu-metric}
 
 The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
@@ -114,17 +114,17 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 | `Segment by`  | `ibm_service_instance`, `ibm_resource`|
 {: caption="Table 1: CPU utilization metrics of a VM" caption-side="top"}
 
-### Memory utilisation
+### Memory utilization
 {: mem-metric}
 
-The memory utilisation of a {{site.data.keyword.powerSys_notm}} instance.
+The memory utilization of a {{site.data.keyword.powerSys_notm}} instance.
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_mem_util`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `percent` |
 | `Segment by`  | `ibm_service_instance`, `ibm_resource`|
-{: caption="Table 2: Memory utilisation metrics of a VM" caption-side="top"}
+{: caption="Table 2: Memory utilization metrics of a VM" caption-side="top"}
 
 ### Incoming network bytes
 {: in-net-metric}
@@ -212,18 +212,11 @@ The following additional attributes are available for segmenting all the metrics
 ## Considerations from IBM Cloud monitoring
 {: #sysdig-limits}
 
-There are some predefined limits around metrics ingestion. When limits are hit, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
+There are some predefined limits around metrics ingestion. When limits are pressed, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
 - **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
-- **Metrics available/unavailable**: The following table shows the possible cause for metrics being available or unavilable in the dashboard:
-  |Metric is available|Metric is unavailable|
-  |------------------|---------------|
-  |Metric is available for {{site.data.keyword.powerSys_notm}} instance in shut-off state is available in the dashboard provided they were booted once before. |The {{site.data.keyword.powerSys_notm}} instance is not booted at least one time.|
-  |Based on the IBM cloud monitoring retention policy you can see the historical platform data of {{site.data.keyword.powerSys_notm}} instance even after deletion. For more information, see: [Sysdig docs on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.|The {{site.data.keyword.powerSys_notm}} instance that are in error state.|
-  
 - **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
-- **100 % memory utilization**: When the memory utilisation can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations may show 100%.
-
-refinement required
+- **100 % memory utilization**: When the memory utilization can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
+- **Deleted instance metrics**: Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the IBM cloud monitoring retention policy you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
 
 ## Use cases for metrics availability
 {: #use-case-metrics}
@@ -231,21 +224,29 @@ refinement required
 The following are some of the use cases that show the availability of different metrics.
 
 Use cases based on state of {{site.data.keyword.powerSys_notm}} instance.
-|{{site.data.keyword.powerSys_notm}} \n instance state| CPU and memory \n utilization metrics | Storage metrics| Network metrics|
+| {{site.data.keyword.powerSys_notm}} \n instance state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
 |--------------|-------------|----------------|------------|
-| Error due to unsuccessful \n deployment| No| No| No|
-| Error due to other reasons \n after successful deployment| Yes| Yes| Yes|
-| Warning| Yes| Yes| Yes|
-| Shutoff| Yes| Yes| Yes|
+| Error due to unsuccessful \n deployment| No | No | No |
+| Error due to other reasons \n after successful deployment| Yes [^1] | Yes [^2] | Yes [^3]|
+| Warning | Yes | Yes | Yes |
+| Shutoff | Yes | Yes | Yes |
+{: caption="Table 9. Metrics use cases based on VM state" caption-side="top"}
+
+[^1]: The instance should have initialized once before.
+[^2]: The instance should have initialized once before.
+[^3]: The instance should have initialized once before.
 
 Use cases based on the state of the host (machine).
 | Host state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
 |----------------------|-----------------|------------------|-----------------|
 | Maintenance | Yes | Yes | Yes |
 | Unknown/Error/Attention| No | No | No |
-| Backend services downtime | No [^1] | No [^1] | No [^1] |
+| Backend services downtime | No [^4] | No [^5] | No [^6] |
+{: caption="Table 10. Metrics use cases based on Host state" caption-side="top"}
 
-[^1]: Metrics are unavailable during the downtime interval.
+[^4]: Metrics are unavailable during the downtime interval.
+[^5]: Metrics are unavailable during the downtime interval.
+[^6]: Metrics are unavailable during the downtime interval.
 
 ## Additional information
 {: #sysdig-add-info}
