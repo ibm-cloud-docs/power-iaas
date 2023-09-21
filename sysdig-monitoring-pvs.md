@@ -179,7 +179,7 @@ The total disks write bytes at {{site.data.keyword.powerSys_notm}} instance leve
 ## Attributes for segmentation
 {: #sysdig-attributes}
 
-Question: what are segmentation attributes?
+See the global and additional attributes that are available for segmentation.
 
 ### Global attributes
 {: #sysdig-attributes-global}
@@ -215,7 +215,7 @@ The following additional attributes are available for segmenting all the metrics
 There are some predefined limits around metrics ingestion. When limits are pressed, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
 - **Time range**: IBM Cloud monitoring accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
 - **Ipv6 interface usage**: The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics are available even though the Ipv6 is not visible to you as a {{site.data.keyword.powerSys_notm}} user.
-- **100 % memory utilization**: When the memory utilization can not be determined due to various reason such as comuunication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
+- **100 % memory utilization**: When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - **Deleted instance metrics**: Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the IBM cloud monitoring retention policy you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
 
 ## Use cases for metrics availability
@@ -224,7 +224,7 @@ There are some predefined limits around metrics ingestion. When limits are press
 The following are some of the use cases that show the availability of different metrics.
 
 Use cases based on state of {{site.data.keyword.powerSys_notm}} instance.
-| {{site.data.keyword.powerSys_notm}} \n instance state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
+| Instance state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
 |--------------|-------------|----------------|------------|
 | Error due to unsuccessful \n deployment| No | No | No |
 | Error due to other reasons \n after successful deployment| Yes [^1] | Yes [^2] | Yes [^3]|
@@ -237,7 +237,7 @@ Use cases based on state of {{site.data.keyword.powerSys_notm}} instance.
 [^3]: The instance should have initialized once before.
 
 Use cases based on the state of the host (machine).
-| Host state| CPU and memory \n utilization metrics | Storage metrics | Network metrics |
+| Host state | CPU and memory \n utilization metrics | Storage metrics | Network metrics |
 |----------------------|-----------------|------------------|-----------------|
 | Maintenance | Yes | Yes | Yes |
 | Unknown/Error/Attention| No | No | No |
