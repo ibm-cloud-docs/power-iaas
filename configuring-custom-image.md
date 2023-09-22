@@ -60,12 +60,11 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S). 
+The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).  
 
 Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
 
 When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
-
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
@@ -79,7 +78,7 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.4?topic=considerations-migrating-i-72-from-54-61-71){: external}. 
+The {{site.data.keyword.powerSys_notm}} offering supports IBM i 7.1, or later. Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the Power Systems Virtual Server. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.3?topic=considerations-migrating-i-72-from-54-61-71){: external}. 
 
 Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. See [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external} for more information.
   
