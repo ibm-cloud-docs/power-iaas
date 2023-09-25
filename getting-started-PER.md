@@ -60,7 +60,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 ## Considerations when using PER
 {: leverage-per}
 
-- You cannot create a cloud connection or a VPN connection in a PER workspace.
+- You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - Currently, you can only choose `DAL10` as the datacenter to create a PER workspace. 
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (`DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
@@ -75,7 +75,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 
 PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you will need to create a new workspace (currently available in `DAL10` ).
 
-The automated migration of your existing network is not supported. But if your existing workspaces are in `DAL10` and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
+The automated migration of your existing network is not supported, but if your existing workspaces are in `DAL10` and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
 
 Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
@@ -93,11 +93,11 @@ You can create, delete, attach, detach, and update private networks by using the
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using Cloud Connection.
 
-On a PER workspace, **Cloud Connections** and **VPN connections** options are not available in the left navigation of the user interface since they are not required or supported with PER.
+On a PER workspace, **cloud Connections** and **VPN connections** options are not available in the left navigation of the user interface since they are not required or supported with PER.
 {: note}
 
 On a PER workspace, you can perform the following actions:
-1.  Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
+1.  Attach a network without any requirement of creating a separate Cloud Connection such as Direct Link.
 2.	Effortlessly attach a connection to the IBM cloud network by attaching the Transit Gateway with your PER workspace.
 3.  Connect to your on-premises network by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
 
@@ -119,7 +119,7 @@ Transit Gateway is required to connect with VPC and classic infrastructure. To a
 
 Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and Classic infrastructures as connection. 
 
-The multiple connections that you add under Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
+The connections that you attach to the Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}
