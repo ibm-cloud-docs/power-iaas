@@ -27,6 +27,9 @@ subcollection: power-iaas
 
 {{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums: 
 
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+{: important}
+
 |  Power Systems    |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
