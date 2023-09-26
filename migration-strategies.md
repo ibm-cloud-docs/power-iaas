@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-08-21"
+lastupdated: "2023-09-26"
 
-keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
+keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
@@ -230,7 +230,7 @@ Learn about migration strategies that are specific to IBM i systems.
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be restored on the Power Systems Virtual Server instance by using some of the migration strategies, such as MDM, COS, Aspera, and NFS server. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
+Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be restored on the Power Systems Virtual Server instance by using some of the migration strategies, such as COS, Aspera, and NFS server. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
 
 The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
@@ -239,7 +239,7 @@ The following steps detail how to migrate your OS and data from an on-premises s
 3. Create a virtual tape and *IMGCLG* on the on-premises system and perform an operating system save by entering, `GO LICPGM Option 40`.
 4. Transfer or FTP the images to the {{site.data.keyword.powerSys_notm}}.
 
-    You can accomplish the transfer by using some of the listed migration strategies (MDM, COS, Aspera, etc.).
+    You can accomplish the transfer by using some of the listed migration strategies (COS, Aspera, etc.).
     {: important}
 
 5. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
