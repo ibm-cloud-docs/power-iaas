@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-22"
+lastupdated: "2023-09-26"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -56,8 +56,8 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 
 AIX stock images currently available when you create a VM are:
 
-* AIX 7.3 TL1 SP2
-* AIX 7.2 TL5 SP6
+* AIX 7.3 TL1 SP1
+* AIX 7.2 TL5 SP5
 * AIX 7.1 TL5 SP9
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
@@ -68,8 +68,8 @@ AIX stock images currently available when you create a VM are:
 
 IBM i stock images currently available when you create a VM are:
 
-* IBM i 7.5 TR2
-* IBM i 7.4 TR8
+* IBM i 7.5 TR1
+* IBM i 7.4 TR7
 * IBM i 7.3 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.2 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.1 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
