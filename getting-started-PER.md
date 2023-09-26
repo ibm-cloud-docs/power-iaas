@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-07-07"
+lastupdated: "2023-09-22"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -60,44 +60,44 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centres is
 ## Considerations when using PER
 {: leverage-per}
 
-- You cannot create a cloud connection or a VPN connection in a PER workspace.
+- You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - Currently, you can only choose `DAL10` as the datacenter to create a PER workspace. 
-- You can establish a connection between collocated workspaces if one colo is PER enabled (`DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
+- You can establish a connection between collocated workspaces if one colo is PER-enabled (`DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
-- You cannot create a non-PER workspace in a PER enabled datacenter. However, you can still use your old non-PER workspaces that are existing in a PER enabled datacenter that are created before PER rollout.
-- See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
+- You cannot create a non-PER workspace in a PER-enabled datacenter. However, you can still use your old non-PER workspaces that are existing in a PER-enabled datacenter that are created before PER rollout.
+- In certain situations, local connection charges may apply when connecting from an on-premise location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to leverage the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
 {: migrate-per}
 
 PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you will need to create a new workspace (currently available in `DAL10` ).
 
-The automated migration of your existing network is not supported. But if your existing workspaces are in `DAL10` and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
+The automated migration of your existing network is not supported, but if your existing workspaces are in `DAL10` and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
 
 Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-Existing non-PER workspaces continue to utilize existing routers. To utilize the PER solution's high-performance routers, you will need migrate your existing workspaces or create new PER-enabled workspaces.
+Existing non-PER workspaces continue to utilize existing routers. To utilize the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace.
 
 ## Creating a PER workspace
 {: create-per-workspace}
 
 To create a PER workspace, follow the steps that are mentioned in [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose `DAL10` as the datacenter.
 
-You can check whether a workspace is PER enabled by selecting the workspace and viewing workspace's details. The PER enabled workspace shows an information message regarding PER and Transit Gateway.
+You can check whether a workspace is PER-enabled by selecting the workspace and viewing workspace's details. The PER-enabled workspace shows an information message regarding PER and Transit Gateway.
 {: note}
 
-You can create, delete, attach, detach, and update private networks by using the **Subnets** and **Virtual server instances** pages on a PER workspace, the same as with a non-PER workspace. However, private networks on PER workspaces in a PER enabled datacenter, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) to perform a desired operation.
+You can create, delete, attach, detach, and update private networks by using the **Subnets** and **Virtual server instances** pages on a PER workspace, the same as with a non-PER workspace. However, private networks on PER workspaces in a PER-enabled datacenter, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet) to perform a desired operation.
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using Cloud Connection.
 
-On a PER workspace, **Cloud Connections** and **VPN connections** options are not available in the left navigation of the user interface since they are not required or supported with PER.
+On a PER workspace, **cloud Connections** and **VPN connections** options are not available in the left navigation of the user interface since they are not required or supported with PER.
 {: note}
 
 On a PER workspace, you can perform the following actions:
-1.  Attach a network without any requirement of creating a separate cloud connection such as Direct Link.
+1.  Attach a network without any requirement of creating a separate Cloud Connection such as Direct Link.
 2.	Effortlessly attach a connection to the IBM cloud network by attaching the Transit Gateway with your PER workspace.
 3.  Connect to your on-premises network by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
 
@@ -117,9 +117,9 @@ You need to attach to the Transit Gateway if you want to connect your workspace 
 
 Transit Gateway is required to connect with VPC and classic infrastructure. To attach a virtual server instance from a PER workspace with Transit Gateway, complete the steps that are mentioned in [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
 
-Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER enabled workspace. You can also add VPC and Classic infrastructures as connection. 
+Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and Classic infrastructures as connection. 
 
-The multiple connections that you add under Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
+The connections that you attach to the Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}
