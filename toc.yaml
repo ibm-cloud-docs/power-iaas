@@ -58,7 +58,6 @@ toc:
               - creating-ssh-key.md
               - configuring-custom-image.md
               - modifying-instance.md
-              - virtual-applianes-catalog.md
               - manage-placement-groups.md
               - getting-started-with-spp.md
               - virtual-tape-libraries.md
