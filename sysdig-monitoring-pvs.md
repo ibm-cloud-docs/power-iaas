@@ -214,16 +214,17 @@ The following additional attributes are available for segmenting all the metrics
 ## Considerations from IBM Cloud monitoring
 {: #sysdig-limits}
 
-There are some predefined limits around metrics ingestion. When limits are pressed, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
+When predefined limits are pressed, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
 - {{site.data.keyword.mon_full_notm}} accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
-- The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics for internal manageent network are available additionally even though you have not configured it.
+- The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics is for internal management network and are available additionally even though you have not configured it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
-- Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the IBM cloud monitoring retention policy you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
-- Metrics of {{site.data.keyword.powerSys_notm}} instances will not be available if:
-  - Instance was never initialized before
+- The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.
+- Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the IBM cloud monitoring retention policy you can, see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
+- Metrics of {{site.data.keyword.powerSys_notm}} instances are not available if:
+  - The instance was never initialized before
   - Error in the Instance 
   - Issue with the host
-- The metric utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in shut-off state.
+
 
 ## Additional information
 {: #sysdig-add-info}
