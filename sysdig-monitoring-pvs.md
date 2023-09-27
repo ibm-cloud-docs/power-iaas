@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-27"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -206,9 +206,9 @@ The following additional attributes are available for segmenting all the metrics
 | `ibm_service_instance` | The workspace ID | Valid value is the Power System {{site.data.keyword.powerSys_notm}} workspace ID |
 | `ibm_service_instance_name` | The workspace name | Valid value is the defined name of the workspace |
 | `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource for which metric is available | Currently valid value is "pvm-instance" |
-| `ibm_resource` | The {{site.data.keyword.powerSys_notm}} instance ID based on ibm_resource_type| Currently valid value is the "pvm-instance" ID |
-| `ibm_resource_name` | Name of the {{site.data.keyword.powerSys_notm}} instance based on ibm_resource_type | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance | Valid value is {{site.data.keyword.powerSys_notm}} ID |
-| `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid value is an IP address |
+| `ibm_resource` | ID of a resource | Currently valid value is the "pvm-instance" ID |
+| `ibm_resource_name` | Name of the resource | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance |
+| `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid mac address |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
 
 ## Considerations from IBM Cloud monitoring
@@ -255,3 +255,4 @@ Use cases based on the state of the host (machine).
 
 - Learn more about the Sysdig dashboard user interface, see [About the Dashboard UI](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/using-dashboards/about-the-dashboard-ui/){: external}.
 - See the [IBM Cloud monitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started) documentation in IBM Cloud.
+- View [Plans and Pricing](/docs/monitoring?topic=monitoring-pricing_plans) for {{site.data.keyword.mon_full_notm}} instance.
