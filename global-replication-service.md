@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-09-11"
+lastupdated: "2023-09-28"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -50,10 +50,9 @@ The following table shows the data centers that supports replication and their c
 |Storage pool|Tier 3-Flash-2 \n Tier 3-Flash-1 \n Tier 1-Flash-1 | Tier 3-Flash-4 \n Tier 3-Flash-3 \n Tier 1-Flash-3|
 |||
 |data center name|`WDC04`|`DAL13`|
-|Storage pool|Tier 1-flash-X|Tier 1-flash-X|
+|Storage pool|Tier 1-flash-8|Tier 1-flash-6|
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
-[review-required]{: tag-dark-teal}
 
 ## Pricing for Global replication service
 {: #pricing-GRS}
