@@ -58,7 +58,7 @@ The {{site.data.keyword.powerSys_notm}} provides services that are delivered fro
 - ISO/IEC 27018:2019 
 - ISO/IEC 27701:2019
 
-For more information, see [IBM Cloud® compliance: ISO 27001](https://www.ibm.com/cloud/compliance/iso-27001){: external}.
+For more information, see [ISO 27017 - IBM Cloud® infrastructure certificate](https://www.ibm.com/downloads/cas/EEO0NVLK){: external} and [Products in scope of the IBM services information security management system (ISMS).](https://www.ibm.com/downloads/cas/OELMNOND){: external}. 
 
 ## PCI-DSS 
 {: pci-dss-compliance}
