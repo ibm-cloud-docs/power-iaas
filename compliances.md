@@ -1,9 +1,10 @@
+
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-12-13"
+lastupdated: "2023-09-26"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -57,7 +58,8 @@ The {{site.data.keyword.powerSys_notm}} provides services that are delivered fro
 - ISO/IEC 27018:2019 
 - ISO/IEC 27701:2019
 
-For more information, see [ISO 27017 - IBM Cloud infrastructure certificate](https://www.ibm.com/downloads/cas/GLL9ZBZX){: external} and [Products in scope of the IBM services information security management system (ISMS).](https://www.ibm.com/downloads/cas/OELMNOND){: external}. 
+For more information, see [IBM Cloud® compliance: ISO 27001](https://www.ibm.com/cloud/compliance/iso-27001){: external}.
+
 ## PCI-DSS 
 {: pci-dss-compliance}
 
