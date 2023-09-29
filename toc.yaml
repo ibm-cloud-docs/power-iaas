@@ -72,8 +72,8 @@ toc:
             topics:
               - network-architecture.md
               - configuring-private-subnet.md
-              - cloud-connections-CLI.md              
               - getting-started-PER.md
+              - cloud-connections-CLI.md              
               - ordering-direct-link.md
               - vpn-connections.md              
               - network-security.md
