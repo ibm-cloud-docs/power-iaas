@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-09-22"
+lastupdated: "2023-09-29"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -79,7 +79,7 @@ The automated migration of your existing network is not supported, but if your e
 
 Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-Existing non-PER workspaces continue to utilize existing routers. To utilize the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace.
+Existing non-PER workspaces continue to utilize existing routers. To utilize the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace. 
 
 ## Creating a PER workspace
 {: create-per-workspace}

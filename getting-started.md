@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2023
 
-lastupdated: "2022-09-13"
+lastupdated: "2023-08-29"
 
 keywords: getting started, infrastructure as a service, iaas, before you begin, terminology, video, how-to
 

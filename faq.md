@@ -38,15 +38,19 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 {: faq}
 {: support}
 
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), <!-- E880 (9119-MHE),  -->E980 (9080-M9S)<!-- , E1080 (9080-HEX), or S1022 (9105-22A) -->. To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
+The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E980 (9080-M9S)<!-- , E1080 (9080-HEX), --> or S1022 (9105-22A). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
-**AIX** - {{site.data.keyword.powerSys_notm}} supports AIX 7.1, or later. When viewing the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+**AIX** - The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S). 
+
+Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
+
+When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
-<!-- - [E880 (9119-MHE) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9119-MHE-vios-only){: external} -->
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-<!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
-- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604245){: external} -->
+- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
+
+<!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external} -->
 
 For information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
@@ -90,6 +94,8 @@ SUSE
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 
+The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
+{: note} 
 
 If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for following Linux distributions:
 

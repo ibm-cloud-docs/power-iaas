@@ -72,8 +72,8 @@ toc:
             topics:
               - network-architecture.md
               - configuring-private-subnet.md
-              - cloud-connections-CLI.md              
               - getting-started-PER.md
+              - cloud-connections-CLI.md              
               - ordering-direct-link.md
               - vpn-connections.md              
               - network-security.md
@@ -103,7 +103,12 @@ toc:
               - set-full-linux.md
               - registering-linux.md
               - using-rhel.md
-              - deploying-linux.md              
+              - deploying-linux.md
+      - topicgroup: 
+            label: Observability
+            topics:
+              - sysdig-monitoring-pvs.md
+              - at-events.md           
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -116,7 +121,6 @@ toc:
       - link:
           label: Command reference
           href: /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
-      - at-events.md
 
   - navgroup:
       id: help

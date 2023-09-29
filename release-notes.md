@@ -29,6 +29,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## September 2023
 {: #sep-2023}
 
+- **{{site.data.keyword.powerSys_notm}} and SysDig Integration**
+: You can now seamlessly monitor your platform metrics within the IBM Cloud environment using the IBM Cloud Monitoring service. For detailed instructions on how to access and utilize this integration, please refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
+
+  The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13`.
+  {: note}
+
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
 : The Power®10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
 
@@ -37,6 +43,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - **IBM i 7.3 service extension pricing**
 : Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at end of normal support and will be in service extension. Service extension pricing will be automatically added to the IBM i charge for IBM i 7.3 usage.
+
+- **Addition of New Global Replication Service data center pair**
+: {{site.data.keyword.powerSys_notm}} have expanded the Global Replication Service (GRS) capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is currently available on the Tier 1 storage support within the GRS framework. See, the documentation: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ## June 2023
 {: #jun-2023}

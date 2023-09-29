@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2022
+  years: 2020, 2023
 
-lastupdated: "2022-12-09"
+lastupdated: "2023-08-29"
 
 keywords: use case, Application, modernization, cloud, native
 
@@ -32,4 +32,7 @@ In addition to developing new cloud-native applications, IT organizations are mo
 
 For information on application modernization on Power Systems, see [Field Guide to Application Modernization on IBM Power Systems](https://www.ibm.com/downloads/cas/D9POQ3YR){: external}.
 
-For information on deploying Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} and tutorials to explore the platform, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/?mhsrc=ibmsearch_a&mhq=%20Deploying%20Red%20Hat%20OpenShift%20Container%20Platform%20on%20Power%20Virtual%20Servers){: external}.
+You can deploy Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} in the following possible deployment methods: <!-- IPI is not applicable to PPCAS -->
+- IPI (Installer-provisioned installation) - Includes all the necessary infrastructure services within the Red Hat OpenShift cluster and provides a turn-key solution. Choose this for a automated and faster installation. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with IPI](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/installing/installing-on-ibm-power-virtual-server){: external}.
+- UPI (User Provisioned Infrastructure) - Uses the pre-existing install process that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with UPI](https://docs.openshift.com/container-platform/4.13/installing/installing_platform_agnostic/installing-platform-agnostic.html){: external}.
+- Additionally, IBM developers have created a set of playbooks to help you get started with a UPI install. You can use this as-is, or take as examples. For more information, see the [Github Playbooks](https://github.com/ocp-power-automation/ocp4-upi-powervs){: external}.

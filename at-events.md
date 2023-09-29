@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-21"
+lastupdated: "2023-08-28"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -268,3 +268,126 @@ The following events are for working with VPN Connection in your {{site.data.key
 Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs for all North America and South America data centers from Dallas, all Europe data centers from Frankfurt, Sydney data center from Sydney, and all Japan data center from Tokyo. For a list of locations where Power Systems Virtual Server services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
 {{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch). 
+
+<!-- ## Activity tracker sample response format
+{: #at-response-sample}
+
+The new response format used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
+
+The CADF standard is significant in auditing security in cloud environments as it defines a comprehensive event model that includes the necessary information for certifying, managing, and auditing the security of applications and services in the cloud.
+{: note}
+
+The following code snippets shows the differences between the old and new activity tracker response format.
+
+`New response format`
+```
+{
+    "logSourceCRN": "crn:v1:bluemix:public:power-iaas:us-east:a/xxxxxxxxxxxxxxxxxxxx:yyyyyyyyyyyyyyyyyyyyyy::",
+    "saveServiceCopy": true,
+    "dataEvent": false,
+    "outcome": "success",
+    "eventTime": "2022-06-30T03:12:49.63+0000",
+    "action": "power-iaas.tenant.read",
+    "correlationId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "severity": "normal",
+    "initiator": {
+        "id": "IBMid-xxxxxxxxxx",
+        "name": "xxxxm@us.ibm.com",
+        "typeURI": "service/security/account/user",
+        "authnId": "",
+        "authnName": "",
+        "host": {
+            "agent": "PostmanRuntime/7.28.4",
+            "address": "127.0.0.1",
+            "addressType": "IPv4"
+        },
+        "credential": {
+            "type": "user"
+        }
+    },
+    "target": {
+        "id": "crn:v1:bluemix:public:power-iaas:us-east:a/xxxxxxxxxxxxxxxxxxxx:yyyyyyyyyyyyyyyyyyyyyy::",
+        "name": "testName",
+        "typeURI": "power-iaas/tenant",
+        "resourceGroupId": "crn:v1:bluemix:public:resource-controller::a/xxxxxxxxxxxxxxxxxxxx::resource-group:zzzzzzzzzzzzzzzzzzzzzzz"
+    },
+    "reason": {
+        "reasonCode": 200,
+        "reasonType": "OK"
+    },
+    "requestData": null,
+    "responseData": {
+        "cloudInstances": [
+            {
+                "capabilities": [],
+                "cloudInstanceID": "yyyyyyyyyyyyyyyyyyyyyy",
+                "enabled": true,
+                "href": "/pcloud/v1/cloud-instances/yyyyyyyyyyyyyyyyyyyyyy",
+                "initialized": false,
+                "name": "testName",
+                "region": "us-east"
+            }
+        ],
+        "creationDate": "2019-05-21T21:32:00.746Z",
+        "enabled": true,
+        "sshKeys": [],
+        "tenantID": "xxxxxxxxxxxxxxxxxxxx"
+    },
+    "message": "Power Systems Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
+    "observer": {
+        "name": "ActivityTracker"
+    }
+}
+````
+{: codeblock}
+
+
+`Old response format`
+```
+{
+    "payload": {
+        "outcome": "success",
+        "eventTime": "2019-05-31T19:33:02.97+0000",
+        "action": "pcloud.tenant.read",
+        "severity": "normal",
+        "initiator": {
+            "id": "IBMid-xxxxxxxxxx",
+            "name": "xxxxm@us.ibm.com",
+            "typeURI": "service/security/account/user",
+            "host": {
+                "agent": "PostmanRuntime/7.13.0",
+                "address": "127.0.0.1"
+            },
+            "credential": {
+                "type": "user"
+            }
+        },
+        "target": {
+            "id": "crn:v1:bluemix:public:power-iaas:us-east:a/xxxxxxxxxxxxxxxxxxxx:yyyyyyyyyyyyyyyyyyyyyy::",
+            "name": "testName",
+            "typeURI": "pcloud/tenant/read",
+            "host": {
+                "address": "100.64.24.72"
+            }
+        },
+        "reason": {
+            "reasonCode": 200
+        },
+        "responseData": "{\"cloudInstances\":[{\"cloudInstanceID\":\"yyyyyyyyyyyyyyyyyyyyyy\",\"enabled\":true,\"href\":\"/pcloud/v1/cloud-instances/yyyyyyyyyyyyyyyyyyyyyy\",\"initialized\":false,\"name\":\"testName\",\"region\":\"us-east\"}],\"creationDate\":\"2019-05-21T21:32:00.746Z\",\"enabled\":true,\"sshKeys\":[{\"creationDate\":\"2019-05-21T22:13:49.806Z\",\"name\":\"Test\",\"sshKey\":\"Foo\"}],\"tenantID\":\"xxxxxxxxxxxxxxxxxxxx\"}",
+        "message": "pcloud: read tenant 9cdad2e857d442d49853e484e9b91d24 success"
+    },
+    "logSourceCRN": "crn:v1:bluemix:public:power-iaas:us-east:a/xxxxxxxxxxxxxxxxxxxx:yyyyyyyyyyyyyyyyyyyyyy::",
+    "saveServiceCopy": true,
+    "meta": {
+        "serviceProviderName": "power-iaas",
+        "serviceProviderRegion": "ng",
+        "serviceProviderProjectId": "power-iaas",
+        "userAccountIds": [
+            "a/xxxxxxxxxxxxxxxxxxxx"
+        ],
+        "userSpaceRegion": "ng"
+    }
+}
+````
+{: codeblock} -->
+

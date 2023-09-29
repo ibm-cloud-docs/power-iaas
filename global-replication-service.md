@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-06-29"
+lastupdated: "2023-09-28"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -43,13 +43,16 @@ If you need a more detailed information on Gobal Replication Service, see [Globa
 
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by Power System Virtual Server](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
 
-The following table shows the datacenter and their corresponding pool level detail that supports replication:
+The following table shows the data centers that supports replication and their corresponding pool level detail:
 ||Site 1| Site 2|
 |---|---|----|
-|Datacenter name|WDC06|DAL12|
-|Storage pool|Tier3-Flash-2 \n Tier3-Flash-1 \n Tier1-Flash-1 | Tier3-Flash-4 \n Tier3-Flash-3 \n Tier1-Flash-3|
+|data center name|`WDC06`|`DAL12`|
+|Storage pool|Tier 3-Flash-2 \n Tier 3-Flash-1 \n Tier 1-Flash-1 | Tier 3-Flash-4 \n Tier 3-Flash-3 \n Tier 1-Flash-3|
+|||
+|data center name|`WDC04`|`DAL13`|
+|Storage pool|Tier 1-flash-8|Tier 1-flash-6|
 {: class="simple-table"}
-{: caption="Table 1. Replication enabled datacenter and their supported storage pool" caption-side="bottom"}
+{: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
 ## Pricing for Global replication service
 {: #pricing-GRS}
