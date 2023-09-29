@@ -229,4 +229,4 @@ When predefined limits are pressed, rate-limited requests respond with a `503 Se
 
 - Learn more about the Sysdig dashboard user interface, see [About the Dashboard UI](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/using-dashboards/about-the-dashboard-ui/){: external}.
 - See the [IBM Cloud monitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started) documentation in IBM Cloud.
-- View [Plans and Pricing](/docs/monitoring?topic=monitoring-pricing_plans) for {{site.data.keyword.mon_full_notm}} instance.
+- Refer to [sample pricing](/docs/monitoring?topic=monitoring-pricing_plans#pricing_example3) in IBM Cloud Monitoring documentation.
