@@ -32,7 +32,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - **{{site.data.keyword.powerSys_notm}} and SysDig Integration**
 : You can now seamlessly monitor your platform metrics within the IBM Cloud environment using the IBM Cloud Monitoring service. For detailed instructions on how to access and utilize this integration, please refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
-  The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13`.
+The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, and `WDC04` with other data center coming soon..
   {: note}
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
