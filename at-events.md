@@ -269,7 +269,7 @@ Events are automatically forwarded to North America, Europe, Tokyo, or Sydney ge
 
 {{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch). 
 
-<!-- ## Activity tracker sample response format
+## Activity tracker sample response format
 {: #at-response-sample}
 
 The new response format used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
@@ -389,5 +389,5 @@ The following code snippets shows the differences between the old and new activi
     }
 }
 ````
-{: codeblock} -->
+{: codeblock}
 
