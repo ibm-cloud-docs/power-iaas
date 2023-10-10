@@ -74,7 +74,7 @@ The two different ways to access the {{site.data.keyword.mon_full_notm}} user in
 - [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
-To view metrics in your dashboard, the platform metrics of the {{site.data.keyword.mon_full_notm}} instance must be enabled.
+To view metrics in your dashboard, you must enable the platform metrics of the {{site.data.keyword.mon_full_notm}} instance.
 {: important}
 
 ### Accessing metrics from {{site.data.keyword.powerSys_notm}} workspace
