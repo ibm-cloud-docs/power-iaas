@@ -25,45 +25,43 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 <!-- {{site.data.keyword.cloud_notm}} - IBM Cloud -->
 
 
-# Monitoring metrics for {{site.data.keyword.powerSys_notm}}
+# Monitoring metrics for IBM {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
-You can monitor compute, network, and storage metrics from resources in your {{site.data.keyword.powerSysFull}} workspace with IBM Cloud® Monitoring dashboards. 
+You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using IBM Cloud® Monitoring dashboards. 
 {:shortdesc}
 
 {{site.data.keyword.mon_full_notm}} is a fully managed enterprise-grade monitoring service for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in `WDC06`, `SYD05`, `WDC04`, and `DAL13` with other DCs coming soon.
+Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in `WDC06`, `SYD05`, `WDC04`, and `DAL13`. As this is being sequentially rolled-out, support in other data centers will be available soon.
 {: note}
 
 ## Platform metrics overview
 {: #sysdig-ov}
 {: #platform_metrics}
 
-You can view platform metrics for {{site.data.keyword.powerSys_notm}} when you create an {{site.data.keyword.mon_full_notm}} instance in the same region that is enabled for platform monitoring. For more information, see [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+You can view platform metrics for {{site.data.keyword.powerSys_notm}} after you create an {{site.data.keyword.mon_full_notm}} instance in the same region that is enabled for platform monitoring. For more information, see [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
-Before you create {{site.data.keyword.mon_full_notm}} on your platform, consider the following points:
+Before you create an {{site.data.keyword.mon_full_notm}} instance on your platform, consider the following points:
 
-* You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
-* Platform metrics are regional. Metrics are monitored only from {{site.data.keyword.mon_full_notm}} that are in the same region of the {{site.data.keyword.powerSys_notm}} workspace that you want to monitor.
-* Metrics are collected automatically and are available for monitoring through the {{site.data.keyword.mon_full_notm}}-enabled instance.
+* You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region on your platform.
+* To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.powerSys_notm}} instance is provisioned.
+* Platform metrics are collected automatically and are available for monitoring through the {{site.data.keyword.mon_full_notm}}-enabled instance.
 
-To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.powerSys_notm}} instance is provisioned.
-{: important}
 
 ## Creating an {{site.data.keyword.mon_full_notm}} instance
 {: #sysdig-create-monitor}
 
 Create an {{site.data.keyword.mon_full_notm}} instance and enable the platform metrics to capture various performance metrics.
 
-To create an {{site.data.keyword.mon_full_notm}} instance, do the following steps:
+To create an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
 To monitor platform metrics, select the region where your {{site.data.keyword.powerSys_notm}} workspace is provisioned.
 {: important}
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
 2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
-3. Select your location and enter your custom values for **Service name** and other fields.  
+3. Select your location and enter your custom values for **Service name**  field and other fields.  
 4. Select the **Enable** indicator for **IBM platform metrics**.
 5. Select the license agreements indicator and click **Create**.
 
@@ -73,18 +71,18 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 {: #sysdig-view}
 
 The two different ways to access the {{site.data.keyword.mon_full_notm}} user interface to view the metrics dashboards are as follows:
-- [Access the {{site.data.keyword.mon_full_notm}} user interface from your {{site.data.keyword.powerSys_notm} workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
-- [Access the {{site.data.keyword.mon_full_notm}} user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
+- [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
+- [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
-To view metrics in your dashboard, the platform metrics of the {{site.data.keyword.mon_full_notm}} instance must be enabled.
+To view metrics in your dashboard, you must enable the platform metrics of the {{site.data.keyword.mon_full_notm}} instance.
 {: important}
 
-### Accessing metrics from {{site.data.keyword.powerSys_notm} workspace
+### Accessing metrics from {{site.data.keyword.powerSys_notm}} workspace
 {: #sysdig-view-ui}
 
 From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user interface, perform the following steps:
-1.  click **workspaces**.
-2.  Select the workspace for which a monitoring instance is present.
+1.  Click **workspaces**.
+2.  Select the workspace for which a monitoring instance is available.
 3.  From the **workspace details** page, click **Launch monitoring**.
       The {{site.data.keyword.mon_full_notm}} dashboard opens.
 4.  Click **Dashboards** > **Dashboard Library** > **IBM** and select your dashboard to view.
@@ -212,15 +210,17 @@ The following additional attributes are available for segmenting all the metrics
 | `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid mac address |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
 
-## Considerations from IBM Cloud monitoring
+## IBM Cloud monitoring limitations
 {: #sysdig-limits}
 
-When predefined limits are pressed, rate-limited requests respond with a `503 Service Unavailable`. Following are the limitations:
-- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range, called the window of acceptance that is fixed to 5 minutes.
+IBM Cloud Monitoring has the following limitations:
+
+- When you exceed the predefined limits, the rate-limited requests respond with a `503 Service Unavailable` error.
+- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range called the window of acceptance that is fixed to 5 minutes.
 - The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics is for internal management network and are available additionally even though you did not configure it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.
-- Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the IBM cloud monitoring retention policy, you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
+- Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the {{site.data.keyword.mon_full_notm}} retention policy, you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
 - Metrics of {{site.data.keyword.powerSys_notm}} instances are not available if the instance was never initialized before, error in the instance, or issue with the host.
 
 
