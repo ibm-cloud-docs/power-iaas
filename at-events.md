@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Activity tracker events
 {: #at-events}
 
-{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on January 29, 2024. Some of the event fields will not be sent or replaced by the new format. For code showing the differences between the old and new format of the activity tracker response, see [## Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
+{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on January 29, 2024. Some of the event fields will not be sent or replaced by the new format. For code showing the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
 {: note}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} in {{site.data.keyword.cloud}}.
