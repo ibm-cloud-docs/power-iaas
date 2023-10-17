@@ -42,7 +42,6 @@ The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock ima
 * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-* SLES 15 SP3 general purpose (SLES15-SP3)
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
@@ -76,7 +75,7 @@ When you are configuring a Source NAT (SNAT) gateway between your public and pri
 The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
 {: note}
 
-You can verify that the device interface type is `ibmveth` by using the following command: 
+You can verify that the device interface type is `ibmveth` by using the following command:
 
 ```text
 ethtool -i <interface name> | grep driver
@@ -106,7 +105,7 @@ The following instructions are applicable to SLES version SP15. If you need addi
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
     - Verify the checksum offloading setting by running the following command:
 
       ```text

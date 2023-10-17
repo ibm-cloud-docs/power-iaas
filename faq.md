@@ -40,7 +40,7 @@ IBM Power Systems Virtual Server is a hosted infrastructure offering that allows
 
 The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}: S922 (9009-22A), E980 (9080-M9S)<!-- , E1080 (9080-HEX), --> or S1022 (9105-22A). To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
 
-**AIX** - The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S). 
+**AIX** - The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).
 
 Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
 
@@ -56,8 +56,8 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 
 AIX stock images currently available when you create a VM are:
 
-* AIX 7.3 TL1 SP1
-* AIX 7.2 TL5 SP5
+* AIX 7.3 TL1 SP2
+* AIX 7.2 TL5 SP6
 * AIX 7.1 TL5 SP9
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
@@ -68,8 +68,8 @@ AIX stock images currently available when you create a VM are:
 
 IBM i stock images currently available when you create a VM are:
 
-* IBM i 7.5 TR1
-* IBM i 7.4 TR7
+* IBM i 7.5 TR2
+* IBM i 7.4 TR8
 * IBM i 7.3 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.2 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.1 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
@@ -77,11 +77,11 @@ IBM i stock images currently available when you create a VM are:
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 
 Red Hat
-* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
+* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP)
+* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
 * RHEL 8.4 general purpose (RHEL8-SP4)
 * RHEL 8.6 general purpose (RHEL8-SP6)
-* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
+* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )
 * RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
 
 SUSE
@@ -89,13 +89,12 @@ SUSE
 * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-* SLES 15 SP3 general purpose (SLES15-SP3)
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 
 The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
-{: note} 
+{: note}
 
 If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for following Linux distributions:
 
@@ -116,7 +115,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-## What versions of stock images are available? 
+## What versions of stock images are available?
 {: #stock-images}
 {: faq}
 {: support}
@@ -128,14 +127,14 @@ For each major version (example: Technology Level) of the operating system (OS) 
 {: faq}
 {: support}
 
-Any unsupported and older stock images are periodically removed from the offering. You will be notified three weeks before the images are removed. 
+Any unsupported and older stock images are periodically removed from the offering. You will be notified three weeks before the images are removed.
 
 ## What happens to VMs deployed using stock images that are being removed?
 {: #vm-stock-images}
 {: faq}
 {: support}
 
-VMs deployed by using stock images that are being removed can continue to operate without any issues. You are recommended to follow operating system vendor’s guidelines to update the OS as needed. 
+VMs deployed by using stock images that are being removed can continue to operate without any issues. You are recommended to follow operating system vendor’s guidelines to update the OS as needed.
 
 ## What formats should I use when uploading a custom image?
 {: #custom-image}
@@ -458,7 +457,7 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: #network_latency}
 {: faq}
 
-Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency). 
+Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
 
 ## Are we notified about any planned maintenance activities?
 {: #planned_maintenance_activity}
@@ -488,7 +487,7 @@ Volume is auxiliary when `isAuxiliary` field of volume is true.  When `replicati
 {: #check-serial-no}
 {: faq}
 
-The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value. 
+The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value.
 
 You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
 
@@ -532,6 +531,6 @@ Yes, you can automate the network configurations such as the Maximum Transmissio
 
 To automate the MTU configuration, you need to customize your cloud-init network configuration. For more information, see the [Cloud-init docs on network configuration](https://cloudinit.readthedocs.io/en/latest/reference/network-config-format-v1.html){: external}.
 
-Both AIX and IBM i supports custom cloud-init configurations at the time of {{site.data.keyword.powerSys_notm}} instace (VM) deployment. 
+Both AIX and IBM i supports custom cloud-init configurations at the time of {{site.data.keyword.powerSys_notm}} instace (VM) deployment.
 
 You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
