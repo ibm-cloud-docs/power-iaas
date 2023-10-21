@@ -43,7 +43,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
       You can connect {{site.data.keyword.dl_short}}s to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the on-premises network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
       {: note}
 
-## Use cases
+## Non Power Edge Router use cases
 {: #networking-use-cases}
 
 These use cases describe the following deployment topologies:
@@ -61,7 +61,7 @@ These use cases describe the following deployment topologies:
 
 Multiple topologies, described in this document, can be layered to create a topology that suits your deployment needs.
 
-## Connecting to classic infrastructure by using {{site.data.keyword.dl_short}} (2.0)
+### Connecting to classic infrastructure by using {{site.data.keyword.dl_short}} (2.0)
 {: #network-reference-architecture-classic}
 
 In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to IBM Cloud resources hosted in a classic infrastructure environment. You can either [order {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) connections, or use IBM Cloud connections. 
@@ -91,7 +91,7 @@ Complete the following steps to implement this scenario:
     Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
     {: note}
 
-## Connecting to VPC by using {{site.data.keyword.dl_short}} Connect
+### Connecting to VPC by using {{site.data.keyword.dl_short}} Connect
 {: #network-reference-architecture-vpc}
 
 In this deployment topology, a {{site.data.keyword.dl_short}} (2.0) is used to connect your {{site.data.keyword.powerSys_notm}} networks to resources that are hosted in the IBM Cloud VPC infrastructure.
@@ -127,7 +127,7 @@ Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however,
 
 TBD-->
 
-## Connecting to on-premises by using Megaport
+### Connecting to on-premises by using Megaport
 {: #network-reference-architecture-onprem}
 
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} Connect is used to provide connectivity from your on-premises (remote) networks to your {{site.data.keyword.powerSys_notm}} subnets.
@@ -174,7 +174,7 @@ Complete the following steps to implement this scenario:
 The {{site.data.keyword.powerSys_notm}} router is the default gateway for your Power virtual server instances. This router is operated by the {{site.data.keyword.powerSys_notm}} team and you have no direct access or control.
     
 
-## Connecting two Power virtual server environments
+### Connecting two Power virtual server environments
 {: #network-reference-architecture-pvs2pvs}
 
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments located at two different data centers.
@@ -210,7 +210,7 @@ The key features of this Connect-to-classic topology are as follows:
     ```
 The {{site.data.keyword.powerSys_notm}} router is the default gateway for your Power virtual server instances. This router is operated by the IBM Cloud team and you have no direct access or control.
 
-## Connecting to an on-premises network by using a private SSL connection and a jump server
+### Connecting to an on-premises network by using a private SSL connection and a jump server
 {: #network-reference-architecture-privatessl}   
 
 The IBM Cloud SSL VPN service is a feature of the IBM Cloud classic infrastructure, which enables you to manage your classic resources, remotely, over the IBM Cloud Private network. An SSL VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. For more information, see [About VPN](/docs/iaas-vpn?topic=iaas-vpn-about-iaas-vpn).
@@ -234,7 +234,7 @@ Complete the following steps to implement this scenario:
 This option is typically used to manage infrastructures and is not recommended for production workloads.
 {: note}
 
-## Connecting to an on-premises network by using an internet IPsec VPN connection
+### Connecting to an on-premises network by using an internet IPsec VPN connection
 {: #network-reference-architecture-privateipsec}
 
 Although individual {{site.data.keyword.powerSys_notm}} instances can have internet access, there is no site-to-site IPsec VPN service that connects your {{site.data.keyword.powerSys_notm}} subnets to your remote networks currently available.
@@ -265,7 +265,7 @@ For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server V
 
 Additionally, the x86 servers can be deployed on to the subnets contained within the associated and nonassociated VLANs to build complex topologies, such as three-tier architectures.
 
-## Connecting to an on-premises network by using a private {{site.data.keyword.dl_short}} connection
+### Connecting to an on-premises network by using a private {{site.data.keyword.dl_short}} connection
 {: #network-reference-architecture-directlink}
 
 To connect your external networks to your {{site.data.keyword.powerSys_notm}} subnets, you can use the {{site.data.keyword.dl_short}} service; however, you cannot use this connectivity for a direct connection as both your {{site.data.keyword.powerSys_notm}} subnets and your remote networks are considered to be external networks to the VRF and direct external-to-external traffic is prohibited. Therefore, in this deployment topology, a gateway appliance and GRE tunnels are used to provide connectivity.
@@ -306,7 +306,7 @@ Complete the following steps to implement this scenario:
 
 For tutorials based on some of the topologies described, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
-## Connecting two {{site.data.keyword.powerSys_notm}} environments by using IBM Cloud Transit Gateway
+### Connecting two {{site.data.keyword.powerSys_notm}} environments by using IBM Cloud Transit Gateway
 {: #network-reference-architecture-tgw}
 
 In this deployment topology, a connection through IBM Cloud Transit Gateway is used to provide connectivity between Power virtual server environments located at two different data centers. With IBM Cloud Transit Gateway, you can also interconnect your {{site.data.keyword.powerSys_notm}}s to the IBM Cloud classic and VPC infrastructures, keeping traffic within the IBM Cloud network. Transit Gateway enables you to connect your otherwise disconnected private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. In addition, you can establish connection between multiple {{site.data.keyword.powerSys_notm}} workspaces across different data centers.
@@ -327,3 +327,36 @@ Complete the following steps to implement this scenario:
 3.	Connect your {{site.data.keyword.powerSys_notm}}s that are located in data center 1 and data center 2 through the IBM Cloud network by using a transit gateway. 
 
 After the transit gateway connection is established, different IBM Cloud networks are connected to each other.
+
+## Power Edge Router use cases
+{: #per-use-cases}
+
+Using a Power Edge Router (PER) enabled workspace provides the following benefits:
+
+* Improved performance with aggregated bandwidth of 400Gb.
+* Direct access to IBM cloud services from {{site.data.keyword.powerSys_notm}} workspace.
+* Direct access to {{site.data.keyword.powerSys_notm}} from on-premise environment using a Direct Link connect or Direct Link dedicated.
+
+Here are some of the PER use cases.
+
+### Connecting on-premise with a PER enabled {{site.data.keyword.powerSys_notm}}
+{: #per-on-orem}
+
+The PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be connected to IBM Cloud using the transit gateway which in turn can attach an on-premises workspace using the direct link. The connection is established by connecting the Pod-to-Pod Router (PPR) of PER-enabled workspace and Cross connection Router (XCR) using direct-link from on-premises with the transit gateway. 
+A non-PER-enabled workspace that uses Direct Link connection cannot attach with the transit gateway directly and hence cannot connect to the on-premises network. A non-PER-enabled workspace needs to connect through the classic infrastructure to connect to on-premises network. Furthermore, if custom IP address is configured in non-PER-enabled workspace, a GRE tunnel needs to be built in the classic infrastructure which needs to pass through the gateway appliance.
+
+![Connecting on-premise with a PER enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premise with a PER enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+
+![Connecting on-premise with a PER enabled workspace](./images/use_case_diags-PER_onprem.svg "Connecting on-premise with a PER enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+
+### Connecting a PER enabled {{site.data.keyword.powerSys_notm}} to Classic Infrastructure
+{: #per-classic}
+
+Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure using the local routing of transit gateway with no additional transit gateway charges when the following conditions are satisfied:
+-	The workspace and the classic infrastructure are in the same region.
+-	The workspace should be connected to a transit gateway.
+A workspace that is not PER-enabled will use a direct link-based connection to connect the {{site.data.keyword.powerSys_notm}} workspace with classic infrastructure. A transit gateway is not required in this case as the direct link has the virtual connection that can reach the classic infrastructure.
+
+![Connecting PER workspace with classic](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
+
+![Connecting PER workspace with classic](./images/use_case_diags-PER_Classic.svg "Connecting PER workspace with classic infrastructure"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
