@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-06-12"
+lastupdated: "2023-10-21"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -30,24 +30,7 @@ The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL)
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. The following OS versions support a full Linux subscription:
-
-**SUSE**:
-* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
-* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
-* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
-* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-* SLES 15 SP4 general purpose (SLES15-SP4)
-* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
-* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
-
-**Red Hat**:
-* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP)
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
-* RHEL 8.4 general purpose (RHEL8-SP4)
-* RHEL 8.6 general purpose (RHEL8-SP6)
-* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 
 
 The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.

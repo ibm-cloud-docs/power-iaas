@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-26"
+lastupdated: "2023-10-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -77,21 +77,21 @@ IBM i stock images currently available when you create a VM are:
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 
 Red Hat
-* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP)
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
-* RHEL 8.4 general purpose (RHEL8-SP4)
+* RHEL 9.2 general purpose (RHEL9-SP2)
 * RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+* RHEL8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP)
+
 
 SUSE
-* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
-* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
-* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
-* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
+* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
+* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
+* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 
 The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
 {: note}
