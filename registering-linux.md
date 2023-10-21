@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-05-09"
+lastupdated: "2023-10-21"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -36,16 +36,7 @@ If you choose to register for full Linux subscription, an additional charge will
 
 If you choose to provision a Linux VM with your own subscription, select **Linux – Client supplied subscription**. In the image menu, select your custom image. For more information, see [how to deploy a custom image with {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of SLES are supported:
-
-* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
-* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
-* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
-* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-* SLES 15 SP3 general purpose (SLES15-SP3)
-* SLES 15 SP4 general purpose (SLES15-SP4)
-* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
-* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
+The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 
 If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
@@ -76,7 +67,7 @@ When you are configuring a Source NAT (SNAT) gateway between your public and pri
 The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
 {: note}
 
-You can verify that the device interface type is `ibmveth` by using the following command: 
+You can verify that the device interface type is `ibmveth` by using the following command:
 
 ```text
 ethtool -i <interface name> | grep driver
@@ -106,7 +97,7 @@ The following instructions are applicable to SLES version SP15. If you need addi
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
     - Verify the checksum offloading setting by running the following command:
 
       ```text
