@@ -333,26 +333,26 @@ After the transit gateway connection is established, different IBM Cloud network
 
 Using a Power Edge Router (PER) enabled workspace provides the following benefits:
 
-* Improved performance with aggregated bandwidth of 400Gb.
+* Improved performance with aggregated bandwidth of 400 Gb.
 * Direct access to IBM cloud services from {{site.data.keyword.powerSys_notm}} workspace.
-* Direct access to {{site.data.keyword.powerSys_notm}} from on-premise environment using a Direct Link connect or Direct Link dedicated.
+* Direct access to {{site.data.keyword.powerSys_notm}} from on-premises environment by using a Direct Link connect or Direct Link dedicated.
 
-Here are some of the PER use cases.
+The following are some of the PER use cases:
 
-### Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}
+### Connecting on-premises with a PER-enabled {{site.data.keyword.powerSys_notm}}
 {: #per-on-orem}
 
-The PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be connected to IBM Cloud using the transit gateway which in turn can attach an on-premises workspace using the direct link. The connection is established by connecting the Pod-to-Pod Router (PPR) of PER-enabled workspace and Cross connection Router (XCR) using direct-link from on-premises with the transit gateway. 
-A non-PER-enabled workspace that uses Direct Link connection cannot attach with the transit gateway directly and hence cannot connect to the on-premises network. A non-PER-enabled workspace needs to connect through the classic infrastructure to connect to on-premises network. Furthermore, if custom IP address is configured in non-PER-enabled workspace, a GRE tunnel needs to be built in the classic infrastructure which needs to pass through the gateway appliance.
+The PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be connected to IBM Cloud using the transit gateway, which in turn can attach an on-premises workspace by using the direct link. The connection is established by connecting the Pod-to-Pod Router (PPR) of PER-enabled workspace and Cross connection Router (XCR) using direct-link from on-premises with the transit gateway. 
+A non-PER-enabled workspace that uses Direct Link connection cannot attach with the transit gateway directly and hence cannot connect to the on-premises network. A non-PER-enabled workspace needs to connect through the classic infrastructure to connect to the on-premises network. Furthermore, if custom IP address is configured in a non-PER-enabled workspace, a GRE tunnel needs to be built in the classic infrastructure that needs to pass through the gateway appliance.
 
-![Connecting on-premise with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premise with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+![Connecting on-premises with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premises with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
-![Connecting on-premise with a PER-enabled workspace](./images/use_case_diags-PER_onprem.svg "Connecting on-premise with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+![Connecting on-premises with a PER-enabled workspace](./images/use_case_diags-PER_onprem.svg "Connecting on-premises with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
 ### Connecting a PER-enabled {{site.data.keyword.powerSys_notm}} to Classic Infrastructure
 {: #per-classic}
 
-Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure using the local routing of transit gateway with no additional transit gateway charges when the following conditions are satisfied:
+Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure that uses the local routing of transit gateway with no additional transit gateway charges when the following conditions are satisfied:
 -	The workspace and the classic infrastructure are in the same region.
 -	The workspace should be connected to a transit gateway.
 A workspace that is not PER-enabled will use a direct link-based connection to connect the {{site.data.keyword.powerSys_notm}} workspace with classic infrastructure. A transit gateway is not required in this case as the direct link has the virtual connection that can reach the classic infrastructure.
@@ -364,7 +364,7 @@ A workspace that is not PER-enabled will use a direct link-based connection to c
 ### Connecting a PER-enabled {{site.data.keyword.powerSys_notm}} to VPC
 {: #per-vpc}
 
-Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and Virtual Private Cloud (VPC) on top of a connected classic infrastructure connection. This multi-connection can be established using the transit gateway. 
+Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and Virtual Private Cloud (VPC) on top of a connected classic infrastructure connection. This multi-connection can be established by using the transit gateway. 
 
 The best part of using transit gateway is that it establishes a three-way communication. Thus, the PER-enabled workspace, VPC, and classic infrastructure can ping each other.
 
@@ -379,21 +379,21 @@ For a non-PER workspace that uses Direct Link connection, you can connect your {
 
 One of the major simplifications that PER provides is on how seamlessly you can connect your {{site.data.keyword.powerSys_notm}} workspaces with the IBM Cloud services.
 
-On a PER-enabled workspace that uses a custom IP address, the network is routed through PER which routes to a Network Address Translator (NAT) device that translates the custom IP address into an IBM Cloud supported IP address. 
+On a PER-enabled workspace that uses a custom IP address, the network is routed through PER that routes to a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address. 
 
 On a non-PER-enabled {{site.data.keyword.powerSys_notm}} workspace that uses a direct-link based connection, the custom IP address from the workspace can reach the IBM Cloud services endpoint through either of the following routes:
--	The custom IP address from the workspace needs to pass through a proxy server that will translate the custom IP address to IBM Cloud supported IP address.
--	The custom IP address from the workspace needs to pass through the Virtual Private Endpoint (VPE) that has in-built translation capability. The VPE will help in translating the Custom IP address to a IBM Cloud supported IP address.
+-	The custom IP address from the workspace needs to pass through a proxy server that coverts the custom IP address to an IBM Cloud supported IP address.
+-	The custom IP address from the workspace needs to pass through the Virtual Private Endpoint (VPE) that has conversion capability. The VPE helps in converting the Custom IP address to a IBM Cloud supported IP address.
 
 ![Connecting PER workspace with IBM Cloud services](./images/4_PER_Cloudservices.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 11. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
 ![Connecting PER workspace with IBM Cloud services](./images/use_case_diags-PER_cloud_services.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 11. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
-### Connection {{site.data.keyword.powerSys_notm}} workspaces accross data center
+### Connection {{site.data.keyword.powerSys_notm}} workspaces across data center
 {: #per-accross-dc}
 
 The transit gateway can be used to connect multiple Power System Virtual Server workspaces that are across different data center.
-A PER-enabled workspace needs to be attached with the transit gateway, that can exchange routes between two workspaces. When these workspaces are present in different regions, global transit gateway needs to be used.
+A PER-enabled workspace needs to be attached with the transit gateway, that can exchange routes between two workspaces. When these workspaces are present in different regions, a global transit gateway needs to be used.
 
 On a non-PER-enabled workspace, a Direct Link connection is required to connect the workspace and the transit gateway.
 
