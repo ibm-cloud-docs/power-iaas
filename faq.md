@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-21"
+lastupdated: "2023-10-23"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -429,7 +429,7 @@ On a Linux VM, the following database is supported:
 
 You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
-## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
+<!-- ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
 {: #web-enablement-for-ibmi}
 {: faq}
 
@@ -444,7 +444,7 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
 4. Find the required software that you can download, install, and use. For example:
 
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
-    **Web Enablement for i (5733-WE3)** - WebSphere V9
+    **Web Enablement for i (5733-WE3)** - WebSphere V9 -->
 
 ## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
 {: #ocp_on_powervs}
