@@ -385,9 +385,9 @@ On a non-PER-enabled {{site.data.keyword.powerSys_notm}} workspace that uses a d
 -	The custom IP address from the workspace needs to pass through a proxy server that coverts the custom IP address to an IBM Cloud supported IP address.
 -	The custom IP address from the workspace needs to pass through the Virtual Private Endpoint (VPE) that has conversion capability. The VPE helps in converting the Custom IP address to a IBM Cloud supported IP address.
 
-![Connecting PER workspace with IBM Cloud services](./images/4_PER_Cloudservices.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 11. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
+![Connecting PER workspace with IBM Cloud services](./images/4_PER_Cloudservices.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 12. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
-![Connecting PER workspace with IBM Cloud services](./images/use_case_diags-PER_cloud_services.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 11. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
+![Connecting PER workspace with IBM Cloud services](./images/use_case_diags-PER_cloud_services.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 12. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
 ### Connection {{site.data.keyword.powerSys_notm}} workspaces across data center
 {: #per-accross-dc}
@@ -397,6 +397,20 @@ A PER-enabled workspace needs to be attached with the transit gateway, that can 
 
 On a non-PER-enabled workspace, a Direct Link connection is required to connect the workspace and the transit gateway.
 
-![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 12. Connecting workspaces in different regions" caption-side="bottom"}
+![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
 
-![Connecting workspaces in different regions](./images/use_case_diags-PER_pvs.svg "Connecting workspaces in different regions"){: caption="Figure 12. Connecting workspaces in different regions" caption-side="bottom"}
+![Connecting workspaces in different regions](./images/use_case_diags-PER_pvs.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
+
+## Using custom IP address in PER enabled {{site.data.keyword.powerSys_notm}} with GRE tunnel
+{: #per-gre}
+
+A Generic Routing Encapsulation (GRE) tunnel is required when you want to establish a connection from your PER-enabled workspace with classic infrastructure because the classic subnet is located behind the Backend Connect Router (BCR) router. 
+
+The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through by the BCR. The BCR only allows to pass through an IBM Cloud IP address (`10.0.0.0/8`).
+
+Hence, if you have a custom IP address in your PER-enabled workspace, you will need a GRE tunnel that will wrap the custom IP address with another header. This GRE tunnel will need to be attached with the transit gateway.
+
+In a non-PER-enabled workspace that uses Direct Link to connect the classic infrastructure, you can set up the GRE tunnel using the automation that is supported in {{site.data.keyword.powerSys_notm}}.
+
+
+![Connecting workspaces in different regions](./images/use_case_diags-PER_GRE_tunnel.svg "Connecting workspaces in different regions"){: caption="Figure 14. Connecting workspaces in different regions" caption-side="bottom"}
