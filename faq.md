@@ -79,9 +79,10 @@ IBM i stock images currently available when you create a VM are:
 Red Hat
 * RHEL 9.2 general purpose (RHEL9-SP2)
 * RHEL 8.6 general purpose (RHEL8-SP6)
-* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )
-* RHEL8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
-* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP)
+* RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP )
+* RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+* RHEL 8.4 for SAP HANA (RHEL8-SP4-SAP)
+* RHEL 8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
 
 
 SUSE
