@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-04-04"
+lastupdated: "2023-10-27"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -22,356 +22,245 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
+<!-- {{site.data.keyword.powerSys_notm}} - Power System Virtual Server-->
 
-# Restoring an AIX mksysb image onto an IBM Power Systems Virtual Server instance
+# Replicating a desired AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
 {: #restoring-aix-mksysb-image}
 
-Learn how to restore an AIX `mksysb` image onto an IBM Power Systems Virtual Server instance
+Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}
 
-The IPv6 interface that is used for VM management might be affected when you restore an AIX `mksysb` image. Before proceeding onto the next section, review [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
-{: important}
+A simple way to migrate a local AIX environment (or workload) into {{site.data.keyword.powerSys_notm}} is to restore an operating system `rootvg` backup over an existing image and then migrate the data. The `rootvg` backup is created with the AIX `mksysb` command. The restored mksysb image will apply the AIX configuration details while preserving the {{site.data.keyword.powerSys_notm}} deployed storage and networking resources.
 
-## Defining an AIX Helper VM
-{: #defining-aix-helper-vm}
+Once the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this topic.
+
+It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance using the {{site.data.keyword.powerSys_notm}} user interface or the ibm cloud CLI.
+
+## Considerations before creating the mksysb image on the source AIX instance
+
+1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. More information can be found at [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
+
+2. The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}. 
+
+Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions supported](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) for more details. 
+
+The AIX instance deployed in {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
+
+3. Ensure that NPIV filesets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked using the lslpp command as follows.
+
+<!-- ![vfc-check](vfc-check.png) -->
+```
+#
+# lslpp -l devices.vdevice.IBM.vfc-client.rte
+  Fileset                      Level     State      Description
+  -------------------------------------------------------------
+
+Path: /usr/lib/obj repos
+  devices.vdevice.IBM.vfc-client.rte
+                            7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
+
+
+Path: /etc/obj repos
+  devices.vdevice.IBM.vfc-client.rte
+                            7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
+
+#
+```
+{: screen}
+
+4. Verify that the AIX initab file does not contain entries with dependencies on unique aspects of the source environment that would not be present in {{site.data.keyword.powerSys_notm}}. Otherwise the converted {{site.data.keyword.powerSys_notm}} AIX instance may not boot. Similarly, if other boot time actions exist such as NFS filesystem mounts, those may need to be disabled. 
+
+5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built in AIX MPIO driver. Ensure that I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
+
+6. Delete any temporary files or files, especially large files, that are not needed on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and filesystems in rootvg. This will reduce the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
+
+## Creating the mksysb image on the source AIX instance
+
+Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details. Ensure that there is sufficient filesystem space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non AIX data added to rootvg. The following example mksysb creates the image in /tmp. The `-i` builds the image from the latest rootvg details and the `-b` option can potentially improve the performance when creating the mksysb image. The `-X` mksysb option will expand `/tmp` if needed for the boot image. This can be omitted if the available space is known to be sufficient.
+
+```
+# create the mksysb image
+mksysb -i -X -C -b 512 /tmp/my-mksysb
+```
+
+Once the mksysb image is created, the storage volume size needed for the restore of the image can be extracted as follows. In this example, a 25 GB volume would be needed.
+
+<!-- ![disksize](target-disk.png) -->
+```
+#
+# restore -qf ./my-mksysb ./bosinst.data
+x ./bosinst.data
+# fgrep -p target_disk_data bosinst.data|fgrep SIZE_MB
+        SIZE MB = 25600
+# rm bosinst.data
+#
+```
+{: screen}
+
+Also capture the image checksum for verification once the image is transferred to a {{site.data.keyword.powerSys_notm}} AIX instance for restoration.
+
+<!-- ![cksum](cksum-output.png) -->
+```
+#
+# cksum ./my-mksysb
+1999777825 1861746688 ./my-mksysb
+#
+```
+{: screen}
+
+## Creating a {{site.data.keyword.powerSys_notm}} AIX instance for conversion with a mksysb image
+{: #create-aix-conversion-vm}
 {: help}
 {: support}
 
-You can use an existing AIX VM to copy an AIX mksysb archive. The `alt_disk_mksysb` command copies the mksysb archive onto a new volume. The `alt_disk_mksysb` command also gives you the option of rebooting from a specific disk image. 
+An AIX instance is needed in {{site.data.keyword.powerSys_notm}} that can be converted with the mksysb image. 
 
-Before you can copy an AIX `mksysb` archive, determine the amount of space the _helper VM_ needs to hold the _mksysb_ image. In the following example, the _mksysb_ image (`gdrh10v1.sysb`) is roughly 5.8 GB. Determining the space needed as follow:
+The instance must be at the same AIX version as the AIX instance where the mksyb image was created. {{site.data.keyword.powerSys_notm}} provides a set of stock images that can be used to facilitate the conversion. Once deployed, the AIX instance will need some updates to host the mksysb image. Choose the needed stock image and deploy a new {{site.data.keyword.powerSys_notm}} AIX instance via the user interface or CLI with the cpu, memory, and network details that are needed for the final converted instance. 
 
+For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum needed size in Megabytes. Below is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
+
+The following details should be observed with the deployed AIX instance.
+
+<!-- ![new-vm](new-vm-details.png) -->
 ```
-:>ls -l gdrh10v1.sysb
--rw-r--r--  1 root   system    5806899200 Jul 18 2017 gdrh10v1.sysb
-```
-{: codeblock}
-
-Next, you must identify a _helper VM_ file system with enough space to hold the mksysb image. If such a file system does not exist, you can attach a data volume as a _staging area_. To display information about a volume group, use the `lsvg` command.
-
-```
-# lsvg rootvg
-VOLUME GROUP:       rootvg                  VG IDENTIFIER:      00f6db0a00004c000000016b94f02
-VG STATE:           active                  PP SIZE:            32 megabyte(s)
-VG PERMISSION:      read/write              TOTAL PPs:          639 (20448 megabytes)
-MAX LVs:            256                     FREE PPs:           477 (15264 megabytes)
-LVs:                12                      USED PPs:           162 (5184 megabytes)
-OPEN LVs:           11                      QUORUM:             2 (Enabled)
-TOTAL PVs:          1                       VG DESCRIPTIORS:    2
-STALE PVs:          0                       STALE PPs:          0
-ACTIVE PVs:         1                       AUTO ON:            yes
-MAX PPs per VG:     32512
-MAX PPs per PV:     1016                    MAX PVs:            32
-LTG size(Dynamic):  512 kilobyte(s)         AUTO SYNC:          no
-HOT SPARE:          no                      BB POLICY:          relocatable
-PV RESTRICTION:     none                    INFINITE RETRY:      no
-DISK BLOCK SIZE:    512                     CRITICAL VG:        no
-FS SYNC OPTION:     no                      CRITICAL PVs:       no
 #
-```
-
-Running the `df -g` command displays information about the total space and available space on a file system. In this instance, the `rootvg` volume group has enough space for creating a new file system, expanding an existing one, and storing the _mksysb_ source image.
-
-The storage information is shown as follow:
-
-```
-# df -g
-Filesystem          GB blocks       Free        %Used       Iused       %Iused      Mounted on
-/dev/hd4                0.09        0.06        41%         2619        17%         /
-/dev/hd2                2.16        0.26        89%        36565        37%         /usr
-/dev/hd9var             0.19        0.16        17%          953         3%         /var
-/dev/hd3                0.22        0.22         1%           33         1%         /tmp
-/dev/hd1                0.03        0.03         2%            7         1%         /home
-/dev/hd11admin          0.12        0.12         1%            5         1%         /admin
-/proc                      -           -          -            -         -          /proc
-/dev/hd10opt            0.44        0.05        90%        11651        49%         /opt
-/dev/||vedump           0.25        0.25         1%            4         1%         /var/admin/ras/||vedump
-#
-```
-
-## Attaching a new (disk) volume
-{: #attaching-new-volume}
-
-If your disk is not at the correct size, complete the following steps:
-
-You must also complete these steps if you want to store the mksysb image in a data disk for shared access or long-term storage.
-{: note}
-
-1. Create a file system to hold the _mksysb_ archive.
-
-2. Click **Add new** under **Attached volumes**.
-
-3. Give your data volume a **Name**. Select the **Type**, **Size**, and make it **Shareable**. In the following example, _mksysbfs_ is the volume name and it has 20 GB of space for multiple _mksysb_ archive files:
-
-4. After successfully attaching the _mksysbfs_ volume to the _helper VM_, log in to the VM. The volume appears as a new hdisk. Run the `lspv` and `cfgmgr` commands on the _helper VM_ to configure and show the new disk. The new disk is labeled as _hdisk1_.
-    Using the lspv command:
-
-    ```
-    # lspv
-    hdisk0        00f6db0acc7aece5        rootvg        active
-    ```
-    Using the cfgmr command:
-    
-    ```
-    # cfgmr
-    #lspv
-    hdisk0        00f6db0acc7aece5        rootvg        active
-    hdisk1        none                     none        
-    #
-    ```
-
-5. Create an _AIX Volume Group_ by running the `mkvg` command. On the _helper VM_, _mksysbvg_ is the volume group name.
-
-    ```
-    mkvg -fy mksysbvg hdlsk1
-    0516-1254 mkvg: Changing the PVID in the ODM.
-    mksysbvg
-    #
-    ```
-
-6. Run the `crfs` command to create a file system and the `mount` command to mount it. The following example shows a mounted file system (`/mksysb`) on the _helper VM_:
-
-    ```
-    #crfs -v jfs2 -a size=18G -m/mksysb -g mksysbvg
-    File system created successfully.
-    18873588 kilobytes total on disk space.
-    New File System size Is 37748736
-    # mount /mksysb
-    # df -g /mksysb
-    Filesystem      GB blocks       Free        %Used       Iused       %Iused      Mounted on
-    /dev/fslv00         18.00      12.26          32%           6           1%      /mksysb
-    #
-    ```
-
-After you complete these steps, you must decide on the best access option. IBM provides several different private access options. Each option allows VM instances with internal IP addresses to reach certain APIs and services.
-
-Log on to the source VM where the source `mksysb` resides and copy the image to the _helper VM_ after you choose an option. In the following example, the customer is using Secure Copy Protocol (scp) from an on-premises system and copying it into the `/mksysb` file system of the _helper VM_:
-
-If you did not decide on a private access option, or chose a different option for your internal IP access, your steps might vary.
-{: note}
-
-Running the cksum command:
-```
- : >cksum gdrh10v1.sysb
-371420133 5806899200 gdrh10v1.sysb
- : >scp gdrh10v1.sysb root@192.168.111.3:/mksysb/gdrh10v1.sysb
- root@192.168.111.3's password:
- gdrh10v1.sysb                                            100%
- ```
-
-## Creating the alternate disk image volume
-{: #creating-alternate-volume}
-
-Log on to the helper VM and verify that the image under `/mksysb` has an identical `cksum` as the reported size from the on-premises system. After verifying the matching sizes, you can create a volume large enough to hold the restored root volume group.
-
-To determine the necessary volume size of the alternate disk, examine the contents of the `bosinst.data` file within the mksysb archive. The `bosinst.data` file in the archive contains stanza information that indicates the minimum space that is required to restore the _mksysb_. An easy way to accomplish this is to usfe the `restore` command to extract the `./images/bosinst.data` file from the _mksysb_ archive.
-
-Search the `bosinst.data` file and find the stanza that is named `target_disk_data`. This stanza indicates the minimum size in megabytes of the required volume in a `SIZE_MB = size` key value pair. The recorded size is used when creating the alternate disk image volume and attaching it to the _helper VM.
-
-The restore -qf command:
-<!-- check for errors -->
-```
-# restore -qf gdrh10v1.sysb ./bosinst.data
-x ./bosinst.data
-# grep -p target_disk_data bosinst.data
-target_disk_data:
-        PVID = 00c04e279d9ce46e
-   PHYSICAL_LOCATION = U9117.MMC.0604E27-V9-C3-T1-L8100000000000000
-        CONNECTION = vscsi0//810000000000
-        LOCATION =
-        SIZE_MB = 20480
-        HDI SKNAME = hdisk0
-```
-
-To create and attach a new volume to **AIX-7200-03-03**, complete the following steps:
-
-1. Click **Add new** under **Attached volumes**.
-
-2. Create a data volume and enter the recorded size in gigabytes (it must be large enough to hold the restored root volume group) by selecting the correct options. For example, you can enter the volume name as **AIX-7200-03-03-altdisk**.
-
-3. After successfully attaching the **AIX-7200-03-03-altdisk** volume to the _helper VM_, log on to the VM. Use the `cfgmgr` and `lspv` commands on the _helper VM_ to show the new disk. The new disk is named `hdisk2`.
-
-Displaying storage information:
-
-```
-# cfgmgr
+# oslevel -s
+7200-05-05-2246
 # lspv
-hdisk0      00f6db0a6c7aece5        rootvg      active
-hdisk1      00c25ab0056a002a        mksysbvg    active
-hdisk2      none                    None
+hdiskO          00fa00d66c59c9d7          rootvg       active
+hdiskl          none                      None
+# bootinfo -s hdiskl
+30720
 #
 ```
+{: screen}
 
-## Restoring the alternate disk mksysb
-{: #restoring-alternate-disk}
+To make room for the mksysb image, disk space must be freed in the instance to hold it. This can be done by removing the `/usr/sys/inst.images` filesystem and creating a new one called `/mksysb-staging`. 
 
-You can now create an AIX boot disk from the source _mksysb_ archive. To create an AIX boot disk from the source _mksysb_ archive, run the `alt_disk_mksysb` command with the following options:
+This should result in sufficient space for most mksysb image use cases. If more space is needed, then a new larger storage volume will need to be attached to the instance with the {{site.data.keyword.powerSys_notm}} user interface and a JFS2 filesystem will need to be created on it. The below example removes `/usr/sys/inst.images` and creates a new 12 GB `mksysb-staging` filesystem.
 
-**-m**: Specify the mksysb archive that you transferred to the _helper VM_. In this example, the source mksysb archive is named `/mksysb/gdrh10v1.sysb`.
-**-d**: Specify the logical disk (hdisk) that is empty of a volume group label. In the example, the target disk is named `hdisk2`.
-**-c**: Use this option to set up a terminal device during VM deployment. Without a valid terminal, the VM does not boot if it needs to open the terminal for any reason.
 
-After you run the `alt_disk_mksysb` command, the terminal displays information similar to the following output:
-
+<!-- ![rmfs](rmfs.png) -->
 ```
-# alt_disk_mksysb -c /dev/vty0 -d hdi sk2 -m/mksysb/gdrh10v1.sysb
-Restoring/image.data from mksysb image.
-Checking disk sizes.
-Creating cloned rootvg volume group and associated logical volumes. 
-Creating logical volume alt_hd5.
-Creating logical volume alt_hd6.
-Creating logical volume alt_hd8.
-Creating logical volume alt_hd4.
-Creating logical volume alt_hd2.
-Creating logical volume alt_hd9var. 
-Creating logical volume alt_hd3.
-Creating logical volume alt_hd1.
-Creating logical volume alt_hd10opt.
-Creating logical volume alt_hd11admin.
-Creating logical volume alt_lg_dumpiv.
-Creating logical volume alt_livedump.
-Creating /alt_inst/ file system 
-Creating /alt_inst/admin file system 
-Creating /alt_inst/home file system 
-Creating /alt_inst/opt file system 
-Creating /alt_inst/tmp file system 
-Creating /alt_inst/usr file system
-Creating /alt_inst/var file system
-Creating /alt_inst/var/adm/ras/livedump file system 
-Restoring mksysb image to alternate disk(s).
-Linking to 64bit kernel.
-Changing logical volume names in volume group descriptor area. 
-Fixing LV control blocks...
-forced unmount of /alt_inst/var/adm/ras/livedump
-forced unmount of /alt_inst/var/adm/ras/livedump
-forced unmount of /alt_inst/var 
-forced unmount of /alt_inst/var 
-forced unmount of /alt_inst/usr 
-forced unmount of /alt_inst/usr 
-forced unmount of /alt_inst/tmp 
-forced unmount of /alt_inst/tmp 
-forced unmount of /alt_inst/opt 
-forced unmount of /alt_inst/opt 
-forced unmount of /alt_inst/home 
-forced unmount of /alt_inst/home 
-forced unmount of /alt_inst/admin 
-forced unmount of /alt_inst/admin 
-forced unmount of /alt_inst
-forced unmount of /alt_inst
-Fixing file system superblocks...
-Bootlist is set to the boot disk: hdisk2 bl v=hd5
+#
+# umount /usr/sys/inst.images
+# rmfs -r /usr/sys/inst.images
+rmlv: Logical volume repo00 is removed.
 #
 ```
+{: screen}
 
-Now, the target volume contains a valid root volume group (`rootvg`) that is boot-ready. Additionally, the bootlist is set. Before rebooting, perform the following checks:
-
-Perform a check by using the bootlist command:
+<!-- ![crfs](crfs.png) -->
 ```
+#
+# crfs -v jfs2 -g rootvg -m /mksysb-staging -a size=12G
+File system created successfully.
+12582324 kilobytes total disk space.
+New File System size is 25165824
+# mount /mksysb-staging
+# mount
+  node       mounted        mounted over    vfs       date        options
+-------- ---------------  ---------------  ------ ------------ ---------------
+         /dev/hd4         /                jfs2   Oct 11 17:47 rw,log=/dev/hd8
+         /dev/hd2         /usr             jfs2   Oct 11 17:47 rw,log=/dev/hd8
+         /dev/hd9var      /var             jfs2   Oct 11 17:47 rw,log=/dev/hd8
+         /dev/hd3         /tmp             jfs2   Oct 11 17:48 rw,log=/dev/hd8
+         /dev/hd1         /home            jfs2   Oct 11 17:48 rw,log=/dev/hd8
+         /dev/hdlladmin   /admin           jfs2   Oct 11 17:48 rw,log=/dev/hd8
+         /proc            /proc            procfs Oct 11 17:48 rw
+         /dev/hd10opt     /opt             jfs2   Oct 11 17:48 rw,log=/dev/hd8
+         /dev/lLivedump   /var/adm/ras/livedump jfs2   Oct 11 17:48 rw,log=/dev/hd8
+         /ahafs           /aha             ahafs  Oct 11 17:49 rw
+         /dev/fslv00      /mksysb-staging  jfs2   Oct 11 18:35 rw,log=/dev/hd8
+#
+```
+{: screen}
+
+In the above example, hdisk1 is the free storage volume where the mksysb image will be restored.
+
+Once the {{site.data.keyword.powerSys_notm}} instance is created, the mksysb image is placed into the /mksysb-staging directory. Transferring the mksysb image to the `/mksysb-staging` directory will depend on your connectivity options to the IBM Cloud and {{site.data.keyword.powerSys_notm}} workspace. 
+
+For example, if you are able to access your {{site.data.keyword.powerSys_notm}} instance over a network connection from your your local system where the mksyb image resides, you could use scp.
+
+For example:
+`# scp ./my-mksysb root@xxx.xxx.xxx.xxx:/mksysb-staging`
+
+Use the `cksum` command to confirm the `my-mksysb` image file was successfully transferred.
+
+Now the mksysb image can be restored onto the attached free storage volume that will become the new rootvg boot disk with the configuration from the source AIX instance. This is done using the [alt_disk_mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=alt-disk-mksysb-command) command. In the example mksysb restore below, `alt_disk_mksysb` will set hdisk1 as the boot disk for subsequent boots.
+
+```
+alt_disk_mksysb -c /dev/vty0 -d hdisk1 -m /mksysb-staging/my-mksysb
+```
+
+Once this completes successfully, an `lspv` will indicate that hdisk1 is now the altinst_rootvg.
+
+<!-- ![lspv details](altinst-lspv.png) -->
+```
+#
+# lspv
+hdisk0          00fa00d66c59c9d7              rootvg          active
+hdisk1          00c939202144313b              altinst_rootvg
+```
+{: screen}
+
+The AIX `bootlist` command can be used to confirm that hdisk1 is now the active AIX boot disk.
+
+<!-- ![blist](blist.png) -->
+```
+#
 # bootlist -m normal -o
-hdisk2 blv=hd5 pathid=0
-hdisk2 blv=hd5 pathid=1
-hdisk2 blv=hd5 pathid=2
-hdisk2 blv=hd5 pathid=3
-# lspv
-hdisk0      00f6db0a6c7aece5        rootvg      active
-hdisk1      00c25ab0056a002a        mksysbvg    active
-hdisk2      00c25ab0062fa576        altinst_rootvg
+hdiskl blv=hd5 pathid=0
+hdiskl blv=hd5 pathid=1
+hdiskl blv=hd5 pathid=2
+hdiskl blv=hd5 pathid=3
+hdiskl blv=hd5 pathid=4
 #
 ```
+{: screen}
 
-When you are ready for the new environment to take effect, reboot the disk by using the `shutdown -Fr` command.
-The device configuration can take several minutes. Upon its completion, the system's login prompt appears and the newly restored system is ready for login.
+The AIX instance can be rebooted to the new hdisk1 rootvg.
 
-AIX login prompt:
+`sync;sync;shutdown -Fr`
 
+Once the AIX instance reboots, it has been converted with the mksysb image. An `lspv` will show hdisk1 as the new rootvg.
+
+<!-- ![post boot lspv details](postboot-lspv.png) -->
 ```
-Last login: Sun Jul 21 08:09:27 2019 on /dev/pts/0 from 10.150.0.8
-***********************************************************************************************
-*                                                                                             *
-*                                                                                             *
-*       Welcome to AIX Version 7.2!                                                           *
-*                                                                                             *
-*       Please see the README file in /usr/lpp/bos for information pertinent to this release  *
-*       of the AIX Operating System                                                           *
-*                                                                                             *
-************************************************************************************************
-[YOU HAVE NEW MAIL]
-root@aix-7200-03-03: /
- :> spv
-hdisko      00f6db0a6c7aece5        old_rootvg
-hdisk1      00c25ab0062fa576        rootvg          active
-hdisk2      00c25ab0056a002a        mksysbvg        active
-root@aix-7200-03-03: /
- :> sfs -a
-Name                    Nodename    Mount Pt                VFS     Size          Options   Auto    Accounting
-/dev/hd4                --          /                       jfs2    21823488        --      yes     no
-/dev/hd1                --          /home                   jfs2    65536           --      yes     no
-/dev/hd2                --          /usr                    jfs2    4390912         --      yes     no
-/dev/hd9var             --          /var                    jfs2    458752          --      yes     no
-/dev/hd3                --          /tmp                    jfs2    786432          --      yes     no
-/dev/hd11admin          --          /admin                  jfs2    262144          --      yes     no
-/proc                   --          /proc                   procfs  --              --      yes     no
-/dev/hd10opt            --          /opt                    jfs2    2097152         --      yes     no
-/dev/livedump           --          /var/adm/ras/livedump   jfs2    524288          --      yes     no
-/dev/fslv00             --          /mksysb                 jfs2    37748736        --      no      no
-root@aix-7200-03-03: /
- :>
+#
+# lspv
+hdisk0          00fa00d66c59c9d7              old_rootvg
+hdisk1          00c939202144313b              rootvg         active
+#
 ```
+{: screen}
 
-You have successfully restored the AIX _mksysb_ archive and the environment is ready for your use.
+Before proceeding, consider running some basic tests on your new converted {{site.data.keyword.powerSys_notm}} AIX instance.
 
-## (Optional) Detaching the staging volume
-{: #detaching-staging-volume}
+1. Run `oslevel -s` to confirm the converted lpar matches the AIX level from the source system where the mksysb backup was created. More detailed verification can optionally be done using the `lspp -h` command.
 
-In the previous section, we used a separate image volume for storing the source _mksysb_. To detach, keep, or delete a volume, review the following information.
+2. Using the user interface, do testing by changing CPU and RAM with your instance. You might also try adding and removing a small storage volume. These tests will confirm that the instance is properly interacting with PowerVM dynamic LPAR operations for live resource updates to the instance.
 
-After the completion of the `alt_disk_mksysb` command, you can detach the staging volume (`mksysbvg`) from the _helper VM_. Before you detach the staging volume, you must close all available file systems by unmounting them. If no action is required, then it is safe to remove the volume group definition from the _helper VM_.
+Now the `old_rootvg` storage volume (hdisk0) can be detached from the instance and deleted using the user interface. First remove the volume from the AIX configuration with the `rmdev` command.
 
-1. Use the `varyoffvg` and `exportvg` commands to remove the _mksysbvg_ volume group.   
+`# rmdev -dl hdisk0`
 
-    Using the varyoffvg and exportvg commands:
-    ```
-    root@aix-7200-03-03: / 
-     :>lsvg -l mksysbvg
-    mksysbvg:
-    LV NAME        TYPE        LPs         PPs         PVs         LV STATE        MOUNT POINT
-    loglv00        jfs2l og    1           1           1           closed/syncd    N/A
-    fslv00         jfs2        576         576         1           closed/syncd    /mksysb
-    root@aix-7200-03-03: / 
-     :>varyoffvg mksysbvg 
-    root@aix-7200-03-03: / 
-    :>exportvg mksysbvg 
-    root@aix-7200-03-03: / 
-     :>lsvg
-    old_rootvg
-    rootvg
-    root@aix-7200-03-03: /
-     :>lspv
-    hdisk0          00f6db0a6c7aece5            old_rootvg
-    hdisk1          00c25ab0062fa576            rootvg            active
-    hdisk2          00c25ab0056a002a            none
-    root@aix-7200-03-03: /
-     :>
-    ```
-2. Upon the successful removal of the volume group definition, remove the disk definition by using the `rmdev` command.
+Before detaching the `old_rootvg` volume (hdisk0), you will need to set the new rootvg volume (hdisk1) to bootable and the `old_rootvg` volume to not bootable in {{site.data.keyword.powerSys_notm}}. 
 
-    ```
-    root@aix-7200-03-03: /
-     :>lspv
-    hdisk0         00f6db0a6c7aece5            old_rootvg
-    hdisk1         00c25ab0062fa576            rootvg             active
-    hdisk2         00c25ab0056a002a            None
-    root@aix-7200-03-03: / 
-    :>rmdev - dl hdisk2
-    hdisk2 deleted
-    root@aix-7200-03-03: /
-     :>lspv
-    hdisk0         00f6db0a6c7aece5            old_rootvg
-    hdisk1         00c25ab0062fa576            rootvg             active
-    root@aix-7200-03-03: /
-     :>
-    ```
+Complete the following steps in {{site.data.keyword.powerSys_notm}} user interface under the details of the AIX instance in the `Attached volumes` section:
 
-3. You can now detach the image volume (disk) containing the source mksysb from the _helper VM_. To detach the disk from **AIX-7200-03-03**, select **Manage existing volumes** and click a volume.
+- Change the bootable indicator  of the new rootvg volume from **off** to **on**. 
+- Set the bootable indiactor of the old boot volume from **on** to **off**. 
+ 
+This will allow the old boot volume to be detached and deleted in the {{site.data.keyword.powerSys_notm}} user interface. This could also be done using the IBM Cloud CLI.
 
-4. After you successfully detach the disk from **AIX-7200-03-03**, you can attach the saved image volume to other VM instances.
+<!-- ![bootable-menu](bootable-menu.png) -->
+
+When the old boot volume is detached and deleted using the user interface, the conversion of the AIX instance using the mksysb is complete with a single rootvg volume. Now the instance is ready for installation of applications and related data.
+
+## Additional Information Resources
+
+[Getting Started with IBM Power Systems Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started)
+
+[{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference)
