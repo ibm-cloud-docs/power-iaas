@@ -31,9 +31,9 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using IBM Cloud® Monitoring dashboards. 
 {:shortdesc}
 
-{{site.data.keyword.mon_full_notm}} is a fully managed enterprise-grade monitoring service for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
+{{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in `WDC06`, `SYD05`, `WDC04`, and `DAL13`. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
+Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in the `WDC06`, `SYD05`, `WDC04`, and `DAL13` data centers. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
 {: note}
 
 ## Platform metrics overview
@@ -70,7 +70,7 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 ## Viewing metrics
 {: #sysdig-view}
 
-The two different ways to access the {{site.data.keyword.mon_full_notm}} user interface to view the metrics dashboards are as follows:
+Access the user interface of {{site.data.keyword.mon_full_notm}} to view the metrics dashboards by following ways:
 - [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
@@ -217,7 +217,7 @@ IBM Cloud Monitoring has the following limitations:
 
 - When you exceed the predefined limits, the rate-limited requests respond with a `503 Service Unavailable` error.
 - {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance that is fixed to 5 minutes.
-- The {{site.data.keyword.powerSys_notm}} instance's Ipv6 interface usage metrics is for internal management network and are available additionally even though you did not configure it.
+- The Ipv6 interface usage metrics of a {{site.data.keyword.powerSys_notm}} instance is for internal management network. These metrics are available additionally even though you did not configure it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.
 - Metrics are available for {{site.data.keyword.powerSys_notm}} instance that are deleted. Based on the {{site.data.keyword.mon_full_notm}} retention policy, you can see the historical platform metrics of deleted instance. For more information, see [Sysdig documentation on retention limit](https://docs.sysdig.com/en/docs/administration/data-retention/#sysdig-monitor-metric-retention-limits){: external}.
