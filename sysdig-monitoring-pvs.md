@@ -65,12 +65,12 @@ To monitor platform metrics, select the region where your {{site.data.keyword.po
 4. Select the **Enable** indicator for **IBM platform metrics**.
 5. Select the license agreements indicator and click **Create**.
 
-You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no IBM Cloud monitoring instance is already created for that region.
+You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no {{site.data.keyword.mon_full_notm}} instance is already created for that region.
 
 ## Viewing metrics
 {: #sysdig-view}
 
-Access the user interface of {{site.data.keyword.mon_full_notm}} to view the metrics dashboards by following ways:
+To view the metrics dashboards, access the user interface of {{site.data.keyword.mon_full_notm}} in the following ways:
 - [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
