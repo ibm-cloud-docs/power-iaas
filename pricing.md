@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-09-26"
+lastupdated: "2023-10-31"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -34,8 +34,8 @@ All prices mentioned on this page are illustrative and do not represent the actu
 |-------------------|--------------|---------------------------------|
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
-| S1022 (9105-22A) [^3]|     33         |       up to 1984 GB             |
-<!-- | E880 (9119-MHE)   |  143         | up to 7,463 GB                  | -->
+| S1022 (9105-22A) [^3][^4]|     33         |       up to 1984 GB             |
+
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
@@ -43,7 +43,9 @@ All prices mentioned on this page are illustrative and do not represent the actu
 
 [^2]: If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
-[^3]: Power System S1022 is available only in WDC07
+[^3]: Power System S1022 is available only in WDC07.
+
+[^4]: If the machine type is S1022 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 {: shortdesc}

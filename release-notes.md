@@ -36,7 +36,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
   {: note}
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
-: The Power®10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
+: The Power10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
 
   SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
   {: note}

@@ -81,7 +81,7 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
-<!-- ## Migrating to an IBM POWER10 system
+## Migrating to an IBM POWER10 system
 {: #power10-migration}
 
 Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
@@ -92,7 +92,8 @@ Learn more about migrating workloads from an existing IBM POWER system to a POWE
 
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
-| 9080-HEX (IBM Power® E1080)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+| S1022 (9105-22A)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+<!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
 
 {: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
@@ -101,7 +102,7 @@ To learn more about IBM POWER10 system performance and migration strategies, see
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
-- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external} -->
+- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external} 
 
 <!-- new power 10 content. p10 systems not enabled in DCs yet as of July 06, 23 -->
 ## Lab services

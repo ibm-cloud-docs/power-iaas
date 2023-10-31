@@ -92,7 +92,7 @@ If you'd like to compare your current environment's performance to what's availa
 <!-- * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external} -->
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-* [IBM Power System S1022 (9105-22A)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
+* [IBM Power System S1022 (9105-22A) (Power10 system)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 <!-- * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}  -->
 
 | Compute     | Storage      | Network      |
