@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-26"
+lastupdated: "2023-11-02"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -339,11 +339,21 @@ Using a Power Edge Router (PER) enabled workspace provides the following benefit
 
 The following are some of the PER use cases:
 
+These are the base use cases. Any specific customization will need to be done on top of these base cases.
+{: important}
+
 ### Connecting on-premises with a PER-enabled {{site.data.keyword.powerSys_notm}}
 {: #per-on-orem}
 
-The PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be connected to IBM Cloud using the transit gateway, which in turn can attach an on-premises workspace by using the direct link. The connection is established by connecting the Pod-to-Pod Router (PPR) of PER-enabled workspace and Cross connection Router (XCR) using direct-link from on-premises with the transit gateway. 
-A non-PER-enabled workspace that uses Direct Link connection cannot attach with the transit gateway directly and hence cannot connect to the on-premises network. A non-PER-enabled workspace needs to connect through the classic infrastructure to connect to the on-premises network. Furthermore, if custom IP address is configured in a non-PER-enabled workspace, a GRE tunnel needs to be built in the classic infrastructure that needs to pass through the gateway appliance.
+A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can connect to IBM Cloud using the transit gateway, which in turn can attach to an on-premises data center by using the direct link. The PER-enabled workspace use a Pod-to-Pod Router (PPR) to establish the connection to IBM Cloud.
+
+The on-premises data center uses a direct link connection to attach to the transit gateway that can access the IBM Cloud.
+
+A Generic Routing Encapsulation (GRE) tunnel is required when you want to establish a connection from your PER-enabled workspace with classic infrastructure because the classic subnet is located behind the Backend Connect Router (BCR) router. 
+
+The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through by the BCR. The BCR only allows to pass through an IBM Cloud IP address (`10.0.0.0/8`).
+
+Hence, if you have a custom IP address in your PER-enabled workspace, you will need a GRE tunnel that will wrap the custom IP address with another header. This GRE tunnel will need to be attached with the transit gateway.
 
 ![Connecting on-premises with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premises with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
@@ -352,10 +362,9 @@ A non-PER-enabled workspace that uses Direct Link connection cannot attach with 
 ### Connecting a PER-enabled {{site.data.keyword.powerSys_notm}} to Classic Infrastructure
 {: #per-classic}
 
-Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure that uses the local routing of transit gateway with no additional transit gateway charges when the following conditions are satisfied:
--	The workspace and the classic infrastructure are in the same region.
+Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure by using local routing of transit gateway with no additional transit gateway charges. For such connection the following conditions should be satisfied:
+-	The workspace and the classic infrastructure should be in the same region.
 -	The workspace should be connected to a transit gateway.
-A workspace that is not PER-enabled will use a direct link-based connection to connect the {{site.data.keyword.powerSys_notm}} workspace with classic infrastructure. A transit gateway is not required in this case as the direct link has the virtual connection that can reach the classic infrastructure.
 
 ![Connecting PER workspace with classic](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
 
@@ -366,9 +375,7 @@ A workspace that is not PER-enabled will use a direct link-based connection to c
 
 Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and Virtual Private Cloud (VPC) on top of a connected classic infrastructure connection. This multi-connection can be established by using the transit gateway. 
 
-The best part of using transit gateway is that it establishes a three-way communication. Thus, the PER-enabled workspace, VPC, and classic infrastructure can ping each other.
-
-For a non-PER workspace that uses Direct Link connection, you can connect your {{site.data.keyword.powerSys_notm}} workspace with VPC and classic infrastructure separately. Thus, VPC and classic infrastructure will not be able to ping each other.
+The best part of using transit gateway is that it establishes a three-way communication. Thus, the PER-enabled workspace, VPC, and classic infrastructure can establish connection with each other.
 
 ![Connecting PER workspace with VPC](./images/3.PER_VPC.svg "Connecting PER workspace with VPC"){: caption="Figure 11. Connecting PER workspace with VPC" caption-side="bottom"}
 
@@ -404,13 +411,7 @@ On a non-PER-enabled workspace, a Direct Link connection is required to connect 
 ## Using custom IP address in PER enabled {{site.data.keyword.powerSys_notm}} with GRE tunnel
 {: #per-gre}
 
-A Generic Routing Encapsulation (GRE) tunnel is required when you want to establish a connection from your PER-enabled workspace with classic infrastructure because the classic subnet is located behind the Backend Connect Router (BCR) router. 
 
-The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through by the BCR. The BCR only allows to pass through an IBM Cloud IP address (`10.0.0.0/8`).
-
-Hence, if you have a custom IP address in your PER-enabled workspace, you will need a GRE tunnel that will wrap the custom IP address with another header. This GRE tunnel will need to be attached with the transit gateway.
-
-In a non-PER-enabled workspace that uses Direct Link to connect the classic infrastructure, you can set up the GRE tunnel using the automation that is supported in {{site.data.keyword.powerSys_notm}}.
 
 
 ![Connecting workspaces in different regions](./images/use_case_diags-PER_GRE_tunnel.svg "Connecting workspaces in different regions"){: caption="Figure 14. Connecting workspaces in different regions" caption-side="bottom"}
