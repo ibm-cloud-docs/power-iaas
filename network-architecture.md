@@ -388,10 +388,6 @@ One of the major simplifications that PER provides is on how seamlessly you can 
 
 On a PER-enabled workspace that uses a custom IP address, the network is routed through PER that routes to a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address. 
 
-On a non-PER-enabled {{site.data.keyword.powerSys_notm}} workspace that uses a direct-link based connection, the custom IP address from the workspace can reach the IBM Cloud services endpoint through either of the following routes:
--	The custom IP address from the workspace needs to pass through a proxy server that coverts the custom IP address to an IBM Cloud supported IP address.
--	The custom IP address from the workspace needs to pass through the Virtual Private Endpoint (VPE) that has conversion capability. The VPE helps in converting the Custom IP address to a IBM Cloud supported IP address.
-
 ![Connecting PER workspace with IBM Cloud services](./images/4_PER_Cloudservices.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 12. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
 ![Connecting PER workspace with IBM Cloud services](./images/use_case_diags-PER_cloud_services.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 12. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
@@ -402,16 +398,6 @@ On a non-PER-enabled {{site.data.keyword.powerSys_notm}} workspace that uses a d
 The transit gateway can be used to connect multiple Power System Virtual Server workspaces that are across different data center.
 A PER-enabled workspace needs to be attached with the transit gateway, that can exchange routes between two workspaces. When these workspaces are present in different regions, a global transit gateway needs to be used.
 
-On a non-PER-enabled workspace, a Direct Link connection is required to connect the workspace and the transit gateway.
-
 ![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
 
 ![Connecting workspaces in different regions](./images/use_case_diags-PER_pvs.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
-
-## Using custom IP address in PER enabled {{site.data.keyword.powerSys_notm}} with GRE tunnel
-{: #per-gre}
-
-
-
-
-![Connecting workspaces in different regions](./images/use_case_diags-PER_GRE_tunnel.svg "Connecting workspaces in different regions"){: caption="Figure 14. Connecting workspaces in different regions" caption-side="bottom"}
