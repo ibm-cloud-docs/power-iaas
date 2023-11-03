@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-03"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -47,7 +47,10 @@ Consult the [General AIX support lifecycle information](https://www.ibm.com/supp
 
 The AIX instance that is deployed in {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
-3. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
+The AIX technology levels (TL) do not need to match, but you may consider using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
+{: important}
+
+1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
 
 <!-- ![vfc-check](vfc-check.png) -->
 ```
@@ -238,7 +241,7 @@ hdisk1          00c939202144313b              rootvg         active
 
 Before proceeding, consider running some basic tests on your new converted {{site.data.keyword.powerSys_notm}} AIX instance.
 
-1. Run `oslevel -s` to confirm that the converted lpar matches the AIX level from the source system where the mksysb backup was created. More detailed verification can optionally be done by using the `lspp -h` command.
+1. Run `oslevel -s` to confirm that the converted lpar matches the AIX level from the source system where the mksysb backup was created. More detailed verification can optionally be done by using the `lslpp -h` command.
 
 2. Using the user interface, do testing by changing the CPU and RAM with your instance. You might also try adding and removing a small storage volume. These tests confirm that the instance is properly interacting with PowerVM dynamic LPAR operations for live resource updates to the instance.
 
