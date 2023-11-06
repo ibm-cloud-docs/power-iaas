@@ -33,7 +33,7 @@ Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keywor
 
 A simple way to migrate a local AIX environment (or workload) into {{site.data.keyword.powerSys_notm}} is to restore an operating system `rootvg` backup over an existing image and then migrate the data. The `rootvg` backup is created with the AIX `mksysb` command. The restored mksysb image applies the AIX configuration details while preserving the {{site.data.keyword.powerSys_notm}} deployed storage and networking resources.
 
-Once the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
+when the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
 
 It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance by using the {{site.data.keyword.powerSys_notm}} user interface or the ibm cloud CLI.
 
@@ -47,7 +47,7 @@ Consult the [General AIX support lifecycle information](https://www.ibm.com/supp
 
 The AIX instance that is deployed in {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
-The AIX technology levels (TL) do not need to match, but you may consider using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
+The AIX technology levels (TL) do not need to match, but you might consider using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
 {: important}
 
 1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
@@ -186,7 +186,7 @@ Once the {{site.data.keyword.powerSys_notm}} instance is created, the mksysb ima
 
 For example, if you are able to access your {{site.data.keyword.powerSys_notm}} instance over a network connection from your local system where the mksyb image resides, you might use scp.
 
-For example:
+For example,
 `# scp ./my-mksysb root@xxx.xxx.xxx.xxx:/mksysb-staging`
 
 Use the `cksum` command to confirm the `my-mksysb` image file was successfully transferred.
@@ -254,7 +254,7 @@ Before detaching the `old_rootvg` volume (hdisk0), you need to set the new rootv
 Complete the following steps in {{site.data.keyword.powerSys_notm}} user interface under the details of the AIX instance in the `Attached volumes` section:
 
 - Change the bootable indicator of the new rootvg volume from **off** to **on**. 
-- Set the bootable indiactor of the old boot volume from **on** to **off**. 
+- Set the bootable indicator of the old boot volume from **on** to **off**. 
  
 This allows the old boot volume to be detached and deleted in the {{site.data.keyword.powerSys_notm}} user interface. This can also be done by using the IBM Cloud CLI.
 
@@ -264,6 +264,5 @@ When the old boot volume is detached and deleted by using the user interface, th
 
 ## Additional Information Resources
 
-[Getting Started with IBM Power Systems Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started)
-
-[{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference)
+* [Getting Started with IBM Power Systems Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started).
+* [{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference).
