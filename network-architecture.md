@@ -333,7 +333,7 @@ After the transit gateway connection is established, different IBM Cloud network
 
 Using a Power Edge Router (PER) enabled workspace provides the following benefits:
 
-* Improved performance with aggregated bandwidth of 400 Gbpss.
+* Improved performance with aggregated bandwidth of 400 Gbps.
 * Direct access to IBM cloud services from {{site.data.keyword.powerSys_notm}} workspace.
 * Direct access to {{site.data.keyword.powerSys_notm}} from on-premises environment by using a Direct Link connect or Direct Link dedicated.
 
