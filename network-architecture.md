@@ -341,8 +341,8 @@ The following are some of the use cases of a PER-enabled {{site.data.keyword.pow
 1. [Connecting an on-premise data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
 2. [Connecting to clasic infrastructure](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
 3. [Connecting to Virtual Private Cloud](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
-4. [Connecting to IBM Cloud services](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc#per-cloud-services)
-5. [Connecting multiple workspaces](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc#per-accross-dc)
+4. [Connecting to IBM Cloud services](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
+5. [Connecting multiple workspaces](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
 
 These are the base capability use cases. These base use cases can be customized to meet any specific requirement.
 {: important}
