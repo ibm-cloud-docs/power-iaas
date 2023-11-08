@@ -227,6 +227,6 @@ IBM Cloud Monitoring has the following limitations:
 ## Additional information
 {: #sysdig-add-info}
 
-- Learn more about the Sysdig dashboard user interface, see [About the Dashboard UI](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/using-dashboards/about-the-dashboard-ui/){: external}.
+- Learn more about the Sysdig dashboard user interface, see [About the Dashboard UI](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/){: external}.
 - See the [IBM Cloud monitoring](/docs/monitoring?topic=monitoring-getting-started#getting-started) documentation in IBM Cloud.
 - Refer to [sample pricing](/docs/monitoring?topic=monitoring-pricing_plans#pricing_example3) in IBM Cloud Monitoring documentation.
