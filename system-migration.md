@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-23"
+lastupdated: "2023-11-08"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
