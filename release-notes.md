@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-04"
+lastupdated: "2023-11-13"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,6 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## November 2023
+{: #nov-2023}
+
+`MAD02` data center is availavle. This is a PER-enabled Power10 data center.
+  
 ## September 2023
 {: #sep-2023}
 
