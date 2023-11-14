@@ -77,6 +77,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
+| MS_GIGABYTE_HOURS|      Memory standard gigabyte-hour|
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
