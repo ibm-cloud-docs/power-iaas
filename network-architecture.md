@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-07"
+lastupdated: "2023-11-14"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -381,9 +381,9 @@ A Generic Routing Encapsulation (GRE) tunnel is not required when you want to es
 
 A GRE tunnel is required when you want to establish a connection from your PER-enabled workspace with classic infrastructure that uses a custom IP address.
 
-  - The classic subnet is located behind the Backend Connect Router (BCR) router.
-  - The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through to classic subnet by the Backend Customer Router (BCR).
-  - The BCR allows an IBM Cloud IP address (`10.0.0.0/8`) only to pass through.
+   - The classic subnet is located behind the Backend Connect Router (BCR) router.
+   - The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through to classic subnet by the Backend Customer Router (BCR).
+   - The BCR allows an IBM Cloud IP address (`10.0.0.0/8`) only to pass through.
 
 Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel needs to be attached with the transit gateway.
 
