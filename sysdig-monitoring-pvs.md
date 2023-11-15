@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-04"
+lastupdated: "2023-11-15"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -33,7 +33,7 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in the `WDC06`, `SYD05`, `WDC04`, and `DAL13` data centers. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
+Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in the `WDC04`, `WDC06`, `SYD05`, `DAL13` `FRA04`, `FRA05`, `MAD02`, `SAO01`, and `TOK04` data centers. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
 {: note}
 
 ## Platform metrics overview
