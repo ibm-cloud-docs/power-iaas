@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #nov-2023}
 
 - `WDC06` and `MAD02` data center are now available for PER. `MAD02` is a PER-enabled Power10 data center.
-- Availibity of IBM Cloud Monitoring service is now extended in `FRA004`, `FRA05`, `MAD02`, `SAO01`, `TOK04`.
+- Availibity of IBM Cloud Monitoring service is now extended in `FRA004`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
   
 ## September 2023
 {: #sep-2023}
