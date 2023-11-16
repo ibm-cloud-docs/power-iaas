@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-13"
+lastupdated: "2023-11-16"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## November 2023
 {: #nov-2023}
 
-- `MAD02` data center is available. This is a PER-enabled Power10 data center.
+- `WDC06` and `MAD02` data center are now available for PER. `MAD02` is a PER-enabled Power10 data center.
 - Availibity of IBM Cloud Monitoring service is now extended in `FRA004`, `FRA05`, `MAD02`, `SAO01`, `TOK04`.
   
 ## September 2023
