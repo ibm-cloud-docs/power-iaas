@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-06-27"
+lastupdated: "2023-11-17"
 
 keywords: virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide 
 
@@ -31,7 +31,7 @@ FalconStor Virtual Tape Library (VTL) is an optimized backup and deduplication s
 
 For more information on how to create and configure an {{site.data.keyword.powerSys_notm}} running the FalconStor VTL software in the {{site.data.keyword.cloud}}, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
 
-The link is an external link that redirects to a PDF file.
+VTL support is not available for your workspaces that use Power10 system as host.
 {:note}
 
 ## Migrating using Falconstor StorSafe VTL

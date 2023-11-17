@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-04"
+lastupdated: "2023-11-17"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -33,7 +33,7 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in the `WDC06`, `SYD05`, `WDC04`, and `DAL13` data centers. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
+Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available in the `DAL13`, `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, `SYD05`, `WDC04`, `WDC06`, and `TOK04` data centers. As this feature is being sequentially rolled-out, support in other data centers will be available soon.
 {: note}
 
 ## Platform metrics overview
@@ -65,12 +65,12 @@ To monitor platform metrics, select the region where your {{site.data.keyword.po
 4. Select the **Enable** indicator for **IBM platform metrics**.
 5. Select the license agreements indicator and click **Create**.
 
-You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no IBM Cloud monitoring instance is already created for that region.
+You can also create the IBM Cloud monitoring instance from the **Integration (Optional)** section when you create a workspace, if no {{site.data.keyword.mon_full_notm}} instance is already created for that region.
 
 ## Viewing metrics
 {: #sysdig-view}
 
-Access the user interface of {{site.data.keyword.mon_full_notm}} to view the metrics dashboards by following ways:
+To view the metrics dashboards, access the user interface of {{site.data.keyword.mon_full_notm}} in the following ways:
 - [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 

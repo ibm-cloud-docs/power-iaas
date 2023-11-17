@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-09-29"
+lastupdated: "2023-11-17"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers). 
 
-The PER solution is available in `DAL10` and `WDC06` data centers. PER will be deployed in other data centers over time.
+The PER solution is available in `DAL10`, `WDC06`, and `MAD02` data centers. `MAD02` is a Power10 data center. PER will be deployed in other data centers over time.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -61,7 +61,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centers is
 {: leverage-per}
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
-- Currently, you can only choose `DAL10` and `WDC06` as the data center to create a PER workspace. 
+- Currently, you can only choose `DAL10`, `WDC06`, and `MAD02` as the data center to create a PER workspace. 
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.

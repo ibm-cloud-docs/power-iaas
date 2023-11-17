@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-31"
+lastupdated: "2023-11-17"
 
-keywords: getting started, power systems virtual server, configure instance, processor, profile, networking
+keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
 subcollection: power-iaas
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Creating a Power Systems Virtual Server
+# Creating a {{site.data.keyword.powerSys_notm}}
 {: #creating-power-virtual-server}
 {: help}
 {: support}
@@ -31,12 +31,12 @@ subcollection: power-iaas
 To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complete the following steps.
 {: shortdesc}
 
-## Creating a Power Systems Virtual Server workspace
+## Creating a {{site.data.keyword.powerSys_notm}} workspace
 {: #creating-service}
 
 1. Log in to the [IBM catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the catalog's search box, type **Power Systems Virtual Server** and click the **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
+2. In the catalog's search box, type **{{site.data.keyword.powerSys_notm}}** and click the **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Create workspace**.
 
@@ -45,7 +45,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
     {: note}
 
-    | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+    | Geography | Location | Region | IBM Power infrastructure zone | IBM Cloud Classic infrastructure data center | IBM Cloud VPC infrastructure zone |
     | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
     | America | Dallas, USA | us-south | DAL10 \n DAL12 \n us-south | DAL10 \n DAL12 \n DAL13 | us-south-1 \n us-south-2 \n us-south-3 |
     | America | Washington DC, USA | us-east | us-east \n WDC06 \n WDC07| WDC04 \n WDC06 \n WDC07| us-east-1 \n us-east-2 \n us-east-3|
@@ -54,21 +54,22 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
     | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
     | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
+    | Europe | Madrid, Spain| eu-es | MAD02 | MAD02 | eu-es-1 |
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
     | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
-    {: caption="Table 1. Power Systems Virtual Server data centers" caption-side="bottom"}
+    {: caption="Table 1. {{site.data.keyword.powerSys_notm}} data centers" caption-side="bottom"}
 
 5. Click **Create**. You are redirected to the **Workspaces** page where you can select your desired or existing workspace.
 
-## Configuring a Power Systems Virtual Server instance
+## Configuring a {{site.data.keyword.powerSys_notm}} instance
 {: #configuring-instance}
 
-To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and select a workspace.
+To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and select a workspace.
 
 1. Log in to the [IBM catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the catalog's search box, type **Power Systems Virtual Server** and click the **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
+2. In the catalog's search box, type **{{site.data.keyword.powerSys_notm}}** and click the **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Select workspace** on the left navigation under **Workspace** of the {{site.data.keyword.powerSys_notm}} user interface to select from a list of previously created workspace. 
    If you do not have a workspace, click **Create a workspace**.
@@ -80,7 +81,7 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
 
 5. Click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
 
-    The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective Power Systems Virtual Server instance that satisfies your business needs.
+    The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
     
     You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request for migration to a different host, the serial numbers will change, and the IBM i license will not work.
@@ -94,7 +95,7 @@ To begin, create a [Power Systems Virtual Server workspace](/docs/power-iaas?top
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
-    Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second Power Systems Virtual Server Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+    Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 8. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
 
@@ -132,11 +133,11 @@ Refer to the following table for more information on each {{site.data.keyword.po
 | Machine type | Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see<!-- [E880 (Dallas only)](https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/872/ENUS9119-_h05/index.html&lang=en){: external}, --> [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}. |
 | Cores | There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. |
 | Memory | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price. |
-| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For these SAP stock images it is mandatory to set an SSH key while creating the VM. You will be able to access the VM instance only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://forums.centos.org/app.php/help/faq){: external} page. Power Systems Virtual Server now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision Power Systems Virtual Server instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your IBM Power Virtual Server](/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server). \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
+| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For these SAP stock images it is mandatory to set an SSH key while creating the VM. You will be able to access the VM instance only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://forums.centos.org/app.php/help/faq){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your IBM Power Virtual Server](/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server). \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
 | Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
 | Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
-{: caption="Table 2. Power Systems Virtual Server instance fields" caption-side="bottom"}
+{: caption="Table 2. {{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers
 {: #reusing_volume_names}
@@ -146,7 +147,7 @@ You can deploy a Power System Virtual Server VM by specifying any name. If you w
 For example, you create a VM with the name TEST-VM and you delete this VM later. The name "TEST-VM" is not immediately available for reuse. Before you attempt to use the name TEST-VM again, you must allow 1 hour to pass after the VM was deleted.
 
 
-## Implementing SAP NetWeaver and SAP HANA in the Power Systems Virtual Server environment
+## Implementing SAP NetWeaver and SAP HANA in the {{site.data.keyword.powerSys_notm}} environment
 {: #sap_netweaver_hana}
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
