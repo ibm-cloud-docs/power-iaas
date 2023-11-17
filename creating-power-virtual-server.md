@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-13"
+lastupdated: "2023-11-17"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -45,7 +45,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
     {: note}
 
-    | Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+    | Geography | Location | Region | IBM Power infrastructure zone | IBM Cloud Classic infrastructure data center | IBM Cloud VPC infrastructure zone |
     | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
     | America | Dallas, USA | us-south | DAL10 \n DAL12 \n us-south | DAL10 \n DAL12 \n DAL13 | us-south-1 \n us-south-2 \n us-south-3 |
     | America | Washington DC, USA | us-east | us-east \n WDC06 \n WDC07| WDC04 \n WDC06 \n WDC07| us-east-1 \n us-east-2 \n us-east-3|

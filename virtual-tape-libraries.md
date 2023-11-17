@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-11-15"
+lastupdated: "2023-11-17"
 
 keywords: virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide 
 
