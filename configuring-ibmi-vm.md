@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-03-31"
+lastupdated: "2023-11-22"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -41,6 +41,9 @@ To open the IBM i console, complete the following steps:
     IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
     {: note}
 
+3.	To disconnect from the console, close the web browser window titled ‘noVNC’ opened in Step 2
+4.	If connection to the console is lost, close the console window and start a new connection (as instructed in Step 2)
+
 ## Tips for working with the IBM i console
 {: #tips-ibmi}
 
@@ -51,16 +54,16 @@ To open the IBM i console, complete the following steps:
 - It's best to first shut down the system before you restart it.
 - **Do not restart the system until the `cloud-init` process is finished and you've configured the local IP address**. If you restart the system during the `cloud-init` process, you must call support or delete and reprovision your IBM i VM instance.
 - If you are using a Mac computer, the **Page Down** key is the same as **FN + Down Arrow**.
-- Change the password on the **Dedicated Service Tools (DST) Sign On** screen. Use **PF5** to change the DST password.
+- Change the password on the **Dedicated Service Tools (DST) Sign On** screen. Use **PF5** to change the DST password. For 7.5 stock images, this is the first screen.
 - On the next screen, select **Option 1** to **Perform an IPL**. The sign-on screen appears after the IPL completes. Change the system `QSECOFR` ID password. New security rules require at least a 15-character password.
 - `CRTUSRPRF` and `CHGUSRPRF` will also use these new security rules. 
 
 ## Licenses and configuring your network
 {: #license-network}
 
-You must install the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels) on your IBM i VM.
+After deploying an IBM i VM, sign on after changing the QSECOFR password, accept the license agreements, then install the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels) if needed. 
 
-After you deploy an IBM i VM and install the proper PTFs, you need to accept the license agreements. To accept the license agreements from the console, you must press **5** on each license agreement to display them. Click **PF14** to accept each agreement. After you accept the license agreements, press **PF3** and wait until `cloud-init` configures your network and injects your license keys.
+To accept the license agreements from the console, press **5** on each license agreement to display them. Click **PF14** to accept each agreement. After accepting the license agreements, press **PF3** and wait until cloud-init configures the network and injects the license keys.  Confirm the system has the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 {: important}
@@ -101,7 +104,7 @@ If this is an upgraded system that contained License Keys before, please allow a
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
+By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached. . For 7.5, the DST password was changed in the first step after deploying the VM. 
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
