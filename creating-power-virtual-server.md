@@ -148,12 +148,11 @@ The dedicated host functionality, allows you to:
 1.	Reserve a host server for your exclusive use. This provides you an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing with other users.
 2.	Get a host-level isolation, that ensures that your virtual server instances are protected from all vulnerabilities.
 3.	Flexibility in creating and placing the virtual server instances on your host server, with the same shared processor pool support as on-premises and IBM Cloud. This improved granularity provides you the ability to run more instances within the same server footprint, thus enhancing your VP: EC ratio up to 1:20.
-4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. [how]{: tag-teal}
+4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. 
+    [how]{: tag-teal}
 
-Dedicated Hosts will be rolled out in two phases, with Phase 1 being available in `XYZ` data centers on December 14th, and Phase 2 being available in general availability in June 2024.
+Dedicated Hosts will be rolled out in two phases, with Phase 1 being available in `XYZ` data centers on December 14th, and Phase 2 being available in general availability in June 2024. [need DC names]{: tag-teal}
 {: note}
-
-[DC names needed in note]{: tag-teal}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers
 {: #reusing_volume_names}
