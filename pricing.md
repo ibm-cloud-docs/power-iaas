@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-31"
+lastupdated: "2023-11-27"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -106,7 +106,9 @@ For detailed usage and billing information, you can refer to the part number in 
 | EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
 | IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
-|VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS     | VPN connection per hour     |
+| VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS     | VPN connection per hour     |
+|	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
+| S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 
@@ -169,6 +171,14 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
 {: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
+## Pricing for dedicated hosts
+{: pricing-dh}
+
+When you use dedicated host, you get an improved VP: EC ratio up to 1:20, which you can use to get control over licensing costs. Consider the following points for dedicated host pricing:
+•	You are not charged for a shared processor pool when you are using a dedicated host.
+•	You are charged for the selection of operating system (AIX, IBM i, and Linux) as usual on top of the dedicated host charges.
+
+<!-- Keith to review -->
 
 ## Storage types
 {: #storage-type}
