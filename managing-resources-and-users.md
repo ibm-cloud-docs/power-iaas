@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2022
+  years: 2019, 2023
 
-lastupdated: "2022-09-15"
+lastupdated: "2022-11-27"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -68,6 +68,8 @@ You can use the service access roles to define what users can do with {{site.dat
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make any changes to the resources. |
 | Manager | You can configure all resources. The following are some of the actions you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
+
+To see the complete list of actions for each specific role, see the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page in IBM Cloud.
 
 ## Access roles requirements for Power System Virtual Server
 {: #access-roles-requirement}
