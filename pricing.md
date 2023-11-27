@@ -175,8 +175,10 @@ The following tables show how different processor types affect the cost per syst
 {: pricing-dh}
 
 When you use dedicated host, you get an improved VP: EC ratio up to 1:20, which you can use to get control over licensing costs. Consider the following points for dedicated host pricing:
-•	You are not charged for a shared processor pool when you are using a dedicated host.
-•	You are charged for the selection of operating system (AIX, IBM i, and Linux) as usual on top of the dedicated host charges.
+* You are not charged for a shared processor pool when you are using a dedicated host.
+* You are charged for the selection of operating system (AIX, IBM i, and Linux) as usual on top of the dedicated host charges.
+
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 
 <!-- Keith to review -->
 
