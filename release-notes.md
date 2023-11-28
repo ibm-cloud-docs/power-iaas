@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-17"
+lastupdated: "2023-11-28"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,6 +26,14 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## December 2023
+{: #dec-2023}
+
+- A new cost estimator for {{site.data.keyword.powerSys_notm}} is available. Access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator, see: [Getting started with the cost estimator](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
+- dedicated host
+- VPC VPN
+- New DCs
+  
 ## November 2023
 {: #nov-2023}
 

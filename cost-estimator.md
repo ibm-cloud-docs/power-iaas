@@ -65,6 +65,7 @@ Before deploying a virtual server instance in a workspace, create an estimate of
 See the following table to learn about the fields and descriptions that you need to enter:
 
 | Field	                        | Description                                                                                           |
+|-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | **Required**: Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
 | Operating system              |	Select the operating system that meets your needs from the drop-down.                                |
 | Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic, see: [Configuring a VM for Epic workloads](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                   |
