@@ -8,6 +8,7 @@ Power Systems Virtual Servers
     release-notes.md
     getting-started.md
     about-power-virtual-server.md
+    cost-estimator.md
     pricing.md
     ha-dr.md
 
