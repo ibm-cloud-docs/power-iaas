@@ -57,9 +57,9 @@ Complete the steps documented in [Getting started with VPN gateways](/docs/vpc?t
 ## Step 3
 {: vpc-vpn-3}
 
-Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace.
-  a.	For a PER enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
-  b.	For a non-per enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+**Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace**.
+  -	For a PER enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+  -	For a non-per enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 ## Considerations
 {: vpcvpn-cons}

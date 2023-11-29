@@ -29,10 +29,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## December 2023
 {: #dec-2023}
 
+- New data center `MAD04` is available.
 - A new cost estimator for {{site.data.keyword.powerSys_notm}} is available. Access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator, see: [Getting started with the cost estimator](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
 - dedicated host
-- VPC VPN
-- New DCs
+- A VPC VPN service is now available. This is a more robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see: [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+- {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change a volume’s IOPS level for your existing volumes, clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- 
   
 ## November 2023
 {: #nov-2023}
