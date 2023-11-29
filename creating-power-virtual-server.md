@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-17"
+lastupdated: "2023-11-29"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -54,7 +54,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
     | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
     | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
-    | Europe | Madrid, Spain| eu-es | MAD02 | MAD02 | eu-es-1 |
+    | Europe | Madrid, Spain| eu-es | MAD02 \n MAD04 | MAD02 \n MAD04 | eu-es-1 \n eu-es-2|
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
     | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
