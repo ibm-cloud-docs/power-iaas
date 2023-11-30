@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-29"
+lastupdated: "2023-11-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -114,6 +114,8 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
     - **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing PVM instance (VM) or storage volume from your account. The new storage volume(s) for the VM will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.  
   
     - **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot voulmes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volume(s), the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified.
+
+    To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers)
 
     For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
 
