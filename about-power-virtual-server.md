@@ -24,7 +24,7 @@ subcollection: power-iaas
 # What is a Power Systems Virtual Server?
 {: #about-virtual-server}
 
-{{site.data.keyword.powerSysFull}} is a Power Systems offering. The Power Systems Virtual Servers are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure. The virtual servers, also known as logical partitions (LPAR), run on IBM Power Systems hardware with the PowerVM hypervisor.
+{{site.data.keyword.powerSysFull}} is a Power Systems offering. The {{site.data.keyword.powerSys_notm}} are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure. The virtual servers, also known as logical partitions (LPAR), run on IBM Power Systems hardware with the PowerVM hypervisor.
 {: shortdesc}
 
 With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for Power Systems Virtual Servers:
@@ -58,14 +58,14 @@ You can configure and customize the following options when you create a {{site.d
 ### Bring your own image
 {: #bring-own-image}
 
-IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX, IBM i or Linux image that you have tested and deployed.
+IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-deploy-custom-image) custom AIX, IBM i, or Linux image that you have tested and deployed.
 
 ### Support for SAP NetWeaver or SAP HANA applications
 {: #support-SAPNetWeaver-or-SAPHANA}
 
 When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For information about the supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs). For more information, see [Deploying your infrastructure](/docs/sap?topic=sap-power-vs-planning-items).
 
-When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads at this time.
+When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads currently.
 {: note}
 
 ### Support for deploying a Red Hat OpenShift Cluster
@@ -80,8 +80,7 @@ The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}:
 - IBM Power System S922 (9009-22A)
 - IBM Power System S922 (9009-22G)
 - IBM Power System E980 (9080-M9S)
-- IBM Power System S1022 (9105-22A) <!-- IBM Power System E1080 (9080-HEX) --> 
-  For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-virtual-server#data-sheets) and the hardware overview table.
+- IBM Power System S1022 (9105-22A) For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-virtual-server#data-sheets) and the hardware overview table.
 
 If you'd like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}}, see the [IBM Power Systems performance report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
@@ -97,7 +96,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^1]| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^1]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 1. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -108,7 +107,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| * Power S922 (9009-22A) | * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus9000 C9336PQ  (Spine 10G) \n * Cisco Nexus9000 C93180YC (10G) \n * Cisco Nexus9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
+| * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ  (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 2. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -117,7 +116,7 @@ If you'd like to compare your current environment's performance to what's availa
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
+| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus 9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus 9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus 9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 3. Hardware overview (Non-US)" caption-side="top"}
@@ -135,52 +134,85 @@ For a complete list of supported data centers, see [Creating a Power Systems Vir
 **Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
 {: note} -->
 
-{{site.data.keyword.powerSys_notm}} offers you to select a I/O operations per second (IOPs) based storage that suits your needs. Flexible IOPs is a tier-less storage offering that removes the notion of disk type and replace it with storage pool. Each of the storage pool now supports a set of storage types. 
-
-You can enable or disable the virtual server instance (VM) storage pool affinity. Refer to the following table to learn how storage pool affinity setting behaves:
-
-| VM storage pool affinity setting |	Action |
-|----------------------------------|---------|
-| Enabled |	Volume groups (volumes attached to a VM) can have a mix of volumes with different storage types but still required to all be in the same storage pool. |
-| Disabled |	VM can have volumes attached from different storage pools. |
-{: caption="Table 4. storage pool affinity setting" caption-side="bottom"}
+{{site.data.keyword.powerSys_notm}} offers you to select a I/O operation per second (IOPs) based storage that suits your needs. Flexible IOPs are a tier-less storage offering that removes the notion of disk type and replace it with storage pool. Each of the storage pools now supports all the storage tiers. 
 
 Here are the following tiers that you can select with their respective IOPs mapping:
 | Tier selected	| IOPs you get	| Performance example |
 |---------------|---------------|---------------------|
-| Tier - 0	| 25 IOPs/GB	| A 100-GB volume receives 2,500 IOPs (2.5x faster than tier - 1, 8.3x faster than tier - 3). |
-| Tier – 1	| 10 IOPs/GB	| A 100-GB volume receives 1,000 IOPs (3.3x faster than tier - 3). |
-| Tier – 2	| 3 IOPs/G	| A 100-GB volume receives 300 IOPs. |
-| Fixed IOPs	| 5,000 regardless of size |	A 100-GB volume receives 5,000 IOPs. Break-even is 200 GB @ 5,000 IOPs = 25 IOPs/GB. |
-{: caption="Table 5. tier and IOPs mapping" caption-side="bottom"}
+| Tier - 0	| 25 IOPs/GB	| A 100-GB volume receives 2,500 IOPs. \n This is 2.5x faster than tier - 1 and 8.3x faster than tier - 3. |
+| Tier – 1	| 10 IOPs/GB	| A 100-GB volume receives 1,000 IOPs. \n This is 3.3x faster than tier - 3. |
+| Tier – 2	| 3 IOPs/GB	| A 100-GB volume receives 300 IOPs. |
+| Fixed IOPs	| 5,000 regardless of size |	A 100-GB volume receives 5,000 IOPs. \n Break-even is 200 GB @ 5,000 IOPs = 25 IOPs/GB. |
+{: caption="Table 4. tier and IOPs mapping" caption-side="bottom"}
 
-Use the [List all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPs level available for your workspace.
+In flexible IOPs choice of the storage tier is optional but if you do not choose the storage tier, it defaults to Tier - 3.
+{: important}
 
-In flexible IOPs choice of the storage tier is optional but if you do not choose the storage tier, it will default to Tier - 3.
+## Working with the APIs
+{: iops-api}
 
-The storage tier that you choose is considered along with `volumePool` or `StorageAffinity` parameters which determines the storage pool. For flexible IOPs all storage pools will support any tier level. Additionally, the storage tier is not tied to the storage pool.
+Use the [List of all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPs levels available for your workspace.
+
+The storage tier that you choose is considered along with `volumePool` or `StorageAffinity` parameters that determines the storage pool. For flexible IOPs all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
 ### Benefits of flexible IOPs 
 {: iops-benefits}
 
-Flexible IOPs offers you with multiple tiers of storage to choose from. Each IOPs level is has its own pricing, performance, and capability. With flexible IOPs you can:
+Flexible IOPs offers you with multiple tiers of storage to choose from. Each IOPs level has its own pricing, performance, and capability. With flexible IOPs you can:
 * Change a volume’s IOPs level for your existing volumes while staying within the same storage pool.
 * Clone one or more volumes to your choice of IOPs level. 
 * Deploy a virtual server instance’s volume in any of the supported IOPs levels with the storage pool where the image resides independent of the IOPs level of the image’s backing volumes.
 
+### Selecting a storage tier
+{: iops-tier-select}
+
+Flexible IOPs allows you to select your desired tier for:
+  - Boot volume
+  - Virtual server instance volume
+
+**Boot volume**
+When you are creating virtual server instance, define the boot volume by:
+- Selecting your desired **Operating system**.
+- Select or clear the **Configure for Epic workloads** indicator.
+- Select your desired **Image**.
+- Select from Tier 0, Tier 1, Tier 2, Tier 3, or Fixed IOPs.
+- For **Storage pool**, select from **Auto-select pool**, **Affinity**, **Anti-affinity**.
+
+| VM storage pool affinity setting |	Action |
+|----------------------------------|---------|
+| Auto-select pool |	{{site.data.keyword.powerSys_notm}} determines the best pool available for you. |
+| Affinity |	The storage pool is decided to be the same as the storage pool of affinity object that you choose. |
+| Anti-affinity|  Storage pool is decided making the storage pool of affinity object that you choose as an exception.|
+{: caption="Table 5. Storage pool affinity setting" caption-side="bottom"}
+
+All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
+{: note}
+
+**Virtual server instance volume**
+When you are creating virtual server instance, define the following:
+- Enter a unique name.
+- Enter the desired size of the volume.
+- Enter the quantity of volumes that you need.
+- Select from Tier 0, Tier 1, Tier 2, Tier 3, or Fixed IOPs.
+  
+<!-- You can enable or disable the virtual server instance (VM) storage pool affinity. Refer to the following table to learn how storage pool affinity setting behaves:
+
+| VM storage pool affinity setting |	Action |
+|----------------------------------|---------|
+| Enabled |	Volumes attached to a VM can have a mix of volumes with different storage tiers but still required to be in the same storage pool. |
+| Disabled |	VM can have volumes attached from different storage pools. |
+{: caption="Table 4. storage pool affinity setting" caption-side="bottom"} -->
 ### Limitations of flexible IOPs
 {: iops-limit}
 
 Following are the limitations of flexible IOPs:
-- Volumes enabled for replication cannot be changed to a different IOPs level. If you still want to change the IOPs level for a replicated volume, you should change the replication enabled property to false, change the IOPs level, and re-enable the replication property.
+- Volumes that are enabled for replication cannot be changed to a different IOPs level. If you still want to change the IOPs level for a replicated volume, you should change the replication-enabled property to false, change the IOPs level, and re-enable the replication property.
 - You cannot change the IOPs level when:
   - A volume is marked 'shareable'
   - A volume is in a state of 'in-use'
-  - A volume is part of any snapshots.
+  - A volume is part of any snapshot.
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage tier and pool.
-- Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200GB then the option to change to tier 5k is not allowed.
-
-pricing of flexible IOPs
+- Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to tier 5k is not allowed.
 
 ## Public and private networks
 {: #public-private-networks}
@@ -193,7 +225,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
 * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
-* Protected by firewall and supports the following secure network protocols:
+* Protected by a firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
     * Ping
