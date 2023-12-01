@@ -141,14 +141,14 @@ Here are the following tiers that you can select with their respective IOPs mapp
 |---------------|---------------|---------------------|
 | Tier - 0	| 25 IOPs/GB	| A 100-GB volume receives 2,500 IOPs. \n This is 2.5x faster than tier - 1 and 8.3x faster than tier - 3. |
 | Tier – 1	| 10 IOPs/GB	| A 100-GB volume receives 1,000 IOPs. \n This is 3.3x faster than tier - 3. |
-| Tier – 2	| 3 IOPs/GB	| A 100-GB volume receives 300 IOPs. |
+| Tier – 3	| 3 IOPs/GB	| A 100-GB volume receives 300 IOPs. |
 | Fixed IOPs	| 5,000 regardless of size |	A 100-GB volume receives 5,000 IOPs. \n Break-even is 200 GB @ 5,000 IOPs = 25 IOPs/GB. |
 {: caption="Table 4. tier and IOPs mapping" caption-side="bottom"}
 
 In flexible IOPs choice of the storage tier is optional but if you do not choose the storage tier, it defaults to Tier - 3.
 {: important}
 
-## Working with the APIs
+### Working with the APIs
 {: iops-api}
 
 Use the [List of all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPs levels available for your workspace.
@@ -170,7 +170,7 @@ Flexible IOPs allows you to select your desired tier for:
   - Boot volume
   - Virtual server instance volume
 
-**Boot volume**
+**Boot volume** \n
 When you are creating virtual server instance, define the boot volume by:
 - Selecting your desired **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
@@ -188,7 +188,7 @@ When you are creating virtual server instance, define the boot volume by:
 All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
 {: note}
 
-**Virtual server instance volume**
+**Virtual server instance volume** \n
 When you are creating virtual server instance, define the following:
 - Enter a unique name.
 - Enter the desired size of the volume.
