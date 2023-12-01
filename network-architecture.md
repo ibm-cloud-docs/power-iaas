@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-14"
+lastupdated: "2023-11-30"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -352,7 +352,8 @@ The above are base capability use cases. These base capabilities use cases can b
 
 1. In this depiction, the on-premises data center uses a direct link connection to attach to the transit gateway. 
 
-2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the on-premises data center via the incoming direct link that is interconnected through this transit gateway. 
+2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the on-premises data center via the incoming direct link that is interconnected through this transit gateway.
+3. You will pay for the Direct Link connection that you use  to connect your on-premises with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
 
 ![Connecting on-premises with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premises with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
@@ -363,6 +364,8 @@ The above are base capability use cases. These base capabilities use cases can b
 2. Involves no additional transit gateway charges. For such connection the following conditions should be satisfied:
     - The workspace and the classic infrastructure should be in the same region.
     - The workspace should be connected to a transit gateway.
+
+For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
 
 ![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
 
@@ -387,12 +390,16 @@ A GRE tunnel is required when you want to establish a connection from your PER-e
 
 Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel needs to be attached with the transit gateway.
 
+For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
+
 ### Connecting to Virtual Private Cloud
 {: #per-vpc}
 
 1. Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and Virtual Private Cloud (VPC) using the transit gateway.
 2. You can also connect the classic infrastructure with the same transit gateway to create a multi-connection network. This establishes a three-way communication. 
 3. Thus, the PER-enabled workspace, VPC, and classic infrastructure can establish connection with each other.
+
+The pricing for this connection depends upon the local or global transit gateway usage. See: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
 
 ![Connecting PER workspace with VPC](./images/3.PER_VPC.svg "Connecting PER workspace with VPC"){: caption="Figure 11. Connecting PER workspace with VPC" caption-side="bottom"}
 
@@ -404,6 +411,8 @@ Hence, if you have a custom IP address in your PER-enabled workspace, you need a
     
     On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address. 
 
+For information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
+
 ![Connecting PER workspace with IBM Cloud services](./images/4_PER_Cloudservices.svg "Connecting PER workspace with IBM Cloud services"){: caption="Figure 12. Connecting PER workspace with IBM Cloud services" caption-side="bottom"}
 
 ### Connecting multiple workspaces across a data center
@@ -412,5 +421,7 @@ Hence, if you have a custom IP address in your PER-enabled workspace, you need a
 1. Use the local transit gateway to connect multiple {{site.data.keyword.powerSys_notm}} workspaces that are across different zones but in the same region.
     A PER-enabled workspace needs to be attached with the transit gateway that can exchange routes between two workspaces. 
 2. When the workspaces are present in different regions, use a global transit gateway to inter-connect them.
+
+To know more about the transit gateway charges for local and global routing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
 
 ![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
