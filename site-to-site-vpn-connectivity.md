@@ -49,7 +49,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 ### Configuring VPC VPN in a PER workspace
 {: arch-per}
 
-![VPC VPN in PER architecture diagram](./images/vpc_vpn_per "Configuring VPC VPN in a PER workspace"){: caption="Figure 1. Configuring VPC VPN in a PER workspace" caption-side="bottom"}
+![VPC VPN in PER architecture diagram](./images/vpc_vpn_per.svg "Configuring VPC VPN in a PER workspace"){: caption="Figure 1. Configuring VPC VPN in a PER workspace" caption-side="bottom"}
 
 1. Define the on-premises subnet in the address prefix for the VPC.
 2. Define a routing table with Transit Gateway and VPN gateway.
@@ -57,7 +57,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 ### Configuring VPC VPN in a non-PER workspace
 {: arch-nonper}
 
-![VPC VPN in non-PER architecture diagram](./images/vpc_vpn_legacy "Configuring VPC VPN in a non-PER workspace"){: caption="Figure 1. Configuring VPC VPN in a non-PER workspace" caption-side="bottom"}
+![VPC VPN in non-PER architecture diagram](./images/vpc_vpn_legacy.svg "Configuring VPC VPN in a non-PER workspace"){: caption="Figure 1. Configuring VPC VPN in a non-PER workspace" caption-side="bottom"}
 
 1. Define the on-premises subnet in the address prefix for the VPC.
 2. Define a routing table with Direct Link and VPN gateway.
