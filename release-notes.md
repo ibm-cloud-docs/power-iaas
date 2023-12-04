@@ -29,12 +29,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## December 2023
 {: #dec-2023}
 
-- New data center `MAD04` is available. This is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+- A new data center `MAD04` is available. This is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
 - A new cost estimator for {{site.data.keyword.powerSys_notm}} is available. Access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator, see: [Getting started with the cost estimator](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
-- dedicated host
+- Deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host that significantly expands your range of computing options. This ultimately makes your workload migration to the hybrid cloud easy.
 - A VPC VPN service is available. This is a more robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see: [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
 - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change a volume’s IOPS level for your existing volumes, clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
-- 
   
 ## November 2023
 {: #nov-2023}
@@ -46,33 +45,33 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #sep-2023}
 
 - **{{site.data.keyword.powerSys_notm}} and SysDig Integration**
-: You can now seamlessly monitor your platform metrics within the IBM Cloud environment using the IBM Cloud Monitoring service. For detailed instructions on how to access and utilize this integration, please refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
+: You can now seamlessly monitor your platform metrics within the IBM Cloud environment by using the IBM Cloud Monitoring service. For detailed instructions on how to access and use this integration, refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
-The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13` with other data center coming soon..
+The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13` with other data center coming soon.
   {: note}
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
-: The Power10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers will be made available.
+: The Power10 S1022 (9105-22A) is now available in `WDC07` data center. As we progress, additional data centers are made available.
 
-  SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
+  SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for nonproduction workloads.
   {: note}
 
 - **IBM i 7.3 service extension pricing**
-: Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at end of normal support and will be in service extension. Service extension pricing will be automatically added to the IBM i charge for IBM i 7.3 usage.
+: Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at the end of normal support and will be in service extension. Service extension pricing is automatically added to the IBM i charge for IBM i 7.3 usage.
 
 - **Addition of New Global Replication Service data center pair**
-: {{site.data.keyword.powerSys_notm}} have expanded the Global Replication Service (GRS) capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is currently available on the Tier 1 storage support within the GRS framework. See, the documentation: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+: {{site.data.keyword.powerSys_notm}} expanded the Global Replication Service (GRS) capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is available on the Tier 1 storage support within the GRS framework. See: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ## June 2023
 {: #jun-2023}
 
--  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account through the use of an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#stock-image-copy-improve).
+-  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account by using an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#stock-image-copy-improve).
 
-  We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you will notice that the export option for stock images is no longer available because you are using the reference of the stock image.
+  We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you notice that the export option for stock images is no longer available because you are using the reference of the stock image.
 
-- IBM {{site.data.keyword.powerSys_notm}} is sequentially rolling out Power Edge Router (PER) solution that is currently available in `DAL10` datacenter.
+- IBM {{site.data.keyword.powerSys_notm}} is sequentially rolling out a Power Edge Router (PER) solution that is available in `DAL10` data center.
   
-  PER improves network communication across different parts of IBM network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+  PER improves network communication across different parts of the IBM network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
 
 ## May 2023
 {: #may-2023}
@@ -84,10 +83,10 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## March 2023
 {: #mar-2023}
 
-- **Update on new SAP HANA large t-shirt profiles feature**:
-  IBM supports SLES15 SP4 for SAP and RHEL8.6 for SAP OS images with all other features on all t-shirt profiles with less than 64 cores. These SLES15 SP4 for SAP and RHEL8.6 for SAP OS images are in the process of being updated to support the larger t-shirt profiles. Until further notice please use the larger t-shirt profiles with the SLES15 SP3 for SAP OS image or the RHEL8.4 for SAP OS image. For more information, see the SAP documentation on [OS for IBM Power Virtual Servers](/docs/sap?topic=sap-compute-os-design-considerations#os-power).
+- **Update on the new SAP HANA large t-shirt profiles feature**:
+  IBM supports SLES15 SP4 for SAP and RHEL8.6 for SAP OS images with all other features on all t-shirt profiles with fewer than 64 cores. These SLES15 SP4 for SAP and RHEL8.6 for SAP OS images are while being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles with the SLES15 SP3 for SAP OS image or the RHEL8.4 for SAP OS image. For more information, see the SAP documentation on [OS for IBM Power Virtual Servers](/docs/sap?topic=sap-compute-os-design-considerations#os-power).
 
-  The RHEL8.6 for SAP OS image is currently available in `DAL10`, `DAL12`, `FRA04`, `FRA05`, `LON04`, `LON05`, `MON01`, `SYD05`, `TOR01`, `WDC04` and `WDC06`. The image will be available in all data centers by 3/27/23.
+  The RHEL8.6 for SAP OS image is available in `DAL10`, `DAL12`, `FRA04`, `FRA05`, `LON04`, `LON05`, `MON01`, `SYD05`, `TOR01`, `WDC04`, and `WDC06`. The image is available in all data centers by 3/27/23.
 
 - **{{site.data.keyword.powerSys_notm}} cost estimator**:
   Effective 3/23/23, two of the latest large SAP HANA t-shirt profiles `mh1-90x16200` and `mh1-100x18000` are available options in the [cost estimator](https://cloud.ibm.com/power/overview#estimator){: external}. In April 2023, the latest largest profile `mh1-125x22500` will also be available in the estimator.
@@ -98,7 +97,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## February 2023
 {: #feb-2023}
 
-- Added a new data center DAL10 in the exsisting list of Power Systems Virtual Server data centers. For more information, see [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+- Added a new data center DAL10 in the existing list of Power Systems Virtual Server data centers. For more information, see [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 ## December 2022
 {: #dec-2022}
@@ -110,13 +109,13 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## September 2022
 {: #sept-2022}
 
-- You can share a group of processors between multiple virtual machines that allows you to group your applications together using the shared processor pool. For more information, see [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+- You can share a group of processors between multiple virtual machines that allows you to group your applications together by using the shared processor pool. For more information, see [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
-- {{site.data.keyword.powerSys_notm}} allows you to automate the complete data recovery solution using the API and CLI interfaces of global replication service. For more information, see [Managing global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
+- {{site.data.keyword.powerSys_notm}} allows you to automate the complete data recovery solution by using the API and CLI interfaces of a global replication service. For more information, see [Managing a global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
 
 - You can choose to deploy Epic workloads on a VM for more cost savings. For more information, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-- Full Linux subscription on {{site.data.keyword.powerSys_notm}} now supports SLES 15 SP4 (General).
+- The full Linux subscription on {{site.data.keyword.powerSys_notm}} now supports SLES 15 SP4 (General).
 
 ## August 2022
 {: #aug-2022}
@@ -127,7 +126,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 {: #jul-2022}
 
 - You can use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC). See [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
-- {{site.data.keyword.powerSys_notm}} now supports full Linux subscription on RHEL 8.6. See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+- {{site.data.keyword.powerSys_notm}} now supports a full Linux subscription on RHEL 8.6. See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 ## June 2022
 {: #jun-2022}
@@ -139,7 +138,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## April 2022
 {: #apr-2022}
 
-- Snapshots that are created is monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#metering-snapshot).
+- Snapshots that are created are monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#metering-snapshot).
 
 ## March 2022
 {: #march-2022}
@@ -152,8 +151,8 @@ The data center where you can monitor your platform metrics currently are `WDC06
 
 - You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the Power Systems Virtual Server GUI.
 - You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the Power Systems Virtual Server GUI.
-- You can now set [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the Power Systems Virtual Server GUI.
-- You can now set [affinity policy for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the Power Systems Virtual Server GUI.
+- You can now set a [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the Power Systems Virtual Server GUI.
+- You can now set [affinity policies for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the Power Systems Virtual Server GUI.
 
 ## October 2021
 {: #oct-2021}
@@ -183,13 +182,13 @@ The data center where you can monitor your platform metrics currently are `WDC06
 {: #mar-2021}
 
 - You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM) on a VM instance. For more information, see [Using RHEL within the Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
-- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
-- You can now choose *OSA21* data center to deploy your {{site.data.keyword.powerSys_notm}}.
+- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
+- You can now choose an `OSA21` data center to deploy your {{site.data.keyword.powerSys_notm}}.
 
 ## February 2021
 {: #feb-2021}
 
-- You can now choose *MON01* data center to deploy your {{site.data.keyword.powerSys_notm}}.
-- The Power Systems Virtual Server offering now supports IBM i 7.1. For more information, see [Minimium PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
+- You can now choose a `MON01` data center to deploy your {{site.data.keyword.powerSys_notm}}.
+- The Power Systems Virtual Server offering now supports IBM i 7.1. For more information, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 - You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#cloning-volume).
-- You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).
+- You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information, see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).
