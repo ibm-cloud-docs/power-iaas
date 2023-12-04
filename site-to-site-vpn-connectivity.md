@@ -67,20 +67,22 @@ It is recommended that you create a direct cloud connection between the VPC and 
 ## Step 1
 {: vpc-vpn-1}
 
-**Create a VPC resource.** \n
-Complete the steps documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+**Create a VPC resource.** 
+
+  Complete the steps documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 
 ## Step 2
 {: vpc-vpn-2}
 
-**Create a Site-to-Site VPN gateway in VPC** \n
-Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
+**Create a Site-to-Site VPN gateway in VPC**
+
+  Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
 
 
 ## Step 3
 {: vpc-vpn-3}
 
-**Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace**. \n
+**Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace**. 
 
 Use one the following procedures that suit your needs:
   -	For a PER enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
