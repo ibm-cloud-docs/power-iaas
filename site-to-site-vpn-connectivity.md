@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-12-04"
+lastupdated: "2023-12-05"
 
 keywords: VPC VPN, VPNaaS,
 
@@ -78,6 +78,9 @@ It is recommended that you create a direct cloud connection between the VPC and 
 
 - Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
 
+While creating a VPN connection, use a policy based VPN.
+{: note}
+
 
 ## Step 3
 {: vpc-vpn-3}
@@ -91,9 +94,10 @@ Use one the following procedures that suit your needs:
 ## Considerations
 {: vpcvpn-cons}
 
-1.	Subnets created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of On-premises VPC.
-2.	In routing table of IBM Cloud VPC, you must enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in Edit Traffic panel).
-3.	Choose the Direct Link with Transit Gateway enabled or disable configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.  
+1. The VPN connection that are used in all the configurations are policy-based VPN.
+2. Subnets created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of On-premises VPC.
+3.	In routing table of IBM Cloud VPC, you must enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in Edit Traffic panel).
+4.	Choose the Direct Link with Transit Gateway enabled or disable configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.  
 
 
 ## Additional information
