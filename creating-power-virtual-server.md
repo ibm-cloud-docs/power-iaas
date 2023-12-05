@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-17"
+lastupdated: "2023-12-05"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -54,7 +54,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
     | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
     | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
-    | Europe | Madrid, Spain| eu-es | MAD02 | MAD02 | eu-es-1 |
+    | Europe | Madrid, Spain| eu-es | MAD02 \n MAD04 | MAD02 \n MAD04 | eu-es-1 \n eu-es-2|
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
     | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
@@ -89,7 +89,9 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. When you select a custom image, the new PVM instance(s) will be deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. 
+   
+    You can select a For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
@@ -97,7 +99,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-8. Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
+8.  Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
 
     There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 & S1022 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
     {: important}
@@ -113,10 +115,12 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
   
     - **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot voulmes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volume(s), the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified.
 
+    <!-- To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers) -->
+
     For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
 
-    If you add volumes to be created and attached to your new VM during creation then all the volumes will be placed in the same selected storage pool. Volumes can be created in different storage pools after the VM has been provisioned.
-    {: note}
+    <!-- All volumes created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection. -->
+    <!-- {: note} -->
     
 10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
 
@@ -134,10 +138,26 @@ Refer to the following table for more information on each {{site.data.keyword.po
 | Cores | There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. |
 | Memory | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price. |
 | Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For these SAP stock images it is mandatory to set an SSH key while creating the VM. You will be able to access the VM instance only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community supported CentOS image under Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://forums.centos.org/app.php/help/faq){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your IBM Power Virtual Server](/docs/sap?topic=sap-power-vs-set-up-infrastructure#power-vs-provision-server). \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
-| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
+| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. Enter the **Name in VSI**, choose the desired **Size**, **Quantity**, and **Tiers**.If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
 | Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="Table 2. {{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
+
+<!-- ## Dedicated host
+{: #dedicated-host}
+
+The dedicated hosts feature on {{site.data.keyword.powerSys_notm}} significantly expands your range of computing options that ultimately makes migrating your workloads to the hybrid cloud easy.
+
+The dedicated host functionality, allows you to:
+1.	Reserve a host server for your exclusive use. This provides you an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing with other users.
+2.	Get a host-level isolation, that ensures that your virtual server instances are protected from all vulnerabilities.
+3.	Flexibility in creating and placing the virtual server instances on your host server, with the same shared processor pool support as on-premises and IBM Cloud. This improved granularity provides you the ability to run more instances within the same server footprint, thus enhancing your VP: EC ratio up to 1:20.
+4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. 
+    
+[how?]{: tag-teal}
+
+Dedicated Hosts will be rolled out in two phases, with Phase 1 being available in `XYZ` data centers on December 14th, and Phase 2 being available in general availability in June 2024. [need DC names]{: tag-teal}
+{: note} -->
 
 ## Reusing Volume names or VM names in Power System Virtual Servers
 {: #reusing_volume_names}
@@ -163,7 +183,7 @@ You can configure your virtual machine (VM) instance to deploy Epic workloads wh
 To configure a VM instance for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify whether the deployed VM supports Epic workloads by checking the corresponding VM details page. On the VM details page, the **Deployment type** field must be se to **Epic**.
 
 In the VM details page, for the VMs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues.
-{:important}
+{: warning}
 
 For the VMs on which Epic workloads are supported and are in shut-down state, you must not change the core type to any value other than dedicated to avoid performance issues.
 {:important}
