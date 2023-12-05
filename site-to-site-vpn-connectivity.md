@@ -69,7 +69,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 
 **Create a VPC resource.** 
 
-:Complete the steps documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+- Complete the steps documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 
 ## Step 2
 {: vpc-vpn-2}
