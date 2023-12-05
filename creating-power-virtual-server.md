@@ -76,7 +76,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
 4. Click **Virtual server instances**.
    
-    Make sure you select the desired workspace to display all the virtual server instances you have already created. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page on [What should I do If I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#ui-not-updated).
+    Make sure you select the desired workspace to display all the virtual server instances you have already created. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page on [What should I do if I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#ui-not-updated).
     {: important}
 
 5. Click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
@@ -89,19 +89,19 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. 
+7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image, you must also select the storage type (tier) and the storage pool selection. 
    
     You can select a For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
-    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
+    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses will be automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
+    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VM instance: *IBM i Cloud Storage Solution*, *IBM i Power HA*, *IBM Db2 Web Query for i*, and *Rational Dev Studio for IBM i*. Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 8.  Select your **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and whether you'd like a **Dedicated processor**, **Uncapped shared processor**, or **Capped shared processor**.
 
-    There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 & S1022 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
+    There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 vCPUs. For more information on processor types, see [What's the difference between capped and uncapped shared processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor). If the machine type is S922 & S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
     {: important}
 
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as being *disabled*. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
@@ -111,9 +111,9 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
     Select one of the following Storage pool options: 
     - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool for the storage tier with sufficient capacity. 
   
-    - **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing PVM instance (VM) or storage volume from your account. The new storage volume(s) for the VM will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.  
+    - **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing PVM instance (VM) or storage volume from your account. The new storage volumes for the VM will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.  
   
-    - **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot voulmes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volume(s), the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified.
+    - **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified.
 
     To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers)
 
@@ -148,15 +148,18 @@ Refer to the following table for more information on each {{site.data.keyword.po
 
 The dedicated hosts feature on {{site.data.keyword.powerSys_notm}} significantly expands your range of computing options that ultimately makes migrating your workloads to the hybrid cloud easy.
 
+Dedicated hosts offers you with a flexible solution for creating VMs and place them on a shared processor pool within the IBM Cloud. You get the isolation as an on-premises hosting, along with the benefits of IBM Cloud. With dedicated hosts, you can optimize your cloud infrastructure to meet your specific needs and maintain the security and control similiar to an on-premises environment. 
+
+Dedicated hosts is ideal for you if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing.
+
+
 The dedicated host functionality, allows you to:
-1.	Reserve a host server for your exclusive use. This provides you an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing with other users.
-2.	Get a host-level isolation, that ensures that your virtual server instances are protected from all vulnerabilities.
-3.	Flexibility in creating and placing the virtual server instances on your host server, with the same shared processor pool support as on-premises and IBM Cloud. This improved granularity provides you the ability to run more instances within the same server footprint, thus enhancing your VP: EC ratio up to 1:20.
+1.	Reserve a host server for your exclusive use. Dedicated hosts provides you an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing with other users.
+2.	Get a host-level isolation. An isolation at host level ensures that your VMs are protected from all vulnerabilities.
+3.	Flexibility in creating and placing the VMs. Dedicated hosts offers the ability to flexibly create VMs and have them placed on the dedicated host with the same shared processor pool support similar to an on-premises user but in the IBM Cloud. You get benefit from further enhanced resource utilization & licensing cost optimization through & core to vCPU ratios (VP: EC ratio up to 1:20).
 4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. 
     
-[how?]{: tag-teal}
-
-Dedicated Hosts will be rolled out in two phases, with Phase 1 being available in `XYZ` data centers on December 14th, and Phase 2 being available in general availability in June 2024. [need DC names]{: tag-teal}
+Dedicated hosts will be rolled out in two phases. Phase 1 in select availability in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers starting on December 14th,2023. Phase 2 is available from June 2024.
 {: note}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers
