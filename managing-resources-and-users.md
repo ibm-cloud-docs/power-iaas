@@ -69,10 +69,9 @@ To see the complete list of actions for each specific role, see the [Manage auth
 
 When you assign access to the {{site.data.keyword.powerSys_notm}} service, you can scope access to any of the following resources:
 - All resources
-- Specific resources, which support the following selections:
+- Specific resources, which supports the following selections:
   - Resource group
   - Service instance
-  - Resource type 
   
   Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned against **Resource type** are ignored.
   {: note}
