@@ -399,12 +399,12 @@ The following code snippets shows the differences between the old and new activi
 
 You can create an activity tracker instance and provision it in the same region where your data center is located.
 
-The {{site.data.keyword.powerSys_notm}} workspaces running in various regions or data center will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your Workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} Activity Tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
+The {{site.data.keyword.powerSys_notm}} workspaces running in various regions or data center will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
 {: important}
 
 The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:
 
-|Datacenter | Current AT Region | New AT Region |
+|Datacenter | Current activity tracker region | New activity tracker region |
 |------|----------|---------|
 |`WDC04` | us-south | us-east |
 |`WDC06` | us-south | us-east |
