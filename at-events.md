@@ -393,3 +393,27 @@ The following code snippets shows the differences between the old and new activi
 }
 ````
 {: codeblock}
+
+## Activity tracker regions
+{: #at-regions}
+
+You can create an activity tracker instance and provision it in the same region where your data center is located.
+
+The {{site.data.keyword.powerSys_notm}} workspaces running in various regions or data center will send events to activity tracker instances in their respective regions effective from 29 January 2024.
+{: important}
+
+The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:
+
+|Datacenter | Current AT Region | New AT Region |
+|------|----------|---------|
+|`WDC04` | us-south | us-east |
+|`WDC06` | us-south | us-east |
+|`WDC07` | us-south | us-east|
+|`MON01` | us-south | ca-tor|
+|`TOR04` | us-south | ca-tor|
+|`SAO01` | us-south | br-sao|
+|`SAO04` | us-south | br-sao|
+|`LON04` | eu-de | eu-gb|
+|`LON06` | eu-de | eu-gb|
+|`OSA21` | jp-tok | jp-osa|
+{: caption="Table 18. List of DCs and their corresponding AT instance region" caption-side="top"}

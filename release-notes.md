@@ -34,6 +34,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host that significantly expands your range of computing options. This ultimately makes your workload migration to the hybrid cloud easy.
 - A VPC VPN service is available. This is a more robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see: [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
 - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change a volume’s IOPS level for your existing volumes, clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- The {{site.data.keyword.powerSys_notm}} workspaces running in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see: [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
   
 ## November 2023
 {: #nov-2023}
