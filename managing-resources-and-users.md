@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2022-11-27"
+lastupdated: "2022-12-06"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -28,13 +28,6 @@ subcollection: power-iaas
 
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
-
-You can assign IAM authorizations based on the following criteria:
-
-- Individual users
-- Access groups
-- Specific types of resources
-- Resource groups
 
 For more information about IAM, review the following information:
 
@@ -61,15 +54,29 @@ The following table displays the IAM platform access roles and the corresponding
 ## Service access roles
 {: #service-access-roles}
 
-You can use the service access roles to define what users can do with {{site.data.keyword.powerSys_notm}} functions. The following table displays the IAM service access roles and the corresponding actions a user can complete with {{site.data.keyword.powerSys_notm}}:
+You can use the service access roles to define what actions users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table displays the IAM service access roles and the corresponding actions that a user can complete with {{site.data.keyword.powerSys_notm}}:
 
 | Service access role | Description of actions |
 |-----------|-------------------------|
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make any changes to the resources. |
-| Manager | You can configure all resources. The following are some of the actions you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
+| Manager | You can configure all resources. The following are some of the actions that you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
 To see the complete list of actions for each specific role, see the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page in IBM Cloud.
+
+### Resources supported for {{site.data.keyword.powerSys_notm}} IAM access policies
+{: #res-supported}
+
+When you assign access to the {{site.data.keyword.powerSys_notm}} service, you can scope access to any of the following resources:
+- All resources
+- Specific resources, which support the following selections:
+  - Resource group
+  - Service instance
+  - Resource type 
+  
+  Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned against **Resource type** are ignored.
+  {: note}
+
 
 ## Access roles requirements for Power System Virtual Server
 {: #access-roles-requirement}
