@@ -52,6 +52,7 @@ Power Systems Virtual Servers
         volume-snapshot-clone.md
         global-replication-service.md
         managing_events_logs.md
+        virtual-applianes-catalog.md
 
     {: .topicgroup}
     Networking
