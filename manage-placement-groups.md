@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2023
 
-lastupdated: "2023-11-27"
+lastupdated: "2023-12-07"
 
 keywords: managing placement groups, placement groups, add placement group, delete placement group
 
@@ -29,7 +29,7 @@ Server placement groups provide you control over the host or server on which a n
 
 You can apply an affinity or anti-affinity policy to each VM instance within a server placement group. After you create a placement group, you can provision a new VM instance in the placement group. When you set a placement group with an affinity policy, all VMs in that placement group are launched on the same server. When you set a placement group with an anti-affinity policy, all VMs in that placement group are launched on different servers.
 
-You can use the user interface for placement groups only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to create placement groups.
+You can use the [Add Server to Placement Group](/apidocs/power-cloud#pcloud-placementgroups-members-post) API to add VM to a placement group.
 {: important}
 
 ## Creating server placement groups
@@ -75,7 +75,6 @@ To add a VM to a placement group, complete the following steps:
 2. In the **Server placement groups** page, from the placement group table select a placement group name that you want to add the VM.
 3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. You can also add an existing VM to the placement group. 
 4. Click **Add existing VM** to add an existing VM to the placement group. Select one or more VMs from the table and add it to the placement group. 
-   You can add a maximum of 10 VMs (new and existing) to one placement group from the user interface. Use the [Add Server to Placement Group](/apidocs/power-cloud#pcloud-placementgroups-members-post) API if you need to add more than 10 VMs to a placement group. 
 
 VMs that you select must be on the same server or different server depending on the colocation policy of the placement group. A VM can belong to only one placement group and VMs that are already placed in a different placement group is disabled in the table. 
 {: note}
