@@ -134,18 +134,20 @@ For a complete list of supported data centers, see [Creating a Power Systems Vir
 **Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
 {: note} -->
 
-{{site.data.keyword.powerSys_notm}} offers you to select a I/O operation per second (IOPs) based storage that suits your needs. Flexible IOPs are a tier-less storage offering that removes the notion of disk type and replace it with storage pool. Each of the storage pools now supports all the storage tiers. 
+{{site.data.keyword.powerSys_notm}} offers you to select a I/O operation per second (IOPs) based storage that suits your needs. Flexible IOPs are a tier-less storage offering that removes the notion of disk type and replace it with storage pool. Each of the storage pools supports multiple storage tiers. 
 
-Here are the following tiers that you can select with their respective IOPs mapping:
-| Tier selected	| IOPs you get	| Performance example |
+{{site.data.keyword.powerSys_notm}} offers a flexible tiered storage model. All storage pools will support a set of tiers. Tiers are based on different levels of iops (input/output operations per second).
+
+Following is the set of supported tiers and their iops mapping:
+| Tier | IOPs 	| Performance example |
 |---------------|---------------|---------------------|
-| Tier - 0	| 25 IOPs/GB	| A 100-GB volume receives 2,500 IOPs. \n This is 2.5x faster than tier - 1 and 8.3x faster than tier - 3. |
-| Tier – 1	| 10 IOPs/GB	| A 100-GB volume receives 1,000 IOPs. \n This is 3.3x faster than tier - 3. |
-| Tier – 3	| 3 IOPs/GB	| A 100-GB volume receives 300 IOPs. |
-| Fixed IOPs	| 5,000 regardless of size |	A 100-GB volume receives 5,000 IOPs. \n Break-even is 200 GB @ 5,000 IOPs = 25 IOPs/GB. |
+| Tier 0	| 25 IOPs/GB	| A 100-GB volume receives 2,500 IOPs. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1	| 10 IOPs/GB	| A 100-GB volume receives 1,000 IOPs. \n This is 3.3x faster than tier 3. |
+| Tier 3	| 3 IOPs/GB	| A 100-GB volume receives 300 IOPs. |
+| Fixed IOPs	| 5,000 regardless of size |	A 100-GB volume receives 5,000 IOPs. |
 {: caption="Table 4. tier and IOPs mapping" caption-side="bottom"}
 
-In flexible IOPs choice of the storage tier is optional but if you do not choose the storage tier, it defaults to Tier - 3.
+The use of fixed IOPs is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPs/GB = 5000 IOPs).
 {: important}
 
 ### Working with the APIs
@@ -155,13 +157,24 @@ Use the [List of all supported storage tiers for this cloud instance](/apidocs/p
 
 The storage tier that you choose is considered along with `volumePool` or `StorageAffinity` parameters that determines the storage pool. For flexible IOPs all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
+The storage tier that you choose does not influence the determination of the storage pool where a volume will get created in. When the storage tier is not specified then the storage tier is set to Tier 3 by default. 
+
+The storage pool selection is based on the use of storage pool or storage affinity. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPs all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
+
 ### Benefits of flexible IOPs 
 {: iops-benefits}
 
-Flexible IOPs offers you with multiple tiers of storage to choose from. Each IOPs level has its own pricing, performance, and capability. With flexible IOPs you can:
+Flexible IOPs offers multiple IOPs levels (tiers) of storage to choose from. Each IOPs level has its own pricing, performance, and capability. 
+
+With flexible IOPs you can:
+* Create a volume (or multiple volumes) and specify the IOPs level you want.
 * Change a volume’s IOPs level for your existing volumes while staying within the same storage pool.
 * Clone one or more volumes to your choice of IOPs level. 
-* Deploy a virtual server instance’s volume in any of the supported IOPs levels with the storage pool where the image resides independent of the IOPs level of the image’s backing volumes.
+* Deploy a virtual server instance’s boot volume in any of the supported IOPs levels. Additional data volumes that will be attached to the new virtual server instance can have different IOPs levels from that of the instance’s boot volume.
+* Import an image from IBM Cloud Object Storage to any of the supported IOPs levels.
+
+Best practice for an image import is to use the default IOPs level - Tier 3. When deploying the image (creating a new virtual server instance) the image backing volume(s) get cloned to a new set of volumes that will get attached to the new virtual server instance. When you choose the IOPs level for your boot volume during virtual server instance deployment, the boot volume's IOPs level does not need to match the IOPs level of the image.
+{: note}
 
 ### Selecting a storage tier
 {: iops-tier-select}
@@ -194,6 +207,8 @@ When you are creating virtual server instance, define the following:
 - Enter the desired size of the volume.
 - Enter the quantity of volumes that you need.
 - Select from Tier 0, Tier 1, Tier 2, Tier 3, or Fixed IOPs.
+
+During VM provisioning, if you create additional data volumes to attach to the new the new virtual server instances then these data volumes can be created on any of the supported storage tiers. All these additional data volumes will reside in the same storage pool where the virtual server instance's boot volume resides.
   
 <!-- You can enable or disable the virtual server instance (VM) storage pool affinity. Refer to the following table to learn how storage pool affinity setting behaves:
 
@@ -205,14 +220,14 @@ When you are creating virtual server instance, define the following:
 ### Limitations of flexible IOPs
 {: iops-limit}
 
-Following are the limitations of flexible IOPs:
+Some of the limitations of flexible IOPs are as follows:
 - Volumes that are enabled for replication cannot be changed to a different IOPs level. If you still want to change the IOPs level for a replicated volume, you should change the replication-enabled property to false, change the IOPs level, and re-enable the replication property.
-- You cannot change the IOPs level when:
-  - A volume is marked 'shareable'
-  - A volume is in a state of 'in-use'
-  - A volume is part of any snapshot.
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage tier and pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to tier 5k is not allowed.
+<!-- - - You cannot change the IOPs level when:
+  - A volume is marked 'shareable'
+  - A volume is in a state of 'in-use'
+  - A volume is part of any snapshot. -->
 
 ## Public and private networks
 {: #public-private-networks}
