@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-29"
+lastupdated: "2023-12-08"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -30,11 +30,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #dec-2023}
 
 - A new data center `MAD04` is available. This is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
-- A new cost estimator for {{site.data.keyword.powerSys_notm}} is available. Access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator, see: [Getting started with the cost estimator](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
-- Deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host that significantly expands your range of computing options. This ultimately makes your workload migration to the hybrid cloud easy.
-- A VPC VPN service is available. This is a more robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see: [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
-- {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change a volume’s IOPS level for your existing volumes, clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
-- The {{site.data.keyword.powerSys_notm}} workspaces running in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see: [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
+- A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
+- You can now deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host and significantly expands your range of computing options. This feature facilitates an easy workload migration to the hybrid cloud.
+- A VPC VPN service is available. This is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+- {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- The {{site.data.keyword.powerSys_notm}} workspaces running in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
   
 ## November 2023
 {: #nov-2023}

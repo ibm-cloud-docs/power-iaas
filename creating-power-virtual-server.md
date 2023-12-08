@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-08"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -146,20 +146,20 @@ Refer to the following table for more information on each {{site.data.keyword.po
 ## Dedicated host
 {: #dedicated-host}
 
-The dedicated host feature on {{site.data.keyword.powerSys_notm}} significantly expands your range of computing options that ultimately makes migrating your workloads to the hybrid cloud easy.
+The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands your range of computing options and facilitate an easy workloads migration to the hybrid cloud.
 
-A dedicated host offers you with a flexible solution for creating VMs and places them on a shared processor pool within the IBM Cloud. You get the isolation as an on-premises hosting, along with the benefits of IBM Cloud. With dedicated hosts, you can optimize your cloud infrastructure to meet your specific needs and maintain the security and control similar to an on-premises environment. 
+A dedicated host offers you with a flexible solution for creating virtual machines (VMs) and placing them on a shared processor pool within the IBM Cloud. Dedicated hosts provide host-level isolation as an on-premises hosting, along with IBM Cloud features. With dedicated hosts, you can optimize your cloud infrastructure to meet your specific needs and maintain the security and control similar to an on-premises environment. 
 
-Dedicated hosts are ideal for you if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing.
+Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing.
 
 
-The dedicated host feature allows you to:
-1.	Reserve a host server for your exclusive use. Dedicated hosts provide you with an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing with other users.
-2.	Get a host-level isolation. The isolation at host level ensures that your VMs are protected from all vulnerabilities.
-3.	Flexibility in creating and placing the VMs. You get the ability to flexibly create VMs and provision them on the dedicated host with the same shared processor pool support similar to an on-premises user but in the IBM Cloud. You get benefit from further enhanced resource utilization and licensing cost optimization through core to vCPU ratios (Virtual Processor (VP) : Entitled Capacity (EC) ratio up to 1:20).
+The dedicated host feature provides the following functionalities:
+1.	Reserve a host server for your exclusive use. Dedicated hosts provide you with an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing them with other users.
+2.	Provides a host-level isolation. The isolation at host level ensures that your VMs are protected from all vulnerabilities.
+3.	Allows flexibility in creating and placing the VMs. You get the ability to flexibly create VMs and provision them on the dedicated host with the same shared processor pool support similar to an on-premises user but in the IBM Cloud. You get benefit from enhanced resource utilization and licensing cost optimization through core to vCPU ratios (Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 1:20).
 4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. 
     
-Dedicated hosts are rolled out in two phases. Phase 1 with select availability in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers starting on 14 December 2023. Phase 2 is available from June 2024.
+Dedicated hosts are rolled out in two phases. Phase 1 will commence with select availability in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers starting on 14 December 2023. Phase 2 is available from June 2024 onwards.
 {: note}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers

@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-08"
 
-keywords: cost estimator, power virtual server cost, estimate, estimation,
+keywords: cost estimator tool, power virtual server cost, estimate, estimation,
 
 subcollection: power-iaas
 
@@ -22,14 +22,14 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Getting started with the cost estimator
+# Getting started with the cost estimator tool
 {: cost-estimator}
 
-Use the cost estimator in the {{site.data.keyword.powerSysFull}} home page in IBM Cloud® to estimate the cost of resources before deploying them. Using the cost estimator, you can customize and decide what you need that fit your business needs.
+Use the cost estimator tool in the home page of {{site.data.keyword.powerSysFull}} in IBM Cloud® to estimate the cost of resources before you deploy them. With the cost estimator tool, you can customize and determine the requirements that align with your business needs.
 
 You do not need to be logged in to create an estimate.
 
-Select a data center that suits your needs and use the cost estimator for:
+Select a data center that suits your needs and use the cost estimator tool for:
 1.	Creating an estimate of resources
 2.	Updating an existing estimate
 3.	Saving and sharing your estimate
@@ -45,16 +45,16 @@ You are not charged for creating an estimate. The resources that you estimate ca
 1.	Open the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external} in the IBM Cloud console.
 2.	Click **Estimate cost**.
 3.	Select a data center from the **Location** drop-down menu.
-4.	Select one resource from the following list and choose more configurations as per your requirement to create an estimate before deploying them:
+4.	Select one resource from the following list and choose additional configurations as per your requirement:
     * Virtual server instance
     * Storage volume
     * Shared processor pool
     * VPN connection
     * Virtual tape library
 5.	On the right-side panel, click **Add to estimate** to review the configuration.
-6.	If you are not looged-in, choose **from catalog** in the **Add product to estimate** drop-down menu.
+6.	If you are not logged in, choose **from catalog** in the **Add product to estimate** drop-down menu.
 7.	Click **Save**.
-8.	Click **View estimate** to view and take actions on them.
+8.	Click **View estimate** to view and to take actions on them.
 
 
 ### Estimating a virtual server instance
@@ -62,41 +62,40 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 Before deploying a virtual server instance in a workspace, create an estimate of it. You can create an estimate of a virtual server instance from the estimation page and virtual server instance provisioning page on IBM Cloud.
 
-See the following table to learn about the fields and descriptions that you need to enter:
+To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	                        | Description                                                                                           |
 |-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | **Required**: Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
-| Operating system              |	Select the operating system that meets your needs from the drop-down.                                |
-| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic, see: [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
+| Operating system              |	Select the operating system that meets your requirements from the drop-down.                                |
+| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
 | Machine type                  |	Specify the machine type.                                                                           |
 | Core type                 	| Specify the core type.                                                                                |
 | Cores	                        | **Required**: Define how many cores you need.                                                         |
 | Memory (GiB)                  | **Required**: Define how much space you need per core.                                                |
-| Storage tiers             	| **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a mix of these. \n 
-You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need.|
+| Storage tiers             	| **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a combination of these. tiers \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need.|
 {: caption="Table 1. UI fields in estimating a VSI" caption-side="top"}
 
 
-To learn more on how to create an instance, see: [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 
 ### Estimating a storage volume
 {: est-storage-vol}
 
-Before deploying a storage volume in a workspace, create an estimate of it. See the following table to learn about the fields and descriptions that you need to enter:
+Before deploying a storage volume in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field                         |	Description                                                              |
 |-------------------------------|----------------------------------------------------------------------------|
 | Number of volumes	Required:   |   Specify the number of volumes that you need.                                  |
-| Tier	                        |   Choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a mix of these.|
+| Tier	                        |   Choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a combination of these tiers.|
 | Total storage (GB)	        |   Enter the amount of volume that you need.                                     |
 {: caption="Table 2. UI fields in estimating a storage volume" caption-side="top"}
 
 ### Estimating a shared processor pool
 {: est-spp}
 
-Before deploying a shared processor pool in a workspace, create an estimate of it. See the following table to learn about the fields and descriptions that you need to enter:
+Before deploying a shared processor pool in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	            | Description                                                   |
 |-------------------|---------------------------------------------------------------|
@@ -105,24 +104,24 @@ Before deploying a shared processor pool in a workspace, create an estimate of i
 | Reserved cores 	| **Required**: Enter the number of cores that you want to reserve.  |
 {: caption="Table 3. UI fields in estimating a shared processor pool" caption-side="top"}
 
-To learn more about shared processor pool, see: [Managing a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+To learn more about shared processor pool, see [Managing a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
 ### Estimating a VPN connection
 {: est-vpn}
 
-Before you create and attach a VPN connection, create an estimate of it. See the following table to learn about the fields and descriptions that you need to enter:
+Before you create and attach a VPN connection, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	                |   Description                                                 |
 |-----------------------|---------------------------------------------------------------|
 | Number of connections	|   Enter the number of VPN connections that you want to estimate.   |
 {: caption="Table 4. UI fields in estimating a VPN conection" caption-side="top"}
 
-To learn more about VPN connection, see: [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+To learn more about VPN connection, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ### Estimating a virtual tape library
 {: est-vtl}
 
-Before deploying a virtual tape library (VTL) in a workspace, create an estimate of it. See the following table to learn about the fields and descriptions that you need to enter:
+Before deploying a virtual tape library (VTL) in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	            |   Description                                                                 |
 |-------------------|-------------------------------------------------------------------------------|
@@ -132,10 +131,10 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 | Core type	        |   Specify the core type.                                                      |
 | Cores	            |   **Required**: Define how many cores you need.                               |
 | Memory (GiB)	    |   **Required**: Define how much space you need per core.                      |
-|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a mix of these. \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
+|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 2, Tier 3, Fixed IOPs or a combination of these tiers. \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
 {: caption="Table 5. UI fields in estimating a VTL" caption-side="top"}
 
-To learn more about virtual tape libraries, see: [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
+To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
 
 ## Updating an existing estimate
 {: update-est}
