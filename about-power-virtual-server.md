@@ -155,11 +155,11 @@ The use of fixed IOPs is limited to volumes with a size of 200 GB or less, which
 
 Use the [List of all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPs levels available for your workspace.
 
-The storage tier that you choose is considered along with `volumePool` or `StorageAffinity` parameters that determines the storage pool. For flexible IOPs all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
+The storage tier that you choose is considered along with `volumePool` or `StorageAffinity` parameters that determine the storage pool. For flexible IOPs all storage pools, support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
-The storage tier that you choose does not influence the determination of the storage pool where a volume will get created in. When the storage tier is not specified then the storage tier is set to Tier 3 by default. 
+The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified then the storage tier is set to Tier 3 by default. 
 
-The storage pool selection is based on the use of storage pool or storage affinity. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPs all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
+The storage pool selection is based on the use of storage pool or storage affinity. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPs all storage pools, support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
 ### Benefits of flexible IOPs 
 {: iops-benefits}
@@ -173,7 +173,7 @@ With flexible IOPs you can:
 * Deploy a virtual server instance’s boot volume in any of the supported IOPs levels. Additional data volumes that will be attached to the new virtual server instance can have different IOPs levels from that of the instance’s boot volume.
 * Import an image from IBM Cloud Object Storage to any of the supported IOPs levels.
 
-Best practice for an image import is to use the default IOPs level - Tier 3. When deploying the image (creating a new virtual server instance) the image backing volume(s) get cloned to a new set of volumes that will get attached to the new virtual server instance. When you choose the IOPs level for your boot volume during virtual server instance deployment, the boot volume's IOPs level does not need to match the IOPs level of the image.
+Best practice for an image import is to use the default IOPs level - Tier 3. While deploying the image (creating a new virtual server instance) the image backing volume(s) get cloned to a new set of volumes that get attached to the new virtual server instance. When you choose the IOPs level for your boot volume during virtual server instance deployment, the boot volume's IOPs level does not need to match the IOPs level of the image.
 {: note}
 
 ### Selecting a storage tier
