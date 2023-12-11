@@ -31,10 +31,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - A new data center `MAD04` is available. This is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
 - A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
-- You can now deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host and significantly expands your range of computing options. This feature facilitates an easy workload migration to the hybrid cloud.
+- You can now deploy your {{site.data.keyword.powerSys_notm}} resources on a dedicated host and significantly expands your range of computing options. This feature facilitates an easy workload migration to the hybrid cloud. See [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host) for more information.
 - A VPC VPN service is available. This is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
 - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - The {{site.data.keyword.powerSys_notm}} workspaces running in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
+- New RHEL and SLES versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for more details.
   
 ## November 2023
 {: #nov-2023}
