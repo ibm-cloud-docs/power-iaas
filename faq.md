@@ -22,6 +22,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQ
 {: #power-iaas-faqs}
