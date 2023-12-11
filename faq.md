@@ -79,10 +79,13 @@ IBM i stock images currently available when you create a VM are:
 
 Red Hat
 * RHEL 9.2 general purpose (RHEL9-SP2) [new]{: tag-new}
+* RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) [new]{: tag-new}
+* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new}
 * RHEL 8.8 general purpose (RHEL8-SP8) [new]{: tag-new}
-* RHEL 8.8 for SAP (RHEL8-SP8-SAP) [new]{: tag-new}
+* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new}
+* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new}
 * RHEL 8.6 general purpose (RHEL8-SP6)
-* RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP )
+* RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
 * RHEL 8.4 for SAP HANA (RHEL8-SP4-SAP)
 * RHEL 8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
@@ -90,6 +93,8 @@ Red Hat
 
 SUSE
 * SLES 15 SP5 general purpose (SLES15-SP5) [new]{: tag-new}
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [new]{: tag-new}
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [new]{: tag-new}
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
