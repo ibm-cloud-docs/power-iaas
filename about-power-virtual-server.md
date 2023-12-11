@@ -173,7 +173,7 @@ With flexible IOPs you can:
 * Deploy a virtual server instance’s boot volume in any of the supported IOPs levels. Additional data volumes that will be attached to the new virtual server instance can have different IOPs levels from that of the instance’s boot volume.
 * Import an image from IBM Cloud Object Storage to any of the supported IOPs levels.
 
-Best practice for an image import is to use the default IOPs level - Tier 3. While deploying the image (creating a new virtual server instance) the image backing volume(s) get cloned to a new set of volumes that get attached to the new virtual server instance. When you choose the IOPs level for your boot volume during virtual server instance deployment, the boot volume's IOPs level does not need to match the IOPs level of the image.
+Best practice for an image import is to use the default IOPs level - Tier 3. While deploying the image (creating a new virtual server instance) the image backing volumes get cloned to a new set of volumes that get attached to the new virtual server instance. When you choose the IOPs level for your boot volume during virtual server instance deployment, the boot volume's IOPs level does not need to match the IOPs level of the image.
 {: note}
 
 ### Selecting a storage tier
