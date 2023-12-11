@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-09-28"
+lastupdated: "2023-12-11"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -46,6 +46,8 @@ You can use the GRS location APIs to determine the locations that support storag
 The following table shows the data centers that supports replication and their corresponding pool level detail:
 ||Site 1| Site 2|
 |---|---|----|
+|data center name | MAD02 \n [available 12/15/23 onwards]{: tag-red} |FRA04|
+|data center name | MAD04 \n [available 12/16/23 onwards]{: tag-red} |FRA05|
 |data center name|`WDC06`|`DAL12`|
 |Storage pool|Tier 3-Flash-2 \n Tier 3-Flash-1 \n Tier 1-Flash-1 | Tier 3-Flash-4 \n Tier 3-Flash-3 \n Tier 1-Flash-3|
 |||
