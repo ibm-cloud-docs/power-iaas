@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-12-08"
+lastupdated: "2023-12-12"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -146,20 +146,18 @@ Refer to the following table for more information on each {{site.data.keyword.po
 ## Dedicated host
 {: #dedicated-host}
 
-The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands your range of computing options and facilitate an easy workloads migration to the hybrid cloud.
+The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands the range of computing options available by providing the ability to provision a dedicated hosts for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
 
-A dedicated host offers you with a flexible solution for creating virtual machines (VMs) and placing them on a shared processor pool within the IBM Cloud. Dedicated hosts provide host-level isolation as an on-premises hosting, along with IBM Cloud features. With dedicated hosts, you can optimize your cloud infrastructure to meet your specific needs and maintain the security and control similar to an on-premises environment. 
+A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and utilize the unique shared processor pool capabilities offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can more easily optimize your cloud infrastructure by utilizing single tenant servers to manage software licensing costs while at the same time increasing isolation from other users in a cloud environment.   
 
-Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing.
-
+<!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
 
 The dedicated host feature provides the following functionalities:
-1.	Reserve a host server for your exclusive use. Dedicated hosts provide you with an ultimate control over the provision, placement, and configuration of your VMs without the risk of sharing them with other users.
-2.	Provides a host-level isolation. The isolation at host level ensures that your VMs are protected from all vulnerabilities.
-3.	Allows flexibility in creating and placing the VMs. You get the ability to flexibly create VMs and provision them on the dedicated host with the same shared processor pool support similar to an on-premises user but in the IBM Cloud. You get benefit from enhanced resource utilization and licensing cost optimization through core to vCPU ratios (Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 1:20).
-4.	Seamlessly migrate your Power workloads to the Hybrid Cloud. 
+1.	Reserve a host server ((IBM Power S922 or S1022)) for your exclusive use. All cores and memory on the host are provisioned for your use.
+2.	Flexibly create virtual server instances and place them on the dedicated host.  
+3.	Create shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 1:20.
     
-Dedicated hosts are rolled out in two phases. Phase 1 will commence with select availability in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers starting on 14 December 2023. Phase 2 is available from June 2024 onwards.
+Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability will be in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
 {: note}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers

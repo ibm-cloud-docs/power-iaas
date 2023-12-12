@@ -174,13 +174,15 @@ The following tables show how different processor types affect the cost per syst
 ## Pricing for dedicated hosts
 {: pricing-dh}
 
-When you use dedicated host, you get an improved VP: EC ratio up to 1:20, which you can use to get control over licensing costs. Consider the following points for dedicated host pricing:
-* You are not charged for a shared processor pool when you are using a dedicated host.
-* You are charged for the selection of operating system (AIX, IBM i, and Linux) as usual on top of the dedicated host charges.
+Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host. 
+
+Consider the following points for dedicated host pricing:
+* You are not charged separately for shared processor pools you deploy to the dedicated host.
+* Software charges for the supported operating systems are metered and charged by the core.
+
 
 To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 
-<!-- Keith to review -->
 
 ## Storage types
 {: #storage-type}
