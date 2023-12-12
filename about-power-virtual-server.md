@@ -182,9 +182,8 @@ Flexible IOPS allows you to select your desired tier for:
 - Boot volume
 - Virtual server instance volume
 
-**Boot volume**
-  When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
-  
+**Boot volume**  
+When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
 - Select your desired **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
 - Select your desired **Image**.
