@@ -146,18 +146,18 @@ Refer to the following table for more information on each {{site.data.keyword.po
 ## Dedicated host
 {: #dedicated-host}
 
-The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands the range of computing options available by providing the ability to provision a dedicated hosts for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
+The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
 
-A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and utilize the unique shared processor pool capabilities offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can more easily optimize your cloud infrastructure by utilizing single tenant servers to manage software licensing costs while at the same time increasing isolation from other users in a cloud environment.   
+A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and utilize the unique shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can more easily optimize your cloud infrastructure by utilizing single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.   
 
 <!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
 
-The dedicated host feature provides the following functionalities:
+The dedicated host provides the following features:
 1.	Reserve a host server ((IBM Power S922 or S1022)) for your exclusive use. All cores and memory on the host are provisioned for your use.
 2.	Flexibly create virtual server instances and place them on the dedicated host.  
 3.	Create shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 1:20.
     
-Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability will be in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
+Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability is in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
 {: note}
 
 ## Reusing Volume names or VM names in Power System Virtual Servers
