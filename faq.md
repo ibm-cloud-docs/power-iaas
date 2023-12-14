@@ -92,9 +92,9 @@ Red Hat
 
 
 SUSE
-* SLES 15 SP5 general purpose (SLES15-SP5) [new]{: tag-new}
+<!-- * SLES 15 SP5 general purpose (SLES15-SP5) [new]{: tag-new}
 * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [new]{: tag-new}
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [new]{: tag-new}
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [new]{: tag-new} -->
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
