@@ -138,7 +138,7 @@ IBM {{site.data.keyword.powerSys_notm}} offers you the option to select a I/O op
 
 Table 2 shows the supported storage tiers with corresponding IOPS.
 
-| Tier | IOPS 	| Performance example |
+| Tier level | IOPS 	| Performance |
 |---------------|---------------|---------------------|
 | Tier 0	| 25 IOPS/GB	| A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
 | Tier 1	| 10 IOPS/GB	| A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
@@ -188,7 +188,7 @@ When you are creating a virtual server instance, you can define the boot volume 
 - Select your desired **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
 - Select your desired **Image**.
-- Select from Tier 0, Tier 1, Tier 3, or Fixed IOPS.
+- Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 - For **Storage pool**, select from **Auto-select pool**, **Affinity**, **Anti-affinity**.
 
 | VM storage pool affinity setting |	Action |
@@ -206,7 +206,7 @@ To create a volume, complete the following steps:
 - Enter a unique name.
 - Enter the desired size of the volume.
 - Enter the quantity of volumes that you need.
-- Select from Tier 0, Tier 1, Tier 3, or Fixed IOPS.
+- Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 
 During VM provisioning, if you create additional data volumes to attach to the new virtual server instances then these data volumes can be created on any of the supported storage tiers. All these additional data volumes will reside in the same storage pool where the boot volume of the virtual server instance resides.
   
