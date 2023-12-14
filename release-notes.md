@@ -35,7 +35,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - A VPC VPN service is available. It is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
 - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
-- New RHEL and SLES versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for more details.
+- New RHEL and SLES versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on latest version.
+- **Update on the new SAP HANA large t-shirt profiles feature**  
+  The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles of these OS image. For more information, see the SAP documentation on OS for IBM Power Virtual Servers.
   
 ## November 2023
 {: #nov-2023}
