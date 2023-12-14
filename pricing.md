@@ -82,8 +82,8 @@ For detailed usage and billing information, you can refer to the part number in 
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
-| [Need P/N]{: tag-red} |Tier-0 storage gigabyte-hour [correct desc?]{: tag-red} |
-| [Need P/N]{: tag-red} |Fixed IOPS storage gigabyte-hour [correct desc?]{: tag-red} |
+| TIER_ZERO_STORAGE_GIGABYTE_HOURS |Tier-0 storage gigabyte-hour |
+| FIXED_5K_OPS_GIGABYTE_HOURS |Fixed IOPS storage gigabyte-hour  |
 | AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale out license per core-hour      |
 | AIX_MEDIUM_APPLICATION_INSTANCE_HOURS     | AIX enterprise license per core-hour     |
 | IBMI_OS_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i OS P10 license per core-hour      |
@@ -190,7 +190,6 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 ## Storage types
 {: #storage-type}
 
-[do we need a section for tiers here?]{: tag-red}
 
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
 - **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
