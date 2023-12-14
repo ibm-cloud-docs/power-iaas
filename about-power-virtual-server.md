@@ -181,6 +181,7 @@ Best practice for an image import is to use the default IOPS level (Tier 3). Whi
 Flexible IOPS allows you to select your desired tier for:
 - Boot volume
 - Virtual server instance volume
+- 
 
 **Boot volume**  
 When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
@@ -209,20 +210,15 @@ To create a virtual server instance volume, complete the following steps:
 
 During VM provisioning, if you create additional data volumes to attach to the new virtual server instances then these data volumes can be created on any of the supported storage tiers. All these additional data volumes will reside in the same storage pool where the boot volume of the virtual server instance resides.
   
-<!-- You can enable or disable the virtual server instance (VM) storage pool affinity. Refer to the following table to learn how storage pool affinity setting behaves:
-
-| VM storage pool affinity setting |	Action |
-|----------------------------------|---------|
-| Enabled |	Volumes attached to a VM can have a mix of volumes with different storage tiers but still required to be in the same storage pool. |
-| Disabled |	VM can have volumes attached from different storage pools. |
-{: caption="Table 4. storage pool affinity setting" caption-side="bottom"} -->
 ### Limitations of flexible IOPS
 {: IOPS-limit}
 
 Some of the limitations of flexible IOPS are as follows:
-- Volumes that are enabled for replication cannot be changed to a different IOPS level. If you still want to change the IOPS level for a replicated volume, you should change the replication-enabled property to false, change the IOPS level, and re-enable the replication property.
+<!-- - For changing the IOPS level for replication enabled volumes, if the auxiliary volume has not been onboarded then you can directly change tier of the volume on the primary site. If the auxiliary volume has already been onboarded, then storage tier changes on primary site will not get auto reflected on the secondary site. First change the storage tier of the volume on the primary site. Then change the storage tier for the auxiliary volume on the secondary site. -->
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage tier and pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to tier 5000 is not allowed.
+- Currently flexible IOPS are available on selected data centers<!--  (where? do we have the subset of DC list?) -->. When you onboard the volumes in site 1 and site for global replication service, make sure that both the data center are supporting FIOPS.
+- 
 <!-- - - You cannot change the IOPS level when:
   - A volume is marked 'shareable'
   - A volume is in a state of 'in-use'
