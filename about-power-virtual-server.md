@@ -149,6 +149,9 @@ Table 2 shows the supported storage tiers with corresponding IOPS.
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
 
+Flexible IOPS is currently available in `x`, `y`, `z` and `abc` data centers. Flexible IOPS will be deployed in other data centers over time.
+{: note}
+
 ### Working with the APIs
 {: IOPS-api}
 
@@ -181,7 +184,6 @@ Best practice for an image import is to use the default IOPS level (Tier 3). Whi
 Flexible IOPS allows you to select your desired tier for:
 - Boot volume
 - Virtual server instance volume
-- 
 
 **Boot volume**  
 When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
