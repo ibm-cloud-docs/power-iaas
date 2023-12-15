@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-11-29"
+lastupdated: "2023-12-14"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -53,9 +53,10 @@ The network traffic in a PER environment can flow in the following two ways:
   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
   - `4`	- The converted traffic from NAT is forwarded to PER. 
   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
-  <!-- what is the full form of PPR? POD to POD router. Where a pod is a modular datacenter which are generally organized/kept as racks -->
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM Power Systems Virtual Server users in the IBM Cloud.
+
+For detailed networking PER use cases and architechture diagrams, see [Power Edge Router use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases).
 
 ## Considerations when using PER
 {: leverage-per}

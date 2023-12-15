@@ -154,6 +154,8 @@ A dedicated host provides an additional flexibility to create virtual server ins
 
 <!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
 
+Visit the pricing page to learn more about the [pricing for dedicated hosts](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
+
 The dedicated host provides the following features:
 1.	Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
 2.	Flexibly create virtual server instances and place them on the dedicated host.  
