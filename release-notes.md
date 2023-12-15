@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-12-05"
+lastupdated: "2023-12-14"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -29,7 +29,21 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## December 2023
 {: #dec-2023}
 
-- A new data center `MAD04` is available. This is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+- **New data center `MAD04` is available**  
+  `MAD04` is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+- **Cost estimator tool**  
+  A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
+- **Dedicated hosts**  
+  A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
+- **VPC VPN service**  
+  The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+- **Flexible IOPS**  
+  {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- **Activity tracker region updates**  
+  The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
+- New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on latest version.
+- **Update on the new SAP HANA large t-shirt profiles feature**  
+  The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles of these OS image. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
   
 ## November 2023
 {: #nov-2023}

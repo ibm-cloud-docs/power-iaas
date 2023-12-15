@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-10-31"
+lastupdated: "2023-12-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -21,6 +21,7 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Pricing for Power Systems Virtual Servers
 {: #pricing-virtual-server}
@@ -77,9 +78,12 @@ For detailed usage and billing information, you can refer to the part number in 
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
+| MS_GIGABYTE_HOURS|      Memory standard gigabyte-hour|
 | MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
 | TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
+| TIER_ZERO_STORAGE_GIGABYTE_HOURS |Tier-0 storage gigabyte-hour |
+| FIXED_5K_OPS_GIGABYTE_HOURS |Fixed IOPS storage gigabyte-hour  |
 | AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale out license per core-hour      |
 | AIX_MEDIUM_APPLICATION_INSTANCE_HOURS     | AIX enterprise license per core-hour     |
 | IBMI_OS_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i OS P10 license per core-hour      |
@@ -105,7 +109,9 @@ For detailed usage and billing information, you can refer to the part number in 
 | EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
 | IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
-|VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS     | VPN connection per hour     |
+| VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS     | VPN connection per hour     |
+|	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
+| S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 
@@ -168,9 +174,22 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.6983 (capped shared)       | $509.72                  |
 {: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
+## Pricing for dedicated hosts
+{: pricing-dh}
+
+Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host. 
+
+Consider the following points for dedicated host pricing:
+* You are not charged separately for shared processor pools you deploy to the dedicated host.
+* Software charges for the supported operating systems are metered and charged by the core.
+
+
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
+
 
 ## Storage types
 {: #storage-type}
+
 
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
 - **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:

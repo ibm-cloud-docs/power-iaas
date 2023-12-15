@@ -8,6 +8,7 @@ Power Systems Virtual Servers
     release-notes.md
     getting-started.md
     about-power-virtual-server.md
+    cost-estimator.md
     pricing.md
     ha-dr.md
 
@@ -51,6 +52,7 @@ Power Systems Virtual Servers
         volume-snapshot-clone.md
         global-replication-service.md
         managing_events_logs.md
+        virtual-applianes-catalog.md
 
     {: .topicgroup}
     Networking

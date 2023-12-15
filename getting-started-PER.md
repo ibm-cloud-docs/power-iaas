@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-12-05"
+lastupdated: "2023-11-29"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 

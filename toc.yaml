@@ -21,6 +21,7 @@ toc:
       - getting-started.md
       - release-notes.md
       - about-power-virtual-server.md
+      - cost-estimator.md
       - pricing.md
       - ha-dr.md
       - topicgroup: 
@@ -67,6 +68,7 @@ toc:
               - volume-snapshot-clone.md
               - global-replication-service.md
               - managing_events_logs.md
+              - virtual-applianes-catalog.md
       - topicgroup: 
             label: Networking
             topics:

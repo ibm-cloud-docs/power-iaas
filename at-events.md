@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-08-28"
+lastupdated: "2023-12-14"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -393,3 +393,28 @@ The following code snippets shows the differences between the old and new activi
 }
 ````
 {: codeblock}
+
+## Activity tracker regions
+{: #at-regions}
+
+You can create an activity tracker instance and provision it in the same region where your data center is located.
+
+The {{site.data.keyword.powerSys_notm}} workspaces running in various regions or data center will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
+{: important}
+
+The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:
+
+|Datacenter | Current activity tracker region | New activity tracker region |
+|------|----------|---------|
+|`WDC04` | us-south | us-east |
+|`WDC06` | us-south | us-east |
+|`WDC07` | us-south | us-east|
+|`MON01` | us-south | ca-tor|
+|`TOR04` | us-south | ca-tor|
+|`SAO01` | us-south | br-sao|
+|`SAO04` | us-south | br-sao|
+|`LON04` | eu-de | eu-gb|
+|`LON06` | eu-de | eu-gb|
+|`OSA21` | jp-tok | jp-osa|
+{: caption="Table 18. List of DCs and their corresponding AT instance region" caption-side="top"}
+
