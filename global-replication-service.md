@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-12-11"
+lastupdated: "2023-12-14"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -44,15 +44,12 @@ If you need a more detailed information on Gobal Replication Service, see [Globa
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by Power System Virtual Server](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
 
 The following table shows the data centers that supports replication and their corresponding pool level detail:
-||Site 1| Site 2|
-|---|---|----|
-|data center name | MAD02 \n [available 12/15/23 onwards]{: tag-red} |FRA04|
-|data center name | MAD04 \n [available 12/16/23 onwards]{: tag-red} |FRA05|
-|data center name|`WDC06`|`DAL12`|
-|Storage pool|Tier 3-Flash-2 \n Tier 3-Flash-1 \n Tier 1-Flash-1 | Tier 3-Flash-4 \n Tier 3-Flash-3 \n Tier 1-Flash-3|
-|||
-|data center name|`WDC04`|`DAL13`|
-|Storage pool|Tier 1-flash-8|Tier 1-flash-6|
+|Site 1| Site 2|
+|---|----|
+| `MAD02` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA04`|
+| `MAD04` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA05`|
+|`WDC06`|`DAL12`|
+|`WDC04`|`DAL13`|
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 

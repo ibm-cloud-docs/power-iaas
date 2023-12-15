@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-12-05"
+lastupdated: "2023-12-14"
 
 keywords: VPC VPN, VPNaaS,
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-11-29"
+lastupdated: "2023-12-14"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
