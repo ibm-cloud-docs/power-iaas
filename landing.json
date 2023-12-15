@@ -33,6 +33,11 @@
         "description": "Explore a collection of documentation sections for each SAP offering.",
         "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
       }
+      {
+        "title": "Getting started with Power Edge Routers",
+        "description": "PER improves network communication across different parts of the IBM network.",
+        "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
+      }
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/components/ibm-power/",
@@ -44,14 +49,19 @@
       "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
       "tiles": [
         {
-          "date": "22 June 2023",
-          "title": "Power Edge Router (PER) in Power Systems Virtual Server data centers",
-          "description": "PER provides high-performance routers and advance networking solutions and improves network communication across different parts of IBM network."
+          "date": "14 December 2023",
+          "title": "Flexible IOPS",
+          "description": "Power Virtual Server now offers a tier-less storage service with the name Flexible IOPS."
         },
         {
-          "date": "22 June 2023",
-          "title": "Eliminate stock image copies",
-          "description": "An enhancement that eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account through the use of an image reference."
+          "date": "14 December 2023",
+          "title": "Dedicated hosts",
+          "description": "You can provision IBM Power S922 and S1022 servers for your dedicated use."
+        }
+        {
+          "date": "14 December 2023",
+          "title": "Cost estimator tool",
+          "description": "A new cost estimator tool for Power Virtual Server is available."
         }
       ]
     }
