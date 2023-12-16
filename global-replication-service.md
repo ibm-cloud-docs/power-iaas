@@ -46,13 +46,13 @@ You can use the GRS location APIs to determine the locations that support storag
 The following table shows the data centers that supports replication and their corresponding pool level detail:
 |Site 1| Site 2|
 |---|----|
-| `MAD02` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA04`|
-| `MAD04` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA05`|
 |`WDC06`|`DAL12`|
 |`WDC04`|`DAL13`|
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
+<!-- | `MAD02` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA04`|
+| `MAD04` \n [available in 4Q 2023 onwards]{: tag-red} |`FRA05`| -->
 ## Pricing for Global replication service
 {: #pricing-GRS}
 
