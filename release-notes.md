@@ -29,8 +29,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## December 2023
 {: #dec-2023}
 
-- **New data center `MAD04` is available**  
-  `MAD04` is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+- **New data center availability**  
+  - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+  - `SAO04` is available for PER.
+
 - **Cost estimator tool**  
   A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
 - **Dedicated hosts**  
