@@ -109,7 +109,6 @@ For detailed usage and billing information, you can refer to the part number in 
 | EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
 | IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
-| VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS     | VPN connection per hour     |
 |	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
