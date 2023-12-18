@@ -32,7 +32,7 @@
         "title": "Easy access: IBM Power Systems Virtual Servers with SAP",
         "description": "Explore a collection of documentation sections for each SAP offering.",
         "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
-      }
+      },
       {
         "title": "Getting started with Power Edge Routers",
         "description": "PER improves network communication across different parts of the IBM network.",
@@ -57,7 +57,7 @@
           "date": "14 December 2023",
           "title": "Dedicated hosts",
           "description": "You can provision IBM Power S922 and S1022 servers for your dedicated use."
-        }
+        },
         {
           "date": "14 December 2023",
           "title": "Cost estimator tool",
