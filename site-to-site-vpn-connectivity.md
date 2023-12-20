@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service enables you to use a dedicated VPN for a one cloud experience, improved reliability and high availability.     <!-- that is a more robust service than the legacy {{site.data.keyword.powerSysFull}} VPN service.  -->
 
-Upgrading to IBM Cloud VPC VPN before March 2024 is encouraged<!--  with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS -->. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+Upgrading to IBM Cloud VPC VPN is encouraged<!-- before March 2024 with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS -->. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: note}
  
 
