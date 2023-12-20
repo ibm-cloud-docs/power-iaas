@@ -34,7 +34,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - `SAO04` is available for PER.
 
 - **Cost estimator tool**  
-  A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator).
+  A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator-tool).
 - **Dedicated hosts**  
   A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 - **VPC VPN service**  
