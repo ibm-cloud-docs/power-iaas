@@ -20,18 +20,26 @@ subcollection: power-iaas
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
+<!-- {{site.data.keyword.powerSys_notm}} -->
 
 # Creating a VPC VPN
 {: #vpn-connectivity}
 
-The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service enables you to use a dedicated VPN that is a more robust service than the legacy {{site.data.keyword.powerSysFull}} VPN service. 
+The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service enables you to use a dedicated VPN for a one cloud experience, improved reliability and high availability.     <!-- that is a more robust service than the legacy {{site.data.keyword.powerSysFull}} VPN service.  -->
 
-It is recommended that you migrate from {{site.data.keyword.powerSys_notm}} VPN to the latest VPC VPN.
-{: important}
+Upgrading to IBM Cloud VPC VPN before March 2024 is encouraged<!--  with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS -->. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+{: note}
+ 
 
 When you complete the VPC VPN set up, you can:
 -	Ensure a private and low-cost connectivity to IBM Cloud services.
 -	Access your virtual server instances through the private IP address using Secure Shell (SSH) and other on-premises applications running on your host.
+
+IBM Cloud offers the following two VPN options:  
+* _VPN for VPC_ for site-to-site gateways to safely and securely connect from on premise to resources in VPC, Power, and Classic infrastructure 
+* _Client VPN for VPC_ for client-to-site servers allowing remote devices to secretly connect to VPC network in a secure manner which PowerVS clients can begin using today via the IBM Cloud catalog. 
+
+To learn more on the VPN options you get, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
 
 This topic provides you guidance on how to create or use the VPC VPN. Here is the summarized steps for creating a VPC VPN:
 1.	[Create a VPC resource](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-1).
