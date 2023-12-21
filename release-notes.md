@@ -46,7 +46,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - **Update on the new SAP HANA large t-shirt profiles feature**  
   The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles of these OS image. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
 - **New Global Replication Service (GRS) pairs support**
-  The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+  The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
   
 ## November 2023
 {: #nov-2023}

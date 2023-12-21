@@ -46,8 +46,8 @@ You can use the GRS location APIs to determine the locations that support storag
 The following table shows the data centers that supports replication and their corresponding pool level detail:
 |Site 1| Site 2|
 |---|----|
-| `MAD02` [New]{: tag-red} |`FRA04` [New]{: tag-red}|
-| `MAD04` [New]{: tag-red} |`FRA05` [New]{: tag-red}|
+| `MAD02`|`FRA04` |
+| `MAD04`|`FRA05` |
 |`WDC06`|`DAL12`|
 |`WDC04`|`DAL13`|
 {: class="simple-table"}
