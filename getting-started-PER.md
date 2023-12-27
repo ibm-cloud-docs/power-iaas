@@ -92,7 +92,7 @@ Perform the following steps to connect an existing workspace to an existing Tran
 
 3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.  
   
-Here is a an example command that can be executed where:
+Here is an example command that can be executed where:
  - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee`   
  - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`  
  - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server` 
