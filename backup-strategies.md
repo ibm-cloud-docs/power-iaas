@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-07-07"
+lastupdated: "2023-12-27"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -79,7 +79,7 @@ The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.d
     3. Connect the VPC to a [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui#tg-ui-creating-transit-gateway).
     4. [Create a cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) to connect the non-PER {{site.data.keyword.powerSys_notm}} workspace to the same transit gateway. 
     
-    The {{site.data.keyword.powerSys_notm}} would then use the VPE's IP address to connect to COS. If the VPE has multiple IP addresses, you can set up custom DNS and a custom hostname to connect to COS.
+    The {{site.data.keyword.powerSys_notm}} would then use the VPE's IP address to connect to COS. A Custom Resolver (CR) is needed by the {{site.data.keyword.powerSys_notm}} to reach the COS. If the VPE has multiple IP addresses, you can set up custom DNS and a custom hostname to connect to COS. 
 3.  Deploy a Nginx reverse proxy server in either the classic or VPC infrastructure.
 
     Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
