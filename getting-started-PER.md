@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-12-14"
+lastupdated: "2023-12-27"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers). 
 
-The PER solution is available in `DAL10`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
+The PER solution is available in `DAL10`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time. You must use the [IBM Cloud API](/apidocs/transit-gateway) or [IBM Cloud CLI](/docs/transit-gateway?topic=transit-gateway-transit-gateway-cli&interface=ui) to connect a PER-enabled workspaces in `FRA02` to a Transit Gateway.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -81,6 +81,21 @@ The automated migration of your existing network is not supported, but if your e
 Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
 Existing non-PER workspaces continue to use existing routers. To use the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace. 
+
+Perform the following steps to connect an existing workspace to an existing Transit Gateway using the IBM Cloud CLI:
+
+1. Use the `ibmcloud pi workspaces` command to list the {{site.data.keyword.powerSys_notm}} workspaces in your account.
+   Make note of the CRN for the workspace you wish to connect to the Transit Gateway. 
+
+2. Use the `ibmcloud tg gateways` command to list the Transit Gateways within your account.
+   Make note of the gateway ID you wish to connect to the {{site.data.keyword.powerSys_notm}} workspace.
+
+3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.  
+  
+Here is a an example command that can be executed where:
+  - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee` 
+  - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`
+  - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server` 
 
 ## Creating a PER workspace
 {: create-per-workspace}
