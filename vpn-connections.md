@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021, 2023
+  years: 2021, 2024
 
-lastupdated: "2023-05-16"
+lastupdated: "2024-01-04"
 
 keywords: VPN connections, IKE policies, IPsec policies
 
@@ -11,19 +11,13 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing VPN connections
 {: #VPN-connections}
+
+The {{site.data.keyword.powerSys_notm}} VPN is deprecated and IBM won't provide standard support after 18 January 2025. Create your new VPN connection using the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity). For existing {{site.data.keyword.powerSys_notm}} VPN connections, upgrading to VPC VPN is encouraged before March 2024 with the end of service on 14 July 2025. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+{: deprecated}
 
 You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN service. You can use the VPN to connect to the Power Virtual Server private networks, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
 
