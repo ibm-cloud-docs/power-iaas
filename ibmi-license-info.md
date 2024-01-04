@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-07-25"
+lastupdated: "2024-01-03"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -87,7 +87,7 @@ These additional LPPs for IBM i, which are available and can be included in your
 
    - IBM i Cloud Storage Solutions (5773-ICC)
    - IBM i Power HA (5770-HAS)
-   - IBM DB2 Web Query for i Standard Edition (5733-WQS). Note that this product installs as and keys are applied to product ID 5733-WQX. 
+   <!-- - IBM DB2 Web Query for i Standard Edition (5733-WQS). Note that this product installs as and keys are applied to product ID 5733-WQX.  -->
    - Rational Development Studio for IBM i (5770-WDS)
 
     Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance. 
