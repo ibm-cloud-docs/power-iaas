@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-05"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -72,7 +72,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 
 IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera){: external}.
 
-Use the [Accelerated network transfer for Power Virtual Server migration guide](https://cloud.ibm.com/media/docs/downloads/Accelerated-network-transfer-for-Power-VS-Migration.pdf){: external} powered by Aspera to accelerate transferring your migration content directly into the workspace of your Power Virtual Server helping you to achieve faster time to value from IBM cloud.
+Use the [Accelerated network transfer for Power Virtual Server migration guide](https://cloud.ibm.com/media/docs/downloads/power-iaas/accelerated_migration.pdf){: external} powered by Aspera to accelerate transferring your migration content directly into the workspace of your Power Virtual Server helping you to achieve faster time to value from IBM cloud.
 
 ## Replication
 {: #replication}
