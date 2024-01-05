@@ -95,7 +95,6 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
 | IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
 | IBMIRDS_APPLICATION_INSTANCES     | IBM Rational Development Studio for IBM i license per users-hour      |
-| IBMI_DBIIWQ_APPLICATION_INSTANCE_HOURS     | IBM Db2 Web Query for i core-hour      |
 | BHHANA_APPLICATION_INSTANCE_HOURS     | Balanced for Online analytical processing (OLAP) HANA application instance hour       |
 | COREHANA_APPLICATION_INSTANCE_HOURS     | Core HANA application instance hour      |
 | MEMHANA_APPLICATION_INSTANCE_HOURS     | Memory HANA application instance hour      |
@@ -113,7 +112,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
-
+<!-- | IBMI_DBIIWQ_APPLICATION_INSTANCE_HOURS     | IBM Db2 Web Query for i core-hour      | -->
 ## Base instances
 {: #pricing-base-instance-prices}
 
