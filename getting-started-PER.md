@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-12-27"
+lastupdated: "2024-01-10"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers). 
 
-The PER solution is available in `DAL10`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
+The PER solution is available in `DAL10`, `FRA04`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -96,9 +96,6 @@ Here is an example command that can be executed where:
  - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee`   
  - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`  
  - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server` 
-
-You must use the [IBM Cloud API](/apidocs/transit-gateway) or [IBM Cloud CLI](/docs/transit-gateway?topic=transit-gateway-transit-gateway-cli&interface=ui) to connect a PER-enabled workspaces in `FRA05` to a Transit Gateway.
-{: note}
 
 ## Creating a PER workspace
 {: create-per-workspace}

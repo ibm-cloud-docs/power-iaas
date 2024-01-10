@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-21"
+lastupdated: "2024-01-10"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,13 +26,17 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## January 2023
+{: #jan-2023}
+
+- `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+ 
 ## December 2023
 {: #dec-2023}
 
 - **New data center availability**  
   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
   - `SAO04` is available for PER.
-
 - **Cost estimator tool**  
   A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator-tool).
 - **Dedicated hosts**  
@@ -53,7 +57,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #nov-2023}
 
 - `WDC06` and `MAD02` data center are now available for PER. `MAD02` is a PER-enabled Power10 data center.
-- Availibity of IBM Cloud Monitoring service is now extended in `FRA004`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
+- Availibity of IBM Cloud Monitoring service is now extended in `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
   
 ## September 2023
 {: #sep-2023}
