@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-21"
+lastupdated: "2024-01-10"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -26,6 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## January 2023
+{: #jan-2023}
+
+- `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+ 
 ## December 2023
 {: #dec-2023}
 
