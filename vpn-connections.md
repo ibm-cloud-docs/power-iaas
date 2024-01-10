@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Creating VPN connections
 {: #VPN-connections}
 
-IBM Cloud offers a robust Virtual Private Network (VPN) solution that is tailored specifically for {{site.data.keyword.powerSysFull}} users, that ensures secure and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between on-premises environments and the virtual server instances that are deployed on IBM Cloud.
+{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with securiyu and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between on-premises environments and the virtual server instances that are deployed on IBM Cloud.
 
 Use either of the following to create a new VPN connection:
 - [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
