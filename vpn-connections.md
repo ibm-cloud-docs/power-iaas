@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-01-10"
+lastupdated: "2024-01-12"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -16,11 +16,10 @@ subcollection: power-iaas
 # Creating VPN connections
 {: #VPN-connections}
 
-{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with securiyu and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between on-premises environments and the virtual server instances that are deployed on IBM Cloud.
+{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between on-premises environments and the virtual server instances that are deployed on IBM Cloud.
 
-Use either of the following to create a new VPN connection:
-- [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
-- [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#pvs-vpn) [Deprecated]{: tag-red}
+There is a new method for creating a VPN connection - [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
+The following method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#pvs-vpn) [Deprecated]{: tag-red}
 
 ## Creating a Virtual Private Cloud VPN connection
 {: #vpc-vpn}
@@ -45,8 +44,8 @@ This topic provides you with guidance on how to create or use the VPC VPN. Follo
 1.	[Create a VPC resource](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-1).
 2.	[Create a Site-to-Site VPN gateway in VPC](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-2)
 3.	Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace by using one of the following methods:
-  -	[In PER workspace through TGW](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
-  -	[In non-PER workspace through Cloud connection](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
+     -	[In PER workspace through TGW](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
+     -	[In non-PER workspace through Cloud connection](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding in the Transit Gateway is viable, but it incurs extra charges. The cloud connection set-up is not required in a PER-enabled workspace.
 {: note}
@@ -72,32 +71,18 @@ It is recommended that you create a direct cloud connection between the VPC and 
 3. Attach Direct Link to workspace subnet.
 4. You can choose to attach a Transit Gateway along with the Direct Link, but it incurs extra charges.
 
-### Step 1
-{: vpc-vpn-1}
+**Procedure**
 
-**Create a VPC resource.** 
+1. Create a VPC resource. Complete the steps that are documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 
-- Complete the steps that are documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+2. Create a Site-to-Site VPN gateway in VPC. Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
 
-### Step 2
-{: vpc-vpn-2}
+     While creating a VPN connection, use a policy-based VPN.
+     {: note}
 
-**Create a Site-to-Site VPN gateway in VPC**
-
-- Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
-
-While creating a VPN connection, use a policy-based VPN.
-{: note}
-
-
-### Step 3
-{: vpc-vpn-3}
-
-**Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace**. 
-
-Use one of the following procedures that suit your needs:
--	For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
--	For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+3. Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace. Use one of the following procedures that suit your needs:
+   - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+   - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 ### Considerations
 {: vpcvpn-cons}
