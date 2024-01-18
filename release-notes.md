@@ -31,7 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
   
-- The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN]((/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn)) for a one cloud experience, improved reliability, and high availability connections.
+- The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN]((/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
   
   The {{site.data.keyword.powerSys_notm}} VPN part id VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hourr) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by end of March 2024.
 
