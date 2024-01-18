@@ -33,7 +33,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   
 - The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN]((/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
   
-  The {{site.data.keyword.powerSys_notm}} VPN part id VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hourr) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by end of March 2024.
+  The {{site.data.keyword.powerSys_notm}} VPN part id VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hour) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by end of March 2024.
 
   Existing user can choose to continue using {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to preferred IBM Cloud VPN for VPC service.
 
