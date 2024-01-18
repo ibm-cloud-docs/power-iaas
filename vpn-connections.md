@@ -41,11 +41,11 @@ IBM Cloud offers the following two VPN options:
 To learn more on the VPN options you get, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
 
 This topic provides you with guidance on how to create or use the VPC VPN. Following are the steps for creating a VPC VPN:
-1.	[Create a VPC resource](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-1).
-2.	[Create a Site-to-Site VPN gateway in VPC](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-2)
+1.	Create a VPC resource.
+2.	Create a Site-to-Site VPN gateway in VPC
 3.	Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace by using one of the following methods:
-     -	[In PER workspace through TGW](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
-     -	[In non-PER workspace through Cloud connection](/docs/power-iaas?topic=power-iaas-vpn-connectivity#step-3)
+     -	In PER workspace through TGW
+     -	In non-PER workspace through Cloud connection.
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding in the Transit Gateway is viable, but it incurs extra charges. The cloud connection set-up is not required in a PER-enabled workspace.
 {: note}
