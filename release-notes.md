@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-12"
+lastupdated: "2024-01-18"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -30,6 +30,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jan-2024}
 
 - `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+- After January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPN. It is recommended that you upgrade to or create any new VPN connections using the VPC VPN. If you fail to take the recommended action and run into issues IBM will not be able to support with end of life for parts (VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS) occurring six months later on July 14, 2025.  
+  
+  Additionally, after March 2024 new VPN connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN. You are encouraged to upgrade to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) at your earliest convenience and ideally before March 2024.
  
 ## December 2023
 {: #dec-2023}

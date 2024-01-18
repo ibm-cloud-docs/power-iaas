@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-01-12"
+lastupdated: "2024-01-18"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -24,9 +24,9 @@ The following method is also currently supported - [Creating a {{site.data.keywo
 ## Creating a Virtual Private Cloud VPN connection
 {: #vpc-vpn}
 
-The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service allows using a dedicated VPN for a one-cloud experience, improved reliability and high availability.     <!-- that is a more robust service than the legacy {{site.data.keyword.powerSysFull}} VPN service.  -->
+The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service allows using a dedicated VPN for a one-cloud experience, improved reliability and high availability.
 
-If you are using the {{site.data.keyword.powerSys_notm}} VPN, upgrading to IBM Cloud VPC VPN is encouraged<!-- before March 2024 with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS -->. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+If you are using the {{site.data.keyword.powerSys_notm}} VPN, upgrading to IBM Cloud VPC VPN is encouraged before March 2024 with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: note}
  
 
@@ -100,7 +100,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 ## Creating a {{site.data.keyword.powerSys_notm}} VPN
 {: #pvs-vpn}
 
-The {{site.data.keyword.powerSys_notm}} VPN is deprecated.<!--  and IBM won't provide standard support after 18 January 2025 -->. Create your new VPN connection by using the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity). For existing {{site.data.keyword.powerSys_notm}} VPN connections, upgrading to VPC VPN is encouraged.<!--  before March 2024 with the end of service on 14 July 2025 -->. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+The {{site.data.keyword.powerSys_notm}} VPN is deprecated and IBM won't provide standard support after 18 January 2025. Create your new VPN connection by using the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity). For existing {{site.data.keyword.powerSys_notm}} VPN connections, upgrading to VPC VPN is encouraged before March 2024 with the end of service on 14 July 2025. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: deprecated}
 
 You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN service. You can use the VPN to connect to the Power Virtual Server private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and Power Systems Virtual Servers to enable low-cost secure connectivity.
