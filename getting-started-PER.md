@@ -61,7 +61,7 @@ For detailed networking PER use cases and architechture diagrams, see [Power Edg
 ## Considerations when using PER
 {: leverage-per}
 
-- You cannot create a Cloud Connection or a VPN connection in a PER workspace. 
+- You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your on-premises network to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.

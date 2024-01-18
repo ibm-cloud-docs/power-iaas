@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-10"
+lastupdated: "2024-01-18"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -30,6 +30,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jan-2024}
 
 - `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+  
+- The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN]((/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn)) for a one cloud experience, improved reliability, and high availability connections.
+  
+  The {{site.data.keyword.powerSys_notm}} VPN part id VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hourr) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by end of March 2024.
+
+  Existing user can choose to continue using {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to preferred IBM Cloud VPN for VPC service.
+
+  By January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS product, thus if you choose not to take the recommended action and run into issues IBM will not be able to support with end of life for parts occurring six months later on July 14, 2025. Additionally, after March 2024 new connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN thus you are encouraged to upgrade to the IBM Cloud VPC VPN at your earliest convenience and ideally before March 2024.
  
 ## December 2023
 {: #dec-2023}
@@ -42,7 +50,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - **Dedicated hosts**  
   A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 - **VPC VPN service**  
-  The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a VPC VPN](/docs/power-iaas?topic=power-iaas-vpn-connectivity).
+  The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
 - **Flexible IOPS**  
   {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - **Activity tracker region updates**  

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-14"
+lastupdated: "2023-01-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 

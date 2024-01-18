@@ -79,7 +79,6 @@ toc:
               - ordering-direct-link.md
               - vpn-connections.md              
               - network-security.md
-              - site-to-site-vpn-connectivity.md
               - X86-based-systems.md
       - topicgroup: 
             label: AIX
