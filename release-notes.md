@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-18"
+lastupdated: "2024-01-19"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## January 2024
 {: #jan-2024}
 
-- `FRA04` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+- `DAL12` and `FRA04` data centers are now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
   
 - The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
   
