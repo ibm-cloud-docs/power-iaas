@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-14"
+lastupdated: "2024-01-23"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i, what is power VS
 
@@ -129,11 +129,6 @@ For a complete list of supported data centers, see [Creating a Power Systems Vir
 ## Storage tiers
 {: #storage-tiers}
 
-<!-- For each {{site.data.keyword.powerSys_notm}} instance, you must select a storage tier - **Tier 1** or **Tier 3**. The storage tiers in {{site.data.keyword.powerSys_notm}} are based on I/O operations per second (IOPS). It means that the performance of your storage volumes is limited to the maximum number of IOPS based on volume size and storage tier. Although, the exact numbers might change over time, the **Tier 3** storage is currently set to 3 IOPS/GB, and the **Tier 1** storage is currently set to 10 IOPS/GB. For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPS, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPS. After the IOPS limit is reached for the storage volume, the I/O latency increases.
-
-**Tier 3** storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPS of your storage workload.
-{: note} -->
-
 IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O operation per second (IOPS) based storage as per your requirement. Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
 Table 2 shows the supported storage tiers with corresponding IOPS.
@@ -149,8 +144,8 @@ Table 2 shows the supported storage tiers with corresponding IOPS.
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
 
-Flexible IOPS is currently available in `DAL10`, `MON01`, `SYD04`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
-{: note}
+Flexible IOPS is currently available in `DAL10`, `LON04`, `MON01`, `SYD04`, `SYD05`, `OSA21`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
+{: note} 
 
 ### Working with the APIs
 {: IOPS-api}

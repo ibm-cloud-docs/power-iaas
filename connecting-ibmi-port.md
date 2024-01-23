@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-01-18"
+lastupdated: "2024-01-22"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -84,7 +84,7 @@ Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is u
 
 6. Click **Add** to add your source port to the forwarded port list.
 
-    You need to repeat step **3** to step **6** to add all of the following ports: 23, 449, 8470, 8471, 8472, 8473, 8474, 8475 and 8476.
+    You need to repeat step **3** to step **6** to add all of the following ports: 23, 449, 8470, 8471, 8472, 8473, 8474, 8475, 8476, 2003, 2002, 2006, 2300, 2323, 3001, 3002, and 2005.
     {: important}
 
 7. After you add all of the necessary port numbers, check your populated list.
