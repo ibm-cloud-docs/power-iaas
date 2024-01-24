@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-05"
+lastupdated: "2024-01-24"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -79,16 +79,16 @@ Use the [Accelerated network transfer migration guide](https://cloud.ibm.com/med
 
 You can use various replication mechanisms to migrate and sync environments between your on-premises environment and the {{site.data.keyword.powerSys_notm}}.
 
-Storage area network (SAN) and hardware-based replication is not currently a migration option.
+Storage area network (SAN) and hardware-based replication are not currently a migration option.
 {: note}
 
 ### Host and OS-based logical replication
 {: #replication-host}
 
-IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geographic Mirroring (Geomirroring) and Geographic Logical Volume Manager (GLVM). The following host and os-based logical replication options exist depending on your OS:
+IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geographic Mirroring (Geo mirroring) and Geographic Logical Volume Manager (GLVM). The following host and OS-based logical replication options exist depending on your OS:
 
 - **AIX** - GLVM
-- **IBM i** - Geomirroring
+- **IBM i** - Geo mirroring
 
 ### Application-specific replication
 {: #replication-app}
@@ -102,7 +102,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 - *MIMIX from Syncsort*
 - *Maxava HA*
 
-## Backup and restore
+## Back up and restore
 {: #backup-restore}
 
 You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
@@ -121,16 +121,16 @@ Customers can use third-party tools to perform data migration. The following thi
 ### FalconStor StorSafe VTL
 {: storsafe-vtl}
 
-StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive and data recovery (DR). 
+StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR). 
 
-StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both on-premises and in the cloud, as well as enable simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Legacy tapes can be handled similarly. Here are some of the features of StorSafe VTL:
+StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both on-premises and in the cloud, as well as enable simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled. Here are some of the features of StorSafe VTL:
 
-- Non-disruptive and secure process that can scale to PB-sized workloads.
-- Deduplication & replication improves performance and reduces storage capacity.
-- The same tool for on-premise and cloud that enables both workload and tape migrations.
-- System and application data is deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
+- Nondisruptive and secure process that can scale to PB-sized workloads.
+- Deduplication and replication improve performance and reduces storage capacity.
+- The same tool for on-premises and cloud that enables both workload and tape migrations.
+- System and application data are deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
 - Replicated tapes land in Cloud Object Storage (COS) and can be used by the cloud VTL as a backup baseline without copying the data.
-- Migration leverages existing backup processes and tools leveraging existing environment and knowledge. 
+- Migration uses existing backup processes and tools by using existing environment and knowledge. 
 - Data replication can occur over time as part of the backups with final sync replication completed fast during regular backup windows.
 - FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost COS storage for its repository.
 
@@ -151,15 +151,15 @@ FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled wi
 #### FalconStor StorSafe VTL for On-Premises
 {: storsafe-onprem}
 
-FalconStor StorSafe VTL for on-premise provides flexible deployment options for the user:
+FalconStor StorSafe VTL for on-premises provides flexible deployment options for the user:
 -	It can be installed on any X86 server that is on [Falconstor certification matrix](https://www.falconstor.com/support/certification-matrix/server-hardware/){: external}.
--	It can be installed as a VM in Hypervisors such as VMware, HyperV, Xen and KVM.
+-	It can be installed as a VM in Hypervisors such as VMware, HyperV, Xen, and KVM.
 -	It can be installed inside {{site.data.keyword.powerSys_notm}} as an LPAR.
 
 #### Migration Services
 {: mig-services}
 
-Services to assist in migration are available from IBM, FalconStor, and Authorized Migration Partners. Please reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
+Services to help migration are available from IBM, FalconStor, and Authorized Migration Partners. Reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
 
 If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
 
@@ -195,7 +195,7 @@ GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enab
 
 - [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: external}
 - [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: external}
-- [Exploiting IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
+- [Using IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
 - [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: external}
 - [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: external}
 
@@ -204,7 +204,7 @@ GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enab
 
 Some alternative AIX migration strategies include:
 
-- `rsync` for non-database files
+- `rsync` for nondatabase files
 - The `savevg` and `restvg` AIX commands
 - Log shipping for databases
 
@@ -213,7 +213,7 @@ For a complete tutorial on migrating your AIX workloads to Power Systems Virtual
 ### Migrating from AIX 7.1 to higher versions
 {: #migration-aix-versions}
 
-To migrate your resources from AIX 7.1 to higher AIX versions within Power Systems Virtual Servers, you must use the network boot option. Migration requires the VM to boot from the operating systems kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
+To migrate your resources from AIX 7.1 to higher AIX versions within Power Systems Virtual Servers, you must use the network boot option. Migration requires the VM to boot from the operating system kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
 
 1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
 2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
@@ -228,23 +228,25 @@ For more information on creating and defining a NIM master, setting an LPP sourc
 
 Learn about migration strategies that are specific to IBM i systems.
 
+Recent IBM i migration enhancements: 
+1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape  
+2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}. 
+
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-Image catalogs are created out of objects that are backed up by using optical devices. These catalogs must be restored on the Power Systems Virtual Server instance by using some of the migration strategies, such as COS, Aspera, and NFS server. BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS.
+BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).  
 
-The following steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
+The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
-1. Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
-2. Create a virtual tape and *IMGCLG* on the deployed VM.
-3. Create a virtual tape and *IMGCLG* on the on-premises system and perform an operating system save by entering, `GO LICPGM Option 40`.
-4. Transfer or FTP the images to the {{site.data.keyword.powerSys_notm}}.
+1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
+2.	Create a virtual media and _IMGCLG_ on the deployed VM.
+3.	Create a virtual optical and _IMGCLG_ on the on-premises system and perform an operating system save.
+4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
+5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
+6.	Migrate your remaining data.
 
-    You can accomplish the transfer by using some of the listed migration strategies (COS, Aspera, etc.).
-    {: important}
-
-5. Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
-6. Migrate your remaining data.
+Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.
 
 For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}.
 
@@ -253,7 +255,7 @@ For a complete tutorial on migrating your IBM i workloads to Power Systems Virtu
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-rep-glvm}
 
-GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geomirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
+GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geo mirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
 
 - [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: external}
 - [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}
