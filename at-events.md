@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-12-14"
+lastupdated: "2023-01-29"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -417,4 +417,3 @@ The following table shows the data center and its corresponding regions where yo
 |`LON06` | eu-de | eu-gb|
 |`OSA21` | jp-tok | jp-osa|
 {: caption="Table 18. List of DCs and their corresponding AT instance region" caption-side="top"}
-
