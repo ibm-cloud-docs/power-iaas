@@ -40,7 +40,7 @@ Importing and exporting images requires a considerable amount of processing powe
 
 {{site.data.keyword.powerSys_notm}} users can implement any compatible agent-based backup for AIX virtual machines (VM). *Veeam for AIX* and *IBM Storage Protect* (formerly *IBM Spectrum Protect*) are two commonly used backup strategies.
 
-- *Veeam for AIX* - See [Additional backup strategies](/docs/power-iaas?topic=power-iaas-backup-strategies##add-backup) for more information.
+- *Veeam for AIX* - See [Additional backup strategies](/docs/power-iaas?topic=power-iaas-backup-strategies#additional-backup-strategies) for more information.
  
 - *IBM Storage Protect* provides scalable data protection for physical file servers, applications, and virtual environments. Organizations can scale up to manage billions of objects per backup server. They can reduce backup infrastructure costs with built-in data efficiency capabilities and the ability to migrate data to tape, public cloud services, and on-premises object storage. *IBM Storage Protect* can also be a data offload target for *IBM Storage Protect Plus,* for a long-term data retention and disaster recovery. For more information, see [What can IBM Storage Protect do for your business?](https://www.ibm.com/products/storage-protect){: external}.
 

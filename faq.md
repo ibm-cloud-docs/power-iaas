@@ -369,9 +369,9 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two data centersif they are located withing US. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. 
 
-IBM Cloud Connect is only available to IBM clients within the US.
+You can use Direct Link and Transit Gateway (local & global) for connecting two data centers.
 {: important}
 
 ## How is network bandwidth billed?
