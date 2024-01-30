@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-29"
+lastupdated: "2024-01-30"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -28,6 +28,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 ## January 2024
 {: #jan-2024}
+
+- Certain stock images for SAP will be updated with newer Ansible packages. Until then it is recommended that you do not use the following images to create a new {{site.data.keyword.powerSys_notm}} instance for use with SAP workloads:
+  - RHEL8-SP8-SAP
+  - RHEL8-SP8-SAP-NETWEAVER
+  - RHEL9-SP2-SAP
+  - RHEL9-SP2-SAP-NETWEAVER
 
 - Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available accross all the {{site.data.keyword.powerSys_notm}} data centers. For more information see, [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig). 
 - The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
