@@ -38,11 +38,11 @@ Importing and exporting images requires a considerable amount of processing powe
 ## AIX backup strategies
 {: #backup-aix}
 
-{{site.data.keyword.powerSys_notm}} users can implement any compatible agent-based backup for AIX virtual machines (VM). *Veeam for AIX* and *IBM Spectrum Protect* are two commonly used backup strategies.
+{{site.data.keyword.powerSys_notm}} users can implement any compatible agent-based backup for AIX virtual machines (VM). *Veeam for AIX* and *IBM Storage Protect* (formerly *IBM Spectrum Protect*) are two commonly used backup strategies.
 
 - *Veeam for AIX* - See [Additional backup strategies](/docs/power-iaas?topic=power-iaas-backup-strategies##add-backup) for more information.
  
-- *IBM Spectrum Protect* provides scalable data protection for physical file servers, applications, and virtual environments. Organizations can scale up to manage billions of objects per backup server. They can reduce backup infrastructure costs with built-in data efficiency capabilities and the ability to migrate data to tape, public cloud services, and on-premises object storage. *IBM Spectrum Protect* can also be a data offload target for *IBM Spectrum Protect Plus,* for a long-term data retention and disaster recovery. For more information, see [What can IBM Spectrum Protect do for your business?](https://www.ibm.com/us-en/marketplace/data-protection-and-recovery){: external}.
+- *IBM Storage Protect* provides scalable data protection for physical file servers, applications, and virtual environments. Organizations can scale up to manage billions of objects per backup server. They can reduce backup infrastructure costs with built-in data efficiency capabilities and the ability to migrate data to tape, public cloud services, and on-premises object storage. *IBM Storage Protect* can also be a data offload target for *IBM Storage Protect Plus,* for a long-term data retention and disaster recovery. For more information, see [What can IBM Storage Protect do for your business?](https://www.ibm.com/products/storage-protect){: external}.
 
 It's the user's responsibility to set up and maintain these environments. Remember to check for any connectivity and bandwidth restrictions to the LPAR server. Your LPAR servers can also use {{site.data.keyword.cos_full_notm}} as a repository. 
 
