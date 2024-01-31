@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-29"
+lastupdated: "2024-01-30"
 
 keywords: release notes, announcements, feature updates, changes, power systems virtual server
 
@@ -29,6 +29,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## January 2024
 {: #jan-2024}
 
+- Certain stock images for SAP will be updated with newer Ansible packages. Until then it is recommended that you do not use the following images to create a new {{site.data.keyword.powerSys_notm}} instance for use with SAP workloads:
+  - RHEL8-SP8-SAP
+  - RHEL8-SP8-SAP-NETWEAVER
+  - RHEL9-SP2-SAP
+  - RHEL9-SP2-SAP-NETWEAVER
+
+- Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available accross all the {{site.data.keyword.powerSys_notm}} data centers. For more information see, [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig). 
+- The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
 - `DAL12` and `FRA04` data centers are now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
   
 - The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
@@ -38,7 +46,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   Existing user can choose to continue using {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to preferred IBM Cloud VPN for VPC service.
 
   By January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS product, thus if you choose not to take the recommended action and run into issues IBM will not be able to support with end of life for parts occurring six months later on July 14, 2025. Additionally, after March 2024 new connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN thus you are encouraged to upgrade to the IBM Cloud VPC VPN at your earliest convenience and ideally before March 2024.
-- The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
+
  
 ## December 2023
 {: #dec-2023}

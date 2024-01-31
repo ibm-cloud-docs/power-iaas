@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2023-01-11"
+lastupdated: "2024-01-30"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -79,11 +79,11 @@ IBM i stock images currently available when you create a VM are:
 
 Red Hat
 * RHEL 9.2 general purpose (RHEL9-SP2) 
-* RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new}
-* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new}
+<!-- * RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new} -->
+<!-- * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new} -->
 * RHEL 8.8 general purpose (RHEL8-SP8) [new]{: tag-new}
-* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new}
-* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new}
+<!-- * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new} -->
+<!-- * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new} -->
 * RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
@@ -369,9 +369,9 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. For more information, see [Connecting Power Systems Virtual Server instances and networks](/docs/power-iaas?topic=power-iaas-connecting-networks).
+You can use IBM Cloud Connect to connect two data centersif they are located withing US. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. 
 
-IBM Cloud Connect is only available to IBM clients within the US.
+You can use Direct Link and Transit Gateway (local & global) for connecting two data centers.
 {: important}
 
 ## How is network bandwidth billed?
