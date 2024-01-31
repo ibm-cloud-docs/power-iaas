@@ -78,12 +78,14 @@ IBM i stock images currently available when you create a VM are:
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 
 Red Hat
-* RHEL 9.2 general purpose (RHEL9-SP2) 
+
 <!-- * RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new} -->
 <!-- * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new} -->
-* RHEL 8.8 general purpose (RHEL8-SP8)
+
 <!-- * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new} -->
 <!-- * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new} -->
+* RHEL 9.2 general purpose (RHEL9-SP2) 
+* RHEL 8.8 general purpose (RHEL8-SP8)
 * RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
