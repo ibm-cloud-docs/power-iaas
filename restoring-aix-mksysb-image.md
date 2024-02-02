@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 {{site.data.keyword.attribute-definition-list}}
-<!-- {{site.data.keyword.powerSys_notm}} - Power System Virtual Server-->
+<!-- {{site.data.keyword.powerSys_notm}} -->
 
 # Replicating a desired AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
 {: #restoring-aix-mksysb-image}

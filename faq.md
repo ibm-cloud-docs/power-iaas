@@ -509,10 +509,10 @@ You must pin the IBM i virtual server instances that use the IBM i licenses. If 
 
 Consider the following if you do not see an update in the User Interface(UI):
 
-1. Power System Virtual Server utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
+1. {{site.data.keyword.powerSys_notm}} utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
 2. In some scenarios out-dated information may be shown while the cache is updated, for approximately four minutes.
 3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
-4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, Power System Virtual Server UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
+4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
 
 ## Why I cannot see the storage pool and tier of my boot images?
 {: #stock-image-copy-improve}

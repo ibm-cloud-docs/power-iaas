@@ -77,7 +77,7 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
   {: note}
 
 
-## Access roles requirements for Power System Virtual Server
+## Access roles requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
 
 {{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, Virtual Private Cloud, and so on. You may require additional access based on your resource requirements. For example, to create a Cloud connection you will need Editor access to Direct Link service.
