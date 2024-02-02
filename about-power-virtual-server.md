@@ -21,15 +21,15 @@ subcollection: power-iaas
 {:note: .note}
 {:term: .term}
 
-# What is a Power Systems Virtual Server?
+# What is a {{site.data.keyword.powerSys_notm}}?
 {: #about-virtual-server}
 
 {{site.data.keyword.powerSysFull}} is a Power Systems offering. The {{site.data.keyword.powerSys_notm}} are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. The environment is in its own pod and the internal networks are fenced but offer connectivity options to meet customer requirements. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure. The virtual servers, also known as logical partitions (LPAR), run on IBM Power Systems hardware with the PowerVM hypervisor.
 {: shortdesc}
 
-With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for Power Systems Virtual Servers:
+With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for {{site.data.keyword.powerSys_notm}}s:
 
-![Power Systems Virtual Server responsibility assignment matrix](./images/RACI_matrix.png "Power Systems Virtual Server responsibility assignment matrix"){: caption="Figure 1. Power Systems Virtual Server responsibility assignment matrix" caption-side="bottom"}
+![Power Virtual Server responsibility assignment matrix](./images/RACI_matrix.png "Power Virtual Server responsibility assignment matrix"){: caption="Figure 1. {{site.data.keyword.powerSys_notm}} responsibility assignment matrix" caption-side="bottom"}
 
 ## Key features
 {: #key-features}
@@ -71,7 +71,7 @@ When provisioning a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver
 ### Support for deploying a Red Hat OpenShift Cluster
 {: #support-redhat-openshift}
 
-When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, it is easier to use the IBM&trade; provided automation to create the entire cluster of servers and install Red Hat OpenShift rather than individually provisioning {{site.data.keyword.powerSys_notm}} instances. For instructions to deploy a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, including preparation of the required Operation System images for the cluster, see [Deploying Red Hat OpenShift Container Platform 4.x on IBM {{site.data.keyword.powerSys_notm}}s](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
 ## Hardware specifications
 {: #hardware-specifications}
@@ -123,7 +123,7 @@ If you'd like to compare your current environment's performance to what's availa
 {: #hw-spec-3}
 {: tab-title="Non-US"}
 
-For a complete list of supported data centers, see [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+For a complete list of supported data centers, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
 
 ## Storage tiers
