@@ -26,6 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## February 2024
+{: #feb-2024}
+
+- `SAO01` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
+
 ## January 2024
 {: #jan-2024}
 
