@@ -24,7 +24,7 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Moving data from your on-premise environment to Power Systems Virtual Servers
+# Moving data from your on-premise environment to {{site.data.keyword.powerSys_notm}}s
 {: #move-data-to-cloud}
 
 Depending on your network bandwidth and data size constraints, the process of moving the data volume group is as simple as creating an *Open Virtualization Appliance (OVA) file* or an *mksysb* image (root volume group), and creating a set of *savevg* images for volume group data. By using an *OVA* file or an *mksysb* image, you can build or provision a VM and then migrate the data volume groups of the virtual machine (VM) by using the **restvg** command.

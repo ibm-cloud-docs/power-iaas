@@ -264,5 +264,5 @@ When the old boot volume is detached and deleted by using the user interface, th
 
 ## Additional Information Resources
 
-* [Getting Started with IBM Power Systems Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started).
+* [Getting Started with IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started).
 * [{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference).

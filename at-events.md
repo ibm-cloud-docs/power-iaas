@@ -46,7 +46,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 
 | Action                     | Description                                      |
 |:---------------------------|:-------------------------------------------------|
-| power-iaas.event.read | Read a Power Systems Virtual Server Instance     |
+| power-iaas.event.read | Read a {{site.data.keyword.powerSys_notm}} Instance     |
 {: caption="Table 1. List of events: Read" caption-side="top"}
 
 ### Images events
@@ -76,7 +76,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | power-iaas.network.delete      | Delete a Network                      |
 {: caption="Table 3. List of events: Network" caption-side="top"}
 
-### Power Systems Virtual Server events
+### {{site.data.keyword.powerSys_notm}} events
 {: #at-actions-servers}
 
 The following events are for working with each {{site.data.keyword.powerSys_notm}} instance.
@@ -99,7 +99,7 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 | power-iaas.pvm-instance-network.read      |  Read a Power virtual server instance Network |
 | power-iaas.pvm-instance-network.create     |  Create a Power virtual server instance Network  |
 | power-iaas.pvm-instance-network.delete      |  Delete a Power virtual server instance Network  |
-{: caption="Table 4. List of events: Power Systems Virtual Server" caption-side="top"}
+{: caption="Table 4. List of events: {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
 ### SSH keys events
 {: #at-actions-ssh}
@@ -268,7 +268,7 @@ The following events are for working with VPN Connection in your {{site.data.key
 ## Viewing events
 {: #at-viewing-events}
 
-Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs for all North America and South America data centers from Dallas, all Europe data centers from Frankfurt, Sydney data center from Sydney, and all Japan data center from Tokyo. For a list of locations where Power Systems Virtual Server services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs for all North America and South America data centers from Dallas, all Europe data centers from Frankfurt, Sydney data center from Sydney, and all Japan data center from Tokyo. For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
 {{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch).
 
@@ -336,7 +336,7 @@ The following code snippets shows the differences between the old and new activi
         "sshKeys": [],
         "tenantID": "xxxxxxxxxxxxxxxxxxxx"
     },
-    "message": "Power Systems Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
+    "message": "Power Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
     "observer": {
         "name": "ActivityTracker"
     }

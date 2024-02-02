@@ -19,7 +19,7 @@ subcollection: power-iaas
 IBM provides two Cloud key management services that integrate with {{site.data.keyword.powerSysFull}} workloads:
 {: shortdesc}
 
-1. [IBM Cloud® Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto?topic=hs-crypto-overview) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with Power Systems Virtual Server to securely store and protect encryption key information for AIX and Linux.
+1. [IBM Cloud® Hyper Protect Crypto Services (HPCS)](/docs/hs-crypto?topic=hs-crypto-overview) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. You can integrate HPCS with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
 2. [IBM {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-about) is a full-service multi-tenant encryption solution that allows data to be secured and stored in IBM Cloud™ using the latest envelope encryption techniques. You can integrate {{site.data.keyword.keymanagementserviceshort}} with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux.
 
 ## Using Hyper Protect Crypto Services (HPCS) and {{site.data.keyword.keymanagementserviceshort}} for AIX

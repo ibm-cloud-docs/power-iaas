@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for Power Systems Virtual Servers
+# Pricing for {{site.data.keyword.powerSys_notm}}s
 {: #pricing-virtual-server}
 
 {{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums: 
@@ -116,7 +116,7 @@ For detailed usage and billing information, you can refer to the part number in 
 ## Base instances
 {: #pricing-base-instance-prices}
 
-The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
+The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -127,7 +127,7 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 {{site.data.keyword.powerSys_notm}} provides AIX and IBM i stock images. The operating system version levels of the stock images are subject to change.
 
-You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 

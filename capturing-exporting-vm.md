@@ -55,7 +55,7 @@ CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
 
-## Using the Power Systems Virtual Server user interface to capture and export a VM
+## Using the {{site.data.keyword.powerSys_notm}} user interface to capture and export a VM
 {: #console-capture-export}
 
 1. Click the **Capture and export** icon in your **Virtual server instances** view. The icon is to the right of the **trash** icon.
@@ -89,7 +89,7 @@ CHGASPACT OPTION(*FRCWRT)
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
 
-To learn more about using the command-line interface to capture and export a VM, see [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+To learn more about using the command-line interface to capture and export a VM, see [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#power-iaas-cli-before) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
 1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
 

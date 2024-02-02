@@ -79,18 +79,18 @@ Each LPP in the package contains all the features that's includes the optional f
 
 These additional LPPs for IBM i, which are available and can be included in your VM instance. To include one or more such LPPs, complete the following steps:
 
-1. Go to **Virtual server instances** in the Power Systems Virtual Server user interface and click your instance.
+1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
 
 2. Click the **Edit details** option in the **Server details** page. A menu appears.
 
-3. Select the wanted licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through Power Systems Virtual Server:
+3. Select the wanted licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through {{site.data.keyword.powerSys_notm}}:
 
    - IBM i Cloud Storage Solutions (5773-ICC)
    - IBM i Power HA (5770-HAS)
    - Rational Development Studio for IBM i (5770-WDS)
 
     Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance. 
-    If you want to use these programs on your IBM i VM instance, you must order these licensed programs through Power Systems Virtual Server you cannot use existing licenses in your VM instance.
+    If you want to use these programs on your IBM i VM instance, you must order these licensed programs through {{site.data.keyword.powerSys_notm}} you cannot use existing licenses in your VM instance.
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and to accept the price.
 
@@ -99,6 +99,6 @@ These additional LPPs for IBM i, which are available and can be included in your
 ## Passport Advantage Software
 {: #passport-advantage}
 
-In general, IBM programs that are acquired through Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired through Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the Power Systems Virtual Server offering whether RDi was obtained through the Power Systems Hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
+In general, IBM programs that are acquired through Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired through Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the {{site.data.keyword.powerSys_notm}} offering whether RDi was obtained through the Power Systems Hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
 
 Other examples of IBM software that is acquired through Passport Advantage are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).

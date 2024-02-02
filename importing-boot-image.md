@@ -47,7 +47,7 @@ You can use the IBM® Power Systems™ Virtual Server legacy REST APIs for VM Ca
 ## Using the {{site.data.keyword.powerSys_notm}} CLI to import a boot image
 {: #cli-import-image}
 
-Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} CLI. For more information, see the [IBM Power Systems Virtual Servers CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import).
+Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} CLI. For more information, see the [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import).
 
 1. To import an AIX or IBM i image from IBM Cloud Object Storage, use the [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import) command.
 
@@ -58,7 +58,7 @@ Complete the following steps to import a boot image by using the {{site.data.key
     ```
     {: codeblock}
 
-## Using the Power Systems Virtual Server user interface to import a boot image
+## Using the {{site.data.keyword.powerSys_notm}} user interface to import a boot image
 {: #console-import-image}
 {: help}
 {: support}

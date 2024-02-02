@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# High Availability and Disaster Recovery options in Power Systems Virtual Servers
+# High Availability and Disaster Recovery options in {{site.data.keyword.powerSys_notm}}s
 {: #ha-dr}
 
 The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for {{site.data.keyword.powerSys_notm}}. If you want more advanced HA or Disaster Recover (DR) solutions, you can deploy the following applications in your {{site.data.keyword.powerSys_notm}} environment.
@@ -42,15 +42,15 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 - By using the {{site.data.keyword.powerSys_notm}}, you do not have access to the HMC, VIOS, and the host system. Therefore, any PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available. However, PowerHA SystemMirror 7.2.6 SP1 or later versions support Resource Optimized High Availability (ROHA) functions. For more information on configuring and using ROHA with {{site.data.keyword.powerSys_notm}}, see [Resource Optimized High Availability in Cloud](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=administering-resources-optimized-high-availability-in-cloud){: external}
 
-Licenses that are purchased outside a subscription model license are not eligible to be used in the Power Systems Virtual Server.
+Licenses that are purchased outside a subscription model license are not eligible to be used in the {{site.data.keyword.powerSys_notm}}.
 {: note}
 
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}
 
-You can implement disaster recovery mechanism between two AIX virtual server instances in separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: external}. For information about Transmission Control Protocol (TCP) tuning to improve wide area network (WAN) connection performance between AIX Virtual Machines, see [this support page](https://www.ibm.com/support/pages/node/6410510). 
+You can implement disaster recovery mechanism between two AIX virtual server instances in separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: external}. For information about Transmission Control Protocol (TCP) tuning to improve wide area network (WAN) connection performance between AIX Virtual Machines, see [this support page](https://www.ibm.com/support/pages/node/6410510). 
 
-You can implement disaster recovery mechanisms between two IBM i virtual server instances by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: external}.
+You can implement disaster recovery mechanisms between two IBM i virtual server instances by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: external}.
 
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}

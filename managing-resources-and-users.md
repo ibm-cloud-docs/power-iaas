@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Managing Power Systems Virtual Servers (IAM)
+# Managing {{site.data.keyword.powerSys_notm}}s (IAM)
 {: #managing-resources-and-users}
 
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.

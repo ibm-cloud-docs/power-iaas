@@ -1,7 +1,7 @@
 {
-  "title": "Power Systems Virtual Servers docs",
+  "title": "Power Virtual Servers docs",
   "lastupdated": "2022-09-22",
-  "introduction": "With the Power Systems Virtual Server, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems).",
+  "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems).",
   "section_devtools": {
     "api": "/apidocs/power-cloud",
     "cli": "/docs/power-iaas-cli-plugin",
@@ -9,13 +9,13 @@
   },
   "section_recommended": [
     {
-      "title": "Creating a Power Systems Virtual Server",
-      "description": "Learn to create and configure an IBM Power Systems Virtual Server.",
+      "title": "Creating a Power Virtual Server",
+      "description": "Learn to create and configure an IBM Power Virtual Server.",
       "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
     },
     {
       "title": "Network architecture diagrams",
-      "description": "Review the network diagrams to understand the Power Systems™ Virtual Server network architecture.",
+      "description": "Review the network diagrams to understand the Power Virtual Server network architecture.",
       "href": "/docs/power-iaas?topic=power-iaas-network-architecture-diagrams"
     },
     {
@@ -25,11 +25,11 @@
     },
     {
       "title": "SAP HANA and SAP NetWeaver",
-      "description": "Plan and provision Power Systems Virtual Servers for SAP HANA and SAP NetWeaver.",
+      "description": "Plan and provision Power Virtual Servers for SAP HANA and SAP NetWeaver.",
       "href": "/docs/sap?topic=sap-power-vs-planning-items"
     },
     {
-      "title": "Easy access: IBM Power Systems Virtual Servers with SAP",
+      "title": "Easy access: IBM Power Virtual Servers with SAP",
       "description": "Explore a collection of documentation sections for each SAP offering.",
       "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
     },

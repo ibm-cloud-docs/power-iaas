@@ -53,7 +53,7 @@ When you use SPP, you pay for the following items:
 * SPP reserved cores that use the shared capped part number.
 * Virtual server instance cores that are deployed into the SPP that use shared uncapped part number.
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing, see [Pricing for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
+The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing, see [Pricing for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 {: note}
 
 ## Configuring shared processor pool
@@ -123,7 +123,7 @@ To add virtual server instances to an exsiting SPP, complete the following steps
 3. Complete the input fields under the **General** tile based on your requirement.
 4. Select the checkbox **Add to a Shared processor pool**.
 5. Select an existing shared processor pool.
-6. Continue with the with the process of creating a virtual server instance. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+6. Continue with the with the process of creating a virtual server instance. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 ## Configuring a shared processor pool placement group
 {: #configure-SPP-PG}
