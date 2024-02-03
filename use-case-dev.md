@@ -24,7 +24,7 @@ subcollection: power-iaas
 # AIX and IBM i development and test
 {: #use-case-dev-test}
 
-The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the IBM Power Systems Virtual Server.
+The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the IBM {{site.data.keyword.powerSys_notm}}.
 {: shortdesc}
 
 ## Client needs

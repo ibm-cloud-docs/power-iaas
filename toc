@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="power-iaas" category="virtualservers" audience="service" href="/docs/power-iaas" path="power-iaas"}
-Power Systems Virtual Servers
+Power Virtual Servers
 
     {: .navgroup id="learn"}
     release-notes.md
@@ -32,7 +32,7 @@ Power Systems Virtual Servers
         use-case-oracle.md
         use-case-redhat-openshift.md
 
-    [Why IBM Power Systems Virtual Servers?](https://www.ibm.com/cloud/power-virtual-server)
+    [Why IBM Power Virtual Servers?](https://www.ibm.com/cloud/power-virtual-server)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
