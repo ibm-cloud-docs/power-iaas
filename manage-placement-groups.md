@@ -42,7 +42,7 @@ You cannot change the policy or name of a placement group after it is created. Y
 
 To create a new placement group, complete the following steps:
 
-1. Go to the Power Systems Virtual Server user interface and click **Server placement groups**.
+1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Server placement groups**.
 2. In the **Server placement groups** page, click **Create group**.
 3. Specify a name for the new placement group. Select a colocation policy to specify whether all the VMs under this placement group must reside in the same server or in a different server. 
 4. Click **Create**.
@@ -71,7 +71,7 @@ When you add a VM to the server placement group, the request might not be comple
 
 To add a VM to a placement group, complete the following steps:
 
-1. Go to the Power Systems Virtual Server user interface and click **Server placement groups**.
+1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Server placement groups**.
 2. In the **Server placement groups** page, from the placement group table select a placement group name that you want to add the VM.
 3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. You can also add an existing VM to the placement group. 
 4. Click **Add existing VM** to add an existing VM to the placement group. Select one or more VMs from the table and add it to the placement group. 

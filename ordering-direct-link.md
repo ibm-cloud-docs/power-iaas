@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Ordering {{site.data.keyword.dl_short}} Connect for Power Systems Virtual Servers
+# Ordering {{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s
 {: #ordering-direct-link-connect}
 
 Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSysShort}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
@@ -90,13 +90,13 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
     Data center details:
     Direct Link Connect subnet:
     IBM Cloud IP address:
-    Power Systems Virtual Server network IP address:
+    Power Virtual Server network IP address:
     Direct Link Connect VLAN:
     IBM Cloud ASN:
-    Power Systems Virtual Server network ASN:
-    Power Systems Virtual Server Private Network (subnet) Name (1):
-    Power Systems Virtual Server Private Network (subnet) Name (2):
-    Power Systems Virtual Server Private Network (subnet) Name (3):
+    Power Virtual Server network ASN:
+    Power Virtual Server Private Network (subnet) Name (1):
+    Power Virtual Server Private Network (subnet) Name (2):
+    Power Virtual Server Private Network (subnet) Name (3):
     Direct Link Connect 2.0 Virtual Connections:
     Classic Network Virtual Connection: Yes/No
     VPC Virtual Connection 1: VPC name and ID
@@ -104,10 +104,10 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
     VPC Virtual Connection 3: VPC name and ID 
     ```
 
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The {{site.data.keyword.cloud_notm}} network team generates the **{{site.data.keyword.cloud_notm}} ASN** and adds it to the {{site.data.keyword.cloud_notm}} support case. The {{site.data.keyword.cloud_notm}} network team also generates the IP addresses. Your private network name is your Power Systems Virtual Server private network subnet name.
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The {{site.data.keyword.cloud_notm}} network team generates the **{{site.data.keyword.cloud_notm}} ASN** and adds it to the {{site.data.keyword.cloud_notm}} support case. The {{site.data.keyword.cloud_notm}} network team also generates the IP addresses. Your private network name is your Power Virtual Server private network subnet name.
     {: important}
 
-    The {{site.data.keyword.powerSys_notm}} support case is closed when the {{site.data.keyword.dl_short}} Connect connection is configured to communicate with your Power Systems Virtual Server instance. 
+    The {{site.data.keyword.powerSys_notm}} support case is closed when the {{site.data.keyword.dl_short}} Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance. 
  
 ## Setting up high availability over {{site.data.keyword.dl_short}} Connect
 {: #ha-availability}
@@ -119,7 +119,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 
 1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
-   In the **BGP** section, select a port from a separate port group for the redundant {{site.data.keyword.dl_short}} Connect instance. Both {{site.data.keyword.dl_short}} Connect instances must be on separate ports to connect to different Power Systems Virtual Server routers, thus, ensuring redundancy.
+   In the **BGP** section, select a port from a separate port group for the redundant {{site.data.keyword.dl_short}} Connect instance. Both {{site.data.keyword.dl_short}} Connect instances must be on separate ports to connect to different {{site.data.keyword.powerSys_notm}} routers, thus, ensuring redundancy.
 
     The following example shows the {{site.data.keyword.dl_short}} Connect ports for the DAL12 data center. The ports that end with `1-1` and `1-2` belong to one port group, and the ports ending with `2-1` and `2-2` belong to another port group. If you select a port from the first port group, you must select a port from the second port group for the redundant {{site.data.keyword.dl_short}} Connect instance. That is, if you select **-1-1** for the first {{site.data.keyword.dl_short}} Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance.
 
@@ -167,7 +167,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 ## Routing considerations for VPC
 {: #routing-considerations}
 
-If traffic is sent from the Power Systems Virtual Server to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
+If traffic is sent from the {{site.data.keyword.powerSys_notm}} to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
 {: shortdesc}
 
 For proper VPC configuration, the on-premises IP address must meet the following requirements:

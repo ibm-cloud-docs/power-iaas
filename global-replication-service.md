@@ -41,7 +41,7 @@ If you need a more detailed information on Gobal Replication Service, see [Globa
 ## Locations that support global replication service
 {: #locations-GRS}
 
-You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by Power System Virtual Server](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
+You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
 
 The following table shows the data centers that supports replication and their corresponding pool level detail:
 |Site 1| Site 2|

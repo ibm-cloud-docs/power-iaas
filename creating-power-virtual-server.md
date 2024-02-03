@@ -164,10 +164,10 @@ The dedicated host provides the following features:
 Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability is in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
 {: note}
 
-## Reusing Volume names or VM names in Power System Virtual Servers
+## Reusing Volume names or VM names in {{site.data.keyword.powerSys_notm}}s
 {: #reusing_volume_names}
 
-You can deploy a Power System Virtual Server VM by specifying any name. If you want to delete that VM and deploy a new VM with the same name, you must allow 1 hour between deleting the original instance and creating a VM by using the same name again.
+You can deploy a {{site.data.keyword.powerSys_notm}} VM by specifying any name. If you want to delete that VM and deploy a new VM with the same name, you must allow 1 hour between deleting the original instance and creating a VM by using the same name again.
 
 For example, you create a VM with the name TEST-VM and you delete this VM later. The name "TEST-VM" is not immediately available for reuse. Before you attempt to use the name TEST-VM again, you must allow 1 hour to pass after the VM was deleted.
 

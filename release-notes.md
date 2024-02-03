@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-01-30"
 
-keywords: release notes, announcements, feature updates, changes, power systems virtual server
+keywords: release notes, announcements, feature updates, changes, power virtual server
 
 ---
 
@@ -25,6 +25,11 @@ keywords: release notes, announcements, feature updates, changes, power systems 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## February 2024
+{: #feb-2024}
+
+- `SAO01` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
 
 ## January 2024
 {: #jan-2024}
@@ -78,7 +83,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #sep-2023}
 
 - **{{site.data.keyword.powerSys_notm}} and SysDig Integration**
-: You can now seamlessly monitor your platform metrics within the IBM Cloud environment by using the IBM Cloud Monitoring service. For detailed instructions on how to access and use this integration, refer to the documentation: [Monitoring metrics for Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
+: You can now seamlessly monitor your platform metrics within the IBM Cloud environment by using the IBM Cloud Monitoring service. For detailed instructions on how to access and use this integration, refer to the documentation: [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
 The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13` with other data center coming soon.
   {: note}
@@ -110,7 +115,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 {: #may-2023}
 
 - IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo).
-- IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating Power Systems Virtual Server with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
+- IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
 - Effective 1 May 2023, AIX 7.1 on {{site.data.keyword.powerSys_notm}} is covered for software support. In {{site.data.keyword.powerSys_notm}}, starting March 2024, Service Extension pricing is automatically added to the AIX charge for AIX 7.1 usage. AIX 7.1 Service Extension was announced on January 24, 2023. For more information see, [Service Extension for IBM AIX 7.1](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/4/877/ENUSZS23-0004/index.html&lang=en&request_locale=en){: external}.
 
 ## March 2023
@@ -125,17 +130,17 @@ The data center where you can monitor your platform metrics currently are `WDC06
   Effective 3/23/23, two of the latest large SAP HANA t-shirt profiles `mh1-90x16200` and `mh1-100x18000` are available options in the [cost estimator](https://cloud.ibm.com/power/overview#estimator){: external}. In April 2023, the latest largest profile `mh1-125x22500` will also be available in the estimator.
 
 - **Access your event logs and notifications**:
-  You can now access your event logs and notification from the **Event logs** page on the Power System Virtual Server user interface. For more information, see [Managing events logs and notifications](/docs/power-iaas?topic=power-iaas-manage-event-logs)
+  You can now access your event logs and notification from the **Event logs** page on the {{site.data.keyword.powerSys_notm}} user interface. For more information, see [Managing events logs and notifications](/docs/power-iaas?topic=power-iaas-manage-event-logs)
 
 ## February 2023
 {: #feb-2023}
 
-- Added a new data center DAL10 in the existing list of Power Systems Virtual Server data centers. For more information, see [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+- Added a new data center DAL10 in the existing list of {{site.data.keyword.powerSys_notm}} data centers. For more information, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 ## December 2022
 {: #dec-2022}
 
-- Get the list of internationally recognized {{site.data.keyword.powerSys_notm}} compliance certifications. For more information, see [Power Systems Virtual Server compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list).
+- Get the list of internationally recognized {{site.data.keyword.powerSys_notm}} compliance certifications. For more information, see [{{site.data.keyword.powerSys_notm}} compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list).
 
 - You can integrate Hyper Protect Crypto Services (HPCS) with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with HPCS](/docs/power-iaas?topic=power-iaas-integrate-hpcs).
 
@@ -159,12 +164,12 @@ The data center where you can monitor your platform metrics currently are `WDC06
 {: #jul-2022}
 
 - You can use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC). See [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
-- {{site.data.keyword.powerSys_notm}} now supports a full Linux subscription on RHEL 8.6. See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+- {{site.data.keyword.powerSys_notm}} now supports a full Linux subscription on RHEL 8.6. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 ## June 2022
 {: #jun-2022}
 
-- {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+- {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - IBM i 7.5 is supported on {{site.data.keyword.powerSys_notm}}s.
 - With virtual appliances independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSys_notm}} workloads. See [Managing virtual appliances](/docs/power-iaas?topic=power-iaas-virtual-appliances).
   
@@ -176,21 +181,21 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## March 2022
 {: #march-2022}
 
-- The Power Systems Virtual Server now supports [AIX 7.3](/docs/power-iaas?topic=power-iaas-deploy-custom-image#aix-details).
-- You can view best practices and guidelines on [AIX backup performance on IBM Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-backup-strategies#backup-aix).
+- The {{site.data.keyword.powerSys_notm}} now supports [AIX 7.3](/docs/power-iaas?topic=power-iaas-deploy-custom-image#aix-details).
+- You can view best practices and guidelines on [AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies#backup-aix).
 
 ## December 2021
 {: #dec-2021}
 
-- You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the Power Systems Virtual Server GUI.
-- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the Power Systems Virtual Server GUI.
-- You can now set a [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the Power Systems Virtual Server GUI.
-- You can now set [affinity policies for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the Power Systems Virtual Server GUI.
+- You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
+- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the {{site.data.keyword.powerSys_notm}} GUI.
+- You can now set a [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
+- You can now set [affinity policies for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the {{site.data.keyword.powerSys_notm}} GUI.
 
 ## October 2021
 {: #oct-2021}
 
-- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a Power Systems Virtual Server VPN service. 
+- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service. 
 - You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-tape-libraries) to backup IBM i data. 
 
 ## September 2021
@@ -207,21 +212,21 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## May 2021
 {: #may-2021}
 
-- You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-managing-cloud-connections) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources.
-- Power Systems Virtual Server now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](/docs/sap?topic=sap-power-vs-sles-hana).
+- You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-managing-cloud-connections) to automate the way you connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources.
+- {{site.data.keyword.powerSys_notm}} now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](/docs/sap?topic=sap-power-vs-sles-hana).
 
 
 ## March 2021
 {: #mar-2021}
 
-- You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM) on a VM instance. For more information, see [Using RHEL within the Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
-- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
+- You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM) on a VM instance. For more information, see [Using RHEL within the {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
+- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
 - You can now choose an `OSA21` data center to deploy your {{site.data.keyword.powerSys_notm}}.
 
 ## February 2021
 {: #feb-2021}
 
 - You can now choose a `MON01` data center to deploy your {{site.data.keyword.powerSys_notm}}.
-- The Power Systems Virtual Server offering now supports IBM i 7.1. For more information, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
+- The {{site.data.keyword.powerSys_notm}} offering now supports IBM i 7.1. For more information, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 - You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#cloning-volume).
 - You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information, see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).

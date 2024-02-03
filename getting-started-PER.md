@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-01-19"
+lastupdated: "2024-02-02"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers). 
 
-The PER solution is available in `DAL10`, `DAL12`, `FRA04`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
+The PER solution is available in `DAL10`, `DAL12`, `FRA04`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, `SAO01`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -54,7 +54,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `4`	- The converted traffic from NAT is forwarded to PER. 
   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
 
-The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM Power Systems Virtual Server users in the IBM Cloud.
+The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
 
 For detailed networking PER use cases and architechture diagrams, see [Power Edge Router use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases).
 
@@ -99,7 +99,7 @@ Here is an example command that can be executed where:
 ## Creating a PER workspace
 {: create-per-workspace}
 
-To create a PER workspace, follow the steps that are mentioned in [Creating a Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose a PER-enabled data center.
+To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose a PER-enabled data center.
 
 You can check whether a workspace is PER-enabled by selecting the workspace and viewing the workspace's details. The PER-enabled workspace shows an information message regarding PER and Transit Gateway.
 {: note}
@@ -152,7 +152,7 @@ AIX and IBM i operating systems operate in PER workspaces in the same way that t
 ### Full Linux Subscription with PER
 {: aix-ibmi-per}
 
-See [Full Linux® subscription for Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
+See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
 {: note}
 
 Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER workspace. Follow these instructions for a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
@@ -164,7 +164,7 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
       Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result. 
   5.  Enter `161.26.0.10` in the **DNS server** field.
 
-2. Create a virtual server instance. See, [Configuring a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
+2. Create a virtual server instance. See, [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify whether the registration is successful with the following commands:
   

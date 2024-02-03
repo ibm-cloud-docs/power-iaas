@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Backup strategies for IBM Power Systems Virtual Servers
+# Backup strategies for IBM {{site.data.keyword.powerSys_notm}}s
 {: #backup-strategies}
 
 Learn more about different AIX and IBM i backup strategies for IBM&reg; Power Systems&trade; Virtual Server.
@@ -48,7 +48,7 @@ It's the user's responsibility to set up and maintain these environments. Rememb
 
 For a complete tutorial on backing up and restoring AIX VM data, see [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf){: external}.
 
-For best practices and guidelines on AIX backup performance on IBM Power Systems Virtual Server, see [AIX Backup Performance Best Practices and Guidelines on IBM Power Systems Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_AIX_Backup_Performance_Best_Practices_and_Guidelines_v1_0_03012022.pdf){: external}.
+For best practices and guidelines on AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}, see [AIX Backup Performance Best Practices and Guidelines on IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_AIX_Backup_Performance_Best_Practices_and_Guidelines_v1_0_03012022.pdf){: external}.
 
 ## IBM i backup strategies
 {: #backup-ibmi}

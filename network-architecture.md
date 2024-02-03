@@ -161,14 +161,14 @@ Complete the following steps to implement this scenario:
 
     Customer network subnet:
     Customer router IP Address:
-    Power Systems Virtual Server customer network IP address:
-    Power Systems Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
+    Power Virtual Server customer network IP address:
+    Power Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
     Customer Network ASN:
 
     Customer subnets to be advertised:
-    Power Systems Virtual Server customer Private Network ID (1):
-    Power Systems Virtual Server customer Private Network ID (2):
-    Power Systems Virtual Server customer Private Network ID (3):
+    Power Virtual Server customer Private Network ID (1):
+    Power Virtual Server customer Private Network ID (2):
+    Power Virtual Server customer Private Network ID (3):
     ```
     
 The {{site.data.keyword.powerSys_notm}} router is the default gateway for your Power virtual server instances. This router is operated by the {{site.data.keyword.powerSys_notm}} team and you have no direct access or control.
@@ -199,14 +199,14 @@ The key features of this Connect-to-classic topology are as follows:
 
     Customer network subnet:
     Customer router IP Address:
-    Power Systems Virtual Server customer network IP address:
-    Power Systems Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
+    Power Virtual Server customer network IP address:
+    Power Virtual Server network ASN: 64999 for WDC04 and 64997 for DAL13
     Customer Network ASN:
 
     Customer subnets to be advertised:
-    Power Systems Virtual Server customer Private Network ID (1):
-    Power Systems Virtual Server customer Private Network ID (2):
-    Power Systems Virtual Server customer Private Network ID (3):
+    Power Virtual Server customer Private Network ID (1):
+    Power Virtual Server customer Private Network ID (2):
+    Power Virtual Server customer Private Network ID (3):
     ```
 The {{site.data.keyword.powerSys_notm}} router is the default gateway for your Power virtual server instances. This router is operated by the IBM Cloud team and you have no direct access or control.
 

@@ -22,13 +22,13 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Modifying a Power Systems Virtual Server instance
+# Modifying a {{site.data.keyword.powerSys_notm}} instance
 {: #modifying-server}
 
 Learn how to modify your {{site.data.keyword.powerSysShort}} to better meet your business needs.
 {: shortdesc}
 
-## Resizing an instance by using the Power Systems Virtual Server user interface
+## Resizing an instance by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #resizing-vm}
 
 To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:

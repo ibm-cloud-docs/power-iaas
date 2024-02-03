@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:video: .video}
 {{site.data.keyword.attribute-definition-list}}
 
-# Migration strategies for IBM Power Systems Virtual Servers
+# Migration strategies for IBM {{site.data.keyword.powerSys_notm}}s
 {: #migration-strategies-power}
 
 Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.
@@ -52,7 +52,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 
 1. Create an OVA image on your local system.
 2. Copy the OVA image to your **Cloud Object Storage** account.
-3. [Deploy the OVA image and provision a new Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+3. [Deploy the OVA image and provision a new {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -173,7 +173,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 
-For more information, see [Restoring an AIX mksysb image onto a Power Systems Virtual Server instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
@@ -195,12 +195,12 @@ Some alternative AIX migration strategies include:
 - The `savevg` and `restvg` AIX commands
 - Log shipping for databases
 
-For a complete tutorial on migrating your AIX workloads to Power Systems Virtual Servers, see [Migrating AIX to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
+For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
 
 ### Migrating from AIX 7.1 to higher versions
 {: #migration-aix-versions}
 
-To migrate your resources from AIX 7.1 to higher AIX versions within Power Systems Virtual Servers, you must use the network boot option. Migration requires the VM to boot from the operating system kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
+To migrate your resources from AIX 7.1 to higher AIX versions within {{site.data.keyword.powerSys_notm}}s, you must use the network boot option. Migration requires the VM to boot from the operating system kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
 
 1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
 2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
@@ -237,7 +237,7 @@ Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and C
 
 For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}.
 
-For a complete tutorial on migrating your IBM i workloads to Power Systems Virtual Servers, see [Migrating IBM i to IBM Power Systems Virtual Servers](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
+For a complete tutorial on migrating your IBM i workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
 
 ### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
 {: #logical-rep-glvm}

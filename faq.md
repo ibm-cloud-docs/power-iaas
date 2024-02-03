@@ -27,12 +27,12 @@ subcollection: power-iaas
 # FAQ
 {: #power-iaas-faqs}
 
-## What is IBM Power Systems Virtual Server?
+## What is {{site.data.keyword.powerSysFull}}?
 {: #what-is-powervs}
 {: faq}
 {: support}
 
-IBM Power Systems Virtual Server is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment that is built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM Power Systems Virtual Servers are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+IBM {{site.data.keyword.powerSys_notm}} is a hosted infrastructure offering that allows you to quickly integrate with the Internet for on-demand provisioning. This offering provides a secure and scalable server virtualization environment that is built upon the advanced RAS features and leading performance of the Power Systems™ platform. The IBM {{site.data.keyword.powerSys_notm}}s are located in IBM data centers and distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 ## What versions of AIX, IBM i, and Linux are supported?
 {: #os-versions}
@@ -61,7 +61,7 @@ AIX stock images currently available when you create a VM are:
 * AIX 7.2 TL5 SP6
 * AIX 7.1 TL5 SP9
 
-**IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the Power Systems Virtual Server. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+**IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E980 (9080-M9S)<!-- , E1080 (9080-HEX),--> and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -125,14 +125,14 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 {: faq}
 {: support}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a Power Systems Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## What versions of stock images are available?
 {: #stock-images}
 {: faq}
 {: support}
 
-For each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering, Power Systems Virtual Server provides a single stock image. PowerVS typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for PowerVM&trade; environment.
+For each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. PowerVS typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for PowerVM&trade; environment.
 
 ## When are stock images removed from the catalog?
 {: #remove-stock-images}
@@ -200,7 +200,7 @@ There is a core-to-vCPU ratio of 1:1. For shared processors, fractional cores ro
 {: #proc-table-2}
 {: tab-title="Shared processors"}
 
-## How does my current environment compare to what's available through the Power Systems Virtual Server?
+## How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?
 {: #performance}
 {: faq}
 
@@ -271,7 +271,7 @@ Clients are responsible for third-party licensing.
 
 For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 
-## Do Power Systems Virtual Servers run in a multi-tenant environment?
+## Do {{site.data.keyword.powerSys_notm}}s run in a multi-tenant environment?
 {: #multi}
 {: faq}
 
@@ -287,7 +287,7 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [Power Systems Virtual Server API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone).
 
 ## What are the key differences between a snapshot and clone?
 {: #snap-vs-clone}
@@ -345,19 +345,19 @@ The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation t
 
 It also allows you to quickly create an intermediate snap-shot then a volumes-clone before entering the long-running volume detach or attach phase. You have the ability to pause the process immediately before attaching volumes.
 
-## How do you set up private networks between Intel&reg; Virtual Servers (x86) and Power Systems Virtual Servers?
+## How do you set up private networks between Intel&reg; Virtual Servers (x86) and {{site.data.keyword.powerSys_notm}}s?
 {: #connecting}
 {: faq}
 {: support}
 
-See the tutorial on [IBM Power Systems Virtual Server integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
+See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
 
 ## How do you set up customer site access to a private network by using VPN?
 {: #configuring}
 {: faq}
 {: support}
 
-For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to Power Systems Virtual Server, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from an on-premise environment to {{site.data.keyword.powerSys_notm}}, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?
@@ -383,13 +383,13 @@ You can use Direct Link and Transit Gateway (local & global) for connecting two 
 
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per packages. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
 
-**IBM Power Systems Virtual Server environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+**IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
 ## What monitoring services are available?
 {: #monitoring}
 {: faq}
 
-IBM does not provide status and performance monitoring for the Power Systems Virtual Server. Clients must use their own on-premises tools.
+IBM does not provide status and performance monitoring for the {{site.data.keyword.powerSys_notm}}. Clients must use their own on-premises tools.
 
 ## What performance and capacity planning services do you provide for IBM i?
 {: #ibmi-performance}
@@ -421,13 +421,13 @@ Click on the overflow menu (icon with 3 vertical dots) on the far right of each 
 - Delete a single virtual server instance from the its details page.
 Navigate to the virtual server instance's details page by clicking on the virtual server instance name on the table on the Virtual server instances page. Find and click on the trash icon on the top right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
 
-## How do I open a support ticket for the Power Systems Virtual Server workspace?
+## How do I open a support ticket for the {{site.data.keyword.powerSys_notm}} workspace?
 {: #support-ticket}
 {: faq}
 
 To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-## What are the supported databases that I can run for SAP on Power Systems Virtual Server?
+## What are the supported databases that I can run for SAP on {{site.data.keyword.powerSys_notm}}?
 {: #support-databases}
 {: faq}
 
@@ -439,13 +439,13 @@ On an AIX VM, the following databases are supported:
 On a Linux VM, the following database is supported:
 - SAP HANA Platform 2.0 SPS 04, or later
 
-You can find an up-to-date list at [SAP Apps on IBM Power Systems Virtual Server](https://launchpad.support.sap.com/#/notes/2855850){: external}.
+You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
 <!-- ## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
 {: #web-enablement-for-ibmi}
 {: faq}
 
-If you have an IBM i VM instance with the licensed program bundle in the Power Systems Virtual Server offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
+If you have an IBM i VM instance with the licensed program bundle in the {{site.data.keyword.powerSys_notm}} offering, you can download the WebSphere Application Server that is available  in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
 1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: external}.
 
@@ -458,11 +458,11 @@ If you have an IBM i VM instance with the licensed program bundle in the Power S
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9 -->
 
-## How do I run Red Hat OpenShift Container Platform (OCP) on Power Systems Virtual Servers?
+## How do I run Red Hat OpenShift Container Platform (OCP) on {{site.data.keyword.powerSys_notm}}s?
 {: #ocp_on_powervs}
 {: faq}
 
-You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM Power Systems Virtual Servers](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM {{site.data.keyword.powerSys_notm}}s](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
 
 
 ## What is the network latency over Direct Link?
@@ -475,7 +475,7 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 {: #planned_maintenance_activity}
 {: faq}
 
-For planned maintenance and disruptive changes, the Power Systems Virtual Server operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
+For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys_notm}} operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
 
 ## How do I convert existing volumes to replication enabled volumes?
 {: #convert-to-replication-vol}
@@ -509,10 +509,10 @@ You must pin the IBM i virtual server instances that use the IBM i licenses. If 
 
 Consider the following if you do not see an update in the User Interface(UI):
 
-1. Power System Virtual Server utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
+1. {{site.data.keyword.powerSys_notm}} utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
 2. In some scenarios out-dated information may be shown while the cache is updated, for approximately four minutes.
 3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
-4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, Power System Virtual Server UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
+4. When the DC has a heavy amount of traffic, and the cache has not been refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI may display an error message. A subsequent page refresh will retrieve and display the updated information.
 
 ## Why I cannot see the storage pool and tier of my boot images?
 {: #stock-image-copy-improve}

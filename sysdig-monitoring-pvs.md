@@ -20,7 +20,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 {:preview: .preview}
 {:external: target="_blank" .external}
 {{site.data.keyword.attribute-definition-list}}
-<!-- {{site.data.keyword.powerSys_notm}} - Power System Virtual Server-->
+<!-- {{site.data.keyword.powerSys_notm}} -->
 <!-- {{site.data.keyword.mon_full_notm}} - IBM Cloud Monitoring -->
 <!-- {{site.data.keyword.cloud_notm}} - IBM Cloud -->
 

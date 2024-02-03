@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using SLES within the Power Systems Virtual Server
+# Using SLES within the {{site.data.keyword.powerSys_notm}}
 {: #using-linux}
 
 You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
@@ -64,7 +64,7 @@ To connect a Linux virtual machine (VM) to the public internet, you must add a p
 
 When you are configuring a Source NAT (SNAT) gateway between your public and private networks, ensure that the TCP checksum offload option is disabled. You must also set the maximum transmission unit (MTU) value to 1450 on the network interface that is connected to the private network. To ensure that the interface checksum offloading and MTU settings of the network interface are persistent whenever the virtual machine is restarted, you need to modify the configuration files of your network interface.
 
-The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM Power Systems Virtual Server VMs are deployed by using ibmveth devices only.
+The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM {{site.data.keyword.powerSys_notm}} VMs are deployed by using ibmveth devices only.
 {: note}
 
 You can verify that the device interface type is `ibmveth` by using the following command:
@@ -117,7 +117,7 @@ ip link show eth0
 eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
 ```
 
-### Configuring SNAT in the Power Systems Virtual Server environment
+### Configuring SNAT in the {{site.data.keyword.powerSys_notm}} environment
 {: #configuring-snat}
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. To learn more, see [Forward and NAT rules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd){: external}.

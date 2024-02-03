@@ -62,7 +62,7 @@ inet 192.168.2.104 netmask 0xfffffff0 broadcast 192.168.2.111
 
 If one of your NICs does not contain an IPv6 link local address, continue on to the next section.
 
-### Using a Power Systems Virtual Server boot image to recover from a missing IPv6 link local address
+### Using a {{site.data.keyword.powerSys_notm}} boot image to recover from a missing IPv6 link local address
 {: #recovering-ipv6}
 
 1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: external}.
