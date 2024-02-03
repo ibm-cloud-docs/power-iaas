@@ -56,8 +56,8 @@ To set up full Linux subscription for your account, complete the following steps
 
 Ensure that the following requirements are met when you create a Cloud connection: Create a Cloud connection with the following parameters:
 
--	Ensure that you set up a Cloud connection between the Power Systems Virtual Server instance and the IBM Cloud Classic infrastructure by using a private network.
--	The Power Systems Virtual Servers in each region and zone must have its own cloud connection.
+-	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSys_notm}} instance and the IBM Cloud Classic infrastructure by using a private network.
+-	The {{site.data.keyword.powerSys_notm}}s in each region and zone must have its own cloud connection.
 - You have the details of this private network for further configuration.
 
 For more information about creating a Cloud connection, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -71,7 +71,7 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
 2. Open the Security groups for the VPC by navigation to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [security groups](/docs/vpc?topic=vpc-using-security-groups).
 
-3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet CIDR of your private network for the Power Systems Virtual Server instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you will be using, and copy the CIDR.
+3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet CIDR of your private network for the {{site.data.keyword.powerSys_notm}} instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you will be using, and copy the CIDR.
 
 4. After the proxy is created, log in to the proxy instance and locate the subnet CIDR by completing the following steps:
 
@@ -86,7 +86,7 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 ### Step 3: Creating and configuring a Power virtual machine (PVM)
 {: #create-power-vm}
 
-1.	Create a Power Systems Virtual Server instance (also known as PVM instance) by using Power Systems Virtual instance GUI, CLI, or API with the following requirements.
+1.	Create a {{site.data.keyword.powerSys_notm}} instance (also known as PVM instance) by using Power Systems Virtual instance GUI, CLI, or API with the following requirements.
 
     a.	SSH key
 
@@ -143,7 +143,7 @@ Set up a proxy configuration, by completing the following steps:
       - acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy will accept.
       - acl ibmprivate dst 161.26.0.0/16 and acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to, this is the location of the RHEL satellite servers and SLES RMT servers.
       - acl SSL_ports port 443 8443 : Ports used for communication with RHEL satellite servers and SLES RMT servers.
-      - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your Power Systems Virtual Server VM to the squid proxy.
+      - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your {{site.data.keyword.powerSys_notm}} VM to the squid proxy.
 
       ```text
       # Recommended minimum configuration:

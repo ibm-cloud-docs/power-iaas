@@ -21,7 +21,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Using RHEL within the Power Systems Virtual Server
+# Using RHEL within the {{site.data.keyword.powerSys_notm}}
 {: #linux-with-powervs}
 
 You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
@@ -128,7 +128,7 @@ ip link show eth0
 eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mode DEFAULT <...>
 ```
 
-### Configuring Network Address Translation (NAT) in the Power Systems Virtual Server environment
+### Configuring Network Address Translation (NAT) in the {{site.data.keyword.powerSys_notm}} environment
 {: #nat-configuration}
 
 Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: external}.

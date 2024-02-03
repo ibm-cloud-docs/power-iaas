@@ -70,7 +70,7 @@ The key features of this connect to classic topology are as follows:
 
 * Your Power virtual servers are hosted on your Power subnets. The IP address schema for these subnets is defined by you and should not overlap with your remote networks.
 * The Power router is the default gateway for your Power virtual server instances. The Power router is operated by the IBM Cloud team and you have no direct access or control.
-* You extend your remote networks into the Megaport network, see [Connecting directly to the Power Systems Virtual Server environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
+* You extend your remote networks into the Megaport network, see [Connecting directly to the Power Virtual Server environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
     * Megaport operates a global network infrastructure which enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
     * A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, best practice is to select two different port locations to provide redundancy.
     * Megaport has a number of Cloud Service Providers including IBM Cloud.
@@ -87,7 +87,7 @@ The key features of this connect to classic topology are as follows:
 
 * Your Power virtual servers are hosted on your Power subnets. The IP address schema for these subnets is defined by you and should not overlap between environments.
 * The Power routers are the default gateways for your Power virtual server instances. The Power routers are operated by the IBM Cloud team and you have no direct access or control.
-* You connect your Power subnets to the Megaport network, see [Connecting directly to the Power Systems Virtual Server environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
+* You connect your Power subnets to the Megaport network, see [Connecting directly to the Power Virtual Server environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
     * Megaport operates a global network infrastructure which enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
     * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC, via the Megaport Portal or Megaport API, allows you to connect two Power virtual server environments.
 

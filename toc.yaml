@@ -45,7 +45,7 @@ toc:
               - use-case-oracle.md
               - use-case-redhat-openshift.md
       - link: 
-              label: Why IBM Power Systems Virtual Servers?
+              label: Why IBM Power Virtual Servers?
               href: https://www.ibm.com/cloud/power-virtual-server
 
   - navgroup: 
