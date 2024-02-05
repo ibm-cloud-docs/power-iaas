@@ -121,7 +121,7 @@ toc:
           href: https://cloud.ibm.com/apidocs/power-cloud
       - link:
           label: Command reference
-          href: /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference
+          href: /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference-v1
 
   - navgroup:
       id: help
