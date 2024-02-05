@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-10-21"
+lastupdated: "2024-02-05"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -33,7 +33,10 @@ The full Linux subscription also provides, via activation keys, access to OS int
 To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 
 
-The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
+The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`. 
+
+<!-- If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client supplied subscription** section.
+{: note} -->
 
 ## Setting up full Linux subscription
 {: #setup-full-Linux}

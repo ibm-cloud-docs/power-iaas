@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -94,9 +94,9 @@ Red Hat
 
 
 SUSE
-<!-- * SLES 15 SP5 general purpose (SLES15-SP5) [new]{: tag-new}
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [new]{: tag-new}
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [new]{: tag-new} -->
+* SLES 15 SP5 general purpose (SLES15-SP5) 
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
@@ -104,6 +104,9 @@ SUSE
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
 * SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
 * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
+
+[^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
 The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
 {: note}
