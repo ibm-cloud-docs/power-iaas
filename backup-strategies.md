@@ -35,20 +35,10 @@ Image capture produces a storage FlashCopy of the logical partition (LPAR) and w
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.
 
-## AIX backup strategies
-{: #backup-aix}
+## Secure automated backup with Compass for AIX and Linux® [Beta]{: tag-red}
+{: #cobalt-iron}
 
-{{site.data.keyword.powerSys_notm}} users can implement any compatible agent-based backup for AIX virtual machines (VM). *Veeam for AIX* and *IBM Storage Protect* (formerly *IBM Spectrum Protect*) are two commonly used backup strategies.
-
-- *Veeam for AIX* - See [Additional backup strategies](/docs/power-iaas?topic=power-iaas-backup-strategies#additional-backup-strategies) for more information.
- 
-- *IBM Storage Protect* provides scalable data protection for physical file servers, applications, and virtual environments. Organizations can scale up to manage billions of objects per backup server. They can reduce backup infrastructure costs with built-in data efficiency capabilities and the ability to migrate data to tape, public cloud services, and on-premises object storage. *IBM Storage Protect* can also be a data offload target for *IBM Storage Protect Plus,* for a long-term data retention and disaster recovery. For more information, see [What can IBM Storage Protect do for your business?](https://www.ibm.com/products/storage-protect){: external}.
-
-It's the user's responsibility to set up and maintain these environments. Remember to check for any connectivity and bandwidth restrictions to the LPAR server. Your LPAR servers can also use {{site.data.keyword.cos_full_notm}} as a repository. 
-
-For a complete tutorial on backing up and restoring AIX VM data, see [Backing up and restoring data in an AIX VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf){: external}.
-
-For best practices and guidelines on AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}, see [AIX Backup Performance Best Practices and Guidelines on IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas/PowerVS_AIX_Backup_Performance_Best_Practices_and_Guidelines_v1_0_03012022.pdf){: external}.
+IBM Cloud® partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of IBM Power® Virtual Server. For more information, see the [documentation](). 
 
 ## IBM i backup strategies
 {: #backup-ibmi}
