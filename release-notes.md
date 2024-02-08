@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-02-05"
+lastupdated: "2024-02-08"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -42,7 +42,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - RHEL9-SP2-SAP
   - RHEL9-SP2-SAP-NETWEAVER
 
-- Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available across all the {{site.data.keyword.powerSys_notm}} data centers. For more information see, [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig). 
 - The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
 - `DAL12` and `FRA04` data centers are now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
   
