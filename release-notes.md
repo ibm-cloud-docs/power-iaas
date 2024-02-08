@@ -30,8 +30,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #feb-2024}
 
 - `SAO01` data center is now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
-- You can now provision the SLES 15 SP5 images. Note that you are required to install an additional [software package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as prerequisite for SAP and Netweaver workloads.
-- You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that are listed under the **Client supplied subscription** section. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+- You can now provision the SLES 15 SP5 images. You are required to install an additional [software package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite for SAP and Netweaver workloads.
+- You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that is listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available in all the data centers except `SAO04`. `SAO04` is in the process of updating its images and should have stock non-FLS images shortly. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 ## January 2024
 {: #jan-2024}
@@ -42,15 +42,15 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - RHEL9-SP2-SAP
   - RHEL9-SP2-SAP-NETWEAVER
 
-- Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available accross all the {{site.data.keyword.powerSys_notm}} data centers. For more information see, [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig). 
+- Platform metrics for {{site.data.keyword.powerSys_notm}} are currently available across all the {{site.data.keyword.powerSys_notm}} data centers. For more information see, [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig). 
 - The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
 - `DAL12` and `FRA04` data centers are now available for PER. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
   
-- The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to leverage the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
+- The direction going forward for {{site.data.keyword.powerSys_notm}} VPN connectivity capability will be to use the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
   
-  The {{site.data.keyword.powerSys_notm}} VPN part id VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hour) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by end of March 2024.
+  The {{site.data.keyword.powerSys_notm}} VPN part ID VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS (VPN connection per hour) is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by the end of March 2024.
 
-  Existing user can choose to continue using {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to preferred IBM Cloud VPN for VPC service.
+  Existing user can choose to continue to use {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to their preferred IBM Cloud VPN for VPC service.
 
   By January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS product, thus if you choose not to take the recommended action and run into issues IBM will not be able to support with end of life for parts occurring six months later on July 14, 2025. Additionally, after March 2024 new connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN thus you are encouraged to upgrade to the IBM Cloud VPC VPN at your earliest convenience and ideally before March 2024.
 
@@ -69,9 +69,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
 - **Flexible IOPS**  
   {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
-- New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on latest version.
+- New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on the latest version.
 - **Update on the new SAP HANA large t-shirt profiles feature**  
-  The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles of these OS image. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
+  The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use the larger t-shirt profiles of these OS images. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
 - **New Global Replication Service (GRS) pairs support**
   The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
   
