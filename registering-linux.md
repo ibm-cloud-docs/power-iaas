@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-02-08"
+lastupdated: "2024-02-09"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -34,7 +34,7 @@ You can choose from the following options:
 
 If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client Supplied Subscription** section. The stock non-Full Linux Subscription (FLS) images are available in all the data centers except `SAO04`. `SAO04` is in the process of updating its images and should have stock non-FLS images shortly.
+If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client Supplied Subscription** section.
 {: note}
 
 The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).

@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-02-08"
+lastupdated: "2024-02-09"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -35,7 +35,7 @@ To register for the full Linux subscription, you must select one of the stock op
 
 The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`. 
 
-If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available in all the data centers except `SAO04`. `SAO04` is in the process of updating its images and should have stock non-FLS images shortly.
+If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
 ## Setting up full Linux subscription
