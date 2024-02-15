@@ -35,7 +35,7 @@ To register for the full Linux subscription, you must select one of the stock op
 
 The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`. 
 
-If you wish to supply your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning Page, these images are listed under the **Client supplied subscription** section.
+If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
 ## Setting up full Linux subscription
