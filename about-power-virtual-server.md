@@ -144,7 +144,7 @@ Table 2 shows the supported storage tiers with corresponding IOPS.
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
 
-Flexible IOPS is currently available in `DAL10`, `LON04`, `MON01`, `SYD04`, `SYD05`, `OSA21`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
+Flexible IOPS is currently available in `DAL10`, `FRA05`, `LON04`, `MAD04`, `MON01`, `SYD04`, `SYD05`, `OSA21`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
 {: note} 
 
 ### Working with the APIs
