@@ -32,7 +32,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Power Edge Router (PER) is now available in the `SAO01` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - You can now provision the SLES 15 SP5 images. You are required to install an additional [software package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite for SAP and Netweaver workloads.
 - You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that is listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available across all the data centers. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-- Flexible IOPS is now available in the `FRA04`, `FRA05`, `MAD02`, and `MAD04` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- Flexible IOPS is now available in the `FRA04` and `MAD02` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
 ## January 2024
 {: #jan-2024}
