@@ -208,4 +208,4 @@ To perform the workspace migration, complete the following steps:
 6.	Upon successful testing, delete the Direct Link connections and notify IBM by updating the ticket.
 7.	The {{site.data.keyword.powerSys_notm}} team performs in-house cleanup, mark the workspace as `Migrated`, and close the ticket.
 
-After your workspace is migrated to PER network through the ticketing process, continue relying on support ticket for network configuration. Open a support ticket after you have created, deleted, or updated a subnet to configure the backend devices. This is to ensure the consistency of the subnet configuration in the {{site.data.keyword.powerSys_notm}} database and in the backend network devices.
+After your workspace is migrated to the PER network through the ticketing process, continue relying on support ticket for network configuration. Open a support ticket after you have created, deleted, or updated a subnet to configure the backend devices. This is to ensure the consistency of the subnet configuration in the {{site.data.keyword.powerSys_notm}} database and in the backend network devices.
