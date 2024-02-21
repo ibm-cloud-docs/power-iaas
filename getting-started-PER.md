@@ -99,7 +99,7 @@ Here is an example command that can be executed where:
 ## Creating a PER workspace
 {: create-per-workspace}
 
-To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose a PER-enabled data center.
+To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per) and choose a PER-enabled data center.
 
 You can check whether a workspace is PER-enabled by selecting the workspace and viewing the workspace's details. The PER-enabled workspace shows an information message regarding PER and Transit Gateway.
 {: note}
