@@ -73,7 +73,7 @@ For detailed networking PER use cases and architechture diagrams, see [Power Edg
 ## Migrating to PER
 {: migrate-per}
 
-PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you need to create a new workspace or [migrate your workspace to PER](/docs/power-iaas?topic=power-iaas-cloud-connections#migrate-existing-configuration).
+PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you need to create a new workspace or [migrate your workspace to PER](/docs/power-iaas?topic=power-iaas-cloud-connections#migrate-ws-per).
 
 The automated migration of your existing network is not supported, but if your existing workspaces are in a PER-enabled data center and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
 

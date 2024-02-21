@@ -151,35 +151,13 @@ By default, gateway appliances will send traffic for the 172 network to the defa
 
 You must configure the VRA with BGP protocol for route advertising so that the subnets can reach through the GRE tunnel. The ASN numbers are pre-assigned in the {{site.data.keyword.powerSys_notm}}s and you can't choose another number.
 
-## Migrating an existing network configuration to PER
+## Migrating an existing network configuration
 {: #migrate-existing-configuration}
 
 You can continue to have your existing configuration managed using the {{site.data.keyword.powerSys_notm}} IBM Support case process. You are not required to migrate to a {{site.data.keyword.powerSys_notm}} network. 
 {: note}
 
-If you want to use the new features that are offered by Power Edge Router (PER), you need to create a new workspace that uses the PER-enabled data centers or you need to migrate your existing workspace to PER.
-
-To perform the workspace migration, complete the following steps:
-1.	Create a [case](https://cloud.ibm.com/unifiedsupport/cases/form){: external} from the **Support Center** of IBM Cloud.
-2.	Select **Workspace for Power Virtual Server** and **Power VS Network Related** under **Topic** and **Subtopic** respectively.
-3.	Provide a short description of your migration requirements in the **Subject**.
-4.	In the **Description** box under additional information, provide the following information and click **Next**:
-  1.  The CRN (Cloud Resource Name) of your workspace that you want to upgrade.
-  2.	The list of subnets configured in the workspace.
-  3.	The list of Direct Link connections to which the subnets are attached.  
-  
-  The IBM {{site.data.keyword.powerSys_notm}} operation team processes the support ticket by configuring the PER and other network devices in parallel to the Direct Link configuration. When the PER configuration is complete, you are notified through a ticket update that the PER configuration is ready for your validation and testing.  
-
-5.	Schedule a maintenance window, during which you need to provision the Transit Gateway to conclude the PER network construction. See the [PER use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases) for more information. To force the network to go through the PER network, perform the following steps: 
-  1.	From the IBM Cloud catalog, browse your provisioned Direct Link connections.
-  2.	Click a Direct Link connection to open the connection details page.
-  3.	Click the **BGP** tab and then open the **Route Filter** details.
-  4.	Under **Import route filters** and **Export route filters**, select **Deny all import routes** to block the Direct Link routes and force the traffic to go through the PER network.  
-  
-  Repeat the above steps for each of the Direct Link connections. If you face any PER connectivity problem and want to revert to the Direct Link path, select **Permit all import routes** to unblock the Direct Link routes and disconnect the workspace from the Transit Gateway.
-
-6.	Upon successful testing, delete the Direct Link connections and notify IBM by updating the ticket.
-7.	The {{site.data.keyword.powerSys_notm}} team performs in-house cleanup, mark the workspace as `Migrated`, and close the ticket.
+If you want to use the new features that are offered by network automation, you can migrate your existing network configuration by creating a {{site.data.keyword.powerSys_notm}} operations IBM Support case.
 
 ### Considerations for network configuration migration
 {: #pre-req-migration-to-network}
