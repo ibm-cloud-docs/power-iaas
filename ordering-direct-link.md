@@ -182,9 +182,9 @@ For proper VPC configuration, the on-premises IP address must meet the following
 For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).
 
 ## Migrating to Power Edge Router
-{: #migrate-per}
+{: #migrate-ws-per}
 
-If you want to use the new features that are offered by Power Edge Router (PER), you need to create a new workspace that uses the PER-enabled data centers or you need to migrate your existing workspace to PER. If you have subnets and Direct Link configured manually via support ticket and would like to migrate to use Power Edge Router (PER) network to take advantage of its built-in redundancy and much higher bandwidth, migrate your workspace to PER.
+If you have subnets and Direct Link configured manually via support ticket and would like to migrate to use Power Edge Router (PER) network to take advantage of its built-in redundancy and much higher bandwidth, migrate your workspace to PER.
 
 To perform the workspace migration, complete the following steps:
 1.	Create a [case](https://cloud.ibm.com/unifiedsupport/cases/form){: external} from the **Support Center** of IBM Cloud.
