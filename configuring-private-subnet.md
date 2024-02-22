@@ -71,6 +71,12 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
+## Reserving IP adresses
+{: #reserv-ip}
+
+Paceholder text
+
+
 ## Networking considerations
 {: #networking-considerations}
 
