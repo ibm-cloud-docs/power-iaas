@@ -76,10 +76,7 @@ toc:
               - configuring-private-subnet.md
               - getting-started-PER.md
               - cloud-connections-CLI.md              
-                - topicgroup: 
-                    label: Direct Link
-                    topics:
-                        - ordering-direct-link.md
+              - ordering-direct-link.md
               - vpn-connections.md              
               - network-security.md
               - X86-based-systems.md
