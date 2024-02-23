@@ -14,7 +14,7 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-## Migrating to Power Edge Router
+# Migrating to Power Edge Router
 {: #migrate-ws-per}
 
 If you have subnets and Direct Link configured manually via support ticket and would like to migrate to use Power Edge Router (PER) network to take advantage of its built-in redundancy and much higher bandwidth, migrate your workspace to PER using a suport ticket.
@@ -44,7 +44,7 @@ To perform the workspace migration, complete the following steps:
 After the workspace is migrated to the PER network through the ticketing process, continue to refer to the support ticket for network configuration information (subnet create, delete, and update). Before deleting your old migrated workspace, open a support ticket to remove the configuration of the backend devices and once that is complete the workspace can be deleted.
 {: important}
 
-### Additional information on PER migration
+## Additional information on PER migration
 {: #add-info-per-mig}
 
 If you need to make additional changes after you have competed the migration to configure the backend devices, perform the following actions:
