@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-12-21"
+lastupdated: "2024-02-23"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -25,8 +25,6 @@ A new resource volume group is introduced to enable, disable, and manage storage
 
 GRS aims to automate the complete DR solution and provide the API and CLI interfaces to create the recipe for the DR solution. GRS currently does not have any user interface.
 
-<!-- <LBS link goes here > -->
-
 The scope of the GRS service is to create and manage replicated resources that include the following items:
 - Volume lifecycle operations support on replicated volumes.
 - APIs to manage volume groups through create, update, delete, start, and stop operations.
@@ -44,12 +42,13 @@ If you need a more detailed information on Gobal Replication Service, see [Globa
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
 
 The following table shows the data centers that supports replication and their corresponding pool level detail:
-|Site 1| Site 2|
-|---|----|
-| `MAD02`|`FRA04` |
-| `MAD04`|`FRA05` |
-|`WDC06`|`DAL12`|
-|`WDC04`|`DAL13`|
+| Site 1 |  Site 2 |
+|--------|---------|
+| `MAD02`| `FRA04` |
+| `MAD04`| `FRA05` |
+| `WDC04`| `DAL13` |
+| `WDC06`| `DAL12` |
+| `WDC07`| `DAL10` |
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 

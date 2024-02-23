@@ -49,19 +49,14 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "14 December 2023",
-        "title": "Flexible IOPS",
-        "description": "Power Virtual Server now offers a tier-less storage service with the name Flexible IOPS."
+        "date": "23 February 2024",
+        "title": "PER migration",
+        "description": "You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket."
       },
       {
         "date": "14 December 2023",
         "title": "Dedicated hosts",
         "description": "You can provision IBM Power S922 and S1022 servers for your dedicated use."
-      },
-      {
-        "date": "14 December 2023",
-        "title": "Cost estimator tool",
-        "description": "A new cost estimator tool for Power Virtual Server is available."
       }
     ]
   }

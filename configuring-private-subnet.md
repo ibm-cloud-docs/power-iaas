@@ -71,6 +71,33 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
+<!-- ## Reserving IP adresses
+{: #reserv-ip}
+
+Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
+
+You get the option to option to:
+- Add IP address
+- Modify IP address
+- See the list of IP address reserved
+- Delete IP address reserved.
+
+Once an IP is in the reserved list, it is not auto-assigned to a virtual server instance. If you manually provide any IP address from the reserved list for a virtual server instance to attached the network, an error is shown indicating that it is in the reserved IP list.
+
+### Adding an IP address in the reserved list
+{: #add-resrv-ip}
+
+To add an IP address into the reserved IP addess list, perform the following steps:
+1. Open the [Subnets](https://cloud.ibm.com/power/subnets){: external} page in the IBM Cloud.
+2. From the list of subnets that you have created, click on the desired subnet for which you want to reserv the IP address.
+3. Click **Reserv IP**.
+4. Enter your IP address in the **IP address** field.
+   
+   Make sure the IP address that you want to reserv falls in the IP range that you have defined while provisioning the subnet.
+   {: note}
+
+5. Provide a description of your reserved IP in the **Reserved IP description (optional)** field. -->
+
 ## Networking considerations
 {: #networking-considerations}
 
