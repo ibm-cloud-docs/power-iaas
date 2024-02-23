@@ -34,7 +34,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that is listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available across all the data centers. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - Flexible IOPS is now available in the `FRA04` and `MAD02` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - Global Replication Service (GRS) is now available in `WDC07` and `DAL10` data center pair.
-- You can now migrate your workspace that uses Direct Link connection to a PER workspace through a support ticket. For more information, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per).
+- You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket. For more information, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per).
 
 ## January 2024
 {: #jan-2024}
