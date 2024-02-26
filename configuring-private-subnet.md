@@ -71,7 +71,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
-## Reserving IP adresses
+## Reserving IP addresses
 {: #reserv-ip}
 
 Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
@@ -82,7 +82,7 @@ You get the option to option to:
 - See the list of IP address reserved
 - Delete IP address reserved.
 
-Once an IP is in the reserved list, it is not auto-assigned to a virtual server instance. If you manually provide any IP address from the reserved list for a virtual server instance to attached the network, an error is shown indicating that it is in the reserved IP list.
+Once an IP is in the reserved list, it is not auto assigned to a virtual server instance. If you manually provide any IP address from the reserved list for a virtual server instance to attach the network, an error is shown in the UI indicating that it is in the reserved IP list.
 
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}
