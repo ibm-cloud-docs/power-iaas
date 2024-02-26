@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "20223-07-24"
+lastupdated: "2024-02-26"
 
-keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, DAL13, WDC04, FRA04, FRA05, DNS
+keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
 subcollection: power-iaas
 
@@ -71,7 +71,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
-<!-- ## Reserving IP adresses
+## Reserving IP adresses
 {: #reserv-ip}
 
 Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
@@ -87,16 +87,16 @@ Once an IP is in the reserved list, it is not auto-assigned to a virtual server 
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}
 
-To add an IP address into the reserved IP addess list, perform the following steps:
+To add an IP address into the reserved IP address list, perform the following steps:
 1. Open the [Subnets](https://cloud.ibm.com/power/subnets){: external} page in the IBM Cloud.
-2. From the list of subnets that you have created, click on the desired subnet for which you want to reserv the IP address.
-3. Click **Reserv IP**.
+2. From the list of subnets that you have created, click the desired subnet for which you want to reserve the IP address.
+3. Click **Reserve IP**.
 4. Enter your IP address in the **IP address** field.
    
-   Make sure the IP address that you want to reserv falls in the IP range that you have defined while provisioning the subnet.
+   Make sure the IP address that you want to reserve falls in the IP range that you have defined while provisioning the subnet.
    {: note}
 
-5. Provide a description of your reserved IP in the **Reserved IP description (optional)** field. -->
+5. Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
 
 ## Networking considerations
 {: #networking-considerations}
