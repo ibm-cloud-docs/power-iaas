@@ -36,14 +36,7 @@ If you choose to register for full Linux subscription, an additional charge will
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
-The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. The following versions of RHEL are supported:
-
-* RHEL8.4 for SAP HANA (RHEL8-SP4-SAP) 
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER) 
-* RHEL 8.4 general purpose (RHEL8-SP4)
-* RHEL 8.6 general purpose (RHEL8-SP6)
-* RHEL8.6 for SAP HANA (RHEL8-SP6-SAP )             
-* RHEL8.4 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) 
+The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions). 
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}.
 

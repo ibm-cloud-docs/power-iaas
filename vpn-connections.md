@@ -321,6 +321,3 @@ b. These additional subnets are restricted:
      `10.182.28.192/26`
 
 c. You might get a "subnet not available" message while creating subnets in certain locations. Choose a different subnet to resolve this issue.
-
-
-
