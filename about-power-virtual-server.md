@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-23"
+lastupdated: "2024-02-28"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i, what is power VS
 
@@ -41,9 +41,6 @@ The following are some of the key features for the {{site.data.keyword.powerSys_
 
 {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX and IBM i operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-virtual-server).
 
-{{site.data.keyword.powerSys_notm}} does not provide Linux stock images. You must bring your own Linux image (OVA format) and subscription. SLES and RHEL OVA images are supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
-{: note}
-
 ### Infrastructure customization
 {: #infra-customization}
 
@@ -76,7 +73,7 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 ## Hardware specifications
 {: #hardware-specifications}
 
-The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}: 
+The following IBM Power Systems can host a {{site.data.keyword.powerSys_notm}}:
 - IBM Power System S922 (9009-22A)
 - IBM Power System S922 (9009-22G)
 - IBM Power System E980 (9080-M9S)
@@ -145,21 +142,21 @@ The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which
 {: important}
 
 Flexible IOPS is currently available in `DAL10`, `FRA04`, `FRA05`, `LON04`, `MAD02`, `MAD04`, `MON01`, `SYD04`, `SYD05`, `OSA21`, `TOK04`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
-{: note} 
+{: note}
 
 ### Working with the APIs
 {: IOPS-api}
 
 Use the [List of all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
 
-The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default. 
+The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default.
 
 The storage pool selection is based on the use of storage pool or storage affinity parameters. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPS all storage pools, support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
-### Benefits of flexible IOPS 
+### Benefits of flexible IOPS
 {: IOPS-benefits}
 
-Flexible IOPS offers multiple IOPS levels (tiers) of storage to choose from. Each IOPS level has its own pricing, performance, and capability. 
+Flexible IOPS offers multiple IOPS levels (tiers) of storage to choose from. Each IOPS level has its own pricing, performance, and capability.
 
 With flexible IOPS you can:
 * Create a volume (or multiple volumes) and specify the IOPS level that you want.
@@ -178,7 +175,7 @@ Flexible IOPS allows you to select your desired tier for:
 - Boot volume
 - Data volume
 
-**Boot volume**  
+**Boot volume**
 When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
 - Select your desired **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
@@ -196,7 +193,7 @@ When you are creating a virtual server instance, you can define the boot volume 
 All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
 {: note}
 
-**Data volume**  
+**Data volume**
 To create a volume, complete the following steps:
 - Enter a unique name.
 - Enter the desired size of the volume.
@@ -204,7 +201,7 @@ To create a volume, complete the following steps:
 - Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 
 During VM provisioning, if you create additional data volumes to attach to the new virtual server instances then these data volumes can be created on any of the supported storage tiers. All these additional data volumes reside in the same storage pool where the boot volume of the virtual server instance resides.
-  
+
 ### Limitations of flexible IOPS
 {: IOPS-limit}
 
