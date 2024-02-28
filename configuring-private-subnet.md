@@ -71,7 +71,7 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 ```
 {: codeblock}
 
-## Reserving IP addresses
+<!-- ## Reserving IP addresses
 {: #reserv-ip}
 
 Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
@@ -96,7 +96,7 @@ To add an IP address into the reserved IP address list, perform the following st
    Make sure the IP address that you want to reserve falls in the IP range that you have defined while provisioning the subnet.
    {: note}
 
-5. Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
+5. Provide a description of your reserved IP in the **Reserved IP description (optional)** field. -->
 
 ## Networking considerations
 {: #networking-considerations}
