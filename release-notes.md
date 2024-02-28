@@ -35,6 +35,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Flexible IOPS is now available in the `FRA04` and `MAD02` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - Global Replication Service (GRS) is now available in `WDC07` and `DAL10` data center pair.
 - You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket. For more information, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per).
+- IBM Cloud Monitoring service is now avilable in `OSA21`, `DAL10`, and `WDC07`.
 
 ## January 2024
 {: #jan-2024}
@@ -56,6 +57,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
   By January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS product, thus if you choose not to take the recommended action and run into issues, IBM will not support with end of life for parts occurring six months later on July 14, 2025. Additionally, after March 2024 new connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN thus you are encouraged to upgrade to the IBM Cloud VPC VPN at your earliest convenience and ideally before March 2024.
 
+- IBM Cloud Monitoring service is now avilable in `SYD04`, `SAO04`, and `DAL12`.
  
 ## December 2023
 {: #dec-2023}
@@ -89,7 +91,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - **{{site.data.keyword.powerSys_notm}} and SysDig Integration**
 : You can now seamlessly monitor your platform metrics within the IBM Cloud environment by using the IBM Cloud Monitoring service. For detailed instructions on how to access and use this integration, refer to the documentation: [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
-The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, `WDC04`, and `DAL13` with other data center coming soon.
+The data center where you can monitor your platform metrics currently are `WDC06`, `SYD05`, and `WDC04` with other data center coming soon.
   {: note}
 
 - **Introduction of {{site.data.keyword.powerSys_notm}} S1022 processor**
