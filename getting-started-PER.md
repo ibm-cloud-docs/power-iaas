@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-02-19"
+lastupdated: "2024-02-27"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}
 
-PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers). 
+PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers).
 
 The PER solution is available in `DAL10`, `DAL12`, `FRA04`, `FRA05`, `WDC06`, `WDCO7`, `MAD02`, `MAD04`, `SAO01`, and `SAO04` data centers. `MAD02`, `MAD04`, and `WDCO7` are Power10 data center. PER will be deployed in other data centers over time.
 {: note}
@@ -47,11 +47,11 @@ The network traffic in a PER environment can flow in the following two ways:
 - Accessing classic infrastructure through Transit Gateway.
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
-   
+
 - Accessing cloud services that can access each other's resources.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
-  - `4`	- The converted traffic from NAT is forwarded to PER. 
+  - `4`	- The converted traffic from NAT is forwarded to PER.
   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
@@ -79,22 +79,22 @@ The automated migration of your existing network is not supported, but if your e
 
 Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud Connection and VPNaaS.
 
-Existing non-PER workspaces continue to use existing routers. To use the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace. 
+Existing non-PER workspaces continue to use existing routers. To use the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace.
 
 Perform the following steps to connect an existing workspace to an existing Transit Gateway using the IBM Cloud CLI:
 
 1. Use the `ibmcloud pi workspaces` command to list the {{site.data.keyword.powerSys_notm}} workspaces in your account.
-   Make note of the CRN for the workspace you wish to connect to the Transit Gateway. 
+   Make note of the CRN for the workspace you wish to connect to the Transit Gateway.
 
 2. Use the `ibmcloud tg gateways` command to list the Transit Gateways within your account.
    Make note of the gateway ID you wish to connect to the {{site.data.keyword.powerSys_notm}} workspace.
 
-3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.  
-  
+3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.
+
 Here is an example command that can be executed where:
- - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee`   
- - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`  
- - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server` 
+ - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee`
+ - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`
+ - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server`
 
 ## Creating a PER workspace
 {: create-per-workspace}
@@ -132,7 +132,7 @@ You need to attach to the Transit Gateway if you want to connect your workspace 
 
 Transit Gateway is required to connect with VPC and classic infrastructure. To attach a virtual server instance from a PER workspace with Transit Gateway, complete the steps that are mentioned in [Ordering IBM Cloud Transit Gateway.](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
 
-Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and Classic infrastructures as connection. 
+Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and Classic infrastructures as connection.
 
 The connections that you attach to the Transit Gateway can ping each other. For example, if you add a {{site.data.keyword.powerSys_notm}} workspace and VPC under Transit Gateway connection, they both can access each other resource.
 
@@ -161,13 +161,13 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
   2.  Click **Subnets** under **Networking** in the left navigation menu.
   3.  Click **Create subnet**.
   4.  Enter a unique name and CIDR.
-      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result. 
+      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
   5.  Enter `161.26.0.10` in the **DNS server** field.
 
 2. Create a virtual server instance. See, [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify whether the registration is successful with the following commands:
-  
+
  For SUSE:
    ```
    SUSEConnect -s
@@ -187,7 +187,7 @@ PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and 
 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
-- CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-connection)
+- CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
 
 <!-- ## Various sample application scenarios
 {: scenarios-per}
@@ -202,7 +202,7 @@ There are various application scenarios that can be possible based on your choic
 | {{site.data.keyword.powerSys_notm}} multi-location connectivity (unipart)	| DL + classic + VPC	[^footnote7]| TGW global routing (improved connection) |	TGW global routing | 
 | {{site.data.keyword.powerSys_notm}} GRS	(Global Replication Service) | DL + Megaport [^footnote6]	| TGW global routing 	(to test) | TGW global routing |
 | On-premise to {{site.data.keyword.powerSys_notm}} connectivity	| DL + vSRX [^footnote4] |	TGW global routing | TGW global routing |
-|{{site.data.keyword.powerSys_notm}} to Cloud Services (COS, DNS, NTP etc.)	| Use proxy server [^footnote5] | - | Use NAT to reach services |			
+|{{site.data.keyword.powerSys_notm}} to Cloud Services (COS, DNS, NTP etc.)	| Use proxy server [^footnote5] | - | Use NAT to reach services |
 | Aggregate Bandwidth shared by all customers, between {{site.data.keyword.powerSys_notm}} and IBM Cloud	| 60 Gb/s [^footnote8]	| 60 Gb/s [^footnote9]	| 400 Gb/s |
 |User Experience	| Ok | Better	| Excellent |
 {: caption="Table 1. Various application scenarios" caption-side="bottom"}
@@ -217,4 +217,3 @@ is used for DL2DL connection.
 [^footnote7]: Combination no longer in use.
 [^footnote8]: Typical speed.
 [^footnote9]: Typical speed. -->
-
