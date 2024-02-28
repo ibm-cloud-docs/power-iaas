@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-14"
+lastupdated: "2024-02-28"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -110,9 +110,18 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
 |	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
+| D0HZ5ZX | SUSE-GP-Tier1 Pay per Use |
+| D0HZ6ZX  | SUSE-GP-Tier2 Pay per Use |
+| D0HZ7ZX  | SUSE-GP-Tier3 Pay per Use |
+| D0HZ8ZX  | SUSE-SAP-Tier1 Pay per Use |
+| D0HZ9ZX  | SUSE-SAP-Tier2 Pay per Use |
+| D0HZAZX  | SUSE-SAP-Tier3 Pay per Use |
+| D0A0YZX  | Redhat GP on Scale Out Application instance Pay per Use |
+| D0A0ZZX  | Redhat GP on Scale Up Application instance Pay per Use |
+| D0A10ZX  | Redhat SAP on Scale Out Application instance Pay per Use |
+| D0A11ZX  | Redhat SAP on Scale Up Application instance Pay per Use |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
-<!-- | IBMI_DBIIWQ_APPLICATION_INSTANCE_HOURS     | IBM Db2 Web Query for i core-hour      | -->
 ## Base instances
 {: #pricing-base-instance-prices}
 
