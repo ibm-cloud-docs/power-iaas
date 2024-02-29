@@ -110,6 +110,10 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
 |	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
+| REDHAT_GP_ON_SCALE_OUT_APP_INSTANCE_HOURS	|    Redhat GP Scale Out License/Core Hour |
+| REDHAT_GP_SCALE_UP_LICENSE_CORE_HOURS	    |  Redhat GP Scale Up License/Core Hour |
+| REDHAT_SAP_SCALE_OUT_LICENSE_PER_CORE_HOUR	|	Redhat SAP Scale Out License/Core Hour |
+| REDHAT_SAP_SCALE_UP_LICENSE_PER_CORE_HOUR	|   Redhat SAP Scale Up License/Core Hour |
 | SUSE_OS_GP_TIER_ONE_INSTANCE_HOURS	  |	SUSE GP Tier1 Instance Hours |
 | SUSE_OS_GP_TIER_THREE_INSTANCE_HOURS	|	SUSE GP Tier3 Instance Hours |
 | SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier2 Instance Hours |
