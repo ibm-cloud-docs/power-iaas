@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-02-27"
+lastupdated: "2024-02-29"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -43,6 +43,29 @@ To perform the workspace migration to PER, complete the following steps:
 
 After the workspace is migrated to the PER network through the ticketing process, continue to refer to the support ticket for network configuration information (subnet create, delete, and update gateway). Before deleting your old migrated workspace, open a support ticket to remove the configuration of the backend devices and once that is complete the workspace can be deleted.
 {: important}
+
+## Running a Full Linux Subscription (FLS) on the migrated workspace
+{:#fls-migrated-sub}
+
+There are two ways to by which you can run the FLS with the migrated workspace.
+
+1. FLS will work if you update the migrated subnets with DNS IP's.
+
+  Update the migrated subnet by adding DNS IP's such as `161.26.0.10` or `161.26.0.11`.
+  Use the command line to run the following command in your termminal:
+  
+  ```
+  ibmcloud pi netu Network_ID --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
+  ```
+  {: codeblock}
+
+2. Add the following two DNS IP's or specific DNS IP's of your environment to `/etc/resolv.conf` file:
+
+  ```
+  nameserver 161.26.0.10
+  nameserver 161.26.0.11
+  ```
+  {: codeblock}
 
 ## Additional information on PER migration
 {: #add-info-per-mig}
