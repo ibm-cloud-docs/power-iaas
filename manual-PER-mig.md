@@ -54,18 +54,18 @@ There are two ways to by which you can run the FLS with the migrated workspace.
   Update the migrated subnet by adding DNS IP's such as `161.26.0.10` or `161.26.0.11`.
   Use the command line to run the following command in your termminal:
   
-  ```
-  ibmcloud pi netu Network_ID --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
-  ```
-  {: codeblock}
+```
+ibmcloud pi netu Network_ID --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
+```
+{: codeblock}
 
 2. Add the following two DNS IP's or specific DNS IP's of your environment to `/etc/resolv.conf` file:
 
-  ```
-  nameserver 161.26.0.10
-  nameserver 161.26.0.11
-  ```
-  {: codeblock}
+```
+nameserver 161.26.0.10
+nameserver 161.26.0.11
+```
+{: codeblock}
 
 ## Additional information on PER migration
 {: #add-info-per-mig}
