@@ -110,16 +110,12 @@ For detailed usage and billing information, you can refer to the part number in 
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
 |	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
-| D0HZ5ZX | SUSE-GP-Tier1 Pay per Use |
-| D0HZ6ZX  | SUSE-GP-Tier2 Pay per Use |
-| D0HZ7ZX  | SUSE-GP-Tier3 Pay per Use |
-| D0HZ8ZX  | SUSE-SAP-Tier1 Pay per Use |
-| D0HZ9ZX  | SUSE-SAP-Tier2 Pay per Use |
-| D0HZAZX  | SUSE-SAP-Tier3 Pay per Use |
-| D0A0YZX  | Redhat GP on Scale Out Application instance Pay per Use |
-| D0A0ZZX  | Redhat GP on Scale Up Application instance Pay per Use |
-| D0A10ZX  | Redhat SAP on Scale Out Application instance Pay per Use |
-| D0A11ZX  | Redhat SAP on Scale Up Application instance Pay per Use |
+| SUSE_OS_GP_TIER_ONE_INSTANCE_HOURS	  |	SUSE GP Tier1 Instance Hours |
+| SUSE_OS_GP_TIER_THREE_INSTANCE_HOURS	|	SUSE GP Tier3 Instance Hours |
+| SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier2 Instance Hours |
+| SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier1 Instance Hours |
+| SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier3 Instance Hours |
+| SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier2 Instance Hours |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 ## Base instances
