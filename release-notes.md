@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## March 2024
 {: #mar-2024}
 
-- New SUSE part numbers for each tier is available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
+- SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 
 ## February 2024
 {: #feb-2024}
