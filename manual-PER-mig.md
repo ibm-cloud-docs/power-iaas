@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-04"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -55,14 +55,11 @@ There are two ways to by which you can run the FLS with the migrated workspace.
   ```
   ibmcloud pi netu Network_ID --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
   ```
-  {: codeblock}
-
-2. Add the following two DNS IP's or specific DNS IP's of your environment to `/etc/resolv.conf` file:
+2. For existing virtual server instances that are deployed using migrated subnets, add the following two DNS IP's or specific DNS IP's of your environment to `/etc/resolv.conf` file:
   ```
   nameserver 161.26.0.10
   nameserver 161.26.0.11
   ```
-  {: codeblock}
 
 ## Additional information on PER migration
 {: #add-info-per-mig}
