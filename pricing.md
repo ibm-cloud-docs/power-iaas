@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-04"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
