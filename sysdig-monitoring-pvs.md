@@ -33,7 +33,7 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics are currently available across all {{site.data.keyword.powerSys_notm}} data centers except `DAL13`, `FRA04`, `MON01`, and `TOR01`.
+Platform metrics are currently available across all {{site.data.keyword.powerSys_notm}} data centers except `DAL13`, `MON01`, and `TOR01`.
 {: note}
 
 ## Platform metrics overview

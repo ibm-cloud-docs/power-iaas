@@ -31,6 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 - Flexible IOPS is now available in the `DAL12`, `DAL13`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- IBM Cloud Monitoring service is now avilable in `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
 ## February 2024
 {: #feb-2024}
