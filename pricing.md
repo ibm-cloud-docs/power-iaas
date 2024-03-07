@@ -44,7 +44,7 @@ All prices mentioned on this page are illustrative and do not represent the actu
 
 [^2]: If the machine type is S922 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
-[^3]: Power System S1022 is available only in WDC07.
+[^3]: Power System S1022 is available only in DAL10, MAD02, MAD04, and WDC07.
 
 [^4]: If the machine type is S1022 and operating system is IBM i, IBM i supports maximum of 4 cores per VM.
 
