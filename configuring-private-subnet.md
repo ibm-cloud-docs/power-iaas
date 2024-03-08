@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-02-26"
+lastupdated: "2024-03-04"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -76,13 +76,12 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 
 Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
 
-You get the option to option to:
+You get the option to:
 - Add IP address
-- Modify IP address
 - See the list of IP address reserved
 - Delete IP address reserved.
 
-Once an IP is in the reserved list, it is not auto assigned to a virtual server instance. If you manually provide any IP address from the reserved list for a virtual server instance to attach the network, an error is shown in the UI indicating that it is in the reserved IP list.
+An IP address present in the reserved list, is not auto assigned to a virtual server instance. <!-- If you manually provide any IP address from the reserved list for a virtual server instance to attach the network, an error is shown in the UI indicating that the IP address is in the reserved IP list. -->
 
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}

@@ -162,10 +162,15 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 {: faq}
 {: support}
 
-All regions use **Tier 1** or **Tier 3** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs want to select **Tier 3**. A VM cannot have disks from both storage types while provisioning. But, you can add a volume of the other storage types after the VM has been provisioned. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+Each volume has a storage tier, which defines how many I/O operations per second (IOPS) can be started against that volume. These tiers can scale according to the size of the volume.
 
-The boot image storage type is predefined and cannot be chosen.
-{: note}
+The following tiers are supported:
+* Tier 0 (25 IOPS/GB)
+* Tier 1 (10 IOPS per GB)
+* Tier 3 (3 IOPS per GB)
+* Fixed 5000 IOPS
+
+If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs/allowlist/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers-spec-private-cloud).
 
 ## How do I extend my AIX rootvg?
 {: #rootvg}
