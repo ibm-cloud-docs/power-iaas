@@ -78,11 +78,10 @@ Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning
 
 You get the option to:
 - Add IP address
-- Modify IP address
 - See the list of IP address reserved
 - Delete IP address reserved.
 
-An IP address present in the reserved list, is not auto assigned to a virtual server instance. If you manually provide any IP address from the reserved list for a virtual server instance to attach the network, an error is shown in the UI indicating that the IP address is in the reserved IP list.
+An IP address present in the reserved list, is not auto assigned to a virtual server instance. <!-- If you manually provide any IP address from the reserved list for a virtual server instance to attach the network, an error is shown in the UI indicating that the IP address is in the reserved IP list. -->
 
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}
