@@ -45,7 +45,7 @@ After the workspace is migrated to the PER network through the ticketing process
 {: important}
 
 ## Running a Full Linux Subscription (FLS) on the migrated workspace
-{:#fls-migrated-sub}
+{: #fls-migrated-sub}
 
 There are two ways to by which you can run the FLS with the migrated workspace.
 
