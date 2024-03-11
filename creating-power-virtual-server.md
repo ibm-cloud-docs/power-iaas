@@ -117,16 +117,14 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
     To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers)
 
-    <!-- To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers) -->
-
     For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#affinity).
 
     All volumes created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
     {: note}
     
 10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
-
-    <!-- When you choose to provide a specific IP address, make sure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
+<!-- 
+    When you choose to provide a specific IP address, make sure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important} -->
     
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
