@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2019, 2021
+  years: 2019, 2024
 
-lastupdated: "2021-09-15"
+lastupdated: "2024-03-12"
 
-keywords: use case, Oracle, database, demos
+keywords: use case, Oracle, database, demos. oracle on Power VS
 
 subcollection: power-iaas
 
@@ -24,18 +24,11 @@ subcollection: power-iaas
 # Deploying an Oracle database in IBM {{site.data.keyword.powerSys_notm}}s
 {: #use-case-oracle}
 
-Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysShort}} instance.
+Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}
 
-The following videos do not capture the latest updates to {{site.data.keyword.powerSys_notm}}. You might notice significant differences in functions between what is shown in the video and what's currently available.
-{: important}
+Download the [Oracle RAC implementation on IBM Power Systems Virtual Server](https://www.ibm.com/support/pages/node/6999243) document for details on deploying Oracle RAC and watch this video on [Oracle RAC in IBM's PowerVS Hybrid Cloud](https://ibm.biz/Oracle_RAC_PowerVS_Hybrid_Cloud_Webinar).
 
-## Modernizing an Oracle database
-{: #modernizing-oracle}
+If you are interested in the automation of deployment and management of Oracle RAC and Oracle database, refer to pages 190 to 213 in the [Using Ansible for Automation in IBM Power Environments Redbook](https://www.redbooks.ibm.com/redpieces/pdfs/sg248551.pdf) and watch this video on [Automating Oracle and AIX Installation with Ansible Tools](https://ibm.biz/Automating_Oracle_and_AIX_with_Ansible).
 
-For details, see this video on [deploying Oracle database in the {{site.data.keyword.powerSys_notm}}](https://ibm.biz/HybridOracleDBonPOWER9-Part1).
-
-## Building a new Oracle environment from a custom AIX image
-{: #building-oracle}
-
-For details on how to export a custom AIX image on-premises and redeploy it in the {{site.data.keyword.powerSys_notm}} to build a new Oracle environment, see this video on [building a new Oracle environment from a custom AIX image](https://ibm.biz/HybridOracleDBonPOWER9-Part2){: external}.
+To implement Oracle Data Guard on Power Virtual Server instances that are hosted in different data centers, see [Oracle Disaster Recovery on IBM Power Virtual Server](https://www.ibm.com/downloads/cas/LOEM24KA).

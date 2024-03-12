@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-04"
+lastupdated: "2024-03-12"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -150,20 +150,20 @@ Each processor has a different hourly rate depending on its type (**Dedicated** 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
 {: important}
 
-The following tables show how different processor types affect the cost per system:
+The following tables shows the base price and how different processor types affect the cost per system:
 
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
-| 1                      | $0.64 (dedicated)            | $353.028                  |
-| 1                      | $0.28 (uncapped shared)      | $88.257                  |
-| 1                      | $0.34 (capped shared)        | $132.422                  |
+| 1                      | $0.51 (dedicated)            | $368.91                  |
+| 1                      | $0.13 (uncapped shared)      | $92.33                  |
+| 1                      | $0.19 (capped shared)        | $138.38                  |
 {: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
-| 1                           | $1.91 (dedicated)            | $1235.671                 |
-| 1                           | $0.64 (uncapped shared)      | $308.936                  |
-| 1                           | $0.85 (capped shared)        | $463.404                  |
+| 1                           | $1.77 (dedicated)            | $1291.28               |
+| 1                           | $0.44 (uncapped shared)      | $322.84                  |
+| 1                           | $0.66 (capped shared)        | $484.26                  |
 {: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
 
 | Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -176,9 +176,9 @@ The following tables show how different processor types affect the cost per syst
 
 <!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
-| 1                           | $1.862 (dedicated)            | $1359.26                 |
-| 1                           | $0.4655 (uncapped shared)     | $339.82                  |
-| 1                           | $0.6983 (capped shared)       | $509.72                  |
+| 1                           | $2.03 (dedicated)            | $1484.97                 |
+| 1                           | $0.51 (uncapped shared)     | $371.26                  |
+| 1                           | $0.76 (capped shared)       | $556.90                  |
 {: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
 ## Pricing for dedicated hosts
