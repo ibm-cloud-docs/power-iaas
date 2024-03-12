@@ -24,7 +24,7 @@ subcollection: power-iaas
 # Deploying an Oracle database in IBM {{site.data.keyword.powerSys_notm}}s
 {: #use-case-oracle}
 
-Learn how to deploy an Oracle database in a IBM {{site.data.keyword.powerSysFull}} instance.
+Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}
 
 Download the [Oracle RAC implementation on IBM Power Systems Virtual Server](https://www.ibm.com/support/pages/node/6999243) document for details on deploying Oracle RAC and watch this video on [Oracle RAC in IBM's PowerVS Hybrid Cloud](https://ibm.biz/Oracle_RAC_PowerVS_Hybrid_Cloud_Webinar).
