@@ -58,6 +58,7 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
     | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
+    | Asia Pacific | Chennai, India | - | CHE01 | CHE01 | - |
     {: caption="Table 1. {{site.data.keyword.powerSys_notm}} data centers" caption-side="bottom"}
 
 5. Click **Create**. You are redirected to the **Workspaces** page where you can select your desired or existing workspace.

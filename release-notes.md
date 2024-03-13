@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-11"
+lastupdated: "2024-03-13"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -29,6 +29,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## March 2024
 {: #mar-2024}
 
+- New data center `CHE01` is available. The Chennai 01 data center currently does not support the following capabilities:
+  - 10 GB Direct Link connection is unavailable
+  - Transit Gateway is unavailable. To use the Transit Gateway, connect to `CHE01` using a different data center that supports Transit Gateway
+  - IBM Cloud Monitoring is unavailable
+  - Power Edge Router is unavailable.
 - SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 - Flexible IOPS is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - IBM Cloud Monitoring service is now avilable in `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
