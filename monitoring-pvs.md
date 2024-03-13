@@ -29,7 +29,7 @@ Use this tutorial to learn how to configure a {{site.data.keyword.powerSys_notm}
 
 To cconfigure a {{site.data.keyword.powerSys_notm}} instance to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
-By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/).
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary).
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
 
@@ -87,7 +87,7 @@ The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information
 {: #pvs_step1}
 {: step}
 
-Follow the steps mentioned in the P documentation on [Configuring a Power Virtual Server instance](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+Follow the steps mentioned in the {{site.data.keyword.powerSys_notm}} documentation on [Configuring a Power Virtual Server instance](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 ## Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #pvs_step2}
@@ -131,87 +131,8 @@ After you provision an instance, the **Monitoring** dashboard opens.
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
-## Configure your {{site.data.keyword.powerSys_notm}} instance to send metrics to your instance
-{: #pvs_step3}
-{: step}
-
-To configure your {{site.data.keyword.powerSys_notm}} instance to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent.
-
-Complete the following steps from a command line:
-
-1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
-
-   ```text
-   ibmcloud login -a cloud.ibm.com
-   ```
-   {: pre}
-
-   Select the account and region where the {{site.data.keyword.mon_full_notm}} instance is available.
-
-2. Access your {{site.data.keyword.powerSys_notm}} instance.
-
-3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
-
-4. Obtain the ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
-
-5. Deploy the monitoring agent. Run the following command:
-
-   ```text
-   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure true --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
-   ```
-   {: pre}
-
-   Where
-
-   * ACCESS_KEY is the [access key](/docs/monitoring?topic=monitoring-access_key) for the instance.
-
-   * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.  To determine the endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
-
-   * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your monitoring agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
-
-   * The `sysdig_capture_enabled` is set to *false* to disable the capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
-
-   * The `secure` flag must be set to *true* to use a secure SSL/TLS connection to send metrics to the collector.
-
-   If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
-
-
-   * **For Debian and Ubuntu Linux distributions**, run the following command:
-
-      ```text
-      apt-get -y install linux-headers-$(uname -r)
-      ```
-      {: pre}
-
-   * **For RHEL, CentOS, and Fedora Linux distributions**, run the following command:
-
-      ```text
-      yum -y install kernel-devel-$(uname -r)
-      ```
-      {: pre}
-
-6. Configure the agent for non-orchestrated environments.
-
-    Open the `dragent.yaml` file that is located in `/opt/draios/etc/`.
-
-    Add the following configuration parameter:
-
-    ```yaml
-    feature:
-      mode: monitor_light
-    ```
-    {: codeblock}
-
-    Restart the agent. Run the following command:
-
-    ```sh
-    service dragent restart
-    ```
-    {: pre}
-
-
 ## Launch the monitoring UI
-{: #pvs_step4}
+{: #pvs_step3}
 {: step}
 
 Complete the following steps to launch the web UI:
@@ -235,21 +156,15 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 {: tip}
 
 
-## Monitor your {{site.data.keyword.powerSys_notm}} instance
-{: #pvs_step5}
+## View and monitor your {{site.data.keyword.powerSys_notm}} instance
+{: #pvs_step4}
 {: step}
 
-You can monitor your Ubuntu server in the **Overview** view that is available through the Web UI. This view is your starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI.
+You can view and monitor your {{site.data.keyword.powerSys_notm}} instance using the following methods:
+- [Accessing metrics from Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui)
+- [Accessing metrics from the Observability page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob)
 
-In the section **Hosts & containers**, you can find the entry for your Ubuntu server. Click **Hosts & containers** ![Hosts & containers](../images/switch_hosts.png) to switch data sources. Then, select your Ubuntu server. The data that is displayed corresponds to the selected server.
-
-To configure color-coding for a column, complete the following steps:
-
-1. Select a column by hovering your mouse over the column title. Then, click the pencil icon.
-
-2. Toggle **Enable** to enable color-coding.
-
-3. Set values for the different thresholds.
+See the [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary) to learn about the various metrices that you can monitor.
 
 ## Next steps
 {: #pvs_next_steps}
@@ -258,6 +173,6 @@ To configure color-coding for a column, complete the following steps:
 
 - Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
 
-- Learn how to manage logs. See [Logging with Linux VPC server instances](/docs/log-analysis?topic=log-analysis-ubuntu).
-
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
+
+- Learn about the [IBM Cloud monitoring limitations](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-limits) for {{site.data.keyword.powerSys_notm}}.
