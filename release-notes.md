@@ -31,7 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - New data center `CHE01` is available. The Chennai 01 data center currently does not support the following capabilities:
   - 10 GB Direct Link connection is unavailable
-  - Transit Gateway is unavailable. To use the Transit Gateway, connect to `CHE01` using a different data center that supports Transit Gateway
+  - Transit Gateway is unavailable. [To use the Transit Gateway, connect to `CHE01` using a different data center that supports Transit Gateway]{: tag-cool-gray}
   - IBM Cloud Monitoring is unavailable
   - Power Edge Router is unavailable.
 - SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
