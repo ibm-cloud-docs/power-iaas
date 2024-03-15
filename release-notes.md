@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-11"
+lastupdated: "2024-03-13"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -29,8 +29,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## March 2024
 {: #mar-2024}
 
+- New data center `CHE01` is available. The following are some capabilities that differ for this data center:
+  - `CHE01` supports up to 5 GB Direct Link connections compared to other datacenters that supports up to 10 GB.
+  - To use Transit Gateway, you will need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+  - IBM Cloud Monitoring and Power Edge Router network connectivity are currently unavailable for `CHE01`.
 - SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
-- Flexible IOPS is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+- Flexible I/O operation per second (IOPS) is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - IBM Cloud Monitoring service is now avilable in `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - Power Edge Router (PER) is now available in the `TOK04` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 
