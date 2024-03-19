@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-03-19"
 
-keywords:
+keywords: IBM Power VS, Power VS monitoring, Sysdig for Power VS, monitoring a virtual server
 
 subcollection: monitoring
 
@@ -29,17 +29,15 @@ Use this tutorial to learn how to configure a {{site.data.keyword.powerSys_notm}
 
 To cconfigure a {{site.data.keyword.powerSys_notm}} instance to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
-By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary).
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host. The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
 
-The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
+- `System hosts metrics` provide information about CPU, memory, and storage usage metrics, that you can use to analyze the performance and resource utilization of all your processes. For more information, see [CPU utilization](/docs/power-iaas?topic=power-iaas-monitor-sysdig#cpu-utilization) and [Memory Utilization](/docs/power-iaas?topic=power-iaas-monitor-sysdig#memory-utilization).
 
-- `System hosts metrics` provide information about CPU, memory, and storage usage metrics, that you can use to analyze the performance and resource utilization of all your processes.
+- `File and File System metrics` provide information about files and file system that you can use to analyze file interactions that occur in your system. For example, you can find information about your open files, bytes going in and out, or the percentage of usage of a given file system. For more information, see [Disk read bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#disk-read-bytes) and [Disk write bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#disk-write-bytes).
 
-- `File and File System metrics` provide information about files and file system that you can use to analyze file interactions that occur in your system. For example, you can find information about your open files, bytes going in and out, or the percentage of usage of a given file system.
+- `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. For more information, see [Incoming network bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#incoming-network-bytes) and [Outgoing network bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#outgoing-network-bytes).
 
-- `Process metrics` provide information about the processes that run in your servers. For example, you can use these metrics to  explore the number of processes, or get client or server information.
-
-- `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
+For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary).
 
 Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Advisor* tab, the *Explore* tab, and in the *Dashboard* tab. You monitor the data through metric views and dashboards.
 {: shortdesc}
@@ -83,14 +81,8 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-## Provision a {{site.data.keyword.powerSys_notm}} instance
-{: #pvs_step1}
-{: step}
-
-Follow the steps mentioned in the {{site.data.keyword.powerSys_notm}} documentation on [Configuring a Power Virtual Server instance](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
-
 ## Provision an {{site.data.keyword.mon_full_notm}} instance
-{: #pvs_step2}
+{: #pvs_step1}
 {: step}
 
 To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
@@ -132,7 +124,7 @@ After you provision an instance, the **Monitoring** dashboard opens.
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
 ## Launch the monitoring UI
-{: #pvs_step3}
+{: #pvs_step2}
 {: step}
 
 Complete the following steps to launch the web UI:
@@ -155,9 +147,8 @@ IIt may take some time before you see the server entry while the information is 
 You only can monitor one instance per browser. You could have multiple tabs for the same instance.
 {: tip}
 
-
 ## View and monitor your {{site.data.keyword.powerSys_notm}} instance
-{: #pvs_step4}
+{: #pvs_step3}
 {: step}
 
 You can view and monitor your {{site.data.keyword.powerSys_notm}} instance using the following methods:
@@ -175,4 +166,4 @@ See the [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaa
 
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
 
-- Learn about the [IBM Cloud monitoring limitations](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-limits) for {{site.data.keyword.powerSys_notm}}.
+- Learn about the [IBM Cloud monitoring limitations on {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-limits) for {{site.data.keyword.powerSys_notm}}.
