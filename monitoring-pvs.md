@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-03-19"
+lastupdated: "2024-03-21"
 
 keywords: IBM Power VS, Power VS monitoring, Sysdig for Power VS, monitoring a virtual server
 
@@ -29,13 +29,7 @@ Use this tutorial to learn how to configure a {{site.data.keyword.powerSys_notm}
 
 To cconfigure a {{site.data.keyword.powerSys_notm}} instance to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
-By default, this agent collects core infrastructure and network time series that you can use to monitor the host. The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
-
-- `System hosts metrics` provide information about CPU, memory, and storage usage metrics, that you can use to analyze the performance and resource utilization of all your processes. For more information, see [CPU utilization](/docs/power-iaas?topic=power-iaas-monitor-sysdig#cpu-utilization) and [Memory Utilization](/docs/power-iaas?topic=power-iaas-monitor-sysdig#memory-utilization).
-
-- `File and File System metrics` provide information about files and file system that you can use to analyze file interactions that occur in your system. For example, you can find information about your open files, bytes going in and out, or the percentage of usage of a given file system. For more information, see [Disk read bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#disk-read-bytes) and [Disk write bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#disk-write-bytes).
-
-- `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. For more information, see [Incoming network bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#incoming-network-bytes) and [Outgoing network bytes](/docs/power-iaas?topic=power-iaas-monitor-sysdig#outgoing-network-bytes).
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host. The {{site.data.keyword.mon_short}} agent automatically collects various system metrics per host.
 
 For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary).
 
