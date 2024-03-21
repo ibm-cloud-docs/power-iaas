@@ -71,6 +71,7 @@ AIX stock images currently available when you create a VM are:
 
 IBM i stock images currently available when you create a VM are:
 
+* IBM i COR [^1] [New]{: tag-dark-teal} 
 * IBM i 7.5 TR3 [New]{: tag-dark-teal}
 * IBM i 7.5 TR2
 * IBM i 7.4 TR9 [New]{: tag-dark-teal}
@@ -78,6 +79,8 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.3 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.2 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 * IBM i 7.1 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
+
+[^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}. 
 
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 

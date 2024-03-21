@@ -30,8 +30,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #mar-2024}
 
 - Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
-- New AIX 7.3 TL2 and 7.2 TL5 SP7 operating system images are available.
-- New IBM i 7.5 TR3 and IBM i 7.4 TR9 operating system images are available.
+- New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, See the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR operating system images are available. For more information, See the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 - New data center `CHE01` is available. The following are some capabilities that differ for this data center:
   - `CHE01` supports up to 5 GB Direct Link connections compared to other datacenters that supports up to 10 GB.
   - To use Transit Gateway, you will need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
