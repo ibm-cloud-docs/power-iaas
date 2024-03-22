@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-03-21"
+lastupdated: "2024-03-22"
 
 keywords: IBM Power VS, Power VS monitoring, Sysdig for Power VS, monitoring a virtual server
 
@@ -11,7 +11,7 @@ subcollection: monitoring
 content-type: tutorial
 services: monitoring
 account-plan: lite
-completion-time: 1h
+completion-time: 30m
 
 ---
 
@@ -27,34 +27,7 @@ completion-time: 1h
 Use this tutorial to learn how to configure a {{site.data.keyword.powerSys_notm}} instance to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To cconfigure a {{site.data.keyword.powerSys_notm}} instance to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
-
-By default, this agent collects core infrastructure and network time series that you can use to monitor the host. The {{site.data.keyword.mon_short}} agent automatically collects various system metrics per host.
-
 For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary).
-
-Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Advisor* tab, the *Explore* tab, and in the *Dashboard* tab. You monitor the data through metric views and dashboards.
-{: shortdesc}
-
-Consider the following information when monitoring your data:
-* In the *Explorer* tab, you can monitor individual metrics.
-* In the *Advisor* tab, you can monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
-
-    This tab is only available for users that belong to a team that has access to monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
-    {: note}
-
-* In the *Dashboard* tab, you can monitor through panels predefined dashboards or custom ones and get a specialized insight into network data, application data, topology, services, hosts, and containers. A panel displays a metric or group of metrics in a dashboard.
-
-
-For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing panels](/docs/monitoring?topic=monitoring-panels).
-
-
-You can configure a dashboard as the default entry point for a team, unifying a team's experience, and allowing users to focus their immediate attention on the most relevant information for them.
-{: tip}
-
-For more information, see [Viewing metrics](/docs/monitoring?topic=monitoring-monitoring).
-
-
 
 ## Before you begin
 {: #pvs_prereqs}
