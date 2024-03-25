@@ -62,7 +62,7 @@ To create a new subnet, complete the following steps:
 
 9. Click **Create subnet**.
 
-You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section. 
+You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section.
 
 You can also create and configure a private network subnet by using the IBM CLI. Use the following command to create a private network subnet:
 
@@ -75,6 +75,9 @@ ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "st
 {: #reserv-ip}
 
 Use the reserved IPs to block {{site.data.keyword.powerSys_notm}} from assigning a specific IP address to a virtual server instance.
+
+You must delete the reserved IP address manually to remove the IP reservation. Deleting the virtual machine instance does not delete the reserved IP address that is associated with it.
+{: note}
 
 You get the option to:
 - Add IP address
@@ -91,7 +94,7 @@ To add an IP address into the reserved IP address list, perform the following st
 2. From the list of subnets that you have created, click the desired subnet for which you want to reserve the IP address.
 3. Click **Reserve IP**.
 4. Enter your IP address in the **IP address** field.
-   
+
    Make sure the IP address that you want to reserve falls in the IP range that you have defined while provisioning the subnet.
    {: note}
 
