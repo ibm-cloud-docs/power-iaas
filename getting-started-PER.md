@@ -150,7 +150,7 @@ AIX, IBM i, and Linux operating systems are supported in a PER workspace.
 AIX and IBM i operating systems operate in PER workspaces in the same way that they do in non-PER workspaces.
 
 ### Full Linux Subscription with PER
-{: aix-ibmi-per}
+{: aix-linux-per}
 
 See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
 {: note}
