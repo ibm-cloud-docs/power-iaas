@@ -22,7 +22,7 @@ completion-time: 30m
 {: #pvs-monitoring}
 {: toc-content-type="tutorial"}
 {: toc-services="monitoring"}
-{: toc-completion-time="1h"}
+{: toc-completion-time="30m"}
 
 Use this tutorial to learn how to configure a {{site.data.keyword.powerSys_notm}} instance to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
@@ -32,11 +32,11 @@ For a list of collected metrics, see [{{site.data.keyword.powerSys_notm}} metric
 ## Before you begin
 {: #pvs_prereqs}
 
-[Read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
+To get started, you can [read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
 
-Work in a supported region, for example the `US South` region.
+You must work in a supported region, for example the `US South` region.
 
-Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} {{site.data.keyword.IBM_notm}}ID, go to [Create an account](https://cloud.ibm.com/login){: external}.
+Always use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} {{site.data.keyword.IBM_notm}}ID, go to [Create an account](https://cloud.ibm.com/login){: external}.
 
 Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources:
 
@@ -48,7 +48,7 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-## Provision an {{site.data.keyword.mon_full_notm}} instance
+## Provisioning an {{site.data.keyword.mon_full_notm}} instance
 {: #pvs_step1}
 {: step}
 
@@ -80,7 +80,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
    By default, the **default** resource group is set.
 
-10. (Optional) Specify any [tags](/docs/account?topic=account-tag) you want to use.
+10. (Optional) Specify any [tags](/docs/account?topic=account-tag) that you want to use.
 
 11. Select whether of not the service instance receives platform metrics for all service instances in the region.
 
@@ -90,11 +90,11 @@ After you provision an instance, the **Monitoring** dashboard opens.
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
-## Launch the monitoring UI
+## Opening the monitoring UI
 {: #pvs_step2}
 {: step}
 
-Complete the following steps to launch the web UI:
+Complete the following steps to open the web UI:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
@@ -108,21 +108,21 @@ Complete the following steps to launch the web UI:
 
 4. Select your instance. Then, click **Open dashboard**.
 
-IIt may take some time before you see the server entry while the information is initally collected and processed by the monitoring agent.
+It can take some time before you see the server entry while the information is initially collected and processed by the monitoring agent.
 {: note}
 
-You only can monitor one instance per browser. You could have multiple tabs for the same instance.
+You can only monitor one instance per browser. You might have multiple tabs for the same instance.
 {: tip}
 
-## View and monitor your {{site.data.keyword.powerSys_notm}} instance
+## Viewing and monitoring your {{site.data.keyword.powerSys_notm}} instance
 {: #pvs_step3}
 {: step}
 
-You can view and monitor your {{site.data.keyword.powerSys_notm}} instance using the following methods:
+You can view and monitor your {{site.data.keyword.powerSys_notm}} instance by using the following methods:
 - [Accessing metrics from Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui)
 - [Accessing metrics from the Observability page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob)
 
-See the [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary) to learn about the various metrices that you can monitor.
+See the [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-metrics-dictionary) to learn about the various metrics that you can monitor.
 
 ## Next steps
 {: #pvs_next_steps}
@@ -131,6 +131,6 @@ See the [{{site.data.keyword.powerSys_notm}} metrics dictionary](/docs/power-iaa
 
 - Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
 
-- Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
+- Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functions to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions, and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
 
 - Learn about the [IBM Cloud monitoring limitations on {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-limits) for {{site.data.keyword.powerSys_notm}}.
