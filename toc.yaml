@@ -72,15 +72,20 @@ toc:
       - topicgroup: 
             label: Networking
             topics:
-              - network-architecture.md
               - configuring-private-subnet.md
+              - network-architecture.md
               - getting-started-PER.md
-              - cloud-connections-CLI.md              
-              - ordering-direct-link.md
-              - manual-PER-mig.md
-              - vpn-connections.md              
+              - vpn-connections.md
               - network-security.md
               - X86-based-systems.md
+              - topicgroup:
+                  label: Former networking configurations
+                  topics:
+                    - manual-PER-mig.md
+                    - network-architecture-former.md
+                    - cloud-connections-CLI.md
+                    - ordering-direct-link.md
+                    - vpn-connections-deprecated.md
       - topicgroup: 
             label: AIX
             topics:
