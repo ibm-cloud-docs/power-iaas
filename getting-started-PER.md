@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Capabilities of the Power Edge Router
+# Getting started with the Power Edge Router
 {: #per}
 
 A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
