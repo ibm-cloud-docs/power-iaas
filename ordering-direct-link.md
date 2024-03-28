@@ -68,21 +68,20 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
       | Dallas 10 \n Dallas 12  \n Dallas 13 | 4206000072 \n 64999 \n 64999 |
-      | Washington 4 | 64995 |
-      | Washington 6 | 64999 |
-      | Washington 7 | 4206000068 |
-      | Frankfurt 4  \n Frankfurt 5 | 64999 |
-      | London 6 | 64999 |
-      | Toronto 1 | 64999 |
-      | Montreal 1 | 64999 |
-      | São Paulo 4 | 4206000076 |
+      | Washington 04 \n Washington 06 \n Washington 07 | 64995 \n 64999 \n 4206000068 |
+      | Frankfurt 04  \n Frankfurt 05 | 64999 \n 64999|
+      | London 06 | 64999 |
+      | Toronto 01 | 64999 |
+      | Montreal 01 | 64999 |
+      | São Paulo 04 | 4206000076 |
+      | Chennai 01| 4206000092 |
       {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"} 
       
-1. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
+2. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
 
    After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections. 
   
-1. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
@@ -145,6 +144,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     | TOK04 | IBM Power VS | SL-TOK01-ZENLAYER-3-1 \n 01675-TK4-X-I-0002 \n TKY/TKY/LE-275454 | SL-TOK01-ZENLAYER-4-1|
     | OSA21 | IBM Power VS | SL-OSA01-ATTOKYO-1-1 | SL-OSA01-ATTOKYO-2-1 |
     | SAO04 | IBM Power VS | SL-SAO04-POWERVSCX-1-1 \n SL-SAO04-POWERVSCX-1-2 | SL-SAO04-POWERVSCX-2-1 \n SL-SAO04-POWERVSCX-2-2 |
+    | CHE01 | IBM Power VS | IBM-CHE01-POWERCX-1-1 \n IBM-CHE01-POWERCX-1-2 | IBM-CHE01-POWERCX-2-1 \n IBM-CHE01-POWERCX-2-2 |
     {: caption="Table 2. Port and Port groups for redundant {{site.data.keyword.dl_short}} instances" caption-side="bottom"}
 
     [^footnote1]: This port is not GRE capable, but supports a speed of 10 Gbps.

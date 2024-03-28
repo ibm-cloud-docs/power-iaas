@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-14"
+lastupdated: "2024-03-21"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -88,7 +88,7 @@ You get the option to:
 - See the list of the reserved IP address
 - Delete the reserved IP address.
 
-An IP address present in the reserved list is not auto assigned to a virtual server instance.
+An IP address present in the reserved list, is not auto assigned to a virtual server instance.
 
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}

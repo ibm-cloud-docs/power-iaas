@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-08"
+lastupdated: "2024-03-18"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -51,14 +51,18 @@ To create and configure an IBM&reg; Power Systems&trade; Virtual Server, complet
     | America | Washington DC, USA | us-east | us-east \n WDC06 \n WDC07| WDC04 \n WDC06 \n WDC07| us-east-1 \n us-east-2 \n us-east-3|
     | America | São Paulo, Brazil | br-sao | SAO01 \n SAO04| SAO01 \n SAO04| br-sao-1 \n br-sao-2 |
     | America | Toronto, Canada | ca-tor | TOR01 | TOR01 | ca-tor-1 |
-    | America | Montreal, Canada | ca-mon | MON01 | MON01 | - |
+    | America | Montreal, Canada [^1] | ca-mon | MON01 | MON01 | - |
     | Europe | Frankfurt, Germany | eu-de | eu-de-1 \n eu-de-2 | FRA04 \n FRA05 | eu-de-2 \n eu-de-3 |
     | Europe | London, UK | eu-gb | LON04 \n LON06 | LON04 \n LON06 | eu-gb-1 \n eu-gb-3 |
     | Europe | Madrid, Spain| eu-es | MAD02 \n MAD04 | MAD02 \n MAD04 | eu-es-1 \n eu-es-2|
     | Asia Pacific | Sydney, Australia | au-syd | SYD04 \n SYD05 | SYD04 \n SYD05 | au-syd-2 \n au-syd-3 |
     | Asia Pacific | Tokyo, Japan | jp-tok | TOK04 | TOK04 | jp-tok-2 |
     | Asia Pacific | Osaka, Japan | jp-osa | OSA21 | OSA21 | jp-osa-1 |
+    | Asia Pacific | Chennai, India [^2]| - | CHE01 | CHE01 | - |
     {: caption="Table 1. {{site.data.keyword.powerSys_notm}} data centers" caption-side="bottom"}
+
+    [^1]: This is a single datacenter for the location.
+    [^2]: This is a single datacenter for the location.
 
 5. Click **Create**. You are redirected to the **Workspaces** page where you can select your desired or existing workspace.
 
@@ -123,9 +127,9 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
     {: note}
     
 10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
-
+<!-- 
     When you choose to provide a specific IP address, make sure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
-    {: important}
+    {: important} -->
     
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}

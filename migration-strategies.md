@@ -31,6 +31,101 @@ subcollection: power-iaas
 Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}
 
+## IBM i migration strategies
+{: #migration-ibmi}
+
+Learn about migration strategies that are specific to IBM i systems.
+
+Recent IBM i migration enhancements: 
+1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape  
+2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}. 
+
+### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
+{: #ibmi-brms-icc}
+
+BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).  
+
+The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
+
+1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
+2.	Create a virtual media and _IMGCLG_ on the deployed VM.
+3.	Create a virtual optical and _IMGCLG_ on the on-premises system and perform an operating system save.
+4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
+5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
+6.	Migrate your remaining data.
+
+Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.
+
+For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}.
+
+For a complete tutorial on migrating your IBM i workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
+
+### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
+{: #logical-rep-glvm}
+
+GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geo mirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
+
+- [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: external}
+- [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}
+
+## AIX migration strategies
+{: #migration-aix}
+
+Learn about migration strategies that are specific to AIX systems.
+
+### Migration by using MKSYSB
+{: #migration-mksysb}
+
+You can migrate your data by using the `mksysb` command:
+
+1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to COS.
+2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
+3. Restore the on-premises image.
+
+For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+
+### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
+{: #logical-replication}
+
+GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
+
+- [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: external}
+- [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: external}
+- [Using IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
+- [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: external}
+- [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: external}
+
+### Alternative AIX migration strategies
+{: #migration-alternative-aix}
+
+Some alternative AIX migration strategies include:
+
+- `rsync` for nondatabase files
+- The `savevg` and `restvg` AIX commands
+- Log shipping for databases
+
+For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
+
+### Migrating from AIX 7.1 to higher versions
+{: #migration-aix-versions}
+
+To migrate your resources from AIX 7.1 to higher AIX versions within {{site.data.keyword.powerSys_notm}}s, you must use the network boot option. Migration requires the VM to boot from the operating system kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
+
+1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
+2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
+3. Customize any additional installation resources.
+4. Define the AIX 7.1 VM as a NIM client.
+5. Perform the installation for NIM migration.
+
+For more information on creating and defining a NIM master, setting an LPP source and spot, see [Migrating from AIX 7.1](https://cloud.ibm.com/media/docs/downloads/power-iaas/Migration_from_AIX7_1.pdf){: external}.
+
+## Aspera Technologies
+{: #aspera-technologies}
+
+IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera){: external}.
+
+Use the [Accelerated network transfer migration guide](https://cloud.ibm.com/media/docs/downloads/power-iaas/accelerated_migration.pdf){: external} powered by Aspera to accelerate transferring your migration content directly into the workspace of your Power Virtual Server helping you to achieve faster time to value from IBM cloud.
+
 ## IBM Cloud Object Storage (COS)
 {: #migration-icos}
 
@@ -53,13 +148,6 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 1. Create an OVA image on your local system.
 2. Copy the OVA image to your **Cloud Object Storage** account.
 3. [Deploy the OVA image and provision a new {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
-
-## Aspera Technologies
-{: #aspera-technologies}
-
-IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera){: external}.
-
-Use the [Accelerated network transfer migration guide](https://cloud.ibm.com/media/docs/downloads/power-iaas/accelerated_migration.pdf){: external} powered by Aspera to accelerate transferring your migration content directly into the workspace of your Power Virtual Server helping you to achieve faster time to value from IBM cloud.
 
 ## Replication
 {: #replication}
@@ -158,91 +246,3 @@ You can engage IBM teams and services to assist you throughout the migration lif
 
 - [IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: external}
 - [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: external}
-
-## AIX migration strategies
-{: #migration-aix}
-
-Learn about migration strategies that are specific to AIX systems.
-
-### Migration by using MKSYSB
-{: #migration-mksysb}
-
-You can migrate your data by using the `mksysb` command:
-
-1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to COS.
-2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
-3. Restore the on-premises image.
-
-For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
-
-### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
-{: #logical-replication}
-
-GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
-
-- [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: external}
-- [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: external}
-- [Using IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
-- [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: external}
-- [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: external}
-
-### Alternative AIX migration strategies
-{: #migration-alternative-aix}
-
-Some alternative AIX migration strategies include:
-
-- `rsync` for nondatabase files
-- The `savevg` and `restvg` AIX commands
-- Log shipping for databases
-
-For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
-
-### Migrating from AIX 7.1 to higher versions
-{: #migration-aix-versions}
-
-To migrate your resources from AIX 7.1 to higher AIX versions within {{site.data.keyword.powerSys_notm}}s, you must use the network boot option. Migration requires the VM to boot from the operating system kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
-
-1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
-2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
-3. Customize any additional installation resources.
-4. Define the AIX 7.1 VM as a NIM client.
-5. Perform the installation for NIM migration.
-
-For more information on creating and defining a NIM master, setting an LPP source and spot, see [Migrating from AIX 7.1](https://cloud.ibm.com/media/docs/downloads/power-iaas/Migration_from_AIX7_1.pdf){: external}.
-
-## IBM i migration strategies
-{: #migration-ibmi}
-
-Learn about migration strategies that are specific to IBM i systems.
-
-Recent IBM i migration enhancements: 
-1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape  
-2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}. 
-
-### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
-{: #ibmi-brms-icc}
-
-BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).  
-
-The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
-
-1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
-2.	Create a virtual media and _IMGCLG_ on the deployed VM.
-3.	Create a virtual optical and _IMGCLG_ on the on-premises system and perform an operating system save.
-4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
-5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
-6.	Migrate your remaining data.
-
-Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.
-
-For more information, see [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external} and [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}.
-
-For a complete tutorial on migrating your IBM i workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
-
-### Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
-{: #logical-rep-glvm}
-
-GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geo mirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
-
-- [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: external}
-- [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}
