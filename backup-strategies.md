@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-20"
+lastupdated: "2024-04-01"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -164,6 +164,11 @@ The Backup Offering is available in the following data center pairs:
 |---------------|---------------|
 | DAL10         | WDC07         |
 | DAL12         | WDC06         |
+| MAD02         | FRA04         |
+| MAD04         | FRA02         |
+| SAO01         | SAO04         |
+| OSA21         | TOK04         |
+{: caption="Table 1. Data center pair availibility for backup offering" caption-side="bottom"}
 
 ### Additional support
 {: baas-support}
