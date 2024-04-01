@@ -156,7 +156,8 @@ When you use the Backup Offering, you are billed monthly through IBM Cloud for a
 
 Connectivity between {{site.data.keyword.powerSys_notm}} instances and the backup servers is established via a transit gateway connection to the backup VPC. Name resolution is for the backup server connections which is also required. You can accomplish this using the agent system's /etc/hosts file, or by adding CNAME entries to your agent system's DNS server. These elements need to be deployed in your account (transit gateway and VPC provisioning and setup happens through automation when the Backup Offering is provisioned). 
 
-Supported data center pairs 
+### Supported data center pairs
+{:#baas-dcs} 
 
 The Backup Offering is available in the following data center pairs: 
 
