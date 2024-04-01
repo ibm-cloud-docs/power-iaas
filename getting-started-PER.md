@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-03-27"
+lastupdated: "2024-04-01"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers).
 
-The PER capability is available in all the {{site.data.keyword.powerSys_notm}} data centers except `DAL13`, `LON06`, `SYD04`, `TOR01`, and `WDC04`. PER will be deployed in these data centers over time. 
+The PER capability will be deployed in all the data centers over time. See [Data centers supporting PER](/docs/power-iaas?topic=power-iaas-per#dcs-per) for more information.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -59,7 +59,7 @@ The automation of ACI, PER, and NAT Services provisioning in IBM data centers is
 For detailed networking PER use cases and architechture diagrams, see [Power Edge Router use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases).
 
 ## Considerations when using PER
-{: leverage-per}
+{: #leverage-per}
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
@@ -71,7 +71,7 @@ For detailed networking PER use cases and architechture diagrams, see [Power Edg
 - In certain situations, local connection charges can apply when connecting from an on-premises location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router) to learn more about PER pricing.
 
 ## Migrating to PER
-{: migrate-per}
+{: #migrate-per}
 
 PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you need to create a new workspace or [migrate your workspace to PER](/docs/power-iaas?topic=power-iaas-migrate-ws-per) using a support ticket.
 
@@ -97,7 +97,7 @@ Here is an example command that can be executed where:
  - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server`
 
 ## Creating a PER workspace
-{: create-per-workspace}
+{: #create-per-workspace}
 
 To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per) and choose a PER-enabled data center.
 
@@ -120,7 +120,7 @@ You cannot delete PER workspaces that have Transit Gateway connections. You must
 {: important}
 
 ### Using IBM cloud services in a PER workspace
-{: cloud-services-per}
+{: #cloud-services-per}
 
 From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage (COS), Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0/16`. See [IaaS endpoints](/docs/vpc?topic=vpc-service-endpoints-for-vpc#infrastructure-as-a-service-iaas-endpoints) for more information.
 
@@ -128,7 +128,7 @@ You need to attach to the Transit Gateway if you want to connect your workspace 
 {: important}
 
 ### Attaching Transit Gateway to a PER workspace
-{: tgw-per}
+{: #tgw-per}
 
 Transit Gateway is required to connect with VPC and classic infrastructure. To attach a virtual server instance from a PER workspace with Transit Gateway, complete the steps that are mentioned in [Ordering IBM Cloud Transit Gateway.](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui)
 
@@ -140,17 +140,17 @@ Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF
 {: note}
 
 ## OS support in a PER workspace
-{: os-per}
+{: #os-per}
 
 AIX, IBM i, and Linux operating systems are supported in a PER workspace.
 
 ### AIX and IBM i support on PER
-{: aix-ibmi-per}
+{: #aix-ibmi-per}
 
 AIX and IBM i operating systems operate in PER workspaces in the same way that they do in non-PER workspaces.
 
 ### Full Linux Subscription with PER
-{: aix-linux-per}
+{: #aix-linux-per}
 
 See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} to register `RHEL84`, `SLES SP2`, `SLES SP3` images on a non-PER workspace.
 {: note}
@@ -181,7 +181,7 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
    {: codeblock}
 
 ## CLI and API support with PER
-{: cli-api-per}
+{: #cli-api-per}
 
 PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and CLIs.
 
@@ -190,15 +190,33 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
 
 ## Data centers supporting PER
-{: dcs-per}
+{: #dcs-per}
 
 The table below shows the available data centers for {{site.data.keyword.powerSys_notm}} and its corresponding status against PER:
 
 | Data centers | PER available |
 |-----|-----|
-| Cell | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
-| Cell | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
-| Cell | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `CHE01` | ![Checkmark icon](./images/X.svg) |
+| `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
+| `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
+| `DAL10` | ![Checkmark icon](./images/checkmark.svg) | 
+| `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
+| `DAL13` | ![Checkmark icon](./images/X.svg) | 
+| `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
+| `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
+| `LON06` | ![Checkmark icon](./images/X.svg) |
+| `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
+| `MAD04` | ![Checkmark icon](./images/checkmark.svg) |
+| `OSA21` | ![Checkmark icon](./images/checkmark.svg) |
+| `SAO01` | ![Checkmark icon](./images/checkmark.svg) |
+| `SAO04` | ![Checkmark icon](./images/checkmark.svg) |
+| `SYD04` | ![Checkmark icon](./images/X.svg) |
+| `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
+| `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
+| `TOR01` | ![Checkmark icon](./images/X.svg) |
+| `WDC04` | ![Checkmark icon](./images/X.svg) |
+| `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
+| `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
