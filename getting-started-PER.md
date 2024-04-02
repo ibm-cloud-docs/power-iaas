@@ -30,7 +30,7 @@ A Power Edge Router (PER) is a high-performance router that provides advanced ro
 
 PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud MPLS (Multi Protocol Label Switching) backbone, making it easy for different parts of the IBM network to communicate with each other. The PER solution is consisted of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} POD (acronym for Performance Optimized Data center that is modular data centers).
 
-The PER capability is available in all the {{site.data.keyword.powerSys_notm}} data centers except `DAL13`, `LON06`, `SYD04`, `TOR01`, and `WDC04`. PER will be deployed in these data centers over time. 
+The PER capability is available in all the {{site.data.keyword.powerSys_notm}} data centers except `DAL13`, `LON06`, `SYD04`, `TOR01`, and `WDC04`. PER will be deployed in these data centers over time.
 {: note}
 
 PER associates specific {{site.data.keyword.powerSys_notm}} networks with unique MPLS route distinguishers (RDs). This makes it easy for different networks to communicate with each other across the IBM Cloud MPLS backbone.
@@ -188,32 +188,3 @@ PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
-
-<!-- ## Various sample application scenarios
-{: scenarios-per}
-
-There are various application scenarios that can be possible based on your choice of a PER or a non-PER workspace. The table below describes some of the various possible application scenarios:
-
-| Scenarios | {{site.data.keyword.powerSys_notm}} DL without Transit Gateway| {{site.data.keyword.powerSys_notm}} DL with Transit Gateway |{{site.data.keyword.powerSys_notm}} PER workspace|
-|-----------|-------------------|---------------------|-------------------|
-| IBM Cloud local VPC and Classic resources access (x86 VMs etc.)|	DL local routing [^footnote1] |	TGW local routing	| TGW local routing|
-| IBM Cloud remote VPC resource access	| DL global routing [^footnote2] |	TGW global routing	| TGW globa	routing |
-| {{site.data.keyword.powerSys_notm}} multi-location connectivity for HA DR etc.	| DL + vSRX [^footnote3] | TGW global routing | 	TGW global routing |
-| {{site.data.keyword.powerSys_notm}} multi-location connectivity (unipart)	| DL + classic + VPC	[^footnote7]| TGW global routing (improved connection) |	TGW global routing | 
-| {{site.data.keyword.powerSys_notm}} GRS	(Global Replication Service) | DL + Megaport [^footnote6]	| TGW global routing 	(to test) | TGW global routing |
-| On-premise to {{site.data.keyword.powerSys_notm}} connectivity	| DL + vSRX [^footnote4] |	TGW global routing | TGW global routing |
-|{{site.data.keyword.powerSys_notm}} to Cloud Services (COS, DNS, NTP etc.)	| Use proxy server [^footnote5] | - | Use NAT to reach services |
-| Aggregate Bandwidth shared by all customers, between {{site.data.keyword.powerSys_notm}} and IBM Cloud	| 60 Gb/s [^footnote8]	| 60 Gb/s [^footnote9]	| 400 Gb/s |
-|User Experience	| Ok | Better	| Excellent |
-{: caption="Table 1. Various application scenarios" caption-side="bottom"}
-
-[^footnote1]: No charges apply.
-[^footnote2]: No charges apply.
-[^footnote3]: Involves cost, complexity, and low performance. Considering Megaport
-is used for DL2DL connection.
-[^footnote4]: Involves cost, complexity, and low performance. Other options, includes on-premise over DL to classic to PowerVS over DL to classic
-[^footnote5]: Involves cost and complexity
-[^footnote6]: Involves high cost
-[^footnote7]: Combination no longer in use.
-[^footnote8]: Typical speed.
-[^footnote9]: Typical speed. -->
