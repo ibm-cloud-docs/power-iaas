@@ -178,7 +178,7 @@ Support for the Backup Offering is provided by Cobalt Iron and you will need to 
 * For more information about the offering, see the [Cobalt Iron documentation](https://help.cobaltiron.com/wp-login.php){: extrnal}.
 * For issues related to backup and restore, reach out to Cobalt Iron by opening a service ticket via `support.cobaltiron.com`.
 
-If you encounter an issue related to Power Virtual Server or IBM Cloud, see Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support). 
+If you encounter an issue related to Power Virtual Server or IBM Cloud, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support). 
 
 ## IBM i backup strategies
 {: #backup-ibmi}
