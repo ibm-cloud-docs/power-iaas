@@ -199,9 +199,9 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `CHE01` | X |
 | `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL10` | ![Checkmark icon](./images/checkmark.svg) | 
+| `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL13` | X | 
+| `DAL13` | X |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
 | `LON06` | X |
@@ -219,5 +219,5 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
 {: summary="This table has row and column headers. The row headers identify the service. The column headers indentify where that service is located. To understand where a service is located in the table, navigate to the row, and find the for the location you are interested in."}
+{: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
