@@ -219,5 +219,4 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: summary="This table has row and column headers. The row headers identify the service. The column headers indentify where that service is located. To understand where a service is located in the table, navigate to the row, and find the for the location you are interested in."}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
