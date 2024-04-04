@@ -57,11 +57,10 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 
 AIX stock images currently available when you create a VM are:
 
-* AIX 7.3 TL2 [New]{: tag-dark-teal}
+* AIX 7.3 TL2
 * AIX 7.3 TL1 SP2
-* AIX 7.2 TL5 SP7 [New]{: tag-dark-teal}
+* AIX 7.2 TL5 SP7
 * AIX 7.2 TL5 SP6
-* AIX 7.1 TL5 SP9
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
@@ -71,14 +70,11 @@ AIX stock images currently available when you create a VM are:
 
 IBM i stock images currently available when you create a VM are:
 
-* IBM i COR [^1] [New]{: tag-dark-teal} 
-* IBM i 7.5 TR3 [New]{: tag-dark-teal}
+* IBM i COR [^1]
+* IBM i 7.5 TR3
 * IBM i 7.5 TR2
-* IBM i 7.4 TR9 [New]{: tag-dark-teal}
+* IBM i 7.4 TR9
 * IBM i 7.4 TR8
-* IBM i 7.3 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
-* IBM i 7.2 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
-* IBM i 7.1 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}. 
 
