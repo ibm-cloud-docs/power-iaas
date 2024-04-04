@@ -106,7 +106,7 @@ Some alternative AIX migration strategies include:
 
 For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
 
-<!-->
+<!--
 Sandhya: AIX 7.1 end of life April 2023. Per Carl's suggestion have commented this text
 
 ### Migrating from AIX 7.1 to higher versions
