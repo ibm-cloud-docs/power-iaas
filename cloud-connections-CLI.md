@@ -13,25 +13,25 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing {{site.data.keyword.cloud_notm}} connections
+# {{site.data.keyword.powerSys_notm}} Cloud Connections
 {: #cloud-connections}
 
-You can use {{site.data.keyword.cloud}} connections to connect your {{site.data.keyword.powerSys_notm}} instances to {{site.data.keyword.cloud_notm}} resources on {{site.data.keyword.cloud_notm}} classic network and Virtual Private Cloud (VPC) infrastructures. {{site.data.keyword.cloud_notm}} connection creates a {{site.data.keyword.dl_short}} (2.0) Connect instance to connect your {{site.data.keyword.powerSys_notm}} instances to the {{site.data.keyword.cloud_notm}} resources within your account. For cross-account connectivity, use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures. The speed and reliability of the {{site.data.keyword.dl_short}} connection extends your {{site.data.keyword.powerSys_notm}} network to the IBM Cloud network and offers more consistent and higher-throughput connectivity, while keeping network traffic within the {{site.data.keyword.cloud_notm}}. 
+You can use {{site.data.keyword.powerSys_notm}} Cloud Connections to connect your {{site.data.keyword.powerSys_notm}} instances to {{site.data.keyword.cloud_notm}} resources on {{site.data.keyword.cloud_notm}} classic network and Virtual Private Cloud (VPC) infrastructures. {{site.data.keyword.powerSys_notm}} Cloud Connection creates a {{site.data.keyword.dl_short}} (2.0) Connect instance to connect your {{site.data.keyword.powerSys_notm}} instances to the {{site.data.keyword.cloud_notm}} resources within your account. For cross-account connectivity, use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures. The speed and reliability of the {{site.data.keyword.dl_short}} connection extends your {{site.data.keyword.powerSys_notm}} network to the IBM Cloud network and offers more consistent and higher-throughput connectivity, while keeping network traffic within the {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 You can have a maximum of two {{site.data.keyword.cloud_notm}} ({{site.data.keyword.powerSys_notm}} Direct Link Connect) per account per {{site.data.keyword.powerSys_notm}} data center. To create a {{site.data.keyword.powerSys_notm}} {{site.data.keyword.cloud_notm}} you must have the required access to create the connections. For more information, see [Access roles requirements for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
 {: important}
 
-## Support for {{site.data.keyword.powerSys_notm}} workspaces with {{site.data.keyword.cloud_notm}} connections
+## Support for {{site.data.keyword.powerSys_notm}} workspaces with {{site.data.keyword.powerSys_notm}} Cloud Connections
 {: #powervs-support-cloud-connections}
 
-When you perform multiple {{site.data.keyword.cloud_notm}} connection tasks, actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the status might not change immediately.
+When you perform multiple {{site.data.keyword.powerSys_notm}} Cloud Connection tasks, actions within a task can time out. When the timeout occurs, the tasks are completed in the background and the status might not change immediately.
 {: note}
 
-## Creating {{site.data.keyword.cloud_notm}} connections
+## Creating {{site.data.keyword.powerSys_notm}} Cloud Connections
 {: #create-cloud-connections}
 
-To create an {{site.data.keyword.cloud_notm}} connection, complete the following steps:
+To create an {{site.data.keyword.powerSys_notm}} Cloud Connection, complete the following steps:
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Cloud connections**.
 2. On the Cloud connections page, click **Create connection**.
