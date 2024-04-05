@@ -197,8 +197,6 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | Data centers | PER available |
 |-----|-----|
 | `CHE01` |   X |
-| `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
-| `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL13` |   X |

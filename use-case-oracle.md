@@ -26,4 +26,4 @@ If you are interested in the automation of deployment and management of Oracle R
 To implement Oracle Data Guard on {{site.data.keyword.powerSys_notm}} instances that are hosted in different data centers, see [Oracle Disaster Recovery on IBM Power Virtual Server](https://www.ibm.com/downloads/cas/LOEM24KA).
 
 ## Migrating your Oracle database
-To migrate an AIX-based Oracle databases from IBM Power to {{site.data.keyword.powerSys_notm}}, see [Oracle technical migration procedure](https://cloud.ibm.com/media/docs/downloads/Oracle_Technical_Migration_procedure_version_1.0.pdf){: external}.
+To migrate an AIX-based Oracle databases from IBM Power to {{site.data.keyword.powerSys_notm}}, see [Oracle technical migration procedure](https://cloud.ibm.com/media/docs/downloads/power-iaas/Oracle_Technical_Migration_procedure_version_1.0.pdf){: external}.
