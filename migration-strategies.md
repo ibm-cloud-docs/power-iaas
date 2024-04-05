@@ -108,7 +108,6 @@ For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.p
 
 <!--
 Sandhya: AIX 7.1 end of life April 2023. Per Carl's suggestion have commented this text
-
 ### Migrating from AIX 7.1 to higher versions
 {: #migration-aix-versions}
 
