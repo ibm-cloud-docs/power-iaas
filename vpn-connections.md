@@ -19,44 +19,44 @@ subcollection: power-iaas
 {{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between on-premises environments and the virtual server instances that are deployed on IBM Cloud.
 
 IBM Cloud offers the following two VPN options:  
-* _VPN for VPC_ for site-to-site gateways to safely and securely connect from on-premises to resources in VPC, Power, and Classic infrastructure 
-* _Client VPN for VPC_ for client-to-site servers allowing remote devices to secretly connect to the VPC network in a secure manner.
+* _VPN for VPC_ for site-to-site gateways that allows to safely and securely connect from on-premises to resources in VPC, Power, and Classic infrastructure 
+* _Client VPN for VPC_ for client-to-site servers that allows remote devices to secretly connect to the VPC network in a secure manner.
 
 To learn more on the VPN options you get, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
 
 ## Deploying an automated VPN on your workspace
 {: #auto-vpc-vpn}
 
-Automation projects that use [IBM Cloud Schematics](https://www.ibm.com/products/schematics){: external} are now available on GitHub to create or use an existing IBM {{site.data.keyword.powerSys_notm}} workspace that is connected to a VPC using Transit Gateway. These Terraform Infrastructure as Code (IaC) modules offer VPN connections that allow private communication to your IBM {{site.data.keyword.powerSys_notm}}.
+Automation projects that use [IBM Cloud Schematics](https://www.ibm.com/products/schematics){: external} are now available on GitHub to create or use an existing IBM {{site.data.keyword.powerSys_notm}} workspace that is connected to a VPC using Transit Gateway. These Terraform Infrastructures as Code (IaC) modules offer VPN connections that allow private communication to your IBM {{site.data.keyword.powerSys_notm}}.
 
 These automations provide one-click deployment. For example, the site-to-site VPN automation reduces deployment time from days to 3 minutes. 
 
 You can download or clone the GitHub repository and use that IaC locally with the terraform command. You can also choose to create a Schematics workspace and point to the project's public GitHub repository. 
 
-To understand the details for general Power Systems communication through VPC, including architecture and trouble shooting, see the [Power Systems communication through a VPC Transit Hub](/docs/solution-tutorials?topic=solution-tutorials-vpc-transit-power) solution tutorial.
+To understand the details for general Power Systems communication through VPC, including architecture, and troubleshooting, see the [Power Systems communication through a VPC Transit Hub](/docs/solution-tutorials?topic=solution-tutorials-vpc-transit-power) solution tutorial.
 
 ### Site-to-site VPN automation
 {: #s2s-auto-vpn}
 
-Use this Terraform module to create a [site-to-site VPN gateway](/docs/vpc?topic=vpc-using-vpn), which allows a secure connection over the internet from your local on-premises network to private resources in a {{site.data.keyword.powerSys_notm}} Workspace. This Terraform IaC creates a policy-based VPN gateway and connection with local and peer policies. 
+Use this Terraform module to create a [site-to-site VPN gateway](/docs/vpc?topic=vpc-using-vpn), which allows a secure connection over the internet from your local on-premises network to private resources in a {{site.data.keyword.powerSys_notm}} workspace. This Terraform IaC creates a policy-based VPN gateway and connection with local and peer policies. 
 
 A Transit Gateway and IBM {{site.data.keyword.powerSys_notm}} workspace are created by default, but you can override the default by specifying existing ones. 
 
 If you need to identity support for AIX or IBM i, specify the local and remote identities.
 {: note}
 
-The Github repository for site-to-site VPN automation is located [here](https://github.com/IBM/power-vpn-gateway/){: external}.
+The GitHub repository for site-to-site VPN automation is located [here](https://github.com/IBM/power-vpn-gateway/){: external}.
 
 To download the IBM Cloud Schematics repository and learn more about Schematics, see [Getting started: IBM Cloud Schematics](/docs/schematics?topic=schematics-getting-started).
 
-![Power connectivity solutions using VPN for VPC](https://video.ibm.com/embed/recorded/133346636){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
+![Power connectivity solutions by using VPN for VPC](https://video.ibm.com/embed/recorded/133346636){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ### Client-to-site VPN automation 
 {: #c2s-auto-vpn}
 
 Use this Terraform module to create a [client-to-site VPN server](/docs/vpc?topic=vpc-vpn-client-to-site-overview), which allows users to safely connect from an onsite or remote device to a Power Virtual Server workspace. This allows users to connect immediately from their device and start working with the IBM Power Virtual Server infrastructure. 
 
-The Github repository for client-to-server VPN automation is located [here](https://github.com/IBM/power-vpn-server). 
+The GitHub repository for client-to-server VPN automation is located [here](https://github.com/IBM/power-vpn-server). 
 
 An OVPN file is generated from Terraform, applied, and then stored in a Cloud Object Storage bucket for the user to import into the OpenVPN desktop client.
 
