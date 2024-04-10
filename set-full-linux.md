@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-02-09"
+lastupdated: "2024-04-05"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}}s
 {: #set-full-Linux}
 
-The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM Cloud&reg; services.
 {: shortdesc}
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
@@ -37,6 +37,9 @@ The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` 
 
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
+
+<!-- When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63k in size.
+{: note} -->
 
 ## Setting up full Linux subscription
 {: #setup-full-Linux}
