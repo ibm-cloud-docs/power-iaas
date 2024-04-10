@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-21"
+lastupdated: "2024-04-05"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -44,9 +44,6 @@ For example, consider a CIDR - `192.168.100.14/24` that explains the following:
 - IPv4 address - `192.168.100.14`
 - Associated routing prefix - `192.168.100.0` 
 - Subnet mask - `255.255.255.0` that has 24 leading 1 bits.
-
-The first IP address is always reserved for the gateway in all data centers. The second and third IP addresses are reserved for gateway high-availability (HA) only in the `WDC04` co-located (colo) data center. The subnet address and subnet broadcast address are reserved in both colos.
-{: important}
 
 To create a new subnet, complete the following steps:
 

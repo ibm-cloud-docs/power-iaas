@@ -36,14 +36,14 @@ Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; 
 
 Learn about migration strategies that are specific to IBM i systems.
 
-Recent IBM i migration enhancements: 
-1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape  
-2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}. 
+Recent IBM i migration enhancements:
+1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape
+2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}.
 
 ### Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).  
+BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).
 
 The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
@@ -106,6 +106,8 @@ Some alternative AIX migration strategies include:
 
 For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
 
+<!--
+Sandhya: AIX 7.1 end of life April 2023. Per Carl's suggestion have commented this text
 ### Migrating from AIX 7.1 to higher versions
 {: #migration-aix-versions}
 
@@ -117,7 +119,7 @@ To migrate your resources from AIX 7.1 to higher AIX versions within {{site.data
 4. Define the AIX 7.1 VM as a NIM client.
 5. Perform the installation for NIM migration.
 
-For more information on creating and defining a NIM master, setting an LPP source and spot, see [Migrating from AIX 7.1](https://cloud.ibm.com/media/docs/downloads/power-iaas/Migration_from_AIX7_1.pdf){: external}.
+For more information on creating and defining a NIM master, setting an LPP source and spot, see [Migrating from AIX 7.1](https://cloud.ibm.com/media/docs/downloads/power-iaas/Migration_from_AIX7_1.pdf){: external}.-->
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -196,7 +198,7 @@ Customers can use third-party tools to perform data migration. The following thi
 ### FalconStor StorSafe VTL
 {: storsafe-vtl}
 
-StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR). 
+StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR).
 
 StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both on-premises and in the cloud, as well as enable simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled. Here are some of the features of StorSafe VTL:
 
@@ -205,14 +207,14 @@ StorSafe VTL is software that emulates physical tape drives and libraries to opt
 - The same tool for on-premises and cloud that enables both workload and tape migrations.
 - System and application data are deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
 - Replicated tapes land in Cloud Object Storage (COS) and can be used by the cloud VTL as a backup baseline without copying the data.
-- Migration uses existing backup processes and tools by using existing environment and knowledge. 
+- Migration uses existing backup processes and tools by using existing environment and knowledge.
 - Data replication can occur over time as part of the backups with final sync replication completed fast during regular backup windows.
 - FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost COS storage for its repository.
 
 #### Migrating an IBM i system
 {: mig-storsafe-ibmi}
 
-See the video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}. 
+See the video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}.
 
 <!-- ![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen} -->
 
@@ -221,7 +223,7 @@ You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/c
 #### FalconStor StorSafe VTL for Cloud
 {: storsafe-cloud}
 
-FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from IBM catalogue with one click. 
+FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from IBM catalogue with one click.
 
 #### FalconStor StorSafe VTL for On-Premises
 {: storsafe-onprem}
@@ -234,7 +236,7 @@ FalconStor StorSafe VTL for on-premises provides flexible deployment options for
 #### Migration Services
 {: mig-services}
 
-Services to help migration are available from IBM, FalconStor, and Authorized Migration Partners. Reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com). 
+Services to help migration are available from IBM, FalconStor, and Authorized Migration Partners. Reach out if you would like more information about using migration services or becoming a FalconStor Migration Partner at [PowerVSMigration@falconstor.com](mailto:PowerVSMigration@falconstor.com).
 
 If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
 

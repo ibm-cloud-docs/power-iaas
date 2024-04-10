@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-04-01"
+lastupdated: "2024-04-03"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -196,28 +196,25 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 
 | Data centers | PER available |
 |-----|-----|
-| `CHE01` | X |
-| `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
-| `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL10` | ![Checkmark icon](./images/checkmark.svg) | 
+| `CHE01` |   X |
+| `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL13` | X | 
+| `DAL13` |   X |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON06` | X |
+| `LON06` | ![Checkmark icon](./images/checkmark.svg)|
 | `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD04` | ![Checkmark icon](./images/checkmark.svg) |
 | `OSA21` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO01` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO04` | ![Checkmark icon](./images/checkmark.svg) |
-| `SYD04` | X|
+| `SYD04` |   X |
 | `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
-| `TOR01` | X |
-| `WDC04` | X |
+| `TOR01` |   X |
+| `WDC04` |   X |
 | `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the service. The column headers indentify where that service is located. To understand where a service is located in the table, navigate to the row, and find the for the location you are interested in."}
