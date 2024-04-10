@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-04-10"
 
 keywords: creating ssh key, power private cloud as a service, ppcaas, before you begin, terminology, video, how-to
 
@@ -33,44 +33,44 @@ You can use the `ssh-keygen` tool to generate SSH keys. To generate an SSH key, 
 1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the `Manager` service access role, can generate SSH keys. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 2. Run the `ssh-keygen` command in your on-premises workstation. The following example generates a standard 2048-bit RSA key. The command prompts you for the location to store the key (default is $HOME/.ssh/) as well as a passphrase to secure the SSH key.
 
-```text
-root@bck2:/etc# ssh-keygen 
-Generating public/private rsa key pair.
-Enter file in which to save the key (/root/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /root/.ssh/id_rsa.
-Your public key has been saved in /root/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx root@bck2.example.com
-The key's randomart image is:
-+---[RSA 2048]----+
-|.  oo*%=+o..     |
-|.++.oX+=. .      |
-|..+ooo=. .       |
-|   E.+. .o.      |
-|    +   S..+     |
-|     . +. =      |
-|      o  = o     |
-|      .o+ +      |
-|       +o.       |
-+----[SHA256]-----+
+  ```text
+  root@bck2:/etc# ssh-keygen 
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/root/.ssh/id_rsa):
+  Enter passphrase (empty for no passphrase):
+  Enter same passphrase again:
+  Your identification has been saved in /root/.ssh/id_rsa.
+  Your public key has been saved in /root/.ssh/id_rsa.pub.
+  The key fingerprint is:
+  SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx root@bck2.example.com
+  The key's randomart image is:
+  +---[RSA 2048]----+
+  |.  oo*%=+o..     |
+  |.++.oX+=. .      |
+  |..+ooo=. .       |
+  |   E.+. .o.      |
+  |    +   S..+     |
+  |     . +. =      |
+  |      o  = o     |
+  |      .o+ +      |
+  |       +o.       |
+  +----[SHA256]-----+
 ```
 The `ssh-keygen` command in the example generates two keys in the ~/.ssh directory:
 
 ```text
-$ ls ~/.ssh
-id_rsa
-id_rsa.pub
+  $ ls ~/.ssh
+  id_rsa
+  id_rsa.pub
 ```
 The id_rsa.pub file is the SSH public key file.
 
-3. Go to the Stratos for Power dashboard and click **SSH keys** in the navigation pane.
+3. Go to the {{site.data.keyword.powerSys_notm}} dashboard in IBM Cloud and click **SSH keys** in the navigation pane.
 4. Click **Create SSH key**.
 5. Specify a name in the **Key name** field and fill in the contents of your public key file in the **Public key** text box.
 6. Click **Add SSH key**.
 
-To add an SSH public key to the Stratos for Power configuration by using CLI, use the `ibmcloud pi key-create` command. 
+To add an SSH public key to the {{site.data.keyword.powerSys_notm}} workspace configuration by using CLI, use the `ibmcloud pi key-create` command. 
 When you create a virtual server instance, you can connect to the instance over SSH by using the IP address of the instance. For example: 
 
 ```text
