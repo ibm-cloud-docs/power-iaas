@@ -26,5 +26,3 @@ For details on deploying Oracle RAC, download the [Oracle RAC implementation on 
 If you are interested in the automation of deployment and management of Oracle RAC and Oracle database, refer to pages 190 to 213 in the [Using Ansible for Automation in IBM Power Environments Redbook](https://www.redbooks.ibm.com/redpieces/pdfs/sg248551.pdf) and watch this video on [Automating Oracle and AIX Installation with Ansible Tools](https://ibm.biz/Automating_Oracle_and_AIX_with_Ansible).
 
 To implement Oracle Data Guard on {{site.data.keyword.powerSys_notm}} instances that are hosted in different data centers, see [Oracle Disaster Recovery on IBM Power Virtual Server](https://www.ibm.com/downloads/cas/LOEM24KA).
-
-## Migrating your Oracle database
