@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-02-23"
+lastupdated: "2024-10-04"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -35,22 +35,6 @@ The scope of the GRS service is to create and manage replicated resources that i
 {: #additional-info-GRS}
 
 If you need a more detailed information on Gobal Replication Service, see [Global Replication Services Solution using IBM Power Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
-
-## Locations that support global replication service
-{: #locations-GRS}
-
-You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
-
-The following table shows the data centers that supports replication and their corresponding pool level detail:
-| Site 1 |  Site 2 |
-|--------|---------|
-| `MAD02`| `FRA04` |
-| `MAD04`| `FRA05` |
-| `WDC04`| `DAL13` |
-| `WDC06`| `DAL12` |
-| `WDC07`| `DAL10` |
-{: class="simple-table"}
-{: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
 ## Pricing for Global replication service
 {: #pricing-GRS}
@@ -84,6 +68,22 @@ The following table explains how to determine the primary and secondary site bas
 |Site 2|Site 2|Site 1|
 {: class="simple-table"}
 {: caption="Table 2. Primary and secondary site reference based on volume creation" caption-side="bottom"}
+
+## Locations that support global replication service
+{: #locations-GRS}
+
+You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
+
+The following table shows the data centers that supports replication and their corresponding pool level detail:
+| Site 1 |  Site 2 |
+|--------|---------|
+| `MAD02`| `FRA04` |
+| `MAD04`| `FRA05` |
+| `WDC04`| `DAL13` |
+| `WDC06`| `DAL12` |
+| `WDC07`| `DAL10` |
+{: class="simple-table"}
+{: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
 ## Preparation for disaster recovery
 {: #dr-prep}
