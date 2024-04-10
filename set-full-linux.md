@@ -38,8 +38,8 @@ The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` 
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
-When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63k in size.
-{: note}
+<!-- When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63k in size.
+{: note} -->
 
 ## Setting up full Linux subscription
 {: #setup-full-Linux}
