@@ -58,9 +58,7 @@ For information on end of service pack support (EoSPS) dates, see [AIX support l
 AIX stock images currently available when you create a VM are:
 
 * AIX 7.3 TL2
-* AIX 7.3 TL1 SP2
 * AIX 7.2 TL5 SP7
-* AIX 7.2 TL5 SP6
 
 **IBM i** - {{site.data.keyword.powerSys_notm}} supports IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
@@ -72,11 +70,15 @@ IBM i stock images currently available when you create a VM are:
 
 * IBM i COR [^1]
 * IBM i 7.5 TR3
-* IBM i 7.5 TR2
 * IBM i 7.4 TR9
-* IBM i 7.4 TR8
+* IBM i 7.3 TR13
+* IBM i 7.2 TR9
+* IBM i 7.1 TR11 [^2]
+ 
+[^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}. 
+[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available.
+
 
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 
@@ -97,8 +99,8 @@ Red Hat
 
 SUSE
 * SLES 15 SP5 general purpose (SLES15-SP5) 
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^3]
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^4]
 * SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
@@ -107,8 +109,8 @@ SUSE
 * SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
 * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 
-[^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^3]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^4]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
 The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
 {: note}
