@@ -91,10 +91,10 @@ It is recommended that you create a direct cloud connection between the VPC and 
 {: note}
 
 ### Architecture diagram
-{: arc-diag-vpcvpn}
+{: #arc-diag-vpcvpn}
 
 ### Configuring VPC VPN in a PER workspace
-{: arch-per}
+{: #arch-per}
 
 ![VPC VPN in PER architecture diagram](./images/vpc_vpn_per.svg "Configuring VPC VPN in a PER workspace"){: caption="Figure 1. Configuring VPC VPN in a PER workspace" caption-side="bottom"}
 
@@ -102,7 +102,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 2. Define a routing table with Transit Gateway and VPN gateway.
 
 ### Configuring VPC VPN in a non-PER workspace
-{: arch-nonper}
+{: #arch-nonper}
 
 ![VPC VPN in non-PER architecture diagram](./images/vpc_vpn_legacy.svg "Configuring VPC VPN in a non-PER workspace"){: caption="Figure 1. Configuring VPC VPN in a non-PER workspace" caption-side="bottom"}
 
@@ -125,7 +125,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
    - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 ### Considerations
-{: vpcvpn-cons}
+{: #vpcvpn-cons}
 
 1. The VPN connection that is used in all the configurations are policy-based VPN.
 2. Subnets that are created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of On-premises VPC.
@@ -134,6 +134,6 @@ It is recommended that you create a direct cloud connection between the VPC and 
 
 
 ### Additional information
-{: vpcvpn-add-info}
+{: #vpcvpn-add-info}
 
 - [Connecting IBM VPC to IBM {{site.data.keyword.powerSys_notm}}s and IBM Cloud Object Storage](https://www.ibm.com/blog/connecting-ibm-vpc-to-ibm-power-virtual-servers-and-ibm-cloud-object-storage/){: external}.

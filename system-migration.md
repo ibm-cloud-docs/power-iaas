@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-11-09"
+lastupdated: "2024-04-17"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -31,7 +31,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and Power processor family can help determine which migration path to follow.
 
-IBM i customers must use IBM i 7.1, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+IBM i customers must use IBM i 7.2, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 ## Migration checklist
 {: #migration-checklist}
