@@ -31,6 +31,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - Power Edge Router (PER) is now available in the `LON06` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 for SAP and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+- Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+
+[^2]: This update is in reference to the service extension update in the [March 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
 
 ## March 2024
 {: #mar-2024}
@@ -143,7 +146,9 @@ The data center where you can monitor your platform metrics currently are `WDC06
 
 - IBM {{site.data.keyword.powerSys_notm}} now supports two new data centers `WDC07` (Washington DC) and `SAO04` (São Paulo).
 - IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
-- Effective 1 May 2023, AIX 7.1 on {{site.data.keyword.powerSys_notm}} is covered for software support. In {{site.data.keyword.powerSys_notm}}, starting March 2024, Service Extension pricing is automatically added to the AIX charge for AIX 7.1 usage. AIX 7.1 Service Extension was announced on January 24, 2023. For more information see, [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+- Effective 1 May 2023, AIX 7.1 on {{site.data.keyword.powerSys_notm}} is covered for software support. In {{site.data.keyword.powerSys_notm}}, starting March 2024[^1], Service Extension pricing is automatically added to the AIX charge for AIX 7.1 usage. AIX 7.1 Service Extension was announced on January 24, 2023. For more information see, [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+
+[^1]: Please see the update in the [April 2024](/docs/power-iaas?topic=power-iaas-release-notes#apr-2024) release note section.
 
 ## March 2023
 {: #mar-2023}
