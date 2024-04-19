@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-19"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -77,7 +77,7 @@ IBM i stock images currently available when you create a VM are:
  
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available.
+[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
 
 
 **Linux** - {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are currently available when you select Full Linux Subscription (learn more about [Full Linux Subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
