@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-07"
+lastupdated: "2024-04-22"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -85,6 +85,7 @@ Where ** is the country code of your DC based on the following table:
 | Madrid	| Spain	| ES |
 | Sydney	| Australia |	 AU |
 | Tokyo & Osaka |	Japan | JP |
+| Chennai | India | IN |
 {: caption="Table 1. POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
