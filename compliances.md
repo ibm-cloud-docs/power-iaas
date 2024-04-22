@@ -69,6 +69,6 @@ PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
 ## HIPAA
 {: #HIPAA-cert}
 
-The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. The {{site.data.keyword.powerSys_notm}} is now HIPPA compliant. For more information, see the [IBM Cloud® compliance: HIPAA](https://www.ibm.com/cloud/compliance/hipaa){: external}
+The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. {{site.data.keyword.powerSys_notm}} on IBM Cloud is HIPPA-ready. For more information, see the [IBM Cloud® compliance: HIPAA](https://www.ibm.com/cloud/compliance/hipaa){: external}
 
 If you or your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. By using this setting, you can filter on HIPAA Enabled services in the catalog, indicate to IBM that your account stores protected health information (PHI), and digitally accept the IBM Business Associate Addendum for covered entities. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa).

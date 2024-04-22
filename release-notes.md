@@ -32,6 +32,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Power Edge Router (PER) is now available in the `LON06` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 for SAP and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 - AIX 7.1 support will continue to be charged at standard usage rates[^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+- {{site.data.keyword.powerSys_notm}} on IBM Cloud is now HIPPA-ready. See the [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#HIPAA-cert) for more details.
   
 <!-- - Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}. -->
 
