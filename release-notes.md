@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-19"
+lastupdated: "2024-04-22"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -31,7 +31,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - Power Edge Router (PER) is now available in the `LON06` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 for SAP and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
-- Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+- AIX 7.1 support will continue to be charged at standard usage rates[^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+  
+<!-- - Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}. -->
 
 [^2]: This update is in reference to the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
 
