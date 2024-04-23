@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-07"
+lastupdated: "2024-04-22"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -63,15 +63,13 @@ You can access the SUMA configuration by running the [suma command](https://www.
 Before you run the `suma` command to download any update, make sure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
 
 To make the LPAR aware in which data center it is running, run the following command:
+```bash
+echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
 ```
-#echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
-```
-{: codeblock}
 
+```bash
+export SUMA_COUNTRY_CODE=**
 ```
-#export SUMA_COUNTRY_CODE=**
-```
-{: codeblock}
 
 Where ** is the country code of your DC based on the following table:
 
@@ -85,13 +83,13 @@ Where ** is the country code of your DC based on the following table:
 | Madrid	| Spain	| ES |
 | Sydney	| Australia |	 AU |
 | Tokyo & Osaka |	Japan | JP |
+| Chennai | India | IN |
 {: caption="Table 1. POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
-```
+```bash
 suma -x -a Action=Preview -a RqType=Latest
 ```
-{: codeblock}
 
 The `suma` command allows you to preview only the download operation. When you run this command, files are not downloaded. If the LPAR is not authenticated to access the internet, the command returns an error message. For information on troubleshooting SUMA error messages, see [Troubleshooting SUMA error messages](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html#serv_update_mgt__section_troubleshoot_suma){: external}.
 
@@ -109,7 +107,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
 
     Configuring proxy settings:
 
-    ```
+    ```screen
     Type or select values in entry fields.
     Press Enter AFTER making all desired changes.
                                                                [Entry Fields]
@@ -134,7 +132,7 @@ For the **Fixserver protocol** field, *https* is the only option. For the **Down
 
 Base configuration SMIT:
 
-```
+```screen
                      Base Configuration
 
 Type or select values in entry fields.
@@ -216,4 +214,3 @@ For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/suppo
 {: #ibmi-network-server}
 
 Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.
-
