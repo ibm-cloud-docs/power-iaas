@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-19"
+lastupdated: "2024-04-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -84,10 +84,10 @@ IBM i stock images currently available when you create a VM are:
 
 Red Hat
 
-* RHEL 9.2 general purpose (RHEL9-SP2)
+* RHEL 9.2 general purpose (RHEL9-SP2) [new]{: tag-new}
 * RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new}
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new}
-* RHEL 8.8 general purpose (RHEL8-SP8)
+* RHEL 8.8 general purpose (RHEL8-SP8) [new]{: tag-new}
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new}
 * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new}
 * RHEL 8.6 general purpose (RHEL8-SP6)
