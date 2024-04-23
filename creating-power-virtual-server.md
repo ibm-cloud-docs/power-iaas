@@ -126,7 +126,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
     All volumes created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
     {: note}
 
-    When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63 Kb in size.
+    When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63 Kb in size. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
     {: note}
     
 10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
