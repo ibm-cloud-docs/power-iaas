@@ -32,7 +32,7 @@ Install the following program temporary fixes (PTFs) depending on the version of
 
 For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}. If using an IBM i custom image, these PTFs must be installed and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}. An overview of IBM i fix concepts and terms is found at [Fixes concepts and terms](https://www.ibm.com/docs/en/i/7.4?topic=fixes-concepts-terms){: external}.
 
-To learn more about the options available for performing IBM i operating system upgrades, see [Performing IBM i Upgrades on Power Virtual Servers](https://www.ibm.com/support/pages/performing-ibm-i-upgrades-power-virtual-servers){: external}.
+To learn more about the options available to perform IBM i operating system upgrades, see [Performing IBM i Upgrades on Power Virtual Servers](https://www.ibm.com/support/pages/performing-ibm-i-upgrades-power-virtual-servers){: external}.
 {: important}
 
 ## Required PTFs for iSCSI Virtual Tape Library (VTL)

@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs. To share virtual optical images through a network, the network installation server must meet the requirements documented in the subsequent sections.
 
-To learn more about the options available for performing IBM i operating system upgrades, see [Performing IBM i Upgrades on Power Virtual Servers](https://www.ibm.com/support/pages/performing-ibm-i-upgrades-power-virtual-servers){: external}.
+To learn more about the options available to perform IBM i operating system upgrades, see [Performing IBM i Upgrades on Power Virtual Servers](https://www.ibm.com/support/pages/performing-ibm-i-upgrades-power-virtual-servers){: external}.
 {: important}
 
 ## Configuration
