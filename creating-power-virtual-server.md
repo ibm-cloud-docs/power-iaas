@@ -93,9 +93,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image, you must also select the storage type (tier) and the storage pool selection. 
-   
-    You can select a For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
+7. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image, you must also select the storage type (tier) and the storage pool selection. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
@@ -127,9 +125,6 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-i
     {: note}
     
 10. Finally, define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
-<!-- 
-    When you choose to provide a specific IP address, make sure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
-    {: important} -->
     
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display information about all of the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
