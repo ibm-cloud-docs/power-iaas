@@ -22,7 +22,7 @@ subcollection: power-iaas
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
 
-# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}}s
+# Full Linux&reg; subscription for {{site.data.keyword.powerSysFull}}s
 {: #set-full-Linux}
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM Cloud&reg; services.
@@ -279,3 +279,15 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
       `Could not register with SLES RMT servers, Please verify connection to the proxy server. If proxy is verified, it may be an issue with SLES RMT servers undergoing maintenance. If so, please try executing the command again within a few minutes`
 
       Then it could be a network issue and you should attempt to register again at a later time.
+
+## Passing user-defined scripts
+{: #cloud-init-fls}
+
+When you select a full Linux subscription boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime. 
+
+In the user data  you can pass the custom content that allows you to customize the operating system for the specific instance.
+
+The user data that you pass should follow the following conditions:
+-  It should be uncompressed.
+-  It should start with `#cloud-config`. 
+-  It should not exceed 63 Kb in size.
