@@ -107,8 +107,6 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibm-os-versions}
 
-[On Cloud]{: tag-blue}
-
 {{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.1, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
@@ -117,21 +115,18 @@ If you are using IBM i 6.1, you must first upgrade the OS to a current support l
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-IBM i stock images currently available when you create a virtual machine are:
+IBM i stock images currently available when you create a VM are:
 
 * IBM i COR [^1]
 * IBM i 7.5 TR3
-* IBM i 7.5 TR2
 * IBM i 7.4 TR9
-* IBM i 7.4 TR8
-* IBM i 7.3 TR13 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
-* IBM i 7.2 TR13 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
-* IBM i 7.1 TR13 (end of support and are in service extension. Therefore, additional Service Extension fees apply)
-
+* IBM i 7.3 TR13
+* IBM i 7.2 TR9
+* IBM i 7.1 TR11 [^2]
+ 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[Private Cloud]{: tag-red}IBM i is not supported for private cloud.
-{: note}
+[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
 
 ### Linux
 {: #linux-os-versions}
