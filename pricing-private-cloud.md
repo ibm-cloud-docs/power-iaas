@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 - Snapshots: Snapshots (in GB) are metered.
 
-For more information about billing for operating systems, see [Operating systems](/docs/allowlist/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
+For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
 In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might be different from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances, based on the discounts and promotion codes.
 
@@ -50,7 +50,7 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a <!--virtual server instance--> virtual machine during the middle of the month, the monthly bill for the <!--virtual server instance--> virtual machine reflects the resource change and the <!--virtual server instance--> virtual machine price that is prorated per hour.
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance that has one core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
@@ -160,7 +160,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Currently, Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/allowlist/power-iaas?topic=power-iaas-full-linux-sub). If you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you bring your own license, it is not metered or billed.
+Currently, Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). If you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you bring your own license, it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space used to store the stock image. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, you can select the virtual machine and delete it when it is not needed.
 
@@ -181,7 +181,7 @@ You can choose the one of the following core types for your workload:
 
 Different scenarios provide different benefits when you use each type of virtual processor cores.
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 In the following example, assume that the cost of different types of virtual processor cores is same within each type of system they belong to.
@@ -325,7 +325,7 @@ Total billable storage = 595 GB
 
 * Deployed virtual machine boot volumes: 200GB
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 ## End of billing
@@ -344,7 +344,7 @@ Review the following frequently asked questions about pricing:
 ### Where do I find cost estimates for {{site.data.keyword.powerSys_notm}} offerings?
 {: #cost-estimates}
 
-   You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
+   You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 
 ### Is there any initial one-time payment before the pod infrastructure is installed in the client private cloud data center?
 {: #initial-one-time-payment}

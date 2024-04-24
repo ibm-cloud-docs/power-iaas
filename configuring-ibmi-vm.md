@@ -56,9 +56,9 @@ To open the IBM i console, complete the following steps:
 ## Licenses and configuring your network
 {: #license-network}
 
-After deploying an IBM i VM, sign on after changing the QSECOFR password, accept the license agreements, then install the [minimum program temporary fix (PTFs) levels](/docs/allowlist/power-iaas?topic=power-iaas-minimum-levels) if needed.
+After deploying an IBM i VM, sign on after changing the QSECOFR password, accept the license agreements, then install the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels) if needed.
 
-To accept the license agreements from the console, press **5** on each license agreement to display them. Click **PF14** to accept each agreement. After accepting the license agreements, press **PF3** and wait until cloud-init configures the network and injects the license keys.  Confirm the system has the [minimum program temporary fix (PTFs) levels](/docs/allowlist/power-iaas?topic=power-iaas-minimum-levels).
+To accept the license agreements from the console, press **5** on each license agreement to display them. Click **PF14** to accept each agreement. After accepting the license agreements, press **PF3** and wait until cloud-init configures the network and injects the license keys.  Confirm the system has the [minimum program temporary fix (PTFs) levels](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 The `cloud-init` configuration process can take up to 5 minutes. **Do not restart your system** while `cloud-init` is running. If you restart your system during this time, you must call IBM support to manually configure your network and license keys.
 {: important}

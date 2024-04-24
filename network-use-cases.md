@@ -49,7 +49,7 @@ With this use case, you can establish a private network that allows communicatio
 
 A virtual machine within a pod downloads and deploys software from the internet.
 
-You can specify the outbound-only network type when you define network requirements before pod installation. For more information, see [Network requirement](/docs/allowlist/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). After pod installation, you can configure the outbound-only network type by using Support Center ticketing system. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+You can specify the outbound-only network type when you define network requirements before pod installation. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). After pod installation, you can configure the outbound-only network type by using Support Center ticketing system. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 Figure 2 describes the outbound-only type of network setup.
 ![Outbound-only network type](./figures/outbound-ext-conn-dnat.png "Outbound-only network type"){: caption="Figure 2. Outbound-only network type" caption-side="bottom"}
@@ -95,7 +95,7 @@ With this use case, you can establish a network between a virtual machine in the
 
 Connect the virtual machine in the pod to a proxy network in the corporate network environment. Connect the proxy network to the Red Hat Satellite server on IBM Cloud by using either Direct Link or VPN connection. The virtual machine in the pod can access the Linux&reg; satellite server to retrieve software fixes and other artifacts.
 
-The network connectivity for full Linux subscription can be established by providing the network requirements before installing the pod. For more information, see [Network requirement](/docs/allowlist/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). Once the pod is installed, you can configure the network connectivity for full Linux subscription by using the Support Center ticketing system. For more information about full Linux subscription, see [Full Linux subscription for Power Virtual Server private cloud](/docs/allowlist/power-iaas?topic=power-iaas-full-linux-sub). For more information about contacting the Support Center, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+The network connectivity for full Linux subscription can be established by providing the network requirements before installing the pod. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). Once the pod is installed, you can configure the network connectivity for full Linux subscription by using the Support Center ticketing system. For more information about full Linux subscription, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). For more information about contacting the Support Center, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 Figure 6 describes the network connectivity between a virtual machine and a Red Hat Satellite server on IBM Cloud setup.
 

@@ -21,8 +21,8 @@ You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ib
 
 If you'd like to download fixes and updates, you must perform one of the following:
 
-- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/allowlist/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
-- Set up another VM as an AIX [NIM server](/docs/allowlist/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
+- Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
 - Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-aix-proxy).
 
 ## Ordering fixes and updates for AIX VMs
@@ -206,4 +206,4 @@ For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/suppo
 ### Setting up an IBM i network install server
 {: #ibmi-network-server}
 
-Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/allowlist/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.
+Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.

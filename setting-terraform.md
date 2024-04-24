@@ -27,7 +27,7 @@ Looking for a managed Terraform on IBM Cloud solution? Try out [IBM Cloud Schema
 
 Before you can create an authorization by using Terraform, make sure that you have completed the following prerequisites:
 
-- Make sure that you have the [required access](/docs/allowlist/power-iaas?topic=power-iaas-managing-resources-and-users) to create and work with the {{site.data.keyword.powerSys_notm}} resources.
+- Make sure that you have the [required access](/docs/power-iaas?topic=power-iaas-managing-resources-and-users) to create and work with the {{site.data.keyword.powerSys_notm}} resources.
 - Install the Terraform CLI and configure the IBM Cloud Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the IBM Cloud APIs that are used to complete this task.
 - Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 

@@ -76,4 +76,4 @@ For example, `cp /usr/lpp/bosinst/bos.vendor.profile  /usr/sys/inst.images/insta
     bos.sysmgt.nim.master   7.2.3.17        USR             APPLY           SUCCESS
     ```
 
-For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support).
+For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

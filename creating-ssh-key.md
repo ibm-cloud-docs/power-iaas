@@ -45,7 +45,7 @@ You can set up one or more SSH keys for root login when you create virtual serve
 
 You can use the `ssh-keygen` tool to generate SSH keys. To generate an SSH key, complete the following steps:
 
-1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the Manage Users classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/allowlist/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
+1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the Manage Users classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 
 2. Run the `ssh-keygen` command in your private cloud workstation. The following example generates a standard 2048-bit RSA key. The command prompts you for the location to store the key (default is $HOME/.ssh/) as well as a passphrase to secure the SSH key.
 
@@ -123,7 +123,7 @@ You can create an AIX VM instance with a configured SSH key by using the {{site.
 
 You must [generate a public SSH key](#creating-ssh-key) before you can create an AIX VM with a configured SSH key.
 
-1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/allowlist/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
+1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 
 2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm}} user interface.
 

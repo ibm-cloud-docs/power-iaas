@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Getting Help and Support
 {: #getting-help-and-support}
 
-Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/allowlist/power-iaas?topic=power-iaas-faq) and [Getting support](/docs/get-support?topic=get-support-using-avatar&interface=ui).
+Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-faq) and [Getting support](/docs/get-support?topic=get-support-using-avatar&interface=ui).
 {: shortdesc}
 
 ## PowerVS infrastructure cases

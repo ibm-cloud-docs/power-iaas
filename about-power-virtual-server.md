@@ -156,9 +156,9 @@ For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 10
 The entire network subsystem can be divided into the following parts:
 
 * **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your private cloud data center during the initial deployment.
-* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually using different network use cases. For more information, see [Network use cases](/docs/allowlist/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your private cloud data center and other IBM Cloud services, you must manually set up the network configuration.
+* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your private cloud data center and other IBM Cloud services, you must manually set up the network configuration.
 
-For more information, see [Network overview](/docs/allowlist/power-iaas?topic=power-iaas-network-private-cloud).
+For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
 
 ## On cloud architecture
 {: #on-cloud-architecture}
@@ -193,9 +193,9 @@ The following are some of the key features for the {{site.data.keyword.powerSys_
 #### Straightforward billing
 {: #straightforward-billing-on-cloud}
 
-{{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX, IBM i, or Linux operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+{{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX, IBM i, or Linux operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
-Bring your own Linux image (OVA format) and subscription. SLES and RHEL OVA images are supported. For more information, see [Using SLES within the {{site.data.keyword.powerSys_notm}}](/docs/allowlist/power-iaas?topic=power-iaas-using-linux).
+Bring your own Linux image (OVA format) and subscription. SLES and RHEL OVA images are supported. For more information, see [Using SLES within the {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-using-linux).
 {: note}
 
 #### Infrastructure customization
@@ -212,12 +212,12 @@ You can configure and customize the following options when you create a {{site.d
 #### Bring your own image
 {: #bring-own-image}
 
-IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/allowlist/power-iaas?topic=power-iaas-using-linux) custom AIX, IBM i, or Linux image that is tested and deployed.
+IBM provides you with stock AIX and IBM i images when you create a {{site.data.keyword.powerSys_notm}}. However, you can always [bring your own](/docs/power-iaas?topic=power-iaas-using-linux) custom AIX, IBM i, or Linux image that is tested and deployed.
 
 #### Support for SAP NetWeaver or SAP HANA applications
 {: #support-SAPNetWeaver-or-SAPHANA}
 
-When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For more information about supported operating system versions, see [FAQ](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs). For more information, see [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-vs-set-up-infrastructure){: external}.
+When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For more information about supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs). For more information, see [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-vs-set-up-infrastructure){: external}.
 
 When you provision a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads.
 {: note}
@@ -237,7 +237,7 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - IBM Power E1080 (9080-HEX)
 - IBM Power S1022 (9105-22A).
 
-For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/allowlist/power-iaas?topic=power-iaas-about-power-iaas#data-sheets) and the hardware overview table.
+For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-power-iaas#data-sheets) and the hardware overview table.
 
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
@@ -290,7 +290,7 @@ You can compare the performance of your current environment with the environment
 {: #hw-spec-4}
 {: tab-title="Non-US"}
 
-For a complete list of supported data centers, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+For a complete list of supported data centers, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
 
 ### Storage tiers
@@ -406,5 +406,5 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-For more information about the different options for configuring a private network, see [Configure a private network](/docs/allowlist/power-iaas?topic=power-iaas-configuring-subnet).
+For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}

@@ -48,7 +48,7 @@ You cannot assign the subnet that has already been assigned to another virtual m
 7. You must provide the **DNS server** value.
     A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during startup. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
-8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
+8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
 9.  Click **Create subnet**.
 
@@ -91,12 +91,12 @@ To add an IP address into the reserved IP address list, perform the following st
 {: #networking-considerations}
 
 You can establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances with any one of the following four approaches:
-1.	Use a PER enabled workspace. See, [Getting started with PER](/docs/allowlist/power-iaas?topic=power-iaas-per).
+1.	Use a PER enabled workspace. See, [Getting started with PER](/docs/power-iaas?topic=power-iaas-per).
 2.	Create and attach the subnet to a cloud connection and transit gateway.
-3.	Setup routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
-4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/allowlist/power-iaas?topic=power-iaas-VPN-connections).
+3.	Setup routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
+4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
-In case you are not using none of the four approaches, open a [support ticket](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
+In case you are not using none of the four approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
 
 
 For example, if you add a subnet `172.10.10.0/24` from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet without the use of the other methods listed above, you must open a support ticket and provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface.
@@ -109,7 +109,7 @@ For example, if you add a subnet `172.10.10.0/24` from user interface, and if th
 <!-- You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration. -->
 
 <!-- When you have cloud connections or VPNaaS configured, you can create private networks automatically by attaching private network subnet to cloud connections.
-This establishes communication between virtual servers instances on the same private subnet in a {{site.data.keyword.BluDirectLink}} workspace. However, when you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances that are not in the same private network, you must open a [support ticket](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network configuration. -->
+This establishes communication between virtual servers instances on the same private subnet in a {{site.data.keyword.BluDirectLink}} workspace. However, when you need a private network communication between the two {{site.data.keyword.powerSys_notm}} instances that are not in the same private network, you must open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) against {{site.data.keyword.powerSys_notm}} to configure such private network configuration. -->
 
 <!-- If your private subnets are routed over a Direct Link, you must also make sure that your {{site.data.keyword.powerSys_notm}} has a route to the {{site.data.keyword.cloud_notm}}. The default route might not be set up to route traffic to {{site.data.keyword.cloud_notm}} subnets, which are typically of the form, *10.xx.xx.xx*. Similarly, {{site.data.keyword.cloud_notm}} network-based x86 virtual switch interfaces (VSI) and other hosts might require an IP route to connect to a {{site.data.keyword.powerSys_notm}}.
 
@@ -124,7 +124,7 @@ For more information, see tutorial on [{{site.data.keyword.powerSysFull}} integr
 
 You must not use an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet. The instances that are attached to that subnet might not be able to reach parts of the public internet.
 
-If you are using an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet you must use IANA assigned IPs and GRE tunneling. For more information see [Generic Routing Encapsulation (GRE) tunneling](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel). PowerVS assigns IPs as Internal IP from the prefix 192.168.0.0/16 to your accounts for Public Network access. Once a public subnet is assigned, you cannot use those IPs for private networks.
+If you are using an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet you must use IANA assigned IPs and GRE tunneling. For more information see [Generic Routing Encapsulation (GRE) tunneling](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel). PowerVS assigns IPs as Internal IP from the prefix 192.168.0.0/16 to your accounts for Public Network access. Once a public subnet is assigned, you cannot use those IPs for private networks.
 
 The following networks are filtered out and are not accepted: 10.0.0.0/14, 10.200.0.0/14, 10.198.0.0/15, and 10.254.0.0/16.
 {: note}

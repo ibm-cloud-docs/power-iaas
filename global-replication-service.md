@@ -92,7 +92,7 @@ The following table shows the data centers that supports replication and their c
 ## Preparation for disaster recovery
 {: #dr-prep}
 
-When you have the virtual server instances with data volume running workloads, you can ensure that your data volumes are replicated and can be recovered from the remote site, in case of failure by performing [actions on primary site](/docs/allowlist/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site) and [secondary site](/docs/allowlist/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site).
+When you have the virtual server instances with data volume running workloads, you can ensure that your data volumes are replicated and can be recovered from the remote site, in case of failure by performing [actions on primary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site) and [secondary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site).
 
 ### Actions on the primary site
 {: #configure-primary-site}
@@ -100,7 +100,7 @@ When you have the virtual server instances with data volume running workloads, y
 To enable DR on the primary site, complete the following steps:
 1. Create a replication-enabled volume by providing `replicationEnabled` flag as `True` in the [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) request body.
 
-    To know more about the replication properties of a volume, see the [FAQ](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#convert-to-replication-vol)
+    To know more about the replication properties of a volume, see the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#convert-to-replication-vol)
 
 2. Create a virtual server instance with replication-enabled volumes by using {{site.data.keyword.powerSys_notm}} interface.
 
@@ -117,13 +117,13 @@ To enable DR on the primary site, complete the following steps:
 To enable DR on the secondary site, complete the following steps:
 1. Onboard the auxiliary volume by using the [onboard auxiliary volumes](/apidocs/power-cloud#pcloud-volume-onboarding-post) API.
 
-    For more information about onboarding operation, see [Onboarding auxiliary volumes](/docs/allowlist/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes).
+    For more information about onboarding operation, see [Onboarding auxiliary volumes](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes).
 
 2. Create a standby virtual server instance with onboarded auxiliary volumes.
 
     You can create a standby virtual server instance with onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
 
-Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/allowlist/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
+Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
 
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}

@@ -7,4 +7,4 @@ The Power Systems Virtual Servers are a form of infrastructure as a service (Iaa
 
 Use the Power Systems Virtual Server for a number of workload scenarios, including disaster recovery, development environments, and partial IT infrastructure moves. Power Systems Virtual Server clients can stay competitive with the scaling of their infrastructure and remain flexible with their workload management and capacity both on- and off-premise. And since the infrastructure layer is identical, system administrators who run on-premises AIX, IBM i (available for on-cloud), or Linux systems today can use their same tools, workflows, and enhancements in the cloud.
 
-For frequently asked questions, see [FAQ]{/docs/allowlist/power-iaas?topic=power-iaas-ppc-faqs}. Please contact Sandhya H.U. (sandhya.hombardi@ibm.com) or Mukesh Biswas (mukesh.biswas@ibm.com) for all content-related issues.
+For frequently asked questions, see [FAQ]{/docs/power-iaas?topic=power-iaas-ppc-faqs}. Please contact Sandhya H.U. (sandhya.hombardi@ibm.com) or Mukesh Biswas (mukesh.biswas@ibm.com) for all content-related issues.
