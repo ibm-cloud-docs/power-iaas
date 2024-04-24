@@ -1,9 +1,9 @@
-﻿---
+---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2023
 
-lastupdated: "2020-04-10"
+lastupdated: "2023-12-21"
 
 keywords: network interface, NIC, AIX VM, ifconfig command, detach, en0, rmdev, external IP address, smitty mktcpip, namerslv command
 
@@ -11,16 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:external: .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # How to add or remove a network interface from an AIX virtual machine (VM)
 {: #managing-network-interface}
@@ -76,4 +67,3 @@ To add a network interface (for example, *en0*) and point it to the new internal
 {: codeblock}
 
 If you'd like to manipulate domain name server (DNS) entries for local resolver routines in the system configuration database, see the [namerslv command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/n_commands/namerslv.html){: external}.
-

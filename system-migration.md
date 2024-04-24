@@ -3,30 +3,22 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-22"
 
-keywords: workload migration, power systems, hardware, migration checklist
+keywords: workload migration, power, hardware, migration checklist
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
-# Planning a workload migration to an IBM® Power® Systems
+# Planning a workload migration to an IBM® Power®
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) <!-- E1080 (9080-HEX) -->. For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+[On Cloud]{: tag-blue}
+
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) <!-- E1080 (9080-HEX) -->. For more information, see [Hardware specifications](/docs/allowlist/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud).
 {: shortdesc}
 
 For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and Power processor family can help determine which migration path to follow.
@@ -36,7 +28,7 @@ IBM i customers must use IBM i 7.2, or later. Clients running IBM i 6.1 must fir
 ## Migration checklist
 {: #migration-checklist}
 
-Before you migrate to a newer IBM Power System, review the following checklist:
+Before you migrate to a newer IBM Power, review the following checklist:
 
 - Plan the system migration.
 - Install the latest required software and apply the available fixes.
@@ -60,14 +52,14 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
 3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
 
-**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system. -->
+**IBM i V6R1, or later** - For an IBM i Power, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system. -->
 
 <!-- Obsolete Power 8 content -->
 
 ## Migrating to an IBM POWER9 system
 {: #power9-migration}
 
-Learn more about migrating workloads from your older IBM POWER System to a POWER9 System. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from your older IBM Power to a POWER9 System. Before you begin your migration, review the information in this section.
 
 Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
 {: tip}
@@ -79,7 +71,7 @@ To learn more about IBM POWER9 system performance and migration strategies, see 
 
 - [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
-- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+- [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
 ## Migrating to an IBM POWER10 system
 {: #power10-migration}
@@ -93,18 +85,18 @@ Learn more about migrating workloads from an existing IBM POWER system to a POWE
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
 | S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+{: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
+
 <!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
 
-{: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
 To learn more about IBM POWER10 system performance and migration strategies, see the following articles:
 
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
-- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external} 
+- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
 
-<!-- new power 10 content. p10 systems not enabled in DCs yet as of July 06, 23 -->
 ## Lab services
 {: #lab-services}
 

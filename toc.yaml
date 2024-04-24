@@ -13,80 +13,102 @@ toc:
     path: power-iaas
     label: Power Virtual Servers
 
+
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - getting-started.md
-      - release-notes.md
       - about-power-virtual-server.md
-      - cost-estimator.md
+      - pricing-private-cloud.md
       - pricing.md
+      - generating-estimate.md
       - ha-dr.md
-      - topicgroup: 
-              label: Backup and migration strategies
-              topics: 
-              - backup-strategies.md
-              - migration-strategies.md
-              - system-migration.md
-      - topicgroup: 
+      - topicgroup:
+              label: Backup and Migration strategies
+              topics:
+                - backup-strategies.md
+                - migration-strategies.md
+                - system-migration.md
+      - topicgroup:
               label: Security and compliance
-              topics: 
+              topics:
               - gdpr.md
               - compliances.md
               - Integrate_hpcs.md
-      - topicgroup: 
-              label: Use cases
-              topics: 
-              - use-case-dev.md
-              - use-case-app.md
-              - use-case-hybrid.md
-              - use-case-oracle.md
-              - use-case-redhat-openshift.md
-      - link: 
-              label: Why IBM Power Virtual Servers?
-              href: https://www.ibm.com/cloud/power-virtual-server
+      - topicgroup:
+          label: Use cases
+          topics:
+             - use-case-dev.md
+             - use-case-app.md
+             - use-case-hybrid.md
+             - use-case-oracle.md
+             - use-case-redhat-openshift.md
+             - use-case-sap-hana.md
+      - link:
+              label: Why IBM Power Virtual Server private cloud?
+              href: https://www.ibm.com/products/power-virtual-server
 
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
-      - topicgroup: 
-            label: Managing, creating, and deploying
+      - topicgroup:
+          label: Assessing the pre-installation requirements for private cloud
+          topics:
+            - preinstallation-checklist.md
+            - site-readiness.md
+            - site-access-requirements.md
+            - environmental-req.md
+            - power-requirements.md
+            - network-requirements.md
+            - network-planning
+            - safety-notices.md
+      - topicgroup:
+          label: Networking for Power Virtual Server private cloud
+          topics:
+            - network-overview.md
+            - network-use-cases.md
+            - network_latency.md
+      - topicgroup:
+          label: Networking for Power Virtual Server on cloud
+          topics:
+            - network-architecture.md
+            - configuring-private-subnet.md
+            - getting-started-PER.md
+            - cloud-connections-CLI.md
+            - ordering-direct-link.md
+            - manual-PER-mig.md
+            - vpn-connections.md
+            - network-security.md
+            - X86-based-systems.md
+      - topicgroup:
+            label: Creating, managing, and deploying
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
+              - viewing-pod-details.md
               - creating-ssh-key.md
-              - configuring-custom-image.md
               - modifying-instance.md
+              - virtual-applianes-catalog.md
+              - importing-boot-image.md
+              - configuring-custom-image.md
               - manage-placement-groups.md
               - getting-started-with-spp.md
-              - virtual-tape-libraries.md
+              - virtual-tape-library.md
               - capturing-exporting-vm.md
-              - importing-boot-image.md
               - downloading-fixes.md
               - volume-snapshot-clone.md
               - global-replication-service.md
               - managing_events_logs.md
-              - virtual-applianes-catalog.md
-      - topicgroup: 
-            label: Networking
+              - setting-terraform.md
+              - returning-pod.md
+      - topicgroup:
+            label: Custom OS Images
             topics:
-              - configuring-private-subnet.md
-              - network-architecture.md
-              - getting-started-PER.md
-              - vpn-connections.md
-              - network-security.md
-              - X86-based-systems.md
-              - topicgroup:
-                  label: Former networking configurations
-                  topics:
-                    - manual-PER-mig.md
-                    - network-architecture-former.md
-                    - cloud-connections-CLI.md
-                    - ordering-direct-link.md
-                    - vpn-connections-deprecated.md
-      - topicgroup: 
+             - imaging.md
+
+      - topicgroup:
             label: AIX
             topics:
               - creating-vm-ssh-keys.md
@@ -94,8 +116,9 @@ toc:
               - aix-migration-steps.md
               - removing-network-interface.md
               - rsct-rmc-aix.md
+              - configuring-aix-mdm.md
               - provisioning-nim-server.md
-      - topicgroup: 
+      - topicgroup:
             label: IBM i
             topics:
               - configuring-ibmi-vm.md
@@ -104,38 +127,51 @@ toc:
               - removing-network-interface-ibmi.md
               - ibmi-minimum-levels.md
               - ibmi-license-info.md
-      - topicgroup: 
+      - topicgroup:
             label: Linux
             topics:
+              - full-linux-sub.md
               - set-full-linux.md
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup: 
+      - topicgroup:
             label: Observability
             topics:
               - sysdig-monitoring-pvs.md
-              - at-events.md           
+              - at-events.md
+      # - topicgroup:
+      #     label: APIs for Private Cloud
+      #     topics:
+      #       -  swagger-pcloud.md
 
+# Mukesh to provide the content             - migrate-ibmi-data-ibmi-vm.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
       id: reference
-      topics: 
-      - link: 
-          label: API reference
-          href: https://cloud.ibm.com/apidocs/power-cloud
+      topics:
+      # - link:
+      #     label: API reference
+      #     href: https://cloud.ibm.com/apidocs/power-iaas-la
+      - swagger-pcloud.md
       - link:
           label: Command reference
-          href: /power-iaas-cli-plugin/power-iaas-cli-plugin-power-iaas-cli-reference-v1
+          href: https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference
+      - link:
+          label: Terraform reference
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture 
+# Will complete before GA  - responsibility-matrix.md
 
   - navgroup:
       id: help
-      topics: 
+      topics:
       - faq.md
-      - topicgroup: 
+      - topicgroup:
           label: Troubleshooting
-          topics: 
+          topics:
           - troubleshoot-aix.md
           - troubleshoot-snapshot.md
       - getting-help-and-support.md
+
+# Will use this toipc if any troubleshooting info to be added      - troubleshoot-ppcaas.md

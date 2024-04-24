@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2023
 
-lastupdated: "2024-04-05"
+lastupdated: "2023-06-12"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -11,29 +11,22 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for {{site.data.keyword.powerSysFull}}s
+# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}} on cloud
 {: #set-full-Linux}
 
-The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM Cloud&reg; services.
+[On Cloud]{: tag-blue}
+
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 
-The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`. 
+The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
@@ -43,15 +36,15 @@ If you plan to use your own license, select the OS image suffixed with `-BYOL`. 
 
 To set up full Linux subscription for your account, complete the following steps:
 
-1. [Configuring a Cloud connection](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
-2. [Creating a proxy](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy)
-3. [Creating and configuring a Power virtual machine (PVM)](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm)
+1. [Configuring a Cloud connection](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
+2. [Creating a proxy](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-proxy)
+3. [Creating and configuring a Power virtual machine (PVM)](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm)
 
     a.	RHEL
 
     b.	SLES
-4. [Configuring a proxy](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-proxy)
-5. [Customizing the VMs by using the cloud-init script (RHEL and SLES)](/docs/power-iaas?topic=power-iaas-set-full-Linux#virtual-server)
+4. [Configuring a proxy](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#configure-proxy)
+5. [Customizing the VMs by using the cloud-init script (RHEL and SLES)](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#virtual-server)
 
 
 ### Step 1: Configuring a Cloud connection
@@ -59,11 +52,11 @@ To set up full Linux subscription for your account, complete the following steps
 
 Ensure that the following requirements are met when you create a Cloud connection: Create a Cloud connection with the following parameters:
 
--	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSys_notm}} instance and the IBM Cloud Classic infrastructure by using a private network.
--	The {{site.data.keyword.powerSys_notm}}s in each region and zone must have its own cloud connection.
+-	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSysFull}} instance and the IBM Cloud Classic infrastructure by using a private network.
+-	The {{site.data.keyword.powerSys_notm}} in each region and zone must have its own cloud connection.
 - You have the details of this private network for further configuration.
 
-For more information about creating a Cloud connection, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+For more information about creating a Cloud connection, see [Managing Cloud connections](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections).
 
 ### Step 2: Creating a proxy
 {: #create-proxy}
@@ -84,18 +77,18 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
    c. To get the CIDR, run the `ip route` command. Example CIDRs are: 10.240.65.0/24, 10.209.155.192/26.
 
-   d. Note the CIDR number as you need it, as described in [step 3](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm) to establish connections from the VM to the proxy.
+   d. Note the CIDR number as you need it, as described in [step 3](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm) to establish connections from the VM to the proxy.
 
 ### Step 3: Creating and configuring a Power virtual machine (PVM)
 {: #create-power-vm}
 
-1.	Create a {{site.data.keyword.powerSys_notm}} instance (also known as PVM instance) by using Power Systems Virtual instance GUI, CLI, or API with the following requirements.
+1.	Create a {{site.data.keyword.powerSys_notm}} instance (also known as PVM instance) by using Power Virtual instance GUI, CLI, or API with the following requirements.
 
     a.	SSH key
 
     b.	Public network
 
-    c.	Private network that you created in [step 1](/docs/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
+    c.	Private network that you created in [step 1](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#configure-cloud-connection)
 
 2.	In the proxy instance CLI, start an SSH connection to your RHEL or SLES PVM instance by using the PVM’s external IP address in the following command:
 
@@ -103,11 +96,11 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
     Example: ssh root@1.2.3.4
 
-3.  Add a network route from the PVM instance to the proxy instance that you configured in [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
+3.  Add a network route from the PVM instance to the proxy instance that you configured in [step 2](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
 
       - Run the `ip route` command and add the CIDR subnet of proxy through the private gateway of PVM.
 
-        -	The CIDR subnet of the proxy is the value that you got after performing [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
+        -	The CIDR subnet of the proxy is the value that you got after performing [step 2](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
         -	You can view the private gateway of PVM in the server details of the PVM.
 
         Example: Run the `ip route` command and add the CIDR subnet IP address 1.5.3.9/24 through the private gateway IP address 5.9.7.1.
@@ -125,7 +118,7 @@ Set up a proxy configuration, by completing the following steps:
 
     - Run the `ip route` command and add the CIDR number of that private network that you derived in Step 1 via the gateway of proxy.
 
-      - You can view the private VM gateway in the [IBM Cloud](https://cloud.ibm.com){: external} website. Select the PowerVS VM that you created in [step 3](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm), and go to the attached private network. The CIDR number is listed as the last variable.
+      - You can view the private VM gateway in the [IBM Cloud](https://cloud.ibm.com){: external} website. Select the PowerVS VM that you created in [step 3](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm), and go to the attached private network. The CIDR number is listed as the last variable.
       - Run the `route -n` command to view the gateway of the proxy.
 
 3. A connection is now established with the proxy and the PVM. You can ping the connection in both the proxy instance and the PVM instance, as follows:
@@ -280,11 +273,11 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 ## Passing user-defined scripts
 {: #cloud-init-fls}
 
-When you select a full Linux subscription boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime. 
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
 
 In the user data  you can pass the custom content that allows you to customize the operating system for the specific instance.
 
 The user data that you pass should follow the following conditions:
 -  It should be uncompressed.
--  It should start with `#cloud-config`. 
+-  It should start with `#cloud-config`.
 -  It should not exceed 63 Kb in size.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-12"
+lastupdated: "2024-03-13"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -11,34 +11,27 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for {{site.data.keyword.powerSys_notm}}s
-{: #pricing-virtual-server}
+# Pricing for {{site.data.keyword.powerSys_notm}} on cloud
+{: #pricing-virtual-server-on-cloud}
 
-{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums: 
+[On Cloud]{: tag-blue}
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+{{site.data.keyword.powerSysFull}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
+
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
 {: important}
 
-|  Power Systems    |  Processors  |  Memory                         |
+
+|  Power Systems     |  Processors  |  Memory                         |
 |-------------------|--------------|---------------------------------|
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
 | S1022 (9105-22A) [^3][^4]|     33         |       up to 1984 GB             |
+{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
-{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
@@ -60,7 +53,7 @@ In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated pri
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
@@ -74,7 +67,7 @@ In this example, the LPAR resources are increased (after reaching 300 hours in t
 
 For detailed usage and billing information, you can refer to the part number in your invoice. The part numbers in the invoice represent the charge unit. Refer to the following table to view the part numbers and its corresponding description.
 
-| Part number  | Description                     | 
+| Part number  | Description                     |
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
@@ -125,7 +118,7 @@ For detailed usage and billing information, you can refer to the part number in 
 ## Base instances
 {: #pricing-base-instance-prices}
 
-The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
+The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -136,21 +129,21 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 {{site.data.keyword.powerSys_notm}} provides AIX and IBM i stock images. The operating system version levels of the stock images are subject to change.
 
-You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/allowlist/power-iaas?topic=power-iaas-deploy-custom-image).
 
-The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
+The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](/docs/allowlist/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/allowlist/power-iaas?topic=power-iaas-linux-deployment).
 
 ## Processor types
 {: #pricing-processor}
 
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
+All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/allowlist/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-The following tables shows the base price and how different processor types affect the cost per system:
+The following tables show how different processor types affect the cost per system:
 
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
@@ -173,57 +166,49 @@ The following tables shows the base price and how different processor types affe
 | 1                           | $0.22 (capped shared)       | $159.14                  |
 {: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
 
-
-<!-- | Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| --------------------------- | ----------------------------- | ------------------------ |
-| 1                           | $2.03 (dedicated)            | $1484.97                 |
-| 1                           | $0.51 (uncapped shared)     | $371.26                  |
-| 1                           | $0.76 (capped shared)       | $556.90                  |
-{: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
-
 ## Pricing for dedicated hosts
-{: pricing-dh}
+{: #pricing-dh}
 
-Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host. 
+Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
 * You are not charged separately for shared processor pools you deploy to the dedicated host.
 * Software charges for the supported operating systems are metered and charged by the core.
 
 
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
+To learn more about the dedicated host, see: [dedicated host](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 
 
 ## Storage types
 {: #storage-type}
 
-
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
 - **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
-  |Volume size you create|You are billed|
-  |----------------------|--------------|
-  |10 GB|10 GB|
-  |10+5 GB|15 GB|
-  {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+    |Volume size you create|You are billed|
+    |----------------------|--------------|
+    |10 GB|10 GB|
+    |10+5 GB|15 GB|
+    {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
 
-- **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image. 
+- **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image.
+    When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
 
-  When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
-
-  |Image volume size |Single or multiple backing|You are billed|
-  |------------------|--------------------------|--------------|
-  |20 GB|Single backing volume|20 GB|
-  |volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
-  {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+    |Image volume size |Single or multiple backing|You are billed|
+    |------------------|--------------------------|--------------|
+    |20 GB|Single backing volume|20 GB|
+    |volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
+    {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
 
 - **Deployed VM volumes**: These volumes are created when you deploy a VM with an image. The deployed VMs will get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
-  |Image backing volume|You are billed|
-  |--------------------|--------------|
-  |20 GB|20 GB|
-  |20 GB + 30 GB|50 GB|
-  {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+   |Image backing volume|You are billed|
+    |--------------------|--------------|
+    |20 GB|20 GB|
+    |20 GB + 30 GB|50 GB|
+    {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
 
 ### Use case of account billable storage
+{: #account-billable-storage}
+
 The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
 | Name     | Size    | State/Description      |
@@ -274,7 +259,7 @@ When you use a VPN connection, you are billed monthly.
 IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
 
 ## Pricing for Power Edge Router
-{: per-pricing}
+{: #per-pricing}
 
 There are no additional charges for PER, however, you are charged based on the number of Transit Gateway connections and routing options.
 
@@ -294,7 +279,7 @@ The following table shows the charges based on the number of connections includi
 |51+ | $4.7025 |
 {: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
 
-The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external} in the IBM Cloud console.
+The Transit Gateway charges indicated in the tables above are subjected to change. To calculate your pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} in the IBM Cloud console.
 {: important}
 
 ## End of billing

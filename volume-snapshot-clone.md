@@ -1,33 +1,22 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2023
 
-lastupdated: "2023-06-05"
+lastupdated: "2023-03-28"
 
-keywords: volume snapshot, clone, restore, api, flashcopy
+keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, terminology, video, how-to
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:preview: .preview}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Snapshots, cloning, and restoring
-{: #volume-snapshot-clone}
+{: #snapshots-cloning}
 
-{{site.data.keyword.powerSysShort}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the {{site.data.keyword.powerSys_notm}} APIs lets you create delta snapshots, volume clones, and restore your disks.
+{{site.data.keyword.powerSysFull}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, {{site.data.keyword.powerSysShort}} APIs lets you create delta snapshots, volume clones, and restore your disks.
 
 **APIs to create snapshot and clone**
 - [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
@@ -37,10 +26,11 @@ subcollection: power-iaas
 - [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
 - [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
 
+
 ## Taking a snapshot
 {: #volume-snapshot}
 
-The snapshot interface allows you to create a relationship between your source disks and a target disks (target disks are created as part of the snapshot API) at time **T1**. The snapshot API tracks the delta changes done to the source disk beyond time **T1**. This enables the user to restore the source disks to their **T1** state at later point in time.
+The snapshot interface allows you to create a relationship between your source disks and a target disks (target disks are created as part of the snapshot API) at time **T1**. The snapshot API tracks the delta changes done to the source disk beyond time **T1**. This enables the user to restore the source disks to their **T1** state at a later point in time.
 
 There are several use cases for the snapshot feature. For example, an administrator plans to upgrade the middleware on his system but would like to be able to revert to its original state before proceeding with an upgrade. If the middleware fails, the administrator can restore the source disk to its previous state. To accomplish this, the administrator would perform the following steps:
 
@@ -52,12 +42,12 @@ There are several use cases for the snapshot feature. For example, an administra
 You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on a different set of disks.
 {: note}
 
-### Metering and pricing of snapshot 
+### Metering and pricing of snapshot
 {: #metering-snapshot}
 
 Each snapshot that you create is monitored every hour and charged depending on the disk space that is requested for the snapshot. The space that is utilized by a snapshot is charged at 30% of the base rate. For example, if you have **M** disks on a VM that add up to 600 GB of space, and those **M** disks are used as source disks for snapshots, the following charges are applicable:
 
-- If you create one snapshot, you are charged for the disk space that is used by the base 600 GB of **M** disks plus 30% of 600 GB of disk space. That is, 600 GB (space of M disks) + 180 GB (30% of 600 GB) = 780 GB of disk space. 
+- If you create one snapshot, you are charged for the disk space that is used by the base 600 GB of **M** disks plus 30% of 600 GB of disk space. That is, 600 GB (space of M disks) + 180 GB (30% of 600 GB) = 780 GB of disk space.
 - If you create one more snapshot by using same disks, you will be charged for disk space that is used by **M** disks (600 GB) + (30% of 600 GB) + (30% of 600 GB) = 960 GB of disk space.
 - The pricing that is charged for the snapshot is based on the storage tier that contains the source volumes: Tier 1 or Tier 3.
 
@@ -98,7 +88,7 @@ You cannot modify the source or target disk attributes, such as disk size, while
 
 **Use case**: You can perform the clone operation on multiple volumes that are attached to the VM and that are in an available state.
 
-**Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, the {{site.data.keyword.powerSys_notm}} creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
+**Restrictions and considerations**: When the clone operation is performed on an volume that is in-use, {{site.data.keyword.powerSys_notm}} creates a consistent group snapshot and re-creates the copy of the cloned volume by using the group snapshot.
 
 **Steps**: Performing the clone operation on a volume consists of three steps: prepare, start, and execute the volumes-clone request. These steps allow you to perform preparatory actions and to authorize the ongoing I/O operations on the source volumes. Breaking the clone operation on a volume into multiple steps provides consistent clones and reduces the VM quiesce time. The clone operation on a volume consists the following steps:
 
@@ -133,7 +123,7 @@ This step allows the consistency group to initiate the FlashCopy operation. As a
     You can view the latest volumes-clone request status by using the [get volumes-clone detail](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-get) request or the [get volumes-clone list](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-volumesclone-getall) request. When the volumes-clone request is initiated, the initial status is set to **Starting**. When the group snapshot is created, the request status changes to **Available**. The start action of the volumes-clone request is synchronous and when the API call returns to the client, the volumes-clone request status changes to **Available** unless an error occurs. If an error occurred during the start action, the status of the volume-clone request changes to **Failed**. The reason for failure is specified in the error that is returned with the start action response. The prepared snapshot data is removed so that you can clone the same set of volumes again. If you cancel the start action of a volumes-clone request, status of the volumes-clone request changes to **Cancelling**. You can cancel a volumes-clone request when the volumes-clone request is in the **Available** state.
 
 - **Output**
-    The volumes-clone request is updated to v**iew the current status**.
+    The volumes-clone request is updated to **view the current status**.
 
 ### 3. Execute the volumes-clone request
 {: #execute-vol-clone}
@@ -173,7 +163,7 @@ Performs the remaining execution action to create the cloned volumes from the av
 ## Restoring a snapshot
 {: #restoring-snapshot}
 
-The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, the {{site.data.keyword.powerSys_notm}} creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
+The restore operation restores all of the volumes that are part of a VM snapshot back to the source disks. While it restores the VM, {{site.data.keyword.powerSys_notm}} creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, you can pass in the `restore_fail_action` query parameter with a value of `retry` to retry the restore operation. To roll back a previous disk state, you can pass in the `restore_fail_action` query parameter with a value of `rollback`. When the restore operation fails, the VM enters an **Error** state.
 
 ### Best practices
 {: #best-practice-vol}
@@ -201,8 +191,8 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 {: #snap-clone-faqs}
 
 Here are some of the following frequently asked questions on snapshots and clonning that are documented on the faq page:
-- [What are the key differences between a snapshot and clone?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-vs-clone)
-- [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-clone-ui)
-- [Are there any initial snapshot requirement in terms of storage?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-storage-req)
-- [Does the snapshot and volume clone supports any safeguard policy?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#snap-clone-safeguard)
-- [Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#poweha-toolkit)
+- [What are the key differences between a snapshot and clone?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
+- [Is there any UI to perform snapshot or clone operations?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
+- [Are there any initial snapshot requirement in terms of storage?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)
+- [Does the snapshot and volume clone supports any safeguard policy?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-safeguard)
+- [Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs#poweha-toolkit)

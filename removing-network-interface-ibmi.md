@@ -1,9 +1,9 @@
-﻿---
+---
 
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-04-03"
+lastupdated: "2023-12-21"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -11,30 +11,23 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # How to add or remove a network interface from an IBM i virtual machine (VM)
 {: #managing-network-interface-ibmi}
 
+[On Cloud]{: tag-blue}
+
 Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
 {: shortdesc}
 
-When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
+When you toggle a public network off and then on, the {{site.data.keyword.powerSysFull}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
 {: note}
 
 ## Removing a network interface from an IBM i VM
 {: #remove-nic-ibmi}
 
-Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface. For a complete set of instructions, see [Changing the TCP/IP Address of the IBM System i System](https://www.ibm.com/support/pages/changing-tcpip-address-ibm-system-i-system){: external}.
+Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface. For a complete set of instructions, see [Changing the TCP/IP Address of the IBM i System](https://www.ibm.com/support/pages/node/641015){: external}.
 
 1. Before you change a TCP/IP address, determine whether it has any associated routes. Choose **Option 8** from the **NETSTAT \*IFC** screen.
     It's a good idea to select **Option 5** to display the details of the route. Remember to press **F6** to print the details for reference for when the route must be readded. This step should be done for all of the **non-\*DIRECT** routes that are listed on the screen.
@@ -48,7 +41,7 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
     ```
                         Work with TCP/IP Interfaces
                                                                         System: RCHASSLH
-    Type options, press Enter. 
+    Type options, press Enter.
     1=Add   2=Change    4=Remove    5=Display   9=Start   10=End
 
               Internet          Subnet            Line                Line
@@ -58,15 +51,15 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
     _4_       10.10.10.1        255.255.255.0     SITETRN             *TRLAN
     ___       127.0.0.1         255.0.0.0         *LOOPBACK           *NONE
 
-    
 
-    
+
+
 
                                                                                   Bottom
     F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
     F12=Cancel    F17=Top         F18=Bottom
     ```
-    
+
 5. You must vary off the Line description (LIND) after you remove the interface.
 
 ## Adding a network interface to an IBM i VM
@@ -84,15 +77,15 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
 6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
 7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
-    
+
 Adding a network interface:
 
     ```
                                 Add TCP/IP Interface (ADDTCPIFC)
 
     Type choices, press Enter
-   
-    Internet address.   .   .   .   .   .   .   .   .   . > .   .  
+
+    Internet address.   .   .   .   .   .   .   .   .   . > .   .
     Line description.   .   .   .   .   .   .   .   .   .   ____________    Name, *LOOPBACK..
     Subnet mask .   .   .   .   .   .   .   .   .   .   .   ____________
     Associated local interface. .   .   .   .   .   .   .   *NONE
@@ -106,4 +99,3 @@ Adding a network interface:
     X.25 DDN interface. .   .   .   .   .   .   .   .   .   *NO             *YES,   *NO
     TRLAN bit sequencing.   .   .   .   .   .   .   .   .   *MSB            *MSB,   *LSB
     ```
-    

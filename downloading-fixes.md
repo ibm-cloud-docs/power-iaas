@@ -1,9 +1,9 @@
-﻿---
+---
 
 copyright:
   years: 2019, 2023
 
-lastupdated: "2023-12-07"
+lastupdated: "2023-04-04"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -11,29 +11,19 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Downloading fixes and updates
 {: #downloading-fixes-updates}
 
-You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates.
+You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
 If you'd like to download fixes and updates, you must perform one of the following:
 
-- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
-- Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
-- Set up another public-facing VM with an HTTP/HTTPS proxy.
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/allowlist/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
+- Set up another VM as an AIX [NIM server](/docs/allowlist/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
+- Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-aix-proxy).
 
 ## Ordering fixes and updates for AIX VMs
 {: #downloading-fixes-aix}
@@ -60,15 +50,16 @@ You can access the SUMA configuration by running the [suma command](https://www.
 ### Configuring SUMA to use the proxy settings
 {: #configuring-aix-proxy}
 
-Before you run the `suma` command to download any update, make sure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
+Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
 
 To make the LPAR aware in which data center it is running, run the following command:
-```
+
+```text
 #echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
 ```
 {: codeblock}
 
-```
+```text
 #export SUMA_COUNTRY_CODE=**
 ```
 {: codeblock}
@@ -88,8 +79,8 @@ Where ** is the country code of your DC based on the following table:
 {: caption="Table 1. POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
-```
-suma -x -a Action=Preview -a RqType=Latest
+```text
+suma -x -a Action=Preview -a RqType=LatestCopy
 ```
 {: codeblock}
 
@@ -109,7 +100,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
 
     Configuring proxy settings:
 
-    ```
+    ```text
     Type or select values in entry fields.
     Press Enter AFTER making all desired changes.
                                                                [Entry Fields]
@@ -123,7 +114,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
             Port number                                       [5026]
             Authentication user ID                            []
             Authentication password requested interactively.
-    ```  
+    ```
 
     Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
 
@@ -215,5 +206,4 @@ For more information, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/suppo
 ### Setting up an IBM i network install server
 {: #ibmi-network-server}
 
-Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.
-
+Before you can install or upgrade an IBM i system through the network, you must [set up a network installation server](/docs/allowlist/power-iaas?topic=power-iaas-preparing-install-server). The network installation server contains images of the IBM i operating system, its internal code as well as licensed programs and PTFs.

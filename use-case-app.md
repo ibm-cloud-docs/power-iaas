@@ -1,28 +1,23 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2023
 
-lastupdated: "2020-04-10"
+lastupdated: "2023-03-28"
 
-keywords: use case, application hosting, enterprise-level workload, bursting, scaling, db2 workloads
+keywords: AIX and IBM i hosting, application, use case, application hosting, enterprise-level workload, bursting, scaling, db2 workloads
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # AIX and IBM i production application hosting
 {: #use-case-app-hosting}
+
+IBM i is not supported for private cloud.
+{: note}
 
 The client wants to run an enterprise-level workload in an infrastructure as a service (IaaS) environment with the ability to leverage the IBM Cloud services.
 {: shortdesc}
@@ -32,7 +27,7 @@ The client wants to run an enterprise-level workload in an infrastructure as a s
 
 - Traditional IaaS value
 - Modernize core business by using the {{site.data.keyword.cloud_notm}} portfolio
-- Flexible option to bursting and scaling their on-premises environment or to host temporary capacity
+- Flexible option to bursting and scaling their private cloud environment or to host temporary capacity
 - Interested in or have an evolving strategy for a consumption-based option
 - Looking to move away from operating a data center
 
@@ -47,8 +42,8 @@ The client wants to run an enterprise-level workload in an infrastructure as a s
 ## Solution components
 {: #use-case-app-solutions}
 
-- IBM&reg; Power Systems&trade; Virtual Server
+- {{site.data.keyword.powerSysFull}}
 - PowerHA *(optional)*
 - Mass data migration (MDM)
-- Direct Link and Direct Link Dedicated for on-premises connectivity
+- Direct Link and Direct Link Dedicated for private cloud connectivity
 - Cloud Object Storage for optional backup and custom image hosting

@@ -1,61 +1,85 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2023
 
-lastupdated: "2024-04-10"
+lastupdated: "2023-04-27"
 
-keywords: getting started, infrastructure as a service, iaas, before you begin, terminology, video, how-to
+keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
-# Getting started with IBM {{site.data.keyword.powerSys_notm}}s
+# Getting started with IBM {{site.data.keyword.powerSys_notm}}
 {: #getting-started}
 
-{{site.data.keyword.powerSysFull}} is a Power Systems offering. {{site.data.keyword.powerSys_notm}}s are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage. You can use the {{site.data.keyword.powerSys_notm}}s to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. IBM Power Systems clients who have typically relied upon on-premises-only infrastructure can now quickly and economically extend their Power IT resources off-premises. Avoid the large capital expense or added risk when migrating your essential workloads and get started with {{site.data.keyword.powerSys_notm}}s today!
-{: shortdesc}
+{{site.data.keyword.powerSysFull}} is an IBM Power servers offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power enterprise workloads both on cloud or on-premises in your data center.
 
-In the data centers, the {{site.data.keyword.powerSys_notm}}s are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or on-premises environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}}s to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified on-premises infrastructure.
+You get fast and flexible management that can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing. Using these services you can easily adjust workloads with flexible compute capacity. {{site.data.keyword.powerSys_notm}} instances can be used across the IBM Cloud platform globally. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. Avoid the large capital expenses or added risk when migrating your essential workloads and get started with {{site.data.keyword.powerSys_notm}} today! For frequently asked questions about the {{site.data.keyword.powerSys_notm}}, see [FAQ](/docs/allowlist/power-iaas?topic=power-iaas-powervs-faqs).
 
-{{site.data.keyword.powerSys_notm}}s integrates your AIX, IBM i, or Linux&reg; capabilities in an off-premises environment distinct from the IBM Cloud. You get fast, self-service provisioning, flexible management both on-premises and off-premises, and similar to on-premises it can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing that lets you easily scale up and out. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. For frequently asked questions about the {{site.data.keyword.powerSys_notm}}, see [FAQs](/docs/power-iaas?topic=power-iaas-power-iaas-faqs).
+[Private Cloud]{: tag-red}
 
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](/docs/sap?topic=sap-power-vs-planning-items) and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-infrastructure).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure or the pod is deployed in your data center. The pod is maintained and operated by IBM site reliability engineering (SREs) and managed through the IBM Cloud platform. Each pod is associated with an IBM Cloud Satellite Location that is owned by your IBM Cloud account. This architecture helps to scale horizontally to add more pods according to your requirements. To verify that the pre-installation requirements are met, see [Prerequisites for installing the pod](/docs/allowlist/power-iaas?topic=power-iaas-pre_installation_checklist).
 
-If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=ppc-aas-app-modernization-using-RedHat-openshift).
+Private cloud officially supports Red Hat Enterprise Linux (RHEL) and IBM AIX&reg;. With the support of these operating systems you can deploy several applications, including SAP HANA, SAP S/4HANA, and SAP NetWeaver. You can also run Red Hat OpenShift Container Platform to accelerate your application modernization efforts by using new cloud-native applications.
+
+{{site.data.keyword.powerSys_notm}} does not provide Linux stock images. Bring your own Linux image (OVA format) and subscription. SUSE Linux Enterprise Server (SLES) and RHEL OVA images are supported. [Learn more](/docs/allowlist/power-iaas?topic=power-iaas-using-linux)
+{: note}
+
+<!--; SUSE Linux Enterprise Server will be available in the future with subscription.-->
+
+[On Cloud]{: tag-blue}
+
+{{site.data.keyword.powerSys_notm}} on cloud resources reside in IBM data centers with dedicated networking and SAN-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that is nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
+
+In the data centers, the {{site.data.keyword.powerSys_notm}} are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or private cloud environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified private cloud infrastructure.
+
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-vpc-infrastructure){: external}.
+
+If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on {{site.data.keyword.powerSys_notm}}](/docs/allowlist/power-iaas?topic=power-iaas-app-modernization-using-RedHat-openshift).
 
 ## Terminology
 {: #terminology}
 
-Before you create a virtual server, you must understand the difference in terminology between a {{site.data.keyword.powerSys_notm}} **workspace** and a {{site.data.keyword.powerSys_notm}} **instance**. Think of the {{site.data.keyword.powerSys_notm}} **workspace** as a container for all {{site.data.keyword.powerSys_notm}} **instances** at a specific geographic region. The {{site.data.keyword.powerSys_notm}} **workspace** is available from the **Resource list** in the {{site.data.keyword.powerSys_notm}} user interface. The workspace can contain multiple {{site.data.keyword.powerSys_notm}} **instances**. For example, you can have two {{site.data.keyword.powerSys_notm}} **workspaces**, one in Dallas, Texas, and another in Washington, D.C. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} **instances**.
+* **IBM Cloud account** - Your can log on to IBM Cloud dashboard by using IBM Cloud account to access various IBM Cloud solutions, services, and offerings. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
+
+* **Location and region** - The global network of locations of IBM Cloud provides three tiers of regions: multizone regions (MZR), single-campus multizone regions, and data centers. To achieve low application latency, choose your nearest location and region. For details about the available IBM Cloud regions and data centers, review [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations){: external}.
+
+* **Satellite location** - A Satellite location is a representation of an environment in your infrastructure provider, such as a private cloud data center. Each IBM {{site.data.keyword.powerSys_notm}} Private Cloud pod in your data center must be associated with a Satellite location to manage the lifecycle operations of the pod. You must create multiple and unique Satellite locations if you are planning to deploy multiple pods in your data center. For detailed information, see [Understanding Satellite location and hosts](https://cloud.ibm.com/docs/satellite?topic=satellite-location-host){: external}.
+
+* **workspace** - A workspace is a container of all the virtual machines, storage volumes, network configurations, and so on at a specific geographic region. {{site.data.keyword.powerSys_notm}} workspaces are available from the Resource list in the {{site.data.keyword.powerSys_notm}} user interface. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} instances. Within each Satellite location, you can create multiple workspaces. For example, you can create two workspaces in the Satellite location of the North Data Center: one workspace for production workloads and another workspace for development tests.
+
+* **pod** - a pod consists of IBM Power compute, storage, and network infrastructure that is built, installed, and maintained by IBM in your data center. You can have multiple pods and each pod will be uniquely represented by an IBM Cloud Satellite location.
+
+* **Control plane network and client data plane network** - Control plane network is the connection between IBM Cloud and client data center. The client data plane network is the connection between the client data center and the IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods. For more information, see the [Network overview for private cloud](/docs/allowlist/power-iaas?topic=power-iaas-network-private-cloud) topic.
 
 ## Before you begin
 {: #before-you-begin}
 
 Before you create your first {{site.data.keyword.powerSys_notm}} instance, review the following prerequisites:
 
-1. Create an IBM Cloud account. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
+1. Create an IBM Cloud account if you don’t have an existing account. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
 
-2. Review the Identity and Access Management (IAM) information at [Managing {{site.data.keyword.powerSys_notm}}s (IAM)](/docs/power-iaas?topic=power-iaas-managing-resources-and-users).
+2. Plan and specify your infrastructure requirements and review the estimated cost by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. Identify whether you want on cloud, private cloud infrastructure, or both.
 
-3. Create a public and private SSH key that you can use to securely connect to your {{site.data.keyword.powerSys_notm}}. To create a public and private SSH key, see [Adding an SSH key](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
+3. Review the entire lifecycles of {{site.data.keyword.powerSys_notm}} instances on [private cloud](/docs/allowlist/power-iaas?topic=power-iaas-getting-started#lifecycle-private-cloud) and [on cloud](/docs/allowlist/power-iaas?topic=power-iaas-getting-started#lifecycle-on-cloud).
 
-4. *(Optional)* If you want to use a custom AIX or IBM i image, you must create an IBM Cloud Object Storage (COS) and upload it there. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+![Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance](./figures/PowerVS-lifecycle_overview.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance"){: caption="Figure 1. Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance" caption-side="bottom"}
 
-5. *(Optional)* If you want to use a private network to connect to a {{site.data.keyword.powerSys_notm}} instance, you must either create cloud connections, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections), or order the [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#steps-to-order-direct-link-connect) service. You cannot create a private network during the VM provisioning process. You must first use the {{site.data.keyword.powerSys_notm}} user interface, command line interface (CLI), or application programming interfaced (API) to [create one](/docs/power-iaas?topic=power-iaas-configuring-subnet)
+## Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+{: #lifecycle-private-cloud}
 
-## Next steps
-{: #next-steps}
+[Private Cloud]{: tag-red}
 
-With a new IBM Cloud account and a private and public SSH key, you're ready to [Create a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server)!
+![Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud"){: caption="Figure 2. Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="bottom"}
+
+
+## Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud
+{: #lifecycle-on-cloud}
+
+[On Cloud]{: tag-blue}
+
+![Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud"){: caption="Figure 3. Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud" caption-side="bottom"}

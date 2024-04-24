@@ -11,18 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
@@ -52,7 +41,7 @@ Resolve: If the AIX VM does not boot, you must provision an additional AIX VM an
 
     ![NIM master installation summary](./images/terminal-aix-nim-summary.png "NIM master installation summary"){: caption="Figure 3. NIM master installation summary" caption-side="bottom"}
 
-For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## My AIX VM Tier 1 (NVMe-based flash storage) disk is running at a suboptimal level. What can I do to improve its performance?
 {: #troubleshoot-slow-aix}

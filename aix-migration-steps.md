@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2020, 2021
@@ -11,25 +11,14 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
-# Moving data from your on-premise environment to {{site.data.keyword.powerSys_notm}}s
+# Moving data from your private cloud environment to {{site.data.keyword.powerSys_notm}}
 {: #move-data-to-cloud}
 
 Depending on your network bandwidth and data size constraints, the process of moving the data volume group is as simple as creating an *Open Virtualization Appliance (OVA) file* or an *mksysb* image (root volume group), and creating a set of *savevg* images for volume group data. By using an *OVA* file or an *mksysb* image, you can build or provision a VM and then migrate the data volume groups of the virtual machine (VM) by using the **restvg** command.
 
-You can use the following methods to back up your on-premise data and move the data to IBM {{site.data.keyword.powerSys_notm}}.
+You can use the following methods to back up your private cloud data and move the data to {{site.data.keyword.powerSysFull}}.
 
 ## Migrating volume group data by using the *savevg* command
 {: #migrate-data-using-savevg}

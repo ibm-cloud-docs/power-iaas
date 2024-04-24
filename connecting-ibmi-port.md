@@ -11,23 +11,17 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Connecting to an IBM i virtual machine (VM)
 {: #connect-ibmi}
 
-Learn how to connect to an IBM i VM after configuring your system. Make sure to review [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmi) before connecting to an IBM i VM.
+[On Cloud]{: tag-blue}
+
+Learn how to connect to an IBM i VM after configuring your system. Make sure to review [Configuring your IBM i virtual machine (VM)](/docs/allowlist/power-iaas?topic=power-iaas-configuring-ibmi) before connecting to an IBM i VM.
 {: shortdesc}
 
-For a complete list of firewall ports that are available for IBM i VMs, see [Network security](/docs/power-iaas?topic=power-iaas-network-security). If you plan on ordering [Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) or already have it, port forwarding is not needed.
+For a complete list of firewall ports that are available for IBM i VMs, see [Network security](/docs/allowlist/power-iaas?topic=power-iaas-network-security). If you plan on ordering [Direct Link Connect on Classic](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect) or already have it, port forwarding is not needed.
 {: important}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)
@@ -41,7 +35,7 @@ Before you begin, see [Install IBM i Access Client Solutions](https://www.ibm.co
 The public IP address blocks most ports. As a result, you need to use SSH tunneling or configure your certificates and use SSL to allow ACS to connect over public IP.
 
 Before you use an SSH tunnel, you must create a user profile with `USRCLS(*SECOFR)` specified or enable the `QSECOFR` user profile. To enable the `QSECOFR` user profile, edit the `/QOpenSys/QIBM/ProdData/SC1/OpenSSH/etc/sshd_config` configuration file, and uncomment `PermitRootLogin yes`.
- 
+
 After the `QSECOFR` user profile is enabled, start the SSHD server on the VM:
 
 ```text
@@ -155,6 +149,7 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
     {: pre}
 
 After you complete these steps, you can get to a console from ACS. Additionally, you can get to _iNav/DM_ by pointing your browser to the following address:
+
 
 ```text
 https://127.0.0.1:2005/ibm/console/login.do?action=secure

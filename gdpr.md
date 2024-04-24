@@ -1,32 +1,27 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-09-15"
+  years: 2023
 
-keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
+lastupdated: "2023-04-24"
+
+keywords: Generating an estimate, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # General Data Protection Regulation (GDPR)
-{: #data-protection}
+{: #general-data}
+{: help}
+{: support}
 
 The [General Data Protection Regulation](https://gdpr.eu/){: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}
 
-With the GDPR, IBM&reg; Power Systems&trade; Virtual Server clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in IBM's wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
+With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in IBM's wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
 
 ## Online retention of client data
 {: #data-retention}

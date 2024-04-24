@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2023, 2024
 
-lastupdated: "2024-01-29"
+lastupdated: "2024-01-05"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -11,20 +11,12 @@ subcollection: power-iaas
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Activity tracker events
 {: #at-events}
 
-{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on January 29, 2024. Some of the event fields will not be sent or replaced by the new format. For the code snippets that shows the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
+{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on January 29, 2024. Some of the event fields will not be sent or replaced by the new format. For the code snippets that shows the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/allowlist/power-iaas?topic=power-iaas-at-events#at-response-sample).
 {: note}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} in {{site.data.keyword.cloud}}.
@@ -83,22 +75,22 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 
 | Action                        | Description                          |
 |:------------------------------|:-------------------------------------|
-| power-iaas.pvm-instance.read      | Read a Power virtual server instance                  |
-| power-iaas.pvm-instance.create    | Create a Power virtual server instance                |
-| power-iaas.pvm-instance.update    | Update a Power virtual server instance                |
-| power-iaas.pvm-instance.delete    | Delete a Power virtual server instance                |
-| power-iaas.pvm-instance.start     | Start a Power virtual server instance                 |
-| power-iaas.pvm-instance.stop      | Stop a Power virtual server instance                  |
-| power-iaas.pvm-instance.renew     | Restart a Power virtual server instance                |
-| power-iaas.pvm-instance.unknown   | Unknown action on a Power virtual server instance     |
-| power-iaas.pvm-instance.monitor   | Console access to a Power virtual server instance     |
-| power-iaas.pvm-instance.capture   | Capture a Power virtual server instance into an image |
-| power-iaas.pvm-instance.immediate-shutdown     | Shut down a Power virtual server instance immediately |
-| power-iaas.pvm-instance.clone   | Clone a Power virtual server instance |
-| power-iaas.pvm-instance.snapshot     |  Create a Power virtual server instance Snapshot |
-| power-iaas.pvm-instance-network.read      |  Read a Power virtual server instance Network |
-| power-iaas.pvm-instance-network.create     |  Create a Power virtual server instance Network  |
-| power-iaas.pvm-instance-network.delete      |  Delete a Power virtual server instance Network  |
+| power-iaas.pvm-instance.read      | Read a {{site.data.keyword.powerSys_notm}} instance                  |
+| power-iaas.pvm-instance.create    | Create a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.update    | Update a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.delete    | Delete a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.start     | Start a {{site.data.keyword.powerSys_notm}} instance                 |
+| power-iaas.pvm-instance.stop      | Stop a {{site.data.keyword.powerSys_notm}} instance                  |
+| power-iaas.pvm-instance.renew     | Restart a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.unknown   | Unknown action on a {{site.data.keyword.powerSys_notm}} instance     |
+| power-iaas.pvm-instance.monitor   | Console access to a {{site.data.keyword.powerSys_notm}} instance     |
+| power-iaas.pvm-instance.capture   | Capture a {{site.data.keyword.powerSys_notm}} instance into an image |
+| power-iaas.pvm-instance.immediate-shutdown     | Shut down a {{site.data.keyword.powerSys_notm}} instance immediately |
+| power-iaas.pvm-instance.clone   | Clone a {{site.data.keyword.powerSys_notm}} instance |
+| power-iaas.pvm-instance.snapshot     |  Create a {{site.data.keyword.powerSys_notm}} instance Snapshot |
+| power-iaas.pvm-instance-network.read      |  Read a {{site.data.keyword.powerSys_notm}} instance Network |
+| power-iaas.pvm-instance-network.create     |  Create a {{site.data.keyword.powerSys_notm}} instance Network  |
+| power-iaas.pvm-instance-network.delete      |  Delete a {{site.data.keyword.powerSys_notm}} instance Network  |
 {: caption="Table 4. List of events: {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
 ### SSH keys events
@@ -336,7 +328,7 @@ The following code snippets shows the differences between the old and new activi
         "sshKeys": [],
         "tenantID": "xxxxxxxxxxxxxxxxxxxx"
     },
-    "message": "Power Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
+    "message": "Power Systems Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
     "observer": {
         "name": "ActivityTracker"
     }
