@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-04-27"
+lastupdated: "2024-04-22"
 
 keywords: compliance, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology
 
@@ -28,10 +28,9 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
-[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC 1 reports.
+[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC reports.
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
--   SOC 1 Type 1
 -   SOC 1 Type 2
 
 ## ISO 27017:2015
@@ -57,3 +56,10 @@ You are responsible for the storing, processing, and transmission of cardholder 
 Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request a PCI DSS Attestation of Compliance (AOC) and/or a Service Responsibility Matrix (SRM) guide for {{site.data.keyword.powerSys_notm}}.
 
 You can build PCI DSS compliant environments and applications using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
+
+## HIPAA
+{: #HIPAA-cert}
+
+The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. {{site.data.keyword.powerSys_notm}} on IBM Cloud is HIPAA-ready. You can build HIPAA-ready environments and applications using {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Cloud® compliance: HIPAA](https://www.ibm.com/cloud/compliance/hipaa){: external}.
+
+If you or your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. By using this setting, you can filter on HIPAA Enabled services in the catalog, indicate to IBM that your account stores protected health information (PHI), and digitally accept the IBM Business Associate Addendum for covered entities. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa).
