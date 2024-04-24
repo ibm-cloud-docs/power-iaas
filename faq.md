@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-03-27"
+lastupdated: "2024-04-22"
 
 keywords: faq, {{site.data.keyword.powerSys_notm}} as a service, ppcaas, terminology, video, how-to
 
@@ -144,13 +144,12 @@ IBM i stock images currently available when you create a virtual machine are:
 
 Red Hat
 
-<!-- * RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new} -->
-<!-- * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new} -->
-
-<!-- * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new} -->
-<!-- * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new} -->
-* RHEL 9.2 general purpose (RHEL9-SP2)
-* RHEL 8.8 general purpose (RHEL8-SP8)
+* RHEL 9.2 general purpose (RHEL9-SP2) [new]{: tag-new}
+* RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new}
+* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new}
+* RHEL 8.8 general purpose (RHEL8-SP8) [new]{: tag-new}
+* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new}
+* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new}
 * RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
