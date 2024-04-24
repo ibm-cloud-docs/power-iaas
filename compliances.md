@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024 
 
-lastupdated: "2024-04-22"
+lastupdated: "2024-04-24"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -35,10 +35,9 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
-[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC 1 reports.
+[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC reports.
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
--   SOC 1 Type 1 
 -   SOC 1 Type 2
 
 ## ISO 27017:2015
