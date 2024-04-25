@@ -16,8 +16,6 @@ subcollection: power-iaas
 # AIX and IBM i development and test
 {: #use-case-dev-test}
 
-IBM i is not supported for private cloud.
-{: note}
 
 {{site.data.keyword.powerSysFull}} is a great solution if you want to create a temporary sandbox environment to perform testing and as a step before you deploy production applications.
 {: shortdesc}

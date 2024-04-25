@@ -38,9 +38,6 @@ To open a support ticket for {{site.data.keyword.powerSys_notm}}, complete the f
 
 If you are facing any AIX or IBM i operating system-specific issue, It is recommended that you directly engage with the operating system support using the portal as follows.
 
-IBM i is not supported for private cloud.
-{: note}
-
 1. Log in to the [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US){: external} portal using your IBM id.
 2. Click **Open a case**.
 3. On the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**.

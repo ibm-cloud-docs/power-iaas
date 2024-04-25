@@ -108,3 +108,15 @@ To complete the setup process, follow these steps:
 7. One of the parameters for the command represents the proxy IP. Set this proxy IP to the internal private IP of your proxy VSI. For example, `10.240.0.4`. Set the port to 3128.
 
 To check whether the setup is complete and the subscription is successful, check the log files, `/var/log/powervs-fls.log` and `powervs-fls-dev.log`. When the setup is completed successfully, you can use the commands, such as `yum update -y`, `yum search <package>`, `yum install <package>`.
+
+## Passing user-defined scripts
+{: #cloud-init-fls-private-cloud}
+
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
+
+In the user data  you can pass the custom content that allows you to customize the operating system for the specific instance.
+
+The user data that you pass should follow the following conditions:
+-  It should be uncompressed.
+-  It should start with `#cloud-config`.
+-  It should not exceed 63 Kb in size.

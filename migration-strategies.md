@@ -93,9 +93,6 @@ IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geogr
 - **AIX** - GLVM
 - **IBM i** - Geomirroring
 
-IBM i is not supported for private cloud.
-{: note}
-
 ### Application-specific replication
 {: #replication-app}
 

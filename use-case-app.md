@@ -16,9 +16,6 @@ subcollection: power-iaas
 # AIX and IBM i production application hosting
 {: #use-case-app-hosting}
 
-IBM i is not supported for private cloud.
-{: note}
-
 The client wants to run an enterprise-level workload in an infrastructure as a service (IaaS) environment with the ability to leverage the IBM Cloud services.
 {: shortdesc}
 

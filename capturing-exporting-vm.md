@@ -40,8 +40,6 @@ CHGASPACT OPTION(*FRCWRT)
 ```
 {: codeblock}
 
-IBM i is not supported for private cloud.
-{: note}
 
 ## Using the {{site.data.keyword.powerSys_notm}} user interface to capture and export a VM
 {: #console-capture-export}

@@ -45,8 +45,6 @@ For complete specifications, see [Hardware and software specifications](/docs/po
 
 The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power hardware.
 
-[Private Cloud]{: tag-red} IBM i is not supported for private cloud.
-{: note}
 
 ### AIX
 {: #aix-os-version}
@@ -123,7 +121,7 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.3 TR13
 * IBM i 7.2 TR9
 * IBM i 7.1 TR11 [^2]
- 
+
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 [^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
