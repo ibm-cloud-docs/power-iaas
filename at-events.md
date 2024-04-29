@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-29"
+lastupdated: "2024-04-29"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -44,10 +44,11 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
 
-| Action                     | Description                                      |
-|:---------------------------|:-------------------------------------------------|
+| Action   | Description                                      |
+|:---------|:-------------------------------------------------|
+| power-iaas.event.list | List all {{site.data.keyword.powerSys_notm}} Instance     |
 | power-iaas.event.read | Read a {{site.data.keyword.powerSys_notm}} Instance     |
-{: caption="Table 1. List of events: Read" caption-side="top"}
+{: caption="Table 1. List of events: Instance" caption-side="top"}
 
 ### Images events
 {: #at-actions-images}
@@ -56,7 +57,8 @@ The following events are for working with images in your {{site.data.keyword.pow
 
 | Action                     | Description                     |
 |:---------------------------|:--------------------------------|
-| power-iaas.image.read          | Read an Image or all Images     |
+| power-iaas.image.list          | List all Images |
+| power-iaas.image.read          | Read an Image or all Images |
 | power-iaas.image.create        | Create an Image              |
 | power-iaas.image.update        | Update an Image                 |
 | power-iaas.image.delete        | Delete an Image                 |
@@ -70,7 +72,8 @@ The following events are for working with networks in your {{site.data.keyword.p
 
 | Action                     | Description                           |
 |:---------------------------|:--------------------------------------|
-| power-iaas.network.read        | Read a Network or all Networks        |
+| power-iaas.network.list        | List all Networks    |
+| power-iaas.network.read        | Read a Network or all Networks    |
 | power-iaas.network.create      | Create a Network (Public or Private) |
 | power-iaas.network.update      | Update a Network                      |
 | power-iaas.network.delete      | Delete a Network                      |
@@ -83,22 +86,23 @@ The following events are for working with each {{site.data.keyword.powerSys_notm
 
 | Action                        | Description                          |
 |:------------------------------|:-------------------------------------|
-| power-iaas.pvm-instance.read      | Read a Power virtual server instance                  |
-| power-iaas.pvm-instance.create    | Create a Power virtual server instance                |
-| power-iaas.pvm-instance.update    | Update a Power virtual server instance                |
-| power-iaas.pvm-instance.delete    | Delete a Power virtual server instance                |
-| power-iaas.pvm-instance.start     | Start a Power virtual server instance                 |
-| power-iaas.pvm-instance.stop      | Stop a Power virtual server instance                  |
-| power-iaas.pvm-instance.renew     | Restart a Power virtual server instance                |
-| power-iaas.pvm-instance.unknown   | Unknown action on a Power virtual server instance     |
-| power-iaas.pvm-instance.monitor   | Console access to a Power virtual server instance     |
-| power-iaas.pvm-instance.capture   | Capture a Power virtual server instance into an image |
-| power-iaas.pvm-instance.immediate-shutdown     | Shut down a Power virtual server instance immediately |
-| power-iaas.pvm-instance.clone   | Clone a Power virtual server instance |
-| power-iaas.pvm-instance.snapshot     |  Create a Power virtual server instance Snapshot |
-| power-iaas.pvm-instance-network.read      |  Read a Power virtual server instance Network |
-| power-iaas.pvm-instance-network.create     |  Create a Power virtual server instance Network  |
-| power-iaas.pvm-instance-network.delete      |  Delete a Power virtual server instance Network  |
+| power-iaas.pvm-instance.list      | List all {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.read      | Read a {{site.data.keyword.powerSys_notm}} instance                  |
+| power-iaas.pvm-instance.create    | Create a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.update    | Update a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.delete    | Delete a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.start     | Start a {{site.data.keyword.powerSys_notm}} instance                 |
+| power-iaas.pvm-instance.stop      | Stop a {{site.data.keyword.powerSys_notm}} instance                  |
+| power-iaas.pvm-instance.renew     | Restart a {{site.data.keyword.powerSys_notm}} instance                |
+| power-iaas.pvm-instance.unknown   | Unknown action on a {{site.data.keyword.powerSys_notm}} instance     |
+| power-iaas.pvm-instance.monitor   | Console access to a {{site.data.keyword.powerSys_notm}} instance     |
+| power-iaas.pvm-instance.capture   | Capture a {{site.data.keyword.powerSys_notm}} instance into an image |
+| power-iaas.pvm-instance.immediate-shutdown     | Shut down a {{site.data.keyword.powerSys_notm}} instance immediately |
+| power-iaas.pvm-instance.clone   | Clone a {{site.data.keyword.powerSys_notm}} instance |
+| power-iaas.pvm-instance.snapshot     |  Create a {{site.data.keyword.powerSys_notm}} instance Snapshot |
+| power-iaas.pvm-instance-network.read      |  Read a {{site.data.keyword.powerSys_notm}} instance Network |
+| power-iaas.pvm-instance-network.create     |  Create a {{site.data.keyword.powerSys_notm}} instance Network  |
+| power-iaas.pvm-instance-network.delete      |  Delete a {{site.data.keyword.powerSys_notm}} instance Network  |
 {: caption="Table 4. List of events: {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
 ### SSH keys events
@@ -108,6 +112,7 @@ The following events are for working with your account and SSH keys in your {{si
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.ssh-key.list      | List all the SSH keys |
 | power-iaas.ssh-key.read      | Read an SSH key or SSH keys |
 | power-iaas.ssh-key.create    | Create an SSH key           |
 | power-iaas.ssh-key.update    | Update an SSH key           |
@@ -121,6 +126,7 @@ The following events are for working with data volumes in your {{site.data.keywo
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.volume.list       | List all Volumes    |
 | power-iaas.volume.read       | Read a Volume or Volumes    |
 | power-iaas.volume.create     | Create a Volume            |
 | power-iaas.volume.update     | Update a Volume            |
@@ -135,6 +141,7 @@ The following events are for working with storage capacity in your {{site.data.k
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.storage-capacity.list       | List all Storage Capacity     |
 | power-iaas.storage-capacity.read       | Read Storage Capacity     |
 {: caption="Table 7. List of events: Storage capacity" caption-side="top"}
 
@@ -145,6 +152,7 @@ The following events are for working with storage pools in your {{site.data.keyw
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.system-pools.list       | List all System Pools Information     |
 | power-iaas.system-pools.read       | Read System Pools Information     |
 {: caption="Table 8. List of events: Storage pools" caption-side="top"}
 
@@ -157,11 +165,12 @@ The following events are for working with tenants in your {{site.data.keyword.po
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.tenant.list       |  List all the Tenant Information |
 | power-iaas.tenant.read       |  Read your Tenant Information |
-| power-iaas.tenant-ssh.read   |   Read SSH Key or SSH Keys |
-| power-iaas.tenant-ssh.create  |   Create an SSH Key  |
-| power-iaas.tenant-ssh.update  | Update an SSH Key |
-| power-iaas.tenant-ssh.delete   |  Delete an SSH Key  |
+| power-iaas.tenant-sshkey.read   |   Read SSH Key or SSH Keys |
+| power-iaas.tenant-sshkey.create  |   Create an SSH Key  |
+| power-iaas.tenant-sshkey.update  | Update an SSH Key |
+| power-iaas.tenant-sshkey.delete   |  Delete an SSH Key  |
 {: caption="Table 9. List of events: Tenant" caption-side="top"}
 
 ### List of events: Job
@@ -171,6 +180,7 @@ The following events are for working with jobs in your {{site.data.keyword.power
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.job.list       |  List all Jobs |
 | power-iaas.job.read       |  Read a Job or all Jobs |
 | power-iaas.job.create  |   Create a Job  |
 | power-iaas.job.delete   |  Delete a Job  |
@@ -183,6 +193,7 @@ The following events are for working with network ports in your {{site.data.keyw
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.port.list       |  List all Network Ports |
 | power-iaas.port.read       |  Read a Network Port or all Network Ports |
 | power-iaas.port.create  |   Create a Network Port   |
 | power-iaas.port.update  |   Update a Network Port   |
@@ -196,6 +207,7 @@ The following events are for working with SAP in your {{site.data.keyword.powerS
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.sap.list       |  List all SAP Information |
 | power-iaas.sap.read       |  Read SAP Information |
 | power-iaas.sap.create  |   Create an SAP PVM Instance   |
 {: caption="Table 12. List of events: SAP" caption-side="top"}
@@ -207,6 +219,7 @@ The following events are for working with Cloud connections in your {{site.data.
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.cloud-connection.list       |  List all Cloud Connections  |
 | power-iaas.cloud-connection.read       |  Read a Cloud Connection or all Cloud Connections  |
 | power-iaas.cloud-connection.create     |   Create a Cloud Connection    |
 | power-iaas.cloud-connection.update     |   Update a Cloud Connection    |
@@ -220,6 +233,7 @@ The following events are for working with placement groups in your {{site.data.k
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.placement-groups.list       |  List all Placement Groups  |
 | power-iaas.placement-groups.read       |  Read a Placement Group or all Placement Groups  |
 | power-iaas.placement-groups.create     |   Create a Placement Group     |
 | power-iaas.placement-groups.update     |   Update a Placement Group     |
@@ -233,6 +247,7 @@ The following events are for working with IKE Policy in your {{site.data.keyword
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.ike-policy.list       |  List all IKE Policy   |
 | power-iaas.ike-policy.read       |  Read an IKE Policy   |
 | power-iaas.ike-policy.create     |   Create an IKE Policy      |
 | power-iaas.ike-policy.update     |   Update an IKE Policy      |
@@ -246,6 +261,7 @@ The following events are for working with IPsec Policy in your {{site.data.keywo
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.ipsec-policy.list       |  List all IPsec Policy   |
 | power-iaas.ipsec-policy.read       |  Read an IPsec Policy   |
 | power-iaas.ipsec-policy.create     |   Create an IPsec Policy      |
 | power-iaas.ipsec-policy.update     |   Update an IPsec Policy      |
@@ -259,6 +275,7 @@ The following events are for working with VPN Connection in your {{site.data.key
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
+| power-iaas.vpn-connection.list       |  List all VPN Connections   |
 | power-iaas.vpn-connection.read       |  Read a VPN Connection or all VPN Connections   |
 | power-iaas.vpn-connection.create     |   Create a VPN Connection       |
 | power-iaas.vpn-connection.update     |   Update a VPN Connection       |
@@ -283,7 +300,7 @@ The CADF standard is significant in auditing security in cloud environments as i
 The following code snippets shows the differences between the old and new activity tracker response format.
 
 `New response format`
-```
+```json
 {
     "logSourceCRN": "crn:v1:bluemix:public:power-iaas:us-east:a/xxxxxxxxxxxxxxxxxxxx:yyyyyyyyyyyyyyyyyyyyyy::",
     "saveServiceCopy": true,
@@ -336,17 +353,15 @@ The following code snippets shows the differences between the old and new activi
         "sshKeys": [],
         "tenantID": "xxxxxxxxxxxxxxxxxxxx"
     },
-    "message": "Power Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
+    "message": "{{site.data.keyword.powerSys_notm}}: read tenant xxxxxxxxxxxxxxxxxxxx ",
     "observer": {
         "name": "ActivityTracker"
     }
 }
 ````
-{: codeblock}
-
 
 `Old response format`
-```
+```json
 {
     "payload": {
         "outcome": "success",
@@ -392,7 +407,6 @@ The following code snippets shows the differences between the old and new activi
     }
 }
 ````
-{: codeblock}
 
 ## Activity tracker regions
 {: #at-regions}
