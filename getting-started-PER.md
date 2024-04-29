@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-29"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -208,7 +208,7 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `OSA21` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO01` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO04` | ![Checkmark icon](./images/checkmark.svg) |
-| `SYD04` |   X |
+| `SYD04` | ![Checkmark icon](./images/checkmark.svg) |
 | `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOR01` |   X |
