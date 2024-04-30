@@ -167,9 +167,9 @@ The following events are for working with tenants in your {{site.data.keyword.po
 |:-------------------------|:----------------------------|
 | power-iaas.tenant.read   |  Read a tenant |
 | power-iaas.tenant-sshkey.read   |   Read a tenant SSH Key  |
-| power-iaas.tenant-sshkey.create  |   Create an SSH Key  |
-| power-iaas.tenant-sshkey.update  | Update an SSH Key |
-| power-iaas.tenant-sshkey.delete   |  Delete an SSH Key  |
+| power-iaas.tenant-sshkey.create  |   Create a tenant SSH Key  |
+| power-iaas.tenant-sshkey.update  | Update a tenant SSH Key |
+| power-iaas.tenant-sshkey.delete   |  Delete a tenant SSH Key  |
 {: caption="Table 9. List of events: Tenant" caption-side="top"}
 
 ### List of events: Job
@@ -180,7 +180,7 @@ The following events are for working with jobs in your {{site.data.keyword.power
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.job.list       |  List all jobs |
-| power-iaas.job.read       |  Read a jobs |
+| power-iaas.job.read       |  Read a job |
 | power-iaas.job.create  |   Create a job  |
 | power-iaas.job.delete   |  Delete a job  |
 {: caption="Table 10. List of events: Job" caption-side="top"}
