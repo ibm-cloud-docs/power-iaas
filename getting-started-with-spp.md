@@ -16,9 +16,6 @@ subcollection: power-iaas
 # Managing shared processor pool
 {: #manage-SPP}
 
-An user defined shared processor pool is not supported for {{site.data.keyword.powerSysFull}} Private Cloud.
-{: note}
-
 A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances. Unlike a virtual server instance that has a dedicated and defined maximum amount of processing capacity, you can set the reserved cores in SPP that are guaranteed to be available at the pool level.
 {: shortdesc}
 
@@ -35,7 +32,7 @@ The benefits of using an SPP are as follows:
 * Provides control over licensing costs by limiting the number of processors an uncapped partition can use, which reduces the number of software licenses.
 * Provides a better overall ability to manage processor resources.
 
-The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} workspace. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
+The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add upto 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
 
 You can specify the host affinity and anti-affinity between two or more SPPs with shared processor pool placement groups. For more information, see [Configuring shared processor pool placement group](/docs/power-iaas?topic=power-iaas-manage-SPP#configure-SPP-PG).
 
@@ -81,7 +78,7 @@ To create an SPP, complete the following steps:
     |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
-    |Reserved processing cores|The core-to-vCPU ratio is 1:1 by default. |
+    |Reserved processing cores|For {{site.data.keyword.powerSys_notm}} on cloud, the core-to-vCPU ratio is 1:1 by default. \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-vCPU ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
      {: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
 
 1. Click **Create**.
