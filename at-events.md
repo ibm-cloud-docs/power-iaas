@@ -58,7 +58,7 @@ The following events are for working with images in your {{site.data.keyword.pow
 | Action                     | Description                     |
 |:---------------------------|:--------------------------------|
 | power-iaas.image.list          | List all Images |
-| power-iaas.image.read          | Read an Image or all Images |
+| power-iaas.image.read          | Read an Image |
 | power-iaas.image.create        | Create an Image              |
 | power-iaas.image.update        | Update an Image                 |
 | power-iaas.image.delete        | Delete an Image                 |
@@ -73,7 +73,7 @@ The following events are for working with networks in your {{site.data.keyword.p
 | Action                     | Description                           |
 |:---------------------------|:--------------------------------------|
 | power-iaas.network.list        | List all Networks    |
-| power-iaas.network.read        | Read a Network or all Networks    |
+| power-iaas.network.read        | Read a Network   |
 | power-iaas.network.create      | Create a Network (Public or Private) |
 | power-iaas.network.update      | Update a Network                      |
 | power-iaas.network.delete      | Delete a Network                      |
@@ -113,7 +113,7 @@ The following events are for working with your account and SSH keys in your {{si
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.ssh-key.list      | List all the SSH keys |
-| power-iaas.ssh-key.read      | Read an SSH key or SSH keys |
+| power-iaas.ssh-key.read      | Read an SSH key  |
 | power-iaas.ssh-key.create    | Create an SSH key           |
 | power-iaas.ssh-key.update    | Update an SSH key           |
 | power-iaas.ssh-key.delete    | Delete an SSH key           |
@@ -127,7 +127,7 @@ The following events are for working with data volumes in your {{site.data.keywo
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.volume.list       | List all Volumes    |
-| power-iaas.volume.read       | Read a Volume or Volumes    |
+| power-iaas.volume.read       | Read a Volume    |
 | power-iaas.volume.create     | Create a Volume            |
 | power-iaas.volume.update     | Update a Volume            |
 | power-iaas.volume.delete     | Delete a Volume            |
@@ -142,7 +142,7 @@ The following events are for working with storage capacity in your {{site.data.k
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.storage-capacity.list       | List all Storage Capacity     |
-| power-iaas.storage-capacity.read       | Read Storage Capacity     |
+| power-iaas.storage-capacity.read       | Read a Storage Capacity     |
 {: caption="Table 7. List of events: Storage capacity" caption-side="top"}
 
 ### Storage pools events
@@ -153,7 +153,7 @@ The following events are for working with storage pools in your {{site.data.keyw
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.system-pools.list       | List all System Pools Information     |
-| power-iaas.system-pools.read       | Read System Pools Information     |
+| power-iaas.system-pools.read       | Read a System Pools Information     |
 {: caption="Table 8. List of events: Storage pools" caption-side="top"}
 
 
@@ -165,9 +165,8 @@ The following events are for working with tenants in your {{site.data.keyword.po
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
-| power-iaas.tenant.list       |  List all the Tenant Information |
-| power-iaas.tenant.read       |  Read your Tenant Information |
-| power-iaas.tenant-sshkey.read   |   Read SSH Key or SSH Keys |
+| power-iaas.tenant.sshkey.list   |  List all tenant SSH keys |
+| power-iaas.tenant-sshkey.read   |   Read an SSH Key  |
 | power-iaas.tenant-sshkey.create  |   Create an SSH Key  |
 | power-iaas.tenant-sshkey.update  | Update an SSH Key |
 | power-iaas.tenant-sshkey.delete   |  Delete an SSH Key  |
@@ -181,7 +180,7 @@ The following events are for working with jobs in your {{site.data.keyword.power
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.job.list       |  List all Jobs |
-| power-iaas.job.read       |  Read a Job or all Jobs |
+| power-iaas.job.read       |  Read a Jobs |
 | power-iaas.job.create  |   Create a Job  |
 | power-iaas.job.delete   |  Delete a Job  |
 {: caption="Table 10. List of events: Job" caption-side="top"}
@@ -194,7 +193,7 @@ The following events are for working with network ports in your {{site.data.keyw
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.port.list       |  List all Network Ports |
-| power-iaas.port.read       |  Read a Network Port or all Network Ports |
+| power-iaas.port.read       |  Read a Network Port   |
 | power-iaas.port.create  |   Create a Network Port   |
 | power-iaas.port.update  |   Update a Network Port   |
 | power-iaas.port.delete   | Delete a Network Port  |
@@ -208,7 +207,7 @@ The following events are for working with SAP in your {{site.data.keyword.powerS
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.sap.list       |  List all SAP Information |
-| power-iaas.sap.read       |  Read SAP Information |
+| power-iaas.sap.read       |  Read an SAP Information |
 | power-iaas.sap.create  |   Create an SAP PVM Instance   |
 {: caption="Table 12. List of events: SAP" caption-side="top"}
 
@@ -220,7 +219,7 @@ The following events are for working with Cloud connections in your {{site.data.
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.cloud-connection.list       |  List all Cloud Connections  |
-| power-iaas.cloud-connection.read       |  Read a Cloud Connection or all Cloud Connections  |
+| power-iaas.cloud-connection.read       |  Read a Cloud Connection  |
 | power-iaas.cloud-connection.create     |   Create a Cloud Connection    |
 | power-iaas.cloud-connection.update     |   Update a Cloud Connection    |
 | power-iaas.cloud-connection.delete       |   Delete a Cloud Connection    |
@@ -234,7 +233,7 @@ The following events are for working with placement groups in your {{site.data.k
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.placement-groups.list       |  List all Placement Groups  |
-| power-iaas.placement-groups.read       |  Read a Placement Group or all Placement Groups  |
+| power-iaas.placement-groups.read       |  Read a Placement Group |
 | power-iaas.placement-groups.create     |   Create a Placement Group     |
 | power-iaas.placement-groups.update     |   Update a Placement Group     |
 | power-iaas.placement-groups.delete       |   Delete a Placement Group     |
@@ -276,7 +275,7 @@ The following events are for working with VPN Connection in your {{site.data.key
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
 | power-iaas.vpn-connection.list       |  List all VPN Connections   |
-| power-iaas.vpn-connection.read       |  Read a VPN Connection or all VPN Connections   |
+| power-iaas.vpn-connection.read       |  Read a VPN Connection          |
 | power-iaas.vpn-connection.create     |   Create a VPN Connection       |
 | power-iaas.vpn-connection.update     |   Update a VPN Connection       |
 | power-iaas.vpn-connection.delete       |   Delete a VPN Connection       |
