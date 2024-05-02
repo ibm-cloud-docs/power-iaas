@@ -312,6 +312,62 @@ The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up 
 {: #proc-table-2}
 {: tab-title="Shared processors"}
 
+
+
+### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+{: #pricing-spp-private-cloud}
+
+[Private Cloud]{: tag-red}
+
+The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}} on cloud. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
+
+When you use SPP in private cloud, you pay for the following items:
+
+* The maximum capacity of the SPP reserved cores that use the shared capped part number.
+* The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
+* The operating system license based on the following types of virtual instnaces:
+    * shared capped processor partition: pricing is based on the entitled capacity.
+    * shared uncapped processor partitions: pricing is based on the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in a SPP for each type of operating system such as AIX or IBM i.
+
+| Offering/Solution  | EC:VP ratio  | Core Pricing  | OS license pricing |
+| -----------------  | -----------  | ------------  | ------------------ |
+| PowerVS Private Cloud	User-defined Pools  | 1:20	1. | 1. SPP capacity at capped shared processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For PowerVS Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
+{: class="simple-tab-table"}
+{: tab-group="processor"}
+{: caption="Table 2. Shared processor pool in private cloud" caption-side="top"}
+{: #spp-table-1}
+{: tab-title="Shared processors"}
+
+To calculate the price for OS licensing, you must consider the following conditions:
+* If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
+* If the total number of VPs associated with the partitions in a SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
+
+The following examples illustrates the calculation of the pricing for OS licensing when you use SPP:
+
+**Example 1**
+Maximum Pool Capacity: 8
+AIX VM1 VP: 4
+AIX VM2 VP: 2
+
+In this example, the maximum pool capacity (8) is greater than the total number of VPs associated with the partitions in a SPP (4+2=6). Therefore, the pricing for OS licensing is calculated as follows:
+* The partition VM1 contains four VPs of AIX OS license. So, the price is four times the cost of AIX OS license.
+* The partition VM2 contains two VPs of AIX OS license. So, the price is two times the cost of AIX OS license.
+
+Therefore, the total cost for this SPP is six times the cost of AIX.
+
+**Example 2**
+Maximum Pool Capacity: 8
+AIX VM1 VP: 4
+AIX VM2 VP: 2
+AIX VM3 VP: 4
+
+In this example, the maximum pool capacity (8) is less than the total number of of VPs associated with the partitions in a SPP (4+2+4=10). Therefore, the pricing for OS licensing is distributed proportionately for all the VPs.
+* VM1 is charged with 3.2 times the AIX OS license cost.
+* VM2 is charged with 1.6 times the AIX OS license cost.
+* VM3 is charged with 3.2 times the AIX OS license cost.
+
+
 ## How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?
 {: #performance}
 {: faq}
