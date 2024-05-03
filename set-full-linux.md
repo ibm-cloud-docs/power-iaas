@@ -275,7 +275,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
 When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
 
-In the user data  you can pass the custom content that allows you to customize the operating system for the specific instance.
+In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
 
 The user data that you pass should follow the following conditions:
 -  It should be uncompressed.
