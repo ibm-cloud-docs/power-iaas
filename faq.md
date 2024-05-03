@@ -187,7 +187,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterpris
 
 FLS provides access to RHEL OS interim fixes and updates by using activation keys for Power servers that are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-The following list is an example of FLS offering:
+The following list is an example of FLS offerings:
 
 * Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.0 (General)
 * Support:	You pay IBM for support
@@ -325,9 +325,9 @@ When you use SPP in private cloud, you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
-* The operating system license based on the following types of virtual instnaces:
-    * shared capped processor partition: pricing is based on the entitled capacity.
-    * shared uncapped processor partitions: pricing is based on the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in a SPP for each type of operating system such as AIX or IBM i.
+* The operating system license based on the following types of virtual instances:
+    * shared capped processor partition: pricing is determined by the entitled capacity.
+    * shared uncapped processor partitions: pricing is determined by the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in a SPP for each type of operating system such as AIX or IBM i.
 
 | Offering/Solution  | EC:VP ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
