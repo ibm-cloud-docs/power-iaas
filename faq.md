@@ -227,12 +227,16 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 
 <!--The FAQs from here are migrated from PowerVS guide-->
 
-## Can I use my own AIX, IBM i, or Linux image?
+## Can I use my own AIX, IBM i, Linux, or Linux for SAP (HANA or NetWeaver) image?
 {: #image}
 {: faq}
 {: support}
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See Deploying an SAP custom image within a Power Virtual Server.
+
+
 
 ## What versions of stock images are available?
 {: #stock-images}
@@ -313,7 +317,6 @@ The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up 
 {: tab-title="Shared processors"}
 
 
-
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
@@ -335,9 +338,11 @@ When you use SPP in private cloud, you pay for the following items:
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
 {: class="simple-tab-table"}
 {: tab-group="processor"}
-{: caption="Table 2. Shared processor pool in private cloud" caption-side="top"}
-{: #spp-table-1}
-{: tab-title="Shared processors"}
+{: caption="Table 3. Shared processor pool in private cloud" caption-side="top"}
+
+
+### How to calculate the pricing for OS licensing in SPP
+{: #cal-OSlic}
 
 To calculate the price for OS licensing, you must consider the following conditions:
 * If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
@@ -345,7 +350,23 @@ To calculate the price for OS licensing, you must consider the following conditi
 
 The following examples illustrates the calculation of the pricing for OS licensing when you use SPP:
 
-**Example 1**
+Maximum pool capacity is 8.
+{: note}
+
+| Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
+| ------  | ------  | -------- | --------------------------------------------- | ---------------- |
+| 1       | AXI VM1 | 4        | 6 < 8                                         | 4 x cost of AXI OS license |
+|         | AXI VM2 | 2        |                                               | 2 x cost of AXI OS license |
+|2        | AXI VM1 | 4        | 10 > 8                                        | 3.2 x cost of AXI OS license |
+|         | AXI VM2 | 2        |                                               | 1.6 x cost of AXI OS license |
+|         | AXI VM3 | 4        |                                               | 3.2 x cost of AXI OS license |
+{: class="simple-tab-table"}
+{: tab-group="processor"}
+{: caption="Table 4. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
+
+
+
+<!--**Example 1**
 Maximum Pool Capacity: 8
 AIX VM1 VP: 4
 AIX VM2 VP: 2
@@ -365,7 +386,7 @@ AIX VM3 VP: 4
 In this example, the maximum pool capacity (8) is less than the total number of of VPs associated with the partitions in a SPP (4+2+4=10). Therefore, the pricing for OS licensing is distributed proportionately for all the VPs.
 * VM1 is charged with 3.2 times the AIX OS license cost.
 * VM2 is charged with 1.6 times the AIX OS license cost.
-* VM3 is charged with 3.2 times the AIX OS license cost.
+* VM3 is charged with 3.2 times the AIX OS license cost.-->
 
 
 ## How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?
@@ -471,7 +492,7 @@ The key differences are as follows:
 | Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
 | Ease of creation | Easy and quick process| Three-step process and takes a long time|
 | Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
-{: caption="Table 1. Differences between a snapshot and clone" caption-side="bottom"}
+{: caption="Table 5. Differences between a snapshot and clone" caption-side="bottom"}
 
 
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.

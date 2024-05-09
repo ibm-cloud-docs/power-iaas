@@ -92,6 +92,7 @@ toc:
               - modifying-instance.md
               - virtual-applianes-catalog.md
               - importing-boot-image.md
+              - deploying-SAP-custom-image.md
               - configuring-custom-image.md
               - manage-placement-groups.md
               - getting-started-with-spp.md
@@ -160,7 +161,7 @@ toc:
           href: https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference
       - link:
           label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture 
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture
 # Will complete before GA  - responsibility-matrix.md
 
   - navgroup:

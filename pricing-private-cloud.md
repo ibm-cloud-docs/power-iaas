@@ -108,6 +108,20 @@ For detailed usage and billing information, you can refer to the part numbers in
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  |
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  |
+| IBM i operating system P10 license core-hour |
+| IBM i operating system P30 license core-hour |
+| IBM i operating system P10 movable license - SWMA paid - core-hour |
+| IBM i operating system P30 movable license - SWMA paid - core-hour |
+| IBM i operating system P10 service extension core-hour |
+| IBM i operating system P30 service extension core-hour |
+| IBM i LPP P10 license core-hour |
+| IBM i LPP P30 license core-hour |
+| IBM i LPP P10 movable license - SWMA paid - core-hour |
+| IBM i LPP P30 movable license - SWMA paid - core-hour |
+| IBM i P10 PowerHA instance core-hour |
+| IBM i P30 PowerHA instance core-hour |
+| IBM i Cloud Storage Solutions instance core-hour |
+| IBM i Rational Developer Studio instance core-hour|
 | **IBM Power Systems Virtual Server Private Cloud Volume Group**  |
 | Volume Storage Tier 0 gigabyte-hour  |
 | Volume Storage Tier 1 gigabyte-hour  |
@@ -119,35 +133,6 @@ For detailed usage and billing information, you can refer to the part numbers in
 | Snapshot Storage Tier 3 gigabyte-hour  |
 | Snapshot Storage Tier 5k gigabyte-hour  |
 {: caption="Table 2. Part numbers" caption-side="bottom"}
-
-
-<!--| Virtual Tape Library terabyte-hour  |
-| AIX operating system scale-up license core-hour  |
-| AIX operating system scale-out license core-hour  |
-| Red Hat Enterprise Linux operating system scale-out license core-hour  |
-| Red Hat Enterprise Linux operating system scale-up license core-hour  |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour  |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour  |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour  |
-| IBM i operating system P10 license core-hour  |
-| IBM i operating system P30 license core-hour  |
-| IBM i operating system P10 movable license - SWMA paid - core-hour  |
-| IBM i operating system P30 movable license - SWMA paid - core-hour  |
-| IBM i operating system P10 service extension core-hour |
-| IBM i operating system P30 service extension core-hour  |
-| IBM i LPP P10 license core-hour  |
-| IBM i LPP P30 license core-hour  |
-| IBM i LPP P10 movable license - SWMA paid - core-hour  |
-| IBM i LPP P30 movable license - SWMA paid - core-hour  |
-| IBM i P10 PowerHA instance core-hour  |
-| IBM i P30 PowerHA instance core-hour  |
-| IBM i Cloud Storage Solutions instance core-hour  |
-| IBM i Rational Developer Studio instance core-hour  | -->
-
-<!--| **IBM Power Systems Virtual Server Shared Processor Pool Group**  |
-| IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool  |
-| IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool  |
-| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool  |-->
 
 
 ## Base instances
@@ -173,11 +158,6 @@ You can choose the one of the following core types for your workload:
 * **Dedicated virtual processor cores**
 * **Shared capped virtual processor cores**
 * **Shared uncapped virtual processor cores**
-
-<!--The virtual processor cores are classified based on the association between a physical processor type and a virtual server instance:
-* **Dedicated virtual processor cores** - a  virtual server instance is associated with a physical **Dedicated processor**
-* **Shared capped virtual processor cores** - a virtual server instance is associated with a physical **Shared capped processor**
-* **Shared uncapped virtual processor cores** - a virtual server instance is associated with a physical **Shared uncapped processor**-->
 
 Different scenarios provide different benefits when you use each type of virtual processor cores.
 
