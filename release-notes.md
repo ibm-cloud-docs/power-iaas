@@ -26,10 +26,16 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## May 2024
+{: #may-2024}
+
+- Power Edge Router (PER) is now available in the `DAL13` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+
+
 ## April 2024
 {: #apr-2024}
 
-- Power Edge Router (PER) is now available in the `LON06` and `SYD04` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+- Power Edge Router (PER) is now available in the `LON06` and `SYD04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 general purpose, RHEL 9.2 for SAP,  RHEL8.8 general purpose, and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 - AIX 7.1 will continue to be charged at standard usage rates until further notice [^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 - {{site.data.keyword.powerSys_notm}} on IBM Cloud is now HIPAA-ready. See the [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#HIPAA-cert) for more details.
