@@ -21,7 +21,7 @@ IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geogr
 - **AIX** - GLVM
 - **IBM i** - Geo mirroring
 
-# Application-specific replication
+## Application-specific replication
 {: #replication-app}
 
 Applications might have replication mechanisms that can sync multiple environments. These options are commonly used for application-specific replication:

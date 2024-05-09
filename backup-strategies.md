@@ -20,7 +20,7 @@ Learn more about different AIX and IBM i backup strategies for IBM&reg; Power Sy
 {: shortdesc}
 
 
-## Backup for AIX and Linux instances
+## Backup for AIX and Linux® instances
 
 ### Secure automated backup with Compass for AIX and Linux®
 {: #baas}
@@ -262,7 +262,7 @@ Default output format [None]: json
 
 ### Veeam for AIX
 
-Veeam for AIX - It provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
+Veeam for AIX provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
 
 #### Ordering Veeam standalone licenses
 {: #backup_veeam_ordering_licenses}
@@ -275,9 +275,9 @@ A license key will be generated and emailed to whomever placed the order.
 
 ### FalconStor StorSafe VTL
 
-FalconStor StorSafe VTL - For more information see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
+For more information see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
   
-## Managed services and IBM resiliency services
+### Managed services and IBM resiliency services
 {: #managed-services}
 
 Contact an IBM representative if you need help with understanding the different backup lifecycle processes.

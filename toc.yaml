@@ -31,7 +31,7 @@ toc:
               - migration-strategies.md
               - system-migration.md
       - topicgroup: 
-              label: Replication in Power Virtual Server
+              label: Replication in Power Virtual Servers
               topics: 
               - host-and-os-based-logical-replication.md
               - global-replication-service.md      
