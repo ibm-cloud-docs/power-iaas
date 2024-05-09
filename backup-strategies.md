@@ -19,14 +19,10 @@ subcollection: power-iaas
 Learn more about different AIX and IBM i backup strategies for IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}
 
-## Image capture
-{: #backup-image-capture}
 
-Image capture produces a storage FlashCopy of the logical partition (LPAR) and works on both AIX, Linux, and IBM i LPARs. You can use image capture to store VM images within your account (locally) as a part of your image catalog, or directly to [IBM Cloud Object Storage](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm), or both.
+## Backup for AIX and Linux instances
 
-Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.
-
-## Secure automated backup with Compass for AIX and Linux®
+### Secure automated backup with Compass for AIX and Linux®
 {: #baas}
 
 IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called Secure Automated Backup with Compass® referred hereafter as “Backup Offering.”  
@@ -197,7 +193,20 @@ The typical IBM i customer uses the following flow to back up LPARs and objects:
 
 For a complete tutorial on backing up and restoring IBM i VM data, see [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: external}.
 
-## Using Cloud Object Storage
+
+## Additional backup strategies
+{: add-backup}
+
+The additional backup strategies that you can use are as follows:
+
+### Image capture
+{: #backup-image-capture}
+
+Image capture produces a storage FlashCopy of the logical partition (LPAR) and works on both AIX, Linux, and IBM i LPARs. You can use image capture to store VM images within your account (locally) as a part of your image catalog, or directly to [IBM Cloud Object Storage](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm), or both.
+
+Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum image size that you can import or export is **10 TB**.
+
+### Cloud Object Storage
 {: #cos-over-directlink}
 
 The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
@@ -214,7 +223,7 @@ The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.d
 
     Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
 
-### Cloud Object Storage on AIX
+#### Cloud Object Storage on AIX
 {: cos-aix}
 
 IBM Power Systems that are running AIX 7.2 TL3, or later, have a script that is located in the path, `/usr/samples/nim/cloud_setup`. The `cloud_setup` command installs the command-line environment for cloud storage services.
@@ -251,14 +260,11 @@ Default output format [None]: json
 2019-01-28 15:05:25 1380725 yum-3.4.3-5.aix6.1.noarch.rpm
 ```
 
-## Additional backup strategies
-{: add-backup}
+### Veeam for AIX
 
-The additional backup strategies that you can use are as follows:
-- FalconStor StorSafe VTL - For more information see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
-- Veeam for AIX - It provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
+Veeam for AIX - It provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
 
-### Ordering Veeam standalone licenses
+#### Ordering Veeam standalone licenses
 {: #backup_veeam_ordering_licenses}
 
 You can order a Veeam® standalone license, via IBM Cloud portal [Order Veeam Licesne](https://cloud.ibm.com/infrastructure/vmware-solutions/console/instances/licenses)
@@ -266,6 +272,10 @@ You can order a Veeam® standalone license, via IBM Cloud portal [Order Veeam Li
 An email will be sent confirming the order. Should the order be incorrect, it can be deleted. For more information, see [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses).
 
 A license key will be generated and emailed to whomever placed the order.
+
+### FalconStor StorSafe VTL
+
+FalconStor StorSafe VTL - For more information see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
   
 ## Managed services and IBM resiliency services
 {: #managed-services}

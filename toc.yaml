@@ -31,6 +31,11 @@ toc:
               - migration-strategies.md
               - system-migration.md
       - topicgroup: 
+              label: Replication in Power Virtual Server
+              topics: 
+              - host-and-os-based-logical-replication.md
+              - global-replication-service.md      
+      - topicgroup: 
               label: Security and compliance
               topics: 
               - gdpr.md
@@ -66,7 +71,6 @@ toc:
               - importing-boot-image.md
               - downloading-fixes.md
               - volume-snapshot-clone.md
-              - global-replication-service.md
               - managing_events_logs.md
               - virtual-applianes-catalog.md
       - topicgroup: 
