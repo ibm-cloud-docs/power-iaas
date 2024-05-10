@@ -29,7 +29,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## May 2024
 {: #may-2024}
 
-- Power Edge Router (PER) is now available in the `DAL13` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+- Power Edge Router (PER) is now available in the `DAL13` and `TOR01` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+- Power Virtual Server now offers refreshed images for IBM i 7.2 TR 9.
 
 
 ## April 2024
@@ -39,7 +40,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 general purpose, RHEL 9.2 for SAP,  RHEL8.8 general purpose, and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 - AIX 7.1 will continue to be charged at standard usage rates until further notice [^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 - {{site.data.keyword.powerSys_notm}} on IBM Cloud is now HIPAA-ready. See the [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#HIPAA-cert) for more details.
-  
+
 <!-- - Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}. -->
 
 [^2]: This update is in reference to the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
@@ -81,9 +82,9 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
 - PER is now available in `DAL12` and `FRA04`. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
-  
+
 - The direction going forward for VPN connectivity capability of the {{site.data.keyword.powerSys_notm}} will be to use the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.
-  
+
   The VPNAAS_CONNECT_APPLICATION_INSTANCE_HOURS part ID of the {{site.data.keyword.powerSys_notm}} is designed only for {{site.data.keyword.powerSys_notm}} and will be withdrawn by the end of March 2024.
 
   Existing users can choose to continue to use {{site.data.keyword.powerSys_notm}} VPN until the end of service or upgrade to their preferred IBM Cloud VPN for VPC service.
@@ -91,33 +92,33 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   By January 18, 2025 IBM will no longer deliver standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS product, thus if you choose not to take the recommended action and run into issues, IBM will not support with end of life for parts occurring six months later on July 14, 2025. Additionally, after March 2024 new connections can no longer be provisioned with the {{site.data.keyword.powerSys_notm}} VPN thus you are encouraged to upgrade to the IBM Cloud VPC VPN at your earliest convenience and ideally before March 2024.
 
 - IBM Cloud Monitoring service is now avilable in `SYD04`, `SAO04`, and `DAL12`.
- 
+
 ## December 2023
 {: #dec-2023}
 
-- **New data center availability**  
+- **New data center availability**
   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
   - `SAO04` is available for PER.
-- **Cost estimator tool**  
+- **Cost estimator tool**
   A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator-tool).
-- **Dedicated hosts**  
+- **Dedicated hosts**
   A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
-- **VPC VPN service**  
+- **VPC VPN service**
   The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
-- **Flexible IOPS**  
+- **Flexible IOPS**
   {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on the latest version.
-- **Update on the new SAP HANA large t-shirt profiles feature**  
+- **Update on the new SAP HANA large t-shirt profiles feature**
   The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](https://test.cloud.ibm.com/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
 - **New Global Replication Service (GRS) pairs support**
   The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
-  
+
 ## November 2023
 {: #nov-2023}
 
 - `WDC06` and `MAD02` data center are now available for PER. `MAD02` is a PER-enabled Power10 data center.
 - Availibity of IBM Cloud Monitoring service is now extended in `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
-  
+
 ## September 2023
 {: #sep-2023}
 
@@ -147,7 +148,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
   We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you notice that the export option for stock images is no longer available because you are using the reference of the stock image.
 
 - IBM {{site.data.keyword.powerSys_notm}} is sequentially rolling out a Power Edge Router (PER) solution that is available in `DAL10` data center.
-  
+
   PER improves network communication across different parts of the IBM network. See, [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per) for more information.
 
 ## May 2023
@@ -213,7 +214,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 - {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - IBM i 7.5 is supported on {{site.data.keyword.powerSys_notm}}s.
 - With virtual appliances independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSys_notm}} workloads. See [Managing virtual appliances](/docs/power-iaas?topic=power-iaas-virtual-appliances).
-  
+
 ## April 2022
 {: #apr-2022}
 
@@ -236,8 +237,8 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## October 2021
 {: #oct-2021}
 
-- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service. 
-- You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-tape-libraries) to backup IBM i data. 
+- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service.
+- You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-tape-libraries) to backup IBM i data.
 
 ## September 2021
 {: #sep-2021}

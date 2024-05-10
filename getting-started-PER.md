@@ -172,7 +172,7 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
    ```code
    SUSEConnect -s
    ```
-   
+
  For RHEL:
    ```code
    subscription-manager status
@@ -211,7 +211,7 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `SYD04` | ![Checkmark icon](./images/checkmark.svg) |
 | `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
-| `TOR01` | X |
+| `TOR01` | ![Checkmark icon](./images/checkmark.svg)  |
 | `WDC04` | X |
 | `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
