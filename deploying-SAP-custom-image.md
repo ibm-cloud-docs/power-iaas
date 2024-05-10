@@ -46,4 +46,4 @@ Note: You must complete the planning and pricing before deploying the Linux for 
 {: #byoc-SAP}
 
 You can bring your own customized Linux for SAP (HANA or NetWeaver) operating system (OS) image to deploy within a {{site.data.keyword.powerSys_notm}}.
-You must self-certify that the image is an SAP image by selecting the checkbox to distinguish between the {{site.data.keyword.powerSys_notm}} stock image and a customer provided SAP image. For more information on importing an image, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image).
+You must self-certify that the image is an SAP image by selecting the checkbox to distinguish between the {{site.data.keyword.powerSys_notm}} stock image and a customer provided SAP image. For more information on importing an image, see [Using the Power Virtual Server user interface to import a boot image](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-importing-boot-image#console-import-image).
