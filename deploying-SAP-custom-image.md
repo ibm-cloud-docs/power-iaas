@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying an Linux for SAP (HANA or NetWeaver) custom image
+# Deploying a Linux for SAP (HANA or NetWeaver) custom image
 {: #deploying-SAP-image}
 
 [On Cloud]{: tag-blue}
