@@ -234,7 +234,7 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See Deploying an SAP custom image within a Power Virtual Server.
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying an SAP custom image within a Power Virtual Server](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#image).
 
 
 
