@@ -234,6 +234,7 @@ Consider the following points for dedicated host pricing:
 To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 [Q2-2024 update end]{: tag-teal}
 
+
 ## Storage types
 {: #storage-types}
 

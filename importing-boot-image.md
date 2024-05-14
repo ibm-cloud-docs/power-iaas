@@ -58,7 +58,7 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 
 1. Click **Boot images**, then **Import image**.
 
-   If you are importing customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.
+   [Q2-2024 update start]{: tag-teal} If you are importing customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.[Q2-2024 update end]{: tag-teal}
    {: note}
 
 2. After you click **Import image**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.

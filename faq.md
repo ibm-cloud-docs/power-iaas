@@ -227,15 +227,16 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 
 <!--The FAQs from here are migrated from PowerVS guide-->
 
-## Can I use my own AIX, IBM i, Linux, or Linux for SAP (HANA or NetWeaver) image?
+## Can I use my own AIX, IBM i, Linux, or [Linux for SAP (HANA or NetWeaver)]{: tag-teal} image?
 {: #image}
 {: faq}
 {: support}
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
+[Q2-2024 update start]{: tag-teal}
 You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#image).
-
+[Q2-2024 update end]{: tag-teal}
 
 
 ## What versions of stock images are available?
@@ -322,6 +323,8 @@ The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up 
 
 [Private Cloud]{: tag-red}
 
+[Q2-2024 update start]{: tag-teal}
+
 The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}} on cloud. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
 
 When you use SPP in private cloud, you pay for the following items:
@@ -339,10 +342,12 @@ When you use SPP in private cloud, you pay for the following items:
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 3. Shared processor pool in private cloud" caption-side="top"}
-
+[Q2-2024 update end]{: tag-teal}
 
 ### How to calculate the pricing for OS licensing in SPP
 {: #cal-OSlic}
+
+[Q2-2024 update start]{: tag-teal}
 
 To calculate the price for OS licensing, you must consider the following conditions:
 * If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
@@ -357,13 +362,14 @@ Maximum pool capacity is 8.
 | ------  | ------  | -------- | --------------------------------------------- | ---------------- |
 | 1       | AXI VM1 | 4        | 6 < 8                                         | 4 x cost of AXI OS license |
 |         | AXI VM2 | 2        |                                               | 2 x cost of AXI OS license |
-|2        | AXI VM1 | 4        | 10 > 8                                        | 3.2 x cost of AXI OS license |
+| 2       | AXI VM1 | 4        | 10 > 8                                        | 3.2 x cost of AXI OS license |
 |         | AXI VM2 | 2        |                                               | 1.6 x cost of AXI OS license |
 |         | AXI VM3 | 4        |                                               | 3.2 x cost of AXI OS license |
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 4. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
 
+[Q2-2024 update end]{: tag-teal}
 
 
 <!--**Example 1**
