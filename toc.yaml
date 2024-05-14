@@ -30,11 +30,11 @@ toc:
               - backup-strategies.md
               - backup-strategies-ibmi.md
               - additional-backup-strategies.md
-        - topicgroup: 
+      - topicgroup: 
               label: Migration strategies in Power Virtual Servers
               topics: 
               - system-migration.md
-              - migration-strategies.md     
+              - migration-strategies.md       
       - topicgroup: 
               label: Replication in Power Virtual Servers
               topics: 
