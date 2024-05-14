@@ -25,11 +25,16 @@ toc:
       - pricing.md
       - ha-dr.md
       - topicgroup: 
-              label: Backup and migration strategies
+              label: Backup strategies in Power Virtual Servers
               topics: 
               - backup-strategies.md
-              - migration-strategies.md
+              - backup-strategies-ibmi.md
+              - additional-backup-strategies.md
+        - topicgroup: 
+              label: Migration strategies in Power Virtual Servers
+              topics: 
               - system-migration.md
+              - migration-strategies.md     
       - topicgroup: 
               label: Replication in Power Virtual Servers
               topics: 
