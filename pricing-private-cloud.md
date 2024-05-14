@@ -224,16 +224,15 @@ The pricing is subject to change depending on the SAP HANA operational costs.
 ## Pricing for dedicated hosts
 {: #pricing-dh}
 
+[Q2-2024 update start]{: tag-teal}
+Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
-[Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.]{: tag-teal}
-
-[Consider the following points for dedicated host pricing:
+Consider the following points for dedicated host pricing:
 * You are not charged separately for shared processor pools you deploy to the dedicated host.
-* Software charges for the supported operating systems are metered and charged by the core.]{: tag-teal}
+* Software charges for the supported operating systems are metered and charged by the core.
 
-[To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).]{: tag-teal}
-
-
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
+[Q2-2024 update end]{: tag-teal}
 
 ## Storage types
 {: #storage-types}
