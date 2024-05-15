@@ -34,7 +34,11 @@ toc:
               label: Migration strategies in Power Virtual Servers
               topics: 
               - system-migration.md
-              - migration-strategies.md       
+              - migration-strategies-aix.md
+              - migration-strategies.md
+              - additional-migration-strategies.md
+              - migration-strategies-third-party.md
+              - migration-strategies-backup-restore.md       
       - topicgroup: 
               label: Replication in Power Virtual Servers
               topics: 
