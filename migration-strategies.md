@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:video: .video}
 {{site.data.keyword.attribute-definition-list}}
 
-# Migration strategies for IBM {{site.data.keyword.powerSys_notm}}s
+# Migration strategies for IBM i
 {: #migration-strategies-power}
 
 Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.

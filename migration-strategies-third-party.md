@@ -34,7 +34,7 @@ subcollection: power-iaas
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
-- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl)
+- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-managed-thirdparty#storsafe-vtl)
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
