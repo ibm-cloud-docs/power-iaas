@@ -91,7 +91,7 @@ The following table displays the additional access roles required for the corres
 | Reader, Viewer                                          | All resources in account (Including future IAM enabled services)     |
 | Editor, Operator, Viewer                                | Direct Link service                                                  |
 | Viewer                                                  | All resource group                                                   |
-| Viewer                                                  | Satellite service                                                    |
+| Viewer                                                  | Satellite service [Private Cloud]{: tag-red}                                                   |
 | Viewer                                                  | User Interface Infrastructure Capacity service            |                                                   
 {: caption="Table 3. Additional access roles" caption-side="bottom"}
 
