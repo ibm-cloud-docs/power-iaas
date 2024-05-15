@@ -44,13 +44,13 @@ The basic steps that are involved in deploying an instance by using a custom ima
 Before you can use a custom image as the boot volume, review the following information:
 
 - You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
-- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your on-premise environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The {{site.data.keyword.powerSys_notm}}s does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes. 
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your on-premise environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The {{site.data.keyword.powerSys_notm}}s does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes.
 - Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power Systems hardware that you selected in the **Machine Type** field.
 
 For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external} and [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
 
-The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}. 
+The supported AIX and IBM i operating system versions depend on the IBM Power Systems hardware that you select for the {{site.data.keyword.powerSys_notm}}.
 
 If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
 {: important}
@@ -60,11 +60,11 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).  
+The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).
 
 Power Systems <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
 
-When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. 
+When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
@@ -78,10 +78,10 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.3?topic=considerations-migrating-i-72-from-54-61-71){: external}. 
+Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.3?topic=considerations-migrating-i-72-from-54-61-71){: external}.
 
 Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. See [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external} for more information.
-  
+
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
 IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.2, and IBM i 7.3 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
@@ -97,7 +97,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported w
 
 Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment. 
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
 
 ## Creating an IBM Cloud Object Storage bucket
@@ -123,7 +123,7 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB of uncompressed image) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
@@ -160,7 +160,7 @@ Complete the following steps to provision a new instance by using a custom boot 
 | Bucket name | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. Optional folders can be added during an [export image](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export) operation to Cloud Object Storage. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field. |
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field. |
-{: caption="Table 1. Importing a boot image" caption-side="bottom"} 
+{: caption="Table 1. Importing a boot image" caption-side="bottom"}
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
