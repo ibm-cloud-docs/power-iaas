@@ -29,8 +29,7 @@ subcollection: power-iaas
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-[Private Cloud]{: tag-red}
-You will need a `Viewer` role for the `IAM Access Management` service to display the `Infrastructure capacity` navigation menu if using custom role with `power-iaas.pod-capacity.view` IAM action.
+You will need a `Viewer` role for the `IAM Access Management` service to display the `Infrastructure capacity` navigation menu (in Private Cloud) if using custom role with `power-iaas.pod-capacity.view` IAM action.
 {: important}
 
 For more information about IAM, review the following information:
