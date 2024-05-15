@@ -62,7 +62,7 @@ You can use the service access roles to define what actions users can perform on
 | Manager | You can configure all resources. The following are some of the actions that you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
-To see the complete list of actions for each specific role, see the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page in IBM Cloud.
+To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud.
 
 ### Resources supported for {{site.data.keyword.powerSys_notm}} IAM access policies
 {: #res-supported}
