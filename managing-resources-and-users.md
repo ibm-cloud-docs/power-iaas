@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2022-12-06"
+lastupdated: "2024-05-15"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -70,12 +70,11 @@ To see the complete list of actions for each specific role, see the [Manage auth
 When you assign access to the {{site.data.keyword.powerSys_notm}} service, you can scope access to any of the following resources:
 - All resources
 - Specific resources, which supports the following selections:
-  - Resource group
-  - Service instance
+    - Resource group
+    - Service instance
   
-  Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned against **Resource type** are ignored.
-  {: note}
-
+Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned against **Resource type** are ignored.
+{: note}
 
 ## Access roles requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
@@ -89,10 +88,13 @@ The following table displays the additional access roles required for the corres
 | Editor, Manager, Operator, Reader, Viewer               | {{site.data.keyword.powerSys_notm}} service                          |
 | Editor, Manager, Operator, Reader, Viewer, VPN Client   | VPC Infrastructure Services service                                  |
 | Editor, Operator, Viewer                                | Transit Gateway service                                              |
-| Reader, Viewer                                          | All resources in account (Including future IAM enabled services)                    |
+| Reader, Viewer                                          | All resources in account (Including future IAM enabled services)     |
 | Editor, Operator, Viewer                                | Direct Link service                                                  |
 | Viewer                                                  | All resource group                                                   |
+| Viewer                                                  | Satellite service                                                    |
+| Viewer                                                  | User Interface Infrastructure Capacity service            |                                                   
 {: caption="Table 3. Additional access roles" caption-side="bottom"}
+
 ## User access scenarios
 {: #user-access-scenarios}
 
