@@ -70,6 +70,7 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
+              - get-started-dedicated-host.md
               - creating-ssh-key.md
               - configuring-custom-image.md
               - modifying-instance.md
