@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Getting started with dedicated host
 {: #dedicated-host}
 
-The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
+The dedicated host feature on IBM {{site.data.keyword.powerSysFull}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
 
 A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and utilize the unique shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can easily optimize your cloud infrastructure by utilizing single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.   
 
@@ -64,6 +64,18 @@ A secondary workspace cannot further share a resource (that it does not own) wit
 
 ## Reserving a dedicated host
 {: #reserv-dh}
+
+To reserve a dedicated host, perform the following steps:
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+2. Select your desired workspace.
+3. Click **Dedicated hosts** on the left navigation menu.
+        All your existing dedicated host that you have created are shown.
+4. Click **Reserve host**.
+5. Select the desired **Dedicated host group** from the available list of host group created before.
+        Click **Create new** if you have not created a dedicated host before.
+6. Enter your **Host name** and select from the available **Machine type**.
+        Dedicated hosts cannot be reserved into host groups for which the current workspace has secondary access. You can create multiple dedicated host at once.
+        {: note}
 
 ## Accessing the dedicated host group details
 {: #details-dh}
