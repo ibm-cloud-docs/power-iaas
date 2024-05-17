@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing global replication service
+# Global Replication Service
 {: #getting-started-GRS}
 
 Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads nowadays run on cloud infrastructure, it’s essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.

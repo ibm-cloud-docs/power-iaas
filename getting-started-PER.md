@@ -157,28 +157,26 @@ See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/p
 
 Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER workspace. Follow these instructions for a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
 1.  Create a private network.
-  1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
-  2.  Click **Subnets** under **Networking** in the left navigation menu.
-  3.  Click **Create subnet**.
-  4.  Enter a unique name and CIDR.
-      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
-  5.  Enter `161.26.0.10` in the **DNS server** field.
+    1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
+    2.  Click **Subnets** under **Networking** in the left navigation menu.
+    3.  Click **Create subnet**.
+    4.  Enter a unique name and CIDR.
+        Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
+    5.  Enter `161.26.0.10` in the **DNS server** field.
 
 2. Create a virtual server instance. See, [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify whether the registration is successful with the following commands:
 
  For SUSE:
-   ```
+   ```code
    SUSEConnect -s
    ```
-   {: codeblock}
 
  For RHEL:
-   ```
+   ```code
    subscription-manager status
    ```
-   {: codeblock}
 
 ## CLI and API support with PER
 {: #cli-api-per}
@@ -196,23 +194,25 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 
 | Data centers | PER available |
 |-----|-----|
-| `CHE01` |   X |
+| `CHE01` | X |
 | `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL13` |   X |
+| `DAL13` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON06` | ![Checkmark icon](./images/checkmark.svg)|
+| `LON04` | ![Checkmark icon](./images/checkmark.svg) |
+| `LON06` | X |
 | `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD04` | ![Checkmark icon](./images/checkmark.svg) |
+| `MON01` | X |
 | `OSA21` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO01` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO04` | ![Checkmark icon](./images/checkmark.svg) |
 | `SYD04` | ![Checkmark icon](./images/checkmark.svg) |
 | `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
-| `TOR01` |   X |
-| `WDC04` |   X |
+| `TOR01` | ![Checkmark icon](./images/checkmark.svg)  |
+| `WDC04` | X |
 | `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}

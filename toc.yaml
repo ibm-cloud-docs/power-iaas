@@ -25,11 +25,25 @@ toc:
       - pricing.md
       - ha-dr.md
       - topicgroup: 
-              label: Backup and migration strategies
+              label: Backup strategies in Power Virtual Servers
               topics: 
               - backup-strategies.md
-              - migration-strategies.md
+              - backup-strategies-ibmi.md
+              - additional-backup-strategies.md
+      - topicgroup: 
+              label: Migration strategies in Power Virtual Servers
+              topics: 
               - system-migration.md
+              - migration-strategies-aix.md
+              - migration-strategies.md
+              - additional-migration-strategies.md
+              - migration-strategies-third-party.md
+              - migration-strategies-backup-restore.md       
+      - topicgroup: 
+              label: Replication in Power Virtual Servers
+              topics: 
+              - host-and-os-based-logical-replication.md
+              - global-replication-service.md      
       - topicgroup: 
               label: Security and compliance
               topics: 
@@ -56,6 +70,7 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
+              - get-started-dedicated-host.md
               - creating-ssh-key.md
               - configuring-custom-image.md
               - modifying-instance.md
@@ -66,7 +81,6 @@ toc:
               - importing-boot-image.md
               - downloading-fixes.md
               - volume-snapshot-clone.md
-              - global-replication-service.md
               - managing_events_logs.md
               - virtual-applianes-catalog.md
       - topicgroup: 
