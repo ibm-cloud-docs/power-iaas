@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-17"
+lastupdated: "2024-05-17"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -78,7 +78,7 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 ### IBM i
 {: #ibmi-details}
 
-Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.3?topic=considerations-migrating-i-72-from-54-61-71){: external}.
+Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 7.2 or 7.3. For more information, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
 
 Power Systems <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. See [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external} for more information.
 
