@@ -69,7 +69,7 @@ for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osTy
 ### First boot change password
 {: #first-boot-change-password}
 
-Once the VNC Console has loaded and the IBM i console screen is shown, follow the following steps to reset the password of the IBM i standard user.
+Once the VNC Console has loaded and the IBM i console screen is shown, follow the steps to reset the password of the IBM i standard user.
 
 1. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
 2. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
