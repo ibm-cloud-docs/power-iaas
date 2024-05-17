@@ -32,7 +32,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Power Edge Router (PER) is now available in the `DAL13` and `TOR01` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - Power Virtual Server now offers refreshed images for IBM i 7.2 TR 9.
 - The SLES 15 SP4 general purpose (SLES15-SP4) stock image is in the process of being removed from our DCs since the OS level no longer supported by SUSE.
-- The RHEL 8.6 general purpose (RHEL8-SP6) stock image is in the process of being removed from our DCs since the OS level no longer supported by Red Hat.
 
 
 ## April 2024
