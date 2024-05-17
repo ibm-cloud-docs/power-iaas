@@ -28,6 +28,14 @@ subcollection: power-iaas
 # Additional migration strategies
 {: #additional-migration-strategies-power}
 
+## IBM teams and managed services
+{: #teams-managed-services}
+
+You can engage IBM teams and services to assist you throughout the migration lifecycle.
+
+- [Expert Labs](https://www.ibm.com/products/expertlabs){: external}
+- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: external}
+
 ## Aspera Technologies
 {: #aspera-technologies}
 

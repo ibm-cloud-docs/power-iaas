@@ -25,7 +25,7 @@ subcollection: power-iaas
 {:video: .video}
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM managed services and third party tools
+# Third party tools
 {: #migration-strategies-managed-thirdparty}
 
 
@@ -86,10 +86,3 @@ Services to help migration are available from IBM, FalconStor, and Authorized Mi
 If you need any help with deploying FalconStor StorSafe VTL, see [FalconStor VTL for IBM Deployment Guide](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}.
 
 For more information on FalconStor StorSafe VTL, see [www.falconstor.com](https://www.falconstor.com/){: external}.
-## IBM teams and managed services
-{: #teams-managed-services}
-
-You can engage IBM teams and services to assist you throughout the migration lifecycle.
-
-- [IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: external}
-- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: external}

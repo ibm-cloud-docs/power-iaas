@@ -18,6 +18,14 @@ subcollection: power-iaas
 
 The additional backup strategies that you can use are as follows:
 
+## IBM teams and managed services
+{: #teams-managed-services}
+
+You can engage IBM teams and services to assist you throughout the migration lifecycle.
+
+- [Expert Labs](https://www.ibm.com/products/expertlabs){: external}
+- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: external}
+
 ## Image capture
 {: #backup-image-capture}
 
@@ -95,8 +103,3 @@ A license key will be generated and emailed to whomever placed the order.
 ## FalconStor StorSafe VTL
 
 For more information see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
-
-## Managed services and IBM resiliency services
-{: #managed-services}
-
-Contact an IBM representative if you need help with understanding the different backup lifecycle processes.
