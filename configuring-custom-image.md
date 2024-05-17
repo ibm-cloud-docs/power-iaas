@@ -71,7 +71,7 @@ For more information on end of service pack support (EoSPS) dates, see [AIX supp
 
 Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 5.4, 6.1 or 7.1. For more information, see [Migrating to IBM i 7.2 from 5.4, 6.1 or 7.1](https://www.ibm.com/docs/en/i/7.4?topic=considerations-migrating-i-72-from-54-61-71){: external}.
 
-Power servers <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. See [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external} for more information.
+Power servers <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. For more information, see [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}.
 
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 

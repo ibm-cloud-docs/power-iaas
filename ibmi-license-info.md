@@ -16,8 +16,6 @@ subcollection: power-iaas
 # IBM i License Program Products (LPP) and Operating System feature bundles
 {: #ibmi-lpps}
 
-[On Cloud]{: tag-blue}
-
 
 When you select IBM i, in addition to the IBM i operating system, the following LPP, and IBM i operating system features are included in the {{site.data.keyword.powerSysFull}} offering:
 

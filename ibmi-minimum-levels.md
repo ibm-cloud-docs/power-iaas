@@ -15,7 +15,6 @@ subcollection: power-iaas
 # Minimum PTF levels for IBM i
 {: #minimum-levels}
 
-[On Cloud]{: tag-blue}
 
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 

@@ -16,7 +16,6 @@ subcollection: power-iaas
 # Connecting to an IBM i virtual machine (VM)
 {: #connect-ibmi}
 
-[On Cloud]{: tag-blue}
 
 Learn how to connect to an IBM i VM after configuring your system. Make sure to review [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmi) before connecting to an IBM i VM.
 {: shortdesc}

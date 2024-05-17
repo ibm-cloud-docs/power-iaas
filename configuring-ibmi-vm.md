@@ -16,8 +16,6 @@ subcollection: power-iaas
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
 
-[On Cloud]{: tag-blue}
-
 
 Complete the following instructions to configure your IBM i virtual machine (VM).
 {: shortdesc}

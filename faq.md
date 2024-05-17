@@ -106,6 +106,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 {: #ibm-os-versions}
 
 {{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.1, or later.
+{{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
