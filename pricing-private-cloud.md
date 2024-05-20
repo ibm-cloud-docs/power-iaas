@@ -80,60 +80,72 @@ For detailed usage and billing information, you can refer to the part numbers in
 
 |  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalogue) |
 |  --------------------------------------------------------------- | ---------------------------------------------- |
-| **IBM Power Systems Virtual Server Virtual Machine Group**       |                                                |
-| IBM Power Systems E1080 virtual processor core hour - capped     | E1080 virtual processor core hours - capped |
-| IBM Power Systems E1080 virtual processor core hour - dedicated  | E1080 virtual processor core hours - dedicated |
-| IBM Power Systems E1080 virtual processor core hour - shared     | E1080 virtual processor core hours - shared |
-| IBM Power Systems E1050 virtual processor core hour - capped     | E1050 virtual processor core hours - capped |
-| IBM Power Systems E1050 virtual processor core hour - dedicated  | E1050 virtual processor core hours - dedicated |
-| IBM Power Systems E1050 virtual processor core hour - shared     | E1050 virtual processor core hours - shared |
-| IBM Power Systems S1022 virtual processor core hour - capped     | S1022 virtual processor core hours - capped |
-| IBM Power Systems S1022 virtual processor core hour - dedicated  | S1022 virtual processor core hours - dedicated |
-| IBM Power Systems S1022 virtual processor core hour - shared     | S1022 virtual processor core hours - shared |
-| IBM Power Systems scale-out memory gigabyte hours                | P10 2U RAM Gigabyte Hours |
-| IBM Power Systems scale-up memory gigabyte hours                 | P10 4U RAM Gigabyte Hours |
-| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload  | E1080 HANA virtual processor core hours - capped |
-| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | E1080 HANA virtual processor core hours - dedicated |
-| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | E1080 HANA virtual processor core hours - shared |
-| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | E1050 HANA virtual processor core hour - capped |
-| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | E1050 HANA virtual processor core hour - dedicated |
-| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | E1050 HANA virtual processor core hour - shared |
-| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | S1022 HANA virtual processor core hour- capped |
-| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | S1022 HANA virtual processor core hour - dedicated |
-| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | S1022 HANA virtual processor core hour - shared |
-| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | HANA P10 2U RAM Gigabyte Hours |
-| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | HANA P10 4U RAM Gigabyte Hours |
-| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | RHEL SAP Scale Out License per Core Hours |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | RHEL SAP Scale Up License per Core Hours |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | SLES SAP Tier 1 Instance-Hours |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | SLES SAP Tier 2 Instance-Hours |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | SLES SAP Tier 3 Instance-Hours |
-| IBM i operating system P10 license core-hour | IBMi P10 License per Core Hours |
-| IBM i operating system P30 license core-hour | IBMi P30 License per Core Hours |
-| IBM i operating system P10 movable license - SWMA paid - core-hour | IBMi P10 License - mobile core - SWMA paid on-prem |
-| IBM i operating system P30 movable license - SWMA paid - core-hour | IBMi P30 License - mobile core - SWMA paid on-prem |
-| IBM i operating system P10 service extension core-hour | IBMi P10 Service Extension |
-| IBM i operating system P30 service extension core-hour | IBMi P30 Service Extension |
-| IBM i LPP P10 license core-hour | IBMi P10 LPP |
-| IBM i LPP P30 license core-hour | IBMi P30 LPP |
-| IBM i LPP P10 movable license - SWMA paid - core-hour | IBMi P10 LPP - mobile core - SWMA paid on-prem |
-| IBM i LPP P30 movable license - SWMA paid - core-hour | IBMi P30 LPP - mobile core - SWMA paid on-prem |
-| IBM i P10 PowerHA instance core-hour | IBMi P10 - PowerHA |
-| IBM i P30 PowerHA instance core-hour | IBMi P30 - PowerHA |
-| IBM i Cloud Storage Solutions instance core-hour | IBMi - COS / Cloud Storage Solution |
-| IBM i Rational Developer Studio instance core-hour| IBMi - Rational Developer Studio |
-| **IBM Power Systems Virtual Server Private Cloud Volume Group**  |
-| Volume Storage Tier 0 gigabyte-hour  | Volume Storage Tier 0 Gigabyte-Hours |
-| Volume Storage Tier 1 gigabyte-hour  | Volume Storage Tier 1 Gigabyte-Hours |
-| Volume Storage Tier 3 gigabyte-hour  | Volume Storage Tier 3 Gigabyte-Hours |
-| Volume Storage Tier 5k gigabyte-hour | Volume Storage Tier 5k Gigabyte-Hours |
-| **IBM Power Systems Virtual Server Private Cloud Snapshot Group**  |
-| Snapshot Storage Tier 0 gigabyte-hour  | Snapshot Storage Tier 0 Gigabyte-Hours |
-| Snapshot Storage Tier 1 gigabyte-hour  | Snapshot Storage Tier 1 Gigabyte-Hours |
-| Snapshot Storage Tier 3 gigabyte-hour  | Snapshot Storage Tier 3 Gigabyte-Hours |
-| Snapshot Storage Tier 5k gigabyte-hour | Snapshot Storage Tier 5k Gigabyte-Hours |
-| **IBM Power Systems Virtual Server Private Cloud VTL Group** |
-| [Q2-2024 update start]{: tag-teal} Virtual Tape Library terabyte-hour | Virtual Tape Library Terabyte-Hours [Q2-2024 update end]{: tag-teal}|
+| **IBM Power Systems Virtual Server virtual machine group**       |                                                |
+| IBM Power Systems E1080 virtual processor core hour - capped     | ppcaas-metric-E1080-cores-capped |
+| IBM Power Systems E1080 virtual processor core hour - dedicated  | ppcaas-metric-E1080-cores-dedicated |
+| IBM Power Systems E1080 virtual processor core hour - shared     | ppcaas-metric-E1080-cores-shared |
+| IBM Power Systems E1050 virtual processor core hour - capped     | ppcaas-metric-E1050-cores-capped |
+| IBM Power Systems E1050 virtual processor core hour - dedicated  | ppcaas-metric-E1050-cores-dedicated |
+| IBM Power Systems E1050 virtual processor core hour - shared     | ppcaas-metric-E1050-cores-shared |
+| IBM Power Systems S1022 virtual processor core hour - capped     | ppcaas-metric-S1022-cores-capped |
+| IBM Power Systems S1022 virtual processor core hour - dedicated  | ppcaas-metric-S1022-cores-dedicated |
+| IBM Power Systems S1022 virtual processor core hour - shared     | ppcaas-metric-S1022-cores-shared |
+| IBM Power Systems scale-out memory gigabyte hours                | ppcaas-metric-p10-2u-memory-standard |
+| IBM Power Systems scale-up memory gigabyte hours                 | ppcaas-metric-p10-4u-memory-standard |
+| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-capped |
+| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-dedicated |
+| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-shared |
+| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-capped |
+| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1050-hana-cores-dedicated |
+| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-shared |
+| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-capped |
+| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-S1022-hana-cores-dedicated |
+| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared |
+| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-2u-hanamem-standard |
+| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-4u-hanamem-standard |
+| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier1 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier2 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier3 |
+| **IBM Power Systems Virtual Server operating systems group**       |                                                |
+| AIX operating system scale-up license core-hour | ppcaas-metric-aix-scale-up |
+| AIX operating system scale-out license core-hour | ppcaas-metric-aix-scale-out |
+| Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour | ppcaas-metric-rhel-scale-up |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
+| [Q2-2024 update start]{: tag-teal} IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
+| IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
+| IBM i operating system P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p10-mol |
+| IBM i operating system P30 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p30-mol |
+| IBM i operating system P10 service extension core-hour | ppcaas-metric-ibmi-os-p10-sve |
+| IBM i operating system P30 service extension core-hour | ppcaas-metric-ibmi-os-p30-sve |
+| IBM i LPP P10 license core-hour | ppcaas-metric-ibmi-lpp-p10 |
+| IBM i LPP P30 license core-hour | ppcaas-metric-ibmi-lpp-p30 |
+| IBM i LPP P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-lpp-p10-mol |
+| IBM i LPP P30 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-lpp-p30-mol |
+| IBM i P10 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p10 |
+| IBM i P30 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30 |
+| IBM i Cloud Storage Solutions instance core-hour | ppcaas-metric-ibmi-cos |
+| IBM i Rational Developer Studio instance core-hour| ppcaas-metric-ibmi-rds [Q2-2024 update end]{: tag-teal}|
+| **IBM Power Systems Virtual Server Private Cloud volume group**  |
+| Volume Storage Tier 0 gigabyte-hour  | ppcaas-metric-volume-tier0 |
+| Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
+| Volume Storage Tier 3 gigabyte-hour  | ppcaas-metric-volume-tier3 |
+| Volume Storage Tier 5k gigabyte-hour | ppcaas-metric-volume-tier5k |
+| **IBM Power Systems Virtual Server Private Cloud snapshot group**  |
+| Snapshot Storage Tier 0 gigabyte-hour  | ppcaas-metric-snapshot-tier0 |
+| Snapshot Storage Tier 1 gigabyte-hour  | ppcaas-metric-snapshot-tier1 |
+| Snapshot Storage Tier 3 gigabyte-hour  | ppcaas-metric-snapshot-tier3 |
+| Snapshot Storage Tier 5k gigabyte-hour | ppcaas-metric-snapshot-tier5k |
+| **IBM Power Systems Virtual Server Private Cloud virtual tape library group** |
+| [Q2-2024 update start]{: tag-teal} Virtual Tape Library terabyte-hour | ppcaas-metric-vtl [Q2-2024 update end]{: tag-teal}|
+| **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |             |
+| [Q2-2024 update start]{: tag-teal} IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores |
+| IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
+| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores [Q2-2024 update end]{: tag-teal} |
 {: caption="Table 2. Part numbers" caption-side="bottom"}
 
 
