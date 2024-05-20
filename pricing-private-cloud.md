@@ -111,8 +111,8 @@ For detailed usage and billing information, you can refer to the part numbers in
 | **IBM Power Systems Virtual Server operating systems group**       |                                                |
 | AIX operating system scale-up license core-hour | ppcaas-metric-aix-scale-up |
 | AIX operating system scale-out license core-hour | ppcaas-metric-aix-scale-out |
-| Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
 | Red Hat Enterprise Linux operating system scale-up license core-hour | ppcaas-metric-rhel-scale-up |
+| Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
