@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-03-27"
+lastupdated: "2024-05-16"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -14,7 +14,7 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating to Power Edge Router
+# Migrating existing network configurations to Power Edge Router
 {: #migrate-ws-per}
 
 If you have manually configured subnets and Direct Link through a support ticket and are planning to leverage the built-in redundancy and much higher bandwidth of Power Edge Router (PER), consider migrating your workspace to PER.
@@ -30,7 +30,7 @@ To perform the workspace migration to PER, complete the following steps:
 
   The IBM {{site.data.keyword.powerSys_notm}} operation team processes the support ticket by configuring the PER and other network devices in parallel to the Direct Link configuration. When the PER configuration is complete, you are notified through a ticket update that the PER configuration is ready for your validation and testing.
 
-5.	Schedule a maintenance window, during which you need to provision the Transit Gateway to conclude the PER network construction. See the [PER use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases) for more information. To force the network to go through the PER network, perform the following steps:
+5.	Schedule a maintenance window, during which you need to provision the Transit Gateway to conclude the PER network construction. See the [PER use cases](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases) for more information. To force the network to go through the PER network, perform the following steps:
   1.	From the IBM Cloud catalog, browse your provisioned Direct Link connections.
   2.	Click a Direct Link connection to open the connection details page.
   3.	Click the **BGP** tab and then open the **Route Filter** details.
