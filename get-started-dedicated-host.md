@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 The dedicated host feature on IBM {{site.data.keyword.powerSysFull}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
 
-A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and utilize the unique shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can easily optimize your cloud infrastructure by utilizing single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.   
+A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and use the shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can easily optimize your cloud infrastructure by using single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.   
 
 <!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
 
@@ -35,7 +35,7 @@ Visit the pricing page to learn more about the [pricing for dedicated hosts](/do
 
 The dedicated host provides the following features:
 1.	Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
-2.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on total, free, or used capacity for your dedicated hosts.
+2.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
 3. Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
 4.	Flexibly create virtual server instances and place them on the dedicated host.  
 5.	Create shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
@@ -47,16 +47,16 @@ Dedicated hosts are rolled out in two phases – Select Availability and General
 ## Primary and secondary workspaces
 {: #pr-sec-ws-dh}
 
-The {{site.data.keyword.powerSys_notm}} workspaces are differentiated into primary and secondary workspace based on which workspace you use to reserve a dedicated host and share it with other multiple workspaces See [Primary workspace](#primary-ws) and [Secondary workspace](#secondary-ws) for more details.
+The {{site.data.keyword.powerSys_notm}} workspaces are differentiated into primary and secondary workspace based on which workspace you use to reserve a dedicated host and share it with other multiple workspaces. See [primary workspace](#primary-ws) and [secondary workspace](#secondary-ws) for more details.
 
 ### Primary workspace
 {: #primary-ws-dh}
 
-A primary workspace is the owning tenant of a dedicated host or storage reservation and is allowed full control over the associated resources. The primary workspace will have the capability to remove, delete, or share the dedicated resources that are owned by the workspace under the IBM Cloud account.  
+A primary workspace is the owning tenant of a dedicated host or storage reservation and is allowed full control over the associated resources. The primary workspace has the capability to remove, delete, or share the dedicated resources that are owned by the workspace under the IBM Cloud account.  
 
-With the same IBM Cloud account, the primary workspace user will have the control over sharing the dedicated resources with all (or a subset) of their workspaces (in the same account).  
+With the same IBM Cloud account, the primary workspace user has the control over sharing the dedicated resources with all (or a subset) of their workspaces (in the same account).  
 
-The primary workspace will receive billing charges associated with the reservation of dedicated reservations.
+The primary workspace receives billing charges that are associated with the reservation of dedicated reservations.
 
 ### Secondary workspace
 {: #secondary-ws-dh}
@@ -70,11 +70,11 @@ A secondary workspace cannot further share a resource (that it does not own) wit
 ## Access and authorization
 {: #access-auth-dh}
 
-A workspace will not be able to access virtual server instances or other resources owned by a different workspace or account. However, you can setup authorization for usage of a dedicated host by other workspaces or accounts using a self-serve model using the IBM Cloud IAM Service Authorization capabilities. The current supported roles are as follows:
+A workspace will not be able to access virtual server instances or other resources that are owned by a different workspace or account. However, you can set up authorization for usage of a dedicated host by other workspaces or accounts by using a self-serve model with the IBM Cloud IAM Service Authorization capabilities. The current supported roles are as follows:
 |Role           | Description                                                                    |
 |---------------|--------------------------------------------------------------------------------|
 | Reader        | View the workspaces that a dedicated host has been shared with.        |
-| Manager       | Reserve and delete dedicated hosts, share and un-share with other work-spaces, any other crud (create, read, update, delete) actions possible with dedicated hosts    |
+| Manager       | Reserve and delete dedicated hosts, share, and unshare with other workspaces, any other crud (create, read, update, delete) actions possible with dedicated hosts    |
 {: caption="Table 1. Roles and permissions in dedicated host" caption-side="bottom"}
 
 ## Creating a dedicated host group
@@ -86,17 +86,17 @@ To create a dedicated host group, perform the following steps:
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 2. Select your desired workspace.
 3. Click **Dedicated hosts** on the left navigation menu.
-        All your existing dedicated host that you have created are shown.
+        All your existing dedicated hosts that you have created are shown.
 4. Click **Reserve host**.
 5. Click **Create new**
 6. Enter your custom **Dedicated host group name**.
 7. Share this dedicated host group among other workspaces by providing the available workspaces with a secondary access.
-        The workspaces that are in the same region as the primary workspace and are in active state can be selected.
+        The workspaces that are in the same region as the primary workspace and are in an active state can be selected.
         {: note}
 
 8. Click **Save**. 
 
-You can click on a desired dedicated host group to access the host group details. Further, you can create more dedicated host, share or unshare workspaces with secondary access.
+You can click a desired dedicated host group to access the host group details. Further, you can create more dedicated host, share, or unshare workspaces with secondary access.
 {: important}
 
 ### Sharing or unsharing dedicated host group among workspaces
@@ -108,10 +108,10 @@ To share workspaces, perform the following steps:
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 2. Select your desired workspace.
 3. Click **Dedicated hosts** on the left navigation menu.
-        All your existing dedicated host that you have created are shown.
-4. Click on the desired dedicated host group to open the details page.
-5. Click **Share** and select the desired workspaces you want to share. 
-        The workspaces that are in the same region as the primary workspace and are in active state can be selected.
+        All your existing dedicated hosts that you have created are shown.
+4. Click the desired dedicated host group to open the details page.
+5. Click **Share** and select the desired workspaces that you want to share. 
+        The workspaces that are in the same region as the primary workspace and are in an active state can be selected.
         {: note}
 
 6. Click **Save**.
@@ -121,13 +121,13 @@ You can **Stop sharing** the workspaces with secondary access to the host group 
 ## Reserving a dedicated host
 {: #reserv-dh}
 
-You can create multiple dedicated host at once. To reserve a dedicated host, perform the following steps:
+You can create multiple dedicated hosts at once. To reserve a dedicated host, perform the following steps:
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 2. Select your desired workspace.
 3. Click **Dedicated hosts** on the left navigation menu.
-        All your existing dedicated host that you have created are shown.
+        All your existing dedicated hosts that you have created are shown.
 4. Click **Reserve host**.
-5. Select the desired **Dedicated host group** from the available list of host group created before.
+5. Select the desired **Dedicated host group** from the available list of host groups created before.
         Click **Create new** if you have not created a dedicated host before.
 6. Enter your **Host name** and select from the available **Machine type**.
         Dedicated hosts cannot be reserved into host groups for which the current workspace has secondary access.
@@ -136,25 +136,34 @@ You can create multiple dedicated host at once. To reserve a dedicated host, per
 7. Click **Finish** and view the summary of estimated cost.
 8. Click **Create**.
 
-You can click on a desired dedicated host to access the host details. Further, you can create and manage virtual server instances, create a shared processor pool, or release the dedicated host.
+You can click a desired dedicated host to access the host details. Further, you can create and manage virtual server instances, create a shared processor pool, or release the dedicated host.
 {: important}
 
-### Deploying a virtual server in dedicated host
+### Deploying a virtual server in a dedicated host
 {: #vsi-dh}
 
-### Creating SPP in dedicated host
+You can create a virtual server instance in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page.
+
+Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
+
+<!-- How provisioning a normal VSI differs from dedicated host provisioning? -->
+<!-- Any UI validation to document reg how my pool selection determines how/which dedicated host gets available for selection? -->
+
+### Creating SPP in a dedicated host
 {: #spp-dh}
+
+Draft text
 
 ## Releasing a dedicated host
 {: #release-dh}
 
-You can release a dedicated host when there are no resources deployed in the host. To release a dedicated host, perform the following steps:
+You can release a dedicated host when there are no resources that are deployed in the host. To release a dedicated host, perform the following steps:
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 2. Select your desired workspace.
 3. Click **Dedicated hosts** on the left navigation menu.
-        All your existing dedicated host that you have created are shown.
-4. Click on a desired dedicated host that you want to release.
-        You must remove all the associated resources provisioned on the host before releasing the host.
+        All your existing dedicated hosts that you have created are shown.
+4. Click a desired dedicated host that you want to release.
+        You must remove all the associated resources that are provisioned on the host before releasing the host.
         {: note}
 
 5. Click **Release host**.
@@ -164,6 +173,6 @@ You can release a dedicated host when there are no resources deployed in the hos
 ## APIs and CLIs
 {: #api-cli-dh}
 
-## Maintenace in dedicated host
+## Maintenance in dedicated host
 {: #mainetnance-dh}
 
