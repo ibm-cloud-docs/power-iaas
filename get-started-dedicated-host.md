@@ -99,7 +99,7 @@ To create a dedicated host group, perform the following steps:
 You can click on a desired dedicated host group to access the host group details. Further, you can create more dedicated host, share or unshare workspaces with secondary access.
 {: important}
 
-## Sharing or unsharing dedicated host group among workspaces
+### Sharing or unsharing dedicated host group among workspaces
 {: #share-dh}
 
 You can choose to grant workspaces with secondary access while [creating a dedicated host group](#create-group-dh) and from the dedicated host group details page. You can stop sharing them from the dedicated host group details page.
