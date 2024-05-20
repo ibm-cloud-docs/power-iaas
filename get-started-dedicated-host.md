@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-05-17"
+lastupdated: "2024-05-20"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -142,7 +142,7 @@ You can click a desired dedicated host to access the host details. Further, you 
 ### Deploying a virtual server in a dedicated host
 {: #vsi-dh}
 
-You can create a virtual server instance in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page.
+You can create a virtual server instance in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page. You must toogle "ON" the **Deploy to dedicated host** button.
 
 Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
 
@@ -152,7 +152,9 @@ Follow the instructions in [Configuring a Power Virtual Server instance](docs/po
 ### Creating SPP in a dedicated host
 {: #spp-dh}
 
-Draft text
+You can create a shared processor pool in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create pool** to open the **Create new shared processor pool** page.
+
+Follow the instructions in [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
 
 ## Releasing a dedicated host
 {: #release-dh}
