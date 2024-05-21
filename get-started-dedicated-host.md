@@ -38,7 +38,7 @@ The dedicated host provides the following features:
 2.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
 3. Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
 4.	Flexibly create virtual server instances and place them on the dedicated host.  
-5.	Create shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
+5.	Create virtual server instances and shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
 6.	Set your own custom names for the dedicated hosts and dedicated host groups.
     
 Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability is in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
@@ -142,9 +142,9 @@ You can click a desired dedicated host to access the host details. Further, you 
 ### Deploying a virtual server in a dedicated host
 {: #vsi-dh}
 
-You can create a virtual server instance in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page. You must toogle "ON" the **Deploy to dedicated host** button.
+You can create a virtual server instance in a single-tenant environment on a dedicated host. The virtual server instance provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).  
 
-Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
+Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page. You must toogle "ON" the **Deploy to dedicated host** button. Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
 
 <!-- How provisioning a normal VSI differs from dedicated host provisioning? -->
 <!-- Any UI validation to document reg how my pool selection determines how/which dedicated host gets available for selection? -->
@@ -152,9 +152,9 @@ Follow the instructions in [Configuring a Power Virtual Server instance](docs/po
 ### Creating SPP in a dedicated host
 {: #spp-dh}
 
-You can create a shared processor pool in a single-tenant environment on a dedicated host. Open the desired dedicated host details page, and click **Create pool** to open the **Create new shared processor pool** page.
+You can create a shared processor pool (SPP) in a single-tenant environment on a dedicated host. The SPPs provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).  
 
-Follow the instructions in [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
+Open the desired dedicated host details page, and click **Create pool** to open the **Create new shared processor pool** page. Follow the instructions in [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
 
 ## Releasing a dedicated host
 {: #release-dh}
