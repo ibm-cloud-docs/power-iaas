@@ -367,7 +367,7 @@ Review the following frequently asked questions about pricing:
 
    On the global catalog, complete the following steps to view the pricing for each metric ID:
 
-   * Logon to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
+   * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
    * Search for the entries, 'power-iaas', in the search bar.
    * Click 'Workspace for Power Virtual Server' entry from the search results.
       The **Workspace for Power Virtual Server** page opens.
