@@ -34,14 +34,14 @@ subcollection: power-iaas
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
-- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-managed-thirdparty#storsafe-vtl)
+- [*Falconstor StorSafe VTL*](#storsafe-vtl)
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
 - *Maxava HA*
 
 ## FalconStor StorSafe VTL
-{: storsafe-vtl}
+{: #storsafe-vtl}
 
 StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR).
 
