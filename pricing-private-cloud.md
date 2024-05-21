@@ -48,7 +48,7 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 ## Monthly usage
 {: #monthly-usage}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a <!--virtual server instance--> virtual machine during the middle of the month, the monthly bill for the <!--virtual server instance--> virtual machine reflects the resource change and the <!--virtual server instance--> virtual machine price that is prorated per hour.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine during the middle of the month, the monthly bill for the virtual machine reflects the resource change and the virtual machine price that is prorated per hour.
 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -62,11 +62,11 @@ Let us assume the following hypothetical monthly prices:
 
 **Total cost per month**     = $291.43
 
-Factoring the example quantities and prices, the base price for this <!--virtual server instance--> virtual machine is $291.43/month or an average of $0.399/hour for all the resources consumed.
+Factoring the example quantities and prices, the base price for this  virtual machine is $291.43/month or an average of $0.399/hour for all the resources consumed.
 
-Assume that in the course of the month, the customer allocates more memory to the <!--virtual server instance--> virtual machine. At the end of the month, the new price for the <!--virtual server instance--> virtual machine will be higher to account for the extra memory and amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources deployed as shown in Table 1.
+Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory and amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources deployed as shown in Table 1.
 
-In Table 1, the <!--virtual server instance--> virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the <!--virtual server instance--> virtual machine is prorated by an hour for the final monthly price of $303.
+In Table 1, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
 | Hours elapsed in a month   | Amount charged                               |  Virtual machine  description    |
 | -------------------------- | -------------------------------------------- |  --------------------------------------- |
@@ -75,7 +75,7 @@ In Table 1, the <!--virtual server instance--> virtual machine resources are inc
 | 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
 {: caption="Table 1. An example of monthly charges for a virtual machine" caption-side="bottom"}
 
-For detailed usage and billing information, you can refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each individual resource charged. For this example, we would see four distinct part numbers in the invoice for that <!--virtual server instance--> virtual machine, one each for: the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). To view the part numbers, refer to Table 2.
+For detailed usage and billing information, you can refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each individual resource charged. For this example, we would see four distinct part numbers in the invoice for that  virtual machine, one each for: the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). To view the part numbers, refer to Table 2.
 
 
 |  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalogue) |
@@ -153,7 +153,7 @@ For detailed usage and billing information, you can refer to the part numbers in
 ## Base instances
 {: #base-instances}
 
-The base instance billing depends on the options that you select when you create a <!--virtual server instance--> virtual machine. The machine type, number of cores, and amount of memory affects the base instance billing. When you create your <!--virtual server instance--> virtual machine, the associated monthly rate is displayed on the base instance billing.
+The base instance billing depends on the options that you select when you create a  virtual machine. The machine type, number of cores, and amount of memory affects the base instance billing. When you create your  virtual machine, the associated monthly rate is displayed on the base instance billing.
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -167,7 +167,7 @@ If you bring your own custom image, you are charged for the image size and the s
 ## Processor types
 {: #processor-types}
 
-You are charged different rates that depends on the type of system that you choose for your <!--virtual server instance--> virtual machine. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, E1080 costs more than E1050.
+You are charged different rates that depends on the type of system that you choose for your  virtual machine. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, E1080 costs more than E1050.
 
 You can choose the one of the following core types for your workload:
 * **Dedicated virtual processor cores**
@@ -341,7 +341,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 ## End of billing
 {: #end-billing}
 
-The monthly billing cycle ends when you delete the <!--virtual server instance--> virtual machine. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the <!--virtual server instance--> virtual machine provision change. If you stop the <!--virtual server instance--> virtual machine, the billing process is not stopped. Delete the <!--virtual server instance--> virtual machine to stop the billing cycle.
+The monthly billing cycle ends when you delete the virtual machine. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the virtual machine provision change. If you stop the virtual machine, the billing process is not stopped. Delete the virtual machine to stop the billing cycle.
 
 When your virtual machine is active but idle, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the core count and memory of the virtual machine.
 {: important}
@@ -358,22 +358,25 @@ Review the following frequently asked questions about pricing:
 
    [Q2-2024 update start]{: tag-teal}By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}. [Q2-2024 update end]{: tag-teal}
 
-### How do I find the unit prices for the billing metrics?
+### Where can I find the unit prices for the billing metrics?
 {: #billing-metrics}
 
 [Q2-2024 update start]{: tag-teal}
 
-   On the [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}, you can view the unit prices for the billing metrics for IBM {{site.data.keyword.powerSys_notm}} Private Cloud. On the global catalog, perform the following steps to view the pricing for each metric ID:
+   You can view the unit prices for the billing metrics for IBM {{site.data.keyword.powerSys_notm}} Private Cloud on the [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
 
-   * Search for 'power-iaas' in the search bar.
-   * Click the global catalog entry, 'Workspace for Power Virtual Server'.
+   On the global catalog, complete the following steps to view the pricing for each metric ID:
+
+   * Logon to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
+   * Search for the entries, 'power-iaas', in the search bar.
+   * Click 'Workspace for Power Virtual Server' entry from the search results.
       The **Workspace for Power Virtual Server** page opens.
-   * Click **Power Virtual Server Private Cloud Group** from the left pane.
-      The groups with different satellite regions are displayed.
-   * Select the group with the satellite region where you might host the IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
+   * Click the **Power Virtual Server Private Cloud Group** from the left pane.
+      Groups with different satellite regions are displayed.
+   * Select the group with the satellite region where you want to host the IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
       For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** group displays the pricing for virtual machines in Dallas.
-   * Click the **Pricing** tab on the right navigation pane to view the pricing for different Metric IDs.
-      Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the Part numbers. Prices are listed on all IBM Cloud supported currencies.
+   * Click the **Pricing** tab on the right navigation pane to view the pricing for different **Metric IDs**.
+      Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
 
 [Q2-2024 update end]{: tag-teal}
 
@@ -390,7 +393,7 @@ Review the following frequently asked questions about pricing:
 ### Can I change infrastructure configuration based on my requirements after my virtual servers are provisioned? How will it impact billing?
 {: #change-infra-post-provisioning}
 
-   Yes, you can add additional nodes but cannot reduce the number of nodes. The billing will get updated from the date the new nodes are added.
+   Yes, you can add additional nodes but cannot reduce the number of nodes. The billing gets updated from the date the new nodes are added.
 
 ### When does the billing begin?
 {: #billing-schedule}
