@@ -371,12 +371,22 @@ Review the following frequently asked questions about pricing:
 
    * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
    * Search for the entries, 'power-iaas', in the search bar.
-   * Click 'Workspace for Power Virtual Server' entry from the search results.
-      The **Workspace for Power Virtual Server** page opens.
-   * Click the **Power Virtual Server Private Cloud Group** from the left pane.
-      Groups with different satellite regions are displayed.
-   * Select the group with the satellite region where you want to host the IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
-      For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** group displays the pricing for virtual machines in Dallas.
+   * Determine the type of resource for which you need pricing. The following options are available:
+     - 'Power Virtual Server Virtual Machine' for Virtual Machines
+     - 'Power Virtual Server Volume' for Volumes
+     - 'Power Virtual Server Snapshot' for Snapshots
+     - 'Power Virtual Server Shared Processor Pool' for Shared Processor Pools
+         Currently, there is no pricing associated with other types of resources.
+         {: note}
+   * Click on the selected resource type entry from the search results. The corresponding page opens.
+   * Click the Private Cloud billing plan from the left pane:
+     - 'Power Virtual Server Private Cloud Virtual Machine Group' for Virtual Machines
+     - 'Power Virtual Server Private Cloud Volume Group' for Volumes
+     - 'Power Virtual Server Private Cloud Snapshot Group' for Snapshots
+     - 'Power Virtual Server Private Cloud Shared Processor Pool' for Shared Processor Pools
+         Deployments with different satellite regions are displayed.
+   * Select the deployment with the name ending with the satellite region for which you want the pricing.
+      For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** deployment displays the pricing for virtual machines in the satellite locations hosted in the Dallas region.
    * Click the **Pricing** tab on the right navigation pane to view the pricing for different **Metric IDs**.
       Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
 
