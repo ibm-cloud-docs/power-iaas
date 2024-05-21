@@ -70,7 +70,7 @@ A secondary workspace cannot further share a resource (that it does not own) wit
 ## Access and authorization
 {: #access-auth-dh}
 
-A workspace will not be able to access virtual server instances or other resources that are owned by a different workspace or account. However, you can set up authorization for usage of a dedicated host by other workspaces or accounts by using a self-serve model with the IBM Cloud IAM Service Authorization capabilities. The current supported roles are as follows:
+You can set up authorization for usage of a dedicated host for other workspaces by using the IBM Cloud IAM Service Authorization capabilities. As an administrator of your organization, you can mark the users with the following supported roles:
 |Role           | Description                                                                    |
 |---------------|--------------------------------------------------------------------------------|
 | Reader        | View the workspaces that a dedicated host has been shared with.        |
@@ -175,6 +175,9 @@ You can release a dedicated host when there are no resources that are deployed i
 ## APIs and CLIs
 {: #api-cli-dh}
 
+Do we need to list any phase 1 APIs & CLIs?
+
 ## Maintenance in dedicated host
 {: #mainetnance-dh}
+
 
