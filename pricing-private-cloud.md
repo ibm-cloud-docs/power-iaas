@@ -149,6 +149,8 @@ For detailed usage and billing information, you can refer to the part numbers in
 {: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
 {: #Table2}
 
+[Q2-2024 update start]{: tag-teal} For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).[Q2-2024 update end]{: tag-teal}
+
 
 ## Base instances
 {: #base-instances}
