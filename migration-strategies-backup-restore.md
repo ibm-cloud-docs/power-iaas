@@ -28,4 +28,4 @@ subcollection: power-iaas
 # Back up and restore
 {: #backup-restore}
 
-You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](#migration-aix) and [IBM i migration strategies](#migration-ibmi) sections provide information on OS-specific migration strategies.
+You can back up your on-premises environment and restore it to {{site.data.keyword.powerSys_notm}}. In most cases, COS, and NFS servers serve as an intermediary to back up and restore data. The [AIX migration strategies](/docs/power-iaas?topic=power-iaas-migration-aix) and [IBM i migration strategies](/docs/power-iaas?topic=power-iaas-migration-strategies-power) sections provide information on OS-specific migration strategies.
