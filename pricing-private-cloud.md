@@ -146,9 +146,8 @@ For detailed usage and billing information, you can refer to the part numbers in
 | [Q2-2024 update start]{: tag-teal} IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores |
 | IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
 | IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores [Q2-2024 update end]{: tag-teal} |
-{: caption="Table 2. Part numbers" caption-side="bottom"}
-
-
+{: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
+{: #Table2}
 
 
 ## Base instances
@@ -356,6 +355,23 @@ Review the following frequently asked questions about pricing:
 {: #cost-estimates}
 
    You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+
+   By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}
+
+### How do I find the unit prices for the billing metrics?
+{: #billing-metrics}
+
+   On the [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}, you can view the unit prices for the billing metrics for IBM {site.data.keyword.powerSys_notm}. On the global catalog, perform the following steps to view the pricing for each metric ID:
+     * Search for 'power-iaas' in the search bar.
+     * From the search results, click the global catalog entry, 'Workspace for Power Virtual Server'.
+         The **Workspace for Power Virtual Server** page opens.
+     * Click **Power Virtual Server Private Cloud Group** from the left pane.
+         The groups with different satellite regions are displayed.
+     * Select the group with the satellite region where you might host the IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
+         For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** group displays the pricing for virtual machines in Dallas.
+     * Click the **Pricing** tab on the right navigation pane to view the pricing for different Metric IDs.
+         Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the Part numbers. Prices are listed on all IBM Cloud supported currencies.
+
 
 ### Is there any initial one-time payment before the pod infrastructure is installed in the client private cloud data center?
 {: #initial-one-time-payment}

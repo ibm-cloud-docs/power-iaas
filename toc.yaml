@@ -142,6 +142,11 @@ toc:
               - using-rhel.md
               - deploying-linux.md
       - topicgroup:
+            label: SAP
+            topics:
+              - deploying-SAP-custom-image.md
+              - SAP-price-optimization.md
+      - topicgroup:
             label: Observability
             topics:
               - sysdig-monitoring-pvs.md
