@@ -77,16 +77,16 @@ The following are some of the key features for the IBM {{site.data.keyword.power
 {: #satellite-location-spec-private-cloud}
 
 The following IBM Cloud regions are capable of hosting connections from {{site.data.keyword.powerSys_notm}} private pods:
-- Dallas
-- Frankfurt
-- London
-- Madrid
-- Osaka
-- Sao Paulo
-- Sydney
-- Tokyo
-- Toronto
-- Washington, DC
+- Dallas (satcon_dal)
+- Frankfurt (satcon_fra)
+- London (satcon_lon)
+- Madrid (satcon_mad)
+- Osaka (satcon_osa)
+- Sao Paulo (satcon_sao)
+- Sydney (satcon_syd)
+- Tokyo (satcon_tok)
+- Toronto (satcon_tor)
+- Washington, DC (satcon_wdc)
 
 #### pods
 {: #pod-spec-private-cloud}

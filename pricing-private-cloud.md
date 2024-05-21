@@ -31,16 +31,16 @@ For more information about billing for operating systems, see [Operating systems
 In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might be different from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances, based on the discounts and promotion codes.
 
 The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} Private Cloud in your data center:
-- Dallas
-- Frankfurt
-- London
-- Madrid
-- Osaka
-- Sao Paulo
-- Sydney
-- Tokyo
-- Toronto
-- Washington, DC
+- Dallas (satcon_dal)
+- Frankfurt (satcon_fra)
+- London (satcon_lon)
+- Madrid (satcon_mad)
+- Osaka (satcon_osa)
+- Sao Paulo (satcon_sao)
+- Sydney (satcon_syd)
+- Tokyo (satcon_tok)
+- Toronto (satcon_tor)
+- Washington, DC (satcon_wdc)
 
 Selection of IBM Cloud region is one of the factors for computing pricing.
 {: Note}
