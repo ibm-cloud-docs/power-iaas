@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-05-14"
 
-keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
+keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
 subcollection: power-iaas
 
@@ -28,7 +28,19 @@ subcollection: power-iaas
 # Migration strategies for AIX
 {: #migration-aix}
 
-Learn about migration strategies that are specific to AIX systems.
+Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
+
+## Migrating your on-premise environment to {{site.data.keyword.powerSys_notm}}
+{: #mig-onprem-cloud}
+
+See the [Move data from your on-premise environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
+
+## Migrating using NIM on {{site.data.keyword.powerSys_notm}}
+{: #mig-nim}
+
+You can configure your Network Installation Management (NIM) server on a {{site.data.keyword.powerSys_notm}} and migrate an AIX virtual server instance from AIX 7.1 to AIX 7.2/7.3, as well as other operations.
+
+See [Migrating using NIM on {{site.data.keyword.powerSys_notm}}](https://www.ibm.com/support/pages/node/7033798){: external} for more information.
 
 ## Migration by using MKSYSB
 {: #migration-mksysb}
@@ -40,17 +52,6 @@ You can migrate your data by using the `mksysb` command:
 3. Restore the on-premises image.
 
 For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
-
-## Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
-{: #logical-replication}
-
-GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
-
-- [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: external}
-- [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: external}
-- [Using IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
-- [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: external}
-- [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: external}
 
 ## Alternative AIX migration strategies
 {: #migration-alternative-aix}
