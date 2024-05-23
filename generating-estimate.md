@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2024
 
-lastupdated: "2023-04-24"
+lastupdated: "2024-05-23"
 
 keywords: Generating an estimate, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -39,11 +39,13 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 3. Click **{{site.data.keyword.powerSys_notm}}** tile.
 
-4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace. \n You are redirected to the **Estimate cost** page.
+4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.  
+    You are redirected to the **Estimate cost** page.
 
 5. Select the type of virtual server from **Location type** drop-down list as [**On-premises** (private cloud)](#on-prem-location-type) or [**Off-premises** (IBM Cloud)](#off-prem-location-type).
 
-6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region. \n For private cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
+6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.  
+    For private cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
 
 7. On the right-side panel, click **Add to estimate** to review the configuration.
 
@@ -148,6 +150,19 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 {: caption="Table 5. UI fields in estimating a VTL" caption-side="top"}
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
+
+### Estimating a dedicated host
+{: #est-dh}
+
+Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
+
+| Field	            |   Description                                                                 |
+|-------------------|-------------------------------------------------------------------------------|
+| NNumber of dedicated hosts	|   **Required**: Enter the number of dedicated hosts you want to create.  |
+| Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
+{: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
+
+To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 ### On-premises (private cloud)
 {: #on-prem-location-type}
