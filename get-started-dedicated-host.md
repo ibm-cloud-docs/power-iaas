@@ -146,6 +146,8 @@ You can create a virtual server instance in a single-tenant environment on a ded
 
 Open the desired dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page. You must toogle "ON" the **Deploy to dedicated host** button. Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
 
+When you use dedicated host, the virtual server instances deployed on them are not billed for core and memory charges.
+
 <!-- How provisioning a normal VSI differs from dedicated host provisioning? -->
 <!-- Any UI validation to document reg how my pool selection determines how/which dedicated host gets available for selection? -->
 
@@ -155,6 +157,8 @@ Open the desired dedicated host details page, and click **Create instance** to o
 You can create a shared processor pool (SPP) in a single-tenant environment on a dedicated host. The SPPs provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).  
 
 Open the desired dedicated host details page, and click **Create pool** to open the **Create new shared processor pool** page. Follow the instructions in [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
+
+When you use dedicated host, the SPPs deployed on them are not billed for the reserved capacity.
 
 ## Releasing a dedicated host
 {: #release-dh}
