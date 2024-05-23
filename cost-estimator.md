@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-08"
+lastupdated: "2024-05-23"
 
 keywords: cost estimator tool, power virtual server cost, estimate, estimation,
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 {:external: target="_blank" .external}
 
 # Getting started with the cost estimator tool
-{: cost-estimator}
+{: #cost-estimator}
 
 Use the cost estimator tool in the home page of {{site.data.keyword.powerSysFull}} in IBM Cloud® to estimate the cost of resources before you deploy them. With the cost estimator tool, you can customize and determine the requirements that align with your business needs.
 
@@ -35,7 +35,7 @@ Select a data center that suits your needs and use the cost estimator tool for:
 3.	Saving and sharing your estimate
 
 ## Creating an estimation of resources
-{:est-resources}
+{: #est-resources}
 
 To create an estimate, perform the following steps:
 
@@ -51,6 +51,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
     * Shared processor pool
     * VPN connection
     * Virtual tape library
+    * Dedicated host
 5.	On the right-side panel, click **Add to estimate** to review the configuration.
 6.	If you are not logged in, choose **from catalog** in the **Add product to estimate** drop-down menu.
 7.	Click **Save**.
@@ -58,7 +59,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 
 ### Estimating a virtual server instance
-{: est-vsi}
+{: #est-vsi}
 
 Before deploying a virtual server instance in a workspace, create an estimate of it. You can create an estimate of a virtual server instance from the estimation page and virtual server instance provisioning page on IBM Cloud.
 
@@ -81,7 +82,7 @@ To learn more on how to create an instance, see [Configuring a {{site.data.keywo
 
 
 ### Estimating a storage volume
-{: est-storage-vol}
+{: #st-storage-vol}
 
 Before deploying a storage volume in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
@@ -93,7 +94,7 @@ Before deploying a storage volume in a workspace, create an estimate of it. To l
 {: caption="Table 2. UI fields in estimating a storage volume" caption-side="top"}
 
 ### Estimating a shared processor pool
-{: est-spp}
+{: #est-spp}
 
 Before deploying a shared processor pool in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
@@ -107,7 +108,7 @@ Before deploying a shared processor pool in a workspace, create an estimate of i
 To learn more about shared processor pool, see [Managing a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
 ### Estimating a VPN connection
-{: est-vpn}
+{: #est-vpn}
 
 Before you create and attach a VPN connection, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
@@ -119,7 +120,7 @@ Before you create and attach a VPN connection, create an estimate of it. To lear
 To learn more about VPN connection, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ### Estimating a virtual tape library
-{: est-vtl}
+{: #est-vtl}
 
 Before deploying a virtual tape library (VTL) in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
@@ -136,12 +137,23 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
 
+### Estimating a dedicated host
+{: #est-dh}
+
+Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
+
+| Field	            |   Description                                                                 |
+|-------------------|-------------------------------------------------------------------------------|
+| NNumber of dedicated hosts	|   **Required**: Enter the number of dedicated hosts you want to create.  |
+| Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
+{: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
+
 ## Updating an existing estimate
-{: update-est}
+{: #update-est}
 
 Open the view estimate page in IBM Cloud and perform the following steps that are mentioned in [updating an existing estimate](/docs/billing-usage?topic=billing-usage-cost#update-estimate). 
 
 ## Saving and sharing your estimate
-{: est-share}
+{: #est-share}
 
 Open the view estimate page in IBM Cloud and perform the following steps that are mentioned in [saving and sharing your estimate](/docs/billing-usage?topic=billing-usage-cost#share-estimate).
