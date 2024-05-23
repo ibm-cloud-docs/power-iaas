@@ -100,7 +100,7 @@ toc:
               - importing-boot-image.md
               - configuring-custom-image.md
               - manage-placement-groups.md
-              - getting-started-with-spp.md
+              - managing-spp.md
               - virtual-tape-library.md
               - capturing-exporting-vm.md
               - downloading-fixes.md
@@ -145,7 +145,8 @@ toc:
             label: SAP
             topics:
               - deploying-SAP-custom-image.md
-              - SAP-price-optimization.md
+              - SAP-full-system-profiles.md
+              - SAP-HANA-sr2-sh2-profiles.md
       - topicgroup:
             label: Observability
             topics:

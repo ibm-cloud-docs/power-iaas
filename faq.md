@@ -343,6 +343,7 @@ When you use SPP in private cloud, you pay for the following items:
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 3. Shared processor pool in private cloud" caption-side="top"}
+
 [Q2-2024 update end]{: tag-teal}
 
 ### How to calculate the pricing for OS licensing in SPP

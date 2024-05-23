@@ -113,6 +113,23 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier1 Instance Hours |
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier3 Instance Hours |
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier2 Instance Hours |
+| [Q2-2024 update start]{: tag-teal} S1022_NW_SHARED_UNCAPPED _CORE_HOURS | S1022 NW Shared Uncapped Processor |
+| S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 NW Shared Capped Processor |
+| S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
+| S1022_NW_MEM_GB_HOURS | 	S1022 NW Memory |
+| PTEN_ESS_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Processor |
+| PTEN_EDD_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Dedicated Processor |
+| PTEN_ECC_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Capped Processor |
+| PTEN_MS_GIGABYTE_HOURS | P10 Standard Memory |
+| PTEN_MHU_GIGABYTE_HOURS | P10 High Use Memory (>64 Gb per core) |
+| S1022_SR2_HANA_CORE_HOURS | TBD |
+| S1022_SR2_HANA_MEM_GB_HOURS | TBD |
+| E1080_SR2_HANA_CORE_HOURS | TBD |
+| E1080_SR2_HANA_MEM_GB_HOURS | TBD |
+| S1022_SH2_HANA_CORE_HOURS  | TBD |
+| S1022_SH2_HANA_MEM_GB_HOURS | TBD |
+| E1080_SH2_HANA_CORE_HOURS | TBD |
+| E1080_SH2_HANA_MEM_GB_HOURS  | TBD [Q2-2024 update end]{: tag-teal}|
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 ## Base instances
@@ -132,6 +149,29 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 You can also bring your own custom image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must still purchase an operating system license for virtual server resources. If you bring your own custom image, you are charged for the image size and the storage tier that you use for the image. After you deploy a stock image (and only after deployment), you are charged for the space the image is stored in. The storage unit price (per GB) for the stored boot images is same as the selected storage tier (Tier 0 or Tier 3) where your boot disks are deployed. To identify the estimated storage rates, use the Cost Estimator tool. To reduce costs you can capture the virtual machine and delete when it is not needed. The pricing for AIX and IBM i operating system license is not determined by whether you use a custom image or a stock image. To learn more, go to [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
+
+
+## Linux for SAP workloads
+{: #linux-SAP-workload-types}
+
+[Q2-2024 update start]{: tag-teal}
+
+You can deploy the following types of SAP workloads as virtual machines:
+
+* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are similar to other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on both S1022 and E1080 systems.
+
+* **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. Similar to other types of deployments, the following types of systems, processors, and memory are supported for SAP HANA:
+    - System types: S1022 (for workloads less than 2 TB of RAM) or E1080 (for workloads more than 2 TB of RAM)
+    - Virtual processor core types: dedicated, shared capped, or shared uncapped
+    - Memory types: scale-out or scale-up
+
+For SAP HANA workloads, the charges for processor and memory parts are the same as compared to non-SAP HANA workloads. To estimate the costs for non-SAP HANA workloads, see Tables 3, 4, 5, and 6.
+
+The pricing is subject to change depending on the SAP HANA operational costs.
+{: note}
+
+[Q2-2024 update end]{: tag-teal}
+
 
 ## Processor types
 {: #pricing-processor}
@@ -165,6 +205,7 @@ The following tables show how different processor types affect the cost per syst
 | 1                           | $0.15 (uncapped shared)     | $106.06                  |
 | 1                           | $0.22 (capped shared)       | $159.14                  |
 {: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
+
 
 ## Pricing for dedicated hosts
 {: #pricing-dh}
