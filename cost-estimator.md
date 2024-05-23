@@ -148,6 +148,8 @@ Before deploying a dedicated host in a workspace, create an estimate of it. To l
 | Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
 {: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
 
+To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
+
 ## Updating an existing estimate
 {: #update-est}
 
