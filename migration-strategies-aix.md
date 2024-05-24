@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-24"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -59,7 +59,6 @@ For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyw
 Some alternative AIX migration strategies include:
 
 - `rsync` for nondatabase files
-- The `savevg` and `restvg` AIX commands
 - Log shipping for databases
 
 For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.
