@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-24"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -25,23 +25,25 @@ subcollection: power-iaas
 # Getting started with dedicated host
 {: #dedicated-host}
 
-The dedicated host feature on IBM {{site.data.keyword.powerSysFull}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host. 
+Dedicated host capability on {{site.data.keyword.powerSysFull}} offers you the exclusive ability to provision an entire server for your exclusive use, expanding your computing options significantly. This offering allows you the ability to handle mission-critical workloads with complete isolation, control, and security. 
 
-A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and use the shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can easily optimize your cloud infrastructure by using single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.   
+Dedicated host on {{site.data.keyword.powerSys_notm}} is metered by the hour of the entire server. This provides you with additional flexibility to create virtual server instances and control their placement, along with a unique shared processor pool capability.
+
+This means you can optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts increase isolation from other users in a cloud environment, ensuring your operations run smoothly and securely. This level of control and security gives you the confidence and reassurance you need.
 
 <!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
 
-Create an estimate for deploying dedicated host using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or visit the pricing page to learn more about the [pricing for dedicated hosts](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
+Create an estimate for deploying dedicated host using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or visit the pricing page to learn more about the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
 
 The dedicated host provides the following features:
 1.	Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
-2.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
-3. Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
-4.	Flexibly create virtual server instances and place them on the dedicated host.  
-5.	Create virtual server instances and shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
+2.	Flexibly create virtual server instances and place them on the dedicated host.  
+3.	Create virtual server instances and shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
+4.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
+5.      Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
 6.	Set your own custom names for the dedicated hosts and dedicated host groups.
     
-Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability is in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
+The Dedicated host capability is currently in the technology preview. It is available in select data centers `DAL10`, `DAL12`, `WDC06`, and `WDC07`. For general availability, dedicated hosts will be available worldwide and will follow the technology preview.
 {: note}
 
 ## Primary and secondary workspaces
@@ -176,10 +178,16 @@ You can release a dedicated host when there are no resources that are deployed i
         When you are releasing the last dedicated host on a dedicated host group, you get the option to **Release host and delete host group**.
         {: important}
 
-## APIs and CLIs
+## API and CLI support
 {: #api-cli-dh}
 
 Do we need to list any phase 1 APIs & CLIs?
+
+## Supporting operating systems
+{: #os-support-dh}
+
+The following operating systems are supported for dedicated host:
+- 
 
 ## Maintenance in dedicated host
 {: #mainetnance-dh}
