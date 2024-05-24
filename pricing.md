@@ -36,6 +36,7 @@ All prices mentioned on this page are illustrative and do not represent the actu
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
 | S1022 (9105-22A) [^3][^4]|     33         |       up to 1984 GB             |
+{: caption="Table 1. Processor and memory capacity of various Power systems" caption-side="top"}
 
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
@@ -181,49 +182,49 @@ The following tables shows the base price and how different processor types affe
 | 1                           | $0.76 (capped shared)       | $556.90                  |
 {: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
-## Pricing for dedicated hosts
-{: pricing-dh}
+## Dedicated hosts
+{: #pricing-dh}
 
-Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host. 
+Dedicated hosts are priced based on the host type – either an IBM Power S922 or an IBM Power S1022. For clarity, IBM Power S922 and Power S1022 are priced on the server's cores and memory only.
 
 Consider the following points for dedicated host pricing:
-* You are not charged separately for shared processor pools you deploy to the dedicated host.
-* Software charges for the supported operating systems are metered and charged by the core.
+* You are not charged separately for shared processor pools and virtual server instances that you deploy to the dedicated host.
+* The supported operating systems charges are metered and charged by the core.
 
-
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
-
+For a more detailed understanding of the dedicated host pricing, we encourage you to explore the [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host) topic, where you can find comprehensive information to support your decision-making process.
 
 ## Storage types
 {: #storage-type}
 
-
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
 - **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
-  |Volume size you create|You are billed|
-  |----------------------|--------------|
-  |10 GB|10 GB|
-  |10+5 GB|15 GB|
-  {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+
+    |Volume size you create|You are billed|
+    |----------------------|--------------|
+    |10 GB|10 GB|
+    |10+5 GB|15 GB|
+    {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
 
 - **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image. 
 
-  When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
+    When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
 
-  |Image volume size |Single or multiple backing|You are billed|
-  |------------------|--------------------------|--------------|
-  |20 GB|Single backing volume|20 GB|
-  |volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
-  {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+    |Image volume size |Single or multiple backing|You are billed|
+    |------------------|--------------------------|--------------|
+    |20 GB|Single backing volume|20 GB|
+    |volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volume|30 GB|
+    {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
 
 - **Deployed VM volumes**: These volumes are created when you deploy a VM with an image. The deployed VMs will get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
-  |Image backing volume|You are billed|
-  |--------------------|--------------|
-  |20 GB|20 GB|
-  |20 GB + 30 GB|50 GB|
-  {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+    |Image backing volume|You are billed|
+    |--------------------|--------------|
+    |20 GB|20 GB|
+    |20 GB + 30 GB|50 GB|
+    {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
 
 ### Use case of account billable storage
+{: #use-case-billable-storage}
+
 The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
 | Name     | Size    | State/Description      |
@@ -266,15 +267,15 @@ Total billable storage = 595 GB
 - Image volumes: 200 GB
 - Deployed VMs: 160 GB
 
-## Pricing for VPN connection
+## VPN connection
 {: #pricing-vpn}
 
 When you use a VPN connection, you are billed monthly.
 
 IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
 
-## Pricing for Power Edge Router
-{: per-pricing}
+## Power Edge Router
+{: #per-pricing}
 
 There are no additional charges for PER, however, you are charged based on the number of Transit Gateway connections and routing options.
 
