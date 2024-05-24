@@ -63,8 +63,8 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 {: #sysdig-view}
 
 To view the metrics dashboards, access the user interface of {{site.data.keyword.mon_full_notm}} in the following ways:
-- [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
-- [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
+- [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs-draft/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
+- [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs-draft/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
 To view metrics in your dashboard, you must enable the platform metrics of the {{site.data.keyword.mon_full_notm}} instance.
 {: important}

@@ -29,8 +29,8 @@ IBM provides a pre-installation checklist after you place an order for IBM {{sit
 {: #pre-order-check}
 
 Before you place the order, check if the following criterias to install the pod in your data center are met:
-*  Identify an IBM Cloud region closest to the physical location of your data center where the pod will reside. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
-*  Confirm that the site and environment requirements to place the pod are met. For more information, see [Site-planning and environmental requirements](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#site-plan-env-req).
+*  Identify an IBM Cloud region closest to the physical location of your data center where the pod will reside. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs-draft/power-iaas?topic=power-iaas-network_latency_main).
+*  Confirm that the site and environment requirements to place the pod are met. For more information, see [Site-planning and environmental requirements](/docs-draft/power-iaas?topic=power-iaas-pre_installation_checklist#site-plan-env-req).
 
 ## {{site.data.keyword.powerSys_notm}} requirements
 {: #power-sys-req}
@@ -44,10 +44,10 @@ Before connecting to the IBM Cloud, creating a workspace, or performing other pr
 
 Before you place the order, prepare your data center site to meet the following site and environmental requirements:
 *  The data center can accommodate all the 42U racks in a pod. For example, a small pod contains one 42U rack and a medium pod might contain two or four 42U racks.
-*  The floor of the data center is able to withstand the weight of the rack and other equipments. For more information about rack dimensions and weight, see [Site access requirements](/docs/power-iaas?topic=power-iaas-site-access-requirements).
-*  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control are ready. For more information, see [Environmental requirements](/docs/power-iaas?topic=power-iaas-environmental-requirements).
-*  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements](/docs/power-iaas?topic=power-iaas-power-requirements).
-*  The data center is in a secured location with restricted access. For more information, see [Site readiness](/docs/power-iaas?topic=power-iaas-site-readiness).
+*  The floor of the data center is able to withstand the weight of the rack and other equipments. For more information about rack dimensions and weight, see [Site access requirements](/docs-draft/power-iaas?topic=power-iaas-site-access-requirements).
+*  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control are ready. For more information, see [Environmental requirements](/docs-draft/power-iaas?topic=power-iaas-environmental-requirements).
+*  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements](/docs-draft/power-iaas?topic=power-iaas-power-requirements).
+*  The data center is in a secured location with restricted access. For more information, see [Site readiness](/docs-draft/power-iaas?topic=power-iaas-site-readiness).
 
 The following data center site requirements must be met before the pod is delivered to your data center:
 *  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the pod infrastructure.
@@ -58,8 +58,8 @@ The following data center site requirements must be met before the pod is delive
 {: #network-req}
 
 The following network requirements must be completed before the pod is delivered to your data center:
-*  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/power-iaas?topic=power-iaas-network-requirements).
-*  Review and identify the available Network use cases and communicate your requirements to IBM before installation. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases).
+*  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs-draft/power-iaas?topic=power-iaas-network-requirements).
+*  Review and identify the available Network use cases and communicate your requirements to IBM before installation. For more information, see [Network use cases](/docs-draft/power-iaas?topic=power-iaas-network_use_cases).
 
 ## Network validation and account activation
 {: #validation-activation}

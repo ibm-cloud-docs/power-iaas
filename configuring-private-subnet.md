@@ -22,14 +22,14 @@ You can configure a private network subnet when you create a {{site.data.keyword
 {: shortdesc}
 
 How the private network subnet is configured, depends on the {{site.data.keyword.powerSys_notm}} Workspace networking configuration, which can use one of the following four approaches:
-1. {{site.data.keyword.powerSys_notm}} Workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-2. {{site.data.keyword.powerSys_notm}} Workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). Former default, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
-4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated).
+1. {{site.data.keyword.powerSys_notm}} Workspace enabled with the [Power Edge Router (PER)](/docs-draft/power-iaas?topic=power-iaas-per). This is default for most locations if created after mid-2023, and can use [VPN Connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
+2. {{site.data.keyword.powerSys_notm}} Workspace enabled with [Power Cloud Connections](/docs-draft/power-iaas?topic=power-iaas-cloud-connections). Former default, and can use [VPN Connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
+3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs-draft/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs-draft/power-iaas?topic=power-iaas-VPN-connections-deprecated).
 
 When you specify a CIDR, the following are automatically populated:
 - A gateway
-- An IP range 
+- An IP range
 - DNS server.
 You must use CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: external}.
 Here is the format of a CIDR:
@@ -93,7 +93,7 @@ To add an IP address into the reserved IP address list, perform the following st
 2. From the list of subnets that you have created, click the desired subnet for which you want to reserve the IP address.
 3. Click **Reserve IP**.
 4. Enter your IP address in the **IP address** field.
-   
+
    Make sure the IP address that you want to reserve falls in the IP range that you have defined while provisioning the subnet.
    {: note}
 

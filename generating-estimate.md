@@ -39,12 +39,12 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 3. Click **{{site.data.keyword.powerSys_notm}}** tile.
 
-4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.  
+4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.
     You are redirected to the **Estimate cost** page.
 
 5. Select the type of virtual server from **Location type** drop-down list as [**On-premises** (private cloud)](#on-prem-location-type) or [**Off-premises** (IBM Cloud)](#off-prem-location-type).
 
-6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.  
+6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.
     For private cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
 
 7. On the right-side panel, click **Add to estimate** to review the configuration.
@@ -69,7 +69,7 @@ If you select the **Location type** as Off-premises, select one resource from th
 * [VPN connection](#est-vpn)
 
 
-The summary of the selected infrastructure is displayed on the **Summary** page. You can review the total estimated cost per hour and per month that is displayed on the **Summary** page. To create, save, and download the estimate, see [Creating, saving, and viewing an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
+The summary of the selected infrastructure is displayed on the **Summary** page. You can review the total estimated cost per hour and per month that is displayed on the **Summary** page. To create, save, and download the estimate, see [Creating, saving, and viewing an estimate](/docs-draft/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
 
 #### Estimating a virtual server instance
 {: #est-vsi}
@@ -82,7 +82,7 @@ To learn about the fields and descriptions that you need to enter, see the follo
 |-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | **Required**: Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
 | Operating system              |	Select the operating system that meets your requirements from the drop-down.                                |
-| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
+| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic, see [Configuring a VM for Epic workloads](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
 | Machine type                  |	Specify the machine type.                                                                           |
 | Core type                 	| Specify the core type.                                                                                |
 | Cores	                        | **Required**: Define how many cores you need.                                                         |
@@ -91,7 +91,7 @@ To learn about the fields and descriptions that you need to enter, see the follo
 {: caption="Table 1. UI fields in estimating a VSI" caption-side="top"}
 
 
-To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 
 #### Estimating a storage volume
@@ -119,7 +119,7 @@ Before deploying a shared processor pool in a workspace, create an estimate of i
 | Reserved cores 	| **Required**: Enter the number of cores that you want to reserve.  |
 {: caption="Table 3. UI fields in estimating a shared processor pool" caption-side="top"}
 
-To learn more about shared processor pool, see [Managing a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+To learn more about shared processor pool, see [Managing a shared processor pool](/docs-draft/power-iaas?topic=power-iaas-manage-SPP).
 
 #### Estimating a VPN connection
 {: #est-vpn}
@@ -131,7 +131,7 @@ Before you create and attach a VPN connection, create an estimate of it. To lear
 | Number of connections	|   Enter the number of VPN connections that you want to estimate.   |
 {: caption="Table 4. UI fields in estimating a VPN conection" caption-side="top"}
 
-To learn more about VPN connection, see [Creating VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+To learn more about VPN connection, see [Creating VPN connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
 
 #### Estimating a virtual tape library
 {: #est-vtl}
@@ -149,7 +149,7 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 |Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers. \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
 {: caption="Table 5. UI fields in estimating a VTL" caption-side="top"}
 
-To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
+To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs-draft/power-iaas?topic=power-iaas-manage-vtl).
 
 ### Estimating a dedicated host
 {: #est-dh}
@@ -162,7 +162,7 @@ Before deploying a dedicated host in a workspace, create an estimate of it. To l
 | Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
 {: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
 
-To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
+To learn more about dedicated host, see [Getting started with dedicated host](/docs-draft/power-iaas?topic=power-iaas-dedicated-host).
 
 ### On-premises (private cloud)
 {: #on-prem-location-type}
@@ -190,7 +190,7 @@ If you select the **Location type** as On-Premises, proceed with the following s
     The actual cost might increase based on the metered consumption rates.
     {: note}
 
-5.  Click **Add to estimate** to create an estimate and export your configuration estimate. For instructions about creating to an estimate, see [Creating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
+5.  Click **Add to estimate** to create an estimate and export your configuration estimate. For instructions about creating to an estimate, see [Creating an estimate](/docs-draft/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
 
 
 ## Creating, saving, and viewing an estimate
@@ -219,5 +219,5 @@ Share the downloaded estimate with your IBM Business Partner to start the orderi
 
 If you do not have an IBM Business Partner, contact IBM through email or the contact number that is specified on the window.
 
-Before you place the order for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, verify that the basic criteria to own a pod is met. For more information, see [Prerequisites for installing the pod](/docs/power-iaas?topic=power-iaas-pre_installation_checklist).
+Before you place the order for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, verify that the basic criteria to own a pod is met. For more information, see [Prerequisites for installing the pod](/docs-draft/power-iaas?topic=power-iaas-pre_installation_checklist).
 {: important}

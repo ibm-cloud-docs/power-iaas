@@ -21,7 +21,7 @@ subcollection: power-iaas
 You can deploy a Linux&reg; virtual machine (VM) in your workspace with a custom Linux image and receive support from a Linux vendor. When you are provisioning a VM, select **Linux-Client supplied subscription** for your own Linux image (OVA format) and subscription.
 {: shortdesc}
 
-If you bring your own image, you must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs/power-iaas?topic=power-iaas-using-linux#registering-sles) or [Registering and subscribing to RHEL](/docs/power-iaas?topic=power-iaas-linux-with-powervs#subscribing-to-rhel).
+If you bring your own image, you must obtain the subscription for Linux directly from the vendor. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor's satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM. To learn more about the registration process, see [Registering and subscribing to SLES](/docs-draft/power-iaas?topic=power-iaas-using-linux#registering-sles) or [Registering and subscribing to RHEL](/docs-draft/power-iaas?topic=power-iaas-linux-with-powervs#subscribing-to-rhel).
 
 ## How to create an OVA format Linux image
 {: #ova-format}

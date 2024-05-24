@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 There is a new method for creating a VPN connection - [Creating a Virtual Private Cloud VPN connection](/docs/allowlist/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
 
-The following deprecated method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated) [Deprecated]{: tag-red}
+The following deprecated method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs-draft/power-iaas?topic=power-iaas-VPN-connections-deprecated) [Deprecated]{: tag-red}
 
 ## Creating a Virtual Private Cloud VPN connection
 {: #vpc-vpn}

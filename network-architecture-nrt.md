@@ -62,7 +62,7 @@ The key features of this connect to classic topology are as follows:
 
 * Your {{site.data.keyword.powerSys_notm}} are hosted on your Power subnets. The IP address schema for these subnets is defined by you and should not overlap with your remote networks.
 * The Power router is the default gateway for your {{site.data.keyword.powerSys_notm}} instances. The Power router is operated by the IBM Cloud team and you have no direct access or control.
-* You extend your remote networks into the Megaport network, see [Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
+* You extend your remote networks into the Megaport network, see [Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services](/docs-draft/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
     * Megaport operates a global network infrastructure which enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
     * A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, best practice is to select two different port locations to provide redundancy.
     * Megaport has a number of Cloud Service Providers including IBM Cloud.
@@ -79,14 +79,14 @@ The key features of this connect to classic topology are as follows:
 
 * Your {{site.data.keyword.powerSys_notm}} are hosted on your Power subnets. The IP address schema for these subnets is defined by you and should not overlap between environments.
 * The Power routers are the default gateways for your {{site.data.keyword.powerSys_notm}} instances. The Power routers are operated by the IBM Cloud team and you have no direct access or control.
-* You connect your Power subnets to the Megaport network, see [Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services](/docs/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
+* You connect your Power subnets to the Megaport network, see [Connecting directly to the {{site.data.keyword.powerSys_notm}} environment by using Megaport connectivity services](/docs-draft/power-iaas?topic=power-iaas-configuring-power#connecting-megaport):
     * Megaport operates a global network infrastructure which enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
     * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC, via the Megaport Portal or Megaport API, allows you to connect two {{site.data.keyword.powerSys_notm}} environments.
 
 ## Connect to Classic
 {: #network-reference-architecture-classic}
 
-In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud Classic infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
+In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud Classic infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs-draft/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
 
 ![Connect to Classic](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 3. Connect to Classic" caption-side="bottom"}
 
@@ -110,7 +110,7 @@ Each IBM Cloud Direct Link service is not redundant, however, diversity can be e
 ## Connect to VPC
 {: #network-reference-architecture-vpc}
 
-In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud VPC infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
+In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud VPC infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs-draft/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
 
 ![Connect to VPC](./images/network-connect-to-vpc.svg "Connect to VPC"){: caption="Figure 4. Connect to VPC" caption-side="bottom"}
 
@@ -148,7 +148,7 @@ The IBM Cloud SSL VPN service can only access your classic private IP subnets, t
 
 The key features of this SSL VPN topology are as follows:
 
-* This deployment topology builds upon the [Connect to Classic](/docs/power-iaas?topic=power-iaas-network-reference-architecture-classic) so refer to that section as well.
+* This deployment topology builds upon the [Connect to Classic](/docs-draft/power-iaas?topic=power-iaas-network-reference-architecture-classic) so refer to that section as well.
 * Your IBM Cloud account needs to have the required permissions, a VPN password configured, and you have access to the subnets hosting your resources, see [Activating or deactivating SSL VPN access for a user](/docs/iaas-vpn?topic=iaas-vpn-activate-or-deacivate-ssl-vpn-access-for-a-user).
 * Your workstation or laptop at your location has the stand-alone VPN client installed. [Stand-alone VPN clients (Windows, Linux, and Mac OS X)](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients)
 * You have Internet access and the stand-alone client has a connection to the endpoint for the location hosting your classic resources, see [Available VPN endpoints](/docs/iaas-vpn?topic=iaas-vpn-available-vpn-endpoints).
@@ -157,7 +157,7 @@ The key features of this SSL VPN topology are as follows:
 ## Internet IPsec VPN connection
 {: #network-reference-architecture-privateipsec}
 
-Individual {{site.data.keyword.powerSys_notm}} can have Internet access, see [Public and private networks](/docs/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks), however, there is no site-to-site IPsec VPN service that connects your Power subnets to your remote networks, currently available.
+Individual {{site.data.keyword.powerSys_notm}} can have Internet access, see [Public and private networks](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks), however, there is no site-to-site IPsec VPN service that connects your Power subnets to your remote networks, currently available.
 
 ![IPsec VPN](./images/network-ipsec-vpn.svg "SSL VPN"){: caption="Figure 6. IPsec VPN" caption-side="bottom"}
 
@@ -173,7 +173,7 @@ The key features of this IPsec VPN topology are as follows:
     * Your Power subnets advertised by the Power router.
 * A site-to-site IPSec VPN is configured between a gateway in your remote network and the gateway appliance.
 * Static routes or a routing protocol, such as BGP, is used to share routes between your gateway on your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your Power subnets.
-* A Generic Routing Encapsulation (GRE) tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
+* A Generic Routing Encapsulation (GRE) tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs-draft/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
 
 For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 
@@ -204,7 +204,7 @@ The key features of this Direct Link topology are as follows:
     * Via the IBM Cloud UI/CLI/API, you select your VLANs and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance re-routes, or trunks, that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
     * A gateway appliance is attached to a non-removable private transit VLAN, and optionally a non-removable public transit VLAN.
 * The Classic infrastructure environment VRF will prohibit the direct routing of Power subnets to external networks traffic and vice versa.
-* A GRE tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
+* A GRE tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs-draft/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
 * A GRE tunnel is required between the gateway appliance and a tunnel endpoint connected to your external networks to enable the remote network to remote network connectivity.
 * See [Getting started with IBM Cloud Direct Link (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl), however, key elements of IBM Cloud Direct Link (2.0) include the following:
     * Requires BGP to establish the routes to a customer's remote network.

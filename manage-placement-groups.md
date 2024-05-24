@@ -57,14 +57,14 @@ You can use the following for managing server placement groups:
 You can add VMs to a server placement group. The VMs that you add to the server placement group must be in an **Active** state. You cannot add a VM to a server placement group that contains a VM that is in **Build** state. In this case, after you create a VM you must wait for the VM to be in **Active** state and then add another VM in the server placement group. Use the following API to add a server to a placement group:
 [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
 
-When you add a VM to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+When you add a VM to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support).
 {: note}
 
 To add a VM to a placement group, complete the following steps:
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Virtual server instances**.
 2. In the **Server placement groups** tab, from the placement group table, select a placement group that you want to add the VM.
-3. In the **VMs in placement groups** section, you can [create a new VM](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. You can also add an existing VM to the placement group.
+3. In the **VMs in placement groups** section, you can [create a new VM](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server) and add it to the placement group. You can also add an existing VM to the placement group.
 4. Click **Add existing VM** to add an existing VM to the placement group. Select one or more VMs from the table and add it to the placement group. You can add a maximum of 10 VMs to one placement group.
 
 VMs that you select must be on the same server or different server depending on the colocation policy of the placement group. A VM can belong to only one placement group and VMs that are already placed in a different placement group is disabled in the table.
