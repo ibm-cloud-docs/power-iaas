@@ -14,8 +14,8 @@ toc:
     label: Power Virtual Servers
 
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - getting-started.md
@@ -24,48 +24,48 @@ toc:
       - cost-estimator.md
       - pricing.md
       - ha-dr.md
-      - topicgroup: 
+      - topicgroup:
               label: Backup strategies in Power Virtual Servers
-              topics: 
+              topics:
               - backup-strategies.md
               - backup-strategies-ibmi.md
               - additional-backup-strategies.md
-      - topicgroup: 
+      - topicgroup:
               label: Migration strategies in Power Virtual Servers
-              topics: 
+              topics:
               - system-migration.md
               - migration-strategies-aix.md
               - migration-strategies.md
               - additional-migration-strategies.md
               - migration-strategies-third-party.md
-              - migration-strategies-backup-restore.md       
-      - topicgroup: 
+              - migration-strategies-backup-restore.md
+      - topicgroup:
               label: Replication in Power Virtual Servers
-              topics: 
+              topics:
               - host-and-os-based-logical-replication.md
-              - global-replication-service.md      
-      - topicgroup: 
+              - global-replication-service.md
+      - topicgroup:
               label: Security and compliance
-              topics: 
+              topics:
               - gdpr.md
               - compliances.md
               - Integrate_hpcs.md
-      - topicgroup: 
+      - topicgroup:
               label: Use cases
-              topics: 
+              topics:
               - use-case-dev.md
               - use-case-app.md
               - use-case-hybrid.md
               - use-case-oracle.md
               - use-case-redhat-openshift.md
-      - link: 
+      - link:
               label: Why IBM Power Virtual Servers?
               href: https://www.ibm.com/cloud/power-virtual-server
 
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
-      - topicgroup: 
+      - topicgroup:
             label: Managing, creating, and deploying
             topics:
               - managing-resources-and-users.md
@@ -83,7 +83,7 @@ toc:
               - volume-snapshot-clone.md
               - managing_events_logs.md
               - virtual-applianes-catalog.md
-      - topicgroup: 
+      - topicgroup:
             label: Networking
             topics:
               - configuring-private-subnet.md
@@ -100,7 +100,7 @@ toc:
                     - cloud-connections-CLI.md
                     - ordering-direct-link.md
                     - vpn-connections-deprecated.md
-      - topicgroup: 
+      - topicgroup:
             label: AIX
             topics:
               - creating-vm-ssh-keys.md
@@ -109,7 +109,7 @@ toc:
               - removing-network-interface.md
               - rsct-rmc-aix.md
               - provisioning-nim-server.md
-      - topicgroup: 
+      - topicgroup:
             label: IBM i
             topics:
               - configuring-ibmi-vm.md
@@ -118,25 +118,31 @@ toc:
               - removing-network-interface-ibmi.md
               - ibmi-minimum-levels.md
               - ibmi-license-info.md
-      - topicgroup: 
+      - topicgroup:
             label: Linux
             topics:
               - set-full-linux.md
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup: 
+      - topicgroup:
+            label: SAP
+            topics:
+              - deploying-SAP-custom-image.md
+              - SAP-full-system-profiles.md
+              - SAP-HANA-sr2-sh2-profiles.md
+      - topicgroup:
             label: Observability
             topics:
               - sysdig-monitoring-pvs.md
-              - at-events.md           
+              - at-events.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
       id: reference
-      topics: 
-      - link: 
+      topics:
+      - link:
           label: API reference
           href: https://cloud.ibm.com/apidocs/power-cloud
       - link:
@@ -145,11 +151,11 @@ toc:
 
   - navgroup:
       id: help
-      topics: 
+      topics:
       - faq.md
-      - topicgroup: 
+      - topicgroup:
           label: Troubleshooting
-          topics: 
+          topics:
           - troubleshoot-aix.md
           - troubleshoot-snapshot.md
       - getting-help-and-support.md

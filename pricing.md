@@ -121,6 +121,23 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier1 Instance Hours |
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier3 Instance Hours |
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier2 Instance Hours |
+| [Q2-2024 update start]{: tag-teal} S1022_NW_SHARED_UNCAPPED _CORE_HOURS | S1022 NW Shared Uncapped Processor |
+| S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 NW Shared Capped Processor |
+| S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
+| S1022_NW_MEM_GB_HOURS |  S1022 NW Memory |
+| PTEN_ESS_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Processor |
+| PTEN_EDD_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Dedicated Processor |
+| PTEN_ECC_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Capped Processor |
+| PTEN_MS_GIGABYTE_HOURS | P10 Standard Memory |
+| PTEN_MHU_GIGABYTE_HOURS | P10 High Use Memory (>64 Gb per core) |
+| S1022_SR2_HANA_CORE_HOURS | TBD |
+| S1022_SR2_HANA_MEM_GB_HOURS | TBD |
+| E1080_SR2_HANA_CORE_HOURS | TBD |
+| E1080_SR2_HANA_MEM_GB_HOURS | TBD |
+| S1022_SH2_HANA_CORE_HOURS  | TBD |
+| S1022_SH2_HANA_MEM_GB_HOURS | TBD |
+| E1080_SH2_HANA_CORE_HOURS | TBD |
+| E1080_SH2_HANA_MEM_GB_HOURS  | TBD [Q2-2024 update end]{: tag-teal}|
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 ## Base instances
