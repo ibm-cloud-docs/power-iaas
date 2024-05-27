@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Pricing for {{site.data.keyword.powerSys_notm}}s
 {: #pricing-virtual-server}
 
-{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums: 
+{{site.data.keyword.powerSys_notm}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To calculate the exact pricing, use the [IBM cost estimator](https://cloud.ibm.com/estimator){: external}.
 {: important}
@@ -75,7 +75,7 @@ In this example, the LPAR resources are increased (after reaching 300 hours in t
 
 For detailed usage and billing information, you can refer to the part number in your invoice. The part numbers in the invoice represent the charge unit. Refer to the following table to view the part numbers and its corresponding description.
 
-| Part number  | Description                     | 
+| Part number  | Description                     |
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
 | SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
@@ -205,7 +205,7 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |10+5 GB|15 GB|
     {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
 
-- **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image. 
+- **Image backing volumes**:These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume size(s) contained in the image.
 
     When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the size(s) of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
 
@@ -221,6 +221,17 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |20 GB|20 GB|
     |20 GB + 30 GB|50 GB|
     {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+
+[Q2-2024 update start]{: tag-teal}
+
+- **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates made to the virtual machine. When you take the snapshot of the volume for the first time, the size of the snapshot is equal to the volume of the virtual machine. Subsequently, when you take the snapshots of the same volume, the updates made to the volume after the first snapshot taken is only saved. So, the subsequent snapshots when compared with the first snapshot taken are smaller and thus cost less.
+
+For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The the size of the second snapshot might be 1 GB.
+
+Snapshot sizes are not predictable as they are related to the updates made to the volume between two snapshots.
+{: note}
+
+[Q2-2024 update end]{: tag-teal}
 
 ### Use case of account billable storage
 {: #use-case-billable-storage}
