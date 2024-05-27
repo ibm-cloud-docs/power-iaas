@@ -36,7 +36,10 @@ If you choose to register for full Linux subscription, an additional charge will
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
-The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions). 
+The {{site.data.keyword.powerSys_notm}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+
+[JIRA-PPC-4873 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
+{: note}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external}.
 
@@ -72,7 +75,7 @@ When you are configuring a Source NAT (SNAT) gateway between your public and pri
 The TCP checksum offload option must be disabled on the private network interface of the SNAT Gateway and virtual Ethernet device must be of the type `ibmveth`. You do not need to change the TCP checksum offload option for public network interface. IBM {{site.data.keyword.powerSys_notm}} VMs are deployed by using ibmveth devices only.
 {: note}
 
-You can verify that the device interface type is `ibmveth` by using the following command: 
+You can verify that the device interface type is `ibmveth` by using the following command:
 
 ```text
 ethtool -i <interface name> | grep driver
@@ -102,7 +105,7 @@ The following instructions are applicable to RHEL version 8.1, and later. If you
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct. 
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
     - Verify the checksum offloading setting by running the following command:
 
       ```text

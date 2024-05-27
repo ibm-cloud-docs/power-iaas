@@ -74,7 +74,7 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.3 TR13
 * IBM i 7.2 TR9
 * IBM i 7.1 TR11 [^2]
- 
+
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 [^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
@@ -97,7 +97,7 @@ Red Hat
 
 
 SUSE
-* SLES 15 SP5 general purpose (SLES15-SP5) 
+* SLES 15 SP5 general purpose (SLES15-SP5)
 * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^3]
 * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^4]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
@@ -110,10 +110,12 @@ SUSE
 [^3]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^4]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
-The S1022 systems supports RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. SAP Netweaver is not certified for use with S1022 systems, making them suitable exclusively for non-production workloads.
+The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. [JIRA-PPC-4873 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
 {: note}
 
-If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for following Linux distributions:
+If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image.
+
+{{site.data.keyword.powerSys_notm}} supports custom images for following Linux distributions:
 
 General purpose:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
@@ -125,12 +127,19 @@ For SAP workloads:
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/cloud/instance-types/detail/5636201){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/cloud/instance-types/detail/5636281){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
-## Can I use my own AIX, IBM i, or Linux image?
+## Can I use my own AIX, IBM i, Linux, [or Linux for SAP (HANA or NetWeaver)]{: tag-teal} image?
 {: #image}
 {: faq}
 {: support}
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+
+[Q2-2024 update start]{: tag-teal}
+
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#image).
+
+[Q2-2024 update end]{: tag-teal}
+
 
 ## What versions of stock images are available?
 {: #stock-images}
@@ -381,7 +390,7 @@ You must set your own firewall in your IBM Cloud account.
 {: faq}
 {: support}
 
-You can use IBM Cloud Connect to connect two data centersif they are located withing US. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world. 
+You can use IBM Cloud Connect to connect two data centersif they are located withing US. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world.
 
 You can use Direct Link and Transit Gateway (local & global) for connecting two data centers.
 {: important}
