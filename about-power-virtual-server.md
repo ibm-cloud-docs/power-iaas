@@ -19,7 +19,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.powerSysFull}} is an IBM Power servers offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads both private cloud and on cloud.
 
-Review this information to understand the {{site.data.keyword.powerSys_notm}} private cloud and {{site.data.keyword.powerSys_notm}} on cloud architectures and to identify the hardware and software specifications:
+Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} on cloud architectures and to identify the hardware and software specifications:
 {: shortdesc}
 
 * [Private cloud architecture](#private-cloud-architecture)
@@ -103,6 +103,83 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 <!--When the threshold exceeds, you receive a notification. [SHU: Not available currently for LA.]-->
 
+#### pod configurations
+{: #pod-config}
+
+[Q2-2024 update start]{: tag-teal}
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod have 1x42 U rack and are available in S1022 and E1050 system types.
+
+Table 1 illustrates the configuration for small pod.
+
+| Server types               | S1022 |     |     | E1050    |     |
+| -------------------------- | ------|-----|---- | -------- | --- |
+| Number of racks            | 1     |     |     | 1        |     |
+| Server quantity in a pod   | 6     | 5   | 9   | 2        | 4   |
+| Number of cores per server | 40    | 40  | 40  | 96       | 96  |
+| Total number of cores      | 240   | 200 | 360 | 192      | 384 |
+| Usable cores               | 198   | 165 | 297 | 170      | 340 |
+|                            |       |     |     |          |     |
+| Memory types               |       |     |     |          |     |
+| 2 TB                       | 12    |     | 18  |          |     |
+| 4 TB                       |       | 20  | 36  | 16       | 32  |
+{: caption="Table 1. Small pod configuration." caption-side="top"}
+
+
+The small pod with one rack is available with FS 230 TB flash system storage. Table 2 illustrates the configuration for small pod with flash system storage options.
+
+| Storage types                         | FS 230 TB |        |
+| ------------------------------------- | ----------|--------|
+| Number of racks                       | 1         |        |
+| Drives for each flash system          | 12        | 12     |
+| Memory for each drive                 | 19.2      | 19.2   |
+| Number of flash systemss in a pod     | 1         | 2      |
+| Total Drives in a pod                 | 12        | 24     |
+| Total memory size in TB               | 230       | 460    |
+| Usable memory size in TB              | 219       | 438    |
+| Usable memory size in TB at 2x compr. | 43        | 876    |
+{: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
+
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and are available in S1022, E1050, and E1080 (2CEC) system types.
+
+Table 3 illustrates the configuration for medium pod storage options.
+
+| Server types                | S1022 |     |     |      | E1050    |      |       |      | E1080 (2CEC) |     |
+| --------------------------- | ------|-----|-----|------| -------- | ---- | ----- | ---- | -------------| --- |
+| Number of racks             | 2     |     | 4   |      | 2        |      | 4     |      | 4            |     |
+| Number of servers in a rack | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
+|                             | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
+|                             | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
+| Total number of cores       | 480   | 600 | 640 | 1600 | 480      | 672  | 768   | 1824 | 240          | 600 |
+| Usable cores                | 396   | 495 | 528 | 1320 | 425      | 595  | 680   | 1615 | 214          | 535 |
+| Memory types                |       |     |     |      |          |      |       |      |              |     |
+| 2 TB                        | 24    | 30  | 32  | 80   |          |      |       |      |              |     |
+| 4 TB                        | 48    | 60  | 64  | 160  | 20       | 28   |  32   | 76   |              |     |
+| 8 TB                        |       |     |     |      | 40       | 56   | 64    | 152  | 16           | 40  |
+| 16 TB                       |       |     |     |      |          |      |       |      | 32           | 80  |
+| 32 TB                       |       |     |     |      |          |      |       |      | 64           | 160 |
+{: caption="Table 1. Medium pod configuration." caption-side="top"}
+
+
+The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. Table 4 illustrates the configuration for medium pod with flash system storage options.
+
+| Storage types                         | FS 460 TB or FS 920 TB |      |       |      |       |      |       |       |
+| ------------------------------------- | -----------------------|----- | ------|------| ----- | ---- | ----- | ----- |
+| Server types                          | S1022                  |      |       |      | E1050 |      |       |       |
+| Number of racks                       | 2                      |      | 4     |      | 2     |      | 4     |       |
+| Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
+| Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
+| Memory for each drive                 | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
+| Number of flash systemss in a pod     | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
+| Total Drives in a pod                 | 24                     | 48   | 48    | 96   | 72    | 144  | 96    | 192   |
+| Total memory size in TB               | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
+| Usable memory size in TB              | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
+| Usable memory size in TB at 2x compr. | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
+{: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
+
+[Q2-2024 update end]{: tag-teal}
+
+
+
 #### Supported Power10 processor-based servers
 {: #power-system-spec-private-cloud}
 
@@ -139,12 +216,12 @@ Flexible IOPS is a tier-less storage offering that removes the notion of disk ty
 
 Table 1 shows the supported storage tiers with corresponding IOPS.
 
-| Tier level | IOPS 	| Performance |
+| Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
-| Tier 0	| 25 IOPS/GB	| A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1	| 10 IOPS/GB	| A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
-| Tier 3	| 3 IOPS/GB	| A 100-GB volume receives 300 IOPS. |
-| Fixed IOPS	| 5000 IOPS regardless of size |	A 100-GB volume receives 5000 IOPS. |
+| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
+| Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
+| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
 {: caption="Table 1. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
@@ -302,12 +379,12 @@ IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O o
 
 Table 6 shows the supported storage tiers with corresponding IOPS.
 
-| Tier level | IOPS 	| Performance |
+| Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
-| Tier 0	| 25 IOPS/GB	| A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1	| 10 IOPS/GB	| A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
-| Tier 3	| 3 IOPS/GB	| A 100-GB volume receives 300 IOPS. |
-| Fixed IOPS	| 5000 IOPS regardless of size |	A 100-GB volume receives 5000 IOPS. |
+| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
+| Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
+| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
 {: caption="Table 6. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
@@ -355,10 +432,10 @@ When you are creating a virtual server instance, you can define the boot volume 
 - Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 - For **Storage pool**, select from **Auto-select pool**, **Affinity**, **Anti-affinity**.
 
-| VM storage pool affinity setting |	Action |
+| VM storage pool affinity setting | Action |
 |----------------------------------|---------|
-| Auto-select pool |	{{site.data.keyword.powerSys_notm}} determines the best storage pool available for you. |
-| Affinity |	The storage pool must be similar to the storage pool of affinity object that you choose. |
+| Auto-select pool | {{site.data.keyword.powerSys_notm}} determines the best storage pool available for you. |
+| Affinity | The storage pool must be similar to the storage pool of affinity object that you choose. |
 | Anti-affinity|  Storage pool makes the storage pool of affinity object that you choose as an exception.|
 {: caption="Table 7. Storage pool affinity setting" caption-side="bottom"}
 

@@ -40,8 +40,8 @@ In a user defined SPP, you can set the Entitled Capacity (EC) and Virtual Proces
 
 Note the following limitations while using EC:VP ratio:
 * You can set the ratio only on a user defined SPP.
-* For non-dedicated hosts on Power10 systems, you can increase the limit of EC:VP ratio to 1:3 for ECs less than or equal to 2.
-* For POWER9 systems and for virtual machines with ECs greater than 2, the EC:VP ratio is 1:1.
+* For non-dedicated hosts on Power10, you can increase the limit of EC:VP ratio to 1:3 for ECs less than or equal to 2.
+* For Power9 and for virtual machines with ECs greater than 2, the EC:VP ratio is 1:1.
 
 [Q2-2024 update end]{: tag-teal}
 
