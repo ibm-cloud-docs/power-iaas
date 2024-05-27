@@ -31,7 +31,7 @@ If you plan to use your own license, select the OS image suffixed with `-BYOL`. 
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-[Q2-2024 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [Q2-2024 update end]{: tag-teal}
+[JIRA-PPC-4873 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
 {: note}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/system/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/system/detail/9225){: external}.

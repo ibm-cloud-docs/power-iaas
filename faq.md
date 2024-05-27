@@ -167,7 +167,7 @@ SUSE
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
 
-The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. [Q2-2024 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [Q2-2024 update end]{: tag-teal}
+The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. [JIRA-PPC-4873 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
 {: note}
 
 If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
