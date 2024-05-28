@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 Infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical switches and routers.
 {: shortdesc}

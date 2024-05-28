@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Planning a workload migration to an IBM® Power®
 {: #system-migration}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) <!-- E1080 (9080-HEX) -->. For more information, see [Hardware specifications](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud).
 {: shortdesc}

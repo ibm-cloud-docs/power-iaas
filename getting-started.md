@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 You get fast and flexible management that can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing. Using these services you can easily adjust workloads with flexible compute capacity. {{site.data.keyword.powerSys_notm}} instances can be used across the IBM Cloud platform globally. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. Avoid the large capital expenses or added risk when migrating your essential workloads and get started with {{site.data.keyword.powerSys_notm}} today! For frequently asked questions about the {{site.data.keyword.powerSys_notm}}, see [FAQ](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs).
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure or the pod is deployed in your data center. The pod is maintained and operated by IBM site reliability engineering (SREs) and managed through the IBM Cloud platform. Each pod is associated with an IBM Cloud Satellite Location that is owned by your IBM Cloud account. This architecture helps to scale horizontally to add more pods according to your requirements. To verify that the pre-installation requirements are met, see [Prerequisites for installing the pod](/docs-draft/power-iaas?topic=power-iaas-pre_installation_checklist).
 
@@ -31,7 +31,7 @@ Private cloud officially supports Red Hat Enterprise Linux (RHEL) and IBM AIX&re
 
 <!--; SUSE Linux Enterprise Server will be available in the future with subscription.-->
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 {{site.data.keyword.powerSys_notm}} on cloud resources reside in IBM data centers with dedicated networking and SAN-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that is nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
 
@@ -72,7 +72,7 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 ## Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #lifecycle-private-cloud}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 ![Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud"){: caption="Figure 2. Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="bottom"}
 
@@ -80,6 +80,6 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 ## Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud
 {: #lifecycle-on-cloud}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 ![Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud"){: caption="Figure 3. Lifecycle of a {{site.data.keyword.powerSys_notm}} on cloud" caption-side="bottom"}

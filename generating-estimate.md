@@ -42,7 +42,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.
     You are redirected to the **Estimate cost** page.
 
-5. Select the type of virtual server from **Location type** drop-down list as [**On-premises** (private cloud)](#on-prem-location-type) or [**Off-premises** (IBM Cloud)](#off-prem-location-type).
+5. Select the type of virtual server from **Location type** drop-down list as [**On-premises**](#on-prem-location-type) or [**Off-premises**](#off-prem-location-type).
 
 6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.
     For private cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
@@ -59,7 +59,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 ### Off-premises (IBM Cloud)
 {: #off-prem-location-type}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 If you select the **Location type** as Off-premises, select one resource from the following list and choose additional configurations as per your requirement:
 
@@ -167,7 +167,7 @@ To learn more about dedicated host, see [Getting started with dedicated host](/d
 ### On-premises (private cloud)
 {: #on-prem-location-type}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 If you select the **Location type** as On-Premises, proceed with the following steps:
 

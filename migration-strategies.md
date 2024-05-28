@@ -25,7 +25,7 @@ Learn how to migrate your data and workloads to a {{site.data.keyword.powerSysFu
 
 COS can be used as an intermediary location to store files from your private cloud environment. You can retrieve and send your files to the {{site.data.keyword.powerSys_notm}} environment from this location. You must create COS buckets to transfer data over the public internet and or privately secured links. For more information, see [IBM Cloud Object Storage: FAQ](https://www.ibm.com/cloud/object-storage/faq){: external}.
 
-[Private Cloud]{: tag-red} You can transfer data from your private cloud data center to IBM {{site.data.keyword.powerSys_notm}} Private Cloud operating systems, such as AIX, through client data network(s).
+[On-Premises]{: tag-red} You can transfer data from your private cloud data center to IBM {{site.data.keyword.powerSys_notm}} Private Cloud operating systems, such as AIX, through client data network(s).
 {: note}
 
 To copy data from COS to your AIX virtual machine (VM), you must install the [Amazon Web Services (AWS) CLI](/docs/cloud-object-storage?topic=cloud-object-storage-aws-cli) by using either the **Yellowdog Updater, Modified (yum)** or **Pip installs Python pip (pip)** package managers. If you use the yum package manager, you can install the AWS CLI with the `yum install aws-cli` command. For the pip package manager, you can use `pip install awscli` to install the AWS CLI. After the installation, you can use the universal S3 commands that are supported by AWS to copy objects.
@@ -54,7 +54,7 @@ For steps to configure MDM on AIX and IBM i VMs, see the following tutorials:
 <!-- To Sandhya: this complete MDM topic have been removed from powerVS dated 22 Aug 2023, determine if the below 2 paras are required. If not delete the entire MDM section. -->
 <!-- Removed MDM topic as per Mark Martin's input. -->
 
-<!--[Private Cloud]{: tag-red}
+<!--[On-Premises]{: tag-red}
 
 You can perform mass data migration specifically during initial phase of pod usage, backup and restore, or disaster recovery scenarios. However, you cannot use control plane network to move your application data from private cloud to the pod storage. Therefore, you must use client data network for this purpose. The primary options for migrating data into the pod client systems are as follows:
 
@@ -140,7 +140,7 @@ StorSafe VTL is software that emulates physical tape drives and libraries to opt
 ### Migrating an IBM i system
 {: #mig-storsafe-ibmi}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 See the video that shows migration of an IBM i system from private cloud to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}.
 
@@ -239,7 +239,7 @@ For more information on creating and defining a NIM master, setting an LPP sourc
 ## IBM i migration strategies
 {: #migration-ibmi}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 Learn about migration strategies that are specific to IBM i systems.
 
@@ -254,13 +254,13 @@ Recent IBM i migration enhancements:
 
 BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).
 
-The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
+The following high-level steps detail how to migrate your OS and data from an [client-managed]{ tag-teal} system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
 1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
 2.	Create a virtual media and _IMGCLG_ on the deployed VM.
-3.	Create a virtual optical and _IMGCLG_ on the on-premises system and perform an operating system save.
+3.	Create a virtual optical and _IMGCLG_ on the [client-managed]{: tag-teal} system and perform an operating system save.
 4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
-5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
+5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your [client-managed]{: tag-teal} system.
 6.	Migrate your remaining data.
 
 Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.

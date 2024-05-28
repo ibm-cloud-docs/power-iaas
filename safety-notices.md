@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Safety notices
 {: #safety-notices}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 These statements provide the caution and danger information that are used in this document.
 

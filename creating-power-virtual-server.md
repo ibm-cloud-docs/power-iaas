@@ -84,7 +84,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs-draft/p
 
     The virtual server instances associated with the selected workspace are displayed.
 
-    [Private Cloud]{: tag-red} If an error occurs immediately after creating and opening the virtual machine instance, you must delete it.
+    [On-Premises]{: tag-red} If an error occurs immediately after creating and opening the virtual machine instance, you must delete it.
     {: note}
 
 2. To create a new instance, click **Create instance**. If you select more than one instance under **Number of instances**, you are presented with additional options.
@@ -99,7 +99,7 @@ To begin, create a [{{site.data.keyword.powerSys_notm}} workspace](/docs-draft/p
 
 4. Complete the **Boot image** fields as instructed by your organization. When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalogue. Custom images are images that you have imported from IBM COS or created from a PVM instance (VM) capture. When you select a stock image you must also select the storage type (tier) and the storage pool selection. When you select a custom image, the new PVM instance(s) will be deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
 
-    [Private Cloud]{: tag-red} If you select a custom image from a local catalog, the PVM instances are deployed on a single storage tier.
+    [On-Premises]{: tag-red} If you select a custom image from a local catalog, the PVM instances are deployed on a single storage tier.
     {: note}
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).

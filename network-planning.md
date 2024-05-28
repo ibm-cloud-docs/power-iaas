@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Network planning
 {: #network-planning}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 The {{site.data.keyword.powerSys_notm}} network architecture requires connectivity between two entities: IBM Cloud and the pod that is located in your private cloud data center. This connectivity is enabled with the help of Direct Link 2.0 Connect technology or through VPN connection. IBM sets up this connectivity during the initial deployment of the pod. Provide some network-specific information before the pod installation so that the Direct Link 2.0 connection or VPN connection can be established. Information that is required by IBM is included in the checklist that is shared before the installation, such as:
 * Autonomous system numbers (ASN)

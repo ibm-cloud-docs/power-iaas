@@ -28,7 +28,7 @@ Review this information to understand the {{site.data.keyword.powerSys_notm}} Pr
 ## Private cloud architecture
 {: #private-cloud-architecture}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
 
@@ -242,7 +242,7 @@ For more information, see [Network overview](/docs-draft/power-iaas?topic=power-
 ## On cloud architecture
 {: #on-cloud-architecture}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 {{site.data.keyword.powerSys_notm}} on cloud are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 

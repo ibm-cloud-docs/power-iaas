@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Site readiness
 {: #site-readiness}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 Determine whether to construct a new site or to make alterations to an existing site. The electric power and communication facilities must be available in adequate quantities for operation. If these facilities are inadequate, contact the utility company to determine whether additional services can be made available.
 

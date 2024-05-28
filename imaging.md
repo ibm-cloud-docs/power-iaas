@@ -18,7 +18,7 @@ subcollection: power-iaas
 # Connectivity to IBM COS buckets to import custom images
 {: #conn-COS-custom-image}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 You can maintain a set of operating system images in your IBM Cloud Object Storage (COS) buckets. These images are referred to as custom images. You can import these custom images into the boot volumes of the logical partitions (LPARs).
 

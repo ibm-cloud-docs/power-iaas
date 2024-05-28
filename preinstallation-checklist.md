@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Prerequisites for installing the pod
 {: #pre_installation_checklist}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 Proper planning is essential for the successful setup and use of {{site.data.keyword.powerSysFull}} pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}

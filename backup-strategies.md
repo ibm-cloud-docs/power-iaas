@@ -19,7 +19,7 @@ subcollection: power-iaas
 Learn more about different AIX and IBM i backup strategies for {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-[Private Cloud]{: tag-red} Your application configuration and data are not backed up automatically. To recover from a disaster, IBM backs up your configuration data that is required to rebuild a pod. The configuration data includes the virtual machine configurations and private cloud image repositories. However, backup and restoration of client data and client OS images is your responsibility.
+[On-Premises]{: tag-red} Your application configuration and data are not backed up automatically. To recover from a disaster, IBM backs up your configuration data that is required to rebuild a pod. The configuration data includes the virtual machine configurations and private cloud image repositories. However, backup and restoration of client data and client OS images is your responsibility.
 
 ## Image capture
 {: #backup-image-capture}
@@ -28,7 +28,7 @@ This function produces a storage Flash Copy of the virtual server and works for 
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum [uncompressed ]{: tag-teal}image size that you can import or export is **10 TB**.
 
-[Private Cloud]{: tag-red} For advanced backup options, you must use your own backup strategy and tools. You can use software such as IBM Storage Protect and solution-based technologies such as SAP HANA replication.
+[On-Premises]{: tag-red} For advanced backup options, you must use your own backup strategy and tools. You can use software such as IBM Storage Protect and solution-based technologies such as SAP HANA replication.
 
 ## Snapshots
 {: #snapshots}
@@ -70,7 +70,7 @@ For a complete tutorial on backing up and restoring IBM i VM data, see [Backing 
 ## Using Cloud Object Storage
 {: #cos-over-directlink}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
 
@@ -86,7 +86,7 @@ The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.d
 
     Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
 
-[Private Cloud]{: tag-red}: You must setup the connection from a virtual machine to Cloud Object Storage (COS) as required.
+[On-Premises]{: tag-red}: You must setup the connection from a virtual machine to Cloud Object Storage (COS) as required.
 
 ### Cloud Object Storage on AIX
 {: #cos-aix}

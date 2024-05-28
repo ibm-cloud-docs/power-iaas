@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Deploying a Linux for SAP (HANA or NetWeaver) custom image
 {: #deploying-SAP-image}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 [Q2-2024 update start]{: tag-teal}
 

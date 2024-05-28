@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-private-cloud}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 {{site.data.keyword.powerSysFull}} Private Cloud provides a secure and unified billing for the separate hardware resources and software resources that you use. The following list of hardware resources are metered:
 
@@ -315,7 +315,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 [Q2-2024 update start]{: tag-teal}
 

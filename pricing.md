@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Pricing for {{site.data.keyword.powerSys_notm}} on cloud
 {: #pricing-virtual-server-on-cloud}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 {{site.data.keyword.powerSysFull}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 

@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Compliance certifications
 {: #compliances-list}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}

@@ -31,9 +31,9 @@ The primary difference between the two is where the physical infrastructure resi
 ## Which Power servers are supported?
 {: #servers-supported}
 
-[On Cloud]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, and IBM Power E1080.
+[Off-Premises]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, and IBM Power E1080.
 
-[Private Cloud]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
+[On-Premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
 For complete specifications, see [Hardware and software specifications](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
@@ -49,7 +49,7 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 ### AIX
 {: #aix-os-version}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} on cloud offering supports the following operating systems:
 * S922  -  7.1 or later
@@ -63,7 +63,7 @@ Stock images available when you create a virtual machine are:
 * AIX 7.2 TL5 SP6
 * AIX 7.1 TL5 SP9
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 The IBM {{site.data.keyword.powerSys_notm}} Private Cloud offering supports the following operating systems:
 * S1022 - 7.2 or later
@@ -76,7 +76,7 @@ Stock images available when you create a virtual machine are:
 * AIX 7.2 TL5 SP5
 
 <!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
-<!--[On Cloud]{: tag-blue}-->
+<!--[Off-Premises]{: tag-blue}-->
 <!--The {{site.data.keyword.powerSys_notm}} on cloud offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
 <!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
 
@@ -94,7 +94,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 <!--* AIX 7.3 TL1 SP2-->
 <!--* AIX 7.2 TL5 SP6-->
 <!--* AIX 7.1 TL5 SP9-->
-<!--[Private Cloud]{: tag-red}-->
+<!--[On-Premises]{: tag-red}-->
 <!--The {{site.data.keyword.powerSys_notm}} private cloud offering supports AIX 7.2, or later on the S1022 (9105-22A) and E1080 (9080-HEX).-->
 <!--AIX stock images currently available for private cloud when you create a VM are:-->
 <!--* AIX 7.3 TL1 SP2-->
@@ -132,7 +132,7 @@ IBM i stock images currently available when you create a VM are:
 
 <!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs-draft/power-iaas?topic=power-iaas-set-full-Linux)):
 
@@ -183,7 +183,7 @@ For SAP workloads:
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub).
 
@@ -418,7 +418,7 @@ For more information, see [Hardware specifications](/docs-draft/power-iaas?topic
 {: #multi}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} on cloud run in a multi-tenant environment. If you have signed up for a dedicated host you can get single-tenant capabilities.
 
@@ -497,7 +497,7 @@ It also allows you to quickly create an intermediate snap-shot then a volumes-cl
 {: faq}
 {: support}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
 
@@ -506,7 +506,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: faq}
 {: support}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
 
@@ -514,7 +514,7 @@ For more information on VPN, see [Managing VPN connections](/docs-draft/power-ia
 {: #firewall}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 You must set your own firewall in your IBM Cloud account.
 
 ## How do you connect a server instance between two data centers (DAL13 to WDC04)?
@@ -532,7 +532,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 {: support}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
@@ -621,20 +621,20 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: #network_latency}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
 
 ## What must be the network latency between the data center and the corresponding IBM Cloud region?
 {: #network_latency-private-cloud}
 
-[Private Cloud]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs-draft/power-iaas?topic=power-iaas-network_latency_main).
+[On-Premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs-draft/power-iaas?topic=power-iaas-network_latency_main).
 
 
 <!--## How many DHCP pools can be created on the {{site.data.keyword.powerSys_notm}} private cloud?-->
 <!--{: #dhcp-pool}-->
 <!--{: faq}-->
 
-<!--[Private Cloud]{: tag-red}-->
+<!--[On-Premises]{: tag-red}-->
 <!--No of DHCP pools that can be created TBD-->
 <!--Sridhar to provide input-->
 
@@ -649,7 +649,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 {: #convert-to-replication-vol}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volume supports replication.
 
@@ -657,7 +657,7 @@ You can retype the volume to toggle the `replicationEnable` flag of the volume b
 {: #check-for-replication-vol}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
 
@@ -666,7 +666,7 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: faq}
 
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
 
@@ -702,7 +702,7 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #cc-res-group}
 {: faq}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
 
 ## What is the Maximum Transmission Unit (MTU) size that is supported in {{site.data.keyword.powerSys_notm}} networks?
@@ -723,7 +723,7 @@ Both AIX and IBM i support custom cloud-init configurations at the time of {{sit
 
 You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
 
-[Private Cloud]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
+[On-Premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 
 ## Can I add user interface to an existing virtual machine?
 {: #ui-vm}

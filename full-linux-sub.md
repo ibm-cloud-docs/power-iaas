@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #full-linux-sub}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) support through IBM.
 {: shortdesc}

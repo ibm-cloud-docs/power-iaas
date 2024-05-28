@@ -61,7 +61,7 @@ You can use the service access roles to define what actions users can perform on
 | Manager | You can configure all resources. The following are some of the actions you can perform on {{site.data.keyword.powerSys_notm}}: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 To view the storage pool and system pool capacities of your private cloud location that is satellite-enabled, you must have the privileges associated with a `Manager`-type service access role.
 {: note}
 

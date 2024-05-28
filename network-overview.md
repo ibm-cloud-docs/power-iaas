@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network overview
 {: #network-private-cloud}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 Establishing a connectivity between the pod in your data center and {{site.data.keyword.powerSysFull}} IBM Cloud requires meticulous planning, site preparation, meeting the prerequisites, understanding the network architecture, and others.
 

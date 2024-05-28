@@ -22,19 +22,19 @@ The {{site.data.keyword.powerSys_notm}} VPN is deprecated and IBM won't provide 
 ## Creating a {{site.data.keyword.powerSys_notm}} VPN
 {: #pvs-vpn}
 
-You can connect an on-premises virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service. You can use the VPN to connect to the Power Virtual Server private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your on-premises location and {{site.data.keyword.powerSys_notm}}s to enable low-cost secure connectivity.
+You can connect an [client-managed environment]{: tag-teal} virtual private network (VPN) gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service. You can use the VPN to connect to the Power Virtual Server private network, complete your work securely, and log out. This capability offers you site-to-site IP security (IPsec) VPN between your [client-managed]{: tag-teal} location and {{site.data.keyword.powerSys_notm}}s to enable low-cost secure connectivity.
 
 With VPN access, you can:
 
 - Ensure private and low-cost connectivity to IBM Cloud services.
-- Access your Virtual Servers through the private IP address by using Secure Shell (SSH) and your other on-premises applications that are running on your on-premises host.
+- Access your Virtual Servers through the private IP address by using Secure Shell (SSH) and your other [client-managed]{: tag-teal} applications that are running on your [client-managed]{: tag-teal} host.
 
-The {{site.data.keyword.powerSys_notm}} infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs-draft/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server workspace to an on-premises network through a VPN tunnel. For more information, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
+The {{site.data.keyword.powerSys_notm}} infrastructure consists of subnets and virtual server instances (VSIs). You can use VPN as a service with your existing VSIs and private networks. To create a VSI on a private network, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server) and [Configuring and adding a private network subnet](/docs-draft/power-iaas?topic=power-iaas-configuring-subnet). You can use VPN to securely connect your Power Virtual Server workspace to an [client-managed environment]{: tag-teal} network through a VPN tunnel. For more information, see [Connecting to your client-managed environment network](/docs/vpc?topic=vpc-vpn-onprem-example&interface=ui).
 
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection are supported on each data center. Currently, VPN for {{site.data.keyword.powerSys_notm}}s is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, and TOK04 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
 {: important}
 
-Due to your bandwidth variation when connecting via a shared VPN gateway, performance varies. For workloads that require the transfer of large data volumes, you should consider using a site-to-site VPN configuration using your own dedicated gateway devices. For more information, see [Configuring the on-premises VPN gateway](/docs-draft/power-iaas?topic=power-iaas-VPN-connections#configure-onpremise-vpngateway).
+Due to your bandwidth variation when connecting via a shared VPN gateway, performance varies. For workloads that require the transfer of large data volumes, you should consider using a site-to-site VPN configuration using your own dedicated gateway devices. For more information, see [Configuring the client-managed environment VPN gateway](/docs-draft/power-iaas?topic=power-iaas-VPN-connections#configure-onpremise-vpngateway).
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
@@ -44,20 +44,20 @@ To learn more about using the command-line interface (CLI) for VPN connections, 
 
 {{site.data.keyword.powerSys_notm}} supports multiple workspaces from the same account. However, only a single workspace can use a VPN connection. If you want to configure a VPN connection for multiple workspaces for the same account, open a [Service Ticket](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support).
 
-### Connecting to on-premises network
+### Connecting to [client-managed environment]{: tag-teal} network
 {: #vpn-connecting-onpremise}
 
-You can configure your VPN to connect to your on-premises network by following these steps in the {{site.data.keyword.powerSys_notm}} CLI or API.
+You can configure your VPN to connect to your [client-managed environment]{: tag-teal} network by following these steps in the {{site.data.keyword.powerSys_notm}} CLI or API.
 
 1. [Create an IKE policy](/docs-draft/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
 2. [Create an IPsec policy](/docs-draft/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
 3. [Create a VPN connection](/docs-draft/power-iaas?topic=power-iaas-VPN-connections#creating-VPN-connections).
-4. Configure your on-premises IPsec gateway enduring IKE policy, IPsec policy, and VPN connection parameters that are compatible.
+4. Configure your [client-managed environment]{: tag-teal} IPsec gateway enduring IKE policy, IPsec policy, and VPN connection parameters that are compatible.
 
-#### Configuring the on-premises VPN gateway
+#### Configuring the [client-managed environment]{: tag-teal} VPN gateway
 {: #configure-onpremise-vpngateway}
 
-The next step is to configure your on-premises VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server workspace. The configuration depends on the type of VPN gateway. See the following topics for details.
+The next step is to configure your [client-managed environment]{: tag-teal} VPN gateway peer to connect to your IBM Cloud VPN Gateway for Power Virtual Server workspace. The configuration depends on the type of VPN gateway. See the following topics for details.
 
 Any configurations that are not listed in this section are not supported by {{site.data.keyword.powerSys_notm}}. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs-draft/power-iaas?topic=power-iaas-vpn-connectivity) with redundant VPN connections.
 
@@ -68,7 +68,7 @@ Any configurations that are not listed in this section are not supported by {{si
 #### Checking the status of the secure connection
 {: #check-secure-connection}
 
-You can test the connection by doing a ping from a virtual server instance to a server in the on-premises network.
+You can test the connection by doing a ping from a virtual server instance to a server in the [client-managed environment]{: tag-teal} network.
 
 ### Creating IKE and IPsec policies
 {: #creating-IKE-policies}
@@ -92,7 +92,7 @@ To create an IKE policy, complete the following steps:
      - **Encryption**: Select the encryption algorithm of the IKE policy. Valid values are '3des-cbc', 'aes-128-cbc', 'aes-128-gcm', 'aes-192-cbc', 'aes-256-cbc', 'aes-256-gcm', and 'des-cbc'. When you use 'aes-128-gcm' or 'aes-256-gcm', the **Authentication** option must be set to 'none'.
      - **Diffie-Hellman (DH) group**: Select the DH group number of the IKE policy. Valid values are 1, 2, 5, 14, 19, 20, 24.
      - **Key lifetime**: Specify the key lifetime of the IKE policy in seconds. The valid value is in the range 180 - 86400 seconds.
-     - **Preshared key**: Specify the authentication key of the VPN gateway for the on-premises network.
+     - **Preshared key**: Specify the authentication key of the VPN gateway for the [client-managed environment]{: tag-teal} network.
 
 5. Click **Create**.
 
@@ -150,20 +150,20 @@ Key Lifetime              28800
 ### Creating the {{site.data.keyword.powerSys_notm}} VPN connection
 {: #creating-VPN-connections}
 
-**Prerequisite**: You must create at least one local subnet in the {{site.data.keyword.powerSys_notm}} interface and a peer subnet in your on-premises environment. You can connect your on-premises environment and the {{site.data.keyword.powerSys_notm}} network through the VPN tunnel. For instructions about creating a subnet, see [Configuring and adding a private network subnet](/docs-draft/power-iaas?topic=power-iaas-configuring-subnet).
+**Prerequisite**: You must create at least one local subnet in the {{site.data.keyword.powerSys_notm}} interface and a peer subnet in your [client-managed]{: tag-teal} environment. You can connect your [client-managed]{: tag-teal} environment and the {{site.data.keyword.powerSys_notm}} network through the VPN tunnel. For instructions about creating a subnet, see [Configuring and adding a private network subnet](/docs-draft/power-iaas?topic=power-iaas-configuring-subnet).
 
 To create a VPN connection, complete the following steps:
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **VPN connections**.
 2. In the **VPN connections** page, click **Create connection**.
 3. In the **Create a new VPN connection** page, enter the following details:
     - **Connection name**: Enter a name for the connection, such as 'powervs-vpn-dallas'.
-    - **Peer gateway address**: Specify the IP address of the VPN gateway for the on-premises network.
-    - **Preshared key**: Specify the authentication key of the VPN gateway for the on-premises network.
+    - **Peer gateway address**: Specify the IP address of the VPN gateway for the [client-managed environment]{: tag-teal} network.
+    - **Preshared key**: Specify the authentication key of the VPN gateway for the [client-managed environment]{: tag-teal} network.
     - **IKE policy**: Use the default IKE policy or specify a custom IKE policy to define security parameters that will be used during Phase 1 of IKE negotiation.
     - **IPsec policy**: Use the default IPsec policy or specify a custom IPsec policy to define the security parameters that will be used during Phase 2 of IKE negotiation.
     - **Mode**: Select either **Route-based mode** or **Policy-based mode** to determine how the traffic is sent through the VPN tunnel. You cannot edit the mode of the VPN connection after you create the VPN connection.
     - **Local subnets**: Specify one or more subnets in the Power Virtual Server workspace that you want to connect through the VPN tunnel.
-    - **Peer subnets**: Specify one or more subnets in the on-premises network that you want to connect through the VPN tunnel.
+    - **Peer subnets**: Specify one or more subnets in the [client-managed environment]{: tag-teal} network that you want to connect through the VPN tunnel.
     - **Dead peer detection**: Shows the dead peer detection settings for the VPN connection. You can use the settings information to detect a dead IKE peer. These settings are displayed for informational purposes only; you cannot modify these settings.
 4. Review the estimated cost and click **Create**.
 

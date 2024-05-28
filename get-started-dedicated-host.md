@@ -25,7 +25,7 @@ subcollection: power-iaas
 # Getting started with dedicated host
 {: #dedicated-host}
 
-[On Cloud]{: tag-blue}
+[Off-Premises]{: tag-blue}
 
 The dedicated host feature on IBM {{site.data.keyword.powerSysFull}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host.
 

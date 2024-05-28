@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services
 {: #integrate-hpcs}
 
-[Private Cloud]{: tag-red}To integrate {{site.data.keyword.powerSysFull}} with IBM Cloud key management services, establish a connection from your virtual machine to IBM Cloud.
+[On-Premises]{: tag-red}To integrate {{site.data.keyword.powerSysFull}} with IBM Cloud key management services, establish a connection from your virtual machine to IBM Cloud.
 {: note}
 
 IBM provides two Cloud key management services that integrate with {{site.data.keyword.powerSys_notm}} workloads:

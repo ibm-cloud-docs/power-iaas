@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Creating a workspace for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #creating-workspace-private-cloud}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 A workspace is a container of {{site.data.keyword.powerSys_notm}} resources at a specific geographic location (region). Compute (for example, images and virtual server instances), networking (for example, subnets and VPN connections), and storage (for example, volumes and snapshots) resources are deployed within a specific workspace and cannot be moved or shared between workspaces. You can create a workspace once the pod setup at your data center is complete and a satellite location is created. Within each location, you can create multiple workspaces. For example, you can create two workspaces in the Dallas location: a workspace for production workloads and another workspace for development tests. Workspaces are a means of grouping and managing related resources deployed in a single location. Billing is performed on components of the workspace.
 {: shortdesc}

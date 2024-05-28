@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Environmental requirements
 {: #environmental-requirements}
 
-[Private Cloud]{: tag-red}
+[On-Premises]{: tag-red}
 
 Your {{site.data.keyword.powerSysFull}} Private Cloud site must have adequate cooling and humidity control for {{site.data.keyword.powerSysFull}} racks. To know the recommended and allowed values of the required parameters, refer to Table 1:
 
