@@ -36,9 +36,14 @@ The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as t
 
 [Q2-2024 update start]{: tag-teal}
 
-In a user defined SPP, you can set the Entitled Capacity (EC) and Virtual Processor (VP) ratio (EC:VP) to 1:3. Using the 1:3 ratio, you can deploy Oracle licensing use cases without purchasing a dedicated host.
+[On-Premises]{: tag-red}
 
-Note the following limitations while using EC:VP ratio:
+For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-vCPU ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.
+
+[Off-Premises]{: tag-blue}
+
+In a {{site.data.keyword.powerSys_notm}} on cloud user defined SPP, you can set the Entitled Capacity (EC) and Virtual Processor (VP) ratio (EC:VP) to 1:3. Using the 1:3 ratio, you can deploy Oracle licensing use cases without purchasing a dedicated host. Note the following limitations while using EC:VP ratio:
+
 * You can set the ratio only on a user defined SPP.
 * For non-dedicated hosts on Power10, you can increase the limit of EC:VP ratio to 1:3 for ECs less than or equal to 2.
 * For Power9 and for virtual machines with ECs greater than 2, the EC:VP ratio is 1:1.

@@ -329,13 +329,13 @@ When you use SPP in private cloud, you pay for the following items:
     * shared capped processor partition: pricing is determined by the entitled capacity.
     * shared uncapped processor partitions: pricing is determined by the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in a SPP for each type of operating system such as AIX or IBM i.
 
+Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
+
 | Offering/Solution  | EC:VP ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| PowerVS Private Cloud	User-defined Pools  | 1:20	1. | 1. SPP capacity at capped shared processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For PowerVS Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at capped shared processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
-{: class="simple-tab-table"}
-{: tab-group="processor"}
-{: caption="Table 3. Shared processor pool in private cloud" caption-side="top"}
+{: caption="Table 12. Shared processor pool in rivate cloud" caption-side="top"}
 
 For more information about calculating the pricing for OS licensisng in SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
@@ -344,7 +344,7 @@ For more information about calculating the pricing for OS licensisng in SPP, see
 ### Use case of account billable storage
 {: #billable-storage}
 
-Table 12 shows the use case on how you are billed based on the storage that you use (assuming tier 1):
+Table 13 shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
    | Name           |  Size    | State or Description         |
    | -------------  | -------  | ------------------------- |
@@ -355,7 +355,7 @@ Table 12 shows the use case on how you are billed based on the storage that you 
    | data-volume-5  |  60 GB   | In-use (attached to vm-2) |
    | image-volume-1 | 100 GB   | In-use (attached to vm-1) |
    | image-volume-2 | 100 GB   | In-use (attached to vm-2) |
-   {: caption="Table 12. Account billable for storage use case" caption-side="bottom"}
+   {: caption="Table 13. Account billable for storage use case" caption-side="bottom"}
 
 Total billable storage = 595 GB
 
@@ -428,10 +428,7 @@ To calculate the price for OS licensing, you must consider the following conditi
 * If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in a SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
 
-The following examples illustrates the calculation of the pricing for OS licensing when you use SPP:
-
-Maximum pool capacity is 8.
-{: note}
+Table 14 shows how the pricing for OS licensing is calculated assuming that the maximum pool capacity is 8:
 
 | Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
 | ------  | ------  | -------- | --------------------------------------------- | ---------------- |
@@ -440,9 +437,7 @@ Maximum pool capacity is 8.
 | 2       | AXI VM1 | 4        | 10 > 8                                        | 3.2 x cost of AXI OS license |
 |         | AXI VM2 | 2        |                                               | 1.6 x cost of AXI OS license |
 |         | AXI VM3 | 4        |                                               | 3.2 x cost of AXI OS license |
-{: class="simple-tab-table"}
-{: tab-group="processor"}
-{: caption="Table 4. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
+{: caption="Table 14. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
 
 [Q2-2024 update end]{: tag-teal}
 

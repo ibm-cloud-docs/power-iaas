@@ -239,7 +239,7 @@ The entire network subsystem can be divided into the following parts:
 
 For more information, see [Network overview](/docs-draft/power-iaas?topic=power-iaas-network-private-cloud).
 
-## On cloud architecture
+## IBM Cloud architecture
 {: #on-cloud-architecture}
 
 [Off-Premises]{: tag-blue}
