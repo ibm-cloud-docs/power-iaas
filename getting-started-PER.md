@@ -54,12 +54,12 @@ For detailed networking PER use cases and architechture diagrams, see [Power Edg
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
-- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your [client-managed environment]{: tag-teal} network to the PER workspace.
+- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your [network in the client-managed environment]{: tag-teal} to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
 - You cannot create a non-PER workspace in a PER-enabled data center. However, you can still use your old non-PER workspaces that are existing in a PER-enabled data center that are created before PER rollout.
-- In certain situations, local connection charges can apply when connecting from an [client-managed environment]{: tag-teal} location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
+- In certain situations, local connection charges can apply when connecting from an [client-managed]{: tag-teal} location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
 
 ## Migrating to PER
 {: #migrate-per}

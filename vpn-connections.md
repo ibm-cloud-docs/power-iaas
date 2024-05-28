@@ -59,7 +59,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 
 ![VPC VPN in PER architecture diagram](./images/vpc_vpn_per.svg "Configuring VPC VPN in a PER workspace"){: caption="Figure 1. Configuring VPC VPN in a PER workspace" caption-side="bottom"}
 
-1. Define the [client-managed environment]{: tag-teal} subnet in the address prefix for the VPC.
+1. Define the [client-managed ]{: tag-teal} subnet in the address prefix for the VPC.
 2. Define a routing table with Transit Gateway and VPN gateway.
 
 ### Configuring VPC VPN in a non-PER workspace
@@ -67,7 +67,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 
 ![VPC VPN in non-PER architecture diagram](./images/vpc_vpn_legacy.svg "Configuring VPC VPN in a non-PER workspace"){: caption="Figure 1. Configuring VPC VPN in a non-PER workspace" caption-side="bottom"}
 
-1. Define the [client-managed environment]{: tag-teal} subnet in the address prefix for the VPC.
+1. Define the [client-managed]{: tag-teal} subnet in the address prefix for the VPC.
 2. Define a routing table with Direct Link and VPN gateway.
 3. Attach Direct Link to workspace subnet.
 4. You can choose to attach a Transit Gateway along with the Direct Link, but it incurs extra charges.
@@ -89,7 +89,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 {: #vpcvpn-cons}
 
 1. The VPN connection that is used in all the configurations are policy-based VPN.
-2. Subnets that are created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of [client-managed environment]{: tag-teal} VPC.
+2. Subnets that are created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of [VPC in your client-managed environment]{: tag-teal}.
 3. In the routing table of IBM Cloud VPC, you must enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in Edit Traffic window).
 4. Choose the Direct Link with Transit Gateway enabled or disable configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
 
