@@ -32,6 +32,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Power Edge Router (PER) is now available in the `DAL13`, `TOR01`, and `WDC04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - Power Virtual Server now offers refreshed images for IBM i 7.2 TR 9.
 - The SLES 15 SP4 general purpose (SLES15-SP4) stock image is in the process of being removed from our DCs since the OS level no longer supported by SUSE.
+- You can now see a **Consumer ID** in your [Billing and Usage](https://cloud.ibm.com/billing){: external} page. Using the consumer ID you can identify and get a detailed view at the resource level broken down by part metric. For more information, see [Consumer ID](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#consumer-id).
 
 ## April 2024
 {: #apr-2024}
