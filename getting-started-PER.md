@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-04-29"
+lastupdated: "2024-05-29"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -45,14 +45,14 @@ The following network architecture diagram explains how the PER is integrated in
 
 The network traffic in a PER environment can flow in the following two ways:
 - Accessing classic infrastructure through Transit Gateway.
-  - `1` - Traffic from ACI tenants is forwarded to the PER.
-  - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
+    - `1` - Traffic from ACI tenants is forwarded to the PER.
+    - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 
 - Accessing cloud services that can access each other's resources.
-  - `1`	- Traffic from ACI tenants is forwarded to the PER.
-  - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
-  - `4`	- The converted traffic from NAT is forwarded to PER.
-  - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
+    - `1`	- Traffic from ACI tenants is forwarded to the PER.
+    - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers for conversion of destination addresses to ADN and CSE networks.
+    - `4`	- The converted traffic from NAT is forwarded to PER.
+    - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
 
@@ -157,28 +157,25 @@ See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/p
 
 Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER workspace. Follow these instructions for a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
 1.  Create a private network.
-  1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
-  2.  Click **Subnets** under **Networking** in the left navigation menu.
-  3.  Click **Create subnet**.
-  4.  Enter a unique name and CIDR.
-      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
-  5.  Enter `161.26.0.10` in the **DNS server** field.
-
+    1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
+    2.  Click **Subnets** under **Networking** in the left navigation menu.
+    3.  Click **Create subnet**.
+    4.  Enter a unique name and CIDR.
+        Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
+    5.  Enter `161.26.0.10` in the **DNS server** field.
 2. Create a virtual server instance. See, [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
 3. Attach the private network that you have created in step 1.
 4. Verify whether the registration is successful with the following commands:
 
  For SUSE:
-   ```
+   ```code
    SUSEConnect -s
    ```
-   {: codeblock}
 
  For RHEL:
-   ```
+   ```code
    subscription-manager status
    ```
-   {: codeblock}
 
 ## CLI and API support with PER
 {: #cli-api-per}
@@ -212,7 +209,7 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `SYD05` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOK04` | ![Checkmark icon](./images/checkmark.svg) |
 | `TOR01` | ![Checkmark icon](./images/checkmark.svg) |
-| `WDC04` |   X |
+| `WDC04` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDC06` | ![Checkmark icon](./images/checkmark.svg) |
 | `WDCO7` | ![Checkmark icon](./images/checkmark.svg) |
 {: row-headers}
