@@ -217,6 +217,7 @@ The following tables shows the base price and how different processor types affe
 | 1                           | $2.03 (dedicated)            | $1484.97                 |
 | 1                           | $0.51 (uncapped shared)     | $371.26                  |
 | 1                           | $0.76 (capped shared)       | $556.90                  |
+
 {: caption="Table 7. E1080 processor type pricing" caption-side="bottom"} -->
 
 ## SAP workload types
