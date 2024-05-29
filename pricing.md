@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-12"
+lastupdated: "2024-05-29"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -36,9 +36,9 @@ All prices mentioned on this page are illustrative and do not represent the actu
 | E980 (9080-M9S)   |  143         | up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | up to 942 GB                    |
 | S1022 (9105-22A) [^3][^4]|     33         |       up to 1984 GB             |
+{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 <!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
-{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
