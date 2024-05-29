@@ -53,6 +53,26 @@ It's important to note that a system's theoretical maximum depends on the data c
 
 In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated price might be different than the actual price when you purchase the {{site.data.keyword.powerSys_notm}} or instances based on the discounts and promotion codes.
 
+## Consumer ID
+{: #consumer-id}
+
+Consumer ID groups the billing usages that are under a single resource such as virtual machines, shared processor pools, and storages. This allows you to view resource usage with a broken down metrics. There is no change in billing or pricing and you continue to receive your bills as-is today.
+
+Following are the benefits of consumer ID:
+-   You have the option to see a more granular view of your bill in the [Billing and Usage](https://cloud.ibm.com/billing){: external} page.
+- Charges are now broken down by resource that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
+
+To view the usage details at the resource level, perform the following steps:
+1. Open the [Billing and Usage](https://cloud.ibm.com/billing){: external} page in the IBM Cloud console.
+2. On the left navigation menu, click **Usage**.
+3. Click **View plans** for the entry- **Workspace for Power Virtual Server**. This opens a page listing all your workspaces.
+4. Click **View details** for the desired workspace. This opens the usage details for the chosen workspace.
+5. Scroll to the bottom of the page and click **View instance details**. This opens the detailed usage view for the chosen virtual server instance.
+
+<!-- The detailed view shows charges at the resource level that is broken down by part metric. -->
+
+For more information on the billing and usage page, see [Billing and Usage documentation](/docs/billing-usage?topic=billing-usage-viewingusage&interface=ui)
+
 ## Monthly usage
 {: #pricing-monthly-usage}
 
