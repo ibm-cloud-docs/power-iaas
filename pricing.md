@@ -60,7 +60,7 @@ In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated pri
 Consumer ID group the billing usages that are under a single resource group such as virtual machines, shared processor pools, and storages. This allows for a metering with a broken down metrics and it's associated resources. There is no change in biling or pricing and you continue to receive your bills as-is today.
 
 Following are the benefits of consumer ID:
-    - You will have the option to see a more granular view of your bill in the  .
+    - You will have the option to see a more granular view of your bill in the [Billing and Usage](https://cloud.ibm.com/billing){: external} page.
     - Charges are now broken down by resource identified in the **Consumer ID** field with the format `resource-type:resource-uuidd`.
 
 To view the usage details at the resource level, perform the following steps:
