@@ -111,17 +111,18 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod have 1x42 U r
 
 Table 1 illustrates the configuration for small pod.
 
-| Server types               | S1022 |     |     | E1050    |     |
-| -------------------------- | ------|-----|---- | -------- | --- |
-| Number of racks            | 1     |     |     | 1        |     |
-| Server quantity in a pod   | 6     | 5   | 9   | 2        | 4   |
-| Number of cores per server | 40    | 40  | 40  | 96       | 96  |
-| Total number of cores      | 240   | 200 | 360 | 192      | 384 |
-| Usable cores               | 198   | 165 | 297 | 170      | 340 |
-|                            |       |     |     |          |     |
-| Memory types               |       |     |     |          |     |
-| 2 TB                       | 12    |     | 18  |          |     |
-| 4 TB                       |       | 20  | 36  | 16       | 32  |
+| Server types                | S1022 |     |     | E1050    |     |
+| --------------------------- | ------|-----|---- | -------- | --- |
+| Number of racks             | 1     |     |     | 1        |     |
+| Number of servers in a rack | Min   | Min | Max | Min      | Max |
+| Server quantity in a pod    | 6     | 5   | 9   | 2        | 4   |
+| Number of cores per server  | 40    | 40  | 40  | 96       | 96  |
+| Total number of cores       | 240   | 200 | 360 | 192      | 384 |
+| Usable cores                | 198   | 165 | 297 | 170      | 340 |
+|                             |       |     |     |          |     |
+| Memory types                |       |     |     |          |     |
+| 2 TB                        | 12    |     | 18  |          |     |
+| 4 TB                        |       | 20  | 36  | 16       | 32  |
 {: caption="Table 1. Small pod configuration." caption-side="top"}
 
 
@@ -165,7 +166,7 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Storage types                         | FS 460 TB or FS 920 TB |      |       |      |       |      |       |       |
 | ------------------------------------- | -----------------------|----- | ------|------| ----- | ---- | ----- | ----- |
 | Server types                          | S1022                  |      |       |      | E1050 |      |       |       |
-| Number of racks                       | 2                      |      | 4     |      | 2     |      | 4     |       |
+| Number of racks                       | 2                      |      | 4     |      | 4     |      | 4     |       |
 | Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
 | Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
 | Memory for each drive                 | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |

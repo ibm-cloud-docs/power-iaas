@@ -61,7 +61,7 @@ The following are some of the use cases of a PER-enabled {{site.data.keyword.pow
 The above are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
 {: important}
 
-### Connecting an client-managed data center
+### Connecting a client-managed data center
 {: #per-on-orem}
 
 1. In this depiction, the [client-managed]{: tag-teal} data center uses a direct link connection to attach to the transit gateway.

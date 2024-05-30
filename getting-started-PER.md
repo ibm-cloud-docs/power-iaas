@@ -106,7 +106,7 @@ On a PER workspace, **cloud Connections** and **VPN connections** options are no
 On a PER workspace, you can perform the following actions:
 1.  Attach a network without any requirement of creating a separate Cloud Connection such as Direct Link.
 2.	Effortlessly attach a connection to the IBM cloud network by attaching the Transit Gateway with your PER workspace.
-3.  Connect to your [client-managed environment]{: tag-teal} network by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
+3.  Connect to your [network in the client-managed environment]{: tag-teal} by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
 
 You cannot delete PER workspaces that have Transit Gateway connections. You must delete the Transit Gateway connections first.
 {: important}
