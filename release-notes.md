@@ -26,6 +26,11 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## June 2024
+{: #jun-2024}
+
+- {{site.data.keyword.powerSys_notm}} is now {{site.data.keyword.cloud}} for Financial Services®. For more information, see the compliance page on [IBM Cloud for Financial Services](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp).
+
 ## May 2024
 {: #may-2024}
 

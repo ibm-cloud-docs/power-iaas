@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024 
 
-lastupdated: "2024-04-24"
+lastupdated: "2024-05-29"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -25,8 +25,20 @@ subcollection: power-iaas
 # {{site.data.keyword.powerSysFull}} compliance certifications
 {: #compliances-list}
 
-The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
+{{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
+
+## {{site.data.keyword.cloud}} for Financial Services®
+{: #fs-cloud-comp}
+
+IBM designates IBM Cloud services as IBM Cloud for Financial Services validated when the services have been determined to materially implement IBM Cloud framework for Financial Services control requirements.  
+
+Similarly, IBM designates ecosystem partners as IBM Cloud for Financial Services validated when the partners conform to the reference architecture and guidance and have been determined by IBM to materially implement the IBM Cloud framework for Financial Services control requirements. 
+
+You should review the associated documentation made available by IBM and ecosystem partners and conduct your own due diligence on the compliance certifications.
+{: note}  
+
+For more information and the list of validated IBM Cloud services, see [IBM Cloud for Financial Services®](https://www.ibm.com/cloud/compliance/ibm-cloud-for-financial-services){: external}.
 
 ## SOC
 {: #soc-cert}
