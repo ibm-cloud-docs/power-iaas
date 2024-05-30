@@ -36,15 +36,15 @@ This means you can optimize your cloud infrastructure by using single-tenant ser
 Create an estimate for deploying dedicated host using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or visit the pricing page to learn more about the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
 
 The dedicated host provides the following features:
-1.	Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
-2.	Flexibly create virtual server instances and place them on the dedicated host.  
-3.	Create virtual server instances and shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
-4.	Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
-5.      Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
-6.	Set your own custom names for the dedicated hosts and dedicated host groups.
+1.  Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
+2.  Flexibly create virtual server instances and place them on the dedicated host.  
+3.  Create virtual server instances and shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 20:1.
+4.  Get a detailed GUI-based view of host capacity information such as core, memory capacity and consumption. This provides the information on the total, free, or used capacity for your dedicated hosts.
+5.  Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an additional flexibility to control access to dedicated hosts across your organization.
+6.  Set your own custom names for the dedicated hosts and dedicated host groups.
     
-The Dedicated host capability is currently in the technology preview. It is available in select data centers `DAL10`, `DAL12`, `WDC06`, and `WDC07`. For general availability, dedicated hosts will be available worldwide and will follow the technology preview.
-{: note}
+<!-- The Dedicated host capability is currently in limited availability and available in select data centers - `DAL10`, `DAL12`, `WDC06`, and `WDC07`. For general availability, dedicated hosts will be available worldwide and will follow the technology preview.
+{: note} -->
 
 ## Primary and secondary workspaces
 {: #pr-sec-ws-dh}
@@ -150,9 +150,6 @@ Open the desired dedicated host details page, and click **Create instance** to o
 
 When you use dedicated host, the virtual server instances deployed on them are not billed for core and memory charges.
 
-<!-- How provisioning a normal VSI differs from dedicated host provisioning? -->
-<!-- Any UI validation to document reg how my pool selection determines how/which dedicated host gets available for selection? -->
-
 ### Creating SPP in a dedicated host
 {: #spp-dh}
 
@@ -160,7 +157,7 @@ You can create a shared processor pool (SPP) in a single-tenant environment on a
 
 Open the desired dedicated host details page, and click **Create pool** to open the **Create new shared processor pool** page. Follow the instructions in [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
 
-When you use dedicated host, the SPPs deployed on them are not billed for the reserved capacity.
+When you use dedicated host to deploy the SPPs, the SPPs are not billed for the reserved capacity.
 
 ## Releasing a dedicated host
 {: #release-dh}
@@ -178,7 +175,7 @@ You can release a dedicated host when there are no resources that are deployed i
         When you are releasing the last dedicated host on a dedicated host group, you get the option to **Release host and delete host group**.
         {: important}
 
-## API and CLI support
+<!-- ## API and CLI support
 {: #api-cli-dh}
 
 Do we need to list any phase 1 APIs & CLIs?
@@ -190,6 +187,4 @@ The following operating systems are supported for dedicated host:
 - 
 
 ## Maintenance in dedicated host
-{: #mainetnance-dh}
-
-
+{: #mainetnance-dh} -->
