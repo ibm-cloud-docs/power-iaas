@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-04-22"
+lastupdated: "2024-05-29"
 
 keywords: compliance, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology
 
@@ -20,6 +20,13 @@ subcollection: power-iaas
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
+
+## Financial Services® Validated
+{: #fs-cloud-comp}
+
+IBM designates IBM Cloud services as IBM Cloud for Financial Services validated when the services have been determined to materially implement IBM Cloud framework for Financial Services control requirements.  
+
+For more information and the list of validated IBM Cloud services, see [{{site.data.keyword.cloud}} for Financial Services®](https://www.ibm.com/cloud/compliance/ibm-cloud-for-financial-services){: external}.
 
 ## SOC
 {: #soc-cert}
