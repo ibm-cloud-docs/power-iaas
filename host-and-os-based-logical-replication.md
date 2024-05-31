@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-10-05"
+lastupdated: "2024-05-31"
 
 keywords: Host and OS based logical replication, Replication, Application specific replication, 
 
@@ -26,11 +26,11 @@ IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geogr
 
 Applications might have replication mechanisms that can sync multiple environments. These options are commonly used for application-specific replication:
 
-- *Db2 HADR*
-- *Oracle Data Guard*
-- *Oracle Goldengate*
-- *iCluster*
-- *MIMIX*
-- *Maxava HA*
-
+- Db2 HADR
+- [Rocket iCluster HA/DR](https://cloud.ibm.com/catalog/content/poc-iClusterNew-df2ab864-0eb4-4645-8c08-f08e008e66bd-global)
+- Maxava HA
+- [Migrate 23](https://cloud.ibm.com/catalog/services/bus4i-system-copy---migrate-23-for-power-i)
+- MIMIX
+- Oracle Data Guard
+- Oracle Goldengate
 

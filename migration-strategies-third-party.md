@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-31"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -34,11 +34,12 @@ subcollection: power-iaas
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
-- [*Falconstor StorSafe VTL*](#storsafe-vtl)
-- *iCluster*
-- *MIMIX*
-- *Double-Take® MoveTM for AIX*
-- *Maxava HA*
+- Double-Take® MoveTM for AIX
+- [Falconstor StorSafe VTL](https://cloud.ibm.com/catalog/content/vtltile-tags-v10.03-01-f1e88e51-7e3d-4fbc-a7ed-3ab9adb2afea-global)
+- [Rocket iCluster HA/DR](https://cloud.ibm.com/catalog/content/poc-iClusterNew-df2ab864-0eb4-4645-8c08-f08e008e66bd-global)
+- Maxava HA
+- [Migrate 23](https://cloud.ibm.com/catalog/services/bus4i-system-copy---migrate-23-for-power-i)
+- MIMIX
 
 ## FalconStor StorSafe VTL
 {: #storsafe-vtl}
