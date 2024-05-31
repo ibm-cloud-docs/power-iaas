@@ -30,7 +30,7 @@ Applications might have replication mechanisms that can sync multiple environmen
 - *Oracle Data Guard*
 - *Oracle Goldengate*
 - *iCluster*
-- *MIMIX from Syncsort*
+- *MIMIX*
 - *Maxava HA*
 
 

@@ -36,7 +36,7 @@ Customers can use third-party tools to perform data migration. The following thi
 
 - [*Falconstor StorSafe VTL*](#storsafe-vtl)
 - *iCluster*
-- *MIMIX from Syncsort*
+- *MIMIX*
 - *Double-Take® MoveTM for AIX*
 - *Maxava HA*
 
