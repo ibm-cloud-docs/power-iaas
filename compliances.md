@@ -38,7 +38,8 @@ SOC 1 is an audit of the internal controls at a service organization implemented
 [Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC reports.
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
--   SOC 1 Type 2
+-   SOC 1 Type II
+-   SOC 2 Type II
 
 ## ISO 27017:2015
 {: #ISO-cert}
