@@ -33,7 +33,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Power Virtual Server now offers refreshed images for IBM i 7.2 TR 9.
 - The SLES 15 SP4 general purpose (SLES15-SP4) stock image is in the process of being removed from our DCs since the OS level no longer supported by SUSE.
 - You can now see a **Consumer ID** in your [Billing and Usage](https://cloud.ibm.com/billing){: external} page. Using the consumer ID you can identify and get a detailed view at the resource level broken down by part metric. For more information, see [Consumer ID](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#consumer-id).
-- {{site.data.keyword.powerSys_notm}} is now Financial Services® Validated and SOC 2 type II compliant. For more information, see the [compliance](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp) page.
+- {{site.data.keyword.powerSys_notm}} is now Financial Services® Validated and SOC 2 Type II compliant. For more information, see the [compliance](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp) page.
 
 ## April 2024
 {: #apr-2024}
