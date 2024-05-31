@@ -193,15 +193,17 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 
 | Data centers | PER available |
 |-----|-----|
-| `CHE01` |   X |
+| `CHE01` | X |
 | `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL13` |   X |
+| `DAL13` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON06` | ![Checkmark icon](./images/checkmark.svg)|
+| `LON04` | ![Checkmark icon](./images/checkmark.svg) |
+| `LON06` | X |
 | `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD04` | ![Checkmark icon](./images/checkmark.svg) |
+| `MON01` | X |
 | `OSA21` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO01` | ![Checkmark icon](./images/checkmark.svg) |
 | `SAO04` | ![Checkmark icon](./images/checkmark.svg) |
