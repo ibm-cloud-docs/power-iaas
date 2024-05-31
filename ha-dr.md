@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-10-23"
+lastupdated: "2024-05-31"
 
 keywords: high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -30,13 +30,19 @@ The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on
 ## Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
 
-GLVM is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
+Geographic Logical Volume Manager (GLVM) is an OS-based IP replication strategy. It is based on the AIX LVM and enables data and logical volume mirroring across geographically distant locations. GLVM supports both synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support. 
+
+To implement GLVM, follow the instruction in [Recommendations for Implementing GLVM On-Premises and on the Cloud](https://www.redbooks.ibm.com/redpieces/pdfs/redp5717.pdf){: external}.
+
+Here are some useful additional links:
 
 - [Geographic Logical Volume Manager (GLVM)](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_glvm.html){: external}
 - [Configuring geographically mirrored volume groups](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/glvm/ha_glvm_config_glvm.html){: external}
-- [Using IBM PowerHA SystemMirror V6.1 for AIX Enterprise Edition](http://www.redbooks.ibm.com/redbooks/pdfs/sg247841.pdf){: external}
 - [PowerHA SystemMirror for AIX 7.2](https://www.ibm.com/support/knowledgecenter/en/SSPHQG_7.2/navigation/welcome.html){: external}
 - [IBM PowerHA SystemMirror for AIX Cookbook](http://www.redbooks.ibm.com/abstracts/sg247739.html){: external}
+
+For setting up long distance replication, a storage based replication such as Global Replication Service (GRS) is preferred. See [GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS) topic for more information.
+{: note}
 
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}
