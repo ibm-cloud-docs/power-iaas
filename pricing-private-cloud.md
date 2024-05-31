@@ -432,11 +432,11 @@ Table 14 shows how the pricing for OS licensing is calculated assuming that the 
 
 | Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
 | ------  | ------  | -------- | --------------------------------------------- | ---------------- |
-| 1       | AXI VM1 | 4        | 6 < 8                                         | 4 x cost of AXI OS license |
-|         | AXI VM2 | 2        |                                               | 2 x cost of AXI OS license |
-| 2       | AXI VM1 | 4        | 10 > 8                                        | 3.2 x cost of AXI OS license |
-|         | AXI VM2 | 2        |                                               | 1.6 x cost of AXI OS license |
-|         | AXI VM3 | 4        |                                               | 3.2 x cost of AXI OS license |
+| 1       | AIX VM1 | 4        | 6 < 8                                         | 4 x cost of AIX OS license |
+|         | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
+| 2       | AIX VM1 | 4        | 10 > 8                                        | 3.2 x cost of AIX OS license |
+|         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
+|         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
 {: caption="Table 14. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
 
 [Q2-2024 update end]{: tag-teal}
