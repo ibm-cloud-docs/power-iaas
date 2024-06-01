@@ -270,7 +270,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
       Then it could be a network issue and you should attempt to register again at a later time.
 
-## Passing user-defined scripts
+<!-- ## Passing user-defined scripts
 {: #cloud-init-fls}
 
 When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
@@ -280,4 +280,5 @@ In the user data you can pass the custom content that allows you to customize th
 The user data that you pass should follow the following conditions:
 -  It should be uncompressed.
 -  It should start with `#cloud-config`.
--  It should not exceed 63 Kb in size.
+-  It should not exceed 63 Kb in size. -->
+<!-- Q2 -->
