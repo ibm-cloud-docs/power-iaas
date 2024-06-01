@@ -67,7 +67,8 @@ If you select the **Location type** as Off-premises, select one resource from th
 * [Storage volume](#est-storage-vol)
 * [Shared processor pool](#est-spp)
 * [VPN connection](#est-vpn)
-
+<!-- * [Dedicated host](#est-dh) -->
+<!-- Q2 -->
 
 The summary of the selected infrastructure is displayed on the **Summary** page. You can review the total estimated cost per hour and per month that is displayed on the **Summary** page. To create, save, and download the estimate, see [Creating, saving, and viewing an estimate](/docs-draft/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
 
@@ -151,7 +152,7 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs-draft/power-iaas?topic=power-iaas-manage-vtl).
 
-### Estimating a dedicated host
+<!-- #### Estimating a dedicated host
 {: #est-dh}
 
 Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
@@ -162,7 +163,8 @@ Before deploying a dedicated host in a workspace, create an estimate of it. To l
 | Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
 {: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
 
-To learn more about dedicated host, see [Getting started with dedicated host](/docs-draft/power-iaas?topic=power-iaas-dedicated-host).
+To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host). -->
+<!-- Q2 -->
 
 ### On-premises (private cloud)
 {: #on-prem-location-type}
