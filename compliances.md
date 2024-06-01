@@ -42,6 +42,8 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
+Similarly, SOC 2 is an audit of the internal controls at a service organization implemented to protect client-owned data involved in client financial reporting like SOC 1. Additionally, SOC 2 evaluates an organization’s information systems relevant to security, availability, processing integrity, privacy, and confidentiality. SOC 2 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 Type II (ISAE 3402 Type 2).
+
 [Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM® public cloud (infrastructure, VPC, and PaaS) SOC reports.
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
