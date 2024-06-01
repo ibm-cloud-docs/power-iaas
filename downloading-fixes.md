@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-04-04"
+lastupdated: "2024-06-31"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -76,13 +76,13 @@ Where ** is the country code of your DC based on the following table:
 | Madrid	| Spain	| ES |
 | Sydney	| Australia |	 AU |
 | Tokyo & Osaka |	Japan | JP |
+| Chennai | India | IN |
 {: caption="Table 1. POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
-```text
+```code
 suma -x -a Action=Preview -a RqType=LatestCopy
 ```
-{: codeblock}
 
 The `suma` command allows you to preview only the download operation. When you run this command, files are not downloaded. If the LPAR is not authenticated to access the internet, the command returns an error message. For information on troubleshooting SUMA error messages, see [Troubleshooting SUMA error messages](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html#serv_update_mgt__section_troubleshoot_suma){: external}.
 
@@ -100,7 +100,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
 
     Configuring proxy settings:
 
-    ```text
+    ```screen
     Type or select values in entry fields.
     Press Enter AFTER making all desired changes.
                                                                [Entry Fields]
@@ -125,7 +125,7 @@ For the **Fixserver protocol** field, *https* is the only option. For the **Down
 
 Base configuration SMIT:
 
-```
+```screen
                      Base Configuration
 
 Type or select values in entry fields.
@@ -157,7 +157,7 @@ The `suma` command can be used to perform various operations on a SUMA task or p
 
 To create and save a SUMA task by using the command line, enter the following command:
 
-```text
+```screen
 suma -w -a DisplayName=‘ AIX72TL2SP2‘ -a FilterML=‘7200-00‘
 ```
 
@@ -169,7 +169,7 @@ Task ID 10 created.
 
 To create and schedule a task that downloads the latest fixes and adds a policy label through the **DisplayName** field (useful when you are listing policies through SMIT), enter the following command:
 
-```text
+```screen
 suma -s "30 2 15 * *" -a RqType=Latest   \
     -a DisplayName="Latest fixes - 15th Monthly"
 ```
