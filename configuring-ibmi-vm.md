@@ -43,6 +43,7 @@ To begin your first boot, open the VNC Console:
 
     IBM i console opens as a popup window. Ensure that your browser setting does not block this popup window.
     {: note}
+
 To disconnect form the VNC Console session, close the web browser window (i.e. close the web broswer pop-up window titled 'noVNC').
 
 If you lose internet connectivity, your VNC Console session (provided via noVNC) will show as "Server disconnected (code: 1006)" and will not auto-connect when internet connectivity is restored.
@@ -50,24 +51,24 @@ If you lose internet connectivity, your VNC Console session (provided via noVNC)
 To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details pane and select **Open console** from the drop-down list. Your session will be restored and show 'Connected (encrypted)'.
 
 Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VNC Console session URL, such as using a shell command loop:
+
 ```shell
 ibmcloud pi service-list
 ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
 for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
 ```
 
-
 ### First boot change password
 {: #first-boot-change-password}
 
-
 Once the VNC Console has loaded and the IBM i console screen is shown, follow the following steps to reset the password of the IBM i standard user.
-3. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
-4. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
-5. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
-6. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
-7. Press your keyboard ENTER key, and the password will change.
-8. The **IPL or Install the System** screen will be shown. See further steps below.
+1. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
+2. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
+3. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
+4. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
+5. Press your keyboard ENTER key, and the password will change.
+6. The **IPL or Install the System** screen will be shown. See further steps below.
+    
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
 
@@ -85,7 +86,9 @@ If the PTFs are incomplete this will cause `cloud-init` to not complete (execute
 {: important}
 
 9. In the **IPL or Install the System** screen, the cursor will be on `Selection`. The default as described previously, is 'Perform an IPL' therefore enter `1` and then press your keyboard ENTER key, which will begin the installation automatically. This process can take more than 10 minutes, each screen in the first text block will show `Current step / total . . . . :` with the number of steps completed (e.g. `20  49` being 20 of 49 steps).
+
 10. During the installation, you will first be shown the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes, the cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
+
 Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
 {: note}
 
