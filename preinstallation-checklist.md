@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: pre-installation, checklist, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network validation, account activation
 
 subcollection: power-iaas
 

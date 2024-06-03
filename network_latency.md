@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-04-28"
 
-keywords: network latency, {{site.data.keyword.powerSys_notm}} as a service, private clouds
+keywords: network latency, {{site.data.keyword.powerSys_notm}}, private clouds
 
 subcollection: power-iaas
 

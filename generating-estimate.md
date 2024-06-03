@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-05-23"
 
-keywords: Generating an estimate, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
+keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, terminology,
 
 subcollection: power-iaas
 

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: pricing, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
+keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
 subcollection: power-iaas
 

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: planning, prerequisites, environment, site access, site requirement, power, power requirement, network, network requirement, system calculator, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud
 
 subcollection: power-iaas
 

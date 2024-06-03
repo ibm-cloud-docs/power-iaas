@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-04-28"
 
-keywords: network use cases, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, architecture, how-to
+keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
 subcollection: power-iaas
 
