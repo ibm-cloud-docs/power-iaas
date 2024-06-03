@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024 
 
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-03"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
