@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, terminology, video, how-to
+keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
 subcollection: power-iaas
 

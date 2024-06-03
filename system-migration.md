@@ -56,10 +56,10 @@ Before you migrate to a newer IBM Power, review the following checklist:
 
 <!-- Obsolete Power 8 content -->
 
-## Migrating to an IBM POWER9 system
+## Migrating to an IBM POWER9
 {: #power9-migration}
 
-Learn more about migrating workloads from your older IBM Power to a POWER9 System. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from your older IBM Power to a POWER9. Before you begin your migration, review the information in this section.
 
 Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
 {: tip}
@@ -67,37 +67,37 @@ Installing only the minimum levels can leave your partitions or workloads vulner
 - POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
 - Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workload).
 
-To learn more about IBM POWER9 system performance and migration strategies, see the following articles:
+To learn more about IBM POWER9 performance and migration strategies, see the following articles:
 
-- [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
+- [Hints and tips for migrating workloads to IBM POWER9](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
-## Migrating to an IBM POWER10 system
+## Migrating to an IBM POWER10
 {: #power10-migration}
 
-Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from an existing IBM POWER to POWER10. Before you begin your migration, review the information in this section.
 
 **AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
 
 **Linux** - You must migrate your Linux operating system level to a Power10-supported level. To accomplish this migration, the following Linux distributions are supported:
 
-|  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
+|  IBM® Power10    |  Supported Linux distributions  |
 |-------------------|--------------|
 | S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
-{: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
+{: caption="Table 1. Supported Linux distributions for Power10" caption-side="bottom"}
 
 <!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
 
 
-To learn more about IBM POWER10 system performance and migration strategies, see the following articles:
+To learn more about IBM POWER10 performance and migration strategies, see the following articles:
 
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
-- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+- [IBM Power Servers Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
 
 ## Lab services
 {: #lab-services}
 
-[IBM Systems Lab Services](https://www.ibm.com/it-infrastructure/services/lab-services){: external} has service offerings available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own. If you need help with assessing the potential impact of a migration, benchmarking a system environment, or identifying ways to improve performance, contact [IBM Lab Services](mailto:ibmsls@us.ibm.com){: external}.
+[IBM Technology Expert Labs](https://www.ibm.com/products/expertlabs){: external} has service offerings available to assist you with resolving system, application, and database performance problems. Formal and informal training opportunities are also available where you can learn how to use performance tools and resolve issues on your own.

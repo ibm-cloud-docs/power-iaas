@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-05-09"
 
-keywords: rhel, using RHEL with PowerVS, Linux
+keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
 subcollection: power-iaas
 
