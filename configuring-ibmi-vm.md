@@ -55,8 +55,12 @@ ibmcloud pi service-list
 ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
 for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
 ```
+
+
 ### First boot change password
 {: #first-boot-change-password}
+
+
 Once the VNC Console has loaded and the IBM i console screen is shown, follow the following steps to reset the password of the IBM i standard user.
 3. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
 4. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
@@ -66,19 +70,29 @@ Once the VNC Console has loaded and the IBM i console screen is shown, follow th
 8. The **IPL or Install the System** screen will be shown. See further steps below.
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
+
+
 ### First boot configuration choice
 {: #first-boot-configuration-choice}
+
 After this, the IBM i virtual machine is ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
+
 The default is to select Option 1 'Perform an IPL'.
+
 However, the minimum Program Temporary Fix (PTFs) levels depend on the IBM i version that has been provisioned and will impact `cloud-init` successful execution; only IBM i 7.5 requires no PTF installation or other tasks. Please see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels) for more information for IBM i 7.1 - 7.4, and to instead peform the OS Install first, then PTFs, then the IPL.
+
 If the PTFs are incomplete this will cause `cloud-init` to not complete (executed after IPL / OS Install and Licensed Program Software Agreements), which will cause the local IP Address configuration to not be saved upon restart of the system. If you restart your system during before `cloud-init` is successful, you must call IBM support to manually configure your network and license keys, or delete and reprovision your IBM i virtual machine instance to start again.
 {: important}
+
 9. In the **IPL or Install the System** screen, the cursor will be on `Selection`. The default as described previously, is 'Perform an IPL' therefore enter `1` and then press your keyboard ENTER key, which will begin the installation automatically. This process can take more than 10 minutes, each screen in the first text block will show `Current step / total . . . . :` with the number of steps completed (e.g. `20  49` being 20 of 49 steps).
 10. During the installation, you will first be shown the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes, the cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
 Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
 {: note}
+
+
 ### First boot license choice
 {: #first-boot-license-choice}
+
 After installation is completed, the Licensed Program Software Agreements must be accepted.
 11. Once installation is completed, the **Sign On** screen will be shown. Enter the `QSECOFR` user, press your keyboard TAB key to move to the next line, and then enter the password chosen previously. Press your keyboard ENTER key to login. In rare occurances if the password was reset during installation, use default password `QSECOFR` again and follow prompts to change your password again.
 12. Upon login, the screen will automatically change to the **Work with Software Agreements** screen.
@@ -90,6 +104,7 @@ After installation is completed, the Licensed Program Software Agreements must b
 18. Repeat steps 14 to 17. There will be 4 repeats until all Licensed Program Software Agreements have been accepted.
 19. When all Licensed Program Software Agreements in the list are completed, the **IBM i Main Menu** screen is shown and `cloud-init` configuration of network and injection of license keys will begin. The `cloud-init` configuration process is executed after all, and can take up to 5 minutes.
 
+
 ## Tips for working with the IBM i console
 {: #tips-ibmi}
 
@@ -100,6 +115,7 @@ After installation is completed, the Licensed Program Software Agreements must b
 - It's best to first shut down the system before you restart it.
 - If you are using a Mac computer, the **Page Down** key is the same as **FN + Down Arrow**.
 - `CRTUSRPRF` and `CHGUSRPRF` will use the same new security rules as `QSECOFR`, requiring at least a 17 character password.
+
 
 ## Verify licences and network configuration
 {: #verify-licences-and-network-configuration}
