@@ -142,12 +142,12 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup:
-            label: SAP
-            topics:
-              - deploying-SAP-custom-image.md
-              - SAP-full-system-profiles.md
-              - SAP-HANA-sr2-sh2-profiles.md
+      #- topicgroup:   Q2
+      #      label: SAP   Q2
+      #      topics:   Q2
+      #        - deploying-SAP-custom-image.md   Q2
+      #        - SAP-full-system-profiles.md   Q2
+      #        - SAP-HANA-sr2-sh2-profiles.md   Q2
       - topicgroup:
             label: Observability
             topics:

@@ -103,6 +103,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 <!--When the threshold exceeds, you receive a notification. [SHU: Not available currently for LA.]-->
 
+<!-- Q2 updates hidden
 #### pod configurations
 {: #pod-config}
 
@@ -179,7 +180,7 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 
 [Q2-2024 update end]{: tag-teal}
 
-
+-->
 
 #### Supported Power10 processor-based servers
 {: #power-system-spec-private-cloud}

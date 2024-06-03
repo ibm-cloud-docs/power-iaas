@@ -34,6 +34,7 @@ The benefits of using an SPP are as follows:
 
 The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add upto 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
 
+<!-- Q2
 [Q2-2024 update start]{: tag-teal}
 
 [On-Premises]{: tag-red}
@@ -49,6 +50,8 @@ In a {{site.data.keyword.powerSys_notm}} on cloud user defined SPP, you can set 
 * For Power9 and for virtual machines with ECs greater than 2, the EC:VP ratio is 1:1.
 
 [Q2-2024 update end]{: tag-teal}
+
+-->
 
 You can specify the host affinity and anti-affinity between two or more SPPs with shared processor pool placement groups. For more information, see [Configuring shared processor pool placement group](/docs-draft/power-iaas?topic=power-iaas-manage-SPP#configure-SPP-PG).
 

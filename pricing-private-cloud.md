@@ -116,6 +116,59 @@ For detailed usage and billing information, you can refer to the part numbers in
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
+| **IBM Power Systems Virtual Server Private Cloud volume group**  |
+| Volume Storage Tier 0 gigabyte-hour  | ppcaas-metric-volume-tier0 |
+| Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
+| Volume Storage Tier 3 gigabyte-hour  | ppcaas-metric-volume-tier3 |
+| Volume Storage Tier 5k gigabyte-hour | ppcaas-metric-volume-tier5k |
+| **IBM Power Systems Virtual Server Private Cloud snapshot group**  |
+| Snapshot Storage Tier 0 gigabyte-hour  | ppcaas-metric-snapshot-tier0 |
+| Snapshot Storage Tier 1 gigabyte-hour  | ppcaas-metric-snapshot-tier1 |
+| Snapshot Storage Tier 3 gigabyte-hour  | ppcaas-metric-snapshot-tier3 |
+| Snapshot Storage Tier 5k gigabyte-hour | ppcaas-metric-snapshot-tier5k |
+{: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
+{: #Table2}
+
+<!--Q2
+
+|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalogue) |
+|  --------------------------------------------------------------- | ---------------------------------------------- |
+| **IBM Power Systems Virtual Server virtual machine group**       |                                                |
+| IBM Power Systems E1080 virtual processor core hour - capped     | ppcaas-metric-E1080-cores-capped |
+| IBM Power Systems E1080 virtual processor core hour - dedicated  | ppcaas-metric-E1080-cores-dedicated |
+| IBM Power Systems E1080 virtual processor core hour - shared     | ppcaas-metric-E1080-cores-shared |
+| IBM Power Systems E1050 virtual processor core hour - capped     | ppcaas-metric-E1050-cores-capped |
+| IBM Power Systems E1050 virtual processor core hour - dedicated  | ppcaas-metric-E1050-cores-dedicated |
+| IBM Power Systems E1050 virtual processor core hour - shared     | ppcaas-metric-E1050-cores-shared |
+| IBM Power Systems S1022 virtual processor core hour - capped     | ppcaas-metric-S1022-cores-capped |
+| IBM Power Systems S1022 virtual processor core hour - dedicated  | ppcaas-metric-S1022-cores-dedicated |
+| IBM Power Systems S1022 virtual processor core hour - shared     | ppcaas-metric-S1022-cores-shared |
+| IBM Power Systems scale-out memory gigabyte hours                | ppcaas-metric-p10-2u-memory-standard |
+| IBM Power Systems scale-up memory gigabyte hours                 | ppcaas-metric-p10-4u-memory-standard |
+| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-capped |
+| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-dedicated |
+| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-shared |
+| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-capped |
+| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1050-hana-cores-dedicated |
+| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-shared |
+| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-capped |
+| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-S1022-hana-cores-dedicated |
+| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared |
+| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-2u-hanamem-standard |
+| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-4u-hanamem-standard |
+| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier1 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier2 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier3 |
+| **IBM Power Systems Virtual Server operating systems group**       |                                                |
+| AIX operating system scale-up license core-hour | ppcaas-metric-aix-scale-up |
+| AIX operating system scale-out license core-hour | ppcaas-metric-aix-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour | ppcaas-metric-rhel-scale-up |
+| Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
 | [Q2-2024 update start]{: tag-teal} IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
 | IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
 | IBM i operating system P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p10-mol |
@@ -150,6 +203,14 @@ For detailed usage and billing information, you can refer to the part numbers in
 {: #Table2}
 
 [Q2-2024 update start]{: tag-teal} For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).[Q2-2024 update end]{: tag-teal}
+
+-->
+<!-- Q2 -->
+
+
+
+
+
 
 
 ## Base instances
@@ -237,7 +298,7 @@ For SAP HANA workloads, the charges for processor and memory parts are the same 
 The pricing is subject to change depending on the SAP HANA operational costs.
 {: note}
 
-
+<!-- Q2
 ## Pricing for dedicated hosts
 {: #pricing-dh}
 
@@ -250,6 +311,8 @@ Consider the following points for dedicated host pricing:
 
 To learn more about the dedicated host, see: [dedicated host](/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
 [Q2-2024 update end]{: tag-teal}
+
+-->
 
 
 ## Storage types
@@ -312,6 +375,9 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 |  Tier 5k                 | $0.00010652                   | $0.08                     |
 {: caption="Table 11. Snapshot storage pricing" caption-side="bottom"}
 
+
+
+<!--Q2
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
@@ -340,6 +406,10 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 For more information about calculating the pricing for OS licensisng in SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 [Q2-2024 update end]{: tag-teal}
+
+-->
+<!-- Q2 -->
+
 
 ### Use case of account billable storage
 {: #billable-storage}
@@ -386,8 +456,14 @@ Review the following frequently asked questions about pricing:
 
    You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs-draft/power-iaas?topic=power-iaas-generating-an-estimate).
 
-   [Q2-2024 update start]{: tag-teal}By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}. [Q2-2024 update end]{: tag-teal}
 
+<!--Q2
+   [Q2-2024 update start]{: tag-teal}By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}. [Q2-2024 update end]{: tag-teal}
+-->
+<!-- Q2 -->
+
+
+<!--Q2
 ### Where can I find the unit prices for the billing metrics?
 {: #billing-metrics}
 
@@ -419,6 +495,10 @@ Review the following frequently asked questions about pricing:
 
 [Q2-2024 update end]{: tag-teal}
 
+-->
+<!-- Q2 -->
+
+<!--Q2
 ### How to calculate the pricing for OS licensing in SPP
 {: #cal-OSlic}
 
@@ -441,6 +521,8 @@ Table 14 shows how the pricing for OS licensing is calculated assuming that the 
 
 [Q2-2024 update end]{: tag-teal}
 
+-->
+<!-- Q2 -->
 
 ### Is there any initial one-time payment before the pod infrastructure is installed in the client private cloud data center?
 {: #initial-one-time-payment}

@@ -131,6 +131,56 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier1 Instance Hours |
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier3 Instance Hours |
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier2 Instance Hours |
+{: caption="Table 3. Part numbers" caption-side="bottom"}
+
+<!--Q2
+
+| Part number  | Description                     |
+| ------------------------- | ---------------------------------- |
+| SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
+| SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
+| MS_GIGABYTE_HOURS|      Memory standard gigabyte-hour|
+| MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
+| TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
+| TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
+| TIER_ZERO_STORAGE_GIGABYTE_HOURS |Tier-0 storage gigabyte-hour |
+| FIXED_5K_OPS_GIGABYTE_HOURS |Fixed IOPS storage gigabyte-hour  |
+| AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale out license per core-hour      |
+| AIX_MEDIUM_APPLICATION_INSTANCE_HOURS     | AIX enterprise license per core-hour     |
+| IBMI_OS_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i OS P10 license per core-hour      |
+| IBMI_OS_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i OS P30 license per core-hour      |
+| IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
+| IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
+| SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
+| IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
+| IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
+| IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
+| IBMIRDS_APPLICATION_INSTANCES     | IBM Rational Development Studio for IBM i license per users-hour      |
+| BHHANA_APPLICATION_INSTANCE_HOURS     | Balanced for Online analytical processing (OLAP) HANA application instance hour       |
+| COREHANA_APPLICATION_INSTANCE_HOURS     | Core HANA application instance hour      |
+| MEMHANA_APPLICATION_INSTANCE_HOURS     | Memory HANA application instance hour      |
+| UMHHANA_APPLICATION_INSTANCE_HOURS     | Ultra Memory HANA for Online analytical processing (OLAP) application instance hour      |
+| IBMIOS_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P10 license per core-hour      |
+| IBMIOS_PTHIRTY_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P30 license per core-hour      |
+| IBMILPP_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i LPP P10 license per core-hour      |
+| IBMILPP_PTHIRTY_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i LPP P30 license per core-hour      |
+| ESS_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 shared uncapped processor per core-hour      |
+| ECC_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 shared capped processor per core-hour      |
+| EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
+| IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
+| IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
+|	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
+| S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
+| REDHAT_GP_ON_SCALE_OUT_APP_INSTANCE_HOURS	|    Redhat GP Scale Out License/Core Hour |
+| REDHAT_GP_SCALE_UP_LICENSE_CORE_HOURS	    |  Redhat GP Scale Up License/Core Hour |
+| REDHAT_SAP_SCALE_OUT_LICENSE_PER_CORE_HOUR	|	Redhat SAP Scale Out License/Core Hour |
+| REDHAT_SAP_SCALE_UP_LICENSE_PER_CORE_HOUR	|   Redhat SAP Scale Up License/Core Hour |
+| SUSE_OS_GP_TIER_ONE_INSTANCE_HOURS	  |	SUSE GP Tier1 Instance Hours |
+| SUSE_OS_GP_TIER_THREE_INSTANCE_HOURS	|	SUSE GP Tier3 Instance Hours |
+| SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier2 Instance Hours |
+| SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier1 Instance Hours |
+| SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier3 Instance Hours |
+| SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier2 Instance Hours |
 | [Q2-2024 update start]{: tag-teal} S1022_NW_SHARED_UNCAPPED _CORE_HOURS | S1022 NW Shared Uncapped Processor |
 | S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 NW Shared Capped Processor |
 | S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
@@ -150,6 +200,10 @@ For detailed usage and billing information, you can refer to the part number in 
 | E1080_SH2_HANA_MEM_GB_HOURS  | TBD [Q2-2024 update end]{: tag-teal}|
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
+-->
+<!-- Q2 -->
+
+
 ## Base instances
 {: #pricing-base-instance-prices}
 
@@ -168,7 +222,7 @@ You can also bring your own custom image to use on a {{site.data.keyword.powerSy
 
 The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You may select a Linux stock image provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you may opt to use a [full Linux&reg; subscription](/docs-draft/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs-draft/power-iaas?topic=power-iaas-linux-deployment).
 
-
+<!--Q2
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
 
@@ -190,6 +244,8 @@ The pricing is subject to change depending on the SAP HANA operational costs.
 
 [Q2-2024 update end]{: tag-teal}
 
+-->
+<!-- Q2 -->
 
 ## Processor types
 {: #pricing-processor}

@@ -58,14 +58,18 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 
 1. Click **Boot images**, then **Import image**.
 
+  <!--Q2
    [Q2-2024 update start]{: tag-teal} If you are importing customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.[Q2-2024 update end]{: tag-teal}
    {: note}
+  -->
+  <!-- Q2 -->
 
 2. After you click **Import image**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.
 
 3. Find your newly uploaded boot image in **Boot images**.
 
 <!--4. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} virtual service instance. Click the arrow in the appropriate boot image tile to see your custom boot image.-->
+<!-- Q2 -->
 
 
 | Field | Description |
