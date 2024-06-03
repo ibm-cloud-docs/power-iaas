@@ -163,9 +163,11 @@ SUSE
 [^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
+<!--Q2-->
+The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
+{: note}
 
-The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. <!-- Q2 [JIRA-PPC-4873 update start]{: tag-teal} The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}-->
-<!--Q2 {: note}-->
+<!--Q2-->
 
 If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
 
@@ -233,12 +235,11 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-<!--
-[Q2-2024 update start]{: tag-teal}
-You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image).
-[Q2-2024 update end]{: tag-teal}
--->
+<!--Q2-->
 
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image).
+
+<!--Q2-->
 ## What versions of stock images are available?
 {: #stock-images}
 {: faq}

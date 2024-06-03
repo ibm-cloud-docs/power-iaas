@@ -152,7 +152,9 @@ Before deploying a virtual tape library (VTL) in a workspace, create an estimate
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
 
-<!-- #### Estimating a dedicated host
+
+<!-- Q2 -->
+#### Estimating a dedicated host
 {: #est-dh}
 
 Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
@@ -163,7 +165,8 @@ Before deploying a dedicated host in a workspace, create an estimate of it. To l
 | Machine type      |   **Required**: Select the available machine types where you can crreate dedicated host. |
 {: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
 
-To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host). -->
+To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
+
 <!-- Q2 -->
 
 ### On-premises (private cloud)

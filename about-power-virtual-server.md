@@ -52,12 +52,12 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 The following are some of the key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, <!--Q2 [or IBM i]{: tag-teal}--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
+* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, or IBM i<--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
     * IBM AIX 7.2 or later
+    * IBM i 7.3 or later <--Q2-->
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
-<!--Q2    *  [IBM i 7.3 or later]{: tag-teal}-->
 
 * **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
     - Number of cores
@@ -104,11 +104,11 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 <!--When the threshold exceeds, you receive a notification. [SHU: Not available currently for LA.]-->
 
-<!-- Q2 updates hidden
+
 #### pod configurations
 {: #pod-config}
 
-[Q2-2024 update start]{: tag-teal}
+<!--Q2-->
 An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod have 1x42 U rack and are available in S1022 and E1050 system types.
 
 Table 1 illustrates the configuration for small pod.
@@ -179,9 +179,8 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Usable memory size in TB at 2x compr. | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
 {: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
 
-[Q2-2024 update end]{: tag-teal}
+<!--Q2-->
 
--->
 
 #### Supported Power10 processor-based servers
 {: #power-system-spec-private-cloud}
@@ -195,7 +194,7 @@ The following Power10 processor-based systems are supported:
 #### Operating systems
 {: #os-spec-private-cloud}
 
-The Power10 processor-based systems with Linux, AIX, <!--Q2 [or IBM i]{: tag-teal}--> operating system are supported.
+The Power10 processor-based systems with Linux, AIX, or IBM i<!--Q2--> operating system are supported.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX <!--[or IBM i]{: tag-teal}--> stock images are supported on the Power10 systems with AIX <!--[or IBM i]{: tag-teal}--> operating system.
 

@@ -17,10 +17,10 @@ subcollection: power-iaas
 {: #deploying-SAP-image}
 
 
-<!-- Q2
+
 [Off-Premises]{: tag-blue}
 
-[Q2-2024 update start]{: tag-teal}
+<!--Q2-->
 
 The Linux&reg; for SAP (HANA or NetWeaver) operating system (OS) image can be deployed within an {{site.data.keyword.powerSysFull}} by using the following methods:
 
@@ -46,12 +46,6 @@ If you want to import the images for your workspace, contact SAP to get the deta
 The imported images can be deployed only in the single storage pool where the images are stored. To deploy the images to a different storage pool, the images must be stored in the storage pool. If you are using the APIs to import the images, you can specify the details of the storage pools where the image must be stored.
 
 Complete the planning and pricing before you deploy the Linux for SAP (HANA or NetWeaver) image on the {{site.data.keyword.powerSys_notm}} workspace. Also, the pricing must be completed before the end of subscription for managed services with SAP. <!--For more information, see Linux for SAP (HANA or NetWeaver) pricing optimization.-->
--->
-<!-- Q2 -->
-
-
-<!--Q2
-
 {: note}
 
 ## Bring your own customized Linux for SAP (HANA or NetWeaver) image
@@ -60,7 +54,4 @@ Complete the planning and pricing before you deploy the Linux for SAP (HANA or N
 You can bring your own customized Linux for SAP (HANA or NetWeaver) operating system (OS) image to deploy within a {{site.data.keyword.powerSys_notm}}.
 Self-certify that the image is an SAP image by selecting the checkbox to distinguish between the {{site.data.keyword.powerSys_notm}} stock image and a customer provided SAP image. For more information about importing an image, see [Using the Power Virtual Server user interface to import a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#console-import-image).
 
-[Q2-2024 update end]{: tag-teal}
-
--->
 <!-- Q2 -->
