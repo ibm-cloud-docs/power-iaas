@@ -58,10 +58,7 @@ The {{site.data.keyword.powerSys_notm}} on cloud offering supports the following
 
 Stock images available when you create a virtual machine are:
 * AIX 7.3 TL2
-* AIX 7.3 TL1 SP2
 * AIX 7.2 TL5 SP7
-* AIX 7.2 TL5 SP6
-* AIX 7.1 TL5 SP9
 
 [On-Premises]{: tag-red}
 
@@ -138,12 +135,12 @@ IBM i stock images currently available when you create a VM are:
 
 Red Hat
 
-* RHEL 9.2 general purpose (RHEL9-SP2) [new]{: tag-new}
-* RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP) [new]{: tag-new}
-* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) [new]{: tag-new}
-* RHEL 8.8 general purpose (RHEL8-SP8) [new]{: tag-new}
-* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) [new]{: tag-new}
-* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) [new]{: tag-new}
+* RHEL 9.2 general purpose (RHEL9-SP2)
+* RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP)
+* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
+* RHEL 8.8 general purpose (RHEL8-SP8)
+* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
+* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)
 * RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)

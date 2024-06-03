@@ -195,7 +195,7 @@ The following Power10 processor-based systems are supported:
 
 The Power10 processor-based systems with Linux, AIX, [or IBM i]{: tag-teal} operating system are supported.
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX [or IBM i]{: tag-teal} stock images are supported on the Power10 systems with AIX [or IBM i]]{: tag-teal} operating system.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX [or IBM i]{: tag-teal} stock images are supported on the Power10 systems with AIX [or IBM i]{: tag-teal} operating system.
 
 #### Storage
 {: #storage-private-cloud}
