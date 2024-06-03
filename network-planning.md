@@ -26,4 +26,4 @@ The {{site.data.keyword.powerSys_notm}} network architecture requires connectivi
 * Network connectivity ports
 * Firewall access and permission
 
-As a part of the network planning, you can review the available use cases in the [Network use cases](/docs-draft/power-iaas?topic=power-iaas-network_use_cases) section and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
+As a part of the network planning, you can review the available use cases in the [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases) section and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.

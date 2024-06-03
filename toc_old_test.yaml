@@ -1,5 +1,5 @@
 #  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Make sure you include all nav file coding requirements, as defined in /docs/writing?topic=writing-code-nav
 #  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
 ---
 toc:
@@ -13,7 +13,7 @@ toc:
     path: power-iaas
     label: Power Virtual Servers
 
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See /docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -117,7 +117,7 @@ toc:
               - sysdig-monitoring-pvs.md
               - at-events.md
 
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see /docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
       id: reference

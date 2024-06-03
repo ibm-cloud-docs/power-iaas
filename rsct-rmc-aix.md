@@ -95,7 +95,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 7. *(Optional)* To build a `nodeid`, run the `/opt/rsct/bin/rmcctrl -p` command if not already done in step 3.
 
-If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support).
+If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: tip}
 
 ## Recovering from a missing IPv6 link local address when using your own boot image

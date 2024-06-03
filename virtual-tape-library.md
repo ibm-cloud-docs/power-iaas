@@ -24,4 +24,4 @@ For more information on how to create and configure an {{site.data.keyword.power
 ## Migrating using Falconstor StorSafe VTL
 {: #storsafe-migr}
 
-See [FalconStor StorSafe VTL](/docs-draft/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl) for migration steps.
+See [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl) for migration steps.

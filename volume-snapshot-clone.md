@@ -191,8 +191,8 @@ If you plan to restore the boot disks, **your VM must be shut down**. If the VM 
 {: #snap-clone-faqs}
 
 Here are some of the following frequently asked questions on snapshots and clonning that are documented on the faq page:
-- [What are the key differences between a snapshot and clone?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
-- [Is there any UI to perform snapshot or clone operations?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
-- [Are there any initial snapshot requirement in terms of storage?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)
-- [Does the snapshot and volume clone supports any safeguard policy?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-safeguard)
-- [Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#poweha-toolkit)
+- [What are the key differences between a snapshot and clone?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
+- [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
+- [Are there any initial snapshot requirement in terms of storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)
+- [Does the snapshot and volume clone supports any safeguard policy?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-safeguard)
+- [Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?](/docs/power-iaas?topic=power-iaas-powervs-faqs#poweha-toolkit)

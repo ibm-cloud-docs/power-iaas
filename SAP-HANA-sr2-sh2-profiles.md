@@ -34,7 +34,7 @@ You can deploy the following types of SAP HANA profiles:
     You cannot switch from sr2 profile to another profile family.
     {: note}
 
-For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](/docs-draft/power-iaas?topic=power-iaas-pricing-virtual-server).
+For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 
 [Q2-2024 update end]{: tag-teal}
 

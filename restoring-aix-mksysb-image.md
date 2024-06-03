@@ -28,11 +28,11 @@ It is assumed the reader has AIX administration experience and is familiar with 
 ## Considerations before creating the mksysb image on the source AIX instance
 {: #consider-image-source-AIX}
 
-1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. More information can be found at [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs-draft/power-iaas?topic=power-iaas-recommended-rsct-package).
+1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. More information can be found at [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
 
 2. The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}.
 
-Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
+Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
 
 The AIX instance that is deployed in {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
@@ -254,5 +254,5 @@ When the old boot volume is detached and deleted by using the user interface, th
 ## Additional Information Resources
 {: #restore-aix-image-resources}
 
-* [Getting Started with IBM Power Systems Virtual Servers](/docs-draft/power-iaas?topic=power-iaas-getting-started).
+* [Getting Started with IBM Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-getting-started).
 * [{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference).

@@ -170,7 +170,7 @@ Review the following network requirements to facilitate the pod infrastructure c
     * provide redundant connections to the IBM Direct Link connection or VPN connection
     * provide the last mile connection from the point-of-presence (PoP) of your service provider to the customer data center  
 
-For network architecture diagrams, see [Network architecture diagrams](/docs-draft/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#netwok-architecture-diagrams){: external}.
+For network architecture diagrams, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#netwok-architecture-diagrams){: external}.
 
 Setting up of network has two parts:
 * [control plane network](#control-plane-network) - for communication between IBM Cloud and the pod
@@ -179,13 +179,13 @@ Setting up of network has two parts:
 ### Control plane network
 {: #control-plane-network}
 
-The private cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your private cloud data center. This connectivity is the main communication channel and is known as control plane network. For more information, see [Control plane network](/docs-draft/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#control-plane-network){: external}.
+The private cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your private cloud data center. This connectivity is the main communication channel and is known as control plane network. For more information, see [Control plane network](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#control-plane-network){: external}.
 
 Direct Link 2.0 Connect can be viewed as an alternative to a traditional site-to-site VPN solution that can provide security and privacy, consistent, and higher-throughput connectivity between a remote network and IBM Cloud environments. For more information about Direct Link Connect, see [Getting started with IBM Cloud Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl){: external}
 
 VPN connection can be established using one of the following methods:
-* [site-to-site VPN Connectivity](/docs-draft/power-iaas?topic=power-iaas-network-private-cloud&interface=api#vpn)
-* [connectivity using IBM Cloud classic environment](/docs-draft/power-iaas?topic=power-iaas-network-private-cloud&interface=api#vpn)
+* [site-to-site VPN Connectivity](/docs/power-iaas?topic=power-iaas-network-private-cloud&interface=api#vpn)
+* [connectivity using IBM Cloud classic environment](/docs/power-iaas?topic=power-iaas-network-private-cloud&interface=api#vpn)
 
 Provide the required network-specific information before the pod installation so that either the Direct Link 2.0 connection or VPN connection can be established. For example:
 
@@ -198,7 +198,7 @@ Provide the required network-specific information before the pod installation so
 ### Data plane network
 {: #data-plane-network}
 
-The Data Plane Network is enabled when the pods in your data center are connected to your private cloud network infrastructure. Using this connectivity you can access the virtual servers (logical partitions) in the pod through your network instead of IBM Cloud. As part of the network planning, you can review the [Network overview](/docs-draft/power-iaas?topic=power-iaas-network-private-cloud) and available use cases in the [Network use cases](/docs-draft/power-iaas?topic=power-iaas-network_use_cases) sections and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
+The Data Plane Network is enabled when the pods in your data center are connected to your private cloud network infrastructure. Using this connectivity you can access the virtual servers (logical partitions) in the pod through your network instead of IBM Cloud. As part of the network planning, you can review the [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud) and available use cases in the [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases) sections and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
 
 ## Site readiness
 {: #site-readiness}
@@ -219,7 +219,7 @@ The {{site.data.keyword.powerSys_notm}} network architecture requires connectivi
 * Network connectivity ports
 * Firewall access and permission
 
-As a part of the network planning, you can review the available use cases in the [Network use cases](/docs-draft/power-iaas?topic=power-iaas-network_use_cases) section and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
+As a part of the network planning, you can review the available use cases in the [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases) section and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
 
 ## System calculators
 {: #system-calculators}

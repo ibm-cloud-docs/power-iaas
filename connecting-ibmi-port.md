@@ -17,10 +17,10 @@ subcollection: power-iaas
 {: #connect-ibmi}
 
 
-Learn how to connect to an IBM i VM after configuring your system. Make sure to review [Configuring your IBM i virtual machine (VM)](/docs-draft/power-iaas?topic=power-iaas-configuring-ibmi) before connecting to an IBM i VM.
+Learn how to connect to an IBM i VM after configuring your system. Make sure to review [Configuring your IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-configuring-ibmi) before connecting to an IBM i VM.
 {: shortdesc}
 
-For a complete list of firewall ports that are available for IBM i VMs, see [Network security](/docs-draft/power-iaas?topic=power-iaas-network-security). If you plan on ordering [Direct Link Connect on Classic](/docs-draft/power-iaas?topic=power-iaas-ordering-direct-link-connect) or already have it, port forwarding is not needed.
+For a complete list of firewall ports that are available for IBM i VMs, see [Network security](/docs/power-iaas?topic=power-iaas-network-security). If you plan on ordering [Direct Link Connect on Classic](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) or already have it, port forwarding is not needed.
 {: important}
 
 ## Installing and configuring IBM i Access Client Solutions (ACS)

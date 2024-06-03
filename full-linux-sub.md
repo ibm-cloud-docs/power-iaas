@@ -25,7 +25,7 @@ The full Linux subscription uses activation keys to provide access to interim fi
 
 To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL stock OS images for SAP and non-SAP applications.
 
-To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 The OS file name for the full Linux subscription feature starts with RHEL. For SAP applications, ensure that you are using an IBM stock OS image for SAP. These stock images are certified for using SAP applications. Bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}}, see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
@@ -35,10 +35,10 @@ The OS file name for the full Linux subscription feature starts with RHEL. For S
 
 Complete the following steps to set up full Linux subscription for your account:
 
-* [Configuring a data plane network](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub#config-dpn)
-* [Creating a proxy](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub#create-proxy-private)
-* [Install squid base](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub#squid-base)
-* [Completing the setup](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub#complete-setup)
+* [Configuring a data plane network](/docs/power-iaas?topic=power-iaas-full-linux-sub#config-dpn)
+* [Creating a proxy](/docs/power-iaas?topic=power-iaas-full-linux-sub#create-proxy-private)
+* [Install squid base](/docs/power-iaas?topic=power-iaas-full-linux-sub#squid-base)
+* [Completing the setup](/docs/power-iaas?topic=power-iaas-full-linux-sub#complete-setup)
 
 ### Configuring a data plane network
 {: #config-dpn}

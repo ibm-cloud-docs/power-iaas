@@ -22,10 +22,10 @@ You can configure a private network subnet when you create a {{site.data.keyword
 {: shortdesc}
 
 How the private network subnet is configured, depends on the {{site.data.keyword.powerSys_notm}} Workspace networking configuration, which can use one of the following four approaches:
-1. {{site.data.keyword.powerSys_notm}} Workspace enabled with the [Power Edge Router (PER)](/docs-draft/power-iaas?topic=power-iaas-per). This is default for most locations if created after mid-2023, and can use [VPN Connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
-2. {{site.data.keyword.powerSys_notm}} Workspace enabled with [Power Cloud Connections](/docs-draft/power-iaas?topic=power-iaas-cloud-connections). Former default, and can use [VPN Connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
-3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs-draft/power-iaas?topic=power-iaas-ordering-direct-link-connect).
-4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs-draft/power-iaas?topic=power-iaas-VPN-connections-deprecated).
+1. {{site.data.keyword.powerSys_notm}} Workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+2. {{site.data.keyword.powerSys_notm}} Workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). Former default, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
+4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated).
 
 When you specify a CIDR, the following are automatically populated:
 - A gateway

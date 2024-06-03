@@ -57,7 +57,7 @@ Complete the following steps to capture and export a virtual server instance:
 5. *(Optional)* If you decide to export to COS, you are presented with more options:
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
-   3. Provide your [HMAC access and HMAC secret keys](/docs-draft/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
+   3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
 
 6. Click **Export**.
 

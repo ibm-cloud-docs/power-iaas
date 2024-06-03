@@ -48,8 +48,8 @@ The data transfer rate for MDM on an IBM i system is roughly 110-120 MB/sec. It 
 {: note}
 
 For steps to configure MDM on AIX and IBM i VMs, see the following tutorials:
-- [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](/docs-draft/power-iaas?topic=power-iaas-configuring-mdm)
-- [Configuring Mass Data Migration (MDM) on IBM i VM](/docs-draft/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm) -->
+- [Configuring IBM Cloud Mass Data Migration (MDM) on AIX VM](/docs/power-iaas?topic=power-iaas-configuring-mdm)
+- [Configuring Mass Data Migration (MDM) on IBM i VM](/docs/power-iaas?topic=power-iaas-configuring-mass-data-migration-mdm-on-ibm-i-vm) -->
 
 <!-- To Sandhya: this complete MDM topic have been removed from powerVS dated 22 Aug 2023, determine if the below 2 paras are required. If not delete the entire MDM section. -->
 <!-- Removed MDM topic as per Mark Martin's input. -->
@@ -68,7 +68,7 @@ If you have an environment with access to PowerVC, you can capture OVA images to
 
 1. Create an OVA image on your local system.
 2. Copy the OVA image to your **Cloud Object Storage** account.
-3. [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs-draft/power-iaas?topic=power-iaas-deploy-custom-image).
+3. [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Aspera Technologies
 {: #aspera-technologies}
@@ -115,7 +115,7 @@ You can back up your private cloud environment and restore it to {{site.data.key
 
 Customers can use third-party tools to perform data migration. The following third-party tools are commonly used for data migration:
 
-- [*Falconstor StorSafe VTL*](/docs-draft/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl)
+- [*Falconstor StorSafe VTL*](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl)
 - *iCluster*
 - *MIMIX from Syncsort*
 - *Double-Take® MoveTM for AIX*
@@ -192,7 +192,7 @@ You can migrate your data by using the `mksysb` command:
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the private cloud image.
 
-For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs-draft/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
+For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 
 ### Logical replication with GLVM and PowerHA SystemMirror for AIX Enterprise Edition
 {: #logical-replication}
@@ -228,8 +228,8 @@ Sandhya: AIX 7.1 end of life April 2023. Per Carl's suggestion have commented th
 
 To migrate your resources from AIX 7.1 to higher AIX versions within {{site.data.keyword.powerSys_notm}}, you must use the network boot option. Migration requires the VM to boot from the operating systems kernel level you are migrating to. To accomplish this, you need to configure the NIM (network boot) server. To define the NIM server with resources required for migration, complete the following steps:
 
-1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs-draft/power-iaas?topic=power-iaas-provisioning-nim).
-2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs-draft/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
+1. Define the VM as a NIM master. For more information, see [Setting up a Network Installation Management (NIM) server](/docs/power-iaas?topic=power-iaas-provisioning-nim).
+2. Create a License Program Products (LPP) source by using an image repository that contains the images. Stock images already contain the ISO and LPPs that are found on the base media, so create the LPP source and NIM resources from [Installing optional software products from the AIX stock image](/docs/power-iaas?topic=power-iaas-using-ess-iso#installing-aix-stock-image).
 3. Customize any additional installation resources.
 4. Define the AIX 7.1 VM as a NIM client.
 5. Perform the installation for NIM migration.

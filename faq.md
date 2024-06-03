@@ -21,7 +21,7 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, pay-as-you-use billing allows you to easily adjust your workloads. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, pay-as-you-use billing allows you to easily adjust your workloads. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 ## What is the difference between {{site.data.keyword.powerSys_notm}} on cloud and private cloud?
 {: #private-cloud-on-cloud-diff}
@@ -35,7 +35,7 @@ The primary difference between the two is where the physical infrastructure resi
 
 [On-Premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
-For complete specifications, see [Hardware and software specifications](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
+For complete specifications, see [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
 <!--The following FAQ is migrated from PowerVS and needs technical review-->
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
@@ -108,7 +108,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E980 (9080-M9S) and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
-- [IBM i PTF minimum levels](/docs-draft/power-iaas?topic=power-iaas-minimum-levels)
+- [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
 IBM i stock images currently available when you create a VM are:
@@ -131,7 +131,7 @@ IBM i stock images currently available when you create a VM are:
 
 [Off-Premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs-draft/power-iaas?topic=power-iaas-set-full-Linux)):
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
 
 Red Hat
 
@@ -182,7 +182,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 [On-Premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 
 FLS provides access to RHEL OS interim fixes and updates by using activation keys for Power servers that are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
@@ -195,7 +195,7 @@ The following list is an example of FLS offerings:
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs-draft/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for private cloud, see [Pricing FAQs](/docs-draft/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for private cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
 ## Can private cloud pods be expanded with additional compute nodes?
@@ -222,7 +222,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 * The status of the API call.
 * The criticality of the action.
 
-For more information, see [Activity tracker events](/docs-draft/power-iaas?topic=power-iaas-at-events).
+For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
 
 <!--The FAQs from here are migrated from PowerVS guide-->
 
@@ -231,11 +231,11 @@ For more information, see [Activity tracker events](/docs-draft/power-iaas?topic
 {: faq}
 {: support}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs-draft/power-iaas?topic=power-iaas-deploy-custom-image).
+Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 <!--
 [Q2-2024 update start]{: tag-teal}
-You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#image).
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image).
 [Q2-2024 update end]{: tag-teal}
 -->
 
@@ -279,7 +279,7 @@ The following tiers are supported:
 * Tier 3 (3 IOPS per GB)
 * Fixed 5000 IOPS
 
-If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs-draft/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers-spec-private-cloud).
+If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers-spec-private-cloud).
 
 ## How do I extend my AIX rootvg?
 {: #rootvg}
@@ -297,7 +297,7 @@ When you deploy a VM, you can choose between **dedicated**, **capped shared**, o
 - **Uncapped shared**: shared among other clients
 - **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
-The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs-draft/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs-draft/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
@@ -391,13 +391,13 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 {: #os-support}
 {: faq}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs-draft/power-iaas?topic=power-iaas-create-vm).
+The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
 
-You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support).
+You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 {{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-For more information about supported versions of OS, see [What versions of AIX, IBM i, and Linux&reg; are supported?](/docs-draft/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+For more information about supported versions of OS, see [What versions of AIX, IBM i, and Linux&reg; are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 ## How does third-party licensing work?
 {: #third-party}
@@ -410,7 +410,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications](/docs-draft/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 
 ## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
@@ -430,7 +430,7 @@ There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offerin
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs-draft/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -447,7 +447,7 @@ The key differences are as follows:
 {: caption="Table 5. Differences between a snapshot and clone" caption-side="bottom"}
 
 
-See [Snapshots, cloning, and restoring](/docs-draft/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
+See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
 
 ## Is there any UI to perform snapshot or clone operations?
 {: #snap-clone-ui}
@@ -506,7 +506,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 
 [Off-Premises]{: tag-blue}
 For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
-For more information on VPN, see [Managing VPN connections](/docs-draft/power-iaas?topic=power-iaas-VPN-connections).
+For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?
 {: #firewall}
@@ -575,7 +575,7 @@ Navigate to the virtual server instance's details page by clicking the virtual s
 {: #support-ticket}
 {: faq}
 
-To open a support ticket, see [Getting help and support](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support).
+To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## What are the supported databases that I can run for SAP on {{site.data.keyword.powerSys_notm}}?
 {: #support-databases}
@@ -625,7 +625,7 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 ## What must be the network latency between the data center and the corresponding IBM Cloud region?
 {: #network_latency-private-cloud}
 
-[On-Premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs-draft/power-iaas?topic=power-iaas-network_latency_main).
+[On-Premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
 
 
 <!--## How many DHCP pools can be created on the {{site.data.keyword.powerSys_notm}} private cloud?-->

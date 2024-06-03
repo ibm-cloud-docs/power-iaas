@@ -11,17 +11,17 @@
     {
       "title": "Creating a Power Virtual Server",
       "description": "Learn to create and configure an IBM Power Virtual Server.",
-      "href": "/docs-draft/power-iaas?topic=power-iaas-creating-power-virtual-server"
+      "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
     },
     {
       "title": "Network architecture diagrams",
       "description": "Review the network diagrams to understand the Power Virtual Server network architecture.",
-      "href": "/docs-draft/power-iaas?topic=power-iaas-network-architecture-diagrams"
+      "href": "/docs/power-iaas?topic=power-iaas-network-architecture-diagrams"
     },
     {
       "title": "FAQ",
       "description": "Frequently Asked Questions",
-      "href": "/docs-draft/power-iaas?topic=power-iaas-power-iaas-faqs"
+      "href": "/docs/power-iaas?topic=power-iaas-power-iaas-faqs"
     },
     {
       "title": "SAP HANA and SAP NetWeaver",
@@ -46,7 +46,7 @@
     "community": "https://community.ibm.com/community/user/publiccloud/home"
   },
   "section_updates": {
-    "view_more": "/docs-draft/power-iaas?topic=power-iaas-release-notes",
+    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
         "date": "23 February 2024",

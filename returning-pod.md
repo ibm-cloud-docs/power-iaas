@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 If you want to discontinue the {{site.data.keyword.powerSysFull}} Private Cloud services at the end of subscription tenure or because of any other scenario that is permitted by the contract with IBM, you must return the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure as explained in the following steps:
 
-1. Open a ticket with [IBM Support](/docs-draft/power-iaas?topic=power-iaas-getting-help-and-support) and state your request to discontinue the IBM {{site.data.keyword.powerSys_notm}} Private Cloud services.
+1. Open a ticket with [IBM Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support) and state your request to discontinue the IBM {{site.data.keyword.powerSys_notm}} Private Cloud services.
 2. Back up all the application data and settings from the virtual server instances.
 3. Delete all your virtual server instances and workspaces.
 4. Delete the corresponding Satellite location instances after IBM completes the steps for pod teardown.
