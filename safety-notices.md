@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-01-05"
 
-keywords: power, power server, ppc as a service, safety notice
+keywords: power, power server, private cloud, safety notice
 
 subcollection: power-iaas
 

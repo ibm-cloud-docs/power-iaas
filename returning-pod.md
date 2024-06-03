@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-12-20"
 
-keywords: returning pod, {{site.data.keyword.powerSys_notm}} as a service, private cloud, decomission, terminology, how-to
+keywords: returning pod, {{site.data.keyword.powerSys_notm}}, private cloud, decomission, remove pod
 
 subcollection: power-iaas
 

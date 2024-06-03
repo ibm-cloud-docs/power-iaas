@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-03-13"
 
-keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
+keywords: power, SAP HANA, sr2, sh2, profiles
 
 subcollection: power-iaas
 
