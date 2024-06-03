@@ -5,12 +5,11 @@
 toc:
   properties:
     subcollection: power-iaas
-    allowlist-id: c638b21d-854a-4cef-09b5-f181fb3ee880
     category: virtualservers
     audience: service
     href: /docs/power-iaas
-    console-page: /catalog/services/ppcaas
-    product-page: https://www.ibm.com/cloud/power-iaas
+    console-page: /catalog/services/power-systems-virtual-server
+    product-page: https://www.ibm.com/cloud/power-virtual-server
     path: power-iaas
     label: Power Virtual Servers
 
@@ -21,6 +20,7 @@ toc:
       id: learn
       topics:
       - getting-started.md
+      - release-notes.md
       - about-power-virtual-server.md
       - pricing-private-cloud.md
       - pricing.md
@@ -166,7 +166,7 @@ toc:
       topics:
       - link:
           label: API reference
-          href: https://cloud.ibm.com/apidocs/power-iaas-la
+          href: https://cloud.ibm.com/apidocs/power-cloud
       - link:
           label: Command reference
           href: https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference
