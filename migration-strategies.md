@@ -254,13 +254,13 @@ Recent IBM i migration enhancements:
 
 BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).
 
-The following high-level steps detail how to migrate your OS and data from an [client-managed]{ tag-teal} system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
+The following high-level steps detail how to migrate your OS and data from a client-managed<!--Q2 client-managed to be confirmed by Joe--> system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
 1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
 2.	Create a virtual media and _IMGCLG_ on the deployed VM.
-3.	Create a virtual optical and _IMGCLG_ on the [client-managed]{: tag-teal} system and perform an operating system save.
+3.	Create a virtual optical and _IMGCLG_ on the client-managed<!--Q2 client-managed to be confirmed by Joe--> system and perform an operating system save.
 4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
-5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your [client-managed]{: tag-teal} system.
+5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your client-managed<!--Q2 client-managed to be confirmed by Joe--> system.
 6.	Migrate your remaining data.
 
 Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.
