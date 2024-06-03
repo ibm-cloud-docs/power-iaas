@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-01-05"
+lastupdated: "2024-03-06"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -71,7 +71,7 @@ The following table explains how to determine the primary and secondary site bas
 |Site 1|Site 1|Site 2|
 |Site 2|Site 2|Site 1|
 {: class="simple-table"}
-{: caption="Table 2. Primary and secondary site reference based on volume creation" caption-side="bottom"}
+{: caption="Table 1. Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
 ## Locations that support global replication service
 {: #locations-GRS}
@@ -87,7 +87,7 @@ The following table shows the data centers that supports replication and their c
 | `WDC06`| `DAL12` |
 | `WDC07`| `DAL10` |
 {: class="simple-table"}
-{: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
+{: caption="Table 2. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
 ## Preparation for disaster recovery
 {: #dr-prep}
