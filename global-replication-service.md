@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-03-06"
 
-keywords: pricing, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
+keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs
 
 subcollection: power-iaas
 
