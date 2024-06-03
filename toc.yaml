@@ -153,10 +153,6 @@ toc:
             topics:
               - sysdig-monitoring-pvs.md
               - at-events.md
-      # - topicgroup:
-      #     label: APIs for Private Cloud
-      #     topics:
-      #       -  swagger-pcloud.md
 
 # Mukesh to provide the content             - migrate-ibmi-data-ibmi-vm.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see /docs/api-docs.
