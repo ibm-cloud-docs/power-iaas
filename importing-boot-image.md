@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-05-22"
 
-keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
+keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
 subcollection: power-iaas
 

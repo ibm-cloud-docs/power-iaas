@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-04-27"
 
-keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
+keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
 subcollection: power-iaas
 

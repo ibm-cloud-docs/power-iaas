@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-23"
 
-keywords: power, event logs, events, notifications, view logs, customize notifications
+keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
 subcollection: power-iaas
 

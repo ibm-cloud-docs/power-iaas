@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-02-07"
 
-keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology
+keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
 subcollection: power-iaas
 

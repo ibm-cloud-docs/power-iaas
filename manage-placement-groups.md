@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
+keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
 subcollection: power-iaas
 

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-07-06"
 
-keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG,
+keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
 subcollection: power-iaas
 

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-01-28"
 
-keywords: migration strategies, cos, mass data migration, mdm, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
+keywords: migration strategies, cos, mass data migration, mdm, powervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
