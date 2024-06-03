@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-04-24"
 
-keywords: Generating an estimate, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
+keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
 
 subcollection: power-iaas
 

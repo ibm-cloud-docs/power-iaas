@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-05-29"
 
-keywords: compliance, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology
+keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
 subcollection: power-iaas
 

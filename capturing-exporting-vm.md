@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: capturning and exporing a vm, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
+keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
 subcollection: power-iaas
 

@@ -1,11 +1,11 @@
----
+﻿---
 
 copyright:
   years: 2023, 2024
 
 lastupdated: "2024-01-05"
 
-keywords: backup strategy, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology
+keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
 subcollection: power-iaas
 

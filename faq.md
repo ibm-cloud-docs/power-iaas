@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-04-22"
 
-keywords: faq, {{site.data.keyword.powerSys_notm}} as a service, ppcaas, terminology, video, how-to
+keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
 subcollection: power-iaas
 

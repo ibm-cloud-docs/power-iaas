@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-03-13"
 
-keywords: power, power server, ppc as a service, multiple virtual servers, hybrid cloud environment, what is ppcaas
+keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
 subcollection: power-iaas
 

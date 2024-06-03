@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-01-05"
 
-keywords: customizing linux image, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: linux deployment, ova, powervc capture, vios
 
 subcollection: power-iaas
 
