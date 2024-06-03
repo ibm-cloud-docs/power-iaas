@@ -164,10 +164,9 @@ toc:
   - navgroup:
       id: reference
       topics:
-      # - link:
-      #     label: API reference
-      #     href: https://cloud.ibm.com/apidocs/power-iaas-la
-      - swagger-pcloud.md
+      - link:
+          label: API reference
+          href: https://cloud.ibm.com/apidocs/power-iaas-la
       - link:
           label: Command reference
           href: https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference
@@ -175,7 +174,6 @@ toc:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture
 # Will complete before GA  - responsibility-matrix.md
-
   - navgroup:
       id: help
       topics:
