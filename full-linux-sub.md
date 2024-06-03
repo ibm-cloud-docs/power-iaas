@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-01-05"
 
-keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
 subcollection: power-iaas
 

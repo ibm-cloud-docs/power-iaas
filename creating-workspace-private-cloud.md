@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2023-04-24"
 
-keywords: creating workspace resources, {{site.data.keyword.powerSys_notm}} as a service, private cloud, howto, terminology, video, how-to
+keywords: creating workspace resources, {{site.data.keyword.powerSys_notm}}, private cloud, workspace
 
 subcollection: power-iaas
 

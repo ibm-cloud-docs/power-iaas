@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2023-03-28"
 
-keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, environment, environmental requirement
 
 subcollection: power-iaas
 

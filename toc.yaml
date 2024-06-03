@@ -123,7 +123,7 @@ toc:
               - aix-migration-steps.md
               - removing-network-interface.md
               - rsct-rmc-aix.md
-              - configuring-aix-mdm.md
+        #      - configuring-aix-mdm.md - deprecated MDM
               - provisioning-nim-server.md
       - topicgroup:
             label: IBM i
