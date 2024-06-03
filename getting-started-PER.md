@@ -54,7 +54,7 @@ For detailed networking PER use cases and architechture diagrams, see [Power Edg
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
-- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from your [network in the client-managed environment]{: tag-teal} to the PER workspace.
+- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from network in your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to the PER workspace.
 - You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
@@ -106,7 +106,7 @@ On a PER workspace, **cloud Connections** and **VPN connections** options are no
 On a PER workspace, you can perform the following actions:
 1.  Attach a network without any requirement of creating a separate Cloud Connection such as Direct Link.
 2.	Effortlessly attach a connection to the IBM cloud network by attaching the Transit Gateway with your PER workspace.
-3.  Connect to your [network in the client-managed environment]{: tag-teal} by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
+3.  Connect to your network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by creating a Direct Link and attaching it with the Transit Gateway present on the PER workspace.
 
 You cannot delete PER workspaces that have Transit Gateway connections. You must delete the Transit Gateway connections first.
 {: important}

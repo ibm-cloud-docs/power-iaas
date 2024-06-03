@@ -49,7 +49,7 @@ Using a Power Edge Router (PER) enabled workspace provides the following benefit
 
 * Improved performance with aggregated bandwidth of 400 Gbps.
 * Direct access to IBM cloud services from {{site.data.keyword.powerSys_notm}} workspace.
-* Direct access to {{site.data.keyword.powerSys_notm}} from [client-managed]{: tag-teal}  environment by using a Direct Link connect or Direct Link dedicated.
+* Direct access to {{site.data.keyword.powerSys_notm}} from client-managed<!--Q2 client-managed to be confirmed by Joe--> environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
 1. [Connecting an client-managed data center](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
@@ -64,10 +64,10 @@ The above are base capability use cases. These base capabilities use cases can b
 ### Connecting a client-managed data center
 {: #per-on-orem}
 
-1. In this depiction, the [client-managed]{: tag-teal} data center uses a direct link connection to attach to the transit gateway.
+1. In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a direct link connection to attach to the transit gateway.
 
-2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the [client-managed]{: tag-teal} data center via the incoming direct link that is interconnected through this transit gateway.
-3. You will pay for the Direct Link connection that you use  to connect your [client-managed environment]{: tag-teal} with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center via the incoming direct link that is interconnected through this transit gateway.
+3. You will pay for the Direct Link connection that you use  to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
