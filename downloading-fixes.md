@@ -1,9 +1,9 @@
-﻿---
+---
 
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-31"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -11,29 +11,19 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Downloading fixes and updates
 {: #downloading-fixes-updates}
 
-You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates.
+You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
 If you'd like to download fixes and updates, you must perform one of the following:
 
-- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-server#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
 - Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
-- Set up another public-facing VM with an HTTP/HTTPS proxy.
+- Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-aix-proxy).
 
 ## Ordering fixes and updates for AIX VMs
 {: #downloading-fixes-aix}
@@ -60,16 +50,19 @@ You can access the SUMA configuration by running the [suma command](https://www.
 ### Configuring SUMA to use the proxy settings
 {: #configuring-aix-proxy}
 
-Before you run the `suma` command to download any update, make sure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
+Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
 
 To make the LPAR aware in which data center it is running, run the following command:
-```bash
-echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
-```
 
-```bash
-export SUMA_COUNTRY_CODE=**
+```text
+#echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
 ```
+{: codeblock}
+
+```text
+#export SUMA_COUNTRY_CODE=**
+```
+{: codeblock}
 
 Where ** is the country code of your DC based on the following table:
 
@@ -87,8 +80,8 @@ Where ** is the country code of your DC based on the following table:
 {: caption="Table 1. POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
-```bash
-suma -x -a Action=Preview -a RqType=Latest
+```code
+suma -x -a Action=Preview -a RqType=LatestCopy
 ```
 
 The `suma` command allows you to preview only the download operation. When you run this command, files are not downloaded. If the LPAR is not authenticated to access the internet, the command returns an error message. For information on troubleshooting SUMA error messages, see [Troubleshooting SUMA error messages](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html#serv_update_mgt__section_troubleshoot_suma){: external}.
@@ -121,7 +114,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
             Port number                                       [5026]
             Authentication user ID                            []
             Authentication password requested interactively.
-    ```  
+    ```
 
     Where, *xx.xx.xx.xx* is the IP address of the proxy and *5026* is the port number that is used to connect to the proxy settings. When you press **Enter**, a test connection determines whether the AIX LPAR is authenticated to access the internet by using the proxy settings. The common values for proxy port number are *3138* or *8080*.
 
@@ -164,7 +157,7 @@ The `suma` command can be used to perform various operations on a SUMA task or p
 
 To create and save a SUMA task by using the command line, enter the following command:
 
-```text
+```screen
 suma -w -a DisplayName=‘ AIX72TL2SP2‘ -a FilterML=‘7200-00‘
 ```
 
@@ -176,7 +169,7 @@ Task ID 10 created.
 
 To create and schedule a task that downloads the latest fixes and adds a policy label through the **DisplayName** field (useful when you are listing policies through SMIT), enter the following command:
 
-```text
+```screen
 suma -s "30 2 15 * *" -a RqType=Latest   \
     -a DisplayName="Latest fixes - 15th Monthly"
 ```

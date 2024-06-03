@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-05-03"
+lastupdated: "2024-05-16"
 
 keywords: direct link, order DL, ordering DL
 
@@ -16,13 +16,13 @@ subcollection: power-iaas
 # {{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s
 {: #ordering-direct-link-connect}
 
-Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSysShort}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
+Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}
 
 {{site.data.keyword.dl_short}} (2.0) Connect provides the following advantages:
 
 - Support for connections to multiple {{site.data.keyword.cloud_notm}} accounts from a single direct link.
-- Support for multiple VPCs (without classic access) from a single direct link within the same account. 
+- Support for multiple VPCs (without classic access) from a single direct link within the same account.
 
 ## Before you begin
 {: #before-you-begin-direct-link-connect}
@@ -30,21 +30,21 @@ Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/
 Before you order {{site.data.keyword.dl_short}} Connect, make sure that you review the following considerations and have satisfied any prerequisites:
 
 * Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the {{site.data.keyword.dl_short}} (2.0) Connect service.
-* Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
-* {{site.data.keyword.cloud_notm}} highly recommends that you establish a second, diverse direct link to prevent outages, whether unplanned, or planned due to maintenance. 
-* A 10 Gbps connection is available only using the {{site.data.keyword.dl_short}} (2.0) Connect offering. 
-* {{site.data.keyword.dl_short}} (2.0) Connect is available in all current locations. 
+* Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
+* {{site.data.keyword.cloud_notm}} highly recommends that you establish a second, diverse direct link to prevent outages, whether unplanned, or planned due to maintenance.
+* A 10 Gbps connection is available only using the {{site.data.keyword.dl_short}} (2.0) Connect offering.
+* {{site.data.keyword.dl_short}} (2.0) Connect is available in all current locations.
 * Currently, there isn't a migration path from {{site.data.keyword.dl_short}} on Classic (1.0) to {{site.data.keyword.dl_short}} (2.0). You must order a new {{site.data.keyword.dl_short}} (2.0) Connect connection.
 
 ## Pricing
 {: #direct-link-connect-pricing}
 
-The {{site.data.keyword.powerSys_notm}} offering includes a highly available connection to {{site.data.keyword.cloud_notm}} services at no cost for each customer per data center. You can also select the global routing option for these direct links at no cost. 
+The {{site.data.keyword.powerSys_notm}} offering includes a highly available connection to {{site.data.keyword.cloud_notm}} services at no cost for each customer per data center. You can also select the global routing option for these direct links at no cost.
 
 ## Ordering {{site.data.keyword.dl_short}} (2.0) Connect
 {: #order-direct-link-connect-2.0}
 
-To order {{site.data.keyword.dl_short}} Connect, complete the following steps: 
+To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
 1. Follow {{site.data.keyword.dl_short}} Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with these exceptions:
 
@@ -55,33 +55,35 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
       * For **Routing**, select **Local** to access all of the data centers that are connected at the location that you specified. Select **Global** to access all of the {{site.data.keyword.cloud_notm}} data centers in the world.
       * For **Provider**, select **IBM POWER VS** from the list.
-      * For **Speed**, select the link speed to meet your workload requirements. The recommended speed is 1 Gbps. 
-      * For the list of **Ports**, select a port that has the least number of connections. If you have multiple direct links, you must choose different ports for each connection.  
+      * For **Speed**, select the link speed to meet your workload requirements. The recommended speed is 1 Gbps.
+      * For the list of **Ports**, select a port that has the least number of connections. If you have multiple direct links, you must choose different ports for each connection.
 
    * In the **Billing** section, select **Unmetered**.
-   * In the **BGP** section: 
+   * In the **BGP** section:
 
       *  For **BGP peering subnet**, you can select **Auto-select IP** to auto-select an IP address from range `169.254.0.0/16`, or manually enter addresses in a specific range to avoid conflict with an existing connection.
       * For **BGP ASN**, enter `64999` as the BGP ASN number for the {{site.data.keyword.dl_short}} Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
-      * Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number. 
+      * Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
 
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
       | Dallas 10 \n Dallas 12  \n Dallas 13 | 4206000072 \n 64999 \n 64999 |
-      | Washington 04 \n Washington 06 \n Washington 07 | 64995 \n 64999 \n 4206000068 |
-      | Frankfurt 04  \n Frankfurt 05 | 64999 \n 64999|
-      | London 06 | 64999 |
-      | Toronto 01 | 64999 |
-      | Montreal 01 | 64999 |
-      | São Paulo 04 | 4206000076 |
-      | Chennai 01| 4206000092 |
-      {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"} 
-      
+      | Washington 4 | 64995 |
+      | Washington 6 | 64999 |
+      | Washington 7 | 4206000068 |
+      | Frankfurt 4  \n Frankfurt 5 | 64999 |
+      | London 6 | 64999 |
+      | Toronto 1 | 64999 |
+      | Montreal 1 | 64999 |
+      | São Paulo 4 | 4206000076 |
+      | Chennai 01  | 4206000092 |
+      {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"}
+
 2. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
 
-   After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections. 
-  
-3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+   After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections.
+
+3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
@@ -89,25 +91,25 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
     Data center details:
     Direct Link Connect subnet:
     IBM Cloud IP address:
-    Power Virtual Server network IP address:
+     Power Virtual Server network IP address:
     Direct Link Connect VLAN:
     IBM Cloud ASN:
-    Power Virtual Server network ASN:
-    Power Virtual Server Private Network (subnet) Name (1):
-    Power Virtual Server Private Network (subnet) Name (2):
-    Power Virtual Server Private Network (subnet) Name (3):
+     Power Virtual Server network ASN:
+     Power Virtual Server Private Network (subnet) Name (1):
+     Power Virtual Server Private Network (subnet) Name (2):
+     Power Virtual Server Private Network (subnet) Name (3):
     Direct Link Connect 2.0 Virtual Connections:
     Classic Network Virtual Connection: Yes/No
     VPC Virtual Connection 1: VPC name and ID
     VPC Virtual Connection 2: VPC name and ID
-    VPC Virtual Connection 3: VPC name and ID 
+    VPC Virtual Connection 3: VPC name and ID
     ```
 
-    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The {{site.data.keyword.cloud_notm}} network team generates the **{{site.data.keyword.cloud_notm}} ASN** and adds it to the {{site.data.keyword.cloud_notm}} support case. The {{site.data.keyword.cloud_notm}} network team also generates the IP addresses. Your private network name is your Power Virtual Server private network subnet name.
+    The **{{site.data.keyword.powerSys_notm}} network** autonomous system number (ASN) is the same as your Border Gateway Protocol (BGP) ASN. The {{site.data.keyword.cloud_notm}} network team generates the **{{site.data.keyword.cloud_notm}} ASN** and adds it to the {{site.data.keyword.cloud_notm}} support case. The {{site.data.keyword.cloud_notm}} network team also generates the IP addresses. Your private network name is your {{site.data.keyword.powerSys_notm}} private network subnet name.
     {: important}
 
-    The {{site.data.keyword.powerSys_notm}} support case is closed when the {{site.data.keyword.dl_short}} Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance. 
- 
+    The {{site.data.keyword.powerSys_notm}} support case is closed when the {{site.data.keyword.dl_short}} Connect connection is configured to communicate with your {{site.data.keyword.powerSys_notm}} instance.
+
 ## Setting up high availability over {{site.data.keyword.dl_short}} Connect
 {: #ha-availability}
 
@@ -116,7 +118,7 @@ Your {{site.data.keyword.dl_short}} connections are location-specific. By defaul
 
 To set up a high availability through {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
-1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
+1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
    In the **BGP** section, select a port from a separate port group for the redundant {{site.data.keyword.dl_short}} Connect instance. Both {{site.data.keyword.dl_short}} Connect instances must be on separate ports to connect to different {{site.data.keyword.powerSys_notm}} routers, thus, ensuring redundancy.
 
@@ -124,7 +126,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 
     ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-    Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternate {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed. 
+    Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternate {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed.
 
     Refer to the following table to identify the ports and port groups that you must select for the redundant {{site.data.keyword.dl_short}} Connect instance:
 
@@ -162,21 +164,21 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
-2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
+2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
 ## Routing considerations for VPC
 {: #routing-considerations}
 
-If traffic is sent from the {{site.data.keyword.powerSys_notm}} to your on-premises public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
+If traffic is sent from the {{site.data.keyword.powerSys_notm}} to your private cloud public IP address, and if the virtual server instance has a public floating IP, you might need a special configuration in the VPC. Otherwise, the traffic goes through the virtual machine's public interface instead of a private interface.
 {: shortdesc}
 
-For proper VPC configuration, the on-premises IP address must meet the following requirements:
+For proper VPC configuration, the private cloud IP address must meet the following requirements:
 
 - The IP address range for a private network must be within the following blocks, which are reserved by the Internet Assigned Numbers Authority (IANA):
     - Class A — `10.0.0.0` — `10.255.255.255` (16,777,216 total hosts)
     - Class B — `172.16.0.0` — `172.31.255.255` (1,048,576 total hosts)
     - Class C — `192.168.0.0` — `192.168.255.255` (65,536 total hosts)
 - VM instances within the VPC must not have a floating IP.
-- Use the **Delegate-VPC** action to create a route to the on-premises public subnet in the VPC default routing table. 
+- Use the **Delegate-VPC** action to create a route to the private cloud public subnet in the VPC default routing table.
 
 For more information, see [Routing considerations for IANA-registered IP assignments](/docs/vpc?topic=vpc-interconnectivity#routing-considerations-iana).

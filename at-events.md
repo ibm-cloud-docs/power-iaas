@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-30"
+lastupdated: "2024-06-03"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -11,15 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Activity tracker events
 {: #at-events}

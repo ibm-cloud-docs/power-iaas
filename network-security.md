@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2024
 
-lastupdated: "2020-01-23"
+lastupdated: "2024-01-03"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -11,18 +11,12 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Network security
 {: #network-security}
+
+[Off-Premises]{: tag-blue}
 
 Infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical switches and routers.
 {: shortdesc}
@@ -30,7 +24,7 @@ Infrastructure provides virtual LAN (VLAN) isolation between different tenants, 
 ## Default firewall ports
 {: #firewall-ports}
 
-The {{site.data.keyword.powerSysShort}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
+The {{site.data.keyword.powerSysFull}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
 There are plans to add the ability to dynamically configure the firewall rules in the future.
@@ -53,4 +47,4 @@ The following firewall ports are also open, typically used for IBM i logical par
 
 The port 6443 is also open for miscellaneous purposes. This port will not be open for the WDC04 and DAL13 data centers.
 
-If you need extra ports to be opened, you can consider customer-specific firewall option that is currently available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to Power Systems™ Virtual Server by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the Power Systems™ Virtual Server connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#networking-environment).
+If you need extra ports to be opened, you can consider customer-specific firewall option that is currently available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to {{site.data.keyword.powerSys_notm}} by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the {{site.data.keyword.powerSys_notm}} connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#networking-environment).

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024 
+  years: 2023, 2024
 
-lastupdated: "2024-05-31"
+lastupdated: "2024-05-29"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -11,21 +11,14 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.powerSysFull}} compliance certifications
+# Compliance certifications
 {: #compliances-list}
 
-{{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
+[Off-Premises]{: tag-blue}
+
+The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
 
 ## Financial Services® Validated
@@ -54,14 +47,14 @@ The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
 The International Organization for Standardization (ISO) is an independent, non-governmental organization with a membership of 164 national standards bodies. ISO develops international standards that are voluntary, consensus-based and market relevant. The goal is to ensure that products and services are safe, reliable and of good quality.
 
 The {{site.data.keyword.powerSys_notm}} provides services that are delivered from global data centres that are a component of the IBM Cloud™ IaaS ISO certification. The ISO certification covers a family of 4 standards as follows:
-- ISO/IEC 27001:2013 
-- ISO/IEC 27017:2015 
-- ISO/IEC 27018:2019 
+- ISO/IEC 27001:2013
+- ISO/IEC 27017:2015
+- ISO/IEC 27018:2019
 - ISO/IEC 27701:2019
 
-For more information, see [ISO 27017 - IBM Cloud® infrastructure certificate](https://www.ibm.com/downloads/cas/EEO0NVLK){: external} and [Products in scope of the IBM services information security management system (ISMS).](https://www.ibm.com/downloads/cas/OELMNOND){: external}. 
+For more information, see [ISO 27017 - IBM Cloud infrastructure certificate](https://www.ibm.com/downloads/cas/GLL9ZBZX){: external} and [Products in scope of the IBM services information security management system (ISMS).](https://www.ibm.com/downloads/cas/OELMNOND){: external}.
 
-## PCI-DSS 
+## PCI-DSS
 {: #pci-dss-compliance}
 
 To ensure consistent standards for merchants, the Payment Card Industry Security Standards Council established the Payment Card Industry (PCI) data security standards. These standards incorporate best practices to protect cardholder data, and they often require validation from a third-party Qualified Service Assessor (QSA). IBM is a Level 1 Service Provider for PCI DSS.
@@ -70,8 +63,7 @@ You are responsible for the storing, processing, and transmission of cardholder 
 
 Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request a PCI DSS Attestation of Compliance (AOC) and/or a Service Responsibility Matrix (SRM) guide for {{site.data.keyword.powerSys_notm}}.
 
-You can build PCI DSS compliant environments and applications using IBM Cloud. For more information, see [IBM Cloud
-PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
+You can build PCI DSS compliant environments and applications using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
 
 ## HIPAA
 {: #HIPAA-cert}

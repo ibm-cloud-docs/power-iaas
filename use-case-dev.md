@@ -1,31 +1,32 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2023
 
-lastupdated: "2019-04-10"
+lastupdated: "2023-04-27"
 
-keywords: use case, client needs, solution components, hybrid cloud journey, sandbox environment
+keywords: AIX and IBM i development, test, use case, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
 
 subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # AIX and IBM i development and test
 {: #use-case-dev-test}
 
-The client wants to create a temporary sandbox environment to perform testing and as a step before they deploy production applications in the IBM {{site.data.keyword.powerSys_notm}}.
+
+{{site.data.keyword.powerSysFull}} is a great solution if you want to create a temporary sandbox environment to perform testing and as a step before you deploy production applications.
 {: shortdesc}
+
+For example:
+    - You need a remote environment to test the software or hardware updates.
+    - You need some system resources temporarily.
+    - You need to evaluate, plan, and test next-generation hardware or operating system (OS) versions.
+    - You want a temporary and isolated infrastructure for application testing.
+    - You want to test hardware before a refresh.
+
 
 ## Client needs
 {: #use-case-dev-needs}
@@ -45,7 +46,7 @@ The client wants to create a temporary sandbox environment to perform testing an
 ## Technical solution
 {: #use-case-dev-solutions}
 
-- IBM&reg; Power Systems&trade; Virtual Server
-- Direct Link Connect for optional connectivity into full {{site.data.keyword.cloud_notm}} or from  an on-premises environment
-- VPN and Direct Link Dedicated for on-premises connectivity
+- {{site.data.keyword.powerSysFull}}
+- Direct Link Connect for optional connectivity into full {{site.data.keyword.cloud_notm}} or from  a private cloud environment
+- VPN and Direct Link Dedicated for private cloud connectivity
 - Cloud Object Storage for optional backup and custom image hosting or migration

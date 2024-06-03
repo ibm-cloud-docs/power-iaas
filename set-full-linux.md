@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2023
 
-lastupdated: "2024-04-05"
+lastupdated: "2023-06-12"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -11,35 +11,25 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}}s
+# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}} on cloud
 {: #set-full-Linux}
 
-The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM Cloud&reg; services.
+[Off-Premises]{: tag-blue}
+
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 
-The Linux OS images start with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`. 
+The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
 
 If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
-
-<!-- When you pass the user data for the Full Linux Subscription (FLS) images, it should be uncompressed and start with `#cloud-config`. The user data should not exceed 63k in size.
-{: note} -->
 
 ## Setting up full Linux subscription
 {: #setup-full-Linux}
@@ -62,8 +52,8 @@ To set up full Linux subscription for your account, complete the following steps
 
 Ensure that the following requirements are met when you create a Cloud connection: Create a Cloud connection with the following parameters:
 
--	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSys_notm}} instance and the IBM Cloud Classic infrastructure by using a private network.
--	The {{site.data.keyword.powerSys_notm}}s in each region and zone must have its own cloud connection.
+-	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSysFull}} instance and the IBM Cloud Classic infrastructure by using a private network.
+-	The {{site.data.keyword.powerSys_notm}} in each region and zone must have its own cloud connection.
 - You have the details of this private network for further configuration.
 
 For more information about creating a Cloud connection, see [Managing Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -92,7 +82,7 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 ### Step 3: Creating and configuring a Power virtual machine (PVM)
 {: #create-power-vm}
 
-1.	Create a {{site.data.keyword.powerSys_notm}} instance (also known as PVM instance) by using Power Systems Virtual instance GUI, CLI, or API with the following requirements.
+1.	Create a {{site.data.keyword.powerSys_notm}} instance (also known as PVM instance) by using Power Virtual instance GUI, CLI, or API with the following requirements.
 
     a.	SSH key
 
@@ -279,3 +269,16 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
       `Could not register with SLES RMT servers, Please verify connection to the proxy server. If proxy is verified, it may be an issue with SLES RMT servers undergoing maintenance. If so, please try executing the command again within a few minutes`
 
       Then it could be a network issue and you should attempt to register again at a later time.
+
+<!-- ## Passing user-defined scripts
+{: #cloud-init-fls}
+
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
+
+In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
+
+The user data that you pass should follow the following conditions:
+-  It should be uncompressed.
+-  It should start with `#cloud-config`.
+-  It should not exceed 63 Kb in size. -->
+<!-- Q2 -->

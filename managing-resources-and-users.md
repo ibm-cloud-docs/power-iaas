@@ -11,19 +11,9 @@ subcollection: power-iaas
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-
-# Managing {{site.data.keyword.powerSys_notm}}s (IAM)
+# Managing {{site.data.keyword.powerSysFull}}s (IAM)
 {: #managing-resources-and-users}
 
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
@@ -49,7 +39,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Platform access role | Type of access allowed                                                                                  |
 | -------------------- | ------------------------------------------------------------------------------------------------------- |
 | Viewer               | View instances and list instances.                                                                      |
-| Operator             | View instances and list instances.                                                                      |
+| Operator             | View instances and manage aliases, bindings (private cloud only), and credentials.                     |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
 {: caption="Table 1. IAM platform access roles" caption-side="bottom"}

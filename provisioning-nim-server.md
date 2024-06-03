@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2019, 2024
@@ -43,7 +43,7 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
     sit0: flags=8100041<UP, RUNNING, LINKO>
             inet6 ::/96
     lo0: flags=e08084b, c0<UP, BROADCAST, LOOPBACK, RUNNING, SIMPLEX, MULTICAST, GROUPRT, 64 BIT, LARGESEND, CHAIN>
-            inet 127.0.0.1 netmask 0xff000000 broadcast 127.255.255.255 
+            inet 127.0.0.1 netmask 0xff000000 broadcast 127.255.255.255
             inet6 ::1%1/128
              tcp_sendspace 131072 tcp_recvspace 131072 rfc1323 1
     #
@@ -61,9 +61,9 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
     ```screen
     # echo "192.168.2.228 mpb-test-aix" >> /etc/hosts
     # nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no
-    
+
     ####### NIM master setup #######
-    During script execution, lpp_source and spot resource creation times may vary. 
+    During script execution, lpp_source and spot resource creation times may vary.
     To view the install log at any time during nim_master_setup, run the command: tail -f /var/adm/ras/nim.setup in a separate screen.
     Creating image.data file...
     ```
@@ -75,7 +75,7 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
     ```screen
     +----------------------------------------+
                  Summaries
-    +----------------------------------------+             
+    +----------------------------------------+
     Installation Summary
     --------------------
     Name                    Level           Part            Event           Result

@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2024-03-13"
 
-keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
+keywords: power, SAP HANA, sr2, sh2, profiles
 
 subcollection: power-iaas
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # SAP HANA sr2 and sh2 profiles
 {: #SAP-hana-sr2-sh2-profiles}
+
+
+<!--Q2
 
 [Q2-2024 update start]{: tag-teal}
 
@@ -34,3 +37,6 @@ You can deploy the following types of SAP HANA profiles:
 For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 
 [Q2-2024 update end]{: tag-teal}
+
+-->
+<!-- Q2 -->

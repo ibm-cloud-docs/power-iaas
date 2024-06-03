@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2024-02-08"
 
 keywords: use case, client needs, disaster recover, hybrid power, mission-critical application, recovery
 
@@ -11,28 +11,20 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:preview: .preview}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
 
-The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destination for their on-premises environment.
+The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destination for their private cloud environment.
 {: shortdesc}
 
 ## Client needs
 {: #use-case-hybrid-needs}
 
 - A first step into using infrastructure as a service (IaaS) environment before committing to end-to-end, mission-critical application hosting
-- A mission-critical IBM Power environment with a DR solution to raise the level of security and reliability of their on-premises data center
+- A mission-critical IBM Power environment with a DR solution to raise the level of security and reliability of their private cloud data center
 - A DR solution in a different geography
 
 ## Examples
