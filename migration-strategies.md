@@ -124,6 +124,8 @@ Customers can use third-party tools to perform data migration. The following thi
 ### FalconStor StorSafe VTL
 {: #storsafe-vtl}
 
+[Off-Premises]{: tag-blue}
+
 StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive and data recovery (DR).
 
 StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery both private cloud and in the cloud, as well as enable simple and easy migration from private cloud to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads private cloud, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Legacy tapes can be handled similarly. Here are some of the features of StorSafe VTL:
