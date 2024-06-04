@@ -340,8 +340,8 @@ When you use SPP in a private cloud, you pay for the following items:
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
 * The operating system license is based on the following types of virtual instances:
-    * shared capped processor partition: pricing is determined by the entitled capacity.
-    * shared uncapped processor partitions: pricing is determined by the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
+    * capped SPP: pricing is determined by the entitled capacity.
+    * uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
@@ -351,7 +351,7 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
 {: caption="Table 12. Shared processor pool in rivate cloud" caption-side="top"}
 
-For more information about calculating the pricing for OS licensisng in SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
+For more information about calculating the pricing for OS licensisng in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 
 <!-- Q2 -->
@@ -439,23 +439,23 @@ Review the following frequently asked questions about pricing:
 
 <!-- Q2 -->
 
-### How to calculate the pricing for OS licensing in SPP
+### How to calculate the pricing for OS licensing in the uncapped SPP?
 {: #cal-OSlic}
 
 
-To calculate the price for OS licensing, you must consider the following conditions:
+To calculate the price for OS licensing in the uncapped SPP, consider the following conditions:
 * If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in a SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
 
-Table 14 shows how the pricing for OS licensing is calculated :
+Table 14 shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores  :
 
-| Example | Max Pool Capacity      | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
-| ------  | ----- | ------  | -------- | --------------------------------------------- | ---------------- |
-| 1       |  8 cores capped   | AIX VM1 | 4        | 6 < 8                                         | 4 x cost of AIX OS license |
-|         |       | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
-| 2       |  8 cores uncapped     | AIX VM1 | 4        | 10 > 8                                        | 3.2 x cost of AIX OS license |
-|         |       | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
-|         |       | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
+| Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
+| ------  | ------- | -------- | --------------------------------------------- | ---------------- |
+| 1       | AIX VM1 | 4        | 6 < 8  (6 is considered)                      | 4 x cost of AIX OS license |
+|         | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
+| 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
+|         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
+|         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
 {: caption="Table 14. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
 
 
