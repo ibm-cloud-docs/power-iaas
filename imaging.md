@@ -15,15 +15,15 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connectivity to IBM COS buckets to import custom images
+# Establishing connectivity to IBM COS buckets to import custom images
 {: #conn-COS-custom-image}
 
 [On-Premises]{: tag-red}
 
 You can maintain a set of operating system images in your IBM Cloud Object Storage (COS) buckets. These images are referred to as custom images. You can import these custom images into the boot volumes of the logical partitions (LPARs).
 
-To import the stored custom images from the **Boot images** page, click **Import image** option. Enter the following information in the **Import boot image** panel to complete the following steps:
-* A custom image name that must be used during virtual machine provisioning
+To import stored custom images from the **Boot images** page, click **Import image** option. Enter the following information in the **Import boot image** panel to complete the following steps:
+* Custom image name to be used during virtual machine provisioning
 * Storage tier number
 * Storage pool preferences
 * Region of your COS instance
@@ -37,5 +37,5 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud processes the custom image
 * Converts the image file into an image volume.
 * Copies the image volume as a boot volume to deploy the LPAR.
 
-The following diagram describes the architecture to import custom images stored in the IBM COS buckets:
+The following diagram shows the architecture for importing custom images stored in the IBM COS buckets:
 ![Control plane connectivity with IBM COS bucket.](./figures/COS-VPE-direct-link-control-plane.jpg "Control plane connectivity with IBM COS bucket."){: caption="Figure 1. Control plane connectivity with IBM COS bucket." caption-side="bottom"}

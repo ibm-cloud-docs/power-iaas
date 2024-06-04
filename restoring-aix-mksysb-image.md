@@ -22,19 +22,20 @@ Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keywor
 A simple way to migrate a local AIX environment (or workload) into {{site.data.keyword.powerSys_notm}} is to restore an operating system `rootvg` backup over an existing image and then migrate the data. The `rootvg` backup is created with the AIX `mksysb` command. The restored mksysb image applies the AIX configuration details while preserving the {{site.data.keyword.powerSys_notm}} deployed storage and networking resources.
 
 when the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
+{: note}
 
-It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance by using the {{site.data.keyword.powerSys_notm}} user interface or the ibm cloud CLI.
+It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance by using the {{site.data.keyword.powerSys_notm}} user interface or the IBM Cloud CLI.
 
 ## Considerations before creating the mksysb image on the source AIX instance
 {: #consider-image-source-AIX}
 
-1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. More information can be found at [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
+1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. For more information see, [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
 
 2. The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}.
 
 Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
 
-The AIX instance that is deployed in {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
+The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
 The AIX technology levels (TL) do not need to match, but you might consider using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
 {: important}
@@ -42,7 +43,7 @@ The AIX technology levels (TL) do not need to match, but you might consider usin
 1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
 
 
-```
+```screen
 #
 # lslpp -l devices.vdevice.IBM.vfc-client.rte
   Fileset                      Level     State      Description
@@ -59,28 +60,29 @@ Path: /etc/obj repos
 
 #
 ```
-{: screen}
 
 4. Verify that the AIX initab file does not contain entries with dependencies on unique aspects of the source environment that would not be present in {{site.data.keyword.powerSys_notm}}. Otherwise, the converted {{site.data.keyword.powerSys_notm}} AIX instance might not boot. Similarly, if other boot time actions exist such as NFS file system mounts, those might need to be disabled.
 
-5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Make sure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
+5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Enure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
 
-6. Delete any temporary files or files, especially large files that are not needed on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
+6. Delete any temporary files or files, especially large files that are not necessary on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
 
 ## Creating the mksysb image on the source AIX instance
 {: #create-image-source-AIX}
 
-Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg. The following example mksysb creates the image in /tmp. The `-i` builds the image from the latest rootvg details and the `-b` option can potentially improve the performance when creating the mksysb image. The `-X` mksysb option expands `/tmp` if needed for the boot image. This can be omitted if the available space is known to be sufficient.
+Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details on the command usage. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg. 
 
-```
+In the following example, mksysb creates the image in /tmp. The `-i` builds the image from the latest rootvg details and the `-b` option can potentially improve the performance when creating the mksysb image. The `-X` mksysb option expands `/tmp` if necessary for the boot image. This can be omitted if the available space is known to be sufficient.
+
+```screen
 # create the mksysb image
 mksysb -i -X -C -b 512 /tmp/my-mksysb
 ```
 
-Once the mksysb image is created, the storage volume size that is needed for the restore of the image can be extracted as follows. In this example, a 25 GB volume would be needed.
+Once the mksysb image is created, the storage volume size that is necessary to restore of the image can be extracted as follows. In this example, a 25 GB volume would be necessary.
 
 
-```
+```screen
 #
 # restore -qf ./my-mksysb ./bosinst.data
 x ./bosinst.data
@@ -89,7 +91,6 @@ x ./bosinst.data
 # rm bosinst.data
 #
 ```
-{: screen}
 
 Also, capture the image checksum for verification once the image is transferred to a {{site.data.keyword.powerSys_notm}} AIX instance for restoration.
 
@@ -107,11 +108,11 @@ Also, capture the image checksum for verification once the image is transferred 
 {: help}
 {: support}
 
-An AIX instance is needed in {{site.data.keyword.powerSys_notm}} that can be converted with the mksysb image.
+An AIX instance is required in {{site.data.keyword.powerSys_notm}} that can be converted with the mksysb image.
 
-The instance must be at the same AIX version as the AIX instance where the mksyb image was created. {{site.data.keyword.powerSys_notm}} provides a set of stock images that can be used to facilitate the conversion. When deployed, the AIX instance needs some updates to host the mksysb image. Choose the needed stock image and deploy a new {{site.data.keyword.powerSys_notm}} AIX instance via the user interface or CLI with the cpu, memory, and network details that are needed for the final converted instance.
+The instance must be at the same AIX version as the AIX instance where the mksyb image was created. {{site.data.keyword.powerSys_notm}} provides a set of stock images that can be used to facilitate the conversion. When deployed, the AIX instance needs some updates to host the mksysb image. Choose the stock image and deploy a new {{site.data.keyword.powerSys_notm}} AIX instance via the user interface or CLI with the cpu, memory, and network details that are required for the final converted instance.
 
-For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum needed size in Megabytes. Below is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
+For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum required size in Megabytes. Below is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
 
 The following details should be observed with the deployed AIX instance.
 
@@ -131,7 +132,7 @@ hdiskl          none                      None
 
 To make room for the mksysb image, disk space must be freed in the instance to hold it. This can be done by removing the `/usr/sys/inst.images` file system and creating a new one called `/mksysb-staging`.
 
-This should result in sufficient space for most mksysb image use cases. If more space is needed, then a new larger storage volume needs to be attached to the instance with the {{site.data.keyword.powerSys_notm}} user interface and a JFS2 file system will need to be created on it. The below example removes `/usr/sys/inst.images` and creates a new 12 GB `mksysb-staging` file system.
+This should result in sufficient space for most mksysb image use cases. If more space is required, then a new larger storage volume needs to be attached to the instance with the {{site.data.keyword.powerSys_notm}} user interface and a JFS2 file system will need to be created on it. The below example removes `/usr/sys/inst.images` and creates a new 12 GB `mksysb-staging` file system.
 
 
 
@@ -172,7 +173,7 @@ New File System size is 25165824
 
 In the above example, hdisk1 is the free storage volume where the mksysb image is restored.
 
-Once the {{site.data.keyword.powerSys_notm}} instance is created, the mksysb image is placed into the /mksysb-staging directory. Transferring the mksysb image to the `/mksysb-staging` directory depends on your connectivity options to the IBM Cloud and {{site.data.keyword.powerSys_notm}} workspace.
+Once the {{site.data.keyword.powerSys_notm}} instance is created, the mksysb image is placed in the /mksysb-staging directory. Transferring the mksysb image to the `/mksysb-staging` directory depends on your connectivity options to the IBM Cloud and {{site.data.keyword.powerSys_notm}} workspace.
 
 For example, if you are able to access your {{site.data.keyword.powerSys_notm}} instance over a network connection from your local system where the mksyb image resides, you might use scp.
 
@@ -181,7 +182,7 @@ For example,
 
 Use the `cksum` command to confirm the `my-mksysb` image file was successfully transferred.
 
-Now the mksysb image can be restored onto the attached free storage volume that will become the new rootvg boot disk with the configuration from the source AIX instance. This is done by using the [alt_disk_mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=alt-disk-mksysb-command) command. In the example mksysb restore below, `alt_disk_mksysb` sets hdisk1 as the boot disk for subsequent boots.
+Now the mksysb image can be restored onto the attached free storage volume that will become the new rootvg boot disk with the configuration from the source AIX instance. This is done by using the [alt_disk_mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=alt-disk-mksysb-command) command. In the following mksysb restore example, `alt_disk_mksysb` sets hdisk1 as the boot disk for subsequent boots.
 
 ```
 alt_disk_mksysb -c /dev/vty0 -d hdisk1 -m /mksysb-staging/my-mksysb
@@ -233,7 +234,7 @@ Before proceeding, consider running some basic tests on your new converted {{sit
 
 1. Run `oslevel -s` to confirm that the converted lpar matches the AIX level from the source system where the mksysb backup was created. More detailed verification can optionally be done by using the `lslpp -h` command.
 
-2. Using the user interface, do testing by changing the CPU and RAM with your instance. You might also try adding and removing a small storage volume. These tests confirm that the instance is properly interacting with PowerVM dynamic LPAR operations for live resource updates to the instance.
+2. In the user interface, you can test by changing the CPU and RAM with your instance. You might also try adding and removing a small storage volume. These tests confirm that the instance is properly interacting with PowerVM dynamic LPAR operations for live resource updates to the instance.
 
 Now the `old_rootvg` storage volume (hdisk0) can be detached from the instance and deleted by using the user interface. First, remove the volume from the AIX configuration with the `rmdev` command.
 
