@@ -197,9 +197,9 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 
 | Number of cores (S1022)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
-|  1                       | $0.1962 (dedicated)           | $143.226                  |
-|  1                       | $0.1962 (uncapped shared)     | $143.226                  |
-|  1                       | $0.1962 (capped shared)       | $143.226                  |
+|  1                       | $0.1962 (dedicated)           | $143.23                  |
+|  1                       | $0.1962 (uncapped shared)     | $143.23                  |
+|  1                       | $0.1962 (capped shared)       | $143.23                  |
 {: caption="Table 3. S1022 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1080)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
