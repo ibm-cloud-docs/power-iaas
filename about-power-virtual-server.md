@@ -136,12 +136,12 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | ------------------------------------- | ----------|--------|
 | Number of racks                       | 1         |        |
 | Drives for each flash system          | 12        | 12     |
-| Memory for each drive in TB           | 19.2      | 19.2   |
-| Number of flash systems in a pod     | 1         | 2      |
+| Capacity for each drive in TB         | 19.2      | 19.2   |
+| Number of flash systems in a pod      | 1         | 2      |
 | Total Drives in a pod                 | 12        | 24     |
-| Total memory size in TB               | 230       | 460    |
-| Usable memory size in TB              | 219       | 438    |
-| Usable memory size in TB at 2x compr. | 43        | 876    |
+| Total capacity in TB               | 230       | 460    |
+| Usable capacity in TB              | 219       | 438    |
+| Usable capacity in TB at 2x compression | 438        | 876    |
 {: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
 
 An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and are available in S1022, E1050, and E1080 (2CEC) system types.
@@ -152,8 +152,8 @@ Table 3 illustrates the configuration for medium pod storage options.
 | --------------------------- | ------|-----|-----|------| -------- | ---- | ----- | ---- | -------------| --- |
 | Number of racks             | 2     |     | 4   |      | 2        |      | 4     |      | 4            |     |
 | Number of servers in a rack | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
-|                             | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
-|                             | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
+| Server quantity in a pod    | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
+| Number of cores per server  | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
 | Total number of cores       | 480   | 600 | 640 | 1600 | 480      | 672  | 768   | 1824 | 240          | 600 |
 | Usable cores                | 396   | 495 | 528 | 1320 | 425      | 595  | 680   | 1615 | 214          | 535 |
 | Memory types                |       |     |     |      |          |      |       |      |              |     |
@@ -173,12 +173,12 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Number of racks                       | 2                      |      | 4     |      | 4     |      | 4     |       |
 | Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
 | Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
-| Memory for each drive in TB           | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
-| Number of flash systems in a pod     | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
+| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
+| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
 | Total Drives in a pod                 | 24                     | 48   | 48    | 96   | 72    | 144  | 96    | 192   |
-| Total memory size in TB               | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
-| Usable memory size in TB              | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
-| Usable memory size in TB at 2x compr. | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
+| Total capacity in TB                  | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
+| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
+| Usable capacity in TB at 2x compression | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
 {: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
 
 <!--Q2-->
