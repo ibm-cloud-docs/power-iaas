@@ -52,12 +52,14 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 The following are some of the key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, or IBM i<--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
-    * IBM AIX 7.2 or later
-    * IBM i 7.3 or later <--Q2-->
+* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
+    * IBM AIX 7.2, or later
+    * IBM i 7.3, or later and IBM i COR[^1]<!-Q2-->
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
+
+    [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 * **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
     - Number of cores
@@ -134,8 +136,8 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | ------------------------------------- | ----------|--------|
 | Number of racks                       | 1         |        |
 | Drives for each flash system          | 12        | 12     |
-| Memory for each drive                 | 19.2      | 19.2   |
-| Number of flash systemss in a pod     | 1         | 2      |
+| Memory for each drive in TB           | 19.2      | 19.2   |
+| Number of flash systems in a pod     | 1         | 2      |
 | Total Drives in a pod                 | 12        | 24     |
 | Total memory size in TB               | 230       | 460    |
 | Usable memory size in TB              | 219       | 438    |
@@ -171,8 +173,8 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Number of racks                       | 2                      |      | 4     |      | 4     |      | 4     |       |
 | Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
 | Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
-| Memory for each drive                 | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
-| Number of flash systemss in a pod     | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
+| Memory for each drive in TB           | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
+| Number of flash systems in a pod     | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
 | Total Drives in a pod                 | 24                     | 48   | 48    | 96   | 72    | 144  | 96    | 192   |
 | Total memory size in TB               | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
 | Usable memory size in TB              | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |

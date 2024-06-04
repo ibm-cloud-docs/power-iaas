@@ -52,7 +52,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
 - New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, See the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
-- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR operating system images are available. For more information, See the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, See the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
 - New data center `CHE01` is available. The following are some capabilities that differ for this data center:
   - `CHE01` supports up to 5 GB Direct Link connections compared to other datacenters that supports up to 10 GB.
   - To use Transit Gateway, you will need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -61,6 +61,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - Flexible I/O operation per second (IOPS) is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-virtual-server#storage-tiers).
 - IBM Cloud Monitoring service is now avilable in `DAL13` and `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - PER is now available in the `OSA21`, `SYD05`, and `TOK04` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+
+[^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 ## February 2024
 {: #feb-2024}

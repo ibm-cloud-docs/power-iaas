@@ -145,9 +145,9 @@ For detailed usage and billing information, you can refer to the part numbers in
 | **IBM Power Systems Virtual Server Private Cloud virtual tape library group** |
 | <!-- Q2 --> Virtual Tape Library terabyte-hour | ppcaas-metric-vtl <!-- Q2 -->|
 | **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |             |
-| <!-- Q2 --> IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores |
+| <!-- Q2 --> IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
 | IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
-| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores <!-- Q2 --> |
+| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores <!-- Q2 --> |
 {: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
 {: #Table2}
 
@@ -446,15 +446,15 @@ To calculate the price for OS licensing, you must consider the following conditi
 * If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in a SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
 
-Table 14 shows how the pricing for OS licensing is calculated assuming that the maximum pool capacity is 8:
+Table 14 shows how the pricing for OS licensing is calculated :
 
-| Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
-| ------  | ------  | -------- | --------------------------------------------- | ---------------- |
-| 1       | AIX VM1 | 4        | 6 < 8                                         | 4 x cost of AIX OS license |
-|         | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
-| 2       | AIX VM1 | 4        | 10 > 8                                        | 3.2 x cost of AIX OS license |
-|         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
-|         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
+| Example | Max Pool Capacity      | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
+| ------  | ----- | ------  | -------- | --------------------------------------------- | ---------------- |
+| 1       |  8 cores capped   | AIX VM1 | 4        | 6 < 8                                         | 4 x cost of AIX OS license |
+|         |       | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
+| 2       |  8 cores uncapped     | AIX VM1 | 4        | 10 > 8                                        | 3.2 x cost of AIX OS license |
+|         |       | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
+|         |       | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
 {: caption="Table 14. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
 
 
