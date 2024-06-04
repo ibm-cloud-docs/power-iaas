@@ -81,18 +81,17 @@ Use the following methods to back up and restore contents of a file system:
 1. Unmount the file system.
 2. Save the raw logical volume content into a file by running the following command:
 
-```text
+```code
   # dd if=/dev/lvname of=/file/system/lvname.dd
 ```
-{: codeblock}
+
 
 This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in file system `/file/system`. Make sure that the specified directory where the output file will be stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume size is 100 GB, you need 100 GB file system space for the logical volume copy.
 
 On the destination server, re-create the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
 
-```text
+```code
 # dd if=/file/system/lvname.dd of=/dev/lvname
 ```
-{: codeblock}
 
-After you run the dd command to mount the file system, you can access the contents of the original file system.
+After you run the `dd` command to mount the file system, you can access the contents of the original file system.
