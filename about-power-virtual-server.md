@@ -118,7 +118,7 @@ Table 1 illustrates the configuration for small pod.
 | Server types                | S1022 |     |     | E1050    |     |
 | --------------------------- | ------|-----|---- | -------- | --- |
 | Number of racks             | 1     |     |     | 1        |     |
-| Number of servers in a rack | Min   | Min | Max | Min      | Max |
+| Servers in a rack           | Min   | Min | Max | Min      | Max |
 | Server quantity in a pod    | 6     | 5   | 9   | 2        | 4   |
 | Number of cores per server  | 40    | 40  | 40  | 96       | 96  |
 | Total number of cores       | 240   | 200 | 360 | 192      | 384 |
@@ -151,7 +151,7 @@ Table 3 illustrates the configuration for medium pod storage options.
 | Server types                | S1022 |     |     |      | E1050    |      |       |      | E1080 (2CEC) |     |
 | --------------------------- | ------|-----|-----|------| -------- | ---- | ----- | ---- | -------------| --- |
 | Number of racks             | 2     |     | 4   |      | 2        |      | 4     |      | 4            |     |
-| Number of servers in a rack | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
+| Servers in a rack           | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
 | Server quantity in a pod    | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
 | Number of cores per server  | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
 | Total number of cores       | 480   | 600 | 640 | 1600 | 480      | 672  | 768   | 1824 | 240          | 600 |
