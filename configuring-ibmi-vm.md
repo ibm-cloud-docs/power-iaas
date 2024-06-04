@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-02"
+lastupdated: "2024-06-03"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -11,25 +11,17 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
 
+
 The following instructions describe the first boot and usage of your IBM i virtual machine (VM).
 {: shortdesc}
 
-IBM i 7.1 VMs support only 64 storage volumes per VM. IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
+IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
 {: note}
-
 
 ## First boot of IBM i
 {: #first-boot}
@@ -59,25 +51,24 @@ If you lose internet connectivity, your VNC Console session (provided via noVNC)
 To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details pane and select **Open console** from the drop-down list. Your session will be restored and show 'Connected (encrypted)'.
 
 Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VNC Console session URL, such as using a shell command loop:
+
 ```shell
 ibmcloud pi service-list
 ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
 for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
 ```
 
-
 ### First boot change password
 {: #first-boot-change-password}
 
 Once the VNC Console has loaded and the IBM i console screen is shown, follow the following steps to reset the password of the IBM i standard user.
-
-3. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
-4. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
-5. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
-6. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
-7. Press your keyboard ENTER key, and the password will change.
-8. The **IPL or Install the System** screen will be shown. See further steps below.
-
+1. In the VNC Console window, the IBM i virtual machine will wait on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
+2. The **Change Service Tools User Password** screen will load, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
+3. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
+4. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
+5. Press your keyboard ENTER key, and the password will change.
+6. The **IPL or Install the System** screen will be shown. See further steps below.
+    
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
 
@@ -94,8 +85,9 @@ However, the minimum Program Temporary Fix (PTFs) levels depend on the IBM i ver
 If the PTFs are incomplete this will cause `cloud-init` to not complete (executed after IPL / OS Install and Licensed Program Software Agreements), which will cause the local IP Address configuration to not be saved upon restart of the system. If you restart your system during before `cloud-init` is successful, you must call IBM support to manually configure your network and license keys, or delete and reprovision your IBM i virtual machine instance to start again.
 {: important}
 
-9. In the **IPL or Install the System** screen, the cursor will be on `Selection`. The default as described previously, is 'Perform an IPL' therefore enter `1` and then press your keyboard ENTER key, which will begin the installation automatically. This process can take more than 10 minutes, each screen in the first text block will show `Current step / total . . . . :` with the number of steps completed (e.g. `20  49` being 20 of 49 steps).
-10. During the installation, you will first be shown the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes, the cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
+1. In the **IPL or Install the System** screen, the cursor will be on `Selection`. The default as described previously, is 'Perform an IPL' therefore enter `1` and then press your keyboard ENTER key, which will begin the installation automatically. This process can take more than 10 minutes, each screen in the first text block will show `Current step / total . . . . :` with the number of steps completed (e.g. `20  49` being 20 of 49 steps).
+
+2. During the installation, you will first be shown the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes, the cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
 
 Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
 {: note}
@@ -105,16 +97,15 @@ Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign O
 {: #first-boot-license-choice}
 
 After installation is completed, the Licensed Program Software Agreements must be accepted.
-
-11. Once installation is completed, the **Sign On** screen will be shown. Enter the `QSECOFR` user, press your keyboard TAB key to move to the next line, and then enter the password chosen previously. Press your keyboard ENTER key to login. In rare occurances if the password was reset during installation, use default password `QSECOFR` again and follow prompts to change your password again.
-12. Upon login, the screen will automatically change to the **Work with Software Agreements** screen.
-13. On the **Work with Software Agreements** screen, click **PF12** at the bottom of the console window to show the descriptions for each license (e.g. DB2 Multisystem).
-14. On the **Work with Software Agreements** screen, for each Licensed Program enter `5` as the "Opt" to display the agreement to accept. Press your keyboard ENTER key to begin.
-15. The **Software Agreement** screen will appear for each Licensed Program. Click **PF15** at the bottom of the console window to Accept All for this Licensed Program. The **Confirm Acceptance of Software Agreement** screen will appear for each Licensed Program. Press your keyboard ENTER key to confirm acceptance.
-16. The **Work with Software Agreements** screen will appear again, showing "More..." in the bottom right corner. Click **PF11** at the bottom of the console window to show the "Accept Status" which should appear as 'Yes'. Press your keyboard ENTER key, this will force a check of the agreements.
-17. The force check of the agreements will then show the **Software Agreements Not Accepted** screen. Click **PF12** at the bottom of the console window to return to the **Work with Software Agreements** screen where the Licensed Program list will have been updated.
-18. Repeat steps 14 to 17. There will be 4 repeats until all Licensed Program Software Agreements have been accepted.
-19. When all Licensed Program Software Agreements in the list are completed, the **IBM i Main Menu** screen is shown and `cloud-init` configuration of network and injection of license keys will begin. The `cloud-init` configuration process is executed after all, and can take up to 5 minutes.
+1. Once installation is completed, the **Sign On** screen will be shown. Enter the `QSECOFR` user, press your keyboard TAB key to move to the next line, and then enter the password chosen previously. Press your keyboard ENTER key to login. In rare occurances if the password was reset during installation, use default password `QSECOFR` again and follow prompts to change your password again.
+2. Upon login, the screen will automatically change to the **Work with Software Agreements** screen.
+3. On the **Work with Software Agreements** screen, click **PF12** at the bottom of the console window to show the descriptions for each license (e.g. DB2 Multisystem).
+4. On the **Work with Software Agreements** screen, for each Licensed Program enter `5` as the "Opt" to display the agreement to accept. Press your keyboard ENTER key to begin.
+5. The **Software Agreement** screen will appear for each Licensed Program. Click **PF15** at the bottom of the console window to Accept All for this Licensed Program. The **Confirm Acceptance of Software Agreement** screen will appear for each Licensed Program. Press your keyboard ENTER key to confirm acceptance.
+6. The **Work with Software Agreements** screen will appear again, showing "More..." in the bottom right corner. Click **PF11** at the bottom of the console window to show the "Accept Status" which should appear as 'Yes'. Press your keyboard ENTER key, this will force a check of the agreements.
+7. The force check of the agreements will then show the **Software Agreements Not Accepted** screen. Click **PF12** at the bottom of the console window to return to the **Work with Software Agreements** screen where the Licensed Program list will have been updated.
+8. Repeat steps 14 to 17. There will be 4 repeats until all Licensed Program Software Agreements have been accepted.
+9. When all Licensed Program Software Agreements in the list are completed, the **IBM i Main Menu** screen is shown and `cloud-init` configuration of network and injection of license keys will begin. The `cloud-init` configuration process is executed after all, and can take up to 5 minutes.
 
 
 ## Tips for working with the IBM i console
@@ -138,10 +129,10 @@ One or more IP Addresses with "Line Description" as `CLOUDINIT<<0..n>>` should b
 
 See an example below of the `cloud-init` configuration verification:
 
-```
+```screen
                     Work with TCP/IP Interfaces
                                                                       System: KCW73A
-Type options, press Enter. 
+Type options, press Enter.
   1=Add   2=Change    4=Remove    5=Display   9=Start   10=End
 
           Internet          Subnet            Line                Line
@@ -156,6 +147,7 @@ F12=Cancel    F17=Top         F18=Bottom
 ```
 
 For external IP Addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** pane. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
+
 
 Lastly, on the **IBM i Main Menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values should be populated for each License.
 

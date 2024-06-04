@@ -11,20 +11,13 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # IBM i License Program Products (LPP) and Operating System feature bundles
 {: #ibmi-lpps}
 
-When you select IBM i, in addition to the IBM i operating system, the following LPP, and IBM i operating system features are included in the {{site.data.keyword.powerSys_notm}} offering:
+
+When you select IBM i, in addition to the IBM i operating system, the following LPP, and IBM i operating system features are included in the {{site.data.keyword.powerSysFull}} offering:
 
 - 5770-SS1 IBM i processor and unlimited users
 - 5770-SS1: IBM i Option 23, OptiConnect
@@ -89,7 +82,7 @@ These additional LPPs for IBM i, which are available and can be included in your
    - IBM i Power HA (5770-HAS)
    - Rational Development Studio for IBM i (5770-WDS)
 
-    Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance. 
+    Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance.
     If you want to use these programs on your IBM i VM instance, you must order these licensed programs through {{site.data.keyword.powerSys_notm}} you cannot use existing licenses in your VM instance.
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and to accept the price.
@@ -99,6 +92,6 @@ These additional LPPs for IBM i, which are available and can be included in your
 ## Passport Advantage Software
 {: #passport-advantage}
 
-In general, IBM programs that are acquired through Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired through Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the {{site.data.keyword.powerSys_notm}} offering whether RDi was obtained through the Power Systems Hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
+In general, IBM programs that are acquired through Passport Advantage can be brought to the {{site.data.keyword.powerSys_notm}} offering. One example of an IBM i program that is acquired through Passport Advantage is Rational Developer for i (RDi). For RDi, you can bring your current Rational Developer for i (RDi) license to the {{site.data.keyword.powerSys_notm}} offering whether RDi was obtained through the Power Hardware channel or through Passport Advantage. If you do not currently have an RDi license and need the product, obtain a license by using Passport Advantage, and bring it to the {{site.data.keyword.powerSys_notm}} offering.
 
 Other examples of IBM software that is acquired through Passport Advantage are WebSphere MQ, Db2 Connect, and Lotus Notes. For more information, see [licensing and Passport Advantage](https://www.ibm.com/software/passportadvantage/eligible_public_cloud_BYOSL_policy.html).

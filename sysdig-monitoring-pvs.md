@@ -3,24 +3,14 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-29"
+lastupdated: "2024-03-22"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:preview: .preview}
-{:external: target="_blank" .external}
 {{site.data.keyword.attribute-definition-list}}
-<!-- {{site.data.keyword.powerSys_notm}} -->
+<!-- {{site.data.keyword.powerSys_notm}} - Power System Virtual Server-->
 <!-- {{site.data.keyword.mon_full_notm}} - IBM Cloud Monitoring -->
 <!-- {{site.data.keyword.cloud_notm}} - IBM Cloud -->
 
@@ -28,12 +18,14 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 # Monitoring metrics for IBM {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
-You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using IBM Cloud® Monitoring dashboards. 
-{:shortdesc}
+[Off-Premises]{: tag-blue}
+
+You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using the IBM Cloud® Monitoring dashboards.
+{: shortdesc}
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics are currently available across all {{site.data.keyword.powerSys_notm}} data centers except `CHE01`, `MON01`, and `TOR01`.
+Platform metrics are currently available across all {{site.data.keyword.powerSys_notm}} data centers except `CHE01`, `DAL13`, `MON01`, and `TOR01`.
 {: note}
 
 ## Platform metrics overview
@@ -61,7 +53,7 @@ To monitor platform metrics, select the region where your {{site.data.keyword.po
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
 2. Search for **{{site.data.keyword.mon_full_notm}}** and select it.
-3. Select your location and enter your custom values for **Service name** field and other fields.  
+3. Select your location and enter your custom values for **Service name** field and other fields.
 4. Select the **Enable** indicator for **IBM platform metrics**.
 5. Select the license agreements indicator and click **Create**.
 
@@ -70,8 +62,8 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 ## Viewing metrics
 {: #sysdig-view}
 
-To view the metrics dashboards, access the user interface of {{site.data.keyword.mon_full_notm}} in the following ways:
-- [Access the IBM Cloud monitoring user interface from your {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
+To view the metrics dashboards, access the user interface of the {{site.data.keyword.mon_full_notm}} in the following ways:
+- [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
 To view metrics in your dashboard, you must enable the platform metrics of the {{site.data.keyword.mon_full_notm}} instance.
@@ -98,13 +90,13 @@ To access the dashboard, complete the following steps:
 5.  Click the instance.
 6.  Click **Open dashboard**.
       The {{site.data.keyword.mon_full_notm}} dashboard opens.
-7.  Click **Dashboards** > **Dashboard Library** > **IBM** and select your dashboard to view.    
+7.  Click **Dashboards** > **Dashboard Library** > **IBM** and select your dashboard to view.
 
 ## {{site.data.keyword.powerSys_notm}} metrics dictionary
 {: #sysdig-metrics-dictionary}
 
 ### CPU utilization
-{: cpu-metric}
+{: #cpu-metric}
 
 The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
 | Metadata | Description |
@@ -116,7 +108,7 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 {: caption="Table 1: CPU utilization metrics of a VM" caption-side="top"}
 
 ### Memory utilization
-{: mem-metric}
+{: #mem-metric}
 
 The memory utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
 | Metadata | Description |
@@ -128,7 +120,7 @@ The memory utilization of a {{site.data.keyword.powerSys_notm}} instance in perc
 {: caption="Table 2: Memory utilization metrics of a VM" caption-side="top"}
 
 ### Incoming network bytes
-{: in-net-metric}
+{: #in-net-metric}
 
 The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface (or per MAC address).
 | Metadata | Description |
@@ -140,7 +132,7 @@ The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 {: caption="Table 3: Incoming byte metrics of a VM per network interface " caption-side="top"}
 
 ### Outgoing network bytes
-{: out-net-metric}
+{: #out-net-metric}
 
 The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
 | Metadata | Description |
@@ -152,7 +144,7 @@ The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 {: caption="Table 4: Outgoing byte metrics of a VM per network interface " caption-side="top"}
 
 ### Disk read bytes
-{: disk-rd-metric}
+{: #disk-rd-metric}
 
 The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | Metadata | Description |
@@ -164,7 +156,7 @@ The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 {: caption="Table 5: Total disk read bytes metrics at a VM" caption-side="top"}
 
 ### Disk write bytes
-{: disk-wrt-metric}
+{: #disk-wrt-metric}
 
 The total disks write bytes at {{site.data.keyword.powerSys_notm}} instance level.
 | Metadata | Description |
@@ -216,7 +208,7 @@ The following additional attributes are available for segmenting all the metrics
 IBM Cloud Monitoring has the following limitations:
 
 - When you exceed the predefined limits, the rate-limited requests respond with a `503 Service Unavailable` error.
-- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance that is fixed to 5 minutes.
+- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance. The window of acceptance is fixed to 5 minutes.
 - The Ipv6 interface usage metrics of a {{site.data.keyword.powerSys_notm}} instance are for internal management network. Additionally, these metrics are available even though you did not configure it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.

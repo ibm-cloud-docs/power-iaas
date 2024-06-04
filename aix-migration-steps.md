@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2020, 2021
@@ -11,25 +11,14 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
-# Moving data from your on-premise environment to {{site.data.keyword.powerSys_notm}}s
+# Moving data from your private cloud environment to {{site.data.keyword.powerSys_notm}}
 {: #move-data-to-cloud}
 
 Depending on your network bandwidth and data size constraints, the process of moving the data volume group is as simple as creating an *Open Virtualization Appliance (OVA) file* or an *mksysb* image (root volume group), and creating a set of *savevg* images for volume group data. By using an *OVA* file or an *mksysb* image, you can build or provision a VM and then migrate the data volume groups of the virtual machine (VM) by using the **restvg** command.
 
-You can use the following methods to back up your on-premise data and move the data to IBM {{site.data.keyword.powerSys_notm}}.
+You can use the following methods to back up your private cloud data and move the data to {{site.data.keyword.powerSysFull}}.
 
 ## Migrating volume group data by using the *savevg* command
 {: #migrate-data-using-savevg}
@@ -92,18 +81,17 @@ Use the following methods to back up and restore contents of a file system:
 1. Unmount the file system.
 2. Save the raw logical volume content into a file by running the following command:
 
-```text
+```code
   # dd if=/dev/lvname of=/file/system/lvname.dd
 ```
-{: codeblock}
+
 
 This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in file system `/file/system`. Make sure that the specified directory where the output file will be stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume size is 100 GB, you need 100 GB file system space for the logical volume copy.
 
 On the destination server, re-create the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
 
-```text
+```code
 # dd if=/file/system/lvname.dd of=/dev/lvname
 ```
-{: codeblock}
 
-After you run the dd command to mount the file system, you can access the contents of the original file system.
+After you run the `dd` command to mount the file system, you can access the contents of the original file system.

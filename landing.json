@@ -1,7 +1,7 @@
 {
   "title": "Power Virtual Servers docs",
-  "lastupdated": "2022-09-22",
-  "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems).",
+  "lastupdated": "2024-04-24",
+  "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers private cloud or in on-cloud (that are running either the AIX, IBM i, or Linux operating systems).",
   "section_devtools": {
     "api": "/apidocs/power-cloud",
     "cli": "/docs/power-iaas-cli-plugin",

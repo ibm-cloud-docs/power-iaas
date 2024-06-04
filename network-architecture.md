@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-29"
+lastupdated: "2024-05-16"
 
-keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect
+keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport, PER use cases
 
 subcollection: power-iaas
 
@@ -16,28 +16,30 @@ subcollection: power-iaas
 # Network architecture diagrams
 {: #network-architecture-diagrams}
 
-This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysShort}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
+[Off-Premises]{: tag-blue}
+
+This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} on cloud network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks).  
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/allowlist/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks).
 
 {{site.data.keyword.powerSys_notm}} network architectures consist of one or more of the following networks:
 
-- IBM Cloud infrastructure networks - While the following infrastructure network environments offer different features and are managed separately, they can be connected to each other to provide layer-3 IPv4 traffic flow: 
-    - Classic - Classic network resources include VLANs, subnets, and SSL Virtual Private Network (VPN) access. See [Network security architecture](https://www.ibm.com/cloud/architecture/architectures/network-security-arch/){: external} for a description of the classic network components. Bring Your Own IP (BYOIP) is not supported. 
-    - Virtual Private Cloud (VPC) - VPC network resources include subnets, floating IPs, security groups, and VPN gateways. For more information, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). See [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){: external} for a one-hour course on VPC networking. BYOIP is supported.  
-    - Power Systems - Network resources include subnets. BYOIP is supported.
-- Overlay networks - These networks exist in the IBM Cloud VMware Shared and VMware Dedicated offerings. While technically hosted in the IBM Cloud classic infrastructure environment, these networks are implemented in VMware NSX and under your direct control, including the IP addressing schema. BYOIP is supported. Therefore, overlay networks cannot be routed by the IBM Cloud infrastructure networks; access is through tunnels. 
+- IBM Cloud infrastructure networks - While the following infrastructure network environments offer different features and are managed separately, they can be connected to each other to provide layer-3 IPv4 traffic flow:
+    - Classic - Classic network resources include VLANs, subnets, and SSL Virtual Private Network (VPN) access. See [Network security architecture](https://www.ibm.com/cloud/architecture/architectures/network-security-arch/){: external} for a description of the classic network components. Bring Your Own IP (BYOIP) is not supported.
+    - Virtual Private Cloud (VPC) - VPC network resources include subnets, floating IPs, security groups, and VPN gateways. For more information, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). See [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){: external} for a one-hour course on VPC networking. BYOIP is supported.
+    - IBM Power - Network resources include subnets. BYOIP is supported.
+- Overlay networks - These networks exist in the IBM Cloud VMware Shared and VMware Dedicated offerings. While technically hosted in the IBM Cloud classic infrastructure environment, these networks are implemented in VMware NSX and under your direct control, including the IP addressing schema. BYOIP is supported. Therefore, overlay networks cannot be routed by the IBM Cloud infrastructure networks; access is through tunnels.
 - External:
     - Internet - Access the internet through resources that are hosted in any of these three infrastructure environments.
     - Remote - Connect remote networks to your IBM Cloud networks. You can use the following services to connect to a remote network:
         - Internet VPN - Uses the public internet to connect remote networks and their IBM Cloud networks through a VPN. The VPN is terminated on gateway devices or a service within IBM Cloud.
-        - {{site.data.keyword.cloud_notm}} {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, on-premises network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}}](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). 
+        - {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, private clouds network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl).
 
-      You can connect direct links to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the on-premises network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
+      You can connect {{site.data.keyword.dl_short}}s to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the private cloud network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
       {: note}
 
 ## Power Edge Router use cases
@@ -46,41 +48,44 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 Using a Power Edge Router (PER) enabled workspace provides the following benefits:
 
 * Improved performance with aggregated bandwidth of 400 Gbps.
-* Direct access to IBM Cloud services from {{site.data.keyword.powerSys_notm}} workspace.
-* Direct access to {{site.data.keyword.powerSys_notm}} from on-premises environment by using {{site.data.keyword.cloud_notm}} Direct Link Connect or Direct Link Dedicated offerings.
+* Direct access to IBM cloud services from {{site.data.keyword.powerSys_notm}} workspace.
+* Direct access to {{site.data.keyword.powerSys_notm}} from client-managed<!--Q2 client-managed to be confirmed by Joe--> environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
-* [Connecting an on-premises data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
-* [Connecting to classic infrastructure](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
-* [Connecting to Virtual Private Cloud](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
-* [Connecting to IBM Cloud (Classic) services via Secure Endpoint (SE)]([/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services-se)
-* [Connecting multiple workspaces across a data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
+1. [Connecting an client-managed data center](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
+2. [Connecting to classic infrastructure](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
+3. [Connecting to Virtual Private Cloud](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
+4. [Connecting to IBM Cloud services](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
+5. [Connecting multiple workspaces](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
 
-These base capabilities use cases can be customized to meet any specific requirement.
+The above are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
 {: important}
 
-### Connecting an on-premises data center
+### Connecting a client-managed data center
 {: #per-on-orem}
 
-1. In this depiction, the on-premises data center uses a direct link connection to attach to the transit gateway. 
-1. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the on-premises data center through the incoming direct link, which is interconnected through this transit gateway.
-1. You pay for the direct link connection that you use to connect your on-premises with the transit gateway. There is no cost involved for using up to 4 connections on a local transit gateway. For information on IBM Cloud Transit Gateway pricing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
+1. In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a direct link connection to attach to the transit gateway.
 
-![Connecting on-premises with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting on-premises with a PER-enabled workspace"){: caption="Figure 1. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center via the incoming direct link that is interconnected through this transit gateway.
+3. You will pay for the Direct Link connection that you use  to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+
+![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
 ### Connecting to classic infrastructure
 {: #per-classic}
 
-1. Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure by using transit gateway local routing.
-1. Involves no additional transit gateway charges. For such a connection, satisfy the following conditions:
-    - The workspace and the classic infrastructure must be in the same region.
-    - The workspace must be connected to a transit gateway.
+1. Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and the classic infrastructure by using local routing of transit gateway.
+2. Involves no additional transit gateway charges. For such connection the following conditions should be satisfied:
+    - The workspace and the classic infrastructure should be in the same region.
+    - The workspace should be connected to a transit gateway.
 
-For information on IBM Cloud Transit Gateway pricing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
+For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
-![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 2. Connecting PER workspace with classic" caption-side="bottom"}
+![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
 
-The following scenarios are differentiated based on GRE tunnel requirements:
+
+
+Here are the following two scenarios for connecting to classic that are differentiated based on GRE tunnel requirement:
 
 **When a GRE tunnel is not needed.**
 
@@ -93,48 +98,46 @@ A Generic Routing Encapsulation (GRE) tunnel is not required when you want to es
 
 A GRE tunnel is required when you want to establish a connection from your PER-enabled workspace with classic infrastructure that uses a custom IP address.
 
-   - The classic subnet is located behind the BCR.
-   - The custom IP address (for example `172.X.X.X`) that originates from your workspace is dropped and not allowed to pass through to a classic subnet by the BCR.
+   - The classic subnet is located behind the Backend Connect Router (BCR) router.
+   - The custom IP address for example `172.X.X.X` that originates from your workspace is dropped and not allowed to pass through to classic subnet by the Backend Customer Router (BCR).
    - The BCR allows an IBM Cloud IP address (`10.0.0.0/8`) only to pass through.
 
-Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel must be attached with the transit gateway.
+Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel needs to be attached with the transit gateway.
 
-For detailed steps, see [Configuring a Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
+For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
-### Connecting to a Virtual Private Cloud
+### Connecting to Virtual Private Cloud
 {: #per-vpc}
 
 1. Establish a connection between PER-enabled {{site.data.keyword.powerSys_notm}} workspace and Virtual Private Cloud (VPC) using the transit gateway.
-1. You can also connect the classic infrastructure with the same transit gateway to create a multi-connection network. This establishes a three-way communication. 
-1. Thus, the PER-enabled workspace, VPC, and classic infrastructure can establish connection with each other.
+2. You can also connect the classic infrastructure with the same transit gateway to create a multi-connection network. This establishes a three-way communication.
+3. Thus, the PER-enabled workspace, VPC, and classic infrastructure can establish connection with each other.
 
-The pricing for this connection depends upon the local or global transit gateway usage. For more information, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
+The pricing for this connection depends upon the local or global transit gateway usage. See: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
-![Connecting PER workspace with VPC](./images/3.PER_VPC.svg "Connecting PER workspace with VPC"){: caption="Figure 3. Connecting PER workspace with VPC" caption-side="bottom"}
+![Connecting PER workspace with VPC](./images/3.PER_VPC.svg "Connecting PER workspace with VPC"){: caption="Figure 11. Connecting PER workspace with VPC" caption-side="bottom"}
 
-### Connecting to IBM Cloud (Classic) services via a Secure Endpoint (SE)
+### Connecting to IBM Cloud (Classic) services via Secure Endpoint (SE)
 {: #per-cloud-services-se}
 
-A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can, by default, connect to IBM Cloud Service Endpoints (CSE), and can also seamlessly connect with the Secure Endpoints (SE) in the Classic infrastructure environment when using a transit gateway.
+A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can by default connect to IBM Cloud Service Endpoints (CSE), and can also seamlessly connect with the Secure Endpoints (SE) in the Classic Infrastructure environment when using a Transit Gateway.
 
-1. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace is connected to the Classic Infrastructure environment using a transit gateway.
-1. A {{site.data.keyword.powerSys_notm}} can then connect to the Secure Endpoint (SE) of the IBM Cloud (Classic) services.
-    
-    On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address. 
+1. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace is connected to the Classic Infrastructure environment using a Transit Gateway.
+2. A {{site.data.keyword.powerSys_notm}} can then connect to the Secure Endpoint (SE) of the IBM Cloud (Classic) services.
 
-For information on IBM Cloud Transit Gateway pricing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
+    On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address.
 
-![Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)](./images/4_PER_Cloudservices.svg "Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)"){: caption="Figure 4. Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)" caption-side="bottom"}
+For information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+
+![Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)](./images/4_PER_Cloudservices.svg "Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)"){: caption="Figure 12. Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)" caption-side="bottom"}
 
 ### Connecting multiple workspaces across a data center
 {: #per-accross-dc}
 
-1. Use the local transit gateway to connect multiple {{site.data.keyword.powerSys_notm}} workspaces that are across different zones, but in the same region.
+1. Use the local transit gateway to connect multiple {{site.data.keyword.powerSys_notm}} workspaces that are across different zones but in the same region.
+    A PER-enabled workspace needs to be attached with the transit gateway that can exchange routes between two workspaces.
+2. When the workspaces are present in different regions, use a global transit gateway to inter-connect them.
 
-    A PER-enabled workspace must be attached with the transit gateway that can exchange routes between two workspaces. 
+To know more about the transit gateway charges for local and global routing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
-1. When the workspaces are present in different regions, use a global transit gateway to interconnect them.
-
-For information about the transit gateway charges for local and global routing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-power-edge-router).
-
-![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 5. Connecting workspaces in different regions" caption-side="bottom"}
+![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}
