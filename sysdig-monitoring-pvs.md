@@ -20,7 +20,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 [Off-Premises]{: tag-blue}
 
-You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using IBM Cloud® Monitoring dashboards.
+You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using the IBM Cloud® Monitoring dashboards.
 {: shortdesc}
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
@@ -62,7 +62,7 @@ You can also create the IBM Cloud monitoring instance from the **Integration (Op
 ## Viewing metrics
 {: #sysdig-view}
 
-To view the metrics dashboards, access the user interface of {{site.data.keyword.mon_full_notm}} in the following ways:
+To view the metrics dashboards, access the user interface of the {{site.data.keyword.mon_full_notm}} in the following ways:
 - [Access the IBM Cloud monitoring user interface from your Power Systems Virtual Server workspace](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ui).
 - [Access the IBM Cloud monitoring user interface from the **Observability** page](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-view-ob).
 
@@ -208,7 +208,7 @@ The following additional attributes are available for segmenting all the metrics
 IBM Cloud Monitoring has the following limitations:
 
 - When you exceed the predefined limits, the rate-limited requests respond with a `503 Service Unavailable` error.
-- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance that is fixed to 5 minutes.
+- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance. The window of acceptance is fixed to 5 minutes.
 - The Ipv6 interface usage metrics of a {{site.data.keyword.powerSys_notm}} instance are for internal management network. Additionally, these metrics are available even though you did not configure it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.
