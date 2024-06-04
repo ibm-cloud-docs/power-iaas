@@ -111,7 +111,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 {: #pod-config}
 
 <!--Q2-->
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod have 1x42 U rack and are available in S1022 and E1050 system types.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
 
 Table 1 illustrates the configuration for small pod.
 
@@ -144,7 +144,7 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | Usable capacity in TB at 2x compression | 438        | 876    |
 {: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and are available in S1022, E1050, and E1080 (2CEC) system types.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and  S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
 
 Table 3 illustrates the configuration for medium pod storage options.
 
