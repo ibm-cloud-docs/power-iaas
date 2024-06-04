@@ -17,7 +17,7 @@ subcollection: power-iaas
 # What is {{site.data.keyword.powerSys_notm}}?
 {: #about-power-iaas}
 
-{{site.data.keyword.powerSysFull}} is an IBM Power servers offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads both private cloud and on cloud.
+{{site.data.keyword.powerSysFull}} is an IBM Power server offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads on both private cloud and on cloud.
 
 Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} on cloud architectures and to identify the hardware and software specifications:
 {: shortdesc}
@@ -25,12 +25,12 @@ Review this information to understand the {{site.data.keyword.powerSys_notm}} Pr
 * [Private cloud architecture](#private-cloud-architecture)
 * [On cloud architecture](#on-cloud-architecture)
 
-## Private cloud architecture
+## {{site.data.keyword.powerSys_notm}} Private Cloud architecture
 {: #private-cloud-architecture}
 
 [On-Premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
 
 To understand the architecture of IBM {{site.data.keyword.powerSys_notm}} Private Cloud, key features, and hardware and software requirements, review the following topics:
 
@@ -49,12 +49,12 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 ### Key features
 {: #key-features}
 
-The following are some of the key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
+The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
+* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
     * IBM AIX 7.2, or later
-    * IBM i 7.3, or later and IBM i COR[^1]<!-Q2-->
+    * IBM i 7.3, or later and IBM i COR[^1] <!-- Q2 -->
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
@@ -138,7 +138,7 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | Drives for each flash system          | 12        | 12     |
 | Capacity for each drive in TB         | 19.2      | 19.2   |
 | Number of flash systems in a pod      | 1         | 2      |
-| Total Drives in a pod                 | 12        | 24     |
+| Total drives in a pod                 | 12        | 24     |
 | Total capacity in TB               | 230       | 460    |
 | Usable capacity in TB              | 219       | 438    |
 | Usable capacity in TB at 2x compression | 438        | 876    |
@@ -203,7 +203,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Ha
 #### Storage
 {: #storage-private-cloud}
 
-For small pod only IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}
+For small pod only IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}.
 
 <!--* Medium pods: [IBM Flash System FS9500](https://www.ibm.com/in-en/products/flashsystem-9500){: external}-->
 
@@ -216,7 +216,7 @@ You can extend the storage capacity of the pods, but you cannot add more storage
 
 The storage tiers are based on I/O operations per second (IOPs). The performance of your storage volumes is limited to the maximum number of IOPs based on the storage volume size and storage tier.
 
-Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
+Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools support multiple storage tiers. The storage tiers are based on different IOPS levels.
 
 Table 1 shows the supported storage tiers with corresponding IOPS.
 
@@ -231,7 +231,7 @@ Table 1 shows the supported storage tiers with corresponding IOPS.
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
 
-For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPs. After the IOPs limit is reached for the storage volume, the I/O latency increases. Tier 3 storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
+For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPs. After the IOPs limit is reached for the storage volume, the I/O latency increases. Tier 3 storage is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
 
 ### Network
 {: #network-spec-private-cloud}
@@ -243,7 +243,7 @@ The entire network subsystem can be divided into the following parts:
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
 
-## IBM Cloud architecture
+## {{site.data.keyword.powerSys_notm}} on cloud architecture
 {: #on-cloud-architecture}
 
 [Off-Premises]{: tag-blue}
@@ -262,7 +262,7 @@ Review the following topics to understand the on cloud architecture, key feature
 ### High-level architecture
 {: #high-level-architecture-on-cloud}
 
-{{site.data.keyword.powerSys_notm}} on cloud are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+{{site.data.keyword.powerSys_notm}} on cloud is located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for {{site.data.keyword.powerSys_notm}}:
 
@@ -271,7 +271,7 @@ With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy 
 ### Key features
 {: #key-features-on-cloud}
 
-The following are some of the key features for the {{site.data.keyword.powerSys_notm}}.
+The key features for the {{site.data.keyword.powerSys_notm}} On Cloud are as follows.
 
 #### Straightforward billing
 {: #straightforward-billing-on-cloud}
@@ -322,7 +322,7 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 
 For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-power-iaas#data-sheets) and the hardware overview table.
 
-You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
+You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
 
 ### Data sheets
@@ -476,7 +476,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
 * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
-* Protected by a firewall and supports the following secure network protocols:
+* The public network is protected by a firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
     * Ping
@@ -489,5 +489,5 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+For more information about the different options for configuring a private network, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}
