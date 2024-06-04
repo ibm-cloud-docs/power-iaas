@@ -162,7 +162,7 @@ Table 3 illustrates the configuration for medium pod storage options.
 | 8 TB                        |       |     |     |      | 40       | 56   | 64    | 152  | 16           | 40  |
 | 16 TB                       |       |     |     |      |          |      |       |      | 32           | 80  |
 | 32 TB                       |       |     |     |      |          |      |       |      | 64           | 160 |
-{: caption="Table 1. Medium pod configuration." caption-side="top"}
+{: caption="Table 3. Medium pod configuration." caption-side="top"}
 
 
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. Table 4 illustrates the configuration for medium pod with flash system storage options.
@@ -218,7 +218,7 @@ The storage tiers are based on I/O operations per second (IOPs). The performance
 
 Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools support multiple storage tiers. The storage tiers are based on different IOPS levels.
 
-Table 1 shows the supported storage tiers with corresponding IOPS.
+Table 5 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
@@ -226,7 +226,7 @@ Table 1 shows the supported storage tiers with corresponding IOPS.
 | Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
-{: caption="Table 1. Tier and IOPS mapping" caption-side="bottom"}
+{: caption="Table 5. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
@@ -340,7 +340,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 2. Hardware overview (Washington, D.C.)" caption-side="top"}
+{: caption="Table 6. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-1}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
@@ -349,7 +349,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^1]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 3. Hardware overview (Washington, D.C.)" caption-side="top"}
+{: caption="Table 7. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-2}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
@@ -360,7 +360,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ  (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 4. Hardware overview (Dallas, TX)" caption-side="top"}
+{: caption="Table 8. Hardware overview (Dallas, TX)" caption-side="top"}
 {: #hw-spec-3}
 {: tab-title="Dallas (DAL12, DAL13)"}
 
@@ -369,7 +369,7 @@ You can compare the performance of your current environment with the environment
 | * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus 9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus 9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus 9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 5. Hardware overview (Non-US)" caption-side="top"}
+{: caption="Table 9. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-4}
 {: tab-title="Non-US"}
 
@@ -381,7 +381,7 @@ For a complete list of supported data centers, see [Creating a {{site.data.keywo
 
 IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O operation per second (IOPS) based storage as per your requirement. Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
-Table 6 shows the supported storage tiers with corresponding IOPS.
+Table 10 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
@@ -389,7 +389,7 @@ Table 6 shows the supported storage tiers with corresponding IOPS.
 | Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
-{: caption="Table 6. Tier and IOPS mapping" caption-side="bottom"}
+{: caption="Table 10. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
@@ -441,7 +441,7 @@ When you are creating a virtual server instance, you can define the boot volume 
 | Auto-select pool | {{site.data.keyword.powerSys_notm}} determines the best storage pool available for you. |
 | Affinity | The storage pool must be similar to the storage pool of affinity object that you choose. |
 | Anti-affinity|  Storage pool makes the storage pool of affinity object that you choose as an exception.|
-{: caption="Table 7. Storage pool affinity setting" caption-side="bottom"}
+{: caption="Table 11. Storage pool affinity setting" caption-side="bottom"}
 
 All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
 {: note}
