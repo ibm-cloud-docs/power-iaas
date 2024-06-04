@@ -17,7 +17,7 @@ subcollection: power-iaas
 # What is {{site.data.keyword.powerSys_notm}}?
 {: #about-power-iaas}
 
-{{site.data.keyword.powerSysFull}} is an IBM Power servers offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads both private cloud and on cloud.
+{{site.data.keyword.powerSysFull}} is an IBM Power server offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads on both private cloud and on cloud.
 
 Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} on cloud architectures and to identify the hardware and software specifications:
 {: shortdesc}
@@ -25,12 +25,12 @@ Review this information to understand the {{site.data.keyword.powerSys_notm}} Pr
 * [Private cloud architecture](#private-cloud-architecture)
 * [On cloud architecture](#on-cloud-architecture)
 
-## Private cloud architecture
+## {{site.data.keyword.powerSys_notm}} Private Cloud architecture
 {: #private-cloud-architecture}
 
 [On-Premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
 
 To understand the architecture of IBM {{site.data.keyword.powerSys_notm}} Private Cloud, key features, and hardware and software requirements, review the following topics:
 
@@ -49,15 +49,17 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 ### Key features
 {: #key-features}
 
-The following are some of the key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
+The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX&reg;, Linux&reg;, or IBM i<--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
-    * IBM AIX 7.2 or later
-    * IBM i 7.3 or later <--Q2-->
+* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
+    * IBM AIX 7.2, or later
+    * IBM i 7.3, or later and IBM i COR[^1] <!-- Q2 -->
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
+
+    [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 * **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
     - Number of cores
@@ -109,14 +111,14 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 {: #pod-config}
 
 <!--Q2-->
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod have 1x42 U rack and are available in S1022 and E1050 system types.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
 
 Table 1 illustrates the configuration for small pod.
 
 | Server types                | S1022 |     |     | E1050    |     |
 | --------------------------- | ------|-----|---- | -------- | --- |
 | Number of racks             | 1     |     |     | 1        |     |
-| Number of servers in a rack | Min   | Min | Max | Min      | Max |
+| Servers in a rack           | Min   | Min | Max | Min      | Max |
 | Server quantity in a pod    | 6     | 5   | 9   | 2        | 4   |
 | Number of cores per server  | 40    | 40  | 40  | 96       | 96  |
 | Total number of cores       | 240   | 200 | 360 | 192      | 384 |
@@ -134,24 +136,24 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | ------------------------------------- | ----------|--------|
 | Number of racks                       | 1         |        |
 | Drives for each flash system          | 12        | 12     |
-| Memory for each drive                 | 19.2      | 19.2   |
-| Number of flash systemss in a pod     | 1         | 2      |
-| Total Drives in a pod                 | 12        | 24     |
-| Total memory size in TB               | 230       | 460    |
-| Usable memory size in TB              | 219       | 438    |
-| Usable memory size in TB at 2x compr. | 43        | 876    |
+| Capacity for each drive in TB         | 19.2      | 19.2   |
+| Number of flash systems in a pod      | 1         | 2      |
+| Total drives in a pod                 | 12        | 24     |
+| Total capacity in TB               | 230       | 460    |
+| Usable capacity in TB              | 219       | 438    |
+| Usable capacity in TB at 2x compression | 438        | 876    |
 {: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and are available in S1022, E1050, and E1080 (2CEC) system types.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and  S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
 
 Table 3 illustrates the configuration for medium pod storage options.
 
 | Server types                | S1022 |     |     |      | E1050    |      |       |      | E1080 (2CEC) |     |
 | --------------------------- | ------|-----|-----|------| -------- | ---- | ----- | ---- | -------------| --- |
 | Number of racks             | 2     |     | 4   |      | 2        |      | 4     |      | 4            |     |
-| Number of servers in a rack | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
-|                             | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
-|                             | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
+| Servers in a rack           | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
+| Server quantity in a pod    | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
+| Number of cores per server  | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
 | Total number of cores       | 480   | 600 | 640 | 1600 | 480      | 672  | 768   | 1824 | 240          | 600 |
 | Usable cores                | 396   | 495 | 528 | 1320 | 425      | 595  | 680   | 1615 | 214          | 535 |
 | Memory types                |       |     |     |      |          |      |       |      |              |     |
@@ -160,7 +162,7 @@ Table 3 illustrates the configuration for medium pod storage options.
 | 8 TB                        |       |     |     |      | 40       | 56   | 64    | 152  | 16           | 40  |
 | 16 TB                       |       |     |     |      |          |      |       |      | 32           | 80  |
 | 32 TB                       |       |     |     |      |          |      |       |      | 64           | 160 |
-{: caption="Table 1. Medium pod configuration." caption-side="top"}
+{: caption="Table 3. Medium pod configuration." caption-side="top"}
 
 
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. Table 4 illustrates the configuration for medium pod with flash system storage options.
@@ -171,12 +173,12 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Number of racks                       | 2                      |      | 4     |      | 4     |      | 4     |       |
 | Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
 | Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
-| Memory for each drive                 | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
-| Number of flash systemss in a pod     | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
+| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
+| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
 | Total Drives in a pod                 | 24                     | 48   | 48    | 96   | 72    | 144  | 96    | 192   |
-| Total memory size in TB               | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
-| Usable memory size in TB              | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
-| Usable memory size in TB at 2x compr. | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
+| Total capacity in TB                  | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
+| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
+| Usable capacity in TB at 2x compression | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
 {: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
 
 <!--Q2-->
@@ -201,7 +203,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Ha
 #### Storage
 {: #storage-private-cloud}
 
-For small pod only IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}
+For small pod only IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}.
 
 <!--* Medium pods: [IBM Flash System FS9500](https://www.ibm.com/in-en/products/flashsystem-9500){: external}-->
 
@@ -214,9 +216,9 @@ You can extend the storage capacity of the pods, but you cannot add more storage
 
 The storage tiers are based on I/O operations per second (IOPs). The performance of your storage volumes is limited to the maximum number of IOPs based on the storage volume size and storage tier.
 
-Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
+Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools support multiple storage tiers. The storage tiers are based on different IOPS levels.
 
-Table 1 shows the supported storage tiers with corresponding IOPS.
+Table 5 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
@@ -224,12 +226,12 @@ Table 1 shows the supported storage tiers with corresponding IOPS.
 | Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
-{: caption="Table 1. Tier and IOPS mapping" caption-side="bottom"}
+{: caption="Table 5. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
 
-For example, a 100 GB Tier 3 storage volume can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPs. After the IOPs limit is reached for the storage volume, the I/O latency increases. Tier 3 storage tier is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
+For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPs. After the IOPs limit is reached for the storage volume, the I/O latency increases. Tier 3 storage is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
 
 ### Network
 {: #network-spec-private-cloud}
@@ -241,7 +243,7 @@ The entire network subsystem can be divided into the following parts:
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
 
-## IBM Cloud architecture
+## {{site.data.keyword.powerSys_notm}} on cloud architecture
 {: #on-cloud-architecture}
 
 [Off-Premises]{: tag-blue}
@@ -260,7 +262,7 @@ Review the following topics to understand the on cloud architecture, key feature
 ### High-level architecture
 {: #high-level-architecture-on-cloud}
 
-{{site.data.keyword.powerSys_notm}} on cloud are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+{{site.data.keyword.powerSys_notm}} on cloud is located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for {{site.data.keyword.powerSys_notm}}:
 
@@ -269,7 +271,7 @@ With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy 
 ### Key features
 {: #key-features-on-cloud}
 
-The following are some of the key features for the {{site.data.keyword.powerSys_notm}}.
+The key features for the {{site.data.keyword.powerSys_notm}} On Cloud are as follows.
 
 #### Straightforward billing
 {: #straightforward-billing-on-cloud}
@@ -320,7 +322,7 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 
 For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-power-iaas#data-sheets) and the hardware overview table.
 
-You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
+You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
 
 ### Data sheets
@@ -338,7 +340,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 2. Hardware overview (Washington, D.C.)" caption-side="top"}
+{: caption="Table 6. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-1}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
@@ -347,7 +349,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^1]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 3. Hardware overview (Washington, D.C.)" caption-side="top"}
+{: caption="Table 7. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-2}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
@@ -358,7 +360,7 @@ You can compare the performance of your current environment with the environment
 | * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ  (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 4. Hardware overview (Dallas, TX)" caption-side="top"}
+{: caption="Table 8. Hardware overview (Dallas, TX)" caption-side="top"}
 {: #hw-spec-3}
 {: tab-title="Dallas (DAL12, DAL13)"}
 
@@ -367,7 +369,7 @@ You can compare the performance of your current environment with the environment
 | * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus 9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus 9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus 9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
-{: caption="Table 5. Hardware overview (Non-US)" caption-side="top"}
+{: caption="Table 9. Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-4}
 {: tab-title="Non-US"}
 
@@ -379,7 +381,7 @@ For a complete list of supported data centers, see [Creating a {{site.data.keywo
 
 IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O operation per second (IOPS) based storage as per your requirement. Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
-Table 6 shows the supported storage tiers with corresponding IOPS.
+Table 10 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
@@ -387,7 +389,7 @@ Table 6 shows the supported storage tiers with corresponding IOPS.
 | Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
-{: caption="Table 6. Tier and IOPS mapping" caption-side="bottom"}
+{: caption="Table 10. Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
@@ -439,7 +441,7 @@ When you are creating a virtual server instance, you can define the boot volume 
 | Auto-select pool | {{site.data.keyword.powerSys_notm}} determines the best storage pool available for you. |
 | Affinity | The storage pool must be similar to the storage pool of affinity object that you choose. |
 | Anti-affinity|  Storage pool makes the storage pool of affinity object that you choose as an exception.|
-{: caption="Table 7. Storage pool affinity setting" caption-side="bottom"}
+{: caption="Table 11. Storage pool affinity setting" caption-side="bottom"}
 
 All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
 {: note}
@@ -474,7 +476,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Easy and quick method to connect to a {{site.data.keyword.powerSys_notm}} instance.
 * IBM configures the network environment to enable a secure public network connection from the internet to the {{site.data.keyword.powerSys_notm}} instance.
 * Connectivity is implemented by using an IBM Cloud Virtual Router Appliance (VRA) and a Direct Link Connect connection.
-* Protected by a firewall and supports the following secure network protocols:
+* The public network is protected by a firewall and supports the following secure network protocols:
     * SSH
     * HTTPS
     * Ping
@@ -487,5 +489,5 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 * Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
-For more information about the different options for configuring a private network, see [Configure a private network](/docs/power-iaas?topic=power-iaas-configuring-subnet).
+For more information about the different options for configuring a private network, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}

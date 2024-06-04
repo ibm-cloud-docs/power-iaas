@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images
 {: #recommended-rsct-package}
 
-RSCT is a set of software components that together provide a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSysFull}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends that you use [RSCT 3.2.6.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: external} for optimal performance.
+RSCT is a set of software components that together provides a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSysFull}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends that you use [RSCT 3.2.6.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: external} for optimal performance.
 {: shortdesc}
 
 The RSCT `nodeid` is not rebuilt if you are deploying an AIX VM from a network installation management (NIM) server without `cloud-init`, and RSCT is installed.
@@ -27,7 +27,7 @@ The RSCT `nodeid` is not rebuilt if you are deploying an AIX VM from a network i
 
 The [RMC subsystem](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_undrmc.html){: external} is the scalable backbone of RSCT that provides a generalized framework for managing resources within a single system or a cluster. Its generalized framework is used by cluster management tools to monitor, query, modify, and control cluster resources. RMC provides a single monitoring and management infrastructure for both RSCT peer domains and management domains.
 
-The AIX VM's RMC status is presented in the {{site.data.keyword.powerSys_notm}} dashboard as a health status. The RMC health status can be either `OK` or `Warning`. Warning statuses happen when the RMC subsystem between your VM and the management system is not connected.
+The RMC status of the AIX VM is presented in the {{site.data.keyword.powerSys_notm}} dashboard as a health status. The RMC health status can be either `OK` or `Warning`. Warning statuses happen when the RMC subsystem between your VM and the management system is not connected.
 
 The RMC connection between your VM and the system management service is configured when you create the AIX VM. When you deploy an AIX VM, the IPv6 management interface is injected into the VM. If you remove or overwrite this interface, an RMC connection is not possible. The following procedures can cause the injected IPv6 management interface to be lost after you deploy the AIX VM:
 
@@ -55,9 +55,9 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 ### Using a {{site.data.keyword.powerSys_notm}} boot image to recover from a missing IPv6 link local address
 {: #recovering-ipv6}
 
-1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more informati9on, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: external}.
+1. Enter the `lslpp -L rsct.*` command to ensure that an operating system (OS) modification did not affect the RSCT file set level. For more information, see [Verifying RSCT installation on AIX nodes](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/admin/bl503_instvaix.html){: external}.
 
-    {{site.data.keyword.powerSys_notm}} supports *3.2.1* ass the minimum release. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
+    {{site.data.keyword.powerSys_notm}} supports *3.2.1* as the minimum release. If you redeployed an AIX image with a package that is older than 3.2.1, you must upgrade RSCT first.
     {: important}
 
 2. If you still have the {{site.data.keyword.powerSys_notm}} deployed boot image, complete the following steps:

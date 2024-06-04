@@ -21,7 +21,7 @@ subcollection: power-iaas
 The [General Data Protection Regulation](https://gdpr.eu/){: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}
 
-With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely in IBM's wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
+With the GDPR, {{site.data.keyword.powerSysFull}} clients can rely on the {{site.data.keyword.powerSys_notm}} team's understanding and compliance with emerging data privacy standards and legislation. {{site.data.keyword.powerSys_notm}} clients can also rely on IBM's wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
 
 ## Online retention of client data
 {: #data-retention}
@@ -36,7 +36,7 @@ Client data is retained during the client's use of the workspace (that is, until
 ## Destruction of client data
 {: #data-destruction}
 
-{{site.data.keyword.powerSys_notm}} gives the client the ability to delete all online client data at their request or termination of the workspace. The secure destruction of all client data happens at the *end of life* of the associated infrastructure or cloud service.
+{{site.data.keyword.powerSys_notm}} gives the client the ability to delete all online client data at their request or upon termination of the workspace. The secure destruction of all client data happens at the *end of life* of the associated infrastructure or cloud service.
 
 ## Export of client data
 {: #data-export}

@@ -22,7 +22,7 @@ You get fast and flexible management that can be connected to access a stack of 
 
 [On-Premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure or the pod is deployed in your data center. The pod is maintained and operated by IBM site reliability engineering (SREs) and managed through the IBM Cloud platform. Each pod is associated with an IBM Cloud Satellite Location that is owned by your IBM Cloud account. This architecture helps to scale horizontally to add more pods according to your requirements. To verify that the pre-installation requirements are met, see [Prerequisites for installing the pod](/docs/power-iaas?topic=power-iaas-pre_installation_checklist).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure or the pod is deployed in your data center. The pod is maintained and operated by IBM site reliability engineering (SREs) and managed through the IBM Cloud platform. Each pod is associated with an IBM Cloud Satellite Location that is owned by your IBM Cloud account. This architecture helps to scale horizontally, to add more pods according to your requirements. To verify that the pre-installation requirements are met, see [Prerequisites for installing the pod](/docs/power-iaas?topic=power-iaas-pre_installation_checklist).
 
 Private cloud officially supports Red Hat Enterprise Linux (RHEL) and IBM AIX&reg;. With the support of these operating systems you can deploy several applications, including SAP HANA, SAP S/4HANA, and SAP NetWeaver. You can also run Red Hat OpenShift Container Platform to accelerate your application modernization efforts by using new cloud-native applications.
 
@@ -33,7 +33,7 @@ Private cloud officially supports Red Hat Enterprise Linux (RHEL) and IBM AIX&re
 
 [Off-Premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} on cloud resources reside in IBM data centers with dedicated networking and SAN-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that is nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
+{{site.data.keyword.powerSys_notm}} on cloud resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that is nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
 
 In the data centers, the {{site.data.keyword.powerSys_notm}} are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or private cloud environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified private cloud infrastructure.
 
@@ -44,13 +44,13 @@ If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.ke
 ## Terminology
 {: #terminology}
 
-* **IBM Cloud account** - Your can log on to IBM Cloud dashboard by using IBM Cloud account to access various IBM Cloud solutions, services, and offerings. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
+* **IBM Cloud account** - You can log on to IBM Cloud dashboard by using IBM Cloud account to access various IBM Cloud solutions, services, and offerings. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
 
 * **Location and region** - The global network of locations of IBM Cloud provides three tiers of regions: multizone regions (MZR), single-campus multizone regions, and data centers. To achieve low application latency, choose your nearest location and region. For details about the available IBM Cloud regions and data centers, review [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations){: external}.
 
 * **Satellite location** - A Satellite location is a representation of an environment in your infrastructure provider, such as a private cloud data center. Each IBM {{site.data.keyword.powerSys_notm}} Private Cloud pod in your data center must be associated with a Satellite location to manage the lifecycle operations of the pod. You must create multiple and unique Satellite locations if you are planning to deploy multiple pods in your data center. For detailed information, see [Understanding Satellite location and hosts](https://cloud.ibm.com/docs/satellite?topic=satellite-location-host){: external}.
 
-* **workspace** - A workspace is a container of all the virtual machines, storage volumes, network configurations, and so on at a specific geographic region. {{site.data.keyword.powerSys_notm}} workspaces are available from the Resource list in the {{site.data.keyword.powerSys_notm}} user interface. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} instances. Within each Satellite location, you can create multiple workspaces. For example, you can create two workspaces in the Satellite location of the North Data Center: one workspace for production workloads and another workspace for development tests.
+* **workspace** - A workspace is a container of all the virtual machines, storage volumes, network configurations, and so on at a specific geographic region. {{site.data.keyword.powerSys_notm}} workspaces are available from the **Resource list** in the {{site.data.keyword.powerSys_notm}} user interface. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} instances. Within each Satellite location, you can create multiple workspaces. For example, you can create two workspaces in the Satellite location of the North Data Center: one workspace for production workloads and another workspace for development tests.
 
 * **pod** - a pod consists of IBM Power compute, storage, and network infrastructure that is built, installed, and maintained by IBM in your data center. You can have multiple pods and each pod will be uniquely represented by an IBM Cloud Satellite location.
 
