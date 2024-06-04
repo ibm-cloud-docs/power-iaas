@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2023-06-04"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
