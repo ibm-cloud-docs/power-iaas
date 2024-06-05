@@ -347,7 +347,7 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 
 | Offering/Solution  | cores-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at capped shared processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
 {: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
