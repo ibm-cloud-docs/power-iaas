@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2024
 
-lastupdated: "2023-04-24"
+lastupdated: "2024-06-05"
 
 keywords: setting up terraform, {{site.data.keyword.powerSys_notm}} as a service, private cloud, howto, terminology, how-to
 
@@ -78,4 +78,4 @@ Before you can create an authorization by using Terraform, make sure that you ha
 ## What's next?
 {: #what-next}
 
-Now that you successfully created your {{site.data.keyword.powerSys_notm}} instance with Terraform on IBM Cloud, you can visit the [Power Terraform registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture){: external} to perform additional tasks using Terraform.
+Now that you have successfully created your {{site.data.keyword.powerSys_notm}} instance with Terraform on IBM Cloud, you can visit the [Power Terraform registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture){: external} to perform additional tasks using Terraform.
