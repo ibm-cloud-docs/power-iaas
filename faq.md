@@ -143,7 +143,6 @@ Red Hat
 * RHEL 8.8 general purpose (RHEL8-SP8)
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
 * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)
-* RHEL 8.6 general purpose (RHEL8-SP6)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
 * RHEL 8.4 for SAP HANA (RHEL8-SP4-SAP)
@@ -154,7 +153,6 @@ SUSE [^footnote3]
 * SLES 15 SP5 general purpose (SLES15-SP5)
 * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
 * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
-* SLES 15 SP4 general purpose (SLES15-SP4)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
@@ -164,7 +162,7 @@ SUSE [^footnote3]
 
 [^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote3]: SLES images are not supported on [On-Premises]{: tag-red}.
+[^footnote3]: SLES images are not currently supported on {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 <!--Q2-->
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
