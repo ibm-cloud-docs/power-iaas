@@ -1,9 +1,8 @@
 ---
-
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-22"
+lastupdated: "2024-06-05"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 

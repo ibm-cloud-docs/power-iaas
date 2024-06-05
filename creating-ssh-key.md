@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-05"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -116,14 +116,14 @@ After you end the SSH client debug session, close the script session by pressing
 ## Creating an AIX VM instance
 {: #create-ssh-key}
 
-You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as being *disabled*. If you have public network access to the AIX VM, you can use telnet from a private cloud system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/docs/en/aix/7.2){: external}.
+You can create an AIX VM instance with a configured SSH key by using the {{site.data.keyword.powerSys_notm}} CLI or the console. When you use an AIX stock image as your boot volume, the root password is not set. You must connect to the AIX VM and set the root password for the system. Without completing this step, SSH login as **root** appears as disabled. If you have public network access to the AIX VM, you can use telnet from a private cloud system and set the root password. For more information, see [IBM AIX V7.2 documentation](https://www.ibm.com/docs/en/aix/7.2){: external}.
 
 ### Creating an AIX VM with a configured SSH key using UI
 {: #console-add-ssh}
 
 You must [generate a public SSH key](#creating-ssh-key) before you can create an AIX VM with a configured SSH key.
 
-1. Ensure that you have the proper account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
+1. Ensure that you have necessary account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 
 2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm}} user interface.
 
@@ -140,7 +140,7 @@ You must [generate a public SSH key](#creating-ssh-key) before you can create an
 ### Creating an AIX VM with a configured SSH key using CLI
 {: #create-vm-cli}
 
-You can create a new VM with the public key with the following command (replacing the options with your own):
+You can create a new VM with the public key with the following command by replacing the options with your own:
 
 ```text
 ibmcloud pi instance-create keytest-vm --image AIX-7200-03-03 --memory 5 --networks "cloud.ibm.com" --processors 1 --processor-type shared --key-name testkey

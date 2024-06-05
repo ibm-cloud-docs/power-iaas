@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-07-06"
+lastupdated: "2024-06-05"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -63,7 +63,7 @@ When you use SPP, you pay for the following items:
 * SPP reserved cores that use the shared capped part number.
 * Virtual server instance cores that are deployed into the SPP that use shared uncapped part number.
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} on cloud, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#pricing-spp-private-cloud)
+The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} on cloud, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#pricing-spp-private-cloud).
 {: note}
 
 ## Configuring shared processor pool
@@ -81,7 +81,7 @@ Create an SPP by specifying the following parameters:
 
 When you define these parameters, a backend process determines the best host for the new SPP.
 
-When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. You need to delete such SPPs manually as they do not get cleaned up automatically.
+When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. Delete such SPPs manually as they do not get cleaned up automatically.
 {: note}
 
 ### Creating a shared processor pool
@@ -108,7 +108,7 @@ To create an SPP, complete the following steps:
 ### Updating or deleting a shared processor pool
 {: #update-delete-spp}
 
-To update or delete an SPP, navigate to **Compute** > **Shared processor pools**. Then select the SPP that you want to edit and click on the edit icon. You will get a notification after the SPP is deleted successfully.
+To update or delete an SPP, navigate to **Compute** > **Shared processor pools**. Then select the SPP that you want to edit, and click on the edit icon. You will receive a notification after the SPP is deleted successfully.
 
 You can update or delete the following details of an existing SPP:
 
@@ -129,14 +129,14 @@ During any planned maintenance activity or when you want to perform a remote res
 ### Deploying a virtual server instance into a shared processor pool
 {: #deploy-pvm-in-spp}
 
-To add virtual server instances to an exsiting SPP, complete the following steps:
+To add virtual server instances to an existing SPP, complete the following steps:
 
-1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
+1. Open the **Virtual server instances** page in the {{site.data.keyword.powerSys_notm}} user interface.
 2. Click **Create instance**.
 3. Complete the input fields under the **General** tile based on your requirement.
 4. Select the checkbox **Add to a Shared processor pool**.
 5. Select an existing shared processor pool.
-6. Continue with the with the process of creating a virtual server instance. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+6. Continue with the process of creating a virtual server instance. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 ## Configuring a shared processor pool placement group
 {: #configure-SPP-PG}
@@ -182,15 +182,15 @@ To create an SPP PG, complete the following steps:
 2. Click the **Pool placement groups** tab.
 3. Click **Create group**.
 4. In the **Create new pool placement group** window, enter the following details:
-  |Field|Description                                             |
-  |-----|--------------------------------------------------------|
-  |Name |Enter a name that is unique within your cloud account. \n Use a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
-  |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
-  {: caption="Table 4. Create a new SPP PG field description" caption-side="top"}
+    |Field|Description                                             |
+    |-----|--------------------------------------------------------|
+    |Name |Enter a name that is unique within your cloud account. \n Use a minimum of 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
+    |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
+    {: caption="Table 4. Create a new SPP PG field description" caption-side="top"}
 
 5. Click **Create**.
 
-You get notified when the new SPP PG is created.
+You will receive a notifcation when the new SPP PG is created.
 
 ### Adding a shared processor pool to a the placement group
 {: #add-spp-inside-spp-pg}
@@ -210,7 +210,7 @@ To add an SPP to an existing SPP PG, complete the following steps:
 |Create new        |You can create an SPP from scratch by defining pool name, machine type, and number of cores. For more information, see [Create a new SPP](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp)|
 {: caption="Table 5. Add SPP to an SPP PG: field description" caption-side="top"}
 
-You will be notified after the new SPP PG is created.
+You will receive a notification after the new SPP PG is created.
 
 ### Deleting a shared processor pool placement group
 {: #delete-spp-pg}

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2019, 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-05"
 
 keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
@@ -33,7 +33,7 @@ You cannot change the policy or name of a placement group after it is created. Y
 
 To create a placement group, complete the following steps:
 <!--This procedure needs to be verified as the first and second steps are different in PowerVS-->
-1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Server placement groups**.
+1. Go to the {{site.data.keyword.powerSys_notm}} user interface, and click **Server placement groups**.
 2. In the **Server placement groups** page,  click **Create group**.
 3. Specify a name for the new placement group. Select a colocation policy to specify whether all the VMs under this placement group must reside in the same server or in a different server.
 4. Click **Create**.
@@ -44,7 +44,7 @@ In the **Server placement groups** page, the table displays all placement groups
 ## Server placement group APIs
 {: #all-placement-groups}
 
-You can use the following for managing server placement groups:
+You can use the following APIs for managing server placement groups:
 
 - [Get all server placement groups](/apidocs/power-cloud#pcloud-placementgroups-getall): Displays all existing server placement groups.
 - [Get server placement group detail](/apidocs/power-cloud#pcloud-cloud-placementgroups-get): Displays details about a specific server placement group.
