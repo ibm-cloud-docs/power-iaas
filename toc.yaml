@@ -27,11 +27,25 @@ toc:
       - generating-estimate.md
       - ha-dr.md
       - topicgroup:
-              label: Backup and Migration strategies
+              label: Backup strategies in Power Virtual Servers
               topics:
-                - backup-strategies.md
-                - migration-strategies.md
-                - system-migration.md
+              - backup-strategies.md
+              - backup-strategies-ibmi.md
+              - additional-backup-strategies.md
+      - topicgroup:
+              label: Migration strategies in Power Virtual Servers
+              topics:
+              - system-migration.md
+              - migration-strategies-aix.md
+              - migration-strategies.md
+              - additional-migration-strategies.md
+              - migration-strategies-third-party.md
+              - migration-strategies-backup-restore.md
+      - topicgroup:
+              label: Replication in Power Virtual Servers
+              topics:
+              - host-and-os-based-logical-replication.md
+              - global-replication-service.md
       - topicgroup:
               label: Security and compliance
               topics:
