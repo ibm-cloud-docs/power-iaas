@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2023-06-04"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -198,22 +198,22 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 | Number of cores (S1022)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.1962 (dedicated)           | $143.23                  |
-|  1                       | $0.1962 (uncapped shared)     | $143.23                  |
-|  1                       | $0.1962 (capped shared)       | $143.23                  |
+|  1                       | $0.1962 (shared uncapped)     | $143.23                  |
+|  1                       | $0.1962 (shared capped)       | $143.23                  |
 {: caption="Table 3. S1022 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1080)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.6866 (dedicated)           | $501.20                   |
-|  1                       | $0.6866 (uncapped shared)     | $501.20                   |
-|  1                       | $0.6866 (capped shared)       | $501.20                   |
+|  1                       | $0.6866 (shared uncapped)     | $501.20                   |
+|  1                       | $0.6866 (shared capped)       | $501.20                   |
 {: caption="Table 4. E1080 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1050)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.2945 (dedicated)           | $215.00                   |
-|  1                       | $0.2945 (uncapped shared)     | $215.00                   |
-|  1                       | $0.2945 (capped shared)       | $215.00                   |
+|  1                       | $0.2945 (shared uncapped)     | $215.00                   |
+|  1                       | $0.2945 (shared capped)       | $215.00                   |
 {: caption="Table 5. E1050 processor type pricing" caption-side="bottom"}
 
 
@@ -341,15 +341,15 @@ When you use SPP in a private cloud, you pay for the following items:
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
 * The operating system license is based on the following types of virtual instances:
     * capped SPP: pricing is determined by the entitled capacity.
-    * uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors (VPs) and the maximum capacity of the SPP. To get the total number of VPs, count the number of VPs associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
+    * uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-| Offering/Solution  | EC:VP ratio  | Core Pricing  | OS license pricing |
+| Offering/Solution  | cores-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at capped shared processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
-{: caption="Table 12. Shared processor pool in rivate cloud" caption-side="top"}
+{: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
 For more information about calculating the pricing for OS licensisng in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
