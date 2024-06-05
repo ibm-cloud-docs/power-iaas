@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-15"
+lastupdated: "2024-06-05"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -13,13 +13,13 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing {{site.data.keyword.powerSysFull}}s (IAM)
+# Managing identity and access management (IAM) for {{site.data.keyword.powerSysFull}}s
 {: #managing-resources-and-users}
 
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-You will need a `Viewer` role for the `IAM Access Management` service to display the `Infrastructure capacity` navigation menu (in Private Cloud) if using custom role with `power-iaas.pod-capacity.view` IAM action.
+To display the **Infrastructure capacity** navigation menu for the Private Cloud while using a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role assigned in the IAM Access Management service.
 {: important}
 
 For more information about IAM, review the following information:
@@ -34,7 +34,7 @@ For more information about IAM, review the following information:
 
 You can use platform access roles to enable users to complete tasks on {{site.data.keyword.cloud_notm}} resources, such as creating users or adding services.
 
-The following table displays the IAM platform access roles and the corresponding type of control that is allowed by {{site.data.keyword.powerSys_notm}}:
+The following table displays the IAM platform access roles and the corresponding type of control that is allowed by the {{site.data.keyword.powerSys_notm}}:
 
 | Platform access role | Type of access allowed                                                                                  |
 | -------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -47,34 +47,34 @@ The following table displays the IAM platform access roles and the corresponding
 ## Service access roles
 {: #service-access-roles}
 
-You can use the service access roles to define what actions users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table displays the IAM service access roles and the corresponding actions that a user can complete with {{site.data.keyword.powerSys_notm}}:
+You can use the service access roles to define the actions that the users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table displays the IAM service access roles and the corresponding actions that a user can complete by using the {{site.data.keyword.powerSys_notm}}:
 
 | Service access role | Description of actions |
 |-----------|-------------------------|
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make any changes to the resources. |
-| Manager | You can configure all resources. The following are some of the actions that you can perform: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
+| Manager | Configure all resources. You can perform the following actions: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
-To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud.
+To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
 
 ### Resources supported for {{site.data.keyword.powerSys_notm}} IAM access policies
 {: #res-supported}
 
 When you assign access to the {{site.data.keyword.powerSys_notm}} service, you can scope access to any of the following resources:
 - All resources
-- Specific resources, which supports the following selections:
+- Specific resources, which support the following selections:
     - Resource group
     - Service instance
   
-Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned against **Resource type** are ignored.
+Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
 {: note}
 
-## Access roles requirements for {{site.data.keyword.powerSys_notm}}
+## Access role requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
 
-{{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, Virtual Private Cloud, and so on. You may require additional access based on your resource requirements. For example, to create a Cloud connection you will need Editor access to Direct Link service.
+{{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, and Virtual Private Cloud. You might require additional access based on your resource requirements. For example, to create a Cloud connection, you need `access`to the Direct Link service.
 
-The following table displays the additional access roles required for the corresponding type of services that is allowed by {{site.data.keyword.powerSys_notm}}:
+The following table displays the additional access roles that are required for the corresponding type of services that are allowed by {{site.data.keyword.powerSys_notm}}:
 
 | Additional access role | Resources Attributes                                                                                  |
 | ---------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -90,4 +90,4 @@ The following table displays the additional access roles required for the corres
 ## User access scenarios
 {: #user-access-scenarios}
 
-See [Managing access to resources](/docs/iam?topic=iam-iammanidaccser) for information on how to manage or assign access by using IAM policies.
+For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).

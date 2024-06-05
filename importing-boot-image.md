@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-05-22"
+lastupdated: "2024-06-05"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -19,7 +19,7 @@ subcollection: power-iaas
 You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs can select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
 {: shortdesc}
 
-Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. If you have not already generated your HMAC keys you can follow the instructions in [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. If you have not already generated your HMAC keys, you can follow the instructions in [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
@@ -59,6 +59,7 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 1. Click **Boot images**, then **Import image**.
 
 <!-- Q2 -->
+
    If you are importing customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.
    {: note}
 
@@ -88,4 +89,4 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 {: caption="Table 1. Boot images options" caption-side="bottom"}
 
 <!--The following content is not in PowerVS but retaining it to get comments from TR-->
-If you'd like to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external} for the Cloud Object Storage CLI command.
+If you' want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external}.

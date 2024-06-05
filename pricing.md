@@ -252,7 +252,7 @@ The pricing is subject to change depending on the SAP HANA operational costs.
 
 You are charged different rates depending on the processor type you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Each processor has a different hourly rate depending on its type (**Dedicated** vs **Uncapped shared**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between capped and uncapped shared processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
+Each processor has a different hourly rate depending on its type (**Dedicated** vs **Shared uncapped**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance?How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
 All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -262,22 +262,22 @@ The following tables show how different processor types affect the cost per syst
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
 | 1                      | $0.51 (dedicated)            | $368.91                  |
-| 1                      | $0.13 (uncapped shared)      | $92.33                  |
-| 1                      | $0.19 (capped shared)        | $138.38                  |
+| 1                      | $0.13 (shared uncapped)      | $92.33                  |
+| 1                      | $0.19 (shared capped)        | $138.38                  |
 {: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.77 (dedicated)            | $1291.28               |
-| 1                           | $0.44 (uncapped shared)      | $322.84                  |
-| 1                           | $0.66 (capped shared)        | $484.26                  |
+| 1                           | $0.44 (shared uncapped)      | $322.84                  |
+| 1                           | $0.66 (shared capped)        | $484.26                  |
 {: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
 
 | Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $0.58 (dedicated)            | $424.25                 |
-| 1                           | $0.15 (uncapped shared)     | $106.06                  |
-| 1                           | $0.22 (capped shared)       | $159.14                  |
+| 1                           | $0.15 (shared uncapped)     | $106.06                  |
+| 1                           | $0.22 (shared capped)       | $159.14                  |
 {: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-05"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -194,8 +194,8 @@ The table below shows the available data centers for {{site.data.keyword.powerSy
 | `DAL13` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON04` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON06` | X |
+| `LON04` | X |
+| `LON06` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD04` | ![Checkmark icon](./images/checkmark.svg) |
 | `MON01` | X |

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-05"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -42,7 +42,7 @@ For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.
 
 The supported AIX and IBM i operating system versions depend on the IBM Power hardware that you select for the {{site.data.keyword.powerSys_notm}}.
 
-If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
+If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to the current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
 {: important}
 
 To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
@@ -63,7 +63,7 @@ When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7
 
 <!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external} -->
 
-For more information on end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
+For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 {: note}
 
 ### IBM i
@@ -110,14 +110,14 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
     {: note}
 
-6. First, choose a wanted level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
+6. First, choose a necessary level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
 
-7. Choose the bucket's *storage class*, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
+7. Choose the *storage class* of the bucket, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB [of uncompressed image]{: tag-teal} ) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and it's best to avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB [of uncompressed image]{: tag-teal} ) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and avoid using any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
@@ -130,7 +130,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-    To view your credential information, such as your secret and access keys, click the arrow to the right of **View credentials**. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
+    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](/docs/services/cloud-object-storage?topic=cloud-object-storage-service-credentials) and [Bucket permissions](/docs/services/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 
 ## Using a custom boot image to provision a new instance
 {: #upload-custom-boot}
@@ -158,5 +158,5 @@ Complete the following steps to provision a new instance by using a custom boot 
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
-    If you'd like to download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external} for the Cloud Object Storage CLI command.
+    To download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external} for the Cloud Object Storage CLI command.
     {: tip}
