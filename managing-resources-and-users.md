@@ -19,7 +19,7 @@ subcollection: power-iaas
 Identity and access management (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To display the **Infrastructure capacity** navigation menu for the Private Cloud while using a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have  a `Viewer` role assigned in the IAM Access Management service.
+To display the **Infrastructure capacity** navigation menu for the Private Cloud while using a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role assigned in the IAM Access Management service.
 {: important}
 
 For more information about IAM, review the following information:
@@ -72,9 +72,9 @@ Although you can select a **Resource type** from the **Attribute type** drop-dow
 ## Access role requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
 
-{{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, Virtual Private Cloud, and so on. You may require additional access based on your resource requirements. For example, to create a Cloud connection, you will need `access`to the Direct Link service.
+{{site.data.keyword.powerSys_notm}} requires additional access for features such as Direct Link, Transit Gateway service, and Virtual Private Cloud. You might require additional access based on your resource requirements. For example, to create a Cloud connection, you need `access`to the Direct Link service.
 
-The following table displays the additional access roles required for the corresponding type of services that are allowed by {{site.data.keyword.powerSys_notm}}:
+The following table displays the additional access roles that are required for the corresponding type of services that are allowed by {{site.data.keyword.powerSys_notm}}:
 
 | Additional access role | Resources Attributes                                                                                  |
 | ---------------------- | ----------------------------------------------------------------------------------------------------- |
