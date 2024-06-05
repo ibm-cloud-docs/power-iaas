@@ -164,7 +164,7 @@ SUSE [^footnote3]
 
 [^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote3]: SLES images are not supported on [On-Premises]{: tag-red}.
+[^footnote3]: SLES images are not currently supported on {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 <!--Q2-->
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
