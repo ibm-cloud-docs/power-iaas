@@ -166,7 +166,7 @@ SUSE
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 
 <!--Q2-->
-The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has core-to-vCPU ratio set to 1:10 or greater. [JIRA-PPC-4873 update end]{: tag-teal}
+The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
 {: note}
 
 <!--Q2-->
@@ -300,7 +300,7 @@ When you deploy a VM, you can choose between **dedicated**, **capped shared**, o
 - **Uncapped shared**: shared among other clients
 - **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
-The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The cores-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|

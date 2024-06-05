@@ -71,7 +71,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
     - **Capped shared**: The processor is shared among other virtual machines but the partition cannot use more number of cores than the assigned numbers unlike uncapped shared processor partitions. This option is used mostly for licensing purpose.
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to an each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The core-to-vCPU ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 vCPUs.
+* **Entitled processor-to-virtual-processor ratio**: The cores-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 vCPUs.
 
 ### Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
