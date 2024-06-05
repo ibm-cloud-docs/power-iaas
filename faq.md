@@ -294,13 +294,13 @@ By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the A
 {: #processor}
 {: faq}
 
-When you deploy a VM, you can choose between **dedicated**, **capped shared**, or **uncapped shared** processors for your virtual CPUs (vCPUs). The following list provides a simplified breakdown of their differences:
+When you deploy a VM, you can choose between **dedicated**, **shared capped**, or **shared uncapped** cores. The following list provides a simplified breakdown of their differences:
 
+- **Shared uncapped**: shared among other clients
+- **Shared capped**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
-- **Uncapped shared**: shared among other clients
-- **Capped shared**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 
-The cores-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 vCPUs. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The cores-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
