@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -150,7 +150,7 @@ Red Hat
 * RHEL 8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
 
 
-SUSE
+SUSE [^footnote3]
 * SLES 15 SP5 general purpose (SLES15-SP5)
 * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
 * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
@@ -164,6 +164,7 @@ SUSE
 
 [^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote3]: SLES images are not supported on [On-Premises]{: tag-red}.
 
 <!--Q2-->
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
