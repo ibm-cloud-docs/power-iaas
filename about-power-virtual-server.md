@@ -66,7 +66,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
     - Amount of memory
     - Storage volume size
 * **Shared (capped and uncapped) and dedicated virtual machine**: When you deploy a virtual machine, you can choose one of the following options for the type of core:
-    - **Shared capped**: The processor is shared among other virtual machines but the partition cannot use more number of cores than the assigned numbers unlike uncapped shared processor partitions. This option is used mostly for licensing purpose.
+    - **Shared capped**: The processor is shared among other virtual machines but the partition cannot use more number of cores than the assigned numbers unlike shareduncapped processor partitions. This option is used mostly for licensing purpose.
     - **Shared uncapped**: The processor is shared among other virtual machines.
     - **Dedicated**: The processor is allocated for the specific virtual machine.
 

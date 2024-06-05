@@ -290,7 +290,7 @@ If you find the storage tiers are over or under-provisioned, you can change the 
 
 By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
 
-## What's the difference between capped and uncapped shared processor performance? How do they compare to dedicated processor performance?
+## What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?
 {: #processor}
 {: faq}
 

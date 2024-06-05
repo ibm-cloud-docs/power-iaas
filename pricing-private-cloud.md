@@ -198,22 +198,22 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 | Number of cores (S1022)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.1962 (dedicated)           | $143.23                  |
-|  1                       | $0.1962 (uncapped shared)     | $143.23                  |
-|  1                       | $0.1962 (capped shared)       | $143.23                  |
+|  1                       | $0.1962 (shared uncapped)     | $143.23                  |
+|  1                       | $0.1962 (shared capped)       | $143.23                  |
 {: caption="Table 3. S1022 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1080)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.6866 (dedicated)           | $501.20                   |
-|  1                       | $0.6866 (uncapped shared)     | $501.20                   |
-|  1                       | $0.6866 (capped shared)       | $501.20                   |
+|  1                       | $0.6866 (shared uncapped)     | $501.20                   |
+|  1                       | $0.6866 (shared capped)       | $501.20                   |
 {: caption="Table 4. E1080 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1050)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.2945 (dedicated)           | $215.00                   |
-|  1                       | $0.2945 (uncapped shared)     | $215.00                   |
-|  1                       | $0.2945 (capped shared)       | $215.00                   |
+|  1                       | $0.2945 (shared uncapped)     | $215.00                   |
+|  1                       | $0.2945 (shared capped)       | $215.00                   |
 {: caption="Table 5. E1050 processor type pricing" caption-side="bottom"}
 
 
