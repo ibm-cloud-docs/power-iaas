@@ -69,7 +69,7 @@ You can access StorSafe VTL from the [IBM Cloud Catalog](https://cloud.ibm.com/c
 ### FalconStor StorSafe VTL for Cloud
 {: storsafe-cloud}
 
-FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from IBM catalogue with one click.
+FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from the IBM catalogue with one click.
 
 ### FalconStor StorSafe VTL for On-Premises
 {: storsafe-onprem}

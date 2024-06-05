@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-14"
+lastupdated: "2024-06-05"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -29,14 +29,14 @@ You can engage IBM teams and services to assist you throughout the migration lif
 ## Image capture
 {: #backup-image-capture}
 
-Image capture produces a storage FlashCopy of the logical partition (LPAR) and works on both AIX, Linux, and IBM i LPARs. You can use image capture to store VM images within your account (locally) as a part of your image catalog, or directly to [IBM Cloud Object Storage](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm), or both.
+Image capture produces a storage FlashCopy of the logical partition (LPAR) and works on both AIX, Linux, and IBM i LPARs. You can use image capture to store VM images within your account (locally) as a part of your image catalog, directly to [IBM Cloud Object Storage](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm), or both.
 
 Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum uncompressed image size that you can import or export is **10 TB**.
 
 ## Cloud Object Storage
 {: #cos-over-directlink}
 
-The preferred way to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
+The preferred ways to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
 
 1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the COS direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
 2.  In a non-PER workspace that are in a multi-zone region (MZR) the best way to connect to COS is as follows:
@@ -94,7 +94,7 @@ Veeam for AIX provides simple physical server backup solutions for machines that
 ### Ordering Veeam standalone licenses
 {: #backup_veeam_ordering_licenses}
 
-You can order a Veeam® standalone license, via IBM Cloud portal [Order Veeam Licesne](https://cloud.ibm.com/infrastructure/vmware-solutions/console/instances/licenses)
+You can order a Veeam® standalone license, via IBM Cloud portal [Order Veeam Licesne](https://cloud.ibm.com/infrastructure/vmware-solutions/console/instances/licenses).
 
 An email will be sent confirming the order. Should the order be incorrect, it can be deleted. For more information, see [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses).
 
