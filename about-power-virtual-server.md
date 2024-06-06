@@ -44,7 +44,7 @@ To understand the architecture of IBM {{site.data.keyword.powerSys_notm}} Privat
 
 The following diagram provides a high-level architectural view of IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
 
-![High-level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture"){: caption="Figure 1. High Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture" caption-side="bottom"}
+![High-level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture" caption-side="bottom"}
 
 ### Key features
 {: #key-features}
@@ -52,7 +52,7 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images includes the following operating system images:
+* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images include the following operating system images:
     * IBM AIX 7.2, or later
     * IBM i 7.3, or later and IBM i COR[^1] <!-- Q2 -->
     * Red Hat Enterprise Linux (RHEL)
@@ -66,12 +66,12 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
     - Amount of memory
     - Storage volume size
 * **Shared (capped and uncapped) and dedicated virtual machine**: When you deploy a virtual machine, you can choose one of the following options for the type of core:
-    - **Shared capped**: The processor is shared among other virtual machines but the partition cannot use more number of cores than the assigned numbers unlike shareduncapped processor partitions. This option is used mostly for licensing purpose.
+    - **Shared capped**: The processor is shared among other virtual machines but the partition cannot use higher number of cores than the assigned numbers unlike shared uncapped processor partitions. This option is used mostly for licensing purposes.
     - **Shared uncapped**: The processor is shared among other virtual machines.
     - **Dedicated**: The processor is allocated for the specific virtual machine.
 
-* **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to an each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
-* **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
+* **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
+* **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
 * **Entitled processor-to-virtual-processor ratio**: The cores-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
 
 ### Hardware and software specifications
@@ -99,10 +99,10 @@ The following pod sizes are available:
 * Small: 1 rack of IBM Power10 (S1022 and E1050) processors
 * Medium: 2 – 4 racks of IBM Power10 (S1022, E1050, or E1080) processors.
 
-You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1080 processors. The spare node will be used for maintenance or automatic high availability purposes.
+You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1080 processors. The spare nodes is used for maintenance or automatic high availability purposes.
 You can use 100% of the core, memory, and storage of the nodes by excluding the spare nodes.
 
-The spare node is used by the IBM site reliability engineering (SRE) team for maintenance and are not available for your use.
+The spare node is used by the IBM site reliability engineering (SRE) team for maintenance and is not available for your use.
 {: note}
 
 <!--When the threshold exceeds, you receive a notification. [SHU: Not available currently for LA.]-->
@@ -145,7 +145,7 @@ The small pod with one rack is available with FS 230 TB flash system storage. Ta
 | Usable capacity in TB at 2x compression | 438        | 876    |
 {: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod have 2x42 U or 4x42 U rack and  S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
 
 Table 3 illustrates the configuration for medium pod storage options.
 
@@ -204,7 +204,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Ha
 #### Storage
 {: #storage-private-cloud}
 
-For small pod only IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}.
+For small pods only the IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}.
 
 <!--* Medium pods: [IBM Flash System FS9500](https://www.ibm.com/in-en/products/flashsystem-9500){: external}-->
 
@@ -217,7 +217,7 @@ You can extend the storage capacity of the pods, but you cannot add more storage
 
 The storage tiers are based on I/O operations per second (IOPs). The performance of your storage volumes is limited to the maximum number of IOPs based on the storage volume size and storage tier.
 
-Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools support multiple storage tiers. The storage tiers are based on different IOPS levels.
+Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
 Table 5 shows the supported storage tiers with corresponding IOPS.
 
@@ -240,7 +240,7 @@ For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Ti
 The entire network subsystem can be divided into the following parts:
 
 * **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your private cloud data center during the initial deployment.
-* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your private cloud data center and other IBM Cloud services, you must manually set up the network configuration.
+* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your private cloud data center and other IBM Cloud services, you must manually set up the network configuration.
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
 
@@ -338,7 +338,7 @@ You can compare the performance of your current environment with the environment
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus9000 93180YC-EX (10G) \n * Cisco Nexus9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 6. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -358,7 +358,7 @@ You can compare the performance of your current environment with the environment
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
-| * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ  (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
+| * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 8. Hardware overview (Dallas, TX)" caption-side="top"}
@@ -425,15 +425,15 @@ Best practice for an image import is to use the default IOPS level (Tier 3). Whi
 #### Selecting a storage tier
 {: #IOPS-tier-select}
 
-Flexible IOPS allows you to select your desired tier for:
+Flexible IOPS allows you to select a tier that you need for your:
 - Boot volume
 - Data volume
 
 **Boot volume**
 When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
-- Select your desired **Operating system**.
+- Select your **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
-- Select your desired **Image**.
+- Select your **Image**.
 - Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 - For **Storage pool**, select from **Auto-select pool**, **Affinity**, **Anti-affinity**.
 
