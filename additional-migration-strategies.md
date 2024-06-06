@@ -41,7 +41,7 @@ You can engage IBM teams and services to assist you throughout the migration lif
 
 IBM Aspera&reg; on Cloud is a hosted service that quickly and reliably moves and shares your data sets across a hybrid cloud environment. IBM Aspera can help transfer data to the IBM Cloud for later retrieval from the {{site.data.keyword.powerSys_notm}} environment. For more information, see [IBM Aspera on Cloud](https://www.ibm.com/products/aspera){: external}.
 
-Use the [Accelerated network transfer migration guide](https://cloud.ibm.com/media/docs/downloads/power-iaas/accelerated_migration.pdf){: external} powered by Aspera to accelerate transferring your migration content directly into the workspace of your Power Virtual Server helping you to achieve faster time to value from IBM cloud.
+Use the [Accelerated network transfer migration guide](https://cloud.ibm.com/media/docs/downloads/power-iaas/accelerated_migration.pdf){: external} powered by Aspera to accelerate the transfer of your migration content. It helps you to directly transfer the migration content to the {{site.data.keyword.powerSys_notm}} workspace and you achieve faster time to value from IBM cloud.
 
 ## IBM Cloud Object Storage (COS)
 {: #migration-icos}
@@ -60,7 +60,7 @@ For an IBM i VM, you must use the [Cloud Storage Solution for IBM i product (573
 ## PowerVC images and COS
 {: #migration-powervc-icos}
 
-If you have an environment with access to PowerVC, you can capture OVA images to easily migrate your data. The {{site.data.keyword.powerSys_notm}} offering allows you to provision a new virtual server based on an OVA image. To accomplish this, regardless of the operating system (OS), you must complete the following steps:
+If you have an environment with access to PowerVC, you can capture OVA images to easily migrate your data. Using the {{site.data.keyword.powerSys_notm}} offering, you can provision a new virtual server based on an OVA image. To accomplish this, regardless of the operating system (OS), you must complete the following steps:
 
 1. Create an OVA image on your local system.
 2. Copy the OVA image to your **Cloud Object Storage** account.
