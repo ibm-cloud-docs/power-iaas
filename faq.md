@@ -31,7 +31,7 @@ The primary difference between the two is where the physical infrastructure resi
 ## Which Power servers are supported?
 {: #servers-supported}
 
-[Off-premises]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, and IBM Power E1080.
+[Off-premises]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
 
 [On-premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
@@ -102,7 +102,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibm-os-versions}
 
-{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.1, or later.
+{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.2, or later.
 {{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
@@ -117,14 +117,15 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.5 TR3
 * IBM i 7.4 TR9
 * IBM i 7.3 TR13
-* IBM i 7.2 TR9 [^3]
-* IBM i 7.1 TR11 [^2]
+* IBM i 7.2 TR9 [^2]
+
+<!--IBM i 7.1 TR11 2-->
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
+<!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
 
-[^3]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
+[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
 
 ### Linux
 {: #linux-os-versions}
@@ -133,7 +134,7 @@ IBM i stock images currently available when you create a VM are:
 
 [Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)) or BYOL (Bring Your Own License):
 
 Red Hat
 
@@ -168,9 +169,11 @@ SUSE [^footnote3]
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
 
+To use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customised Linux image in OVA format using Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
+
 <!--Q2-->
 
-If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
+<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
 
 General purpose:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
@@ -178,7 +181,7 @@ General purpose:
 
 For SAP workloads:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
-* RHEL 8.1 or later
+* RHEL 8.1 or later-->
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
