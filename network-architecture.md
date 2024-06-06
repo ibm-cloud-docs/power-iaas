@@ -24,7 +24,7 @@ This topic describes typical network architectures that are used in the {{site.d
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/allowlist/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks).
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks).
 
 {{site.data.keyword.powerSys_notm}} network architectures consist of one or more of the following networks:
 
@@ -52,11 +52,11 @@ Using a Power Edge Router (PER) enabled workspace provides the following benefit
 * Direct access to {{site.data.keyword.powerSys_notm}} from client-managed<!--Q2 client-managed to be confirmed by Joe--> environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
-1. [Connecting an client-managed data center](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
-2. [Connecting to classic infrastructure](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
-3. [Connecting to Virtual Private Cloud](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
-4. [Connecting to IBM Cloud services](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
-5. [Connecting multiple workspaces](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
+1. [Connecting an client-managed data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
+2. [Connecting to classic infrastructure](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
+3. [Connecting to Virtual Private Cloud](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
+4. [Connecting to IBM Cloud services](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
+5. [Connecting multiple workspaces](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
 
 The above are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
 {: important}
@@ -67,7 +67,7 @@ The above are base capability use cases. These base capabilities use cases can b
 1. In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a direct link connection to attach to the transit gateway.
 
 2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center via the incoming direct link that is interconnected through this transit gateway.
-3. You will pay for the Direct Link connection that you use  to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+3. You will pay for the Direct Link connection that you use  to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
@@ -79,7 +79,7 @@ The above are base capability use cases. These base capabilities use cases can b
     - The workspace and the classic infrastructure should be in the same region.
     - The workspace should be connected to a transit gateway.
 
-For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
 
@@ -104,7 +104,7 @@ A GRE tunnel is required when you want to establish a connection from your PER-e
 
 Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel needs to be attached with the transit gateway.
 
-For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
+For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 ### Connecting to Virtual Private Cloud
 {: #per-vpc}
@@ -113,7 +113,7 @@ For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel]
 2. You can also connect the classic infrastructure with the same transit gateway to create a multi-connection network. This establishes a three-way communication.
 3. Thus, the PER-enabled workspace, VPC, and classic infrastructure can establish connection with each other.
 
-The pricing for this connection depends upon the local or global transit gateway usage. See: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+The pricing for this connection depends upon the local or global transit gateway usage. See: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting PER workspace with VPC](./images/3.PER_VPC.svg "Connecting PER workspace with VPC"){: caption="Figure 11. Connecting PER workspace with VPC" caption-side="bottom"}
 
@@ -127,7 +127,7 @@ A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can by default conne
 
     On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address.
 
-For information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+For information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)](./images/4_PER_Cloudservices.svg "Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)"){: caption="Figure 12. Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)" caption-side="bottom"}
 
@@ -138,6 +138,6 @@ For information on transit gateway pricing, see: [Pricing for Power Edge Router]
     A PER-enabled workspace needs to be attached with the transit gateway that can exchange routes between two workspaces.
 2. When the workspaces are present in different regions, use a global transit gateway to inter-connect them.
 
-To know more about the transit gateway charges for local and global routing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+To know more about the transit gateway charges for local and global routing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting workspaces in different regions](./images/5_PER_PER.svg "Connecting workspaces in different regions"){: caption="Figure 13. Connecting workspaces in different regions" caption-side="bottom"}

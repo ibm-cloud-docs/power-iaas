@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between client-managed environment<!--Q2 client-managed to be confirmed by Joe--> environments and the virtual server instances that are deployed on IBM Cloud.
 
-There is a new method for creating a VPN connection - [Creating a Virtual Private Cloud VPN connection](/docs/allowlist/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
+There is a new method for creating a VPN connection - [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
 
 The following deprecated method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated) [Deprecated]{: tag-red}
 
@@ -82,8 +82,8 @@ It is recommended that you create a direct cloud connection between the VPC and 
      {: note}
 
 3. Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace. Use one of the following procedures that suit your needs:
-   - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/allowlist/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
-   - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections).
+   - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+   - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 ### Considerations
 {: #vpcvpn-cons}
