@@ -145,7 +145,7 @@ If you are using an IP range outside of the ranges that are defined by the [RFC 
 The following networks are filtered out and are not accepted: 10.0.0.0/14, 10.200.0.0/14, 10.198.0.0/15, and 10.254.0.0/16.
 {: note}
 
-The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
+The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
 | CIDR block size | Available IP addresses (WDC04,WDC06) | Available IP addresses (non-WDC) |
 | --------------- | ------------------------------ | ---------------------------------- |

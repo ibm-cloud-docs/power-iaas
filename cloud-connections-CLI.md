@@ -121,7 +121,7 @@ A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall 
 
 GRE tunnel configuration requires a tunnel source IP ({{site.data.keyword.powerSys_notm}} router end), GRE subnet, and destination IP address. For more information, see [Creating IBM Cloud connections](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
 
-A GRE tunnel subnet supports addressings for GRE tunnels. It is used for the tunnel source IP, local IP, and remote IP. The first half of the subnet IP range (`s1`) is used for source IP addresses and the second half (`s2`) is used for local and remote IPs. GRE tunnels use the first IP from `s1` as the source IP. The local IP is the first IP of `s2` and the remote IP is the second IP of `s2`.
+A GRE tunnel subnet supports addressings for GRE tunnels. It is used for the tunnel source IP, local IP, and remote IP. The first half of the subnet IP range (`s1`) is used for source IP addresses and the second half (`s2`) is used for local and remote IP addresses. GRE tunnels use the first IP from `s1` as the source IP. The local IP is the first IP of `s2` and the remote IP is the second IP of `s2`.
 
 ### GRE configuration example
 {: #gre-configuration-example}
