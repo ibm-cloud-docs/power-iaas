@@ -54,7 +54,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
 * **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images include the following operating system images:
     * IBM AIX 7.2, or later
-    * IBM i 7.3, or later and IBM i COR[^1] <!-- Q2 -->
+    * IBM i 7.3, or later and IBM i COR [^1] <!-- Q2 -->
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
@@ -347,14 +347,14 @@ You can compare the performance of your current environment with the environment
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^1]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^2]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 7. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-2}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
-[^1]: SAP Netweaver is not certified for S1022 systems and hence is limited to non-production workloads.
+[^2]: SAP Netweaver is not certified for S1022 systems and hence is limited to non-production workloads.
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |
