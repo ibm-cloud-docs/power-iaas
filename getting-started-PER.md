@@ -47,7 +47,7 @@ The network traffic in a PER environment can flow in the following two ways:
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
 
-For detailed networking PER use cases and architechture diagrams, see [Power Edge Router use cases](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases).
+For detailed networking PER use cases and architecture diagrams, see [Power Edge Router use cases](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases).
 
 ## Considerations when using PER
 {: #leverage-per}
@@ -72,13 +72,13 @@ Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Clou
 
 Existing non-PER workspaces continue to use existing routers. To use the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace.
 
-Perform the following steps to connect an existing workspace to an existing Transit Gateway using the IBM Cloud CLI:
+Perform the following steps to connect an existing workspace to an existing Transit Gateway by using the IBM Cloud CLI:
 
 1. Use the `ibmcloud pi workspaces` command to list the {{site.data.keyword.powerSys_notm}} workspaces in your account.
-   Make note of the CRN for the workspace you wish to connect to the Transit Gateway.
+   Make note of the CRN for the workspace that you want to connect to the Transit Gateway.
 
 2. Use the `ibmcloud tg gateways` command to list the Transit Gateways within your account.
-   Make note of the gateway ID you wish to connect to the {{site.data.keyword.powerSys_notm}} workspace.
+   Make note of the gateway ID that you want to connect to the {{site.data.keyword.powerSys_notm}} workspace.
 
 3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.
 
@@ -184,7 +184,7 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 ## Data centers supporting PER
 {: #dcs-per}
 
-The table below shows the available data centers for {{site.data.keyword.powerSys_notm}} and its corresponding status against PER:
+The following table shows the available data centers for {{site.data.keyword.powerSys_notm}} and its corresponding status against PER:
 
 | Data centers | PER available |
 |-----|-----|
