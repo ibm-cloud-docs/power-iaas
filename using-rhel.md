@@ -31,12 +31,14 @@ If you plan to use your own license, select the OS image suffixed with `-BYOL`. 
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-<!-- JIRA-PPC-4873 update start-->The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
+<!-- JIRA-PPC-4873 update start-->
+
+The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
 {: note}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/system/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/system/detail/9225){: external}.
 
-If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}}, you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, ensure that the image includes the correct version of RHEL image with cloud-init version from March 2021, or later. If you are using an earlier RHEL image, download the appropriate cloud-init and configure it as in the steps that are documented at [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
@@ -51,7 +53,7 @@ You cannot contact the Red Hat-based repository and download the appropriate sof
 
 1. To buy an RHEL subscription, see [Red Hat Enterprise Linux Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: external}.
 
-2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index){: external}.
+2. To register your system, see [Quick Registration for RHEL](https://access.redhat.com/labs/registrationassistant/){: external}.<!-- this link throws 404 error(https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/quick_registration_for_rhel/index)-->
 
 ## Capturing and importing an RHEL image
 {: #import-rhel-image}

@@ -50,7 +50,7 @@ To set up full Linux subscription for your account, complete the following steps
 ### Step 1: Configuring a Cloud connection
 {: #configure-cloud-connection}
 
-Ensure that the following requirements are met when you create a Cloud connection: Create a Cloud connection with the following parameters:
+Ensure that the following requirements are met when you create a Cloud connection. Create a Cloud connection with the following parameters:
 
 -	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSysFull}} instance and the IBM Cloud Classic infrastructure by using a private network.
 -	The {{site.data.keyword.powerSys_notm}} in each region and zone must have its own cloud connection.
@@ -65,9 +65,9 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
 1. Deploy a proxy instance based on your requirement. For more information, see [Enabling proxy protocol](/docs/vpc?topic=vpc-advanced-traffic-management#proxy-protocol-enablement).
 
-2. Open the Security groups for the VPC by navigation to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [security groups](/docs/vpc?topic=vpc-using-security-groups).
+2. Open the Security groups for the VPC by navigating to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [security groups](/docs/vpc?topic=vpc-using-security-groups).
 
-3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet CIDR of your private network for the {{site.data.keyword.powerSys_notm}} instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you will be using, and copy the CIDR.
+3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet Classless Inter-Domain Routing (CIDR) of your private network for the {{site.data.keyword.powerSys_notm}} instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you will be using, and copy the CIDR.
 
 4. After the proxy is created, log in to the proxy instance and locate the subnet CIDR by completing the following steps:
 
@@ -105,7 +105,7 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
         Example: Run the `ip route` command and add the CIDR subnet IP address 1.5.3.9/24 through the private gateway IP address 5.9.7.1.
 
-    If your VM is restarted, these IP routes are removed and the IP routes must be added again.
+    If your VM is restarted, these IP routes are removed and so must be added again.
     {: note}
 
 ### Step 4: Configuring a proxy instance
@@ -116,7 +116,7 @@ Set up a proxy configuration, by completing the following steps:
 1. Log in to your proxy instance by running the `ssh root@<public IP of proxy>` command.
 2. Ensure that another IP route is created within the proxy instance. This IP route allows the IP addresses that are within the range of the private IP gateway that you created for your VM. The IP addresses are used to connect your VM to the proxy gateway.
 
-    - Run the `ip route` command and add the CIDR number of that private network that you derived in Step 1 via the gateway of proxy.
+    - Run the `ip route` command and add the CIDR number of that private network that you derived in [Step 1](#configure-cloud-connection) via the gateway of proxy.
 
       - You can view the private VM gateway in the [IBM Cloud](https://cloud.ibm.com){: external} website. Select the PowerVS VM that you created in [step 3](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-power-vm), and go to the attached private network. The CIDR number is listed as the last variable.
       - Run the `route -n` command to view the gateway of the proxy.
