@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-03"
+lastupdated: "2024-06-06"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -41,12 +41,12 @@ To begin your first boot, open the VNC Console:
 1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance.
 2. Click **VM actions** in the server details page and select **Open console** from the drop-down list. On the console setting page, select the language and click **Open console**.
 
-    IBM i console opens as a pop-up window. Ensure that your browser setting does not block this pop-up window.
+    IBM i console opens as a new window. Ensure that your browser setting does not block any pop-up window.
     {: note}
 
-To disconnect from the VNC Console session, close the web browser window (that is, close the web browser pop-up window that is titled 'noVNC').
+To disconnect from the VNC Console session, close the web browser window that is titled 'noVNC'.
 
-If you lose internet connectivity, your VNC Console session (provided through noVNC) will show as "Server disconnected (code: 1006)" and will not auto-connect when internet connectivity is restored.
+If you lose internet connectivity, your VNC Console session (provided through noVNC) shows as "Server disconnected (code: 1006)" and will not auto-connect when internet connectivity is restored.
 
 To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details page and select **Open console** from the drop-down list. Your session is restored and show 'Connected (encrypted)'.
 
@@ -61,13 +61,13 @@ for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osTy
 ### First boot change password
 {: #first-boot-change-password}
 
-Once the VNC Console has loaded and the IBM i console screen is shown, follow the following steps to reset the password of the IBM i standard user.
-1. In the VNC Console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the bottom of the console window to open the change password screen for the IBM i standard user.
+When the VNC Console loads and the IBM i console screen is shown, complete the following steps to reset the password of the IBM i standard user:
+1. In the VNC Console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
 2. The **Change Service Tools User Password** screen loads, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
 3. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
 4. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
-5. Press your keyboard ENTER key, and the password will change.
-6. The **IPL or Install the System** screen will be shown. See further steps below.
+5. Press ENTER.
+6. The **IPL or Install the System** screen will be shown. See more steps documented on this page.
     
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
@@ -80,14 +80,14 @@ After this, the IBM i virtual machine is ready to be configured and a prompt wil
 
 The default is to select Option 1 'Perform an IPL'.
 
-However, the minimum Program Temporary Fix (PTFs) levels depend on the IBM i version that has been provisioned and will impact `cloud-init` successful execution; only IBM i 7.5 requires no PTF installation or other tasks. See [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels) for more information for IBM i 7.1 - 7.4, and to instead perform the OS Install first, then PTFs, then the IPL.
+However, the minimum Program Temporary Fix (PTFs) levels depend on the IBM i version that has been provisioned and will impact `cloud-init` successful execution; only IBM i 7.5 requires no PTF installation or other tasks. See [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels) for more information. Perform the OS Install first, then PTFs, and then the IPL.
 
-If the PTFs are incomplete this will cause `cloud-init` to not complete (run after IPL / OS Installation and licensed program software agreements), which will cause the local IP address configuration to not be saved upon restart of the system. If you restart your system during before `cloud-init` is successful, you must call IBM support to manually configure your network and license keys, or delete and reprovision your IBM i virtual machine instance to start again.
+If the PTFs are incomplete this will cause `cloud-init` to not complete (run after IPL or OS Installation and licensed program software agreements), which will cause the local IP address configuration to not be saved upon restart of the system. If you restart your system during before `cloud-init` is successful, you must call IBM support to manually configure your network and license keys, or delete and reprovision your IBM i virtual machine instance to start again.
 {: important}
 
-1. In the **IPL or Install the System** screen, the cursor is on `Selection`. Therefore, the default as described previously, is 'Perform an IPL' enter `1` and then press your keyboard ENTER key, which will begin the installation automatically. This process can take more than 10 minutes, each screen in the first text block shows `Current step / total . . . . :` with the number of steps completed (for example `20  49` being 20 of 49 steps).
+1. In the **IPL or Install the System** screen, the cursor is on `Selection`. Therefore, the default as described previously, is 'Perform an IPL' enter `1` and then press ENTER to begin the installation. This process can take more than 10 minutes, each screen in the first text block shows **Current step / total . . . . :** with the number of steps completed (for example `20  49` being 20 of 49 steps).
 
-2. During the installation, you will first be shown the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes. The cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
+2. During the installation, you get the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes. The cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
 
 Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
 {: note}
@@ -102,7 +102,7 @@ When the installation is completed, the licensed program and software agreements
 3. On the **Work with Software Agreements** screen, click **PF12** at the bottom of the console window to show the descriptions for each license (for example Db2 Multisystem).
 4. On the **Work with Software Agreements** screen, for each licensed program enter `5` as the "Opt" to display the agreement to accept. Press your keyboard ENTER key to begin.
 5. The **Software Agreement** screen appears for each licensed program. Click **PF15** at the bottom of the console window to Accept All for this licensed program. The **Confirm Acceptance of Software Agreement** screen appears for each licensed program. Press your keyboard ENTER key to confirm acceptance.
-6. The **Work with Software Agreements** screen appears again, showing "More..." in the bottom-right corner. Click **PF11** at the bottom of the console window to show the "Accept Status" that should appear as 'Yes'. Press your keyboard ENTER key, this forces a check of the agreements.
+6. The **Work with Software Agreements** screen appears again, showing "More..." in the lower-right corner. Click **PF11** at the bottom of the console window to show the "Accept Status" that should appear as 'Yes'. Press your keyboard ENTER key, this forces a check of the agreements.
 7. The force check of the agreements shows the **Software Agreements Not Accepted** screen. Click **PF12** at the bottom of the console window to return to the **Work with Software Agreements** screen where the licensed program list has been updated.
 8. Repeat steps 14 to 17. There will be 4 repeats until all licensed program Software Agreements have been accepted.
 9. When all licensed program Software Agreements in the list are completed, the **IBM i Main menu** screen is shown and `cloud-init` configuration of network and injection of license keys begin. The `cloud-init` configuration process is run after all, and can take up to 5 minutes.
@@ -153,7 +153,7 @@ Lastly, on the **IBM i Main menu** screen type the `WRKLICINF` command in the co
 
 When you have verified your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-If License Keys for the operating system or any IBM i licensed program Products (LPP) have not been applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
+If license keys for the operating system or any IBM i licensed program Products (LPP) is not applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
 If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
 
@@ -161,7 +161,7 @@ If this is an upgraded system that contained license Keys before, allow a weeken
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST, and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
+By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}

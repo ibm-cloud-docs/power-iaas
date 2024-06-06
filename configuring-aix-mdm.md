@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-01-24"
+lastupdated: "2024-06-06"
 
 keywords: mdm, storage pool, mount command, powervm
 
@@ -21,13 +21,13 @@ You can configure MDM on an IBM Power PowerVM AIX LPAR. For more information, se
 
 1. Begin by connecting to the provided **Management** URL.
 
-2. Select **Unlock & Start Storage Pool...** from the **Common Tasks** pane.
+2. Select **Unlock & Start Storage Pool...** from the **Common Tasks** page.
 
 3. Enter your provided **Pool Passphrase** into the **Security Authentication** area in the **Activate/Start Storage Pool** window.
 
-4. Select **OK** to return to the **Common Tasks** pane.
+4. Select **OK** to return to the **Common Tasks** page.
 
-5. Select **View Network Shares** and close the **Common tasks** pane. Your preconfigured share is now listed in the **Normal** state.
+5. Select **View Network Shares** and close the **Common tasks** page. Your preconfigured share is now listed in the **Normal** state.
 
 6. **Right-click** and select **View Mount Command** to view the mount parameters for the share. You can have multiple mount options depending on your MDM order's supplied network parameters. Make sure that you are using the correct mount for your network environment. In the following example, *eth2* is cabled to the management network, and *eth4* is cabled to a network that the production LPARs have access to.
 
