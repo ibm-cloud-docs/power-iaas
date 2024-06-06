@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Returning the pod to IBM
 {: #returning_pod}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 If you want to discontinue the {{site.data.keyword.powerSysFull}} Private Cloud services at the end of subscription tenure or because of any other scenario that is permitted by the contract with IBM, you must return the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure as explained in the following steps:
 

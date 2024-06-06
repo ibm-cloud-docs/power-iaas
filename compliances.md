@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Compliance certifications
 {: #compliances-list}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
@@ -24,7 +24,7 @@ The {{site.data.keyword.powerSys_notm}} provides programs and certifications tha
 ## Financial Services® Validated
 {: #fs-cloud-comp}
 
-IBM designates IBM Cloud services as _IBM Cloud for Financial Services Validated_ when the services are determined to materially implement the IBM Cloud framework for financial services control requirements.  
+IBM designates IBM Cloud services as _IBM Cloud for Financial Services Validated_ when the services are determined to materially implement the IBM Cloud framework for financial services control requirements.
 
 For more information and the list of validated IBM Cloud services, see [{{site.data.keyword.cloud}} for Financial Services®](https://www.ibm.com/cloud/compliance/ibm-cloud-for-financial-services){: external}.
 

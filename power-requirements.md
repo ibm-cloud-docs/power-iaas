@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Power requirements
 {: #power-requirements}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 Your {{site.data.keyword.powerSysFull}} Private Cloud site must be provisioned with with A-side and B side power redundancy that meets the {{site.data.keyword.powerSys_notm}} rack connector and load requirements. Table 1 shows the rack connector and load requirements.
 

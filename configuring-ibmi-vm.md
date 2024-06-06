@@ -68,7 +68,7 @@ When the VNC Console loads and the IBM i console screen is shown, complete the f
 4. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
 5. Press ENTER.
 6. The **IPL or Install the System** screen will be shown. See more steps documented on this page.
-    
+
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
 

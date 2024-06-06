@@ -28,7 +28,7 @@ Review this information to understand the {{site.data.keyword.powerSys_notm}} Pr
 ## {{site.data.keyword.powerSys_notm}} Private Cloud architecture
 {: #private-cloud-architecture}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 The IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
 
@@ -72,7 +72,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The cores-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
+* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
 
 ### Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
@@ -247,7 +247,7 @@ For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-n
 ## {{site.data.keyword.powerSys_notm}} on cloud architecture
 {: #on-cloud-architecture}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 {{site.data.keyword.powerSys_notm}} on cloud are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 

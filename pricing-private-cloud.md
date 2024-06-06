@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-private-cloud}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
 
@@ -330,7 +330,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 
 The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}} on cloud. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
@@ -345,7 +345,7 @@ When you use SPP in a private cloud, you pay for the following items:
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-| Offering/Solution  | cores-to-virtual core ratio  | Core Pricing  | OS license pricing |
+| Offering/Solution  | core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
 | PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |

@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 <!--Q2-->
 
