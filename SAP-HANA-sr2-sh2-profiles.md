@@ -17,8 +17,6 @@ subcollection: power-iaas
 {: #SAP-hana-sr2-sh2-profiles}
 
 
-<!--Q2
-
 [Q2-2024 update start]{: tag-teal}
 
 You can deploy SAP HANA on the following systems:
@@ -38,5 +36,4 @@ For more information about SAP HANA profiles, see [IBM Power Virtual Server cert
 
 [Q2-2024 update end]{: tag-teal}
 
--->
 <!-- Q2 -->
