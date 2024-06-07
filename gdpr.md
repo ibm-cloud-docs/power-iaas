@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-04-24"
+lastupdated: "2024-06-07"
 
 keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
 
@@ -41,4 +41,4 @@ Client data is retained during the client's use of the workspace (that is, until
 ## Export of client data
 {: #data-export}
 
-IBM contractually commits, as required by various industry and government regulations, that we will provide clients the capability to export their data, or that IBM will provide the client with export copies of their data upon request. {{site.data.keyword.powerSys_notm}} gives clients the ability to export data on their own.
+IBM contractually commits, as required by various industry and government regulations to provide clients the capability to export their data, or that IBM provides the client with export copies of their data upon request. {{site.data.keyword.powerSys_notm}} gives clients the ability to export data on their own.

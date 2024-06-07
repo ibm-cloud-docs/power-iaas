@@ -59,7 +59,7 @@ To create a proxy setup, complete the following steps:
 
 2. In the default Security group that is attached to your proxy, add 443, 8443, 80 and 3128 ports.
 
-3. On the VSI, enable a floating IP temporarily. In the proxy instance, start an secure shell (SSH) connection by using this temporary IP address in the `ssh` command.
+3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a secure shell (SSH) connection by using this temporary IP address in the `ssh` command.
 
 ```text
 
@@ -81,7 +81,7 @@ You must have root authority to run these commands. After the installation compl
 
 Configure the squid by using the following commands:
 1. `acl localnet "<CIDR of a subnet that you will deploy in the pod>"`
-      For example: `10.140.129.217/29`
+      for example, `10.140.129.217/29`
 2. `acl ibmprivate dst 161.26.0.0/16`
 3. `acl ibmprivate dst 166.8.0.0/14`
 
@@ -118,9 +118,9 @@ When you select a Full Linux Subscription (FLS) boot image while provisioning a 
 
 In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
 
-The user data that you pass should follow the following conditions:
--  It should be uncompressed.
--  It should start with `#cloud-config`.
+The user data that you pass must meet the following conditions:
+-  It is uncompressed.
+-  It starts with `#cloud-config`.
 -  It should not exceed 63 Kb in size.
 
 <!-- Q2 -->
