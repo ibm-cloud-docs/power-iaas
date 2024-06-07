@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-02-27"
+lastupdated: "2024-06-07"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -17,25 +17,25 @@ subcollection: power-iaas
 # Using SLES within the {{site.data.keyword.powerSys_notm}}
 {: #using-linux}
 
-You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
+You can deploy a Linux&reg; virtual machine (VM) by using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}
 
 You can choose from the following options:
 - Register for a full Linux subscription.
 - Use your own Linux subscription from a Linux vendor.
 
-If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+If you choose to register for full Linux subscription, an extra charge applies to your provisioned VM for Linux support through IBM. A full Linux subscription requires use of one of the stock operating system images that are provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register by using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
+If you plan to use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
-When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Please download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
+When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
 
-## Registering and purchasing subscription to SLES
+## Registering and purchasing a subscription to SLES
 {: #registering-sles}
 
 You cannot contact the SUSE-based repository and download the appropriate software packages without first enabling your SLES subscription.
@@ -90,7 +90,7 @@ The following instructions are applicable to SLES version SP15. If you need addi
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting are correct.
     - Verify the checksum offloading setting by running the following command:
 
       ```text
