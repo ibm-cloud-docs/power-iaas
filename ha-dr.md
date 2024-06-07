@@ -21,36 +21,36 @@ Both High Availability (HA) and Disaster Recovery (DR) are essential for busines
 ## High availability and disaster recovery options in private cloud
 {: #ha-dr-private-cloud}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 For the pod software, {{site.data.keyword.powerSysFull}} removes all single points of failure by implementing redundancy as follows:
 
-- Redundancy in power supplies to the server that are connected to different power sources.
+- Redundancy in power supplies to the servers that are connected to different power sources.
 - Redundancy in network adapters that are connected to redundant network switches.
 - Redundancy in Fibre Channel adapters that are connected to redundant storage area network (SAN) fabrics.
 - A dual-VIOS setup with redundant subcomponents for each Virtual I/O Server (VIOS).
 - A dual-HMC setup is provided with medium size pod. However, a small pod configuration has only a single HMC. For small pods, the standby system is shared between the managing and managed nodes.
 - Dual storage systems that allow host-based mirroring of customer data.
 
-By using the remote restart function, the {{site.data.keyword.powerSys_notm}} restarts the virtual server instances on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities against power failure. However, the remote restart function might not be helpful if a storage hardware fails. For advanced high-availability function, you can implement HA clusters and HA services such as PowerHA SystemMirror, on the virtual server instances. For HA clusters, you must use server placement groups with anti-affinity policy to enable the functionality of the following items:
+By using the remote restart function, the {{site.data.keyword.powerSys_notm}} restarts the virtual server instances on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities against power failure. However, the remote restart function might not be helpful if a storage hardware fails. For advanced high-availability functions, you can implement HA clusters and HA services such as PowerHA SystemMirror, on the virtual server instances. For HA clusters, you must use server placement groups with anti-affinity policy to enable the functions of the following items:
 * All virtual machines run on different systems.
 * You have disks from different controllers.
 * You can create mirror volume groups.
 
-For client-managed applications, you must implement high-availability strategy. For example, you can leverage solutions such as Red Hat Enterprise Linux High Availability or SUSE Linux Enterprise High Availability.
+For client-managed applications, you must implement a high-availability strategy. For example, you can use solutions such as Red Hat Enterprise Linux High Availability or SUSE Linux Enterprise High Availability.
 
 ### Disaster recovery mechanisms for private cloud
 {: #disaster-recovery-mech-private-cloud}
 
 Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable.
 
-For the IBM-managed software, the disaster recovery strategy remains the same as the high-availability strategy. For client-managed applications and software, you are responsible for the disaster recovery strategy. For example, you can leverage solutions such as Red Hat Enterprise Linux High Availability and SUSE Linux Enterprise Clustered Disaster Recovery.
+For the IBM-managed software, the disaster recovery strategy remains the same as the high-availability strategy. For client-managed applications and software, you are responsible for the disaster recovery strategy. For example, you can use solutions such as Red Hat Enterprise Linux High Availability and SUSE Linux Enterprise Clustered Disaster Recovery.
 
 
 ## High Availability and Disaster Recovery options on cloud
 {: #ha-dr-on-cloud}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} instance restarts the virtual servers on a different host system if a hardware failure occurs. This process provides basic High Availability (HA) capabilities for {{site.data.keyword.powerSys_notm}}. If you want more advanced HA or Disaster Recover (DR) solutions, you can deploy the following applications in your {{site.data.keyword.powerSys_notm}} environment.
 {: shortdesc}
@@ -83,8 +83,8 @@ You can implement disaster recovery mechanisms between two IBM i virtual server 
 ### Business Continuity through backup and restore
 {: #ha-dr-ha-business}
 
-[On-Premises]{: tag-red} Your application configuration and data are not backed up automatically. To recover from a disaster, IBM backs up your configuration data that is required to rebuild a pod. The configuration data includes the virtual machine configurations and private cloud image repositories. However, backup and restoration of client data and client OS images is your responsibility.
+[On-premises]{: tag-red} Your application configuration and data are not backed up automatically. To recover from a disaster, IBM backs up your configuration data that is required to rebuild a pod. The configuration data includes the virtual machine configurations and private cloud image repositories. However, backup and restoration of client data and client OS images is your responsibility.
 
-[Off-Premises]{: tag-blue} Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up automatically. You can back up your virtual server to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) as explained in [Backup strategies for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies). You can also restore your virtual server in case a critical failure occurs.
+[Off-premises]{: tag-blue} Your {{site.data.keyword.powerSys_notm}} configuration and data are not backed up automatically. You can back up your virtual server to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) as explained in [Backup strategies for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies). You can also restore your virtual server in case a critical failure occurs.
 
-Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and is prone to failure. The maximum uncompressed image size that you can import or export is **10 TB**.
+Importing and exporting images requires a considerable amount of processing power and network bandwidth. As a result, you can submit only one import or export request before it is queued. Typically, users import or export system disks (AIX rootvg disks) that are smaller in size (**less than 1 TB**) to facilitate the transfer to and from Cloud Object Storage. If your image size is greater than 1 TB, your transfer might take a long time and be prone to failure. The maximum uncompressed image size that you can import or export is **10 TB**.

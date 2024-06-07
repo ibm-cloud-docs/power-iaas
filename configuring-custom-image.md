@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-06"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -35,7 +35,7 @@ Before you can use a custom image as the boot volume, review the following infor
 
 - You must have a basic understanding of [IBM Cloud Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) concepts.
 - If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your private cloud environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The {{site.data.keyword.powerSys_notm}} does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes.
-- Alternatively, if you have already deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
+- Alternatively, if you have deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power hardware that you selected in the **Machine Type** field.
 
 For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.keyword.powerSys_notm}}, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external} and [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
@@ -69,7 +69,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibmi-details}
 
-Clients running IBM i 6.1, or earlier, must first upgrade the OS to current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 7.2 or 7.3. For more information, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
+Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 7.2 or 7.3. For more information, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports IBM i 7.3, or later and IBM i COR.
 {: note}
@@ -78,20 +78,20 @@ Power servers <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 
 
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.2, and IBM i 7.3 VMs are at end of support and are in service extension. Therefore, additional Service Extension fees apply.
+IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.2, and IBM i 7.3 VMs are at the end of support and are in service extension. Therefore, additional Service Extension fees apply.
 {: note}
 
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported with the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps documented as follows:
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported by the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps that are documented as follows:
 - [Installing and configuring cloud-init on SLES](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-sles){: external}.
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
 Power server <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use; bring your own images are not supported. To learn more about SAP applications with PowerVS, please see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
 
 ## Creating an IBM Cloud Object Storage bucket
@@ -117,14 +117,14 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB [of uncompressed image]{: tag-teal} ) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and avoid using any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, etc.) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB [of uncompressed image]{: tag-teal} ) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, and so on) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}
 
 1. You can generate secret and access keys when you create the service credentials for the IBM Cloud Object Storage. To create the service credentials, you must have `Writer` access for the **Object Storage** bucket.
 
-2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** pane.
+2. Select **New credential** under **Service credentials** in the **Cloud Object Storage** page.
 
 3. Complete all of the wanted fields for adding a credential. Remember to check **Include HMAC Credential** for obtaining a **Hash-based Message Authentication Code (HMAC)** credential.
 

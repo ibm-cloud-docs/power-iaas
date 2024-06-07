@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #full-linux-sub}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) support through IBM.
 {: shortdesc}
@@ -55,11 +55,11 @@ The CentOS image is recommended for the proxy VSI.
 
 To create a proxy setup, complete the following steps:
 
-1. Open the Security groups for the VPC by navigation to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
+1. Open the Security groups for the VPC by navigating to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
 
 2. In the default Security group that is attached to your proxy, add 443, 8443, 80 and 3128 ports.
 
-3. On the VSI, enable a floating IP temporarily. In the proxy instance, start an secure shell (SSH) connection by using this temporary IP address in the `ssh` command.
+3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a secure shell (SSH) connection by using this temporary IP address in the `ssh` command.
 
 ```text
 
@@ -81,7 +81,7 @@ You must have root authority to run these commands. After the installation compl
 
 Configure the squid by using the following commands:
 1. `acl localnet "<CIDR of a subnet that you will deploy in the pod>"`
-      For example: `10.140.129.217/29`
+      for example, `10.140.129.217/29`
 2. `acl ibmprivate dst 161.26.0.0/16`
 3. `acl ibmprivate dst 166.8.0.0/14`
 
@@ -102,8 +102,8 @@ To complete the setup process, follow these steps:
 4. Connect to the LPAR by using one of the following methods:
    * From the console on the browser.
    * By using the `SSH` command from your data network.
-5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`
-6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file
+5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`.
+6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file:
     `/usr/local/bin/rhel-cloud-init.sh`
 7. One of the parameters for the command represents the proxy IP. Set this proxy IP to the internal private IP of your proxy VSI. For example, `10.240.0.4`. Set the port to 3128.
 
@@ -114,13 +114,13 @@ To check whether the setup is complete and the subscription is successful, check
 ## Passing user-defined scripts
 {: #cloud-init-fls-private-cloud}
 
-When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during the first boot runtime.
 
 In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
 
-The user data that you pass should follow the following conditions:
--  It should be uncompressed.
--  It should start with `#cloud-config`.
+The user data that you pass must meet the following conditions:
+-  It is uncompressed.
+-  It starts with `#cloud-config`.
 -  It should not exceed 63 Kb in size.
 
 <!-- Q2 -->

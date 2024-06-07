@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network requirements
 {: #network-requirements}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 To facilitate the {{site.data.keyword.powerSysFull}} pod infrastructure connectivity, you must evaluate the following network requirements:
 * The data center site must provide network cables to connect the private cloud network infrastructure and the data network at the site.

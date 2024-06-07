@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-private-cloud}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
 
@@ -50,10 +50,10 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, bill for the virtual machine reflects the resource change at a per-hour prorated price.
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices mentioned in this topic are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance with one core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
+In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance that has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
 Let us assume the following hypothetical monthly prices:
 * Cores: $143.23/month x 1 = $143.23
 * Memory: $9/month each GB x 8 = $ 72.00
@@ -164,7 +164,7 @@ For more information about unit prices for each metric ID, see [Where can I find
 ## Base instances
 {: #base-instances}
 
-The base instance billing depends on the options you select when you create a  virtual machine. The machine type, number of cores, and amount of memory affect the base instance billing. When you create your  virtual machine, the associated monthly rate is displayed on the base instance billing.
+The billing of a base instance depends on the options you select when you create a virtual machine. The factors that affect the billing of the base instance are, the machine type, number of cores, and amount of memory. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instance.
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -188,7 +188,7 @@ You can choose one of the following core types for your workload:
 
 Different scenarios provide different benefits when you use each type of virtual processor core.
 
-All prices mentioned on this page are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices mentioned in this topic are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 In the following example, assume that the cost of different types of virtual processor cores is the same within each system type they belong to.
@@ -330,7 +330,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 
 The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}} on cloud. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
@@ -345,7 +345,7 @@ When you use SPP in a private cloud, you pay for the following items:
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-| Offering/Solution  | cores-to-virtual core ratio  | Core Pricing  | OS license pricing |
+| Offering/Solution  | core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
 | PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
@@ -423,7 +423,7 @@ Review the following frequently asked questions about pricing:
      - `Power Virtual Server Volume` for Volumes.
      - `Power Virtual Server Snapshot` for Snapshots.
      - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools.
-         Currently, there is no pricing associated with other types of resources.
+         There is no pricing associated with other types of resources.
    * Click on the selected resource type entry from the search results. The corresponding page opens.
    * Click the Private Cloud billing plan from the left pane:
      - `Power Virtual Server Private Cloud Virtual Machine Group` for Virtual Machines.

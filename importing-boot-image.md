@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-07"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -16,10 +16,10 @@ subcollection: power-iaas
 # Importing a boot image
 {: #importing-boot-image}
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs can select **Tier 3**. The storage types cannot be changed once the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay before receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 1 (NVMe-based Flash Storage)** or **Tier 3 (SSD Flash Storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs can select **Tier 3**. The storage types cannot be changed when the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
-Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. If you have not already generated your HMAC keys, you can follow the instructions in [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
@@ -60,10 +60,10 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 
 <!-- Q2 -->
 
-   If you are importing customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.
+   If you are importing a customized SAP HANA or SAP NetWeaver image, you must select the self-certification checkbox.
    {: note}
 
-2. After you click **Import image**, enter all of the required information. Refer to the table at the bottom of the page to complete the necessary fields to import a boot image.
+2. After you click **Import image**, enter all of the required information. Refer to the table at the end of the page to complete the necessary fields to import a boot image.
 
 3. Find your newly uploaded boot image in **Boot images**.
 
@@ -75,15 +75,15 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want your imported image to display in your image name catalog.|
-| Storage type | Select whether you want **Tier 1 (NVMe-based flash storage)** or **Tier 3 (SSD flash storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
-| Storage pool | The custom image storage volume(s) will be placed in the storage pool based on the storage pool placement options (auto-select, affinity, or anti-affinity) that you choose. The boot volume of any VM that is deployed by using this image will be deployed in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).|
+| Storage type | Select whether you want **Tier 1 (NVMe-based Flash Storage)** or **Tier 3 (SSD Flash Storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
+| Storage pool | One or more custom image storage volumes are placed in the storage pool based on the storage pool placement options (auto-select, affinity, or anti-affinity) that you choose. The boot volume of any VM that is deployed by using this image deploys in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).|
 | Auto-select pool | Select this option to automatically create the storage volume in a pool that has sufficient capacity. |
-| Affinity | Use this option to identify the storage pool that must be used to place the boot volumes, based on an existing PVM instance (VM) or storage volume from your account. The custom image storage volumes will be placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected to place the boot volumes is based on the PVM instance’s root (boot) volume. |
-| Anti-affinity | Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot voulmes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volume(s), the storage pools in which the list of anti-affinity object(s) reside will not be selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified. |
+| Affinity | Use this option to identify the storage pool that must be used to place the boot volumes, based on an existing PVM instance (VM) or storage volume from your account. The custom image storage volumes are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected to place the boot volumes is based on the PVM instance’s root (boot) volume. |
+| Anti-affinity | Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified. |
 | Source details (Cloud storage) | Use the following fields to set the Cloud storage details.|
 | Region | Select either **us-east**, **us-south**, **ca-tor**, **eu-de**, **eu-es**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region.|
-| Image file name | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are *tar* and *ova*. You can compress image files by using *gzip*. The supported file name extensions are *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.
-| Bucket name | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
+| Image file name | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are `tar` and `ova`. You can compress image files by using `gzip`. The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz` and `.tgz`. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.
+| Bucket name | Sub folders can be used and specified as `bucketName/optional/folders`. Optional folders are created automatically if they don’t exist. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
 {: caption="Table 1. Boot images options" caption-side="bottom"}

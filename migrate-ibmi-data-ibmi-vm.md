@@ -16,4 +16,4 @@ subcollection: power-iaas
 # Configuring Mass Data Migration (MDM) on IBM i VM
 {: #config-MDM-IBMi-VM}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}

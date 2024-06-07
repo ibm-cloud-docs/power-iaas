@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network use cases
 {: #network_use_cases}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 Review the common network use cases within the network architecture of {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
@@ -24,9 +24,9 @@ Review the common network use cases within the network architecture of {{site.da
 ## Use case 1: Private network within a pod
 {: #connect_lpars_within_pod}
 
-With this use case, you can establish a private network within a pod that allows communication between the applications located in the pod. You can establish a private network within the pod by using the IP address allocation method, Classless Inter-Domain Routing (CIDR).
+With this use case, you can establish a private network within a pod that allows communication between the applications located in the pod. You can establish a private network within the pod by using the IP address allocation method: Classless Inter-Domain Routing (CIDR).
 
-You can deploy virtual machines in a pod that has a default configuration by using one of the following patterns:
+You can deploy virtual machines in a pod that have a default configuration by using one of the following patterns:
 * **Affinity**: In this pattern, virtual machines are deployed on the same physical host. Therefore, the virtual machines can communicate with each other on the same host through the attached Ethernet switch.
 * **Anti-affinity**: In this pattern, virtual machines are deployed on different physical hosts. A custom configuration is required on the externally connected Ethernet switch to enable communication between virtual machines that are deployed on different physical hosts.
 
@@ -62,7 +62,7 @@ With this use case, you can establish a network that allows communication betwee
 ### Example
 {: #BGP-example}
 
- You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
+ You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. By setting up the Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
 
 Figure 3 describes the bidirectional external connectivity through BGP type of network setup.
 ![Bidirectional external connectivity through BGP](./figures/bi-dir-ext-conn-bgp.png "Bidirectional external connectivity through BGP"){: caption="Figure 3. Bidirectional external connectivity through BGP" caption-side="bottom"}
@@ -70,7 +70,7 @@ Figure 3 describes the bidirectional external connectivity through BGP type of n
 ## Use case 4: Bidirectional external connectivity through static routes
 {: #bi-dir-ext-conn-static-routes}
 
-With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. By setting up Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 ### Example
 {: #static-example}

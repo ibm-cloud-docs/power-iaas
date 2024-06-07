@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2021
+  years: 2020, 2024
 
-lastupdated: "2020-04-19"
+lastupdated: "2024-06-06"
 
 keywords: aix mksysb, volume group, backup multiple volumes, savevg, dd command
 
@@ -34,7 +34,7 @@ Use the following command to find and back up all files in a specific volume gro
 ```
 {: codeblock}
 
-For example:
+For example,  
 
 ```text
 # savevg –f /home/admin01/datavg_bkup –i  datavg
@@ -53,7 +53,7 @@ Run the following commands to back up multiple volume groups:
 ```
 {: codeblock}
 
-To generate an output file that contains information about the volume group, run the *mkvgdata* command for each online volume group to generate the output file. This output file is located in the `/tmp/vgdata` directory. You can compress and store this output file in the `/backup` file system directory as shown in the following example. This output file contains information about all volume groups, logical volumes, and file systems that can be used as a single image. This image can be transferred or stored within an *mksysb* backup image if the `/backup` directory is located on the root volume group.
+To generate an output file that contains information about the volume group, run the *mkvgdata* command for each online volume group to generate the output file. This output file is located in the `/tmp/vgdata` directory. You can compress and store this output file in the `/backup` file system directory as shown in the following example. This output file contains information about all volume groups, logical volumes, and file systems that can be used as a single image. This image can be transferred or stored within an *mksysb* backup image if the `/backup` directory is on the root volume group.
 
 Run the following command to re-create the volume groups, logical volumes, and file systems:
 
@@ -63,7 +63,7 @@ Run the following command to re-create the volume groups, logical volumes, and f
 
 Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and look for the line with `VG_SOURCE_DISK_LIST=`. Change the line to have *hdisks*, *vpaths*, or *hdiskpowers* based on your requirement.
 
-For example:
+For example,  
 
 ```text
 # restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data
@@ -76,7 +76,7 @@ The output file of the *savevg* command can be restored by using the *restvg* co
 
 You can use the *savevg* command to back up volume groups. All logical volume information, Journaled File System (JFS), and JFS2 mounted file systems are archived. However, you cannot use the *savevg* command to back up raw logical volumes.
 
-Use the following methods to back up and restore contents of a file system:
+Use the following methods to back up and restore the contents of a file system:
 
 1. Unmount the file system.
 2. Save the raw logical volume content into a file by running the following command:
@@ -86,7 +86,7 @@ Use the following methods to back up and restore contents of a file system:
 ```
 
 
-This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in file system `/file/system`. Make sure that the specified directory where the output file will be stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume size is 100 GB, you need 100 GB file system space for the logical volume copy.
+This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in the file system `/file/system`. Make sure that the specified directory where the output file will be stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume size is 100 GB, you need 100 GB file system space for the logical volume copy.
 
 On the destination server, re-create the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
 

@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Planning and prerequisites
 {: #planning_prerequisite}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 Proper planning is essential for the successful setup and use of your {{site.data.keyword.powerSys_notm}} pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}

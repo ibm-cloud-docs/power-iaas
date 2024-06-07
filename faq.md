@@ -31,9 +31,9 @@ The primary difference between the two is where the physical infrastructure resi
 ## Which Power servers are supported?
 {: #servers-supported}
 
-[Off-Premises]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, and IBM Power E1080.
+[Off-premises]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
 
-[On-Premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
+[On-premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
 For complete specifications, see [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
@@ -49,7 +49,7 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 ### AIX
 {: #aix-os-version}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} on cloud offering supports the following operating systems:
 * S922  -  7.1 or later
@@ -60,7 +60,7 @@ Stock images available when you create a virtual machine are:
 * AIX 7.3 TL2
 * AIX 7.2 TL5 SP7
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 The IBM {{site.data.keyword.powerSys_notm}} Private Cloud offering supports the following operating systems:
 * S1022 - 7.2 or later
@@ -73,7 +73,7 @@ Stock images available when you create a virtual machine are:
 * AIX 7.2 TL5 SP5
 
 <!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
-<!--[Off-Premises]{: tag-blue}-->
+<!--[Off-premises]{: tag-blue}-->
 <!--The {{site.data.keyword.powerSys_notm}} on cloud offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
 <!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
 
@@ -91,7 +91,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 <!--* AIX 7.3 TL1 SP2-->
 <!--* AIX 7.2 TL5 SP6-->
 <!--* AIX 7.1 TL5 SP9-->
-<!--[On-Premises]{: tag-red}-->
+<!--[On-premises]{: tag-red}-->
 <!--The {{site.data.keyword.powerSys_notm}} private cloud offering supports AIX 7.2, or later on the S1022 (9105-22A) and E1080 (9080-HEX).-->
 <!--AIX stock images currently available for private cloud when you create a VM are:-->
 <!--* AIX 7.3 TL1 SP2-->
@@ -102,7 +102,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibm-os-versions}
 
-{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.1, or later.
+{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.2, or later.
 {{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
@@ -117,23 +117,24 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.5 TR3
 * IBM i 7.4 TR9
 * IBM i 7.3 TR13
-* IBM i 7.2 TR9 [^3]
-* IBM i 7.1 TR11 [^2]
+* IBM i 7.2 TR9 [^2]
+
+<!--IBM i 7.1 TR11 2-->
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[^2]: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.
+<!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
 
-[^3]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
+[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
 
 ### Linux
 {: #linux-os-versions}
 
 <!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)):
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)) or BYOL (Bring Your Own License):
 
 Red Hat
 
@@ -160,17 +161,19 @@ SUSE [^footnote3]
 * SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
 * SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 
-[^footnote1]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote2]: Install [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote1]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote3]: SLES images are not currently supported on {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 <!--Q2-->
-The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions. The RHEL 9.2 stock images can be deployed on the systems that has cores-to-virtual core ratio set to 1:10 or greater.
+The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
+
+To use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 <!--Q2-->
 
-If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
+<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
 
 General purpose:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
@@ -178,14 +181,14 @@ General purpose:
 
 For SAP workloads:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
-* RHEL 8.1 or later
+* RHEL 8.1 or later-->
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 
 FLS provides access to RHEL OS interim fixes and updates by using activation keys for Power servers that are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
@@ -214,7 +217,7 @@ Yes, you can expand the pod with additional storage capacity. But you cannot add
 ## Are the private cloud pods equipped with spare compute nodes for maintenance?
 {: #spare-compute-node}
 
-In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node will be E1080.
+In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
 
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
@@ -253,14 +256,14 @@ For each major version (example: Technology Level) of the operating system (OS) 
 {: faq}
 {: support}
 
-Any unsupported and older stock images are periodically removed from the offering. You will be notified three weeks before the images are removed.
+Any unsupported and older stock images are periodically removed from the offering. You are notified three weeks before the images are removed.
 
 ## What happens to virtual machines deployed by using stock images that are removed?
 {: #vm-stock-images}
 {: faq}
 {: support}
 
-If the stock images that are used to depoy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor’s guidelines specific to your operating system.
+If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor’s guidelines specific to your operating system.
 
 ## What formats should I use when uploading a custom image?
 {: #custom-image}
@@ -268,7 +271,7 @@ If the stock images that are used to depoy the virtual machines are removed, the
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What are the available storage types in the storage area network (SAN)?
+## What are the available storages types in the storage area network (SAN)?
 {: #storage}
 {: faq}
 {: support}
@@ -299,7 +302,7 @@ When you deploy a VM, you can choose between **dedicated**, **shared capped**, o
 - **Shared capped**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
-The cores-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
@@ -353,13 +356,13 @@ If you like to compare your current environment's performance to what's availabl
 {: #vm-migration}
 {: faq}
 
-To migrate your VM from one data center to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then perform an import followed by a deployment.
+To migrate your VM from one data center to another, you must capture and export your VM to Cloud Object Storage (COS). After you successfully capture and export your VM, copy it to the COS in the destination region, then do an import followed by a deployment.
 
 ## What does VM pinning do?
 {: #pinning}
 {: faq}
 
-You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host once the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host when the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
@@ -367,7 +370,7 @@ You can choose to *soft pin* or *hard pin* a VM to the host where it is running.
 
 You can apply affinity and anti-affinity policies to both VMs and volumes.
 
-**VM affinity and anti-affinity policy** allows you to spread a group of VMs across different hosts or keep them on a specific host.
+**VM affinity and anti-affinity policy** allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
 Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
@@ -381,7 +384,7 @@ The use of volume affinity policy (affinity or anti-affinity) requires the avail
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this, you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false. The PVM instance *storagePoolAffinity* property is set to true by default when the PVM instance is deployed and can be changed only by using the modify PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this, you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false. The PVM instance *storagePoolAffinity* property is set to true by default when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
 
 ## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
 {: #licensing-os}
@@ -418,9 +421,9 @@ For more information, see [Hardware specifications](/docs/power-iaas?topic=power
 {: #multi}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
-The {{site.data.keyword.powerSys_notm}} on cloud run in a multi-tenant environment. If you have signed up for a dedicated host you can get single-tenant capabilities.
+The {{site.data.keyword.powerSys_notm}} on cloud runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
 
 ## Are there bare-metal options?
 {: #bare}
@@ -455,29 +458,29 @@ See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapsh
 {: #snap-clone-ui}
 {: faq}
 
-None. Use the API and CLI to perform snapshot or clone operations. Using the {{site.data.keyword.powerSys_notm}} API and command line interface (CLI) you can create, restore, delete, and attach the snap-shots and volume-clones.
+None. Use the API and CLI to perform snapshot or clone operations. Using the {{site.data.keyword.powerSys_notm}} API and command-line interface (CLI) you can create, restore, delete, and attach the snap-shots and volume-clones.
 
 **APIs to create snapshot and clone**
-- [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
+- [Create a new volume clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
 - [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
 
 **CLIs to create snapshot and clone**
 - [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
 - [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
 
-## Are there any initial snapshot requirement in terms of storage?
+## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}
 {: faq}
 
 None. The storage is allocated on demand.
 
-## Does the snapshot and volume clone supports any safeguard policy?
+## Does the snapshot and volume clone support any safeguard policy?
 {: #snap-clone-safeguard}
 {: faq}
 
 None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
 
-## Can you tell me more about the backup process using the PowerHA Toolkit for IBM i?
+## Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?
 {: #poweha-toolkit}
 {: faq}
 
@@ -486,7 +489,7 @@ The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation t
 - Create the volumes-clone
 - Attach the clones to a host
 - Start the host
-- kicki-off the backups
+- Kick-off the backups
 - Move the BRMS data back to the production VM before shutting down the backup VM
 - Remove the cloned volumes.
 
@@ -497,7 +500,7 @@ It also allows you to quickly create an intermediate snap-shot then a volumes-cl
 {: faq}
 {: support}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
 
@@ -506,7 +509,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: faq}
 {: support}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
@@ -514,7 +517,7 @@ For more information on VPN, see [Managing VPN connections](/docs/power-iaas?top
 {: #firewall}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 You must set your own firewall in your IBM Cloud account.
 
 ## How do you connect a server instance between two data centers (DAL13 to WDC04)?
@@ -532,7 +535,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 {: support}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
@@ -621,20 +624,20 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: #network_latency}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
 
 ## What must be the network latency between the data center and the corresponding IBM Cloud region?
 {: #network_latency-private-cloud}
 
-[On-Premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
+[On-premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
 
 
 <!--## How many DHCP pools can be created on the {{site.data.keyword.powerSys_notm}} private cloud?-->
 <!--{: #dhcp-pool}-->
 <!--{: faq}-->
 
-<!--[On-Premises]{: tag-red}-->
+<!--[On-premises]{: tag-red}-->
 <!--No of DHCP pools that can be created TBD-->
 <!--Sridhar to provide input-->
 
@@ -643,21 +646,21 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 {: #planned_maintenance_activity}
 {: faq}
 
-For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys_notm}} operations team sends you notifications at least 7 days in advance. Watch the Notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
+For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys_notm}} operations team sends you notifications at least 7 days in advance. Watch the notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
 
-## How do I convert existing volumes to replication enabled volumes?
+## How do I convert existing volumes to replication-enabled volumes?
 {: #convert-to-replication-vol}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
-You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volume supports replication.
+You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
 
 ## How can I check whether volume is already replication enabled?
 {: #check-for-replication-vol}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
 
@@ -666,7 +669,7 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: faq}
 
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
 
@@ -678,16 +681,16 @@ The serial number is available after you deploy your virtual server instance and
 
 Pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
 
-## What should I do If I do not see the latest information in the UI?
+## What should I do if I do not see the latest information in the UI?
 {: #ui-not-updated}
 {: faq}
 
 Consider the following if you do not see an update in the User Interface(UI):
 
-1. {{site.data.keyword.powerSys_notm}} utilizes a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
-2. In some scenarios out-dated information may be shown while the cache is updated, for approximately four minutes.
+1. {{site.data.keyword.powerSys_notm}} uses a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
+2. In some scenarios out-dated information might be shown while the cache is updated, for approximately four minutes.
 3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
-4. When the DC has a heavy amount of traffic, and the cache is not refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI may display an error message. A subsequent page refresh retrieves and displays the updated information.
+4. When the DC has a heavy amount of traffic, and the cache is not refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI might display an error message. A subsequent page refresh retrieves and displays the updated information.
 
 ## Why can’t I see the storage pool and tier of my boot images?
 {: #stock-image-copy-improve}
@@ -702,7 +705,7 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #cc-res-group}
 {: faq}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
 
 ## What is the Maximum Transmission Unit (MTU) size that is supported in {{site.data.keyword.powerSys_notm}} networks?
@@ -723,9 +726,9 @@ Both AIX and IBM i support custom cloud-init configurations at the time of {{sit
 
 You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
 
-[On-Premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
+[On-premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 
-## Can I add user interface to an existing virtual machine?
+## Can I add a a user interface to an existing virtual machine?
 {: #ui-vm}
 {: faq}
 
