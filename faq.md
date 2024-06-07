@@ -21,7 +21,7 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, pay-as-you-use billing allows you to easily adjust your workloads. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 ## What is the difference between {{site.data.keyword.powerSys_notm}} on cloud and private cloud?
 {: #private-cloud-on-cloud-diff}
@@ -105,7 +105,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 {{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.2, or later.
 {{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
 
-If you are using IBM i 6.1, you must first upgrade the OS to a current support level before migrating to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E980 (9080-M9S) and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -121,7 +121,7 @@ IBM i stock images currently available when you create a VM are:
 
 <!--IBM i 7.1 TR11 2-->
 
-[^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+[^1]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 <!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
 
@@ -134,7 +134,10 @@ IBM i stock images currently available when you create a VM are:
 
 [Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. The following Linux stock images are available when you select Full Linux Subscription (learn more about [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux)) or BYOL (Bring Your Own License):
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+
+The following list of Linux stock images are available:
+
 
 Red Hat
 
@@ -190,7 +193,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 
-FLS provides access to RHEL OS interim fixes and updates by using activation keys for Power servers that are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
+FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 The following list is an example of FLS offerings:
 
@@ -230,6 +233,28 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
 
+<!--Q2-->
+## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
+{: #pod-disconnect-unplanned-nw-mcp}
+
+If there is an unplanned network outage for the management network that is connecting the IBM Cloud instance and the pod infrastructure, the VMs continue to run within the pod.
+
+See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and the secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
+
+|  Capability  | Impact of disconnected mode |
+| ------------ | --------------------------- |
+| Your workload and data | No impact – your workload is operational and data is available. |
+| GUI or API (for read operations) | Minimal impact – GUI is operational and uses last known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
+| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable – resource write operations are unavailable until the connectivity for the control plane is reestablished. |
+| command-line interface (CLI) | Minimal impact – read operations remain operational and write operations are unavailable until connectivity is reestablished.|
+| Billing and metering | No impact – metering uses last-known cached data. If the pod gets disconnected, write operations are unavailable. |
+| Telemetry | Unavailable – telemetry data within the pod is unavailable until control plane connectivity is reestablished. However, IBM Storage Insights continue to cache the information for a selected period. |
+| DHCP service (for your data network) |  No impact – DHCP services are provided by the pod-resident network infrastructure and does not require a connection to IBM Cloud. |
+| IBM remote support | Unavailable – IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
+{: caption="Table 1. Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
+
+<!--Q2-->
+
 <!--The FAQs from here are migrated from PowerVS guide-->
 
 ## Can I use my own AIX, IBM i, or Linux <!--, or [Linux for SAP (HANA or NetWeaver)]{: tag-teal}--> image?
@@ -265,13 +290,13 @@ Any unsupported and older stock images are periodically removed from the offerin
 
 If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor’s guidelines specific to your operating system.
 
-## What formats should I use when uploading a custom image?
+## What formats can I use to upload a custom image?
 {: #custom-image}
 {: faq}
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What are the available storages types in the storage area network (SAN)?
+## What storage types are available in the storage area network (SAN)?
 {: #storage}
 {: faq}
 {: support}
@@ -296,17 +321,17 @@ By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the A
 {: #processor}
 {: faq}
 
-When you deploy a VM, you can choose between **dedicated**, **shared capped**, or **shared uncapped** cores. The following list provides a simplified breakdown of their differences:
+When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, or **Shared uncapped** cores. The following list provides a simplified breakdown of their differences:
 
 - **Shared uncapped**: shared among other clients
-- **Shared capped**: shared, but resources do not expand beyond those that are requested (used mostly for licensing)
+- **Shared capped**: shared, but resources do not expand beyond the requested capacity (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
 The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
-| The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. After a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the wanted number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around four cores, but it peaks around eight cores, you need to configure the partition with eight cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand.|
+| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core, which is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 1. Dedicated processors" caption-side="top"}
@@ -315,12 +340,17 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 
 |Shared processors|
 |:-----------------|
-| For shared processors, there are two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition might consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5. For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value that is specified for processing units. For example, if virtual processors are set to 3, the partition might consume 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization would be three physical cores worth of CPU time). There must be unused capacity available on the server for a partition to consume more than its configured processing units.|
+| Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of the CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 2. Shared processors" caption-side="top"}
 {: #proc-table-2}
 {: tab-title="Shared processors"}
+
+
+<!--The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. After a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the wanted number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around four cores, but it peaks around eight cores, you need to configure the partition with eight cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand.-->
+
+<!--For shared processors, there are two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition might consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5. For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value that is specified for processing units. For example, if virtual processors are set to 3, the partition might consume 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization would be three physical cores worth of CPU time). There must be unused capacity available on the server for a partition to consume more than its configured processing units.-->
 
 
 <!--**Example 1**
@@ -372,7 +402,7 @@ You can apply affinity and anti-affinity policies to both VMs and volumes.
 
 **VM affinity and anti-affinity policy** allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
+<!--is this not a UI element?-->Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
 The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
@@ -384,7 +414,7 @@ The use of volume affinity policy (affinity or anti-affinity) requires the avail
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To accomplish this, you must modify the PVM instance and set the new PVM instance *storagePoolAffinity* property to false. The PVM instance *storagePoolAffinity* property is set to true by default when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the *storagePoolAffinity* property of the new PVM instance to false. By default, the *storagePoolAffinity* property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
 
 ## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
 {: #licensing-os}
@@ -445,7 +475,7 @@ The key differences are as follows:
 
 | Context | Snapshot | Clone |
 |-|-|-|
-| Definion | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed/manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
+| Definion | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
 | Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
 | Ease of creation | Easy and quick process| Three-step process and takes a long time|
 | Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
@@ -490,10 +520,10 @@ The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation t
 - Attach the clones to a host
 - Start the host
 - Kick-off the backups
-- Move the BRMS data back to the production VM before shutting down the backup VM
-- Remove the cloned volumes.
+- Move the BRMS data back to the production VM and then shut down the backup VM
+- Remove the cloned volumes
 
-It also allows you to quickly create an intermediate snap-shot then a volumes-clone before entering the long-running volume detach or attach phase. You can pause the process immediately before attaching volumes.
+Using the PowerHA toolkit, you can create an intermediate snap-shot and a volumes-clone before the process enters the long-running volume detach or attach phase. You can pause the process immediately before the volumes are attached.
 
 ## How do you set up private networks between Intel&reg; Virtual Servers (x86) and {{site.data.keyword.powerSys_notm}}?
 {: #connecting}
@@ -510,7 +540,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: support}
 
 [Off-premises]{: tag-blue}
-For a complete tutorial on site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?
@@ -568,13 +598,15 @@ To delete a workspace (and all its resources), use the left navigation to naviga
 {: #delete-service-instance}
 {: faq}
 
-There are two methods to delete a virtual server instance. Both deletion methods are manual processes. To delete all VSIs, delete the workspace or delete a subset of the virtual server instance.
+Deleting a virtual server instance is a manual process. To delete all VSIs, delete the workspace or delete a subset of the virtual server instance.
 
 - Delete a single virtual server instance from the Virtual server instances page.
 Click the overflow menu (icon with 3 vertical dots) on the far right of each virtual server instance entry on the table. From the pull-down menu, click **Delete** to open the deleted confirmation modal. Click **Delete instance** to initiate the deletion request. This action cannot be undone.
 
 - Delete a single virtual server instance from the details page.
-Navigate to the virtual server instance's details page by clicking the virtual server instance name present on the table, on the Virtual server instances page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+
+<!--Navigate to the virtual server instance's details page by clicking the virtual server instance name present on the table, on the Virtual server instances page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.-->
 
 ## How do I open a support ticket for the {{site.data.keyword.powerSys_notm}} workspace?
 {: #support-ticket}
@@ -722,13 +754,13 @@ Yes, you can automate the network configurations such as the Maximum Transmissio
 
 To automate the MTU configuration, you need to customize your cloud-init network configuration. For more information, see the [Cloud-init docs on network configuration](https://cloudinit.readthedocs.io/en/latest/reference/network-config-format-v1.html){: external}.
 
-Both AIX and IBM i support custom cloud-init configurations at the time of {{site.data.keyword.powerSys_notm}} instance (VM) deployment.
+Both AIX and IBM i support the configurations for custom cloud-init at the time of {{site.data.keyword.powerSys_notm}} instance (VM) deployment.
 
-You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The custom cloud-init is specified by the `userData` request parameter. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
+You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
 
 [On-premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 
-## Can I add a a user interface to an existing virtual machine?
+## Can I add a user interface to an existing virtual machine?
 {: #ui-vm}
 {: faq}
 
