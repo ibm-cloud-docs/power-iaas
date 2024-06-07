@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-07"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 

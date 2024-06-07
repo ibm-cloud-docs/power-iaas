@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-07"
 
 keywords: direct link, order DL, ordering DL
 
@@ -27,9 +27,9 @@ Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/
 ## Before you begin
 {: #before-you-begin-direct-link-connect}
 
-Before you order {{site.data.keyword.dl_short}} Connect, make sure that you review the following considerations and have satisfied any prerequisites:
+Before you order {{site.data.keyword.dl_short}} Connect, make sure that you review the following considerations and satisfied the prerequisites:
 
-* Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorizations to order the {{site.data.keyword.dl_short}} (2.0) Connect service.
+* Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorization to order the {{site.data.keyword.dl_short}} (2.0) Connect service.
 * Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
 * {{site.data.keyword.cloud_notm}} highly recommends that you establish a second, diverse direct link to prevent outages, whether unplanned, or planned due to maintenance.
 * A 10 Gbps connection is available only using the {{site.data.keyword.dl_short}} (2.0) Connect offering.
@@ -48,7 +48,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
 1. Follow {{site.data.keyword.dl_short}} Connect [ordering instructions](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#instructions-connect) with these exceptions:
 
-   * In the **Gateway** section, select the same location as the {{site.data.keyword.powerSys_notm}} instance. Each location requires its own direct link. For example, if you order a direct link for Frankfurt 04, you cannot establish connection to the VMs in Frankfurt 05.
+   * In the **Gateway** section, select the same location as the {{site.data.keyword.powerSys_notm}} instance. Each location requires its own direct link. For example, if you order a direct link for Frankfurt 04, you cannot establish a connection to the VMs in Frankfurt 05.
 
       For the list of {{site.data.keyword.dl_short}} Connect PowerVS locations, see [Providers and locations](/docs/dl?topic=dl-locations#connect-locations).
       {: important}
@@ -62,16 +62,16 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
    * In the **BGP** section:
 
       *  For **BGP peering subnet**, you can select **Auto-select IP** to auto-select an IP address from range `169.254.0.0/16`, or manually enter addresses in a specific range to avoid conflict with an existing connection.
-      * For **BGP ASN**, enter `64999` as the BGP ASN number for the {{site.data.keyword.dl_short}} Connect location unless a different ASN number is required as indicated on the provisioning page. For example, BGP ASN number for the WDC04 location is `64995`. For 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
+      * For **BGP ASN**, enter `64999` as the BGP ASN number for the {{site.data.keyword.dl_short}} Connect location unless a different ASN number is required as indicated on the provisioning page. For example, the BGP ASN number for the WDC04 location is `64995`. For 10 Gbps ports that are not GRE capable, you must use the BGP ASN number `64997`.
       * Do not try to change the BGP ASN number to **64995**. You must contact the IBM Power support team to handle your request to change the BGP ASN number.
 
       | Direct Link Connect site | BGP ASN |
       | ---------------------------- | -------------- |
-      | Dallas 10 \n Dallas 12  \n Dallas 13 | 4206000072 \n 64999 \n 64999 |
+      | Dallas 10 \n Dallas 12 \n Dallas 13 | 4206000072 \n 64999 \n 64999 |
       | Washington 4 | 64995 |
       | Washington 6 | 64999 |
       | Washington 7 | 4206000068 |
-      | Frankfurt 4  \n Frankfurt 5 | 64999 |
+      | Frankfurt 4 \n Frankfurt 5 | 64999 |
       | London 6 | 64999 |
       | Toronto 1 | 64999 |
       | Montreal 1 | 64999 |
@@ -126,7 +126,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 
     ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
 
-    Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternate {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed.
+    Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternative {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed.
 
     Refer to the following table to identify the ports and port groups that you must select for the redundant {{site.data.keyword.dl_short}} Connect instance:
 
