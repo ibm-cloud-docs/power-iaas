@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for {{site.data.keyword.powerSys_notm}} on cloud
+# Pricing for {{site.data.keyword.powerSys_notm}}
 {: #pricing-virtual-server-on-cloud}
 
 [Off-premises]{: tag-blue}

@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Managing the shared processor pool
 {: #manage-SPP}
 
-A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances. 
+A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances.
 {: shortdesc}
 
 Unlike a virtual server instance that has a dedicated and defined maximum amount of processing capacity, you can set the reserved cores in SPP that is available at the pool level.
@@ -45,7 +45,7 @@ For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-virtual c
 
 [Off-premises]{: tag-blue}
 
-In a {{site.data.keyword.powerSys_notm}} on cloud user-defined SPP, you can set the core-to-virtual core ratio to 1:3. Using the 1:3 ratio, you can deploy Oracle licensing use cases without purchasing a dedicated host. Note the following limitations when your use core-to-virtual core ratio:
+In a {{site.data.keyword.powerSys_notm}} user-defined SPP, you can set the core-to-virtual core ratio to 1:3. Using the 1:3 ratio, you can deploy Oracle licensing use cases without purchasing a dedicated host. Note the following limitations when your use core-to-virtual core ratio:
 
 * You can set the ratio only on a user-defined SPP.
 * For non-dedicated hosts on Power10, you can increase the limit of core-to-virtual core ratio to 1:3 for entitled capacities less than or equal to 2.
@@ -63,7 +63,7 @@ When you use SPP, you pay for the following items:
 * SPP reserved cores that use the shared capped part number.
 * Virtual server instance cores that are deployed into the SPP that use shared uncapped part number.
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} on cloud, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#pricing-spp-private-cloud).
+The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#pricing-spp-private-cloud).
 {: note}
 
 ## Configuring a shared processor pool
@@ -97,7 +97,7 @@ To create an SPP, complete the following steps:
     |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
-    |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}} on cloud, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-virtual core ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
+    |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-virtual core ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
      {: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
 
     [^1]: The Reserved processing cores are the number of cores that are reserved for processing and must always be a whole number.

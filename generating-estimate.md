@@ -27,7 +27,7 @@ Use the cost estimator tool for:
 ## Creating an estimation of resources
 {: #est-resources}
 
-You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} Private Cloud or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
+You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your IBM {{site.data.keyword.powerSysFull}} Private Cloud or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
 {: shortdesc}
 
 You are not charged for creating an estimate. The resources that you estimate can be deployed only after a workspace creation.
@@ -45,7 +45,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 5. Select the type of virtual server from the **Location** drop-down list as [**On-premises**](#on-prem-location-type) or [**Off-premises**](#off-prem-location-type).
 
 6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.
-    For private cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
+    For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
 
 7. On the right-side panel, click **Add to estimate** to review the configuration.
 
@@ -170,7 +170,7 @@ To learn more about dedicated host, see [Getting started with dedicated host]. -
 
 <!-- Q2 -->
 
-### On-premises (private cloud)
+### On-premises (IBM {{site.data.keyword.powerSys_notm}} Private Cloud)
 {: #on-prem-location-type}
 
 [On-premises]{: tag-red}

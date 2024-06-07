@@ -19,7 +19,7 @@ subcollection: power-iaas
 IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To display the **Infrastructure capacity** navigation menu for the Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
+To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
 {: important}
 
 For more information about IAM, review the following information:
@@ -39,7 +39,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Platform access role | Type of access allowed                                                                                  |
 | -------------------- | ------------------------------------------------------------------------------------------------------- |
 | Viewer               | View instances and list instances.                                                                      |
-| Operator             | View instances and manage aliases, bindings (private cloud only), and credentials.                     |
+| Operator             | View instances and manage aliases, bindings (IBM {{site.data.keyword.powerSys_notm}} Private Cloud only), and credentials.                     |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
 {: caption="Table 1. IAM platform access roles" caption-side="bottom"}

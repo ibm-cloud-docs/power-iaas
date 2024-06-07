@@ -21,12 +21,12 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
-## What is the difference between {{site.data.keyword.powerSys_notm}} on cloud and private cloud?
+## What is the difference between {{site.data.keyword.powerSys_notm}} and IBM {{site.data.keyword.powerSys_notm}} Private Cloud?
 {: #private-cloud-on-cloud-diff}
 
-The primary difference between the two is where the physical infrastructure resides. The IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} on cloud infrastructure resides in the IBM data centers.
+The primary difference between the two is where the physical infrastructure resides. The IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
 ## Which Power servers are supported?
 {: #servers-supported}
@@ -51,7 +51,7 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 
 [Off-premises]{: tag-blue}
 
-The {{site.data.keyword.powerSys_notm}} on cloud offering supports the following operating systems:
+The {{site.data.keyword.powerSys_notm}} offering supports the following operating systems:
 * S922  -  7.1 or later
 * E980  -  7.1 or later
 * S1022 -  7.1 TL 5 or later
@@ -72,9 +72,9 @@ Stock images available when you create a virtual machine are:
 * AIX 7.2 TL5 SP6
 * AIX 7.2 TL5 SP5
 
-<!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
+<!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
 <!--[Off-premises]{: tag-blue}-->
-<!--The {{site.data.keyword.powerSys_notm}} on cloud offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
+<!--The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
 <!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
 
 When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
@@ -102,10 +102,10 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibm-os-versions}
 
-{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.2, or later.
-{{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
+{{site.data.keyword.powerSys_notm}} supports IBM i 7.2, or later.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports IBM i 7.3, or later.
 
-If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E980 (9080-M9S) and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -130,11 +130,11 @@ IBM i stock images currently available when you create a VM are:
 ### Linux
 {: #linux-os-versions}
 
-<!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
+<!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
 
 [Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 The following list of Linux stock images are available:
 
@@ -176,7 +176,7 @@ To use your own license, select the OS image that is suffixed with `-BYOL`. On t
 
 <!--Q2-->
 
-<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
+<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for the following Linux distributions:
 
 General purpose:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
@@ -204,20 +204,20 @@ The following list is an example of FLS offerings:
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for private cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
-## Can private cloud pods be expanded with additional compute nodes?
+## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional compute nodes?
 {: #expand-pods}
 
 Yes, up to the maximum number of compute nodes for the specific configuration size. For example, you can initially start with 5 nodes and then add 3 more nodes.
 
-## Can private cloud pods be expanded with additional storage?
+## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional storage?
 {: #expand-pods-storage}
 
 Yes, you can expand the pod with additional storage capacity. But you cannot add more storage controllers.
 
-## Are the private cloud pods equipped with spare compute nodes for maintenance?
+## Are the IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods equipped with spare compute nodes for maintenance?
 {: #spare-compute-node}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
@@ -327,7 +327,7 @@ When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, o
 - **Shared capped**: shared, but resources do not expand beyond the requested capacity (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
-The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
@@ -453,7 +453,7 @@ For more information, see [Hardware specifications](/docs/power-iaas?topic=power
 
 [Off-premises]{: tag-blue}
 
-The {{site.data.keyword.powerSys_notm}} on cloud runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
+The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
 
 ## Are there bare-metal options?
 {: #bare}
@@ -540,7 +540,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: support}
 
 [Off-premises]{: tag-blue}
-For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from an private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?

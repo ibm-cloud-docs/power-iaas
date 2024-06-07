@@ -21,9 +21,9 @@ subcollection: power-iaas
 
 Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.powerSysFull}} racks. Work with the IBM representative to ensure that these prerequisites are complete before the pods are delivered to your data center.
 
-Review the following requirements that your private cloud site must fulfill:
+Review the following requirements that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site must fulfill:
 * Accommodate a fully configured 42U rack that is 7 ft tall.
-* Provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your private cloud site.
+* Provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site.
 * Provide the flooring that supports the weight of the {{site.data.keyword.powerSys_notm}} racks.
 
 Refer Table 1 to understand rack dimensions and weight.

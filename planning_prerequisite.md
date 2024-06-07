@@ -18,12 +18,12 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-Proper planning is essential for the successful setup and use of your {{site.data.keyword.powerSys_notm}} pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
+Proper planning is essential for the successful setup and use of your IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}
 
-IBM owns the responsibility to install, upgrade, and update the hardware and software for the pod infrastructure. However, IBM coordinates with you for any dependencies and to ensure that your private cloud data center meets all the prerequisites before the pod installation.
+IBM owns the responsibility to install, upgrade, and update the hardware and software for the pod infrastructure. However, IBM coordinates with you for any dependencies and to ensure that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center meets all the prerequisites before the pod installation.
 
-IBM provides a checklist during the pre-installation stage so that your private cloud environment is ready for the pod installation and other associated activities. An IBM representative conducts the installation readiness review to ensure that you understand the prerequisites clearly.
+IBM provides a checklist during the pre-installation stage so that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud environment is ready for the pod installation and other associated activities. An IBM representative conducts the installation readiness review to ensure that you understand the prerequisites clearly.
 
 Review the following guidelines to prepare your data center for the {{site.data.keyword.powerSys_notm}}.
 
@@ -32,9 +32,9 @@ Review the following guidelines to prepare your data center for the {{site.data.
 
 Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new IBM {{site.data.keyword.powerSys_notm}} racks. Work with the IBM representative to ensure that these prerequisites are complete before the pods are delivered to your data center. The information in this document includes specifications for servers and expansion units, plugs and receptacles, cables, power-distribution units, and uninterruptible power supplies.
 
-Review the following requirements that your private cloud site must fulfill:
+Review the following requirements that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site must fulfill:
 * accommodate a fully configured 42U rack that is 7 ft tall
-* provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your private cloud site
+* provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site
 * provide the flooring that supports the weight of the {{site.data.keyword.powerSys_notm}} racks.
 
 Refer the following tables for rack dimensions and weight details:
@@ -65,7 +65,7 @@ For generic prerequisites and planning guidelines for Power10 processor-based sy
 ## Environmental requirements
 {: #environmental-requirements}
 
-Your private cloud site must have adequate cooling and humidity control for {{site.data.keyword.powerSys_notm}} racks. See the following table for recommended and allowed values of the required parameters:
+Your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site must have adequate cooling and humidity control for {{site.data.keyword.powerSys_notm}} racks. See the following table for recommended and allowed values of the required parameters:
 
 | Environment (operating) (1)                                           | | |
 |---------------------------------------------------------------------- | --- | --- |
@@ -85,7 +85,7 @@ Your private cloud site must have adequate cooling and humidity control for {{si
 
 IBM recommended operating environment is a long-term operating environment that can result in the greatest reliability and energy efficiency. The allowable operating environment represents the environment in which the equipment is tested to verify its functionality. Due to the stresses that operating in the allowable envelope can place on the equipment, these envelopes must be used for short-term operation, not continuous operation. A few configurations must not operate at the maximum limits of the ASHRAE A3 allowable range. Consult your IBM technical specialist for additional information.
 
-If altitude of the private cloud site exceeds by 900 m (2,953 ft), derate the maximum allowable temperature by 1°C (1.8°F) for every 175 m (574 ft). The maximum allowable elevation is 3,050 m (10,000 ft).
+If altitude of the IBM {{site.data.keyword.powerSys_notm}} Private Cloud site exceeds by 900 m (2,953 ft), derate the maximum allowable temperature by 1°C (1.8°F) for every 175 m (574 ft). The maximum allowable elevation is 3,050 m (10,000 ft).
 
 Refer to the following considerations to set the minimum and maximum humidity levels:
 *  The minimum humidity level is the maximum absolute humidity of the -12°C (10.4°F) dew point and 8% relative humidity. These levels intersect at approximately 25°C (77°F). Based on the temperature, set the minimum humidity level:
@@ -105,7 +105,7 @@ For more information, see Table 1 - 5 in [Environmental design criteria](https:/
 ## Power requirements
 {: #power-requirements}
 
-Your private cloud site must be provisioned with dual power cords that meets the PowerVS rack connector and load requirements. See the following table for rack connector and load requirements:
+Your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site must be provisioned with dual power cords that meets the PowerVS rack connector and load requirements. See the following table for rack connector and load requirements:
 
 
 | Rack Line Cord Feature Code | Wall plug      | Rated voltage (V AC) | Phase   | Rated amperage | Geography |
@@ -155,7 +155,7 @@ Keep the following cloud-specific requirements ready:
 * an active IBM Cloud account ID
         You can create an IBM Cloud account or use an existing account ID. For more information, see [Setting up your IBM Cloud account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started&mhsrc=ibmsearch_a&mhq=IBM+cloud+account&_gl=1*1s6v863*_ga*NzQ0MjA1OTk5LjE2ODkxODA1Njk.*_ga_FYECCCS21D*MTY4OTU3NDAwNC44LjEuMTY4OTU3NDQ4Ni4wLjAuMA..){: external}.
 * a Satellite Location ID for each {{site.data.keyword.powerSys_notm}} infrastructure deployment
-        A Satellite location is a representation of an environment in your infrastructure provider, such as a private cloud data center or cloud. You must select an IBM Cloud region that is closest to the physical location of the data center where the pod will be installed. For more information, see [Creating a Satellite location](https://cloud.ibm.com/docs/satellite?topic=satellite-locations){: external}.
+        A Satellite location is a representation of an environment in your infrastructure provider, such as a IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center or cloud. You must select an IBM Cloud region that is closest to the physical location of the data center where the pod will be installed. For more information, see [Creating a Satellite location](https://cloud.ibm.com/docs/satellite?topic=satellite-locations){: external}.
 * a Satellite Connector for providing a secure connection between your Satellite location and IBM Cloud. For more information, see [Creating a Connector](https://cloud.ibm.com/docs/satellite?topic=satellite-create-connector){: external}
         **Note:** The default value of the Connector name is connector. However, while creating a Connector, specify a unique name such that the connector name represents your pod location. For example, if your pod is located in a data center in the Raleigh, North Carolina region, the name of the connector can be “Raleigh North Data Center pod”.
 * a secure access for IBM specialists or operations team to remotely manage the {{site.data.keyword.powerSys_notm}} infrastructure from the IBM Cloud.
@@ -164,8 +164,8 @@ Keep the following cloud-specific requirements ready:
 {: #network-requirements}
 
 Review the following network requirements to facilitate the pod infrastructure connectivity:
-* Site must provide network cables to connect the private cloud network infrastructure and the data network at the site.
-* Site must provide two uplink cables that to connect the private cloud network infrastructure to the IBM Cloud region through IBM Direct Link connections or through VPN connections.
+* Site must provide network cables to connect the IBM {{site.data.keyword.powerSys_notm}} Private Cloud network infrastructure and the data network at the site.
+* Site must provide two uplink cables that to connect the IBM {{site.data.keyword.powerSys_notm}} Private Cloud network infrastructure to the IBM Cloud region through IBM Direct Link connections or through VPN connections.
 * Hire a service provider to
     * provide redundant connections to the IBM Direct Link connection or VPN connection
     * provide the last mile connection from the point-of-presence (PoP) of your service provider to the customer data center  
@@ -179,7 +179,7 @@ Setting up of network has two parts:
 ### Control plane network
 {: #control-plane-network}
 
-The private cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your private cloud data center. This connectivity is the main communication channel and is known as control plane network. For more information, see [Control plane network](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#control-plane-network){: external}.
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center. This connectivity is the main communication channel and is known as control plane network. For more information, see [Control plane network](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#control-plane-network){: external}.
 
 Direct Link 2.0 Connect can be viewed as an alternative to a traditional site-to-site VPN solution that can provide security and privacy, consistent, and higher-throughput connectivity between a remote network and IBM Cloud environments. For more information about Direct Link Connect, see [Getting started with IBM Cloud Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl){: external}
 
@@ -198,7 +198,7 @@ Provide the required network-specific information before the pod installation so
 ### Data plane network
 {: #data-plane-network}
 
-The Data Plane Network is enabled when the pods in your data center are connected to your private cloud network infrastructure. Using this connectivity you can access the virtual servers (logical partitions) in the pod through your network instead of IBM Cloud. As part of the network planning, you can review the [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud) and available use cases in the [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases) sections and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
+The Data Plane Network is enabled when the pods in your data center are connected to your IBM {{site.data.keyword.powerSys_notm}} Private Cloud network infrastructure. Using this connectivity you can access the virtual servers (logical partitions) in the pod through your network instead of IBM Cloud. As part of the network planning, you can review the [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud) and available use cases in the [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases) sections and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement those use-cases and configuration.
 
 ## Site readiness
 {: #site-readiness}
@@ -212,7 +212,7 @@ Refer [Site preparation and physical planning](https://www.ibm.com/docs/en/power
 ## Network planning
 {: #network-planning}
 
-The {{site.data.keyword.powerSys_notm}} network architecture requires connectivity between two entities: IBM Cloud and the pod that is located in your private cloud data center. This connectivity is enabled with the help of Direct Link 2.0 Connect technology or through VPN connection. IBM sets up this connectivity during the initial deployment of the pod. Provide some network-specific information before the pod installation so that the Direct Link 2.0 connection or VPN connection can be established. Information that is required by IBM is included in the checklist that is shared before the installation, such as:
+The {{site.data.keyword.powerSys_notm}} network architecture requires connectivity between two entities: IBM Cloud and the pod that is located in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center. This connectivity is enabled with the help of Direct Link 2.0 Connect technology or through VPN connection. IBM sets up this connectivity during the initial deployment of the pod. Provide some network-specific information before the pod installation so that the Direct Link 2.0 connection or VPN connection can be established. Information that is required by IBM is included in the checklist that is shared before the installation, such as:
 * Autonomous system numbers (ASN)
 * Service key
 * IP addresses and gateway for the Aggregation Services Router (ASR)

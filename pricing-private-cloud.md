@@ -333,9 +333,9 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 [On-premises]{: tag-red}
 
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}} on cloud. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
+The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
 
-When you use SPP in a private cloud, you pay for the following items:
+When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
@@ -347,7 +347,7 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 
 | Offering/Solution  | core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| PowerVS Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| IBM {{site.data.keyword.powerSys_notm}} Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
 {: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
@@ -425,7 +425,7 @@ Review the following frequently asked questions about pricing:
      - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools.
          There is no pricing associated with other types of resources.
    * Click on the selected resource type entry from the search results. The corresponding page opens.
-   * Click the Private Cloud billing plan from the left pane:
+   * Click the {{site.data.keyword.powerSys_notm}} Private Cloud billing plan from the left pane:
      - `Power Virtual Server Private Cloud Virtual Machine Group` for Virtual Machines.
      - `Power Virtual Server Private Cloud Volume Group` for Volumes.
      - `Power Virtual Server Private Cloud Snapshot Group` for Snapshots.
@@ -456,12 +456,12 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 | 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
 |         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
-{: caption="Table 14. Pricing for OS licensing in SPP in private cloud" caption-side="top"}
+{: caption="Table 14. Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
 
 <!-- Q2 -->
 
-### Is there any initial one-time payment before the pod infrastructure is installed in the client private cloud data center?
+### Is there any initial one-time payment before the pod infrastructure is installed in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center?
 {: #initial-one-time-payment}
 
    No
@@ -479,4 +479,4 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 ### When does the billing begin?
 {: #billing-schedule}
 
-   Billing begins when an IBM representative sets up and registers the pod in the client private cloud data center.
+   Billing begins when an IBM representative sets up and registers the pod in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center.

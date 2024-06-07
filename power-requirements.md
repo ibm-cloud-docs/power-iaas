@@ -19,7 +19,7 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-Your {{site.data.keyword.powerSysFull}} Private Cloud site must be provisioned with with A-side and B side power redundancy that meets the {{site.data.keyword.powerSys_notm}} rack connector and load requirements. Table 1 shows the rack connector and load requirements.
+Your IBM {{site.data.keyword.powerSysFull}} Private Cloud site must be provisioned with with A-side and B side power redundancy that meets the {{site.data.keyword.powerSys_notm}} rack connector and load requirements. Table 1 shows the rack connector and load requirements.
 
 Be sure to read all caution and danger statements provided in the Safety notices before you perform the procedures. For more information about safety notices containing the the caution and danger information, see [Safety notices](/docs/power-iaas?topic=power-iaas-safety-notices). Read any additional safety information that comes with your system or optional device before you install the device.
 

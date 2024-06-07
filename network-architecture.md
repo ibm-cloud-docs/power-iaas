@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 [Off-premises]{: tag-blue}
 
-This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} on cloud network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
+This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
