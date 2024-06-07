@@ -53,18 +53,18 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 {: #leverage-per}
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
-- You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces should be connected to the same Transit Gateway.
+- You can establish a connection between collocated workspaces if one colo is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces must be connected to the same Transit Gateway.
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway to achieve end to end connectivity from network in your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to the PER workspace.
-- You can establish a connection between VPC and Classic infrastructure with PER after adding them to the Transit Gateway.
+- You can establish a connection between VPC and Classic infrastructure with PER by adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
 - You cannot create a non-PER workspace in a PER-enabled data center. However, you can still use your old non-PER workspaces that are existing in a PER-enabled data center that are created before PER rollout.
-- In certain situations, local connection charges can apply when connecting from an [client-managed]{: tag-teal} location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
+- In certain situations, local connection charges can apply when you connect from a [client-managed]{: tag-teal} location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
 
 ## Migrating to PER
 {: #migrate-per}
 
-PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you need to create a new workspace or [migrate your workspace to PER](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) using a support ticket.
+PER is not supported in existing {{site.data.keyword.powerSys_notm}} workspaces. To use PER, you need to create a new workspace or [migrate your workspace to PER](/docs/allowlist/power-iaas?topic=power-iaas-migrate-ws-per) with a support ticket.
 
 The automated migration of your existing network is not supported, but if your existing workspaces are in a PER-enabled data center and use a Transit Gateway based Cloud Connection, you can easily connect to new PER network instances.
 
@@ -72,7 +72,7 @@ Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Clou
 
 Existing non-PER workspaces continue to use existing routers. To use the PER solution's high-performance routers, you can create a new PER-enabled workspace to deploy in while continuing to use the non-PER-enabled workspace. You can also migrate existing workloads into the new PER-enabled workspace by backing up the data from the existing workspace and restoring the data into the PER-enabled new workspace.
 
-Perform the following steps to connect an existing workspace to an existing Transit Gateway by using the IBM Cloud CLI:
+Complete the following steps to connect an existing workspace to an existing Transit Gateway by using the IBM Cloud CLI:
 
 1. Use the `ibmcloud pi workspaces` command to list the {{site.data.keyword.powerSys_notm}} workspaces in your account.
    Make note of the CRN for the workspace that you want to connect to the Transit Gateway.
@@ -82,7 +82,7 @@ Perform the following steps to connect an existing workspace to an existing Tran
 
 3. Use the `ibmcloud tg connection-create` command to create a new connection between the Transit Gateway and the PER-enabled workspace.
 
-Here is an example command that can be executed where:
+An example command that you can run where:
  - Transit Gateway ID is `aaaa-bbbb-cccc-dddd-eeee`
  - The {{site.data.keyword.powerSys_notm}} workspace CRN is `crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb::`
  - Executable command is `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name powervs_per_fra02 —network-id crn:v1:bluemix:public:power-iaas:fra02:a/aaaa:bbbb:: —network-type power_virtual_server`
@@ -93,10 +93,10 @@ Here is an example command that can be executed where:
 
 To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per) and choose a PER-enabled data center.
 
-You can check whether a workspace is PER-enabled by selecting the workspace and viewing the workspace's details. The PER-enabled workspace shows an information message regarding Transit Gateway.
+You can check whether a workspace is PER-enabled by selecting the workspace and viewing the workspace's details. The PER-enabled workspace shows an information message on Transit Gateway.
 {: note}
 
-You can create, delete, attach, detach, and update private networks by using the **Subnets** and **Virtual server instances** pages on a PER workspace, the same as with a non-PER workspace. However, private networks on PER workspaces in a PER-enabled data center, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/allowlist/power-iaas?topic=power-iaas-configuring-subnet) to perform a wanted operation.
+You can create, delete, attach, detach, and update private networks by using the **Subnets** and **Virtual server instances** pages on a PER workspace, the same as with a non-PER workspace. However, private networks on PER workspaces in a PER-enabled data center, such as `DAL10`, use upgraded networking technology for higher performance, and seamless connectivity. See, [Configuring and adding a private network subnet](/docs/allowlist/power-iaas?topic=power-iaas-configuring-subnet) to perform a necessary operation.
 
 Use Transit Gateway only to configure the Virtual connections, as opposed to using Cloud Connection.
 
@@ -149,28 +149,26 @@ See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/a
 
 Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER workspace. Follow these instructions for a PER-enabled workspace to let the virtual server instance automatically register a full Linux subscription:
 1.  Create a private network.
-  1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
-  2.  Click **Subnets** under **Networking** in the left navigation menu.
-  3.  Click **Create subnet**.
-  4.  Enter a unique name and CIDR.
-      Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
-  5.  Enter `161.26.0.10` in the **DNS server** field.
+    1.  Open the {{site.data.keyword.powerSys_notm}} user interface from the IBM Cloud console.
+    2.  Click **Subnets** under **Networking** in the left navigation menu.
+    3.  Click **Create subnet**.
+    4.  Enter a unique name and CIDR.
+        Make sure the CIDR being used is not the same as another CIDR already in use or a subset of that CIDR. The host server for the satellite server will be unable to resolve a network conflict as a result.
+    5.  Enter `161.26.0.10` in the **DNS server** field.
 
 2. Create a virtual server instance. See, [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/allowlist/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) for detailed instructions.
-3. Attach the private network that you have created in step 1.
+3. Attach the private network created in step 1.
 4. Verify whether the registration is successful with the following commands:
 
  For SUSE:
-   ```
+   ```code
    SUSEConnect -s
    ```
-   {: codeblock}
 
  For RHEL:
-   ```
+   ```code
    subscription-manager status
    ```
-   {: codeblock}
 
 ## CLI and API support with PER
 {: #cli-api-per}

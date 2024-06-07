@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-31"
+lastupdated: "2024-06-07"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -19,16 +19,15 @@ subcollection: power-iaas
 You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
 
-If you'd like to download fixes and updates, you must perform one of the following:
-
-- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
+If you'd like to download fixes and updates, you must complete one of the following actions:
+- Put your virtual machine (VM) on the public network. You can add a public network [during](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) or [after](/docs/power-iaas?topic=power-iaas-modifying-instance#adding-removing-network) the provisioning stage. Depending on your VM, see the [SUMA tasks and the command-line](#suma-tasks-cli) section for information on the **suma** command or the [SNDPTFORD command](#sndptford-command).
 - Set up another VM as an AIX [NIM server](/docs/power-iaas?topic=power-iaas-provisioning-nim) or an IBM i [Network installation Server](#ibmi-network-server).
 - Set up another public-facing VM with an [HTTP/HTTPS proxy](#configuring-aix-proxy).
 
 ## Ordering fixes and updates for AIX VMs
 {: #downloading-fixes-aix}
 
-Learn more about ordering fixes and updates for AIX VMs using SUMA.
+Learn more about ordering fixes and updates for AIX VMs by using SUMA.
 
 ### Understanding SUMA
 {: #understanding-suma}
@@ -39,7 +38,12 @@ SUMA sets up an automated interface to download fixes and updates from a fix dis
 
 When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master, SUMA establishes a connection to the fix distribution website and downloads the available service update.
 
-To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes), `/usr/esa/bin/verifyConnectivity -tw`. If the tests fail, work with your network security team to determine why you are unable to access the servers.
+To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes): 
+
+```code
+/usr/esa/bin/verifyConnectivity -tw
+``` 
+If the tests fail, work with your network security team to determine why you are unable to access the servers.
 
 You can access the SUMA configuration by running the [suma command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/s_commands/suma.html){: external} or by using the `SMIT suma` fast path. When you create a SUMA policy, you must specify one of the following request types that specifies the type of download:
 - **PTF**: Specifies a request to download a program temporary fix (PTF), such as U813941. Only certain PTFs can be downloaded as an individual file set. This limitation applies to PTFs that contain either the *bos.rte.install* or *bos.alt_disk_install.rte* file sets as well as those that are released in between Service Packs (SP). Otherwise, you must download the technology level (TL) or SP.
@@ -50,9 +54,9 @@ You can access the SUMA configuration by running the [suma command](https://www.
 ### Configuring SUMA to use the proxy settings
 {: #configuring-aix-proxy}
 
-Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data center it is running.
+Before you run the `suma` command to download any updates, ensure that the AIX LPAR is authenticated to access the internet and that your LPAR knows in which data centers it is running.
 
-To make the LPAR aware in which data center it is running, run the following command:
+To make the LPAR aware in which data centers it is running, run the following command:
 
 ```text
 #echo “COUNTRY_CODE = **” >> /var/suma/data/config.suma
@@ -88,9 +92,17 @@ The `suma` command allows you to preview only the download operation. When you r
 
 Complete the following steps to configure SUMA to use the proxy settings:
 
-1. Ensure that the *bos.ecc_client.rte* file set is installed on the AIX LPAR by running the following command, `lslpp -h bos.ecc_client.rte`.
+1. Ensure that the *bos.ecc_client.rte* file set is installed on the AIX LPAR by running the following command:
 
-2. Determine if the `config_conn_path` command is available in the `bos.ecc_client.rte` file set by running the following command, `lslpp -w /usr/ecc/bin/config_conn_path`.
+    ```code
+    lslpp -h bos.ecc_client.rte
+    ```
+
+2. Determine whether the `config_conn_path` command is available in the `bos.ecc_client.rte` file set by running the following command:
+
+    ```code
+    lslpp -w /usr/ecc/bin/config_conn_path
+    ```
 
 3. Configure your proxy settings by completing the following steps:
    1. Run the `smit srv_conn` command.
@@ -123,7 +135,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
 For the **Fixserver protocol** field, *https* is the only option. For the **Download protocol** field, *http* is the default option. You can change the default option to *https* for a secure connection. If you set the **Download protocol** to *https*, the downloads are slower but more secure because *HTTP* provides multi-threaded performance and *HTTPS* provides single-threaded performance.
 {: important}
 
-Base configuration SMIT:
+Base SMIT configuration:
 
 ```screen
                      Base Configuration
@@ -146,7 +158,7 @@ Download timeout (seconds)                                [180]                 
 ### SUMA tasks and the command line
 {: #suma-tasks-cli}
 
-The `suma` command can be used to perform various operations on a SUMA task or policy. An **RqType** parameter specifies the type of download that is being requested, such as a TL, SP, or Latest. You can use several flag options with the `suma` command to perform the following tasks:
+The `suma` command can be used to perform various operations on a SUMA task or policy. An **RqType** parameter specifies the type of download that is being requested, such as a TL, SP, or Latest. You can use several flag options with the `suma` command to complete the following tasks:
 
 - Create
 - Edit

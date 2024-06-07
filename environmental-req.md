@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-06"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, environment, environmental requirement
 
@@ -39,9 +39,9 @@ Your {{site.data.keyword.powerSysFull}} Private Cloud site must have adequate co
 | Maximum dew point | 27.0°C (80.6°F) |  |
 {: caption="Table 1. Recommended and allowed environmental parameter values" caption-side="bottom"}
 
-To set up the operating environment, IBM suggests to use the recommended values from Table 1. Over prolonged use, this operating environment becomes reliable and energy-efficient.
+To set up the operating environment, IBM suggests using the recommended values from Table 1. Over prolonged use, this operating environment becomes reliable and energy-efficient.
 
-To set up a short-term operating environment, you can use the allowable values from Table 1. In an operating system, if you are using the allowable values for the requried parameters, use an equipment that is functionally tested.
+To set up a short-term operating environment, you can use the allowable values from Table 1. In an operating system, if you are using the allowable values for the required parameters, use an equipment that is functionally tested.
 
 When allowable values for the required parameters in the operating environment are used for continuous operation, it can overload the equipment.
 {: attention}
