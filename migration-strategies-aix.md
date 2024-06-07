@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-24"
+lastupdated: "2024-06-07"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -30,24 +30,24 @@ subcollection: power-iaas
 
 Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
 
-## Migrating your on-premise environment to {{site.data.keyword.powerSys_notm}}
+## Migrating your on-premises environment to {{site.data.keyword.powerSys_notm}}
 {: #mig-onprem-cloud}
 
-See the [Move data from your on-premise environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
+See the [Move data from your on-premises environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
 
-## Migrating using NIM on {{site.data.keyword.powerSys_notm}}
+## Migrating by using NIM on {{site.data.keyword.powerSys_notm}}
 {: #mig-nim}
 
-You can configure your Network Installation Management (NIM) server on a {{site.data.keyword.powerSys_notm}} and migrate an AIX virtual server instance from AIX 7.1 to AIX 7.2/7.3, as well as other operations.
+You can configure your Network Installation Management (NIM) server on a {{site.data.keyword.powerSys_notm}} and migrate an AIX virtual server instance from AIX 7.1 to AIX 7.2 or 7.3, and other operations.
 
-See [Migrating using NIM on {{site.data.keyword.powerSys_notm}}](https://www.ibm.com/support/pages/node/7033798){: external} for more information.
+See [Migrating by using NIM on {{site.data.keyword.powerSys_notm}}](https://www.ibm.com/support/pages/node/7033798){: external} for more information.
 
 ## Migration by using MKSYSB
 {: #migration-mksysb}
 
 You can migrate your data by using the `mksysb` command:
 
-1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to COS.
+1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to Cloud Object Storage.
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
 3. Restore the on-premises image.
 

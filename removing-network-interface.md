@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-21"
+lastupdated: "2024-06-07"
 
 keywords: network interface, NIC, AIX VM, ifconfig command, detach, en0, rmdev, external IP address, smitty mktcpip, namerslv command
 
@@ -46,7 +46,7 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 ## Adding a network interface to an AIX VM
 {: #add-nic}
 
-When you toggle a public network off and then on, a new Virtual Ethernet Adapter (VEA) is created on your VM. You must identify the network interface that the new VLAN is associated with before reconfiguring the IP adress.
+When you toggle a public network off and then on, a new Virtual Ethernet Adapter (VEA) is created on your VM. You must identify the network interface that the new VLAN is associated with before reconfiguring the IP address.
 
 Every time you toggle a public network off and then on, the system creates multiple network interfaces. As a result, the `ifconfig -a` command will show several unused network interfaces after toggling the public network. To remove these stale network interfaces, use `ifconfig` and `rmdev` as described in the previous section.
 {: note}

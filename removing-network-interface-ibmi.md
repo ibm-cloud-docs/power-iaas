@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-21"
+lastupdated: "2024-06-07"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -32,9 +32,9 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
     It's a good idea to select **Option 5** to display the details of the route. Remember to press **F6** to print the details for reference for when the route must be readded. This step should be done for all of the **non-\*DIRECT** routes that are listed on the screen.
     {: tip}
 
-2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you'd like to remove. All of that communication that is going over the route is terminated after you remove it.
-3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you'd like to deactivate on the **NETSTAT \*IFC** screen.
-4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you'd like to remove.
+2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you need to remove. All of that communication that is going over the route is terminated after you remove it.
+3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you need to deactivate on the **NETSTAT \*IFC** screen.
+4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you need to remove.
     Removing a network interface:
 
     ```
@@ -70,7 +70,7 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
     Most configurations require you to update only the first three fields.
     {: note}
 
-2. Add the new internal IP address you obtained from the {{site.data.keyword.powerSys_notm}} user interface (you can type over the quotation marks) to the **Internet address** field.
+2. Add the new internal IP address that you obtained from the {{site.data.keyword.powerSys_notm}} user interface (you can type over the quotation marks) to the **Internet address** field.
 3. Add the new subnet mask to the **Subnet mask** field.
 4. Complete the remaining fields by using your reference printout. The LIND must be the same as the LIND defined on the removed interface.
 5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.

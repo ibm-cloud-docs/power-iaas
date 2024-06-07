@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}} on cloud
+# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}}
 {: #set-full-Linux}
 
 [Off-premises]{: tag-blue}

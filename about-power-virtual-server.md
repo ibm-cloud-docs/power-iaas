@@ -17,15 +17,15 @@ subcollection: power-iaas
 # What is {{site.data.keyword.powerSys_notm}}?
 {: #about-power-iaas}
 
-{{site.data.keyword.powerSysFull}} is an IBM Power server offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads on both private cloud and on cloud.
+{{site.data.keyword.powerSysFull}} is an IBM Power server offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads on both IBM {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}}.
 
-Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} on cloud architectures and to identify the hardware and software specifications:
+Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} architectures and to identify the hardware and software specifications:
 {: shortdesc}
 
-* [Private cloud architecture](#private-cloud-architecture)
-* [On cloud architecture](#on-cloud-architecture)
+* [IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](#private-cloud-architecture)
+* [{{site.data.keyword.powerSys_notm}} architecture](#on-cloud-architecture)
 
-## {{site.data.keyword.powerSys_notm}} Private Cloud architecture
+## IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture
 {: #private-cloud-architecture}
 
 [On-premises]{: tag-red}
@@ -239,19 +239,19 @@ For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Ti
 
 The entire network subsystem can be divided into the following parts:
 
-* **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your private cloud data center during the initial deployment.
-* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your private cloud data center and other IBM Cloud services, you must manually set up the network configuration.
+* **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center during the initial deployment.
+* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center and other IBM Cloud services, you must manually set up the network configuration.
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
 
-## {{site.data.keyword.powerSys_notm}} on cloud architecture
+## {{site.data.keyword.powerSys_notm}} architecture
 {: #on-cloud-architecture}
 
 [Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} on cloud are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+{{site.data.keyword.powerSys_notm}} are located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
-Review the following topics to understand the on cloud architecture, key features, and hardware and software requirements:
+Review the following topics to understand the {{site.data.keyword.powerSys_notm}} architecture, key features, and hardware and software requirements:
 
 *  [High-level architecture](#high-level-architecture-on-cloud)
 *  [Key features](#key-features-on-cloud)
@@ -263,7 +263,7 @@ Review the following topics to understand the on cloud architecture, key feature
 ### High-level architecture
 {: #high-level-architecture-on-cloud}
 
-{{site.data.keyword.powerSys_notm}} on cloud is located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
+{{site.data.keyword.powerSys_notm}} is located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
 With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems). After you provision the {{site.data.keyword.powerSys_notm}}, you get access to infrastructure and physical computing resources without the need to manage or operate them. However, you must manage the operating system and the software applications and data. The following graphic represents a responsibility assignment (RACI) matrix for {{site.data.keyword.powerSys_notm}}:
 
@@ -272,7 +272,7 @@ With the {{site.data.keyword.powerSys_notm}}, you can quickly create and deploy 
 ### Key features
 {: #key-features-on-cloud}
 
-The key features for the {{site.data.keyword.powerSys_notm}} On Cloud are as follows.
+The key features for the {{site.data.keyword.powerSys_notm}} are as follows.
 
 #### Straightforward billing
 {: #straightforward-billing-on-cloud}

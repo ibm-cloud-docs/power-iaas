@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-07"
 
 keywords: returning pod, {{site.data.keyword.powerSys_notm}}, private cloud, decomission, remove pod
 
@@ -31,4 +31,4 @@ After you open the support ticket, IBM works with you to complete all the necess
 - Unregistering the pod from your IBM Cloud Satellite location.
 - Decommissioning the IBM Direct Link connection that is used for control plane traffic and regional IBM Cloud resources that are associated with the pod.
 
-IBM onsite service engineers will visit your data center to perform the physical uninstallation and packing the infrastructure for return along with logistical support.
+IBM onsite service engineers visit your data center to perform the physical uninstallation and packing the infrastructure for return along with logistical support.

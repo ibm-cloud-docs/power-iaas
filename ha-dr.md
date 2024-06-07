@@ -16,9 +16,9 @@ subcollection: power-iaas
 # High availability and disaster recovery
 {: #ha-dr}
 
-Both High Availability (HA) and Disaster Recovery (DR) are essential for business continuity. HA addresses local planned and unplanned outages for hardware or software. Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable. Review the topic to understand the HA and DR for private cloud and on cloud offerings.
+Both High Availability (HA) and Disaster Recovery (DR) are essential for business continuity. HA addresses local planned and unplanned outages for hardware or software. Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable. Review the topic to understand the HA and DR for IBM {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} offerings.
 
-## High availability and disaster recovery options in private cloud
+## High availability and disaster recovery options in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #ha-dr-private-cloud}
 
 [On-premises]{: tag-red}
@@ -39,7 +39,7 @@ By using the remote restart function, the {{site.data.keyword.powerSys_notm}} re
 
 For client-managed applications, you must implement a high-availability strategy. For example, you can use solutions such as Red Hat Enterprise Linux High Availability or SUSE Linux Enterprise High Availability.
 
-### Disaster recovery mechanisms for private cloud
+### Disaster recovery mechanisms IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #disaster-recovery-mech-private-cloud}
 
 Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable.
@@ -47,7 +47,7 @@ Disaster recovery addresses the catastrophic events during which the IBM Cloud r
 For the IBM-managed software, the disaster recovery strategy remains the same as the high-availability strategy. For client-managed applications and software, you are responsible for the disaster recovery strategy. For example, you can use solutions such as Red Hat Enterprise Linux High Availability and SUSE Linux Enterprise Clustered Disaster Recovery.
 
 
-## High Availability and Disaster Recovery options on cloud
+## High Availability and Disaster Recovery options {{site.data.keyword.powerSys_notm}}
 {: #ha-dr-on-cloud}
 
 [Off-premises]{: tag-blue}

@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-07"
 
-keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport, PER use cases
+keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
 subcollection: power-iaas
 
@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 [Off-premises]{: tag-blue}
 
-This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} on cloud network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
+This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
@@ -37,7 +37,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
     - Internet - Access the internet through resources that are hosted in any of these three infrastructure environments.
     - Remote - Connect remote networks to your IBM Cloud networks. You can use the following services to connect to a remote network:
         - Internet VPN - Uses the public internet to connect remote networks and their IBM Cloud networks through a VPN. The VPN is terminated on gateway devices or a service within IBM Cloud.
-        - {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, private clouds network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl).
+        - {{site.data.keyword.dl_short}} - {{site.data.keyword.dl_short}} is a suite of offerings that enable the creation of direct, private connections between your remote, private cloud network and IBM Cloud, without traversing the public internet. For more information, see [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl).
 
       You can connect {{site.data.keyword.dl_short}}s to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the private cloud network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
       {: note}
@@ -52,22 +52,22 @@ Using a Power Edge Router (PER) enabled workspace provides the following benefit
 * Direct access to {{site.data.keyword.powerSys_notm}} from client-managed<!--Q2 client-managed to be confirmed by Joe--> environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
-1. [Connecting an client-managed data center](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
+1. [Connecting a client-managed data center](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
 2. [Connecting to classic infrastructure](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
 3. [Connecting to Virtual Private Cloud](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
 4. [Connecting to IBM Cloud services](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
 5. [Connecting multiple workspaces](/docs/allowlist/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
 
-The above are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
+what was mentioned earlier are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
 {: important}
 
 ### Connecting a client-managed data center
 {: #per-on-orem}
 
-1. In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a direct link connection to attach to the transit gateway.
+1. In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a Direct Link connection to attach to the transit gateway.
 
-2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center via the incoming direct link that is interconnected through this transit gateway.
-3. You will pay for the Direct Link connection that you use  to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost involved for using upto 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+2. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same transit gateway, which in turn enables connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center via the incoming Direct Link that is interconnected through this transit gateway.
+3. You pay for the Direct Link connection that you use to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the transit gateway. There is no cost that is involved for using up to 4 connections on a local transit gateway. For more information on transit gateway pricing, see: [Pricing for Power Edge Router](/docs/allowlist/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
@@ -122,7 +122,7 @@ The pricing for this connection depends upon the local or global transit gateway
 
 A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can by default connect to IBM Cloud Service Endpoints (CSE), and can also seamlessly connect with the Secure Endpoints (SE) in the Classic Infrastructure environment when using a Transit Gateway.
 
-1. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace is connected to the Classic Infrastructure environment using a Transit Gateway.
+1. A PER-enabled {{site.data.keyword.powerSys_notm}} workspace is connected to the Classic Infrastructure environment by using a Transit Gateway.
 2. A {{site.data.keyword.powerSys_notm}} can then connect to the Secure Endpoint (SE) of the IBM Cloud (Classic) services.
 
     On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device that converts the custom IP address into an IBM Cloud supported IP address.
