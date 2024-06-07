@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-03"
+lastupdated: "2024-06-07"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -68,7 +68,7 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5770-XW1: IBM i Access Family
 
 
-Each LPP in the package contains all the features that's includes the optional features. For example, the **5770-BR1** solution includes the network feature and the advanced feature in addition to the base product.
+Each LPP in the package contains all the features that's includes the optional features. For example, the **5770-BR1** solution includes the network feature and the advanced features in addition to the base product.
 
 These additional LPPs for IBM i, which are available and can be included in your VM instance. To include one or more such LPPs, complete the following steps:
 

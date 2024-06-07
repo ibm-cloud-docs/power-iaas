@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-07"
 
 keywords: Host and OS based logical replication, Replication, Application specific replication, 
 

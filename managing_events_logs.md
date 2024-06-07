@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-03-23"
+lastupdated: "2024-06-07"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -21,19 +21,19 @@ The {{site.data.keyword.powerSysFull}} logs all the events and notifications fro
 
 Consider the following points when you are working with the event logs and notifications:
 
-* The **Event logs** page shows a maximum of 400 latest entries from the current and previous months.
+* The **Event logs** page shows a maximum of 400 entries from the current and previous months.
 * You can choose to enable or disable notifications for events on all workspaces. For more information, see [Customizing the log notification settings](/docs/power-iaas?topic=power-iaas-manage-event-logs#set-event-logs).
 * If you disable the notifications, you can still access the logs from the **Event logs** page.
-* You can customize notifications; for example you can enable or disable notifications from concurrent users within the same workspace.
+* You can customize notifications; for example, you can enable or disable notifications from concurrent users within the same workspace.
 * Your changes to the notification settings are associated with your user account and apply to all workspaces.
 * Your every action or operation does not create a log that you can view in the Event logs page.
 
 ## Accessing the event logs
 {: #access-event-logs}
 
-You can access a maximum of 400 events for the current and previous months in the IBM Cloud console. To see the event logs, perform the following steps:
+You can access a maximum of 400 events for the current and previous months in the IBM Cloud console. To see the event logs, complete the following steps:
 
-1.	Log in to the [IBM Catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+1.	Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 2.	In the catalog's search box, type **{{site.data.keyword.powerSysFull}}**, and click the **Workspace for {{site.data.keyword.powerSysFull}}** tile.
 3.	Click **Select workspace** on the left navigation under workspace of the {{site.data.keyword.powerSysFull}} user interface to select from a list of previously created workspaces.
     If you do not have a workspace, click **Create a workspace**.
@@ -42,10 +42,10 @@ You can access a maximum of 400 events for the current and previous months in th
 ## Customizing the log notification settings
 {: #set-event-logs}
 
-You can stop the notifications or stop getting notifications from other concurrent users in the same workspace. To customize the log notification settings, perform the following steps:
+You can stop the notifications or stop getting notifications from other concurrent users in the same workspace. To customize the log notification settings, complete the following steps:
 
 1.	Access the **Event logs** page from the user interface. For more information, see [Accessing the event logs](/docs/power-iaas?topic=power-iaas-manage-event-logs#access-event-logs).
-2.	Click **Log notification settings** on the top right corner of the page.
+2.	Click **Log notification settings**.
 3.	Toggle the **Show notifications based on the settings below** button to on or off based on your requirement.
     | Toggle notification button status |	Description |
     |-----|------|
