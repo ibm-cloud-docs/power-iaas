@@ -62,14 +62,14 @@ toc:
              - use-case-redhat-openshift.md
              - use-case-sap-hana.md
       - link:
-              label: Why IBM Power Virtual Server private cloud?
+              label: Why IBM Power Virtual Server Private Cloud?
               href: https://www.ibm.com/products/power-virtual-server
 
   - navgroup:
       id: howto
       topics:
       - topicgroup:
-          label: Assessing the pre-installation requirements for private cloud
+          label: Assessing the pre-installation requirements for IBM Power Virtual Server Private Cloud
           topics:
             - preinstallation-checklist.md
             - site-readiness.md
@@ -80,13 +80,13 @@ toc:
             - network-planning
             - safety-notices.md
       - topicgroup:
-          label: Networking for Power Virtual Server private cloud
+          label: Networking for IBM Power Virtual Server Private Cloud
           topics:
             - network-overview.md
             - network-use-cases.md
             - network_latency.md
       - topicgroup:
-          label: Networking for Power Virtual Server on cloud
+          label: Networking for Power Virtual Server
           topics:
             - configuring-private-subnet.md
             - network-architecture.md

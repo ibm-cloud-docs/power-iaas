@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-In {{site.data.keyword.powerSysFull}} Private Cloud, you can view the pod details such as the total number of cores, memory, and number of system units. You can also view the storage capacity that you have utilized from the total storage per controller.
+In IBM {{site.data.keyword.powerSysFull}} Private Cloud, you can view the pod details such as the total number of cores, memory, and number of system units. You can also view the storage capacity that you have utilized from the total storage per controller.
 {: shortdesc}
 
 <!---Need UI design to verify the steps --->

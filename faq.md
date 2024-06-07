@@ -21,12 +21,12 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your private cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
-## What is the difference between {{site.data.keyword.powerSys_notm}} on cloud and private cloud?
+## What is the difference between {{site.data.keyword.powerSys_notm}} and IBM {{site.data.keyword.powerSys_notm}} Private Cloud?
 {: #private-cloud-on-cloud-diff}
 
-The primary difference between the two is where the physical infrastructure resides. The IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} on cloud infrastructure resides in the IBM data centers.
+The primary difference between the two is where the physical infrastructure resides. The IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
 ## Which Power servers are supported?
 {: #servers-supported}
@@ -43,7 +43,7 @@ For complete specifications, see [Hardware and software specifications](/docs/po
 {: faq}
 {: support}
 
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power hardware.
+The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on the IBM Power hardware.
 
 
 ### AIX
@@ -51,33 +51,33 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 
 [Off-premises]{: tag-blue}
 
-The {{site.data.keyword.powerSys_notm}} on cloud offering supports the following operating systems:
+The {{site.data.keyword.powerSys_notm}} offering supports the following operating systems:
 * S922  -  7.1 or later
 * E980  -  7.1 or later
-* S1022 -  7.1 TL 5 or later
+* S1022 -  7.1 Technology Level (TL) 5 or later
 
-Stock images available when you create a virtual machine are:
+The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL2
 * AIX 7.2 TL5 SP7
 
 [On-premises]{: tag-red}
 
-The IBM {{site.data.keyword.powerSys_notm}} Private Cloud offering supports the following operating systems:
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports the following operating systems:
 * S1022 - 7.2 or later
 * E1080 - 7.2 or later
 
-Stock images available when you create a virtual machine are:
+The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL1 SP2
 * AIX 7.3 TL1 SP1
 * AIX 7.2 TL5 SP6
 * AIX 7.2 TL5 SP5
 
-<!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
+<!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
 <!--[Off-premises]{: tag-blue}-->
-<!--The {{site.data.keyword.powerSys_notm}} on cloud offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
+<!--The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
 <!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
 
-When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
@@ -102,10 +102,10 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibm-os-versions}
 
-{{site.data.keyword.powerSys_notm}} on cloud supports IBM i 7.2, or later.
-{{site.data.keyword.powerSys_notm}} private cloud supports IBM i 7.3, or later.
+{{site.data.keyword.powerSys_notm}} supports IBM i 7.2, or later.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports IBM i 7.3, or later.
 
-If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}} on cloud. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 - [S922 (9009-22A), E980 (9080-M9S) and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
@@ -125,16 +125,16 @@ IBM i stock images currently available when you create a VM are:
 
 <!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
 
-[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
+[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 ### Linux
 {: #linux-os-versions}
 
-<!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} on cloud and private cloud offerings.-->
+<!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
 
 [Off-premises]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 The following list of Linux stock images are available:
 
@@ -172,11 +172,11 @@ SUSE [^footnote3]
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
 
-To use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
+To use your own license, select the OS image that with `-BYOL` suffix. On the **Create virtual server instance** page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using the Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 <!--Q2-->
 
-<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} on cloud supports custom images for the following Linux distributions:
+<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for the following Linux distributions:
 
 General purpose:
 * SLES 12 SP4 or later and SLES 15 SP1 or later
@@ -195,7 +195,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterpris
 
 FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-The following list is an example of FLS offerings:
+The following list is an example of the FLS offerings:
 
 * Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.0 (General)
 * Support:	You pay IBM for support
@@ -204,20 +204,20 @@ The following list is an example of FLS offerings:
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for private cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
-## Can private cloud pods be expanded with additional compute nodes?
+## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional compute nodes?
 {: #expand-pods}
 
-Yes, up to the maximum number of compute nodes for the specific configuration size. For example, you can initially start with 5 nodes and then add 3 more nodes.
+Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
 
-## Can private cloud pods be expanded with additional storage?
+## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional storage?
 {: #expand-pods-storage}
 
 Yes, you can expand the pod with additional storage capacity. But you cannot add more storage controllers.
 
-## Are the private cloud pods equipped with spare compute nodes for maintenance?
+## Are the IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods equipped with spare compute nodes for maintenance?
 {: #spare-compute-node}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
@@ -237,20 +237,20 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
 {: #pod-disconnect-unplanned-nw-mcp}
 
-If there is an unplanned network outage for the management network that is connecting the IBM Cloud instance and the pod infrastructure, the VMs continue to run within the pod.
+If an unplanned network outage occurs for the management network that is connecting the IBM Cloud instance to the pod infrastructure, the VMs continue to run within the pod.
 
-See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and the secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
+See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
 
-|  Capability  | Impact of disconnected mode |
-| ------------ | --------------------------- |
-| Your workload and data | No impact – your workload is operational and data is available. |
-| GUI or API (for read operations) | Minimal impact – GUI is operational and uses last known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
-| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable – resource write operations are unavailable until the connectivity for the control plane is reestablished. |
-| command-line interface (CLI) | Minimal impact – read operations remain operational and write operations are unavailable until connectivity is reestablished.|
-| Billing and metering | No impact – metering uses last-known cached data. If the pod gets disconnected, write operations are unavailable. |
-| Telemetry | Unavailable – telemetry data within the pod is unavailable until control plane connectivity is reestablished. However, IBM Storage Insights continue to cache the information for a selected period. |
-| DHCP service (for your data network) |  No impact – DHCP services are provided by the pod-resident network infrastructure and does not require a connection to IBM Cloud. |
-| IBM remote support | Unavailable – IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
+|  Capability            | Status | Impact of disconnected mode |
+| ------------           | --------------------------- | ---- |
+| Your workload and data | No impact | Your workload is operational and data is available. |
+| GUI or API (for read operations) | Minimal impact | The GUI is operational and uses the last-known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
+| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable | The resource write operations are unavailable until the connectivity to the control plane is re-established. |
+| command-line interface (CLI) | Minimal impact | The read operations remain operational and the write operations are unavailable until connectivity is re-established.|
+| Billing and metering | No impact | Metering uses last-known cached data. If the pod gets disconnected, the write operations are unavailable. |
+| Telemetry | Unavailable | The telemetry data within the pod is unavailable until the control plane connectivity is re-established. However, IBM Storage Insights continue to cache the information for a selected period. |
+| DHCP service (for your data network) |  No impact | DHCP services are provided by the pod-resident network infrastructure and do not require a connection to IBM Cloud. |
+| IBM remote support | Unavailable | IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
 {: caption="Table 1. Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
 
 <!--Q2-->
@@ -327,11 +327,11 @@ When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, o
 - **Shared capped**: shared, but resources do not expand beyond the requested capacity (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
-The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}} on cloud](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
-| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core, which is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications.|
+| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 1. Dedicated processors" caption-side="top"}
@@ -340,7 +340,7 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 
 |Shared processors|
 |:-----------------|
-| Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of the CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units.|
+| Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Table 2. Shared processors" caption-side="top"}
@@ -392,7 +392,10 @@ To migrate your VM from one data center to another, you must capture and export 
 {: #pinning}
 {: faq}
 
-You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host when the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+You can choose a pinning policy: *soft pin* or *hard pin*, to pin a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you *hard pin* a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+
+
+You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
@@ -453,19 +456,19 @@ For more information, see [Hardware specifications](/docs/power-iaas?topic=power
 
 [Off-premises]{: tag-blue}
 
-The {{site.data.keyword.powerSys_notm}} on cloud runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
+The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
 
 ## Are there bare-metal options?
 {: #bare}
 {: faq}
 
-There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
+No, the bare-metal options are not available. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
 ## Can you tell me more about the snapshotting, cloning, and restoring capabilities?
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -605,6 +608,7 @@ Click the overflow menu (icon with 3 vertical dots) on the far right of each vir
 
 - Delete a single virtual server instance from the details page.
 On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+<!--Sandhya: The UI elements are to be confirmed.-->
 
 <!--Navigate to the virtual server instance's details page by clicking the virtual server instance name present on the table, on the Virtual server instances page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.-->
 

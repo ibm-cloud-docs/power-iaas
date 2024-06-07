@@ -53,7 +53,7 @@ These use cases describe the following deployment topologies:
     - Use IBM Cloud classic x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
     - Build a backup and restore environment based on [IBM Spectrum Protect Cloud Blueprints](https://www.ibm.com/support/pages/ibm-spectrum-protect-cloud-blueprints) for both IBM Spectrum Protect and IBM Spectrum Protect Plus topologies. Also, see [AIX Backups with {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf).
 * Connecting {{site.data.keyword.powerSys_notm}} to the IBM Cloud VPC infrastructure environment by using {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is to use IBM Cloud VPC x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
-* Connecting {{site.data.keyword.powerSys_notm}} to the network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by using Megaport or {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is that you require access to your Power virtual servers from your external networks, such as network in your client-managed environment<!--Q2 client-managed to be confirmed by Joe-->. This topology uses Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect.
+* Connecting {{site.data.keyword.powerSys_notm}} to the network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by using Megaport or {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is that you require access to your Power virtual servers from your external networks, such as networks in your client-managed environment<!--Q2 client-managed to be confirmed by Joe-->. This topology uses Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect.
 * Connecting two {{site.data.keyword.powerSys_notm}} environments by using Megaport or {{site.data.keyword.dl_short}} Connect. This topology connects two or more Power virtual server environments together by using Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect. Connecting two or more environments together enables use cases, such as disaster recovery.
 * Connecting {{site.data.keyword.powerSys_notm}} to a network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> through the IBM classic infrastructure by using private SSL connection and a jump server. This is a specific use case for connecting to the classic environment so that the SSL VPN connection can be used to access your {{site.data.keyword.powerSys_notm}}s for operations and administration tasks.
 * Connecting {{site.data.keyword.powerSys_notm}} to a network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> through the IBM Cloud classic infrastructure by using an internet IPsec VPN connection.  This use case describes how to connect to the classic environment so that an IPsec VPN connection can be used to access your classic and {{site.data.keyword.powerSys_notm}}s. Typically, this network architecture is used for small production environments or proof-of-concept, development, and test purposes.
@@ -83,14 +83,14 @@ Complete the following steps to implement this scenario:
         - The classic infrastructure advertises only your IBM Cloud classic private subnets to the {{site.data.keyword.powerSys_notm}} router.
         - The classic infrastructure filters the following networks from the BGP advertisements coming from the {{site.data.keyword.powerSys_notm}} router because these IP addresses are used by the services networks: `10.0.0.0/14`, `10.198.0.0/15`, `10.200.0.0/14`, `169.254.0.0/16`, `224.0.0.0/4` and any IP ranges that are assigned to your IBM Cloud classic private subnets.
 
-          You can use the `10.x.x.x` range if there is no conflict with an IBM Cloud back-end `10.x.x.x` service. You must contact IBM Support if you want to use NAT'ing or IP aliasing to resolve the IP conflict. However, IBM does not recommend using the `10.x.x.x` range when you create a network.
+          You can use the `10.x.x.x` range if there is no conflict with an IBM Cloud back-end `10.x.x.x` service. You must contact IBM Support if you want to use NAT'ing or IP aliasing to resolve the IP conflict. However, IBM does not recommend by using the `10.x.x.x` range when you create a network.
           {: important}
 
 3. Identify the IBM Cloud classic private subnets and the IP address schema that is assigned to you when you ordered bare metal or virtual server instances that are hosted on your IBM Cloud classic private subnets. Connect to the required resources and services.
 
     All the routers in all classic infrastructure data centers and PoPs across the global IBM Cloud backbone are connected to the {{site.data.keyword.powerSys_notm}} router by using the {{site.data.keyword.dl_short}} Connect VRF-enabled connection.
 
-    Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+    Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
     {: note}
 
 ### Connecting to VPC by using {{site.data.keyword.dl_short}} Connect
@@ -119,9 +119,9 @@ Complete the following steps to implement this scenario:
       - IBM Cloud Object Storage
 
 4. Create Virtual Private Endpoints (VPEs) for services of interest such as DNS, NTP, and IBM Cloud Object Storage. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
-5. If you want to access the endpoint network, use a VPC virtual server instance to proxy the any required endpoint services that do not support VPEs.
+5. If you want to access the endpoint network, use a VPC virtual server instance to proxy any required endpoint services that do not support VPEs.
 
-Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+However, each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 <!--
 ## Connecting to IBM Cloud services
@@ -129,20 +129,20 @@ Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however,
 
 TBD-->
 
-### Connecting to client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by using Megaport
+### Connecting to a client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by using Megaport
 {: #network-reference-architecture-onprem}
 
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} Connect is used to provide connectivity from your (remote) network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to your {{site.data.keyword.powerSys_notm}} subnets.
 
-![Connect to client-managed environment](./images/network-connect-to-onprem.svg "Connect to client-managed environment"){: caption="Figure 3. Connect to client-managed environment" caption-side="bottom"}
+![Connect to a client-managed environment](./images/network-connect-to-onprem.svg "Connect to a client-managed environment"){: caption="Figure 3. Connect to client-managed environment" caption-side="bottom"}
 
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to {{site.data.keyword.powerSys_notm}} directly.
 
 Review the following characteristics about Megaport connectivity services:
     * Megaport operates a global network infrastructure that enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
-    * A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, best practice is to select two different port locations to provide redundancy.
+    * A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, the best practice is to select two different port locations to provide redundancy.
     * Megaport has a number of cloud service providers including IBM Cloud.
-    * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC (by using the Megaport portal or API) allows you to connect into the Power virtual server environment and, optionally, the classic/VPC infrastructure environments or other clouds.
+    * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC (by using the Megaport portal or API) allows you to connect into the Power virtual server environment and optionally, the classic/VPC infrastructure environments or other clouds.
 
 Megaport connectivity services are available in DAL12, DAL13, FRA05, LON06, MON01, SYD05, OSA21, WDC04, and WDC06 data centers.
 {: important}
@@ -153,7 +153,7 @@ Complete the following steps to implement this scenario:
 2. Procure the [Megaport](https://www.megaport.com/){: external} VXC connections to connect your (remote) network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to the Megaport network.
     - Open an IBM Support case against {{site.data.keyword.powerSys_notm}} to receive a service ID or a virtual cross-connect (VxC) identifier from IBM.
     - Engage with Megaport to procure the connection (VxC) to {{site.data.keyword.powerSys_notm}} Port @ Megaport.
-        Although a single data center connection between the network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> and Megaport network is possible, best practice is to select two different port locations to provide redundancy.
+        Although a single data center connection between the network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> and the Megaport network is possible, best practice is to select two different port locations to provide redundancy.
 3. Open an IBM Support case against the {{site.data.keyword.powerSys_notm}} team to configure the Megaport network to the {{site.data.keyword.powerSys_notm}} router by using VXCs. Remember to include the following pieces of information in your case:
 
     ```text
@@ -179,11 +179,11 @@ The {{site.data.keyword.powerSys_notm}} router is the default gateway for your P
 ### Connecting two Power virtual server environments
 {: #network-reference-architecture-pvs2pvs}
 
-In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments located at two different data centers.
+In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments at two different data centers.
 
 ![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 4. Connecting Power virtual server environments" caption-side="bottom"}
 
-IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to {{site.data.keyword.powerSys_notm}} directly.
+IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> to {{site.data.keyword.powerSys_notm}} directly.
 
 The key features of this Connect-to-classic topology are as follows:
 
@@ -243,12 +243,12 @@ Although individual {{site.data.keyword.powerSys_notm}} instances can have inter
 
 ![IPsec VPN deployment scenario](./images/network-ipsec-vpn.svg "SSL VPN"){: caption="Figure 6. IPsec VPN deployment scenario" caption-side="bottom"}
 
-This deployment topology leverages the IBM Cloud classic infrastructure gateway appliance to provide an internet-connected IPsec VPN gateway to enable a site-to-site VPN connection to your {{site.data.keyword.powerSys_notm}} resources.
+This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide an internet-connected IPsec VPN gateway to enable a site-to-site VPN connection to your {{site.data.keyword.powerSys_notm}} resources.
 
 - The IBM Cloud gateway appliance allows you to selectively route private and public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of VyOS, JunOS, or any other operating system (Bring Your Own Appliance) that you choose.
 - All appliance features are customer-managed.
 - By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
-- A gateway appliance is attached to two nonremovable transit VLANs, one each for your public, and private networks.
+- A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
 
 Complete the following steps to implement this scenario:
 
@@ -284,8 +284,8 @@ If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location,
 
 ![{{site.data.keyword.dl_short}} on Classic deployment scenario](./images/network-dl-gre.svg "{{site.data.keyword.dl_short}}"){: caption="Figure 7. {{site.data.keyword.dl_short}} on Classic deployment scenario" caption-side="bottom"}
 
-This deployment topology leverages the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
-    - The IBM Cloud gateway appliance allows you to selectively route private and, optionally, public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of; VyOS, JunOS, or any other operating system (Bring Your Own Appliance) you choose.
+This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
+    - The IBM Cloud gateway appliance allows you to selectively route private and optionally public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of; VyOS, JunOS, or any other operating system (Bring Your Own Appliance) you choose.
     - All appliance features are customer-managed.
     - By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
     - A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
@@ -300,10 +300,12 @@ Complete the following steps to implement this scenario:
 
    However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your {{site.data.keyword.powerSys_notm}} subnets.
 4. Configure a GRE tunnel between the gateway appliance and the {{site.data.keyword.powerSys_notm}} router as this router doesn't have routes for your remote networks that are advertised to it through the IBM Cloud-side router. Within the GRE tunnel, static routes are configured between the {{site.data.keyword.powerSys_notm}} router and the gateway appliance. For more information, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
-5. Set up a separate {{site.data.keyword.dl_short}} (2.0) connection between your remote network (client-managed environment<!--Q2 client-managed to be confirmed by Joe-->) and the IBM Cloud classic infrastructure. See [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl), however, key elements of IBM Cloud {{site.data.keyword.dl_short}} (2.0) include the following:
-    - Requires BGP to establish the routes to a customer's remote network.
-    - Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant, however, diversity can be enabled over multiple {{site.data.keyword.dl_short}}s along with BGP.
-    - Ensure that IP subnet overlaps do not exist between the infrastructure environments and the remote networks.
+5. Set up a separate {{site.data.keyword.dl_short}} (2.0) connection between your remote network (client-managed environment<!--Q2 client-managed to be confirmed by Joe-->) and the IBM Cloud classic infrastructure. See [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). 
+    
+    Key elements of IBM Cloud {{site.data.keyword.dl_short}} (2.0) include the following:
+        - Requires BGP to establish the routes to a customer's remote network.
+        - Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant but, diversity can be enabled over multiple {{site.data.keyword.dl_short}}s along with BGP.
+        - Ensure that IP subnet overlaps do not exist between the infrastructure environments and the remote networks.
 6. Configure a GRE tunnel between the gateway appliance and a tunnel endpoint that is connected to your external network to enable the remote network connectivity. For more information, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 For tutorials based on some of the topologies described, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
@@ -311,7 +313,7 @@ For tutorials based on some of the topologies described, see [IBM Power Virtual 
 ### Connecting two {{site.data.keyword.powerSys_notm}} environments by using IBM Cloud Transit Gateway
 {: #network-reference-architecture-tgw}
 
-In this deployment topology, a connection through IBM Cloud Transit Gateway is used to provide connectivity between Power virtual server environments located at two different data centers. With IBM Cloud Transit Gateway, you can also interconnect your {{site.data.keyword.powerSys_notm}}s to the IBM Cloud classic and VPC infrastructures, keeping traffic within the IBM Cloud network. Transit Gateway enables you to connect your otherwise disconnected private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. In addition, you can establish connection between multiple {{site.data.keyword.powerSys_notm}} workspaces across different data centers.
+In this deployment topology, a connection through IBM Cloud Transit Gateway is used to provide connectivity between Power virtual server environments at two different data centers. With IBM Cloud Transit Gateway, you can also interconnect your {{site.data.keyword.powerSys_notm}}s to the IBM Cloud classic and VPC infrastructures, keeping traffic within the IBM Cloud network. Transit Gateway enables you to connect your otherwise disconnected private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. In addition, you can establish connection between multiple {{site.data.keyword.powerSys_notm}} workspaces across different data centers.
 
 The following network architecture allows connectivity between multiple {{site.data.keyword.powerSys_notm}} locations with high availability (HA) and disaster recovery (DR) solutions.
 

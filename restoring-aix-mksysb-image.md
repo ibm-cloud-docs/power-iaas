@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-04-04"
+lastupdated: "2024-06-07"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -37,7 +37,7 @@ Consult the [General AIX support lifecycle information](https://www.ibm.com/supp
 
 The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
-The AIX technology levels (TL) do not need to match, but you might consider using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
+The AIX technology levels (TL) do not need to match, but you might consider by using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
 {: important}
 
 1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
@@ -132,7 +132,7 @@ hdiskl          none                      None
 
 To make room for the mksysb image, disk space must be freed in the instance to hold it. This can be done by removing the `/usr/sys/inst.images` file system and creating a new one called `/mksysb-staging`.
 
-This should result in sufficient space for most mksysb image use cases. If more space is required, then a new larger storage volume needs to be attached to the instance with the {{site.data.keyword.powerSys_notm}} user interface and a JFS2 file system will need to be created on it. The below example removes `/usr/sys/inst.images` and creates a new 12 GB `mksysb-staging` file system.
+This should result in sufficient space for most mksysb image use cases. If more space is required, then a new larger storage volume needs to be attached to the instance with the {{site.data.keyword.powerSys_notm}} user interface and a JFS2 file system will need to be created on it. The following example removes `/usr/sys/inst.images` and creates a new 12 GB `mksysb-staging` file system.
 
 
 
@@ -171,7 +171,7 @@ New File System size is 25165824
 ```
 {: screen}
 
-In the above example, hdisk1 is the free storage volume where the mksysb image is restored.
+In the preceding example, hdisk1 is the free storage volume where the mksysb image is restored.
 
 Once the {{site.data.keyword.powerSys_notm}} instance is created, the mksysb image is placed in the /mksysb-staging directory. Transferring the mksysb image to the `/mksysb-staging` directory depends on your connectivity options to the IBM Cloud and {{site.data.keyword.powerSys_notm}} workspace.
 

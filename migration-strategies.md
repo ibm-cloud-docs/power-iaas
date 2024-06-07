@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-14"
+lastupdated: "2024-06-07"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 # Migration strategies for IBM i
 {: #migration-strategies-power}
 
-Learn how to migrate your data and workloads to a IBM&reg; Power Systems&trade; Virtual Server.
+Learn about the various strategies to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
 ## IBM i migration strategies
@@ -43,7 +43,7 @@ Recent IBM i migration enhancements:
 ## Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
-BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including COS (Cloud Object Storage).
+BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including Cloud Object Storage (COS).
 
 The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 

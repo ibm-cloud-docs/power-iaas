@@ -37,7 +37,7 @@ You can create a workspace only if the pod setup at your data center is complete
 
 3. Click **Create a workspace**.
 
-4. Select the **Location type** as Private cloud.<!--Check UI-->
+4. Select the **Location type** as On-premises.
 
 5. Select the **Sattelite location** that you created for the IBM Cloud region that is closest to the physical location of your data center.
 

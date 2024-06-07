@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-07"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -19,7 +19,7 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-The {{site.data.keyword.powerSys_notm}} network architecture requires connectivity between two entities: IBM Cloud and the pod that is located in your private cloud data center. This connectivity is enabled with the help of Direct Link 2.0 Connect technology or through VPN connection. IBM sets up this connectivity during the initial deployment of the pod. Provide some network-specific information before the pod installation so that the Direct Link 2.0 connection or VPN connection can be established. Information that is required by IBM is included in the checklist that is shared before the installation, such as:
+The {{site.data.keyword.powerSys_notm}} network architecture requires connectivity between two entities: IBM Cloud and the pod that is located in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center. This connectivity is enabled with the help of Direct Link 2.0 Connect technology or through VPN connection. IBM sets up this connectivity during the initial deployment of the pod. Provide some network-specific information before the pod installation so that the Direct Link 2.0 connection or VPN connection can be established. Information that is required by IBM is included in the checklist that is shared before the installation, such as:
 * Autonomous system numbers (ASN)
 * Service key
 * IP addresses and gateway for the Aggregation Services Router (ASR)
