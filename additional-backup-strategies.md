@@ -51,7 +51,7 @@ The preferred ways to connect to Cloud Object Storage (COS) from a VM in {{site.
     Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
 
 ### Cloud Object Storage on AIX
-{: cos-aix}
+{: #cos-aix}
 
 IBM Power Systems that are running AIX 7.2 TL3, or later, have a script that is located in the path `/usr/samples/nim/cloud_setup`. The `cloud_setup` command installs the command-line environment for cloud storage services.
 
@@ -88,6 +88,7 @@ Default output format [None]: json
 ```
 
 ## Veeam for AIX
+{: #veam-aix}
 
 Veeam for AIX provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
 
@@ -101,5 +102,6 @@ An email is sent confirming the order. If the order is incorrect, it can be dele
 A license key is generated to whomever placed the order.
 
 ## FalconStor StorSafe VTL
+{: #fstor-vtl}
 
 For more information, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).

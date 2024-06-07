@@ -18,7 +18,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 # Monitoring metrics for IBM {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using the IBM Cloud® Monitoring dashboards.
 {: shortdesc}

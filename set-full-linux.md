@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}} on cloud
 {: #set-full-Linux}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}

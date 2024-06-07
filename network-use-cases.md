@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network use cases
 {: #network_use_cases}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 Review the common network use cases within the network architecture of {{site.data.keyword.powerSysFull}}.
 {: shortdesc}

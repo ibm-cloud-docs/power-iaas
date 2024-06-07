@@ -123,7 +123,7 @@ You can create an AIX VM instance with a configured SSH key by using the {{site.
 
 You must [generate a public SSH key](#creating-ssh-key) before you can create an AIX VM with a configured SSH key.
 
-1. Ensure that you have necessary account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
+1. Ensure that you have the necessary account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Service access roles](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#service-access-roles).
 
 2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm}} user interface.
 
@@ -193,5 +193,5 @@ After you end the SSH client debug session, close the script session by pressing
 Refer to the following support pages for additional information for different use cases:
 
 - [Debugging sshd without impacting existing sshd sessions](https://www.ibm.com/support/pages/node/631957){: external}
-- [Using IPSec rules to filter network traffic](https://www.ibm.com/support/pages/node/6590907){: external}
+- [Using IPsec rules to filter network traffic](https://www.ibm.com/support/pages/node/6590907){: external}
 - [Downloading and installing or upgrading OpenSSL and OpenSSH](https://www.ibm.com/support/pages/node/720655){: external}

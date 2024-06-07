@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Activity tracker events
 {: #at-events}
 
-{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on January 29, 2024. Some of the event fields will not be sent or replaced by the new format. For the code snippets that shows the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
+{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on 29 January, 2024. Some of the event fields are not sent or replaced by the new format. For the code snippets that shows the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
 {: note}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} in {{site.data.keyword.cloud}}.
@@ -238,21 +238,21 @@ The following events are to work with IKE policy in your {{site.data.keyword.pow
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
-| power-iaas.ike-policy.list       |  Lists all the IKE policy   |
+| power-iaas.ike-policy.list       |  Lists all the IKE policies   |
 | power-iaas.ike-policy.read       |  Reads an IKE policy   |
 | power-iaas.ike-policy.create     |   Creates an IKE policy      |
 | power-iaas.ike-policy.update     |   Updates an IKE policy      |
 | power-iaas.ike-policy.delete       |   Deletes an IKE policy      |
 {: caption="Table 15. List of events: IKE policy" caption-side="top"}
 
-### List of events: IPSec policy
+### List of events: IPsec policy
 {: #at-ipsec-policy}
 
 The following events are to work with IPsec policy in your {{site.data.keyword.powerSys_notm}} instance.
 
 | Action                   | Description                 |
 |:-------------------------|:----------------------------|
-| power-iaas.ipsec-policy.list       |  Lists all the IPsec policy   |
+| power-iaas.ipsec-policy.list       |  Lists all the IPsec policies   |
 | power-iaas.ipsec-policy.read       |  Reads an IPsec policy   |
 | power-iaas.ipsec-policy.create     |   Creates an IPsec policy      |
 | power-iaas.ipsec-policy.update     |   Updates an IPsec policy      |
@@ -276,19 +276,25 @@ The following events are to work with VPN Connection in your {{site.data.keyword
 ## Viewing events
 {: #at-viewing-events}
 
-Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs for all North America and South America data centers from Dallas, all Europe data centers from Frankfurt, all Sydney data center from Sydney, and all Japan data center from Tokyo. For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs as follows:
+- All North America and South America data centers from Dallas.
+- All Europe data centers from Frankfurt.
+- All Sydney data center from Sydney, and 
+- All Japan data center from Tokyo. 
+
+For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
 {{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch).
 
 ## Activity tracker sample response format
 {: #at-response-sample}
 
-The new response format used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
+The new response format that is used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
 
-The CADF standard is significant in auditing security in cloud environments as it defines a comprehensive event model that includes the necessary information for certifying, managing, and auditing the security of applications and services in the cloud.
+The CADF standard is significant in auditing security in cloud environments. It defines a comprehensive event model that includes the necessary information for certifying, managing, and auditing the security of applications and services in the cloud.
 {: note}
 
-The following code snippets shows the differences between the old and new activity tracker response format.
+The following code snippets show the differences between the old and new activity tracker response format.
 
 `New response format`
 ```json
@@ -404,7 +410,7 @@ The following code snippets shows the differences between the old and new activi
 
 You can create an activity tracker instance and provision it in the same region where your data center is located.
 
-The {{site.data.keyword.powerSys_notm}} workspaces running in various regions or data centers will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
+The {{site.data.keyword.powerSys_notm}} workspaces that runs in various regions or data centers will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
 {: important}
 
 The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:

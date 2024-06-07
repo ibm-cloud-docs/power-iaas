@@ -30,7 +30,8 @@ How the private network subnet is configured, depends on the networking configur
 When you specify a CIDR, the following values are automatically populated:
 - A gateway
 - An IP range
-- DNS server.
+- DNS server
+
 You must use a CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: external}.
 Here is the format of a CIDR:
 ```shell
@@ -111,12 +112,15 @@ You can establish a private network communication between the two {{site.data.ke
 In case you are not using any of the four approaches, open a [support ticket](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
 
 
-For example, if you add a subnet `172.10.10.0/24` from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet without the use of the other methods listed above, you must open a support ticket and provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface.
+<!--For example, if you add a subnet `172.10.10.0/24` from user interface, and if this use case requires communication between the virtual server instances that are attached to the subnet without the use of the other methods listed above, you must open a support ticket and provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface.-->
+
+For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI).  The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instancse to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
+
 
 | Name          |  Gateway     | VLAN ID | CIDR       |
 | ------------- |  ----------- | ------- | ---------- |
 | powerns-net02 |  172.10.10.1 | 3001    | 172.10.10.0/26 |
-{: caption="Table 1. Example subnet information displayed in UI" caption-side="bottom"}
+{: caption="Table 1. Example subnet information displayed in the UI" caption-side="bottom"}
 
 <!-- You must route {{site.data.keyword.powerSys_notm}} private network subnets over {{site.data.keyword.BluDirectLink}} to allow connectivity between {{site.data.keyword.powerSys_notm}} and the {{site.data.keyword.cloud_notm}} network. This step is part of the {{site.data.keyword.cloud_notm}} Direct Link configuration. -->
 
@@ -134,14 +138,14 @@ For more information, see tutorial on [{{site.data.keyword.powerSysFull}} integr
 ## Using CIDR notation
 {: #cidr-notation}
 
-You must not use an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet. The instances that are attached to that subnet might not be able to reach parts of the public internet.
+You must not use an IP range outside of the ranges that are defined by the [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} document (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet. The instances that are attached to that subnet might not be able to reach parts of the public internet.
 
-If you are using an IP range outside of the ranges that are defined by [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet you must use IANA assigned IPs and GRE tunneling. For more information see [Generic Routing Encapsulation (GRE) tunneling](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel). PowerVS assigns IPs as Internal IP from the prefix 192.168.0.0/16 to your accounts for Public Network access. Once a public subnet is assigned, you cannot use those IPs for private networks.
+If you are using an IP range outside of the ranges that are defined by the [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} document (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet you must use Internet Assigned Numbers Authority (IANA) assigned IP addresses and GRE tunneling. For more information, see [Generic Routing Encapsulation (GRE) tunneling](/docs/allowlist/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel). PowerVS assigns IP addresses as Internal IP from the prefix 192.168.0.0/16 to your accounts for Public Network access. Once a public subnet is assigned, you cannot use those IP addresses for private networks.
 
 The following networks are filtered out and are not accepted: 10.0.0.0/14, 10.200.0.0/14, 10.198.0.0/15, and 10.254.0.0/16.
 {: note}
 
-The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the **more** IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
+The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
 | CIDR block size | Available IP addresses (WDC04,WDC06) | Available IP addresses (non-WDC) |
 | --------------- | ------------------------------ | ---------------------------------- |

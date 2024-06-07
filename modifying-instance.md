@@ -32,7 +32,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 3. Click the **Edit** icon, a menu appears. From the menu, select the value you want to modify for the {{site.data.keyword.powerSys_notm}} instance. You can modify the following values: **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
-    If the virtual machine (VM) is inactive, you can change the processor type to *Dedicated processor*, *Uncapped shared processor*, or *Capped shared processor*.
+    If the virtual machine (VM) is inactive, you can change the processor type to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
     {: tip}
 
 4. Select the service agreement box and click **Order** to complete the instance modification process and accept the price.
@@ -113,14 +113,14 @@ If you want to attach or detach a volume, complete the following steps:
 
 You can resize a storage volume after its initial creation. To delete a volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM.
 
-[Off-Premises]{: tag-blue} For IBM i 7.3 and later versions, you can resize volume to increase the volume size, but this requires an initial program load (IPL) to recognize the new volume size.
+[Off-premises]{: tag-blue} For IBM i 7.3 and later versions, you can resize volume to increase the volume size, but this requires an initial program load (IPL) to recognize the new volume size.
 
 Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see  [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you perform an IPL operation before the resize operation is complete, an additional IPL is required.
 {: important}
 
 If you cannot take the downtime, you can add additional volumes. You can attach maximum of 127 volumes to the VM.
 
-[Off-Premises]{: tag-blue} Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
+[Off-premises]{: tag-blue} Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
 {: important}
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Storage volumes**.
@@ -141,7 +141,7 @@ To apply or verify an IBM i software key, the VM must be active and in running s
 ## Adding or removing a public network
 {: #adding-removing-network}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 You can remove or add a public network by clicking the **Public networks** toggle in **Virtual server instances**. When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information about how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
 
@@ -156,7 +156,7 @@ SRC is only supported for AIX and IBMi virtual machines.
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-[Off-Premises]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+[Off-premises]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
 
 ## Use cases

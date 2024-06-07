@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-01-22"
+lastupdated: "2024-06-06"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -70,7 +70,7 @@ Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is u
 
 4. Under the **Connection** category, select **Connection**>**SSH**>**Tunnels**.
 
-5. Add your **Source port** number and **Destination**. For example, you  can chose 50000 as the source port number.
+5. Add your **Source port** number and **Destination**. For example, you can chose 50000 as the source port number.
 
     Do not change the source port numbers. When telnetting, avoid making the source port the same as the destination.
     {: tip}
@@ -99,7 +99,7 @@ Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is u
 ## Starting the TCP servers
 {: #start-tcp-servers}
 
-Start the required TCP servers on your IBM i operating system by performing the following tasks:
+Start the required TCP servers on your IBM i operating system by completing the following tasks:
 
 1. To allow SSH connections, enter the following command:
 
@@ -138,7 +138,7 @@ your virtual devices or enable _autoconfig_. To enable _autoconfig_, complete th
 
  5. Select `QAUTOVRT` with option **2** (Change).
 
- 6. Change the value from **0** to the number of auto-configured consoles you want to be able to connect concurrently.
+ 6. Change the value from **0** to the number of auto-configured consoles that you want to be able to connect concurrently.
 
  7. Go to the IBM i VM and start the telnet server for the console:
 

@@ -17,7 +17,7 @@ subcollection: power-iaas
 # System calculators
 {: #system-calculators}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 You can use system calculators to determine the system power load or the distributed floor load for your system.
 * **Power calculators**: The [IBM Systems energy estimator](https://see.c8f8f055.public.multi-containers.ibm.com/see/EnergyEstimator){: external} is a web-based tool for estimating power requirements for IBM systems. This tool estimates typical power requirements (watts) for a specific system configuration under normal operating conditions.

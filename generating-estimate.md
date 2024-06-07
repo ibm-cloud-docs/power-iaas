@@ -59,7 +59,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 ### Off-premises (IBM Cloud)
 {: #off-prem-location-type}
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 If you select the **Location type** as Off-premises, select one resource from the following list and choose additional configurations as per your requirement:
 
@@ -173,7 +173,7 @@ To learn more about dedicated host, see [Getting started with dedicated host]. -
 ### On-premises (private cloud)
 {: #on-prem-location-type}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 If you select the **Location type** as On-Premises, proceed with the following steps:
 

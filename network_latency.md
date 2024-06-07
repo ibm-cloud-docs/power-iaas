@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network latency
 {: #network_latency_main}
 
-[On-Premises]{: tag-red}
+[On-premises]{: tag-red}
 
 The network latency between your data center and the corresponding {{site.data.keyword.powerSysFull}} IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds.
 {: shortdesc}

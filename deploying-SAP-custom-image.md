@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-03-01"
+lastupdated: "2024-06-06"
 
 keywords: deploying a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to
 
@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 
 
-[Off-Premises]{: tag-blue}
+[Off-premises]{: tag-blue}
 
 <!--Q2-->
 
@@ -37,13 +37,13 @@ If SAP manages your subscription, the SAP performs the following operations on {
 * Creating a Cloud Object Storage (COS) bucket to store the images in {{site.data.keyword.powerSys_notm}}.
 * Importing the images from the COS bucket to a new workspace that is created by SAP.
 * Importing the images from the COS bucket to an existing workspace.
-    The central image repository provided by SAP cannot be used to refresh stock images.
+    The central image repository that is provided by SAP cannot be used to refresh stock images.
     {: note}
 
 
 If you want to import the images for your workspace, contact SAP to get the details such as access key, secret key, bucket name, COS region, and image name. You can import the images by using the {{site.data.keyword.powerSys_notm}} interface, CLI, API, or Terraform.
 
-The imported images can be deployed only in the single storage pool where the images are stored. To deploy the images to a different storage pool, the images must be stored in the storage pool. If you are using the APIs to import the images, you can specify the details of the storage pools where the image must be stored.
+The imported images can be deployed only in the single storage pool where the images are stored. To deploy the images to a different storage pool, the images must be stored in the storage pool. If you are using the APIs to import the images, you can specify the details of the storage pools where the images must be stored.
 
 Complete the planning and pricing before you deploy the Linux for SAP (HANA or NetWeaver) image on the {{site.data.keyword.powerSys_notm}} workspace. Also, the pricing must be completed before the end of subscription for managed services with SAP. <!--For more information, see Linux for SAP (HANA or NetWeaver) pricing optimization.-->
 {: note}
