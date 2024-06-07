@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2023-06-04"
+lastupdated: "2024-06-07"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
 
-- Virtual machines: The CPU (in cores), with processor mode (capped, shared, dedicated), and memory (in GB).
+- Virtual machines: The CPU (in cores), with processor modes (capped, shared, dedicated), and memory (in GB).
 
 - Volumes: Volume (in GB).
 
@@ -48,9 +48,9 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 ## Monthly usage
 {: #monthly-usage}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, bill for the virtual machine reflects the resource change at a per-hour prorated price.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
 
-All prices mentioned in this topic are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in this topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance that has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
@@ -62,25 +62,25 @@ Let us assume the following hypothetical monthly prices:
 
 **Total cost per month**     = $291.43
 
-Factoring the example quantities and prices, the base price for this  virtual machine is $291.43/month or an average of $0.399/hour for all the resources consumed.
+Factoring the example quantities and prices, the base price for this virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed.
 
-Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory and amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources deployed as shown in Table 1.
+Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory and amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
 
 In Table 1, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
-| Hours elapsed in a month   | Amount charged                               |  Virtual machine  description    |
+| Hours elapsed in a month   | Amount charged                               |  Virtual machine description    |
 | -------------------------- | -------------------------------------------- |  --------------------------------------- |
 | 300 hours                  | (300 hours x $0.399)/month = $119.70         |  1 core, 8 GB memory, 150 GB disk, RHEL  |
 | 430 hours                  | (430 hours x $0.498)/month = $214.14         |  1 core, 16 GB memory, 150 GB disk, RHEL |
 | 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
 {: caption="Table 1. An example of monthly charges for a virtual machine" caption-side="bottom"}
 
-For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. For this example, we would see four distinct part numbers in the invoice for that  virtual machine, one each for the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). To view the part numbers, refer to Table 2.
+For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. For this example, we would see four distinct part numbers in the invoice for that virtual machine, one each for the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). To view the part numbers, refer to Table 2.
 
 
 <!-- Q2 -->
 
-|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalogue) |
+|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
 |  --------------------------------------------------------------- | ---------------------------------------------- |
 | **IBM Power Systems Virtual Server virtual machine group**       |                                                |
 | IBM Power Systems E1080 virtual processor core hour - capped     | ppcaas-metric-E1080-cores-capped |
@@ -164,7 +164,7 @@ For more information about unit prices for each metric ID, see [Where can I find
 ## Base instances
 {: #base-instances}
 
-The billing of a base instance depends on the options you select when you create a virtual machine. The factors that affect the billing of the base instance are, the machine type, number of cores, and amount of memory. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instance.
+The billing of a base instance depends on the options that you select when you create a virtual machine. The factors that affect the billing of the base instance are the machine type, number of cores, and amount of memory. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instance.
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -173,13 +173,13 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 
 Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you bring your own license, it is not metered or billed.
 
-If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
+If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
 
 ## Processor types
 {: #processor-types}
 
-You are charged different rates depending on the type of system that you choose for your  virtual machine. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, E1080 costs more than E1050.
+You are charged different rates depending on the type of system that you choose for your virtual machine. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, the E1080 costs more than E1050.
 
 You can choose one of the following core types for your workload:
 * **Dedicated virtual processor cores**
@@ -188,7 +188,7 @@ You can choose one of the following core types for your workload:
 
 Different scenarios provide different benefits when you use each type of virtual processor core.
 
-All prices mentioned in this topic are illustrative and do not represent the actual amounts used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in this topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 In the following example, assume that the cost of different types of virtual processor cores is the same within each system type they belong to.
@@ -240,7 +240,7 @@ You can deploy the following two types of SAP workloads as virtual machines:
 * **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. Similar to other types of deployments, the following types of systems, processors, and memory are supported for SAP HANA:
     - System types: S1022, E1050, or E1080
     - Virtual processor core types: dedicated, shared capped, or shared uncapped
-    - Memory types: scale-out or scale-up
+    - Memory types: scale out or scale-up
 
 For SAP HANA workloads, the charges for processor and memory parts are the same as compared to non-SAP HANA workloads. To estimate the costs for non-SAP HANA workloads, see Tables 3, 4, 5, and 6.
 
@@ -278,15 +278,15 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the f
    {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
 
 
-* **Image backing volumes**: These volumes are part of a boot image in your cloud instance present in the boot image catalog. You are billed based on the total volume size(s) contained in the image.
+* **Image backing volumes**: These volumes are part of a boot image in your cloud instance present in the boot image catalog. You are billed based on one or more total volume sizes contained in the image.
 
-    When the image has a single backing volume, you are billed based on the size (GB) of the single volume. When the image has multiple backing volumes, billing is based on tallying up the size(s) of all the image backing volumes. Table 8 shows an example of how you are billed based on your boot volume:
+    When the image has a single backing volume, you are billed based on the size (GB) of the single volume. When the image has multiple backing volumes, billing is based on tallying up the sizes of all the image backing volumes. Table 8 shows an example of how you are billed based on your boot volume:
 
 
    | Image volume size                   | Single or multiple backing  | Billed volume size |
    | ----------------------------------  | --------------------------  | ----------------|
    | 20 GB                               | Single backing volume       | 20 GB           |
-   | volume 1 (20 GB), volume 2 (10 GB)  | Multiple backing volumes     | 30 GB           |
+   | Volume 1 (20 GB), volume 2 (10 GB)  | Multiple backing volumes     | 30 GB           |
    {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
 
 
@@ -298,9 +298,9 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the f
    |  20 GB + 30 GB        | 50 GB           |
    {: caption="Table 9. Calculation of deployed virtual machines volume" caption-side="bottom"}
 
-* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates made to the virtual machine. When you take the snapshot of the volume for the first time, the size of the snapshot is equal to the volume of the virtual machine. Subsequently, when you take the snapshots of the same volume, the updates made to the volume after the first snapshot taken is only saved. So, the subsequent snapshots compared with the first snapshot taken are smaller and thus cost less.
+* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take the snapshot of the volume for the first time, the size of the snapshot is equal to the volume of the virtual machine. Then, when you take the snapshots of the same volume, the updates that are made to the volume after the first snapshot taken is only saved. So, the subsequent snapshots that are compared with the first snapshot taken are smaller and thus cost less.
 
-For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The the size of the second snapshot might be 1 GB.
+For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
 
 Snapshot sizes are not predictable as they are related to the updates made to the volume between two snapshots.
 {: note}
@@ -333,25 +333,25 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 [On-premises]{: tag-red}
 
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio upto 1:20. Hence, the operating system license charges are calculated differently.
+The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio up to 1:20. Hence, the operating system license charges are calculated differently.
 
 When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
 * The operating system license is based on the following types of virtual instances:
-    * capped SPP: pricing is determined by the entitled capacity.
-    * uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
+    * Capped SPP: pricing is determined by the entitled capacity.
+    * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-| Offering/Solution  | core-to-virtual core ratio  | Core Pricing  | OS license pricing |
+| Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| IBM {{site.data.keyword.powerSys_notm}} Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges will be associated with the respective VM proportionate to VPs of that VM |
+| IBM {{site.data.keyword.powerSys_notm}} Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
 {: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
-For more information about calculating the pricing for OS licensisng in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
+For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 
 <!-- Q2 -->
@@ -417,23 +417,23 @@ Review the following frequently asked questions about pricing:
    On the global catalog, complete the following steps to view the pricing for each metric ID:
 
    * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
-   * Search for the entries, `power-iaas`, in the search bar.
+   * Search for the entries `power-iaas` in the search bar.
    * Determine the type of resource for which you need pricing. The following options are available:
-     - `Power Virtual Server Virtual Machine` for Virtual Machines.
+     - `Power Virtual Server Virtual Machine` for virtual machines.
      - `Power Virtual Server Volume` for Volumes.
      - `Power Virtual Server Snapshot` for Snapshots.
      - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools.
-         There is no pricing associated with other types of resources.
-   * Click on the selected resource type entry from the search results. The corresponding page opens.
-   * Click the {{site.data.keyword.powerSys_notm}} Private Cloud billing plan from the left pane:
-     - `Power Virtual Server Private Cloud Virtual Machine Group` for Virtual Machines.
+         There is no pricing that is associated with other types of resources.
+   * Click the selected resource type entry from the search results. The corresponding page opens.
+   * Click the {{site.data.keyword.powerSys_notm}} Private Cloud billing plan from the left page:
+     - `Power Virtual Server Private Cloud Virtual Machine Group` for virtual machines.
      - `Power Virtual Server Private Cloud Volume Group` for Volumes.
      - `Power Virtual Server Private Cloud Snapshot Group` for Snapshots.
-     - `Power Virtual Server Private Cloud Shared Processor Pool` for Shared Processor Pools.
+     - `Power Virtual Server Private Cloud Shared Processor Pool` for Shared Processor Pools (SPP).
          Deployments with different satellite regions are displayed.
    * Select the deployment with the name ending with the satellite region for which you want the pricing.
-      For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** deployment displays the pricing for virtual machines in the satellite locations hosted in the Dallas region.
-   * Click the **Pricing** tab on the right navigation pane to view the pricing for different **Metric IDs**.
+      For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** deployment displays the pricing for virtual machines in the satellite locations that are hosted in the Dallas region.
+   * Click the **Pricing** tab on the right navigation page to view the pricings for different **Metric IDs**.
       Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
 
 
@@ -444,14 +444,14 @@ Review the following frequently asked questions about pricing:
 
 
 To calculate the price for OS licensing in the uncapped SPP, consider the following conditions:
-* If the total number of VPs associated with the partitions in a SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
-* If the total number of VPs associated with the partitions in a SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
+* If the total number of VPs associated with the partitions in an SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
+* If the total number of VPs associated with the partitions in an SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
 
-Table 14 shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores  :
+Table 14 shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores :
 
-| Example | VM      | VP on VM | Total number of VPs vs. Maximum pool capacity | Cost calculation |
+| Example | VM      | VP on VM | Total number of VPs versus Maximum pool capacity | Cost calculation |
 | ------  | ------- | -------- | --------------------------------------------- | ---------------- |
-| 1       | AIX VM1 | 4        | 6 < 8  (6 is considered)                      | 4 x cost of AIX OS license |
+| 1       | AIX VM1 | 4        | 6 < 8 (6 is considered)                      | 4 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
 | 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
@@ -466,15 +466,15 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 
    No
 
-### In terms of cost, what do I pay for?
+### In terms of costs, what do I pay for?
 {: #payment}
 
-   The monthly consumption charges are factored based on the minimum committed spend and metered consumption charges. If the consumption charges are less than or equal to the minimum committed spend, you pay the minimum committed spend amount. If the consumption charges exceeds the minimum commmitted spend, you pay the metered consumption charges.
+   The monthly consumption charges are factored based on the minimum committed spend and metered consumption charges. If the consumption charges are less than or equal to the minimum-committed spend, you pay the minimum-committed spend amount. If the consumption charges exceed the minimum committed spend, you pay the metered consumption charges.
 
 ### Can I change infrastructure configuration based on my requirements after my virtual servers are provisioned? How will it impact billing?
 {: #change-infra-post-provisioning}
 
-   Yes, you can add additional nodes but cannot reduce the number of nodes. The billing gets updated from the date the new nodes are added.
+   Yes, you can add extra nodes but cannot reduce the number of nodes. The billing gets updated from the date that the new nodes are added.
 
 ### When does the billing begin?
 {: #billing-schedule}

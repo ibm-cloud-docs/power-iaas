@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-07"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 

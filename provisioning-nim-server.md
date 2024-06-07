@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-22"
+lastupdated: "2024-05-07"
 
 keywords: troubleshooting, NIM server, support, fixes, updates
 
@@ -11,15 +11,7 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting up a Network Installation Management (NIM) server
 {: #provisioning-nim}
@@ -54,7 +46,11 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
 3. Confirm that a valid `bos.vendor.profile` exists by copying the `/usr/lpp/bosinst/bos.vendor.profile` into the `installp/ppc` directory of the source repository.
     For example, `cp /usr/lpp/bosinst/bos.vendor.profile  /usr/sys/inst.images/installp/ppc/.`
 
-4. Run the following command, `nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no`.
+4. Run the following command:
+    
+    ```code
+    `nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no`
+    ```
 
     Creating a NIM master:
 
@@ -68,7 +64,7 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
     Creating image.data file...
     ```
 
-5. Once completed, the NIM master file set has been installed and the basic resource objects created. The administrator is now able to add more NIM clients and define resources.
+5. Once completed, the NIM master file set are installed and the basic resource objects created. The administrator is now able to add more NIM clients and define resources.
 
     NIM master installation summary:
 
@@ -87,4 +83,4 @@ For more information, see [Setting up NIM to boot into maintenance mode](https:/
 ## Additional information
 {: #add-info-nim}
 
- - [Migrating Clients using NIM on PowerVS](https://www.ibm.com/support/pages/node/7033798)(: external).
+ - [Migrating Clients by using NIM on PowerVS](https://www.ibm.com/support/pages/node/7033798)(: external).
