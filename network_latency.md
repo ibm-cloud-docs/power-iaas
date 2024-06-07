@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-04-28"
+lastupdated: "2024-06-07"
 
 keywords: network latency, {{site.data.keyword.powerSys_notm}}, private clouds
 
@@ -37,16 +37,16 @@ You can note the IP addresses for the IBM Cloud region that you want to test fro
 | Washington, DC | 169.63.123.154, 169.63.110.114, 169.62.13.2, 169.60.123.162, 169.59.152.58, 52.117.93.26 |
 {: caption="Table 1. IBM Cloud Region and IP address" caption-side="bottom"}
 
-To check latency requirements of a connection, complete the following steps:
+To check the latency requirements of a connection, complete the following steps:
 
-1. From a computer in the data center where you place the pod, ping the IP address of the IBM Cloud region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the pod will be placed.
+1. From a computer in the data center where you place the pod, ping the IP address of the IBM Cloud region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the pod is placed.
 
-   For example:
+   For example,
    ```text
    ping <ip_address>
    ```
 
-2. Close the connection once the transmission of a few packets is complete. For example, from the command line, enter `ctrl+c`.
+2. Close the connection when the transmission of a few packets is complete. For example, from the command-line, enter `ctrl+c`.
 
 3. In the **ping statistics** output, note the average (avg) round-trip distance in milliseconds (ms) between the host and the IBM Cloud region. Compare whether the connection meets the latency requirement of less than or equal to 200 milliseconds (<= 200 ms).
 

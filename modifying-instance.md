@@ -3,14 +3,13 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-07"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
 subcollection: power-iaas
 
 ---
-
 
 {{site.data.keyword.attribute-definition-list}}
 
@@ -28,21 +27,21 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface.
 
-2. Click the desired **Virtual server instances** to open the instances details page.
+2. Click a virtual server instance to open the instances details page.
 
-3. Click the **Edit** icon, a menu appears. From the menu, select the value you want to modify for the {{site.data.keyword.powerSys_notm}} instance. You can modify the following values: **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
+3. Click the **Edit** icon, a menu appears. From the menu, select the value that you want to modify for the {{site.data.keyword.powerSys_notm}} instance. You can modify the following values: **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
     If the virtual machine (VM) is inactive, you can change the processor type to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
     {: tip}
 
 4. Select the service agreement box and click **Order** to complete the instance modification process and accept the price.
 
-5. View the **Server details** pane to verify {{site.data.keyword.powerSys_notm}} instance modification.
+5. View the **Server details** page to verify {{site.data.keyword.powerSys_notm}} instance modification.
 
 ### Resizing the memory and core counts of the virtual machine
 {: #resize-core-mem}
 
-You can scale up and scale down the memory and core counts of the virtual machine (VM) according to your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VM is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memorey and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
+You can scale up and scale down the memory and core counts of the virtual machine (VM) according to your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VM is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memory and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
 
 | Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
@@ -63,7 +62,7 @@ You can scale up and scale down the memory and core counts of the virtual machin
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-To resize an existing VM that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VM, resize it, and then activate it. Resize the VM at least once when the VM is shut down to enable the 8x ratio. Simply shutting down and activating the VM does not enable the 8x ratio of memory and core counts.
+To resize an existing VM that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VM, resize it, and then activate it. Resize the VM at least once when the VM is shut down to enable the 8x ratio. If you shut down and activate, the VM it will not enable the 8x ratio of memory and core counts.
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
@@ -87,7 +86,7 @@ If you want to attach or detach a volume, complete the following steps:
 
 3. To detach a storage volume, click **Detach** in the table.
 
-    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay in order to see if the volume has been successfully detached. Another detach request should be made if the volume is still not disconnected.
+    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Another detach request should be made if the volume is still not disconnected.
     {: note}
 
 4. You can also create a new storage volume.
@@ -115,19 +114,19 @@ You can resize a storage volume after its initial creation. To delete a volume, 
 
 [Off-premises]{: tag-blue} For IBM i 7.3 and later versions, you can resize volume to increase the volume size, but this requires an initial program load (IPL) to recognize the new volume size.
 
-Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see  [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you perform an IPL operation before the resize operation is complete, an additional IPL is required.
+Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you do an IPL operation before the resize operation is complete, an extra IPL is required.
 {: important}
 
-If you cannot take the downtime, you can add additional volumes. You can attach maximum of 127 volumes to the VM.
+If you cannot take the downtime, you can add extra volumes. You can attach a maximum of 127 volumes to the VM.
 
-[Off-premises]{: tag-blue} Any volume that has been included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
+[Off-premises]{: tag-blue} Any volume that is included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
 {: important}
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Storage volumes**.
 
 2. Click the **Edit** icon to the right of your storage volume.
 
-3. Click on **Edit** to select the desired storage volume size in the **Modify storage volume** window. You can increase only the size of the storage volume.
+3. Click **Edit** to select the desired storage volume size in the **Modify storage volume** window. You can increase only the size of the storage volume.
 
 4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
 
@@ -135,7 +134,7 @@ If you cannot take the downtime, you can add additional volumes. You can attach 
 
 6. In an AIX VM instance, if you resize your boot storage volume, run the `chvg -g rootvg` command.
 
-To apply or verify an IBM i software key, the VM must be active and in running state. If you already ran a resize operation, you must wait until the resize operation completes and VM returns to OK status.
+To apply or verify an IBM i software key, the VM must be active and in a running state. If you already ran a resize operation, you must wait until the resize operation completes and the VM returns to OK status.
 {: note}
 
 ## Adding or removing a public network
@@ -151,41 +150,41 @@ You cannot toggle a public network off if there are no other defined networks.
 ## Detecting problems by using the System Reference Code (SRC)
 {: #detect-problems-using-src}
 
-SRC is only supported for AIX and IBMi virtual machines.
+SRC is only supported for AIX and IBM i virtual machines.
 {: note}
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-[Off-premises]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+[Off-premises]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
 
 ## Use cases
 {: #use-case-resize-vm}
 
-The different scenarios that you might face while requesting for resizing the memory of a {{site.data.keyword.powerSys_notm}} instance are listed below:
+The different scenarios that you might face while requesting for resizing the memory of a {{site.data.keyword.powerSys_notm}} instance are listed after this:
 
 ### Your request for resizing both memory and CPU fails:
 {: #resize-mem-cpu-fail}
 
-When you attempt to resize the memory as well as the CPU of a deployed virtual server instance through a single request, it may fail due to the following reasons:
+When you attempt to resize the memory as well as the CPU of a deployed virtual server instance through a single request, it might fail due to the following reasons:
 - There is no free memory available on the host.
 - There is no free memory available on the logical partition as the resources on it are running.
 - The free memory available on the logical partition is less than that of the desired value indicated in the resizing request.
 - You have made multiple attempts for resizing.
-- Currently, there is no preference for memory or CPU on what should be resized first. If the first request being processed fails, the second one will also fail automatically.
+- Currently, there is no preference for memory or CPU on what should be resized first. If the first request processing fails, the second one will also fail automatically.
 
-`Example`: When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3.2 GB for running resources in it), then there is a possibility that both the CPU and memory resize will fail.
+`Example`: When the currently allocated memory for the logical partition is 4 GB and you are trying to reduce the value to 2 GB and the logical partition at the time of request does not have free 2 GB memory for resizing (considering the logical partition is using up to 3.2 GB for running resources in it), then there is a possibility that both the CPU, and memory resize fails.
 
 ### You request for resizing the memory, but you get a partial resize:
 {: #resize-mem-cpu-partial}
 
-When you attempt to resize the memory of a deployed virtual server instance through a request, it may partially resize or in the worst scenarios, might even fail due to the following reasons:
-- There is no free memory available on the host will result in failed request.
-- There is no free memory available on the logical partition as the resources are running on it. This will result in a failed request.
-- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request. This will result in a partial resize.
-- You have made multiple attempts for resizing. This will result in a failed request.
+When you attempt to resize the memory of a deployed virtual server instance through a request, it might partially resize or in the worst scenarios, might even fail due to the following reasons:
+- There is no free memory available on the host that results in a failed request.
+- There is no free memory available on the logical partition as the resources are running on it. This results in a failed request.
+- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request. This results in a partial resize.
+- You have made multiple attempts for resizing. This results in a failed request.
 
-`Example`: When the currently allocated memory for the logical partition is 4GB and you are trying to reduce the value to 2GB and the logical partition at the time of request does not have free 2GB memory for resizing (considering the logical partition is using upto 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3GB.
+`Example`: When the currently allocated memory for the logical partition is 4 GB and you are trying to reduce the value to 2 GB and the logical partition at the time of request does not have free 2 GB memory for resizing (considering the logical partition is using up to 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3 GB.
 
-In the current cloud environment, it may take upto 1.5 hours approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires will fail, until all referencing tables are updated.
+In the current cloud environment, it might take up to 1.5 hours approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires fails until all referencing tables are updated.
 {: important}
