@@ -21,7 +21,7 @@ subcollection: power-iaas
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}} Private cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 ## What is the difference between {{site.data.keyword.powerSys_notm}} and IBM {{site.data.keyword.powerSys_notm}} Private Cloud?
 {: #private-cloud-on-cloud-diff}
@@ -43,7 +43,7 @@ For complete specifications, see [Hardware and software specifications](/docs/po
 {: faq}
 {: support}
 
-The supported AIX, IBM i, and Linux&reg; operating system versions depend on the IBM Power hardware.
+The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on the IBM Power hardware.
 
 
 ### AIX
@@ -54,19 +54,19 @@ The supported AIX, IBM i, and Linux&reg; operating system versions depend on the
 The {{site.data.keyword.powerSys_notm}} offering supports the following operating systems:
 * S922  -  7.1 or later
 * E980  -  7.1 or later
-* S1022 -  7.1 TL 5 or later
+* S1022 -  7.1 Technology Level (TL) 5 or later
 
-Stock images available when you create a virtual machine are:
+The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL2
 * AIX 7.2 TL5 SP7
 
 [On-premises]{: tag-red}
 
-The IBM {{site.data.keyword.powerSys_notm}} Private Cloud offering supports the following operating systems:
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports the following operating systems:
 * S1022 - 7.2 or later
 * E1080 - 7.2 or later
 
-Stock images available when you create a virtual machine are:
+The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL1 SP2
 * AIX 7.3 TL1 SP1
 * AIX 7.2 TL5 SP6
@@ -77,7 +77,7 @@ Stock images available when you create a virtual machine are:
 <!--The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
 <!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
 
-When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
+To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
@@ -125,7 +125,7 @@ IBM i stock images currently available when you create a VM are:
 
 <!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
 
-[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} private cloud.
+[^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 ### Linux
 {: #linux-os-versions}
@@ -172,7 +172,7 @@ SUSE [^footnote3]
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
 
-To use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
+To use your own license, select the OS image that with `-BYOL` suffix. On the **Create virtual server instance** page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using the Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 <!--Q2-->
 
@@ -195,7 +195,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterpris
 
 FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-The following list is an example of FLS offerings:
+The following list is an example of the FLS offerings:
 
 * Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.0 (General)
 * Support:	You pay IBM for support
@@ -204,13 +204,13 @@ The following list is an example of FLS offerings:
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
 ## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional compute nodes?
 {: #expand-pods}
 
-Yes, up to the maximum number of compute nodes for the specific configuration size. For example, you can initially start with 5 nodes and then add 3 more nodes.
+Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
 
 ## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional storage?
 {: #expand-pods-storage}
@@ -237,20 +237,20 @@ For more information, see [Activity tracker events](/docs/power-iaas?topic=power
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
 {: #pod-disconnect-unplanned-nw-mcp}
 
-If there is an unplanned network outage for the management network that is connecting the IBM Cloud instance and the pod infrastructure, the VMs continue to run within the pod.
+If an unplanned network outage occurs for the management network that is connecting the IBM Cloud instance to the pod infrastructure, the VMs continue to run within the pod.
 
-See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and the secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
+See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
 
-|  Capability  | Impact of disconnected mode |
-| ------------ | --------------------------- |
-| Your workload and data | No impact – your workload is operational and data is available. |
-| GUI or API (for read operations) | Minimal impact – GUI is operational and uses last known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
-| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable – resource write operations are unavailable until the connectivity for the control plane is reestablished. |
-| command-line interface (CLI) | Minimal impact – read operations remain operational and write operations are unavailable until connectivity is reestablished.|
-| Billing and metering | No impact – metering uses last-known cached data. If the pod gets disconnected, write operations are unavailable. |
-| Telemetry | Unavailable – telemetry data within the pod is unavailable until control plane connectivity is reestablished. However, IBM Storage Insights continue to cache the information for a selected period. |
-| DHCP service (for your data network) |  No impact – DHCP services are provided by the pod-resident network infrastructure and does not require a connection to IBM Cloud. |
-| IBM remote support | Unavailable – IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
+|  Capability            | Status | Impact of disconnected mode |
+| ------------           | --------------------------- | ---- |
+| Your workload and data | No impact | Your workload is operational and data is available. |
+| GUI or API (for read operations) | Minimal impact | The GUI is operational and uses the last-known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
+| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable | The resource write operations are unavailable until the connectivity to the control plane is re-established. |
+| command-line interface (CLI) | Minimal impact | The read operations remain operational and the write operations are unavailable until connectivity is re-established.|
+| Billing and metering | No impact | Metering uses last-known cached data. If the pod gets disconnected, the write operations are unavailable. |
+| Telemetry | Unavailable | The telemetry data within the pod is unavailable until the control plane connectivity is re-established. However, IBM Storage Insights continue to cache the information for a selected period. |
+| DHCP service (for your data network) |  No impact | DHCP services are provided by the pod-resident network infrastructure and do not require a connection to IBM Cloud. |
+| IBM remote support | Unavailable | IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
 {: caption="Table 1. Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
 
 <!--Q2-->
@@ -392,7 +392,10 @@ To migrate your VM from one data center to another, you must capture and export 
 {: #pinning}
 {: faq}
 
-You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM back to the original host when the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+You can choose a pinning policy: *soft pin* or *hard pin*, to pin a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you *hard pin* a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+
+
+You can choose to *soft pin* or *hard pin* a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. If the VM has a licensing restriction with the host, the *hard pin* option restricts the movement of the VM during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
@@ -459,13 +462,13 @@ The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If y
 {: #bare}
 {: faq}
 
-There are no bare-metal options. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
+No, the bare-metal options are not available. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
 
 ## Can you tell me more about the snapshotting, cloning, and restoring capabilities?
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -540,7 +543,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: support}
 
 [Off-premises]{: tag-blue}
-For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from an private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 ## What firewall options are there around VPN connectivity?
@@ -605,6 +608,7 @@ Click the overflow menu (icon with 3 vertical dots) on the far right of each vir
 
 - Delete a single virtual server instance from the details page.
 On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+<!--Sandhya: The UI elements are to be confirmed.-->
 
 <!--Navigate to the virtual server instance's details page by clicking the virtual server instance name present on the table, on the Virtual server instances page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.-->
 
