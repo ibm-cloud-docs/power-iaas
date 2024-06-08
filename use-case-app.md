@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-08"
 
 keywords: AIX and IBM i hosting, application, use case, application hosting, enterprise-level workload, bursting, scaling, db2 workloads
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # AIX and IBM i production application hosting
 {: #use-case-app-hosting}
 
-The client wants to run an enterprise-level workload in an infrastructure as a service (IaaS) environment with the ability to leverage the IBM Cloud services.
+The client wants to run an enterprise-level workload in an infrastructure as a service (IaaS) environment with the ability to use the IBM Cloud services.
 {: shortdesc}
 
 ## Client needs
