@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-08"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # VPN connections
 {: #VPN-connections}
 
-{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between client-managed environment<!--Q2 client-managed to be confirmed by Joe--> environments and the virtual server instances that are deployed on IBM Cloud.
+{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between client-managed environment<!--Q2 client-managed to be confirmed by Joe--> and the virtual server instances that are deployed on IBM Cloud.
 
 There is a new method for creating a VPN connection - [Creating a Virtual Private Cloud VPN connection](/docs/allowlist/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
 
@@ -25,13 +25,13 @@ The following deprecated method is also currently supported - [Creating a {{site
 ## Creating a Virtual Private Cloud VPN connection
 {: #vpc-vpn}
 
-The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service allows using a dedicated VPN for a one-cloud experience, improved reliability and high availability.
+The Virtual Private Cloud's (VPC) Virtual Private Network (VPN) service provides a dedicated VPN for a one-cloud experience, improved reliability, and high availability.
 
 If you are using the {{site.data.keyword.powerSys_notm}} VPN, upgrading to IBM Cloud VPC VPN is encouraged before March 2024 with the end of service on 14 July 2025. After 18 January 2025, IBM won't provide standard support for the legacy {{site.data.keyword.powerSys_notm}} VPNaaS. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: note}
 
 
-When you complete the VPC VPN set-up, you can:
+When you complete the VPC VPN set up, you can:
 -	Ensure a private and low-cost connectivity to IBM Cloud services.
 -	Access your virtual server instances through the private IP address by using Secure Shell (SSH) and other client-managed<!--Q2 client-managed to be confirmed by Joe--> applications running on your host.
 
@@ -48,7 +48,7 @@ This topic provides you with guidance on how to create or use the VPC VPN. Follo
      -	In PER workspace through TGW
      -	In non-PER workspace through Cloud connection.
 
-It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding in the Transit Gateway is viable, but it incurs extra charges. The cloud connection set-up is not required in a PER-enabled workspace.
+It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding in the Transit Gateway is viable, but it incurs extra charges. The cloud connection setup is not required in a PER-enabled workspace.
 {: note}
 
 ### Architecture diagram
@@ -89,7 +89,7 @@ It is recommended that you create a direct cloud connection between the VPC and 
 {: #vpcvpn-cons}
 
 1. The VPN connection that is used in all the configurations are policy-based VPN.
-2. Subnets that are created in {{site.data.keyword.powerSys_notm}} needs to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of VPC in your client-managed environment<!--Q2 client-managed to be confirmed by Joe-->.
+2. Subnets that are created in {{site.data.keyword.powerSys_notm}} need to be added to Local CIDR list of IBM Cloud VPC and Peer CIDR list of VPC in your client-managed environment<!--Q2 client-managed to be confirmed by Joe-->.
 3. In the routing table of IBM Cloud VPC, you must enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in Edit Traffic window).
 4. Choose the Direct Link with Transit Gateway enabled or disable configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
 
