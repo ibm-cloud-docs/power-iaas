@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2023
+  years: 2020, 2024
 
-lastupdated: "2023-05-09"
+lastupdated: "2024-06-08"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -17,16 +17,16 @@ subcollection: power-iaas
 {: #linux-with-powervs}
 
 
-You can deploy a Linux&reg; virtual machine (VM) using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
+You can deploy a Linux&reg; virtual machine (VM) by using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}
 
 You can choose from the following options:
 - Register for a full Linux subscription.
 - Use your own Linux subscription from a Linux vendor.
 
-If you choose to register for full Linux subscription, an additional charge will apply to your provisioned VM for Linux support through IBM. Full Linux subscription requires use of one of the stock operating system images provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+If you choose to register for full Linux subscription, an extra charge applies to your provisioned VM for Linux support through IBM. A full Linux subscription requires use of one of the stock operating system images that are provided by IBM. In the image menu, select **IBM provided subscription** to choose one of the IBM stock images. For more information on how to provision and register by using a full Linux subscription, see [Full Linux subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
-If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
+If you plan to use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
@@ -41,7 +41,7 @@ When you create an OVA image, ensure that the image includes the correct version
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues) within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
 {: note}
 
-## Registering and purchasing subscription to RHEL
+## Registering and purchasing a subscription to RHEL
 {: #subscribing-to-rhel}
 
 You cannot contact the Red Hat-based repository and download the appropriate software packages without first enabling your RHEL subscription.
@@ -72,7 +72,7 @@ You can verify that the device interface type is `ibmveth` by using the followin
 ethtool -i <interface name> | grep driver
 ```
 
-The following instructions are applicable to RHEL version 8.1, and later. If you need additional help to configure network interfaces, refer to the Red Hat documentation.
+The following instructions are applicable to RHEL version 8.1 and later. If you need more help to configure network interfaces, refer to the Red Hat documentation.
 
 1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
 
@@ -96,7 +96,7 @@ The following instructions are applicable to RHEL version 8.1, and later. If you
 
 3. Restart the VM.
 
-4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting is correct.
+4. After the restart operation is complete, verify that the MTU value and the checksum offloading setting are correct.
     - Verify the checksum offloading setting by running the following command:
 
       ```text
@@ -134,7 +134,7 @@ Before running the `iptables` commands, complete the following steps to ensure t
    firewall-cmd --zone=public --list-all
    ```
 
-3. To turn on the masquerade option that will set the configuration settings persist after the reboot operations, run the following command:
+3. To turn on the masquerade option that will set the configuration settings persist after the restart operations, run the following command:
    ```text
    firewall-cmd --zone=public --add-masquerade --permanent
    success
@@ -190,6 +190,6 @@ You can permanently set **IP forwarding** by editing the `/etc/sysctl.conf` file
 ### Configuring Linux VMs to use a SNAT router
 {: #use-snat-router}
 
-1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that will be using the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
+1. [Deploy the Linux VMs](/docs/power-iaas?topic=power-iaas-linux-deployment) that use the SNAT router to access the internet. Make sure that the SNAT router is routing the attached private networks.
 
 2. Assign the SNAT router IP (eth1 as in the previous example) on the private network as the default router on your newly created Linux VM.

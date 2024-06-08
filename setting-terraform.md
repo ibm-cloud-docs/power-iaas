@@ -16,10 +16,10 @@ subcollection: power-iaas
 # Setting up Terraform for {{site.data.keyword.powerSys_notm}}
 {: #setting-up-terraform}
 
-Terraform on IBM Cloud enables predictable and consistent provisioning of IBM Cloud services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the IBM Cloud CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.powerSysFull}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on IBM Cloud enables predictable and consistent provisioning of IBM Cloud services so that you can rapidly build complex, multitier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the IBM Cloud CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.powerSysFull}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
-Looking for a managed Terraform on IBM Cloud solution? Try out [IBM Cloud Schematics](/docs/schematics?topic=schematics-getting-started). With Schematics, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the IBM Cloud Provider plug-in. Schematics also provides pre-defined Terraform templates that you can easily install from the IBM Cloud catalog.
+Looking for a managed Terraform on IBM Cloud solution? Try out [IBM Cloud Schematics](/docs/schematics?topic=schematics-getting-started). With Schematics, you can use the Terraform scripting language that you are familiar with, but you do not have to worry about setting up and maintaining the Terraform command-line and the IBM Cloud Provider plug-in. Schematics also provides pre-defined Terraform templates that you can easily install from the IBM Cloud catalog.
 {: tip}
 
 ## Installing Terraform and configuring resources for {{site.data.keyword.powerSys_notm}}
@@ -78,4 +78,4 @@ Before you can create an authorization by using Terraform, make sure that you ha
 ## What's next?
 {: #what-next}
 
-Now that you have successfully created your {{site.data.keyword.powerSys_notm}} instance with Terraform on IBM Cloud, you can visit the [Power Terraform registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture){: external} to perform additional tasks using Terraform.
+Now that you have successfully created your {{site.data.keyword.powerSys_notm}} instance with Terraform on IBM Cloud, you can visit the [Power Terraform registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture){: external} to perform more tasks by using Terraform.
