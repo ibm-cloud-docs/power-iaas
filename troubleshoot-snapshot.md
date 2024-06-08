@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2024
 
-lastupdated: "2020-04-17"
+lastupdated: "2024-06-08"
 
 keywords: snapshot, restore, clone, troubleshoot
 
