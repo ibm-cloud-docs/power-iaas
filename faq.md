@@ -265,8 +265,8 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 <!--Q2-->
-
-You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image).
+<!-- Q2
+You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image). -->
 
 <!--Q2-->
 ## What versions of stock images are available?
