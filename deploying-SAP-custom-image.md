@@ -34,14 +34,14 @@ SAP provides a central image repository within a {{site.data.keyword.powerSys_no
 
 If SAP manages your subscription, the SAP performs the following operations on {{site.data.keyword.powerSys_notm}}:
 
-* Creating a Cloud Object Storage (COS) bucket to store the images in {{site.data.keyword.powerSys_notm}}.
-* Importing the images from the COS bucket to a new workspace that is created by SAP.
-* Importing the images from the COS bucket to an existing workspace.
+* Creating a Cloud Object Storage bucket to store the images in {{site.data.keyword.powerSys_notm}}.
+* Importing the images from the Cloud Object Storage bucket to a new workspace that is created by SAP.
+* Importing the images from the Cloud Object Storage bucket to an existing workspace.
     The central image repository that is provided by SAP cannot be used to refresh stock images.
     {: note}
 
 
-If you want to import the images for your workspace, contact SAP to get the details such as access key, secret key, bucket name, COS region, and image name. You can import the images by using the {{site.data.keyword.powerSys_notm}} interface, CLI, API, or Terraform.
+If you want to import the images for your workspace, contact SAP to get the details such as access key, secret key, bucket name, Cloud Object Storage region, and image name. You can import the images by using the {{site.data.keyword.powerSys_notm}} interface, CLI, API, or Terraform.
 
 The imported images can be deployed only in the single storage pool where the images are stored. To deploy the images to a different storage pool, the images must be stored in the storage pool. If you are using the APIs to import the images, you can specify the details of the storage pools where the images must be stored.
 

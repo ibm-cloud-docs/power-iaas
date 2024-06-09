@@ -16,6 +16,8 @@ subcollection: power-iaas
 # SAP full system profiles
 {: #SAP-full-system-profiles}
 
+<!--
+
 [Q2-2024 update start]{: tag-teal}
 
 SAP HANA profiles use all or most of the system resources, hence referred to as 'full system profiles'. You can deploy SAP HANA using full system profiles on a S1022 system only if no virtual machines are deployed on the system.
@@ -25,5 +27,7 @@ No additional billing or metering is charged for full system profiles. The virtu
 For more information about pricing, see [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 
 [Q2-2024 update end]{: tag-teal}
+
+-->
 
 <!-- Q2 -->

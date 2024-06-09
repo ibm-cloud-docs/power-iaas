@@ -48,7 +48,7 @@ The following table displays the appropriate region for your workspace:
 Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
 {: note}
 
-| Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud Classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
+| Geography | Location | Region | IBM Power infrastructure zone | Colocated IBM Cloud classic infrastructure data center | Colocated IBM Cloud VPC infrastructure zone |
 | --------- | -------- | ------ | ----------------------------- | ----------------- | ----------------------- |
 | America | Dallas, USA | us-south | DAL10 \n DAL12 \n us-south | DAL10 \n DAL12 \n DAL13 | us-south-1 \n us-south-2 \n us-south-3 |
 | America | Washington DC, USA | us-east | us-east \n WDC06 \n WDC07| WDC04 \n WDC06 \n WDC07| us-east-1 \n us-east-2 \n us-east-3|
@@ -96,7 +96,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 4. Complete the **Boot image** fields as instructed by your organization.
 
-    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM COS or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
+    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
 
     [On-premises]{: tag-red} If you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
     {: note}

@@ -64,7 +64,7 @@ To see the contents of the RPM package, enter the `rpm` command as shown in the 
 
 Once you obtain the correct disk name (through virtual adapter mapping), you can create a virtual disk image and package the contents into an OVA. After the RPM is installed, the man page and the executable (`create_ova`) are available in the normal paths. Note that a link is made to `/usr/bin/create_ova`, so there is no need to set the user path. If you decide to perform an uninstall, any links, files, or directories that are tracked by the RPM for this package are removed. The following example contains a list of sample commands and output:
 
-You can upload the `ova.gz` file into your Cloud Object Storage (COS) account. Once you upload it, go to the {{site.data.keyword.powerSys_notm}} user interface and import the OVA image from your Cloud Object Storage account.
+You can upload the `ova.gz` file into your Cloud Object Storage account. Once you upload it, go to the {{site.data.keyword.powerSys_notm}} user interface and import the OVA image from your Cloud Object Storage account.
 {: important}
 
 ```text

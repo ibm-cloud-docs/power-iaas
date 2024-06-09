@@ -86,7 +86,7 @@ The key features of this connection to classic topology are as follows:
 ## Connect to Classic
 {: #network-reference-architecture-classic}
 
-In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud Classic infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
+In this deployment topology, a Direct Link 2.0 is used to connect your {{site.data.keyword.powerSysShort}} networks to your resources hosted in your IBM Cloud classic infrastructure environment. See [Ordering Direct Link Connect 2.0](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) for details on how to order this connection.
 
 ![Connect to Classic](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 3. Connect to Classic" caption-side="bottom"}
 
@@ -123,7 +123,7 @@ The key features of this connection to classic topology are as follows:
     * The XCR advertises your VPC subnets to the Power router.
 * The XCR is operated by the IBM Cloud team and you have no direct access or control:
     * The XCR filters the following networks from the BGP advertisements from the Power router as they are used by the endpoint networks: 169.254.0.0/16, 224.0.0.0/4, 166.9.0.0/16 and any IP ranges assigned to your VPC subnets.
-* The implicit router function in VPC provides routing functions to each VPC and allows each VPC to have access to its own copy of the IPv4 address space. The MPLS VPN allows for federating Direct Link, and Classic infrastructure environment. See [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external} for a full description.
+* The implicit router function in VPC provides routing functions to each VPC and allows each VPC to have access to its own copy of the IPv4 address space. The MPLS VPN allows for federating Direct Link, and classic infrastructure environment. See [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external} for a full description.
 * Endpoint networks - Service and infrastructure services endpoint networks are not accessible from your Power subnets. Virtual private endpoints are also not accessible from your Power subnets:
     * Service endpoints - allow connection to IBM Cloud services available through DNS names in the cloud.ibm.com domain and resolve to 166.9.x.x addresses.
     * Infrastructure services - allow connection to IBM Cloud services from the adn.networklayer.com domain and resolve to 161.26.0.0/16 addresses. Services that you can reach include:
@@ -168,7 +168,7 @@ The key features of this IPsec VPN topology are as follows:
     * All appliance features are customer-managed.
     * Via the IBM Cloud UI/CLI/API, you select your VLANs and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes, or trunks, that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
     * A gateway appliance is attached to two non-removable transit VLANs, one each for your public, and private networks.
-* The Classic infrastructure environment VRF contains the following routes, it will **NOT** contain routes to your remote networks:
+* The classic infrastructure environment VRF contains the following routes, it will **NOT** contain routes to your remote networks:
     * Subnets that are assigned to you by IBM Cloud for use in your classic environment.
     * Your Power subnets advertised by the Power router.
 * A site-to-site IPSec VPN is configured between a gateway in your remote network and the gateway appliance.
@@ -203,7 +203,7 @@ The key features of this Direct Link topology are as follows:
     * All appliance features are customer-managed.
     * Via the IBM Cloud UI/CLI/API, you select your VLANs and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes, or trunks, that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
     * A gateway appliance is attached to a non-removable private transit VLAN, and optionally a non-removable public transit VLAN.
-* The Classic infrastructure environment VRF prohibits the direct routing of Power subnets to external network traffic and vice versa.
+* The classic infrastructure environment VRF prohibits the direct routing of Power subnets to external network traffic and vice versa.
 * A GRE tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks that are advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
 * A GRE tunnel is required between the gateway appliance and a tunnel endpoint that is connected to your external networks to enable the remote network to remote network connectivity.
 * See [Getting started with IBM Cloud Direct Link (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). Key elements of IBM Cloud Direct Link (2.0) include the following:
@@ -211,6 +211,6 @@ The key features of this Direct Link topology are as follows:
     * Each IBM Cloud Direct Link service is not redundant. Diversity can be enabled over multiple direct links along with BGP.
     * Ensure that IP subnet overlaps do not exist between the infrastructure environments, remote networks, and the services network.
     * The IBM Cloud services network isn't accessible directly from remote networks including your Power subnets.
-* The service networks are only accessible from your subnets that are assigned to you in your Classic infrastructure environment. The service networks are not accessible from your external networks or your Power subnets.
+* The service networks are only accessible from your subnets that are assigned to you in your classic infrastructure environment. The service networks are not accessible from your external networks or your Power subnets.
 
 For some tutorials based on some of the topologies described above, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.

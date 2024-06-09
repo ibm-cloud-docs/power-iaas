@@ -30,7 +30,7 @@ Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/
 Before you order {{site.data.keyword.dl_short}} Connect, make sure that you review the following considerations and satisfied the prerequisites:
 
 * Verify that your {{site.data.keyword.cloud_notm}} account has the correct authorization to order the {{site.data.keyword.dl_short}} (2.0) Connect service.
-* Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
+* Review [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites). Also, review [Routing considerations](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#routing-considerations), and [Setting up high availability](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#ha-availability), as needed for your particular deployment.
 * {{site.data.keyword.cloud_notm}} highly recommends that you establish a second, diverse direct link to prevent outages, whether unplanned, or planned due to maintenance.
 * A 10 Gbps connection is available only using the {{site.data.keyword.dl_short}} (2.0) Connect offering.
 * {{site.data.keyword.dl_short}} (2.0) Connect is available in all current locations.
@@ -83,7 +83,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
    After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections.
 
-3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/allowlist/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:
@@ -118,7 +118,7 @@ Your {{site.data.keyword.dl_short}} connections are location-specific. By defaul
 
 To set up a high availability through {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
-1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
+1. Order two instances of {{site.data.keyword.dl_short}} Connect. For instructions, see [Ordering {{site.data.keyword.dl_short}} Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
    In the **BGP** section, select a port from a separate port group for the redundant {{site.data.keyword.dl_short}} Connect instance. Both {{site.data.keyword.dl_short}} Connect instances must be on separate ports to connect to different {{site.data.keyword.powerSys_notm}} routers, thus, ensuring redundancy.
 
@@ -164,7 +164,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     [^footnote13]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote14]: This port is not GRE capable, but supports a speed of 10 Gbps.
 
-2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/allowlist/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
+2. Select the remaining options and create the {{site.data.keyword.dl_short}} Connect instance as described in [Ordering {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0).
 
 ## Routing considerations for VPC
 {: #routing-considerations}

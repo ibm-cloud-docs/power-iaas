@@ -52,7 +52,7 @@ To set up full Linux subscription for your account, complete the following steps
 
 Ensure that the following requirements are met when you create a Cloud connection: Create a Cloud connection with the following parameters:
 
--	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSysFull}} instance and the IBM Cloud Classic infrastructure by using a private network.
+-	Ensure that you set up a Cloud connection between the {{site.data.keyword.powerSysFull}} instance and the IBM Cloud classic infrastructure by using a private network.
 -	The {{site.data.keyword.powerSys_notm}} in each region and zone must have its own cloud connection.
 - You have the details of this private network for further configuration.
 

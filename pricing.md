@@ -383,7 +383,10 @@ The following table shows the charges based on the routing option that you selec
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="Table 13. TGW charges based on routing" caption-side="top"}
+{: caption="Table 13. Transit Gateway charges based on routing" caption-side="top"}
+
+<!--TGW was used in the caption-->
+
 
 The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
@@ -392,7 +395,10 @@ The following table shows the charges based on the number of connections includi
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
+{: caption="Table 14. Transit Gateway charges based on number of connections" caption-side="top"}
+
+<!--TGW was used in the caption-->
+
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. To calculate your pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} in the IBM Cloud console.
 {: important}

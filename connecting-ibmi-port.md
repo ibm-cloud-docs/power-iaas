@@ -155,7 +155,7 @@ https://127.0.0.1:2005/ibm/console/login.do?action=secure
 ```
 {: pre}
 
-To enable ICC to use an SSL connection to IBM Cloud Object Storage (COS), which IBM COS requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: external}.
+To enable ICC to use an SSL connection to IBM Cloud Object Storage, which IBM Cloud Object Storage requires, see [Configuring Cloud Storage Solutions file transfer encryption](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_72/icc/topics/iccutsk_config_ssl.htm){: external}.
 
 ### Configuring ACS
 {: #configuring-acs}
