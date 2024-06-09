@@ -43,17 +43,17 @@ You can use the third-party tools to complete your data migration. The following
 
 StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR).
 
-StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery. It works for both on-premises and in the cloud. It enables simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled. 
+StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery. It works for both on-premises and in the cloud. It enables simple and easy migration from on-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads on-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled.
 
 Following are some of the features of StorSafe VTL:
 - Nondisruptive and secure process that can scale to PB-sized workloads.
 - Deduplication and replication improve performance and reduces storage capacity.
 - The same tool for on-premises and cloud that enables both workload and tape migrations.
 - System and application data are deduplicated and compressed before transmitting over the network, thereby accelerating migration, even on the initial baseline transfer.
-- Replicated tapes land in Cloud Object Storage (COS) and can be used by the cloud VTL as a backup baseline without copying the data.
+- Replicated tapes land in Cloud Object Storage and can be used by the cloud VTL as a backup baseline without copying the data.
 - Migration uses existing backup processes and tools by using existing environment and knowledge.
 - Data replication can occur over time as part of the backups with final sync replication completed fast during regular backup windows.
-- FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost COS storage for its repository.
+- FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} can take advantage of IBM low-cost Cloud Object Storage storage for its repository.
 
 ### Migrating an IBM i system
 {: #mig-storsafe-ibmi}

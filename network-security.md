@@ -27,13 +27,14 @@ The infrastructure provides virtual LAN (VLAN) isolation between different tenan
 The {{site.data.keyword.powerSysFull}} network security architecture relies on a set of fixed firewall ports open on the *Juniper vSRX* firewalls:
 {: shortdesc}
 
-There are plans to add the ability to dynamically configure the firewall rules in the future.
-{: note}
-
 * 22 (SSH)
 * 443 (HTTPS)
 * 992 (IBM i5250 emulation SSL)
 * ICMP traffic
+
+There are plans to add the ability to dynamically configure the firewall rules in the future.
+{: note}
+
 
 The following firewall ports are also open, typically used for IBM i logical partitions (LPARs):
 
@@ -45,6 +46,6 @@ The following firewall ports are also open, typically used for IBM i logical par
 * 9475
 * 9476
 
-The port 6443 is also open for miscellaneous purposes. This port will not be open for the WDC04 and DAL13 data centers.
+The port 6443 is also open for miscellaneous purposes. However, the port 6443 is not open for the WDC04 and DAL13 data centers.
 
-If you need extra ports to be opened, you can consider a customer-specific firewall option that is available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to {{site.data.keyword.powerSys_notm}} by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the {{site.data.keyword.powerSys_notm}} connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#networking-environment).
+If you need extra ports to be opened, use a customer-specific firewall option. The option is available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to {{site.data.keyword.powerSys_notm}} by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the {{site.data.keyword.powerSys_notm}} connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#networking-environment).

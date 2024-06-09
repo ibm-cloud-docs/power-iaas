@@ -13,6 +13,8 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
+<!--
+
 # SAP HANA sr2 and sh2 profiles
 {: #SAP-hana-sr2-sh2-profiles}
 
@@ -35,5 +37,7 @@ You can deploy the following types of SAP HANA profiles:
 For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
 
 [Q2-2024 update end]{: tag-teal}
+
+-->
 
 <!-- Q2 -->

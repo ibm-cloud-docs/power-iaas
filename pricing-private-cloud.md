@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
-In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances, based on the discounts and promotion codes.
+In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances. The actual price might include the discounts and promotion codes.<!--, based on the discounts and promotion codes.-->
 
 The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} Private Cloud in your data center:
 - Dallas (satcon_dal)
@@ -50,10 +50,12 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
 
+<!--All prices that are mentioned in this topic are illustrative and do not represent the actual amounts that are used for billing.-->
+
 All prices that are mentioned in this topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance that has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
+In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance. The instance has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
 Let us assume the following hypothetical monthly prices:
 * Cores: $143.23/month x 1 = $143.23
 * Memory: $9/month each GB x 8 = $ 72.00
@@ -62,9 +64,7 @@ Let us assume the following hypothetical monthly prices:
 
 **Total cost per month**     = $291.43
 
-Factoring the example quantities and prices, the base price for this virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed.
-
-Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory and amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
+Factoring the example quantities and prices, the base price for the virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed. Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory. The new price amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
 
 In Table 1, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
@@ -75,7 +75,15 @@ In Table 1, the virtual machine resources are increased (after the resources rea
 | 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
 {: caption="Table 1. An example of monthly charges for a virtual machine" caption-side="bottom"}
 
-For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. For this example, we would see four distinct part numbers in the invoice for that virtual machine, one each for the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). To view the part numbers, refer to Table 2.
+For the example in Table 1, we might see four distinct part numbers for the following resources in the invoice:
+* The virtual cores (one for each core)
+* The memory
+* The volume storage (disk)
+* The OS license (RHEL)
+
+<!--For this example, we would see four distinct part numbers in the invoice for that virtual machine, one each for the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). -->
+
+For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. To view the part numbers, refer to Table 2.
 
 
 <!-- Q2 -->
@@ -157,21 +165,17 @@ For more information about unit prices for each metric ID, see [Where can I find
 
 
 
-
-
-
-
 ## Base instances
 {: #base-instances}
 
-The billing of a base instance depends on the options that you select when you create a virtual machine. The factors that affect the billing of the base instance are the machine type, number of cores, and amount of memory. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instance.
+The billing of a base instance depends on the options you select when you create a virtual machine. The machine type, number of cores, and amount of memory affect the base instance billing. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instances.
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you bring your own license, it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -335,7 +339,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 
 The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio up to 1:20. Hence, the operating system license charges are calculated differently.
 
-When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
+When you use SPP in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.

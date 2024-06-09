@@ -36,16 +36,16 @@ Importing and exporting images requires a considerable amount of processing powe
 ## Cloud Object Storage
 {: #cos-over-directlink}
 
-The preferred ways to connect to Cloud Object Storage (COS) from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
+The preferred ways to connect to Cloud Object Storage from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
 
-1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the COS direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
-2.  In a non-PER workspace that are in a multi-zone region (MZR) the best way to connect to COS is as follows:
+1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the Cloud Object Storage direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+2.  In a non-PER workspace that are in a multi-zone region (MZR) the best way to connect to Cloud Object Storage is as follows:
     1. Create a [Virtual Private Cloud (VPC) with subnets](/docs/vpc?topic=vpc-subnets-configure&interface=ui#subnets-create-ui) in the same region as your {{site.data.keyword.powerSys_notm}} workspace.
     2. Create a [Virtual Private Endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) (VPE).
     3. Connect the VPC to a [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui#tg-ui-creating-transit-gateway).
-    4. [Create a cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) to connect the non-PER {{site.data.keyword.powerSys_notm}} workspace to the same transit gateway.
+    4. [Create a cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) to connect the non-PER {{site.data.keyword.powerSys_notm}} workspace to the same Transit Gateway.
 
-    The {{site.data.keyword.powerSys_notm}} would then use the VPE's IP address to connect to COS. A Custom Resolver (CR) is needed by the {{site.data.keyword.powerSys_notm}} to reach the COS. If the VPE has multiple IP addresses, you can set up custom DNS and a custom hostname to connect to COS.
+    The {{site.data.keyword.powerSys_notm}} would then use the VPE's IP address to connect to Cloud Object Storage. A Custom Resolver (CR) is needed by the {{site.data.keyword.powerSys_notm}} to reach the Cloud Object Storage. If the VPE has multiple IP addresses, you can set up custom DNS and a custom hostname to connect to Cloud Object Storage.
 3.  Deploy a Nginx reverse proxy server in either the classic or VPC infrastructure.
 
     Nginx is a mature, compact, and fast open source web server that excels at specialized tasks, including the reverse proxy server role. For information on setting up a Nginx reverse proxy server, see [Installing your Nginx reverse proxy](/docs/direct-link?topic=direct-link-using-ibm-cloud-direct-link-to-connect-to-ibm-cloud-object-storage#direct-link-installing-your-nginx-reverse-proxy).
@@ -58,7 +58,7 @@ IBM Power Systems that are running AIX 7.2 TL3, or later, have a script that is 
 ```text
 cloud_setup [-I | G | C] [-v]
 
--I: Install the necessary RPMs for universal CLI (supports COS).
+-I: Install the necessary RPMs for universal CLI (supports Cloud Object Storage).
 -G: Install the necessary RPMs for gsutil CLI (Google Cloud Storage).
 -C: Install the necessary RPMs for cloud-init.
 -v: Enable debug output.
@@ -68,7 +68,7 @@ cloud_setup [-I | G | C] [-v]
 
 2. Enter the `cloud_setup -I` command to install the AWS CLI and all of the dependant RPMs.
 
-3. After the installation is complete, you must configure `awscli` for access to COS and provide the correct region (where your bucket COS is defined) in the `aws --endpoint-url` s3 command. In the following example, the **us-east** region is used:
+3. After the installation is complete, you must configure `awscli` for access to Cloud Object Storage and provide the correct region (where your bucket Cloud Object Storage is defined) in the `aws --endpoint-url` s3 command. In the following example, the **us-east** region is used:
 
 ```text
 # export PATH=$PATH:/opt/freeware/bin
