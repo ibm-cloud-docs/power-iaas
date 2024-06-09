@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-03-28"
+lastupdated: "2024-06-08"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -19,7 +19,7 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.powerSysFull}} racks. Work with the IBM representative to ensure that these prerequisites are complete before the pods are delivered to your data center.
+Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.powerSysFull}} racks. Work with the IBM representative to ensure that these prerequisites are completed before the pods are delivered to your data center.
 
 Review the following requirements that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud site must fulfill:
 * Accommodate a fully configured 42U rack that is 7 ft tall.
@@ -37,7 +37,7 @@ Refer Table 1 to understand rack dimensions and weight.
 {: caption="Table 1. Rack dimensions and weight" caption-side="bottom"}
 
 
-Refer Table 2 to understand rack characteristics and capacity.
+Refer to Table 2 to understand rack characteristics and capacity.
 
 | Characteristics   | Maximum weight    | EIA unit capacity             |
 | ------------------| ----------------- | ----------------------------- |

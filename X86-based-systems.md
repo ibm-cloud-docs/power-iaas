@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2024
 
-lastupdated: "2020-10-19"
+lastupdated: "2024-06-08"
 
 keywords: Power VS, X86, VSI, GRE tunnel
 

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2024
 
-lastupdated: "2024-02-08"
+lastupdated: "2024-06-08"
 
 keywords: use case, client needs, disaster recover, hybrid power, mission-critical application, recovery
 
@@ -23,15 +23,15 @@ The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destinati
 ## Client needs
 {: #use-case-hybrid-needs}
 
-- A first step into using infrastructure as a service (IaaS) environment before committing to end-to-end, mission-critical application hosting
-- A mission-critical IBM Power environment with a DR solution to raise the level of security and reliability of their private cloud data center
-- A DR solution in a different geography
+- A first step into using infrastructure as a service (IaaS) environment before you commit to end-to-end, mission-critical application hosting.
+- A mission-critical IBM Power environment with a DR solution to raise the level of security and reliability of their private cloud data center.
+- A DR solution in a different geography.
 
 ## Examples
 {: #use-case-hybrid-examples}
 
-- Client is in need of reducing risk by adding a DR destination without acquiring or growing their data center and capital investment
-- Client has a long-term strategy for cloud migration and can use their DR environment to gain infrastructure as a service experience, and prepare for a production rollout
+- User is in need of reducing risk by adding a DR destination without acquiring or growing their data center and capital investment
+- User has a long-term strategy for cloud migration and can use their DR environment to gain infrastructure as a service experience, and prepare for a production rollout
 - Remote to remote DR site
 
 ## Solution components

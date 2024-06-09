@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2024
 
-lastupdated: "2023-06-12"
+lastupdated: "2024-06-08"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -23,12 +23,12 @@ The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL)
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 
-The full Linux subscription feature OS filename starts with the Red Hat or Suse distribution name, `RHEL...` or `SLES...`.
+The full Linux subscription feature OS file name starts with the Red Hat or SUSE distribution name, `RHEL...` or `SLES...`.
 
-If you plan to use your own license, select the OS image suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
+If you plan to use your own license, select the OS image that is suffixed with `-BYOL`. On the VM Provisioning page, these images are listed under the **Client supplied subscription** section.
 {: note}
 
 ## Setting up full Linux subscription
@@ -65,9 +65,9 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
 1. Deploy a proxy instance based on your requirement. For more information, see [Enabling proxy protocol](/docs/vpc?topic=vpc-advanced-traffic-management#proxy-protocol-enablement).
 
-2. Open the Security groups for the VPC by navigation to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [security groups](/docs/vpc?topic=vpc-using-security-groups).
+2. Open the Security groups for the VPC by navigation to the IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [security groups](/docs/vpc?topic=vpc-using-security-groups).
 
-3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet CIDR of your private network for the {{site.data.keyword.powerSys_notm}} instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you will be using, and copy the CIDR.
+3. Select the security group that is attached to your proxy and add these port numbers: 443, 8443, 80, and 3128. Ensure that the IP address that you are asked to specify is the subnet CIDR of your private network for the {{site.data.keyword.powerSys_notm}} instance. To view the subnet CIDR in the IBM Cloud dashboard, go to the zone, click **Subnets**, identify the subnet that you are using, and copy the CIDR.
 
 4. After the proxy is created, log in to the proxy instance and locate the subnet CIDR by completing the following steps:
 
@@ -111,7 +111,7 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 ### Step 4: Configuring a proxy instance
 {: #configure-proxy}
 
-Set up a proxy configuration, by completing the following steps:
+Set up a proxy configuration by completing the following steps:
 
 1. Log in to your proxy instance by running the `ssh root@<public IP of proxy>` command.
 2. Ensure that another IP route is created within the proxy instance. This IP route allows the IP addresses that are within the range of the private IP gateway that you created for your VM. The IP addresses are used to connect your VM to the proxy gateway.
@@ -135,11 +135,11 @@ Set up a proxy configuration, by completing the following steps:
 
    You must have root authority to run these commands. After the installation completes, the squid config file is stored in the `/etc/squid/squid.conf` location.
 
-   b. Use the configuration provided in the following example for your reference. Values represented in the example configuration denote the following:
-      - acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy will accept.
-      - acl ibmprivate dst 161.26.0.0/16 and acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to, this is the location of the RHEL satellite servers and SLES RMT servers.
-      - acl SSL_ports port 443 8443 : Ports used for communication with RHEL satellite servers and SLES RMT servers.
-      - http_port 3128: the port that will be listening for squid. This will be used as the communication port from your {{site.data.keyword.powerSys_notm}} VM to the squid proxy.
+   b. Use the configuration provided in the following example for your reference. Values that are represented in the example configuration denote the following:
+      - Acl localnet src 192.168.0.0/16: the IP ranges of the IBM private network that the proxy accepts.
+      - Acl ibmprivate dst 161.26.0.0/16 and Acl ibmprivate dst 166.8.0.0/14: the IP ranges of the IBM networks this proxy will be going to this location of the RHEL satellite servers and SLES RMT servers.
+      - Acl SSL_ports port 443 8443 : Ports that are used for communication with RHEL satellite servers and SLES RMT servers.
+      - http_port 3128: the port that is listening for squid. This is used as the communication port from your {{site.data.keyword.powerSys_notm}} VM to the squid proxy.
 
       ```text
       # Recommended minimum configuration:
@@ -259,7 +259,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
       -p = "private_ip_of_powervs_vm":3128
 
-      If the system is already registered, you need to de-register the system before registering again by running the following two commands:
+      If the system is already registered, you need to unregister the system before registering again by running the following two commands:
       `SUSEConnect --de-register`
 
       `SUSEConnect –cleanup`
@@ -268,7 +268,7 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
       `Could not register with SLES RMT servers, Please verify connection to the proxy server. If proxy is verified, it may be an issue with SLES RMT servers undergoing maintenance. If so, please try executing the command again within a few minutes`
 
-      Then it could be a network issue and you should attempt to register again at a later time.
+      Then, it might be a network issue and you should attempt to register again later.
 
 <!-- ## Passing user-defined scripts
 {: #cloud-init-fls}

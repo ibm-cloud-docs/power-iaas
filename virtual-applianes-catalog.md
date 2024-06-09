@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2024
 
-lastupdated: "2023-04-24"
+lastupdated: "2024-06-08"
 
 keywords: {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to, managing virtual appliances
 
@@ -16,9 +16,9 @@ subcollection: power-iaas
 # Managing virtual appliances
 {: #virtual-appliances}
 
-Virtual appliance is bring-your-own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSysFull}} workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is handled directly by the ISVs for virtual appliances.
+Virtual appliance is a bring-your-own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSysFull}} workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is handled directly by the ISVs for virtual appliances.
 
-With virtual appliances, you can use additional services within {{site.data.keyword.powerSys_notm}} such as virtual tape libraries. For more information, see [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
+With virtual appliances, you can use extra services within {{site.data.keyword.powerSys_notm}} such as virtual tape libraries. For more information, see [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
 
 
 ## Onboarding your virtual server images for {{site.data.keyword.powerSys_notm}}

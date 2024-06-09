@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2024
 
-lastupdated: "2023-12-20"
+lastupdated: "2024-06-08"
 
 keywords: rsct, rmc, IPv6, Reliable Scalable Cluster Technology, RSCT package, Resource Management Control, RMC
 
@@ -31,9 +31,9 @@ The RMC status of the AIX VM is presented in the {{site.data.keyword.powerSys_no
 
 The RMC connection between your VM and the system management service is configured when you create the AIX VM. When you deploy an AIX VM, the IPv6 management interface is injected into the VM. If you remove or overwrite this interface, an RMC connection is not possible. The following procedures can cause the injected IPv6 management interface to be lost after you deploy the AIX VM:
 
-- You attach a different boot volume to the VM and boot from it
-- You use the `mksysb restore` operation from a private cloud VM
-- You use `smitty` to remove the IPv6 interface
+- Attach a different boot volume to the VM and boot from it
+- Use the `mksysb restore` operation from a private cloud VM
+- Use `smitty` to remove the IPv6 interface
 
 ## Diagnosing and recovering from a missing IPv6 link local address
 {: #rsct-diagnosis-recovery}
@@ -79,7 +79,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
     /opt/rsct/bin/rmcrefreshMD -s ctrmc
     ```
 
-4. *(Optional)* If you altered the `nodeid` (that is unique to RMC), it might have impacted RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from a private cloud deployment that is not supported. Begin by rebuilding the node:
+4. *(Optional)* If you altered the `nodeid` (that is unique to RMC), it can impact RMC. For example, when you are using PowerHA and trying to copy your `nodeid` details from a private cloud deployment that is not supported. Begin by rebuilding the node:
 
     ```text
     odmdelete -o CuAt -q name=cluster0 to remove 'cluster0' entry from the CuAt ODM.
@@ -117,7 +117,7 @@ Complete the following steps to recover from a missing IPv6 link local address:
 
 7. Validate that the RSCT packages are at least *3.2.1* or later by running the `lslpp -L rsct.*` command.
 
-8. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will likely **not** match the data from the IBM boot image.
+8. Run the `/usr/sbin/rsct/bin/lsnodeid` command. This will not match the data from the IBM boot image.
 
 9. Generate a `nodeid` to match the original boot ID. Start RMC again and wait 15 minutes.
 

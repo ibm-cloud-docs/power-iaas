@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-04-17"
+lastupdated: "2024-06-08"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -23,20 +23,20 @@ subcollection: power-iaas
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Planning a workload migration to an IBM® Power® Systems
+# Planning a workload migration to {{site.data.keyword.powerSysFull}}
 {: #system-migration}
 
 When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) <!-- E1080 (9080-HEX) -->. For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
-For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and Power processor family can help determine which migration path to follow.
+For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
 
-IBM i customers must use IBM i 7.2, or later. Clients running IBM i 6.1 must first upgrade the operating system (OS) to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+IBM i customers must use IBM i 7.2 or later. If you are running IBM i 6.1, you must first upgrade the operating system (OS) to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
 ## Migration checklist
 {: #migration-checklist}
 
-Before you migrate to a newer IBM Power System, review the following checklist:
+Before you migrate to a newer IBM Power, review the following checklist:
 
 - Plan the system migration.
 - Install the latest required software and apply the available fixes.
@@ -56,7 +56,7 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 
 **AIX 6.1 or 7.1** - You have the option of doing an AIX update to a supported level instead of a migration. If you are on AIX 6.1, you must migrate to 7.1 to get POWER8 capabilities. To accomplish this migration, there are three options:
 
-1. If you are at a level that supports POWER8 and if the system is LPM-capable, use LPM to move to the POWER8 system.
+1. If you are at a level that supports POWER8 and if the system is LPM-capable, use LPM to move to the POWER8.
 2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
 3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
 
@@ -64,27 +64,27 @@ Before you migrate to a newer IBM Power System, review the following checklist:
 
 <!-- Obsolete Power 8 content -->
 
-## Migrating to an IBM POWER9 system
+## Migrating to an IBM Power9
 {: #power9-migration}
 
-Learn more about migrating workloads from your older IBM POWER System to a POWER9 System. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from your older IBM POWER System to a Power9 System. Before you begin your migration, review the information in this section.
 
 Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
 {: tip}
 
-- POWER9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from a older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
-- Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workload).
+- Power9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from an older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
+- Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workloads).
 
-To learn more about IBM POWER9 system performance and migration strategies, see the following articles:
+To learn more about IBM Power9 performance and migration strategies, see the following articles:
 
-- [Hints and tips for migrating workloads to IBM POWER9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
+- [Hints and tips for migrating workloads to IBM Power9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
-## Migrating to an IBM POWER10 system
+## Migrating to an IBM Power10
 {: #power10-migration}
 
-Learn more about migrating workloads from an existing IBM POWER system to a POWER10 system. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from an existing IBM Power to a Power10. Before you begin your migration, review the information in this section.
 
 **AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
 
@@ -92,12 +92,12 @@ Learn more about migrating workloads from an existing IBM POWER system to a POWE
 
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
-| S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
-<!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
-
+| S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
 {: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
-To learn more about IBM POWER10 system performance and migration strategies, see the following articles:
+<!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
+
+To learn more about IBM Power10 performance and migration strategies, see the following articles:
 
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-03-13"
+lastupdated: "2024-06-08"
 
 keywords: power, SAP HANA, sr2, sh2, profiles
 
@@ -30,7 +30,7 @@ You can deploy the following types of SAP HANA profiles:
 
 * **SAP HANA**: If you want to deploy SAP HANA in your data center and if no S1022 systems are available, you can select an E1080 system.
 * **sh2 profiles**: If you want to deploy SAP HANA profiles on the S1022 system with less than 2 TB memory, you can deploy sh2 profiles.
-* **sr2 profiles**: If you are a member of IBM Consulting for SAP RISE, you can deploy workloads by using SAP RISE Optimized profiles (sr2 profiles) by using API, CLI, or Terraform. The sr2 profiles are designed for SAP RISE. When the sr2 profile is deployed, you can edit the core value and memory size of the virtual machine using the UI.
+* **sr2 profiles**: If you are a member of IBM Consulting for SAP RISE, you can deploy workloads by using SAP RISE Optimized profiles (sr2 profiles) by using API, CLI, or Terraform. The sr2 profiles are designed for SAP RISE. When the sr2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI.
     You cannot switch from sr2 profile to another profile family.
     {: note}
 
