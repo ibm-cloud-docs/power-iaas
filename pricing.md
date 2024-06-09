@@ -84,7 +84,7 @@ All prices that are mentioned on this page are illustrative and do not represent
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
 For detailed usage and billing information, you can refer to the part number in your invoice. The part numbers in the invoice represent the charge unit. Refer to the following table to view the part number and its corresponding description.
-<!--
+
 | Part number  | Description                     |
 | ------------------------- | ---------------------------------- |
 | SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
@@ -132,8 +132,8 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier 3 Instance Hours |
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
--->
 
+<!--Q2
 
 | Part number  | Description                     |
 | ------------------------- | ---------------------------------- |
@@ -200,6 +200,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | E1080_SH2_HANA_MEM_GB_HOURS  | TBD [Q2-2024 update end]{: tag-teal}|
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
+-->
 <!-- Q2 -->
 
 
@@ -382,7 +383,10 @@ The following table shows the charges based on the routing option that you selec
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="Table 13. TGW charges based on routing" caption-side="top"}
+{: caption="Table 13. Transit Gateway charges based on routing" caption-side="top"}
+
+<!--TGW was used in the caption-->
+
 
 The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
@@ -391,7 +395,10 @@ The following table shows the charges based on the number of connections includi
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Table 14. TGW charges based on number of connections" caption-side="top"}
+{: caption="Table 14. Transit Gateway charges based on number of connections" caption-side="top"}
+
+<!--TGW was used in the caption-->
+
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. To calculate your pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} in the IBM Cloud console.
 {: important}

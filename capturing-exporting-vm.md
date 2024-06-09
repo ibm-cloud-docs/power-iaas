@@ -30,7 +30,7 @@ The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchron
 The VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
 {: important}
 
-You are charged different rates based on whether you export to the image catalog or COS.
+You are charged different rates based on whether you export to the image catalog or Cloud Object Storage.
 {: note}
 
 Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (written) to the disk by running the following command:
@@ -50,11 +50,11 @@ Complete the following steps to capture and export a virtual server instance:
 
 2. Choose the volumes that you want to capture and export.
 
-3. Select whether you want to export the volume-backed image to the image catalog, COS, or both.
+3. Select whether you want to export the volume-backed image to the image catalog, Cloud Object Storage, or both.
 
 4. Give your captured image a **Name**.
 
-5. *(Optional)* If you decide to export to COS, you are presented with more options:
+5. *(Optional)* If you decide to export to Cloud Object Storage, you are presented with more options:
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
@@ -68,18 +68,18 @@ Complete the following steps to capture and export a virtual server instance:
 
 8. Find your newly exported image by completing either one of the following tasks:
 
-   - If you chose to capture and export your volume-backed image to COS, go to your COS bucket.
+   - If you chose to capture and export your volume-backed image to Cloud Object Storage, go to your Cloud Object Storage bucket.
 
    - If you chose to capture and export your volume-backed image to the image catalog, go to **Boot images**.
 
-9. *(Optional)* If you'd like to export your volume-backed image from your image catalog to COS, select it, and click the **Capture and export** icon.
+9. *(Optional)* If you'd like to export your volume-backed image from your image catalog to Cloud Object Storage, select it, and click the **Capture and export** icon.
 
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
 
 To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} Private Cloud CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
-1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, COS, or both.
+1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, Cloud Object Storage, or both.
 
     ```text
     ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volumes "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
@@ -95,7 +95,7 @@ To learn more about using the command-line interface to capture and export a VM,
         ```
         {: codeblock}
 
-    - To see your newly exported image in COS, use the `ibmcloud cos list-objects` command:
+    - To see your newly exported image in Cloud Object Storage, use the `ibmcloud cos list-objects` command:
 
         ```text
         ibmcloud cos list-objects --bucket BUCKET_NAME [--delimiter DELIMITER] [--encoding-type METHOD] [--prefix PREFIX] [--starting-token TOKEN] [--page-size SIZE] [--max-items NUMBER] [--region REGION] [--json]

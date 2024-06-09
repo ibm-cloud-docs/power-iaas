@@ -300,8 +300,8 @@ Complete the following steps to implement this scenario:
 
    However, it does not contain routes to your remote networks. Static routes or a routing protocol, such as BGP, shares routes between your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your {{site.data.keyword.powerSys_notm}} subnets.
 4. Configure a GRE tunnel between the gateway appliance and the {{site.data.keyword.powerSys_notm}} router as this router doesn't have routes for your remote networks that are advertised to it through the IBM Cloud-side router. Within the GRE tunnel, static routes are configured between the {{site.data.keyword.powerSys_notm}} router and the gateway appliance. For more information, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
-5. Set up a separate {{site.data.keyword.dl_short}} (2.0) connection between your remote network (client-managed environment<!--Q2 client-managed to be confirmed by Joe-->) and the IBM Cloud classic infrastructure. See [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). 
-    
+5. Set up a separate {{site.data.keyword.dl_short}} (2.0) connection between your remote network (client-managed environment<!--Q2 client-managed to be confirmed by Joe-->) and the IBM Cloud classic infrastructure. See [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl).
+
     Key elements of IBM Cloud {{site.data.keyword.dl_short}} (2.0) include the following:
         - Requires BGP to establish the routes to a customer's remote network.
         - Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant but, diversity can be enabled over multiple {{site.data.keyword.dl_short}}s along with BGP.
@@ -328,6 +328,6 @@ Complete the following steps to implement this scenario:
 
 1.	Create an [IBM Cloud Transit Gateway](https://cloud.ibm.com/interconnectivity/transit/provision){: external} to enable the virtual connections.
 2.	[Create an IBM Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections) with Transit Gateway enabled.
-3.	Connect your {{site.data.keyword.powerSys_notm}}s that are located in data center 1 and data center 2 through the IBM Cloud network by using a transit gateway.
+3.	Connect your {{site.data.keyword.powerSys_notm}}s that are located in data center 1 and data center 2 through the IBM Cloud network by using a Transit Gateway.
 
-After the transit gateway connection is established, different IBM Cloud networks are connected to each other.
+After the Transit Gateway connection is established, different IBM Cloud networks are connected to each other.
