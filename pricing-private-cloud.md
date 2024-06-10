@@ -254,6 +254,9 @@ The pricing is subject to change depending on the SAP HANA operational costs.
 
 
 
+
+
+
 ## Storage types
 {: #storage-types}
 
