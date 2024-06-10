@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Generating an estimate for a {{site.data.keyword.powerSys_notm}} instance
+# Generating an estimate for a {{site.data.keyword.powerSys_notm}}
 {: #generating-an-estimate}
 {: help}
 {: support}
