@@ -13,14 +13,11 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
+# Deploying a Linux for SAP (HANA or NetWeaver) custom image
+{: #deploying-SAP-image}
 
 
 
-[Off-premises]{: tag-blue}
-
-
-
-{: note}
 
 ## Bring your own customized Linux for SAP (HANA or NetWeaver) image
 {: #byoc-SAP}
