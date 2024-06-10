@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-01-05"
+lastupdated: "2024-06-10"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -55,7 +55,7 @@ The CentOS image is recommended for the proxy VSI.
 
 To create a proxy setup, complete the following steps:
 
-1. Open the Security groups for the VPC by navigating to IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
+1. Open the Security groups for the VPC by navigation to the IBM Cloud dashboard > VPC Infrastructure > Networks > Security groups. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
 
 2. In the default Security group that is attached to your proxy, add 443, 8443, 80 and 3128 ports.
 
@@ -102,15 +102,15 @@ To complete the setup process, follow these steps:
 4. Connect to the LPAR by using one of the following methods:
    * From the console on the browser.
    * By using the `SSH` command from your data network.
-5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`.
-6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file:
+5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`
+6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file
     `/usr/local/bin/rhel-cloud-init.sh`
 7. One of the parameters for the command represents the proxy IP. Set this proxy IP to the internal private IP of your proxy VSI. For example, `10.240.0.4`. Set the port to 3128.
 
 To check whether the setup is complete and the subscription is successful, check the log files, `/var/log/powervs-fls.log` and `powervs-fls-dev.log`. When the setup is completed successfully, you can use the commands, such as `yum update -y`, `yum search <package>`, `yum install <package>`.
 
 
-<!-- Q2 -->
+
 ## Passing user-defined scripts
 {: #cloud-init-fls-private-cloud}
 
@@ -123,4 +123,4 @@ The user data that you pass must meet the following conditions:
 -  It starts with `#cloud-config`.
 -  It should not exceed 63 Kb in size.
 
-<!-- Q2 -->
+

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -48,7 +48,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - AIX 7.1 will continue to be charged at standard usage rates until further notice [^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 - {{site.data.keyword.powerSys_notm}} on IBM Cloud is now HIPAA-ready. See the [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#HIPAA-cert) for more details.
 
-<!-- - Service Extension pricing for AIX 7.1 usage will be enabled at a later date[^2]. Until then AIX 7.1 support will continue to be charged at standard usage rates. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}. -->
+
 
 [^2]: This update is regarding the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
 

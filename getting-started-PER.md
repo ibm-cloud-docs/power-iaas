@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-10"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -54,7 +54,7 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
 - You can establish a connection between collocated workspaces if one colocation facility (colo) is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces must be connected to the same Transit Gateway.
-- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway. You can use the connection to achieve an end-to-end connectivity from a network in your client-managed environment to the PER workspace. <!--Q2 client-managed to be confirmed by Joe-->
+- When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway. You can use the connection to achieve an end-to-end connectivity from a network in your client-managed environment to the PER workspace. 
 - You can establish a connection between VPC and classic infrastructure with PER by adding them to the Transit Gateway.
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
@@ -105,7 +105,7 @@ On a PER workspace, if you do not find the **cloud Connections** and **VPN conne
 On a PER workspace, you can do the following actions:
 * Attach a network without creating a separate Cloud Connection such as Direct Link.
 * Attach a connection to the IBM cloud network after you attach the Transit Gateway with your PER workspace.
-* Connect to your network in the client-managed environment<!--Q2 client-managed to be confirmed by Joe--> by creating a Direct Link. Attach the Direct Link with the Transit Gateway that is present on the PER workspace.
+* Connect to your network in the client-managed environment by creating a Direct Link. Attach the Direct Link with the Transit Gateway that is present on the PER workspace.
 
 To delete the PER workspaces that are connected to the Transit Gateway, you must first delete the Transit Gateway connections.
 {: important}
@@ -125,7 +125,7 @@ Transit Gateway is required to connect with VPC and classic infrastructure. To a
 
 Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and classic infrastructures as connection.
 
-The connections attached to the Transit Gateway can <!--ping--> communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources associated with each other.
+The connections attached to the Transit Gateway can  communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources associated with each other.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}

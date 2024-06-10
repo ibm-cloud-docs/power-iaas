@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-10"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -37,7 +37,7 @@ The primary difference between the two is where the physical infrastructure resi
 
 For complete specifications, see [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
-<!--The following FAQ is migrated from PowerVS and needs technical review-->
+
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
 {: faq}
@@ -72,10 +72,10 @@ The following stock images are available when you create a virtual machine:
 * AIX 7.2 TL5 SP6
 * AIX 7.2 TL5 SP5
 
-<!--**AIX** - The following versions of AIX are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
-<!--[Off-premises]{: tag-blue}-->
-<!--The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).-->
-<!--Power server S1022 (9105-22A) supports AIX 7.1 TL 5 and later.-->
+
+
+
+
 
 To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
@@ -83,21 +83,21 @@ To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 inf
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 - [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
 
-<!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external} -->
+
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
-<!--AIX stock images currently available when you create a VM are:-->
-<!--* AIX 7.3 TL1 SP2-->
-<!--* AIX 7.2 TL5 SP6-->
-<!--* AIX 7.1 TL5 SP9-->
-<!--[On-premises]{: tag-red}-->
-<!--The {{site.data.keyword.powerSys_notm}} private cloud offering supports AIX 7.2, or later on the S1022 (9105-22A) and E1080 (9080-HEX).-->
-<!--AIX stock images currently available for private cloud when you create a VM are:-->
-<!--* AIX 7.3 TL1 SP2-->
-<!--* AIX 7.3 TL1 SP1-->
-<!--* AIX 7.2 TL5 SP6-->
-<!--* AIX 7.2 TL5 SP5-->
+
+
+
+
+
+
+
+
+
+
+
 
 ### IBM i
 {: #ibm-os-versions}
@@ -119,18 +119,18 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.3 TR13
 * IBM i 7.2 TR9 [^2]
 
-<!--IBM i 7.1 TR11 2-->
+
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-<!--2: Starting May 1, 2024, IBM i 7.1 is End of Life and no support will be made available. IBM i 7.1 stock images will also become unavailable from {{site.data.keyword.powerSys_notm}} data centers.-->
+
 
 [^2]: Not supported on IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
 ### Linux
 {: #linux-os-versions}
 
-<!--The following versions of Linux are supported on {{site.data.keyword.powerSys_notm}} and private cloud offerings.-->
+
 
 [Off-premises]{: tag-blue}
 
@@ -168,23 +168,15 @@ SUSE [^footnote3]
 [^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote3]: SLES images are not currently supported on {{site.data.keyword.powerSys_notm}} Private Cloud.
 
-<!--Q2-->
+
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
 
 To use your own license, select the OS image that with `-BYOL` suffix. On the **Create virtual server instance** page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using the Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
-<!--Q2-->
 
-<!--If you opt for a Linux subscription directly from Red Hat or SUSE, you will need to bring your own image. {{site.data.keyword.powerSys_notm}} supports custom images for the following Linux distributions:
 
-General purpose:
-* SLES 12 SP4 or later and SLES 15 SP1 or later
-* RHEL 8.4 or later
 
-For SAP workloads:
-* SLES 12 SP4 or later and SLES 15 SP1 or later
-* RHEL 8.1 or later-->
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
@@ -233,7 +225,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
 
-<!--Q2-->
+
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
 {: #pod-disconnect-unplanned-nw-mcp}
 
@@ -253,22 +245,21 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 | IBM remote support | Unavailable | IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
 {: caption="Table 1. Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
 
-<!--Q2-->
 
-<!--The FAQs from here are migrated from PowerVS guide-->
 
-## Can I use my own AIX, IBM i, or Linux <!--, or [Linux for SAP (HANA or NetWeaver)]{: tag-teal}--> image?
+
+
+## Can I use my own AIX, IBM i, or Linux  image?
 {: #image}
 {: faq}
 {: support}
 
 Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-<!--Q2-->
-<!-- Q2
-You can also use customized Linux for SAP (HANA or NetWeaver) images. This function is known as **bring your own image with your own subscription**. See [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-powervs-faqs#image). -->
 
-<!--Q2-->
+
+
+
 ## What versions of stock images are available?
 {: #stock-images}
 {: faq}
@@ -348,32 +339,12 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 {: tab-title="Shared processors"}
 
 
-<!--The hypervisor makes a 1:1 binding of a partition’s processor to a physical processor core. After a VM is activated, the 1:1 binding is static in that a given operating system (OS) logical thread will always run on that same physical hardware. With a dedicated processor partition, you need to size the wanted number of cores to meet the **peak** demand of the partition. For example, if during a typical workday the CPU consumption is around four cores, but it peaks around eight cores, you need to configure the partition with eight cores. Otherwise, you might encounter queuing delays in dispatching applications because there are not enough cores to handle the peak demand.-->
-
-<!--For shared processors, there are two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, the partition might consume at most 30 seconds of CPU time every minute for a capped partition with processing units set to 0.5. For an uncapped partition, the number of virtual processors defines the upper limit of CPU consumption and not the value that is specified for processing units. For example, if virtual processors are set to 3, the partition might consume 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization would be three physical cores worth of CPU time). There must be unused capacity available on the server for a partition to consume more than its configured processing units.-->
 
 
-<!--**Example 1**
-Maximum Pool Capacity: 8
-AIX VM1 VP: 4
-AIX VM2 VP: 2
 
-In this example, the maximum pool capacity (8) is greater than the total number of VPs associated with the partitions in a SPP (4+2=6). Therefore, the pricing for OS licensing is calculated as follows:
-* The partition VM1 contains four VPs of AIX OS license. So, the price is four times the cost of AIX OS license.
-* The partition VM2 contains two VPs of AIX OS license. So, the price is two times the cost of AIX OS license.
 
-Therefore, the total cost for this SPP is six times the cost of AIX.
 
-**Example 2**
-Maximum Pool Capacity: 8
-AIX VM1 VP: 4
-AIX VM2 VP: 2
-AIX VM3 VP: 4
 
-In this example, the maximum pool capacity (8) is less than the total number of of VPs associated with the partitions in a SPP (4+2+4=10). Therefore, the pricing for OS licensing is distributed proportionately for all the VPs.
-* VM1 is charged with 3.2 times the AIX OS license cost.
-* VM2 is charged with 1.6 times the AIX OS license cost.
-* VM3 is charged with 3.2 times the AIX OS license cost.-->
 
 
 ## How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?
@@ -405,7 +376,7 @@ You can apply affinity and anti-affinity policies to both VMs and volumes.
 
 **VM affinity and anti-affinity policy** allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-<!--is this not a UI element?-->Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
+Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
 The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
 
@@ -608,9 +579,9 @@ Click the overflow menu (icon with 3 vertical dots) on the far right of each vir
 
 - Delete a single virtual server instance from the details page.
 On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
-<!--Sandhya: The UI elements are to be confirmed.-->
 
-<!--Navigate to the virtual server instance's details page by clicking the virtual server instance name present on the table, on the Virtual server instances page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.-->
+
+
 
 ## How do I open a support ticket for the {{site.data.keyword.powerSys_notm}} workspace?
 {: #support-ticket}
@@ -669,13 +640,13 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 [On-premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
 
 
-<!--## How many DHCP pools can be created on the {{site.data.keyword.powerSys_notm}} private cloud?-->
-<!--{: #dhcp-pool}-->
-<!--{: faq}-->
 
-<!--[On-premises]{: tag-red}-->
-<!--No of DHCP pools that can be created TBD-->
-<!--Sridhar to provide input-->
+
+
+
+
+
+
 
 
 ## Are we notified about any planned maintenance activities?

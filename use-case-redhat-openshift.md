@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-06-10"
 
 keywords: Red hat use case, use case, Application, modernization, cloud, native
 
@@ -19,10 +19,7 @@ subcollection: power-iaas
 
 Cloud-native applications are the applications that are **born in the cloud**, which means that the applications use microservice-based architecture, containers, and a corresponding container orchestration platform. Red Hat&reg; OpenShift&reg; is an enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.
 
-<!--By packaging and running existing monolithic applications within Red Hat OpenShift Container Platform, enterprises can achieve the following benefits:
-* A lower infrastructure footprint.
-* A lower maintenance and support costs.
-* An easier portability across a range of cloud infrastructure and platform services.-->
+
 
 In addition to developing new cloud-native applications, IT organizations are modernizing older, monolithic core business applications to support the faster delivery of new functions to the business.
 

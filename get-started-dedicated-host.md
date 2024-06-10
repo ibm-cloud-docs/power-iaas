@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -31,7 +31,7 @@ Dedicated host on {{site.data.keyword.powerSys_notm}} is metered by the hour of 
 
 This means you can optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts increase isolation from other users in a cloud environment, ensuring your operations run smoothly and securely. This level of control and security gives you the confidence and reassurance you need.
 
-<!-- Dedicated hosts are ideal for your environment if you need a high level of customization and control over your cloud infrastructure, while also benefiting from the scalability and cost-effectiveness of cloud computing. -->
+
 
 Create an estimate for deploying a dedicated host by using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or see the pricing page to learn more about the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
 
@@ -43,8 +43,7 @@ The dedicated host provides the following features:
 5.  Share the dedicated hosts with all or a subset of your workspaces in the same account. You get an extra flexibility to control access to dedicated hosts across your organization.
 6.  Set your own custom names for the dedicated hosts and dedicated host groups.
     
-<!-- The Dedicated host capability is currently in limited availability and available in select data centers - `DAL10`, `DAL12`, `WDC06`, and `WDC07`. For general availability, dedicated hosts will be available worldwide and will follow the technology preview.
-{: note} -->
+
 
 ## Primary and secondary workspaces
 {: #pr-sec-ws-dh}
@@ -179,16 +178,4 @@ You can release a dedicated host when no resources are deployed on the host. To 
         When you are releasing the last dedicated host on a dedicated host group, you get the option to **Release host and delete host group**.
         {: important}
 
-<!-- ## API and CLI support
-{: #api-cli-dh}
 
-Do we need to list any phase 1 APIs & CLIs?
-
-## Supporting operating systems
-{: #os-support-dh}
-
-The following operating systems are supported for dedicated host:
-- 
-
-## Maintenance in dedicated host
-{: #mainetnance-dh} -->

@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -37,7 +37,7 @@ The benefits of using an SPP are as follows:
 The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
 
 
-<!-- Q2 -->
+
 
 [On-premises]{: tag-red}
 
@@ -51,7 +51,7 @@ In a {{site.data.keyword.powerSys_notm}} user-defined SPP, you can set the core-
 * For non-dedicated hosts on Power10, you can increase the limit of core-to-virtual core ratio to 1:3 for entitled capacities less than or equal to 2.
 * For Power9 and for virtual machines with entitled capacities greater than 2, the core-to-virtual core ratio is 1:1.
 
-<!-- Q2 -->
+
 
 You can specify the host affinity and anti-affinity between two or more SPPs with shared processor pool placement groups. For more information, see [Configuring shared processor pool placement group](/docs/power-iaas?topic=power-iaas-manage-SPP#configure-SPP-PG).
 

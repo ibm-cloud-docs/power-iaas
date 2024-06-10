@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-05-23"
+lastupdated: "2024-06-10"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -68,8 +68,8 @@ If you select the **Location type** as Off-premises, select one resource from th
 * [Shared processor pool](#est-spp)
 * [VPN connection](#est-vpn)
 
-<!-- * [Dedicated host](#est-dh) -->
-<!-- Q2 -->
+
+
 
 The summary of the selected infrastructure is displayed on the **Summary** page. You can review the total estimated cost per hour and per month that is displayed on the **Summary** page. To create, save, and download the estimate, see [Creating, saving, and viewing an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
 
@@ -154,21 +154,10 @@ Before you deploy a virtual tape library (VTL) in a workspace, create an estimat
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
 
 
-<!-- Q2 -->
-<!-- #### Estimating a dedicated host
-{: #est-dh}
 
-Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	            |   Description                                                                 |
-|-------------------|-------------------------------------------------------------------------------|
-| Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts you want to create.  |
-| Machine type      |   (**Required**) Select the available machine types where you can crreate dedicated host. |
-{: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
 
-To learn more about dedicated host, see [Getting started with dedicated host]. -->
 
-<!-- Q2 -->
 
 ### On-premises (IBM {{site.data.keyword.powerSys_notm}} Private Cloud)
 {: #on-prem-location-type}
@@ -179,7 +168,7 @@ If you select the **Location type** as On-Premises, proceed with the following s
 
 1. Specify the infrastructure requirements that include the machine type, number of systems, and storage capacity for your data center in the **Infrastructure configuration** section. The **Infrastructure overview** section displays the summary of the selected configuration. The pod size depends on the number of systems that you select including the total memory and the total number of cores that you plan to use in your data center.
 
-    Currently, IBM Power S1022 <!--(9105-22A)-->(2U), IBM Power E1050 <!--(9043-MRX)-->(4U), and IBM Power E1080 <!--(9080-HEX)-->(12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
+    Currently, IBM Power S1022 (2U), IBM Power E1050 (4U), and IBM Power E1080 (12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
 
 
 2. The **Minimum committed spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod. Select the number of years for the **Contract commitment term** drop-down list.

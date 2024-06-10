@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-10"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -52,7 +52,7 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 
 The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).
 
-Power servers <!-- E1080 (9080-HEX) and --> S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
+Power servers  S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
 
 When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
@@ -61,7 +61,7 @@ When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 - [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
 
-<!-- - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external} -->
+
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 {: note}
@@ -74,7 +74,7 @@ Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports IBM i 7.3, or later and IBM i COR.
 {: note}
 
-Power servers <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports IBM i 7.3 and later versions. For more information, see [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}.
+Power servers S1022 (9105-22A) supports IBM i 7.3 and later versions. For more information, see [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}.
 
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
@@ -89,7 +89,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported b
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
-Power server <!-- E1080 (9080-HEX) and  -->S1022 (9105-22A) supports: RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
+Power server S1022 (9105-22A) supports: RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
