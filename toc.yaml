@@ -103,8 +103,7 @@ toc:
             label: Creating, managing, and deploying
             topics:
               - managing-resources-and-users.md
-              - creating-power-virtual-server.md
-              # - get-started-dedicated-host.md Q2
+              - get-started-dedicated-host.md
               - viewing-pod-details.md
               - creating-ssh-key.md
               - modifying-instance.md
