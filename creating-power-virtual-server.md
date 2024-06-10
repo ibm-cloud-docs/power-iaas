@@ -161,24 +161,9 @@ The following table provides more information about each {{site.data.keyword.pow
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="Table 2. {{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
 
-## Dedicated host
-{: #dedicated-host}
-
-The dedicated host feature on IBM {{site.data.keyword.powerSys_notm}} significantly expands the range of computing options available by providing the ability to provision a dedicated host for your exclusive use. Dedicated hosts are metered by the hour for the entire capacity of the host.
-
-A dedicated host provides an additional flexibility to create virtual server instances, control their placement, and use the unique shared processor pool capabilities that are offered by {{site.data.keyword.powerSys_notm}}. With dedicated hosts, you can easily optimize your cloud infrastructure by using single tenant servers to manage software licensing costs while increasing isolation from other users in a cloud environment.
 
 
 
-Visit the pricing page to learn more about the [pricing for dedicated hosts](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh).
-
-The dedicated host provides the following features:
-1.	Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
-2.	Flexibly create virtual server instances and place them on the dedicated host.
-3.	Create shared processor pools on the dedicated host and flexibly manage resource utilization including the Virtual Processor (VP) to Entitled Capacity (EC) ratio up to 1:20.
-
-Dedicated hosts are rolled out in two phases – Select Availability and General Availability. Select Availability is in `DAL10`, `DAL12`, `WDC06`, and `WDC07` data centers. General Availability will expand the reach of dedicated host capabilities further around the world.
-{: note}
 
 ## Reusing Volume names or VM names in {{site.data.keyword.powerSys_notm}}
 {: #reusing_volume_names}

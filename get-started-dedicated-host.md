@@ -33,7 +33,7 @@ This means you can optimize your cloud infrastructure by using single-tenant ser
 
 
 
-Create an estimate for deploying a dedicated host by using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or see the pricing page to learn more about the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server#pricing-for-dedicated-hosts).
+Create an estimate for deploying a dedicated host by using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or see the pricing page to learn more about the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh).
 
 The dedicated host provides the following features:
 1.  Reserve a host server (IBM Power S922 or S1022) for your exclusive use. All cores and memory on the host are provisioned for your use.
