@@ -158,6 +158,8 @@ The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. Y
 
 
 
+
+
 ## Processor types
 {: #pricing-processor}
 
@@ -202,8 +204,7 @@ Consider the following points for dedicated host pricing:
 * Software charges for the supported operating systems are metered and charged by the core.
 
 
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
-
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 ## Storage types
 {: #storage-type}
