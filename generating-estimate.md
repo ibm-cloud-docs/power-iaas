@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -67,8 +67,7 @@ If you select the **Location type** as Off-premises, select one resource from th
 * [Storage volume](#est-storage-vol)
 * [Shared processor pool](#est-spp)
 * [VPN connection](#est-vpn)
-
-
+* [Dedicated host](#est-dh) 
 
 
 The summary of the selected infrastructure is displayed on the **Summary** page. You can review the total estimated cost per hour and per month that is displayed on the **Summary** page. To create, save, and download the estimate, see [Creating, saving, and viewing an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
@@ -155,7 +154,18 @@ To learn more about virtual tape libraries, see [Managing a virtual tape library
 
 
 
+#### Estimating a dedicated host
+{: #est-dh}
 
+Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
+
+| Field	            |   Description                                                                 |
+|-------------------|-------------------------------------------------------------------------------|
+| Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts you want to create.  |
+| Machine type      |   (**Required**) Select the available machine types where you can crreate dedicated host. |
+{: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
+
+To learn more about dedicated host, see [Getting started with dedicated host].
 
 
 

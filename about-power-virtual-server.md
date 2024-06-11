@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -72,7 +72,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
+* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
 
 ### Hardware and software specifications
 {: #hardware-software-specs-private-cloud}

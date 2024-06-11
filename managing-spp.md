@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -41,7 +41,7 @@ The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as t
 
 [On-premises]{: tag-red}
 
-For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-virtual core ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.
+For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.
 
 [Off-premises]{: tag-blue}
 
@@ -97,7 +97,7 @@ To create an SPP, complete the following steps:
     |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
-    |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the core-to-virtual core ratio can be 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
+    |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
      {: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
 
     [^1]: The Reserved processing cores are the number of cores that are reserved for processing and must always be a whole number.

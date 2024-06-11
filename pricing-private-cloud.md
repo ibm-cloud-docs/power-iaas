@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -326,7 +326,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 [On-premises]{: tag-red}
 
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio up to 1:20. Hence, the operating system license charges are calculated differently.
+The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. Hence, the operating system license charges are calculated differently.
 
 When you use SPP in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
