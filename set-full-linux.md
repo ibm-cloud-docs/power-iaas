@@ -92,11 +92,11 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
 2.	In the proxy instance CLI, start an SSH connection to your RHEL or SLES PVM instance by using the PVM’s external IP address in the following command:
 
-	`ssh root@<external IP address>`
+	  `ssh root@<external IP address>`
 
     Example: ssh root@1.2.3.4
 
-Ensure to use a default gateway in the private subnet when you are provisioning a virtual server instance.
+    Ensure to use a default gateway in the private subnet when you are provisioning a virtual server instance.
 
 3.  Add a network route from the PVM instance to the proxy instance that you configured in [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
 
@@ -275,5 +275,18 @@ You can customize your RHEL and SLES VMs by running the cloud-init script.
 
       Then, it might be a network issue and you should attempt to register again later.
 
+
+
+## Passing user-defined scripts
+{: #cloud-init-fls}
+
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during first boot runtime.
+
+In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
+
+The user data that you pass should follow the following conditions:
+-  It should be uncompressed.
+-  It should start with `#cloud-config`.
+-  It should not exceed 63 Kb in size.
 
 
