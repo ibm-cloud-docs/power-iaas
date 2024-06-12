@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -96,7 +96,12 @@ Create a proxy setup by completing the following steps. This proxy is set up in 
 
     Example: ssh root@1.2.3.4
 
+Ensure to use a default gateway in the private subnet when you are provisioning a virtual server instance.
+
 3.  Add a network route from the PVM instance to the proxy instance that you configured in [step 2](/docs/power-iaas?topic=power-iaas-set-full-Linux#create-proxy).
+
+    Ensure the private network that is used during the VMs provisioning is set as the default gateway and not the public subnet.
+    {: note}
 
       - Run the `ip route` command and add the CIDR subnet of proxy through the private gateway of PVM.
 
