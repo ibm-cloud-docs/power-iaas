@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -90,7 +90,7 @@ For example, `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name pow
 ## Creating a PER workspace
 {: #create-per-workspace}
 
-To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#migrate-ws-per) and choose a PER-enabled data center.
+To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose a PER-enabled data center.
 
 You can check whether a workspace is PER-enabled by selecting the workspace and viewing the details of the workspace. The PER-enabled workspace shows an information message on Transit Gateway.
 {: note}

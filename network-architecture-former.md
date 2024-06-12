@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -25,7 +25,7 @@ This topic describes typical network architectures that are used in the {{site.d
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-about-virtual-server#public-private-networks).
+When you create a {{site.data.keyword.powerSys_notm}}, you can configure a private network subnet. For more information, see [Configuring a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 
 {{site.data.keyword.powerSys_notm}} network architectures consist of one or more of the following networks:
 
@@ -217,7 +217,7 @@ The IBM Cloud SSL VPN service can access only your classic private IP subnets. T
 
 ![SSL VPN deployment scenario](./images/network-ssl-vpn.svg "SSL VPN"){: caption="Figure 5. SSL VPN deployment scenario" caption-side="bottom"}
 
-This deployment topology builds on the [Connect-to-classic](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-classic) architecture.
+This deployment topology builds on the [Connect-to-classic](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic) architecture.
 {: note}
 
 Complete the following steps to implement this scenario:
@@ -289,7 +289,7 @@ This deployment topology uses the IBM Cloud classic infrastructure gateway appli
 Complete the following steps to implement this scenario:
 
 1. [Set up an IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
-2. Complete all steps that are mentioned in [Connect-to-classic infrastructure by using IBM {{site.data.keyword.dl_short}}](/docs/gateway-appliance?topic=power-iaas-network-architecture-diagrams#network-reference-architecture-privatessl). It includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
+2. Complete all steps that are mentioned in [Connect-to-classic infrastructure by using IBM {{site.data.keyword.dl_short}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-network-architecture-diagrams-former#network-reference-architecture-classic). It includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
 3. The IBM Cloud classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your classic environment.
     - Your {{site.data.keyword.powerSys_notm}} subnets advertised by the {{site.data.keyword.powerSys_notm}} router.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -56,13 +56,13 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #mar-2024}
 
 - Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
-- New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
-- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions).
+- New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 - A new data center `CHE01` is available. The following are some capabilities that differ for this data center:
   - `CHE01` supports up to 5 GB Direct Link connections compared to other data centers that supports up to 10 GB.
   - To use Transit Gateway, you need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
   - IBM Cloud Monitoring and Power Edge Router network connectivity are currently unavailable for `CHE01`.
-- SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server).
+- SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 - Flexible I/O operation per second (IOPS) is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
 - IBM Cloud Monitoring service is now available in `DAL13` and `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - PER is now available in the `OSA21`, `SYD05`, and `TOK04` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -109,14 +109,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
   - `SAO04` is available for PER.
 - **Cost estimator tool**
-  A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-getting-started-with-the-cost-estimator-tool).
+  A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 - **Dedicated hosts**
-  A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
+  A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use.
 - **VPC VPN service**
   The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
 - **Flexible IOPS**
   {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
-- New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#os-versions) page for details on the latest version.
+- New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) page for details on the latest version.
 - **Update on the new SAP HANA large t-shirt profiles feature**
   The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
 - **New Global Replication Service (GRS) pairs support**
@@ -152,7 +152,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## June 2023
 {: #jun-2023}
 
--  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account by using an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#stock-image-copy-improve).
+-  The {{site.data.keyword.powerSys_notm}} enhances the management of stock images in the backend. This enhancement eliminates identical versions (copies) of stock images and improves the performance of copying a stock image in your account by using an image reference. Find more information in the [FAQ doc page](/docs/power-iaas?topic=power-iaas-powervs-faqs#stock-image-copy-improve).
 
   We are currently rolling out the feature to eliminate stock image copies in all data centers in phases. If your data center has already received the update, you notice that the export option for stock images is no longer available because you are using the reference of the stock image.
 
@@ -209,7 +209,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## August 2022
 {: #aug-2022}
 
-- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration as a Service for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-managing-virtual-tape-library).
+- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration as a Service for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
 
 ## July 2022
 {: #jul-2022}
@@ -227,19 +227,19 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## April 2022
 {: #apr-2022}
 
-- Snapshots that are created are monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#metering-snapshot).
+- Snapshots that are created are monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-snapshots-cloning#metering-snapshot).
 
 ## March 2022
 {: #march-2022}
 
 - The {{site.data.keyword.powerSys_notm}} now supports [AIX 7.3](/docs/power-iaas?topic=power-iaas-deploy-custom-image#aix-details).
-- You can view best practices and guidelines on [AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies#backup-aix).
+- You can view best practices and guidelines on [AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies).
 
 ## December 2021
 {: #dec-2021}
 
 - You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
-- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) by using the {{site.data.keyword.powerSys_notm}} GUI.
+- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups) by using the {{site.data.keyword.powerSys_notm}} GUI.
 - You can now set a [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
 - You can now set [affinity policies for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the {{site.data.keyword.powerSys_notm}} GUI.
 
@@ -247,18 +247,18 @@ The data center where you can monitor your platform metrics currently are `WDC06
 {: #oct-2021}
 
 - You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service.
-- You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-virtual-tape-libraries) to backup IBM i data.
+- You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-manage-vtl) to backup IBM i data.
 
 ## September 2021
 {: #sep-2021}
 
 - You can now use [Capturing and exporting a virtual machine](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm) to view the new Job feature and view restrictions for VM capture, image import, and image export.
-- You can now use [Mixed storage](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#mixed_storage) to attach storage volumes to a PVM instance from different storage tiers and pools.
+- You can now use [Mixed storage](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage) to attach storage volumes to a PVM instance from different storage tiers and pools.
 
 ## June 2021
 {: #jun-2021}
 
-- You can now use [Placement groups](/docs/power-iaas?topic=power-iaas-placement-groups) to add your servers into groups and apply affinity or anti-affinity policies.
+- You can now use [Placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups) to add your servers into groups and apply affinity or anti-affinity policies.
 
 ## May 2021
 {: #may-2021}
@@ -279,5 +279,5 @@ The data center where you can monitor your platform metrics currently are `WDC06
 
 - You can now choose a `MON01` data center to deploy your {{site.data.keyword.powerSys_notm}}.
 - The {{site.data.keyword.powerSys_notm}} offering now supports IBM i 7.1. For more information, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
-- You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-volume-snapshot-clone#cloning-volume).
+- You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-snapshots-cloning#cloning-volume).
 - You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information, see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-server#resize-core-mem).

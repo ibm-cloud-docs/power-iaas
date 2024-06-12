@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-12"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -24,7 +24,7 @@ You need extra storage for the LPAR to host the image catalogs until they are mo
 The typical IBM i customer uses the following flow to back up LPARs and objects:
 
 1. Use the 5733-ICC product to connect to Cloud Object Storage (~2 times the disk capacity to hold the backup images).
-2. Connect to IBM Cloud Object Storage by following the steps that are mentioned in [Using Cloud Object Storage](/docs/power-iaas?topic=power-iaas-backup-strategies#cos-over-directlink).
+2. Connect to IBM Cloud Object Storage by following the steps that are mentioned in [Using Cloud Object Storage](/docs/power-iaas?topic=power-iaas-additional-backup-strategies#cos-over-directlink).
 3. Complete the back up to Cloud Object Storage by choosing the speed and resiliency that is required.
 
    - [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: external}

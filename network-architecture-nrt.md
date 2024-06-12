@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-12"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
@@ -173,7 +173,7 @@ The key features of this IPsec VPN topology are as follows:
     * Your Power subnets advertised by the Power router.
 * A site-to-site IPSec VPN is configured between a gateway in your remote network and the gateway appliance.
 * Static routes or a routing protocol, such as BGP, are used to share routes between your gateway on your remote network and the gateway appliance. The routes that are advertised by the gateway appliance include your Power subnets.
-* A Generic Routing Encapsulation (GRE) tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks that are advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-managing-cloud-connections#configure-gre-tunnel)
+* A Generic Routing Encapsulation (GRE) tunnel is required between the gateway appliance and the Power router as the Power router will not have routes for your remote networks that are advertised to it from the XCR. Within the GRE tunnel, static routes are configured between the Power router and the gateway appliance. See [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel)
 
 For a tutorial on site-to-site VPN connectivity, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 

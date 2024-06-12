@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -419,7 +419,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
 ## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
