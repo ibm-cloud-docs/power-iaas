@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -160,10 +160,6 @@ The following table provides more information about each {{site.data.keyword.pow
 | Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="Table 2. {{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
-
-
-
-
 
 ## Reusing Volume names or VM names in {{site.data.keyword.powerSys_notm}}
 {: #reusing_volume_names}
