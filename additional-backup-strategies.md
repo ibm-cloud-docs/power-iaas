@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-12"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -38,7 +38,7 @@ Importing and exporting images requires a considerable amount of processing powe
 
 The preferred ways to connect to Cloud Object Storage from a VM in {{site.data.keyword.powerSys_notm}} are as follows:
 
-1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the Cloud Object Storage direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#attaching-transit-gateway-to-a-per-workspace).
+1.  In a PER workspace, attach the {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway and directly access the Cloud Object Storage direct endpoint. See, [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 2.  In a non-PER workspace that are in a multi-zone region (MZR) the best way to connect to Cloud Object Storage is as follows:
     1. Create a [Virtual Private Cloud (VPC) with subnets](/docs/vpc?topic=vpc-subnets-configure&interface=ui#subnets-create-ui) in the same region as your {{site.data.keyword.powerSys_notm}} workspace.
     2. Create a [Virtual Private Endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui) (VPE).
@@ -104,4 +104,4 @@ A license key is generated to whomever placed the order.
 ## FalconStor StorSafe VTL
 {: #fstor-vtl}
 
-For more information, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-migration-strategies-power#falconstor-storsafe-vtl).
+For more information, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-manage-vt).

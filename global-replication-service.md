@@ -113,7 +113,7 @@ To enable DR on the primary site, complete the following steps:
 To enable DR on the secondary site, complete the following steps:
 1. Onboard the auxiliary volume by using the [onboard auxiliary volume](/apidocs/power-cloud#pcloud-volume-onboarding-post) API. 
     
-    For more information about onboarding operation, see [Onboarding auxiliary volumes](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-auxiliary-volumes).
+    For more information about onboarding operation, see [Onboarding auxiliary volumes](#onboard-aux-vol).
 
 2. Create a standby virtual server instance with onboarded auxiliary volumes.
     

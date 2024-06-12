@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -52,11 +52,11 @@ Using a Power Edge Router (PER)-enabled workspace provides the following benefit
 * Direct access to the {{site.data.keyword.powerSys_notm}} from a client-managed environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
-1. [Connecting a client-managed data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
-2. [Connecting to classic infrastructure](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic)
-3. [Connecting to Virtual Private Cloud](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-vpc)
-4. [Connecting to IBM Cloud services](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-cloud-services)
-5. [Connecting multiple workspaces](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-accross-dc)
+1. [Connecting a client-managed data center](#per-on-orem)
+2. [Connecting to classic infrastructure](#per-classic)
+3. [Connecting to Virtual Private Cloud](#per-vpc)
+4. [Connecting to IBM Cloud services](#per-cloud-services-se)
+5. [Connecting multiple workspaces](#per-accross-dc)
 
 The use cases are enabled with base capabilities and can be customized to meet any specific requirements.
 {: important}
