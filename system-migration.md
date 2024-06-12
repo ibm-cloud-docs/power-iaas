@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-06-10"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 # Planning a workload migration to {{site.data.keyword.powerSysFull}}
 {: #system-migration}
 
-When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) <!-- E1080 (9080-HEX) -->. For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
+When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), and S1022 (9105-22A) . For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-about-virtual-server#hardware-specifications).
 {: shortdesc}
 
 For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given. Your current AIX level and POWER processor family can help determine which migration path to follow.
@@ -45,24 +45,9 @@ Before you migrate to a newer IBM Power, review the following checklist:
 - Follow the I/O consideration guide.
 - Consider contacting [IBM Technology Expert Labs](#lab-services) to ease the migration process.
 
-<!-- ## Migrating to an IBM POWER8 system
-{: #power8-migration}
 
-**AIX 5.3 and earlier** - You need to migrate to a POWER8-supported level. To accomplish this migration, you have three options:
 
-1. Network Installation Manager (NIM) `alt disk` migration.
-2. Migrate in-place, then either `mksysb`, `alt_disk_copy`, or Logical Partition Mobility (LPM) (when migrating from a POWER6 or POWER7 system).
-3. Create a `mksysb` image of an AIX 5.2 or 5.3 system, install the supported 7.1 version on the POWER8 system, and create an AIX 5.2 or 5.3 versioned WPAR from the `mksysb` image.
 
-**AIX 6.1 or 7.1** - You have the option of doing an AIX update to a supported level instead of a migration. If you are on AIX 6.1, you must migrate to 7.1 to get POWER8 capabilities. To accomplish this migration, there are three options:
-
-1. If you are at a level that supports POWER8 and if the system is LPM-capable, use LPM to move to the POWER8.
-2. If you are at a level that supports POWER8, use `mksysb` or `alt_disk_copy` to move to the POWER8 system. Perform an AIX update on the POWER8 system only if needed.
-3. Update in-place and either `mksysb`, `alt_disk_copy`, or LPM (when going from POWER6 or POWER7 system). If `alt_disk_copy` is chosen, the update can be to the alternative disk rather than in-place.
-
-**IBM i V6R1, or later** - For an IBM i Power System, see [Data migrations](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzamc/rzamc1.htm){: external} to learn how to safely migrate data to an IBM POWER8 system. -->
-
-<!-- Obsolete Power 8 content -->
 
 ## Migrating to an IBM Power9
 {: #power9-migration}
@@ -95,7 +80,7 @@ Learn more about migrating workloads from an existing IBM Power to a Power10. Be
 | S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
 {: caption="Table 1. Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
-<!-- | E1080 (9080-HEX)   |  Little Endian: \n * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) | -->
+
 
 To learn more about IBM Power10 performance and migration strategies, see the following articles:
 
@@ -104,7 +89,7 @@ To learn more about IBM Power10 performance and migration strategies, see the fo
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external} 
 
-<!-- new power 10 content. p10 systems not enabled in DCs yet as of July 06, 23 -->
+
 ## Lab services
 {: #lab-services}
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -37,34 +37,16 @@ Be sure to read all caution and danger statements provided in the Safety notices
 {: caption="Table 1. Rack connectors with load capacity requirements" caption-side="bottom"}
 
 
-<!--Table 2 shows the single-phase rack power requirements.
-
-| Specification                           | North America                                        | EMEA |
-| Input normal voltage                    | 200 - 208, 240 V ac                                        | 220 - 240 V ac |
-| Frequency                               | 50 or 60 Hz plus or minus 3 Hz                       | 50 or 60 Hz plus or minus 3 Hz |
-| Line load current                       | 60 A plug (48 A derated) \n #6492                             | 63A  \n #6491|
-| Power connection (from the PDU of the rack) | IEC 60309 2P+E (60 A plug (48 A derated)) \n **(IBM 6491)** | IEC 60309, P+N+G \n **(IBM 6492)** |
-| PDUs/Power Circuits                     | Four to six (two to three redundant pairs)                           | Four to six (two to three redundant pairs) |
-| Power requirement at site               | * Four to six single-phase circuits \n * Each rack requires four to six drops. | * Four or six single-phase circuits \n * Each rack requires four or six drops. |
-| Power cord length                       | 14 ft                                                 | 4.3 m |-->
 
 
-<!--{: caption="Table 2. Single-phase rack power requirements" caption-side="bottom"}-->
 
 
-<!--Table 3 shows the three-phase rack power requirements.
-
-| Specification                           | North America                                        | EMEA |
-| Input normal voltage  (line-to-line)                    | 200 - 208, 240 V ac                                        | 380 - 415 V ac |
-| Frequency                               | 50 or 60 Hz plus or minus 3 Hz                       | 50 or 60 Hz plus or minus 3 Hz |
-| Line load current                       | 50 or 60 A (three-phase delta) \n #ECJ6 or #ECJ7 \n 30A (three-phase wye) \n #ELC2                                                  | 16A \n #6653 \n 32A \n #6489 or #6667 |
-| Power connection (from the PDU of the rack) | IEC 60309 3P+G (60 A plug (48 A derated)) \n **(IBM  (ECJ7/EPTP/EPTL))** | IEC 60309, 3P+N+G \n **(IBM 6489)** |
-| PDUs/Power Circuits                     | Four or six (two redundant pairs)                           | Four or six (two redundant pairs) |
-| Power requirement at site               | * Four or six single-phase circuits.   \n * Each rack requires four or six drops. | * Four or six single-phase circuits.   \n  * Each rack requires four or six drops. |
-| Power cord length                       | 14 ft                                                 | 4.3 m |-->
 
 
-<!--{: caption="Table 3. Three-phase rack power requirements" caption-side="bottom"}-->
+
+
+
+
 
 
 

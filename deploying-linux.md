@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-10"
 
 keywords: linux deployment, ova, powervc capture, vios
 
@@ -36,10 +36,9 @@ If you've deployed PowerVC in your private cloud environment, you can use it to 
 ### Capturing an image from VIOS
 {: #vios-capture}
 
-<!--## Using VIOS to capture and import an OVA image
-{: #vios-ova-cap}-->
 
-The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/articles/au-viosmapping/?mhsrc=ibmsearch_a&mhq=VOIS%20disk%20mapping){: external}. **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
+
+The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture. For more information on finding the disk configuration of a VIOS client, see [VIOS disk mapping in a nutshell](https://developer.ibm.com/technologies/systems/articles/au-viosmapping/){: external}. **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
 
 The `create_ova` RPM also contains the `create_ova` man page and license. You must install the RPM on VIOS releases, which are before VIOS 3.1.2.0. The `create_ova` command is provided as a system command on VIOS release 3.1.2.0, or later.
 {: note}
@@ -116,7 +115,4 @@ Done verifying resources.
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/linux_20200511101424.ova.gz
 ```
 
-<!--## Using the pvsadm tool to convert RHEL Qcow2 images to OVA image
-{: pvsadm-convert-ova}
 
-You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme){: external} to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues){: external} within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.-->

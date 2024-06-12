@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -31,7 +31,7 @@ If you plan to use your own license, select the OS image that is suffixed with `
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}}, you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
+If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
 

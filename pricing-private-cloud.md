@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-11"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
-In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances. The actual price might include the discounts and promotion codes.<!--, based on the discounts and promotion codes.-->
+In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances. The actual price might include the discounts and promotion codes.
 
 The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} Private Cloud in your data center:
 - Dallas (satcon_dal)
@@ -50,7 +50,7 @@ Selection of IBM Cloud region is one of the factors for computing pricing.
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
 
-<!--All prices that are mentioned in this topic are illustrative and do not represent the actual amounts that are used for billing.-->
+
 
 All prices that are mentioned in the topic, [Pricing for IBM Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -81,12 +81,12 @@ For the example in Table 1, we might see four distinct part numbers for the foll
 * The volume storage (disk)
 * The OS license (RHEL)
 
-<!--For this example, we would see four distinct part numbers in the invoice for that virtual machine, one each for the virtual cores, the memory, the volume storage (disk), and the OS license (RHEL). -->
+
 
 For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. To view the part numbers, refer to Table 2.
 
 
-<!-- Q2 -->
+
 
 |  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
 |  --------------------------------------------------------------- | ---------------------------------------------- |
@@ -126,7 +126,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
-| <!-- Q2 --> IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
+|  IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
 | IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
 | IBM i operating system P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p10-mol |
 | IBM i operating system P30 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p30-mol |
@@ -139,7 +139,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 | IBM i P10 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p10 |
 | IBM i P30 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30 |
 | IBM i Cloud Storage Solutions instance core-hour | ppcaas-metric-ibmi-cos |
-| IBM i Rational Developer Studio instance core-hour| ppcaas-metric-ibmi-rds <!-- Q2 -->|
+| IBM i Rational Developer Studio instance core-hour| ppcaas-metric-ibmi-rds |
 | **IBM Power Systems Virtual Server Private Cloud volume group**  |
 | Volume Storage Tier 0 gigabyte-hour  | ppcaas-metric-volume-tier0 |
 | Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
@@ -151,17 +151,17 @@ For detailed usage and billing information, refer to the part numbers in your in
 | Snapshot Storage Tier 3 gigabyte-hour  | ppcaas-metric-snapshot-tier3 |
 | Snapshot Storage Tier 5k gigabyte-hour | ppcaas-metric-snapshot-tier5k |
 | **IBM Power Systems Virtual Server Private Cloud virtual tape library group** |
-| <!-- Q2 --> Virtual Tape Library terabyte-hour | ppcaas-metric-vtl <!-- Q2 -->|
+|  Virtual Tape Library terabyte-hour | ppcaas-metric-vtl |
 | **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |             |
-| <!-- Q2 --> IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
+|  IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
 | IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
-| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores <!-- Q2 --> |
+| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores  |
 {: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
 {: #Table2}
 
 For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).
 
-<!-- Q2 -->
+
 
 
 
@@ -251,21 +251,10 @@ For SAP HANA workloads, the charges for processor and memory parts are the same 
 The pricing is subject to change depending on the SAP HANA operational costs.
 {: note}
 
-<!-- Q2
-## Pricing for dedicated hosts
-{: #pricing-dh}
 
-[Q2-2024 update start]{: tag-teal}
-Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
-Consider the following points for dedicated host pricing:
-* You are not charged separately for shared processor pools you deploy to the dedicated host.
-* Software charges for the supported operating systems are metered and charged by the core.
 
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
-[Q2-2024 update end]{: tag-teal}
 
--->
 
 
 ## Storage types
@@ -330,14 +319,14 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 
 
 
-<!-- Q2 -->
+
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
 
 [On-premises]{: tag-red}
 
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, SPP can have the entitled capacity and virtual capacity ratio up to 1:20. Hence, the operating system license charges are calculated differently.
+The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. Hence, the operating system license charges are calculated differently.
 
 When you use SPP in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
@@ -358,7 +347,7 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 
-<!-- Q2 -->
+
 
 
 ### Use case of account billable storage
@@ -409,10 +398,10 @@ Review the following frequently asked questions about pricing:
 
    By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}.
 
-<!-- Q2 -->
 
 
-<!-- Q2 -->
+
+
 ### Where can I find the unit prices for the billing metrics?
 {: #billing-metrics}
 
@@ -441,7 +430,7 @@ Review the following frequently asked questions about pricing:
       Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
 
 
-<!-- Q2 -->
+
 
 ### How to calculate the pricing for OS licensing in the uncapped SPP?
 {: #cal-OSlic}
@@ -463,7 +452,7 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 {: caption="Table 14. Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
 
-<!-- Q2 -->
+
 
 ### Is there any initial one-time payment before the pod infrastructure is installed in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center?
 {: #initial-one-time-payment}

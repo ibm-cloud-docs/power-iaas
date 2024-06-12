@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -29,7 +29,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud officially supports Red Ha
 {{site.data.keyword.powerSys_notm}} does not provide Linux stock images. Bring your own Linux image (OVA format) and subscription. SUSE Linux Enterprise Server (SLES) and RHEL OVA images are supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
 {: note}
 
-<!--; SUSE Linux Enterprise Server will be available in the future with subscription.-->
+
 
 [Off-premises]{: tag-blue}
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -60,7 +60,7 @@ Following are some of the features of StorSafe VTL:
 
 See the video that shows migration of an IBM i system from on-premises to {{site.data.keyword.powerSys_notm}} - [Migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: external}.
 
-<!-- ![migration of an IBM i system](https://www.youtube.com/watch?v=E9_B5n3FYOM){: video output="iframe" data-script="#video-transcript-ui" id="youtubeplayer" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen} -->
+
 
 You can access StorSafe VTL from the [IBM Cloud catalog](https://cloud.ibm.com/catalog). In the search field, enter `FalconStor StorSafe VTL for PowerVS Cloud` or `FalconStor StorSafe VTL for Power On-Premises`.
 

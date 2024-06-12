@@ -12,8 +12,6 @@ toc:
     product-page: https://www.ibm.com/cloud/power-virtual-server
     path: power-iaas
     label: Power Virtual Servers
-
-
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See /docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
@@ -64,7 +62,6 @@ toc:
       - link:
               label: Why IBM Power Virtual Server Private Cloud?
               href: https://www.ibm.com/products/power-virtual-server
-
   - navgroup:
       id: howto
       topics:
@@ -107,7 +104,6 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
-              # - get-started-dedicated-host.md Q2
               - viewing-pod-details.md
               - creating-ssh-key.md
               - modifying-instance.md
@@ -128,7 +124,6 @@ toc:
             label: Custom OS Images
             topics:
              - imaging.md
-
       - topicgroup:
             label: AIX
             topics:
@@ -137,7 +132,6 @@ toc:
               - aix-migration-steps.md
               - removing-network-interface.md
               - rsct-rmc-aix.md
-        #      - configuring-aix-mdm.md - deprecated MDM
               - provisioning-nim-server.md
       - topicgroup:
             label: IBM i
@@ -156,18 +150,11 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      #- topicgroup:
-      #      label: SAP  Q2
-      #      topics:  Q2
-      #        - deploying-SAP-custom-image.md Q2
-      #        - SAP-full-system-profiles.md Q2
-      #        - SAP-HANA-sr2-sh2-profiles.md Q2
       - topicgroup:
             label: Observability
             topics:
               - sysdig-monitoring-pvs.md
               - at-events.md
-
 # Mukesh to provide the content             - migrate-ibmi-data-ibmi-vm.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see /docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -194,5 +181,4 @@ toc:
           - troubleshoot-aix.md
           - troubleshoot-snapshot.md
       - getting-help-and-support.md
-
 # Will use this toipc if any troubleshooting info to be added      - troubleshoot-ppcaas.md

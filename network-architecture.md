@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -49,7 +49,7 @@ Using a Power Edge Router (PER)-enabled workspace provides the following benefit
 
 * Improved performance with aggregated bandwidth of 400 Gbps.
 * Direct access to the IBM Cloud services from the {{site.data.keyword.powerSys_notm}} workspace.
-* Direct access to the {{site.data.keyword.powerSys_notm}} from a client-managed environment by using a Direct Link connect or Direct Link dedicated.<!--Q2 client-managed to be confirmed by Joe-->
+* Direct access to the {{site.data.keyword.powerSys_notm}} from a client-managed environment by using a Direct Link connect or Direct Link dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
 1. [Connecting a client-managed data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem)
@@ -61,16 +61,15 @@ The following are some of the use cases of a PER-enabled {{site.data.keyword.pow
 The use cases are enabled with base capabilities and can be customized to meet any specific requirements.
 {: important}
 
-<!--The above are base capability use cases. These base capabilities use cases can be customized to meet any specific requirement.
-{: important}-->
+
 
 ### Connecting a client-managed data center
 {: #per-on-orem}
 
-In this depiction, the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center uses a Direct Link connection to attach to the Transit Gateway.
+In this depiction, the client-managed data center uses a Direct Link connection to attach to the Transit Gateway.
 
-1. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed<!--Q2 client-managed to be confirmed by Joe--> data center through the incoming Direct Link connectivity. The Direct Link connectivity is interconnected through the Transit Gateway.<!--A PER-enabled {{site.data.keyword.powerSys_notm}} workspace can be attached to the same Transit Gateway, which in turn enables connectivity to the client-managed data center via the incoming Direct Link that is interconnected through this Transit Gateway.-->
-2. You pay for the Direct Link connection that you use to connect your client-managed environment<!--Q2 client-managed to be confirmed by Joe--> with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+1. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed data center through the incoming Direct Link connectivity. The Direct Link connectivity is interconnected through the Transit Gateway.
+2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 

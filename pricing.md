@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-10"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -31,7 +31,7 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 | S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB             |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
 
-<!-- | E1080 (9080-HEX)   |  240          | up to 64 TB                    | -->
+
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
@@ -133,75 +133,8 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
-<!--Q2
 
-| Part number  | Description                     |
-| ------------------------- | ---------------------------------- |
-| SOS_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared uncapped processor per core-hour       |
-| SOD_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out dedicated processor per core-hour      |
-| MS_GIGABYTE_HOURS|      Memory standard gigabyte-hour|
-| MHU_GIGABYTE_HOURS     | High use RAM (>64 Gb per core) gigabyte-hour      |
-| TIER_ONE_STORAGE_GIGABYTE_HOURS     | Tier-1 storage gigabyte-hour      |
-| TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
-| TIER_ZERO_STORAGE_GIGABYTE_HOURS |Tier-0 storage gigabyte-hour |
-| FIXED_5K_OPS_GIGABYTE_HOURS |Fixed IOPS storage gigabyte-hour  |
-| AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale out license per core-hour      |
-| AIX_MEDIUM_APPLICATION_INSTANCE_HOURS     | AIX enterprise license per core-hour     |
-| IBMI_OS_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i OS P10 license per core-hour      |
-| IBMI_OS_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i OS P30 license per core-hour      |
-| IBMI_LPP_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i LPP P10 license per core-hour      |
-| IBMI_LPP_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i LPP P30 license per core-hour     |
-| SOC_VIRTUAL_PROCESSOR_CORE_HOURS     | Scale out shared capped processor per core-hour      |
-| IBMIHA_PTEN_APPLICATION_INSTANCES     | PowerHA for IBM i P10 license per core-hour      |
-| IBMIHA_PTHIRTY_APPLICATION_INSTANCES     | PowerHA for IBM i P30 license per core-hour      |
-| IBMICOS_APPLICATION_INSTANCES     | IBM Cloud Storage Solutions for IBM i license per core-hour      |
-| IBMIRDS_APPLICATION_INSTANCES     | IBM Rational Development Studio for IBM i license per users-hour      |
-| BHHANA_APPLICATION_INSTANCE_HOURS     | Balanced for Online analytical processing (OLAP) HANA application instance hour       |
-| COREHANA_APPLICATION_INSTANCE_HOURS     | Core HANA application instance hour      |
-| MEMHANA_APPLICATION_INSTANCE_HOURS     | Memory HANA application instance hour      |
-| UMHHANA_APPLICATION_INSTANCE_HOURS     | Ultra Memory HANA for Online analytical processing (OLAP) application instance hour      |
-| IBMIOS_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P10 license per core-hour      |
-| IBMIOS_PTHIRTY_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i P30 license per core-hour      |
-| IBMILPP_PTEN_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i LPP P10 license per core-hour      |
-| IBMILPP_PTHIRTY_MOL_APPLICATION_INSTANCE_HOURS     | Movable IBM i LPP P30 license per core-hour      |
-| ESS_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 shared uncapped processor per core-hour      |
-| ECC_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 shared capped processor per core-hour      |
-| EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
-| IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
-| IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
-|	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
-| S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
-| REDHAT_GP_ON_SCALE_OUT_APP_INSTANCE_HOURS	|    Redhat GP Scale Out License per Core Hour |
-| REDHAT_GP_SCALE_UP_LICENSE_CORE_HOURS	    |  Redhat GP Scale Up License per Core Hour |
-| REDHAT_SAP_SCALE_OUT_LICENSE_PER_CORE_HOUR	|	Redhat SAP Scale Out License/Core Hour |
-| REDHAT_SAP_SCALE_UP_LICENSE_PER_CORE_HOUR	|   Redhat SAP Scale Up License/Core Hour |
-| SUSE_OS_GP_TIER_ONE_INSTANCE_HOURS	  |	SUSE GP Tier 1 Instance Hours |
-| SUSE_OS_GP_TIER_THREE_INSTANCE_HOURS	|	SUSE GP Tier 3 Instance Hours |
-| SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier 2 Instance Hours |
-| SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier 1 Instance Hours |
-| SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier 3 Instance Hours |
-| SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours |
-| [Q2-2024 update start]{: tag-teal} S1022_NW_SHARED_UNCAPPED _CORE_HOURS | S1022 NW Shared Uncapped Processor |
-| S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 NW Shared Capped Processor |
-| S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
-| S1022_NW_MEM_GB_HOURS | 	S1022 NW Memory |
-| PTEN_ESS_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Processor |
-| PTEN_EDD_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Dedicated Processor |
-| PTEN_ECC_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Capped Processor |
-| PTEN_MS_GIGABYTE_HOURS | P10 Standard Memory |
-| PTEN_MHU_GIGABYTE_HOURS | P10 High Use Memory (>64 Gb per core) |
-| S1022_SR2_HANA_CORE_HOURS | TBD |
-| S1022_SR2_HANA_MEM_GB_HOURS | TBD |
-| E1080_SR2_HANA_CORE_HOURS | TBD |
-| E1080_SR2_HANA_MEM_GB_HOURS | TBD |
-| S1022_SH2_HANA_CORE_HOURS  | TBD |
-| S1022_SH2_HANA_MEM_GB_HOURS | TBD |
-| E1080_SH2_HANA_CORE_HOURS | TBD |
-| E1080_SH2_HANA_MEM_GB_HOURS  | TBD [Q2-2024 update end]{: tag-teal}|
-{: caption="Table 3. Part numbers" caption-side="bottom"}
 
--->
-<!-- Q2 -->
 
 
 ## Base instances
@@ -222,30 +155,10 @@ You can also bring your own custom image to use on a {{site.data.keyword.powerSy
 
 The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You might select a Linux stock image that is provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you might opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
-<!--Q2
-## Linux for SAP workloads
-{: #linux-SAP-workload-types}
 
-[Q2-2024 update start]{: tag-teal}
 
-You can deploy the following types of SAP workloads as virtual machines:
 
-* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are similar to other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on both S1022 and E1080 systems.
 
-* **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. Similar to other types of deployments, the following types of systems, processors, and memory are supported for SAP HANA:
-    - System types: S1022 (for workloads less than 2 TB of RAM) or E1080 (for workloads more than 2 TB of RAM)
-    - Virtual processor core types: dedicated, shared capped, or shared uncapped
-    - Memory types: scale-out or scale-up
-
-For SAP HANA workloads, the charges for processor and memory parts are the same as compared to non-SAP HANA workloads. To estimate the costs for non-SAP HANA workloads, see Tables 3, 4, 5, and 6.
-
-The pricing is subject to change depending on the SAP HANA operational costs.
-{: note}
-
-[Q2-2024 update end]{: tag-teal}
-
--->
-<!-- Q2 -->
 
 ## Processor types
 {: #pricing-processor}
@@ -291,8 +204,7 @@ Consider the following points for dedicated host pricing:
 * Software charges for the supported operating systems are metered and charged by the core.
 
 
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#dedicated-host).
-
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 ## Storage types
 {: #storage-type}
@@ -385,7 +297,7 @@ The following table shows the charges based on the routing option that you selec
 |Global routing data transfer | $0.011 GB|
 {: caption="Table 13. Transit Gateway charges based on routing" caption-side="top"}
 
-<!--TGW was used in the caption-->
+
 
 
 The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
@@ -397,7 +309,7 @@ The following table shows the charges based on the number of connections includi
 |51+ | $4.7025 |
 {: caption="Table 14. Transit Gateway charges based on number of connections" caption-side="top"}
 
-<!--TGW was used in the caption-->
+
 
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. To calculate your pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} in the IBM Cloud console.

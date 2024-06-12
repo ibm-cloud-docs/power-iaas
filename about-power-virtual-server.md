@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-03"
+lastupdated: "2024-06-11"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -52,9 +52,9 @@ The following diagram provides a high-level architectural view of IBM {{site.dat
 The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
-* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i<!--Q2--> image that is tested and deployed. Currently, the supported images include the following operating system images:
+* **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i image that is tested and deployed. Currently, the supported images include the following operating system images:
     * IBM AIX 7.2, or later
-    * IBM i 7.3, or later and IBM i COR [^1] <!-- Q2 -->
+    * IBM i 7.3, or later and IBM i COR [^1] 
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
@@ -72,7 +72,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio is 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
+* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
 
 ### Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
@@ -105,13 +105,13 @@ You can use 100% of the core, memory, and storage of the nodes by excluding the 
 The spare node is used by the IBM site reliability engineering (SRE) team for maintenance and is not available for your use.
 {: note}
 
-<!--When the threshold exceeds, you receive a notification. [SHU: Not available currently for LA.]-->
+
 
 
 #### pod configurations
 {: #pod-config}
 
-<!--Q2-->
+
 An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
 
 Table 1 illustrates the configuration for small pod.
@@ -182,7 +182,7 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Usable capacity in TB at 2x compression | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
 {: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
 
-<!--Q2-->
+
 
 
 #### Supported Power10 processor-based servers
@@ -197,16 +197,16 @@ The following Power10 processor-based systems are supported:
 #### Operating systems
 {: #os-spec-private-cloud}
 
-The Power10 processor-based systems with Linux, AIX, or IBM i<!--Q2--> operating system are supported.
+The Power10 processor-based systems with Linux, AIX, or IBM i operating system are supported.
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX <!--[or IBM i]{: tag-teal}--> stock images are supported on the Power10 systems with AIX <!--[or IBM i]{: tag-teal}--> operating system.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 systems with AIX  operating system.
 
 #### Storage
 {: #storage-private-cloud}
 
 For small pods only the IBM Flash System FS5200 is supported. For more information, see [IBM Flash System FS5200](https://www.ibm.com/in-en/products/flashsystem-5200){: external}.
 
-<!--* Medium pods: [IBM Flash System FS9500](https://www.ibm.com/in-en/products/flashsystem-9500){: external}-->
+
 
 
 You can extend the storage capacity of the pods, but you cannot add more storage controllers.
@@ -329,12 +329,12 @@ You can compare the performance of your current environment with the environment
 ### Data sheets
 {: #data-sheets}
 
-<!-- * [IBM Power System E880 (9119-MHE) - Dallas only](https://www.ibm.com/downloads/cas/EE476WAP){: external} -->
+
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
 * [IBM Power System S1022 (9105-22A) (Power10 system)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 
-<!-- * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}  -->
+
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
@@ -460,11 +460,11 @@ During VM provisioning, if you create additional data volumes to attach to the n
 {: #IOPS-limit}
 
 Some of the limitations of flexible IOPS are as follows:
-<!-- - For changing the IOPS level for replication enabled volumes, if the auxiliary volume has not been onboarded then you can directly change tier of the volume on the primary site. If the auxiliary volume has already been onboarded, then storage tier changes on primary site will not get auto reflected on the secondary site. First change the storage tier of the volume on the primary site. Then change the storage tier for the auxiliary volume on the secondary site. -->
+
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to Fixed IOPS is not allowed.
 
-<!-- - Currently flexible IOPS are available on selected data centers (where? do we have the subset of DC list?). When you onboard the volumes in site 1 and site for global replication service, make sure that both the data center are supporting FIOPS. -->
+
 
 ### Public and private networks
 {: #public-private-networks}

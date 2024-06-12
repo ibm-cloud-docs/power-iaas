@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-06-10"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -22,6 +22,6 @@ Determine whether to construct a new site or to modify an existing site. The ele
 
 Ensure that the {{site.data.keyword.powerSysFull}} pod is protected with restricted access that is consistent with your company data protection and physical access control policies.
 
-<!--Ensure that the {{site.data.keyword.powerSys_notm}} pod is installed in a restricted access location. Access to this location must be restricted to authorized personnel who are skilled and properly instructed.-->
+
 
 For more information, see [Site preparation and physical planning](https://www.ibm.com/docs/en/power10?topic=system-site-preparation-physical-planning){: external}.
