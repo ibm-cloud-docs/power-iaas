@@ -103,7 +103,7 @@ toc:
             label: Creating, managing, and deploying
             topics:
               - managing-resources-and-users.md
-              - get-started-dedicated-host.md
+              - creating-power-virtual-server.md
               - viewing-pod-details.md
               - creating-ssh-key.md
               - modifying-instance.md
@@ -132,7 +132,6 @@ toc:
               - aix-migration-steps.md
               - removing-network-interface.md
               - rsct-rmc-aix.md
-        #      - configuring-aix-mdm.md - deprecated MDM
               - provisioning-nim-server.md
       - topicgroup:
             label: IBM i
@@ -151,12 +150,6 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup:
-           label: SAP
-           topics:
-             - deploying-SAP-custom-image.md
-             - SAP-full-system-profiles.md
-             - SAP-HANA-sr2-sh2-profiles.md
       - topicgroup:
             label: Observability
             topics:
