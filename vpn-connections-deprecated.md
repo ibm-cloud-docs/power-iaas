@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-12"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -34,7 +34,7 @@ The {{site.data.keyword.powerSys_notm}} infrastructure consists of subnets and v
 A maximum of four VPN connections are supported for one user account. A maximum of four policies (IKE and IPsec) for a VPN connection are supported on each data center. Currently, VPN for {{site.data.keyword.powerSys_notm}}s is supported in DAL12, DAL13, FRA04, FRA05, LON04, LON06, MON01, OSA21, SAO01, SYD04, SYD05, TOR01, and TOK04 data centers. When you use the Power Virtual Server network automation service for the first time, it might result in a temporary timeout failure. You must retry the operation as the same error might not occur again.
 {: important}
 
-Due to your bandwidth variation when connecting via a shared VPN gateway, performance varies. For workloads that require the transfer of large data volumes, you should consider by using a site-to-site VPN configuration with your own dedicated gateway devices. For more information, see [Configuring the client-managed environment VPN gateway](/docs/power-iaas?topic=power-iaas-VPN-connections#configure-onpremise-vpngateway).
+Due to your bandwidth variation when connecting via a shared VPN gateway, performance varies. For workloads that require the transfer of large data volumes, you should consider by using a site-to-site VPN configuration with your own dedicated gateway devices. For more information, see [Configuring the client-managed environment VPN gateway](#vpn-connecting-onpremise).
 {: important}
 
 To learn more about using the command-line interface (CLI) for VPN connections, see [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
@@ -49,9 +49,9 @@ To learn more about using the command-line interface (CLI) for VPN connections, 
 
 You can configure your VPN to connect to your network in the client-managed environment by following these steps in the {{site.data.keyword.powerSys_notm}} CLI or API.
 
-1. [Create an IKE policy](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
-2. [Create an IPsec policy](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-IKE-policies).
-3. [Create a VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#creating-VPN-connections).
+1. [Create an IKE policy](#creating-IKE-policies).
+2. [Create an IPsec policy](#adding-IPsec-policies).
+3. [Create a VPN connection](#creating-VPN-connections).
 4. Configure your IPsec gateway enduring IKE policy, IPsec policy, and VPN connection parameters in your client-managed environment that are compatible.
 
 #### Configuring the VPN gateway in the client-managed environment
@@ -59,11 +59,11 @@ You can configure your VPN to connect to your network in the client-managed envi
 
 The next step is to configure your VPN gateway peer to connect in the client-managed environment to your IBM Cloud VPN Gateway for Power Virtual Server workspace. The configuration depends on the type of VPN gateway. See the following topics for details.
 
-Any configurations that are not listed in this section are not supported by {{site.data.keyword.powerSys_notm}}. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity](/docs/power-iaas?topic=power-iaas-vpn-connectivity) with redundant VPN connections.
+Any configurations that are not listed in this section are not supported by {{site.data.keyword.powerSys_notm}}. If you need a different configuration or predictable performance, you must opt for the configuration that is described in [Site-to-site VPN connectivity in VPC documentation](/docs/vpc?topic=vpc-vpn-create-gateway&interface=ui) with redundant VPN connections.
 
 - [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
 - [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
-- [Connecting to a IBM Cloud VPC VPN Gateway peer](/docs/vpc?topic=vpc-vpn-overview)
+- [Connecting to a IBM Cloud VPC VPN Gateway peer](/docs/vpc?topic=vpc-vpn-overview).
 
 #### Checking the status of the secure connection
 {: #check-secure-connection}
