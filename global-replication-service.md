@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-12"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -96,7 +96,7 @@ When you have the virtual server instances with data volume running workloads, y
 To enable DR on the primary site, complete the following steps:
 1. Create a replication-enabled volume by providing `replicationEnabled` flag as `True` in the [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) request body.
     
-    To know more about the replication properties of a volume, see the [FAQ](/docs/power-iaas?topic=power-iaas-power-iaas-faqs#convert-to-replication-vol).
+    To know more about the replication properties of a volume, see the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#convert-to-replication-vol).
 
 2. Create a virtual server instance with replication-enabled volumes by using {{site.data.keyword.powerSys_notm}} interface.
     
