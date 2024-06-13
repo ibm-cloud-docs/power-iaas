@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-03"
+lastupdated: "2024-06-13"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Activity tracker events
 {: #at-events}
 
-{{site.data.keyword.powerSys_notm}} Activity Tracker Events will migrate to the CADF Event standard on 29 January, 2024. Some of the event fields are not sent or replaced by the new format. For the code snippets that shows the differences between the old and new format of the activity tracker response, see [Activity tracker sample response format](/docs/power-iaas?topic=power-iaas-at-events#at-response-sample).
+{{site.data.keyword.powerSys_notm}} Activity Tracker Events migrated to the CADF Event standard on 29 January, 2024. With the implementation of this change, some of the event fields are not sent or replaced by the [new format](#at-response-sample).
 {: note}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} in {{site.data.keyword.cloud}}.

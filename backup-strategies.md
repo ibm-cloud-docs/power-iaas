@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-13"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -138,7 +138,7 @@ To create and deploy a backup server instance from the IBM Cloud catalog, comple
 
     For more information, see [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui) and [Using virtual private endpoints for VPC to privately connect to IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-vpe-connection&interface=cli).
 
-6. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/wp-login.php){: external} (login required).
+6. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: external}.
 
 ### Pricing
 {: #baas-pricing}
@@ -166,7 +166,7 @@ The Backup Offering is available in the following data center pairs:
 {: #baas-support}
 
 Support for the Backup Offering is provided by Cobalt Iron and you need to have login credentials to Cobalt Iron to access the following:
-* For more information about the offering, see the [Cobalt Iron documentation](https://help.cobaltiron.com/wp-login.php){: extrnal}.
+* For more information about the offering, see the [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: extrnal}.
 * For issues related to backup and restore, reach out to Cobalt Iron by opening a service ticket via `support.cobaltiron.com`.
 
 If you encounter an issue that is related to {{site.data.keyword.powerSys_notm}} or IBM Cloud, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

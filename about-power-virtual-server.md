@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-13"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -92,7 +92,7 @@ The following IBM Cloud regions are capable of hosting connections from {{site.d
 - Toronto (satcon_tor)
 - Washington, DC (satcon_wdc)
 
-#### pods
+#### Pods
 {: #pod-spec-private-cloud}
 
 The following pod sizes are available:
@@ -108,7 +108,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 
 
-#### pod configurations
+#### Pod configurations
 {: #pod-config}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-13"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -82,6 +82,7 @@ The following table shows the data centers that support replication and their co
 | `WDC04`| `DAL13` |
 | `WDC06`| `DAL12` |
 | `WDC07`| `DAL10` |
+| `OSA21`| `TOK04` |
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 
