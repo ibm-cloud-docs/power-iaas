@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-13"
+lastupdated: "2024-06-14"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jun-2024}
 
 - The RHEL 8.6 general purpose (RHEL8-SP6) stock image is in the process of being removed from the {{site.data.keyword.powerSys_notm}} data centers since the OS level is no longer supported by Red Hat.
-- Global replication service now supports the new data center pair `OSA21`and`TOK04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- Global replication service now supports the new data center pair `OSA21` and `TOK04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ## May 2024
 {: #may-2024}
