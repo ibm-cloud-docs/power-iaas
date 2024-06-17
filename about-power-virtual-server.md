@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-13"
+lastupdated: "2024-06-17"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -394,9 +394,6 @@ Table 10 shows the supported storage tiers with corresponding IOPS.
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
-
-Flexible IOPS is currently available in `DAL10`, `DAL12`, `DAL13`, `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `MAD04`, `MON01`, `SAO01`, `SAO04`, `SYD04`, `SYD05`, `OSA21`, `TOK04`, `WDC04`, `WDC06`, and `WDC07` data centers. Flexible IOPS will be deployed in other data centers over time.
-{: note}
 
 #### Working with the APIs
 {: #IOPS-api}

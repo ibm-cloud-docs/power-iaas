@@ -3,22 +3,13 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-14"
+lastupdated: "2024-06-17"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:preview: .preview}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes
 {: #release-notes}
@@ -40,6 +31,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 - The SLES 15 SP4 general purpose (SLES15-SP4) stock image is in the process of being removed from the {{site.data.keyword.powerSys_notm}} data centers since the OS level is no longer supported by Red Hat.
 - You can now see a **Consumer ID** in your [Billing and Usage](https://cloud.ibm.com/billing){: external} page. Using the consumer ID you can identify and get a detailed view at the resource level broken down by part metric. For more information, see [Consumer ID](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#consumer-id).
 - {{site.data.keyword.powerSys_notm}} is now Financial Services® Validated and has received a SOC 2 Type II report. For more information, see the [compliance](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp) page.
+- Flexible I/O operation per second (IOPS) is now available in the `TOR01` data center. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
 
 ## April 2024
 {: #apr-2024}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-13"
+lastupdated: "2024-06-17"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -135,6 +135,7 @@ The following events are to work with storage capacity in your {{site.data.keywo
 |:-------------------------|:----------------------------|
 | power-iaas.storage-capacity.list       | Lists all the storage capacity     |
 | power-iaas.storage-capacity.read       | Reads a storage capacity     |
+| power-iaas.pod-capacity.list [On-premises]{: tag-red} | Lists system and storage capacity for a private cloud pod|
 {: caption="Table 7. List of events: Storage capacity" caption-side="top"}
 
 ### Storage pools events

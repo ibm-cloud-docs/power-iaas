@@ -3,7 +3,8 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-14"
+lastupdated: "2024-06-17"
+
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -234,22 +235,6 @@ Charges for IBM {{site.data.keyword.powerSys_notm}} Private Cloud are determined
 {: caption="Table 6. Memory type pricing" caption-side="bottom"}
 
 
-## SAP workload types
-{: #SAP-workload-types}
-
-You can deploy the following two types of SAP workloads as virtual machines:
-
-* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are similar to other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not the same as that of RHEL for SAP (non-SAP OS). SAP NetWeaver can be deployed on both S1022 and E1080 systems.
-
-* **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. Similar to other types of deployments, the following types of systems, processors, and memory are supported for SAP HANA:
-    - System types: S1022, E1050, or E1080
-    - Virtual processor core types: dedicated, shared capped, or shared uncapped
-    - Memory types: scale out or scale-up
-
-For SAP HANA workloads, the charges for processor and memory parts are the same as compared to non-SAP HANA workloads. To estimate the costs for non-SAP HANA workloads, see Tables 3, 4, 5, and 6.
-
-The pricing is subject to change depending on the SAP HANA operational costs.
-{: note}
 
 
 
