@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-14"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -48,14 +48,14 @@ The dedicated host provides the following features:
 ## Primary and secondary workspaces
 {: #pr-sec-ws-dh}
 
-The {{site.data.keyword.powerSys_notm}} workspaces are differentiated into primary and secondary workspace based on which workspace you use to reserve a dedicated host and share it with other multiple workspaces. See [primary workspace](#primary-ws) and [secondary workspace](#secondary-ws) for more details.
+The {{site.data.keyword.powerSys_notm}} workspaces are differentiated into primary and secondary workspace based on which workspace you use to reserve a dedicated host and share it with other multiple workspaces. See [primary workspace](#primary-ws-dh) and [secondary workspace](#secondary-ws-dh) for more details.
 
 ### Primary workspace
 {: #primary-ws-dh}
 
-A primary workspace is the owning tenant of a dedicated host or storage reservation and is allowed full control over the associated resources. The primary workspace can remove, delete, or share the dedicated resources that are owned by the workspace under the IBM Cloud account.  
+A primary workspace is the owning tenant of a dedicated host with full control over the associated resources. The primary workspace can remove, delete, or share the dedicated resources that are owned by the workspace under the IBM Cloud account.  
 
-With the same IBM Cloud account, the primary workspace user has the control over sharing the dedicated resources with all (or a subset) of their workspaces (in the same account).  
+With the same IBM Cloud account, the primary workspace user has the control over sharing the dedicated resources with all or a subset of their workspaces in the same account. The sharing must be in the same data center  
 
 The primary workspace receives billing charges that are associated with the reservation of dedicated reservations.
 
@@ -64,7 +64,7 @@ The primary workspace receives billing charges that are associated with the rese
 
 A secondary workspace is a workspace with which the dedicated resources are shared.  
 
-This workspace can deploy the virtual server instances and volumes against the dedicated resources that are shared with the workspace.  
+This workspace can deploy the virtual server instances on the dedicated resources that are shared with the workspace.  
 
 A secondary workspace cannot further share a resource (that it does not own) with another workspace.
 
@@ -147,7 +147,7 @@ You can create a virtual server instance in a single-tenant environment on a ded
 
 Open the dedicated host details page, and click **Create instance** to open the **Create virtual server instance** page. You must toggle "ON" to the **Deploy to dedicated host** button.  
 
-Follow the instructions in [Configuring a Power Virtual Server instance](docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
+Follow the instructions in [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
 
 When you use dedicated hosts, the virtual server instances that are deployed on them are not billed for core and memory charges.
 
@@ -179,3 +179,13 @@ You can release a dedicated host when no resources are deployed on the host. To 
         {: important}
 
 
+
+## Maintenance in dedicated host
+{: #mainetnance-dh}
+
+When IBM needs to do maintenance on a dedicated host, the VMs are evacuated to another dedicated host specifically for the maintenance operation window. You are not able to see anything unless a host failure that needs the replacement of the original dedicated host.
+
+If a dedicated host suffers from a failure, IBM restarts the VMs on another dedicated host.
+
+When VMs are relocated to another dedicated host for maintenance, you are not charged for an extra dedicated host.
+{: note}

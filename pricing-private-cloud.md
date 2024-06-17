@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-14"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -410,13 +410,11 @@ Review the following frequently asked questions about pricing:
    On the global catalog, complete the following steps to view the pricing for each metric ID:
 
    * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
-   * Search for the entries `power-iaas` in the search bar.
-   * Determine the type of resource for which you need pricing. The following options are available:
-     - `Power Virtual Server Virtual Machine` for virtual machines.
+   * Search the catalog for the resources for which you need pricing. The following options for search strings are available:
+     - `Power Virtual Server Virtual Machine` for Virtual Machines which includes processor, memory, operating systems, and workloads.
      - `Power Virtual Server Volume` for Volumes.
      - `Power Virtual Server Snapshot` for Snapshots.
-     - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools.
-         There is no pricing that is associated with other types of resources.
+     - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools. There is no pricing that is associated with other types of resources.
    * Click the selected resource type entry from the search results. The corresponding page opens.
    * Click the {{site.data.keyword.powerSys_notm}} Private Cloud billing plan from the left page:
      - `Power Virtual Server Private Cloud Virtual Machine Group` for virtual machines.
