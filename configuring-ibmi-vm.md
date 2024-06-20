@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-20"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -43,6 +43,9 @@ To begin your first boot, open the VNC Console:
 
     IBM i console opens as a new window. Ensure that your browser setting does not block any pop-up window.
     {: note}
+
+    The Idle timeout for the VNC console is 30 minutes.
+    {: important}
 
 To disconnect from the VNC Console session, close the web browser window that is titled 'noVNC'.
 

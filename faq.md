@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-20"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -68,9 +68,7 @@ The IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports the following
 
 The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL1 SP2
-* AIX 7.3 TL1 SP1
 * AIX 7.2 TL5 SP6
-* AIX 7.2 TL5 SP5
 
 
 

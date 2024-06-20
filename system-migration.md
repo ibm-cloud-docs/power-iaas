@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-20"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -47,14 +47,10 @@ Before you migrate to a newer IBM Power, review the following checklist:
 - Follow the I/O consideration guide.
 - Consider contacting [IBM Technology Expert Labs](#lab-services) to ease the migration process.
 
-
-
-
-
 ## Migrating to an IBM Power9
 {: #power9-migration}
 
-Learn more about migrating workloads from your older IBM POWER System to a Power9 System. Before you begin your migration, review the information in this section.
+Learn more about migrating workloads from your older IBM POWER to a Power9. Before you begin your migration, review the information in this section.
 
 Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
 {: tip}
@@ -64,9 +60,9 @@ Installing only the minimum levels can leave your partitions or workloads vulner
 
 To learn more about IBM Power9 performance and migration strategies, see the following articles:
 
-- [Hints and tips for migrating workloads to IBM Power9 processor-based systems](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
+- [Hints and tips for migrating workloads to IBM Power9](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
-- [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+- [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
 ## Migrating to an IBM Power10
 {: #power10-migration}

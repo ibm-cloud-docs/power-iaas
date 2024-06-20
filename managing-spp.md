@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-20"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -16,10 +16,11 @@ subcollection: power-iaas
 # Managing the shared processor pool
 {: #manage-SPP}
 
-A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances.
+A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM).
 {: shortdesc}
 
-Unlike a virtual server instance that has a dedicated and defined maximum amount of processing capacity, you can set the reserved cores in SPP that is available at the pool level.
+
+In SPP, reserved cores can be adjusted based on availability, unlike a VM with a fixed processing capacity.
 
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
@@ -30,11 +31,10 @@ The following table shows how an SPP is used to reduce the licensing cost when y
 {: caption="Table 1. SPP helps to reduce the licensing cost" caption-side="bottom"}
 
 The benefits of using an SPP are as follows:
+- Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licesnses. 
+- A better overall ability to manage processor resources. 
 
-* Get control over licensing costs by limiting the number of processors an uncapped partition can use, which reduces the number of software licenses.
-* Get a better overall ability to manage processor resources.
-
-The {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of virtual server instances of the same machine type (host).
+{{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of VMs of the same machine type (host).
 
 
 
@@ -45,10 +45,10 @@ For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-v
 
 [Off-premises]{: tag-blue}
 
-In a {{site.data.keyword.powerSys_notm}} user-defined SPP, you can set the core-to-virtual core ratio to 1:3. Using the 1:3 ratio, you can deploy Oracle licensing use cases without purchasing a dedicated host. Note the following limitations when your use core-to-virtual core ratio:
+In a {{site.data.keyword.powerSys_notm}} with Power10, you can define a Shared Processor Pool (SPP) with values of up to 3.0 cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing scenarios. Review the following limitations when you use core-to-virtual core ratio:
 
-* You can set the ratio only on a user-defined SPP.
-* For non-dedicated hosts on Power10, you can increase the limit of core-to-virtual core ratio to 1:3 for entitled capacities less than or equal to 2.
+* Ratio can only be set on a user-defined SPP.
+* For non-dedicated hosts on Power10, you can set upto 3.0 cores.
 * For Power9 and for virtual machines with entitled capacities greater than 2, the core-to-virtual core ratio is 1:1.
 
 
@@ -58,12 +58,13 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 ## Pricing for shared processor pool
 {: #price-spp}
 
-When you use SPP, you pay for the following items:
+When using SPP, you pay for the following:
 
-* SPP reserved cores that use the shared capped part number.
-* Virtual server instance cores that are deployed into the SPP that use shared uncapped part number.
+* SPP reserved cores that use dedicated host.
+* SPP reserved cores that use the shared capped host.
+* VM cores that are deployed into the SPP that use shared uncapped host.
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage remains the same as earlier. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ on pricing](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+With SPP you can manage CPU cores. Pricing for memory and storage is charged as ususal. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [FAQ on pricing](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 {: note}
 
 ## Configuring a shared processor pool
@@ -81,7 +82,7 @@ Create an SPP by specifying the following parameters:
 
 When you define these parameters, a backend process determines the best host for the new SPP.
 
-When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. Delete such SPPs manually as they do not get cleaned up automatically.
+When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. These SPPs must be removed manually, as they are not automatically deleted. 
 {: note}
 
 ### Creating a shared processor pool
@@ -94,7 +95,7 @@ To create an SPP, complete the following steps:
 3. In the **Create new shared processor pool** window, define the following preferences based on your requirements:
     |Field|Description|
     |----|----|
-    |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric characters are not allowed and underscore (‘_’) is only allowed as a special character.|
+    |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Alphanumeric and special characters are not allowed except underscore (‘_’).|
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
     |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
@@ -114,29 +115,32 @@ You can update or delete the following details of an existing SPP:
 
 * Name of the SPP - Follow the same naming conventions that you used while creating an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
 * Number of cores - You can update the number of reserved cores based on resource availability and allocation.
-* Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no virtual server instances exist in the SPP. If virtual server instances are present, it must be deleted or moved with a support ticket.
+* Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no VMs exist in the SPP. If VMs are present, it must be deleted or moved with a support ticket.
 
-## Managing a virtual server instance of a shared processor pool
+## Managing a VM of a shared processor pool
 {: #manage-vm-inside-spp}
 
-When you deploy a virtual server instance, you can choose an SPP instead of a host. As you cannot move a virtual server instance into or out of an SPP, you can deploy a virtual server instance directly into an SPP as a best practice. You can also deploy a virtual server instance into a server placement group; the selected SPP host must be compatible with the affinity policy of the placement group that you selected.
+When you deploy a VM, you can choose an SPP instead of a host. As you cannot move a VM into or out of an SPP, you can deploy a VM directly into an SPP as a best practice. You can also deploy a VM into a server placement group; the selected SPP host must be compatible with the affinity policy of the placement group that you selected.
 
-When you deploy multiple virtual server instances simultaneously, a new server placement group is created automatically.
+When you deploy multiple VMs simultaneously, a new server placement group is created automatically.
 {: note}
 
-During any planned maintenance activity or when you want to perform a remote restart operation, ensure that the virtual server instances are linked to an SPP based on your requirements.
+During any planned maintenance activity or when you want to perform a remote restart operation, ensure that the VMs are linked to an SPP based on your requirements.
 
-### Deploying a virtual server instance into a shared processor pool
+### Deploying a VM into a shared processor pool
 {: #deploy-pvm-in-spp}
 
-To add virtual server instances to an existing SPP, complete the following steps:
+To add VMs to an existing SPP, complete the following steps:
+
+[On-premises]{: tag-red} Use the API and CLI for bulk deployment of VMs in an SPP. However, you cannot provision more than 3 VMs within an SPP in both small and medium pods.
+{: important}
 
 1. Open the **Virtual server instances** page in the {{site.data.keyword.powerSys_notm}} user interface.
 2. Click **Create instance**.
 3. Complete the input fields under the **General** tile based on your requirement.
 4. Select the checkbox **Add to a Shared processor pool**.
 5. Select an existing shared processor pool.
-6. Continue with the process of creating a virtual server instance. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+6. Continue with the process of creating a VM. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 ## Configuring a shared processor pool placement group
 {: #configure-SPP-PG}

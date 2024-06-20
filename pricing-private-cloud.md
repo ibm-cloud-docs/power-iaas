@@ -3,8 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-17"
-
+lastupdated: "2024-06-20"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -129,14 +128,10 @@ For detailed usage and billing information, refer to the part numbers in your in
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
 |  IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
 | IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
-| IBM i operating system P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p10-mol |
-| IBM i operating system P30 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-os-p30-mol |
 | IBM i operating system P10 service extension core-hour | ppcaas-metric-ibmi-os-p10-sve |
 | IBM i operating system P30 service extension core-hour | ppcaas-metric-ibmi-os-p30-sve |
 | IBM i LPP P10 license core-hour | ppcaas-metric-ibmi-lpp-p10 |
 | IBM i LPP P30 license core-hour | ppcaas-metric-ibmi-lpp-p30 |
-| IBM i LPP P10 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-lpp-p10-mol |
-| IBM i LPP P30 movable license - SWMA paid - core-hour | ppcaas-metric-ibmi-lpp-p30-mol |
 | IBM i P10 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p10 |
 | IBM i P30 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30 |
 | IBM i Cloud Storage Solutions instance core-hour | ppcaas-metric-ibmi-cos |
@@ -166,6 +161,7 @@ For more information about unit prices for each metric ID, see [Where can I find
 
 
 
+
 ## Base instances
 {: #base-instances}
 
@@ -176,7 +172,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The metering for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -236,18 +232,23 @@ Charges for IBM {{site.data.keyword.powerSys_notm}} Private Cloud are determined
 
 
 
+## Pricing for dedicated hosts
+{: #pricing-dh}
 
+Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
+Consider the following points for dedicated host pricing:
+* You are not charged separately for shared processor pools you deploy to the dedicated host.
+* Software charges for the supported operating systems are metered and charged by the core.
 
-
-
+To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 ## Storage types
 {: #storage-types}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the following storage types:
 
-* **Data volumes**: These volumes are of the simplest form that you can create. You are billed based on the current volume size at the metering time. Table 7 shows an example of how you are billed based on your volume creation:
+* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. Table 7 shows an example of how you are billed based on your volume creation:
 
    | Volume size you create  | Volume size you are billed  |
    |  ---------------------  | ----------------------------  |
@@ -256,9 +257,13 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the f
    {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
 
 
-* **Image backing volumes**: These volumes are part of a boot image in your cloud instance present in the boot image catalog. You are billed based on one or more total volume sizes contained in the image.
+* **Image backing volumes**: These volumes are part of a boot image in your cloud instance listed in the boot image catalog. Billing for image backing volumes is determined as follows:
 
-    When the image has a single backing volume, you are billed based on the size (GB) of the single volume. When the image has multiple backing volumes, billing is based on tallying up the sizes of all the image backing volumes. Table 8 shows an example of how you are billed based on your boot volume:
+
+   - Single volume billing - When the image has a single backing volume, you are billed based on the size (GB) of the single volume.
+   - Multiple volume billing - When the image has multiple backing volumes, billing is based on tallying up the sizes of all the image backing volumes.
+
+Table 8 shows an example of how you are billed based on your boot volume:
 
 
    | Image volume size                   | Single or multiple backing  | Billed volume size |
@@ -268,7 +273,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the f
    {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
 
 
-* **Deployed virtual machine volumes**: These volumes are created when you deploy a virtual machine with an image. The deployed virtual machines get a copy of all the volumes in the image. Any additional data volumes attached to the deployed virtual machine are billed under Data Volumes. Table 9 shows an example of how you are billed based on the virtual machines that you deploy:
+* **Deployed virtual machine volumes**: When you deploy a virtual machine with an image, it gets a copy of all the volumes in the image. Extra data volumes added to the deployed virtual machine are billed separately as Data Volumes. Table 9 shows an example of how you are billed based on the virtual machines that you deploy:
 
    | Image backing volume  | Billed volume size |
    |  -------------------  | ----------------|
@@ -310,14 +315,15 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 
 [On-premises]{: tag-red}
 
+SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}. In the IBM {{site.data.keyword.powerSys_notm}} Private Cloud environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
 
-The SPP helps you to manage CPU cores only. Pricing for memory and storage is similar to {{site.data.keyword.powerSys_notm}}. In IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. Hence, the operating system license charges are calculated differently.
+Consequently, the calculation of operating system license charges follows a distinct methodology within the IBM {{site.data.keyword.powerSys_notm}} Private Cloud setup to accommodate this core-to-virtual core ratio efficiently.
 
-When you use SPP in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
+When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
-* The operating system license is based on the following types of virtual instances:
+* The operating system license, which is based on the following types of virtual server instances:
     * Capped SPP: pricing is determined by the entitled capacity.
     * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
 

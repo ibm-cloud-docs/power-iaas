@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-17"
+lastupdated: "2024-06-20"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -108,87 +108,167 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 
 
-#### Pod configurations
-{: #pod-config}
 
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
+#### Small pod configurations
+{: #pod-config-small}
 
-Table 1 illustrates the configuration for small pod.
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.  
 
-| Server types                | S1022 |     |     | E1050    |     |
-| --------------------------- | ------|-----|---- | -------- | --- |
-| Number of racks             | 1     |     |     | 1        |     |
-| Servers in a rack           | Min   | Min | Max | Min      | Max |
-| Server quantity in a pod    | 6     | 5   | 9   | 2        | 4   |
-| Number of cores per server  | 40    | 40  | 40  | 96       | 96  |
-| Total number of cores       | 240   | 200 | 360 | 192      | 384 |
-| Usable cores                | 198   | 165 | 297 | 170      | 340 |
-|                             |       |     |     |          |     |
-| Memory types                |       |     |     |          |     |
-| 2 TB                        | 12    |     | 18  |          |     |
-| 4 TB                        |       | 20  | 36  | 16       | 32  |
+[Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
+
+
+| Server types                | Min   | Min | Max |
+| --------------------------- | ------|-----|---- |
+| Server quantity in a pod    | 6     | 5   | 9   | 
+| Number of cores per server  | 40    | 40  | 40  |
+| Total number of cores       | 240   | 200 | 360 | 
+| Usable cores                | 198   | 165 | 297 |
+|                             |       |     |     | 
+| **Memory types**            |       |     |     |      
+| 2 TB                        | 12    | -   | 18  |  
+| 4 TB                        | -     | 20  | 36  |
+{: class="simple-tab-table"}
+{: tab-group="host_selection"}
 {: caption="Table 1. Small pod configuration." caption-side="top"}
+{: #single-rack}
+{: tab-title="S1022"}
 
+| Server types                | Min      | Max |
+| --------------------------- | -------- | --- |
+| Server quantity in a pod    | 2        | 4   |
+| Number of cores per server  | 96       | 96  |
+| Total number of cores       | 192      | 384 |
+| Usable cores                | 170      | 340 |
+|                             |          |     |
+| **Memory types**            |          |     |
+| 2 TB                        |  -       | -   |
+| 4 TB                        | 16       | 32  |
+{: class="simple-tab-table"}
+{: tab-group="host_selection"}
+{: caption="Table 1. Small pod configuration." caption-side="top"}
+{: #single-rack}
+{: tab-title="E1050"}
 
-The small pod with one rack is available with FS 230 TB flash system storage. Table 2 illustrates the configuration for small pod with flash system storage options.
+The small pod with one rack is available with FS 230 TB flash system storage. 
 
 | Storage types                         | FS 230 TB |        |
 | ------------------------------------- | ----------|--------|
-| Number of racks                       | 1         |        |
+| Number of racks                       | 1         |   1    |
 | Drives for each flash system          | 12        | 12     |
 | Capacity for each drive in TB         | 19.2      | 19.2   |
 | Number of flash systems in a pod      | 1         | 2      |
 | Total drives in a pod                 | 12        | 24     |
-| Total capacity in TB               | 230       | 460    |
-| Usable capacity in TB              | 219       | 438    |
+| Total capacity in TB                  | 230       | 460    |
+| Usable capacity in TB                 | 219       | 438    |
 | Usable capacity in TB at 2x compression | 438        | 876    |
 {: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
+{: #single-rack-storage}
+
+#### Medium pod configurations
+{: #pod-config-medium}
+
 
 An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
 
-Table 3 illustrates the configuration for medium pod storage options.
+[Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
-| Server types                | S1022 |     |     |      | E1050    |      |       |      | E1080 (2CEC) |     |
-| --------------------------- | ------|-----|-----|------| -------- | ---- | ----- | ---- | -------------| --- |
-| Number of racks             | 2     |     | 4   |      | 2        |      | 4     |      | 4            |     |
-| Servers in a rack           | Min   | Max | Min | Max  | Min      | Max  | Min   | Max  | Min          | Max |
-| Server quantity in a pod    | 12    | 15  | 16  | 40   | 5        | 7    | 8     | 19   | 2            | 5   |
-| Number of cores per server  | 40    | 40  | 40  | 40   | 96       | 96   | 96    | 96   | 120          | 120 |
-| Total number of cores       | 480   | 600 | 640 | 1600 | 480      | 672  | 768   | 1824 | 240          | 600 |
-| Usable cores                | 396   | 495 | 528 | 1320 | 425      | 595  | 680   | 1615 | 214          | 535 |
-| Memory types                |       |     |     |      |          |      |       |      |              |     |
-| 2 TB                        | 24    | 30  | 32  | 80   |          |      |       |      |              |     |
-| 4 TB                        | 48    | 60  | 64  | 160  | 20       | 28   |  32   | 76   |              |     |
-| 8 TB                        |       |     |     |      | 40       | 56   | 64    | 152  | 16           | 40  |
-| 16 TB                       |       |     |     |      |          |      |       |      | 32           | 80  |
-| 32 TB                       |       |     |     |      |          |      |       |      | 64           | 160 |
+|  Server types               | Min   | Max | Min | Max  | 
+| --------------------------- | ------|-----|-----|------| 
+| Number of racks             | 2     |  2  | 4   |  4   |    
+| Server quantity in a pod    | 12    | 15  | 16  | 40   | 
+| Number of cores per server  | 40    | 40  | 40  | 40   | 
+| Total number of cores       | 480   | 600 | 640 | 1600 | 
+| Usable cores                | 396   | 495 | 528 | 1320 | 
+| **Memory types**            |       |     |     |      |  
+| 2 TB                        | 24    | 30  | 32  | 80   |   
+| 4 TB                        | 48    | 60  | 64  | 160  | 
+| 8 TB                        |  -    |  -  | -   |  -   | 
+| 16 TB                       |  -    |  -  | -   |  -   |  
+| 32 TB                       |  -    |  -  | -   |  -   | 
+{: class="simple-tab-table"}
+{: tab-group="host_selection_multi_rack"}
 {: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: #multi-rack}
+{: tab-title="S1022"}
 
+| Server types                | Min      | Max  | Min   | Max  |
+| --------------------------- | -------- | ---- | ----- | ---- |
+| Number of racks             | 2        | 2    | 4     | 4    | 
+| Server quantity in a pod    | 5        | 7    | 8     | 19   | 
+| Number of cores per server  | 96       | 96   | 96    | 96   | 
+| Total number of cores       | 480      | 672  | 768   | 1824 | 
+| Usable cores                | 425      | 595  | 680   | 1615 | 
+| **Memory types**            |          |      |       |      | 
+| 2 TB                        |          |      |       |      | 
+| 4 TB                        | 20       | 28   |  32   | 76   | 
+| 8 TB                        | 40       | 56   | 64    | 152  |
+| 16 TB                       |  -       |  -   |  -    | -    |
+| 32 TB                       |   -      |  -   |  -    |  -   |
+{: class="simple-tab-table"}
+{: tab-group="host_selection_multi_rack"}
+{: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: #multi-rack}
+{: tab-title="E1050"}
 
-The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. Table 4 illustrates the configuration for medium pod with flash system storage options.
+| Server types                | Min          | Max |
+| --------------------------- | -------------| --- |
+| Number of racks             | 4            | 4   |
+| Server quantity in a pod    | 2            | 5   |
+| Number of cores per server  | 120          | 120 |
+| Total number of cores       | 240          | 600 |
+| Usable cores                | 214          | 535 |
+| **Memory types**            |              |     |
+| 2 TB                        |  -           | -   |
+| 4 TB                        |  -           |  -  |
+| 8 TB                        | 16           | 40  |
+| 16 TB                       | 32           | 80  |
+| 32 TB                       | 64           | 160 |
+{: class="simple-tab-table"}
+{: tab-group="host_selection_multi_rack"}
+{: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: #multi-rack}
+{: tab-title="E1080 (2CEC)"}
 
-| Storage types                         | FS 460 TB or FS 920 TB |      |       |      |       |      |       |       |
-| ------------------------------------- | -----------------------|----- | ------|------| ----- | ---- | ----- | ----- |
-| Server types                          | S1022                  |      |       |      | E1050 |      |       |       |
-| Number of racks                       | 2                      |      | 4     |      | 4     |      | 4     |       |
-| Number of servers in a rack           | Min                    | Max  | Min   | Max  | Min   | Max  | Min   | Max   |
-| Drives for each flash system          | 24                     | 48   | 24    | 48   | 24    | 48   | 24    | 48    |
-| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 | 19.2  | 19.2 | 19.2  | 19.2  |
-| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    | 3     | 3    | 4     | 4     |
-| Total Drives in a pod                 | 24                     | 48   | 48    | 96   | 72    | 144  | 96    | 192   |
-| Total capacity in TB                  | 460                    | 920  | 920   | 1840 | 1380  | 2760 | 1840  | 3680  |
-| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 | 1314  | 2628 | 1752  | 3504  |
-| Usable capacity in TB at 2x compression | 876                    | 1752 | 1752  | 3504 | 2628  | 5256 | 3504  | 7007  |
+The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. 
+
+| Storage types                         | Min                    | Max  | Min   | Max  |
+| ------------------------------------- | -----------------------|----- | ------|------|
+| Drives for each flash system          | 24                     | 48   | 24    | 48   | 
+| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 | 
+| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    | 
+| Total Drives in a pod                 | 24                     | 48   | 48    | 96   |
+| Total capacity in TB                  | 460                    | 920  | 920   | 1840 | 
+| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 | 
+| Usable capacity in TB at 2x compression | 876                  | 1752 | 1752  | 3504 |
+{: class="simple-tab-table"}
+{: tab-group="host_selection_storage_multi"}
 {: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
+{: #multi-rack-storage}
+{: tab-title="2 or 4 racks"}
+
+| Storage types                         | Min   | Max  | Min   | Max   |
+| ------------------------------------- | ----- | ---- | ----- | ----- |
+| Drives for each flash system          | 24    | 48   | 24    | 48    |
+| Capacity for each drive in TB         | 19.2  | 19.2 | 19.2  | 19.2  |
+| Number of flash systems in a pod      | 3     | 3    | 4     | 4     |
+| Total Drives in a pod                 | 72    | 144  | 96    | 192   |
+| Total capacity in TB                  | 1380  | 2760 | 1840  | 3680  |
+| Usable capacity in TB                 | 1314  | 2628 | 1752  | 3504  |
+| Usable capacity in TB at 2x compression | 2628  | 5256 | 3504  | 7007  |
+{: class="simple-tab-table"}
+{: tab-group="host_selection_storage_multi"}
+{: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
+{: #multi-rack-storage}
+{: tab-title="4 racks"}
 
 
 
 
-#### Supported Power10 processor-based servers
+#### Supported Power10 servers
 {: #power-system-spec-private-cloud}
 
-The following Power10 processor-based systems are supported:
+The following Power10 are supported:
 
 * [IBM Power S1022](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 * [IBM Power E1050](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}
@@ -197,9 +277,9 @@ The following Power10 processor-based systems are supported:
 #### Operating systems
 {: #os-spec-private-cloud}
 
-The Power10 processor-based systems with Linux, AIX, or IBM i operating system are supported.
+The Power10 supports Linux, AIX, or IBM i operating system.
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 systems with AIX  operating system.
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 with AIX  operating system.
 
 #### Storage
 {: #storage-private-cloud}
@@ -332,7 +412,7 @@ You can compare the performance of your current environment with the environment
 
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-* [IBM Power System S1022 (9105-22A) (Power10 system)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
+* [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 
 
 

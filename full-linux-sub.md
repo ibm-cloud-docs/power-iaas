@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-19"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -114,11 +114,11 @@ To check whether the setup is complete and the subscription is successful, check
 ## Passing user-defined scripts
 {: #cloud-init-fls-private-cloud}
 
-When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you get the option to pass in user data during the first boot runtime.
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you have the option to pass in user data during the first boot runtime.
 
-In the user data you can pass the custom content that allows you to customize the startup configuration for the specific instance.
+In the user data, you have the option to include custom content that enables you to tailor the startup configuration for the specific instance.
 
-The user data that you pass must meet the following conditions:
+The custom user data must meet the following conditions:
 -  It is uncompressed.
 -  It starts with `#cloud-config`.
 -  It should not exceed 63 Kb in size.

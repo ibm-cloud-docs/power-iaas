@@ -104,6 +104,7 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
+              - get-started-dedicated-host.md
               - viewing-pod-details.md
               - creating-ssh-key.md
               - modifying-instance.md
@@ -150,6 +151,12 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
+      - topicgroup:
+           label: SAP
+           topics:
+             - deploying-SAP-custom-image.md
+             - SAP-full-system-profiles.md
+             - SAP-HANA-sr2-sh2-profiles.md
       - topicgroup:
             label: Observability
             topics:

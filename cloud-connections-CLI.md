@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-20"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -61,7 +61,7 @@ To create an {{site.data.keyword.powerSys_notm}} Cloud Connection, complete the 
    Attaching a subnet to an IBM Cloud connection is required as the network traffic is routed over the connection. You must route {{site.data.keyword.powerSys_notm}} private network subnets over IBM Cloud {{site.data.keyword.dl_short}} to allow connectivity between {{site.data.keyword.powerSys_notm}} instances and the IBM Cloud network. Attaching a subnet to Cloud connections allows {{site.data.keyword.powerSys_notm}} VM to VM communication as well as for the VMs that are located in the same subnet or different subnet within the workspace to communicate.
    {: note}
 
-   If the Cloud connection is attached to a Transit Gateway, the following subnet ranges are not supported `10.0.0.0/14`, `10.200.0.0/14`, `10.198.0.0/15` and `10.254.0.0/16`. Ensure avoid subnets in these ranges (if used with a Transit Gateway) when attaching subnets to the cloud connection, .
+   If the Cloud connection is attached to a Transit Gateway, prepare for [Direct Link](/docs/dl?topic=dl-notification-dl-tgw) and [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-notification-dl-tgw) changes to advertise service network routes.
    {: note}
 
 6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.

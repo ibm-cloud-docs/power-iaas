@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-20"
 
 keywords: planning, prerequisites, environment, site access, site requirement, power, power requirement, network, network requirement, system calculator, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud
 
@@ -57,7 +57,7 @@ Refer the following tables for rack dimensions and weight details:
 {: caption="Table 2. Rack characteristics and capacity" caption-side="bottom"}
 
 
-For generic prerequisites and planning guidelines for Power10 processor-based systems, see the following topics:
+For generic prerequisites and planning guidelines for Power10, see the following topics:
 
 * [Site preparation and physical planning](https://www.ibm.com/docs/en/power10/9080-HEX?topic=e1080-planning-system){: external}
 * [IBM Power as Rack Specification](https://www.ibm.com/docs/en/power10/9080-HEX?topic=rack-model-7965-s42-specifications){: external}

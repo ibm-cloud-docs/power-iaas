@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-06-20"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -50,7 +50,7 @@ Refer to Table 2 to understand rack characteristics and capacity.
 
 **Floor load calculator**: You can use [Floor load calculator](http://www-01.ibm.com/support/knowledgecenter/v1/content/POWER6/iphdl/floorloadcalc.htm){: external} to determine the distributed load that a server, expansion unit, or migration tower places on a subfloor (for example, in a data center with a raised floor) or on an above-ground or nonraised floor structure.
 
-For generic prerequisites and planning guidelines for Power10 processor-based systems, see the following topics:
+For generic prerequisites and planning guidelines for Power10, see the following topics:
 
 * [Site preparation and physical planning](https://www.ibm.com/docs/en/power10/9080-HEX?topic=e1080-planning-system){: external}
 * [IBM Power as Rack Specification](https://www.ibm.com/docs/en/power10/9080-HEX?topic=rack-model-7965-s42-specifications){: external}
