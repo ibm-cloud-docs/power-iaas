@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-21"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -36,19 +36,32 @@ The benefits of using an SPP are as follows:
 
 {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of VMs of the same machine type (host).
 
+## Managing the core-to-virtual core ratio
+{: #ec-vp-ratio}
 
 
 
 [On-premises]{: tag-red}
 
-For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.
+For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the minimum core-to-virtual core ratio is 1:20. The minimum Entitled Capacity (EC) must be 0.05 and can be incremented by 0.05.
 
 [Off-premises]{: tag-blue}
 
-In a {{site.data.keyword.powerSys_notm}} with Power10, you can define a Shared Processor Pool (SPP) with values of up to 3.0 cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing scenarios. Review the following limitations when you use core-to-virtual core ratio:
+In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
 
-* Ratio can only be set on a user-defined SPP.
-* For non-dedicated hosts on Power10, you can set upto 3.0 cores.
+For example, the following table shows how your VC is determined based of EC selection:
+| User-defined EC value | Possible VC value |
+|-----------------------|-------------------|
+| EC is set to 1.5      | VPs can be 2 or 3 |
+| EC is set to 2.25     | VP is 3           |
+| EC is set to 3.5      | VPs is 4          |
+{: caption="Table 1. Example showing core-to-virtual core ratio" caption-side="top"}
+
+Review the following points when you use core-to-virtual core ratio:
+* You can set EC in increments of 0.25.
+* You can set VC in increments of 1.
+* The ratio can only be set on a user-defined SPP.
+* For non-dedicated hosts on Power10, you can set up to 3.0 cores.
 * For Power9 and for virtual machines with entitled capacities greater than 2, the core-to-virtual core ratio is 1:1.
 
 

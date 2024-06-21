@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-21"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -21,13 +21,27 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jun-2024}
 
 - The RHEL 8.6 general purpose (RHEL8-SP6) stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
+
 - Global replication service supports the new data center pair `OSA21` and `TOK04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+
 - Access the dedicated host capability from the {{site.data.keyword.powerSys_notm}} user interface. IBM Power S922 and S1022 servers can be provisioned for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
-- Deploy Linux for SAP (HANA or Netweaver) OS image within IBM Power Virtual Server by using SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
+
+- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/apidocs/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/apidocs/power-cloud#v1-snapshots-get) for API details. 
+
+    Dedicated Hosts and Snapshots require PowerVC (PVC) 2.2.1 that is deployed worldwide except in four data centers. These four data centers are upgraded to PVC 2.2.1 with the following timeline: 
+
+    -  `MAD02` and `CHE01` on June 21, 2024
+    -  `DAL12` on June 24, 2024
+    -  `SAO01` on September 07, 2024
+    
+    {{site.data.keyword.powerSys_notm}} on-premises is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
+
+- Deploy Linux for SAP (HANA or Netweaver) OS image within IBM {{site.data.keyword.powerSys_notm}} by using SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
+
 - Deploy SAP full system profiles on the S1022 system only if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
 - Deploy SAP HANA sr2 and sh2 profiles on the S1022 or E1080 system. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
-- In a {{site.data.keyword.powerSys_notm}} with Power10, you can define a Shared Processor Pool (SPP) with values of up to 3.0 cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing scenarios. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
-- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/apidocs/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/apidocs/power-cloud#v1-snapshots-get) for API details. 
+
+- In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
 ## May 2024
 {: #may-2024}

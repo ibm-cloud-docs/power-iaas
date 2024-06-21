@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -182,6 +182,8 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 [On-premises]{: tag-red}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+{: #FLS}
+
 
 FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 

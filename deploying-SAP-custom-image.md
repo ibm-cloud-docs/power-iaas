@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-21"
 
 keywords: deploying a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to
 
@@ -19,27 +19,20 @@ subcollection: power-iaas
 
 [Off-premises]{: tag-blue}
 
-The Linux&reg; for SAP (HANA or NetWeaver) operating system (OS) image can be deployed within an {{site.data.keyword.powerSysFull}} by using the following methods:
-
-* [SAP provided central image repository](#SAP-pcir).
-* [Bring your own customized image](#byoc-SAP).
-
-## SAP provided central image repository
-{: #SAP-pcir}
-
-SAP provides a central image repository within a {{site.data.keyword.powerSys_notm}}. SAP manages the repository and the physical size of the image in the repository can be 4 GB.
-
-If SAP manages your subscription, the SAP performs the following operations on {{site.data.keyword.powerSys_notm}}:
-
-* Creating a Cloud Object Storage bucket to store the images in {{site.data.keyword.powerSys_notm}}.
-* Importing the images from the Cloud Object Storage bucket to a new workspace that is created by SAP.
-* Importing the images from the Cloud Object Storage bucket to an existing workspace.
-    The central image repository that is provided by SAP cannot be used to refresh stock images.
-    {: note}
+The Linux&reg; for SAP (HANA or NetWeaver) operating system (OS) image can be deployed within an {{site.data.keyword.powerSysFull}} by using IBM&reg; provided central image repository for SAP offerings. You can bring your own SAP (HANA or NetWeaver) image with your own subscription, import the image to your workspace, and create a virtual machine by using the image.
 
 
-If you want to import the images for your workspace, contact SAP to get the details such as access key, secret key, bucket name, Cloud Object Storage region, and image name. You can import the images by using the {{site.data.keyword.powerSys_notm}} interface, CLI, API, or Terraform.
+You can import an image by using the {{site.data.keyword.powerSys_notm}} interface, CLI, API, or Terraform.
 
-To deploy imported images to a storage pool, they can only be used within the same storage pool where they are initially stored. If you wish to deploy the images to a different storage pool, you must first store the images in that specific storage pool. When utilizing APIs for image import, you have the option to define the storage pool where the images should be stored.
+When you import a Linux for SAP (HANA or NetWeaver) custom image through the interface, select the self-certification checkbox to confirm that the image is an SAP image. For more information about importing an image, see [Using the Power Virtual Server user interface to import a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#console-import-image).
 
-Before deploying the Linux for SAP (HANA or NetWeaver) image on the {{site.data.keyword.powerSys_notm}} workspace, ensure that the planning and pricing are finalized. Additionally, make sure to complete the pricing before the managed services subscription with SAP expires. 
+
+
+The IBM provided central image repository for SAP offerings cannot be used to refresh the stock images.
+{: note}
+
+An imported SAP image is stored into a single storage pool and can be deployed only in that single storage pool. To deploy the SAP image into other storage pools, you must import the image into those storage pools. If you use APIs for image import, you can define the storage pool where the images can be stored.
+
+
+
+
