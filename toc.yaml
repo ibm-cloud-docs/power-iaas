@@ -154,9 +154,7 @@ toc:
       - topicgroup:
            label: SAP
            topics:
-             - deploying-SAP-custom-image.md
              - SAP-full-system-profiles.md
-             - SAP-HANA-sr2-sh2-profiles.md
       - topicgroup:
             label: Observability
             topics:

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-21"
+lastupdated: "2024-06-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -37,9 +37,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     {{site.data.keyword.powerSys_notm}} on-premises is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
 
 - Deploy Linux for SAP (HANA or Netweaver) OS image within IBM {{site.data.keyword.powerSys_notm}} by using SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
-
-- Deploy SAP full system profiles on the S1022 system only if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
-- Deploy SAP HANA sr2 and sh2 profiles on the S1022 or E1080 system. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
