@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -117,7 +117,7 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     Buckets are a way to organize your data, but they are not the only way. Object names (often referred to as object keys) can use one or more forward slashes for a directory-like organizational system. You then use the portion of the object name before a delimiter to form an object prefix, which is used to list related objects in a single bucket through the API.
     {: tip}
 
-Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB [of uncompressed image]{: tag-teal} ) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, and so on) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+Objects are limited to 200 MB when uploaded through the console unless you use the Aspera High-Speed Transfer plug-in. Larger objects (up to 10 TB of uncompressed image) can also be split into parts and uploaded in parallel using the API. Object keys can be up to 1024 characters in length, and avoid any characters that might be problematic in a web address. These special characters (*?*, *=*, *<*, and so on) might cause unwanted behavior if not URL-encoded. For more information, see the [Cloud Object Storage tutorial](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 ## Generating secret and access keys with Hash-based Message Authentication Code (HMAC)
 {: #access-keys}

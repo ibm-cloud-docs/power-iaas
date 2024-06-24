@@ -3,9 +3,9 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-06-24"
 
-keywords: {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to, managing virtual appliances
+keywords: managing virtual appliances, onboarding VM images
 
 subcollection: power-iaas
 

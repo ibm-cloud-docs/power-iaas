@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-24"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -59,7 +59,7 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
 - You cannot create a non-PER workspace in a PER-enabled data center. However, you can still use your old non-PER workspaces that are existing in a PER-enabled data center that are created before PER rollout.
-- In certain situations, local connection charges can apply when you connect from a [client-managed]{: tag-teal} location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
+- In certain situations, local connection charges can apply when you connect from a client-managed location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
 
 ## Migrating to PER
 {: #migrate-per}

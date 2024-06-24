@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-24"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Importing a boot image
 {: #importing-boot-image}
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 1 (NVMe-based Flash Storage)** or **Tier 3 (SSD Flash Storage)** storage types. The **Tier 1** storage type is best for customers who require higher throughput. Customers who do not require exceptionally high throughput and are looking to minimize costs can select **Tier 3**. The storage types cannot be changed when the volume is created. A VM cannot have disks from both storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. The storage types cannot be changed when the volume is created. A VM can have disks from multiple storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
 Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).

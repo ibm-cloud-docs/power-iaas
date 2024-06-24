@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-24"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -19,7 +19,7 @@ subcollection: power-iaas
 IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
+[On-premises]{: tag-red} To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
 {: important}
 
 For more information about IAM, review the following information:
@@ -65,7 +65,7 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
 - Specific resources, which support the following selections:
     - Resource group
     - Service instance
-  
+
 Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
 {: note}
 
@@ -84,7 +84,7 @@ The following table displays the additional access roles that are required for t
 | Reader, Viewer                                          | All resources in account (Including future IAM enabled services)     |
 | Editor, Operator, Viewer                                | Direct Link service                                                  |
 | Viewer                                                  | All resource group                                                   |
-| Viewer                                                  | Satellite service (Private Cloud)                                    |
+| Viewer                                                  | Satellite service [On-premises]{: tag-red}                           |
 {: caption="Table 3. Additional access roles" caption-side="bottom"}
 
 ## User access scenarios

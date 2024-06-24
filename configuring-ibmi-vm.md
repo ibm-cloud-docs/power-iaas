@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -159,6 +159,10 @@ When you have verified your network and license key configuration, you can initi
 If license keys for the operating system or any IBM i licensed program Products (LPP) is not applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
 If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
+
+The IBM i virtual machine might result in a timeout error, if you update the IBM i virtual machine license and memory together.
+{: note}
+
 
 
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
