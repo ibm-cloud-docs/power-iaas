@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-21"
+lastupdated: "2024-06-26"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -189,7 +189,7 @@ FLS provides access to RHEL OS fixes and updates through activation keys for Pow
 
 The following list is an example of the FLS offerings:
 
-* Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.0 (General)
+* Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.2 (General and SAP)
 * Support:	You pay IBM for support
 * Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
 
