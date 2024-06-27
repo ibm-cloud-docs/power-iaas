@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-26"
+lastupdated: "2024-06-27"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -449,7 +449,7 @@ The key differences are as follows:
 
 | Context | Snapshot | Clone |
 |-|-|-|
-| Definion | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
+| Definition | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
 | Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
 | Ease of creation | Easy and quick process| Three-step process and takes a long time|
 | Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|

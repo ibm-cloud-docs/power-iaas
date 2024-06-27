@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-27"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -113,20 +113,20 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 #### Small pod configurations
 {: #pod-config-small}
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.  
+An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
 
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
 
 | Server types                | Min   | Min | Max |
 | --------------------------- | ------|-----|---- |
-| Server quantity in a pod    | 6     | 5   | 9   | 
+| Server quantity in a pod    | 6     | 5   | 9   |
 | Number of cores per server  | 40    | 40  | 40  |
-| Total number of cores       | 240   | 200 | 360 | 
+| Total number of cores       | 240   | 200 | 360 |
 | Usable cores                | 198   | 165 | 297 |
-|                             |       |     |     | 
-| **Memory types**            |       |     |     |      
-| 2 TB                        | 12    | -   | 18  |  
+|                             |       |     |     |
+| **Memory types**            |       |     |     |
+| 2 TB                        | 12    | -   | 18  |
 | 4 TB                        | -     | 20  | 36  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
@@ -150,7 +150,7 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rac
 {: #single-rack}
 {: tab-title="E1050"}
 
-The small pod with one rack is available with FS 230 TB flash system storage. 
+The small pod with one rack is available with FS 230 TB flash system storage.
 
 | Storage types                         | FS 230 TB |        |
 | ------------------------------------- | ----------|--------|
@@ -173,19 +173,19 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U o
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
-|  Server types               | Min   | Max | Min | Max  | 
-| --------------------------- | ------|-----|-----|------| 
-| Number of racks             | 2     |  2  | 4   |  4   |    
-| Server quantity in a pod    | 12    | 15  | 16  | 40   | 
-| Number of cores per server  | 40    | 40  | 40  | 40   | 
-| Total number of cores       | 480   | 600 | 640 | 1600 | 
-| Usable cores                | 396   | 495 | 528 | 1320 | 
-| **Memory types**            |       |     |     |      |  
-| 2 TB                        | 24    | 30  | 32  | 80   |   
-| 4 TB                        | 48    | 60  | 64  | 160  | 
-| 8 TB                        |  -    |  -  | -   |  -   | 
-| 16 TB                       |  -    |  -  | -   |  -   |  
-| 32 TB                       |  -    |  -  | -   |  -   | 
+|  Server types               | Min   | Max | Min | Max  |
+| --------------------------- | ------|-----|-----|------|
+| Number of racks             | 2     |  2  | 4   |  4   |
+| Server quantity in a pod    | 12    | 15  | 16  | 40   |
+| Number of cores per server  | 40    | 40  | 40  | 40   |
+| Total number of cores       | 480   | 600 | 640 | 1600 |
+| Usable cores                | 396   | 495 | 528 | 1320 |
+| **Memory types**            |       |     |     |      |
+| 2 TB                        | 24    | 30  | 32  | 80   |
+| 4 TB                        | 48    | 60  | 64  | 160  |
+| 8 TB                        |  -    |  -  | -   |  -   |
+| 16 TB                       |  -    |  -  | -   |  -   |
+| 32 TB                       |  -    |  -  | -   |  -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Table 3. Medium pod configuration." caption-side="top"}
@@ -194,14 +194,14 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U o
 
 | Server types                | Min      | Max  | Min   | Max  |
 | --------------------------- | -------- | ---- | ----- | ---- |
-| Number of racks             | 2        | 2    | 4     | 4    | 
-| Server quantity in a pod    | 5        | 7    | 8     | 19   | 
-| Number of cores per server  | 96       | 96   | 96    | 96   | 
-| Total number of cores       | 480      | 672  | 768   | 1824 | 
-| Usable cores                | 425      | 595  | 680   | 1615 | 
-| **Memory types**            |          |      |       |      | 
-| 2 TB                        |          |      |       |      | 
-| 4 TB                        | 20       | 28   |  32   | 76   | 
+| Number of racks             | 2        | 2    | 4     | 4    |
+| Server quantity in a pod    | 5        | 7    | 8     | 19   |
+| Number of cores per server  | 96       | 96   | 96    | 96   |
+| Total number of cores       | 480      | 672  | 768   | 1824 |
+| Usable cores                | 425      | 595  | 680   | 1615 |
+| **Memory types**            |          |      |       |      |
+| 2 TB                        |          |      |       |      |
+| 4 TB                        | 20       | 28   |  32   | 76   |
 | 8 TB                        | 40       | 56   | 64    | 152  |
 | 16 TB                       |  -       |  -   |  -    | -    |
 | 32 TB                       |   -      |  -   |  -    |  -   |
@@ -230,16 +230,16 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U o
 {: #multi-rack}
 {: tab-title="E1080 (2CEC)"}
 
-The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage. 
+The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
 
 | Storage types                         | Min                    | Max  | Min   | Max  |
 | ------------------------------------- | -----------------------|----- | ------|------|
-| Drives for each flash system          | 24                     | 48   | 24    | 48   | 
-| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 | 
-| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    | 
+| Drives for each flash system          | 24                     | 48   | 24    | 48   |
+| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 |
+| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    |
 | Total Drives in a pod                 | 24                     | 48   | 48    | 96   |
-| Total capacity in TB                  | 460                    | 920  | 920   | 1840 | 
-| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 | 
+| Total capacity in TB                  | 460                    | 920  | 920   | 1840 |
+| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 |
 | Usable capacity in TB at 2x compression | 876                  | 1752 | 1752  | 3504 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}

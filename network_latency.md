@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-27"
 
 keywords: network latency, {{site.data.keyword.powerSys_notm}}, private clouds
 
@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 [On-premises]{: tag-red}
 
-The network latency between your data center and the corresponding {{site.data.keyword.powerSysFull}} IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds.
+The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds.
 {: shortdesc}
 
 You can note the IP addresses for the IBM Cloud region that you want to test from the following table:

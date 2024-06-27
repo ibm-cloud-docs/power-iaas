@@ -20,9 +20,12 @@ toc:
       - getting-started.md
       - release-notes.md
       - about-power-virtual-server.md
-      - pricing-private-cloud.md
-      - pricing.md
-      - generating-estimate.md
+      - topicgroup:
+              label: Pricing
+              topics:
+              - pricing-private-cloud.md
+              - pricing.md      
+              - generating-estimate.md
       - ha-dr.md
       - topicgroup:
               label: Backup strategies in Power Virtual Servers

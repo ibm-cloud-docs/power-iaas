@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-27"
 
 keywords: mdm, storage pool, mount command, powervm
 
@@ -31,14 +31,10 @@ You can configure MDM on an IBM Power PowerVM AIX LPAR. For more information, se
 
 6. **Right-click** and select **View Mount Command** to view the mount parameters for the share. You can have multiple mount options depending on your MDM order's supplied network parameters. Make sure that you are using the correct mount for your network environment. In the following example, *eth2* is cabled to the management network, and *eth4* is cabled to a network that the production LPARs have access to.
 
-    ![Viewing the share mount parameters](./images/mdm-view-mount.svg "Viewing the share mount parameters"){: caption="Figure 4. Viewing the share mount parameters" caption-side="bottom"}
-
 7. On your AIX LPAR, enter the `mount ServerName:/remote/directory /local/directory` command. You must replace *ServerName* with the MDM IP address. Your command should appear similar to the following: `mount 10.32.246.4:/export/ibmpoc /share/ibmpoc`.
 
     The MDM device does not allow routing on the secondary NIC unless management and data ports are shared. The secondary NIC and the AIX host must be on the same layer 2 VLAN or subnet.
     {: note}
-
-    ![Entering the mount command](./images/mdm-view-mount-command-ibmpoc.svg "Entering the mount command"){: caption="Figure 5. Entering the mount command" caption-side="bottom"}
 
 8. Copy or move your data from the AIX host to the share by using the `cp` or `mv` commands.
 

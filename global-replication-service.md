@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-13"
+lastupdated: "2024-06-27"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,  
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Global Replication Service
+# Global Replication Service (GRS)
 {: #getting-started-GRS}
 
 Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads nowadays run on cloud infrastructure, it’s essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
@@ -83,6 +83,7 @@ The following table shows the data centers that support replication and their co
 | `WDC06`| `DAL12` |
 | `WDC07`| `DAL10` |
 | `OSA21`| `TOK04` |
+| `SYD04`| `SYD05` |
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
 

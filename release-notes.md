@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-26"
+lastupdated: "2024-06-27"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -24,7 +24,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - The RHEL 8.6 general purpose (RHEL8-SP6) stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
 
-- Global replication service supports the new data center pair `OSA21` and `TOK04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- Global replication service supports the new data center pairs `OSA21` and `TOK04`; `SYD04` and `SYD05`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 - Access the dedicated host capability from the {{site.data.keyword.powerSys_notm}} user interface. IBM Power S922 and S1022 servers can be provisioned for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
