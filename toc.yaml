@@ -56,6 +56,7 @@ toc:
       - topicgroup:
           label: Use cases
           topics:
+             - connect-azure-multicloud.md
              - use-case-dev.md
              - use-case-app.md
              - use-case-hybrid.md
