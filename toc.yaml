@@ -11,7 +11,7 @@ toc:
     console-page: /catalog/services/power-systems-virtual-server
     product-page: https://www.ibm.com/cloud/power-virtual-server
     path: power-iaas
-    label: Power Virtual Servers
+    label: Power Virtual Server
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See /docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
@@ -24,17 +24,17 @@ toc:
               label: Pricing
               topics:
               - pricing-private-cloud.md
-              - pricing.md      
+              - pricing.md
               - generating-estimate.md
       - ha-dr.md
       - topicgroup:
-              label: Backup strategies in Power Virtual Servers
+              label: Backup strategies in Power Virtual Server
               topics:
               - backup-strategies.md
               - backup-strategies-ibmi.md
               - additional-backup-strategies.md
       - topicgroup:
-              label: Migration strategies in Power Virtual Servers
+              label: Migration strategies in Power Virtual Server
               topics:
               - system-migration.md
               - migration-strategies-aix.md
@@ -43,7 +43,7 @@ toc:
               - migration-strategies-third-party.md
               - migration-strategies-backup-restore.md
       - topicgroup:
-              label: Replication in Power Virtual Servers
+              label: Replication in Power Virtual Server
               topics:
               - host-and-os-based-logical-replication.md
               - global-replication-service.md

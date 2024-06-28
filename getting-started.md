@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-06-28"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -21,20 +21,6 @@ subcollection: power-iaas
 You get fast and flexible management that can be connected to access a stack of enterprise services from IBM – all with pay-as-you-use billing. Using these services you can easily adjust workloads with flexible compute capacity. {{site.data.keyword.powerSys_notm}} instances can be used across the IBM Cloud platform globally. You can quickly deploy a {{site.data.keyword.powerSys_notm}} to meet your specific business needs and easily control workload demands. Avoid the large capital expenses or added risk when migrating your essential workloads and get started with {{site.data.keyword.powerSys_notm}} today! For frequently asked questions about the {{site.data.keyword.powerSys_notm}}, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 
 
-## IBM {{site.data.keyword.powerSys_notm}} Public Cloud
-{: #public-cloud}
-
-[Off-premises]{: tag-blue}
-
-
- IBM {{site.data.keyword.powerSys_notm}} resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that are nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
-
-In the data centers, the {{site.data.keyword.powerSys_notm}} are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or private cloud environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified private cloud infrastructure.
-
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-vpc-infrastructure){: external}.
-
-If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-app-modernization-using-RedHat-openshift).
-
 ## IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #private-cloud}
 
@@ -47,6 +33,22 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud officially supports Red Ha
 {{site.data.keyword.powerSys_notm}} does not provide Linux stock images. Bring your own Linux image (OVA format) and subscription. SUSE Linux Enterprise Server (SLES) and RHEL OVA images are supported. [Learn more](/docs/power-iaas?topic=power-iaas-using-linux)
 {: note}
 
+
+
+
+## IBM {{site.data.keyword.powerSys_notm}}
+{: #public-cloud}
+
+[Off-premises]{: tag-blue}
+
+
+ IBM {{site.data.keyword.powerSys_notm}} resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that are nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.
+
+In the data centers, the {{site.data.keyword.powerSys_notm}} are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or private cloud environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified private cloud infrastructure.
+
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-vpc-infrastructure){: external}.
+
+If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-app-modernization-using-RedHat-openshift).
 
 
 ## Terminology
@@ -77,17 +79,16 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 ![Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance](./figures/PowerVS-lifecycle_overview.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance"){: caption="Figure 1. Getting Started with IBM {{site.data.keyword.powerSys_notm}} Private Cloud service instance" caption-side="bottom"}
 
-## Lifecycle of a {{site.data.keyword.powerSys_notm}} Public Cloud
-{: #lifecycle-on-cloud}
-
-[Off-premises]{: tag-blue}
-
-![Lifecycle of a {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of a {{site.data.keyword.powerSys_notm}}"){: caption="Figure 2. Lifecycle of a {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
-
-
 ## Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #lifecycle-private-cloud}
 
 [On-premises]{: tag-red}
 
-![Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud"){: caption="Figure 3. Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="bottom"}
+![Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud"){: caption="Figure 2. Lifecycle of an IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="bottom"}
+
+## Lifecycle of a {{site.data.keyword.powerSys_notm}}
+{: #lifecycle-on-cloud}
+
+[Off-premises]{: tag-blue}
+
+![Lifecycle of a {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of a {{site.data.keyword.powerSys_notm}}"){: caption="Figure 3. Lifecycle of a {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
