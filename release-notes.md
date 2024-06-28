@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-06-28"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -20,7 +20,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## June 2024
 {: #jun-2024}
 
+- {{site.data.keyword.powerSysFull}} Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of {{site.data.keyword.powerSys_notm}} within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment. For more information about {{site.data.keyword.powerSys_notm}} Private Cloud and how to get started, see [Getting started with IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-getting-started).
 
+    The content specific to IBM {{site.data.keyword.powerSys_notm}} Private Cloud is marked with [On-premises]{: tag-red} tag and the content specific to IBM {{site.data.keyword.powerSys_notm}} is marked with [Off-premises]{: tag-blue} tag.
+    {: note}
 
 - The RHEL 8.6 general purpose (RHEL8-SP6) stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
 
