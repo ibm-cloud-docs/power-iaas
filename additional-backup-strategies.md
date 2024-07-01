@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-07-01"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -104,4 +104,4 @@ A license key is generated to whomever placed the order.
 ## FalconStor StorSafe VTL
 {: #fstor-vtl}
 
-For more information, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-manage-vt).
+For more information, see [FalconStor StorSafe VTL](/docs/power-iaas?topic=power-iaas-manage-vtl).
