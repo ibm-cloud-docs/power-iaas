@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-02"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -26,9 +26,9 @@ IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
 ## First boot of IBM i
 {: #first-boot}
 
-When an IBM Power Virtual Server is used a Stock OS Image of IBM i, the console must first be used to reset the password of the IBM i standard user `QSECOFR`.
+When an {{site.data.keyword.powerSysFull}} is used a stock OS Image of IBM i, the console must first be used to reset the password of the IBM i standard user `QSECOFR`.
 
-The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 17 characters (no blank spaces) by using the VNC Console. For a refresh of VNC Console usage with IBM i, see the following [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
+The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) by using the VNC Console. For a refresh of VNC Console usage with IBM i, see the following [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
 The following first boot steps can have minor differences for stock OS Images before IBM i 7.5.
 
@@ -51,7 +51,7 @@ To disconnect from the VNC Console session, close the web browser window that is
 
 If you lose internet connectivity, your VNC Console session (provided through noVNC) shows as "Server disconnected (code: 1006)" and will not auto-connect when internet connectivity is restored.
 
-To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details page and select **Open console** from the drop-down list. Your session is restored and show 'Connected (encrypted)'.
+To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details page and select **Open console** from the drop-down list. Your session is restored and shows 'Connected (encrypted)'.
 
 Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VNC Console session URL, such as using a shell command loop:
 
@@ -67,10 +67,10 @@ for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osTy
 When the VNC Console loads and the IBM i console screen is shown, complete the following steps to reset the password of the IBM i standard user:
 1. In the VNC Console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
 2. The **Change Service Tools User Password** screen loads, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
-3. Press your keyboard TAB key multiple times until the cursor is next to the `New password . . . .` and enter a 17 character password (no blanks).
-4. Repeat, use TAB key multiple times until the cursor is next to the `New password (to verify) . . . .` and enter the new password again.
-5. Press ENTER.
-6. The **IPL or Install the System** screen will be shown. See more steps documented on this page.
+3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
+4. Repeat the step on the `New password (to verify) . . . .` field and enter the new password again.
+5. Press ENTER to continue.
+6. The **IPL or Install the System** screen is shown. See more steps documented on this page.
 
     Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
     {: note}
@@ -90,7 +90,7 @@ If the PTFs are incomplete this will cause `cloud-init` to not complete (run aft
 
 1. In the **IPL or Install the System** screen, the cursor is on `Selection`. Therefore, the default as described previously, is 'Perform an IPL' enter `1` and then press ENTER to begin the installation. This process can take more than 10 minutes, each screen in the first text block shows **Current step / total . . . . :** with the number of steps completed (for example `20  49` being 20 of 49 steps).
 
-2. During the installation, you get the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation a blank screen with a cursor will be shown for a few minutes. The cursor will disappear and a full blank screen will be shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
+2. During the installation, you get the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation, a blank screen with a cursor is shown for a few minutes. The cursor disappears and a full blank screen is shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
 
 Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
 {: note}
@@ -99,16 +99,14 @@ Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign O
 ### First boot license choice
 {: #first-boot-license-choice}
 
-When the installation is completed, the licensed program and software agreements must be accepted.
-1. Once installation is completed, the **Sign On** screen will be shown. Enter the `QSECOFR` user, press your keyboard TAB key to move to the next line, and then enter the password that is chosen previously. Press your keyboard ENTER key to log in. In rare occurrences if the password was reset during installation, use default password `QSECOFR` again and follow prompts to change your password again.
-2. Upon login, the screen will automatically change to the **Work with Software Agreements** screen.
-3. On the **Work with Software Agreements** screen, click **PF12** at the bottom of the console window to show the descriptions for each license (for example Db2 Multisystem).
-4. On the **Work with Software Agreements** screen, for each licensed program enter `5` as the "Opt" to display the agreement to accept. Press your keyboard ENTER key to begin.
-5. The **Software Agreement** screen appears for each licensed program. Click **PF15** at the bottom of the console window to Accept All for this licensed program. The **Confirm Acceptance of Software Agreement** screen appears for each licensed program. Press your keyboard ENTER key to confirm acceptance.
-6. The **Work with Software Agreements** screen appears again, showing "More..." in the lower-right corner. Click **PF11** at the bottom of the console window to show the "Accept Status" that should appear as 'Yes'. Press your keyboard ENTER key, this forces a check of the agreements.
-7. The force check of the agreements shows the **Software Agreements Not Accepted** screen. Click **PF12** at the bottom of the console window to return to the **Work with Software Agreements** screen where the licensed program list has been updated.
-8. Repeat steps 14 to 17. There will be 4 repeats until all licensed program Software Agreements have been accepted.
-9. When all licensed program Software Agreements in the list are completed, the **IBM i Main menu** screen is shown and `cloud-init` configuration of network and injection of license keys begin. The `cloud-init` configuration process is run after all, and can take up to 5 minutes.
+When the installation is complete, the **System Sign-On** screen is presented. Follow the similar steps from [First boot change password](#first-boot-change-password) to change `QSECOFR` password. After the System sign-on is complete, accept the Licensed Program Software Agreements.
+
+1. Following login, the screen will automatically change to the work with **Software Agreements** screen.
+2. To accept the license agreements from the console, press **5=display** each license agreement and press ENTER.
+3. Use **F14** to accept each agreement.
+4. After all are accepted, press ENTER to continue to the IBM i main menu.
+5. When the IBM i main menu is shown, the cloud-init configuration of the network and injection of the license keys begin. The cloud-init configuration process ran and can take up to 5 minutes.
+6. Confirm that the system has the [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 
 ## Tips for working with the IBM i console
@@ -118,15 +116,15 @@ When the installation is completed, the licensed program and software agreements
 - IBM i uses function keys extensively. At the bottom of the console, you can see **PF1** through **PF12**. To get to **PF13** to **PF24**, click the **Next...** button.
 - If you see a red **X** in the console during the configuration process, use your keyboard's **CONTROL** button to exit.
 - You can use **CONTROL+W** to end a hung session. If this happens, you must perform a bypass by clicking **PF18** and logging on again.
-- It is recommended to first shut-down the system before you restart it.
+- It is recommended to first shut down the system before you restart it.
 - If you are using a Mac computer, the **Page Down** key is the same as **FN + Down Arrow**.
-- `CRTUSRPRF` and `CHGUSRPRF` use the same new security rules as `QSECOFR`, requiring at least a 17 character password.
+- `CRTUSRPRF` and `CHGUSRPRF` use the same new security rules as `QSECOFR`, requiring at least a 15 character password.
 
 
 ## Verify licenses and network configuration
 {: #verify-licences-and-network-configuration}
 
-To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i Main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1` and press ENTER again.
+To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1` and press ENTER again.
 
 One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` should be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
 
@@ -152,11 +150,11 @@ F12=Cancel    F17=Top         F18=Bottom
 For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
 
 
-Lastly, on the **IBM i Main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values should be populated for each license.
+Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values should be populated for each license.
 
 When you have verified your network and license key configuration, you can initial program load (IPL) the LPAR.
 
-If license keys for the operating system or any IBM i licensed program Products (LPP) is not applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
+If license keys for the operating system or any IBM i licensed program Products (LPP) are not applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
 If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
 
@@ -168,7 +166,7 @@ The IBM i virtual machine might result in a timeout error, if you update the IBM
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
+By default, the SST, and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
@@ -221,6 +219,6 @@ You can use the **Operations** page to manage advanced VM operations and configu
 
      - **Server operating mode**
          - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
-         - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to make changes to the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
+         - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
 
 5. Click **Run Action**.
