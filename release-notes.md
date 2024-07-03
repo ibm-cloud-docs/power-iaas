@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-28"
+lastupdated: "2024-07-03"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -16,6 +16,11 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## July 2024
+{: #jul-2024}
+
+- Global replication service supports the new data center pair `SAO01` and `SAO04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ## June 2024
 {: #jun-2024}
