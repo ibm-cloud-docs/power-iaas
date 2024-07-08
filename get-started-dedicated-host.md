@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-08"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -25,11 +25,13 @@ subcollection: power-iaas
 # Getting started with dedicated host
 {: #dedicated-host}
 
-Dedicated host capability on {{site.data.keyword.powerSysFull}} offers you the exclusive ability to provision an entire server for your exclusive use, expanding your computing options significantly. You can handle mission-critical workloads with complete isolation, control, and security. 
+Dedicated host capability on {{site.data.keyword.powerSysFull}} allows you to provision an entire server for your sole use, significantly expanding your computing options. You can handle mission-critical workloads with complete isolation, control, and security. 
 
-The hourly billing for a Dedicated host on a Power Virtual Server covers the entire server. Using a dedicated host provides extra flexibility to create virtual server instances and control their placement, along with a unique shared processor pool capability. This means you can optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts increase isolation from other users in a cloud environment, ensuring your operations run smoothly and securely.
+The hourly billing for a Dedicated host on a Power Virtual Server covers the entire server. Using a dedicated host provides extra flexibility in two ways: 
+- It allows you to create virtual server instances and control their placement, and
+- It offers a unique shared processor pool capability. 
 
-
+This setup enables you to optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts enhance isolation from other users in a cloud environment, ensuring your operations run smoothly and securely.
 
 Create an estimate before deploying a dedicated host by using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or see the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh) page to learn more.
 
@@ -46,34 +48,29 @@ Dedicated hosts provide the following features:
 ## Primary and secondary workspaces
 {: #pr-sec-ws-dh}
 
-{{site.data.keyword.powerSys_notm}} workspaces are differentiated into primary and secondary workspaces. This differentiation is determined by whether a workspace was used to reserve the dedicated host (primary) or if the workspace was given access to the dedicated host (secondary). See [primary workspace](#primary-ws-dh) and [secondary workspace](#secondary-ws-dh) for more details.
+{{site.data.keyword.powerSys_notm}} workspaces are categorized as primary or secondary. A primary workspace is used to reserve the dedicated host, while a secondary workspace is granted access to the dedicated host. See [primary workspace](#primary-ws-dh) and [secondary workspace](#secondary-ws-dh) for more details.
+
 
 ### Primary workspace
 {: #primary-ws-dh}
 
-A primary workspace is the owning tenant of a dedicated host with full control over the associated resources. The primary workspace can remove, delete, or share the dedicated resources that are owned by the workspace under the IBM Cloud account.  
-
-Primary workspace users can control sharing permissions for dedicated resources with all (or a subset) or their workspaces that are located in the same account. 
+A primary workspace is the owning tenant of a dedicated host with full control over the associated resources. It can delete or share the dedicated resources it owns under the IBM Cloud account. Primary workspace users can control sharing permissions for dedicated resources with all or a subset of their workspaces within the same account. 
 
 Billing for dedicated hosts is charged to the primary workspace.
 
 ### Secondary workspace
 {: #secondary-ws-dh}
 
-A secondary workspace is a workspace with which the dedicated resources are shared.  
-
-This workspace can deploy the virtual server instances on the dedicated resources that are shared with the workspace.  
-
-A secondary workspace cannot further share a resource (that it does not own) with another workspace.
+A secondary workspace is one with which the dedicated resources are shared. It can deploy virtual server instances on the shared dedicated resources. However, a secondary workspace cannot further share a resource it doesn't own with another workspace.
 
 ## Access and authorization
 {: #access-auth-dh}
 
-You can set up authorization for usage of a dedicated host for other workspaces by using the IBM Cloud IAM Service Authorization capabilities. As an administrator of your organization, you can mark users with the following supported roles:
+You can set up authorization for usage of a dedicated host for other workspaces by using IBM Cloud IAM Service Authorization capabilities. As an administrator of your organization, you can assign users the following supported roles:
 |Role           | Description                                                                    |
 |---------------|--------------------------------------------------------------------------------|
 | Reader        | View the workspaces that a dedicated host is shared with.        |
-| Manager       | Reserve and delete dedicated hosts, share, and unshare with other workspaces, any other crud (create, read, update, delete) actions possible with dedicated hosts    |
+| Manager       | Perform all CRUD (Create, Read, Update, Delete) actions on dedicated hosts, including: \n - Reserve and delete dedicated hosts \n - Share and unshare with other workspaces  - Manage any other aspects of dedicated hosts.    |
 {: caption="Table 1. Roles and permissions in dedicated host" caption-side="bottom"}
 
 ## Creating a dedicated host group
@@ -88,10 +85,10 @@ To create a dedicated host group, complete the following steps:
         Here, you can see all existing dedicated hosts.
 4. Click **Reserve host**.
 5. Click **Create new**.
-6. Enter your custom **Dedicated host group name**.
-7. Share this dedicated host group among other workspaces by providing the available workspaces with a secondary access.  
+6. Enter a custom name on the **Dedicated host group name** field.
+7. Optionally, share this dedicated host group with other workspaces by granting them secondary access.  
 
-        Workspaces that are in the same region as the primary workspace and are in an active state can be selected.
+        Only workspaces in the same region as the primary workspace and in an active state can be selected.
         {: note}
 
 8. Click **Save**. 
@@ -110,9 +107,9 @@ To share workspaces, complete the following steps:
 3. Click **Dedicated hosts** on the left navigation menu.  
         Here, you can see all existing dedicated hosts.
 4. Click a dedicated host group to open the details page.
-5. Click **Share** and select the workspaces that you want to share.  
+5. Click **Share** and select the workspaces you want to share with.
 
-        Workspaces that are in the same region as the primary workspace and are in an active state can be selected.
+        Only workspaces in the same region as the primary workspace and in an active state can be selected.
         {: note}
 
 6. Click **Save**.
@@ -128,11 +125,11 @@ You can create multiple dedicated hosts. To reserve a dedicated host, complete t
 3. Click **Dedicated hosts** on the left navigation menu.  
         Here, you can see all existing dedicated hosts.
 4. Click **Reserve host**.
-5. Select the **Dedicated host group** from the available list of host groups already created.
-        Click **Create new** when no dedicated host is available.
-6. Enter your **Host name** and select **Machine type** from the drop-down list.    
+5. Select a dedicated host group from the available list of host groups already created. 
+        If no dedicated host group is available, click **Create new**.
+6. Enter your **Host name** and select the **Machine type** from the drop-down list.    
 
-        Dedicated hosts cannot be reserved into host groups in which the current workspace has secondary access.
+        Dedicated hosts cannot be reserved in host groups where the current workspace has secondary access.
         {: note}
 
 7. Click **Finish** and view the summary of estimated cost.
@@ -150,7 +147,8 @@ Click into a dedicated host to create a new virtual server instance. You must to
 
 Follow the instructions in [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) page for detailed instructions.
 
-The virtual server instances that are deployed on the dedicated host are not billed for core and memory charges.
+Virtual server instances deployed on the dedicated host are not billed for core and memory charges.
+{: note}
 
 ### Creating SPP in a dedicated host
 {: #spp-dh}
@@ -161,7 +159,8 @@ Click into a dedicated host to create a new shared processor pool.
 
 Follow the instructions in the [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP) page for detailed instructions.
 
-When you use dedicated host to deploy the SPPs, the SPPs are not billed for the reserved capacity.
+When using a dedicated host to deploy SPPs, the SPPs are not billed for the reserved capacity.
+{: note}
 
 ## Releasing a dedicated host
 {: #release-dh}
@@ -171,23 +170,20 @@ You can release a dedicated host when no resources are deployed on the host. To 
 2. Select a workspace.
 3. Click **Dedicated hosts** on the left navigation menu.  
         Here, you can see all existing dedicated hosts.
-4. Select the dedicated host that you want to release.  
+4. Select the dedicated host you want to release.  
 
-        You must remove all the associated resources that are provisioned on the host before releasing the host.
+        You must remove all associated resources provisioned on the host before releasing it.
         {: note}
 
 5. Click **Release host**.  
-        When releasing the last dedicated host on a dedicated host group, the dedicated host group will also be deleted. 
-
-        You cannot have empty dedicated host groups on a workspace.
+        When releasing the last dedicated host in a dedicated host group, the group will also be deleted. Empty dedicated host groups are not allowed on a workspace.
         {: note}
-
 
 
 ## Maintenance in dedicated host
 {: #mainetnance-dh}
 
-When IBM needs to do maintenance on a dedicated host, the VMs are evacuated to another dedicated host specifically for the maintenance operation window. You are not able to see anything unless a host failure that needs the replacement of the original dedicated host.
+When IBM needs to do maintenance on a dedicated host, the virtual server instances (VMs) are evacuated to another dedicated host specifically for the maintenance operation window. You will not notice any changes unless there is a host failure that requires replacement of the original dedicated host.
 
 If a dedicated host suffers from a failure, IBM restarts the VMs on another dedicated host.
 
