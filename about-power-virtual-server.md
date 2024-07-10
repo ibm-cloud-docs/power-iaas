@@ -157,7 +157,7 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rac
 | **Memory types**            |          |     |
 | 2 TB                        |  -       | -   |
 | 4 TB                        |  -       | -   |
-| 8 TB                        | 16       | 32  |
+| 8 TB                        |  16      | 32  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Table 1. Small pod configuration." caption-side="top"}
@@ -214,11 +214,11 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U o
 | Total number of cores       | 480      | 672  | 768   | 1824 |
 | Usable cores                | 425      | 595  | 680   | 1615 |
 | **Memory types**            |          |      |       |      |
-| 2 TB                        |          |      |       |      |
+| 2 TB                        |  -       |  -   |   -   |  -   |
 | 4 TB                        | 20       | 28   |  32   | 76   |
-| 8 TB                        | 40       | 56   | 64    | 152  |
-| 16 TB                       |  -       |  -   |  -    | -    |
-| 32 TB                       |   -      |  -   |  -    |  -   |
+| 8 TB                        | 40       | 56   |  64   | 152  |
+| 16 TB                       |  -       |  -   |  -    |  -   |
+| 32 TB                       |  -       |  -   |  -    |  -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Table 3. Medium pod configuration." caption-side="top"}
