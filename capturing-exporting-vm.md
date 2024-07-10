@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-10"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Capturing and exporting a virtual machine (VM)
 {: #capturing-exporting-vm}
+
+
+
 
 You can capture and export an AIX or IBM i VM instance by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VM is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (Cloud Object Storage) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
 {: shortdesc}

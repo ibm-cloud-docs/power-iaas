@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-10"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Snapshots, cloning, and restoring
 {: #snapshots-cloning}
+
+
+
 
 {{site.data.keyword.powerSysFull}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, {{site.data.keyword.powerSysShort}} APIs you can create delta snapshots, volume clones, and restore your disks.
 
@@ -32,7 +35,7 @@ subcollection: power-iaas
 
 With the snapshot interface you can create a relationship between your source disks and a target disks (target disks are created as part of the snapshot API) at time **T1**. The snapshot API tracks the delta changes done to the source disk beyond time **T1**. Thus, you can restore the source disks to their **T1** state at a later point in time.
 
-There are several use cases for the snapshot feature. For example, 
+There are several use cases for the snapshot feature. For example,
 - An administrator plans to upgrade the middleware but would like to be able to revert to its original state before proceeding with an upgrade.
 - If the middleware fails, the administrator can restore the source disk to its previous state. To accomplish this, the administrator would perform the following steps:
 

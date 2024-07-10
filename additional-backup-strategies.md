@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-10"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Additional backup strategies
 {: #additional-backup-strategies}
+
+
+
 
 The additional backup strategies that you can use are as follows:
 

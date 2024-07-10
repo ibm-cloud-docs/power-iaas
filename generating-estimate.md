@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-11"
+lastupdated: "2024-07-10"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -17,6 +17,8 @@ subcollection: power-iaas
 {: #generating-an-estimate}
 {: help}
 {: support}
+
+
 
 Use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} tool to estimate the cost of the resources before you deploy them. With the cost estimator tool, you can customize and determine the requirements that align with your business needs.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-10"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -27,6 +27,8 @@ subcollection: power-iaas
 
 # Additional migration strategies
 {: #additional-migration-strategies-power}
+
+
 
 ## IBM teams and managed services
 {: #teams-managed-services}

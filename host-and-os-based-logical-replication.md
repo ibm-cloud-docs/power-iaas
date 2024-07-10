@@ -3,9 +3,9 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-10"
 
-keywords: Host and OS based logical replication, Replication, Application specific replication, 
+keywords: Host and OS based logical replication, Replication, Application specific replication,
 
 subcollection: power-iaas
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Host and OS-based logical replication
 {: #replication-host}
+
+
 
 IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geographic Mirroring (Geo mirroring) and Geographic Logical Volume Manager (GLVM). The following host and OS-based logical replication options exist depending on your OS:
 
@@ -33,4 +35,3 @@ Applications might have replication mechanisms that can sync multiple environmen
 - MIMIX
 - Oracle Data Guard
 - Oracle Goldengate
-

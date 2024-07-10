@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-10"
 
 keywords: rsct, rmc, IPv6, Reliable Scalable Cluster Technology, RSCT package, Resource Management Control, RMC
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images
 {: #recommended-rsct-package}
+
+
+
 
 RSCT is a set of software components that together provides a comprehensive clustering environment for AIX&reg;, Linux&reg;, Solaris, and Windows&reg; operating systems. RSCT is the infrastructure that is used by various IBM products to provide clusters with improved system availability, scalability, and ease of use. For the {{site.data.keyword.powerSysFull}} offering, RSCT 3.2.1 is the minimum package level that is required for an imported AIX image (provides IPv6 support). However, the {{site.data.keyword.powerSys_notm}} development team recommends that you use [RSCT 3.2.6.2](https://www.ibm.com/support/knowledgecenter/SGVKBA_3.2/navigation/welcome.html){: external} for optimal performance.
 {: shortdesc}

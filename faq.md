@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-10"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # FAQs
 {: #powervs-faqs}
+
+
+
 
 ## What is {{site.data.keyword.powerSysFull}} Private Cloud?
 {: #what-is-ppc}

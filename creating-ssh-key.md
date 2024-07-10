@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Generating and using an SSH key
 {: #creating-ssh-key}
+
+
 
 In this example, the user created a public key on a Linux-based IBM Cloud compute instance by using the `ssh-keygen` tool:
 

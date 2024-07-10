@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-07-10"
 
 keywords: mdm, storage pool, mount command, powervm
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Configuring IBM Cloud Mass Data Migration (MDM) on AIX
 {: #configuring-mdm}
+
+
+
 
 You can configure MDM on an IBM Power PowerVM AIX LPAR. For more information, see [IBM Cloud Mass Data Migration](https://www.ibm.com/cloud/mass-data-migration){: external}.
 {: shortdesc}

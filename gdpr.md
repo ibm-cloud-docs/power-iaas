@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
 
@@ -17,6 +17,9 @@ subcollection: power-iaas
 {: #general-data}
 {: help}
 {: support}
+
+
+
 
 The [General Data Protection Regulation](https://gdpr.eu/){: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}

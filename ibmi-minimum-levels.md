@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: ibm i, program temporary fixes
 
@@ -16,6 +16,7 @@ subcollection: power-iaas
 {: #minimum-levels}
 
 
+
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 
 - IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272)
@@ -23,7 +24,7 @@ Install the following program temporary fixes (PTFs) depending on the version of
 - IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202
 - IBM i 7.5 - No PTF is required
 
-For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}. 
+For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}.
 
 When you use an IBM i custom image, these PTFs must be installed and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}.
 An overview of IBM i fix concepts and terms is found at [Fixes concepts and terms](https://www.ibm.com/docs/en/i/7.4?topic=fixes-concepts-terms){: external}.

@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-21"
+lastupdated: "2024-07-10"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Managing the shared processor pool
 {: #manage-SPP}
+
+
+
 
 A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM).
 {: shortdesc}
@@ -31,8 +34,8 @@ The following table shows how an SPP is used to reduce the licensing cost when y
 {: caption="Table 1. SPP helps to reduce the licensing cost" caption-side="bottom"}
 
 The benefits of using an SPP are as follows:
-- Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licesnses. 
-- A better overall ability to manage processor resources. 
+- Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licesnses.
+- A better overall ability to manage processor resources.
 
 {{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of VMs of the same machine type (host).
 
@@ -95,7 +98,7 @@ Create an SPP by specifying the following parameters:
 
 When you define these parameters, a backend process determines the best host for the new SPP.
 
-When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. These SPPs must be removed manually, as they are not automatically deleted. 
+When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. These SPPs must be removed manually, as they are not automatically deleted.
 {: note}
 
 ### Creating a shared processor pool

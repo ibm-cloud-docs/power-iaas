@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: Red hat use case, use case, Application, modernization, cloud, native
 
@@ -16,6 +16,8 @@ subcollection: power-iaas
 
 # Cloud native development and application modernization by using Red Hat OpenShift on {{site.data.keyword.powerSys_notm}}
 {: #app-modernization-using-RedHat-openshift}
+
+
 
 Cloud-native applications are the applications that are **born in the cloud**, which means that the applications use microservice-based architecture, containers, and a corresponding container orchestration platform. Red Hat&reg; OpenShift&reg; is an enterprise Kubernetes platform enabling IT organizations to develop applications faster, deploy them reliably, and manage them efficiently.
 

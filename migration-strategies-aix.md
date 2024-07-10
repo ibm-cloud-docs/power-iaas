@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -27,6 +27,8 @@ subcollection: power-iaas
 
 # Migration strategies for AIX
 {: #migration-aix}
+
+
 
 Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
 

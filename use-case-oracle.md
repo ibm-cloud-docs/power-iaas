@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-07-10"
 
 keywords: use case, Oracle, database, demos. oracle on Power VS
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Deploying an Oracle database in IBM {{site.data.keyword.powerSys_notm}}s
 {: #use-case-oracle}
+
+
 
 Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}

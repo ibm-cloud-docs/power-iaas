@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-10"
 
 keywords: managing virtual appliances, onboarding VM images
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Managing virtual appliances
 {: #virtual-appliances}
+
+
 
 Virtual appliance is a bring-your-own license model, where independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSysFull}} workloads. It is an appliance-as-a service that allows seamless management and metering of PowerVS. Software support is handled directly by the ISVs for virtual appliances.
 

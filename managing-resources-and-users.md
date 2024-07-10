@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-10"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Managing identity and access management (IAM) for {{site.data.keyword.powerSysFull}}s
 {: #managing-resources-and-users}
+
+
 
 IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

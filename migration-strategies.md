@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -27,6 +27,9 @@ subcollection: power-iaas
 
 # Migration strategies for IBM i
 {: #migration-strategies-power}
+
+
+
 
 Learn about the various strategies to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}

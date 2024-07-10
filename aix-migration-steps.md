@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-10"
 
 keywords: aix mksysb, volume group, backup multiple volumes, savevg, dd command
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Moving data from your private cloud environment to {{site.data.keyword.powerSys_notm}}
 {: #move-data-to-cloud}
+
+
 
 Depending on your network bandwidth and data size constraints, the process of moving the data volume group is as simple as creating an *Open Virtualization Appliance (OVA) file* or an *mksysb* image (root volume group), and creating a set of *savevg* images for volume group data. By using an *OVA* file or an *mksysb* image, you can build or provision a VM and then migrate the data volume groups of the virtual machine (VM) by using the **restvg** command.
 
@@ -34,7 +36,7 @@ Use the following command to find and back up all files in a specific volume gro
 ```
 {: codeblock}
 
-For example,  
+For example,
 
 ```text
 # savevg –f /home/admin01/datavg_bkup –i  datavg
@@ -63,7 +65,7 @@ Run the following command to re-create the volume groups, logical volumes, and f
 
 Now edit the `/tmp/vgdata/{volume group name}/{volume group name}.data file` and look for the line with `VG_SOURCE_DISK_LIST=`. Change the line to have *hdisks*, *vpaths*, or *hdiskpowers* based on your requirement.
 
-For example,  
+For example,
 
 ```text
 # restvg -r -d /tmp/vgdata/{volume group name}/{volume group name}.data

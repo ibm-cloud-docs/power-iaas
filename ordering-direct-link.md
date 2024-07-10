@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: direct link, order DL, ordering DL
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # {{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s
 {: #ordering-direct-link-connect}
+
+
+
 
 Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to configure your private network with {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.dl_short}} (2.0) Connect service creates a seamless connection that allows access to {{site.data.keyword.cloud_notm}} resources from your {{site.data.keyword.powerSys_notm}} instance.
 {: shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Managing events logs and notifications
 {: #manage-event-logs}
+
+
+
 
 The {{site.data.keyword.powerSysFull}} logs all the events and notifications from the IBM Cloud console. You can access these events and notifications in the **Event logs** page.
 {: shortdesc}

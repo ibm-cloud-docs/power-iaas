@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-09"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for {{site.data.keyword.powerSys_notm}}
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} off-premises
 {: #pricing-virtual-server-on-cloud}
 
 [Off-premises]{: tag-blue}

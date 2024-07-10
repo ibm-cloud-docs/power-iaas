@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -27,6 +27,9 @@ subcollection: power-iaas
 
 # Using third-party tools for migration
 {: #migration-strategies-managed-thirdparty}
+
+
+
 
 You can use the third-party tools to complete your data migration. The following third-party tools are commonly used for data migration:
 {: shortdesc}

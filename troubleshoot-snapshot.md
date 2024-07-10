@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-10"
 
 keywords: snapshot, restore, clone, troubleshoot
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Troubleshooting snapshot, clone and restore issues
 {: #troubleshoot-iaas-snapshot}
+
+
 
 Learn how to troubleshoot {{site.data.keyword.powerSysShort}} snapshot, clone and restore issues.
 {: shortdesc}

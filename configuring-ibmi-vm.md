@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-10"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -15,6 +15,7 @@ subcollection: power-iaas
 
 # Configuring your IBM i virtual machine (VM)
 {: #configuring-ibmi}
+
 
 
 The following instructions describe the first boot and usage of your IBM i virtual machine (VM).

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-10"
 
 keywords: use case, client needs, disaster recover, hybrid power, mission-critical application, recovery
 
@@ -16,6 +16,8 @@ subcollection: power-iaas
 
 # Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
+
+
 
 The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destination for their private cloud environment.
 {: shortdesc}

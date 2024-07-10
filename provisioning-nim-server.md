@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-05-07"
+lastupdated: "2024-07-10"
 
 keywords: troubleshooting, NIM server, support, fixes, updates
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Setting up a Network Installation Management (NIM) server
 {: #provisioning-nim}
+
+
+
 
 You can provision an AIX virtual machine (VM) and use it as a NIM server for troubleshooting purposes or for downloading fixes and updates.
 
@@ -47,7 +50,7 @@ You can provision an AIX virtual machine (VM) and use it as a NIM server for tro
     For example, `cp /usr/lpp/bosinst/bos.vendor.profile  /usr/sys/inst.images/installp/ppc/.`
 
 4. Run the following command:
-    
+
     ```code
     `nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no`
     ```

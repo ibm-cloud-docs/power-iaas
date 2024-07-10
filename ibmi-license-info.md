@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -15,6 +15,7 @@ subcollection: power-iaas
 
 # IBM i License Program Products (LPP) and Operating System feature bundles
 {: #ibmi-lpps}
+
 
 
 When you select IBM i, in addition to the IBM i operating system, the following LPP, and IBM i operating system features are included in the {{site.data.keyword.powerSysFull}} offering:

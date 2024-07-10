@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-07-09"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link, colocation, data center, cloud connect, megaport
 
@@ -16,6 +16,8 @@ subcollection: power-iaas
 
 # Network architecture diagrams
 {: #network-reference-architecture}
+
+
 
 This documentation describes typical network architectures that are used in {{site.data.keyword.powerSysShort}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}

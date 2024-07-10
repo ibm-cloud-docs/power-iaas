@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-10"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Getting started with the Power Edge Router
 {: #per}
+
+
 
 A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}

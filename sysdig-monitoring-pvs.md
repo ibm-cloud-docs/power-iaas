@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -207,8 +207,6 @@ The following additional attributes are available for segmenting all the metrics
 
 IBM Cloud Monitoring has the following limitations:
 
-- When you exceed the predefined limits, the rate-limited requests respond with a `503 Service Unavailable` error.
-- {{site.data.keyword.mon_full_notm}} accepts data within a specific time range that is called the window of acceptance. The window of acceptance is fixed to 5 minutes.
 - The Ipv6 interface usage metrics of a {{site.data.keyword.powerSys_notm}} instance are for internal management network. Additionally, these metrics are available even though you did not configure it.
 - When the memory utilization cannot be determined due to various reasons such as communication problem with the {{site.data.keyword.powerSys_notm}} instance, the memory utilizations can show 100%.
 - The memory utilization is zero if the {{site.data.keyword.powerSys_notm}} instance is in a shut-off state.

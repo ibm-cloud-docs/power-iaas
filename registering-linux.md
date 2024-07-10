@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -16,6 +16,10 @@ subcollection: power-iaas
 
 # Using SLES within the {{site.data.keyword.powerSys_notm}}
 {: #using-linux}
+
+
+
+
 
 You can deploy a Linux&reg; virtual machine (VM) by using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-05"
+lastupdated: "2024-07-10"
 
 keywords: setting up terraform, {{site.data.keyword.powerSys_notm}} as a service, private cloud, howto, terminology, how-to
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Setting up Terraform for {{site.data.keyword.powerSys_notm}}
 {: #setting-up-terraform}
+
+
+
 
 Terraform on IBM Cloud enables predictable and consistent provisioning of IBM Cloud services so that you can rapidly build complex, multitier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the IBM Cloud CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.powerSysFull}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-10"
 
 keywords: ibm i, network intsall server, volume_list
 
@@ -15,6 +15,7 @@ subcollection: power-iaas
 
 # Setting up an IBM i network install server
 {: #preparing-install-server}
+
 
 
 Before you can install or upgrade an IBM i system through the network, you must set up a network installation server. The network installation server contains images of the IBM i operating system, its internal code, licensed programs, and PTFs. To share virtual optical images through a network, the network installation server must meet the following requirements that are documented in the subsequent sections.

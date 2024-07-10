@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -16,6 +16,9 @@ subcollection: power-iaas
 
 # Modifying a {{site.data.keyword.powerSys_notm}} instance
 {: #modifying-instance}
+
+
+
 
 Learn how to modify your {{site.data.keyword.powerSysFull}} to better meet your business needs.
 {: shortdesc}

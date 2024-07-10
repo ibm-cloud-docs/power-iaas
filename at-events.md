@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-17"
+lastupdated: "2024-07-10"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Activity tracker events
 {: #at-events}
+
+
 
 {{site.data.keyword.powerSys_notm}} Activity Tracker Events migrated to the CADF Event standard on 29 January, 2024. With the implementation of this change, some of the event fields are not sent or replaced by the [new format](#at-response-sample).
 {: note}
@@ -280,8 +282,8 @@ The following events are to work with VPN Connection in your {{site.data.keyword
 Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs as follows:
 - All North America and South America data centers from Dallas.
 - All Europe data centers from Frankfurt.
-- All Sydney data center from Sydney, and 
-- All Japan data center from Tokyo. 
+- All Sydney data center from Sydney, and
+- All Japan data center from Tokyo.
 
 For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 

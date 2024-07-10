@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-07-10"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -17,13 +17,22 @@ subcollection: power-iaas
 # What is {{site.data.keyword.powerSys_notm}}?
 {: #about-power-iaas}
 
+
+
+
 {{site.data.keyword.powerSysFull}} is an IBM Power server offering. You can use the {{site.data.keyword.powerSys_notm}} to deploy a virtual server, also known as a logical partition (LPAR), in a matter of minutes. You can provision flexible, secure, and scalable compute capacity for Power servers enterprise workloads on both IBM {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}}.
+{: shortdesc}
+
 
 Review this information to understand the {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} architectures and to identify the hardware and software specifications:
-{: shortdesc}
+
+
+
+
 
 * [IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](#private-cloud-architecture)
 * [{{site.data.keyword.powerSys_notm}} architecture](#on-cloud-architecture)
+
 
 ## IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture
 {: #private-cloud-architecture}
@@ -143,7 +152,7 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rac
 |                             |          |     |
 | **Memory types**            |          |     |
 | 2 TB                        |  -       | -   |
-| 4 TB                        | 16       | 32  |
+| 8 TB                        | 16       | 32  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Table 1. Small pod configuration." caption-side="top"}

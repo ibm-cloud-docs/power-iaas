@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-10"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Deploying a custom image within a {{site.data.keyword.powerSys_notm}}
 {: #deploy-custom-image}
+
+
+
 
 You can bring your own customized AIX or IBM i operating system (OS) image to deploy within a {{site.data.keyword.powerSysFull}}.
 {: shortdesc}

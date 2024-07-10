@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: Hyper Protect Crypto Services for Power VS, HPCS Power VS, AIX HPCS, LINUX HPCS, Configure HPCS
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services
 {: #integrate-hpcs}
+
+
+
 
 [On-premises]{: tag-red}To integrate {{site.data.keyword.powerSysFull}} with IBM Cloud key management services, establish a connection from your virtual machine to IBM Cloud.
 {: note}

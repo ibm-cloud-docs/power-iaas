@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-06-12"
+lastupdated: "2024-07-10"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # {{site.data.keyword.powerSys_notm}} VPN
 {: #VPN-connections-deprecated}
+
+
 
 The {{site.data.keyword.powerSys_notm}} VPN is deprecated and IBM won't provide standard support after 18 January 2025. Create your new VPN connection by using the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn). For existing {{site.data.keyword.powerSys_notm}} VPN connections, upgrading to VPC VPN is encouraged before March 2024 with the end of service on 14 July 2025. If you need any assistance on upgrading or migration, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: deprecated}

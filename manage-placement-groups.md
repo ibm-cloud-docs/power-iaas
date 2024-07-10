@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-11"
+lastupdated: "2024-07-10"
 
 keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Managing server placement groups
 {: #managing-placement-groups}
+
+
+
 
 Server placement groups provide you control over the host or server on which a new virtual machine (VM) is placed. By using server placement groups, you can build high availability within a data center.
 {: shortdesc}
@@ -29,7 +32,7 @@ You can use the user interface for placement groups only when the total number o
 
 You can create server placement groups and provision VMs in this placement group. The VMs in this group can be set to have an affinity or anti-affinity policy with each other. Each placement group that you create must have a unique name. You can create a maximum of 25 placement groups. If you need to create more than 25 placement groups, raise a support ticket to increase the maximum limit. Use the following API to create a placement group: [Create a server placement group](/apidocs/power-cloud#pcloud-placementgroups-post).
 
-You can add or remove VMs within the placement group. You cannot change the policy or name of a placement group after it is created. 
+You can add or remove VMs within the placement group. You cannot change the policy or name of a placement group after it is created.
 
 To create a placement group, complete the following steps:
 

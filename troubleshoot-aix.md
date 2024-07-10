@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-10"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS, object data manager, improving performance, suboptimal, lsattr
 
@@ -15,6 +15,8 @@ subcollection: power-iaas
 
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
+
+
 
 Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues.
 {: shortdesc}
@@ -30,18 +32,18 @@ Causes: The AIX boot disk might be corrupted.
 Resolve: If the AIX VM does not boot, you must provision an extra AIX VM and use it as a Network Installation Management (NIM) server. Without a NIM server, you cannot debug the boot issue and must reimage your disk.
 
 1. Determine the hostname and IP address of the system by using the following two commands:
-- `hostname` and 
+- `hostname` and
 - `ifconfig -a`
 
 2. Using the information from the previous step, add an entry for your hostname and IP address into `/etc/hosts`. For example, `echo "192.168.0.15 aix-7100-05-04" >> /etc/hosts`.
 
-3. Run the following command: 
+3. Run the following command:
 
 ```code
 nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no
 ```
 
-4. Once completed, the NIM master file set is installed and the basic resource objects created. 
+4. Once completed, the NIM master file set is installed and the basic resource objects created.
     The administrator is now able to add more NIM clients and define resources.
 
 For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-09"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} on-premises
 {: #pricing-private-cloud}
 
 [On-premises]{: tag-red}

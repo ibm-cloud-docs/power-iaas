@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-10"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -15,6 +15,9 @@ subcollection: power-iaas
 
 # Downloading fixes and updates
 {: #downloading-fixes-updates}
+
+
+
 
 You must use the AIX [Service Update Management Assistant (SUMA)](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/install/serv_update_mgt.html){: external} or the IBM i `Send PTF Order (SNDPTFORD)` command to download fixes and updates from the IBM Fix Central website.
 {: shortdesc}
@@ -38,11 +41,11 @@ SUMA sets up an automated interface to download fixes and updates from a fix dis
 
 When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master, SUMA establishes a connection to the fix distribution website and downloads the available service update.
 
-To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes): 
+To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes):
 
 ```code
 /usr/esa/bin/verifyConnectivity -tw
-``` 
+```
 If the tests fail, work with your network security team to determine why you are unable to access the servers.
 
 You can access the SUMA configuration by running the [suma command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/s_commands/suma.html){: external} or by using the `SMIT suma` fast path. When you create a SUMA policy, you must specify one of the following request types that specifies the type of download:
