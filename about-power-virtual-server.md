@@ -30,6 +30,9 @@ Review this information to understand the {{site.data.keyword.powerSys_notm}} Pr
 
 
 
+
+
+
 * [IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](#private-cloud-architecture)
 * [{{site.data.keyword.powerSys_notm}} architecture](#on-cloud-architecture)
 
@@ -578,3 +581,5 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 
 For more information about the different options for configuring a private network, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 {: note}
+
+

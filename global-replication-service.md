@@ -72,24 +72,24 @@ The following table explains how to determine the primary and secondary site bas
 {: class="simple-table"}
 {: caption="Table 2. Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
-## Locations that support global replication service
+## {{site.data.keyword.powerSys_notm}} regions supporting global replication service
 {: #locations-GRS}
 
-You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations that are supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall).
+You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations that are supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall) in API documentation.
 
-The following table shows the data centers that support replication and their corresponding pool level detail:
-| Site 1 |  Site 2 |
+The following table shows the location pairs that support replication: 
+| Location 1 |  Location 2 |
 |--------|---------|
-| `MAD02`| `FRA04` |
-| `MAD04`| `FRA05` |
-| `WDC04`| `DAL13` |
-| `WDC06`| `DAL12` |
-| `WDC07`| `DAL10` |
-| `OSA21`| `TOK04` |
-| `SYD04`| `SYD05` |
-| `SAO01`| `SAO04` |
+| `mad02`| `eu-de-1 (fra04)` |
+| `mad04`| `eu-de-2 (fra05)` |
+| `us-east (wdc04)`| `us-south (dal13)` |
+| `wdc06`| `dal12` |
+| `wdc07`| `dal10` |
+| `osa21`| `tok04` |
+| `syd04`| `syd05` |
+| `sao01`| `sao04` |
 {: class="simple-table"}
-{: caption="Table 1. Replication enabled data center and their supported storage pool" caption-side="bottom"}
+{: caption="Table 1. Replication enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
 
 ## Preparation for disaster recovery
 {: #dr-prep}
