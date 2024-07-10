@@ -140,6 +140,7 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rac
 | **Memory types**            |       |     |     |
 | 2 TB                        | 12    | -   | 18  |
 | 4 TB                        | -     | 20  | 36  |
+| 8 TB                        | -     | -   | -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Table 1. Small pod configuration." caption-side="top"}
@@ -155,6 +156,7 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rac
 |                             |          |     |
 | **Memory types**            |          |     |
 | 2 TB                        |  -       | -   |
+| 4 TB                        |  -       | -   |
 | 8 TB                        | 16       | 32  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
