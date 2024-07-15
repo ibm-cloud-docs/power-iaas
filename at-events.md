@@ -358,7 +358,7 @@ The following code snippets show the differences between the old and new activit
         "name": "ActivityTracker"
     }
 }
-````
+```
 
 `Old response format`
 ```json
@@ -406,7 +406,7 @@ The following code snippets show the differences between the old and new activit
         "userSpaceRegion": "ng"
     }
 }
-````
+```
 
 ## Activity tracker regions
 {: #at-regions}

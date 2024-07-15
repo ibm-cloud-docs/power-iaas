@@ -19,7 +19,7 @@ subcollection: power-iaas
 
 
 
-You can bring your own customized AIX or IBM i operating system (OS) image to deploy within a {{site.data.keyword.powerSysFull}}.
+You can bring your own customized AIX or IBM i operating system (OS) image to deploy within an {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
 You cannot transfer an OS license from a private cloud system to a {{site.data.keyword.powerSys_notm}}. The license cost is factored into the overall hourly billing rate.

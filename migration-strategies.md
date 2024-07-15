@@ -31,7 +31,7 @@ subcollection: power-iaas
 
 
 
-Learn about the various strategies to migrate your data and workloads to a {{site.data.keyword.powerSysFull}}.
+Learn about the various strategies to migrate your data and workloads to an {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
 ## IBM i migration strategies

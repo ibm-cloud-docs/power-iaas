@@ -18,7 +18,7 @@ subcollection: power-iaas
 
 
 
-Learn how to deploy an Oracle database in a {{site.data.keyword.powerSysFull}} instance.
+Learn how to deploy an Oracle database in an {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}
 
 To migrate an AIX-based Oracle database from IBM Power to {{site.data.keyword.powerSys_notm}}, see [Oracle technical migration procedure](https://cloud.ibm.com/media/docs/downloads/power-iaas/Oracle_Technical_Migration_procedure.pdf){: external}.

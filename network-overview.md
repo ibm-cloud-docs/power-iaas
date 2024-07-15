@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-10"
+lastupdated: "2024-07-10"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -71,7 +71,7 @@ If you create an overlapping network through an API, an error message similar to
   "errors": "Subnet overlap between uni/tn-VPN502/BD-BD_VPN502_V504_PRIV_3302/subnet-[192.168.31.1/24] and uni/tn-VPN502/BD-BD_VPN502_V504_PRIV_3301/subnet-[192.168.31.1/24] in VRF uni/tn-VP
 N502/ctx-VPN502_V504_VRF. It is not possible to have overlapping subnets across different Bridge Domains within the same VRF."
 }
-````
+```
 
 As part of the network planning, you can review the following use cases and identify the use cases that are applicable to you. You can communicate about such requirements before the installation so that you do not have to open separate support tickets to implement the use-cases and configurations.
 

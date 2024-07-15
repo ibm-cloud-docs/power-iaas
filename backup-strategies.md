@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -162,6 +162,7 @@ The Backup Offering is available in the following data center pairs:
 | MAD04         | FRA05         |
 | SAO01         | SAO04         |
 | OSA21         | TOK04         |
+| SYD04         | SYD05         |
 {: caption="Table 1. Data center pair availibility for backup offering" caption-side="bottom"}
 
 ### Additional support
