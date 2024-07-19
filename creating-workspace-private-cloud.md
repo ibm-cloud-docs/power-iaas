@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-04-24"
+lastupdated: "2024-07-15"
 
 keywords: creating workspace resources, {{site.data.keyword.powerSys_notm}}, private cloud, workspace
 
@@ -13,8 +13,14 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Creating a workspace for IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #creating-workspace-private-cloud}
+
+
+
+
 
 [On-premises]{: tag-red}
 

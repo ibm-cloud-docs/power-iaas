@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: power, SAP HANA, sr2, sh2, profiles
 

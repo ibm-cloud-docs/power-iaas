@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: deploying a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-18"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} off-premises
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} Off-premises
 {: #pricing-virtual-server-on-cloud}
 
 [Off-premises]{: tag-blue}
@@ -28,10 +28,9 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 |-------------------|--------------|---------------------------------|
 | E980 (9080-M9S)   |  143         | Up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | Up to 942 GB                    |
-| S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB             |
+| S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB         |
+| E1080 (9080-HEX)   |  240          | up to 64 TB                    |
 {: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
-
-
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
@@ -156,8 +155,22 @@ You can also bring your own custom image to use on a {{site.data.keyword.powerSy
 The {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You might select a Linux stock image that is provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you might opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
+## Linux for SAP workloads
+{: #linux-SAP-workload-types}
 
+You can deploy the following types of SAP workloads as virtual machines:
 
+* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are similar to other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on both S1022 and E1080 systems.
+
+* **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. Similar to other types of deployments, the following types of systems, processors, and memory are supported for SAP HANA:
+    - System types: S1022 (for workloads less than 2 TB of RAM) or E1080 (for workloads more than 2 TB of RAM)
+    - Virtual processor core types: dedicated, shared capped, or shared uncapped
+    - Memory types: scale-out or scale-up
+
+For SAP HANA workloads, the charges for processor and memory parts are the same as compared to non-SAP HANA workloads. To estimate the costs for non-SAP HANA workloads, see Tables 3, 4, 5, and 6.
+
+The pricing is subject to change depending on the SAP HANA operational costs.
+{: note}
 
 
 ## Processor types
@@ -297,9 +310,6 @@ The following table shows the charges based on the routing option that you selec
 |Global routing data transfer | $0.011 GB|
 {: caption="Table 13. Transit Gateway charges based on routing" caption-side="top"}
 
-
-
-
 The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
 |--------------|---------|
@@ -310,9 +320,7 @@ The following table shows the charges based on the number of connections includi
 {: caption="Table 14. Transit Gateway charges based on number of connections" caption-side="top"}
 
 
-
-
-The Transit Gateway charges indicated in the preceding tables are subjected to change. To calculate your pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} in the IBM Cloud console.
+The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
 {: important}
 
 ## End of billing

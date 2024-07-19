@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -26,8 +26,16 @@ subcollection: power-iaas
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
+
+
+
 ## What is the difference between {{site.data.keyword.powerSys_notm}} and IBM {{site.data.keyword.powerSys_notm}} Private Cloud?
 {: #private-cloud-on-cloud-diff}
+
+
+
+
+
 
 The primary difference between the two is where the physical infrastructure resides. The IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
@@ -83,8 +91,7 @@ To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 inf
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 - [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
-
-
+- [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
@@ -202,6 +209,9 @@ The following list is an example of the FLS offerings:
 To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
+
+
+
 ## Can IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods be expanded with additional compute nodes?
 {: #expand-pods}
 
@@ -216,6 +226,12 @@ Yes, you can expand the pod with additional storage capacity. But you cannot add
 {: #spare-compute-node}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
+
+
+
+
+
+
 
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
@@ -321,7 +337,7 @@ When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, o
 - **Shared capped**: shared, but resources do not expand beyond the requested capacity (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
-The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|

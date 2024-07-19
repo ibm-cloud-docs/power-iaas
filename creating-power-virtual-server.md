@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -41,6 +41,10 @@ To create and configure an {{site.data.keyword.powerSysFull}}, complete the foll
    Review the estimated cost on the Summary page.
 7. Select **I agree to the Terms and conditions** checkbox.
 8. Click **Create**. You are redirected to the **Workspaces** page where you can select an existing workspace.
+
+
+
+
 
 ## IBM Cloud regions
 {: #ibm-cloud-reg}
@@ -92,6 +96,9 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 **x - Not available**
 
 [^4]: This is a single data center for the location.
+
+
+
 
 ## Configuring a {{site.data.keyword.powerSys_notm}} instance
 {: #configuring-instance}

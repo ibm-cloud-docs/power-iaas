@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -15,6 +15,7 @@ subcollection: power-iaas
 
 # {{site.data.keyword.powerSys_notm}} Cloud Connections
 {: #cloud-connections}
+
 
 
 

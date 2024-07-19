@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -13,19 +13,15 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-# IBM {{site.data.keyword.powerSys_notm}} architecture
+# IBM {{site.data.keyword.powerSys_notm}} On-premises architecture
 {: #private-cloud-architecture}
-
-
-
 
 
 [On-premises]{: tag-red}
 
 {{site.data.keyword.powerSysFull}} is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The physical infrastructure is deployed in your data center. The site reliability engineers (SREs) from IBM maintain and operates this infrastructure and manage it through the IBM Cloud platform.
 
-To understand the architecture of IBM {{site.data.keyword.powerSys_notm}} Private Cloud, key features, and hardware and software requirements, review the following topics:
+To understand the On-premises architecture, key features, and hardware and software requirements, review the following topics:
 
 *  [High-level architecture](#high-level-architecture-private-cloud)
 *  [Key features](#key-features)
@@ -35,14 +31,14 @@ To understand the architecture of IBM {{site.data.keyword.powerSys_notm}} Privat
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
 
-The following diagram provides a high-level architectural view of IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
+The following diagram provides a high-level architectural view of IBM {{site.data.keyword.powerSys_notm}} On-premises:
 
-![High-level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture" caption-side="bottom"}
+![High-level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture" caption-side="bottom"}
 
 ## Key features
 {: #key-features}
 
-The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud are as follows:
+The key features for the IBM {{site.data.keyword.powerSys_notm}} On-premises are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
 * **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i image that is tested and deployed. Currently, the supported images include the following operating system images:
@@ -54,7 +50,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 
     [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} Private Cloud:
+* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} On-premises:
     - Number of cores
     - Amount of memory
     - Storage volume size
@@ -70,20 +66,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud a
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
 
-### IBM Satellite location
-{: #satellite-location-spec-private-cloud}
-
-The following IBM Cloud regions are capable of hosting connections from {{site.data.keyword.powerSys_notm}} private pods:
-- Dallas (satcon_dal)
-- Frankfurt (satcon_fra)
-- London (satcon_lon)
-- Madrid (satcon_mad)
-- Osaka (satcon_osa)
-- Sao Paulo (satcon_sao)
-- Sydney (satcon_syd)
-- Tokyo (satcon_tok)
-- Toronto (satcon_tor)
-- Washington, DC (satcon_wdc)
+For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} On-premises, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 ### Pods
 {: #pod-spec-private-cloud}
@@ -106,7 +89,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 ### Small pod configurations
 {: #pod-config-small}
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
+A small pod has 1x42U rack and S1022 and E1050 system types are supported in the rack.
 
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
@@ -164,7 +147,7 @@ The small pod with one rack is available with FS 230 TB flash system storage.
 {: #pod-config-medium}
 
 
-An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
+A  medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) system types are supported in the rack.
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
@@ -195,11 +178,11 @@ An IBM {{site.data.keyword.powerSys_notm}} Private Cloud medium pod has 2x42 U o
 | Total number of cores       | 480      | 672  | 768   | 1824 |
 | Usable cores                | 425      | 595  | 680   | 1615 |
 | **Memory types**            |          |      |       |      |
-| 2 TB                        |          |      |       |      |
+| 2 TB                        |  -       |  -   |  -    |  -   |
 | 4 TB                        | 20       | 28   |  32   | 76   |
 | 8 TB                        | 40       | 56   | 64    | 152  |
-| 16 TB                       |  -       |  -   |  -    | -    |
-| 32 TB                       |   -      |  -   |  -    |  -   |
+| 16 TB                       |  -       |  -   |  -    |  -   |
+| 32 TB                       |  -       |  -   |  -    |  -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Table 3. Medium pod configuration." caption-side="top"}
@@ -274,7 +257,7 @@ The following Power10 are supported:
 
 The Power10 supports Linux, AIX, or IBM i operating system.
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 with AIX  operating system.
+IBM {{site.data.keyword.powerSys_notm}} On-premises provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 with AIX  operating system.
 
 ### Storage
 {: #storage-private-cloud}
@@ -314,7 +297,7 @@ For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Ti
 
 The entire network subsystem can be divided into the following parts:
 
-* **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center during the initial deployment.
-* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center and other IBM Cloud services, you must manually set up the network configuration.
+* **Control plane network traffic**: The control plane network is the connection between IBM Cloud and client data center. The IBM SREs establish this connection manually by using the Direct Link Connect (secure) or Virtual private network (VPN) between IBM Cloud and your On-premises data center during the initial deployment.
+* **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your On-premises data center and other IBM Cloud services, you must manually set up the network configuration.
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).

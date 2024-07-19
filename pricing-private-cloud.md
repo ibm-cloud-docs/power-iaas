@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-16"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -13,12 +13,12 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} on-premises
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} On-premises
 {: #pricing-private-cloud}
 
 [On-premises]{: tag-red}
 
-{{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
+IBM {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
 
 - Virtual machines: The CPU (in cores), with processor modes (capped, shared, dedicated), and memory (in GB).
 
@@ -29,6 +29,9 @@ subcollection: power-iaas
 For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
 In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances. The actual price might include the discounts and promotion codes.
+
+
+
 
 The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} Private Cloud in your data center:
 - Dallas (satcon_dal)
@@ -44,6 +47,10 @@ The following IBM Cloud regions can host connections from the pods for IBM {{sit
 
 Selection of IBM Cloud region is one of the factors for computing pricing.
 {: Note}
+
+
+
+
 
 ## Monthly usage
 {: #monthly-usage}
@@ -172,7 +179,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server private cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server On-premises](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -329,6 +336,8 @@ When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you p
 
 Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
 
+
+
 | Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
 | IBM {{site.data.keyword.powerSys_notm}} Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
@@ -336,6 +345,8 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Pri
 {: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
 
 For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
+
+
 
 
 
@@ -393,6 +404,9 @@ Review the following frequently asked questions about pricing:
 
 
 
+
+
+
 ### Where can I find the unit prices for the billing metrics?
 {: #billing-metrics}
 
@@ -421,6 +435,12 @@ Review the following frequently asked questions about pricing:
 
 
 
+
+
+
+
+
+
 ### How to calculate the pricing for OS licensing in the uncapped SPP?
 {: #cal-OSlic}
 
@@ -428,6 +448,9 @@ Review the following frequently asked questions about pricing:
 To calculate the price for OS licensing in the uncapped SPP, consider the following conditions:
 * If the total number of VPs associated with the partitions in an SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in an SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
+
+
+
 
 Table 14 shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores :
 
@@ -443,10 +466,22 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 
 
 
+
+
+
+
+
+
+
 ### Is there any initial one-time payment before the pod infrastructure is installed in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center?
 {: #initial-one-time-payment}
 
    No
+
+
+
+
+
 
 ### In terms of costs, what do I pay for?
 {: #payment}

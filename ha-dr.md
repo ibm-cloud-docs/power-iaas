@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -21,6 +21,7 @@ subcollection: power-iaas
 
 
 Both High Availability (HA) and Disaster Recovery (DR) are essential for business continuity. HA addresses local planned and unplanned outages for hardware or software. Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable. Review the topic to understand the HA and DR for IBM {{site.data.keyword.powerSys_notm}} Private Cloud and {{site.data.keyword.powerSys_notm}} offerings.
+
 
 ## High availability and disaster recovery options in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #ha-dr-private-cloud}

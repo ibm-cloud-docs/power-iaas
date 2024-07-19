@@ -1,7 +1,7 @@
 #  Name your file `toc.yaml`
 #  Make sure you include all nav file coding requirements, as defined in /docs/writing?topic=writing-code-nav
 #  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
-#  This is for staging
+#  This is for publishing
 ---
 toc:
   properties:
@@ -22,35 +22,20 @@ toc:
       - release-notes.md
       - about-power-virtual-server.md
       - topicgroup:
-              label: Architecture
-              topics:
-              - architecture-public-cloud.md
-              - architecture-private-cloud.md
-      - topicgroup:
-              label: Locations
-              topics:
-              - cloud-regions.md
-              - satellite-location-private.md
-      - topicgroup:
               label: Pricing
               topics:
-              - pricing.md
               - pricing-private-cloud.md
+              - pricing.md
               - generating-estimate.md
+      - ha-dr.md
       - topicgroup:
-              label: High availability and disaster recovery
-              topics:
-              - ha-dr.md
-              - ha-dr-public-cloud.md
-              - ha-dr-private-cloud.md
-      - topicgroup:
-              label: Backup strategies
+              label: Backup strategies in Power Virtual Server
               topics:
               - backup-strategies.md
               - backup-strategies-ibmi.md
               - additional-backup-strategies.md
       - topicgroup:
-              label: Migration strategies
+              label: Migration strategies in Power Virtual Server
               topics:
               - system-migration.md
               - migration-strategies-aix.md
@@ -59,7 +44,7 @@ toc:
               - migration-strategies-third-party.md
               - migration-strategies-backup-restore.md
       - topicgroup:
-              label: Replication
+              label: Replication in Power Virtual Server
               topics:
               - host-and-os-based-logical-replication.md
               - global-replication-service.md
@@ -79,43 +64,46 @@ toc:
              - use-case-oracle.md
              - use-case-redhat-openshift.md
              - use-case-sap-hana.md
+      - link:
+              label: Why IBM Power Virtual Server Private Cloud?
+              href: https://www.ibm.com/products/power-virtual-server
   - navgroup:
       id: howto
       topics:
       - topicgroup:
-          label: Networking for Off-premises
+          label: Assessing the pre-installation requirements for IBM Power Virtual Server Private Cloud
           topics:
-             - configuring-private-subnet.md
-             - network-architecture.md
-             - getting-started-PER.md
-             - vpn-connections.md
-             - network-security.md
-             - X86-based-systems.md
-             - topicgroup:
-                 label: Former Off-premises networking configurations
-                 topics:
+            - preinstallation-checklist.md
+            - site-readiness.md
+            - site-access-requirements.md
+            - environmental-req.md
+            - power-requirements.md
+            - network-requirements.md
+            - network-planning
+            - safety-notices.md
+      - topicgroup:
+          label: Networking for IBM Power Virtual Server Private Cloud
+          topics:
+            - network-overview.md
+            - network-use-cases.md
+            - network_latency.md
+      - topicgroup:
+          label: Networking for Power Virtual Server
+          topics:
+            - configuring-private-subnet.md
+            - network-architecture.md
+            - getting-started-PER.md
+            - vpn-connections.md
+            - network-security.md
+            - X86-based-systems.md
+            - topicgroup:
+                label: Former networking configurations
+                topics:
                     - manual-PER-mig.md
                     - network-architecture-former.md
                     - cloud-connections-CLI.md
                     - ordering-direct-link.md
                     - vpn-connections-deprecated.md
-      - topicgroup:
-          label: Networking for On-premises
-          topics:
-              - network-overview.md
-              - topicgroup:
-                  label: Preparing the data center
-                  topics:
-                    - preinstallation-checklist.md
-                    - site-readiness.md
-                    - site-access-requirements.md
-                    - environmental-req.md
-                    - power-requirements.md
-                    - network-requirements.md
-                    - network-planning
-                    - safety-notices.md
-              - network-use-cases.md
-              - network_latency.md
       - topicgroup:
             label: Creating, managing, and deploying
             topics:
@@ -168,12 +156,6 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup:
-           label: SAP
-           topics:
-             - deploying-SAP-custom-image.md
-             - SAP-HANA-sr2-sh2-profiles.md
-             - SAP-full-system-profiles.md
       - topicgroup:
             label: Observability
             topics:

@@ -1,6 +1,6 @@
 {
-  "title": "Power Virtual Server",
-  "lastupdated": "2024-07-12",
+  "title": "Power Virtual Servers docs",
+  "lastupdated": "2024-04-24",
   "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers on IBM Cloud (that are running either the AIX, IBM i, or Linux operating systems).",
   "section_devtools": {
     "api": "/apidocs/power-cloud",
@@ -14,24 +14,9 @@
       "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
     },
     {
-      "title": "Off-premises architecture",
-      "description": "Review the topic to understand the Off-premises architecture, key features, and hardware specifications.",
-      "href": "/docs/power-iaas?topic=power-iaas-on-cloud-architecture"
-    },
-    {
-      "title": "About On-premises architecture architecture, key features, and hardware specifications",
-      "description": "Review the topic to understand the On-premises.",
-      "href": "/docs/power-iaas?topic=power-iaas-private-cloud-architecture"
-    },
-    {
-      "title": "About Off-premises networking",
-      "description": "Review the networking topics to understand the Off-premises network architecture and its components.",
+      "title": "Network architecture diagrams",
+      "description": "Review the network diagrams to understand the Power Virtual Server network architecture.",
       "href": "/docs/power-iaas?topic=power-iaas-network-architecture-diagrams"
-    },
-    {
-      "title": "About On-premises networking",
-      "description": "Review the networking topics to understand the On-premises network architecture and its components.",
-      "href": "/docs/power-iaas?topic=power-iaas-network-private-cloud"
     },
     {
       "title": "FAQ",
@@ -64,14 +49,14 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "28 June 2024",
-        "title": "IBM Power Virtual Server Private Cloud General Availability",
-        "description": "Power Virtual Server Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of Power Virtual Server within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment."
-      },
-      {
         "date": "23 February 2024",
         "title": "PER migration",
         "description": "You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket."
+      },
+      {
+        "date": "14 December 2023",
+        "title": "Dedicated hosts",
+        "description": "You can provision IBM Power S922 and S1022 servers for your dedicated use."
       }
     ]
   }

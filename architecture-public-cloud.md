@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -12,9 +12,6 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-# IBM {{site.data.keyword.powerSys_notm}} Private Cloud architecture
-{: #on-cloud-architecture}
 
 
 
@@ -104,12 +101,11 @@ You can compare the performance of your current environment with the environment
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
 * [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
-
-
+* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * S1022 (9105-22A)| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * Power S1022 (9105-22A)| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 6. Hardware overview (Washington, D.C.)" caption-side="top"}
@@ -118,14 +114,13 @@ You can compare the performance of your current environment with the environment
 
 | Compute     | Storage      | Network      |
 |------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only) [^2]| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
+| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power S1022 (9105-22A) (WDC07 only)| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
 {: class="simple-tab-table"}
 {: tab-group="hardware"}
 {: caption="Table 7. Hardware overview (Washington, D.C.)" caption-side="top"}
 {: #hw-spec-2}
 {: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
 
-[^2]: SAP Netweaver is not certified for S1022 systems and hence is limited to non-production workloads.
 
 | Compute  | Storage   | Network   |
 |--------- | --------- | --------- |

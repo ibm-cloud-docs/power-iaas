@@ -3,20 +3,20 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-06-27"
+lastupdated: "2024-07-18"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
-subcollection: power-iaas
+subcollection: power-iaas 
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connecting {{site.data.keyword.powerSysFull}} in IBM Cloud&reg; to Microsoft Azure with Megaport
+# Connecting IBM {{site.data.keyword.powerSys_notm}} to Microsoft Azure with Megaport
 {: #connect-azure-with-megaport}
 
-This topic provides architectural solution guidelines for running IBM Cloud {{site.data.keyword.powerSys_notm}}s in IBM Cloud with private connectivity between IBM Cloud and Microsoft Azure by using Megaport.
+This topic provides architectural solution guidelines for running {{site.data.keyword.powerSysFull}}s and IBM Cloud with private connectivity between IBM Cloud and Microsoft Azure by using Megaport.
 
 The solution is based on publicly available documentation from:
 
@@ -30,11 +30,11 @@ The solution is based on publicly available documentation from:
 
 This section provides an overview of the solution architecture, and includes an overview of the solution components and cloud services that are used.
 
-This solution provides private network connectivity between IBM Cloud {{site.data.keyword.powerSys_notm}} and Microsoft Azure for high-performance peer-to-peer connection of cross-cloud workloads. The architecture uses private connection services through IBM Cloud Direct Link, which is coupled with Microsoft Azure ExpressRoute, and joined by the Megaport Cloud Router.
+This solution provides private network connectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure for high-performance peer-to-peer connection of cross-cloud workloads. The architecture uses private connection services through IBM Cloud Direct Link, which is coupled with Microsoft Azure ExpressRoute, and joined by the Megaport Cloud Router.
 
-![Private connectivity between IBM Cloud PowerVS and Microsoft Azure](./images/pvs_azure_architechture.svg "Private connectivity between IBM Cloud PowerVS and Microsoft Azure"){: caption="Figure 1. Private connectivity between IBM Cloud PowerVS and Microsoft Azure" caption-side="bottom"}
+![Private connectivity between IBM Power Virtual Server and Microsoft Azure](./images/pvs_azure_architechture.svg "Private connectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Figure 1. Private connectivity between IBM Power Virtual Server and Microsoft Azure" caption-side="bottom"}
 
-{{site.data.keyword.powerSys_notm}} workspace 
+{{site.data.keyword.powerSys_notm}} workspace
 :   A container of all the virtual machines, storage volumes, network configurations, and so on, at a specific geographic region.
 
 IBM Cloud Transit Gateway
@@ -50,39 +50,39 @@ Virtual Cross Connect (VXC)
 :   A connection between any two endpoints on the Megaport network. Most connections support capacity ranging from 1 Mbps to 10 Gbps.
 
 Microsoft Azure ExpressRoute (ER)
-:   Extends your on-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider.
+:   Extends your On-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider.
 
 Microsoft Azure virtual network gateway
-:   A service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your on-premises infrastructure.
+:   A service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your On-premises infrastructure.
 
 ### Building the interconnectivity
 {: #build-interconnect}
 
-To provide private connectivity to IBM Cloud, you can use IBM Cloud Direct Link (DL) and Transit Gateway (TGW). In Microsoft Azure, the equivalent offerings are called ExpressRoute and Virtual network gateway. In addition to these core cloud services, you need a connectivity provider. This example uses Megaport offerings, Megaport Cloud Router (MCR), and Virtual Cross Connects (VXC). 
-This solution focuses on providing connectivity with IBM Cloud {{site.data.keyword.powerSys_notm}}, but you might have other workload needs. IBM Cloud VPC, IBM Cloud classic infrastructure, and various VMware Solutions integrate in a similar way by using IBM Cloud Transit Gateway as the core routing service between the platforms.
+To provide private connectivity to IBM Cloud, you can use IBM Cloud Direct Link (DL) and Transit Gateway (TGW). In Microsoft Azure, the equivalent offerings are called ExpressRoute and Virtual network gateway. In addition to these core cloud services, you need a connectivity provider. This example uses Megaport offerings, Megaport Cloud Router (MCR), and Virtual Cross Connects (VXC).
+This solution focuses on providing connectivity with IBM {{site.data.keyword.powerSys_notm}}, but you might have other workload needs. IBM Cloud VPC, IBM Cloud classic infrastructure, and various VMware Solutions integrate in a similar way by using IBM Cloud Transit Gateway as the core routing service between the platforms.
 
 The following diagram shows a high-level overview of the solution and explains how the solution components are used.
 
-![Building interconnectivity between IBM Cloud Power Virtual Server and Microsoft Azure](./images/building_interconnectivity.svg "Building interconnectivity between IBM Cloud Power Virtual Server and Microsoft Azure"){: caption="Figure 2. Building interconnectivity between IBM Cloud {{site.data.keyword.powerSys_notm}} and Microsoft Azure" caption-side="bottom"}
+![Building interconnectivity between IBM Power Virtual Server and Microsoft Azure](./images/building_interconnectivity.svg "Building interconnectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Figure 2. Building interconnectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure" caption-side="bottom"}
 
 1. `IBM Cloud Transit Gateway` provides interconnectivity across various IBM Cloud platforms. You can create single or multiple transit gateways to connect VPCs, {{site.data.keyword.powerSys_notm}} workspaces, or IBM Cloud classic infrastructure. New networks connected to a TGW are automatically made available to every other network connected to it. You can also provision Unbound GRE tunnels to your TGW that can be used to connect various network appliances or either self-managed or IBM-managed VMware Cloud Foundation (VCF) instances to the TGW.
 2. `IBM Cloud Direct Link` service is a routed, OSI L3 service. It offers a direct connection to the IBM Cloud Private network backbone, with low latency and uses BGP as the routing protocol. IBM Cloud Direct Link can be attached to most IBM Cloud IaaS platforms, or you can attach it to a Transit Gateway where it can provide private interconnectivity to all connections attached to a TGW. IBM Cloud does not provide built-in connection redundancy as part of the product. To establish redundant connectivity, you must acquire two connections on diverse cross-connect routers (XCRs) and configure BGP on each IBM Cloud Direct Link.
 3. `Megaport Cloud Router (MCR)` is a managed virtual router service that enables direct networking between endpoints on the Megaport network. MCR can be purchased as a stand-alone service to route traffic between different cloud environments without the user having a physical presence in that data center. It can also be connected to user Ports to route pertinent traffic back to a physical location. BGP is used as the routing protocol to learn and advertise routes to its connections.
 4. `A Port` is the physical point of connection between your organization’s network and the Megaport network. After you have configured a Port or an MCR, you can create `Virtual Cross Connects (VXCs)` to connect to services on the Megaport network. A VXC is a private point-to-point Ethernet connection between your A-End Port (MCR) and a B-End destination (CSPs, Ports, Megaport Marketplace services, or IX). In this scenario, the B-End destinations are IBM Cloud and Microsoft Azure.
-5. `Microsoft Azure ExpressRoute (ER)` extends your on-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. With ExpressRoute, you can establish OSI L3 connections to Microsoft cloud services, such as Microsoft Azure and Microsoft 365. Redundancy is built in ExpressRoute in every peering location for high availability. ExpressRoute uses BGP as the routing protocol to advertise and learn routes from Microsoft Azure to the connected router, and to/from MCR in this example.
-6. `Microsoft Azure virtual network gateway`is a service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your on-premises infrastructure. It acts as a router between your vNets and your on-premises network (in this case, IBM Cloud).
+5. `Microsoft Azure ExpressRoute (ER)` extends your On-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. With ExpressRoute, you can establish OSI L3 connections to Microsoft cloud services, such as Microsoft Azure and Microsoft 365. Redundancy is built in ExpressRoute in every peering location for high availability. ExpressRoute uses BGP as the routing protocol to advertise and learn routes from Microsoft Azure to the connected router, and to/from MCR in this example.
+6. `Microsoft Azure virtual network gateway`is a service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your On-premises infrastructure. It acts as a router between your vNets and your On-premises network (in this case, IBM Cloud).
 
 ## Configuring the solution architecture
 {: #configure-sol-arch}
 
-The following sections provide links to external resources with the detailed steps and examples on what is needed to configure and validate end-to-end connectivity: 
+The following sections provide links to external resources with the detailed steps and examples on what is needed to configure and validate end-to-end connectivity:
 
-1. [Configure IBM Cloud {{site.data.keyword.powerSys_notm}} environment](#configure-pvs-env).
+1. [Configure IBM {{site.data.keyword.powerSys_notm}} environment](#configure-pvs-env).
 2. [Configure a Megaport Cloud Router (MCR)](#megaport-portal).
 3. [Configure IBM Cloud Direct Links and Virtual Cross Connections (VXC)](#create-connection-mcr).
 4. [Configure Microsoft Azure ExpressRoute circuits](#expressroute).
 
-See the architecture diagram for [private connectivity between IBM Cloud {{site.data.keyword.powerSys_notm}} and Microsoft Azure](#build-interconnect) to get a high-level information.
+See the architecture diagram for [private connectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure](#build-interconnect) to get a high-level information.
 
 This solution uses the following networks as shown in the table:
 
@@ -115,9 +115,9 @@ To obtain your IBM Cloud Account ID, follow the instructions that are provided i
 #### Provisioning a workspace and instance
 {: #provision-ws-vm}
 
-{{site.data.keyword.powerSys_notm}} resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that are nearest to your data center. In the data centers, the {{site.data.keyword.powerSys_notm}}s are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage, and you can use IBM Cloud interconnectivity offerings to provide connectivity to IBM Cloud infrastructure or on-premises private cloud environments.
+{{site.data.keyword.powerSys_notm}} resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that are nearest to your data center. In the data centers, the {{site.data.keyword.powerSys_notm}}s are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage, and you can use IBM Cloud interconnectivity offerings to provide connectivity to IBM Cloud infrastructure or private cloud environments.
 
-To provision and configure your IBM Cloud {{site.data.keyword.powerSys_notm}} environment in IBM Cloud, you need to create the following IBM Cloud {{site.data.keyword.powerSys_notm}} items:
+To provision and configure your IBM {{site.data.keyword.powerSys_notm}} environment in IBM Cloud, you need to create the following IBM {{site.data.keyword.powerSys_notm}} items:
 
 - A workspace
 - A private network subnet
@@ -145,7 +145,7 @@ Before your {{site.data.keyword.powerSys_notm}} workspace can use Transit Gatewa
 
 To configure a Transit Gateway, you need to:
 
-- Create a connection between TGW and your IBM Cloud {{site.data.keyword.powerSys_notm}} workspace instance
+- Create a connection between TGW and your IBM {{site.data.keyword.powerSys_notm}} workspace instance
 - Configure prefix filtering on the {{site.data.keyword.powerSys_notm}} Transit Gateway connection
 
 For more information on how to add a {{site.data.keyword.powerSys_notm}} connection to your Transit Gateway, see [IBM Cloud Docs pages](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-adding-connections&interface=ui).
@@ -197,7 +197,7 @@ To create an MCR, you need to make a few decisions for the connectivity. The fol
 | -------------------| ----------------------| ---------------|
 | MCR Location | Geo Location to be used | Equinox EQ1 |
 | Rate Limit | What network speed you would like to order| 1 Gbps to 10 Gbps|
-| MCR Name | Specify a name for the MCR that is easily identifiable | IBM-Azure-MCR | 
+| MCR Name | Specify a name for the MCR that is easily identifiable | IBM-Azure-MCR |
 | Minimum Term | Select your term length |- No Minimum Term \n - 12 Months \n - 24 Months \n - 36 Months  |
 | BGP State | Select whether BGP connections are enabled \n or shut down by default | Enabled |
 {: caption="Table 2. Megaport Cloud Router Worksheet" caption-side="bottom"}
@@ -210,7 +210,7 @@ To find details for IBM Cloud Direct Link connectivity locations, see the [IBM C
 ### Creating a connection from MCR to IBM Cloud Direct Link
 {: #create-connection-mcr}
 
-IBM Direct Link lets you seamlessly create private connections between your on-premises and cloud resources. Direct Link Connect with Megaport extends your organizations data center network to public clouds to offer better performance, higher throughput, and security to IBM Cloud environments.
+IBM Direct Link lets you seamlessly create private connections between your On-premises and cloud resources. Direct Link Connect with Megaport extends your organizations data center network to public clouds to offer better performance, higher throughput, and security to IBM Cloud environments.
 
 #### Creating a Megaport connection to IBM Direct Link
 {: #create-megaport-to-dl}
@@ -414,9 +414,9 @@ Check the routing and BGP tables by using MCR Looking Glass.
 2.	Click the **Services** tab.
 3.	You can filter based on your MCR name.
 4.	Click the **MCR Looking Glass** icon on the MCR.
-5.	Click the **Routes Table** tab and filter the routes that are assigned to IBM Cloud {{site.data.keyword.powerSys_notm}}.
+5.	Click the **Routes Table** tab and filter the routes that are assigned to IBM {{site.data.keyword.powerSys_notm}}.
 6.	Click the **Routes Table** tab and filter the routes that are assigned to Microsoft Azure.
-7.	Click the **BGP Table** tab and filter the routes that are assigned to IBM Cloud {{site.data.keyword.powerSys_notm}}.
+7.	Click the **BGP Table** tab and filter the routes that are assigned to IBM {{site.data.keyword.powerSys_notm}}.
 8.	Click the **BGP Table** tab and filter the routes that are assigned to Microsoft Azure.
 
 For more information about MCR Looking Glass, see [Megaport documentation](https://docs.megaport.com/mcr/mcr-looking-glass/){: external}.

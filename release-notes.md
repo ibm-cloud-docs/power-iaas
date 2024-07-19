@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-03"
+lastupdated: "2024-07-19"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -22,10 +22,16 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - Global replication service supports the new data center pair `SAO01` and `SAO04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
+IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life five months later on `June 18, 2025`.  
+{: deprecated}
+
+- Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability and 40x higher bandwidth.  You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} DevOps team members and CSMs for your account are available to assist you today. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) or contact your Customer Support Manager (CSM) for help with the migration.
+
+
 ## June 2024
 {: #jun-2024}
 
-- {{site.data.keyword.powerSysFull}} Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of {{site.data.keyword.powerSys_notm}} within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment. For more information about {{site.data.keyword.powerSys_notm}} Private Cloud and how to get started, see [Getting started with IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-getting-started).
+- {{site.data.keyword.powerSys_notm}} Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of {{site.data.keyword.powerSys_notm}} within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment. For more information about {{site.data.keyword.powerSys_notm}} Private Cloud and how to get started, see [Getting started with IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-getting-started).
 
     The content specific to IBM {{site.data.keyword.powerSys_notm}} Private Cloud is marked with [On-premises]{: tag-red} tag and the content specific to IBM {{site.data.keyword.powerSys_notm}} is marked with [Off-premises]{: tag-blue} tag.
     {: note}
@@ -44,9 +50,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
     -  `DAL12` on June 24, 2024
     -  `SAO01` on September 07, 2024
 
-    {{site.data.keyword.powerSys_notm}} on-premises is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
-
-
+    {{site.data.keyword.powerSys_notm}} On-premises is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
@@ -266,7 +270,7 @@ The data center where you can monitor your platform metrics currently are `WDC06
 ## October 2021
 {: #oct-2021}
 
-- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an on-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service.
+- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an On-premises VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service.
 - You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-manage-vtl) to backup IBM i data.
 
 ## September 2021

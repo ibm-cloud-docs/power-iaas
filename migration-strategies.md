@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -11,18 +11,6 @@ subcollection: power-iaas
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:video: .video}
 {{site.data.keyword.attribute-definition-list}}
 
 # Migration strategies for IBM i
@@ -48,13 +36,13 @@ Recent IBM i migration enhancements:
 
 BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including Cloud Object Storage.
 
-The following high-level steps detail how to migrate your OS and data from an on-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
+The following high-level steps detail how to migrate your OS and data from an On-premises system to the {{site.data.keyword.powerSys_notm}} environment. Keep in mind that most of these steps can be automated by using BRMS and ICC.
 
 1.	Create your IBM i VM in the {{site.data.keyword.powerSys_notm}}.
 2.	Create a virtual media and _IMGCLG_ on the deployed VM.
-3.	Create a virtual optical and _IMGCLG_ on the on-premises system and perform an operating system save.
+3.	Create a virtual optical and _IMGCLG_ on the On-premises system and perform an operating system save.
 4.	FTP the images to the {{site.data.keyword.powerSys_notm}}.
-5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your on-premises system.
+5.	Restore or slip the installation of the OS to get the base OS to the same level as it was on your On-premises system.
 6.	Migrate your remaining data.
 
 Refer to this documentation on migrating [IBM i to the Cloud by using BRMS and Cloud Storage Solutions with FTP](https://cloud.ibm.com/media/docs/downloads/power-iaas/IBMi_BRMS_ICC.pdf){: external}.

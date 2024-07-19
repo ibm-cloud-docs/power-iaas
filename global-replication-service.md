@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -77,7 +77,7 @@ The following table explains how to determine the primary and secondary site bas
 
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations that are supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall) in API documentation.
 
-The following table shows the location pairs that support replication: 
+The following table shows the location pairs that support replication:
 | Location 1 |  Location 2 |
 |--------|---------|
 | `mad02`| `eu-de-1 (fra04)` |

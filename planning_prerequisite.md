@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-16"
 
 keywords: planning, prerequisites, environment, site access, site requirement, power, power requirement, network, network requirement, system calculator, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud
 
@@ -170,7 +170,7 @@ Review the following network requirements to facilitate the pod infrastructure c
     * Provide redundant connections to the IBM Direct Link connection or VPN connection
     * Provide the last mile connection from the point-of-presence (PoP) of your service provider to the customer data center  
 
-For network architecture diagrams, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#netwok-architecture-diagrams){: external}.
+For network architecture diagrams, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network_overview-On-premises&interface=api#netwok-architecture-diagrams){: external}.
 
 Setting up of a network has two parts:
 * [Control plane network](#control-plane-network) - for communication between IBM Cloud and the pod
@@ -179,7 +179,7 @@ Setting up of a network has two parts:
 ### Control plane network
 {: #control-plane-network}
 
-The IBM {{site.data.keyword.powerSys_notm}} Private Cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center. This connectivity is the main communication channel and is known as a control plane network. For more information, see [Control plane network](/docs/power-iaas?topic=power-iaas-network_overview-on-premises&interface=api#control-plane-network){: external}.
+The IBM {{site.data.keyword.powerSys_notm}} Private Cloud network architecture requires connectivity between two entities, IBM Cloud and the pod that is located in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center. This connectivity is the main communication channel and is known as a control plane network. For more information, see [Control plane network](/docs/power-iaas?topic=power-iaas-network_overview-On-premises&interface=api#control-plane-network){: external}.
 
 Direct Link 2.0 Connect can be viewed as an alternative to a traditional site-to-site VPN solution that can provide security and privacy, consistent, and higher-throughput connectivity between a remote network and IBM Cloud environments. For more information about Direct Link Connect, see [Getting started with IBM Cloud Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl){: external}
 

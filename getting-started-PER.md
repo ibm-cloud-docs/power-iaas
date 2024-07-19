@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-18"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -127,7 +127,7 @@ Transit Gateway is required to connect with VPC and classic infrastructure. To a
 
 Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and classic infrastructures as connection.
 
-The connections attached to the Transit Gateway can  communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources associated with each other.
+The connections attached to the Transit Gateway can communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources associated with each other.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}

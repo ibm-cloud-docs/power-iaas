@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-16"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# High Availability and Disaster Recovery options {{site.data.keyword.powerSys_notm}} off-premises
+# High Availability and Disaster Recovery options {{site.data.keyword.powerSys_notm}} Off-premises
 {: #ha-dr-on-cloud}
 
 [Off-premises]{: tag-blue}

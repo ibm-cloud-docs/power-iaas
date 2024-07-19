@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-15"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -21,8 +21,15 @@ subcollection: power-iaas
 IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
+
+
 [On-premises]{: tag-red} To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
 {: important}
+
+
+
+
+
 
 For more information about IAM, review the following information:
 

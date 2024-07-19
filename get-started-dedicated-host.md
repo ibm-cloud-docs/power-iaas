@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -11,19 +11,13 @@ subcollection: power-iaas
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
+
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Getting started with dedicated host
 {: #dedicated-host}
+
 
 
 
