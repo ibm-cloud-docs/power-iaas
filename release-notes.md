@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-19"
+lastupdated: "2024-07-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -20,9 +20,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## July 2024
 {: #jul-2024}
 
+- IBM Cloud Monitoring service is now available in `TOR01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - Global replication service supports the new data center pair `SAO01` and `SAO04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
-IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life five months later on `June 18, 2025`.  
+IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: deprecated}
 
 - Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability and 40x higher bandwidth.  You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} DevOps team members and CSMs for your account are available to assist you today. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) or contact your Customer Support Manager (CSM) for help with the migration.
@@ -50,7 +51,7 @@ IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}
     -  `DAL12` on June 24, 2024
     -  `SAO01` on September 07, 2024
 
-    {{site.data.keyword.powerSys_notm}} On-premises is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
+    {{site.data.keyword.powerSys_notm}} (On-premises) is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 

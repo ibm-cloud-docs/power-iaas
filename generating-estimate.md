@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-22"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -58,7 +58,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 10. Click **View estimate** to view and to take actions on them.
 
 
-### Off-premises (IBM Cloud)
+### IBM Cloud
 {: #off-prem-location-type}
 
 [Off-premises]{: tag-blue}
@@ -171,7 +171,7 @@ To learn more about dedicated host, see [Getting started with dedicated host].
 
 
 
-### On-premises (IBM {{site.data.keyword.powerSys_notm}} Private Cloud)
+###  (IBM {{site.data.keyword.powerSys_notm}} Private Cloud)
 {: #on-prem-location-type}
 
 [On-premises]{: tag-red}

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-24"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -313,7 +313,7 @@ The storage tiers are based on I/O operations per second (IOPs). The performance
 
 Flexible IOPS is a tier-less storage offering that removes the notion of a disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
-Table 5 shows the supported storage tiers with corresponding IOPS.
+The following table shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|

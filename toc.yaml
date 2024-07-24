@@ -83,7 +83,7 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Networking for Off-premises
+          label: Networking (Off-premises)
           topics:
              - configuring-private-subnet.md
              - network-architecture.md
@@ -100,7 +100,7 @@ toc:
                     - ordering-direct-link.md
                     - vpn-connections-deprecated.md
       - topicgroup:
-          label: Networking for On-premises
+          label: Networking (On-premises)
           topics:
               - network-overview.md
               - topicgroup:
@@ -168,12 +168,6 @@ toc:
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md
-      - topicgroup:
-           label: SAP
-           topics:
-             - deploying-SAP-custom-image.md
-             - SAP-HANA-sr2-sh2-profiles.md
-             - SAP-full-system-profiles.md
       - topicgroup:
             label: Observability
             topics:

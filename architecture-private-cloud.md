@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-22"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} On-premises architecture
+# IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture
 {: #private-cloud-architecture}
 
 
@@ -31,14 +31,14 @@ To understand the On-premises architecture, key features, and hardware and softw
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
 
-The following diagram provides a high-level architectural view of IBM {{site.data.keyword.powerSys_notm}} On-premises:
+The following diagram provides a high-level architectural view of On-premises offering from IBM {{site.data.keyword.powerSys_notm}}:
 
-![High-level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} On-premises architecture" caption-side="bottom"}
+![High-level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture" caption-side="bottom"}
 
 ## Key features
 {: #key-features}
 
-The key features for the IBM {{site.data.keyword.powerSys_notm}} On-premises are as follows:
+The key features for the On-premises version of IBM {{site.data.keyword.powerSys_notm}} are as follows:
 
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
 * **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i image that is tested and deployed. Currently, the supported images include the following operating system images:
@@ -50,7 +50,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} On-premises are
 
     [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} On-premises:
+* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}}(On-premises):
     - Number of cores
     - Amount of memory
     - Storage volume size
@@ -66,7 +66,7 @@ The key features for the IBM {{site.data.keyword.powerSys_notm}} On-premises are
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
 
-For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} On-premises, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}}(On-premises), see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 ### Pods
 {: #pod-spec-private-cloud}

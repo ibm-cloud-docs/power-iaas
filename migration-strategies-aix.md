@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-22"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
 
-## Migrating your On-premises environment to {{site.data.keyword.powerSys_notm}}
+## Migrating your on-premises environment to {{site.data.keyword.powerSys_notm}}
 {: #mig-onprem-cloud}
 
-See the [Move data from your On-premises environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
+See the [Move data from your on-premises environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
 
 ## Migrating by using NIM on {{site.data.keyword.powerSys_notm}}
 {: #mig-nim}
@@ -37,9 +37,9 @@ See [Migrating by using NIM on {{site.data.keyword.powerSys_notm}}](https://www.
 
 You can migrate your data by using the `mksysb` command:
 
-1. Back up the On-premises OS with the `alt_disk_mksysb` command and transfer it to Cloud Object Storage.
+1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to Cloud Object Storage.
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
-3. Restore the On-premises image.
+3. Restore the on-premises image.
 
 For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 

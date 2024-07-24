@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-22"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# High availability and disaster recovery options in IBM {{site.data.keyword.powerSys_notm}} On-premises
+# High availability and disaster recovery options (On-premises)
 {: #ha-dr-private-cloud}
 
 [On-premises]{: tag-red}
@@ -35,7 +35,7 @@ By using the remote restart function, the {{site.data.keyword.powerSys_notm}} re
 For client-managed applications, you must implement a high-availability strategy. For example, you can use solutions such as Red Hat Enterprise Linux High Availability or SUSE Linux Enterprise High Availability.
 
 
-## Disaster recovery mechanisms IBM {{site.data.keyword.powerSys_notm}} On-premises
+## Disaster recovery mechanisms IBM {{site.data.keyword.powerSys_notm}} (On-premises)
 {: #disaster-recovery-mech-private-cloud}
 
 Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable.

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-22"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -85,7 +85,7 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 1. Create an IBM Cloud account if you don’t have an existing account. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
 
-2. Plan and specify your infrastructure requirements and review the estimated cost by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. Identify whether you want {{site.data.keyword.powerSys_notm}}, {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure, or both.
+2. Plan and specify your infrastructure requirements and review the estimated cost by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. Identify whether you want  {{site.data.keyword.powerSys_notm}}, {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure, or both.
 
 3. Review the entire lifecycles of {{site.data.keyword.powerSys_notm}} instances on [IBM Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-private-cloud) and [IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-on-cloud).
 

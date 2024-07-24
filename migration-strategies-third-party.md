@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-22"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -34,7 +34,7 @@ You can use the third-party tools to complete your data migration. The following
 
 StorSafe VTL is an IBM-certified solution for migration, backup optimization, archive, and data recovery (DR).
 
-StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery. It works for both On-premises and in the cloud. It enables simple and easy migration from On-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads On-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled.
+StorSafe VTL is software that emulates physical tape drives and libraries to optimize backup and recovery. It works for both in the cloud and On-premises. It enables simple and easy migration from On-premises to {{site.data.keyword.powerSysFull}}. StorSafe VTL can backup IBM i or AIX workloads On-premises, replicate to a cloud-resident StorSafe VTL, and then restore to a {{site.data.keyword.powerSys_notm}}. Similarly, legacy tapes can be handled.
 
 Following are some of the features of StorSafe VTL:
 - Nondisruptive and secure process that can scale to PB-sized workloads.

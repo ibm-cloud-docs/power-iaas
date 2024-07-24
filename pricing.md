@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} Off-premises
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} (Off-premises)
 {: #pricing-virtual-server-on-cloud}
 
 [Off-premises]{: tag-blue}
@@ -82,6 +82,9 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
+## Part numbers
+{: #part-numbers}
+
 For detailed usage and billing information, you can refer to the part number in your invoice. The part numbers in the invoice represent the charge unit. Refer to the following table to view the part number and its corresponding description.
 
 | Part number  | Description                     |
@@ -94,7 +97,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | TIER_THREE_STORAGE_GIGABYTE_HOURS     | Tier-3 storage gigabyte-hour     |
 | TIER_ZERO_STORAGE_GIGABYTE_HOURS |Tier-0 storage gigabyte-hour |
 | FIXED_5K_OPS_GIGABYTE_HOURS |Fixed IOPS storage gigabyte-hour  |
-| AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale-out license per core-hour      |
+| AIX_SMALL_APPLICATION_INSTANCE_HOURS     | AIX scale out license per core-hour      |
 | AIX_MEDIUM_APPLICATION_INSTANCE_HOURS     | AIX enterprise license per core-hour     |
 | IBMI_OS_PTEN_APPLICATION_INSTANCE_HOURS     | IBM i OS P10 license per core-hour      |
 | IBMI_OS_PTHIRTY_APPLICATION_INSTANCE_HOURS     | IBM i OS P30 license per core-hour      |
@@ -118,23 +121,36 @@ For detailed usage and billing information, you can refer to the part number in 
 | EDD_VIRTUAL_PROCESSOR_CORE_HOURS     | E980 dedicated virtual processor per core-hour      |
 | IBM_I_OS_PTEN_SRVC_EXT_PER_PROC_CORE_HR     | IBM i OS P10 service extension per core-hour      |
 | IBM_I_SERVICE_EXTENSION_PER_CORE_HOUR     | IBM i OS P30 service extension per core-hour      |
-|	S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
+| S922_DEDICATED_SERVER_HOURS           |  Dedicated host for S922 host per server-hour   |
 | S1022_DEDICATED_SERVER_HOURS  |     Dedicated host for S1022 host per server-hour        |
-| REDHAT_GP_ON_SCALE_OUT_APP_INSTANCE_HOURS	|    Red Hat GP Scale Out License per Core Hour |
-| REDHAT_GP_SCALE_UP_LICENSE_CORE_HOURS	    |  Red Hat GP Scale Up License/Core Hour |
-| REDHAT_SAP_SCALE_OUT_LICENSE_PER_CORE_HOUR	|	Red Hat SAP Scale Out License per Core Hour |
-| REDHAT_SAP_SCALE_UP_LICENSE_PER_CORE_HOUR	|   Red Hat SAP Scale Up License/Core Hour |
+| REDHAT_GP_ON_SCALE_OUT_APP_INSTANCE_HOURS	|    Redhat GP Scale Out License per Core Hour |
+| REDHAT_GP_SCALE_UP_LICENSE_CORE_HOURS	    |  Redhat GP Scale Up License per Core Hour |
+| REDHAT_SAP_SCALE_OUT_LICENSE_PER_CORE_HOUR	|	Redhat SAP Scale Out License/Core Hour |
+| REDHAT_SAP_SCALE_UP_LICENSE_PER_CORE_HOUR	|   Redhat SAP Scale Up License/Core Hour |
 | SUSE_OS_GP_TIER_ONE_INSTANCE_HOURS	  |	SUSE GP Tier 1 Instance Hours |
 | SUSE_OS_GP_TIER_THREE_INSTANCE_HOURS	|	SUSE GP Tier 3 Instance Hours |
 | SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier 2 Instance Hours |
 | SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier 1 Instance Hours |
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier 3 Instance Hours |
 | SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours |
+| S1022_NW_SHARED_UNCAPPED_CORE_HOURS | S1022 SAP NetWeaver Shared Processor |
+| S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 SAP NetWeaver Dedicated Processor |
+| S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
+| S1022_NW_MEM_GB_HOURS | S1022 SAP NetWeaver Memory  |
+| PTEN_ESS_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Processor |
+| PTEN_EDD_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Dedicated Processor |
+| PTEN_ECC_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Capped Processor |
+| PTEN_MS_GIGABYTE_HOURS | P10 Standard Memory |
+| PTEN_MHU_GIGABYTE_HOURS | P10 High Use Memory (>64 Gb per core) |
+| S1022_SR2_HANA_CORE_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - S1022 Processor |
+| S1022_SR2_HANA_MEM_GB_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - S1022 Memory  |
+| E1080_SR2_HANA_CORE_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - E1080 Processor  |
+| E1080_SR2_HANA_MEM_GB_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - E1080 Memory  |
+| S1022_SH2_HANA_CORE_HOURS  | SAP HANA Workload Small Profile (SH2) - S1022 Processor  |
+| S1022_SH2_HANA_MEM_GB_HOURS | SAP HANA Workload Small Profile (SH2) - S1022 Memory  |
+| E1080_SH2_HANA_CORE_HOURS | SAP HANA Workload Small Profile (SH2) - E1080 Processor  |
+| E1080_SH2_HANA_MEM_GB_HOURS  | SAP HANA Workload Small Profile (SH2) - E1080 Memory |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
-
-
-
-
 
 ## Base instances
 {: #pricing-base-instance-prices}
@@ -245,6 +261,13 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |20 GB|20 GB|
     |20 GB + 30 GB|50 GB|
     {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+
+
+
+
+
+
+
 
 ### Use case of account billable storage
 {: #account-billable-storage}
