@@ -14,13 +14,13 @@
       "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
     },
     {
-      "title": "Off-premises architecture",
+      "title": "About Off-premises architecture, key features, and hardware specifications",
       "description": "Review the topic to understand the Off-premises architecture, key features, and hardware specifications.",
       "href": "/docs/power-iaas?topic=power-iaas-on-cloud-architecture"
     },
     {
       "title": "About On-premises architecture, key features, and hardware specifications",
-      "description": "Review the topic to understand the On-premises architecture.",
+      "description": "Review the topic to understand the On-premises architecture, key features, and hardware specifications.",
       "href": "/docs/power-iaas?topic=power-iaas-private-cloud-architecture"
     },
     {

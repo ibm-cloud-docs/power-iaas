@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-24"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -94,7 +94,9 @@ You do not pay extra charges for Transit Gateway. To establish the connection, t
 
 For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
-![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. Connecting PER workspace with classic" caption-side="bottom"}
+![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. (OLD) Connecting PER workspace with classic" caption-side="bottom"}
+
+![Connecting PER workspace with classic with custom IP](./images/1_PER_classic.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 10. (New) Connecting PER workspace with classic" caption-side="bottom"}
 
 The following two scenarios for connecting the classic infrastructure to a PER-enabled workspace are differentiated based on the Generic Routing Encapsulation (GRE) tunnel requirement:
 

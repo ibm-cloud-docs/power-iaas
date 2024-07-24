@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-23"
+lastupdated: "2024-07-24"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -132,24 +132,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | SUSE_OS_GP_TIER_TWO_INSTANCE_HOURS	  | SUSE GP Tier 2 Instance Hours |
 | SUSE_OS_SAP_TIER_ONE_INSTANCE_HOURS	  |	SUSE SAP Tier 1 Instance Hours |
 | SUSE_OS_SAP_TIER_THREE_INSTANCE_HOURS	|	SUSE SAP Tier 3 Instance Hours |
-| SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours |
-| S1022_NW_SHARED_UNCAPPED_CORE_HOURS | S1022 SAP NetWeaver Shared Processor |
-| S1022_NW_SHARED_CAPPED_CORE_HOURS | S1022 SAP NetWeaver Dedicated Processor |
-| S1022_NW_DEDICATED_CORE_HOURS | S1022 NW Dedicated Processor |
-| S1022_NW_MEM_GB_HOURS | S1022 SAP NetWeaver Memory  |
-| PTEN_ESS_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Processor |
-| PTEN_EDD_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Dedicated Processor |
-| PTEN_ECC_VIRTUAL_PROCESSOR_CORE_HOURS | E1080 Shared Capped Processor |
-| PTEN_MS_GIGABYTE_HOURS | P10 Standard Memory |
-| PTEN_MHU_GIGABYTE_HOURS | P10 High Use Memory (>64 Gb per core) |
-| S1022_SR2_HANA_CORE_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - S1022 Processor |
-| S1022_SR2_HANA_MEM_GB_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - S1022 Memory  |
-| E1080_SR2_HANA_CORE_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - E1080 Processor  |
-| E1080_SR2_HANA_MEM_GB_HOURS | SAP RISE - SAP HANA Workload Optimized Profile (SR2) - E1080 Memory  |
-| S1022_SH2_HANA_CORE_HOURS  | SAP HANA Workload Small Profile (SH2) - S1022 Processor  |
-| S1022_SH2_HANA_MEM_GB_HOURS | SAP HANA Workload Small Profile (SH2) - S1022 Memory  |
-| E1080_SH2_HANA_CORE_HOURS | SAP HANA Workload Small Profile (SH2) - E1080 Processor  |
-| E1080_SH2_HANA_MEM_GB_HOURS  | SAP HANA Workload Small Profile (SH2) - E1080 Memory |
+| SUSE_OS_SAP_TIER_TWO_INSTANCE_HOURS	  |	SUSE SAP Tier 2 Instance Hours | 
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 ## Base instances
