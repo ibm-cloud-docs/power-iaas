@@ -21,11 +21,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jul-2024}
 
 - IBM Cloud Monitoring service is now available in `TOR01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
-- Global replication service supports the new data center pairs `SAO01`-`SAO04` and `MON01`-`TOR01`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
-- Deploy Linux for SAP (HANA or Netweaver) OS image within IBM {{site.data.keyword.powerSys_notm}} by using SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
-- Deploy SAP full system profiles on the S1022 system only if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
-- Deploy SAP HANA sr2 and sh2 profiles on the S1022 or E1080 system. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
-- You can now provision your {{site.data.keyword.powerSys_notm}} workload on the Power10 E1080 (9080-HEX) hosts available in `DAL10` and `WDC07` data centers.
+- Global replication service supports new data center pairs `SAO01`-`SAO04` and `MON01`-`TOR01`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- You can now deploy Linux for SAP (HANA or Netweaver) OS images within IBM {{site.data.keyword.powerSys_notm}} by using the SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
+- You can now deploy SAP full system profiles on S1022 systems, if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
+- You can now deploy SAP HANA sr2 and sh2 profiles on S1022 and E1080 systems. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
+- You can now provision {{site.data.keyword.powerSys_notm}} workloads on Power10 E1080 (9080-HEX) hosts available in `DAL10` and `WDC07` data centers.
 
 IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: deprecated}
