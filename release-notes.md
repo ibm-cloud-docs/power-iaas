@@ -21,7 +21,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #jul-2024}
 
 - IBM Cloud Monitoring service is now available in `TOR01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
-- Global replication service supports the new data center pair `SAO01` and `SAO04`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- Global replication service supports the new data center pairs `SAO01`-`SAO04` and `MON01`-`TOR01`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 - Deploy Linux for SAP (HANA or Netweaver) OS image within IBM {{site.data.keyword.powerSys_notm}} by using SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#SAP-pcir) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image#byoc-SAP).
 - Deploy SAP full system profiles on the S1022 system only if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
 - Deploy SAP HANA sr2 and sh2 profiles on the S1022 or E1080 system. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).

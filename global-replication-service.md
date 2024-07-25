@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-25"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -88,6 +88,7 @@ The following table shows the location pairs that support replication:
 | `osa21`| `tok04` |
 | `syd04`| `syd05` |
 | `sao01`| `sao04` |
+| `mon01`| `tor01` |
 {: class="simple-table"}
 {: caption="Table 1. Replication enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
 
