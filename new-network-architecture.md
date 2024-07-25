@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-25"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -19,7 +19,8 @@ subcollection: power-iaas
 
 
 
-[Off-premises]{: tag-blue}
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
 
 This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
 {: shortdesc}
@@ -79,6 +80,9 @@ The use cases are enabled with base capabilities and can be customized to meet a
 In this depiction, the client-managed data center uses a Direct Link connection to attach to the Transit Gateway.
 
 1. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed data center through the incoming Direct Link connectivity. The Direct Link connectivity is interconnected through the Transit Gateway.
+
+![Connecting client-managed environment with a PER-enabled workspace using Transit Gateway](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace using Transit Gateway"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}} using Transit Gateway" caption-side="bottom"}
+
 2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
 ![Connecting client-managed environment with a PER-enabled workspace](./images/2_PER_Onprem.svg "Connecting client-managed environment with a PER-enabled workspace"){: caption="Figure 9. Connecting on-premise with a PER-enabled {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}

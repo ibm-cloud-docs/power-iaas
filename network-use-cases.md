@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-24"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network use cases
 {: #network_use_cases}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Review the common network use cases within the network architecture of {{site.data.keyword.powerSysFull}}.
 {: shortdesc}

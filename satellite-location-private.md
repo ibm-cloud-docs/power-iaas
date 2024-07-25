@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-24"
 
 keywords: power systems, satellite location
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # IBM Satellite location
 {: #satellite-location-spec-private-cloud}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} (On-premises) in your data center:
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-24"
 
 keywords: import custom image, IBM Cloud Object Storage bucket, IBM Cloud Object Storage, import image
 
@@ -18,7 +18,7 @@ subcollection: power-iaas
 # Establishing connectivity to IBM Cloud Object Storage buckets to import custom images
 {: #conn-COS-custom-image}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 You can maintain a set of operating system images in your IBM Cloud Object Storage buckets. These images are referred to as custom images. You can import these custom images into the boot volumes of the logical partitions (LPARs).
 

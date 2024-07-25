@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-24"
 
 keywords: viewing pod, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 
 
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 In IBM {{site.data.keyword.powerSysFull}} Private Cloud, you can view the pod details such as the total number of cores, memory, and number of system units. You can also view the storage capacity that you have used from the total storage per controller.
 {: shortdesc}

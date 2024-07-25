@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-24"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Power requirements
 {: #power-requirements}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Your IBM {{site.data.keyword.powerSysFull}} Private Cloud site  must be provisioned with A-side and B-side power redundancy that meets the {{site.data.keyword.powerSys_notm}} rack connector and load requirements. Table 1 shows the rack connector and load requirements.
 

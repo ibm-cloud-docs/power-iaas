@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-24"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -16,7 +16,8 @@ subcollection: power-iaas
 # Compliance certifications
 {: #compliances-list}
 
-[Off-premises]{: tag-blue}
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}

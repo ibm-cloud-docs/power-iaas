@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-24"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 
 
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) support through IBM.
 {: shortdesc}

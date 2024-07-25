@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-24"
 
 keywords: planning, prerequisites, environment, site access, site requirement, power, power requirement, network, network requirement, system calculator, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Planning and prerequisites
 {: #planning_prerequisite}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Proper planning is essential for the successful setup and use of your IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}

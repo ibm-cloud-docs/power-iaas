@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-24"
 
 keywords: returning pod, {{site.data.keyword.powerSys_notm}}, private cloud, decomission, remove pod
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Returning the pod to IBM
 {: #returning_pod}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 
 

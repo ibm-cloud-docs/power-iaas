@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-24"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network security
 {: #network-security}
 
-[Off-premises]{: tag-blue}
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
 The infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical switches and routers.
 {: shortdesc}

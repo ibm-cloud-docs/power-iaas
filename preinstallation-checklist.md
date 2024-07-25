@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-24"
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network validation, account activation
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Prerequisites for installing the pod
 {: #pre_installation_checklist}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Proper planning is essential for the successful setup and use of {{site.data.keyword.powerSysFull}} pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}

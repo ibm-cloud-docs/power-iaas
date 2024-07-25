@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2024
 
 
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-24"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, environment, environmental requirement
 
@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Environmental requirements
 {: #environmental-requirements}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Your {{site.data.keyword.powerSysFull}} Private Cloud site must have adequate cooling and humidity control for {{site.data.keyword.powerSysFull}} racks. To know the recommended and allowed values of the required parameters, see Table 1:
 

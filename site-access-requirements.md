@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-24"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -17,7 +17,7 @@ subcollection: power-iaas
 # Site access requirements
 {: #site-access-requirements}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.powerSysFull}} racks. Work with the IBM representative to ensure that these prerequisites are completed before the pods are delivered to your data center.
 

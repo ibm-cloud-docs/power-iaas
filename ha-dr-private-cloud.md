@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-24"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # High availability and disaster recovery options (On-premises)
 {: #ha-dr-private-cloud}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 For the pod software, {{site.data.keyword.powerSysFull}} removes all single points of failure by implementing redundancy as follows:
 

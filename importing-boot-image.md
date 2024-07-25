@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-25"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -28,19 +28,22 @@ Image import requires HMAC keys (access, secret) to access your IBM Cloud Object
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
 
 As part of this Job feature, the following API and CLIs are available:
-- API for image import - [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post).
-- CLI command - [`ibmcloud pi image import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-image-import).
-- CLI command [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-job).
+- API for image import - [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.
+- CLI command - [`ibmcloud pi image import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.
+- CLI command [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.
 
 The {{site.data.keyword.powerSys_notm}} VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM capture, image export, and image import) cannot be submitted until the previous operation is complete.
 {: important}
 
+
+
+
 ## Using the {{site.data.keyword.powerSys_notm}} CLI to import a boot image
 {: #cli-import-image}
 
-Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} CLI. For more information, see the [{{site.data.keyword.powerSys_notm}} CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference).
+Complete the following steps to import a boot image by using the {{site.data.keyword.powerSys_notm}} CLI. For more information, see the [{{site.data.keyword.powerSys_notm}} CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference){: external}.
 
-1. To import a custom image from IBM Cloud Object Storage, use the [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import) command.
+1. To import a custom image from IBM Cloud Object Storage, use the [`ibmcloud pi image-import`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-image-import){: external} command.
 
 2. Find your newly imported image by using the `ibmcloud pi images` command.
 

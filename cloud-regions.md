@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-24"
 
 keywords: power systems, cloud regions
 
@@ -17,7 +17,7 @@ subcollection: power-iaas
 {: #ibm-cloud-reg}
 
 
-[Off-premises]{: tag-blue}
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
 
 The following table displays the appropriate region for your workspace:

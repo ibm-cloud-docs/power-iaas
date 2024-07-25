@@ -169,6 +169,12 @@ toc:
               - using-rhel.md
               - deploying-linux.md
       - topicgroup:
+           label: SAP
+           topics:
+             - deploying-SAP-custom-image.md
+             - SAP-HANA-sr2-sh2-profiles.md
+             - SAP-full-system-profiles.md
+      - topicgroup:
             label: Observability
             topics:
               - sysdig-monitoring-pvs.md

@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2024
 
 
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-24"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, system calculators
 
@@ -17,7 +17,7 @@ subcollection: power-iaas
 # System calculators
 {: #system-calculators}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 You can use system calculators to determine the system power load or the distributed floor load for your system.
 * **Power calculators**: The [IBM Systems energy estimator](https://see.c8f8f055.public.multi-containers.ibm.com/see/EnergyEstimator){: external} is a web-based tool for estimating power requirements for IBM systems. This tool estimates typical power requirements (watts) for a specific system configuration under normal operating conditions.

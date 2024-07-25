@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-24"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -128,7 +128,7 @@ Start the required TCP servers on your IBM i operating system by completing the 
 
 To get a 5250 session on your IBM i VM from ACS, either configure the virtual devices or enable autoconfig. To enable autoconfig, complete the following steps by using the IBM i VM:
 
-For IBM i 7.5, it is required that you first use `CHGSSTSECA` to set `SECSYSVAL *YES` (to allow security system value changes).  
+For IBM i 7.5, it is required that you first use `CHGSSTSECA` to set `SECSYSVAL *YES` (to allow security system value changes).
 {: note}
 
  1. Enter the `cfgtcp` command.

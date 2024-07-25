@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-24"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -18,7 +18,8 @@ subcollection: power-iaas
 {: help}
 {: support}
 
-[Off-premises]{: tag-blue}
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
 
 You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}}, providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}

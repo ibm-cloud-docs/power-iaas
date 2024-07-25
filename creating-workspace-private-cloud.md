@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-24"
 
 keywords: creating workspace resources, {{site.data.keyword.powerSys_notm}}, private cloud, workspace
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 
 
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 A workspace is a container of {{site.data.keyword.powerSys_notm}} resources at a specific geographic location (region). Compute (for example, images and virtual server instances), networking (for example, subnets and VPN connections), and storage (for example, volumes and snapshots) resources are deployed within a specific workspace and cannot be moved or shared between workspaces.
 {: shortdesc}

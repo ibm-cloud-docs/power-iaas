@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-24"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -16,7 +16,7 @@ subcollection: power-iaas
 # Network overview
 {: #network-private-cloud}
 
-[On-premises]{: tag-red}
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 Establishing a connectivity between the pod in your data center and {{site.data.keyword.powerSysFull}} IBM Cloud requires meticulous planning, site preparation, meeting the prerequisites, understanding the network architecture, and others.
 
