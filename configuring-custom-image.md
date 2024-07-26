@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -13,10 +13,16 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying a custom image within a {{site.data.keyword.powerSys_notm}}
+# Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}
 {: #deploy-custom-image}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 
 You can bring your own customized AIX or IBM i operating system (OS) image to deploy within an {{site.data.keyword.powerSysFull}}.
@@ -76,11 +82,9 @@ Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current 
 
 
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud supports IBM i 7.3, or later and IBM i COR.
+
+The IBM {{site.data.keyword.powerSys_notm}}(On-premises) supports IBM i 7.3, or later and IBM i COR.
 {: note}
-
-
-
 
 
 Power servers E1080 (9080-HEX) and S1022 (9105-22A) supports IBM i 7.3 and later versions. For more information, see [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}.

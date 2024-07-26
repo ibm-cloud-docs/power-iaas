@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -17,8 +17,11 @@ subcollection: power-iaas
 # IBM {{site.data.keyword.powerSys_notm}} architecture (Off-premises)
 {: #on-cloud-architecture}
 
+---
 
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+---
 
 {{site.data.keyword.powerSysFull}} is located in the IBM data centers, distinct from the IBM Cloud servers with separate networks and direct-attached storage.
 
@@ -50,7 +53,7 @@ The key features for the {{site.data.keyword.powerSys_notm}} are as follows.
 
 {{site.data.keyword.powerSys_notm}} uses a monthly billing rate that includes the licenses for the AIX, IBM i, or Linux operating systems. The monthly billing rate is pro-rated by the hour based on the resources that are deployed to the {{site.data.keyword.powerSys_notm}} instance for the month. When you create the {{site.data.keyword.powerSys_notm}} instance, you can see the total cost for your configuration based on the options that you specify. You can quickly identify what configuration options provide you with the best value for your business needs. For more information, see [Pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
-Bring your own Linux image (OVA format) and subscription. SLES and RHEL OVA images are supported. For more information, see [Using SLES within the {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-using-linux).
+Bring your own Linux image (OVA format) and subscription. SLES and RHEL OVA images are supported. For more information, see [Using SLES within the IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-using-linux).
 {: note}
 
 ### Infrastructure customization

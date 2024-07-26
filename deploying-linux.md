@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: linux deployment, ova, powervc capture, vios
 
@@ -18,7 +18,13 @@ subcollection: power-iaas
 # Creating a custom Linux image in OVA format
 {: #linux-deployment}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 You can deploy a Linux&reg; virtual machine (VM) in your workspace with a custom Linux image and receive support from a Linux vendor. When you are provisioning a VM, select a **Linux-Client supplied subscription** for your own Linux image (OVA format) and subscription.
 {: shortdesc}

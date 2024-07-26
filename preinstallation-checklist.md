@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network validation, account activation
 
@@ -16,14 +16,18 @@ subcollection: power-iaas
 # Prerequisites for installing the pod
 {: #pre_installation_checklist}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Proper planning is essential for the successful setup and use of {{site.data.keyword.powerSysFull}} pods. It ensures that you have everything you need and that you meet all the prerequisites for your pod.
 {: shortdesc}
 
-IBM owns the responsibility to install, upgrade, and update the hardware and software for the pod infrastructure. IBM coordinates with you for any dependencies to ensure that your IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center meets all the prerequisites before the pod installation.
+IBM owns the responsibility to install, upgrade, and update the hardware and software for the pod infrastructure. IBM coordinates with you for any dependencies to ensure that your IBM {{site.data.keyword.powerSys_notm}} (On-premises) data center meets all the prerequisites before the pod installation.
 
-IBM provides a pre-installation checklist after you place an order for IBM {{site.data.keyword.powerSys_notm}} Private Cloud and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your IBM {{site.data.keyword.powerSys_notm}} Private Cloud environment for the pod installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
+IBM provides a pre-installation checklist after you place an order for IBM {{site.data.keyword.powerSys_notm}} (On-premises) and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment for the pod installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
 
 ## Preorder checklist
 {: #pre-order-check}
@@ -64,7 +68,7 @@ The following network requirements must be completed before the pod is delivered
 ## Network validation and account activation
 {: #validation-activation}
 
-You must complete the following steps to validate the network functions and to activate the IBM {{site.data.keyword.powerSys_notm}} Private Cloud account:
+You must complete the following steps to validate the network functions and to activate the IBM {{site.data.keyword.powerSys_notm}} (On-premises) account:
 
 * After the physical cabling is completed, provide the initial configuration to set up the data plane network to the IBM site reliability engineering (SREs) team.
 * The SRE team configures the network for network validation testing.
@@ -72,7 +76,7 @@ You must complete the following steps to validate the network functions and to a
 * The SRE team conducts provisioning testing over the control plane by simulating a user request from the IBM Cloud.
     To complete the remaining network connectivity after the installation of the pod, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
 * After testing is complete, the SRE team activates the account specifying the period from when the billing starts.
-* The SRE team works with you to ensure the visibility of the pod Satellite location in your IBM {{site.data.keyword.powerSys_notm}} Private Cloud account.
+* The SRE team works with you to ensure the visibility of the pod Satellite location in your IBM {{site.data.keyword.powerSys_notm}} (On-premises) account.
 * Perform a provisioning test by using the service broker. The provisioning test is successful if the following statements are true:
     * A virtual machine is successfully provisioned.
     * The virtual machine has an IP address that is assigned to it.

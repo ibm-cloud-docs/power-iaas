@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -13,11 +13,14 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for {{site.data.keyword.powerSys_notm}}
+# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}}
 {: #set-full-Linux}
+
+---
 
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+---
 
 The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}

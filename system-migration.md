@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -17,18 +17,23 @@ subcollection: power-iaas
 # Planning a workload migration to {{site.data.keyword.powerSysFull}}
 {: #system-migration}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), S1022 (9105-22A), and E1080 (9080-HEX).
 {: shortdesc}
 
 
 
-For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} Private Cloud](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
 
 
+For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} (Off-premises)](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
 
 
 

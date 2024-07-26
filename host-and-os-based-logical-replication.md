@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: Host and OS based logical replication, Replication, Application specific replication,
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Host and OS-based logical replication
 {: #replication-host}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 IBM recommends that you use PowerHA SystemMirror (Enterprise Edition) with Geographic Mirroring (Geo mirroring) and Geographic Logical Volume Manager (GLVM). The following host and OS-based logical replication options exist depending on your OS:
 

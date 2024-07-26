@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: managing virtual tape library, ppcaas, virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Managing a virtual tape library
 {: #manage-vtl}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 FalconStor Virtual Tape Library (VTL) is an optimized backup and deduplication solution that provides tape library emulation, high-speed backup or restore, data archival to supported S3 clouds for long-term storage, global data deduplication, enterprise-wide replication, and long-term cloud-based container archive, without requiring changes to the existing environment.
 {: shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -16,8 +16,13 @@ subcollection: power-iaas
 # Migration strategies for IBM i
 {: #migration-strategies-power}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Learn about the various strategies to migrate your data and workloads to an {{site.data.keyword.powerSysFull}}.
 {: shortdesc}

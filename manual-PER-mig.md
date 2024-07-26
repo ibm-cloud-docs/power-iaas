@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -17,8 +17,13 @@ subcollection: power-iaas
 # Migrating existing network configurations to Power Edge Router
 {: #migrate-ws-per}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 If you have manually configured subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER). With PER, you can use the built-in redundancy and much higher bandwidth.
 

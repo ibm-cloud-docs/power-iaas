@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-25"
+lastupdated: "2024-07-26"
 
 keywords: deploying a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to
 
@@ -16,9 +16,11 @@ subcollection: power-iaas
 # Deploying a Linux for SAP (HANA or NetWeaver) custom image
 {: #deploying-SAP-image}
 
+---
 
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+---
 
 The Linux&reg; for SAP (HANA or NetWeaver) operating system (OS) image can be deployed within an {{site.data.keyword.powerSysFull}} by using IBM&reg; provided central image repository for SAP offerings. You can bring your own SAP (HANA or NetWeaver) image with your own subscription, import the image to your workspace, and create a virtual machine by using the image.
 

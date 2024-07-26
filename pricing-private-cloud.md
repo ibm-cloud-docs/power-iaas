@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -16,9 +16,13 @@ subcollection: power-iaas
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} (On-premises)
 {: #pricing-private-cloud}
 
+----
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
-IBM {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
+----
+
+The {{site.data.keyword.powerSysFull}} (On-premises) provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
 
 - Virtual machines: The CPU (in cores), with processor modes (capped, shared, dedicated), and memory (in GB).
 
@@ -28,41 +32,28 @@ IBM {{site.data.keyword.powerSysFull}} Private Cloud provides secure and unified
 
 For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
-In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} Private Cloud, the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} Private Cloud infrastructure or instances. The actual price might include the discounts and promotion codes.
+In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} (On-premises), the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} (On-premises) infrastructure or instances. The actual price might include the discounts and promotion codes.
 
 
 
 
-The following IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} Private Cloud in your data center:
-- Dallas (satcon_dal)
-- Frankfurt (satcon_fra)
-- London (satcon_lon)
-- Madrid (satcon_mad)
-- Osaka (satcon_osa)
-- Sao Paulo (satcon_sao)
-- Sydney (satcon_syd)
-- Tokyo (satcon_tok)
-- Toronto (satcon_tor)
-- Washington, DC (satcon_wdc)
-
-Selection of IBM Cloud region is one of the factors for computing pricing.
-{: Note}
 
 
 
+For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} (On-premises), see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 
 ## Monthly usage
 {: #monthly-usage}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
+IBM {{site.data.keyword.powerSys_notm}} (On-premises) instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
 
 
 
 All prices that are mentioned in the topic, [Pricing for IBM Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} Private Cloud instance. The instance has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
+In the following example, the customer provisions an IBM {{site.data.keyword.powerSys_notm}} (On-premises) instance. The instance has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
 Let us assume the following hypothetical monthly prices:
 * Cores: $143.23/month x 1 = $143.23
 * Memory: $9/month each GB x 8 = $ 72.00
@@ -229,7 +220,7 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 ## Memory types
 {: #memory-types}
 
-Charges for IBM {{site.data.keyword.powerSys_notm}} Private Cloud are determined by the memory usage (in gigabytes), and the type of the system chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. Table 6 shows how memory types affect the cost per system:
+Charges for IBM {{site.data.keyword.powerSys_notm}} (On-premises) are determined by the memory usage (in gigabytes), and the type of the system chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. Table 6 shows how memory types affect the cost per system:
 
 | Number of GBs |  Memory type                      | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 | ---------------- | ----------------------------------  | -----------------------  | ------------------------  |
@@ -253,7 +244,7 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 ## Storage types
 {: #storage-types}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud charges are based on the following storage types:
+IBM {{site.data.keyword.powerSys_notm}} (On-premises) charges are based on the following storage types:
 
 * **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. Table 7 shows an example of how you are billed based on your volume creation:
 
@@ -322,11 +313,11 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 
 [On-premises]{: tag-red}
 
-SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}. In the IBM {{site.data.keyword.powerSys_notm}} Private Cloud environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
+SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}. In the IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
 
-Consequently, the calculation of operating system license charges follows a distinct methodology within the IBM {{site.data.keyword.powerSys_notm}} Private Cloud setup to accommodate this core-to-virtual core ratio efficiently.
+Consequently, the calculation of operating system license charges follows a distinct methodology within the IBM {{site.data.keyword.powerSys_notm}} (On-premises) setup to accommodate this core-to-virtual core ratio efficiently.
 
-When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you pay for the following items:
+When you use SPP in IBM {{site.data.keyword.powerSys_notm}} (On-premises), you pay for the following items:
 
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
@@ -334,18 +325,18 @@ When you use SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud, you p
     * Capped SPP: pricing is determined by the entitled capacity.
     * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
 
-Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} Private Cloud.
+Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} (On-premises).
+
 
 
 
 | Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
-| IBM {{site.data.keyword.powerSys_notm}} Private Cloud	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
+| IBM {{site.data.keyword.powerSys_notm}} (On-premises)	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} (On-premises), these OS license charges are associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
-{: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
+{: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
 
 For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
-
 
 
 
@@ -407,10 +398,16 @@ Review the following frequently asked questions about pricing:
 
 
 
+
+
+
+
+
+
 ### Where can I find the unit prices for the billing metrics?
 {: #billing-metrics}
 
-   You can view the unit prices for the billing metrics for IBM {{site.data.keyword.powerSys_notm}} Private Cloud on the [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
+   You can view the unit prices for the billing metrics for IBM {{site.data.keyword.powerSys_notm}} (On-premises) on the [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
 
    On the global catalog, complete the following steps to view the pricing for each metric ID:
 
@@ -438,9 +435,6 @@ Review the following frequently asked questions about pricing:
 
 
 
-
-
-
 ### How to calculate the pricing for OS licensing in the uncapped SPP?
 {: #cal-OSlic}
 
@@ -448,6 +442,7 @@ Review the following frequently asked questions about pricing:
 To calculate the price for OS licensing in the uncapped SPP, consider the following conditions:
 * If the total number of VPs associated with the partitions in an SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in an SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
+
 
 
 
@@ -461,7 +456,7 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 | 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
 |         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
-{: caption="Table 14. Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} Private Cloud" caption-side="top"}
+{: caption="Table 14. Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
 
 
 
@@ -472,14 +467,10 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 
 
 
-
-### Is there any initial one-time payment before the pod infrastructure is installed in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center?
+### Is there any initial one-time payment before the pod infrastructure is installed in the IBM {{site.data.keyword.powerSys_notm}} (On-premises) data center?
 {: #initial-one-time-payment}
 
    No
-
-
-
 
 
 
@@ -496,4 +487,4 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 ### When does the billing begin?
 {: #billing-schedule}
 
-   Billing begins when an IBM representative sets up and registers the pod in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud data center.
+   Billing begins when an IBM representative sets up and registers the pod in the IBM {{site.data.keyword.powerSys_notm}} (On-premises) data center.

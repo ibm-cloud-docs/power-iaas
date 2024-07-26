@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-25"
+lastupdated: "2024-07-26"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -16,8 +16,13 @@ subcollection: power-iaas
 # Global Replication Service (GRS)
 {: #getting-started-GRS}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads nowadays run on cloud infrastructure, it’s essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
 {: shortdesc}

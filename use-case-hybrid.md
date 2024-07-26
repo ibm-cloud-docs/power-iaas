@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: use case, client needs, disaster recover, hybrid power, mission-critical application, recovery
 
@@ -17,7 +17,13 @@ subcollection: power-iaas
 # Hybrid Power Disaster Recovery (DR)
 {: #use-case-hybrid-hosting}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 The client wants to use the {{site.data.keyword.powerSysFull}} as a DR destination for their private cloud environment.
 {: shortdesc}

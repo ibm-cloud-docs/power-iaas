@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-26"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -16,8 +16,13 @@ subcollection: power-iaas
 # Using third-party tools for migration
 {: #migration-strategies-managed-thirdparty}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 You can use the third-party tools to complete your data migration. The following third-party tools are commonly used for data migration:
 {: shortdesc}

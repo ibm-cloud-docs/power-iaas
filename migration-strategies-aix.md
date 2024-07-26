@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-26"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Migration strategies for AIX
 {: #migration-aix}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
 

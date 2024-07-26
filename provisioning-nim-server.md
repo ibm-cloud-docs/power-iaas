@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: troubleshooting, NIM server, support, fixes, updates
 
@@ -16,8 +16,13 @@ subcollection: power-iaas
 # Setting up a Network Installation Management (NIM) server
 {: #provisioning-nim}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 You can provision an AIX virtual machine (VM) and use it as a NIM server for troubleshooting purposes or for downloading fixes and updates.
 

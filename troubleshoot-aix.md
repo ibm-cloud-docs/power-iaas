@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS, object data manager, improving performance, suboptimal, lsattr
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Troubleshooting AIX-related issues
 {: #troubleshoot-iaas-aix}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Learn how to troubleshoot {{site.data.keyword.powerSysShort}} AIX-related issues.
 {: shortdesc}

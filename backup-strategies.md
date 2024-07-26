@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-26"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Backup for AIX and Linux instances
 {: #backup-strategies}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Learn more about different AIX and Linux backup strategies for IBM&reg; Power Systems&trade; Virtual Server.
 {: shortdesc}

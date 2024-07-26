@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-25"
+lastupdated: "2024-07-26"
 
 keywords: power, SAP HANA, sr2, sh2, profiles
 
@@ -15,6 +15,12 @@ subcollection: power-iaas
 
 # SAP HANA sr2 and sh2 profiles
 {: #SAP-hana-sr2-sh2-profiles}
+
+---
+
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+---
 
 
 

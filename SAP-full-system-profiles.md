@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-25"
+lastupdated: "2024-07-26"
 
 keywords: power, SAP, full system profiles
 
@@ -15,6 +15,13 @@ subcollection: power-iaas
 
 # SAP full system profiles
 {: #SAP-full-system-profiles}
+
+---
+
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+---
+
 
 
 

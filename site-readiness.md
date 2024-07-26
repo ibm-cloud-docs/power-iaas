@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -16,7 +16,11 @@ subcollection: power-iaas
 # Site readiness
 {: #site-readiness}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Determine whether to construct a new site or to modify an existing site. The electric power and communication facilities must be available in adequate quantities for operation. If these facilities are inadequate, contact the utility company to determine whether additional services can be made available.
 

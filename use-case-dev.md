@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: AIX and IBM i development, test, use case, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # AIX and IBM i development and test
 {: #use-case-dev-test}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 {{site.data.keyword.powerSysFull}} is a great solution if you want to create a temporary sandbox environment to do testing and as a step before you deploy production applications.
 {: shortdesc}

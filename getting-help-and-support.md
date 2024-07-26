@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -16,8 +16,13 @@ subcollection: power-iaas
 # Getting Help and Support
 {: #getting-help-and-support}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs) and [Getting support](/docs/get-support?topic=get-support-using-avatar&interface=ui).
 {: shortdesc}

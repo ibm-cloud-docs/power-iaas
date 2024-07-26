@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: setting up terraform, {{site.data.keyword.powerSys_notm}} as a service, private cloud, howto, terminology, how-to
 
@@ -13,11 +13,16 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up Terraform for {{site.data.keyword.powerSys_notm}}
+# Setting up Terraform for IBM {{site.data.keyword.powerSys_notm}}
 {: #setting-up-terraform}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Terraform on IBM Cloud enables predictable and consistent provisioning of IBM Cloud services so that you can rapidly build complex, multitier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the IBM Cloud CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.powerSysFull}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}

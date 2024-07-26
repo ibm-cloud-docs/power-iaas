@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: viewing pod, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -14,18 +14,17 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-# Viewing IBM {{site.data.keyword.powerSys_notm}} Private Cloud pod details
+# Viewing IBM {{site.data.keyword.powerSys_notm}} pod details (On-premises)
 {: #view-pods}
 
-
-
-
-
+---
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
-In IBM {{site.data.keyword.powerSysFull}} Private Cloud, you can view the pod details such as the total number of cores, memory, and number of system units. You can also view the storage capacity that you have used from the total storage per controller.
+---
+
+
+You can view the On-premises pod details such as the total number of cores, memory, and number of system units. You can also view the storage capacity that you have used from the total storage per controller.
 {: shortdesc}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: power, power server, private cloud, safety notice
 
@@ -16,7 +16,11 @@ subcollection: power-iaas
 # Safety notices
 {: #safety-notices}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 These statements provide the caution and danger information that are used in this document.
 

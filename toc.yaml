@@ -1,7 +1,6 @@
 #  Name your file `toc.yaml`
 #  Make sure you include all nav file coding requirements, as defined in /docs/writing?topic=writing-code-nav
 #  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
-#  This is for staging
 ---
 toc:
   properties:

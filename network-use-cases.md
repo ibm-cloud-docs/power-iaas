@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -16,7 +16,11 @@ subcollection: power-iaas
 # Network use cases
 {: #network_use_cases}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Review the common network use cases within the network architecture of {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
@@ -106,10 +110,10 @@ Figure 6 describes the network connectivity between a virtual machine and a Red 
 
 With this use case, you can use the Dynamic Host Configuration Protocol (DHCP) protocol within the pod to dynamically assign an IP address to a virtual machine.
 
-The presence of the DHCP network within the pod is mandatory when you are using the OpenShift Container Platform on the IBM {{site.data.keyword.powerSys_notm}} Private Cloud environment.
+The presence of the DHCP network within the pod is mandatory when you are using the OpenShift Container Platform on the IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment.
 {: note}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud pods can be configured to include a private and hardware-based DHCP network. The edge router within the pod is configured with the DHCP pool and gateway. You can deploy virtual machines in the DHCP network. The virtual machines are assigned IP addresses from the DHCP server.
+IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods can be configured to include a private and hardware-based DHCP network. The edge router within the pod is configured with the DHCP pool and gateway. You can deploy virtual machines in the DHCP network. The virtual machines are assigned IP addresses from the DHCP server.
 
 You can attach only one DHCP network interface card (NIC) to a virtual machine. If you attach more than one DHCP NIC to a virtual machine, only one NIC acquires the IP address from the DHCP server that is assigned to the virtual machine.
 

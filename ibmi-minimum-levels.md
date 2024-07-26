@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: ibm i, program temporary fixes
 
@@ -15,7 +15,13 @@ subcollection: power-iaas
 # Minimum PTF levels for IBM i
 {: #minimum-levels}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 

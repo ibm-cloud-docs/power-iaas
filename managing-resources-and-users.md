@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-26"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -16,18 +16,22 @@ subcollection: power-iaas
 # Managing identity and access management (IAM) for {{site.data.keyword.powerSysFull}}s
 {: #managing-resources-and-users}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is your one-stop shop for all user and resource management in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 
 
-[On-premises]{: tag-red} To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} Private Cloud when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
+
+[On-premises]{: tag-red} To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} (On-premises) when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
 {: important}
-
-
-
 
 
 
@@ -48,7 +52,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Platform access role | Type of access allowed                                                                                  |
 | -------------------- | ------------------------------------------------------------------------------------------------------- |
 | Viewer               | View instances and list instances.                                                                      |
-| Operator             | View instances and manage aliases, bindings (IBM {{site.data.keyword.powerSys_notm}} Private Cloud only), and credentials.                     |
+| Operator             | View instances and manage aliases, bindings (IBM {{site.data.keyword.powerSys_notm}} (On-premises) only), and credentials.                     |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
 {: caption="Table 1. IAM platform access roles" caption-side="bottom"}

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-22"
+lastupdated: "2024-07-26"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -13,12 +13,18 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Generating an estimate for a {{site.data.keyword.powerSys_notm}}
+# Generating an estimate for IBM {{site.data.keyword.powerSys_notm}}
 {: #generating-an-estimate}
 {: help}
 {: support}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 Use the [cost estimator](https://cloud.ibm.com/power/estimate){: external} tool to estimate the cost of the resources before you deploy them. With the cost estimator tool, you can customize and determine the requirements that align with your business needs.
 
@@ -29,7 +35,7 @@ Use the cost estimator tool for:
 ## Creating an estimation of resources
 {: #est-resources}
 
-You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your IBM {{site.data.keyword.powerSysFull}} Private Cloud or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
+You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} (On-premises) or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
 {: shortdesc}
 
 You are not charged for creating an estimate. The resources that you estimate can be deployed only after a workspace creation.
@@ -58,7 +64,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 10. Click **View estimate** to view and to take actions on them.
 
 
-### IBM Cloud
+### Location type: Off-premises
 {: #off-prem-location-type}
 
 [Off-premises]{: tag-blue}
@@ -171,7 +177,7 @@ To learn more about dedicated host, see [Getting started with dedicated host].
 
 
 
-###  (IBM {{site.data.keyword.powerSys_notm}} Private Cloud)
+### Location type: On-premises
 {: #on-prem-location-type}
 
 [On-premises]{: tag-red}

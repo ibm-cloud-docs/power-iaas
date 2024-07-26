@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -17,6 +17,10 @@ subcollection: power-iaas
 {: #capturing-exporting-vm}
 
 
+
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 
 

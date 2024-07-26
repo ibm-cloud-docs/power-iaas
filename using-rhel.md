@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -16,7 +16,13 @@ subcollection: power-iaas
 # Using RHEL within the {{site.data.keyword.powerSys_notm}}
 {: #linux-with-powervs}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 You can deploy a Linux&reg; virtual machine (VM) by using one of the IBM stock OS images, or you can bring your own Linux image (in OVA format).
 {: shortdesc}

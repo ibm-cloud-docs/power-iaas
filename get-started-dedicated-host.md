@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -18,9 +18,13 @@ subcollection: power-iaas
 # Getting started with dedicated host
 {: #dedicated-host}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
+---
 
 Dedicated host capability on {{site.data.keyword.powerSysFull}} allows you to provision an entire server for your sole use, significantly expanding your computing options. You can handle mission-critical workloads with complete isolation, control, and security.
 

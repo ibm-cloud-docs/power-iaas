@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2024
 
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, environment, environmental requirement
 
@@ -17,9 +17,13 @@ subcollection: power-iaas
 # Environmental requirements
 {: #environmental-requirements}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
-Your {{site.data.keyword.powerSysFull}} Private Cloud site must have adequate cooling and humidity control for {{site.data.keyword.powerSysFull}} racks. To know the recommended and allowed values of the required parameters, see Table 1:
+---
+
+Your On-premises site must have adequate cooling and humidity control for {{site.data.keyword.powerSysFull}} racks. To know the recommended and allowed values of the required parameters, see Table 1:
 
 | Environment (operating) (1)                                           | | |
 |---------------------------------------------------------------------- | --- | --- |
@@ -49,7 +53,7 @@ When allowable values for the required parameters in the operating environment a
 If you want to use any allowable configurations of ASHRAE A3 to operate at the maximum limits, contact IBM Support.
 {: note}
 
-If altitude of the IBM {{site.data.keyword.powerSys_notm}} Private Cloud site exceeds by 900 m (2953 ft), derate the maximum allowable temperature by 1°C (1.8°F) for every 175 m (574 ft). The maximum allowable elevation is 3050 m (10000 ft).
+If altitude of the On-premises site exceeds by 900 m (2953 ft), derate the maximum allowable temperature by 1°C (1.8°F) for every 175 m (574 ft). The maximum allowable elevation is 3050 m (10000 ft).
 
 To set the minimum and maximum humidity levels, see the following guidelines:
 *  The minimum humidity level is the maximum absolute humidity of the -12°C (10.4°F) dew point and 8% relative humidity. These levels intersect at approximately 25°C (77°F). Based on the temperature, set the minimum humidity level as follows:

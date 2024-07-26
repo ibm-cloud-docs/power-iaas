@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-24"
+lastupdated: "2024-07-26"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -18,8 +18,11 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 # Monitoring metrics for IBM {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
 
+---
+
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+---
 
 You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using the IBM Cloud® Monitoring dashboards.
 {: shortdesc}

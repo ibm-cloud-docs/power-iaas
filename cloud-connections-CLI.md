@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-26"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -13,12 +13,16 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.powerSys_notm}} Cloud Connections
+# IBM {{site.data.keyword.powerSys_notm}} Cloud Connections
 {: #cloud-connections}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
+---
 
 You can use {{site.data.keyword.powerSys_notm}} Cloud Connections to connect your {{site.data.keyword.powerSys_notm}} instances to {{site.data.keyword.cloud_notm}} resources on {{site.data.keyword.cloud_notm}} classic network and Virtual Private Cloud (VPC) infrastructures. {{site.data.keyword.powerSys_notm}} Cloud Connection creates a {{site.data.keyword.dl_short}} (2.0) Connect instance to connect your {{site.data.keyword.powerSys_notm}} instances to the {{site.data.keyword.cloud_notm}} resources within your account. For cross-account connectivity, use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures. The speed and reliability of the {{site.data.keyword.dl_short}} connection extends your {{site.data.keyword.powerSys_notm}} network to the IBM Cloud network and offers more consistent and higher-throughput connectivity, while keeping network traffic within the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

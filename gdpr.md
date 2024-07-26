@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-26"
 
 keywords: supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, workspace security, delete data, export data, data retention, gdpr
 
@@ -18,8 +18,13 @@ subcollection: power-iaas
 {: help}
 {: support}
 
+---
 
+IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+---
 
 The [General Data Protection Regulation](https://gdpr.eu/){: external} seeks to create a harmonized data protection law framework across the European Union (EU) and aims to give citizens back the control of their personal data. The GDPR imposes strict rules on those hosting and processing personal data anywhere in the world. Additionally, this regulation introduces rules that relate to the free movement of personal data within and outside of the EU.
 {: shortdesc}
