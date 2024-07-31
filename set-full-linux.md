@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-07-29"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}}
+# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} (Off-premises)
 {: #set-full-Linux}
 
 ---

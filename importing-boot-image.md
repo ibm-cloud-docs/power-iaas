@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-07-29"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -52,7 +52,8 @@ Complete the following steps to import a boot image by using the {{site.data.key
 
 2. Find your newly imported image by using the `ibmcloud pi images` command.
 
-    ```shell
+    ```text
+    shell
     ibmcloud pi images [--long] [--json]
     ```
     {: codeblock}

@@ -162,8 +162,8 @@ toc:
       - topicgroup:
             label: Linux
             topics:
-              - full-linux-sub.md
               - set-full-linux.md
+              - full-linux-sub.md
               - registering-linux.md
               - using-rhel.md
               - deploying-linux.md

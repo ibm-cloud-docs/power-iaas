@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-07-31"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -39,7 +39,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can configure a priva
 
 - IBM Cloud infrastructure networks - While the following infrastructure network environments offer different features and are managed separately, they can be connected to each other to provide layer-3 IPv4 traffic flow:
     - Classic - Classic network resources include VLANs, subnets, and SSL Virtual Private Network (VPN) access. See [Network security architecture](https://www.ibm.com/cloud/architecture/architectures/network-security-arch/){: external} for a description of the classic network components. Bring Your Own IP (BYOIP) is not supported.
-    - Virtual Private Cloud (VPC) - VPC network resources include subnets, floating IP addresses, security groups, and VPN gateways. For more information, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). See [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){: external} for a one-hour course on VPC networking. BYOIP is supported.
+    - Virtual Private Cloud (VPC) - VPC network resources include subnets, floating IP addresses, security groups, and VPN gateways. For more information, see [About networking](/docs/vpc?topic=vpc-about-networking-for-vpc). For more information about a course on VPC networking, see [Advanced networking for IBM Cloud VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/){: external}. BYOIP is supported.
     - Power Systems - Network resources include subnets. BYOIP is supported.
 - Overlay networks - These networks exist in the IBM Cloud VMware Shared and VMware Dedicated offerings. While technically hosted in the IBM Cloud classic infrastructure environment, these networks are implemented in VMware NSX and under your direct control, including the IP addressing schema. BYOIP is supported. Therefore, overlay networks cannot be routed by the IBM Cloud infrastructure networks; access is through tunnels.
 - External:
@@ -78,6 +78,8 @@ In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect
 
 ![Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM {{site.data.keyword.dl_short}} (2.0)](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 1. Connect to classic infrastructure with {{site.data.keyword.dl_short}} (2.0)" caption-side="bottom"}
 
+
+
 Complete the following steps to implement this scenario:
 
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap the subnets with your IBM Cloud classic private subnets, or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
@@ -89,14 +91,14 @@ Complete the following steps to implement this scenario:
     - When this connection is established, the Border Gateway Protocol (BGP) is configured automatically by the IBM Cloud team in the following way:
         - The {{site.data.keyword.powerSys_notm}} router advertises your {{site.data.keyword.powerSys_notm}} subnets to the classic infrastructure environment.
         - The classic infrastructure advertises only your IBM Cloud classic private subnets to the {{site.data.keyword.powerSys_notm}} router.
-        - The classic infrastructure filters the following networks from the BGP advertisements coming from the {{site.data.keyword.powerSys_notm}} router because these IP addresses are used by the services networks: `10.0.0.0/14`, `10.198.0.0/15`, `10.200.0.0/14`, `169.254.0.0/16`, `224.0.0.0/4` and any IP ranges that are assigned to your IBM Cloud classic private subnets.
+        - The classic infrastructure filters the following IP addresses from the BGP advertisements that are coming from the {{site.data.keyword.powerSys_notm}} router because these IP addresses are used by the services networks: `10.0.0.0/14`, `10.198.0.0/15`, `10.200.0.0/14`, `169.254.0.0/16`, `224.0.0.0/4` and any IP ranges that are assigned to your IBM Cloud classic private subnets.
 
-          You can use the `10.x.x.x` range if there is no conflict with an IBM Cloud back-end `10.x.x.x` service. You must contact IBM Support if you want to use NAT'ing or IP aliasing to resolve the IP conflict. However, IBM does not recommend by using the `10.x.x.x` range when you create a network.
+          You can use the `10.x.x.x` range if there is no conflict with an IBM Cloud back-end `10.x.x.x` service. You must contact IBM Support if you want to resolve the IP address conflict by using a Network Address Translator (NAT) device or IP aliasing method. However, IBM does not recommend by using the `10.x.x.x` range when you create a network.
           {: important}
 
 3. Identify the IBM Cloud classic private subnets and the IP address schema that is assigned to you when you ordered bare metal or virtual server instances that are hosted on your IBM Cloud classic private subnets. Connect to the required resources and services.
 
-    All the routers in all classic infrastructure data centers and PoPs across the global IBM Cloud backbone are connected to the {{site.data.keyword.powerSys_notm}} router by using the {{site.data.keyword.dl_short}} Connect VRF-enabled connection.
+    All the routers in all classic infrastructure data centers and point-of-presence (POP) points across the global IBM Cloud backbone are connected to the {{site.data.keyword.powerSys_notm}} router by using the {{site.data.keyword.dl_short}} Connect VRF-enabled connection.
 
     Each IBM Cloud {{site.data.keyword.dl_short}} workspace is not redundant. However, diversity can be engineered by using multiple {{site.data.keyword.dl_short}}s and BGP. For more information, see [Models for diversity and redundancy in {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
     {: note}
@@ -108,6 +110,8 @@ In this deployment topology, a {{site.data.keyword.dl_short}} (2.0) is used to c
 
 ![Connect to VPC](./images/network-connect-to-vpc.svg "Connect to VPC"){: caption="Figure 2. Connect to VPC" caption-side="bottom"}
 
+
+
 Complete the following steps to implement this scenario:
 
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap these subnets with your IBM Cloud classic private subnets or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
@@ -117,13 +121,13 @@ Complete the following steps to implement this scenario:
     - The {{site.data.keyword.powerSys_notm}} router advertises your {{site.data.keyword.powerSys_notm}} subnets to the router in the VPC infrastructure.
         - The router in the VPC infrastructure advertises only your IBM Cloud VPC subnets to the {{site.data.keyword.powerSys_notm}} router.
         - The router in the VPC infrastructure filters the following networks from the BGP advertisements coming from the {{site.data.keyword.powerSys_notm}} router because these IP addresses are used by the endpoint networks: `169.254.0.0/16`, `224.0.0.0/4`, `166.9.0.0/16`, and any IP ranges that are assigned to your IBM Cloud VPC subnets.
-3. Identify the IBM Cloud VPC subnets and the IP address schema that is assigned to you when you ordered VPC services. The XCR connects to the endpoint networks by using the VPC implicit router that provides routing functions to each VPC, and allows each VPC to have access to its own copy of the IPv4 address space. The Multi-Protocol Label Switching (MPLS) VPN works with {{site.data.keyword.dl_short}} and classic infrastructure environments. For more information, see [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external}.
+3. Identify the IBM Cloud VPC subnets and the IP address schema that is assigned to you when you ordered VPC services. The cross-connect routers (XCRs) connects to the endpoint networks by using the VPC implicit router that provides routing functions to each VPC, and allows each VPC to have access to its own copy of the IPv4 address space. The Multi-Protocol Label Switching (MPLS) VPN works with {{site.data.keyword.dl_short}} and classic infrastructure environments. For more information, see [Network isolation, data packet flow, and the role of an implicit router in a VPC](https://www.ibm.com/cloud/architecture/content/course/advanced-networking-for-vpc/design-develop-and-deploy/){: external}.
     You cannot access some endpoint networks (services and infrastructure services) from your {{site.data.keyword.powerSys_notm}} subnets. The types of endpoint networks are as follows:
-    - Service endpoints - Allows connection to IBM Cloud services available through DNS names in the cloud.ibm.com domain and resolves to `166.9.x.x` addresses.
+    - Service endpoints - Allows connection to IBM Cloud services available through Domain Name System (DNS) names in the cloud.ibm.com domain and resolves to `166.9.x.x` addresses.
     - Infrastructure services - Allows connection to IBM Cloud services from the adn.networklayer.com domain and resolves to `161.26.0.0/16` addresses. Services that you can reach include:
       - DNS resolvers - `161.26.0.10` and `161.26.0.11` (Windows VS is set up with `161.26.0.7`; Linux with `161.26.0.7` and `161.26.0.8`)
       - Ubuntu and Debian mirrors - mirrors.adn.networklayer.com or `161.26.0.6`
-      - NTP - time.adn.networklayer.com or `161.26.0.6`. This is the same IP address as the Ubuntu and Debian mirrors.
+      - Network Time Protocol (NTP) - time.adn.networklayer.com or `161.26.0.6`. This is the same IP address as the Ubuntu and Debian mirrors.
       - IBM Cloud Object Storage
 
 4. Create Virtual Private Endpoints (VPEs) for services of interest such as DNS, NTP, and IBM Cloud Object Storage. For more information, see [VPE supported services](/docs/vpc?topic=vpc-vpe-supported-services).
@@ -140,13 +144,22 @@ In this deployment topology, [Megaport](https://www.megaport.com/){: external} o
 
 ![Connect to a client-managed environment](./images/network-connect-to-onprem.svg "Connect to a client-managed environment"){: caption="Figure 3. Connect to client-managed environment" caption-side="bottom"}
 
+
+
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
 Review the following characteristics about Megaport connectivity services:
-    * Megaport operates a global network infrastructure that enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
-    * A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, the best practice is to select two different port locations to provide redundancy.
-    * Megaport has a number of cloud service providers including IBM Cloud.
-    * Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC (by using the Megaport portal or API) allows you to connect into the Power virtual server environment and optionally, the classic/VPC infrastructure environments or other clouds.
+
+* Megaport operates a global network infrastructure that enables on-demand connectivity to hundreds of global services in Asia Pacific, North America, Europe, and the Middle East.
+
+* A port is the physical point of connection between your organization’s network and the Megaport network. While a single data center connection is possible, the best practice is to select two different port locations to provide redundancy.
+
+
+* Megaport has a number of cloud service providers including IBM Cloud.
+
+
+* Virtual Cross Connects (VXCs) provide connections between any of the locations and services on the Megaport network. Ordering a VXC (by using the Megaport portal or API) allows you to connect into the Power virtual server environment and optionally, the classic/VPC infrastructure environments or other clouds.
+
 
 Megaport connectivity services are available in DAL12, DAL13, FRA05, LON06, MON01, SYD05, OSA21, WDC04, and WDC06 data centers.
 {: important}
@@ -156,7 +169,7 @@ Complete the following steps to implement this scenario:
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap these subnets with your IBM Cloud classic private subnets or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 2. Procure the [Megaport](https://www.megaport.com/){: external} VXC connections to connect your (remote) network in the client-managed environment to the Megaport network.
     - Open an IBM Support case against {{site.data.keyword.powerSys_notm}} to receive a service ID or a virtual cross-connect (VxC) identifier from IBM.
-    - Engage with Megaport to procure the connection (VxC) to {{site.data.keyword.powerSys_notm}} Port @ Megaport.
+    - Engage with Megaport to procure the connection (VxC) to {{site.data.keyword.powerSys_notm}} Port at Megaport.
         Although a single data center connection between the network in the client-managed environment and the Megaport network is possible, best practice is to select two different port locations to provide redundancy.
 3. Open an IBM Support case against the {{site.data.keyword.powerSys_notm}} team to configure the Megaport network to the {{site.data.keyword.powerSys_notm}} router by using VXCs. Remember to include the following pieces of information in your case:
 
@@ -187,6 +200,8 @@ In this deployment topology, [Megaport](https://www.megaport.com/){: external} o
 
 ![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 4. Connecting Power virtual server environments" caption-side="bottom"}
 
+
+
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
 The key features of this Connect-to-classic topology are as follows:
@@ -194,7 +209,7 @@ The key features of this Connect-to-classic topology are as follows:
 1. Define the IP address schema of your {{site.data.keyword.powerSys_notm}} subnets in your {{site.data.keyword.powerSys_notm}} environment. Your {{site.data.keyword.powerSys_notm}} instances are hosted on these subnets. Ensure that you do not overlap these subnets with your IBM Cloud classic private subnets or the IP addressing schema that is used for the services network. For instructions, see [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 2. Procure the [Megaport](https://www.megaport.com/){: external} VXC connections to connect your (remote) networks in the client-managed environment to the Megaport network.
       - Open an IBM Support case against {{site.data.keyword.powerSys_notm}} to receive a service ID or a virtual cross-connect (VxC) identifier from IBM.
-      - Engage with Megaport to procure the connection (VxC) to {{site.data.keyword.powerSys_notm}} Port @ Megaport.
+      - Engage with Megaport to procure the connection (VxC) to {{site.data.keyword.powerSys_notm}} Port at Megaport.
         When connecting a Power IaaS Location-1 to Power IaaS Location-2 by using Megaport, you might need a [Megaport Cloud Router (MCR)](https://docs.megaport.com/mcr/creating-mcr/){: external} unless network connectivity is through a customer router. Consult a {{site.data.keyword.dl_short}} Connect or Megaport representative for specific network requirements.
 3. Open an IBM Support case against the {{site.data.keyword.powerSys_notm}} team to perform the network configuration to connect the Megaport network to the {{site.data.keyword.powerSys_notm}} router by using VXCs. Remember to include the following pieces of information in your case:
 
@@ -225,15 +240,21 @@ The IBM Cloud SSL VPN service can access only your classic private IP subnets. T
 
 ![SSL VPN deployment scenario](./images/network-ssl-vpn.svg "SSL VPN"){: caption="Figure 5. SSL VPN deployment scenario" caption-side="bottom"}
 
+
+
 This deployment topology builds on the [Connect-to-classic](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic) architecture.
 {: note}
 
-Complete the following steps to implement this scenario:
+Complete the following steps to implement the connectivity using jump server or bastion host:
 
 1. Ensure that you meet the following prerequisites:
+
       * Ensure that your IBM Cloud account has the required permissions, a VPN password is configured, and you have access to the subnets that are hosting your resources. For instructions, see [Activating or deactivating SSL VPN access for a user](/docs/iaas-vpn?topic=iaas-vpn-activate-or-deacivate-ssl-vpn-access-for-a-user).
+
       * Ensure that your workstation or laptop at your client-managed location has the stand-alone VPN client installed. For instructions, see [standalone VPN clients (Windows, Linux, and Mac OS X)](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients)
+
       * Ensure that you have internet access and the stand-alone client has a connection to the endpoint for the location that is hosting your classic resources. For a complete list, see [Available VPN endpoints](/docs/iaas-vpn?topic=iaas-vpn-available-vpn-endpoints).
+
 2. Deploy a jump server or bastion host with your preferred operating system. You can connect from your workstation or laptop at your location to the private IP address of your jump server or bastion host by using Remote Desktop Protocol (RDP) or Secure Shell Protocol (SSH).
 3. Establish a connection from the jump server or bastion host to your {{site.data.keyword.powerSys_notm}} instances by using SSH.
 
@@ -247,12 +268,17 @@ Although individual {{site.data.keyword.powerSys_notm}} instances can have inter
 
 ![IPsec VPN deployment scenario](./images/network-ipsec-vpn.svg "SSL VPN"){: caption="Figure 6. IPsec VPN deployment scenario" caption-side="bottom"}
 
+
+
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide an internet-connected IPsec VPN gateway to enable a site-to-site VPN connection to your {{site.data.keyword.powerSys_notm}} resources.
 
-- The IBM Cloud gateway appliance allows you to selectively route private and public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of VyOS, JunOS, or any other operating system (Bring Your Own Appliance) that you choose.
-- All appliance features are customer-managed.
-- By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
-- A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
+* The IBM Cloud gateway appliance allows you to selectively route private and public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of VyOS, JunOS, or any other operating system (Bring Your Own Appliance) that you choose.
+
+* All appliance features are customer-managed.
+
+* By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
+
+* A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
 
 Complete the following steps to implement this scenario:
 
@@ -288,11 +314,17 @@ If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location,
 
 ![{{site.data.keyword.dl_short}} on Classic deployment scenario](./images/network-dl-gre.svg "{{site.data.keyword.dl_short}}"){: caption="Figure 7. {{site.data.keyword.dl_short}} on Classic deployment scenario" caption-side="bottom"}
 
+
+
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
-    - The IBM Cloud gateway appliance allows you to selectively route private and optionally public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of; VyOS, JunOS, or any other operating system (Bring Your Own Appliance) you choose.
-    - All appliance features are customer-managed.
-    - By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
-    - A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
+
+* The IBM Cloud gateway appliance allows you to selectively route private and optionally public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of; VyOS, JunOS, or any other operating system (Bring Your Own Appliance) you choose.
+
+* All appliance features are customer-managed.
+
+* By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
+
+* A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
 
 Complete the following steps to implement this scenario:
 
@@ -307,9 +339,13 @@ Complete the following steps to implement this scenario:
 5. Set up a separate {{site.data.keyword.dl_short}} (2.0) connection between your remote network (client-managed environment) and the IBM Cloud classic infrastructure. See [Getting started with IBM Cloud {{site.data.keyword.dl_short}} (2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl).
 
     Key elements of IBM Cloud {{site.data.keyword.dl_short}} (2.0) include the following:
-        - Requires BGP to establish the routes to a customer's remote network.
-        - Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant but, diversity can be enabled over multiple {{site.data.keyword.dl_short}}s along with BGP.
-        - Ensure that IP subnet overlaps do not exist between the infrastructure environments and the remote networks.
+
+   * Requires BGP to establish the routes to a customer's remote network.
+
+   * Each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant but, diversity can be enabled over multiple {{site.data.keyword.dl_short}}s along with BGP.
+
+   * Ensure that IP subnet overlaps do not exist between the infrastructure environments and the remote networks.
+
 6. Configure a GRE tunnel between the gateway appliance and a tunnel endpoint that is connected to your external network to enable the remote network connectivity. For more information, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 For tutorials based on some of the topologies described, see [IBM Power Virtual Server Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
@@ -323,9 +359,12 @@ The following network architecture allows connectivity between multiple {{site.d
 
 ![Transit Gateway deployment scenario](./images/network-tgw.svg "Transit Gateway"){: caption="Figure 8. Transit Gateway deployment scenario" caption-side="bottom"}
 
+
+
 Key features are as follows:
 
    - Access and connectivity between two different {{site.data.keyword.powerSys_notm}} locations in the same region (for example DAL12 to DAL13) to support HA through replication.
+
    - Access and connectivity between two different {{site.data.keyword.powerSys_notm}} locations in different regions (for example DAL12 to WDC06) to support DR through replication.
 
 Complete the following steps to implement this scenario:

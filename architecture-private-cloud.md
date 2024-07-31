@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-07-29"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -13,8 +13,10 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} architecture (On-premises)
+
+# Architecture for IBM {{site.data.keyword.powerSys_notm}} (On-premises)
 {: #private-cloud-architecture}
+
 
 ---
 
