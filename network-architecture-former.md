@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-06"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -75,6 +75,7 @@ Multiple topologies, described in this document, can be layered to create a topo
 {: #network-reference-architecture-classic}
 
 In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to IBM Cloud resources hosted in a classic infrastructure environment. You can either [order {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) connections, or use IBM Cloud connections.
+
 
 ![Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM {{site.data.keyword.dl_short}} (2.0)](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 1. Connect to classic infrastructure with {{site.data.keyword.dl_short}} (2.0)" caption-side="bottom"}
 
@@ -358,6 +359,7 @@ In this deployment topology, a connection through IBM Cloud Transit Gateway is u
 The following network architecture allows connectivity between multiple {{site.data.keyword.powerSys_notm}} locations with high availability (HA) and disaster recovery (DR) solutions.
 
 ![Transit Gateway deployment scenario](./images/network-tgw.svg "Transit Gateway"){: caption="Figure 8. Transit Gateway deployment scenario" caption-side="bottom"}
+
 
 
 

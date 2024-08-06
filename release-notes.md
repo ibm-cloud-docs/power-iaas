@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -16,6 +16,11 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## August 2024
+{: #Aug-2024}
+
+- IBM Cloud Monitoring service is now available in `MON01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
 ## July 2024
 {: #jul-2024}

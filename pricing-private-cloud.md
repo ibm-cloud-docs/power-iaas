@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-02"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -279,7 +279,9 @@ Table 8 shows an example of how you are billed based on your boot volume:
    |  20 GB + 30 GB        | 50 GB           |
    {: caption="Table 9. Calculation of deployed virtual machines volume" caption-side="bottom"}
 
-* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take the snapshot of the volume for the first time, the size of the snapshot is equal to the volume of the virtual machine. Then, when you take the snapshots of the same volume, the updates that are made to the volume after the first snapshot taken is only saved. So, the subsequent snapshots that are compared with the first snapshot taken are smaller and thus cost less.
+* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the volume(s) of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
+
+
 
 For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
 

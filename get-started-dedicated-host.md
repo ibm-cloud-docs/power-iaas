@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-06"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -87,10 +87,9 @@ To create a dedicated host group, complete the following steps:
 4. Click **Reserve host**.
 5. Click **Create new**.
 6. Enter a custom name on the **Dedicated host group name** field.
-7. Optionally, share this dedicated host group with other workspaces by granting them secondary access.
-
-        Only workspaces in the same region as the primary workspace and in an active state can be selected.
-        {: note}
+7. Optionally, share this dedicated host group with other workspaces by granting them secondary access.  
+    Only workspaces in the same region as the primary workspace and in an active state can be selected.
+    {: note}
 
 8. Click **Save**.
 
@@ -108,10 +107,9 @@ To share workspaces, complete the following steps:
 3. Click **Dedicated hosts** on the left navigation menu.
         Here, you can see all existing dedicated hosts.
 4. Click a dedicated host group to open the details page.
-5. Click **Share** and select the workspaces you want to share with.
-
-        Only workspaces in the same region as the primary workspace and in an active state can be selected.
-        {: note}
+5. Click **Share** and select the workspaces you want to share with.  
+    Only workspaces in the same region as the primary workspace and in an active state can be selected.
+    {: note}
 
 6. Click **Save**.
 
@@ -128,10 +126,9 @@ You can create multiple dedicated hosts. To reserve a dedicated host, complete t
 4. Click **Reserve host**.
 5. Select a dedicated host group from the available list of host groups already created.
         If no dedicated host group is available, click **Create new**.
-6. Enter your **Host name** and select the **Machine type** from the drop-down list.
-
-        Dedicated hosts cannot be reserved in host groups where the current workspace has secondary access.
-        {: note}
+6. Enter your **Host name** and select the **Machine type** from the drop-down list.  
+    Dedicated hosts cannot be reserved in host groups where the current workspace has secondary access.
+    {: note}
 
 7. Click **Finish** and view the summary of estimated cost.
 8. Click **Create**.
@@ -173,13 +170,11 @@ You can release a dedicated host when no resources are deployed on the host. To 
         Here, you can see all existing dedicated hosts.
 4. Select the dedicated host you want to release.
 
-        You must remove all associated resources provisioned on the host before releasing it.
-        {: note}
+ You must remove all associated resources provisioned on the host before releasing it.
 
 5. Click **Release host**.
         When releasing the last dedicated host in a dedicated host group, the group will also be deleted. Empty dedicated host groups are not allowed on a workspace.
         {: note}
-
 
 ## Maintenance in dedicated host
 {: #mainetnance-dh}

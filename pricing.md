@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-02"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -157,6 +157,10 @@ For detailed usage and billing information, you can refer to the part number in 
 | S1022_SH2_HANA_MEM_GB_HOURS | SAP HANA Workload Small Profile (SH2) - S1022 Memory  |
 | E1080_SH2_HANA_CORE_HOURS | SAP HANA Workload Small Profile (SH2) - E1080 Processor  |
 | E1080_SH2_HANA_MEM_GB_HOURS  | SAP HANA Workload Small Profile (SH2) - E1080 Memory |
+| TIER_ONE_SNAPSHOT_GIGABYTE_HOURS  | Snapshot Tier One Gigabyte Hours |
+| TIER_THREE_SNAPSHOT_GIGABYTE_HOURS  | Snapshot Tier Three Gigabyte Hours |
+| TIER_ZERO_SNAPSHOT_GIGABYTE_HOURS.  | Snapshot Tier Zero Gigabyte Hours |
+| FIXED_FIVE_K_OPS_SNAPSHOT_GIGABYTE_HOURS  |Snapshot Tier Fixed 5k Gigabyte Hours |
 {: caption="Table 3. Part numbers" caption-side="bottom"}
 
 ## Base instances
