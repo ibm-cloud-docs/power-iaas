@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-06"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 

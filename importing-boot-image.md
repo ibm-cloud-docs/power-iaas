@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-29"
+lastupdated: "2024-08-07"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -41,6 +41,24 @@ The {{site.data.keyword.powerSys_notm}} VM capture, image export, and image impo
 {: important}
 
 
+## Using the {{site.data.keyword.powerSys_notm}} API to import a boot image
+{: #api-import-image}
+
+To import a boot image, you can use the APIs listed in the [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} topic.
+
+
+   To import a customized SAP HANA or SAP NetWeaver image, specify the following image details:
+
+```text
+      "importDetails":{
+         "licenseType":"byol",
+   "product":"Hana",
+         "vendor":"SAP"
+      }
+```
+{: codeblock}
+
+
 
 
 ## Using the {{site.data.keyword.powerSys_notm}} CLI to import a boot image
@@ -60,8 +78,7 @@ Complete the following steps to import a boot image by using the {{site.data.key
 
 
 
-
-
+3. To import a customized SAP HANA or SAP NetWeaver image, use the [`-d, --import-details strings`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command.
 
 
 ## Using the {{site.data.keyword.powerSys_notm}} user interface to import a boot image
