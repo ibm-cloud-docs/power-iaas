@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-09"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking
 
@@ -183,8 +183,8 @@ The following table explains the differences in VM configuration that may or mig
 
 |VM deployed for|Storage volume|Core type|Machine type|
 |-----|------|-----|-----|
-|Non-epic workloads|Tier 1 or Tier 3|Shared uncapped, \n shared capped, or \n dedicated|S922 or E980|
-|Epic workloads|Always Tier 1|Always dedicated|Always E980|
+|Non-epic workloads|Tier 1 or Tier 3|Shared uncapped, \n shared capped, or \n dedicated| S922 or E980|
+|Epic workloads|Always Tier 1|Always dedicated| E980 or E1080 |
 {: caption="Table 2. VM configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
 
 The epic VMs are not pinned by default that you can use internally for non-production usage. You must consider pinning the production epic VMs to avoid performance issues.
@@ -194,5 +194,5 @@ You can choose to configure a VM for Epic workloads only when you select AIX as 
 
 1. Epic workloads are supported on AIX 7.2 and later. You cannot choose AIX 7.1.
 2. Supported storage volume is Tier 1. You can change or attach Tier 3 storage volume. This leads to performance issues.
-3. Supported machine type is E980. You cannot select S922.
+3. Supported machine type are E980 or E1080. You cannot select S922.
 4. Supported core type is dedicated. You can switch to other core type, but it might lead to performance issues.

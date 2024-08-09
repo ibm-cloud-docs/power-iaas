@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-09"
 
 keywords: Global replication service, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -154,7 +154,7 @@ The onboarding operation is an asynchronous operation that can take some time th
 ## Performing a failover and failback operation
 {: #perform-fail-over-back}
 
-When you want to access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume-group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API with **access** flag as true.
+When you want to access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API with **access** flag as true.
 
 When the site is back, you can start the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API. The failback operation resumes the replication back to the primary site. Any input and output that is performed on a remote site is lost.
 
@@ -173,17 +173,28 @@ The impacts of global replication service on other {{site.data.keyword.powerSys_
 
 The limitations of GRS are as follows:
 
-- You cannot perform a snapshot restore operation in auxiliary volumes.
-- The volume-group update operation can fail upon a mismatch in volume-group and volume replication states. If the volume group is in an error state, you can use the volume-group action API to reset the volume group status for availability.
-- When you delete a volume from a site, the replicated volume that is managed on its corresponding remote site moves to an error state in an interval of 24 hours.
-- When the volume is resized from a site, the replicated-enabled volume on its corresponding remote site is also resized after an interval of 24 hours.
+- You cannot perform a snapshot-restore operation in auxiliary volumes.
+- The volume group update operation can fail upon a mismatch in the volume group and volume replication states. If the volume group is in an error state, use the volume group action API to reset the volume group status for its availability.
+- When you disable the replication of a volume or delete a volume from a site, the following changes occur:
+    - The replicated volume that is managed on its corresponding remote site moves to an error state in an interval of 24 hours.
+    - The remote copy relationship is deleted at the storage backend and the replicated volume is deleted on the secondary storage of the corresponding remote site.
+- Before you resize a replication-enabled volume, you must remove the volume from the volume group. After the volume resize is completed, you must add the volume back to the volume group.
+
+    Resizing a volume by disabling replication results in errors related to volume on the replicated site.
+    {: important}
+
+- When the volume is resized from a site, the replication-enabled volume on its corresponding remote site is also resized after an interval of 24 hours.
 - When you perform any operation on a volume that is deleted, it fails.
+
+
+
+
 
 ## Best practices for Global replication service
 {: #best-practices-GRS}
 
 - You must set the bootable flag explicitly on onboarded volumes, if required.
-- Start the onboarding of auxiliary volumes only when the master volumes and volume-group are in a consistent copying state.
-- When you add or remove a master or auxiliary volume from a volume-group from one site, you must perform the same operation from other site to keep the data is in sync.
+- Start the onboarding of auxiliary volumes only when the master volumes and volume group are in a consistent copying state.
+- When you add or remove a master or an auxiliary volume from a volume group from one site, you must perform the same operation from other site to keep the data is in sync.
 - You must delete the volumes from primary and secondary site. Volumes are charged when you delete an auxiliary volume but fail to delete the master volume.
 - You must use primary site for all the volume operations and perform operations on auxiliary volume on the secondary site only during failover.
