@@ -180,7 +180,7 @@ The limitations of GRS are as follows:
     - The remote copy relationship is deleted at the storage backend and the replicated volume is deleted on the secondary storage of the corresponding remote site.
 - Before you resize a replication-enabled volume, you must remove the volume from the volume group. After the volume resize is completed, you must add the volume back to the volume group.
 
-    Resizing a volume by disabling replication results in errors related to volume on the replicated site.
+    It is recommended not to resize a volume by disabling volume replication as it results in errors related to volume on the replicated site.
     {: important}
 
 - When the volume is resized from a site, the replication-enabled volume on its corresponding remote site is also resized after an interval of 24 hours.
