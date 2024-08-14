@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-14"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -217,3 +217,4 @@ The following table shows the available data centers for {{site.data.keyword.pow
 {: row-headers}
 {: class="comparison-table"}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
+

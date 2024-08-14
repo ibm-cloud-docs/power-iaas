@@ -72,6 +72,7 @@ toc:
           label: Use cases
           topics:
              - connect-azure-multicloud.md
+             - db2-migration.md
              - use-case-dev.md
              - use-case-app.md
              - use-case-hybrid.md

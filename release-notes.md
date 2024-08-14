@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-14"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -21,6 +21,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #Aug-2024}
 
 - IBM Cloud Monitoring service is now available in `MON01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
+- You can now migrate Db2 on AIX to {{site.data.keyword.powerSys_notm}}. For more information, see [Migrating Db2 on AIX to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-db2-migration).
 
 ## July 2024
 {: #jul-2024}
