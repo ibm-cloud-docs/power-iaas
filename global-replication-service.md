@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-26"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -168,7 +168,7 @@ The impacts of GRS on other {{site.data.keyword.powerSys_notm}} operations are a
 - By default, when you clone a replication-enabled volume, the cloned volume is replication-enabled. During cloning, you can optionally specify whether the cloned volume must be replication-enabled or not. If you want the cloned volume to be replication-enabled, specify the policy for the clone volume. You can use the following methods to clone a volume:
 
     - [Clone a volume by using API](/apidocs/power-cloud#pcloud-v2-volumesclone-execute-post){: external}.
-    - [Clone a volume by using CLI](/docs/en/power-virtual-server?topic=reference-cli#ibmcloud-pi-volume-clone){: external}.
+    - [Clone a volume by using CLI](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone){: external}.
     - [Clone a volume by using Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_clone){: external}.
 
 ## Disabling GRS
@@ -213,6 +213,7 @@ Failure to complete this procedure in the specified order might result in loss o
 {: #resize-rep-vol}
 
 To delete an auxiliary volume from the remote site, disable the replication service on the primary volume. Before you delete the auxiliary volume, make sure that it is not associated with any volume group.
+
 
 Use the [ibmcloud pi volume delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete) CLI command to delete the auxiliary volume.
 
