@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-14"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -54,33 +54,38 @@ CHGASPACT OPTION(*FRCWRT)
 
 Complete the following steps to capture and export a virtual server instance:
 
-1. Click the **Capture and export** icon in your **Boot images** view.
+1. Open the **Virtual server instances** page from the [IBM Cloud console](https://cloud.ibm.com/power/servers).  
+    Ensure you select an workspace if you do not see any virtual server instances.
 
-2. Choose the volumes that you want to capture and export.
+2. Click the virtual server which you want to capture.
 
-3. Select whether you want to export the volume-backed image to the image catalog, Cloud Object Storage, or both.
+3. On the virtual server details page, click options menu (3 vertical dots) and click **Capture and export**.
 
-4. Give your captured image a **Name**.
+4. Choose the volumes that you want to capture and export.
 
-5. *(Optional)* If you decide to export to Cloud Object Storage, you are presented with more options:
+5. Select whether you want to export the volume-backed image to the image catalog, Cloud Object Storage, or both.
+
+6. Give your captured image a **Name**.
+
+7. *(Optional)* If you decide to export to Cloud Object Storage, you are presented with more options:
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
 
-6. Click **Export**.
+8. Click **Export**.
 
-7. If the capture and export operation is successful, you are presented with a confirmation message.
+9. If the capture and export operation is successful, you are presented with a confirmation message.
 
     If you select large volumes, the export process can take a significantly long time.
     {: important}
 
-8. Find your newly exported image by completing either one of the following tasks:
+10. Find your newly exported image by completing either one of the following tasks:
 
    - If you chose to capture and export your volume-backed image to Cloud Object Storage, go to your Cloud Object Storage bucket.
 
    - If you chose to capture and export your volume-backed image to the image catalog, go to **Boot images**.
 
-9. *(Optional)* If you'd like to export your volume-backed image from your image catalog to Cloud Object Storage, select it, and click the **Capture and export** icon.
+11. *(Optional)* If you'd like to export your volume-backed image from your image catalog to Cloud Object Storage, select it, and click the **Capture and export** icon.
 
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-23"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -53,7 +53,7 @@ Using a Power Edge Router (PER)-enabled workspace provides the following benefit
 
 * Improved performance with aggregated bandwidth of 400 Gbps.
 * Direct access to the IBM Cloud services from the {{site.data.keyword.powerSys_notm}} workspace.
-* Direct access to the {{site.data.keyword.powerSys_notm}} from a client-managed environment by using a Direct Link connect or Direct Link dedicated.
+* Direct access to the {{site.data.keyword.powerSys_notm}} from a client-managed environment by using a Direct Link Connect or Direct Link Dedicated.
 
 The following are some of the use cases of a PER-enabled {{site.data.keyword.powerSys_notm}} workspace:
 1. [Connecting a client-managed data center](#per-on-orem)
