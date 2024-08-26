@@ -257,7 +257,7 @@ The limitations of GRS are as follows:
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume){: external}.
 * Get volume groups storage details by using the following methods:
     * [Power Cloud API](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external}.
-    * [Power Virtual Server CLI](/docs/en/power-virtual-server?topic=reference-cli#ibmcloud-pi-volume-group-storage-details){: external}
+    * [Power Virtual Server CLI](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details){: external}
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}.
 
 - When you add or remove a primary or an auxiliary volume from a volume group from one site, perform the same operation from the other site to keep the data in sync.
