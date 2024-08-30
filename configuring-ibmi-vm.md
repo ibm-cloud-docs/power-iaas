@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-08-28"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -33,11 +33,12 @@ IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
 ## First boot of IBM i
 {: #first-boot}
 
-When an {{site.data.keyword.powerSysFull}} is used a stock OS Image of IBM i, the console must first be used to reset the password of the IBM i standard user `QSECOFR`.
+When you use IBM i 7.5 stock OS Image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VM deployment for the TCP configuration to finish.
 
-The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) by using the VNC Console. For a refresh of VNC Console usage with IBM i, see the following [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
+The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the VNC Console. For a refresh of VNC Console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
-The following first boot steps can have minor differences for stock OS Images before IBM i 7.5.
+For steps on changing the DST password, see [First boot change password](#first-boot-change-password).
+{: note}
 
 
 ### First boot VNC Console access
@@ -71,7 +72,11 @@ for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osTy
 ### First boot change password
 {: #first-boot-change-password}
 
-When the VNC Console loads and the IBM i console screen is shown, complete the following steps to reset the password of the IBM i standard user:
+When the VNC Console loads and the IBM i console screen is shown (IBM i 7.5), complete the following steps to reset the password of the IBM i standard user:
+
+Releases prior to IBM i 7.5 will be presented the System Sign-on screen first, where the QSECOFR password needs to be reset.
+{: note}
+
 1. In the VNC Console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
 2. The **Change Service Tools User Password** screen loads, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
 3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
@@ -79,29 +84,12 @@ When the VNC Console loads and the IBM i console screen is shown, complete the f
 5. Press ENTER to continue.
 6. The **IPL or Install the System** screen is shown. See more steps documented on this page.
 
-    Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
-    {: note}
-
-
-### First boot configuration choice
-{: #first-boot-configuration-choice}
+Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
+{: note}
 
 After this, the IBM i virtual machine is ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
 
 The default is to select Option 1 'Perform an IPL'.
-
-However, the minimum Program Temporary Fix (PTFs) levels depend on the IBM i version that has been provisioned and will impact `cloud-init` successful execution; only IBM i 7.5 requires no PTF installation or other tasks. See [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels) for more information. Perform the OS Install first, then PTFs, and then the IPL.
-
-If the PTFs are incomplete this will cause `cloud-init` to not complete (run after IPL or OS Installation and licensed program software agreements), which will cause the local IP address configuration to not be saved upon restart of the system. If you restart your system during before `cloud-init` is successful, you must call IBM support to manually configure your network and license keys, or delete and reprovision your IBM i virtual machine instance to start again.
-{: important}
-
-1. In the **IPL or Install the System** screen, the cursor is on `Selection`. Therefore, the default as described previously, is 'Perform an IPL' enter `1` and then press ENTER to begin the installation. This process can take more than 10 minutes, each screen in the first text block shows **Current step / total . . . . :** with the number of steps completed (for example `20  49` being 20 of 49 steps).
-
-2. During the installation, you get the **Licensed Internal Code IPL in Progress** screen, then the **Operating System IPL in Progress** screen. During the installation, a blank screen with a cursor is shown for a few minutes. The cursor disappears and a full blank screen is shown while the host completes for a further few minutes before returning to the **Operating System IPL in Progress** screen.
-
-Use your keyboard CTRL+W to return to the **Dedicated Service Tools (DST) Sign On** screen at any time (this can be useful if you experience a console session hang).
-{: note}
-
 
 ### First boot license choice
 {: #first-boot-license-choice}

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-26"
+lastupdated: "2024-08-29"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -128,6 +128,9 @@ To enable DR on the secondary site, complete the following steps:
     You can create a standby virtual server instance with the onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
 
 Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
+
+
+
 
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}
