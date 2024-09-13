@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-03"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server
 
@@ -16,6 +16,7 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
 
 ## August 2024
 {: #Aug-2024}

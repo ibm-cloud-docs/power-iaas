@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-12"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -54,10 +54,10 @@ CHGASPACT OPTION(*FRCWRT)
 
 Complete the following steps to capture and export a virtual server instance:
 
-1. Open the **Virtual server instances** page from the [IBM Cloud console](https://cloud.ibm.com/power/servers).  
-    Ensure you select an workspace if you do not see any virtual server instances.
+1. Open the **Virtual server instances** page from the [IBM Cloud console](https://cloud.ibm.com/power/servers).
+    Ensure you select a workspace if you do not see any virtual server instances.
 
-2. Click the virtual server which you want to capture.
+2. Click the virtual server that you want to capture.
 
 3. On the virtual server details page, click options menu (3 vertical dots) and click **Capture and export**.
 
@@ -72,9 +72,10 @@ Complete the following steps to capture and export a virtual server instance:
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
 
+
 8. Click **Export**.
 
-9. If the capture and export operation is successful, you are presented with a confirmation message.
+9.  If the capture and export operation is successful, you are presented with a confirmation message.
 
     If you select large volumes, the export process can take a significantly long time.
     {: important}

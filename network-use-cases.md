@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-04"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -110,7 +110,7 @@ Figure 6 describes the network connectivity between a virtual machine and a Red 
 
 With this use case, you can use the Dynamic Host Configuration Protocol (DHCP) protocol within the pod to dynamically assign an IP address to a virtual machine.
 
-The presence of the DHCP network within the pod is mandatory when you are using the OpenShift Container Platform on the IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment.
+The presence of the DHCP network within the pod is mandatory when you are using the OpenShift Container Platform on the IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment. The DHCP network is intended for use only in the OpenShift Container Platform.
 {: note}
 
 IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods can be configured to include a private and hardware-based DHCP network. The edge router within the pod is configured with the DHCP pool and gateway. You can deploy virtual machines in the DHCP network. The virtual machines are assigned IP addresses from the DHCP server.

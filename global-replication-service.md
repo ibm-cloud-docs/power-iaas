@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-10"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -129,9 +129,6 @@ To enable DR on the secondary site, complete the following steps:
 
 Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
 
-
-
-
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}
 
@@ -226,12 +223,15 @@ For example, `ibmcloud pi vold afd07003-a61a-45ca-97d1-4f910272306d`
 ## Resizing a replication-enabled volume
 {: #resize-rep-vol}
 
-Before you resize a replication-enabled volume, remove the volume from the volume group. After the volume resize is completed, add the volume back to the volume group.
+
+
 
 When you resize a volume from a site, the system also resizes the replication-enabled volume on its corresponding remote site after an interval of 24 hours.
 
 It is recommended not to resize a volume by disabling replication as it results in errors that are related to the volume on the remote site.
 {: important}
+
+
 
 
 ## Limitations of GRS
@@ -253,7 +253,7 @@ The limitations of GRS are as follows:
 ## Best practices for GRS
 {: #best-practices-GRS}
 
-- You must set the bootable flag explicitly on onboarded volumes, if required.
+- You must set the **Shareable** and **Bootable** flag explicitly on onboarded volumes, if required.
 - Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary site. Verify that the volume group is created successfully and it is in a consistent copying state by using [get storage details of the volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
 * Get volume details by using the following methods:
     * [Power Cloud API](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external}.

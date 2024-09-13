@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-07"
+lastupdated: "2024-09-10"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -24,10 +24,10 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. The storage types cannot be changed when the volume is created. A VM can have disks from multiple storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the volume is created, you cannot change the storage types. A virtual machine (VM) can have disks from multiple storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
-Image import requires HMAC keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires Hash-Based Message Authentication Code (HMAC) keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
@@ -57,7 +57,6 @@ To import a boot image, you can use the APIs listed in the [Create a new image f
       }
 ```
 {: codeblock}
-
 
 
 
@@ -99,6 +98,8 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
    {: note}
 
 2. After you click **Import image**, enter all of the required information. Refer to the table at the end of the page to complete the necessary fields to import a boot image.
+
+   
 
 3. Find your newly uploaded boot image in **Boot images**.
 

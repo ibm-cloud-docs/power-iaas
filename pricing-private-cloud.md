@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-09"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -35,11 +35,6 @@ For more information about billing for operating systems, see [Operating systems
 In the IBM Cloud catalog for IBM {{site.data.keyword.powerSys_notm}} (On-premises), the estimated price might differ from the actual price when you purchase the IBM {{site.data.keyword.powerSys_notm}} (On-premises) infrastructure or instances. The actual price might include the discounts and promotion codes.
 
 
-
-
-
-
-
 For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} (On-premises), see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 
@@ -47,8 +42,6 @@ For more information about IBM Cloud regions can host connections from the pods 
 {: #monthly-usage}
 
 IBM {{site.data.keyword.powerSys_notm}} (On-premises) instances are charged at a monthly rate that is prorated per hour. If you add resources to a virtual machine in the middle of the month, the bill for the virtual machine reflects the resource change at a per-hour prorated price.
-
-
 
 All prices that are mentioned in the topic, [Pricing for IBM Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -111,20 +104,19 @@ For detailed usage and billing information, refer to the part numbers in your in
 | IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared |
 | IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-2u-hanamem-standard |
 | IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-4u-hanamem-standard |
-| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier1 |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier2 |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier3 |
-| **IBM Power Systems Virtual Server operating systems group**       |                                                |
 | AIX operating system scale-up license core-hour | ppcaas-metric-aix-scale-up |
 | AIX operating system scale-out license core-hour | ppcaas-metric-aix-scale-out |
 | Red Hat Enterprise Linux operating system scale-up license core-hour | ppcaas-metric-rhel-scale-up |
 | Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up |
+| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
 | SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
-|  IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier1 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier2 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier3 |
+| IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
 | IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
 | IBM i operating system P10 service extension core-hour | ppcaas-metric-ibmi-os-p10-sve |
 | IBM i operating system P30 service extension core-hour | ppcaas-metric-ibmi-os-p30-sve |
@@ -312,8 +304,6 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 
 ### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
 {: #pricing-spp-private-cloud}
-
-[On-premises]{: tag-red}
 
 SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}. In the IBM {{site.data.keyword.powerSys_notm}} (On-premises) environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-10"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -29,7 +29,7 @@ The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL)
 
 The full Linux subscription uses activation keys to provide access to interim fixes and updates for the operating system for {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.powerSys_notm}} is hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply for setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL stock OS images for SAP and non-SAP applications.
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL  stock OS images for SAP and non-SAP applications.
 
 To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
@@ -65,15 +65,11 @@ To create a proxy setup, complete the following steps:
 
 2. In the default Security group that is attached to your proxy, add 443, 8443, 80 and 3128 ports.
 
-3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a secure shell (SSH) connection by using this temporary IP address in the `ssh` command.
+3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a secure shell (SSH) connection by using this temporary IP address in the `ssh` command in the following format:
 
-```text
+    `ssh root@<external IP address>`
 
-ssh root@<external IP address>
-```
-{: codeblock}
-
-Example: ssh root@1.2.3.4
+    For example, ssh root@1.2.3.4
 
 ### Install squid base
 {: #squid-base}
@@ -109,8 +105,11 @@ To complete the setup process, follow these steps:
    * From the console on the browser.
    * By using the `SSH` command from your data network.
 5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`
-6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file
-    `/usr/local/bin/rhel-cloud-init.sh`
+6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file:
+
+      `/usr/local/bin/rhel-cloud-init.sh` 
+
+
 7. One of the parameters for the command represents the proxy IP. Set this proxy IP to the internal private IP of your proxy VSI. For example, `10.240.0.4`. Set the port to 3128.
 
 To check whether the setup is complete and the subscription is successful, check the log files, `/var/log/powervs-fls.log` and `powervs-fls-dev.log`. When the setup is completed successfully, you can use the commands, such as `yum update -y`, `yum search <package>`, `yum install <package>`.
@@ -128,5 +127,3 @@ The custom user data must meet the following conditions:
 -  It is uncompressed.
 -  It starts with `#cloud-config`.
 -  It should not exceed 63 Kb in size.
-
-

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-09"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -80,10 +80,14 @@ You can attach storage volumes to a VM instance from different storage tiers and
 You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. After you delete the original volume, allow one hour before creating a new volume with the same name.
 {: note}
 
+
+
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
 If you want to attach or detach a volume, complete the following steps:
+
+
 
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
 
@@ -112,6 +116,9 @@ If you want to attach or detach a volume, complete the following steps:
     {: note}
 
 7.  Click **Create and Attach**.
+
+
+
 
 ### Resizing a storage volume
 {: #resizing-volume}
@@ -144,6 +151,11 @@ If you cannot take the downtime, you can add extra volumes. You can attach a max
 
 To apply or verify an IBM i software key, the VM must be active and in a running state. If you already ran a resize operation, you must wait until the resize operation completes and the VM returns to OK status.
 {: note}
+
+
+
+
+
 
 ## Adding or removing a public network
 {: #adding-removing-network}
