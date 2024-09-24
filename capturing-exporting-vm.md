@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-24"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -71,6 +71,14 @@ Complete the following steps to capture and export a virtual server instance:
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
+   4. Select the **Generate checksum file** toggle button to generate a checksum file.
+       A checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and has the file extension `.sha256`. Use the command `shasum -a 256` to ensure that the copied file is correct.
+
+       If you are creating your own image, you can create a checksum image and place it with your own image in the same bucket. One of the ways to generate the checksum image is by using the command `shasum -a 256 <filename>` or `sha256sum <filename>`.
+
+       Generating a checksum file might add extra time to the image capture and export process.
+       {: note}
+
 
 
 8. Click **Export**.

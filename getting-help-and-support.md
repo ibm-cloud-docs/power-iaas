@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-24"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -49,14 +49,14 @@ To open a support ticket for {{site.data.keyword.powerSys_notm}} Off-premises or
 7. (Optional) Attach any helpful files in the **Attachments** field.
 8. (Optional) From the **Watchlist** menu, select the users in your account who are interested to get the updates about the issue.
 9.  (Optional) From the **Add resources** menu, select your impacted PowerVS Private Cloud resource.
-10. From the **Data center settings** menu, select your data center.
+10. (Optional) From the **Data center settings** menu, select your data center.
 11. (Optional) To get the email notifications, select **Email me updates about this case** checkbox.
 12. Review your support ticket summary, and click **Submit case**.
         You will receive an email verification. Follow the instructions on the email for further communication on the issue.
 
 
 
-## Opening Operating System (AIX&reg;, Linux&reg;, or IBM i) related cases (Off-premises)
+## Opening Operating System (AIX&reg;, Linux&reg;, or IBM i) related cases [Off-premises]{: tag-blue}
 {: #support-case-IBM-offprem}
 
 If you are facing any AIX, Linux, or IBM i operating system-specific issue, you must directly engage with the operating system support by using the portal as follows:
@@ -68,7 +68,7 @@ If you are facing any AIX, Linux, or IBM i operating system-specific issue, you 
 
 
 
-## Opening Operating System (AIX, Linux, or IBM i) related cases (On-premises)
+## Opening Operating System (AIX, Linux, or IBM i) related cases [On-premises]{: tag-red}
 {: #support-case-IBM-onprem}
 
 If you are facing any AIX, Linux, or IBM i operating system-specific issue, you must directly engage with the operating system support by using the portal as follows:

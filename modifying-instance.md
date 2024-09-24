@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-24"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -35,7 +35,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface.
 
-2. Click a virtual server instance to open the instances details page.
+2. Click a virtual server instance to open the **Virtual server instance details** page.
 
 3. Click the **Edit** icon, a menu appears. From the menu, select the value that you want to modify for the {{site.data.keyword.powerSys_notm}} instance. You can modify the following values: **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
 
@@ -70,23 +70,36 @@ You can scale up and scale down the memory and core counts of the virtual machin
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
-To resize an existing VM that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VM, resize it, and then activate it. Resize the VM at least once when the VM is shut down to enable the 8x ratio. If you shut down and activate, the VM it will not enable the 8x ratio of memory and core counts.
+To resize an existing VM that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VM, resize it, and then activate it. Resize the VM at least once when the VM is shut down to enable the 8x ratio. If you shut down and activate the VM, the 8x ratio of memory and core counts are not enabled.
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
 You can attach storage volumes to a VM instance from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VM instance is deployed. To attach a storage volume, you must modify the VM instance and set the new VM instance *storagePoolAffinity* property to false. You can now attach mixed storage to a VM instance. For more information, see [How to set a VM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
-You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. After you delete the original volume, allow one hour before creating a new volume with the same name.
+### Creating a storage volume
+{: #create-storage-vol}
+
+You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. If the existing volume is a replication-enabled volume, follow the steps to [delete a primary volume](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol). After you delete the original volume, you must allow a minimum of one hour to create a new volume with the same name.
 {: note}
 
+
+You can create a replication-enabled volume from any site. The site from which the replication is initiated contains what is referred to as the `primary volume`; the remote site volume is referred to as the `auxiliary volume`. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
+
+When you are creating a storage volume from the user interface, you can enable the volume for replication by completing the following steps:
+
+- In the **Global Replication Service** section, set the **Volume replication** to on. The name of the primary data center is displayed.
+- From the **Secondary data center** list, select the displayed secondary site name.
+
+The primary volume and the auxiliary volume are mapped into one-to-one relationship mode in both directions. These two sites are fixed and are in replication partnership in both directions. For more information, see [Setting up GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-GRS).
+
+The GRS details of the volume are displayed when you click the storage volume.
 
 
 ### Adding and managing storage volumes
 {: #adding-managing-volume}
 
 If you want to attach or detach a volume, complete the following steps:
-
 
 
 1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
@@ -98,7 +111,7 @@ If you want to attach or detach a volume, complete the following steps:
 
 3. To detach a storage volume, click **Detach** in the table.
 
-    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Another detach request should be made if the volume is still not disconnected.
+    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Make another detach request if the volume is still not disconnected.
     {: note}
 
 4. You can also create a new storage volume.
@@ -112,10 +125,13 @@ If you want to attach or detach a volume, complete the following steps:
 
     For more information about affinity and anti-affinity policies, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
-    In the API for create volume feature, the properties *antiAffinityVMInstances* and *antiAffinityVolumes* used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
+    In the API, for create volume feature the properties `antiAffinityVMInstances` and `antiAffinityVolumes` are used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
     {: note}
 
 7.  Click **Create and Attach**.
+
+
+For more information about updating the volume groups for GRS, see [Updating a volume group](/docs/power-iaas?topic=power-iaas-getting-started-GRS&q=deleting+a+volume&tags=power-iaas#update-vol-grp).
 
 
 
@@ -125,16 +141,20 @@ If you want to attach or detach a volume, complete the following steps:
 {: help}
 {: support}
 
-You can resize a storage volume after its initial creation. To delete a volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer. Resizing is not immediately available after you deploy a VM.
+You can resize a storage volume after its initial creation. However, resizing is not immediately available after you deploy a VM.
 
-[Off-premises]{: tag-blue} For IBM i 7.3 and later versions, you can resize volume to increase the volume size, but this requires an initial program load (IPL) to recognize the new volume size.
+
+For more information about resizing a replication-enabled volume, see [Updating a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS&q=deleting+a+volume&tags=power-iaas#update-prime-vol).
+
+
+[Off-premises]{: tag-blue} For IBM i 7.3 and later versions, you can resize a volume to increase the volume size, but this action requires an initial program load (IPL) to recognize the new volume size.
 
 Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you do an IPL operation before the resize operation is complete, an extra IPL is required.
 {: important}
 
 If you cannot take the downtime, you can add extra volumes. You can attach a maximum of 127 volumes to the VM.
 
-[Off-premises]{: tag-blue} Any volume that is included in a snapshot cannot be resized. To resize a volume that has been included in a snapshot, you must first delete all of the snapshots the volume is a part of.
+[Off-premises]{: tag-blue} Any volume that is included in a snapshot cannot be resized. To resize a volume that is included in a snapshot, you must first delete all the snapshots the volume is a part of.
 {: important}
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Storage volumes**.
@@ -154,6 +174,42 @@ To apply or verify an IBM i software key, the VM must be active and in a running
 
 
 
+### Deleting a volume
+{: #deleting-volume}
+{: help}
+{: support}
+
+To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+
+Once you initiate the action to delete the volume, the action cannot be undone.
+{: note}
+
+For more information about deleting a primary volume, see [Deleting a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol).
+
+
+
+
+### Deleting a virtual server instances
+{: #deleting-volume}
+{: help}
+{: support}
+
+Deleting a virtual server instance is a manual process. To delete all virtual server instances, delete the workspace or delete a subset of the virtual server instance.
+
+You can delete a single virtual server instance by completing the following steps:
+
+
+1. On the **Virtual server instances** page, click the overflow menu (icon with 3 vertical dots) at the end of each virtual server instance entry on the table. From the overflow menu, click **Delete**. The **Delete virtual server instance** confirmation message box appears.
+    Or
+    On the **Virtual server instances** page, click the name of the virtual server instance that you want to delete. The **Virtual server instance details** page opens. Find and click the trash icon on the upper right of the screen. The **Delete virtual server instance** confirmation message box appears.
+2. On the confirmation message box, if you set the toggle button to on you agree for the following actions to occur:
+    - To delete the data volumes that are attached to the virtual server instance. The data volumes are not deleted if they are attached to multiple virtual server instances.
+    - To delete any auxiliary volumes on the secondary site.
+3. Type the virtual server instance name in the textbox.
+4. Click **Delete virtual server instance** to initiate the deletion request.
+
+After the deletion request is initiated, the action cannot be undone.
+{: note}
 
 
 
@@ -173,7 +229,7 @@ You cannot toggle a public network off if there are no other defined networks.
 SRC is only supported for AIX and IBM i virtual machines.
 {: note}
 
-A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects, the error codes, and the reference code that describes the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
+A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
 [Off-premises]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
@@ -181,30 +237,36 @@ A *system reference code (SRC)* is a set of eight alphanumeric characters that i
 ## Use cases
 {: #use-case-resize-vm}
 
-The different scenarios that you might face while requesting for resizing the memory of a {{site.data.keyword.powerSys_notm}} instance are listed after this:
+The following are some of the scenarios that you might face when you make a request for resizing the memory of a {{site.data.keyword.powerSys_notm}} instance:
 
 ### Your request for resizing both memory and CPU fails:
 {: #resize-mem-cpu-fail}
 
-When you attempt to resize the memory as well as the CPU of a deployed virtual server instance through a single request, it might fail due to the following reasons:
-- There is no free memory available on the host.
-- There is no free memory available on the logical partition as the resources on it are running.
-- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request.
-- You have made multiple attempts for resizing.
-- Currently, there is no preference for memory or CPU on what should be resized first. If the first request processing fails, the second one will also fail automatically.
+When you attempt to resize the memory and the CPU of a deployed virtual server instance through a single request, it might fail due to the following reasons:
+- No free memory is available on the host.
+- No free memory is available on the logical partition as the resources on it are running.
+- The free memory that is available on the logical partition is less than the desired value indicated in the resizing request.
+- Multiple attempts are made for resizing.
 
-`Example`: When the currently allocated memory for the logical partition is 4 GB and you are trying to reduce the value to 2 GB and the logical partition at the time of request does not have free 2 GB memory for resizing (considering the logical partition is using up to 3.2 GB for running resources in it), then there is a possibility that both the CPU, and memory resize fails.
+    Currently, there is no preference for memory or CPU on what can be resized first. If the first request processing fails, the second request also fails automatically.
+    {: note}
+
+`Example`: Consider that the allocated memory for the logical partition is 4 GB. You make a request to reduce the memory value to 2 GB. The logical partitioning is using up to 3.2 GB for running resources in it. So, logical partitioning does not have free 2 GB memory for resizing. In such a scenario, it is possible that both the CPU and memory resize might fail.
+
+
 
 ### You request for resizing the memory, but you get a partial resize:
 {: #resize-mem-cpu-partial}
 
-When you attempt to resize the memory of a deployed virtual server instance through a request, it might partially resize or in the worst scenarios, might even fail due to the following reasons:
-- There is no free memory available on the host that results in a failed request.
-- There is no free memory available on the logical partition as the resources are running on it. This results in a failed request.
-- The free memory available on the logical partition is less than that of the desired value indicated in the resizing request. This results in a partial resize.
-- You have made multiple attempts for resizing. This results in a failed request.
+When you attempt to resize the memory of a deployed virtual server instance through a request, it might partially resize or might fail due to the following reasons:
+- No free memory is available on the host.
+- No free memory is available on the logical partition as the resources are running on it.
+- The free memory that is available on the logical partition is less than the desired value indicated in the resizing request.
+- Multiple attempts are made for resizing.
 
-`Example`: When the currently allocated memory for the logical partition is 4 GB and you are trying to reduce the value to 2 GB and the logical partition at the time of request does not have free 2 GB memory for resizing (considering the logical partition is using up to 3 GB for running resources in it) and can free up only 1 GB, then the partial resize should be possible to reduce the memory to 3 GB.
+`Example`: Consider that the allocated memory for the logical partition is 4 GB. You make a request to reduce the memory value to 2 GB. The logical partitioning is using up to 3 GB for running resources in it and so can free up only 1 GB memory. Then, the partial resize can reduce the memory to 3 GB.
 
-In the current cloud environment, it might take up to 1.5 hours approximately for the change in memory to be updated to places referring to the memory of the logical partition. Hence if you attempt to repeat the resize request, the consecutive retires fails until all referencing tables are updated.
+
+
+In the current cloud environment, it might take up to 1.5 hours for the change in memory to be updated. All the places that are referring to the memory of the logical partition are to be updated. Hence, if you attempt to repeat the resize request, the consecutive retires fails until all referencing tables are updated.
 {: important}

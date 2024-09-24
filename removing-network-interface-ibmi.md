@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-23"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -42,9 +42,10 @@ Learn how to change the TCP/IP address of your IBM i VM. You can change your sys
 2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you need to remove. All of that communication that is going over the route is terminated after you remove it.
 3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you need to deactivate on the **NETSTAT \*IFC** screen.
 4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you need to remove.
-    Removing a network interface:
 
-    ```
+**Removing a network interface**:
+
+    ```screen
                         Work with TCP/IP Interfaces
                                                                         System: RCHASSLH
     Type options, press Enter.
@@ -84,9 +85,9 @@ When you toggle a public network off and then on, the {{site.data.keyword.powerS
 6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
 7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
 
-Adding a network interface:
+**Adding a network interface**:
 
-    ```
+    ```screen
                                 Add TCP/IP Interface (ADDTCPIFC)
 
     Type choices, press Enter
@@ -105,3 +106,8 @@ Adding a network interface:
     X.25 DDN interface. .   .   .   .   .   .   .   .   .   *NO             *YES,   *NO
     TRLAN bit sequencing.   .   .   .   .   .   .   .   .   *MSB            *MSB,   *LSB
     ```
+
+Verify the line description’s local adapter address matches the mac address of the newly added adapter address from the Power Virtual Server user interface.
+
+For example,
+Find the mac address in the line description using DSPLIND LIND(xxxxxxxxx). The line description is the name that matches the internet address that was added (use *NETSTAT IFC to view).

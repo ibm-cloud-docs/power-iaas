@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-19"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -59,6 +59,7 @@ When you select IBM i, in addition to the IBM i operating system, the following 
 - 5761-AP1: Advanced DBCS Printer Support
 - 5733-B45: AFP Font Collection for i
 - 5770-BR1: Backup, Recovery, and Media Services
+- 5770-BR2: Backup, Recovery, and Media Services
 - 5761-DB1: System/38 Utilities
 - 5761-CM1: Communications Utilities
 - 5761-DS2: Business Graphics Utility

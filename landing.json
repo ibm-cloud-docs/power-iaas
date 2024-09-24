@@ -1,78 +1,64 @@
 {
+  "version": 2,
   "title": "Power Virtual Server",
-  "lastupdated": "2024-07-12",
   "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers on IBM Cloud (that are running either the AIX, IBM i, or Linux operating systems).",
+  "product_page": "https://www.ibm.com/products/power-virtual-server",
+  "console_page": "https://cloud.ibm.com/power/overview",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IBM® Power® Virtual Servers",
+        "href": "/docs/power-iaas?topic=power-iaas-getting-started"
+      },
+      {
+        "title": "Creating a Power Virtual Server",
+        "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
+      },
+      {
+        "title": "About Off-premises architecture, key features, and hardware specifications",
+        "href": "/docs/power-iaas?topic=power-iaas-on-cloud-architecture"
+      },
+      {
+        "title": "About On-premises architecture, key features, and hardware specifications",
+        "href": "/docs/power-iaas?topic=power-iaas-private-cloud-architecture"
+      },
+      {
+        "title": "FAQ",
+        "href": "/docs/power-iaas?topic=power-iaas-powervs-faqs"
+      },
+      {
+        "title": "IAM for Power Virtual Server",
+        "href": "/docs/power-iaas?topic=power-iaas-managing-resources-and-users"
+      }    
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Use Power Virtual Server to boost competitive advantage",
+      "description": "Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage",
+      "href": "https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage",
+      "type": "blog"
+    },
+    {
+      "title": "Connecting Power Virtual Server to Microsoft Azure",
+      "description": "This topic provides a detailed guide on how to connect IBM Power Virtual Server to Microsoft Azure with Megaport.",
+      "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
+      "type": "redbook", 
+      "recommended": true
+    },
+    {
+      "title": "Migrating Db2 on AIX to Power Virtual Server",
+      "description": "This topic provides a detailed guide on how to migrate your Db2 on AIX to Power Virtual Server",
+      "href": "/docs/power-iaas?topic=power-iaas-db2-migration",
+      "recommended": true
+    }
+  ],
   "section_devtools": {
     "api": "/apidocs/power-cloud",
     "cli": "/docs/power-iaas-cli-plugin",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
-  "section_recommended": [
-    {
-      "title": "Creating a Power Virtual Server",
-      "description": "Learn to create and configure an IBM Power Virtual Server.",
-      "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
-    },
-    {
-      "title": "About Off-premises architecture, key features, and hardware specifications",
-      "description": "Review the topic to understand the Off-premises architecture, key features, and hardware specifications.",
-      "href": "/docs/power-iaas?topic=power-iaas-on-cloud-architecture"
-    },
-    {
-      "title": "About On-premises architecture, key features, and hardware specifications",
-      "description": "Review the topic to understand the On-premises architecture, key features, and hardware specifications.",
-      "href": "/docs/power-iaas?topic=power-iaas-private-cloud-architecture"
-    },
-    {
-      "title": "About Off-premises networking",
-      "description": "Review the networking topics to understand the Off-premises network architecture and its components.",
-      "href": "/docs/power-iaas?topic=power-iaas-network-architecture-diagrams"
-    },
-    {
-      "title": "About On-premises networking",
-      "description": "Review the networking topics to understand the On-premises network architecture and its components.",
-      "href": "/docs/power-iaas?topic=power-iaas-network-private-cloud"
-    },
-    {
-      "title": "FAQ",
-      "description": "Frequently Asked Questions",
-      "href": "/docs/power-iaas?topic=power-iaas-powervs-faqs"
-    },
-    {
-      "title": "SAP HANA and SAP NetWeaver",
-      "description": "Plan and provision Power Virtual Servers for SAP HANA and SAP NetWeaver.",
-      "href": "/docs/sap?topic=sap-power-vs-planning-items"
-    },
-    {
-      "title": "Easy access: IBM Power Virtual Servers with SAP",
-      "description": "Explore a collection of documentation sections for each SAP offering.",
-      "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
-    },
-    {
-      "title": "Getting started with Power Edge Routers",
-      "description": "PER improves network communication across different parts of the IBM network.",
-      "href": "/docs/sap?topic=sap-fast-path-site-map-power-vs"
-    }
-  ],
-  "section_learn": {
-    "developer": "https://developer.ibm.com/components/ibm-power/",
-    "architecture": "https://www.ibm.com/cloud/architecture/architectures/power/overview/",
-    "training": "https://www.ibm.com/training/cloud",
-    "community": "https://community.ibm.com/community/user/publiccloud/home"
-  },
   "section_updates": {
-    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
-    "tiles": [
-      {
-        "date": "28 June 2024",
-        "title": "IBM Power Virtual Server Private Cloud General Availability",
-        "description": "Power Virtual Server Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of Power Virtual Server within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment."
-      },
-      {
-        "date": "23 February 2024",
-        "title": "PER migration",
-        "description": "You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket."
-      }
-    ]
+    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes"
   }
 }

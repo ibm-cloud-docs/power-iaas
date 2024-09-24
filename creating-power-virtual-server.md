@@ -2,9 +2,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-24"
 
-keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, empty vm, epic
+keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
 subcollection: power-iaas
 
@@ -77,7 +77,17 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 3. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-4. Complete the **Boot image** fields.  
+4. Complete the **Boot image** fields.
+
+    You can create or provision a virtual server instance (VM) without any initial boot image volume. VMs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VM can be created without boot volume and the volume which is cloned or replicated can be attached to VM to bring the backed up VM.
+
+    Select the **Deploy empty virtual server instance** checkbox to provision a VM without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
+
+    You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
+    {: important}
+
+    You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
+
 
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers).
 
@@ -86,18 +96,18 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VM instance: 
+    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VM instance:
     - IBM i Cloud Storage Solution
     - IBM i Power HA, and
-    - Rational Dev Studio for IBM i. 
-    
+    - Rational Dev Studio for IBM i.
+
     Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. There are some validation checks in place for Linux images on the user data that you enter. No validation checks are done for AIX and Bring Your Own License (BYOL) images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-5. Complete the **Profile** fields, which will require you to select the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.    
+5. Complete the **Profile** fields, which will require you to select the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
     There is a core-to-virtual core ratio of 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equals 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
     {: important}
@@ -105,8 +115,17 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     When using an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as disabled. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
 
 6.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
-    
-    
+
+    Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This is a VM-level setting that remains unmodifiable upon provisioning.
+
+    Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes.
+    {: note}
+
+    Only IBM i VMs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VMs.
+    {: note}
+
+    For more information, see [Configuring for large quantity of volumes](#config-large-vol).
+
 7.  Define your **Network interfaces** by adding a public network, private network, or both. When adding an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
@@ -199,3 +218,57 @@ For more information about affinity and anti-affinity policy, see [What does it 
 
 If you add volumes to be created and attached to your new VM during creation then all the volumes are provisioned in the same selected storage pool. Volumes can be created in different storage pools after the VM has been provisioned.
 {: note}
+
+## Provisioning a virtual machine without an initial boot volume
+{: #empty-vm}
+
+Create and deploy a virtual server instance (VM) without an initial boot volume.
+
+The VMs without boot volume can be used for cloning operations. These VMs are not bootable until a boot volume is attached post provisioning. The following table shows which images are deployed based on your OS selection:
+
+When you attach boot volume post provisioning of VM, the boot image still shows the OS specific image without boot volume name. 
+{: note}
+
+| OS selected | Image deployed                  |
+|-------------|---------------------------------|
+| AIX         |  AIX (Empty image) image without boot volume             |
+| IBM i       |  IBM i (Empty image) image without boot volume           |
+| Linux       |  You must select one of the following images: \n * Linux - SUSE (Empty image) \n * Linux - RedHat Enterprise (Empty image) image without boot volume       |
+| Linux for SAP (HANA)| Provision of VM without boot volume is not supported|
+| Linux for SAP (NetWeaver)| Provision of VM without boot volume is not supported|
+| Client supplied subscriptions | Provision of VM without boot volume is not supported for these OSs |
+{: caption="Table 3. Provision of VMs without boot volume based on the OS selection." caption-side="top"}
+
+When you select the **Deploy empty virtual server instance** checkbox, you can provision a VM without a boot image and boot volume. Review the following table to understand how the selection of the **Deploy empty virtual server instance** checkbox works along with the provisioning of the large quantity of data volumes:
+
+| Features | 'Deploy empty virtual server instance' checkbox is clear | 'Deploy empty virtual server instance' checkbox is selected |
+|----------|-------------------------------------------------------|-------------------------------------------------------------|
+| Boot image and volume	| Provision a VM with a boot image and boot volume	| Provision a VM without a boot image and boot volume.
+| Creating new volume during VM provisioning | Create up to 10 volumes from the VM provisioning page. To create volumes in bulk, use the [Storage volumes](https://cloud.ibm.com/power/storage) page in the {{site.data.keyword.powerSys_notm}} user interface.	| You cannot create any volumes and attach to the VM during initial provisioning. You can create up to 10 volumes after provisioning. |
+| Attaching existing volume during VM provisioning | Attach up to 500 existing data volumes	| You cannot attach any volumes to the VM during initial provisioning. You can attach one boot volume and up to 500 data volumes after provisioning. |
+| Attaching from multiple storage tiers	| Supported. But if multiple storage tier volumes are used, there is a potential risk of failure of clone operation. | Supported. But if multiple storage tier volumes are used, there is a potential risk of failure of clone operation. |
+| Boot volume | Boot volume is attached while provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes. | 	Boot volume is attached after provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes. |
+{: caption="Table 4. Provisioning a VM with or without a boot volume." caption-side="top"}
+
+
+## Configuring large quantity of data volumes on Off-premises
+{: #config-large-vol}
+
+You can configure your virtual server instance (VM) while provisioning to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
+
+Only IBM i virtual machines in the `DAL10` and `WDC07` data centers support the configuration of large volumes. Configuring the large quantity of volumes is supported only on Off-premises.
+{: note}
+
+### Limitations of large quantity volumes
+{: #limit-large-vols}
+
+Review the following limitations when you are configuring for large quantity of volumes:
+- It is recommended to perform the operations, such as deploy, attach, detach, or delete, in a sequential order to avoid any performance delays.
+
+- It is recommended to use image catalog to capture the virtual machines with large quantity volumes. Using Cloud Object Storage (COS) or any other cloud option might result in delays. The delay is depending on the size of your volume and network speed.
+
+- When you attach large quantity of volumes in a single request, displaying the status value from `available` to `attaching` might be delayed. It is recommended to wait for the `attach` operation to be completed and then select the attached volumes for other operations.
+
+- Provisioning an IBM i VM with small data volumes (even fewer than 10 volumes in some cases) can cause a 3-5 hour delay if bulk-volume operations are ongoing on the storage controller. During this delay, the VM remains in the building state and cannot be modified.
+
+- When a bulk delete operation is in progress on a storage controller, provisioning an IBM i virtual machine, even with fewer data volumes, might get delayed. During provisioning, the virtual machine status continues to be in the `building` state and this status cannot be modified.

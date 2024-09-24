@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-16"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -25,6 +25,12 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 ---
 
 Learn about the various AIX migration strategies for {{site.data.keyword.powerSysFull}}.
+
+## Migrating an AIX-based Oracle database
+{: #oracle-mig-ref}
+
+To migrate an AIX-based Oracle database from IBM Power to Power Virtual Server, see [Oracle technical migration procedure](https://cloud.ibm.com/media/docs/downloads/power-iaas/Oracle_Technical_Migration_procedure.pdf){: external}.
+
 
 ## Migrating Db2 on AIX to {{site.data.keyword.powerSys_notm}}
 {: #db2-migration-ref}
@@ -61,5 +67,3 @@ Some alternative AIX migration strategies include:
 
 - `rsync` for nondatabase files
 - Log shipping for databases
-
-For a complete tutorial on migrating your AIX workloads to {{site.data.keyword.powerSys_notm}}s, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}s](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external}.

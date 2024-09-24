@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-24"
 
 keywords: power systems, cloud regions
 
@@ -68,3 +68,17 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 **x - Not available**
 
 [^4]: This is a single data center for the location.
+
+
+## Data center capabilities
+{: #dc-capabilities}
+
+You can discover data center capabilities and important information that helps you to develop solutions on top of {{site.data.keyword.powerSys_notm}}.
+
+For example, you can determine the support for the following capabilities in each data center:
+- Machine types (Power9 or Power10)
+- Power Edge Router (PER)
+- Global Replication Service (GRS) site pairs
+- Dedicated Hosts availability
+
+You can check and compare these capabilities among three different data centers through the {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview) page in the IBM Cloud console. The external interfaces such as API, CLI, and Terraform also support this feature.

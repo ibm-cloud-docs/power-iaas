@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-06"
+lastupdated: "2024-09-24"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -77,9 +77,9 @@ Multiple topologies, described in this document, can be layered to create a topo
 In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect your {{site.data.keyword.powerSys_notm}} networks to IBM Cloud resources hosted in a classic infrastructure environment. You can either [order {{site.data.keyword.dl_short}} (2.0) Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect) connections, or use IBM Cloud connections.
 
 
-![Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM {{site.data.keyword.dl_short}} (2.0)](./images/network-connect-to-classic.svg "Connect to Classic"){: caption="Figure 1. Connect to classic infrastructure with {{site.data.keyword.dl_short}} (2.0)" caption-side="bottom"}
 
 
+![Connect to classic infrastructure with Direct Link Connect.](./images/Power-arch-DL-classic.svg "Connect to classic infrastructure with Direct Link Connect."){: caption="Figure 1. Connect to classic infrastructure with Direct Link Connect." caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
@@ -109,9 +109,9 @@ Complete the following steps to implement this scenario:
 
 In this deployment topology, a {{site.data.keyword.dl_short}} (2.0) is used to connect your {{site.data.keyword.powerSys_notm}} networks to resources that are hosted in the IBM Cloud VPC infrastructure.
 
-![Connect to VPC](./images/network-connect-to-vpc.svg "Connect to VPC"){: caption="Figure 2. Connect to VPC" caption-side="bottom"}
 
 
+![Connect to VPC with Direct Link Connect.](./images/Power-arch-DL-vpc.svg "Connect to VPC with Direct Link Connect."){: caption="Figure 2. Connect to VPC with Direct Link Connect." caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
@@ -143,9 +143,9 @@ However, each IBM Cloud {{site.data.keyword.dl_short}} service is not redundant 
 
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} Connect is used to provide connectivity from your (remote) network in the client-managed environment to your {{site.data.keyword.powerSys_notm}} subnets.
 
-![Connect to a client-managed environment](./images/network-connect-to-onprem.svg "Connect to a client-managed environment"){: caption="Figure 3. Connect to client-managed environment" caption-side="bottom"}
 
 
+![Connect to client-managed environment with Megaport.](./images/Power-arch-megaport.svg "Connect to client-managed environment with Megaport."){: caption="Figure 3. Connect to client-managed environment with Megaport." caption-side="bottom"}
 
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
@@ -199,9 +199,8 @@ The {{site.data.keyword.powerSys_notm}} router is the default gateway for your P
 
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments at two different data centers.
 
-![Connecting Power virtual server environments](./images/network-connect-to-pvs2pvs.svg "Connecting Power virtual server environments"){: caption="Figure 4. Connecting Power virtual server environments" caption-side="bottom"}
 
-
+![Connect Power Virtual Server environments with Megaport.](./images/Power-arch-megaport-regions.svg "Connect Power Virtual Server environments with Megaport."){: caption="Figure 4. Connect Power Virtual Server environments with Megaport." caption-side="bottom"}
 
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
@@ -239,9 +238,9 @@ The IBM Cloud SSL VPN service is a feature of the IBM Cloud classic infrastructu
 
 The IBM Cloud SSL VPN service can access only your classic private IP subnets. Therefore, you cannot use the SSL VPN feature to access your {{site.data.keyword.powerSys_notm}} instances directly from your workstation. Instead, a jump server or bastion host is used to access your {{site.data.keyword.powerSys_notm}} instances from your network in the client-managed environment.
 
-![SSL VPN deployment scenario](./images/network-ssl-vpn.svg "SSL VPN"){: caption="Figure 5. SSL VPN deployment scenario" caption-side="bottom"}
 
 
+![Connect to client-managed environment with SSL VPN](./images/Power-arch-DL-SSL-classic.svg "Connect to client-managed environment with SSL VPN"){: caption="Figure 5. Connect to client-managed environment with SSL VPN." caption-side="bottom"}
 
 This deployment topology builds on the [Connect-to-classic](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic) architecture.
 {: note}
@@ -267,9 +266,9 @@ This option is typically used to manage infrastructures and is not recommended f
 
 Although individual {{site.data.keyword.powerSys_notm}} instances can have internet access, there is no site-to-site IPsec VPN service that connects your {{site.data.keyword.powerSys_notm}} subnets to your remote networks currently available.
 
-![IPsec VPN deployment scenario](./images/network-ipsec-vpn.svg "SSL VPN"){: caption="Figure 6. IPsec VPN deployment scenario" caption-side="bottom"}
 
 
+![Connect to client-managed environment with IPSec VPN](./images/Power-arch-cc-classic-vpns2s.svg "Connect to client-managed environment with IPSec VPN"){: caption="Figure 6. Connect to client-managed environment with IPSec VPN."}
 
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide an internet-connected IPsec VPN gateway to enable a site-to-site VPN connection to your {{site.data.keyword.powerSys_notm}} resources.
 
@@ -313,9 +312,9 @@ Currently, {{site.data.keyword.dl_short}} (2.0) is not available in all location
 If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location, then see
 [Getting started with IBM Cloud {{site.data.keyword.dl_short}} on Classic](/docs/direct-link?topic=direct-link-get-started-with-ibm-cloud-direct-link).
 
-![{{site.data.keyword.dl_short}} on Classic deployment scenario](./images/network-dl-gre.svg "{{site.data.keyword.dl_short}}"){: caption="Figure 7. {{site.data.keyword.dl_short}} on Classic deployment scenario" caption-side="bottom"}
 
 
+![Connect to client-managed environment with Direct Link GRE Tunnel](./images/Power-arch-cc-classic-GRE.svg "Connect to client-managed environment with Direct Link GRE Tunnel"){: caption="Figure 7. Connect to client-managed environment with Direct Link GRE Tunnel." caption-side="bottom"}
 
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
 
@@ -358,10 +357,9 @@ In this deployment topology, a connection through IBM Cloud Transit Gateway is u
 
 The following network architecture allows connectivity between multiple {{site.data.keyword.powerSys_notm}} locations with high availability (HA) and disaster recovery (DR) solutions.
 
-![Transit Gateway deployment scenario](./images/network-tgw.svg "Transit Gateway"){: caption="Figure 8. Transit Gateway deployment scenario" caption-side="bottom"}
 
 
-
+![Transit Gateway deployment scenario](./images/Power-arch-cc-transit-workspaces.svg "Transit Gateway deployment scenario"){: caption="Figure 8. Transit Gateway deployment scenario." caption-side="bottom"}
 
 Key features are as follows:
 

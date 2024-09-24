@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-24"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -73,6 +73,7 @@ The IBM {{site.data.keyword.powerSys_notm}} (Off-premises) supports the followin
 
 The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL2
+* AIX 7.2 TL5 SP8
 * AIX 7.2 TL5 SP7
 
 [On-premises]{: tag-red}
@@ -84,10 +85,8 @@ The IBM {{site.data.keyword.powerSys_notm}} (On-premises) supports the following
 The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL1 SP2
 * AIX 7.2 TL5 SP6
-
-
-
-
+* AIX 7.2 TL5 SP8
+* AIX 7.3 TL2 SP1
 
 
 To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
@@ -98,18 +97,6 @@ To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 inf
 - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### IBM i
 {: #ibm-os-versions}
@@ -125,24 +112,23 @@ If you are using IBM i 6.1, you must first upgrade the OS to a current support l
 
 IBM i stock images currently available when you create a VM are:
 
-* IBM i COR [^1]
+* IBM i COR [^1][^2]
+* IBM i 7.5 TR4
 * IBM i 7.5 TR3
+* IBM i 7.4 TR10
 * IBM i 7.4 TR9
 * IBM i 7.3 TR13
-* IBM i 7.2 TR9 [^2]
-
-
+* IBM i 7.2 TR9 [^3]
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+[^2]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 
 
 
-[^2]: Not supported on On-premises.
+[^3]: Not supported on On-premises.
 
 ### Linux
 {: #linux-os-versions}
-
-
 
 [Off-premises]{: tag-blue}
 
@@ -153,6 +139,7 @@ The following list of Linux stock images are available:
 
 Red Hat
 
+* RHEL 9.4 general purpose (RHEL9-SP4) [New]{: tag-green}
 * RHEL 9.2 general purpose (RHEL9-SP2)
 * RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP)
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
@@ -180,15 +167,10 @@ SUSE [^footnote3]
 [^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote3]: SLES images are not currently supported on On-premises.
 
-
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
 
 To use your own license, select the OS image that with `-BYOL` suffix. On the **Create virtual server instance** page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using the Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
-
-
-
-
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
@@ -754,3 +736,10 @@ You can customize the cloud-init configurations only through the {{site.data.key
 {: faq}
 
 Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the desired adapter settings.
+
+
+## Does PowerVC provide support for more than one language to VM Console for a single Novalink host?
+{: #language-support}
+{: faq}
+
+PowerVC (Power Virtualization Center) does not support multiple language console sessions for a single Novalink host. The language support is determined by the first console session started on the Novalink host, which affects all subsequent sessions. For more information, see [Support page](https://supportcontent.ibm.com/support/pages/node/6328173).

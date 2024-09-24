@@ -3,9 +3,10 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-24"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
+
 
 subcollection: power-iaas
 
@@ -20,18 +21,25 @@ subcollection: power-iaas
 
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
-
 ---
 
-Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure prepared to handle these catastrophic hits and have minimal impact on business.
-{: shortdesc}
 
+
+
+
+Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
+{: shortdesc}
 The {{site.data.keyword.powerSysFull}} provides a set of APIs to enable disaster recovery (DR) solution for your virtual server instances. IBM Cloud infrastructure internally uses Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication, and advanced network configuration for fast data transfer.
 
 A new resource volume group is introduced to enable, disable, and manage storage replication consistency group. The volume group holds the volumes that need to be recovered at the time of disaster. Make the volume DR capable by adding the volume to the volume group. To trigger failover and failback operations, use the volume group start and stop operations.
 
-GRS aims to automate the complete DR solution and provide the API and CLI interfaces to create the recipe for the DR solution. GRS currently does not have any user interface.
+
+
+GRS provides an asynchronous volume-level replication service that can be used as the foundation for higher-level disaster recovery (DR) automation solutions.
+
+
+
+
 
 The scope of the GRS service is to create and manage replicated resources that include the following items:
 - Volume lifecycle operations support on replicated volumes.
@@ -57,7 +65,7 @@ Replication-enabled volumes incur the following charges:
     Auxiliary volumes are not charged separately and are part of the primary volume charges.
     {: note}
 
-Upon a site failure due to a catastrophe, metering becomes unavailable from the failed site. The charges for replication-enabled volumes are charged from remote site and the charges are two times the size of the volume against the storage part numbers based on the tier of the volume. During this time, the base charge for the replication capability for the replication-enabled volumes is not charged.
+Upon a site failure due to a catastrophe, metering becomes unavailable from the failed site. The charges for replication-enabled volumes are charged from the remote site. The charges are two times the size of the volume against the storage part numbers based on the tier of the volume. During this time, the base charge for the replication capability for the replication-enabled volumes is not charged.
 
 ## Setting up GRS
 {: #configure-GRS}
@@ -65,6 +73,26 @@ Upon a site failure due to a catastrophe, metering becomes unavailable from the 
 GRS involves two sites where storage replication is enabled. These two sites are fixed and mapped into one-to-one relationship mode in both directions. These two sites are fixed and are in replication partnership in both directions.
 
 You can create a replication-enabled volume from any site, the site from where the request is initiated contains the primary volume. The remote site is auxiliary and contains an auxiliary volume.
+
+
+While you are creating a storage volume from the user interface, you can enable the volume for replication by completing the following steps:
+
+1. In the **Global Replication Service** section, set the **Volume replication** to on. The name of the primary data center is displayed.
+2. From the **Secondary data center** list, select the displayed secondary site name.
+
+The GRS details of the volume are displayed when you click the storage volume.
+
+A storage volume can have one of the following replication status:
+
+- **Not eligible**: The storage volume is not in a GRS-enabled storage pool so GRS cannot be enabled on the storage volume. To move the storage volume to a GRS-enabled storage pool, submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+- **Not supported**: The site where the storage volume is created is not a GRS-supported location. So, you cannot enable replication of the storage volume.
+- **Not configured**: The storage volume is in a GRS-enabled location. You can configure the storage volume for GRS.
+- **Initializing**: The GRS enablement of the storage volume is in progress.
+- **Configured**: The storage volume is a GRS-enabled storage volume.
+
+
+For more information, see [Creating a storage volume](/docs/power-iaas?topic=power-iaas-modifying-instance#create-storage-vol).
+
 
 The following table explains how to determine the primary and secondary site based on replication-enabled volume creation:
 
@@ -93,17 +121,17 @@ The following table shows the location pairs that support replication:
 | `sao01`           | `sao04`                  |
 | `mon01`           | `tor01`                  |
 {: class="simple-table"}
-{: caption="Table 1. Replication enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
+{: caption="Table 1. Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
 
 ## Preparation for disaster recovery
 {: #dr-prep}
 
-Consider that you have the virtual server instances with data volumes that are running workloads. If a failure occurs and if the data volumes are replicated, you can recover the data volumes from the remote site. To enable the DR, perform [actions on the primary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site) and [actions on the secondary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site).
+Consider that you have the virtual server instances with data volumes that are running workloads. If a failure occurs and if the data volumes are replicated, you can recover the data volumes from the remote site. To enable the volume replication service, complete the [actions on the primary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site) and the [actions on the secondary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site).
 
 ### Actions on the primary site
 {: #configure-primary-site}
 
-To enable DR on the primary site, complete the following steps:
+To enable volume replication on the primary site, complete the following steps:
 1. Create a replication-enabled volume by providing `replicationEnabled` flag as `True` in the [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) request body.
 
     To know more about the replication properties of a volume, see the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#convert-to-replication-vol).
@@ -120,14 +148,14 @@ To enable DR on the primary site, complete the following steps:
 ### Actions on the secondary site
 {: #configure-secondary-site}
 
-To enable DR on the secondary site, complete the following steps:
+To enable volume replication on the secondary site, complete the following steps:
 1. Onboard the auxiliary volume by using the [onboard auxiliary volume](/apidocs/power-cloud#pcloud-volume-onboarding-post) API. For more information, see [Onboarding auxiliary volumes](#onboard-aux-vol).
 
 2. Create a standby virtual server instance with onboarded auxiliary volumes.
 
     You can create a standby virtual server instance with the onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
 
-Now you have the setup ready for DR. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
+Now you have the setup ready to enable replication service. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
 
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}
@@ -155,7 +183,13 @@ The onboarding operation is an asynchronous operation that can take some time th
 
 To access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API with **access** flag set to `True`.
 
-When the site is back, you can start the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API. The failback operation resumes the replication back to the primary site but any input and output that is performed on a remote site is lost.
+
+
+
+To switch back to the volume group on the primary site, you must perform the volume group stop and start operations from the primary site. You can use the volume group `stop` command and wait until `ReplicationStatus` status changes to `disabled` value. Then, use the volume group `start` command with the `--source master` option to start the volume group. For more information about commands, see [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API.
+
+
+
 
 ## Impacts on other {{site.data.keyword.powerSys_notm}} operations
 {: #impacts-on-powervs}
@@ -205,31 +239,112 @@ Failure to complete this procedure in the specified order might result in loss o
 
     For example, `ibmcloud pi vgu 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb`
 
-    After you disable the replication service, volumes no longer exist in the storage backend. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the volume to an error state.
+
+    After you disable the replication service on a primary volume, the replication relationship between the primary volume and the secondary volume no longer exists in the storage backend. Make sure that the auxiliary volume on the secondary site is not associated with any volume group, then delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
     {: note}
 
 
+
+## Updating a primary volume
+{: #update-prime-vol}
+
+You can resize the primary volume or switch the bootable or shareable options of the volume as `True` or `False`.
+
+
+Use the [ibmcloud pi volume-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-update) CLI command with the following options to update the primary volume:
+
+- **Resize** `--size NEW_SIZE` option: On `DAL10` and `WDC07` location pair, when you resize a replication-enabled primary volume from the primary site, the system resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For all other location pairs, before you resize a replication-enabled volume, remove the volume from the volume group. After the volume resize is completed, add the volume back to the volume group.
+
+    It is recommended not to resize a primary volume by disabling replication as it results in errors that are related to the auxiliary volume on the remote site.
+    {: important}
+
+- **Bootable** `bootable=true` option: To set a primary volume as a boot volume, update the `bootable` attribute to `True`.
+
+- **Sharable** `shareable=true` option: To set a primary volume as a shareable volume, update the `sharable` attribute to `True`.
+
+    If you are setting the `bootable` and `shareable` options to `True` on the primary volume, you must explicitly set the `bootable` and `shareable` options to `True` on the auxiliary volume.
+    {: note}
+
+
+## Deleting a primary volume
+{: #delete-prime-vol}
+
+To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+
+Once you initiate the action to delete the volume, the action cannot be undone.
+{: note}
+
+To delete a primary volume, complete the following steps:
+
+1. [Disable the replication between the primary volume and the secondary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs).
+2. [Delete the auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#del-aux-vol).
+3. If the volume is associated with a volume group, remove the volume from the volume group.
+4. Delete the primary volume. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
+
+When you delete the primary volume, the replication relationship between the primary volume and the secondary volume no longer exists in the storage backend. Make sure that the auxiliary volume on the secondary site is not associated with any volume group, then delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
+
+When you delete a primary volume, the billing for primary volume stops.
+
+The following is an example of deleting the replication-enabled primary volume `afd07003-a61a-45ca-97d1-4f910272306d` from the volume group `5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca`:
+
+1. Remove the volumes from volume group on the primary site. You can use the following CLI command:
+
+        ibmcloud pi volume group update 5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca --remove-member-volume-idsmafd07003-a61a-45ca-97d1-4f910272306d
+
+2. Disable the replication service on the primary volume. You can use the following CLI command:
+
+        ibmcloud pi volume action afd07003-a61a-45ca-97d1-4f910272306d –replication_enabled=False
+
+3. Remove the auxiliary volumes from volume group on the secondary site. You can use the following CLI command:
+
+        ibmcloud pi volume group update 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb
+
+1. Delete the auxiliary volume and the volume group from the secondary site. You can use the following CLI commands:
+
+        ibmcloud pi vol delete ba147c20-578a-4ae1-8a94-252b6bbcd9cb
+
+        ibmcloud pi vg delete 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3
+
+2. Delete the primary volume and the volume group from primary site. You can use the following CLI commands:
+
+        ibmcloud pi vol delete afd07003-a61a-45ca-97d1-4f910272306d
+
+        ibmcloud pi vg delete 5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca
+
+
+
+
+
 ## Deleting an auxiliary volume
-{: #resize-rep-vol}
+{: #del-aux-vol}
 
-To delete an auxiliary volume from the remote site, disable the replication service on the primary volume. Before you delete the auxiliary volume, make sure that it is not associated with any volume group.
+If you delete an auxiliary volume, the associated primary volume is also deleted.
+{: caution}
 
+The auxiliary volume from the storage backend gets deleted when you disable the replication service on the primary volume or delete a primary volume. If added, remove the auxiliary volume from the volume group. Then, manually delete the auxiliary volume on the secondary site. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
 
 Use the [ibmcloud pi volume delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete) CLI command to delete the auxiliary volume.
 
 For example, `ibmcloud pi vold afd07003-a61a-45ca-97d1-4f910272306d`
 
 
-## Resizing a replication-enabled volume
-{: #resize-rep-vol}
+## Creating a volume group
+{: #create-vol-grp}
+
+When you create a volume group and add the replication-enabled volumes to the volume group, the remote replication consistency group is created at both primary and remote storage backend. The consistency group stores the consistent copy for the volumes. When the volume group is created, the primary role attribute is set as `master`.
+
+You can add only replication-enabled volumes to a volume group. If you try to add a non-replication-enabled volume to a volume group, the action fails.
+
+To create a volume group, you can use the CLI command, [ibmcloud pi volume-group-create](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-create){: external}.
 
 
+### Updating a volume group
+{: #update-vol-grp}
 
+You can add or remove storage volumes from a volume group. If you add storage volumes to a volume group on the primary site after the primary volumes are onboarded, then you must also onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
 
-When you resize a volume from a site, the system also resizes the replication-enabled volume on its corresponding remote site after an interval of 24 hours.
+To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
 
-It is recommended not to resize a volume by disabling replication as it results in errors that are related to the volume on the remote site.
-{: important}
 
 
 
@@ -239,16 +354,23 @@ It is recommended not to resize a volume by disabling replication as it results 
 
 The limitations of GRS are as follows:
 
+
+- After you performed a failback operation, the replication role of the volume group (VG) and the volume fail to change from auxiliary to primary. The issue is a recurring issue that impacts your GRS environments.
 - You cannot perform a snapshot-restore operation on auxiliary volumes.
 - The volume group update operation can fail upon a mismatch in the volume group and volume replication states. If the volume group is in an error state, use the [volume group action](/apidocs/power-cloud#pcloud-volumegroups-action-post) API to reset the volume group status.
-- When you disable the replication of a volume or delete a volume from a site, the following changes occur:
 
-    - If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the volume to an error state.
-    - The remote copy relationship is deleted at the storage backend and the replicated volume is deleted on the secondary storage of the corresponding remote site.
+- When you disable or delete a primary volume from a primary site, the following changes occur:
+
+    - The replication relationship between the primary volume and the auxiliary volume is deleted at the storage backend.
+    - If the auxiliary volume is not deleted from the secondary site manually, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
 
 - You cannot remove the replication-enabled volume when it is a part of a volume group.
-- When you resize a volume from a site, the system also resizes the replication-enabled volume on its corresponding remote site after an interval of 24 hours. For more information, see [Resizing a replication-enabled volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#resize-rep-vol).
+- On `DAL10` and `WDC07` location pair, when you resize a replication-enabled primary volume from the primary site, the system resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For all other location pairs, before you resize a replication-enabled volume, remove the volume from the volume group. After the volume resize is completed, add the volume back to the volume group. For more information, see [Updating a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#update-prime-vol).
+- If you resize a primary volume by disabling replication service on the primary site, it results in errors that are related to the auxiliary volume on the remote site.
 - Any operation that is performed on a deleted volume fails.
+
+
+
 
 ## Best practices for GRS
 {: #best-practices-GRS}

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-24"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -24,16 +24,16 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 ---
 
-The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) support through IBM.
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES)support through IBM.
 {: shortdesc}
 
 The full Linux subscription uses activation keys to provide access to interim fixes and updates for the operating system for {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.powerSys_notm}} is hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply for setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL  stock OS images for SAP and non-SAP applications.
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for SAP and non-SAP applications.
 
 To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-The OS file name for the full Linux subscription feature starts with RHEL. For SAP applications, ensure that you are using an IBM stock OS image for SAP. These stock images are certified for using SAP applications. Bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}}, see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
+The OS file name for the full Linux subscription feature starts with RHEL or SLES. For SAP applications, ensure that you are using an IBM stock OS image for SAP. These stock images are certified for using SAP applications. Bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}}, see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
 
 ## Setting up full Linux subscription
@@ -100,14 +100,17 @@ Save the `squid config` file and restart the squid service by using the followin
 To complete the setup process, follow these steps:
 1. Deploy a network in the pod.
 2. Connect the network externally by using a ticketing process with Border Gateway Protocol (BGP).
-3. Deploy the LPAR (RHEL) for completing the full Linux subscription.
+3. Deploy the LPAR (RHEL or SLES) for completing the full Linux subscription.
 4. Connect to the LPAR by using one of the following methods:
    * From the console on the browser.
    * By using the `SSH` command from your data network.
 5. Test the internal private address of the VSI on the VPC by using the `ping` command. For example, `ping 10.240.0.4`
-6. To register your LPAR with the RHEL subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file:
+6. To register your LPAR with the RHEL or SLES subscription on the satellite server, open the `powervs-fls-readme.md` file that is stored in the path `/usr/share/powervs-fls` and use the following command in the file:
 
-      `/usr/local/bin/rhel-cloud-init.sh` 
+      `/usr/local/bin/rhel-cloud-init.sh`
+
+
+      `/usr/local/bin/sles-cloud-init.sh`
 
 
 7. One of the parameters for the command represents the proxy IP. Set this proxy IP to the internal private IP of your proxy VSI. For example, `10.240.0.4`. Set the port to 3128.

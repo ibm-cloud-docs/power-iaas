@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-24"
 
-keywords: release notes, announcements, feature updates, changes, power virtual server
+keywords: release notes, announcements, feature updates, changes, power virtual server, on-premises, off-premises
 
 ---
 
@@ -16,6 +16,28 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+## September 2024
+{: #Sep-2024}
+
+
+- You can now discover data center capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg#dc-capabilities).
+- [Off-premises]{: tag-blue}You can now enable the replication services for a volume from the user interface. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
+- [Off-premises]{: tag-blue}You can now configure a virtual machine that contains a boot volume and deploy an IBM i virtual machine to support the attachment of large quantity of data volumes available in `DAL10` and `WDC07` data centers. For more information, see [Configuring large quantity of data volumes on Off-premises](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#config-large-vol).
+- [On-premises]{: tag-red}You can now select the `DAL10` and `WDC07` location pair to resize a replication-enabled primary volume from the primary site, and the system resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For more information, see [Updating a primary volume](/docs-draft/power-iaas?topic=power-iaas-getting-started-GRS#update-prime-vol).
+- [On-premises]{: tag-red}You can now select the SUSE Linux Enterprise Server (SLES) stock image when you register for full Linux subscription, for {{site.data.keyword.powerSys_notm}}. For more information, see [Full Linux® subscription for IBM Power Virtual Server (On-premises)](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub).
+- [On-premises]{: tag-red}You can now validate the import file against the SHA-256 checksum file from the user interface. For more information, see [Using the Power Virtual Server user interface to import a boot image](/docs-draft/power-iaas?topic=power-iaas-importing-boot-image#console-import-image) and [Using the Power Virtual Server user interface to capture and export a VM](/docs-draft/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
+- You can now download the solution, Secure Automated Backup with Compass by Cobalt Iron, from [IBM Cloud Catalog](https://cloud.ibm.com/catalog){: external} for immediate deployment. The solution provides on-premises to Cloud backup and recovery for IBM {{site.data.keyword.powerSys_notm}} workloads. The offering is the only automated BaaS and recovery solution for IBM {{site.data.keyword.powerSys_notm}} workloads that are powered by IBM Storage Protect, such as SAP HANA, Oracle, Db2 on AIX and Linux. For more information, see [Cobalt Iron Expands Access to Secure Automated Backup With Compass for IBM Power Virtual Server](https://info.cobaltiron.com/news/cobalt-iron-ibm-vs-baas-global-expansion){: external}.
+
+- [Off-premises]{: tag-blue} new AIX 7.2 TL5 SP8 and RHEL 9.4 general purpose (RHEL9-SP4) operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- [On-premises]{: tag-red} new AIX 7.3 TL2 SP1 and AIX 7.2 TL5 SP8 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New IBM i 7.5 TR4 and IBM i 7.4 TR10 operating system images are available for both Off-premises and On-premises. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New `IBM i COR` stock image is available for both Off-premises and On-premises. While you are installing the image, if you encounter any issues, you can refer to the [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external} procedure. For more information, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#ibm-os-versions).
+
+**End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
+{: important}
+
 
 
 ## August 2024
@@ -37,7 +59,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 **End of Service Notice** - End of marketing effective `October 19, 2024` will prevent new Cloud Connections from being established in existing workspaces. In turn, IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: important}
 
-- Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). 
+- Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## June 2024
 {: #jun-2024}

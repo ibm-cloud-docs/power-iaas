@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-09-16"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -47,7 +47,7 @@ Before you can use a custom image as the boot volume, review the following infor
 - Alternatively, if you have deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power hardware that you selected in the **Machine Type** field.
 
-For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.keyword.powerSys_notm}}, see [Migrating AIX to IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Migration_Tutorial_v1.pdf){: external} and [Migrating IBM i to IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Migration_Tutorial_v1.pdf){: external}.
+For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.keyword.powerSys_notm}}, see [Migration strategies for AIX](/docs/power-iaas?topic=power-iaas-migration-aix) and [Migration strategies for IBM i](/docs/power-iaas?topic=power-iaas-migration-strategies-power).
 
 The supported AIX and IBM i operating system versions depend on the IBM Power hardware that you select for the {{site.data.keyword.powerSys_notm}}.
 

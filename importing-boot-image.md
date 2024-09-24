@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-24"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -99,7 +99,14 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 
 2. After you click **Import image**, enter all of the required information. Refer to the table at the end of the page to complete the necessary fields to import a boot image.
 
-   
+
+   Select the **Validate import with checksum file** toggle button to validate the import file against the checksum file. You can generate the checksum file while exporting the image files to the IBM Cloud Object Storage bucket. The checksum file and the import images must be placed in the same bucket. The checksum file name is based on the name of the imported image file and has the file extension `.sha256`. For more information about generating a checksum file, see [Using the Power Virtual Server user interface to capture and export a VM](/docs-draft/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
+
+   If you are creating your own image, you can create a checksum image and place it with your own image in the same bucket. One of the ways to generate the checksum image is by using the command `shasum -a 256 <filename>` or `sha256sum <filename>`.
+
+   Validating an import file against the checksum file might add extra time to the image import process.
+   {: note}
+
 
 3. Find your newly uploaded boot image in **Boot images**.
 
