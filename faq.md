@@ -736,10 +736,3 @@ You can customize the cloud-init configurations only through the {{site.data.key
 {: faq}
 
 Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the desired adapter settings.
-
-
-## Does PowerVC provide support for more than one language to VM Console for a single Novalink host?
-{: #language-support}
-{: faq}
-
-PowerVC (Power Virtualization Center) does not support multiple language console sessions for a single Novalink host. The language support is determined by the first console session started on the Novalink host, which affects all subsequent sessions. For more information, see [Support page](https://supportcontent.ibm.com/support/pages/node/6328173).
