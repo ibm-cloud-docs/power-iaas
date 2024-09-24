@@ -109,6 +109,7 @@ The following table explains how to determine the primary and secondary site bas
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations that are supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall) in API documentation.
 
 The following table shows the location pairs that support replication:
+
 | Location 1        | Location 2               |
 | ----------------- | ------------------------ |
 | `mad02`           | `eu-de-1 (fra04)`        |
@@ -181,7 +182,7 @@ The onboarding operation is an asynchronous operation that can take some time th
 ## Performing a failover and failback operation
 {: #perform-fail-over-back}
 
-To access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post)] API with **access** flag set to `True`.
+To access the auxiliary volumes from the secondary site upon a primary site failure, stop the volume group by using [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API with **access** flag set to `True`.
 
 
 
@@ -240,7 +241,7 @@ Failure to complete this procedure in the specified order might result in loss o
     For example, `ibmcloud pi vgu 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb`
 
 
-    After you disable the replication service on a primary volume, the replication relationship between the primary volume and the secondary volume no longer exists in the storage backend. Make sure that the auxiliary volume on the secondary site is not associated with any volume group, then delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
+    When you disable the replication service on the primary volume or delete a primary volume, the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary site is associated with a volume group, remove the auxiliary volume from the volume group. Delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
     {: note}
 
 
@@ -276,40 +277,34 @@ Once you initiate the action to delete the volume, the action cannot be undone.
 
 To delete a primary volume, complete the following steps:
 
-1. [Disable the replication between the primary volume and the secondary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs).
-2. [Delete the auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#del-aux-vol).
-3. If the volume is associated with a volume group, remove the volume from the volume group.
-4. Delete the primary volume. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
 
-When you delete the primary volume, the replication relationship between the primary volume and the secondary volume no longer exists in the storage backend. Make sure that the auxiliary volume on the secondary site is not associated with any volume group, then delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
+
+1. If the primary volume is associated with a volume group, remove the primary volume from the volume group.
+2. Delete the primary volume from the primary site. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
+3. If the auxiliary volume is associated with a volume group, remove the auxiliary volume from the volume group.
+4. Delete the auxiliary volume from the secondary site.
+
+When you disable the replication service on the primary volume or delete a primary volume, the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary site is associated with a volume group, remove the auxiliary volume from the volume group. Delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
 
 When you delete a primary volume, the billing for primary volume stops.
 
-The following is an example of deleting the replication-enabled primary volume `afd07003-a61a-45ca-97d1-4f910272306d` from the volume group `5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca`:
+In the following example, `afd07003-a61a-45ca-97d1-4f910272306d` is a primary volume that is associated with the volume group `5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca`:
 
-1. Remove the volumes from volume group on the primary site. You can use the following CLI command:
+1. Remove the volume from volume group on the primary site. You can use the following CLI command:
 
         ibmcloud pi volume group update 5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca --remove-member-volume-idsmafd07003-a61a-45ca-97d1-4f910272306d
 
-2. Disable the replication service on the primary volume. You can use the following CLI command:
-
-        ibmcloud pi volume action afd07003-a61a-45ca-97d1-4f910272306d –replication_enabled=False
-
-3. Remove the auxiliary volumes from volume group on the secondary site. You can use the following CLI command:
-
-        ibmcloud pi volume group update 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb
-
-1. Delete the auxiliary volume and the volume group from the secondary site. You can use the following CLI commands:
-
-        ibmcloud pi vol delete ba147c20-578a-4ae1-8a94-252b6bbcd9cb
-
-        ibmcloud pi vg delete 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3
-
-2. Delete the primary volume and the volume group from primary site. You can use the following CLI commands:
+2. Delete the primary volume from primary site. You can use the following CLI commands:
 
         ibmcloud pi vol delete afd07003-a61a-45ca-97d1-4f910272306d
 
-        ibmcloud pi vg delete 5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca
+3. Remove the auxiliary volume from volume group on the secondary site. You can use the following CLI command:
+
+        ibmcloud pi volume group update 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb
+
+4. Delete the auxiliary volume from the secondary site. You can use the following CLI commands:
+
+        ibmcloud pi vol delete ba147c20-578a-4ae1-8a94-252b6bbcd9cb
 
 
 
@@ -321,7 +316,7 @@ The following is an example of deleting the replication-enabled primary volume `
 If you delete an auxiliary volume, the associated primary volume is also deleted.
 {: caution}
 
-The auxiliary volume from the storage backend gets deleted when you disable the replication service on the primary volume or delete a primary volume. If added, remove the auxiliary volume from the volume group. Then, manually delete the auxiliary volume on the secondary site. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
+When you disable the replication service on the primary volume or delete a primary volume, the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary site is associated with a volume group, remove the auxiliary volume from the volume group. Delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
 
 Use the [ibmcloud pi volume delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete) CLI command to delete the auxiliary volume.
 
@@ -347,8 +342,6 @@ To update a volume group, you can use the CLI command, [ibmcloud pi volume-group
 
 
 
-
-
 ## Limitations of GRS
 {: #limitations-GRS}
 
@@ -359,7 +352,7 @@ The limitations of GRS are as follows:
 - You cannot perform a snapshot-restore operation on auxiliary volumes.
 - The volume group update operation can fail upon a mismatch in the volume group and volume replication states. If the volume group is in an error state, use the [volume group action](/apidocs/power-cloud#pcloud-volumegroups-action-post) API to reset the volume group status.
 
-- When you disable or delete a primary volume from a primary site, the following changes occur:
+- When you disable the replication service on the primary volume or delete a primary volume from the primary site, the following changes occur:
 
     - The replication relationship between the primary volume and the auxiliary volume is deleted at the storage backend.
     - If the auxiliary volume is not deleted from the secondary site manually, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
