@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-04"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -39,6 +39,8 @@ If you plan to use your own license, select the OS image that is suffixed with `
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
 
+
+
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/system/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/system/detail/9225){: external}.
 
 If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
@@ -57,6 +59,7 @@ You cannot contact the Red Hat-based repository and download the appropriate sof
 1. To buy an RHEL subscription, see [Red Hat Enterprise Linux Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: external}.
 
 2. To register your system, see [Quick Registration for RHEL](https://docs.redhat.com/en/documentation/subscription_central/1-latest/html/getting_started_with_rhel_system_registration/basic-reg-rhel-gui){: external}.
+
 
 ## Capturing and importing an RHEL image
 {: #import-rhel-image}

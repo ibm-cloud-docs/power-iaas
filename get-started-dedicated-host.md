@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-08-06"
+lastupdated: "2024-10-08"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -34,7 +34,7 @@ The hourly billing for a Dedicated host on a Power Virtual Server covers the ent
 
 This setup enables you to optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts enhance isolation from other users in a cloud environment, ensuring your operations run smoothly and securely.
 
-Create an estimate before deploying a dedicated host by using the [cost estimator](wwww.cloud.ibm.com/power/estimate){: external} or see the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh) page to learn more.
+Create an estimate before deploying a dedicated host by using the [cost estimator](https://cloud.ibm.com/power/estimate){: external} or see the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh) page to learn more.
 
 Dedicated hosts provide the following features:
 1. Ability to reserve a server (IBM Power S922 or S1022) for exclusive use.
@@ -87,7 +87,7 @@ To create a dedicated host group, complete the following steps:
 4. Click **Reserve host**.
 5. Click **Create new**.
 6. Enter a custom name on the **Dedicated host group name** field.
-7. Optionally, share this dedicated host group with other workspaces by granting them secondary access.  
+7. Optionally, share this dedicated host group with other workspaces by granting them secondary access.
     Only workspaces in the same region as the primary workspace and in an active state can be selected.
     {: note}
 
@@ -107,7 +107,7 @@ To share workspaces, complete the following steps:
 3. Click **Dedicated hosts** on the left navigation menu.
         Here, you can see all existing dedicated hosts.
 4. Click a dedicated host group to open the details page.
-5. Click **Share** and select the workspaces you want to share with.  
+5. Click **Share** and select the workspaces you want to share with.
     Only workspaces in the same region as the primary workspace and in an active state can be selected.
     {: note}
 
@@ -126,7 +126,7 @@ You can create multiple dedicated hosts. To reserve a dedicated host, complete t
 4. Click **Reserve host**.
 5. Select a dedicated host group from the available list of host groups already created.
         If no dedicated host group is available, click **Create new**.
-6. Enter your **Host name** and select the **Machine type** from the drop-down list.  
+6. Enter your **Host name** and select the **Machine type** from the drop-down list.
     Dedicated hosts cannot be reserved in host groups where the current workspace has secondary access.
     {: note}
 

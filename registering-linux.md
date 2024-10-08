@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-03"
+lastupdated: "2024-10-06"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -39,6 +39,9 @@ If you plan to use your own license, select the OS image that is suffixed with `
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
+
+
+
 If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
@@ -53,7 +56,7 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 
 1. To buy a SUSE subscription, see [How to Buy](https://www.suse.com/support/?id=SUSE_Linux_Enterprise_Server_for_SAP_Applications#how-to-buy){: external}.
 
-2. To register your system, see [Registering an Installed System](https://documentation.suse.com/sles/12-SP4/single-html/SLES-deployment/#sec-y2-sw-register){: external}.
+2. To register your system, see [Registering an Installed System](https://www.suse.com/support/kb/doc/?id=000018564){: external} .
 
 ## Capturing and importing a SLES image
 {: #preparing-linux-image}

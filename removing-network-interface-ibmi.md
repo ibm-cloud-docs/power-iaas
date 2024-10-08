@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-08"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -24,90 +24,73 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 
 ---
 
-Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a VM or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the machine deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
+
+
+
+
+Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a virtual machine (VM) or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the VM deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
 {: shortdesc}
 
-When you toggle a public network off and then on, the {{site.data.keyword.powerSysFull}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
+When you toggle a public network off and on, the {{site.data.keyword.powerSysFull}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
 {: note}
 
 ## Removing a network interface from an IBM i VM
 {: #remove-nic-ibmi}
 
-Learn how to change the TCP/IP address of your IBM i VM. You can change your system's TCP/IP address while the TCP/IP is active. However, you must deactivate the TCP/IP interface. For a complete set of instructions, see [Changing the TCP/IP Address of the IBM i System](https://www.ibm.com/support/pages/node/641015){: external}.
 
-1. Before you change a TCP/IP address, determine whether it has any associated routes. Choose **Option 8** from the **NETSTAT \*IFC** screen.
-    It's a good idea to select **Option 5** to display the details of the route. Remember to press **F6** to print the details for reference for when the route must be readded. This step should be done for all of the **non-\*DIRECT** routes that are listed on the screen.
+You can change the TCP/IP address of your IBM i VM while the TCP/IP is active. However, you must deactivate the TCP/IP interface. For more information about the complete set of instructions, see [Changing the TCP/IP Address of the IBM i System](https://www.ibm.com/support/pages/node/641015){: external}.
+
+1. Before you change a TCP/IP address, determine whether it has any associated routes. Select **Option 8** from the **NETSTAT \*IFC** screen to view the routes.
+
+    For all the **non-\*DIRECT** routes that are listed on the screen, you can display the routes and print it for reference. Select **Option 5** to display the details of the route. Press **F6** to print the details for reference for when the route must be readded.
     {: tip}
 
-2. Run the `CFGTCP` command, and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes you need to remove. All of that communication that is going over the route is terminated after you remove it.
-3. To make the actual changes, you must deactivate and remove the interface before you add it. Select **Option 10** next to the interface you need to deactivate on the **NETSTAT \*IFC** screen.
-4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from that menu. Select **Option 4** next to the interface you need to remove.
+2. Run the `CFGTCP` command and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes that you need to remove. When you remove the routes, the communication that is happening over the route is terminated.
 
-**Removing a network interface**:
+3. To make the changes, you must deactivate and remove the interface before you add it back. Select **Option 10** next to the interface that you need to deactivate on the **NETSTAT \*IFC** screen.
 
-    ```screen
-                        Work with TCP/IP Interfaces
-                                                                        System: RCHASSLH
-    Type options, press Enter.
-    1=Add   2=Change    4=Remove    5=Display   9=Start   10=End
+4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from the menu. Select **Option 4** next to the interface that you need to remove.
 
-              Internet          Subnet            Line                Line
-    Opt       Address           Mask              Description         Type
-    ___       9.5.186.23        255.255.255.0     SITETRN             *TRLAN
-    ___       9.5.186.222       255.255.255.0     SITETRN             *TRLAN
-    _4_       10.10.10.1        255.255.255.0     SITETRN             *TRLAN
-    ___       127.0.0.1         255.0.0.0         *LOOPBACK           *NONE
+
+![Removing a network interface](./images/work_with_TCP_IP_Interface.png "Removing a network interface"){: caption="Figure 1. Removing a network interface" caption-side="bottom"}
 
 
 
 
 
-                                                                                  Bottom
-    F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
-    F12=Cancel    F17=Top         F18=Bottom
-    ```
-
-5. You must vary off the Line description (LIND) after you remove the interface.
+1. You must vary off the Line description (LIND) after you remove the interface.
 
 ## Adding a network interface to an IBM i VM
 {: #add-nic-ibmi}
 
-When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address (that maps to the external IP address). Point the new interface at the new internal IP address.
+When you toggle a public network off and on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You must check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address that maps to the external IP address. Point the new interface at the new internal IP address.
 
-1. After you remove the routes and interfaces, create the new configuration in the reverse order. To get to the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
-    Most configurations require you to update only the first three fields.
+1. After routes and interfaces are removed, create the new configuration in the reverse order. To open the **ADDTCPIFC** screen, run the `CFGTCP` command and select **Option 1**.
+
+    In most of the configurations, you might need to update only the first three fields.
     {: note}
 
-2. Add the new internal IP address that you obtained from the {{site.data.keyword.powerSys_notm}} user interface (you can type over the quotation marks) to the **Internet address** field.
+2. Add the new internal IP address that you obtained from the {{site.data.keyword.powerSys_notm}} user interface to the **Internet address** field. You can type the IP address over the quotation marks.
+
 3. Add the new subnet mask to the **Subnet mask** field.
-4. Complete the remaining fields by using your reference printout. The LIND must be the same as the LIND defined on the removed interface.
-5. After you add the interface, activate it from the **NETSTAT \*IFC** screen by selecting **Option 9**.
-6. To verify that the new interface is active, ping the address from the command line. If the ping responds, the interface is working correctly.
-7. Finally, add the new routes that use this interface (if any). You can add new routes by selecting **Option 2** from the `CFGTCP` menu. Type **1** in the **Opt** column to add a new route, and press the **Enter** key.
 
-**Adding a network interface**:
+4. Complete the remaining fields by using your reference printout. The LIND value must be the same as the LIND value defined on the interface that was removed earlier.
 
-    ```screen
-                                Add TCP/IP Interface (ADDTCPIFC)
+5. Activate the new interface by selecting **Option 9** from the **NETSTAT \*IFC** screen.
 
-    Type choices, press Enter
+6. To verify that the new interface is active, ping the IP address of the new interface from the command line. If the ping responds, the interface is working correctly.
 
-    Internet address.   .   .   .   .   .   .   .   .   . > .   .
-    Line description.   .   .   .   .   .   .   .   .   .   ____________    Name, *LOOPBACK..
-    Subnet mask .   .   .   .   .   .   .   .   .   .   .   ____________
-    Associated local interface. .   .   .   .   .   .   .   *NONE
-    Type of service.    .   .   .   .   .   .   .   .   .   *NORMAL         *MINDELAY, *MAXTHRPUT..
-    Maximum transmission unit.  .   .   .   .   .   .   .   *LIND           576-16388, *LIND
-    Autostart.  .   .   .   .   .   .   .   .   .   .   .   *YES            *YES,   *NO
-    PVC logical channel identifier. .   .   .   .   .   .   ____________    001-FFF
-                                 + for more values          ____________
-    X.25 idle circuit timeout.  .   .   .   .   .   .   .   60              1-600
-    X.25 maximum virtual circuits.  .   .   .   .   .   .   64              0-64
-    X.25 DDN interface. .   .   .   .   .   .   .   .   .   *NO             *YES,   *NO
-    TRLAN bit sequencing.   .   .   .   .   .   .   .   .   *MSB            *MSB,   *LSB
-    ```
+7. Add the new routes that use the new interface, if any. You can add the new routes by selecting **Option 2** from the `CFGTCP` menu, type **1** in the **Opt** column, and press the **Enter** key.
 
-Verify the line description’s local adapter address matches the mac address of the newly added adapter address from the Power Virtual Server user interface.
+
+![Adding a network interface](./images/add_TCP_IP_interface.png "Adding a network interface"){: caption="Figure 2. Removing a network interface" caption-side="bottom"}
+
+
+
+
+Verify that the local adapter address of the line description matches the MAC address of the newly added adapter address from the {{site.data.keyword.powerSys_notm}} user interface.
 
 For example,
-Find the mac address in the line description using DSPLIND LIND(xxxxxxxxx). The line description is the name that matches the internet address that was added (use *NETSTAT IFC to view).
+Find the MAC address in the line description by using DSPLIND LIND(xxxxxxxxx) command. The line description is the name that matches the **Internet address** field value that was added earlier. Use the **NETSTAT \*IFC** screen to view the line descriptor.
+
+![Finding the MAC address](./images/display_line_descriptor.png "Finding the MAC address"){: caption="Figure 3. Finding the MAC address" caption-side="bottom"}

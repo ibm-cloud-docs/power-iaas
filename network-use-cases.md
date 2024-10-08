@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-04"
+lastupdated: "2024-10-08"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -117,5 +117,5 @@ IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods can be configured to 
 
 You can attach only one DHCP network interface card (NIC) to a virtual machine. If you attach more than one DHCP NIC to a virtual machine, only one NIC acquires the IP address from the DHCP server that is assigned to the virtual machine.
 
-When creating a DHCP network, note that the first five IP addresses are reserved. You must configure a network that has more than five IP addresses. For example, if the subnet mask is 255.255.255.248, the total number of IP addresses is eight. You cannot create a network with a subnet mask beyond 255.255.255.248 as it has less than or equal to five IP addresses.
+When creating a DHCP network, note that the first  four IP addresses are reserved. You must configure a network that has more than four  IP addresses. For example, if the subnet mask is 255.255.255.248, the total number of IP addresses is eight. You cannot create a network with a subnet mask beyond 255.255.255.248 as it has less than or equal to five IP addresses.
 {: important}

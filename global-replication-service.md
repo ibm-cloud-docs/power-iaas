@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-01"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -29,6 +29,8 @@ IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premis
 
 Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
 {: shortdesc}
+
+
 The {{site.data.keyword.powerSysFull}} provides a set of APIs to enable disaster recovery (DR) solution for your virtual server instances. IBM Cloud infrastructure internally uses Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication, and advanced network configuration for fast data transfer.
 
 A new resource volume group is introduced to enable, disable, and manage storage replication consistency group. The volume group holds the volumes that need to be recovered at the time of disaster. Make the volume DR capable by adding the volume to the volume group. To trigger failover and failback operations, use the volume group start and stop operations.

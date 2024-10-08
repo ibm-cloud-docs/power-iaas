@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-06"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -50,7 +50,7 @@ The primary difference between the two is where the physical infrastructure resi
 
 [On-premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
-For complete specifications, see [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
+For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
@@ -299,7 +299,7 @@ The following tiers are supported:
 * Tier 3 (3 IOPS per GB)
 * Fixed 5000 IOPS
 
-If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-about-power-iaas#storage-tiers-spec-private-cloud).
+If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#storage-tiers-spec-private-cloud).
 
 ## How do I extend my AIX rootvg?
 {: #rootvg}
@@ -415,7 +415,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
+For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 ## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
@@ -435,7 +435,7 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction) lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -465,8 +465,8 @@ None. Use the API and CLI to perform snapshot or clone operations. Using the {{s
 - [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
 
 **CLIs to create snapshot and clone**
-- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-snapshot)
-- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#create-volume-clone)
+- [Create a snapshot](/docs-draft/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
+- [Create a volume clone for specific volumes](/docs-draft/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
 
 ## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}
@@ -727,7 +727,7 @@ To automate the MTU configuration, you need to customize your cloud-init network
 
 Both AIX and IBM i support the configurations for custom cloud-init at the time of {{site.data.keyword.powerSys_notm}} instance (VM) deployment.
 
-You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-post).
+You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](/apidocs/power-cloud#pcloud-pvminstances-post).
 
 [On-premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 

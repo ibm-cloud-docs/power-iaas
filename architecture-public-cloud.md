@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-29"
+lastupdated: "2024-10-06"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -96,7 +96,7 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - IBM Power E1080 (9080-HEX)
 - IBM Power S1022 (9105-22A).
 
-For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs/power-iaas?topic=power-iaas-about-power-iaas#data-sheets) and the hardware overview table.
+For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs-draft/power-iaas?topic=power-iaas-on-cloud-architecture#data-sheets) and the hardware overview table.
 
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
@@ -160,7 +160,7 @@ The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which
 ### Working with the APIs
 {: #IOPS-api}
 
-Use the [List of all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
+Use the [List all supported storage tiers for this cloud instance]/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
 
 The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default.
 

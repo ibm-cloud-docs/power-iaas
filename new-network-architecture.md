@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-08"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -30,7 +30,7 @@ This topic describes typical network architectures that are used in the {{site.d
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
 
-When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-about-power-iaas#public-private-networks).
+When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks).
 
 {{site.data.keyword.powerSys_notm}} network architectures consist of one or more of the following networks:
 
@@ -119,10 +119,7 @@ The following two scenarios for connecting the classic infrastructure to a PER-e
 
 * **When is a GRE tunnel not required?**
 
-    A GRE tunnel is not required in the following cases:
-
-    * To establish a connection from your PER-enabled workspace with classic infrastructure.
-    * To establish a connection, you do not have a custom IP address on your workspace.
+    A GRE tunnel is not required to establish a connection from your PER-enabled workspace with classic infrastructure and to establish a connection when you do not have a custom IP address on your workspace.
 
     
 
@@ -132,14 +129,17 @@ The following two scenarios for connecting the classic infrastructure to a PER-e
 
 * **When is a GRE tunnel required?**
 
-    A GRE tunnel is required to establish a connection from your PER-enabled workspace with classic infrastructure that uses a custom IP address for the following reasons:
+A GRE tunnel is required to establish a connection from your PER-enabled {{site.data.keyword.powerSys_notm}} workspace to the classic infrastructure environment that is configured to use custom IP address ranges.
 
-     - The classic subnet is located behind the Backend Customer Router (BCR). The BCR router allows only an IBM Cloud IP address (`10.0.0.0/8`) to pass through it.
-     - The custom IP address, for example `172.X.X.X`, originating from your workspace is dropped and not allowed to pass through the classic subnet by the BCR.
 
-    Hence, if you have a custom IP address in your PER-enabled workspace, you need a GRE tunnel that wraps the custom IP address with another header. This GRE tunnel needs to be attached with the Transit Gateway.
 
-    For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs-draft/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
+
+
+The GRE tunnel is used to wrap the custom IP address with another header so that it is routable through the IBM Cloud network underlay. For example, consider a Backend Customer Router (BCR) within the network underlay. The BCR allows only the IP address range 10.0.0.0/8 to pass through, while it drops the traffic that is originating from IBM {{site.data.keyword.powerSys_notm}} VLAN subnets that use the IP range 172.16.0.0/12 or other IP ranges.
+
+The GRE tunnel must be attached to a Transit Gateway for the routing between the IBM Power VS workspace and classic infrastructure.
+
+For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs-draft/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 
 
@@ -158,7 +158,7 @@ The pricing for this connection depends on the usage of a local or global Transi
 
  
 
-![Connecting PER workspace with VPC and classic infrastructure](./images/pvs-nw-arch-dia/Power-arch-PER-transit-vpc-classic_new12.svg "Connecting PER workspace with VPC and classic infrastructure"){: caption="Figure 6. Connecting PER workspace with VPC and classic infrastructure." caption-side="bottom"}
+![Connecting PER-enabled workspace with VPC and classic infrastructure](./images/pvs-nw-arch-dia/Power-arch-PER-transit-vpc-classic_new12.svg "Connecting PER-enabled workspace with VPC and classic infrastructure"){: caption="Figure 6. Connecting PER-enabled workspace with VPC and classic infrastructure." caption-side="bottom"}
 
 ### Connecting to IBM Cloud (Classic) services through Secure Endpoint (SE)
 {: #per-cloud-services-se}

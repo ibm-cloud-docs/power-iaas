@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-06"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -103,4 +103,4 @@ The following table displays the additional access roles that are required for t
 ## User access scenarios
 {: #user-access-scenarios}
 
-For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/account?topic=account-iamusermanpol).

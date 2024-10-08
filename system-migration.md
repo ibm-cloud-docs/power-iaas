@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-06"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -33,7 +33,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 
 
-For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} (Off-premises)](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-about-power-iaas#hardware-software-specs-private-cloud).
+For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} (Off-premises)](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 
