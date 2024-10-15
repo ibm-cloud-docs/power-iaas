@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-10"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -83,7 +83,7 @@ In this depiction, a client-managed data center uses a Direct Link connection to
 
 1. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed data center through the incoming Direct Link connectivity by using Border Gateway Protocol (BGP) routing protocol. The Direct Link connectivity is interconnected through the Transit Gateway.
 
-    ![Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new5.svg "Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway"){: caption="Figure 1. Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway." caption-side="bottom"}
+    ![Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new5.svg "Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway"){: caption="Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway." caption-side="bottom"}
 
 2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 
@@ -91,7 +91,7 @@ In this depiction, a client-managed data center uses a Direct Link connection to
 
  
 
-![Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway](./images/pvs-nw-arch-dia/power-arch-PER-accounts_new11.svg "Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway"){: caption="Figure 2. Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway." caption-side="bottom"}
+![Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway](./images/pvs-nw-arch-dia/power-arch-PER-accounts_new11.svg "Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway"){: caption="Connecting two IBM Cloud Accounts with a PER and Global Transit Gateway." caption-side="bottom"}
 
 
 
@@ -112,7 +112,7 @@ For more information on Transit Gateway pricing, see: [Pricing for Power Edge Ro
 
  
 
-![Connecting PER workspace with classic with custom IP](./images/pvs-nw-arch-dia/power-arch-PER-classic_new6.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Figure 3. Connecting PER workspace with classic." caption-side="bottom"}
+![Connecting PER workspace with classic with custom IP](./images/pvs-nw-arch-dia/power-arch-PER-classic_new6.svg "Connecting PER workspace with classic infrastructure with/without custom IP"){: caption="Connecting PER workspace with classic." caption-side="bottom"}
 
 
 The following two scenarios for connecting the classic infrastructure to a PER-enabled workspace are differentiated based on the Generic Routing Encapsulation (GRE) tunnel requirement:
@@ -125,7 +125,7 @@ The following two scenarios for connecting the classic infrastructure to a PER-e
 
 
 
-![Connecting PER and Transit Gateway without a GRE tunnel.](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new1.svg "Connecting PER and Transit Gateway without a GRE tunnel."){: caption="Figure 4. Connecting PER and Transit Gateway without a GRE tunnel." caption-side="bottom"}
+![Connecting PER and Transit Gateway without a GRE tunnel.](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new1.svg "Connecting PER and Transit Gateway without a GRE tunnel."){: caption="Connecting PER and Transit Gateway without a GRE tunnel." caption-side="bottom"}
 
 * **When is a GRE tunnel required?**
 
@@ -143,7 +143,7 @@ For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel]
 
 
 
-![Connecting PER and GRE through the Transit Gateway.](./images/pvs-nw-arch-dia/power-arch-PER-gre-classic_new7.svg "Connecting PER and GRE through the Transit Gateway."){: caption="Figure 5. Connecting PER and GRE through the Transit Gateway." caption-side="bottom"}
+![Connecting PER and GRE through the Transit Gateway.](./images/pvs-nw-arch-dia/power-arch-PER-gre-classic_new7.svg "Connecting PER and GRE through the Transit Gateway."){: caption="Connecting PER and GRE through the Transit Gateway." caption-side="bottom"}
 
 
 ### Connecting to Virtual Private Cloud
@@ -158,7 +158,7 @@ The pricing for this connection depends on the usage of a local or global Transi
 
  
 
-![Connecting PER-enabled workspace with VPC and classic infrastructure](./images/pvs-nw-arch-dia/Power-arch-PER-transit-vpc-classic_new12.svg "Connecting PER-enabled workspace with VPC and classic infrastructure"){: caption="Figure 6. Connecting PER-enabled workspace with VPC and classic infrastructure." caption-side="bottom"}
+![Connecting PER-enabled workspace with VPC and classic infrastructure](./images/pvs-nw-arch-dia/Power-arch-PER-transit-vpc-classic_new12.svg "Connecting PER-enabled workspace with VPC and classic infrastructure"){: caption="Connecting PER-enabled workspace with VPC and classic infrastructure." caption-side="bottom"}
 
 ### Connecting to IBM Cloud (Classic) services through Secure Endpoint (SE)
 {: #per-cloud-services-se}
@@ -178,7 +178,7 @@ For information about Transit Gateway pricing, see [Pricing for Power Edge Route
 
  
 
-![Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)](./images/pvs-nw-arch-dia/power-arch-PER-classic-secure-endpoints_new10.svg "Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)"){: caption="Figure 7. Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)." caption-side="bottom"}
+![Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)](./images/pvs-nw-arch-dia/power-arch-PER-classic-secure-endpoints_new10.svg "Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)"){: caption="Connecting PER workspace to IBM Cloud (Classic) services via Secure Endpoint (SE)." caption-side="bottom"}
 
 
 
@@ -201,7 +201,7 @@ To use VPE or SE options, you do not need a public network and you can apply a n
 
 
 
-![Connecting IBM Cloud services by using VPE with PER](./images/pvs-nw-arch-dia/power-arch-PER-transit-vpcs-vpe_new9.svg "Connecting IBM Cloud services by using VPE with PER"){: caption="Figure 8. Connecting IBM Cloud services by using VPE with PER." caption-side="bottom"}
+![Connecting IBM Cloud services by using VPE with PER](./images/pvs-nw-arch-dia/power-arch-PER-transit-vpcs-vpe_new9.svg "Connecting IBM Cloud services by using VPE with PER"){: caption="Connecting IBM Cloud services by using VPE with PER." caption-side="bottom"}
 
 
 ### Connecting multiple workspaces across a data center
@@ -217,4 +217,4 @@ For more information about Transit Gateway charges for local and global routing,
 
 
 
-![Connecting workspaces in different regions](./images/pvs-nw-arch-dia/power-arch-PER-regions_new4.svg "Connecting workspaces in different regions"){: caption="Figure 9. Connecting workspaces in different regions." caption-side="bottom"}
+![Connecting workspaces in different regions](./images/pvs-nw-arch-dia/power-arch-PER-regions_new4.svg "Connecting workspaces in different regions"){: caption="Connecting workspaces in different regions." caption-side="bottom"}

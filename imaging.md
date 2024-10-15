@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: import custom image, IBM Cloud Object Storage bucket, IBM Cloud Object Storage, import image
 
@@ -42,4 +42,4 @@ IBM {{site.data.keyword.powerSys_notm}} (On-premises) processes the custom image
 * Copies the image volume as a boot volume to deploy the LPAR.
 
 The following diagram shows the architecture for importing custom images that are stored in the IBM Cloud Object Storage buckets:
-![Control plane connectivity with IBM Cloud Object Storage bucket.](./figures/COS-VPE-direct-link-control-plane.jpg "Control plane connectivity with IBM Cloud Object Storage bucket."){: caption="Figure 1. Control plane connectivity with IBM Cloud Object Storage bucket." caption-side="bottom"}
+![Control plane connectivity with IBM Cloud Object Storage bucket.](./figures/COS-VPE-direct-link-control-plane.jpg "Control plane connectivity with IBM Cloud Object Storage bucket."){: caption="Control plane connectivity with IBM Cloud Object Storage bucket." caption-side="bottom"}

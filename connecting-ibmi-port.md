@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -93,7 +93,7 @@ Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is u
 
 9. Your saved session appears under **Saved Sessions** after you click **Save**. Select your session and click **Open** to start a PuTTY session to your system.
 
-    ![Seeing your list of saved sessions](./images/putty-load-sesson.png "Seeing your list of saved sessions"){: caption="Figure 4. Seeing your list of saved sessions" caption-side="bottom"}
+    ![Seeing your list of saved sessions](./images/putty-load-sesson.png "Seeing your list of saved sessions"){: caption="Seeing your list of saved sessions" caption-side="bottom"}
 
 10. You are prompted to accept a key on first use, and then presented with a log-in prompt. Use your IBM i session profile and password.
 

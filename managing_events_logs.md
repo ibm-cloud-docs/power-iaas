@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -59,7 +59,7 @@ You can stop the notifications or stop getting notifications from other concurre
     |-----|------|
     | On	| Shows notification based on other subset parameters that you can choose. |
     | Off | All notifications are disabled. |
-    {: caption="Table 1. Notification toggle button options" caption-side="top"}
+    {: caption="Notification toggle button options" caption-side="top"}
     {: #noti-toggle}
 
 4.	When the **Show notifications based on the settings below** button toggle is set to on, you can further toggle the **Show for events requested by others** button to on or off based on your requirements.
@@ -67,7 +67,7 @@ You can stop the notifications or stop getting notifications from other concurre
     |---------|----------|
     | On | Shows notification based on events that are requested or performed by concurrent users in the same workspace. |
     | Off |	Shows notifications for events that are requested or performed by you for the current workspace. It also hides notifications based on events that are requested or performed by concurrent users in the same workspace. |
-    {: caption="Table 2. Workspace notification toglle button options" caption-side="top"}
+    {: caption="Workspace notification toglle button options" caption-side="top"}
     {: #workspace-noti-toggle}
 
 5. Click **Save**.

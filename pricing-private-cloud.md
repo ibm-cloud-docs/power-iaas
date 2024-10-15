@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-10"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -64,7 +64,7 @@ In Table 1, the virtual machine resources are increased (after the resources rea
 | 300 hours                  | (300 hours x $0.399)/month = $119.70         |  1 core, 8 GB memory, 150 GB disk, RHEL  |
 | 430 hours                  | (430 hours x $0.498)/month = $214.14         |  1 core, 16 GB memory, 150 GB disk, RHEL |
 | 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
-{: caption="Table 1. An example of monthly charges for a virtual machine" caption-side="bottom"}
+{: caption="An example of monthly charges for a virtual machine" caption-side="bottom"}
 
 For the example in Table 1, we might see four distinct part numbers for the following resources in the invoice:
 * The virtual cores (one for each core)
@@ -142,7 +142,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 |  IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
 | IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
 | IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores  |
-{: caption="Table 2. Part descriptions and metric IDs" caption-side="bottom"}
+{: caption="Part descriptions and metric IDs" caption-side="bottom"}
 {: #Table2}
 
 For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).
@@ -191,21 +191,21 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 |  1                       | $0.1962 (dedicated)           | $143.23                  |
 |  1                       | $0.1962 (shared uncapped)     | $143.23                  |
 |  1                       | $0.1962 (shared capped)       | $143.23                  |
-{: caption="Table 3. S1022 processor type pricing" caption-side="bottom"}
+{: caption="S1022 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1080)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.6866 (dedicated)           | $501.20                   |
 |  1                       | $0.6866 (shared uncapped)     | $501.20                   |
 |  1                       | $0.6866 (shared capped)       | $501.20                   |
-{: caption="Table 4. E1080 processor type pricing" caption-side="bottom"}
+{: caption="E1080 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E1050)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
 |  1                       | $0.2945 (dedicated)           | $215.00                   |
 |  1                       | $0.2945 (shared uncapped)     | $215.00                   |
 |  1                       | $0.2945 (shared capped)       | $215.00                   |
-{: caption="Table 5. E1050 processor type pricing" caption-side="bottom"}
+{: caption="E1050 processor type pricing" caption-side="bottom"}
 
 
 
@@ -218,7 +218,7 @@ Charges for IBM {{site.data.keyword.powerSys_notm}} (On-premises) are determined
 | ---------------- | ----------------------------------  | -----------------------  | ------------------------  |
 |  1               | IBM Power Systems scale-out memory  | $0.01232877              | $9.00                     |
 |  1               | IBM Power Systems scale-up memory   | $0.01232877              | $9.00                     |
-{: caption="Table 6. Memory type pricing" caption-side="bottom"}
+{: caption="Memory type pricing" caption-side="bottom"}
 
 
 
@@ -244,7 +244,7 @@ IBM {{site.data.keyword.powerSys_notm}} (On-premises) charges are based on the f
    |  ---------------------  | ----------------------------  |
    |  10 GB                  | 10 GB                         |
    |  10+5 GB                | 15 GB                         |
-   {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+   {: caption="Calculation of data volume" caption-side="bottom"}
 
 
 * **Image backing volumes**: These volumes are part of a boot image in your cloud instance listed in the boot image catalog. Billing for image backing volumes is determined as follows:
@@ -260,7 +260,7 @@ Table 8 shows an example of how you are billed based on your boot volume:
    | ----------------------------------  | --------------------------  | ----------------|
    | 20 GB                               | Single backing volume       | 20 GB           |
    | Volume 1 (20 GB), volume 2 (10 GB)  | Multiple backing volumes     | 30 GB           |
-   {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+   {: caption="Calculation of image backing volume" caption-side="bottom"}
 
 
 * **Deployed virtual machine volumes**: When you deploy a virtual machine with an image, it gets a copy of all the volumes in the image. Extra data volumes added to the deployed virtual machine are billed separately as Data Volumes. Table 9 shows an example of how you are billed based on the virtual machines that you deploy:
@@ -269,7 +269,7 @@ Table 8 shows an example of how you are billed based on your boot volume:
    |  -------------------  | ----------------|
    |  20 GB                | 20 GB           |
    |  20 GB + 30 GB        | 50 GB           |
-   {: caption="Table 9. Calculation of deployed virtual machines volume" caption-side="bottom"}
+   {: caption="Calculation of deployed virtual machines volume" caption-side="bottom"}
 
 * **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the volume(s) of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
@@ -289,7 +289,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 |  Tier 1                  | $0.00024658                   | $0.18                     |
 |  Tier 3                  | $0.00012884                   | $0.09                     |
 |  Tier 5k                 | $0.00035507                   | $0.26                     |
-{: caption="Table 10. Volume storage pricing" caption-side="bottom"}
+{: caption="Volume storage pricing" caption-side="bottom"}
 
 | Snapshot storage         | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
@@ -297,7 +297,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 |  Tier 1                  | $0.00007397                   | $0.05                     |
 |  Tier 3                  | $0.00003865                   | $0.03                     |
 |  Tier 5k                 | $0.00010652                   | $0.08                     |
-{: caption="Table 11. Snapshot storage pricing" caption-side="bottom"}
+{: caption="Snapshot storage pricing" caption-side="bottom"}
 
 
 
@@ -326,7 +326,7 @@ Table 12 shows the details of SPP in IBM {{site.data.keyword.powerSys_notm}} (On
 | -----------------  | -----------  | ------------  | ------------------ |
 | IBM {{site.data.keyword.powerSys_notm}} (On-premises)	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode \n For IBM {{site.data.keyword.powerSys_notm}} (On-premises), these OS license charges are associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level \n 2. VM cores charged at EC (capped or uncapped) \n 3. Existing behavior – no change |
-{: caption="Table 12. Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
+{: caption="Shared processor pool for IBM {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
 
 For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
@@ -349,7 +349,7 @@ Table 13 shows the use case on how you are billed based on the storage that you 
    | data-volume-5  |  60 GB   | In-use (attached to vm-2) |
    | image-volume-1 | 100 GB   | In-use (attached to vm-1) |
    | image-volume-2 | 100 GB   | In-use (attached to vm-2) |
-   {: caption="Table 13. Account billable for storage use case" caption-side="bottom"}
+   {: caption="Account billable for storage use case" caption-side="bottom"}
 
 Total billable storage = 595 GB
 
@@ -448,7 +448,7 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 | 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
 |         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
-{: caption="Table 14. Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
+{: caption="Pricing for OS licensing in SPP in {{site.data.keyword.powerSys_notm}} (On-premises)" caption-side="top"}
 
 
 

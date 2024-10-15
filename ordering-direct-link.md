@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: direct link, order DL, ordering DL
 
@@ -88,7 +88,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
       | Montreal 1 | 64999 |
       | São Paulo 4 | 4206000076 |
       | Chennai 01  | 4206000092 |
-      {: caption="Table 1. BGP ASN number for specific Connect sites" caption-side="bottom"}
+      {: caption="BGP ASN number for specific Connect sites" caption-side="bottom"}
 
 2. Read and agree to the [{{site.data.keyword.dl_short}} prerequisites](/docs/dl?topic=dl-ibm-cloud-dl-prerequisites), then click **Create**.
 
@@ -135,7 +135,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
 
     The following example shows the {{site.data.keyword.dl_short}} Connect ports for the DAL12 data center. The ports that end with `1-1` and `1-2` belong to one port group, and the ports ending with `2-1` and `2-2` belong to another port group. If you select a port from the first port group, you must select a port from the second port group for the redundant {{site.data.keyword.dl_short}} Connect instance. That is, if you select **-1-1** for the first {{site.data.keyword.dl_short}} Connect instance, you must select **-2-1** or **-2-2** for the second Direct Link Connect instance.
 
-    ![BGP and connections](images/bgp-connections.png){: caption="Figure 1. BGP and connections" caption-side="bottom"}
+    ![BGP and connections](images/bgp-connections.png){: caption="BGP and connections" caption-side="bottom"}
 
     Border Gateway Protocol (BGP) sessions are configured for the {{site.data.keyword.dl_short}} Connect service in such a way that when a fault is detected on a {{site.data.keyword.dl_short}} Connect instance, the BGP routes traffic to an alternative {{site.data.keyword.dl_short}} Connect instance. For 10 Gbps connections, use the new ports that are not GRE capable. Ports that are GRE capable can use only up to a 5 Gbps speed.
 
@@ -158,7 +158,7 @@ To set up a high availability through {{site.data.keyword.dl_short}} Connect, co
     | OSA21 | IBM Power VS | SL-OSA01-ATTOKYO-1-1 | SL-OSA01-ATTOKYO-2-1 |
     | SAO04 | IBM Power VS | SL-SAO04-POWERVSCX-1-1 \n SL-SAO04-POWERVSCX-1-2 | SL-SAO04-POWERVSCX-2-1 \n SL-SAO04-POWERVSCX-2-2 |
     | CHE01 | IBM Power VS | IBM-CHE01-POWERCX-1-1 \n IBM-CHE01-POWERCX-1-2 | IBM-CHE01-POWERCX-2-1 \n IBM-CHE01-POWERCX-2-2 |
-    {: caption="Table 2. Port and Port groups for redundant {{site.data.keyword.dl_short}} instances" caption-side="bottom"}
+    {: caption="Port and Port groups for redundant {{site.data.keyword.dl_short}} instances" caption-side="bottom"}
 
     [^footnote1]: This port is not GRE capable, but supports a speed of 10 Gbps.
     [^footnote2]: This port is not GRE capable, but supports a speed of 10 Gbps.

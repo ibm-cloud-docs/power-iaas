@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-08-14"
+lastupdated: "2024-10-10"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -40,7 +40,7 @@ By using PER solution, as a {{site.data.keyword.powerSys_notm}} user you can acc
 
 The following network architecture diagram explains how the PER is integrated into the IBM Cloud environment:
 
-![Power Edge Router network architecture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architecture diagram"){: caption="Figure 1. Power Edge Router network architecture diagram" caption-side="bottom"}
+![Power Edge Router network architecture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architecture diagram"){: caption="Power Edge Router network architecture diagram" caption-side="bottom"}
 
 The network traffic in a PER environment can flow in the following two ways:
 - Accessing classic infrastructure through the Transit Gateway.
@@ -217,4 +217,3 @@ The following table shows the available data centers for {{site.data.keyword.pow
 {: row-headers}
 {: class="comparison-table"}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
-

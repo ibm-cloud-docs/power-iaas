@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-10"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -52,7 +52,7 @@ You can change the TCP/IP address of your IBM i VM while the TCP/IP is active. H
 4. To remove the interface after deactivation, run the `CFGTCP` command and select **Option 1** from the menu. Select **Option 4** next to the interface that you need to remove.
 
 
-![Removing a network interface](./images/work_with_TCP_IP_Interface.png "Removing a network interface"){: caption="Figure 1. Removing a network interface" caption-side="bottom"}
+![Removing a network interface](./images/work_with_TCP_IP_Interface.png "Removing a network interface"){: caption="Removing a network interface" caption-side="bottom"}
 
 
 
@@ -83,7 +83,7 @@ When you toggle a public network off and on, the {{site.data.keyword.powerSys_no
 7. Add the new routes that use the new interface, if any. You can add the new routes by selecting **Option 2** from the `CFGTCP` menu, type **1** in the **Opt** column, and press the **Enter** key.
 
 
-![Adding a network interface](./images/add_TCP_IP_interface.png "Adding a network interface"){: caption="Figure 2. Removing a network interface" caption-side="bottom"}
+![Adding a network interface](./images/add_TCP_IP_interface.png "Adding a network interface"){: caption="Removing a network interface" caption-side="bottom"}
 
 
 
@@ -93,4 +93,4 @@ Verify that the local adapter address of the line description matches the MAC ad
 For example,
 Find the MAC address in the line description by using DSPLIND LIND(xxxxxxxxx) command. The line description is the name that matches the **Internet address** field value that was added earlier. Use the **NETSTAT \*IFC** screen to view the line descriptor.
 
-![Finding the MAC address](./images/display_line_descriptor.png "Finding the MAC address"){: caption="Figure 3. Finding the MAC address" caption-side="bottom"}
+![Finding the MAC address](./images/display_line_descriptor.png "Finding the MAC address"){: caption="Finding the MAC address" caption-side="bottom"}

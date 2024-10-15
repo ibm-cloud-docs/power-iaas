@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: power systems, cloud regions
 
@@ -36,7 +36,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 | Washington DC | us-east    |      us-east                               |us-east-1 \n us-east-2 \n us-east-3|us-east \n wdc06 \n wdc07|wdc04 \n wdc06 \n wdc07|
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 1. {{site.data.keyword.powerSys_notm}} regions and zones in Americas" caption-side="top"}
+{: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Americas" caption-side="top"}
 {: #Americas}
 {: tab-title="Americas"}
 
@@ -49,7 +49,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 | Madrid     | eu-es         |  mad                                       |eu-es-1 \n eu-es-2 \n eu-es-3|mad02 \n mad04 \n x|mad02 \n mad04 \n x|
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 1. {{site.data.keyword.powerSys_notm}} regions and zones in Europe" caption-side="top"}
+{: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Europe" caption-side="top"}
 {: #europe}
 {: tab-title="Europe"}
 
@@ -61,7 +61,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 | Chennai    |  x            |   X                                        |   x      |   che01 [^4]                             | che01                 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 1. {{site.data.keyword.powerSys_notm}} regions and zones in Asia Pacific" caption-side="top"}
+{: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Asia Pacific" caption-side="top"}
 {: #asia-pacific}
 {: tab-title="Asia Pacific"}
 

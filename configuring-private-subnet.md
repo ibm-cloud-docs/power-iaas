@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -126,7 +126,7 @@ For example, consider that you are adding a subnet `172.10.10.0/24` from the use
 | Name          |  Gateway     | VLAN ID | CIDR       |
 | ------------- |  ----------- | ------- | ---------- |
 | powerns-net02 |  172.10.10.1 | 3001    | 172.10.10.0/26 |
-{: caption="Table 1. Example subnet information displayed in the UI" caption-side="bottom"}
+{: caption="Example subnet information displayed in the UI" caption-side="bottom"}
 
 
 
@@ -139,9 +139,15 @@ For example, consider that you are adding a subnet `172.10.10.0/24` from the use
 ## Using CIDR notation
 {: #cidr-notation}
 
+
+
 You must not use an IP range outside of the ranges that are defined by the [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} document (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet. The instances that are attached to that subnet might not be able to reach parts of the public internet.
 
 If you are using an IP range outside of the ranges that are defined by the [RFC 1918](https://tools.ietf.org/html/rfc1918){: external} document (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) for a subnet you must use Internet Assigned Numbers Authority (IANA) assigned IP addresses and GRE tunneling. For more information, see [Generic Routing Encapsulation (GRE) tunneling](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel). PowerVS assigns IP addresses as Internal IP from the prefix 192.168.0.0/16 to your accounts for Public Network access. Once a public subnet is assigned, you cannot use those IP addresses for private networks.
+
+
+
+
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
@@ -153,4 +159,4 @@ The number after the slash represents the bit length of the subnet mask. As a re
 |      /26        |          59                    |            61                      |
 |      /27        |          27                    |            29                      |
 |      /28        |          11                    |            13                      |
-{: caption="Table 2. Understanding CIDR notation caption" caption-side="bottom"}
+{: caption="Understanding CIDR notation caption" caption-side="bottom"}

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -129,7 +129,7 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 | Bucket name | Sub folders can be used and specified as `bucketName/optional/folders`. Optional folders are created automatically if they don’t exist. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.|
 | Cloud Object Storage secret key | To identify your secret key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.|
-{: caption="Table 1. Boot images options" caption-side="bottom"}
+{: caption="Boot images options" caption-side="bottom"}
 
 
 If you' want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external}.

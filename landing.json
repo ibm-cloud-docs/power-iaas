@@ -29,7 +29,7 @@
       {
         "title": "IAM for Power Virtual Server",
         "href": "/docs/power-iaas?topic=power-iaas-managing-resources-and-users"
-      }    
+      }
     ]
   },
   "section_highlights": [
@@ -43,7 +43,7 @@
       "title": "Connecting Power Virtual Server to Microsoft Azure",
       "description": "This topic provides a detailed guide on how to connect IBM Power Virtual Server to Microsoft Azure with Megaport.",
       "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
-      "type": "redbook", 
+      "type": "redbook",
       "recommended": true
     },
     {
@@ -59,6 +59,12 @@
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
-    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes"
+    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
+    "tiles": [
+      {
+        "date": "14 October 2024",
+        "title": "You can configure a virtual manchine available in all the data centers except for the virtual machines in the TOR01, MAD04, and LON06 data centers."
+      }
+    ]
   }
 }

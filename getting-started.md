@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -85,7 +85,7 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 3. Review the entire lifecycles of {{site.data.keyword.powerSys_notm}} instances on [IBM Power Virtual Server (Off-premises)](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-on-cloud) and [IBM Power Virtual Server (On-premises)](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-private-cloud).
 
-![Getting Started with IBM {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_overview.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}}"){: caption="Figure 1. Getting Started with IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
+![Getting Started with IBM {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_overview.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}}"){: caption="Getting Started with IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 
 
 
@@ -96,7 +96,7 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 {: #lifecycle-on-cloud}
 
-![Lifecycle of Off-premises}](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of Off-premises"){: caption="Figure 2. Lifecycle of Off-premises" caption-side="bottom"}
+![Lifecycle of Off-premises}](./figures/PowerVS-lifecycle_on-cloud.png "Lifecycle of Off-premises"){: caption="Lifecycle of Off-premises" caption-side="bottom"}
 
 
 
@@ -104,4 +104,4 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 {: #lifecycle-private-cloud}
 
-![Lifecycle of On-premises](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of  On-premises"){: caption="Figure 3. Lifecycle of On-premises" caption-side="bottom"}
+![Lifecycle of On-premises](./figures/PowerVS-lifecycle_private-cloud.png "Lifecycle of  On-premises"){: caption="Lifecycle of On-premises" caption-side="bottom"}

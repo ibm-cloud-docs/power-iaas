@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -38,7 +38,7 @@ Be sure to read all caution and danger statements provided in the Safety notices
 |         | #ELC2 | IEC 60309, 3P+N+G, 30 A | 380 - 415 V   | 3 Wye | 30 A (derated to 24 A) per phase | United States, Canada, Mexico, and Japan (European Style Power for US type countries) |
 | ECJL (C19) and ECJQ (C13) | #ECJ6 | CS8365C | 200 - 240 V | 3 Delta | 50 A or line (40 A derated) | United States, Canada |
 |         | #ECJ7 | IEC 60309, 3P+G | 200 - 240 V | 3 Delta | 60 A or line (48 A derated) | United States, Canada, Latin America, and Japan |
-{: caption="Table 1. Rack connectors with load capacity requirements" caption-side="bottom"}
+{: caption="Rack connectors with load capacity requirements" caption-side="bottom"}
 
 
 
@@ -69,7 +69,7 @@ If you have selected the configuration with 4 PDUs, you can include 6 power drop
 |   |   | 6 | 8 |  4 | 2 x S1022 that is equivalent to 1 MRX. | N/A |
 | EMPD + 4653 or 54 \n (Medium rack 1 or 2) |  | 4  | 8  | 3  | N/A | 1x2 enclosures  |
 |  |  | 6 |  12 |  4 | N/A |  2x2 enclosures |
-{: caption="Table 2. PDUs and power drops requirements" caption-side="bottom"}
+{: caption="PDUs and power drops requirements" caption-side="bottom"}
 
 ** You can place an order for ECJJ or ECJL PDUs only if there is an order with ER3E identifier (specifies 9043-MRX) or EN31 identifier (specifies 4983-AH8).
 {: note}

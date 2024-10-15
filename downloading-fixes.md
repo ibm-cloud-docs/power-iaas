@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -89,7 +89,7 @@ Where ** is the country code of your DC based on the following table:
 | Sydney	| Australia |	 AU |
 | Tokyo & Osaka |	Japan | JP |
 | Chennai | India | IN |
-{: caption="Table 1. POD location with their respective country code" caption-side="top"}
+{: caption="POD location with their respective country code" caption-side="top"}
 
 To verify that the LPAR is connected to the internet, enter the following command:
 ```code

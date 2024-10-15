@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-10"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -40,7 +40,7 @@ You can deploy virtual machines in a pod that has a default configuration by usi
 You have a database server and a web server that need to communicate exclusively with each other. You can connect both servers to the same private network to enable communication between them.
 
 Figure 1 describes the private network within a pod type of network setup.
-![Private network within a pod](./figures/connect_lpars_within_pod.png "Private network within a pod"){: caption="Figure 1. Private network within a pod" caption-side="bottom"}
+![Private network within a pod](./figures/connect_lpars_within_pod.png "Private network within a pod"){: caption="Private network within a pod" caption-side="bottom"}
 
 ## Use case 2: Outbound-only
 {: #outbound-ext-conn-dnat}
@@ -56,7 +56,7 @@ A virtual machine within a pod downloads and deploys software from the internet.
 You can specify the outbound-only network type when you define network requirements before pod installation. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). After pod installation, you can configure the outbound-only network type by using Support Center ticketing system. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 Figure 2 describes the outbound-only type of network setup.
-![Outbound-only network type](./figures/outbound-ext-conn-dnat.png "Outbound-only network type"){: caption="Figure 2. Outbound-only network type" caption-side="bottom"}
+![Outbound-only network type](./figures/outbound-ext-conn-dnat.png "Outbound-only network type"){: caption="Outbound-only network type" caption-side="bottom"}
 
 ## Use case 3: Bidirectional external connectivity through BGP
 {: #bi-dir-ext-conn-bgp}
@@ -69,7 +69,7 @@ With this use case, you can establish a network that allows communication betwee
  You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
 
 Figure 3 describes the bidirectional external connectivity through BGP type of network setup.
-![Bidirectional external connectivity through BGP](./figures/bi-dir-ext-conn-bgp.png "Bidirectional external connectivity through BGP"){: caption="Figure 3. Bidirectional external connectivity through BGP" caption-side="bottom"}
+![Bidirectional external connectivity through BGP](./figures/bi-dir-ext-conn-bgp.png "Bidirectional external connectivity through BGP"){: caption="Bidirectional external connectivity through BGP" caption-side="bottom"}
 
 ## Use case 4: Bidirectional external connectivity through static routes
 {: #bi-dir-ext-conn-static-routes}
@@ -82,7 +82,7 @@ With this use case, you can establish a network that allows communication betwee
 You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. Your corporate network can access the pod subnets through a static route connection.
 
 Figure 4 describes the bidirectional external connectivity through static routes type of network setup.
-![Bidirectional external connectivity through static routes](./figures/static-route.png "Bidirectional external connectivity through static routes"){: caption="Figure 4. Bidirectional external connectivity through static routes" caption-side="bottom"}
+![Bidirectional external connectivity through static routes](./figures/static-route.png "Bidirectional external connectivity through static routes"){: caption="Bidirectional external connectivity through static routes" caption-side="bottom"}
 
 ## Use case 5: Bidirectional external connectivity - ACI Layer 2
 {: #bi-dir-ext-conn-ACI-L2out}
@@ -90,7 +90,7 @@ Figure 4 describes the bidirectional external connectivity through static routes
 With this use case, you can create a network that allows communication between applications within the pod and with destination points on the external network. Integrate a Layer 2 firewall with one of your existing corporate networks to allow the outbound connections. In this type of network, bidirectional external connectivity bypass the router and connect to the Cisco Application Centric Infrastructure (Cisco ACI). You can establish this type of connectivity when you want the same IP address space on both internal and external networks. All other external networks involve two distinct subnets.
 
 Figure 5 describes the bidirectional external connectivity by using ACI Layer 2 firewall type of network setup.
-![Bidirectional external connectivity through ACI L2Out](./figures/bi-dir-ext-conn-ACI-L2out.png "Bidirectional external connectivity through ACI L2Out"){: caption="Figure 5. Bidirectional external connectivity through ACI L2Out" caption-side="bottom"}
+![Bidirectional external connectivity through ACI L2Out](./figures/bi-dir-ext-conn-ACI-L2out.png "Bidirectional external connectivity through ACI L2Out"){: caption="Bidirectional external connectivity through ACI L2Out" caption-side="bottom"}
 
 ## Use case 6: Network connectivity for full Linux subscription
 {: #net-conn-full-linux-sub}
@@ -103,7 +103,7 @@ The network connectivity for full Linux subscription can be established by provi
 
 Figure 6 describes the network connectivity between a virtual machine and a Red Hat Satellite server on IBM Cloud setup.
 
-![Network connectivity for full Linux subscription](./figures/net-conn-full-linux-sub.png "Network connectivity for full Linux subscription"){: caption="Figure 6. Network connectivity for full Linux subscription" caption-side="bottom"}
+![Network connectivity for full Linux subscription](./figures/net-conn-full-linux-sub.png "Network connectivity for full Linux subscription"){: caption="Network connectivity for full Linux subscription" caption-side="bottom"}
 
 ## Use case 7: DHCP network inside the pod
 {: #dhcp-network}

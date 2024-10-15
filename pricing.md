@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -34,7 +34,7 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 | S922 (9009-22A) [^2]   |  15          | Up to 942 GB                    |
 | S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB         |
 | E1080 (9080-HEX)   |  240          | up to 64 TB                    |
-{: caption="Table 1. Theoretical maximum memory" caption-side="bottom"}
+{: caption="Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
@@ -82,7 +82,7 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 | 300 hours                 | (300 hours x $0.343)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
 | 430 hours                 | (430 hours x $0.465)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
-{: caption="Table 2. Monthly LPAR charges" caption-side="top"}
+{: caption="Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
@@ -161,7 +161,7 @@ For detailed usage and billing information, you can refer to the part number in 
 | TIER_THREE_SNAPSHOT_GIGABYTE_HOURS  | Snapshot Tier Three Gigabyte Hours |
 | TIER_ZERO_SNAPSHOT_GIGABYTE_HOURS.  | Snapshot Tier Zero Gigabyte Hours |
 | FIXED_FIVE_K_OPS_SNAPSHOT_GIGABYTE_HOURS  |Snapshot Tier Fixed 5k Gigabyte Hours |
-{: caption="Table 3. Part numbers" caption-side="bottom"}
+{: caption="Part numbers" caption-side="bottom"}
 
 ## Base instances
 {: #pricing-base-instance-prices}
@@ -217,21 +217,21 @@ The following tables show how different processor types affect the cost per syst
 | 1                      | $0.51 (dedicated)            | $368.91                  |
 | 1                      | $0.13 (shared uncapped)      | $92.33                  |
 | 1                      | $0.19 (shared capped)        | $138.38                  |
-{: caption="Table 4. S922 processor type pricing" caption-side="bottom"}
+{: caption="S922 processor type pricing" caption-side="bottom"}
 
 | Number of cores (E980) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ---------------------------- | ------------------------ |
 | 1                           | $1.77 (dedicated)            | $1291.28               |
 | 1                           | $0.44 (shared uncapped)      | $322.84                  |
 | 1                           | $0.66 (shared capped)        | $484.26                  |
-{: caption="Table 5. E980 processor type pricing" caption-side="bottom"}
+{: caption="E980 processor type pricing" caption-side="bottom"}
 
 | Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | --------------------------- | ----------------------------- | ------------------------ |
 | 1                           | $0.58 (dedicated)            | $424.25                 |
 | 1                           | $0.15 (shared uncapped)     | $106.06                  |
 | 1                           | $0.22 (shared capped)       | $159.14                  |
-{: caption="Table 6. S1022 processor type pricing" caption-side="bottom"}
+{: caption="S1022 processor type pricing" caption-side="bottom"}
 
 
 ## Pricing for dedicated hosts
@@ -255,7 +255,7 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |----------------------|--------------|
     |10 GB|10 GB|
     |10+5 GB|15 GB|
-    {: caption="Table 7. Calculation of data volume" caption-side="bottom"}
+    {: caption="Calculation of data volume" caption-side="bottom"}
 
 - **Image backing volumes**: These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume sizes contained in the image.
     When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the sizes of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
@@ -264,14 +264,14 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |------------------|--------------------------|--------------|
     |20 GB|Single backing volume|20 GB|
     |Volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volumes|30 GB|
-    {: caption="Table 8. Calculation of image backing volume" caption-side="bottom"}
+    {: caption="Calculation of image backing volume" caption-side="bottom"}
 
 - **Deployed VM volumes**: These volumes are created when you deploy a VM with an image. The deployed VMs get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
    |Image backing volume|You are billed|
     |--------------------|--------------|
     |20 GB|20 GB|
     |20 GB + 30 GB|50 GB|
-    {: caption="Table 9. Calculation of deployed VMs volume" caption-side="bottom"}
+    {: caption="Calculation of deployed VMs volume" caption-side="bottom"}
 
 
 
@@ -294,7 +294,7 @@ The following table shows the use case on how you are billed based on the storag
 |data-volume-5|60 GB|In-use (attached to vm-2)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Table 10. Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="top"}
 {: #storage-spec-1}
 {: tab-title="Data volumes of 235 GB"}
 
@@ -305,7 +305,7 @@ The following table shows the use case on how you are billed based on the storag
 |SLES-15-1|40 GB|1 backing volume|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Table 11. Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="top"}
 {: #storage-spec-2}
 {: tab-title="Boot volumes of 200 GB"}
 
@@ -315,7 +315,7 @@ The following table shows the use case on how you are billed based on the storag
 |vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5 \n (volumes that are created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Table 12. Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="top"}
 {: #storage-spec-3}
 {: tab-title="Deployed VMs of 160 GB"}
 
@@ -342,7 +342,7 @@ The following table shows the charges based on the routing option that you selec
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="Table 13. Transit Gateway charges based on routing" caption-side="top"}
+{: caption="Transit Gateway charges based on routing" caption-side="top"}
 
 The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
@@ -351,7 +351,7 @@ The following table shows the charges based on the number of connections includi
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Table 14. Transit Gateway charges based on number of connections" caption-side="top"}
+{: caption="Transit Gateway charges based on number of connections" caption-side="top"}
 
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.

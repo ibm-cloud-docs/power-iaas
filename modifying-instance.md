@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -56,7 +56,7 @@ You can scale up and scale down the memory and core counts of the virtual machin
 |4 core and 8 GB memory | 0.5 cores and 2 GB memory | 32 cores and 64 GB memory |
 {: class="simple-tab-table"}
 {: tab-group="resize_core_memory"}
-{: caption="Table 1. Resizing VM core count and memory when the VM is active" caption-side="top"}
+{: caption="Resizing VM core count and memory when the VM is active" caption-side="top"}
 {: #resize_core_memory-1}
 {: tab-title="When VM is active"}
 
@@ -66,7 +66,7 @@ You can scale up and scale down the memory and core counts of the virtual machin
 |4 core and 8 GB memory | You can specify any value that is greater than 0.25 cores, 2 GB memory | You can specify any value that is smaller than the available resources in the host |
 {: class="simple-tab-table"}
 {: tab-group="resize_core_memory"}
-{: caption="Table 1. Resizing VM core count and memory when the VM is shut down" caption-side="top"}
+{: caption="Resizing VM core count and memory when the VM is shut down" caption-side="top"}
 {: #resize_core_memory-2}
 {: tab-title="When VM is shut down"}
 
@@ -132,6 +132,9 @@ If you want to attach or detach a volume, complete the following steps:
 
 
 For more information about updating the volume groups for GRS, see [Updating a volume group](/docs/power-iaas?topic=power-iaas-getting-started-GRS&q=deleting+a+volume&tags=power-iaas#update-vol-grp).
+
+
+
 
 
 

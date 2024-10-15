@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -55,7 +55,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Operator             | View instances and manage aliases, bindings (IBM {{site.data.keyword.powerSys_notm}} (On-premises) only), and credentials.                     |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
-{: caption="Table 1. IAM platform access roles" caption-side="bottom"}
+{: caption="IAM platform access roles" caption-side="bottom"}
 
 ## Service access roles
 {: #service-access-roles}
@@ -66,7 +66,7 @@ You can use the service access roles to define the actions that the users can pe
 |-----------|-------------------------|
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make changes to the resources. |
 | Manager | Configure all resources. You can perform the following actions: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
-{: caption="Table 2. IAM service access roles" caption-side="bottom"}
+{: caption="IAM service access roles" caption-side="bottom"}
 
 To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
 
@@ -98,7 +98,7 @@ The following table displays the additional access roles that are required for t
 | Editor, Operator, Viewer                                | Direct Link service                                                  |
 | Viewer                                                  | All resource group                                                   |
 | Viewer                                                  | Satellite service [On-premises]{: tag-red}                           |
-{: caption="Table 3. Additional access roles" caption-side="bottom"}
+{: caption="Additional access roles" caption-side="bottom"}
 
 ## User access scenarios
 {: #user-access-scenarios}

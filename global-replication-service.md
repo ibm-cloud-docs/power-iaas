@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-14"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -103,7 +103,7 @@ The following table explains how to determine the primary and secondary site bas
 |Site 1|Site 1|Site 2|
 |Site 2|Site 2|Site 1|
 {: class="simple-table"}
-{: caption="Table 2. Primary and secondary site reference based on volume creation" caption-side="bottom"}
+{: caption="Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
 {: #locations-GRS}
@@ -124,7 +124,7 @@ The following table shows the location pairs that support replication:
 | `sao01`           | `sao04`                  |
 | `mon01`           | `tor01`                  |
 {: class="simple-table"}
-{: caption="Table 1. Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
+{: caption="Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
 
 ## Preparation for disaster recovery
 {: #dr-prep}
@@ -341,6 +341,8 @@ To create a volume group, you can use the CLI command, [ibmcloud pi volume-group
 You can add or remove storage volumes from a volume group. If you add storage volumes to a volume group on the primary site after the primary volumes are onboarded, then you must also onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
 
 To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
+
+
 
 
 

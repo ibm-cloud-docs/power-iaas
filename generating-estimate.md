@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -97,7 +97,7 @@ To learn about the fields and descriptions that you need to enter, see the follo
 | Cores	                        | (**Required**) Define how many cores you need.                                                         |
 | Memory (GB)                  | (**Required**) Define how much space you need per core.                                                |
 | Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of tiers. \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
-{: caption="Table 1. UI fields in estimating a VSI" caption-side="top"}
+{: caption="UI fields in estimating a VSI" caption-side="top"}
 
 
 To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
@@ -113,7 +113,7 @@ Before deploying a storage volume in a workspace, create an estimate of it. To l
 | Number of volumes	Required:   |   Specify the number of volumes that you need.                                  |
 | Tier	                        |   Choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers.|
 | Total storage (GB)	        |   Enter the amount of volume that you need.                                     |
-{: caption="Table 2. UI fields in estimating a storage volume" caption-side="top"}
+{: caption="UI fields in estimating a storage volume" caption-side="top"}
 
 
 #### Estimating a shared processor pool
@@ -126,7 +126,7 @@ Before you deploy a shared processor pool in a workspace, create an estimate of 
 | Number of pools	| (**Required**) Specify the number of pools that you need.           |
 | Machine type	    | Specify the machine type.                                     |
 | Reserved cores 	| (**Required**) Enter the number of cores that you want to reserve.  |
-{: caption="Table 3. UI fields in estimating a shared processor pool" caption-side="top"}
+{: caption="UI fields in estimating a shared processor pool" caption-side="top"}
 
 To learn more about a shared processor pool, see [Managing a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
@@ -138,7 +138,7 @@ Before you create and attach a VPN connection, create an estimate of it. To lear
 | Field	                |   Description                                                 |
 |-----------------------|---------------------------------------------------------------|
 | Number of connections	|   Enter the number of VPN connections that you want to estimate.   |
-{: caption="Table 4. UI fields in estimating a VPN conection" caption-side="top"}
+{: caption="UI fields in estimating a VPN conection" caption-side="top"}
 
 To learn more about VPN connections, see [Creating VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
@@ -156,7 +156,7 @@ Before you deploy a virtual tape library (VTL) in a workspace, create an estimat
 | Cores	            |   (**Required**) Define how many cores you need.                               |
 | Memory (GB)	    |   (**Required**) Define how much space you need per core.                      |
 |Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers. \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
-{: caption="Table 5. UI fields in estimating a VTL" caption-side="top"}
+{: caption="UI fields in estimating a VTL" caption-side="top"}
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
 
@@ -171,7 +171,7 @@ Before deploying a dedicated host in a workspace, create an estimate of it. To l
 |-------------------|-------------------------------------------------------------------------------|
 | Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts you want to create.  |
 | Machine type      |   (**Required**) Select the available machine types where you can crreate dedicated host. |
-{: caption="Table 6. UI fields in estimating a dedicated host" caption-side="top"}
+{: caption="UI fields in estimating a dedicated host" caption-side="top"}
 
 To learn more about dedicated host, see [Getting started with dedicated host].
 

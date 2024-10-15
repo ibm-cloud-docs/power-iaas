@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -79,7 +79,7 @@ In this deployment topology, a {{site.data.keyword.dl_short}} is used to connect
 
 
 
-![Connect to classic infrastructure with Direct Link Connect.](./images/Power-arch-DL-classic.svg "Connect to classic infrastructure with Direct Link Connect."){: caption="Figure 1. Connect to classic infrastructure with Direct Link Connect." caption-side="bottom"}
+![Connect to classic infrastructure with Direct Link Connect.](./images/Power-arch-DL-classic.svg "Connect to classic infrastructure with Direct Link Connect."){: caption="Connect to classic infrastructure with Direct Link Connect." caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
@@ -111,7 +111,7 @@ In this deployment topology, a {{site.data.keyword.dl_short}} (2.0) is used to c
 
 
 
-![Connect to VPC with Direct Link Connect.](./images/Power-arch-DL-vpc.svg "Connect to VPC with Direct Link Connect."){: caption="Figure 2. Connect to VPC with Direct Link Connect." caption-side="bottom"}
+![Connect to VPC with Direct Link Connect.](./images/Power-arch-DL-vpc.svg "Connect to VPC with Direct Link Connect."){: caption="Connect to VPC with Direct Link Connect." caption-side="bottom"}
 
 Complete the following steps to implement this scenario:
 
@@ -145,7 +145,7 @@ In this deployment topology, [Megaport](https://www.megaport.com/){: external} o
 
 
 
-![Connect to client-managed environment with Megaport.](./images/Power-arch-megaport.svg "Connect to client-managed environment with Megaport."){: caption="Figure 3. Connect to client-managed environment with Megaport." caption-side="bottom"}
+![Connect to client-managed environment with Megaport.](./images/Power-arch-megaport.svg "Connect to client-managed environment with Megaport."){: caption="Connect to client-managed environment with Megaport." caption-side="bottom"}
 
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
@@ -200,7 +200,7 @@ The {{site.data.keyword.powerSys_notm}} router is the default gateway for your P
 In this deployment topology, [Megaport](https://www.megaport.com/){: external} or {{site.data.keyword.dl_short}} (2.0) Connect is used to provide connectivity between Power virtual server environments at two different data centers.
 
 
-![Connect Power Virtual Server environments with Megaport.](./images/Power-arch-megaport-regions.svg "Connect Power Virtual Server environments with Megaport."){: caption="Figure 4. Connect Power Virtual Server environments with Megaport." caption-side="bottom"}
+![Connect Power Virtual Server environments with Megaport.](./images/Power-arch-megaport-regions.svg "Connect Power Virtual Server environments with Megaport."){: caption="Connect Power Virtual Server environments with Megaport." caption-side="bottom"}
 
 IBM Cloud Connect is a managed network service that uses Megaport services. This service is available only in the United States. You can also use Megaport to connect your network in the client-managed environment to {{site.data.keyword.powerSys_notm}} directly.
 
@@ -240,7 +240,7 @@ The IBM Cloud SSL VPN service can access only your classic private IP subnets. T
 
 
 
-![Connect to client-managed environment with SSL VPN](./images/Power-arch-DL-SSL-classic.svg "Connect to client-managed environment with SSL VPN"){: caption="Figure 5. Connect to client-managed environment with SSL VPN." caption-side="bottom"}
+![Connect to client-managed environment with SSL VPN](./images/Power-arch-DL-SSL-classic.svg "Connect to client-managed environment with SSL VPN"){: caption="Connect to client-managed environment with SSL VPN." caption-side="bottom"}
 
 This deployment topology builds on the [Connect-to-classic](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-classic) architecture.
 {: note}
@@ -268,7 +268,7 @@ Although individual {{site.data.keyword.powerSys_notm}} instances can have inter
 
 
 
-![Connect to client-managed environment with IPSec VPN](./images/Power-arch-cc-classic-vpns2s.svg "Connect to client-managed environment with IPSec VPN"){: caption="Figure 6. Connect to client-managed environment with IPSec VPN."}
+![Connect to client-managed environment with IPSec VPN](./images/Power-arch-cc-classic-vpns2s.svg "Connect to client-managed environment with IPSec VPN"){: caption="Connect to client-managed environment with IPSec VPN."}
 
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide an internet-connected IPsec VPN gateway to enable a site-to-site VPN connection to your {{site.data.keyword.powerSys_notm}} resources.
 
@@ -314,7 +314,7 @@ If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location,
 
 
 
-![Connect to client-managed environment with Direct Link GRE Tunnel](./images/Power-arch-cc-classic-GRE.svg "Connect to client-managed environment with Direct Link GRE Tunnel"){: caption="Figure 7. Connect to client-managed environment with Direct Link GRE Tunnel." caption-side="bottom"}
+![Connect to client-managed environment with Direct Link GRE Tunnel](./images/Power-arch-cc-classic-GRE.svg "Connect to client-managed environment with Direct Link GRE Tunnel"){: caption="Connect to client-managed environment with Direct Link GRE Tunnel." caption-side="bottom"}
 
 This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
 
@@ -359,7 +359,7 @@ The following network architecture allows connectivity between multiple {{site.d
 
 
 
-![Transit Gateway deployment scenario](./images/Power-arch-cc-transit-workspaces.svg "Transit Gateway deployment scenario"){: caption="Figure 8. Transit Gateway deployment scenario." caption-side="bottom"}
+![Transit Gateway deployment scenario](./images/Power-arch-cc-transit-workspaces.svg "Transit Gateway deployment scenario"){: caption="Transit Gateway deployment scenario." caption-side="bottom"}
 
 Key features are as follows:
 

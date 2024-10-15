@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-14"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -19,9 +19,15 @@ subcollection: power-iaas
 
 ---
 
+
+
 IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+
+
+
 
 ---
 
@@ -34,49 +40,3 @@ Review this information to understand the IBM {{site.data.keyword.powerSys_notm}
 
 * [IBM {{site.data.keyword.powerSys_notm}} architecture (Off-premises)](/docs/power-iaas?topic=power-iaas-on-cloud-architecture)
 * [IBM {{site.data.keyword.powerSys_notm}} architecture (On-premises)](/docs/power-iaas?topic=power-iaas-private-cloud-architecture)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

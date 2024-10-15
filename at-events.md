@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -48,7 +48,7 @@ The following event is used to read the {{site.data.keyword.powerSys_notm}} inst
 |:---------|:-------------------------------------------------|
 | power-iaas.event.list | Lists all the {{site.data.keyword.powerSys_notm}} instances     |
 | power-iaas.event.read | Reads a {{site.data.keyword.powerSys_notm}} instance     |
-{: caption="Table 1. List of events: Instance" caption-side="top"}
+{: caption="List of events: Instance" caption-side="top"}
 
 ### Images events
 {: #at-actions-images}
@@ -63,7 +63,7 @@ The following events are to work with images in your {{site.data.keyword.powerSy
 | power-iaas.image.update        | Updates an image                 |
 | power-iaas.image.delete        | Deletes an image                 |
 | power-iaas.image.capture       | Exports an image                |
-{: caption="Table 2. List of events: Images" caption-side="top"}
+{: caption="List of events: Images" caption-side="top"}
 
 ### Network events
 {: #at-actions-networks}
@@ -77,7 +77,7 @@ The following events are to work with networks in your {{site.data.keyword.power
 | power-iaas.network.create      | Creates a network (Public or Private) |
 | power-iaas.network.update      | Updates a network                      |
 | power-iaas.network.delete      | Deletes a network                      |
-{: caption="Table 3. List of events: Network" caption-side="top"}
+{: caption="List of events: Network" caption-side="top"}
 
 ### {{site.data.keyword.powerSys_notm}} events
 {: #at-actions-servers}
@@ -103,7 +103,7 @@ The following events are to work with each {{site.data.keyword.powerSys_notm}} i
 | power-iaas.pvm-instance-network.read      |  Reads a {{site.data.keyword.powerSys_notm}} instance network |
 | power-iaas.pvm-instance-network.create     |  Creates a {{site.data.keyword.powerSys_notm}} instance network  |
 | power-iaas.pvm-instance-network.delete      |  Deletes a {{site.data.keyword.powerSys_notm}} instance network  |
-{: caption="Table 4. List of events: {{site.data.keyword.powerSys_notm}}" caption-side="top"}
+{: caption="List of events: {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
 ### SSH keys events
 {: #at-actions-ssh}
@@ -117,7 +117,7 @@ The following events are to work with your account and SSH keys in your {{site.d
 | power-iaas.ssh-key.create    | Creates an SSH key           |
 | power-iaas.ssh-key.update    | Updates an SSH key           |
 | power-iaas.ssh-key.delete    | Deletes an SSH key           |
-{: caption="Table 5. List of events: SSH keys" caption-side="top"}
+{: caption="List of events: SSH keys" caption-side="top"}
 
 ### Data volumes events
 {: #at-actions-volumes}
@@ -132,7 +132,7 @@ The following events are to work with data volumes in your {{site.data.keyword.p
 | power-iaas.volume.update     | Updates a volume            |
 | power-iaas.volume.delete     | Deletes a volume            |
 | power-iaas.volume.configure  | Attaches or Detaches a volume   |
-{: caption="Table 6. List of events: Data volumes" caption-side="top"}
+{: caption="List of events: Data volumes" caption-side="top"}
 
 ### Storage capacity events
 {: #at-storage-capacity}
@@ -144,7 +144,7 @@ The following events are to work with storage capacity in your {{site.data.keywo
 | power-iaas.storage-capacity.list       | Lists all the storage capacity     |
 | power-iaas.storage-capacity.read       | Reads a storage capacity     |
 | power-iaas.pod-capacity.list [On-premises]{: tag-red} | Lists system and storage capacity for an On-premises pod|
-{: caption="Table 7. List of events: Storage capacity" caption-side="top"}
+{: caption="List of events: Storage capacity" caption-side="top"}
 
 ### Storage pools events
 {: #at-storage-pools}
@@ -155,7 +155,7 @@ The following events are to work with storage pools in your {{site.data.keyword.
 |:-------------------------|:----------------------------|
 | power-iaas.system-pools.list       | Lists all the system pool information     |
 | power-iaas.system-pools.read       | Reads a system pool information     |
-{: caption="Table 8. List of events: Storage pool" caption-side="top"}
+{: caption="List of events: Storage pool" caption-side="top"}
 
 
 
@@ -171,7 +171,7 @@ The following events are to work with tenants in your {{site.data.keyword.powerS
 | power-iaas.tenant-sshkey.create  |   Creates a tenant SSH Key  |
 | power-iaas.tenant-sshkey.update  | Updates a tenant SSH Key |
 | power-iaas.tenant-sshkey.delete   |  Deletes a tenant SSH Key  |
-{: caption="Table 9. List of events: Tenant" caption-side="top"}
+{: caption="List of events: Tenant" caption-side="top"}
 
 ### List of events: Job
 {: #at-job}
@@ -184,7 +184,7 @@ The following events are to work with jobs in your {{site.data.keyword.powerSys_
 | power-iaas.job.read       |  Reads a job |
 | power-iaas.job.create  |   Creates a job  |
 | power-iaas.job.delete   |  Deletes a job  |
-{: caption="Table 10. List of events: Job" caption-side="top"}
+{: caption="List of events: Job" caption-side="top"}
 
 ### List of events: Network ports
 {: #at-network-ports}
@@ -198,7 +198,7 @@ The following events are to work with network ports in your {{site.data.keyword.
 | power-iaas.port.create  |   Creates a network port   |
 | power-iaas.port.update  |   Updates a network port   |
 | power-iaas.port.delete   | Deletes a network port  |
-{: caption="Table 11. List of events: network ports" caption-side="top"}
+{: caption="List of events: network ports" caption-side="top"}
 
 ### List of events: SAP
 {: #at-sap}
@@ -210,7 +210,7 @@ The following events are to work with SAP in your {{site.data.keyword.powerSys_n
 | power-iaas.sap.list       |  Lists all the SAP information |
 | power-iaas.sap.read       |  Reads a SAP information |
 | power-iaas.sap.create  |   Creates a SAP PVM instance   |
-{: caption="Table 12. List of events: SAP" caption-side="top"}
+{: caption="List of events: SAP" caption-side="top"}
 
 ### List of events: Cloud connections
 {: #at-cloud-connection}
@@ -224,7 +224,7 @@ The following events are to work with Cloud connections in your {{site.data.keyw
 | power-iaas.cloud-connection.create     |   Creates a cloud connection    |
 | power-iaas.cloud-connection.update     |   Updates a cloud connection    |
 | power-iaas.cloud-connection.delete       |   Deletes a cloud connection    |
-{: caption="Table 13. List of events: Cloud connections" caption-side="top"}
+{: caption="List of events: Cloud connections" caption-side="top"}
 
 ### List of events: Placement groups
 {: #at-placement-groups}
@@ -238,7 +238,7 @@ The following events are to work with placement groups in your {{site.data.keywo
 | power-iaas.placement-groups.create     |   Creates a placement group     |
 | power-iaas.placement-groups.update     |   Updates a placement group     |
 | power-iaas.placement-groups.delete       |   Deletes a placement group     |
-{: caption="Table 14. List of events: Placement groups" caption-side="top"}
+{: caption="List of events: Placement groups" caption-side="top"}
 
 ### List of events: IKE policy
 {: #at-ike-policy}
@@ -252,7 +252,7 @@ The following events are to work with IKE policy in your {{site.data.keyword.pow
 | power-iaas.ike-policy.create     |   Creates an IKE policy      |
 | power-iaas.ike-policy.update     |   Updates an IKE policy      |
 | power-iaas.ike-policy.delete       |   Deletes an IKE policy      |
-{: caption="Table 15. List of events: IKE policy" caption-side="top"}
+{: caption="List of events: IKE policy" caption-side="top"}
 
 ### List of events: IPsec policy
 {: #at-ipsec-policy}
@@ -266,7 +266,7 @@ The following events are to work with IPsec policy in your {{site.data.keyword.p
 | power-iaas.ipsec-policy.create     |   Creates an IPsec policy      |
 | power-iaas.ipsec-policy.update     |   Updates an IPsec policy      |
 | power-iaas.ipsec-policy.delete       |   Deletes an IPsec policy      |
-{: caption="Table 16. List of events: IPsec policy" caption-side="top"}
+{: caption="List of events: IPsec policy" caption-side="top"}
 
 ### List of events: VPN connection
 {: #at-vpn-connection}
@@ -280,7 +280,7 @@ The following events are to work with VPN Connection in your {{site.data.keyword
 | power-iaas.vpn-connection.create     |   Creates a VPN connection       |
 | power-iaas.vpn-connection.update     |   Updates a VPN connection       |
 | power-iaas.vpn-connection.delete       |   Deletes a VPN connection       |
-{: caption="Table 17. List of events: VPN connection" caption-side="top"}
+{: caption="List of events: VPN connection" caption-side="top"}
 
 ## Viewing events
 {: #at-viewing-events}
@@ -436,4 +436,4 @@ The following table shows the data center and its corresponding regions where yo
 |`LON04` | eu-de | eu-gb|
 |`LON06` | eu-de | eu-gb|
 |`OSA21` | jp-tok | jp-osa|
-{: caption="Table 18. List of DCs and their corresponding AT instance region" caption-side="top"}
+{: caption="List of DCs and their corresponding AT instance region" caption-side="top"}

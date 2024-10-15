@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -44,7 +44,7 @@ Refer Table 1 to understand rack dimensions and weight.
 | Rack with two standard doors     |  600 mm (23.6 in.) | 1132 mm (44.6 in)  |  2020 mm (79.5 in.) | 177 kg (391 lb) |
 | Rack with rear door, heat exchanger (dry), and standard doors |  600 mm (23.6 in.) | 1231 mm (48.5 in.) |  2020 mm (79.5 in.) | 210 kg (463 lb) |
 | Rack with high-end appearance front door and rear door        |  600 mm (23.6 in.) | 1210 mm (47.3 in.) |  2020 mm (79.5 in.) | 181 kg (398 lb) |
-{: caption="Table 1. Rack dimensions and weight" caption-side="bottom"}
+{: caption="Rack dimensions and weight" caption-side="bottom"}
 
 
 Refer to Table 2 to understand rack characteristics and capacity.
@@ -55,7 +55,7 @@ Refer to Table 2 to understand rack characteristics and capacity.
 | Static            | 1678 kg (3700 lb) | 32 kg (70 lb) or EIA average  |
 | Seismic certified | 1170 mm (2580 lb) | 20 kg (45 lb) or EIA maximum  |
 | EIA: Energy Information Administration |
-{: caption="Table 2. Rack characteristics and capacity" caption-side="bottom"}
+{: caption="Rack characteristics and capacity" caption-side="bottom"}
 
 
 **Floor load calculator**: You can use [Floor load calculator](http://www-01.ibm.com/support/knowledgecenter/v1/content/POWER6/iphdl/floorloadcalc.htm){: external} to determine the distributed load that a server, expansion unit, or migration tower places on a subfloor (for example, in a data center with a raised floor) or on an above-ground or nonraised floor structure.

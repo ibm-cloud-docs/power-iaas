@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-09-13"
+lastupdated: "2024-10-10"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -120,7 +120,7 @@ Compass backup servers are preconfigured in data centers and are also replicated
 It is highly recommended that you refrain from deploying any additional resources to Backup Offering VPC.
 {: important}
 
-![Backup Offering network architecture diagram](./images/onPremCloudCobaltIron.svg "Backup Offering network architecture diagram"){: caption="Figure 1. Backup Offering network architecture diagram" caption-side="bottom"}
+![Backup Offering network architecture diagram](./images/onPremCloudCobaltIron.svg "Backup Offering network architecture diagram"){: caption="Backup Offering network architecture diagram" caption-side="bottom"}
 
 * The Backup Offering VPC is the managed backup server instance that is deployed when the Backup Offering is provisioned.
 
@@ -173,7 +173,7 @@ The Backup Offering is available in the following data center pairs:
 | SAO01         | SAO04         |
 | OSA21         | TOK04         |
 | SYD04         | SYD05         |
-{: caption="Table 1. Data center pair availibility for backup offering" caption-side="bottom"}
+{: caption="Data center pair availibility for backup offering" caption-side="bottom"}
 
 ### Additional support
 {: #baas-support}

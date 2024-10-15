@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-09-10"
+lastupdated: "2024-10-10"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -36,7 +36,7 @@ The following table shows how an SPP is used to reduce the licensing cost when y
 |No|Maximum cores = 5 \n Mode = Dedicated|Maximum cores = 6 \n Mode = Dedicated|NA|5+6 = 11|
 |Yes|Maximum cores = 5 \n Mode = Shared/Uncapped \n Entitled capacity = 4.25|Maximum cores = 6 \n Mode = Shared/Uncapped \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by reserved cores in pool|
 {: class="simple-table"}
-{: caption="Table 1. SPP helps to reduce the licensing cost" caption-side="bottom"}
+{: caption="SPP helps to reduce the licensing cost" caption-side="bottom"}
 
 The benefits of using an SPP are as follows:
 - Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licesnses.
@@ -63,7 +63,7 @@ For example, the following table shows how your VC is determined based of EC sel
 | EC is set to 1.5      | VPs can be 2 or 3 |
 | EC is set to 2.25     | VP is 3           |
 | EC is set to 3.5      | VPs is 4          |
-{: caption="Table 1. Example showing core-to-virtual core ratio" caption-side="top"}
+{: caption="Example showing core-to-virtual core ratio" caption-side="top"}
 
 Review the following points when you use core-to-virtual core ratio:
 * You can set EC in increments of 0.25.
@@ -120,7 +120,7 @@ To create an SPP, complete the following steps:
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
     |Reserved processing cores[^1]|[Off-premises]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [On-premises]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} (On-premises), the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
-     {: caption="Table 2. Creating a new SPP fields and descriptions" caption-side="bottom"}
+     {: caption="Creating a new SPP fields and descriptions" caption-side="bottom"}
 
     [^1]: The Reserved processing cores are the number of cores that are reserved for processing and must always be a whole number.
 
@@ -184,7 +184,7 @@ The following table explains how the host selection is determined based on the d
 |Different server (Anti-affinity) |Configure the new SPP on a different host than all host identified by all the existing PG members.|The new SPP is automatically added as a member of the PG policy.|
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 3. Host selection when SPP PG is empty and non-empty" caption-side="top"}
+{: caption="Host selection when SPP PG is empty and non-empty" caption-side="top"}
 {: #host_selection-1}
 {: tab-title="When SPP PG is non-empty"}
 
@@ -194,7 +194,7 @@ The following table explains how the host selection is determined based on the d
 |Different server (Anti-affinity) |A new SPP is configured on a host that is selected based on the backend processing|The new SPP is automatically added as a member of the PG policy |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 3. Host selection when SPP PG is empty and non-empty" caption-side="top"}
+{: caption="Host selection when SPP PG is empty and non-empty" caption-side="top"}
 {: #host_selection-2}
 {: tab-title="When SPP PG is empty"}
 
@@ -211,7 +211,7 @@ To create an SPP PG, complete the following steps:
     |-----|--------------------------------------------------------|
     |Name |Enter a name that is unique within your cloud account. \n Use a minimum of 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
     |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
-    {: caption="Table 4. Create a new SPP PG field description" caption-side="top"}
+    {: caption="Create a new SPP PG field description" caption-side="top"}
 
 5. Click **Create**.
 
@@ -233,7 +233,7 @@ To add an SPP to an existing SPP PG, complete the following steps:
 |------------------|-------------------------------------------------------|
 |Add existing      |You can choose from existing SPPs.     |
 |Create new        |You can create an SPP from scratch by defining pool name, machine type, and number of cores. For more information, see [Create a new SPP](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp)|
-{: caption="Table 5. Add SPP to an SPP PG: field description" caption-side="top"}
+{: caption="Add SPP to an SPP PG: field description" caption-side="top"}
 
 You will receive a notification after the new SPP PG is created.
 

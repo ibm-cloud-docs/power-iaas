@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-15"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -103,6 +103,8 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
+    
+
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. There are some validation checks in place for Linux images on the user data that you enter. No validation checks are done for AIX and Bring Your Own License (BYOL) images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
@@ -149,7 +151,7 @@ The following table provides more information about each {{site.data.keyword.pow
 | Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
 | Public Networks | Select this option to use an IBM-provided public network. There is a cost that is associated with selecting this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
-{: caption="Table 1. {{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
+{: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
 
 ## Reusing Volume names or VM names in {{site.data.keyword.powerSys_notm}}
 {: #reusing_volume_names}
@@ -182,7 +184,7 @@ The following table explains the differences in VM configuration that may or mig
 |-----|------|-----|-----|
 |Non-epic workloads|Tier 1 or Tier 3|Shared uncapped, \n shared capped, or \n dedicated| S922 or E980|
 |Epic workloads|Always Tier 1|Always dedicated| E980 or E1080 |
-{: caption="Table 2. VM configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
+{: caption="VM configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
 
 The epic VMs are not pinned by default that you can use internally for non-production usage. You must consider pinning the production epic VMs to avoid performance issues.
 {: note}
@@ -233,7 +235,7 @@ When you attach boot volume post provisioning of VM, the boot image still shows 
 | Linux for SAP (HANA)| Provision of VM without boot volume is not supported|
 | Linux for SAP (NetWeaver)| Provision of VM without boot volume is not supported|
 | Client supplied subscriptions | Provision of VM without boot volume is not supported for these OSs |
-{: caption="Table 3. Provision of VMs without boot volume based on the OS selection." caption-side="top"}
+{: caption="Provision of VMs without boot volume based on the OS selection." caption-side="top"}
 
 When you select the **Deploy empty virtual server instance** checkbox, you can provision a VM without a boot image and boot volume. Review the following table to understand how the selection of the **Deploy empty virtual server instance** checkbox works along with the provisioning of the large quantity of data volumes:
 
@@ -244,7 +246,7 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 | Attaching existing volume during VM provisioning | Attach up to 500 existing data volumes	| You cannot attach any volumes to the VM during initial provisioning. You can attach one boot volume and up to 500 data volumes after provisioning. |
 | Attaching from multiple storage tiers	| Supported. But if multiple storage tier volumes are used, there is a potential risk of failure of clone operation. | Supported. But if multiple storage tier volumes are used, there is a potential risk of failure of clone operation. |
 | Boot volume | Boot volume is attached while provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes. | 	Boot volume is attached after provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes. |
-{: caption="Table 4. Provisioning a VM with or without a boot volume." caption-side="top"}
+{: caption="Provisioning a VM with or without a boot volume." caption-side="top"}
 
 
 ## Configuring large quantity of data volumes on Off-premises
@@ -260,9 +262,14 @@ You can configure your virtual server instance (VM) while provisioning to enable
 
 
 
-Only IBM i virtual machines in the `DAL10`, `DAL12`, `DAL13`, `FRA05`, `LON04`, `SYD04`, `SYD05`, and `WDC07` data centers support the configuration of large volumes. Configuring the large quantity of volumes is supported only on Off-premises.
-{: note}
 
+
+
+
+
+
+IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes except for the virtual machines in the `CHE01`, `LON06`, `MAD04`, and `TOR01` data centers. Configuring the large quantity of data volumes is supported only on Off-premises.
+{: note}
 
 
 

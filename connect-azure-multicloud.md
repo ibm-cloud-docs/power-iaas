@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-18"
+lastupdated: "2024-10-10"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -32,7 +32,7 @@ This section provides an overview of the solution architecture, and includes an 
 
 This solution provides private network connectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure for high-performance peer-to-peer connection of cross-cloud workloads. The architecture uses private connection services through IBM Cloud Direct Link, which is coupled with Microsoft Azure ExpressRoute, and joined by the Megaport Cloud Router.
 
-![Private connectivity between IBM Power Virtual Server and Microsoft Azure](./images/pvs_azure_architechture.svg "Private connectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Figure 1. Private connectivity between IBM Power Virtual Server and Microsoft Azure" caption-side="bottom"}
+![Private connectivity between IBM Power Virtual Server and Microsoft Azure](./images/pvs_azure_architechture.svg "Private connectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Private connectivity between IBM Power Virtual Server and Microsoft Azure" caption-side="bottom"}
 
 {{site.data.keyword.powerSys_notm}} workspace
 :   A container of all the virtual machines, storage volumes, network configurations, and so on, at a specific geographic region.
@@ -63,7 +63,7 @@ This solution focuses on providing connectivity with IBM {{site.data.keyword.pow
 
 The following diagram shows a high-level overview of the solution and explains how the solution components are used.
 
-![Building interconnectivity between IBM Power Virtual Server and Microsoft Azure](./images/building_interconnectivity.svg "Building interconnectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Figure 2. Building interconnectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure" caption-side="bottom"}
+![Building interconnectivity between IBM Power Virtual Server and Microsoft Azure](./images/building_interconnectivity.svg "Building interconnectivity between IBM Power Virtual Server and Microsoft Azure"){: caption="Building interconnectivity between IBM {{site.data.keyword.powerSys_notm}} and Microsoft Azure" caption-side="bottom"}
 
 1. `IBM Cloud Transit Gateway` provides interconnectivity across various IBM Cloud platforms. You can create single or multiple transit gateways to connect VPCs, {{site.data.keyword.powerSys_notm}} workspaces, or IBM Cloud classic infrastructure. New networks connected to a TGW are automatically made available to every other network connected to it. You can also provision Unbound GRE tunnels to your TGW that can be used to connect various network appliances or either self-managed or IBM-managed VMware Cloud Foundation (VCF) instances to the TGW.
 2. `IBM Cloud Direct Link` service is a routed, OSI L3 service. It offers a direct connection to the IBM Cloud Private network backbone, with low latency and uses BGP as the routing protocol. IBM Cloud Direct Link can be attached to most IBM Cloud IaaS platforms, or you can attach it to a Transit Gateway where it can provide private interconnectivity to all connections attached to a TGW. IBM Cloud does not provide built-in connection redundancy as part of the product. To establish redundant connectivity, you must acquire two connections on diverse cross-connect routers (XCRs) and configure BGP on each IBM Cloud Direct Link.
@@ -91,7 +91,7 @@ This solution uses the following networks as shown in the table:
 | {{site.data.keyword.powerSys_notm}} | 10.100.10/24    |
 | Microsoft Azure                               | 10.200.10/24    |
 | On-premises networks                | 10.0.10/24      |
-{: caption="Table 1. Network details" caption-side="bottom"}
+{: caption="Network details" caption-side="bottom"}
 
 ## Configuring the {{site.data.keyword.powerSys_notm}} environment and Transit Gateway in IBM Cloud
 {: #configure-pvs-env}
@@ -200,7 +200,7 @@ To create an MCR, you need to make a few decisions for the connectivity. The fol
 | MCR Name | Specify a name for the MCR that is easily identifiable | IBM-Azure-MCR |
 | Minimum Term | Select your term length |- No Minimum Term \n - 12 Months \n - 24 Months \n - 36 Months  |
 | BGP State | Select whether BGP connections are enabled \n or shut down by default | Enabled |
-{: caption="Table 2. Megaport Cloud Router Worksheet" caption-side="bottom"}
+{: caption="Megaport Cloud Router Worksheet" caption-side="bottom"}
 
 
 For a detailed explanation of the steps required, refer to [Megaport documentation](https://docs.megaport.com/mcr/creating-mcr/).
@@ -248,7 +248,7 @@ After your connection is added, the next steps are to authorize on the IBM Cloud
 | Rate Limit | The speed of your connection in Mbps | |
 | Minimum Term | Select your term length |- No Minimum Term \n - 12 Months \n - 24 Months \n - 36 Months |
 | IBM Account ID | Your IBM Cloud account ID. Learn more on the [Managing your account, resources, and access documentation](/docs/account?topic=account-accountfaqs#account-details) | The account ID is a 32-character, unique account identifier. |
-{: caption="Table 3. Megaport Virtual Cloud Connection: IBM Cloud Worksheet" caption-side="bottom"}
+{: caption="Megaport Virtual Cloud Connection: IBM Cloud Worksheet" caption-side="bottom"}
 
 
 
@@ -325,7 +325,7 @@ For more information about MCR Looking Glass, see [Megaport documentation](https
 
 In some cases, you might need to filter some routes to be advertised to Megaport from IBM Cloud Transit Gateway connections, or you might want to prioritize your preferred routing paths with AS-prepends, if you have multiple Direct Links attached. The following diagram depicts an overview of how route filtering and AS-prepends work in the IBM Cloud interconnectivity solutions.
 
-![Route filtering and AS-prepending with Transit Gateway and Direct Links](./images/route_filterig_tgw_dl.svg "Route filtering and AS-prepending with Transit Gateway and Direct Links"){: caption="Figure 3. Route filtering and AS-prepending with Transit Gateway and Direct Links" caption-side="bottom"}
+![Route filtering and AS-prepending with Transit Gateway and Direct Links](./images/route_filterig_tgw_dl.svg "Route filtering and AS-prepending with Transit Gateway and Direct Links"){: caption="Route filtering and AS-prepending with Transit Gateway and Direct Links" caption-side="bottom"}
 
 For route filtering, you can use either use Transit Gateway’s route filtering capabilities or apply route filtering on Direct Link, depending on where you want to filter the routes. With Transit Gateway, you can only filter learned prefixes (import) from the connections. With Direct link, you can apply route filters for both learned (import) and advertisements (export). You can also attach GRE tunnels to a Transit Gateway. With GRE tunnels, the route filtering is done with BGP from the connecting router/gateway.
 

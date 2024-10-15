@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: network latency, {{site.data.keyword.powerSys_notm}}, private clouds
 
@@ -39,7 +39,7 @@ You can note the IP addresses for the IBM Cloud region that you want to test fro
 | Tokyo | 161.202.104.226, 128.168.67.106, 165.192.108.10 |
 | Toronto| 163.74.65.138, 163.75.70.50, 169.53.160.154 |
 | Washington, DC | 169.63.123.154, 169.63.110.114, 169.62.13.2, 169.60.123.162, 169.59.152.58, 52.117.93.26 |
-{: caption="Table 1. IBM Cloud Region and IP address" caption-side="bottom"}
+{: caption="IBM Cloud Region and IP address" caption-side="bottom"}
 
 To check the latency requirements of a connection, complete the following steps:
 

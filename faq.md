@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -242,7 +242,7 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 | Telemetry | Unavailable | The telemetry data within the pod is unavailable until the control plane connectivity is re-established. However, IBM Storage Insights continue to cache the information for a selected period. |
 | DHCP service (for your data network) |  No impact | DHCP services are provided by the pod-resident network infrastructure and do not require a connection to IBM Cloud. |
 | IBM remote support | Unavailable | IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
-{: caption="Table 1. Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
+{: caption="Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
 
 
 
@@ -324,7 +324,7 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 | The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
-{: caption="Table 1. Dedicated processors" caption-side="top"}
+{: caption="Dedicated processors" caption-side="top"}
 {: #proc-table-1}
 {: tab-title="Dedicated processors"}
 
@@ -333,7 +333,7 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 | Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units.|
 {: class="simple-tab-table"}
 {: tab-group="processor"}
-{: caption="Table 2. Shared processors" caption-side="top"}
+{: caption="Shared processors" caption-side="top"}
 {: #proc-table-2}
 {: tab-title="Shared processors"}
 
@@ -449,7 +449,7 @@ The key differences are as follows:
 | Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
 | Ease of creation | Easy and quick process| Three-step process and takes a long time|
 | Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
-{: caption="Table 5. Differences between a snapshot and clone" caption-side="bottom"}
+{: caption="Differences between a snapshot and clone" caption-side="bottom"}
 
 
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.

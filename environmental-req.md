@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2024
 
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-10"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, environment, environmental requirement
 
@@ -41,7 +41,7 @@ Your On-premises site must have adequate cooling and humidity control for {{site
 | Temperature       | 5°C - 45°C (41°F - 113°F) |  |
 | Relative humidity | 8% to 85% |  |
 | Maximum dew point | 27.0°C (80.6°F) |  |
-{: caption="Table 1. Recommended and allowed environmental parameter values" caption-side="bottom"}
+{: caption="Recommended and allowed environmental parameter values" caption-side="bottom"}
 
 To set up the operating environment, IBM suggests using the recommended values from Table 1. Over prolonged use, this operating environment becomes reliable and energy-efficient.
 

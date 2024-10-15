@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-29"
+lastupdated: "2024-10-10"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -38,7 +38,7 @@ To understand the On-premises architecture, key features, and hardware and softw
 
 The following diagram provides a high-level architectural view IBM {{site.data.keyword.powerSys_notm}} (On-premises):
 
-![High-level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture"){: caption="Figure 1. High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture" caption-side="bottom"}
+![High-level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture"){: caption="High-Level IBM {{site.data.keyword.powerSys_notm}} (On-premises) architecture" caption-side="bottom"}
 
 ## Key features
 {: #key-features}
@@ -112,7 +112,7 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 | 8 TB                        | -     | -   | -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 1. Small pod configuration." caption-side="top"}
+{: caption="Small pod configuration." caption-side="top"}
 {: #single-rack}
 {: tab-title="S1022"}
 
@@ -129,7 +129,7 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 | 8 TB                        | 16       | 32  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="Table 1. Small pod configuration." caption-side="top"}
+{: caption="Small pod configuration." caption-side="top"}
 {: #single-rack}
 {: tab-title="E1050"}
 
@@ -145,7 +145,7 @@ The small pod with one rack is available with FS 230 TB flash system storage.
 | Total capacity in TB                  | 230       | 460    |
 | Usable capacity in TB                 | 219       | 438    |
 | Usable capacity in TB at 2x compression | 438        | 876    |
-{: caption="Table 2. Small pod with flash system storage configuration." caption-side="top"}
+{: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
 
 ### Medium pod configurations
@@ -171,7 +171,7 @@ A  medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) syste
 | 32 TB                       |  -    |  -  | -   |  -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
-{: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: caption="Medium pod configuration." caption-side="top"}
 {: #multi-rack}
 {: tab-title="S1022"}
 
@@ -190,7 +190,7 @@ A  medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) syste
 | 32 TB                       |  -       |  -   |  -    |  -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
-{: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: caption="Medium pod configuration." caption-side="top"}
 {: #multi-rack}
 {: tab-title="E1050"}
 
@@ -209,7 +209,7 @@ A  medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) syste
 | 32 TB                       | 64           | 160 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
-{: caption="Table 3. Medium pod configuration." caption-side="top"}
+{: caption="Medium pod configuration." caption-side="top"}
 {: #multi-rack}
 {: tab-title="E1080 (2CEC)"}
 
@@ -226,7 +226,7 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Usable capacity in TB at 2x compression | 876                  | 1752 | 1752  | 3504 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
-{: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
+{: caption="Medium pod with flash system storage configuration." caption-side="top"}
 {: #multi-rack-storage}
 {: tab-title="2 or 4 racks"}
 
@@ -241,7 +241,7 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 | Usable capacity in TB at 2x compression | 2628  | 5256 | 3504  | 7007  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
-{: caption="Table 4. Medium pod with flash system storage configuration." caption-side="top"}
+{: caption="Medium pod with flash system storage configuration." caption-side="top"}
 {: #multi-rack-storage}
 {: tab-title="4 racks"}
 
@@ -290,7 +290,7 @@ Table 5 shows the supported storage tiers with corresponding IOPS.
 | Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
-{: caption="Table 5. Tier and IOPS mapping" caption-side="bottom"}
+{: caption="Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
 {: important}
