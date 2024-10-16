@@ -1,7 +1,11 @@
 keyword:
   on-prem:
-    IBM data center
+    IBM data centers
   off-prem-caps:
     Client location
   off-prem-lc:
     client location
+  off-prem-pname:
+    IBM {{site.data.keyword.powerSys_notm}} located in
+  on-prem-pname:
+    IBM {{site.data.keyword.powerSys_notm}} Private Cloud

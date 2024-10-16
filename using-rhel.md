@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-16"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -38,8 +38,8 @@ If you plan to use your own license, select the OS image that is suffixed with `
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-
-
+To ensure that you are running the supported OS levels and to plan for upgrades to the latest levels, refer to [RHEL]( https://access.redhat.com/support/policy/updates/errata/){: external} OS release lifecycle information.
+{: important}
 
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/system/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/system/detail/9225){: external}.
 

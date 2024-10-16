@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-16"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -39,6 +39,9 @@ If you plan to use your own license, select the OS image that is suffixed with `
 
 The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
+
+To ensure that you are running the supported OS levels and to plan for upgrades to the latest levels, refer to [SLES](https://www.suse.com/lifecycle#suse-linux-enterprise-server-15){: external} OS release lifecycle information.
+{: important}
 
 
 
