@@ -3,7 +3,7 @@
   "title": "Power Virtual Server",
   "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers on IBM Cloud (that are running either the AIX, IBM i, or Linux operating systems).",
   "product_page": "https://www.ibm.com/products/power-virtual-server",
-  "console_page": "https://cloud.ibm.com/power/overview",
+  "console_page": "/cloud.ibm.com/power/overview",
   "section_topics": {
     "links": [
       {
@@ -34,7 +34,7 @@
   },
   "section_highlights": [
     {
-      "title": "Use Power Virtual Server to boost competitive advantage",
+        "title": "Use Power Virtual Server to boost competitive advantage",
       "description": "Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage",
       "href": "https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage",
       "type": "blog"
@@ -44,12 +44,6 @@
       "description": "This topic provides a detailed guide on how to connect IBM Power Virtual Server to Microsoft Azure with Megaport.",
       "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
       "type": "redbook",
-      "recommended": true
-    },
-    {
-      "title": "Migrating Db2 on AIX to Power Virtual Server",
-      "description": "This topic provides a detailed guide on how to migrate your Db2 on AIX to Power Virtual Server",
-      "href": "/docs/power-iaas?topic=power-iaas-db2-migration",
       "recommended": true
     }
   ],
@@ -62,8 +56,8 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "14 October 2024",
-        "title": "You can configure a virtual manchine available in all the data centers except for the virtual machines in the TOR01, MAD04, and LON06 data centers."
+        "date": "22 October 2024",
+        "title": "You can now configure IBM i virtual machine in all the data centers to support the attachment of large quantity of data volumes."
       }
     ]
   }
