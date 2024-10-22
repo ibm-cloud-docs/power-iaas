@@ -56,8 +56,8 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "22 October 2024",
-        "title": "You can now configure IBM i virtual machine in all the data centers to support the attachment of large quantity of data volumes."
+        "date": "21 October 2024",
+        "title": "You can now configure IBM i virtual machine in all the data centers except for the virtual machines in the `CHE01` data center to support the attachment of large quantity of data volumes."
       }
     ]
   }

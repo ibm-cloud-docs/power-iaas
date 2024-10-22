@@ -272,7 +272,7 @@ You can configure your virtual server instance (VM) while provisioning to enable
 
 
 
-IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
+IBM i virtual machines in all the data centers except for the virtual machines in the `CHE01` data center support the configuration of large quantity of data volumes. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
 {: note}
 
 
