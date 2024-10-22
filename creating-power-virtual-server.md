@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-10-22"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -272,7 +272,7 @@ You can configure your virtual server instance (VM) while provisioning to enable
 
 
 
-IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes except for the virtual machines in the `CHE01` data center. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
+IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
 {: note}
 
 
