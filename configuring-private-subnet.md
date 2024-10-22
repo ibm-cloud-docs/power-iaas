@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-18"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -20,7 +20,10 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
 
 ---
 

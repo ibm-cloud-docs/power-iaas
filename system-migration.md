@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -19,9 +19,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -33,7 +37,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 
 
-For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} (Off-premises)](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}})](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 

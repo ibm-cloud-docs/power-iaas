@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -18,10 +18,16 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Of
-f-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -31,26 +37,26 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
 {: faq}
 {: support}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your On-premises infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
+IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your {{site.data.keyword.on-prem}} infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 
 
-## What is the difference between the Off-premises and On-premises offerings of IBM {{site.data.keyword.powerSys_notm}}?
+## What is the difference between the {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}?
 {: #private-cloud-on-cloud-diff}
 
 
 
 
-The primary difference between the two is where the physical infrastructure resides. The On-premises infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
+The primary difference between the two is where the physical infrastructure resides. The {{site.data.keyword.on-prem}} infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
 ## Which Power servers are supported?
 {: #servers-supported}
 
-[Off-premises]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
+[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
 
-[On-premises]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
+[{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
-For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
@@ -64,9 +70,9 @@ The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on
 ### AIX
 {: #aix-os-version}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
-The IBM {{site.data.keyword.powerSys_notm}} (Off-premises) supports the following operating systems:
+The IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}}) supports the following operating systems:
 * S922  -  7.1 or later
 * E980  -  7.1 or later
 * S1022 -  7.1 Technology Level (TL) 5 or later
@@ -76,9 +82,9 @@ The following stock images are available when you create a virtual machine:
 * AIX 7.2 TL5 SP8
 * AIX 7.2 TL5 SP7
 
-[On-premises]{: tag-red}
+[{{site.data.keyword.on-prem}}]{: tag-red}
 
-The IBM {{site.data.keyword.powerSys_notm}} (On-premises) supports the following operating systems:
+The IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) supports the following operating systems:
 * S1022 - 7.2 or later
 * E1080 - 7.2 or later
 
@@ -102,7 +108,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 {: #ibm-os-versions}
 
 {{site.data.keyword.powerSys_notm}} supports IBM i 7.2, or later.
-The IBM {{site.data.keyword.powerSys_notm}} (On-premises) supports IBM i 7.3, or later.
+The IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
@@ -125,12 +131,12 @@ IBM i stock images currently available when you create a VM are:
 
 
 
-[^3]: Not supported on On-premises.
+[^3]: Not supported on {{site.data.keyword.on-prem}}.
 
 ### Linux
 {: #linux-os-versions}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 {{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
@@ -165,7 +171,7 @@ SUSE [^footnote3]
 
 [^footnote1]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote3]: SLES images are not currently supported on On-premises.
+[^footnote3]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
 
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
@@ -175,13 +181,13 @@ To use your own license, select the OS image that with `-BYOL` suffix. On the **
 To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
 
 
-[On-premises]{: tag-red}
+[{{site.data.keyword.on-prem}}]{: tag-red}
 
-The IBM {{site.data.keyword.powerSys_notm}} (On-premises) supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+The IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 {: #FLS}
 
 
-FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by the IBM {{site.data.keywordpowerSys_notm}} (On-premises).
+FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by the IBM {{site.data.keywordpowerSys_notm}} ({{site.data.keyword.on-prem}}).
 
 The following list is an example of the FLS offerings:
 
@@ -192,21 +198,21 @@ The following list is an example of the FLS offerings:
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} (On-premises), see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}), see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
 
 
-## Can IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods be expanded with additional compute nodes?
+## Can IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) pods be expanded with additional compute nodes?
 {: #expand-pods}
 
 Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
 
-## Can IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods be expanded with additional storage?
+## Can IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) pods be expanded with additional storage?
 {: #expand-pods-storage}
 
 Yes, you can expand the pod with additional storage capacity. But you cannot add more storage controllers.
 
-## Are the IBM {{site.data.keyword.powerSys_notm}} (On-premises) pods equipped with spare compute nodes for maintenance?
+## Are the IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) pods equipped with spare compute nodes for maintenance?
 {: #spare-compute-node}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
@@ -317,7 +323,7 @@ When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, o
 - **Shared capped**: shared, but resources do not expand beyond the requested capacity (used mostly for licensing)
 - **Dedicated**: resources are allocated for a specific client (used for specific third-party considerations)
 
-The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} (On-premises)](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 |Dedicated processors|
 |:-----------------|
@@ -415,13 +421,13 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} (On-premises)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 ## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
 
@@ -500,7 +506,7 @@ Using the PowerHA toolkit, you can create an intermediate snap-shot and a volume
 {: faq}
 {: support}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
 
@@ -509,7 +515,7 @@ See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x8
 {: faq}
 {: support}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
 For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
@@ -517,7 +523,7 @@ For more information on VPN, see [Managing VPN connections](/docs/power-iaas?top
 {: #firewall}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 You must set your own firewall in your IBM Cloud account.
 
 ## How do you connect a server instance between two data centers (DAL13 to WDC04)?
@@ -535,7 +541,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 {: support}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 **IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
@@ -627,13 +633,13 @@ You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat O
 {: #network_latency}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
 
 ## What must be the network latency between the data center and the corresponding IBM Cloud region?
 {: #network_latency-private-cloud}
 
-[On-premises]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
+[{{site.data.keyword.on-prem}}]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
 
 
 
@@ -655,7 +661,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 {: #convert-to-replication-vol}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
 
@@ -663,7 +669,7 @@ You can retype the volume to toggle the `replicationEnable` flag of the volume b
 {: #check-for-replication-vol}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
 
@@ -672,7 +678,7 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: faq}
 
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
 
@@ -708,7 +714,7 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #cc-res-group}
 {: faq}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
 
 ## What is the Maximum Transmission Unit (MTU) size that is supported in {{site.data.keyword.powerSys_notm}} networks?
@@ -729,7 +735,7 @@ Both AIX and IBM i support the configurations for custom cloud-init at the time 
 
 You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](/apidocs/power-cloud#pcloud-pvminstances-post).
 
-[On-premises]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
+[{{site.data.keyword.on-prem}}]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 
 ## Can I add a user interface to an existing virtual machine?
 {: #ui-vm}

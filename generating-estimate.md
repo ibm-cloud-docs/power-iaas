@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -20,9 +20,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -35,7 +39,7 @@ Use the cost estimator tool for:
 ## Creating an estimation of resources
 {: #est-resources}
 
-You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} (On-premises) or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
+You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} ({{site.data.keyword.on-prem}}) or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
 {: shortdesc}
 
 You are not charged for creating an estimate. The resources that you estimate can be deployed only after a workspace creation.
@@ -50,7 +54,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.
     You are redirected to the **Estimate cost** page for {{site.data.keyword.powerSys_notm}}.
 
-5. Select the type of virtual server from the **Location** drop-down list as [**On-premises**](#on-prem-location-type) or [**Off-premises**](#off-prem-location-type).
+5. Select the type of virtual server from the **Location** drop-down list as [**{{site.data.keyword.on-prem}}**](#on-prem-location-type) or [**{{site.data.keyword.off-prem}}**](#off-prem-location-type).
 
 6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.
     For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
@@ -64,12 +68,12 @@ You are not charged for creating an estimate. The resources that you estimate ca
 10. Click **View estimate** to view and to take actions on them.
 
 
-### Location type: Off-premises
+### Location type: {{site.data.keyword.off-prem}}
 {: #off-prem-location-type}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
-If you select the **Location type** as Off-premises, select one resource from the following list and choose additional configurations based on your requirement:
+If you select the **Location type** as {{site.data.keyword.off-prem}}, select one resource from the following list and choose additional configurations based on your requirement:
 
 * [Virtual server instance](#est-vsi)
 * [Storage volume](#est-storage-vol)
@@ -177,10 +181,10 @@ To learn more about dedicated host, see [Getting started with dedicated host].
 
 
 
-### Location type: On-premises
+### Location type: {{site.data.keyword.on-prem}}
 {: #on-prem-location-type}
 
-[On-premises]{: tag-red}
+[{{site.data.keyword.on-prem}}]{: tag-red}
 
 If you select the **Location type** as On-Premises, proceed with the following steps:
 

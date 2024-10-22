@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-07-29"
+lastupdated: "2024-10-18"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -13,12 +13,15 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} (Off-premises)
+# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}})
 {: #set-full-Linux}
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
 
 ---
 
@@ -292,5 +295,3 @@ The user data that you pass should follow the following conditions:
 -  It should be uncompressed.
 -  It should start with `#cloud-config`.
 -  It should not exceed 63 Kb in size.
-
-

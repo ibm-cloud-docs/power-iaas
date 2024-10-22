@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: import custom image, IBM Cloud Object Storage bucket, IBM Cloud Object Storage, import image
 
@@ -20,7 +20,10 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -35,7 +38,7 @@ To import stored custom images from the **Boot images** page, click **Import ima
 * Your Cloud Object Storage bucket name
 * Hash-based Message Authentication Code (HMAC) secret key and access key
 
-IBM {{site.data.keyword.powerSys_notm}} (On-premises) processes the custom image file as follows:
+IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) processes the custom image file as follows:
 * Downloads the image file from the Cloud Object Storage instance.
 * Imports the image file into the attached storage.
 * Converts the image file into an image volume.

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -19,7 +19,10 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -28,9 +31,9 @@ Site planners can use this information to assess the physical site and operation
 
 
 
-Review the following requirements that your IBM {{site.data.keyword.powerSys_notm}} (On-premises) site must fulfill:
+Review the following requirements that your IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) site must fulfill:
 * Accommodate a fully configured 42U rack that is 7 ft tall.
-* Provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your IBM {{site.data.keyword.powerSys_notm}} (On-premises) site.
+* Provide secured and controlled access to the {{site.data.keyword.powerSys_notm}} racks in your IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) site.
 * Provide the flooring that supports the weight of the {{site.data.keyword.powerSys_notm}} racks.
 
 

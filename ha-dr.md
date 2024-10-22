@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-21"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -18,18 +18,19 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
 Both High Availability (HA) and Disaster Recovery (DR) are essential for business continuity. HA addresses local planned and unplanned outages for hardware or software. Disaster recovery addresses the catastrophic events during which the IBM Cloud region might become unavailable.
 
-Review the following topics to understand the HA and DR for Off-premises and On-premises offerings of IBM {{site.data.keyword.powerSys_notm}}:
+Review the following topics to understand the HA and DR for {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}:
 
-* [High availability and disaster recovery options (Off-premises)](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud)
-* [High availability and disaster recovery options (On-premises)](/docs/power-iaas?topic=power-iaas-ha-dr-private-cloud)
-
-
-
+* [High availability and disaster recovery options ({{site.data.keyword.off-prem}})](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud)
+* [High availability and disaster recovery options ({{site.data.keyword.on-prem}})](/docs/power-iaas?topic=power-iaas-ha-dr-private-cloud)

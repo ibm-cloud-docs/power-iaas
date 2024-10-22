@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-18"
 
 keywords: deploying a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, how-to
 
@@ -18,7 +18,11 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
+
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
 
 ---
 
@@ -35,7 +39,3 @@ The IBM provided central image repository for SAP offerings cannot be used to re
 {: note}
 
 An imported SAP image is stored into a single storage pool and can be deployed only in that single storage pool. To deploy the SAP image into other storage pools, you must import the image into those storage pools. If you use APIs for image import, you can define the storage pool where the images can be stored.
-
-
-
-

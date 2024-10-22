@@ -3,11 +3,11 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-18"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
-subcollection: power-iaas 
+subcollection: power-iaas
 
 ---
 
@@ -50,10 +50,10 @@ Virtual Cross Connect (VXC)
 :   A connection between any two endpoints on the Megaport network. Most connections support capacity ranging from 1 Mbps to 10 Gbps.
 
 Microsoft Azure ExpressRoute (ER)
-:   Extends your On-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider.
+:   Extends your {{site.data.keyword.on-prem}} networks into the Microsoft cloud over a private connection with the help of a connectivity provider.
 
 Microsoft Azure virtual network gateway
-:   A service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your On-premises infrastructure.
+:   A service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your {{site.data.keyword.on-prem}} infrastructure.
 
 ### Building the interconnectivity
 {: #build-interconnect}
@@ -69,8 +69,8 @@ The following diagram shows a high-level overview of the solution and explains h
 2. `IBM Cloud Direct Link` service is a routed, OSI L3 service. It offers a direct connection to the IBM Cloud Private network backbone, with low latency and uses BGP as the routing protocol. IBM Cloud Direct Link can be attached to most IBM Cloud IaaS platforms, or you can attach it to a Transit Gateway where it can provide private interconnectivity to all connections attached to a TGW. IBM Cloud does not provide built-in connection redundancy as part of the product. To establish redundant connectivity, you must acquire two connections on diverse cross-connect routers (XCRs) and configure BGP on each IBM Cloud Direct Link.
 3. `Megaport Cloud Router (MCR)` is a managed virtual router service that enables direct networking between endpoints on the Megaport network. MCR can be purchased as a stand-alone service to route traffic between different cloud environments without the user having a physical presence in that data center. It can also be connected to user Ports to route pertinent traffic back to a physical location. BGP is used as the routing protocol to learn and advertise routes to its connections.
 4. `A Port` is the physical point of connection between your organization’s network and the Megaport network. After you have configured a Port or an MCR, you can create `Virtual Cross Connects (VXCs)` to connect to services on the Megaport network. A VXC is a private point-to-point Ethernet connection between your A-End Port (MCR) and a B-End destination (CSPs, Ports, Megaport Marketplace services, or IX). In this scenario, the B-End destinations are IBM Cloud and Microsoft Azure.
-5. `Microsoft Azure ExpressRoute (ER)` extends your On-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. With ExpressRoute, you can establish OSI L3 connections to Microsoft cloud services, such as Microsoft Azure and Microsoft 365. Redundancy is built in ExpressRoute in every peering location for high availability. ExpressRoute uses BGP as the routing protocol to advertise and learn routes from Microsoft Azure to the connected router, and to/from MCR in this example.
-6. `Microsoft Azure virtual network gateway`is a service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your On-premises infrastructure. It acts as a router between your vNets and your On-premises network (in this case, IBM Cloud).
+5. `Microsoft Azure ExpressRoute (ER)` extends your {{site.data.keyword.on-prem}} networks into the Microsoft cloud over a private connection with the help of a connectivity provider. With ExpressRoute, you can establish OSI L3 connections to Microsoft cloud services, such as Microsoft Azure and Microsoft 365. Redundancy is built in ExpressRoute in every peering location for high availability. ExpressRoute uses BGP as the routing protocol to advertise and learn routes from Microsoft Azure to the connected router, and to/from MCR in this example.
+6. `Microsoft Azure virtual network gateway`is a service that enables you to establish connectivity between your `virtual network (vNet)` in Microsoft Azure and your {{site.data.keyword.on-prem}} infrastructure. It acts as a router between your vNets and your {{site.data.keyword.on-prem}} network (in this case, IBM Cloud).
 
 ## Configuring the solution architecture
 {: #configure-sol-arch}
@@ -90,7 +90,7 @@ This solution uses the following networks as shown in the table:
 |-------------------------------------|-----------------|
 | {{site.data.keyword.powerSys_notm}} | 10.100.10/24    |
 | Microsoft Azure                               | 10.200.10/24    |
-| On-premises networks                | 10.0.10/24      |
+| {{site.data.keyword.on-prem}} networks                | 10.0.10/24      |
 {: caption="Network details" caption-side="bottom"}
 
 ## Configuring the {{site.data.keyword.powerSys_notm}} environment and Transit Gateway in IBM Cloud
@@ -210,7 +210,7 @@ To find details for IBM Cloud Direct Link connectivity locations, see the [IBM C
 ### Creating a connection from MCR to IBM Cloud Direct Link
 {: #create-connection-mcr}
 
-IBM Direct Link lets you seamlessly create private connections between your On-premises and cloud resources. Direct Link Connect with Megaport extends your organizations data center network to public clouds to offer better performance, higher throughput, and security to IBM Cloud environments.
+IBM Direct Link lets you seamlessly create private connections between your {{site.data.keyword.on-prem}} and cloud resources. Direct Link Connect with Megaport extends your organizations data center network to public clouds to offer better performance, higher throughput, and security to IBM Cloud environments.
 
 #### Creating a Megaport connection to IBM Direct Link
 {: #create-megaport-to-dl}

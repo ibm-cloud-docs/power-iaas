@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-21"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -19,9 +19,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -35,11 +39,11 @@ To create and configure an {{site.data.keyword.powerSysFull}}, complete the foll
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 3. Click **Create a workspace**.
-4. Select **Location type** as On-premises or Off-premises.
+4. Select **Location type** as {{site.data.keyword.on-prem}} or {{site.data.keyword.off-prem}}.
 
-   For On-premises location types, select the name of the created satellite location from the **Satellite Location** drop-down list.
+   For {{site.data.keyword.on-prem}} location types, select the name of the created satellite location from the **Satellite Location** drop-down list.
 
-   For Off-premises location types, select the IBM Cloud region that is closest to your physical location from the Satellite Location drop-down list. For the list of available IBM Cloud regions, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
+   For {{site.data.keyword.off-prem}} location types, select the IBM Cloud region that is closest to your physical location from the Satellite Location drop-down list. For the list of available IBM Cloud regions, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
 
 5. In the **Details** section, provide a name for the workspace and select the resource groups.
 6. Click **Continue**. The selected workspace details are displayed on the Summary page.
@@ -62,7 +66,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     The virtual server instances that are associated with the selected workspace are displayed.
 
-    [On-premises]{: tag-red} if an error occurs immediately after creating or opening the virtual server instance, you must delete it.
+    [{{site.data.keyword.on-prem}}]{: tag-red} if an error occurs immediately after creating or opening the virtual server instance, you must delete it.
     {: note}
 
 2. To create a new instance, click **Create instance**.
@@ -91,7 +95,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-    [On-premises]{: tag-red} if you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
+    [{{site.data.keyword.on-prem}}]{: tag-red} if you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
     {: note}
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
@@ -249,10 +253,10 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 {: caption="Provisioning a VM with or without a boot volume." caption-side="top"}
 
 
-## Configuring large quantity of data volumes on Off-premises
+## Configuring large quantity of data volumes on {{site.data.keyword.off-prem}}
 {: #config-large-vol}
 
-[Off-premises]{: tag-blue}
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
 You can configure your virtual server instance (VM) while provisioning to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
 
@@ -268,7 +272,7 @@ You can configure your virtual server instance (VM) while provisioning to enable
 
 
 
-IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes except for the virtual machines in the `CHE01`, `LON06`, `MAD04`, and `TOR01` data centers. Configuring the large quantity of data volumes is supported only on Off-premises.
+IBM i virtual machines in all the data centers support the configuration of large quanitity of data volumes except for the virtual machines in the `CHE01` data center. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
 {: note}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -18,9 +18,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -83,7 +87,7 @@ Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current 
 
 
 
-The IBM {{site.data.keyword.powerSys_notm}}(On-premises) supports IBM i 7.3, or later and IBM i COR.
+The IBM {{site.data.keyword.powerSys_notm}}({{site.data.keyword.on-prem}}) supports IBM i 7.3, or later and IBM i COR.
 {: note}
 
 

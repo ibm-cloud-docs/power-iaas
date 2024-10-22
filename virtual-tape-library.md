@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-21"
 
 keywords: managing virtual tape library, ppcaas, virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide
 
@@ -18,9 +18,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -34,7 +38,7 @@ Here are some of the StorSafe VTL Benefits
 * High Performance. Improve both backup and recovery.
 * Modernize. FalconStor is 100% compatible with existing backup software, hardware, and operational procedures.
 
-VTL is offered through the IBM Cloud Catalog for both Off-premises and On-premises with the following names:
+VTL is offered through the IBM Cloud Catalog for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} with the following names:
 - [FalconStor StorSafe VTL for Power On-Premises](https://cloud.ibm.com/catalog/services/falconstor-storsafe-vtl-for-power-on-premises){: external} and
 - [FalconStor StorSafe VTL for PowerVS Cloud](https://cloud.ibm.com/catalog/content/vtltile-tags-v10.03-01-f1e88e51-7e3d-4fbc-a7ed-3ab9adb2afea-global){: external}.
 

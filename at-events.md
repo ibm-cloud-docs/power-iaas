@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -18,9 +18,14 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
+
 
 ---
 
@@ -143,7 +148,7 @@ The following events are to work with storage capacity in your {{site.data.keywo
 |:-------------------------|:----------------------------|
 | power-iaas.storage-capacity.list       | Lists all the storage capacity     |
 | power-iaas.storage-capacity.read       | Reads a storage capacity     |
-| power-iaas.pod-capacity.list [On-premises]{: tag-red} | Lists system and storage capacity for an On-premises pod|
+| power-iaas.pod-capacity.list [{{site.data.keyword.on-prem}}]{: tag-red} | Lists system and storage capacity for an {{site.data.keyword.on-prem}} pod|
 {: caption="List of events: Storage capacity" caption-side="top"}
 
 ### Storage pools events

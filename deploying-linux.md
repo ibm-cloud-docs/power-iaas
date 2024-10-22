@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-21"
 
 keywords: linux deployment, ova, powervc capture, vios
 
@@ -20,9 +20,13 @@ subcollection: power-iaas
 
 ---
 
-IBM {{site.data.keyword.powerSys_notm}} located in IBM data centers: [Off-premises]{: tag-blue}
 
-IBM {{site.data.keyword.powerSys_notm}} Private Cloud: [On-premises]{: tag-red}
+
+{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
@@ -122,5 +126,3 @@ Done verifying resources.
 # ls -l /datafs/linux_20200511101424.ova.gz
 -rw-r--r--    1 root     staff    1890363097 May 11 2020  /datafs/linux_20200511101424.ova.gz
 ```
-
-
