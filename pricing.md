@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-10-30"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -43,9 +43,15 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 
 [^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-[^3]: Power System S1022 is available only in DAL10, MAD02, MAD04, and WDC07.
+[^3]: Power System S1022 is available only in DAL10,MAD02, MAD04, and WDC07.
 
 [^4]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
+
+
+
+
+
+
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 {: shortdesc}

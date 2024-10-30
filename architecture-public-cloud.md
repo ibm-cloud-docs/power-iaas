@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-10-30"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -137,6 +137,10 @@ You can compare the performance of your current environment with the environment
 {: caption="Hardware overview (Non-US)" caption-side="top"}
 {: #hw-spec-4}
 {: tab-title="Non-US"}
+
+
+
+
 
 For a complete list of supported data centers, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 {: note}
