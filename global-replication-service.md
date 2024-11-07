@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-06"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -29,7 +29,7 @@ subcollection: power-iaas
 
 
 
-Disasters are unplanned events that cause severe damage, incur a loss to our business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
+Disasters are unplanned events that cause severe damage, incur a loss to business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
 {: shortdesc}
 
 
@@ -64,7 +64,7 @@ The charges for GRS depend on the location where you create a replication-enable
 Replication-enabled volumes incur the following charges:
 
 - A base charge for the replication capability is based on the size of the replication-enabled volume under the part number "GLOBAL_REPLICATION_STORAGE_GIGABYTE_HOURS".
-- The charges for replication-enabled volumes are two times the size of the volume against the storage part numbers based on the tier of the volume against the primary volume.
+- The replication-enabled volumes charges are two times the size of the volume against the storage part numbers. This is based on the tier of the volume against the primary volume.
 
     Auxiliary volumes are not charged separately and are part of the primary volume charges.
     {: note}
@@ -160,12 +160,12 @@ To enable volume replication on the secondary site, complete the following steps
 
     You can create a standby virtual server instance with the onboarded volumes or attach the onboarded volumes to the existing virtual server instance.
 
-Now you have the setup ready to enable replication service. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
+Now, you have the setup ready to enable replication service. See [Performing a failover and failback operation](/docs/power-iaas?topic=power-iaas-getting-started-GRS#perform-fail-over-back) section to understand the recovery when a site failure occurs.
 
 ## Onboarding auxiliary volumes
 {: #onboard-aux-vol}
 
-The onboard auxiliary volume is required to manage the replicated volume on a remote site and perform volume recovery.
+The onboard auxiliary volume is needed to manage the replicated volume on a remote site and perform volume recovery.
 
 You must have the editor access on the source and target {{site.data.keyword.powerSys_notm}} workspaces to onboard the auxiliary volume. The source and target workspace must be owned by the same account ID.
 {: note}
@@ -192,6 +192,7 @@ To access the auxiliary volumes from the secondary site upon a primary site fail
 
 
 To switch back to the volume group on the primary site, you must perform the volume group stop and start operations from the primary site. You can use the volume group `stop` command and wait until `ReplicationStatus` status changes to `disabled` value. Then, use the volume group `start` command with the `--source master` option to start the volume group. For more information about commands, see [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API.
+
 
 
 
@@ -274,7 +275,7 @@ Use the [ibmcloud pi volume-update](https://cloud.ibm.com/docs/power-iaas-cli-pl
 ## Deleting a primary volume
 {: #delete-prime-vol}
 
-To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Also, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
 
 Once you initiate the action to delete the volume, the action cannot be undone.
 {: note}
@@ -283,9 +284,9 @@ To delete a primary volume, complete the following steps:
 
 
 
-1. If the primary volume is associated with a volume group, remove the primary volume from the volume group.
+1. Remove the primary volume from the volume group, if the primary volume is associated with a volume group.
 2. Delete the primary volume from the primary site. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
-3. If the auxiliary volume is associated with a volume group, remove the auxiliary volume from the volume group.
+3. Remove the auxiliary volume from the volume group, if the auxiliary volume is associated with a volume group.
 4. Delete the auxiliary volume from the secondary site.
 
 When you disable the replication service on the primary volume or delete a primary volume, the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary site is associated with a volume group, remove the auxiliary volume from the volume group. Delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
@@ -340,11 +341,9 @@ To create a volume group, you can use the CLI command, [ibmcloud pi volume-group
 ### Updating a volume group
 {: #update-vol-grp}
 
-You can add or remove storage volumes from a volume group. If you add storage volumes to a volume group on the primary site after the primary volumes are onboarded, then you must also onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
+You can add or remove storage volumes from a volume group. After onboarding primary volumes, if you add storage volumes to a volume group on the primary site after the primary volumes, you must onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
 
 To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
-
-
 
 
 ## Limitations of GRS
@@ -373,7 +372,7 @@ The limitations of GRS are as follows:
 ## Best practices for GRS
 {: #best-practices-GRS}
 
-- You must set the **Shareable** and **Bootable** flag explicitly on onboarded volumes, if required.
+- Set the **Shareable** and **Bootable** flag explicitly on onboarded volumes, if required.
 - Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary site. Verify that the volume group is created successfully and it is in a consistent copying state by using [get storage details of the volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
 * Get volume details by using the following methods:
     * [Power Cloud API](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external}.
@@ -384,5 +383,5 @@ The limitations of GRS are as follows:
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}.
 
 - When you add or remove a primary or an auxiliary volume from a volume group from one site, perform the same operation from the other site to keep the data in sync.
-- You must delete the volumes from primary and secondary site. Volumes are charged when you delete an auxiliary volume but fail to delete the primary volume.
-- You must use primary site for all the volume operations and perform operations on auxiliary volume on the secondary site only during failover.
+- Delete the volumes from primary and secondary site. Volumes are charged when you delete an auxiliary volume but fail to delete the primary volume.
+- Use primary site for all the volume operations and perform operations on auxiliary volume on the secondary site only during failover.

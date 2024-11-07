@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-07"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -142,7 +142,6 @@ For more information about updating the volume groups for GRS, see [Updating a v
 
 
 
-
 ### Resizing a storage volume
 {: #resizing-volume}
 {: help}
@@ -186,7 +185,7 @@ To apply or verify an IBM i software key, the VM must be active and in a running
 {: help}
 {: support}
 
-To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Additionally, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Also, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
 
 Once you initiate the action to delete the volume, the action cannot be undone.
 {: note}
@@ -213,7 +212,7 @@ You can delete a single virtual server instance by completing the following step
     - To delete the data volumes that are attached to the virtual server instance. The data volumes are not deleted if they are attached to multiple virtual server instances.
     - To delete any auxiliary volumes on the secondary site.
 3. Type the virtual server instance name in the textbox.
-4. Click **Delete virtual server instance** to initiate the deletion request.
+4. Click **Delete the virtual server instance** to initiate the deletion request.
 
 After the deletion request is initiated, the action cannot be undone.
 {: note}

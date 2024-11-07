@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-07"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracker events
+# Activity tracker events for IBM Power Virtual Server
 {: #at-events}
 
 ---
@@ -29,16 +29,32 @@ subcollection: power-iaas
 
 ---
 
+
 {{site.data.keyword.powerSys_notm}} Activity Tracker Events migrated to the CADF Event standard on 29 January, 2024. With the implementation of this change, some of the event fields are not sent or replaced by the [new format](#at-response-sample).
 {: note}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSysFull}} in {{site.data.keyword.cloud}}.
+
+
+{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.powerSysFull}}, generate activity tracking events.
 {: shortdesc}
+
+Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
+
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](https://github.ibm.com/ibmcloud/content-kit/blob/main/docs/atracker?topic=atracker-about){: external}.
+
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+
+As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of `30 March 2025`. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before `30 March 2025`. During the migration period, customers can use {{site.data.keyword.at_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+{: important}
+
+
+
+
 
 {{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [Getting started tutorial for {{site.data.keyword.atracker_short}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-{{site.data.keyword.powerSysFull}} automatically generates events so that you can track activity on your service.
 
+{{site.data.keyword.powerSysFull}} automatically generates events so that you can track activity on your service.
 
 ## Management events
 {: #at-actions-management}
@@ -296,9 +312,9 @@ Events are automatically forwarded to North America, Europe, Tokyo, or Sydney ge
 - All Sydney data center from Sydney, and
 - All Japan data center from Tokyo.
 
-For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Activity Tracker, see [Activity Tracker events by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
+For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Logs, see [IBM Cloud services that generate Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
-{{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch).
+{{site.data.keyword.at_short}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_short}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-launch){: external}.
 
 ## Activity tracker sample response format
 {: #at-response-sample}

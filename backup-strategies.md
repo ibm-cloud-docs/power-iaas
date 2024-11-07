@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-07"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -160,7 +160,13 @@ To create and deploy a backup server instance from the IBM Cloud catalog, comple
 ### Pricing
 {: #baas-pricing}
 
-When you use the Backup Offering, you are billed monthly through IBM Cloud for amount of data backed up for the region and are billed hourly (at .069 GB/hour basis).
+
+
+
+When you use the Backup Offering, you are billed monthly through IBM Cloud for the amount of data backed up for the region and are billed hourly. For more information about pricing plans, see [Cobalt Iron - Secure Automated Backup](https://cloud.ibm.com/catalog/services/cobalt-iron---secure-automated-backup-){: external} page accessible from the IBM Cloud [catalog](https://cloud.ibm.com/catalog){: external}. You can generate an estimate of the cost based on your expected usage from the **Summary** pane.
+
+
+
 
 Connectivity between {{site.data.keyword.powerSys_notm}} instances and the backup servers is established via a Transit Gateway connection to the backup VPC. Name resolution is for the backup server connections, which is also required. You can accomplish this using the agent system's /etc/hosts file, or by adding CNAME entries to your agent system's DNS server. These elements need to be deployed in your account (Transit Gateway and VPC provisioning and setup happens through automation when the Backup Offering is provisioned).
 
