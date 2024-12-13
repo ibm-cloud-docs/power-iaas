@@ -15,11 +15,11 @@
         "href": "/docs/power-iaas?topic=power-iaas-creating-power-virtual-server"
       },
       {
-        "title": "About IBM Power Virtual Server (Off-premises) architecture, key features, and hardware specifications",
+        "title": "About IBM Power Virtual Server in IBM data center architecture, key features, and hardware specifications",
         "href": "/docs/power-iaas?topic=power-iaas-on-cloud-architecture"
       },
       {
-        "title": "About IBM Power Virtual Server (On-premises) architecture, key features, and hardware specifications",
+        "title": "About IBM Power Virtual Server Private Cloud in Client location architecture, key features, and hardware specifications",
         "href": "/docs/power-iaas?topic=power-iaas-private-cloud-architecture"
       },
       {
@@ -56,8 +56,8 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "21 October 2024",
-        "title": "You can now configure IBM i virtual machine in all the data centers except for the virtual machines in the `CHE01` data center to support the attachment of large quantity of data volumes."
+        "date": "12 December 2024",
+        "title": "All IBM Power Virtual Server data centers are now PER-enabled, except for the CHE01 and MON01 data centers."
       }
     ]
   }

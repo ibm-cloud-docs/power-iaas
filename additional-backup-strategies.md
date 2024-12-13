@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -20,17 +20,17 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 ---
 
 The additional backup strategies that you can use are as follows:
 
 ## IBM teams and managed services
-{: #teams-managed-services}
+{: #teams-managed-services-backup}
 
 You can engage IBM teams and services to assist you throughout the migration lifecycle.
 

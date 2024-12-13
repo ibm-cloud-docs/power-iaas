@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -51,7 +51,7 @@ The network traffic in a PER environment can flow in the following two ways:
   - `1` - Traffic from ACI tenants is forwarded to the PER.
   - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 
-- Accessing cloud services that can access the resources attached to each other.
+- Accessing cloud services that can access the resources that are attached to each other.
   - `1`	- Traffic from ACI tenants is forwarded to the PER.
   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers. The Service Gateway converts the destination addresses to ADN and CSE networks.
   - `4`	- The converted traffic from NAT is forwarded to PER.
@@ -76,15 +76,49 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 ## Migrating to PER
 {: #migrate-per}
 
-The existing {{site.data.keyword.powerSys_notm}} workspaces do not support PER. To use PER, create a new workspace or to [migrate your workspace to PER](/docs/power-iaas?topic=power-iaas-migrate-ws-per) with a support ticket.
 
-The automation to migrate an existing network is not supported. However, if your existing workspaces are in a PER-enabled data center and use a Cloud connection with Transit Gateway, you can connect to a new PER-enabled network instance.
 
-Existing {{site.data.keyword.powerSys_notm}} workspaces continue to support Cloud connection and VPN as a Service (VPNaaS).
 
-Existing non-PER workspaces continue to use existing routers. To use the high-performance routers provided with PER, create a new PER-enabled workspace to deploy VMs while you continue to use the non-PER-enabled workspace. To migrate the existing workloads into the new PER-enabled workspace, back up the data from the existing workspace and restore the data into the PER-enabled new workspace.
 
-Complete the following steps to connect an existing workspace to an existing Transit Gateway by using the IBM Cloud command-line interface (CLI):
+
+The migration of an existing workspace to PER is supported through CLI by using the [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command with the following values:
+
+- `per-migrate-start`: Initiates the migration of the workspace to PER.
+- `per-migrate-validate`: Removes the Cloud Connections for the workspace from the network database. Use this command after you remove the Cloud Connections for the workspace from the Transit Gateway.
+
+
+Complete the following steps to migrate the workspace to PER:
+
+1. Remove the following connections:
+
+   * Virtual private network (VPN) in your account that is connected to the data center of the workspace.
+   * Manually configured VLANs by opening a support ticket.
+   * Overlapping subnet CIDRs in your workspace.
+
+2. Initiate the migration by using the `per-migrate-start` value with [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
+
+   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to get the migration status of your workspace. In the CLI response, once the `migrationStatus` property changes to `migrating` and `state` property changes to `user-validation` you can continue to complete the next steps.
+
+3. Attach the workspace to the Transit Gateway to validate the connectivity of the workspace with other workspaces.
+4. Remove the Cloud Connections from the Transit Gateway.
+5. Remove the Cloud Connections from the network database by using the `per-migrate-validate` value with [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
+
+   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to view the Cloud Connection clean up progress of the migration process. In the CLI response, once the `migrationStatus` property is not included and `state` property is set to `Active` state, the migration process is complete and the workspace and network operations can be resumed.
+
+   You cannot delete the workspace and add or delete the subnets that are attached to the workspace until you complete the migration process by using the `per-migrate-validate` command.
+   {: note}
+
+If an error occurs during the migration process, open a support ticket.
+
+The PER status is displayed in the **PER status** column on the [**Workspaces**](https://cloud.ibm.com/power/workspaces) page. Also, you can select a specific workspace to view its PER status on the **Workspace details** page.
+
+If you are migrating the existing workloads to a new PER-enabled workspace, back up the data from the existing workspace, and restore the data to the new PER-enabled workspace.
+
+Currently, the `CHE01` and `MON01` data centers do not support PER. Therefore, continue to use Cloud Connections for interconnectivity between other parts of the IBM network.
+
+
+
+Complete the following steps to connect an existing non-PER workspace to an existing Transit Gateway by using the IBM Cloud command-line interface (CLI):
 
 1. Use the `ibmcloud pi workspaces` command to list the {{site.data.keyword.powerSys_notm}} workspaces in your account.
    Make note of the cloud resource name (CRN) for the workspace that you want to connect to the Transit Gateway.
@@ -101,6 +135,13 @@ For example, `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name pow
 
 ## Creating a PER workspace
 {: #create-per-workspace}
+
+
+
+All the data centers, except `CHE01` and `MON01`, are PER-enabled. When you create a new workspace in the PER-enabled data center, by default the workspace is PER-enabled.
+
+
+
 
 To create a PER workspace, follow the steps that are mentioned in [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and choose a PER-enabled data center.
 
@@ -137,7 +178,7 @@ Transit Gateway is required to connect with VPC and classic infrastructure. To a
 
 Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virtual server instance that was created on a PER-enabled workspace. You can also add VPC and classic infrastructures as connection.
 
-The connections attached to the Transit Gateway can communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources associated with each other.
+The connections attached to the Transit Gateway can communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources that are associated with each other.
 
 Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}
@@ -201,9 +242,10 @@ The following table shows the available data centers for {{site.data.keyword.pow
 | `DAL10` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL12` | ![Checkmark icon](./images/checkmark.svg) |
 | `DAL13` | ![Checkmark icon](./images/checkmark.svg) |
+| `DAL14` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA04` | ![Checkmark icon](./images/checkmark.svg) |
 | `FRA05` | ![Checkmark icon](./images/checkmark.svg) |
-| `LON04` | X |
+| `LON04` | ![Checkmark icon](./images/checkmark.svg) |
 | `LON06` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD02` | ![Checkmark icon](./images/checkmark.svg) |
 | `MAD04` | ![Checkmark icon](./images/checkmark.svg) |

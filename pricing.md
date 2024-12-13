@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-30"
+lastupdated: "2024-12-12"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,21 +13,19 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}})
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}
 {: #pricing-virtual-server-on-cloud}
 
 ---
 
-
-
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---
 
 {{site.data.keyword.powerSysFull}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
-All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud), are illustrative and do not represent the actual amounts that are used for billing. To calculate the exact pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To calculate the exact pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
 {: important}
 
 
@@ -36,21 +34,19 @@ All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/
 | E980 (9080-M9S)   |  143         | Up to 15,307 GB [^1]                 |
 | S922 (9009-22A) [^2]   |  15          | Up to 942 GB                    |
 | S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB         |
-| E1080 (9080-HEX)   |  240          | up to 64 TB                    |
+| E1080 (9080-HEX)   |  240          | Up to 64 TB                    |
+|  E1050 (9043-MRX) [^5]   |   96          | Up to  8,192 GB                |
 {: caption="Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
 [^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-[^3]: Power System S1022 is available only in DAL10,MAD02, MAD04, and WDC07.
+[^3]: Power System S1022 is available only in DAL10,  DAL14, MAD02, MAD04, and WDC07.
 
 [^4]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-
-
-
-
+[^5]: Available only at `DAL14` data center.
 
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
@@ -68,13 +64,13 @@ Following are the benefits of consumer ID:
 - Charges are now broken down by resource that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
 
 To view the usage details at the resource level, do the following steps:
-1. Open the [Billing and Usage](https://cloud.ibm.com/billing){: external} page in the IBM Cloud console.
+1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. On the left navigation menu, click **Usage**.
 3. Click **View plans** for the entry- **Workspace for Power Virtual Server**. A page listing all your workspaces is opened.
 4. Click **View details** for a workspace. A page listing the usage details of a selected workspace is opened.
 5. Scroll to the bottom of the page and click **View instance details**. A page listing the usage details of the selected virtual server instance is opened.
 
-For more information on the billing and usage page, see [Billing and Usage documentation](/docs/billing-usage?topic=billing-usage-viewingusage&interface=ui).
+For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
 ## Monthly usage
 {: #pricing-monthly-usage}
@@ -83,7 +79,7 @@ For more information on the billing and usage page, see [Billing and Usage docum
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
 
-All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud), are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
@@ -216,7 +212,7 @@ You are charged different rates depending on the processor type that you choose 
 
 Each processor has a different hourly rate depending on its type (**Dedicated** vs **Shared uncapped**). Processors also have a different hourly rate depending on the system that they are on **(Dedicated S922** vs **Dedicated E980**). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
-All prices that are mentioned in the topic, [Pricing for Power Virtual Server](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud), are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
 The following tables show how different processor types affect the cost per system:
@@ -320,8 +316,8 @@ The following table shows the use case on how you are billed based on the storag
 
 | Name     | Size    | State/Description    |
 |----------|---------|----------------------|
-|vm-1 deployed AIX-71|30 GB|Volume of AIX-71 + \n data-volume-2 + \n data-volume-3 \n (volumes that are created from copying \n the deployed AIX-71 image, \n Data volumes are already accounted.)|
-|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 + \n data-volume-5 \n (volumes that are created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)|
+|vm-1 deployed AIX-71|30 GB|Volume of AIX-71 +  \n data-volume-2 +  \n data-volume-3  \n (volumes that are created from copying  \n the deployed AIX-71 image,  \n Data volumes are already accounted.)|
+|vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 +  \n data-volume-5  \n (volumes that are created from copying  \n the deployed IBMi-74-001 image,  \n Data volumes are already accounted.)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
 {: caption="Account billable for storage use case" caption-side="top"}

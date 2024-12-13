@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-03"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -18,12 +18,10 @@ subcollection: power-iaas
 
 ---
 
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -40,7 +38,7 @@ Before you open a support ticket against {{site.data.keyword.powerSysShort}}, re
 {: #support-case-IBM-cloud}
 
 
-To open a support ticket for {{site.data.keyword.powerSys_notm}} {{site.data.keyword.off-prem}} or {{site.data.keyword.on-prem}}, complete the following steps:
+To open a support ticket for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} or in {{site.data.keyword.on-prem}}, complete the following steps:
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/catalog){: external} with your IBM Cloud account credentials.
 2. In the menu bar, click **Help (![Help](../icons/help.svg "Help"))** icon. Select the **Support center** option.

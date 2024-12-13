@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-03"
 
 keywords: power, power server, private cloud, safety notice
 
@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 ---
 

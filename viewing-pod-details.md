@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-03"
 
 keywords: viewing pod, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -14,14 +14,14 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Viewing IBM {{site.data.keyword.powerSys_notm}} pod details ({{site.data.keyword.on-prem}})
+# Viewing IBM {{site.data.keyword.powerSys_notm}} pod details in {{site.data.keyword.on-prem}}
 {: #view-pods}
 
 ---
 
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---

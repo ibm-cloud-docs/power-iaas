@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-12-03"
 
 keywords: power, SAP, full system profiles
 
@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---

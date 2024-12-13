@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-11-07"
+lastupdated: "2024-12-12"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 
@@ -380,7 +380,7 @@ The following code snippets show the differences between the old and new activit
         "sshKeys": [],
         "tenantID": "xxxxxxxxxxxxxxxxxxxx"
     },
-    "message": "{{site.data.keyword.powerSys_notm}}: read tenant xxxxxxxxxxxxxxxxxxxx ",
+    "message": "Power Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
     "observer": {
         "name": "ActivityTracker"
     }

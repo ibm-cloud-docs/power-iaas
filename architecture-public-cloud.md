@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-30"
+lastupdated: "2024-12-12"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -14,15 +14,13 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Architecture for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}})
+# Architecture for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}
 {: #on-cloud-architecture}
 
 
 ---
 
-
-
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 ---
 
@@ -33,7 +31,7 @@ Review the following topics to understand the {{site.data.keyword.powerSys_notm}
 *  [High-level architecture](#high-level-architecture-on-cloud)
 *  [Key features](#key-features-on-cloud)
 *  [Hardware specifications](#hardware-specifications-on-cloud)
-*  [Data sheets](#data-sheets)
+*  [Data center capabilities](#dc-capabilities)
 *  [Storage tiers](#storage-tiers)
 *  [Public and private networks](#public-private-networks)
 
@@ -96,47 +94,77 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - IBM Power S922 (9009-22G)
 - IBM Power E980 (9080-M9S)
 - IBM Power E1080 (9080-HEX)
-- IBM Power S1022 (9105-22A).
+- IBM Power S1022 (9105-22A)
+-  IBM Power E1050 (9043-MRX)[^1]
+
+[^1]: Available only at `DAL14` data center.
 
 For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs-draft/power-iaas?topic=power-iaas-on-cloud-architecture#data-sheets) and the hardware overview table.
 
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
 
-## Data sheets
-{: #data-sheets}
+
+
+
+
+
+## Data center capabilities
+{: #dc-capabilities}
+
+You can check and compare your data center capabilities among three different data centers on the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console. You can also use the external interfaces such as API, CLI, and Terraform to check your data center capabilities.
+
+For example, you can determine the support for the following capabilities in each data center:
+- Machine types (Power9 or Power10)
+- Global replication site pair(s)
+- Dedicated host types
+
+The IBM data centers have the following hardware components:
+
+* [Computes](#computes)
+* [Storage](#storage)
+* [Networking](#networking)
+
+
+### Compute
+{: #computes}
+
+The IBM data centers are configured with one or more of the following IBM Power Systems:
 
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 * [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
 * [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
+* [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^2]
 
-| Compute     | Storage      | Network      |
-|------------ | ------------ | ------------ |
-| * Power S922 (9009-22A) \n * Power S922 (9009-22G) \n * Power E980 (9080-MHE) \n * Power E1080 (9080-HEX) \n * Power S1022 (9105-22A)| * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) (WDC04 only) \n * 32 GB SAN infrastructure | * Cisco Nexus 9000 93180YC-EX (10G) \n * Cisco Nexus 9000 C9348GC-FXP (1G) \n * Avocent ACS8048 |
-{: class="simple-tab-table"}
-{: tab-group="hardware"}
-{: caption="Hardware overview (Washington, D.C.)" caption-side="top"}
-{: #hw-spec-1}
-{: tab-title="Washington, D.C. (WDC04, WDC06, and WDC07)"}
+[^2]: Available only at `DAL14` data center.
 
-| Compute  | Storage   | Network   |
-|--------- | --------- | --------- |
-| * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * V7000 SSD (no new VMs) \n * 32 GB SAN | * Cisco Nexus 9000 C9336PQ (Spine 10G) \n * Cisco Nexus 9000 C93180YC (10G) \n * Cisco Nexus 9000 C93108TC-EX (1G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8016 |
-{: class="simple-tab-table"}
-{: tab-group="hardware"}
-{: caption="Hardware overview (Dallas, TX)" caption-side="top"}
-{: #hw-spec-2}
-{: tab-title="Dallas (DAL10, DAL12, DAL13)"}
+For more information about your data center capabilities, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
-| Compute  | Storage   | Network   |
-|--------- | --------- | --------- |
-| * Power E980 (9080-M9S) \n * Power S922 (9009-22A) | * Flash Storage from IBM FS9000 series devices \n * 32 Gb SAN infrastructure | * Cisco Nexus 9000 N9K-C9364C (Spine 10G) \n * Cisco Nexus 9000 9348GC-FXP (Leaf 1G) \n * Cisco Nexus 9000 93180YC-FX (Leaf 25G) \n * Cisco UCS - APIC controller \n * Cisco ASR1001-HX Router \n * Avocent ACS8032DAC-400 |
-{: class="simple-tab-table"}
-{: tab-group="hardware"}
-{: caption="Hardware overview (Non-US)" caption-side="top"}
-{: #hw-spec-4}
-{: tab-title="Non-US"}
+
+### Storage
+{: #storage}
+
+IBM {{site.data.keyword.powerSys_notm}} data centers are enabled with IBM FlashSystem&reg;. For more information about IBM FlashSystem&reg;, see [IBM FlashSystem&reg;](https://www.ibm.com/flashsystem){: external}.
+
+### Networking
+{: #networking}
+
+The networking in the IBM data centers are configured using the following Cisco switches:
+
+* Cisco Nexus 9000 93180YC-EX (10G)
+* Cisco Nexus 9000 93180YC-FX (Leaf 25G)
+* Cisco Nexus 9000 9348GC-FXP (Leaf 1G)
+* Cisco Nexus 9000 C9348GC-FXP (1G)
+* Cisco Nexus 9000 C9336PQ (Spine 10G)
+* Cisco Nexus 9000 N9K-C9364C (Spine 10G)
+* Cisco Nexus 9000 C93180YC (10G)
+* Cisco Nexus 9000 C93108TC-EX (1G)
+* Cisco UCS - APIC controller
+* Cisco ASR1001-HX Router
+* Avocent ACS8048
+* Avocent ACS8016
+* Avocent ACS8032DAC-400
 
 
 
@@ -148,14 +176,14 @@ For a complete list of supported data centers, see [Creating a {{site.data.keywo
 ## Storage tiers
 {: #storage-tiers}
 
-IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O operation per second (IOPS) based storage as per your requirement. Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
+IBM {{site.data.keyword.powerSys_notm}} offers you the option to select an I/O operation per second (IOPS) based storage according to your requirement. Flexible IOPS is a tier-less storage offering that removes the notion of disk type and replace it with a storage pool. Each of the storage pools supports multiple storage tiers. The storage tiers are based on different IOPS levels.
 
 The following table shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
-| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
+| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS.  \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS.  \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
 {: caption="Tier and IOPS mapping" caption-side="bottom"}
@@ -166,11 +194,11 @@ The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which
 ### Working with the APIs
 {: #IOPS-api}
 
-Use the [List all supported storage tiers for this cloud instance]/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
+Use the [List all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
 
 The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default.
 
-The storage pool selection is based on the use of storage pool or storage affinity parameters. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPS all storage pools, support any tier level. Additionally, the storage tier is not tied to the storage pool.
+The storage pool selection is based on the use of storage pool or storage affinity parameters. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPS, all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
 
 ### Benefits of flexible IOPS
 {: #IOPS-benefits}
@@ -184,17 +212,21 @@ With flexible IOPS you can:
 * Deploy the boot volume of a virtual server instance in any of the supported IOPS levels. Additional data volumes that are attached to the new virtual server instance can have different IOPS levels from that of the boot volume of an instance.
 * Import an image from IBM Cloud Object Storage to any of the supported IOPS levels.
 
-Best practice for an image import is to use the default IOPS level (Tier 3). While deploying the image you can choose the IOPS level for your boot volume during virtual server instance deployment, the boot volume's IOPS level does not need to match the IOPS level of the image.
+Best practice for an image import is to use the default IOPS level (Tier 3). While deploying the image, you can choose the IOPS level for your boot volume. During virtual server instance deployment, the IOPS level of the boot volume need not match the IOPS level of the image.
 {: note}
+
+
 
 ### Selecting a storage tier
 {: #IOPS-tier-select}
 
-Flexible IOPS allows you to select a tier that you need for your:
-- Boot volume
-- Data volume
+Using Flexible IOPS, you can select a tier that you need for your [Boot volume](#boot-vol) or [Data volume](#data-vol).
 
-**Boot volume**
+
+#### Boot volume
+{: #boot-vol}
+
+
 When you are creating a virtual server instance, you can define the boot volume by performing the following steps:
 - Select your **Operating system**.
 - Select or clear the **Configure for Epic workloads** indicator.
@@ -212,7 +244,9 @@ When you are creating a virtual server instance, you can define the boot volume 
 All volumes that are created during VM provisioning are created on the same storage pool as the boot volume irrespective of their tier selection.
 {: note}
 
-**Data volume**
+#### Data volume
+{: #data-vol}
+
 To create a volume, complete the following steps:
 - Enter a unique name.
 - Enter the desired size of the volume.

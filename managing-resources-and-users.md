@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -34,7 +34,7 @@ IAM enables you to securely authenticate users, control access to {{site.data.ke
 
 
 
-[{{site.data.keyword.on-prem}}]{: tag-red} To display the **Infrastructure capacity** navigation menu for the IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
+[{{site.data.keyword.on-prem}}]{: tag-red} To display the **Infrastructure capacity** navigation menu for the {{site.data.keyword.on-prem-fname}} when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you have a `Viewer` role that is assigned in the IAM Access Management service.
 {: important}
 
 
@@ -56,7 +56,7 @@ The following table displays the IAM platform access roles and the corresponding
 | Platform access role | Type of access allowed                                                                                  |
 | -------------------- | ------------------------------------------------------------------------------------------------------- |
 | Viewer               | View instances and list instances.                                                                      |
-| Operator             | View instances and manage aliases, bindings (IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) only), and credentials.                     |
+| Operator             | View instances and manage aliases, bindings ({{site.data.keyword.on-prem-fname}} in client location only), and credentials.                     |
 | Editor               | View instances, list instances, create instances, and delete instances.                                 |
 | Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
 {: caption="IAM platform access roles" caption-side="bottom"}
@@ -69,7 +69,7 @@ You can use the service access roles to define the actions that the users can pe
 | Service access role | Description of actions |
 |-----------|-------------------------|
 | Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make changes to the resources. |
-| Manager | Configure all resources. You can perform the following actions: \n * Create instances \n * Increase storage volume sizes \n * Create SSH keys \n * Modify network settings \n * Create boot images \n * Delete storage volumes |
+| Manager | Configure all resources. You can perform the following actions:  \n * Create instances  \n * Increase storage volume sizes  \n * Create SSH keys  \n * Modify network settings  \n * Create boot images  \n * Delete storage volumes |
 {: caption="IAM service access roles" caption-side="bottom"}
 
 To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.

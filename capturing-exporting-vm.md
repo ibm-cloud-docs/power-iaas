@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-05"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 
@@ -47,9 +47,11 @@ You are charged different rates based on whether you export to the image catalog
 Before you capture an IBM i VM, ensure that any buffer I/O memory is flushed (written) to the disk by running the following command:
 
 ```text
-CHGASPACT OPTION(*FRCWRT)
+CHGASPACT ASPDEV(*SYSBAS) OPTION(*FRCWRT)
 ```
 {: codeblock}
+
+
 
 
 ## Using the {{site.data.keyword.powerSys_notm}} user interface to capture and export a VM

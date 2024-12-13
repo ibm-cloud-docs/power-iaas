@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-05"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -15,14 +15,14 @@ subcollection: power-iaas
 
 
 
-# Full Linux&reg; subscription for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})
+# Full Linux&reg; subscription for {{site.data.keyword.on-prem-fname}}
 {: #full-linux-sub}
 
 ---
 
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---

@@ -3,13 +3,16 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-22"
+lastupdated: "2024-12-12"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
 
 
 
@@ -22,18 +25,33 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---
 
-You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by using the IBM Cloud® Monitoring dashboards.
+You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by enabling [{{site.data.keyword.mon_full}}](#sysdig-create-monitor) for basic platform metrics or by installing the [Cloud Monitoring agent for Linux operating systems](#monitor-agnt). The Linux based agent can fetch over 100 infrastructure metrics.
 {: shortdesc}
 
-{{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} with Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
+{{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} powered by Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
-Platform metrics are currently available across all {{site.data.keyword.powerSys_notm}} data centers.
-{: note}
+
+
+
+
+
+
+## Installing the {{site.data.keyword.mon_short}} agent for Linux VMs
+{: #monitor-agnt}
+
+You must provision the {{site.data.keyword.mon_full}} service instance in the {{site.data.keyword.cloud_notm}}. Then, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts in a {{site.data.keyword.powerSys_notm}} workspace to collect the data and metrics from the active VMs.
+
+The {{site.data.keyword.mon_short}} can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring your environment for metrics, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-monitoring-linux-hosts-on-a-powervs-workspace){: external}.
+
+By default, the Linux based agent collects core infrastructure and network time series metrics. You can use the collected metrics to monitor the host. For more information about a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
+
+For more information about basic metrics, see [Platform metrics overview](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-ov).
+
 
 
 
@@ -108,6 +126,7 @@ To access the dashboard, complete the following steps:
 {: #cpu-metric}
 
 The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_cpu_util`|
@@ -120,6 +139,7 @@ The CPU utilization of a {{site.data.keyword.powerSys_notm}} instance in percent
 {: #mem-metric}
 
 The memory utilization of a {{site.data.keyword.powerSys_notm}} instance in percentage.
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_mem_util`|
@@ -132,6 +152,7 @@ The memory utilization of a {{site.data.keyword.powerSys_notm}} instance in perc
 {: #in-net-metric}
 
 The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface (or per MAC address).
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_incoming_bytes`|
@@ -144,6 +165,7 @@ The incoming bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 {: #out-net-metric}
 
 The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network interface.
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_network_outgoing_bytes`|
@@ -156,6 +178,7 @@ The outgoing bytes of a {{site.data.keyword.powerSys_notm}} instance per network
 {: #disk-rd-metric}
 
 The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_read_bytes`|
@@ -168,6 +191,7 @@ The total disk read bytes at {{site.data.keyword.powerSys_notm}} instance level.
 {: #disk-wrt-metric}
 
 The total disks write bytes at {{site.data.keyword.powerSys_notm}} instance level.
+
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_power_iaas_pvm_instance_disk_write_bytes`|
@@ -190,24 +214,25 @@ The following global attributes are available for segmenting all the metrics tha
 
 | Metric label name | Metric description | Valid values |
 |----------------|-----------------------|--------------|
-| `ibm_ctype` | Type of Cloud    | Valid value is `public`. |
-| `ibm_location` | Location of the monitored resource | Valid values are all the supported data center such as `WDC06`. |
-| `ibm_resource_group_name` | Resource group that is associated to the service instance. | Valid values are all the resource groups that are available in your account. |
-| `ibm_scope` | The extent of the data samples that are considered.  | The valid value is the IBM Cloud account ID. |
-| `ibm_service_name` | Name of the service that generates this metric. | The valid value is `power-iaas` |
+| `ibm_ctype` | Type of Cloud    | `public`. |
+| `ibm_location` | Location of the monitored resource | All the supported data center such as `WDC06` |
+| `ibm_resource_group_name` | Resource group that is associated to the service instance. | All the resource groups that are available in your account |
+| `ibm_scope` | The extent of the data samples that are considered.  | IBM Cloud account ID |
+| `ibm_service_name` | Name of the service that generates this metric. | `power-iaas` |
 {: caption="Table 7: Global segmentation attributes" caption-side="top"}
 
 ### Additional attributes
 {: #sysdig-attributes-add}
 
 The following additional attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
+
 | Metric label name | Metric description | Valid values |
 |----------------|-----------------------|--------------|
-| `ibm_service_instance` | The workspace ID | Valid value is the Power System {{site.data.keyword.powerSys_notm}} workspace ID |
-| `ibm_service_instance_name` | The workspace name | Valid value is the defined name of the workspace |
-| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource for which metric is available | Currently valid value is "pvm-instance" |
-| `ibm_resource` | ID of a resource | Currently valid value is the "pvm-instance" ID |
-| `ibm_resource_name` | Name of the resource | Valid value is the name of the {{site.data.keyword.powerSys_notm}} instance |
+| `ibm_service_instance` | The workspace ID | Power System {{site.data.keyword.powerSys_notm}} workspace ID |
+| `ibm_service_instance_name` | The workspace name | Defined name of the workspace |
+| `ibm_resource_type` | The type of {{site.data.keyword.powerSys_notm}} resource for which metric is available |  "pvm-instance" |
+| `ibm_resource` | ID of a resource | "pvm-instance" ID |
+| `ibm_resource_name` | Name of the resource | The name of the {{site.data.keyword.powerSys_notm}} instance |
 | `ibm_power_iaas_pvm_instance_network_mac_address` | The MAC address of the network interface that is attached to the {{site.data.keyword.powerSys_notm}} instance | Valid mac address |
 {: caption="Table 8: Additional segmentation attributes" caption-side="top"}
 

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-30"
+lastupdated: "2024-12-12"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -19,12 +19,10 @@ subcollection: power-iaas
 
 ---
 
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -66,7 +64,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     The virtual server instances that are associated with the selected workspace are displayed.
 
-    [{{site.data.keyword.on-prem}}]{: tag-red} if an error occurs immediately after you create or open the virtual server instance, you must delete it.
+    [{{site.data.keyword.on-prem}}]{: tag-red} If an error occurs immediately after you create or open the virtual server instance, you must delete it.
     {: note}
 
 2. To create a new instance, click **Create instance**.
@@ -95,7 +93,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-    [{{site.data.keyword.on-prem}}]{: tag-red} if you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
+    [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
     {: note}
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
@@ -113,7 +111,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 1. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
-    The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How does they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
+    The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
     {: important}
 
     When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as disabled. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
@@ -143,6 +141,94 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
+## Virtual Serial Number (VSN)
+{: #vsn}
+
+You can assign a virtual serial number (VSN) to a VM.
+
+
+
+Following are the characteristics of a VSN:
+
+* It has seven digits and is a unique string.
+* Is used for licensing and tracking the usage of the VM.
+* It can be associated with only one VM.
+* It can be assigned to a new or an existing VM.
+
+For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
+
+A VM is moved across different systems along with the VSN associated with it. Hence, when a VSN is associated with a VM you need not pin the VM to a host for licensing or entitlement purpose.
+
+
+
+VSN is a unique identifier and can be assigned only to one VM at a time. If you simultaneously deploy more than one VM assigning the same VSN, only one of the VMs gets the VSN and the others are deployed without the VSN being assigned.
+{: important}
+
+
+
+View the details of a VSN associated with a VM on the **VM details** page. You can also view the details of all the VSNs for the workspace that are either in `assigned` or in `retained` state on the **Virtual serial numbers** page on the IBM Cloud console.
+
+VSN is supported only on a VM with IBM i operating system.
+{: note}
+
+### Mapping customer account number to cloud account ID
+{: #VSN-id-map}
+
+
+
+To enable VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to associate your IBM customer number with your IBM Cloud account ID. For more information about opening a support ticket, see [Assigning a Virtual Serial Number to an IBM customer number in IBM Power Virtual Server](/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
+
+### Assigning a VSN to a new VM
+{: #VSN-new-VM}
+
+When you are creating a new VM, if you select **IBM i** OS, the **Virtual serial number** field is enabled. The default VSN value is **None**. You can edit the default value and select one of the following options:
+
+- **Auto-assign**: Assigns a system-generated VSN to your VM only if your `IBM Cloud account ID` is mapped with your `customer number` in the Entitled System Support (ESS).
+- **Select from retained VSNs**: Displays a list of retained VSNs. You can select one of the VSN to assign to your IBM i VM.
+
+
+
+
+VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a time.
+{: note}
+
+
+
+### Assigning a VSN to an existing VM
+{: #VSN-existing-VM}
+
+To assign a VSN for an existing IBM i VM, complete the following steps:
+
+- Shut down the IBM i VM that you plan to assign the VSN.
+- Open the VM to access the **Virtual server instance details** page.
+- Edit the **Virtual serial number** field.
+- From the **VSN assignment** list, select one of the following options:
+    - **None**: Does not assign a VSN to the VM.
+    - **Auto-assign**: Assigns a system-generated VSN to the VM.
+    - **Select from retained VSNs**: Displays the list of retained VSNs that can be selected.
+- Click **Save**.
+- Power on the VM.
+
+
+
+VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a time.
+{: note}
+
+
+
+
+
+### Releasing or retaining a VSN
+{: #VSN-rel-del}
+
+When you delete a VM, you can either retain the VSN or release it. When you edit the VM details to change the VSN, you can retain the existing VSN or release it. To release or retain a VSN, complete the following steps:
+1. To delete a VM, click the delete icon from the **Virtual server instance details** page. The **Delete virtual server instance** window appears.
+2. To edit the details of a VM, click the overflow menu (icon with 3 vertical dots) on the far right of the VM entry from the **Virtual server instance details** page. The **Edit virtual server instance** window appears.
+3. Toggle the **Release the VSN attached to the VM** option on the page as follows to release or retain the VSN:
+    - `Enable`: (Default) Deletes the VM and attaches the VSN to the VM that is released and no longer associated with your account.
+    - `Disable`: Deletes only the VM and retains the VSN that continues to be associated with your account. The retained VSN is moved to the retained VSN pool.
+
+By default, the **Release the VSN attached to the VM** option is enabled.
 
 
 
@@ -151,13 +237,13 @@ The following table provides more information about each {{site.data.keyword.pow
 
 | Field | Description |
 |----------|---------|
-| General | **Instance name**: Specify a name for your virtual server instance. \n **Number of Instances** : Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VM instance. If you choose the Machine type as E980, you can choose an [anti-affinity policy](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity) with maximum of 2 VM instances. \n **Placement group**: If you are creating only one instance, you can choose the placement group to control on which host this instance will be hosted on. Select a placement group from the list. To create a new placement group, select one of the following options: \n Same server : Select this option to place the VM on the same host. \n Different servers : Select this option to place the VM on a different host. \n **Colocation rules**: If you specify more than one instance, you can select the following naming conventions and colo rules: \n **No preference**: Select this option if you do not have a hosting preference. \n **Same server** : Select this option to host all instances on the same server. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Different server** :  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Numerical prefix** : Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *1Austin*. \n **Numerical postfix** : Select this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *Austin 1*. \n **VM pinning** : Select this option to pin your virtual machine. You can choose either a *soft* or *hard* pinning policy. \n [Learn more](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning). \n **Note:** When you create multiple instances of the virtual server, you must select **On** from the **Shareable** field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS, you cannot have shareable data volumes.|
+| General | **Instance name**: Specify a name for your virtual server instance.  \n **Number of Instances** : Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VM instance. If you choose the Machine type as E980, you can choose an [anti-affinity policy](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity) with maximum of 2 VM instances.  \n **Placement group**: If you are creating only one instance, you can choose the placement group to control on which host this instance will be hosted on. Select a placement group from the list. To create a new placement group, select one of the following options:  \n Same server : Select this option to place the VM on the same host.  \n Different servers : Select this option to place the VM on a different host.  \n **Colocation rules**: If you specify more than one instance, you can select the following naming conventions and colo rules:  \n **No preference**: Select this option if you do not have a hosting preference.  \n **Same server** : Select this option to host all instances on the same server. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited.  \n **Different server** :  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited.  \n **Numerical prefix** : Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *1Austin*.  \n **Numerical postfix** : Select this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *Austin 1*.  \n **VM pinning** : Select this option to pin your virtual machine. You can choose either a *soft* or *hard* pinning policy.  \n [Learn more](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).  \n **Note:** When you create multiple instances of the virtual server, you must select **On** from the **Shareable** field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS, you cannot have shareable data volumes.|
 | Machine type | Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external} and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}. |
 | Cores | The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. |
 | Memory | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, you are charged a higher price. For example, when you choose one core with 128 GBs of memory, you are charged the regular price for the first 64 GBs. After the first 64 GBs (64 - 128 GBs), you are charged a higher price. |
-| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For the SAP stock images it is mandatory to set an SSH key while creating the VM. You will be able to access the VM instance only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://wiki.centos.org/FAQ.html){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external}. \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
-| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
-| Public Networks | Select this option to use an IBM-provided public network. Cost is associated when you select this option. \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
+| Boot image | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For the SAP stock images, it is mandatory to set an SSH key while creating the VM. You will be able to access the VM instance only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://wiki.centos.org/FAQ.html){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications.  \n  To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external}.  \n  **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*.  \n  For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps). |
+| Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account.  \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**.  \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance. |
+| Public Networks | Select this option to use an IBM-provided public network. Cost is associated when you select this option.  \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
 
@@ -192,7 +278,7 @@ The following table explains the differences in VM configuration that may or mig
 
 |VM deployed for|Storage volume|Core type|Machine type|
 |-----|------|-----|-----|
-|Non-epic workloads|Tier 1 or Tier 3|Shared uncapped, \n shared capped, or \n dedicated| S922 or E980|
+|Non-epic workloads|Tier 1 or Tier 3|Shared uncapped,  \n shared capped, or  \n dedicated| S922 or E980|
 |Epic workloads|Always Tier 1|Always dedicated| E980 or E1080 |
 {: caption="VM configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
 
@@ -243,7 +329,7 @@ When you attach boot volume post provisioning of the VM, the boot image still sh
 |-------------|---------------------------------|
 | AIX         |  AIX (Empty image) image without boot volume             |
 | IBM i       |  IBM i (Empty image) image without boot volume           |
-| Linux       |  You must select one of the following images: \n * Linux - SUSE (Empty image) \n * Linux - RedHat Enterprise (Empty image) image without boot volume       |
+| Linux       |  You must select one of the following images:  \n * Linux - SUSE (Empty image)  \n * Linux - RedHat Enterprise (Empty image) image without boot volume       |
 | Linux for SAP (HANA)| Provision of VM without boot volume is not supported|
 | Linux for SAP (NetWeaver)| Provision of VM without boot volume is not supported|
 | Client supplied subscriptions | Provision of VM without boot volume is not supported for these OSs |

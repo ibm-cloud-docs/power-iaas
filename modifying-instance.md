@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-11-07"
+lastupdated: "2024-12-12"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -21,10 +21,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -139,6 +139,16 @@ For more information about updating the volume groups for GRS, see [Updating a v
 
 
 
+Verify that the action that you perform on a volume group meets the current state of the volume group. Otherwise, an error message appears indicating that the volume group is not in the expected state.
+{: attention}
+
+The error message appears when you perform the following actions:
+- Stop a volume group when the `ReplicationStatus` is in the `disabled` state.
+- Start a volume group when the `ReplicationStatus` is in the `enabled` state or `available` state.
+- Reset a volume group that is not in the error state.
+
+
+
 
 
 
@@ -196,7 +206,7 @@ For more information about deleting a primary volume, see [Deleting a primary vo
 
 
 ### Deleting a virtual server instances
-{: #deleting-volume}
+{: #deleting-virtual-server-instance}
 {: help}
 {: support}
 

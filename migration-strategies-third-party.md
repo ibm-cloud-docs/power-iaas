@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-05"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -64,12 +64,12 @@ See the video that shows migration of an IBM i system from {{site.data.keyword.o
 
 You can access StorSafe VTL from the [IBM Cloud catalog](https://cloud.ibm.com/catalog). In the search field, enter `FalconStor StorSafe VTL for PowerVS Cloud` or `FalconStor StorSafe VTL for Power On-Premises`.
 
-### FalconStor StorSafe VTL for Cloud
+### FalconStor StorSafe VTL for {{site.data.keyword.off-prem}}
 {: #storsafe-cloud}
 
 FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} comes bundled with OS and can be deployed from the IBM Cloud catalog with one click.
 
-### FalconStor StorSafe VTL for On-Premises
+### FalconStor StorSafe VTL for {{site.data.keyword.on-prem}}
 {: #storsafe-onprem}
 
 FalconStor StorSafe VTL for {{site.data.keyword.on-prem}} provides flexible deployment options for the user:

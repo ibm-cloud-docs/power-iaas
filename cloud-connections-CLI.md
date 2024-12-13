@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-10-28"
+lastupdated: "2024-12-12"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 
@@ -48,7 +48,13 @@ When you perform multiple {{site.data.keyword.powerSys_notm}} Cloud Connection t
 
 
 
-To create an {{site.data.keyword.powerSys_notm}} Cloud Connection, complete the following steps:
+The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `MON01` and `CHE01` data centers. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. This Direct Link is not operational until an authorized IBM Cloud account user with the required authority authorizes the connection via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
+{: note}
+
+To create an {{site.data.keyword.powerSys_notm}} Cloud Connection from `MON01` and `CHE01` data centers, complete the following steps:
+
+
+
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Cloud connections**.
 2. On the Cloud connections page, click **Create connection**.
@@ -64,7 +70,12 @@ To create an {{site.data.keyword.powerSys_notm}} Cloud Connection, complete the 
    b. Select **Enable global routing** if you need access to other data centers outside your {{site.data.keyword.powerSys_notm}} region. For example, you can use global routing to share workloads between dispersed {{site.data.keyword.cloud_notm}} resources, such as Dallas to Tokyo, or Dallas to Frankfurt. If you want to enable IBM Transit Gateway for the Cloud connection, then global routing option is not required.
 
    c. Select **Enable IBM Transit Gateway** to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures and to keep traffic within {{site.data.keyword.cloud_notm}}. {{site.data.keyword.tg_full_notm}} connects the private networks, such as classic, VPC, and {{site.data.keyword.dl_short}}. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started&interface=ui).
-   {{site.data.keyword.tg_full_notm}} is available in `WDC04`, `DAL12`, `DAL13`, `LON04`, `LON06`, `FRA04`, `FRA05`, `SAO01`, `SYD04`, `TOK04`, `TOR01`, `MON01`, `SYD05`, and `OSA21` data centers.
+
+
+
+   {{site.data.keyword.tg_full_notm}} is available in `WDC04`, `DAL12`, `DAL13`, `DAL14`, `LON04`, `LON06`, `FRA04`, `FRA05`, `SAO01`, `SYD04`, `TOK04`, `TOR01`, `MON01`, `SYD05`, and `OSA21` data centers.
+
+
 
 
 
@@ -83,14 +94,6 @@ To create an {{site.data.keyword.powerSys_notm}} Cloud Connection, complete the 
    {: note}
 
 6. Review the summary and the terms and conditions. Then, click **Create** to create an IBM Cloud connection.
-
-
-
-IBM Power Virtual System Cloud Connections are currently not supported on the `WDC06` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. This Direct Link is not operational and must be authorized by the IBM Cloud account user who has the required authority via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
-{: note}
-
-
-
 
 
 ## Modifying IBM Cloud connections

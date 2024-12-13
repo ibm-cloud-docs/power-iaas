@@ -67,6 +67,7 @@ toc:
               topics:
               - gdpr.md
               - compliances.md
+              - eu-compliance.md
               - Integrate_hpcs.md
       - topicgroup:
           label: Use cases
@@ -83,7 +84,7 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Networking (Off-premises)
+          label: Networking for IBM data center
           topics:
              - configuring-private-subnet.md
              - new-network-architecture.md
@@ -92,7 +93,7 @@ toc:
              - network-security.md
              - X86-based-systems.md
              - topicgroup:
-                 label: Former Off-premises networking configurations
+                 label: Former IBM data center networking configurations
                  topics:
                     - manual-PER-mig.md
                     - network-architecture-former.md
@@ -100,7 +101,7 @@ toc:
                     - ordering-direct-link.md
                     - vpn-connections-deprecated.md
       - topicgroup:
-          label: Networking (On-premises)
+          label: Networking for Client location
           topics:
               - network-overview.md
               - topicgroup:

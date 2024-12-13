@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -104,9 +104,51 @@ It is recommended that you create a direct cloud connection between the VPC and 
 Consider the following points for configuring VPC VPN in a non-PER workspace:
 
 * Use a policy-based VPN in all the configurations of the VPN connection. 
-* Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the Local CIDR list of IBM Cloud VPC and Peer CIDR list of VPC in your client-managed environment. 
+* Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the Local CIDR list of IBM Cloud VPC and Peer CIDR list of VPC in your client-managed environment.
 * Enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in the Edit Traffic window) in the routing table of IBM Cloud VPC.
 1. Choose the Direct Link that is enabled with the Transit Gateway or disable the configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
+
+
+
+### Changing from VPNaaS to VPC VPN service
+{: #vpnaas-to-vpcvpn}
+
+To use VPC VPN service, you must switch from VPNaaS to VPC VPN service. The following example illustrates the steps to set up the VPC VPN connection and to validate the connectivity:
+
+1. Create a VPC connection in the same data center as the {{site.data.keyword.powerSys_notm}} by using the same account. Complete the following configurations:
+
+      1. The default routing table must be configured by selecting the `VPN server` and `VPN gateway` values for **Accepts routes from** option. This configuration allows the traffic between the virtual servers that are members of the VPC subnet and the devices on the remote side of the VPN connection.
+      2. Create a second routing table to select VPN Server, VPN Gateway, and Transit Gateway. Under Transit Gateway, select the **Advertise to** option. For more information, see [Getting started with Virtual Private Cloud (VPC)](https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started){: external}.
+
+2. Establish a VPN connection between the VPC and the remote side of the existing VPNaaS. Use the following considerations:
+
+   1. Use a policy-based VPN in all the configurations of the VPN connection.
+   2. Subnets for the remote VPN, VPC, and workspace must be distinct. Subnets cannot be shared or overlapped.
+   3. Add the workspace CIDRs to the list of local CIDRs in the VPN connection.
+   4. Add the workspace CIDRs to the peer CIDRs list in the VPNaaS remote side.
+   5. For more information about VPN options, see [About site-to-site VPN gateways](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn){: external}.
+
+3. Create a Transit Gateway by completing the following steps:
+   1. Add VPC to Transit Gateway.
+   2. Under the **Routes** tab, generate a routing table. You can see the list of VPC, CIDR, and the CIDR for the remote side of the VPN.
+
+   For more information about Transit Gateways, see [Getting started with IBM Cloud Transit Gateway](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-getting-started){: external}.
+
+   The transition to VPC VPN can begin assuming that the following list is true:
+   * The connectivity between a virtual server on the VPC and a system on the remote side of the VPN is working.
+   * The CIDRs are advertised through to the Transit Gateway.
+
+     The workspace and the remote side of the VPN are not connected until all transition to VPC VPN is completed.
+     {: note}
+
+4. Delete the VPNaaS gateway. You must select the VPNaaS connections that are attached to the workspace.
+
+5. Migrate the workspace to PER. You must remove the active Cloud Connections attached to the workspace on other subnets. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+
+6. Connect to the Transit Gateway after the workspace is PER-enabled.
+
+7. Generate the routing table. The CIDRs for the workspace are listed along with the existing CIDRs.
+
 
 
 ### Additional information

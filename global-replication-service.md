@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-12"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -19,25 +19,21 @@ subcollection: power-iaas
 
 ---
 
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
-
-
-
-
 
 Disasters are unplanned events that cause severe damage, incur a loss to business, and affect all organizations. Since most workloads run on cloud infrastructure nowadays, it is essential to have robust and resilient cloud infrastructure that is prepared to handle these catastrophic hits and have minimal impact on business.
 {: shortdesc}
 
 
-The {{site.data.keyword.powerSysFull}} provides a set of APIs to enable disaster recovery (DR) solution for your virtual server instances. IBM Cloud infrastructure internally uses Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication, and advanced network configuration for fast data transfer.
+The {{site.data.keyword.powerSysFull}} provides a set of APIs to enable disaster recovery (DR) solution for your virtual server instances. IBM Cloud infrastructure internally uses Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication.
 
 A new resource volume group is introduced to enable, disable, and manage storage replication consistency group. The volume group holds the volumes that need to be recovered at the time of disaster. Make the volume DR capable by adding the volume to the volume group. To trigger failover and failback operations, use the volume group start and stop operations.
-
-
 
 GRS provides an asynchronous volume-level replication service that can be used as the foundation for higher-level disaster recovery (DR) automation solutions.
 
@@ -51,10 +47,43 @@ The scope of the GRS service is to create and manage replicated resources that i
 - Virtual server instance lifecycle operations by using replicated volumes.
 - Onboard auxiliary volume on secondary site for volume recovery.
 
+
+
+[{{site.data.keyword.on-prem}}]{: tag-red}
+
+## GRS in [{{site.data.keyword.on-prem}}]{: tag-red}
+{: #grs-on-prem}
+
+The GRS enablement in {{site.data.keyword.on-prem-fname}} enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} provides.
+
+The infrastructure in the IBM {{site.data.keyword.powerSys_notm}} Private Cloud in which your workspace is located, has the primary volumes of the replication pairs. The infrastructure in the secondary location has the auxiliary volumes.
+
+IBM Cloud infrastructure internally uses IBM FlashSystems Global Mirror Change Volume (GMCV) as storage technology that provides asynchronous replication.
+
+Each time a replicated volume is created, four copies of volumes are created across the infrastructure:
+
+- Primary volume in the primary infrastructure
+- Primary change volume in the primary infrastructure to store the delta changes
+- Auxiliary volume in the secondary infrastructure
+- Auxiliary change volume in the secondary infrastructure to update the delta changes
+
+You must provide the required network configuration between the primary location and the secondary location for replication, which includes the following prerequisites:
+
+* The network bandwidth must be greater than or equal to 10 Gbps.
+* The network latency must be less than or equal to 200 ms.
+
+During the first sync, the entire data from primary volumes is copied to the auxiliary volumes. For subsequent syncs, only the delta changes are copied. The effective Recovery Point Objective (RPO) depends on the capability of the underlying network throughput and the application characteristics. If the network throughput is insufficient to reach the defined RPO, then the time duration between the synchronization increases.
+
+If the defined RPO exceeds for more than 8 hours, the IBM operations team alerts you.
+{: note}
+
+
+
+
 ## Additional information
 {: #additional-info-GRS}
 
-If you need a more detailed information on Global Replication Services, see [Global Replication Services Solution by using IBM Power Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
+If you need a more detailed information on GRS, see [Global Replication Services Solution by using IBM Power Virtual Server](https://cloud.ibm.com/media/docs/downloads/power-iaas/Global_Replication_Services_Solution_using_IBM_Power_Virtual_Server.pdf){: external}
 
 ## Pricing for GRS
 {: #pricing-GRS}
@@ -192,6 +221,17 @@ To access the auxiliary volumes from the secondary site upon a primary site fail
 
 
 To switch back to the volume group on the primary site, you must perform the volume group stop and start operations from the primary site. You can use the volume group `stop` command and wait until `ReplicationStatus` status changes to `disabled` value. Then, use the volume group `start` command with the `--source master` option to start the volume group. For more information about commands, see [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API.
+
+
+
+
+Verify that the action that you perform on a volume group meets the current state of the volume group. Otherwise, an error message appears indicating that the volume group is not in the expected state.
+{: attention}
+
+The error message appears when you perform the following actions:
+- Stop a volume group when the `ReplicationStatus` is in the `disabled` state.
+- Start a volume group when the `ReplicationStatus` is in the `enabled` state or `available` state.
+- Reset a volume group that is not in the error state.
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-12-12"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---
@@ -32,6 +32,8 @@ This topic describes typical network architectures that are used in the {{site.d
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
+
+
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks).
 
@@ -86,7 +88,7 @@ In this depiction, a client-managed data center uses a Direct Link connection to
 
 1. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace to a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed data center through the incoming Direct Link connectivity by using Border Gateway Protocol (BGP) routing protocol. The Direct Link connectivity is interconnected through the Transit Gateway.
 
-    ![Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new5.svg "Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway"){: caption="Connecting an on-premises workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway." caption-side="bottom"}
+    ![Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new5.svg "Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway"){: caption="Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway." caption-side="bottom"}
 
 2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
 

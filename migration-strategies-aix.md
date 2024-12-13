@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-06"
 
 keywords: migration strategies, AIX, NIM, savevg, mksysb, AIX migration
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -41,10 +41,10 @@ To migrate an AIX-based Oracle database from IBM Power to Power Virtual Server, 
 
 See the use case on [Migrating Db2 on AIX to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-db2-migration) for complete information.
 
-## Migrating your on-premises environment to {{site.data.keyword.powerSys_notm}}
+## Migrating client-managed environment to {{site.data.keyword.powerSys_notm}}
 {: #mig-onprem-cloud}
 
-See the [Move data from your on-premises environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
+See the [Move data from client-managed environment to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-move-data-to-cloud) topic for complete information.
 
 ## Migrating by using NIM on {{site.data.keyword.powerSys_notm}}
 {: #mig-nim}
@@ -58,9 +58,9 @@ See [Migrating by using NIM on {{site.data.keyword.powerSys_notm}}](https://www.
 
 You can migrate your data by using the `mksysb` command:
 
-1. Back up the on-premises OS with the `alt_disk_mksysb` command and transfer it to Cloud Object Storage.
+1. Back up the client-managed environment OS image with the `alt_disk_mksysb` command and transfer it to Cloud Object Storage.
 2. Create a {{site.data.keyword.powerSys_notm}} and import the image.
-3. Restore the on-premises image.
+3. Restore the client-managed environment OS image.
 
 For more information, see [Restoring an AIX mksysb image onto a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-restoring-aix-mksysb-image).
 

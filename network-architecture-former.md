@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -35,7 +35,8 @@ This topic describes typical network architectures that are used in the {{site.d
 {: important}
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
-{: #networking-environment}
+{: #networking-environment-former}
+
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can configure a private network subnet. For more information, see [Configuring a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
 

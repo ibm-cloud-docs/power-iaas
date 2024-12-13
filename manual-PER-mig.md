@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-12"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -19,23 +19,31 @@ subcollection: power-iaas
 
 ---
 
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
 
-If you have manually configured subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER). With PER, you can use the built-in redundancy and much higher bandwidth.
+
+All the IBM {{site.data.keyword.powerSys_notm}} data centers are PER-enabled, except for `CHE01` and `MON01` data centers.
+
+If you have manually configured the network configurations in your workspace without customizations through a support ticket, you can use self-service automation to complete your PER migration.
+
+The automation to migrate an existing network to PER is supported via CLI. Use [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1){: external} command. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+
+If you have manually configured the subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER) through a support ticket. With PER, you can use the built-in redundancy and much higher bandwidth.
 
 
 
-To migrate your workspace to PER, complete the following steps:
+To migrate your workspace to PER through a support ticket, complete the following steps:
+
+
+
 1.	Create a [case](https://cloud.ibm.com/unifiedsupport/cases/form){: external} from the **Support Center** of IBM Cloud.
-2.	Select **Workspace for Power Virtual Server** and **Power VS Network Related** under **Topic** and **Subtopic** respectively.
+2.	Select **Workspace for Power Virtual Server** under **Topic** and **Power VS Network Related** under **Subtopic**.
 3.	Provide a short description of your migration requirements in the **Subject**.
 4.	In the **Description** box under additional information, provide the following information and click **Next**:
     1.  The CRN (Cloud Resource Name) of your workspace that you want to upgrade.

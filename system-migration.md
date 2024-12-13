@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -21,10 +21,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -37,7 +37,7 @@ When workloads are deployed on a new system, you must pay attention to its confi
 
 
 
-For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.off-prem}})](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For more information on hardware specifications that you might need, see [Hardware specifications for {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} ](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 
@@ -86,8 +86,8 @@ Learn more about migrating workloads from an existing IBM Power to a Power10. Be
 
 |  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
 |-------------------|--------------|
-| S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
-| E1080 (9080-HEX)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only). \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+| S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
+| E1080 (9080-HEX)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
 {: caption="Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
 To learn more about IBM Power10 performance and migration strategies, see the following articles:

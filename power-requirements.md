@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -21,7 +21,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -62,15 +62,15 @@ Table 2 shows the number of PDUs and the corresponding power cords that are requ
 If you have selected the configuration with 4 PDUs, you can include 6 power drops in the facility plan to increase the number of PDUs in future.
 {: note}
 
-| Rack type | PDU feature codes | Number of PDUs | Number of Power S1022 servers | Number of Power E1050 servers | Number of Power S1022 and E1050 servers | Number of Power E1080 servers \n (no mixing) |
+| Rack type | PDU feature codes | Number of PDUs | Number of Power S1022 servers | Number of Power E1050 servers | Number of Power S1022 and E1050 servers | Number of Power E1080 servers  \n (no mixing) |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| ESMP (Small) | ECNJ or ECJQ** \n (Default) | 4 | 8 x S1022 (includes management server)  | N/A   | N/A | N/A  |
+| ESMP (Small) | ECNJ or ECJQ**  \n (Default) | 4 | 8 x S1022 (includes management server)  | N/A   | N/A | N/A  |
 |   |  | 6 | 3 extra S1022 |  (C19 PDUs are required) | N/A |  N/A |
 |   |  ECJJ or ECJL** | 4  | 1 (management server)  | 3  | N/A | N/A |
 |   |   |  6  | 2 x S1022 that is equivalent to 1 MRX. (Optional) |  5 | 2 x S1022 that is equivalent to 1 MRX. | N/A |
-| EMPD + 4651 or 4652 \n (Medium rack 1 or 2) | ECJJ or ECJL** | 4  | 6  | 3  | 2 x S1022 that is equivalent to 1 MRX. | 1x2 enclosures |
+| EMPD + 4651 or 4652  \n (Medium rack 1 or 2) | ECJJ or ECJL** | 4  | 6  | 3  | 2 x S1022 that is equivalent to 1 MRX. | 1x2 enclosures |
 |   |   | 6 | 8 |  4 | 2 x S1022 that is equivalent to 1 MRX. | N/A |
-| EMPD + 4653 or 54 \n (Medium rack 1 or 2) |  | 4  | 8  | 3  | N/A | 1x2 enclosures  |
+| EMPD + 4653 or 54  \n (Medium rack 1 or 2) |  | 4  | 8  | 3  | N/A | 1x2 enclosures  |
 |  |  | 6 |  12 |  4 | N/A |  2x2 enclosures |
 {: caption="PDUs and power drops requirements" caption-side="bottom"}
 

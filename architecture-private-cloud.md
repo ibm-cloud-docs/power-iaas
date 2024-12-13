@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -14,15 +14,13 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Architecture for IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}})
+# Architecture for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 {: #private-cloud-architecture}
 
 
 ---
 
-
-
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -35,13 +33,14 @@ To understand the {{site.data.keyword.on-prem}} architecture, key features, and 
 *  [Key features](#key-features)
 *  [Hardware and software specifications](#hardware-software-specs-private-cloud)
 *  [Network](#network-spec-private-cloud)
+*  [Data center capabilities](#dc-capabilities-private)
 
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
 
-The following diagram provides a high-level architectural view IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}):
+The following diagram provides a high-level architectural view of the {{site.data.keyword.on-prem-fname}}:
 
-![High-level IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) architecture](./figures/PPC-network-arc-Sept.png "High-Level IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) architecture"){: caption="High-Level IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) architecture" caption-side="bottom"}
+![High-level {{site.data.keyword.on-prem-fname}} architecture](./figures/PPC-network-arc-Sept.png "High-Level {{site.data.keyword.on-prem-fname}} architecture"){: caption="High-Level {{site.data.keyword.on-prem-fname}} architecture" caption-side="bottom"}
 
 ## Key features
 {: #key-features}
@@ -58,7 +57,7 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
 
     [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}}({{site.data.keyword.on-prem}}):
+* **Dynamic resource adjustment**: You can configure and customize the following resources on the virtual server when you work with IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}:
     - Number of cores
     - Amount of memory
     - Storage volume size
@@ -74,7 +73,7 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
 
-For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}}({{site.data.keyword.on-prem}}), see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 ### Pods
 {: #pod-spec-private-cloud}
@@ -265,7 +264,7 @@ The following Power10 are supported:
 
 The Power10 supports Linux, AIX, or IBM i operating system.
 
-IBM {{site.data.keyword.powerSys_notm}} {{site.data.keyword.on-prem}} provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 with AIX  operating system.
+IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power10 with AIX  operating system.
 
 ### Storage
 {: #storage-private-cloud}
@@ -289,8 +288,8 @@ Table 5 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS  | Performance |
 |---------------|---------------|---------------------|
-| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3. |
+| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS.  \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS.  \n This is 3.3x faster than tier 3. |
 | Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
 {: caption="Tier and IOPS mapping" caption-side="bottom"}
@@ -309,3 +308,14 @@ The entire network subsystem can be divided into the following parts:
 * **Client data plane network traffic**: The client data plane is the connection between the client data center and the {{site.data.keyword.powerSys_notm}} pods. Communication between each virtual machine within a pod is established by using private IP addresses. The IBM SREs configure the communication between virtual machines and the data center corporate network manually by using different network use cases. For more information, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases). Use your own model for firewall and load balancer services. For any communication between your {{site.data.keyword.on-prem}} data center and other IBM Cloud services, you must manually set up the network configuration.
 
 For more information, see [Network overview](/docs/power-iaas?topic=power-iaas-network-private-cloud).
+
+
+
+## Data center capabilities
+{: #dc-capabilities-private}
+
+You can check and compare the data center capabilities among three different infrastructure locations on the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console. You can also use the external interfaces such as API, CLI, and Terraform to check your data center capabilities.
+
+For example, you can determine the support for the following capabilities in your infrastructure:
+- Machine types (Power10)
+- Global Replication Service (GRS)

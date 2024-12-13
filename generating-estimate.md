@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -22,10 +22,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -39,7 +39,7 @@ Use the cost estimator tool for:
 ## Creating an estimation of resources
 {: #est-resources}
 
-You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} ({{site.data.keyword.on-prem}}) or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
+You can generate an estimate by specifying the parameters for your virtual server resources and by specifying a projected growth rate. Based on your selection, you can view the estimated cost of your {{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} or IBM cloud resources. You can connect with your IBM Business Partner or contact IBM to place your order.
 {: shortdesc}
 
 You are not charged for creating an estimate. The resources that you estimate can be deployed only after a workspace creation.
@@ -95,12 +95,12 @@ To learn about the fields and descriptions that you need to enter, see the follo
 |-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | (**Required**) Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
 | Operating system              |	Select the operating system that meets your requirements from the drop-down.                                |
-| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared-capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic workloads, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
+| Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared-capped price.  \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic workloads, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
 | Machine type                  |	Specify the machine type.                                                                           |
 | Core type                 	| Specify the core type.                                                                                |
 | Cores	                        | (**Required**) Define how many cores you need.                                                         |
 | Memory (GB)                  | (**Required**) Define how much space you need per core.                                                |
-| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of tiers. \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
+| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
 {: caption="UI fields in estimating a VSI" caption-side="top"}
 
 
@@ -159,7 +159,7 @@ Before you deploy a virtual tape library (VTL) in a workspace, create an estimat
 | Core type	        |   Specify the core type.                                                      |
 | Cores	            |   (**Required**) Define how many cores you need.                               |
 | Memory (GB)	    |   (**Required**) Define how much space you need per core.                      |
-|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers. \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
+|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers.  \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
 {: caption="UI fields in estimating a VTL" caption-side="top"}
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
@@ -186,7 +186,7 @@ To learn more about dedicated host, see [Getting started with dedicated host].
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-If you select the **Location type** as On-Premises, proceed with the following steps:
+If you select the **Location type** as {{site.data.keyword.on-prem}}, proceed with the following steps:
 
 1. Specify the infrastructure requirements that include the machine type, number of systems, and storage capacity for your data center in the **Infrastructure configuration** section. The **Infrastructure overview** section displays the summary of the selected configuration. The pod size depends on the number of systems that you select including the total memory and the total number of cores that you plan to use in your data center.
 

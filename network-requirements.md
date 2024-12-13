@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-04"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
 
@@ -20,14 +20,14 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
 
 To facilitate the {{site.data.keyword.powerSysFull}} pod infrastructure connectivity, you must evaluate the following network requirements:
-* The data center site must provide network cables to connect the IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) network infrastructure and the data network at the site.
-* The site must provide two uplink cables to connect the IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) network infrastructure to the IBM Cloud region through IBM Direct Link connections or through VPN connections.
+* The data center site must provide network cables to connect the {{site.data.keyword.on-prem-fname}} network infrastructure and the data network at the site.
+* The site must provide two uplink cables to connect the {{site.data.keyword.on-prem-fname}} network infrastructure to the IBM Cloud region through IBM Direct Link connections or through VPN connections.
 * Contract with a service provider to:
     * Provide redundant connections to the IBM Direct Link connection or VPN connection.
     * Provide the last mile connection from the point-of-presence (PoP) of your service provider to the customer data center.  

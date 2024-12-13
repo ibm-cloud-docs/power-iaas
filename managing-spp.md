@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-12"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -37,8 +37,8 @@ In SPP, reserved cores can be adjusted based on availability, unlike a VM with a
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
 |-----|-----------|-----------|-----------|-----------|
-|No|Maximum cores = 5 \n Mode = Dedicated|Maximum cores = 6 \n Mode = Dedicated|NA|5+6 = 11|
-|Yes|Maximum cores = 5 \n Mode = Shared/Uncapped \n Entitled capacity = 4.25|Maximum cores = 6 \n Mode = Shared/Uncapped \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by reserved cores in pool|
+|No|Maximum cores = 5  \n Mode = Dedicated|Maximum cores = 6  \n Mode = Dedicated|NA|5+6 = 11|
+|Yes|Maximum cores = 5  \n Mode = Shared/Uncapped  \n Entitled capacity = 4.25|Maximum cores = 6  \n Mode = Shared/Uncapped  \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by reserved cores in pool|
 {: class="simple-table"}
 {: caption="SPP helps to reduce the licensing cost" caption-side="bottom"}
 
@@ -55,7 +55,7 @@ The benefits of using an SPP are as follows:
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-For IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}), the minimum core-to-virtual core ratio is 1:20. The minimum Entitled Capacity (EC) must be 0.05 and can be incremented by 0.05.
+For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio is 1:20. The minimum Entitled Capacity (EC) must be 0.05 and can be incremented by 0.05.
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -89,7 +89,7 @@ When using SPP, you pay for the following:
 * SPP reserved cores that use the shared capped host.
 * VM cores that are deployed into the SPP that use shared uncapped host.
 
-With SPP you can manage CPU cores. Pricing for memory and storage is charged as ususal. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}), see [FAQ on pricing](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+With SPP you can manage CPU cores. Pricing for memory and storage is charged as ususal. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in {{site.data.keyword.on-prem-fname}}, see [FAQ on pricing](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 {: note}
 
 ## Configuring a shared processor pool
@@ -120,10 +120,10 @@ To create an SPP, complete the following steps:
 3. In the **Create new shared processor pool** window, define the following preferences based on your requirements:
     |Field|Description|
     |----|----|
-    |Name|Enter a name that is unique within your cloud account.\n Use a name of minimum 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
-     |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group. \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
+    |Name|Enter a name that is unique within your cloud account.  \n Use a name of minimum 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
+     |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group.  \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
     |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
-    |Reserved processing cores[^1]|[{{site.data.keyword.off-prem}}]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default. \n [{{site.data.keyword.on-prem}}]{: tag-red} For IBM {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}), the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
+    |Reserved processing cores[^1]|[{{site.data.keyword.off-prem}}]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default.  \n [{{site.data.keyword.on-prem}}]{: tag-red} For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
      {: caption="Creating a new SPP fields and descriptions" caption-side="bottom"}
 
     [^1]: The Reserved processing cores are the number of cores that are reserved for processing and must always be a whole number.
@@ -213,8 +213,8 @@ To create an SPP PG, complete the following steps:
 4. In the **Create new pool placement group** window, enter the following details:
     |Field|Description                                             |
     |-----|--------------------------------------------------------|
-    |Name |Enter a name that is unique within your cloud account. \n Use a minimum of 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
-    |Policy|Same Server (Affinity) \n Different server (Anti-affinity)|
+    |Name |Enter a name that is unique within your cloud account.  \n Use a minimum of 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
+    |Policy|Same Server (Affinity)  \n Different server (Anti-affinity)|
     {: caption="Create a new SPP PG field description" caption-side="top"}
 
 5. Click **Create**.

@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-10-30"
+lastupdated: "2024-12-12"
 
-keywords: release notes, announcements, feature updates, changes, power virtual server, on-premises, off-premises
+keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
 ---
 
@@ -17,10 +17,42 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## December 2024
+{: #Dec-2024}
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+- You can now assign a Virtual Serial Number (VSN) to an IBM i VM. With a VSN associated with your VM, you need not pin the VM to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
+- You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-per#migrate-per).
+- As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+
+Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections solution will reach the end of life on `June 18, 2025`. For more information about End of Service Notice, see [July 2024](/docs/power-iaas?topic=power-iaas-release-notes#jul-2024).
+{: note}
+
+- All IBM {{site.data.keyword.powerSys_notm}} data centers are now PER-enabled, except for the `CHE01` and `MON01` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+- A new data center `DAL14` is available. Following are some of the capabilities of the `DAL14` data center:
+
+    - New {{site.data.keyword.powerSys_notm}} node, [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV) which is a 4-socket server.
+    - {{site.data.keyword.powerSys_notm}} capabilities such as Power Edge Router network connectivity, IBM Cloud Monitoring, and Flexible IOPS.
+
+ For more information about your data center capabilities, see {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview) page in the IBM Cloud console.
+
+- New RHEL 8.10 general purpose (RHEL8-SP10), RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA), RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NetWeaver), SLES 15 SP6 general purpose (SLES15), and AIX 7.3 TL2 SP2 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+
+- Starting `February 24, 2025`, the new format of the virtual host identifier of {{site.data.keyword.powerSys_notm}} dedicated hosts aligns with the format that is used to identify other {{site.data.keyword.powerSys_notm}} resources. If you are using {{site.data.keyword.powerSys_notm}} dedicated hosts and have written any logic such as API or CLI calls that uses the virtual host identifier, you must update the logic to use the new format and identifiers.
+
+
+[{{site.data.keyword.on-prem}}]{: tag-red}
+
+- You can now enable Global Replication Services (GRS) for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
+- You can now access external connectivity to and from the virtual machines in a subnet. For more information, see [Use case 2: Multiple external connectivities](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-network_use_cases#static-l3).
+- You can now discover infrastructure capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}}    [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#dc-capabilities).
+- The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+
 
 ## October 2024
 {: #Oct-2024}
-
 
 
 
@@ -35,16 +67,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
+- [{{site.data.keyword.off-prem}}]{: tag-blue} The refreshed RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and RHEL 8.6 for general purpose and SAP OS images are available in the image catalog that supports SAP t-shirt profiles with more than 64 cores. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
+
 
 
 The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions). For new deployments, you must use the latest stock image in the catalog. Existing VMs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VM to the latest service pack level for the most recent maintenance.
 {: note}
-
-
-
-
-
-
 
 ## September 2024
 {: #Sep-2024}
@@ -53,9 +81,9 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - [{{site.data.keyword.off-prem}}]{: tag-blue}You can now enable the replication services for a volume from the user interface. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
 - [{{site.data.keyword.off-prem}}]{: tag-blue}You can now configure a virtual machine that contains a boot volume and deploy an IBM i virtual machine to support the attachment of large quantity of data volumes available in `DAL10` and `WDC07` data centers. For more information, see [Configuring large quantity of data volumes on {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#config-large-vol).
 - [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the `DAL10` and `WDC07` location pair to resize a replication-enabled primary volume from the primary site. The system then resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For more information, see [Updating a primary volume](/docs-draft/power-iaas?topic=power-iaas-getting-started-GRS#update-prime-vol).
-- [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the SUSE Linux Enterprise Server (SLES) stock image when you register for full Linux subscription, for {{site.data.keyword.powerSys_notm}}. For more information, see [Full Linux® subscription for IBM Power Virtual Server ({{site.data.keyword.on-prem}})](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub).
+- [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the SUSE Linux Enterprise Server (SLES) stock image when you register for full Linux subscription, for {{site.data.keyword.powerSys_notm}}. For more information, see [Full Linux® subscription for IBM Power Virtual Server in {{site.data.keyword.on-prem}}](/docs-draft/power-iaas?topic=power-iaas-full-linux-sub).
 - [{{site.data.keyword.on-prem}}]{: tag-red}You can now validate the import file against the SHA-256 checksum file from the user interface. For more information, see [Using the Power Virtual Server user interface to import a boot image](/docs-draft/power-iaas?topic=power-iaas-importing-boot-image#console-import-image) and [Using the Power Virtual Server user interface to capture and export a VM](/docs-draft/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
-- You can now download, Secure Automated Backup with Compass by Cobalt Iron, from [IBM Cloud Catalog](https://cloud.ibm.com/catalog){: external} for immediate deployment. The solution provides on-premises to Cloud backup and recovery for IBM {{site.data.keyword.powerSys_notm}} workloads. The offering is the only automated BaaS and recovery solution for IBM {{site.data.keyword.powerSys_notm}} workloads that are powered by IBM Storage Protect, such as SAP HANA, Oracle, Db2 on AIX and Linux. For more information, see [Cobalt Iron Expands Access to Secure Automated Backup With Compass for IBM Power Virtual Server](https://info.cobaltiron.com/news/cobalt-iron-ibm-vs-baas-global-expansion){: external}.
+- You can now download, Secure Automated Backup with Compass by Cobalt Iron, from [IBM Cloud Catalog](https://cloud.ibm.com/catalog){: external} for immediate deployment. The solution provides the environment for Cloud backup and recovery for IBM {{site.data.keyword.powerSys_notm}} workloads. The offering is the only automated BaaS and recovery solution for IBM {{site.data.keyword.powerSys_notm}} workloads that are powered by IBM Storage Protect, such as SAP HANA, Oracle, Db2 on AIX and Linux. For more information, see [Cobalt Iron Expands Access to Secure Automated Backup With Compass for IBM Power Virtual Server](https://info.cobaltiron.com/news/cobalt-iron-ibm-vs-baas-global-expansion){: external}.
 
 - [{{site.data.keyword.off-prem}}]{: tag-blue} new AIX 7.2 TL5 SP8 and RHEL 9.4 general purpose (RHEL9-SP4) operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 - [{{site.data.keyword.on-prem}}]{: tag-red} new AIX 7.3 TL2 SP1 and AIX 7.2 TL5 SP8 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
@@ -83,8 +111,14 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - You can now deploy SAP HANA sr2 and sh2 profiles on S1022 and E1080 systems. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
 - You can now provision {{site.data.keyword.powerSys_notm}} workloads on Power10 E1080 (9080-HEX) hosts available in `DAL10` and `WDC07` data centers.
 
+
+
 **End of Service Notice** - End of marketing effective `October 19, 2024` will prevent new Cloud Connections from being established in existing workspaces. In turn, IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: important}
+
+
+
+
 
 - Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
@@ -110,7 +144,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     -  `DAL12` on June 24, 2024
     -  `SAO01` on September 07, 2024
 
-    {{site.data.keyword.powerSys_notm}} ({{site.data.keyword.on-prem}}) is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
+    {{site.data.keyword.on-prem-fname}} is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 

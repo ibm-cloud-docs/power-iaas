@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-09"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -77,7 +77,7 @@ Any configurations that are not listed in this section are not supported by {{si
 
 - [Connecting to a Juniper vSRX peer](/docs/vpc?topic=vpc-juniper-vsrx-config)
 - [Connecting to a strongSwan peer](/docs/vpc?topic=vpc-strongswan-config)
-- [Connecting to a IBM Cloud VPC VPN Gateway peer](/docs/vpc?topic=vpc-vpn-overview).
+- [Connecting to an IBM Cloud VPC VPN Gateway peer](/docs/vpc?topic=vpc-vpn-overview).
 
 #### Checking the status of the secure connection
 {: #check-secure-connection}

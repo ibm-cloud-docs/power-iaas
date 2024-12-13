@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-06"
 
 keywords: managing virtual tape library, ppcaas, virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide
 
@@ -20,10 +20,10 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -32,7 +32,7 @@ FalconStor Virtual Tape Library (VTL) is an optimized backup and deduplication s
 {: shortdesc}
 
 Here are some of the StorSafe VTL Benefits
-* Up to 95% data reduction. FalconStor reduces the storage capacity required by backup data on-premises and in the cloud by up to 95%.
+* Up to 95% data reduction. FalconStor reduces the storage capacity required by backup data in the client-managed environment and in the cloud by up to 95%.
 * Ransomware Protection. Recover data from any point in time with air-gapped, immutable backups.
 * Offsite Protection. For offsite protection, StorSafe VTL exports virtual tapes as physical tapes, and keeps track of their location with a management dashboard. Virtual tapes can remain in the library for fast restores or can be stubbed when exported to local object storage.
 * High Performance. Improve both backup and recovery.

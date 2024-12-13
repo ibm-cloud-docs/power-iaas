@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-10-18"
+lastupdated: "2024-12-12"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -198,8 +198,8 @@ To create an MCR, you need to make a few decisions for the connectivity. The fol
 | MCR Location | Geo Location to be used | Equinox EQ1 |
 | Rate Limit | What network speed you would like to order| 1 Gbps to 10 Gbps|
 | MCR Name | Specify a name for the MCR that is easily identifiable | IBM-Azure-MCR |
-| Minimum Term | Select your term length |- No Minimum Term \n - 12 Months \n - 24 Months \n - 36 Months  |
-| BGP State | Select whether BGP connections are enabled \n or shut down by default | Enabled |
+| Minimum Term | Select your term length |- No Minimum Term  \n - 12 Months  \n - 24 Months  \n - 36 Months  |
+| BGP State | Select whether BGP connections are enabled  \n or shut down by default | Enabled |
 {: caption="Megaport Cloud Router Worksheet" caption-side="bottom"}
 
 
@@ -246,7 +246,7 @@ After your connection is added, the next steps are to authorize on the IBM Cloud
 |Cloud Connection | Choose your cloud provider | IBM Cloud |
 | VXC Connection name | Unique name | IBM-Cloud-MCR-1|
 | Rate Limit | The speed of your connection in Mbps | |
-| Minimum Term | Select your term length |- No Minimum Term \n - 12 Months \n - 24 Months \n - 36 Months |
+| Minimum Term | Select your term length |- No Minimum Term  \n - 12 Months  \n - 24 Months  \n - 36 Months |
 | IBM Account ID | Your IBM Cloud account ID. Learn more on the [Managing your account, resources, and access documentation](/docs/account?topic=account-accountfaqs#account-details) | The account ID is a 32-character, unique account identifier. |
 {: caption="Megaport Virtual Cloud Connection: IBM Cloud Worksheet" caption-side="bottom"}
 

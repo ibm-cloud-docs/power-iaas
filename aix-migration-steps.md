@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-06"
 
 keywords: aix mksysb, volume group, backup multiple volumes, savevg, dd command
 
@@ -13,24 +13,24 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Moving data from your private cloud environment to IBM {{site.data.keyword.powerSys_notm}}
+# Moving data from client-managed environment to IBM {{site.data.keyword.powerSys_notm}}
 {: #move-data-to-cloud}
 
 ---
 
 
 
-{{site.data.keyword.off-prem-fname}}: [{{site.data.keyword.off-prem}}]{: tag-blue}
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}}: [{{site.data.keyword.on-prem}}]{: tag-red}
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
 
 Depending on your network bandwidth and data size constraints, the process of moving the data volume group is as simple as creating an *Open Virtualization Appliance (OVA) file* or an *mksysb* image (root volume group), and creating a set of *savevg* images for volume group data. By using an *OVA* file or an *mksysb* image, you can build or provision a VM and then migrate the data volume groups of the virtual machine (VM) by using the **restvg** command.
 
-You can use the following methods to back up your private cloud data and move the data to {{site.data.keyword.powerSysFull}}.
+You can use the following methods to back the cloud data that is managed by you and move the data to {{site.data.keyword.powerSysFull}}.
 
 ## Migrating volume group data by using the *savevg* command
 {: #migrate-data-using-savevg}
