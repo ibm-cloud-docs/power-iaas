@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -46,7 +46,7 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 
 You must provision the {{site.data.keyword.mon_full}} service instance in the {{site.data.keyword.cloud_notm}}. Then, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts in a {{site.data.keyword.powerSys_notm}} workspace to collect the data and metrics from the active VMs.
 
-The {{site.data.keyword.mon_short}} can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring your environment for metrics, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-monitoring-linux-hosts-on-a-powervs-workspace){: external}.
+The {{site.data.keyword.mon_short}} can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring your environment for metrics, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-powervs){: external}.
 
 By default, the Linux based agent collects core infrastructure and network time series metrics. You can use the collected metrics to monitor the host. For more information about a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,8 +23,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- You can now assign a Virtual Serial Number (VSN) to an IBM i VM. With a VSN associated with your VM, you need not pin the VM to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
-- You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-per#migrate-per).
+- You can now assign a Virtual Serial Number (VSN) to an IBM i VM. With a VSN associated with your VM, you need not pin the VM to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
+- You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 - As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections solution will reach the end of life on `June 18, 2025`. For more information about End of Service Notice, see [July 2024](/docs/power-iaas?topic=power-iaas-release-notes#jul-2024).
@@ -38,15 +38,15 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
  For more information about your data center capabilities, see {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview) page in the IBM Cloud console.
 
-- New RHEL 8.10 general purpose (RHEL8-SP10), RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA), RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NetWeaver), SLES 15 SP6 general purpose (SLES15), and AIX 7.3 TL2 SP2 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New RHEL 8.10 general purpose (RHEL8-SP10), RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA), RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER), RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA), RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER), SLES 15 SP6 general purpose (SLES15), and AIX 7.3 TL2 SP2 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
-- Starting `February 24, 2025`, the new format of the virtual host identifier of {{site.data.keyword.powerSys_notm}} dedicated hosts aligns with the format that is used to identify other {{site.data.keyword.powerSys_notm}} resources. If you are using {{site.data.keyword.powerSys_notm}} dedicated hosts and have written any logic such as API or CLI calls that uses the virtual host identifier, you must update the logic to use the new format and identifiers.
+- Starting `February 24, 2025`, the {{site.data.keyword.powerSys_notm}} dedicated host identifier will use the virtual host ID format. The virtual host ID has the standard format that is used to uniquely identify other {{site.data.keyword.powerSys_notm}} resources. If you are using dedicated hosts and depend on specific resource identifiers such as API and CLI calls, you must update the logic to use the virtual host ID format; otherwise, the logic might fail. For more information, see [Understanding a Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID).
 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-- You can now enable Global Replication Services (GRS) for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
-- You can now access external connectivity to and from the virtual machines in a subnet. For more information, see [Use case 2: Multiple external connectivities](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-network_use_cases#static-l3).
+- You can now enable Global Replication Services (GRS) for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
+- You can now access external connectivity to and from the virtual machines in a subnet. For more information, see [Use case 2: Multiple external connectivities](/docs/power-iaas?topic=power-iaas-network_use_cases#static-l3).
 - You can now discover infrastructure capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}}    [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#dc-capabilities).
 - The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
@@ -111,13 +111,8 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - You can now deploy SAP HANA sr2 and sh2 profiles on S1022 and E1080 systems. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
 - You can now provision {{site.data.keyword.powerSys_notm}} workloads on Power10 E1080 (9080-HEX) hosts available in `DAL10` and `WDC07` data centers.
 
-
-
-**End of Service Notice** - End of marketing effective `October 19, 2024` will prevent new Cloud Connections from being established in existing workspaces. In turn, IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `February 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
+**End of Service Notice** - End of marketing effective `October 19, 2024` will prevent new Cloud Connections from being established in existing workspaces. In turn, IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `April 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: important}
-
-
-
 
 
 - Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

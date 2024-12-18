@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -14,7 +14,7 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating existing network configurations to Power Edge Router
+# Migrating the existing network configurations to Power Edge Router
 {: #migrate-ws-per}
 
 ---
@@ -28,13 +28,13 @@ subcollection: power-iaas
 ---
 
 
-All the IBM {{site.data.keyword.powerSys_notm}} data centers are PER-enabled, except for `CHE01` and `MON01` data centers.
+All the IBM {{site.data.keyword.powerSys_notm}} data centers are PER-enabled, except `CHE01` and `MON01`.
 
 If you have manually configured the network configurations in your workspace without customizations through a support ticket, you can use self-service automation to complete your PER migration.
 
 The automation to migrate an existing network to PER is supported via CLI. Use [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1){: external} command. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
-If you have manually configured the subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER) through a support ticket. With PER, you can use the built-in redundancy and much higher bandwidth.
+If you have manually configured the subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER) through a support ticket. With PER, you can use the built-in redundancy and higher bandwidth.
 
 
 

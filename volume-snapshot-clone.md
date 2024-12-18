@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-18"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -17,7 +17,6 @@ subcollection: power-iaas
 {: #snapshots-cloning}
 
 ---
-
 
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -192,9 +191,16 @@ The restore operation restores all of the volumes that are part of a VM snapshot
 ### Best practices
 {: #best-practice-vol}
 
+
+
+Before you initiate the [**Restoring a snapshot**](#restoring-snapshot) operation, it is recommended to wait until the existing snapshot operation is completed.
+
+
+
 During the restore operation, **it is critical that your source disks be quiesced**. Your source disks cannot be in use. Shut down all of your applications, including file systems and volume managers. If you are running an AIX VM, make sure that the disks are freed from the LVM by varying it off.
 
 If you plan to restore the boot disks, **your VM must be shut down**. If the VM has volumes that are hosting external database applications, quiesce all of your applications and ensure that there are no active IO transactions on the disk. Failure to do so can lead to data corruption and put the VM in maintenance mode.
+
 
 ### Use cases
 {: #use-case-vol}

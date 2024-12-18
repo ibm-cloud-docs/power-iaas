@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -82,7 +82,6 @@ The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL2 SP2
 * AIX 7.3 TL2
 * AIX 7.2 TL5 SP8
-* AIX 7.2 TL5 SP7
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
@@ -151,12 +150,14 @@ The following list of Linux stock images are available:
 Red Hat
 
 * RHEL 9.4 general purpose (RHEL9-SP4)
+* RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
+* RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
 * RHEL 9.2 general purpose (RHEL9-SP2)
-* RHEL 9.2 for Sap HANA (RHEL9-SP2-SAP)
+* RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP)
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
 * RHEL 8.10 general purpose (RHEL8-SP10)
 * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA)
-* RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NetWeaver)
+* RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)
 * RHEL 8.8 general purpose (RHEL8-SP8)
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
 * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)
@@ -700,7 +701,7 @@ Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replica
 
 You cannot update the storage tiers for the GRS enabled volumes. To change the storage tier type, complete the following steps:
 
-1. Remove the volume from the volume group and disable GRS by completing the steps provided in the [Disabling GRS](https://test.cloud.ibm.com/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs) topic.
+1. Remove the volume from the volume group and disable GRS by completing the steps provided in the [Disabling GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs) topic.
 2. Update the volume to the required storage tier type.
 3. Enable the replication on the volume by setting the `replicationEnabled` flag as `True`.
 4. Add the replication-enabled volume back to the volume group.

@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -48,10 +48,10 @@ When you perform multiple {{site.data.keyword.powerSys_notm}} Cloud Connection t
 
 
 
-The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `MON01` and `CHE01` data centers. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. This Direct Link is not operational until an authorized IBM Cloud account user with the required authority authorizes the connection via [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
-{: note}
+The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `MON01` and `CHE01` data centers. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. Direct Link is not operational until an authorized IBM Cloud account user with the required authority must authorize the connection by using [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
 
-To create an {{site.data.keyword.powerSys_notm}} Cloud Connection from `MON01` and `CHE01` data centers, complete the following steps:
+
+To create {{site.data.keyword.powerSys_notm}} Cloud Connection from the `MON01` and `CHE01` data centers, complete the following steps:
 
 
 

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-18"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -141,23 +141,26 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-## Virtual Serial Number (VSN)
+## Virtual Serial Number
 {: #vsn}
 
-You can assign a virtual serial number (VSN) to a VM.
+You can assign a Virtual Serial Number (VSN) to a VM.
+
+VSN is supported only on a VM with IBM i operating system.
+{: note}
 
 
 
-Following are the characteristics of a VSN:
+VSN has the following characteristics:
 
 * It has seven digits and is a unique string.
-* Is used for licensing and tracking the usage of the VM.
+* It is used for licensing and tracking the usage of the VM.
 * It can be associated with only one VM.
 * It can be assigned to a new or an existing VM.
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 
-A VM is moved across different systems along with the VSN associated with it. Hence, when a VSN is associated with a VM you need not pin the VM to a host for licensing or entitlement purpose.
+A VM is moved across systems with its associated VSN. Hence, when a VSN is associated with a VM you need not pin the VM to a host for licensing or entitlement purpose.
 
 
 
@@ -166,30 +169,29 @@ VSN is a unique identifier and can be assigned only to one VM at a time. If you 
 
 
 
-View the details of a VSN associated with a VM on the **VM details** page. You can also view the details of all the VSNs for the workspace that are either in `assigned` or in `retained` state on the **Virtual serial numbers** page on the IBM Cloud console.
+View the details of a VSN associated with a VM on the VM details page. You can also view the details of the VSNs associated with the VMs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
 
-VSN is supported only on a VM with IBM i operating system.
-{: note}
 
-### Mapping customer account number to cloud account ID
+### Mapping the customer account number to the cloud account ID
 {: #VSN-id-map}
 
-
-
-To enable VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to associate your IBM customer number with your IBM Cloud account ID. For more information about opening a support ticket, see [Assigning a Virtual Serial Number to an IBM customer number in IBM Power Virtual Server](/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
+For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a Virtual Serial Number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
 
 ### Assigning a VSN to a new VM
 {: #VSN-new-VM}
 
-When you are creating a new VM, if you select **IBM i** OS, the **Virtual serial number** field is enabled. The default VSN value is **None**. You can edit the default value and select one of the following options:
+You can assign a VSN only to a VM with IBM i OS. To assign a VSN when you create a VM, select **IBM i** OS. The **Virtual serial number** field is enabled. The default VSN value is **None**.
+
+Edit the default VSN value and select one of the following options:
 
 - **Auto-assign**: Assigns a system-generated VSN to your VM only if your `IBM Cloud account ID` is mapped with your `customer number` in the Entitled System Support (ESS).
-- **Select from retained VSNs**: Displays a list of retained VSNs. You can select one of the VSN to assign to your IBM i VM.
+- **Select from retained VSNs**: Displays a list of the retained VSNs. You can select a VSN in the `retained` state and assign it to your IBM i VM.
+
+For more information about creating a VM, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](#configuring-instance).
 
 
 
-
-VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a time.
+You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
 {: note}
 
 
@@ -199,19 +201,19 @@ VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a
 
 To assign a VSN for an existing IBM i VM, complete the following steps:
 
-- Shut down the IBM i VM that you plan to assign the VSN.
-- Open the VM to access the **Virtual server instance details** page.
-- Edit the **Virtual serial number** field.
-- From the **VSN assignment** list, select one of the following options:
+1. Shut down the IBM i VM that you plan to assign the VSN.
+2. Open the VM to access the **Virtual server instance details** page.
+3. Edit the **Virtual serial number** field.
+4. From the **VSN assignment** list, select one of the following options:
     - **None**: Does not assign a VSN to the VM.
     - **Auto-assign**: Assigns a system-generated VSN to the VM.
     - **Select from retained VSNs**: Displays the list of retained VSNs that can be selected.
-- Click **Save**.
-- Power on the VM.
+5. Click **Save**.
+6. Power on the VM.
 
 
 
-VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a time.
+You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
 {: note}
 
 
@@ -221,14 +223,17 @@ VSN cannot be assigned to an empty VM. A VSN can be assigned only to one VM at a
 ### Releasing or retaining a VSN
 {: #VSN-rel-del}
 
+
+
 When you delete a VM, you can either retain the VSN or release it. When you edit the VM details to change the VSN, you can retain the existing VSN or release it. To release or retain a VSN, complete the following steps:
-1. To delete a VM, click the delete icon from the **Virtual server instance details** page. The **Delete virtual server instance** window appears.
-2. To edit the details of a VM, click the overflow menu (icon with 3 vertical dots) on the far right of the VM entry from the **Virtual server instance details** page. The **Edit virtual server instance** window appears.
-3. Toggle the **Release the VSN attached to the VM** option on the page as follows to release or retain the VSN:
-    - `Enable`: (Default) Deletes the VM and attaches the VSN to the VM that is released and no longer associated with your account.
+
+1. Delete a VM by clicking the delete icon from the Virtual server instance details page. The Delete virtual server instance window appears.
+2. Edit the details of a VM by clicking the overflow menu (icon with 3 vertical dots) on the far right of the VM entry from the Virtual server instance details page. The Edit virtual server instance window appears.
+3. Set **Release the VSN attached to the VM** to `Enable` or `Disable` on the page to release or retain the VSN:
+    - `Enable`: (Default) Deletes the VM and attaches the VSN to the VM that is released and no longer associated with your account. By default, the **Release the VSN attached to the VM** is enabled.
     - `Disable`: Deletes only the VM and retains the VSN that continues to be associated with your account. The retained VSN is moved to the retained VSN pool.
 
-By default, the **Release the VSN attached to the VM** option is enabled.
+
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-17"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -84,7 +84,7 @@ You can attach storage volumes to a VM instance from different storage tiers and
 ### Creating a storage volume
 {: #create-storage-vol}
 
-You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. If the existing volume is a replication-enabled volume, follow the steps to [delete a primary volume](https://test.cloud.ibm.com/docs-draft/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol). After you delete the original volume, you must allow a minimum of one hour to create a new volume with the same name.
+You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. If the existing volume is a replication-enabled volume, follow the steps to [delete a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol). After you delete the original volume, you must allow a minimum of one hour to create a new volume with the same name.
 {: note}
 
 
