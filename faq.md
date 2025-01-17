@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-01-16"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -80,7 +80,6 @@ The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} su
 The following stock images are available when you create a virtual machine:
 
 * AIX 7.3 TL2 SP2
-* AIX 7.3 TL2
 * AIX 7.2 TL5 SP8
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
@@ -90,7 +89,6 @@ The {{site.data.keyword.on-prem-fname}} supports the following operating systems
 * E1080 - 7.2 or later
 
 The following stock images are available when you create a virtual machine:
-
 
 * AIX 7.3 TL2 SP2
 * AIX 7.3 TL1 SP2
@@ -124,9 +122,7 @@ IBM i stock images currently available when you create a VM are:
 
 * IBM i COR [^1][^2]
 * IBM i 7.5 TR4
-* IBM i 7.5 TR3
 * IBM i 7.4 TR10
-* IBM i 7.4 TR9
 * IBM i 7.3 TR13
 * IBM i 7.2 TR9 [^3]
 
@@ -170,15 +166,12 @@ Red Hat
 SUSE [^footnote3]
 
 * SLES 15 SP6 general purpose (SLES15)
-* SLES 15 SP5 general purpose (SLES15-SP5)
 * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
 * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-* SLES 15 SP2 for SAP HANA (SLES15-SP2-SAP)
-* SLES 15 SP2 for SAP NetWeaver (SLES15-SP2-SAP-NETWEAVER)
 
 [^footnote1]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
@@ -482,8 +475,8 @@ None. Use the API and CLI to perform snapshot or clone operations. Using the {{s
 - [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
 
 **CLIs to create snapshot and clone**
-- [Create a snapshot](/docs-draft/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
-- [Create a volume clone for specific volumes](/docs-draft/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
+- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
+- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
 
 ## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-01-07"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -90,16 +90,16 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 {: #hardware-specifications-on-cloud}
 
 The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
-- IBM Power S922 (9009-22A)
-- IBM Power S922 (9009-22G)
-- IBM Power E980 (9080-M9S)
-- IBM Power E1080 (9080-HEX)
-- IBM Power S1022 (9105-22A)
--  IBM Power E1050 (9043-MRX)[^1]
+ IBM Power E1050 (9043-MRX)[^1]
+ -->
+
+- [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
+- [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
+- [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
+- [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
+- [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^1]
 
 [^1]: Available only at `DAL14` data center.
-
-For more information about these systems and how they're used inside the {{site.data.keyword.powerSys_notm}}, see their [data sheets](/docs-draft/power-iaas?topic=power-iaas-on-cloud-architecture#data-sheets) and the hardware overview table.
 
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}

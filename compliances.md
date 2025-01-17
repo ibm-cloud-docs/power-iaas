@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-01-07"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -27,6 +27,8 @@ subcollection: power-iaas
 
 The {{site.data.keyword.powerSys_notm}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
+
+
 
 ## Financial Services® Validated
 {: #fs-cloud-comp}

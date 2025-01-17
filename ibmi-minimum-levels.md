@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-01-17"
 
 keywords: ibm i, program temporary fixes
 
@@ -29,10 +29,17 @@ subcollection: power-iaas
 
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 
-- IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272)
-- IBM i 7.3 - MF99207 (TR7) and SI77412, SI77206
-- IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202
-- IBM i 7.5 - No PTF is required
+
+
+
+
+- IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272), SJ02850
+- IBM i 7.3 - MF99207 (TR7) and SI77412, SI77206, SJ02851
+- IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202, SJ02854
+- IBM i 7.5 - SJ02853
+
+
+
 
 For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}.
 

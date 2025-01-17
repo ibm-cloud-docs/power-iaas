@@ -185,6 +185,7 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - data-portability.md
       - link:
           label: API reference
           href: https://cloud.ibm.com/apidocs/power-cloud

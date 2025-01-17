@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-01-17"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -143,6 +143,9 @@ You can use the GRS location APIs to determine the locations that support storag
 
 The following table shows the location pairs that support replication:
 
+
+
+
 | Location 1        | Location 2               |
 | ----------------- | ------------------------ |
 | `mad02`           | `eu-de-1 (fra04)`        |
@@ -154,6 +157,7 @@ The following table shows the location pairs that support replication:
 | `syd04`           | `syd05`                  |
 | `sao01`           | `sao04`                  |
 | `mon01`           | `tor01`                  |
+| `lon04`           | `lon06`                   |
 {: class="simple-table"}
 {: caption="Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
 

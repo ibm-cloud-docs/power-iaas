@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-01-17"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -29,24 +29,26 @@ All prices that are mentioned in the topic are illustrative and do not represent
 {: important}
 
 
-|  Power Systems     |  Processors  |  Memory                         |
-|-------------------|--------------|---------------------------------|
-| E980 (9080-M9S)   |  143         | Up to 15,307 GB [^1]                 |
-| S922 (9009-22A) [^2]   |  15          | Up to 942 GB                    |
-| S1022 (9105-22A) [^3][^4]|     33         |       Up to 1984 GB         |
-| E1080 (9080-HEX)   |  240          | Up to 64 TB                    |
-|  E1050 (9043-MRX) [^5]   |   96          | Up to  8,192 GB                |
+
+
+|  Power Systems         |  Processors  |  Memory                     |
+|------------------------|--------------|-----------------------------|
+| E980 (9080-M9S)        |  143         | Up to 15,307 GB [^1]        |
+| S922 (9009-22A) [^2]   |   15         | Up to 942 GB                |
+| S1022 (9105-22A) [^3]  |   33         | Up to 1984 GB               |
+| E1080 (9080-HEX)       |  240         | Up to 64 TB                 |
+| E1050 (9043-MRX)       |   96         | Up to  8,192 GB             |
 {: caption="Theoretical maximum memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
 [^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-[^3]: Power System S1022 is available only in DAL10,  DAL14, MAD02, MAD04, and WDC07.
+[^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-[^4]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
-[^5]: Available only at `DAL14` data center.
+For more information about the availability of the systems for your data center, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
+
 
 
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
@@ -71,6 +73,10 @@ To view the usage details at the resource level, do the following steps:
 5. Scroll to the bottom of the page and click **View instance details**. A page listing the usage details of the selected virtual server instance is opened.
 
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
+
+
+
+
 
 ## Monthly usage
 {: #pricing-monthly-usage}

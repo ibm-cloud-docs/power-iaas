@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-01-16"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -141,7 +141,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-## Virtual Serial Number
+## About Virtual Serial Number in {{site.data.keyword.off-prem}}
 {: #vsn}
 
 You can assign a Virtual Serial Number (VSN) to a VM.
@@ -358,15 +358,6 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 You can configure your virtual server instance (VM) while provisioning to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
-
-
-
-
-
-
-
-
-
 
 
 

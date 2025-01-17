@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-01-06"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -144,7 +144,7 @@ The GRE tunnel is used to wrap the custom IP address with another header so that
 
 The GRE tunnel must be attached to a Transit Gateway for the routing between the IBM Power VS workspace and classic infrastructure.
 
-For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs-draft/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
+For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel](/docs/power-iaas?topic=power-iaas-cloud-connections#configure-gre-tunnel).
 
 
 
