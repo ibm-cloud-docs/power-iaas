@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-23"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -90,8 +90,6 @@ When you provision a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_n
 {: #hardware-specifications-on-cloud}
 
 The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
- IBM Power E1050 (9043-MRX)[^1]
- -->
 
 - [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
 - [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
@@ -101,12 +99,9 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 
 [^1]: Available only at `DAL14` data center.
 
+
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
-
-
-
-
 
 
 ## Data center capabilities
@@ -262,7 +257,6 @@ Some of the limitations of flexible IOPS are as follows:
 
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to Fixed IOPS is not allowed.
-
 
 
 ## Public and private networks
