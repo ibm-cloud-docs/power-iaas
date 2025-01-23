@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,8 +27,11 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: important}
 
 
+- Starting `January 22, 2025`, [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn) and [Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID) are supported in all the data centers.
+
 
 - Global replication service supports new data center pair `LON04`-`LON06`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+
 
 
 
