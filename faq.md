@@ -79,9 +79,7 @@ The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} su
 
 The following stock images are available when you create a virtual machine:
 
-* AIX 7.3 TL2 SP2
-* AIX 7.2 TL5 SP8
-* AIX 7.1 TL5 SP9[^1]
+
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
