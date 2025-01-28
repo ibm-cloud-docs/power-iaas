@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-28"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -81,6 +81,7 @@ The following stock images are available when you create a virtual machine:
 
 * AIX 7.3 TL2 SP2
 * AIX 7.2 TL5 SP8
+* AIX 7.1 TL5 SP9[^1]
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
@@ -90,11 +91,6 @@ The {{site.data.keyword.on-prem-fname}} supports the following operating systems
 
 The following stock images are available when you create a virtual machine:
 
-* AIX 7.3 TL2 SP2
-* AIX 7.3 TL1 SP2
-* AIX 7.2 TL5 SP6
-* AIX 7.2 TL5 SP8
-* AIX 7.3 TL2 SP1
 
 
 To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
@@ -120,18 +116,7 @@ If you are using IBM i 6.1, you must first upgrade the OS to a current support l
 
 IBM i stock images currently available when you create a VM are:
 
-* IBM i COR [^1][^2]
-* IBM i 7.5 TR4
-* IBM i 7.4 TR10
-* IBM i 7.3 TR13
-* IBM i 7.2 TR9 [^3]
 
-[^1]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
-[^2]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
-
-
-
-[^3]: Not supported on {{site.data.keyword.on-prem}}.
 
 ### Linux
 {: #linux-os-versions}
@@ -163,19 +148,19 @@ Red Hat
 * RHEL 8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
 
 
-SUSE [^footnote3]
+SUSE [^footnote6]
 
 * SLES 15 SP6 general purpose (SLES15)
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote1]
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote2]
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote7]
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote8]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
 
-[^footnote1]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote2]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote3]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
+[^footnote7]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote8]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote6]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
 
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
