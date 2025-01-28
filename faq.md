@@ -146,19 +146,19 @@ Red Hat
 * RHEL 8.4 for SAP NetWeaver (RHEL8-SP4-SAP-NETWEAVER)
 
 
-SUSE [^footnote6]
+SUSE [^footnote8]
 
 * SLES 15 SP6 general purpose (SLES15)
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote7]
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote8]
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote9]
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote10]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
 
-[^footnote7]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote8]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote6]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
+[^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
+[^footnote8]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
 
 The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
 {: note}
