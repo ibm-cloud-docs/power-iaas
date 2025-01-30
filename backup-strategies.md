@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-30"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -36,7 +36,7 @@ Learn more about different AIX and Linux backup strategies for IBM&reg; Power Sy
 ## Secure automated backup with Compass for AIX and Linux®
 {: #baas}
 
-IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called Secure Automated Backup with Compass® referred hereafter as “Backup Offering.”
+IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called Secure Automated Backup with Compass® referred 	hereafter as “Backup Offering.”
 
 The Backup Offering is powered by Cobalt Iron Compass and is accessible from the IBM Cloud [catalog](https://cloud.ibm.com/catalog){: external}. The Backup Offering provides enterprise-class backup and restore features in a cloud-centric SaaS solution. Compass capabilities and security features, along with many other security functions provides protection and self-assessments to protect enterprise data and applications.
 
@@ -87,7 +87,7 @@ Cobalt Iron Compass protects various platforms, applications, and data classes. 
     3.  Support for the SAP HANA Cockpit for configuration, monitoring, and scheduling of backups
 
 
-The Backup Offering provides various integrated security and operational features including:
+The Backup Offering provides various integrated security and operational features that includes:
 
 1. Alerting, notifications, and ticketing features and integration
 2. Automated auditing and validation of backup server landscape
@@ -138,9 +138,9 @@ It is highly recommended that you refrain from deploying any additional resource
 
 * Security group with inbound rule, address prefix, and subnet.
 
-* The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces are required be present in the same region and connected by using the local Transit Gateway.
+* The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces are required to be present in the same region and connected by using the local Transit Gateway.
 
-* You can connect your on-premise workloads to the Transit Gateway through a Direct Link connection. A VPN connection will work the same and is equivalent to a Direct Link connection.
+* You can connect your on-premises workloads to the Transit Gateway through a Direct Link connection. A VPN connection works in the same way and is equivalent to a Direct Link connection.
 
 ### Deploying the backup instance
 {: #baas-deploy}
@@ -156,7 +156,7 @@ To create and deploy a backup server instance from the IBM Cloud catalog, comple
 
     For more information, see [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui) and [Using virtual private endpoints for VPC to privately connect to IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-vpe-connection&interface=cli).
 
-6. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: external}.
+7. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: external}.
 
 ### Pricing
 {: #baas-pricing}
@@ -191,6 +191,7 @@ The Backup Offering is available in the following data center pairs:
 {: #baas-support}
 
 Support for the Backup Offering is provided by Cobalt Iron and you need to have login credentials to Cobalt Iron to access the following:
+
 * For more information about the offering, see the [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: extrnal}.
 * For issues related to backup and restore, reach out to Cobalt Iron by opening a service ticket via `support.cobaltiron.com`.
 
