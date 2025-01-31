@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-31"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -22,6 +22,9 @@ subcollection: power-iaas
 
 
 ---
+
+
+
 
 {{site.data.keyword.powerSysFull}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
