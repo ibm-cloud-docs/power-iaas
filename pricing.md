@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-10"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -22,6 +22,7 @@ subcollection: power-iaas
 
 
 ---
+
 
 
 
@@ -52,12 +53,12 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 For more information about the availability of the systems for your data center, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
-
-
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 {: shortdesc}
 
 In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated price might be different than the actual price when you purchase the {{site.data.keyword.powerSys_notm}} or instances based on the discounts and promotion codes.
+
+
 
 ## Consumer ID
 {: #consumer-id}
@@ -79,8 +80,6 @@ For more information on the billing and usage page, see [Billing and Usage docum
 
 
 
-
-
 ## Monthly usage
 {: #pricing-monthly-usage}
 
@@ -99,6 +98,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 {: caption="Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
+
 
 ## Part numbers
 {: #part-numbers}
@@ -292,8 +292,6 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
 
 
 
-
-
 ### Use case of account billable storage
 {: #account-billable-storage}
 
@@ -339,33 +337,35 @@ Total billable storage = 595 GB
 - Image volumes: 200 GB
 - Deployed VMs: 160 GB
 
-## Pricing for VPN connection
+## Pricing for {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
 {: #pricing-vpn}
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
+IBM charges with the base price hourly per connection. The base price varies per geography. So, if you use one VPN connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
 
-## Pricing for Power Edge Router
+
+
+## Pricing for Power Edge Router (PER)
 {: #per-pricing}
 
-There are no additional charges for PER. You are charged based on the number of Transit Gateway connections and routing options.
+There are no additional charges for PER in {{site.data.keyword.powerSys_notm}}. However, you are charged based on the usage of the number of Transit Gateway connections and routing options.
 
-The following table shows the charges based on the routing option that you select:
+The following table shows an example of the charges based on the routing option that you select:
 | Routing type | Charges |
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="Transit Gateway charges based on routing" caption-side="top"}
+{: caption="An example of Transit Gateway charges based on routing" caption-side="top"}
 
-The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
+The following table shows examples of the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
 | Number of connections | Charges |
 |--------------|---------|
 |1 - 4 | No charges |
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Transit Gateway charges based on number of connections" caption-side="top"}
+{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="top"}
 
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
