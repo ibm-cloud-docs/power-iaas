@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-10"
+lastupdated: "2025-02-11"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -337,21 +337,22 @@ Total billable storage = 595 GB
 - Image volumes: 200 GB
 - Deployed VMs: 160 GB
 
-## Pricing for {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
+## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
 {: #pricing-vpn}
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per geography. So, if you use one VPN connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
+IBM charges with the base price hourly per connection. The base price varies per geography. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your geography X 24 hours X 30 days. For example, if the VPN is used on a region in the US geography, and if the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
 
 
 
 ## Pricing for Power Edge Router (PER)
 {: #per-pricing}
 
-There are no additional charges for PER in {{site.data.keyword.powerSys_notm}}. However, you are charged based on the usage of the number of Transit Gateway connections and routing options.
+There are no additional charges for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options associated to the use of that service.
 
 The following table shows an example of the charges based on the routing option that you select:
+
 | Routing type | Charges |
 |--------------|---------|
 |Local routing data transfer | No charges |
