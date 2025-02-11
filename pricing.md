@@ -342,14 +342,16 @@ Total billable storage = 595 GB
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per geography. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your geography X 24 hours X 30 days. For example, if the VPN is used on a region in the US geography, and if the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
+IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
+
+[Query-5]{: tag-red}Replaced the word "geography" with "region". Is "region" better or "location"?
 
 
 
 ## Pricing for Power Edge Router (PER)
 {: #per-pricing}
 
-There are no additional charges for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options associated to the use of that service.
+No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options associated to the use of PER.
 
 The following table shows an example of the charges based on the routing option that you select:
 
@@ -359,9 +361,10 @@ The following table shows an example of the charges based on the routing option 
 |Global routing data transfer | $0.011 GB|
 {: caption="An example of Transit Gateway charges based on routing" caption-side="top"}
 
-The following table shows examples of the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
+The following table shows examples of the charges based on the number of connections that includes Direct Link, VPC, Classic that you can create:
+
 | Number of connections | Charges |
-|--------------|---------|
+|-----------------------|---------|
 |1 - 4 | No charges |
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
