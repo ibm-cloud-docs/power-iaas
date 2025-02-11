@@ -63,7 +63,7 @@ In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated pri
 ## Consumer ID
 {: #consumer-id}
 
-Consumer ID groups the billing usages that are under a single resource such as virtual machines, shared processor pools, and storages. You can view resource usage with a broken down metrics. There is no change in billing or pricing and you continue to receive your bills as-is today.
+Consumer ID groups the billing usages that are under a single resource such as virtual machines, SPPs, and storages. You can view resource usage with a broken down metrics. There is no change in billing or pricing and you continue to receive your bills as-is today.
 
 Following are the benefits of consumer ID:
 - You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
@@ -254,7 +254,7 @@ The following tables show how different processor types affect the cost per syst
 Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
-* You are not charged separately for shared processor pools that you deploy to the dedicated host.
+* You are not charged separately for SPPs that you deploy to the dedicated host.
 * Software charges for the supported operating systems are metered and charged by the core.
 
 
