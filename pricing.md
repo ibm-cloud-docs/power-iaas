@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-12"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}s
 {: #pricing-virtual-server-on-cloud}
 
 ---
@@ -344,7 +344,6 @@ When you use a VPN connection, you are billed monthly.
 
 IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
 
-[Query-5]{: tag-red}Replaced the word "geography" with "region". Is "region" better or "location"?
 
 
 
