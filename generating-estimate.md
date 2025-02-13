@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-02-13"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -47,9 +47,9 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
 
-2. Search for **Workspace for {{site.data.keyword.powerSys_notm}}** in the search box for IBM Cloud catalog.
+2. Search for **{{site.data.keyword.powerSys_notm}}** in the search box for IBM Cloud catalog.
 
-3. Click **Workspace for {{site.data.keyword.powerSys_notm}}** tile.
+3. Click **{{site.data.keyword.powerSys_notm}}** tile.
 
 4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.
     You are redirected to the **Estimate cost** page for {{site.data.keyword.powerSys_notm}}.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-02-13"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -46,7 +46,7 @@ Consider the following points when you are working with the event logs and notif
 You can access a maximum of 400 events for the current and previous months in the IBM Cloud console. To see the event logs, complete the following steps:
 
 1.	Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
-2.	In the catalog's search box, type **{{site.data.keyword.powerSysFull}}**, and click the **Workspace for {{site.data.keyword.powerSysFull}}** tile.
+2.	In the catalog's search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 3.	Click **Select workspace** on the left navigation under workspace of the {{site.data.keyword.powerSysFull}} user interface to select from a list of previously created workspaces.
     If you do not have a workspace, click **Create a workspace**.
 4.	Click **Event logs** to see the list of event logs and notifications.
