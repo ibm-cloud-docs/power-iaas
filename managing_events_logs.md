@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-02-14"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 

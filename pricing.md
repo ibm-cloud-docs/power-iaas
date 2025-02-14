@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}
+# Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}s
 {: #pricing-virtual-server-on-cloud}
 
 ---
@@ -22,6 +22,10 @@ subcollection: power-iaas
 
 
 ---
+
+
+
+
 
 {{site.data.keyword.powerSysFull}}s is offered in select regions with scale-out logical partitions (LPAR). The IBM Power that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
@@ -49,17 +53,17 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 For more information about the availability of the systems for your data center, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
-
-
 It's important to note that a system's theoretical maximum depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 {: shortdesc}
 
 In the Cloud catalog for {{site.data.keyword.powerSys_notm}}s, the estimated price might be different than the actual price when you purchase the {{site.data.keyword.powerSys_notm}} or instances based on the discounts and promotion codes.
 
+
+
 ## Consumer ID
 {: #consumer-id}
 
-Consumer ID groups the billing usages that are under a single resource such as virtual machines, shared processor pools, and storages. You can view resource usage with a broken down metrics. There is no change in billing or pricing and you continue to receive your bills as-is today.
+Consumer ID groups the billing usages that are under a single resource such as virtual machines, SPPs, and storages. You can view resource usage with a broken down metrics. There is no change in billing or pricing and you continue to receive your bills as-is today.
 
 Following are the benefits of consumer ID:
 - You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
@@ -68,13 +72,11 @@ Following are the benefits of consumer ID:
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. On the left navigation menu, click **Usage**.
-3. Click **View plans** for the entry- **Workspace for Power Virtual Server**. A page listing all your workspaces is opened.
+3. Click **View plans** for the entry- **Workspace for {{site.data.keyword.powerSys_notm}}**. A page listing all your workspaces is opened.
 4. Click **View details** for a workspace. A page listing the usage details of a selected workspace is opened.
 5. Scroll to the bottom of the page and click **View instance details**. A page listing the usage details of the selected virtual server instance is opened.
 
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
-
-
 
 
 
@@ -96,6 +98,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 {: caption="Monthly LPAR charges" caption-side="top"}
 
 In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
+
 
 ## Part numbers
 {: #part-numbers}
@@ -251,7 +254,7 @@ The following tables show how different processor types affect the cost per syst
 Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
-* You are not charged separately for shared processor pools that you deploy to the dedicated host.
+* You are not charged separately for SPPs that you deploy to the dedicated host.
 * Software charges for the supported operating systems are metered and charged by the core.
 
 
@@ -283,8 +286,6 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |20 GB|20 GB|
     |20 GB + 30 GB|50 GB|
     {: caption="Calculation of deployed VMs volume" caption-side="bottom"}
-
-
 
 
 
@@ -336,33 +337,38 @@ Total billable storage = 595 GB
 - Image volumes: 200 GB
 - Deployed VMs: 160 GB
 
-## Pricing for VPN connection
+## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
 {: #pricing-vpn}
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per geography. So if you use one vpn connection that is active for a month, the monthly bill would be $base price X 24 hours X 30 days.
+IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
 
-## Pricing for Power Edge Router
+
+
+
+## Pricing for Power Edge Router (PER)
 {: #per-pricing}
 
-There are no additional charges for PER. You are charged based on the number of Transit Gateway connections and routing options.
+No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options associated to the use of PER.
 
-The following table shows the charges based on the routing option that you select:
+The following table shows an example of the charges based on the routing option that you select:
+
 | Routing type | Charges |
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="Transit Gateway charges based on routing" caption-side="top"}
+{: caption="An example of Transit Gateway charges based on routing" caption-side="top"}
 
-The following table shows the charges based on the number of connections including Direct Link, VPC, Classic that you can create:
+The following table shows examples of the charges based on the number of connections that includes Direct Link, VPC, Classic that you can create:
+
 | Number of connections | Charges |
-|--------------|---------|
+|-----------------------|---------|
 |1 - 4 | No charges |
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Transit Gateway charges based on number of connections" caption-side="top"}
+{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="top"}
 
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
