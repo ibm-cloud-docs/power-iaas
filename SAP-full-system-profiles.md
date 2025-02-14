@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-23"
+lastupdated: "2025-02-14"
 
 keywords: power, SAP, full system profiles
 
@@ -35,5 +35,8 @@ No additional billing or metering is charged for full system profiles. The virtu
 
 
 
+
+SAP custom profiles are not supported on POWER10 systems.
+{: note}
 
 For more information about pricing, see [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
