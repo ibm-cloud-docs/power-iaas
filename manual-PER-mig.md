@@ -40,6 +40,8 @@ You must have access to Direct Link to complete your PER migration. For more inf
 
 
 
+
+
 The automation to migrate an existing network to PER is supported via CLI. Use [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1){: external} command. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
 If you have manually configured the subnets and Direct Link through a support ticket, consider migrating your workspace to Power Edge Router (PER) through a support ticket. With PER, you can use the built-in redundancy and higher bandwidth.

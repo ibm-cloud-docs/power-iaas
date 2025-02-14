@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-01-28"
+lastupdated: "2025-02-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -81,6 +81,13 @@ The following stock images are available when you create a virtual machine:
 
 
 
+
+* AIX 7.3 TL2 SP2
+* AIX 7.2 TL5 SP8
+* AIX 7.1 TL5 SP9[^1]
+
+
+
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
 The {{site.data.keyword.on-prem-fname}} supports the following operating systems:
@@ -88,6 +95,20 @@ The {{site.data.keyword.on-prem-fname}} supports the following operating systems
 * E1080 - 7.2 or later
 
 The following stock images are available when you create a virtual machine:
+
+
+
+* AIX 7.3 TL2 SP2
+* AIX 7.3 TL1 SP2
+* AIX 7.2 TL5 SP6
+* AIX 7.2 TL5 SP8
+* AIX 7.3 TL2 SP1
+* AIX 7.1 TL5 SP9[^1A]
+
+[^1]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
+
+[^1A]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
+
 
 
 
@@ -113,6 +134,27 @@ If you are using IBM i 6.1, you must first upgrade the OS to a current support l
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
 IBM i stock images currently available when you create a VM are:
+
+
+
+* IBM i COR [^2][^3]
+* IBM i 7.5 TR4
+* IBM i 7.4 TR10
+* IBM i 7.3 TR13[^4]
+* IBM i 7.2 TR9 [^4A][^5]
+
+[^2]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+
+[^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
+
+[^4]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+
+[^4A]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+
+
+
+[^5]: Not supported on {{site.data.keyword.on-prem}}.
+
 
 
 
