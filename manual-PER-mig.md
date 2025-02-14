@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -45,7 +45,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
 
 1.	Create a [case](https://cloud.ibm.com/unifiedsupport/cases/form){: external} from the **Support Center** of IBM Cloud.
-2.	Select **Power Virtual Server** under **Topic** and **Power VS Network Related** under **Subtopic**.
+2.	Select **Workspace for {{site.data.keyword.powerSys_notm}}**under **Topic** and **Power VS Network Related** under **Subtopic**.
 3.	Provide a short description of your migration requirements in the **Subject**.
 4.	In the **Description** box under additional information, provide the following information and click **Next**:
     1.  The CRN (Cloud Resource Name) of your workspace that you want to upgrade.
