@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-06"
+lastupdated: "2025-02-18"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -75,7 +75,13 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 3. Review the entire lifecycles of {{site.data.keyword.powerSys_notm}} instances on [IBM Power Virtual Server in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-on-cloud) and [IBM Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-getting-started#lifecycle-private-cloud).
 
+
+
 ![Getting Started with IBM {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_overview_Dec2024.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}}"){: caption="Getting Started with IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
+
+
+
+
 
 
 ## Lifecycle of a {{site.data.keyword.powerSys_notm}}
