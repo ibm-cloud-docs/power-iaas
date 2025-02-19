@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-02-19"
 
 keywords: power systems, cloud regions
 
@@ -71,3 +71,7 @@ Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, 
 **x - Not available**
 
 [^4]: This is a single data center for the location.
+
+
+
+{{_include-segments/workspace-note.md}}

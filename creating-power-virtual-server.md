@@ -1,8 +1,8 @@
 ---
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-19"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -51,6 +51,12 @@ To create and configure an {{site.data.keyword.powerSysFull}}, complete the foll
 
 
 For more information about appropriate region for your workspace, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
+
+
+
+
+{{_include-segments/workspace-note.md}}
+
 
 
 
