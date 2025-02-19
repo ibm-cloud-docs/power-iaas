@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-02-10"
+lastupdated: "2025-02-19"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -85,11 +85,17 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 ## Pricing for shared processor pool
 {: #price-spp}
 
+
+
 When using SPP, you pay for the following:
 
 * SPP reserved cores that use dedicated host.
 * SPP reserved cores that use the shared capped host.
 * VM cores that are deployed into the SPP that use shared uncapped host.
+
+
+
+
 
 With SPP you can manage CPU cores. Pricing for memory and storage is charged as ususal. The total estimated cost page does not show the SPP reserved cores-related costs because of service-level estimator limitations. For more information about pricing for SPP in IBM {{site.data.keyword.powerSys_notm}}, see [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud). For more information about pricing for SPP in {{site.data.keyword.on-prem-fname}}, see [FAQ on pricing](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 {: note}
