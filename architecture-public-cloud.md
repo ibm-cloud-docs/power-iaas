@@ -197,8 +197,6 @@ The storage pool selection is based on the use of storage pool or storage affini
 
 
 
-To view the tier of volumes attached to an instance, use the [Detailed info of a volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
-
 
 ### Benefits of flexible IOPS
 {: #IOPS-benefits}
