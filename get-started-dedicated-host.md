@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-02-21"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -24,8 +24,6 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
-{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
