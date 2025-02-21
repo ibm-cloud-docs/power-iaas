@@ -70,7 +70,6 @@ If you are facing any AIX, Linux, or IBM i operating system-specific issue, you 
 4. Complete all the other required information, and click **Submit Case**.
 
 
-
 ## Opening Operating System (AIX, Linux, or IBM i) related cases [{{site.data.keyword.on-prem}}]{: tag-red}
 {: #support-case-IBM-onprem}
 
