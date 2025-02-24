@@ -35,6 +35,13 @@ PER improves network communication across different parts of the IBM network. Th
 
 
 
+
+In a PER and CRN-enabled workspace, you can also define security rules for network traffic control using the network security group feature. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
+
+
+
+
+
 The PER capability will be deployed in all the data centers over time. See [Data centers that support PER](/docs/power-iaas?topic=power-iaas-per#dcs-per) for more information.
 {: note}
 

@@ -62,12 +62,13 @@ To open a support ticket for {{site.data.keyword.off-prem-fname}} in {{site.data
 
 If you are facing any AIX, Linux, or IBM i operating system-specific issue, you must directly engage with the operating system support by using the portal as follows:
 
+
+
 1. Log in to the [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US){: external} portal by using your IBMid.
 2. Click **Open a case**.
-
-
-
+3. On the **Product** field, enter **AIX on PowerVS** or **IBM i on PowerVS**.
 4. Complete all the other required information, and click **Submit Case**.
+
 
 
 ## Opening Operating System (AIX, Linux, or IBM i) related cases [{{site.data.keyword.on-prem}}]{: tag-red}
