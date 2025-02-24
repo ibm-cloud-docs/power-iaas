@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-24"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -194,6 +194,13 @@ Use the [List all supported storage tiers for this cloud instance](/apidocs/powe
 The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default.
 
 The storage pool selection is based on the use of storage pool or storage affinity parameters. Specifying a storage pool identifies the storage pool directly while storage affinity uses a policy (affinity or anti-affinity) along with an existing volume or virtual server. For flexible IOPS, all storage pools support any tier level. Additionally, the storage tier is not tied to the storage pool.
+
+
+
+
+
+To view the tier of volumes attached to an instance, use the [Detailed info of a volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
+{: note}
 
 
 

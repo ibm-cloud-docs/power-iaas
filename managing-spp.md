@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-02-19"
+lastupdated: "2025-02-24"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -86,11 +86,14 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 
 
 
-When using SPP, you pay for the following:
 
-* SPP reserved cores that use dedicated host.
-* SPP reserved cores that use the shared capped host.
-* VM cores that are deployed into the SPP that use shared uncapped host.
+
+
+When you use SPP, you pay for the following charges:
+
+* Reserved cores in SPP are charged as shared capped cores
+
+* Each VM in SPP is charged for the cores that are assigned to the VM based on their core type (either shared capped cores or shared uncapped cores).
 
 
 
