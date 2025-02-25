@@ -89,6 +89,7 @@ toc:
              - configuring-private-subnet.md
              - new-network-architecture.md
              - getting-started-PER.md
+             - Network-security-group.md
              - vpn-connections.md
              - network-security.md
              - X86-based-systems.md

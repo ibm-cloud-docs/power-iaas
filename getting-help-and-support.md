@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-24"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -44,7 +44,7 @@ To open a support ticket for {{site.data.keyword.off-prem-fname}} in {{site.data
 2. In the menu bar, click **Help (![Help](../icons/help.svg "Help"))** icon. Select the **Support center** option.
 3. On the **Support Center** page, click **Create a case**.
        The **Create a case** page opens.
-4. From the **Topic** menu, select **Workspace for Power Virtual Server** option.
+4. From the **Topic** menu, select **{{site.data.keyword.powerSys_notm}}** option.
 5. From the **Subtopic** menu, select the topic that is related to your issue. For example, Power VS Compute Related or Power VS On Premises Related.
 6. Provide a short description of the issue in the **Subject** field and a detailed description of the issue in the **Description** field.
 7. (Optional) Attach any helpful files in the **Attachments** field.
@@ -62,9 +62,11 @@ To open a support ticket for {{site.data.keyword.off-prem-fname}} in {{site.data
 
 If you are facing any AIX, Linux, or IBM i operating system-specific issue, you must directly engage with the operating system support by using the portal as follows:
 
+
+
 1. Log in to the [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US){: external} portal by using your IBMid.
 2. Click **Open a case**.
-3. On the **Product** field, enter **AIX on Cloud** or **IBM i on Cloud**.
+3. On the **Product** field, enter **AIX on PowerVS** or **IBM i on PowerVS**.
 4. Complete all the other required information, and click **Submit Case**.
 
 

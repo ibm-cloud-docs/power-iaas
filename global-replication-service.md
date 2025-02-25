@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-19"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -117,7 +117,7 @@ The GRS details of the volume are displayed when you click the storage volume.
 
 A storage volume can have one of the following replication status:
 
-- **Not eligible**: The storage volume is not in a GRS-enabled storage pool so GRS cannot be enabled on the storage volume. To move the storage volume to a GRS-enabled storage pool, submit a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+- **Not eligible**: The storage volume is not in a GRS-enabled storage pool so GRS cannot be enabled on the storage volume. 
 - **Not supported**: The site where the storage volume is created is not a GRS-supported location. So, you cannot enable replication of the storage volume.
 - **Not configured**: The storage volume is in a GRS-enabled location. You can configure the storage volume for GRS.
 - **Initializing**: The GRS enablement of the storage volume is in progress.
