@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-19"
+lastupdated: "2025-02-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,6 +27,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {{_include-segments/workspace-note.md}}
 
 
+
+- {{site.data.keyword.powerSys_notm}} is now HITRUST CSF&reg; compliant. For more information, see [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#hitrust).
+
+- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
+
+
+
+- You can now use Network security groups (NSG) in your PER-enabled {{site.data.keyword.powerSys_notm}} workspaces to control internal and external inbound traffic to your virtual network. You can define security rules for NSGs based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). This new capability is available when creating new PER-enabled workspaces. Existing workspaces are planned to be migrated to support NSGs by `June 2025`. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 
 
 

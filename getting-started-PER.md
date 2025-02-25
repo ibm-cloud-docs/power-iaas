@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -36,7 +36,7 @@ PER improves network communication across different parts of the IBM network. Th
 
 
 
-In a PER and CRN-enabled workspace, you can also define security rules for network traffic control using the network security group feature. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
+In a PER and enhanced CRN-enabled workspace, you can also define security rules for network traffic control using the network security group feature. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 
 
 
