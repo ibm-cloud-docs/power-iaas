@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -117,12 +117,12 @@ When you delete a workspace, the resources that are associated with the workspac
 
 For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](https://cloud.ibm.com/docs/account?topic=account-crn).
 
-[JIRA-POWERIAAS-15541-start]{: tag-green}
+
 
 To view or search for resources that are provisioned in IBM {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources){: external}. Note that the user tags are not included in the response for GET API and CLI requests.
 {: note}
 
-[JIRA-POWERIAAS-15541-end]{: tag-green}
+
 
 The following table lists the {{site.data.keyword.powerSys_notm}} resources that are CRN enabled.
 
