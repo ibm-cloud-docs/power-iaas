@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-27"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -27,6 +27,7 @@ subcollection: power-iaas
 ---
 
 A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces. This new capability is available when creating new PER-enabled workspaces. Existing workspaces will be able to support NSGs after a migration process is completed within the PowerVS data centers scheduled to be completed by June 2025.
+{: shortdesc}
 
 Security rules in NSG define which inbound or ingress network traffic is allowed or denied from reaching [members](#members). Members are one or more network interfaces (NIC) at the subnet and virtual machine (VM) level. All outbound or egress traffic is automatically allowed.
 
@@ -73,7 +74,7 @@ An NSG member can only be associated with a single NSG. A provisioned network re
 {: #rules}
 
 Rules or security rules define the inbound network traffic that is allowed or denied from reaching members of an NSG. By default, all inbound network traffic is denied and does not reach any member of an NSG unless security rules are explicitly defined. To learn more about defining rules to allow inbound traffic, see [Creating a new rule on an NSG](#creating-a-new-rule-on-an-nsg).
-{: shortdesc}
+
 
 All outbound traffic is automatically allowed.
 {: note}
@@ -571,5 +572,3 @@ The support tickets to increase the quota are evaluated by customer support and 
 {: #security-con}
 
 When the NSG feature is disabled on a {{site.data.keyword.powerSys_notm}} workspace, the system allows unrestricted communication between VMs and subnets in that workspace. Enabling the NSG feature on a workspace maintains this behavior but also allows you to control the network traffic with security rules to meet specific requirements.
-
-
