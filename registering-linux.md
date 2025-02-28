@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -51,8 +51,7 @@ When you create an OVA image, you must include the appropriate {{site.data.keywo
 
 To run SUSE Linux Enterprise Server on {{site.data.keyword.powerSys_notm}}, your hardware must meet the minimum memory requirements. A minimum of 1024 MB of memory is required for a minimal installation. On machines with more than two processors, add 512 MB per CPU. The memory values specified are valid only for the installation of the operating system. The actual memory requirement in production depends on the workload of the system. For more information about the SLES hardware recommendations, see [https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-power.html]{: external}.
 
-
-
+{{_include-segments/sap-subscription-mode.md}}
 
 ## Registering and purchasing a subscription to SLES
 {: #registering-sles}

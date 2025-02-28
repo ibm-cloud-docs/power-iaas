@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-28"
 
 keywords: power, SAP HANA, sr2, sh2, profiles
 
@@ -24,7 +24,6 @@ subcollection: power-iaas
 
 
 ---
-
 
 
 You can deploy SAP HANA on the following systems:
