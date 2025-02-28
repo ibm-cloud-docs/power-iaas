@@ -21,11 +21,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## February 2025
 {: #Feb-2025}
 
-[Jira-POWERIAAS-17947-start]{: tag-green}
 
 
-- The End of Support date for Cloud Connections has been extended from 18 April, 2025 to 18 June, 2025 to align with its end of life date. For more information about the End of Service and End of Life Notice, see [December 2024](#Dec-2024).
-{: note}
 
 [Jira-POWERIAAS-17947-end]{: tag-green}
 
