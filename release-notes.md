@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,8 +23,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-
-[Jira-POWERIAAS-17947-end]{: tag-green}
 
 
 
