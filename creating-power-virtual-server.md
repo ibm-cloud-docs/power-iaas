@@ -161,6 +161,14 @@ VSN is supported only on a VM with IBM i operating system.
 
 
 
+VSN has the following characteristics:
+
+* It has seven digits and is a unique string.
+* It is used for licensing and tracking the usage of the VM.
+* It can be associated with only one VM.
+* It can be assigned to a new or an existing VM.
+
+
 
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
