@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-05"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -442,6 +442,7 @@ The following tables show examples of how different processor types affect the c
 {: #price-spp}
 
 Shared processor pool (SPP) provides the capability to manage CPU cores efficiently. The number of cores that are assigned to an SPP depends on the entitled cores (EC) and virtual cores (VC) ratio. The EC:VP ratio varies by system type. For example, Power10 systems allow different ratios as compared to Power9 systems. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+
 
 
 
