@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-07"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -24,6 +24,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
+
+The End of Support date for Cloud Connections has been extended from 18 April, 2025 to 18 June, 2025 to align with its end of life date. For more information about the End of Service and End of Life Notice, see [December 2024](#Dec-2024).
+{: important}
+
+
+
+
+
 {{_include-segments/workspace-note.md}}
 
 
@@ -34,7 +42,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-- You can now use Network security groups (NSG) in your PER-enabled {{site.data.keyword.powerSys_notm}} workspaces to control internal and external inbound traffic to your virtual network. You can define security rules for NSGs based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). This new capability is available when creating new PER-enabled workspaces. Existing workspaces are planned to be migrated to support NSGs by `June 2025`. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
+- [{{site.data.keyword.off-prem}}]{: tag-blue} You can now use Network security groups (NSG) in your PER-enabled {{site.data.keyword.powerSys_notm}} workspaces to control internal and external inbound traffic to your virtual network. You can define security rules for NSGs based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). This new capability is available when creating new PER-enabled workspaces. Existing workspaces are planned to be migrated to support NSGs by `June 2025`. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 
 
 

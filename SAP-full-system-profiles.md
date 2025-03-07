@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-02-14"
+lastupdated: "2025-03-05"
 
 keywords: power, SAP, full system profiles
 
@@ -19,14 +19,10 @@ subcollection: power-iaas
 ---
 
 
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---
-
-
-
 
 
 SAP HANA profiles that use all or most of the system resources are referred to as 'full system profiles'. You can deploy SAP HANA using full system profiles on a system if no virtual machines are deployed on the system.

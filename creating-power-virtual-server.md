@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-07"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -160,12 +160,16 @@ VSN is supported only on a VM with IBM i operating system.
 
 
 
+
 VSN has the following characteristics:
 
 * It has seven digits and is a unique string.
 * It is used for licensing and tracking the usage of the VM.
 * It can be associated with only one VM.
 * It can be assigned to a new or an existing VM.
+
+
+
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 
@@ -200,8 +204,11 @@ For more information about creating a VM, see [Configuring a {{site.data.keyword
 
 
 
+
 You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
 {: note}
+
+
 
 
 

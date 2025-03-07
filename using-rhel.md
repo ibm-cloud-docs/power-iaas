@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-02-28"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -53,6 +53,8 @@ When you create an OVA image, ensure that the image includes the correct version
 
 You can use the [pvsadm tool](https://github.com/ppc64le-cloud/pvsadm#readme) to convert the RHEL 8.3 Qcow2 images to OVA image. The pvsadm tool is an open source tool and not an IBM-supported product. If you experience any issues with this tool, you can [open an issue](https://github.com/ppc64le-cloud/pvsadm/issues) within the pvsadm tool GitHub repository. If you use any tool for RHEL releases that are in extended support, ensure that only the Extended Update Support (EUS)-related packages are downloaded and packaged by the tool.
 {: note}
+
+{{_include-segments/sap-subscription-mode.md}}
 
 ## Registering and purchasing a subscription to RHEL
 {: #subscribing-to-rhel}

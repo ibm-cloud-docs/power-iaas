@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-02-28"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -18,8 +18,6 @@ subcollection: power-iaas
 {: #using-linux}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -47,13 +45,13 @@ The {{site.data.keyword.powerSysFull}} provides Linux (RHEL and SLES) stock imag
 To ensure that you are running the supported OS levels and to plan for upgrades to the latest levels, refer to [SLES](https://www.suse.com/lifecycle#suse-linux-enterprise-server-15){: external} OS release lifecycle information.
 {: important}
 
-
-
 If you do not choose to use the full Linux subscription for {{site.data.keyword.powerSys_notm}} you must obtain the subscription directly from the vendor and bring your image. After you deploy your Linux VM, you must log in to the VM and register it with the Linux vendor’s satellite server. To reach the Linux vendor satellite servers (where you can register and obtain packages and fixes), you must attach a public network to your VM.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
 
 To run SUSE Linux Enterprise Server on {{site.data.keyword.powerSys_notm}}, your hardware must meet the minimum memory requirements. A minimum of 1024 MB of memory is required for a minimal installation. On machines with more than two processors, add 512 MB per CPU. The memory values specified are valid only for the installation of the operating system. The actual memory requirement in production depends on the workload of the system. For more information about the SLES hardware recommendations, see [https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-power.html]{: external}.
+
+{{_include-segments/sap-subscription-mode.md}}
 
 ## Registering and purchasing a subscription to SLES
 {: #registering-sles}
