@@ -26,8 +26,8 @@ subcollection: power-iaas
 
 ---
 
-A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.{: shortdesc} This new capability is available when creating new PER-enabled workspaces. Existing workspaces will be able to support NSGs after a migration process is completed within the PowerVS data centers scheduled to be completed by June 2025.
-
+A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces. This new capability is available when creating new PER-enabled workspaces. Existing workspaces will be able to support NSGs after a migration process is completed within the PowerVS data centers scheduled to be completed by June 2025.
+{: shortdesc}
 
 
 
