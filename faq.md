@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -142,6 +142,8 @@ IBM i stock images currently available when you create a VM are:
 * IBM i 7.4 TR10
 * IBM i 7.3 TR13[^4]
 * IBM i 7.2 TR9 [^4A][^5]
+
+
 
 
 [^2]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
