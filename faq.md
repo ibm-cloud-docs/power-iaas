@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -254,6 +254,8 @@ In each pod, one spare node is available that is exclusively usable for IBM oper
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
 
+
+
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSys_notm}} in IBM Cloud. {{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in IBM Cloud. You can use these events to identify the following information:
 * The users who made API calls to cloud services.
 * The time-stamp when the API calls were made.
@@ -261,6 +263,10 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 * The criticality of the action.
 
 For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
+
+
+
+
 
 
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?

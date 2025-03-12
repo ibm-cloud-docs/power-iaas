@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-03-12"
 
-keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events
+keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events, IBM Cloud Logs
 
 subcollection: power-iaas
 
@@ -28,6 +28,7 @@ subcollection: power-iaas
 
 
 ---
+
 
 
 {{site.data.keyword.powerSys_notm}} Activity Tracker Events migrated to the CADF Event standard on 29 January, 2024. With the implementation of this change, some of the event fields are not sent or replaced by the [new format](#at-response-sample).
