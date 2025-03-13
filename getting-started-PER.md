@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-13"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -74,13 +74,21 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 {: #leverage-per}
 
 - You cannot create a Cloud Connection or a VPN connection in a PER workspace.
+
 - You can establish a connection between collocated workspaces if one colocation facility (colo) is PER-enabled (such as `DAL10`) and the second colo (`DAL12` / `DAL13`) uses [Direct Link](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). Both collocated workspaces must be connected to the same Transit Gateway.
+
 - When a PER workspace is connected to a Transit Gateway, you can connect a Direct Link to the same Transit Gateway. You can use the connection to achieve an end-to-end connectivity from a network in your client-managed environment to the PER workspace. 
+
 - You can establish a connection between VPC and classic infrastructure with PER by adding them to the Transit Gateway.
+
 - When you create private networks in a PER workspace, a maximum of one DNS server can be specified.
+
 - A GRE (Generic Routing Encapsulation) tunnel is not supported in a PER workspace.
+
 - You cannot create a non-PER workspace in a PER-enabled data center. However, you can still use your old non-PER workspaces that are existing in a PER-enabled data center that are created before PER rollout.
+
 - In certain situations, local connection charges can apply when you connect from a client-managed location to {{site.data.keyword.powerSys_notm}}. To ensure accurate pricing, it is important to use the cost estimator tool. See the [Pricing of Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to learn more about PER pricing.
+
 
 ## Migrating to PER
 {: #migrate-per}
