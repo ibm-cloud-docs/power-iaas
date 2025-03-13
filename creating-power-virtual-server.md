@@ -85,9 +85,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-3. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
+1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-4. Complete the **Boot image** fields.
+2. Complete the **Boot image** fields.
 
     You can create or provision a virtual server instance (VM) without any initial boot image volume. VMs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VM can be created without a boot volume and the volume that is cloned or replicated can be attached to a VM to bring the backed-up VM.
 
