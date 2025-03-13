@@ -104,6 +104,7 @@ The migration of an existing workspace to PER is supported through CLI by using 
 - `per-migrate-validate`: Removes the Cloud Connections for the workspace from the network database. Use this command after you remove the Cloud Connections for the workspace from the Transit Gateway.
 
 
+
 Complete the following steps to migrate the workspace to PER:
 
 1. Remove the following connections:
