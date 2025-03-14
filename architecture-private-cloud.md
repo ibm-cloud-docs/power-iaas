@@ -119,6 +119,24 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 {: #single-rack}
 {: tab-title="S1022"}
 
+| Server types                | Min      | Max |
+| --------------------------- | -------- | --- |
+| Server quantity in a pod    | 2        | 4   |
+| Number of cores per server  | 96       | 96  |
+| Total number of cores       | 192      | 384 |
+| Usable cores                | 170      | 340 |
+|                             |          |     |
+| **Memory types**            |          |     |
+| 2 TB                        |  -       | -   |
+| 4 TB                        |  -       | -   |
+| 8 TB                        | 16       | 32  |
+{: class="simple-tab-table"}
+{: tab-group="host_selection"}
+{: caption="Small pod configuration." caption-side="top"}
+{: #single-rack}
+{: tab-title="E1050"}
+
+
 
 
 
