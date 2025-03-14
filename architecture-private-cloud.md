@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-03-14"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -101,6 +101,7 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
 
+
 | Server types                | Min   | Min | Max |
 | --------------------------- | ------|-----|---- |
 | Server quantity in a pod    | 6     | 5   | 9   |
@@ -117,6 +118,11 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 {: caption="Small pod configuration." caption-side="top"}
 {: #single-rack}
 {: tab-title="S1022"}
+
+
+
+
+
 
 | Server types                | Min      | Max |
 | --------------------------- | -------- | --- |
