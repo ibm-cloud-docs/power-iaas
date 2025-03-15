@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-15"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events, IBM Cloud Logs
 
@@ -43,22 +43,48 @@ Activity tracking events report on activities that change the state of a service
 
 You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](https://github.ibm.com/ibmcloud/content-kit/blob/main/docs/atracker?topic=atracker-about){: external}.
 
+
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
-As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of `30 March 2025`. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before `30 March 2025`. During the migration period, customers can use {{site.data.keyword.at_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+{{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [Getting started tutorial for {{site.data.keyword.atracker_short}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
+
+
+
+
+
+
+As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of `30 March 2025`. You must migrate to {{site.data.keyword.logs_full_notm}} before `30 March 2025`. During the migration period, you can use {{site.data.keyword.at_full_notm}} with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
 {: important}
 
 
 
 
 
-{{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [Getting started tutorial for {{site.data.keyword.atracker_short}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
-
-
 {{site.data.keyword.powerSysFull}} automatically generates events so that you can track activity on your service.
 
 ## Management events
 {: #at-actions-management}
+
+Management events are of following types:
+    - [Instance events](#instance-events)
+    - [Images events](#images-events)
+    - [Network events](#network-events)
+    - [{{site.data.keyword.powerSys\_notm}} events](#sitedatakeywordpowersys_notm-events)
+    - [SSH keys events](#ssh-keys-events)
+    - [Data volumes events](#data-volumes-events)
+    - [Storage capacity events](#storage-capacity-events)
+    - [Storage pools events](#storage-pools-events)
+    - [Tenant events](#tenant-events)
+    - [List of events: Job](#list-of-events-job)
+    - [List of events: Network ports](#list-of-events-network-ports)
+    - [List of events: SAP](#list-of-events-sap)
+    - [List of events: Cloud connections](#list-of-events-cloud-connections)
+    - [List of events: Placement groups](#list-of-events-placement-groups)
+    - [List of events: IKE policy](#list-of-events-ike-policy)
+    - [List of events: IPsec policy](#list-of-events-ipsec-policy)
+    - [List of events: VPN connection](#list-of-events-vpn-connection)
+
+
 
 
 ### Instance events
@@ -307,11 +333,13 @@ The following events are to work with VPN Connection in your {{site.data.keyword
 ## Viewing events
 {: #at-viewing-events}
 
-Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the activity tracker logs as follows:
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the {{site.data.keyword.at_full_notm}} as follows:
 - All North America and South America data centers from Dallas.
 - All Europe data centers from Frankfurt.
 - All Sydney data center from Sydney, and
 - All Japan data center from Tokyo.
+
+<public>
 
 For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Logs, see [IBM Cloud services that generate Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
@@ -322,10 +350,13 @@ For a list of locations where {{site.data.keyword.powerSys_notm}} services are e
 
 The new response format that is used in activity tracking adheres to the CADF (Cloud Auditing Data Federation) standard. Hence, auditing events can be collected and routed in a standardized format, ensuring consistency and interoperability across different cloud platforms.
 
+
 The CADF standard is significant in auditing security in cloud environments. It defines a comprehensive event model that includes the necessary information for certifying, managing, and auditing the security of applications and services in the cloud.
 {: note}
 
 The following code snippets show the differences between the old and new activity tracker response format.
+
+
 
 `New response format`
 ```json
@@ -383,10 +414,11 @@ The following code snippets show the differences between the old and new activit
     },
     "message": "Power Virtual Server: read tenant xxxxxxxxxxxxxxxxxxxx ",
     "observer": {
-        "name": "ActivityTracker"
+        "name": "Activity tracker"
     }
 }
 ```
+
 
 `Old response format`
 ```json
@@ -436,6 +468,7 @@ The following code snippets show the differences between the old and new activit
 }
 ```
 
+
 ## Activity tracker regions
 {: #at-regions}
 
@@ -445,6 +478,7 @@ The {{site.data.keyword.powerSys_notm}} workspaces that runs in various regions 
 {: important}
 
 The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:
+
 
 |Datacenter | Current activity tracker region | New activity tracker region |
 |------|----------|---------|
@@ -459,3 +493,6 @@ The following table shows the data center and its corresponding regions where yo
 |`LON06` | eu-de | eu-gb|
 |`OSA21` | jp-tok | jp-osa|
 {: caption="List of DCs and their corresponding AT instance region" caption-side="top"}
+
+
+</public>
