@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-03-17"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -309,6 +309,9 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 {: #pricing-spp-private-cloud}
 
 SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}. In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
+
+
+
 
 Consequently, the calculation of operating system license charges follows a distinct methodology within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
 

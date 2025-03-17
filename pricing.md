@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-17"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -95,7 +95,7 @@ Following are the benefits of consumer ID:
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. On the left navigation menu, click **Usage**.
-3. Click **View plans** for the entry- **{{site.data.keyword.powerSys_notm}}**. A page listing all your workspaces is opened.
+3. Click **View plans** for the entry- **{{site.data.keyword.powerSys_notm}} Workspace**. A page listing all your workspaces is opened.
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
 5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected virtual server instance is opened.
 
