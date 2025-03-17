@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-03-15"
+lastupdated: "2025-03-17"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events, IBM Cloud Logs
 
@@ -65,11 +65,12 @@ As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is depreca
 ## Management events
 {: #at-actions-management}
 
-Management events are of following types:
+Following are the differnt types of management events:
+
     - [Instance events](#instance-events)
     - [Images events](#images-events)
     - [Network events](#network-events)
-    - [{{site.data.keyword.powerSys\_notm}} events](#sitedatakeywordpowersys_notm-events)
+    - [{{site.data.keyword.powerSys_notm}} events](#sitedatakeywordpowersys_notm-events)
     - [SSH keys events](#ssh-keys-events)
     - [Data volumes events](#data-volumes-events)
     - [Storage capacity events](#storage-capacity-events)
@@ -333,7 +334,7 @@ The following events are to work with VPN Connection in your {{site.data.keyword
 ## Viewing events
 {: #at-viewing-events}
 
-Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the {{site.data.keyword.at_full_notm}} as follows:
+Events are automatically forwarded to North America, Europe, Tokyo, or Sydney geographic locations. You can access the {{site.data.keyword.logs_full_notm}} as follows:
 - All North America and South America data centers from Dallas.
 - All Europe data centers from Frankfurt.
 - All Sydney data center from Sydney, and
@@ -469,12 +470,12 @@ The following code snippets show the differences between the old and new activit
 ```
 
 
-## Activity tracker regions
+## IBM Cloud log regions
 {: #at-regions}
 
-You can create an activity tracker instance and provision it in the same region where your data center is located.
+You can create an {{site.data.keyword.logs_full_notm}} instance and provision it in the same region where your data center is located.
 
-The {{site.data.keyword.powerSys_notm}} workspaces that runs in various regions or data centers will send events to activity tracker instances in their respective regions effective from 29 January 2024. You must create and provision instances of activity tracker in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export activity Tracker events, see [Exporting Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-export).
+The {{site.data.keyword.powerSys_notm}} workspaces that runs in various regions or data centers will send events to {{site.data.keyword.logs_full_notm}} instances in their respective regions. You must create and provision instances of {{site.data.keyword.logs_full_notm}} in the respective regions where your workspaces reside for continued access to {{site.data.keyword.powerSys_notm}} activity tracker events. If you want to export {{site.data.keyword.logs_full_notm}} events, see [Exporting {{site.data.keyword.logs_full_notm}} events](/docs/activity-tracker?topic=activity-tracker-export).
 {: important}
 
 The following table shows the data center and its corresponding regions where you can deploy an activity tracker instance:
