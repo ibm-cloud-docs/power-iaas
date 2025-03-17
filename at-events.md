@@ -316,7 +316,7 @@ Events are automatically forwarded to North America, Europe, Tokyo, or Sydney ge
 - All Sydney data center from Sydney, and
 - All Japan data center from Tokyo.
 
-<public>
+
 
 For a list of locations where {{site.data.keyword.powerSys_notm}} services are enabled to send events to IBM Cloud Logs, see [IBM Cloud services that generate Activity Tracker events](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations&interface=cli#cloud_services_locations_power-iaas).
 
@@ -470,6 +470,3 @@ The following table shows the data center and its corresponding regions where yo
 |`LON06` | eu-de | eu-gb|
 |`OSA21` | jp-tok | jp-osa|
 {: caption="List of DCs and their corresponding AT instance region" caption-side="top"}
-
-
-</public>
