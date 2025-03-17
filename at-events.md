@@ -19,7 +19,6 @@ subcollection: power-iaas
 ---
 
 
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
