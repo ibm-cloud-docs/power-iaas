@@ -60,38 +60,15 @@ As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is depreca
 
 
 
-{{site.data.keyword.powerSysFull}} automatically generates events so that you can track activity on your service.
 
 ## Management events
 {: #at-actions-management}
-
-Following are the differnt types of management events:
-
-    - [Instance events](#instance-events)
-    - [Images events](#images-events)
-    - [Network events](#network-events)
-    - [{{site.data.keyword.powerSys_notm}} events](#sitedatakeywordpowersys_notm-events)
-    - [SSH keys events](#ssh-keys-events)
-    - [Data volumes events](#data-volumes-events)
-    - [Storage capacity events](#storage-capacity-events)
-    - [Storage pools events](#storage-pools-events)
-    - [Tenant events](#tenant-events)
-    - [List of events: Job](#list-of-events-job)
-    - [List of events: Network ports](#list-of-events-network-ports)
-    - [List of events: SAP](#list-of-events-sap)
-    - [List of events: Cloud connections](#list-of-events-cloud-connections)
-    - [List of events: Placement groups](#list-of-events-placement-groups)
-    - [List of events: IKE policy](#list-of-events-ike-policy)
-    - [List of events: IPsec policy](#list-of-events-ipsec-policy)
-    - [List of events: VPN connection](#list-of-events-vpn-connection)
-
-
 
 
 ### Instance events
 {: #at-actions-read}
 
-The following event is used to read the {{site.data.keyword.powerSys_notm}} instance.
+The following events are used to read the {{site.data.keyword.powerSys_notm}} instance.
 
 | Action   | Description                                      |
 |:---------|:-------------------------------------------------|
