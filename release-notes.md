@@ -17,15 +17,23 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-[Jira-POWERIAAS-17947-start]{: tag-green}
 
 ## March 2025
 {: #March-2025}
+
+[Jira-POWERIAAS-17947-start]{: tag-green}
 
 The End of Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 April 2025. However, starting with 1 July 2025 metering charges are applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections. To avoid these charges, migrate your workspace before 1 July 2025. For more information about the migration, see [Migrating to Power Edge Router](docs/power-iaas?topic=power-iaas-per#migrate-per).
 {: important}
 
 [Jira-POWERIAAS-17947-end]{: tag-green}
+
+[Jira-POWERIAAS-17399-start]{: tag-green}
+
+- [{{site.data.keyword.off-prem}}]{: tag-blue} You can now can enable Cloud Security Posture Management (CSPM) feature in your existing and new {{site.data.keyword.powerSys_notm}} workspaces. For more information about CSPM, see [Integrating Power Virtual Server with IBM Cloud Security and Compliance Center Workload Protection](/docs/power-iaas?topic=power-iaas-integrate-scc).
+
+[Jira-POWERIAAS-17399-end]{: tag-green}
+
 
 
 ## February 2025
