@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-19"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -225,6 +225,45 @@ Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usa
 
 
 
+
+
+### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+{: #pricing-spp-private-cloud}
+
+SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
+
+In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
+
+Consequently, the calculation of operating system license charges follows a distinct methodology within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
+
+When you use SPP in {{site.data.keyword.on-prem-fname}}, you pay for the following items:
+
+* The maximum capacity of the SPP reserved cores that use the shared capped part number.
+* The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
+* The operating system license, which is based on the following types of virtual server instances:
+    * Capped SPP: pricing is determined by the entitled capacity.
+    * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
+
+Table 12 shows the details of SPP in {{site.data.keyword.on-prem-fname}}.
+
+
+
+
+| Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
+| -----------------  | -----------  | ------------  | ------------------ |
+| {{site.data.keyword.on-prem-fname}}	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode  \n For {{site.data.keyword.on-prem-fname}}, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
+| Default Pool | 1:20 | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change |
+{: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="top"}
+
+For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
+
+
+
+
+
+
+
+
 ## Pricing for dedicated hosts
 {: #pricing-dh-private}
 
@@ -301,45 +340,6 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 |  Tier 3                  | $0.00003865                   | $0.03                     |
 |  Tier 5k                 | $0.00010652                   | $0.08                     |
 {: caption="Snapshot storage pricing" caption-side="bottom"}
-
-
-
-
-### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
-{: #pricing-spp-private-cloud}
-
-SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
-
-
-
-In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
-
-Consequently, the calculation of operating system license charges follows a distinct methodology within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
-
-When you use SPP in {{site.data.keyword.on-prem-fname}}, you pay for the following items:
-
-* The maximum capacity of the SPP reserved cores that use the shared capped part number.
-* The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
-* The operating system license, which is based on the following types of virtual server instances:
-    * Capped SPP: pricing is determined by the entitled capacity.
-    * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
-
-Table 12 shows the details of SPP in {{site.data.keyword.on-prem-fname}}.
-
-
-
-
-| Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
-| -----------------  | -----------  | ------------  | ------------------ |
-| {{site.data.keyword.on-prem-fname}}	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode  \n For {{site.data.keyword.on-prem-fname}}, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
-| Default Pool | 1:20 | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change |
-{: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="top"}
-
-For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
-
-
-
-
 
 
 ### Use case of account billable storage
