@@ -227,7 +227,7 @@ Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usa
 
 
 
-### Pricing for shared processor pool in IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+## Pricing for shared processor pool
 {: #pricing-spp-private-cloud}
 
 SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
