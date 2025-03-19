@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-19"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Snapshots, cloning, and restoring
+# Snapshots, restoring, and cloning
 {: #snapshots-cloning}
 
 ---
@@ -28,8 +28,6 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.powerSysFull}} provides the capability to capture full, point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, {{site.data.keyword.powerSysShort}} APIs you can create delta snapshots, volume clones, and restore your disks.
-
-
 
 
 
