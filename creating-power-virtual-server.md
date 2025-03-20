@@ -180,7 +180,6 @@ A VM is moved across systems with its associated VSN. Hence, when a VSN is assoc
 
 
 
-
 VSN is a unique identifier and can be assigned only to one VM at a time. If you simultaneously deploy more than one VM assigning the same VSN, only one of the VMs gets the VSN and the others are deployed without the VSN being assigned.
 {: important}
 
