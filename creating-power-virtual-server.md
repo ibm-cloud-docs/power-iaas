@@ -169,6 +169,15 @@ VSN has the following characteristics:
 
 
 
+[Jira-POWERIAAS-17937-start]{: tag-green}
+
+[Jira-POWERIAAS-18210-end]{: tag-green}
+
+
+
+[Jira-POWERIAAS-18210-start]{: tag-green}
+
+
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 
