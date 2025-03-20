@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-20"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -388,6 +388,8 @@ To create a volume group, you can use the CLI command, [ibmcloud pi volume-group
 You can add or remove storage volumes from a volume group. After onboarding primary volumes, if you add storage volumes to a volume group on the primary site after the primary volumes, you must onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
 
 To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
+
+
 
 
 ## Limitations of GRS
