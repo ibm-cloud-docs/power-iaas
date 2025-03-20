@@ -169,13 +169,7 @@ VSN has the following characteristics:
 
 
 
-[Jira-POWERIAAS-17937-start]{: tag-green}
 
-[Jira-POWERIAAS-18210-end]{: tag-green}
-
-
-
-[Jira-POWERIAAS-18210-start]{: tag-green}
 
 
 
