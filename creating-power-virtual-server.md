@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-20"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -204,8 +204,6 @@ For more information about creating a VM, see [Configuring a {{site.data.keyword
 
 
 
-You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
-{: note}
 
 
 
@@ -228,8 +226,7 @@ To assign a VSN for an existing IBM i VM, complete the following steps:
 
 
 
-You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
-{: note}
+
 
 
 
