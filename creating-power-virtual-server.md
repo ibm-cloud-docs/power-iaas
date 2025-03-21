@@ -104,7 +104,6 @@ You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subs
 
     You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
-
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
     [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
@@ -172,8 +171,6 @@ VSN has the following characteristics:
 * It is used for licensing and tracking the usage of the VM.
 * It can be associated with only one VM.
 * It can be assigned to a new or an existing VM.
-
-
 
 
 
