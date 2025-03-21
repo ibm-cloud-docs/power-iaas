@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -310,8 +310,9 @@ You can choose to configure a VM for Epic workloads only when you select AIX as 
 
 1. Epic workloads are supported on AIX 7.2 and later. You cannot choose AIX 7.1.
 2. Supported storage volume is Tier 1. You can change or attach Tier 3 storage volume.
-       Changing the Tiers leads to performance issues.
-       {: note}
+
+    Changing the Tiers leads to performance issues.
+    {: note}
 
 3. Supported machine types are E980 or E1080. You cannot select S922.
 4. Supported core type is dedicated. You can switch to other core type, but it might lead to performance issues.
