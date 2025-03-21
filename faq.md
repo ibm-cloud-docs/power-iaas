@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -82,9 +82,11 @@ The following stock images are available when you create a virtual machine:
 
 
 
-* AIX 7.3 TL2 SP2
-* AIX 7.2 TL5 SP8
+
+* AIX 7.3 TL3 SP0
+* AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1]
+
 
 
 
@@ -137,11 +139,14 @@ IBM i stock images currently available when you create a VM are:
 
 
 
+
 * IBM i COR [^2][^3]
-* IBM i 7.5 TR4
-* IBM i 7.4 TR10
+* IBM i 7.5 TR5
+* IBM i 7.4 TR11
 * IBM i 7.3 TR13[^4]
 * IBM i 7.2 TR9 [^4A][^5]
+
+
 
 
 
@@ -194,12 +199,15 @@ Red Hat
 SUSE [^footnote8]
 
 * SLES 15 SP6 general purpose (SLES15)
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote9]
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote10]
+* SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
+* SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+
+
+
 
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
