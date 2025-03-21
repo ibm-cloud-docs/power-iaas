@@ -95,8 +95,8 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-    You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
-    {: important}
+You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
+{: important}
 
 
 
