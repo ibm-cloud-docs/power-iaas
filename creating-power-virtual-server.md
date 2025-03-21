@@ -93,8 +93,14 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Select the **Deploy empty virtual server instance** checkbox to provision a VM without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
+
+
     You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
     {: important}
+
+
+
+
 
     You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
