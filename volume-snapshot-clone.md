@@ -56,21 +56,21 @@ A snapshot is a copy of the state of a volume or a set of volumes that is taken 
 ### Creating a snapshot
 {: #create-snapshot-taking}
 
-With the snapshot interface you can create a relationship between your source disks and a target disks at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
+With the snapshot interface, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
 
 #### Use case
 {: #create-snapshot-taking-usecase}
 
 
 The snapshot feature has several use cases. Consider the following example:
-- An administrator plans to upgrade the middleware. If the upgrade to the middleware fails, the administrator has to restore the source disk to its original state.
+- An administrator plans to upgrade the middleware. If the upgrade to the middleware fails, the administrator must restore the source disk to its original state.
 - The administrator completes the following steps:
     1. Initiate the snapshot of the source disk where the middleware information resides by using the [API command](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post). A snapshot of the source disk is created.
     2. Upgrade the middleware.
     3. If the upgrade fails, the administrator restores the source disk by using the snapshot.
     4. If the upgrade succeeds, the administrator deletes the snapshot.
 
-You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on different set of disks.
+You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on different sets of disks.
 {: note}
 
 ### Creating a snapshot by using API or CLI commands
@@ -84,12 +84,12 @@ Use the following API and CLI commands to create a snapshot:
 
 You must provide values for the following parameters in the API and CLI commands:
 
-* `name`: (Required) Specifies the name of the snapshot
+* `name`: (Required) Specifies the name of the snapshot.
 
-    Name must be unique among all the snapshots for the workspace.
+    The `name` must be a unique value among all the snapshots for the workspace.
     {: note}
 
-* `description`: (Optional) Describes the snapshot
+* `description`: (Optional) Describes the snapshot.
 * `volumeIDs`: (Optional) Includes a list of one or more volumes to be included in the snapshot. If this parameter is left empty, all volumes that are attached to the Power virtual machine (PVM) Instance are included in the snapshot.
 
 
@@ -150,7 +150,7 @@ You must provide values for the following parameters in the API and CLI commands
 
 * `SNAPSHOT_ID`: (Required) Specify a unique identifier for the snapshot
 * `force`: (Optional) Specify the value of the flag as `True` or `False`. By default, the flag is set to `False`. This flag is set to `true` only if the VM instance is shut down. By default, the VM must be shut down before you initiate a snapshot restore operation. When the `force` flag is set to `True`, the prerequisite of the VM being shut down is relaxed.
-* `restore`: (Optional) Use the `restore_fail_action` query parameter only if a previous restore operation has resulted in setting the PVM Instance snapshot to `restore-error` status. The `restore_fail_action` query parameter accepts the following `retry` or `rollback` values:
+* `restore`: (Optional) Use the `restore_fail_action` query parameter only if a previous restore operation results in setting the PVM Instance snapshot to `restore-error` status. The `restore_fail_action` query parameter accepts the following `retry` or `rollback` values:
   * If the snapshot status is set to `retry`, then again the failed restore operation is attempted.
   * If the snapshot status is set to `rollback`, then the volumes that were failed to be restored are rolled back to their original state.
 
@@ -278,7 +278,7 @@ To clone a single volume, you can use the [Create a volume clone for specified v
 
 - You cannot modify the source or target disk attributes such as disk size, while the clone operation is in progress.
 
-- You cannot attempt to clone a volume that is part of a consistency group as part of an existing consistency group. A volume will belong to a consistency group after you execute the volumes-clone start request, or the volume is part of a snapshot `create` operation that has not completed the flash copying in the background.
+- You cannot attempt to clone a volume that is part of a consistency group as part of an existing consistency group. A volume will belong to a consistency group after you must run the volumes-clone start request, or the volume is part of a snapshot `create` operation where the flash copying in the background is completed.
 
 - A volume cannot be cloned from one storage pool to a different storage pool.
 
@@ -381,17 +381,17 @@ The volumes-clone request must be in the `Available` state.
 #### Cancelling volumes-clone request by using API and CLI command
 {: #cancel-vol-clone-api-cli}
 
-After you initiate the cancel operation, the initial `percentComplete` will be 0% and the status is set to `cancelling`.
+After you initiate the `cancel` operation, the initial `percentComplete` will be 0% and the status is set to `cancelling`.
 
 Use the following API and CLI command to cancel the volumes-clone request:
 
-- **API**:[Cancel a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-cancel-post)
-- **CLI**:[ibmcloud pi volume clone cancel](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-cancel)
+- **API**: [Cancel a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-cancel-post)
+- **CLI**: [ibmcloud pi volume clone cancel](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-cancel)
 
 You must provide values for the following parameters in the API and CLI commands:
 
 - `volume-clones-id`:	(Required) The unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name
-- `Force`: (Optional) Default status is `False`. The cancel operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the cancel operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
+- `Force`: (Optional) Default status is `False`. The `cancel` operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the `cancel` operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
 
 #### Restrictions and considerations
 {: #cancel-vol-clone-exec-req}
@@ -399,7 +399,7 @@ You must provide values for the following parameters in the API and CLI commands
 You must consider the following restrictions and considerations before you cancel the volumes-clone request:
 
 - If you cancel the volumes-clone request, the initial status of the volumes-clone request is set to `Cancelling`. The status changes to `Cancelled` state when all the clean-up work is completed successfully.
-- You can cancel a volumes-clone request when the volumes-clone request is in the `executing` state. The `force` option must be set to `True` in the cancel volumes-clone request.
+- You can cancel a volumes-clone request when the volumes-clone request is in the `executing` state. The `force` option must be set to `True` in the `cancel` volumes-clone request.
 - If the volumes-clone request is in the `Executing` state, any artifacts that are created by the clone operation process are removed.
 
 
@@ -425,12 +425,12 @@ Use the following API and CLI command to delete the volumes-clone request:
 You must provide values for the following parameters in the API and CLI commands:
 
 - `volume-clones-id`: (Required) The unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
-- `Force`: (Optional) Force the cancellation of a volumes-clone request. The cancel operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the cancel operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
+- `Force`: (Optional) Force the cancellation of a volumes-clone request. The `cancel` operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the `cancel` operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
 
 #### Restrictions and considerations
 {: del-vol-clone-res-con}
 
-If the volumes-clone request is not in one of the final statuses that is required for deletion, you can cancel the request, do any remaining cleanup, and transition the status to `Cancelled`. Once the volumes-clone request is in `Cancelled` status, the request can be deleted.
+If the volumes-clone request is not in one of the final statuses that is required for deletion, you can cancel the request, do any remaining cleanup, and transition the status to `Cancelled`. If the volumes-clone request is in the `Cancelled` status, the request can be deleted.
 
 ### Getting the status for a volumes-clone request
 {: get-vol-clone-req}
@@ -448,10 +448,10 @@ None.
 {: #cancel-vol-clone-api-cli}
 
 
-- **API**:[Get the status of a volumes clone request for the specified clone task ID](/apidocs/power-cloud#pcloud-v2-volumes-clonetasks-get)
-- **CLI**:[ibmcloud pi volume clone get](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-get)
+- **API**: [Get the status of a volumes clone request for the specified clone task ID](/apidocs/power-cloud#pcloud-v2-volumes-clonetasks-get)
+- **CLI**: [ibmcloud pi volume clone get](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-get)
 
-Provide a value for the `volume-clones-id` field.  The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
+Provide a value for the `volume-clones-id` field. The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
 
 #### Restrictions and considerations
 {: get-vol-clone-res-con}
@@ -462,7 +462,7 @@ None.
 ### Getting the list of volumes-clone request
 {: getlist-vol-clone-req}
 
-The API request provides a list of all volumes-clone requests in a workspace and the latest status of each request.
+The API request provides a list of all volumes-clone requests in a workspace and the status of each request.
 
 #### Prerequisites
 {: getlist-vol-clone-prereq}
@@ -473,8 +473,8 @@ None.
 {: #cancel-vol-clone-api-cli}
 
 
-- **API**:[Get the list of volumes-clone request for a cloud instance](/apidocs/power-cloud#pcloud-v2-volumesclone-getall)
-- **CLI**:[ibmcloud pi volume clone list](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-list)
+- **API**: [Get the list of volumes-clone request for a cloud instance](/apidocs/power-cloud#pcloud-v2-volumesclone-getall)
+- **CLI**: [ibmcloud pi volume clone list](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-list)
 
 Provide one of the values to the `filter` parameter from the following list:
 
@@ -494,13 +494,13 @@ You must consider the following restrictions and considerations before you get t
 
 - The detailed information about the source volumes or cloned volumes is not provided.
 
-- List can be limited by using the `filter` parameter. The filter is based on the status of the ‘filter’ parameter.
+- The list can be limited by using the `filter` parameter. The filter is based on the status of the ‘filter’ parameter.
 
 
 ## Frequently asked questions
 {: #snap-clone-faqs}
 
-Here are some of the following frequently asked questions on snapshots and clonning that are documented on the FAQ page:
+Following are some of the frequently asked questions on snapshots and clonning that are documented on the FAQ page:
 - [What are the key differences between a snapshot and a clone?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
 - [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
 - [Are there any initial snapshot requirements in terms of storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)

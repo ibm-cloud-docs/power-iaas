@@ -68,7 +68,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 1. Click **Virtual server instances** on the left page.
 
-    Select a workspace to display the virtual server instances that you have provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
+    Select a workspace to display the virtual server instances that were provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
     {: important}
 
     The virtual server instances that are associated with the selected workspace are displayed.
@@ -101,15 +101,15 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     Select the **Deploy empty virtual server instance** checkbox to provision a VM without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
 
+    
 
 
+    
 
+    You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a VSN is assigned to a VM without storage, you must assign the VSN before attaching the boot volume and starting the VM.
+    {: important}
 
-
-You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a VSN is assigned to a VM without storage, you must assign the VSN before attaching the boot volume and starting the VM.
-{: important}
-
-
+    
 
     You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
