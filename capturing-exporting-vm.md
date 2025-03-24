@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-03-24"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 
 
-You can capture and export an AIX or IBM i VM instance by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VM is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (Cloud Object Storage) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
+You can capture and export a VM instance by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VM is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage (Cloud Object Storage) bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
 {: shortdesc}
 
 When you capture and export a VM, you can choose the image catalog, Cloud Object Storage, or both as destinations. The image catalog is on the IBM Power storage area network (SAN). IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your image catalog to Cloud Object Storage at a later point. You can also deploy the captured image to create a clone of the VM by using a different network configuration.
@@ -105,7 +105,7 @@ Complete the following steps to capture and export a virtual server instance:
 
 To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
-1. To capture an AIX or IBM i VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, Cloud Object Storage, or both.
+1. To capture a VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, Cloud Object Storage, or both.
 
     ```text
     ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volumes "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
