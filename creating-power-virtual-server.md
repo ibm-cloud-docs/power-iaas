@@ -102,10 +102,12 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
+
+
+
+
+You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a VSN is assigned to a VM without storage, you must assign the VSN before attaching the boot volume and starting the VM.
 {: important}
-
-
 
 
 
