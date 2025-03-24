@@ -261,15 +261,12 @@ In each pod, one spare node is available that is exclusively usable for IBM oper
 
 
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSys_notm}} in IBM Cloud. {{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in IBM Cloud. You can use these events to identify the following information:
-* The users who made API calls to cloud services.
-* The time-stamp when the API calls were made.
-* The status of the API call.
-* The criticality of the action.
-
-For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
 
 
+
+
+
+As a security officer, auditor, or manager, you can use the IBM Cloud Logs service to manage general purpose application logs, platform logs, or structured audit events. IBM Cloud Logs can be used with logs from both IBM Cloud services and customer applications. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started){: external}
 
 
 
