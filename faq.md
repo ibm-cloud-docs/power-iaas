@@ -746,7 +746,7 @@ You cannot update the storage tiers for the GRS enabled volumes. To change the s
 
 The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value.
 
-Pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
+
 
 ## What should I do if I do not see the latest information in the UI?
 {: #ui-not-updated}
