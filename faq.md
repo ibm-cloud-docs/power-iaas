@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-24"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -100,11 +100,8 @@ The following stock images are available when you create a virtual machine:
 
 
 
-* AIX 7.3 TL2 SP2
-* AIX 7.3 TL1 SP2
-* AIX 7.2 TL5 SP6
-* AIX 7.2 TL5 SP8
-* AIX 7.3 TL2 SP1
+* AIX 7.3 TL3 SP0
+* AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1A]
 
 [^1]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
