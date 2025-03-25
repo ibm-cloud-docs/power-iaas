@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -258,9 +258,6 @@ In each pod, one spare node is available that is exclusively usable for IBM oper
 
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
-
-
-
 
 
 

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -82,12 +82,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
-
-
-
-
- 
-
 
 
 
@@ -180,10 +174,7 @@ VSN has the following characteristics:
 * It is used for licensing and tracking the usage of the VM.
 * It can be associated with only one VM.
 * It can be assigned to a new or an existing VM.
-
-
-
-
+* It can be assigned to an empty virtual server instance in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 

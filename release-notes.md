@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -16,6 +16,27 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## March 2025
+{: #March-2025}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+
+The End of Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 April 2025. However, starting with 1 July 2025 metering charges are applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections. To avoid these charges, migrate your workspace before 1 July 2025. For more information about the migration, see [Migrating to Power Edge Router](docs/power-iaas?topic=power-iaas-per#migrate-per).
+{: important}
+
+
+
+- You can deploy SAP HANA CH2 and BH2 profiles on specific IBM Power servers. For more information, see [SAP HANA certified profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles).
+
+- The cost on the memory in virtual machines (VMs) when VMs are in the user-defined shared processor pools (SPPs) is calculated based on its usage using the standard memory parts. You can use SPPs to help you optimize the cost of software licensing. For more information, see [Shared processor pool optimization for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-spp-public-optim) and [Shared processor pool optimization for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-optim).
+
+[{{site.data.keyword.on-prem}}]{: tag-red}
+
+- The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs-draft/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs-draft/power-iaas?topic=power-iaas-linux-with-powervs).
 
 
 

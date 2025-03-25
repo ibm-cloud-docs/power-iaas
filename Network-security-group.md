@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-25"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -26,8 +26,12 @@ subcollection: power-iaas
 
 ---
 
-A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces. 
+A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
+
+
+
+The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
 
 
 
