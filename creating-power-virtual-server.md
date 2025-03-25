@@ -86,6 +86,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
+
 1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
 2. Complete the **Boot image** fields.

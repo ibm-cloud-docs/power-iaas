@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-25"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -50,7 +50,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 {: important}
 
 In the following example, the customer provisions an {{site.data.keyword.on-prem-fname}} instance. The instance has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
-Let us assume the following hypothetical monthly prices:
+Assume the following hypothetical monthly prices:
 * Cores: $143.23/month x 1 = $143.23
 * Memory: $9/month each GB x 8 = $ 72.00
 * Storage: $0.216/month each GB x 150 GB = $ 32.40
@@ -58,7 +58,7 @@ Let us assume the following hypothetical monthly prices:
 
 **Total cost per month**     = $291.43
 
-Factoring the example quantities and prices, the base price for the virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed. Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine will be higher to account for the extra memory. The new price amounts to $0.498/hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
+Factoring the example quantities and prices, the base price for the virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed. Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine is higher to account for the extra memory. The new price amounts to $0.498 per hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
 
 In Table 1, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
@@ -158,14 +158,14 @@ For more information about unit prices for each metric ID, see [Where can I find
 ## Base instances
 {: #base-instances}
 
-The billing of a base instance depends on the options you select when you create a virtual machine. The machine type, number of cores, and amount of memory affect the base instance billing. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instances.
+The billing of a base instance depends on the options that you select when you create a virtual machine. The machine type, number of cores, and amount of memory affect the base instance billing. When you create your virtual machine, the associated monthly rate is displayed on the billing of the base instances.
 
 The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. The full Linux subscription allows you to subscribe to updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription you can subscribe to an updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -173,7 +173,7 @@ If you bring your own custom image, you are charged for the image size and the s
 ## Processor types
 {: #processor-types}
 
-You are charged different rates depending on the type of system that you choose for your virtual machine. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, the E1080 costs more than E1050.
+Depending on the type of system that you choose for your virtual machine, you are charged different rates. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, the E1080 costs more than the E1050.
 
 You can choose one of the following core types for your workload:
 * **Dedicated virtual processor cores**
@@ -230,11 +230,9 @@ Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usa
 ## Pricing for shared processor pool
 {: #pricing-spp-private-cloud}
 
-SPP provides the capability to manage CPU cores efficiently while offering pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
+SPP provides the capability to manage CPU cores efficiently and offers pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
 
-In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure.
-
-Consequently, the calculation of operating system license charges follows a distinct methodology within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
+In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure. Therefore, the calculation of operating system license charges follows a distinct method within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
 
 When you use SPP in {{site.data.keyword.on-prem-fname}}, you pay for the following items:
 
@@ -261,6 +259,16 @@ For more information about calculating the pricing for OS licensing in the uncap
 
 
 
+### Shared processor pool optimization
+{: #pricing-spp-private-optim}
+
+You can deploy workloads to VMs in the shared processor pool (SPP) that you define. In the SPPs that you define, the cost is not calculated for the cores that are used by the VMs but the cost for the reserved cores is calculated.
+
+The cost on the memory in the VMs when VMs are in the SPPs that you define is calculated based on its use by using the standard memory parts. You can use SPPs to optimize the cost for Oracle licensing, pricing for disaster recovery solutions such as IBM i CBU, and other workloads.
+
+
+
+
 
 
 
@@ -282,14 +290,14 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 
 * **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. Table 7 shows an example of how you are billed based on your volume creation:
 
-   | Volume size you create  | Volume size you are billed  |
+   | Volume size that you create  | Volume size that you are billed  |
    |  ---------------------  | ----------------------------  |
    |  10 GB                  | 10 GB                         |
    |  10+5 GB                | 15 GB                         |
    {: caption="Calculation of data volume" caption-side="bottom"}
 
 
-* **Image backing volumes**: These volumes are part of a boot image in your cloud instance listed in the boot image catalog. Billing for image backing volumes is determined as follows:
+* **Image backing volumes**: These volumes are part of a boot image in your cloud instance that is listed in the boot image catalog. Billing for image backing volumes is determined as follows:
 
 
    - Single volume billing - When the image has a single backing volume, you are billed based on the size (GB) of the single volume.
@@ -313,7 +321,7 @@ Table 8 shows an example of how you are billed based on your boot volume:
    |  20 GB + 30 GB        | 50 GB           |
    {: caption="Calculation of deployed virtual machines volume" caption-side="bottom"}
 
-* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the volume(s) of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
+* **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the volumes of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
 
 
@@ -364,7 +372,7 @@ Total billable storage = 595 GB
 
 * Image volumes: 200 GB
 
-* Deployed virtual machine boot volumes: 200GB
+* Deployed virtual machine boot volumes: 200 GB
 
 To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -412,7 +420,7 @@ Review the following frequently asked questions about pricing:
 
    * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
    * Search the catalog for the resources for which you need pricing. The following options for search strings are available:
-     - `Power Virtual Server Virtual Machine` for Virtual Machines which includes processor, memory, operating systems, and workloads.
+     - `Power Virtual Server Virtual Machine` for Virtual Machines that includes processor, memory, operating systems, and workloads.
      - `Power Virtual Server Volume` for Volumes.
      - `Power Virtual Server Snapshot` for Snapshots.
      - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools. There is no pricing that is associated with other types of resources.

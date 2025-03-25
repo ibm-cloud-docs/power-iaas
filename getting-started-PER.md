@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -105,7 +105,7 @@ The migration of an existing workspace to PER is supported through CLI by using 
 
 
 
-If you are migrating the last workspace in the data center to PER, you must delete any Cloud Connections that are not attached to any networks.
+Before you migrate the last workspace in the data center to PER, you must delete any Cloud Connections that are not attached to any networks.
 {: note}
 
 

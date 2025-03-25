@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-25"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -408,8 +408,6 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 
 You are charged different rates depending on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-
-
 Processor cores are charged at different hourly rates depending on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, or E1080). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
@@ -445,6 +443,22 @@ Shared processor pool (SPP) provides the capability to manage CPU cores efficien
 
 
 
+### Shared processor pool optimization
+{: #pricing-spp-public-optim}
+
+You can deploy workloads to VMs in the shared processor pool (SPP) that you define. In the SPPs that you define, the cost is not calculated for the cores that are used by the VMs but the cost for the reserved cores is calculated.
+
+The cost on the memory in the VMs when VMs are in the SPPs that you define is calculated based on its use by using the standard memory parts. You can use SPPs to optimize the cost for Oracle licensing, pricing for disaster recovery solutions such as IBM i CBU, and other workloads.
+
+In addition to the standard memory parts in the VMs that are in the SPP, you also have high-use memory parts in the VMs that are not in the SPP. The cost on the high-use memory parts is calculated when the following conditions are met:
+
+- If the memory used by the high-use memory parts exceeds 64 GB per core
+- If the high-use memory parts are in the VMs and the VMs are in the default pool but not in the SPP
+
+When the memory used by the high-use memory parts exceeds the limit, the cost on the excess memory is calculated as follows:
+
+- The first 64 GB of memory is divided into the number of cores that are assigned to the standard memory parts. The memory that exceeds 64 GB per core is assigned to the high-use memory parts.
+- The cost of the memory that exceeds 64 GB per core is calculated by using standard memory parts.
 
 
 

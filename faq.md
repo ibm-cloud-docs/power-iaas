@@ -228,7 +228,11 @@ FLS provides access to RHEL OS fixes and updates through activation keys for Pow
 
 The following list is an example of the FLS offerings:
 
-* Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.2 (General and SAP)
+
+
+
+
+* Stock images: RHEL 8.4 (General), RHEL 8.6 (General), RHEL 9.2 (General)
 * Support:	You pay IBM for support
 * Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
 

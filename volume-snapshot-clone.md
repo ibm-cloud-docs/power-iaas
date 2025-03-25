@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -34,7 +34,6 @@ subcollection: power-iaas
 ## Creating a Snapshot
 {: #create-snapshot}
 
-[New]{: tag-green}
 A snapshot is a copy of the state of a volume or a set of volumes that is taken at a specific time. By using snapshot, you can restore your volumes to the state when you took the snapshot.
 {: shortdesc}
 
@@ -209,7 +208,7 @@ For example, consider that you have **M** disks on a VM that add up to 600 GB of
 The cost of the snapshot is the sum of the costs of volume A and volume B.
 
 
-## Creating a volumes-clone 
+## Creating a volumes-clone
 {: #vol-clon-bp}
 
 ### Creating a volumes-clone request
@@ -326,7 +325,6 @@ This step performs the remaining execution operation to create the cloned volume
 {: #start-vol-clone-exec-prereq}
 
 The volumes-clone request must be in the `Available` state.
-
 
 
 #### Executing volumes-clone request by using API and CLI command
