@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -16,6 +16,31 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+## March 2025
+{: #March-2025}
+
+- New AIX 7.3 TL3 SP0 and 7.2 TL5 SP9, IBM i 7.4 TR11 and 7.5 TR5, SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) and SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+
+The End of Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 April 2025. However, starting with 1 July 2025 metering charges are applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections. To avoid these charges, migrate your workspace before 1 July 2025. For more information about the migration, see [Migrating to Power Edge Router](docs/power-iaas?topic=power-iaas-per#migrate-per).
+{: important}
+
+
+
+- You can deploy SAP HANA CH2 and BH2 profiles on specific IBM Power servers. For more information, see [SAP HANA certified profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles).
+
+- The cost on the memory in virtual machines (VMs) when VMs are in the user-defined shared processor pools (SPPs) is calculated based on its usage using the standard memory parts. You can use SPPs to help you optimize the cost of software licensing. For more information, see [Shared processor pool optimization for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-spp-public-optim) and [Shared processor pool optimization for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-optim).
+
+[{{site.data.keyword.on-prem}}]{: tag-red}
+
+- The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
+
 
 
 ## February 2025
@@ -38,7 +63,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 - {{site.data.keyword.powerSys_notm}} is now HITRUST CSF&reg; compliant. For more information, see [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#hitrust).
 
-- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
+- [{{site.data.keyword.off-prem}}]{: tag-blue} {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
 
 
 

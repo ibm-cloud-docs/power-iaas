@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-03-25"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -32,7 +32,7 @@ The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL)
 
 The full Linux subscription uses activation keys to provide access to interim fixes and updates for the operating system for {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.powerSys_notm}} is hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply for setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for SAP and non-SAP applications.
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for non-SAP applications.
 
 To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 

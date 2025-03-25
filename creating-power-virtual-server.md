@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-25"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -68,7 +68,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 1. Click **Virtual server instances** on the left page.
 
-    Select a workspace to display the virtual server instances that you have provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
+    Select a workspace to display the virtual server instances that were provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
     {: important}
 
     The virtual server instances that are associated with the selected workspace are displayed.
@@ -83,22 +83,30 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
 
-    You must pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request for migration to a different host, the serial numbers change but the IBM i license will not work.
-    {: important}
 
-3. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-4. Complete the **Boot image** fields.
+
+
+1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
+
+2. Complete the **Boot image** fields.
 
     You can create or provision a virtual server instance (VM) without any initial boot image volume. VMs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VM can be created without a boot volume and the volume that is cloned or replicated can be attached to a VM to bring the backed-up VM.
 
     Select the **Deploy empty virtual server instance** checkbox to provision a VM without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
-    You can create a VM without a boot volume for AIX, IBM i, and Linux (with a subscription provided by IBM) operating systems.
+
+    
+
+
+    
+
+    You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a VSN is assigned to a VM without storage, you must assign the VSN before attaching the boot volume and starting the VM.
     {: important}
 
-    You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
+    
 
+    You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
@@ -167,13 +175,12 @@ VSN has the following characteristics:
 * It is used for licensing and tracking the usage of the VM.
 * It can be associated with only one VM.
 * It can be assigned to a new or an existing VM.
-
-
-
+* It can be assigned to an empty virtual server instance in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 
 A VM is moved across systems with its associated VSN. Hence, when a VSN is associated with a VM you need not pin the VM to a host for licensing or entitlement purpose.
+
 
 
 
@@ -205,8 +212,6 @@ For more information about creating a VM, see [Configuring a {{site.data.keyword
 
 
 
-You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
-{: note}
 
 
 
@@ -229,8 +234,7 @@ To assign a VSN for an existing IBM i VM, complete the following steps:
 
 
 
-You cannot assign a VSN to an empty VM. A VSN can be assigned only to one VM at a time.
-{: note}
+
 
 
 
@@ -310,8 +314,9 @@ You can choose to configure a VM for Epic workloads only when you select AIX as 
 
 1. Epic workloads are supported on AIX 7.2 and later. You cannot choose AIX 7.1.
 2. Supported storage volume is Tier 1. You can change or attach Tier 3 storage volume.
-       Changing the Tiers leads to performance issues.
-       {: note}
+
+    Changing the Tiers leads to performance issues.
+    {: note}
 
 3. Supported machine types are E980 or E1080. You cannot select S922.
 4. Supported core type is dedicated. You can switch to other core type, but it might lead to performance issues.

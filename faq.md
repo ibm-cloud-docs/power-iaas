@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -82,9 +82,11 @@ The following stock images are available when you create a virtual machine:
 
 
 
-* AIX 7.3 TL2 SP2
-* AIX 7.2 TL5 SP8
+
+* AIX 7.3 TL3 SP0
+* AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1]
+
 
 
 
@@ -98,11 +100,8 @@ The following stock images are available when you create a virtual machine:
 
 
 
-* AIX 7.3 TL2 SP2
-* AIX 7.3 TL1 SP2
-* AIX 7.2 TL5 SP6
-* AIX 7.2 TL5 SP8
-* AIX 7.3 TL2 SP1
+* AIX 7.3 TL3 SP0
+* AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1A]
 
 [^1]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
@@ -137,11 +136,16 @@ IBM i stock images currently available when you create a VM are:
 
 
 
+
 * IBM i COR [^2][^3]
-* IBM i 7.5 TR4
-* IBM i 7.4 TR10
+* IBM i 7.5 TR5
+* IBM i 7.4 TR11
 * IBM i 7.3 TR13[^4]
 * IBM i 7.2 TR9 [^4A][^5]
+
+
+
+
 
 
 [^2]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
@@ -192,12 +196,15 @@ Red Hat
 SUSE [^footnote8]
 
 * SLES 15 SP6 general purpose (SLES15)
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) [^footnote9]
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) [^footnote10]
+* SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
+* SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+
+
+
 
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
@@ -221,7 +228,11 @@ FLS provides access to RHEL OS fixes and updates through activation keys for Pow
 
 The following list is an example of the FLS offerings:
 
-* Stock images: RHEL 8.4 (General and SAP), RHEL 8.6 (General and SAP), RHEL 9.2 (General and SAP)
+
+
+
+
+* Stock images: RHEL 8.4 (General), RHEL 8.6 (General), RHEL 9.2 (General)
 * Support:	You pay IBM for support
 * Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
 
@@ -252,13 +263,13 @@ In each pod, one spare node is available that is exclusively usable for IBM oper
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.atracker_short}} service to track how users and applications interact with the {{site.data.keyword.powerSys_notm}} in IBM Cloud. {{site.data.keyword.atracker_short}} records user-initiated activities that change the state of a service in IBM Cloud. You can use these events to identify the following information:
-* The users who made API calls to cloud services.
-* The time-stamp when the API calls were made.
-* The status of the API call.
-* The criticality of the action.
 
-For more information, see [Activity tracker events](/docs/power-iaas?topic=power-iaas-at-events).
+
+
+
+As a security officer, auditor, or manager, you can use the IBM Cloud Logs service to manage general purpose application logs, platform logs, or structured audit events. IBM Cloud Logs can be used with logs from both IBM Cloud services and customer applications. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started){: external}
+
+
 
 
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
@@ -733,7 +744,7 @@ You cannot update the storage tiers for the GRS enabled volumes. To change the s
 
 The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value.
 
-Pin the IBM i virtual server instances that use the IBM i licenses. If you do not pin the virtual server instances and request a migration to a different host, the serial numbers changes, and the IBM i license will not work.
+
 
 ## What should I do if I do not see the latest information in the UI?
 {: #ui-not-updated}

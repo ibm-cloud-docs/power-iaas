@@ -56,8 +56,8 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "12 December 2024",
-        "title": "All IBM Power Virtual Server data centers are now PER-enabled, except for the CHE01 and MON01 data centers."
+        "date": "24 March 2025",
+        "title": "Memory is charged linearly for virtual machines (VMs) in user-defined shared processor pools (SPP) to help you optimize the cost of software licensing."
       }
     ]
   }

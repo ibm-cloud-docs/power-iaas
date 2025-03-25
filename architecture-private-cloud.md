@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-03-24"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -29,11 +29,19 @@ subcollection: power-iaas
 
 To understand the {{site.data.keyword.on-prem}} architecture, key features, and hardware and software requirements, review the following topics:
 
-*  [High-level architecture](#high-level-architecture-private-cloud)
-*  [Key features](#key-features)
-*  [Hardware and software specifications](#hardware-software-specs-private-cloud)
-*  [Network](#network-spec-private-cloud)
-*  [Data center capabilities](#dc-capabilities-private)
+- [Architecture for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](#architecture-for-sitedatakeywordon-prem-fname-in-sitedatakeywordon-prem)
+  - [High-level architecture](#high-level-architecture)
+  - [Key features](#key-features)
+  - [Hardware and software specifications](#hardware-and-software-specifications)
+    - [Pods](#pods)
+    - [Small pod configurations](#small-pod-configurations)
+    - [Medium pod configurations](#medium-pod-configurations)
+    - [Supported Power10 servers](#supported-power10-servers)
+    - [Operating systems](#operating-systems)
+    - [Storage](#storage)
+    - [Storage tiers](#storage-tiers)
+  - [Network](#network)
+  - [Data center capabilities](#data-center-capabilities)
 
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
@@ -101,22 +109,21 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
 
-| Server types                | Min   | Min | Max |
+
+
+| Server types                | Min (2 TB option)  | Min (4 TB option) | Max |
 | --------------------------- | ------|-----|---- |
 | Server quantity in a pod    | 6     | 5   | 9   |
 | Number of cores per server  | 40    | 40  | 40  |
 | Total number of cores       | 240   | 200 | 360 |
 | Usable cores                | 198   | 165 | 297 |
 |                             |       |     |     |
-| **Memory types**            |       |     |     |
-| 2 TB                        | 12    | -   | 18  |
-| 4 TB                        | -     | 20  | 36  |
-| 8 TB                        | -     | -   | -   |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Small pod configuration." caption-side="top"}
 {: #single-rack}
 {: tab-title="S1022"}
+
 
 | Server types                | Min      | Max |
 | --------------------------- | -------- | --- |
@@ -124,16 +131,23 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 | Number of cores per server  | 96       | 96  |
 | Total number of cores       | 192      | 384 |
 | Usable cores                | 170      | 340 |
-|                             |          |     |
-| **Memory types**            |          |     |
-| 2 TB                        |  -       | -   |
-| 4 TB                        |  -       | -   |
-| 8 TB                        | 16       | 32  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Small pod configuration." caption-side="top"}
 {: #single-rack}
 {: tab-title="E1050"}
+
+For the S1022 server, the following memory configurations are available:
+
+- **2 TB memory option per server**: A minimum 12 TB of memory and a maximum 18 TB of memory.
+- **4 TB memory option per server**: A minimum 20 TB of memory and a maximum 36 TB of memory.
+
+For the E1050 server, only an 8 TB memory option per server with a minimum 16 TB of memory and a maximum 32 TB of memory is available.
+
+
+
+
+
 
 The small pod with one rack is available with FS 230 TB flash system storage.
 
