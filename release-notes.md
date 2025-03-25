@@ -39,7 +39,7 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-- The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs-draft/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs-draft/power-iaas?topic=power-iaas-linux-with-powervs).
+- The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
 
 
 
