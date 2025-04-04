@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-28"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -35,8 +35,8 @@ When you capture and export a VM, you can choose the image catalog, Cloud Object
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account. See the following APIs and CLIs that are associated to these tasks:
 - API for VM capture - [Capture a PVM instance and create a deployable image (version 2)](/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post).
 - API for image export - [Add an image export job to the jobs queue (version 2)](/apidocs/power-cloud#pcloud-v2-images-export-post).
-- CLI for instance capture - [`ibmcloud pi instance-capture`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-instance-capture) command.
-- CLI for jobs - [`ibmcloud pi jobs`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
+- CLI for instance capture - [`ibmcloud pi instance-capture`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-capture) command.
+- CLI for jobs - [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-jobs) command.
 
 The VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM Capture, Image Export, and Image Import) cannot be submitted until the previous operation is complete.
 {: important}
@@ -103,7 +103,7 @@ Complete the following steps to capture and export a virtual server instance:
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
 
-To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} CLI Reference](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
 
 1. To capture a VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, Cloud Object Storage, or both.
 

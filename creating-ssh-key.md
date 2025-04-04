@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-03-28"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -35,7 +35,7 @@ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey
 ```
 
-To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
+To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
 
 ```text
 ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
@@ -43,7 +43,7 @@ ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
 SSHKey created: testkey
 ```
 
-To confirm that the key was successfully added, use the [`ibmcloud pi keys`](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-keys) command:
+To confirm that the key was successfully added, use the [`ibmcloud pi keys`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-keys) command:
 
 ```text
 ibmcloud pi key testkey

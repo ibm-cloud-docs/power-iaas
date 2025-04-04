@@ -190,9 +190,16 @@ toc:
       - link:
           label: API reference
           href: https://cloud.ibm.com/apidocs/power-cloud
-      - link:
+      - topicgroup:
           label: Command reference
-          href: https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference
+          topics:
+          - cli-getting-started.md
+          - cli-release-notes.md
+          - cli-before-you-begin.md
+          - cli-upgrade-v1.md
+          - cli-power-iaas-cli.md
+          - cli-power-iaas-cli-v1.md
+          - cli-power-iaas-cli-onprem.md
       - link:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-04"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -26,21 +26,23 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. The following list of hardware resources are metered that is measured based on the amount of services used:
 
-* **Virtual machines**: The CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB).
 
-* **Volumes**: Storage volumes (in GB)
+{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. Metering is done based on resource allocation for the purpose of billing. The following list of resources are metered:
 
-* **Snapshots**: Storage snapshots (in GB)
+* Virtual machines: CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB)
 
-* **Dedicated Hosts**: Dedicated hosts (in host units)
+* Volumes: Storage volumes (in GB)
+
+* Snapshots: Storage snapshots (in GB)
+
+* Dedicated Hosts: Dedicated hosts in host units
 
 In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about the billing of VM resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#linux-SAP-workload-types).
 
 
 
-In the {{site.data.keyword.cloud_notm}} catalog for IBM {{site.data.keyword.powerSys_notm}}, the estimated cost might differ from the actual cost when you purchase the {{site.data.keyword.cloud_notm}} infrastructure or instances. The actual cost might include discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+You can generate an estimate of the resources on the {{site.data.keyword.cloud_notm}} catalog for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the {{site.data.keyword.cloud_notm}} infrastructure or instances. The actual cost might include discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 
 IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
@@ -50,7 +52,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-|  Power Systems         |  Usable cores  |  Memory                     |
+|  Power systems         |  Usable cores  |  Memory                     |
 |------------------------|--------------|-----------------------------|
 | E980 (9080-M9S)        |  143         | Up to 15,307 GB [^1]        |
 | S922 (9009-22A) [^2]   |   15         | Up to 942 GB                |
@@ -95,7 +97,7 @@ Following are the benefits of consumer ID:
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. On the left navigation menu, click **Usage**.
-3. Click **View plans** for the entry- **{{site.data.keyword.powerSys_notm}} Workspace**. A page listing all your workspaces is opened.
+3. Click **View plans** for the entry- **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
 5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected virtual server instance is opened.
 
@@ -119,7 +121,7 @@ For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Res
 
 
 
-To view or search for resources that are provisioned in IBM {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources){: external}. Note that the user tags are not included in the response for GET API and CLI requests.
+To view or search for resources that are provisioned in IBM {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources){: external}. The user tags are not included in the response for GET API and CLI requests.
 {: note}
 
 
@@ -151,7 +153,13 @@ To reduce costs, you can capture and delete the VM when it is not used. For more
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance that has one core with 8 GB of memory, a 150 GB disk, and is running AIX 7200-03-02, at a base price of $250.57 per month ($0.343 per hour). As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
+In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance with the following configurations at a base price of $250.57 per month ($0.343 per hour):
+
+- One core with 8 GB of memory
+- A 150 GB disk
+- AIX 7200-03-02 OS.
+
+As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
 
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
@@ -159,9 +167,9 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 | 300 hours                 | (300 hours x $0.343)/month = $103      | 1 core, 8 GB memory, 150 GB disk, AIX  |
 | 430 hours                 | (430 hours x $0.465)/month = $200      | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
-{: caption="Monthly LPAR charges" caption-side="top"}
+{: caption="Monthly LPAR charges" caption-side="bottom"}
 
-In this example, the LPAR resources are increased (after reaching 300 hours in the month) from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
+In this example, if 300 hours is reached in the month, the LPAR resources are increased from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
 
 ## Part number descriptions
@@ -276,7 +284,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  IBM i P30 service extension core-hour | ppcaas-metric-ibmi-os-p30-sve  |
 |  IBM i P10 - PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p10  |
 |  IBM i P30 - PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30  |
-|  IBM i Rational Developement Studio instance-hour | ppcaas-metric-ibmi-rds  |
+|  IBM i Rational Development Studio instance-hour | ppcaas-metric-ibmi-rds  |
 |  SAP HANA workload - IBM Power10 standard scale-out memory gigabyte-hour | ppcaas-metric-p10-2u-hana-memory-standard  |
 |  IBM Power10 standard scale-out memory gigabyte-hour | ppcaas-metric-p10-2u-memory-standard  |
 |  SAP HANA workload - IBM Power10 standard scale-up memory gigabyte-hour | ppcaas-metric-p10-4u-hana-memory-standard  |
@@ -294,7 +302,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  Virtual Tape Library terabyte-hour | ppcaas-metric-vtl  |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
-{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="top"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #virtual-machine-group}
 {: tab-title="Virtual machine group"}
 
@@ -309,7 +317,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  Shared Processor Pool - IBM Power E880 core-hour | power-iaas-metric-E980-cores-spp  |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
-{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="top"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #shared-processor-pool-group}
 {: tab-title="Shared processor pool group"}
 
@@ -320,7 +328,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  IBM Power S1022 (33 usable cores; 2 TB memory) dedicated host-hour | power-iaas-metric-S1022-dedicated-host  |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
-{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="top"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #dedicated-host-group}
 {: tab-title="Dedicated host group"}
 
@@ -340,7 +348,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour | power-iaas-metric-volume-tier5k-async-replicated  |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
-{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="top"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #volume-group}
 {: tab-title="Volume group"}
 
@@ -353,7 +361,7 @@ Refer to the following table to view the part number descriptions and the associ
 |  Snapshot storage (tier 5k: 5,000 IOPS) gigabyte-hour | power-iaas-metric-snapshot-tier5k  |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
-{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="top"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
 
@@ -388,9 +396,9 @@ If you bring your own image, you are charged for the image size and the storage 
 
 You can deploy the following types of SAP workloads as virtual machines:
 
-* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are like other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on S1022, E1080, S922, and E980 systems.
+* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are like other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not the same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on S1022, E1080, S922, and E980 systems.
 
-* **SAP HANA**: For SAP HANA, there are distinct processor and memory billing parts. The charges on these distinct parts appear on the monthly invoices. The following types of systems, processors, and memory are supported for SAP HANA:
+* **SAP HANA**: For SAP HANA, the billing parts for processor and memory are distinct. The charges on these distinct parts appear on the monthly invoices. The following types of systems, processors, and memory are supported for SAP HANA:
     - System types: S1022 (for workloads less than 2 TB of RAM), E1080 (for workloads more than 2 TB of RAM), or E980.
     - Virtual processor core type: dedicated
     - Memory types: scale-out or scale-up
@@ -406,9 +414,9 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 ## Processor types
 {: #pricing-processor}
 
-You are charged different rates depending on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
+You are charged different rates based on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Processor cores are charged at different hourly rates depending on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, or E1080). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
+Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, or E1080). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -439,26 +447,20 @@ The following tables show examples of how different processor types affect the c
 ## Pricing for shared processor pool
 {: #price-spp}
 
+
 Shared processor pool (SPP) provides the capability to manage CPU cores efficiently. The number of cores that are assigned to an SPP depends on the entitled cores (EC) and virtual cores (VC) ratio. The EC:VP ratio varies by system type. For example, Power10 systems allow different ratios as compared to Power9 systems. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
 
 
-### Shared processor pool optimization
-{: #pricing-spp-public-optim}
 
-You can deploy workloads to VMs in the shared processor pool (SPP) that you define. In the SPPs that you define, the cost is not calculated for the cores that are used by the VMs but the cost for the reserved cores is calculated.
+Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP do not incur additional costs for per VM core or the cost for high-use memory parts.
 
-The cost on the memory in the VMs when VMs are in the SPPs that you define is calculated based on its use by using the standard memory parts. You can use SPPs to optimize the cost for Oracle licensing, pricing for disaster recovery solutions such as IBM i CBU, and other workloads.
 
-In addition to the standard memory parts in the VMs that are in the SPP, you also have high-use memory parts in the VMs that are not in the SPP. The cost on the high-use memory parts is calculated when the following conditions are met:
 
-- If the memory used by the high-use memory parts exceeds 64 GB per core
-- If the high-use memory parts are in the VMs and the VMs are in the default pool but not in the SPP
 
-When the memory used by the high-use memory parts exceeds the limit, the cost on the excess memory is calculated as follows:
 
-- The first 64 GB of memory is divided into the number of cores that are assigned to the standard memory parts. The memory that exceeds 64 GB per core is assigned to the high-use memory parts.
-- The cost of the memory that exceeds 64 GB per core is calculated by using standard memory parts.
+
+
 
 
 
@@ -478,15 +480,15 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 {: #storage-type}
 
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
-- **Data volumes**: These are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
+- **Data volumes** are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
 
-    |Volume size you create|You are billed|
+    |Volume size that you create| Volume size that you are billed|
     |----------------------|--------------|
     |10 GB|10 GB|
     |10+5 GB|15 GB|
     {: caption="Calculation of data volume" caption-side="bottom"}
 
-- **Image backing volumes**: These volumes are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume sizes contained in the image.
+- **Image backing volumes** are part of a boot image in your cloud-instance boot image catalog. You are billed based on the total volume sizes that are contained in the image.
     When the image has a single backing volume, you are billed based on the GB size of the single volume. When the image has multiple backing volumes, you are billed based on tallying up the sizes of all the image backing volumes. The following table shows an example of how you are billed based on your boot volume:
 
     |Image volume size |Single or multiple backing|You are billed|
@@ -495,7 +497,7 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     |Volume 1 (20 GB), volume 2 (10 GB)|Multiple backing volumes|30 GB|
     {: caption="Calculation of image backing volume" caption-side="bottom"}
 
-- **Deployed VM volumes**: These volumes are created when you deploy a VM with an image. The deployed VMs get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
+- **Deployed VM volumes** are created when you deploy a VM with an image. The deployed VMs get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
 
     |Image backing volume|You are billed|
     |--------------------|--------------|
@@ -504,7 +506,7 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     {: caption="Calculation of deployed VMs volume" caption-side="bottom"}
 
 
-- **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the one or more volumes of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
+- **Deployed virtual machine snapshots** are the snapshots of the volumes that are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of one or more volumes of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
 For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
 
@@ -542,7 +544,7 @@ The following tables show examples of how different storage types affect the cos
 
 The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
-| Name     | Size    | State/Description      |
+| Name     | Size    | State      |
 |----------|---------|------------------------|
 |data-volume-1|20 GB|Available|
 |data-volume-2|25 GB|In-use (attached to vm-1)|
@@ -551,28 +553,28 @@ The following table shows the use case on how you are billed based on the storag
 |data-volume-5|60 GB|In-use (attached to vm-2)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="bottom"}
 {: #storage-spec-1}
 {: tab-title="Data volumes of 235 GB"}
 
-| Name     | Size    | State/Description      |
+| Name     | Size    | Description      |
 |----------|---------|------------------------|
 |AIX-71-01|30 GB|1 backing volume|
 |IBMi-74-001| 100 GB + 30 GB|2 backing volumes|
 |SLES-15-1|40 GB|1 backing volume|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="bottom"}
 {: #storage-spec-2}
 {: tab-title="Boot volumes of 200 GB"}
 
-| Name     | Size    | State/Description    |
+| Name     | Size    | Description    |
 |----------|---------|----------------------|
 |vm-1 deployed AIX-71|30 GB|Volume of AIX-71 +  \n data-volume-2 +  \n data-volume-3  \n (volumes that are created from copying  \n the deployed AIX-71 image,  \n Data volumes are already accounted.)|
 |vm-2 deployed IBMi-74-001|130 GB|Volume of IBMi-74-001 +  \n data-volume-5  \n (volumes that are created from copying  \n the deployed IBMi-74-001 image,  \n Data volumes are already accounted.)|
 {: class="simple-tab-table"}
 {: tab-group="storage"}
-{: caption="Account billable for storage use case" caption-side="top"}
+{: caption="Account billable for storage use case" caption-side="bottom"}
 {: #storage-spec-3}
 {: tab-title="Deployed VMs of 160 GB"}
 
@@ -587,7 +589,7 @@ Total billable storage = 595 GB
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} Workspace resource.
+IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
 
 On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will reach its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
 {: important}
@@ -595,7 +597,7 @@ On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will 
 ## Pricing for Power Edge Router (PER)
 {: #per-pricing}
 
-No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options associated to the use of PER.
+No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options that are associated to the use of PER.
 
 The following table shows an example of the charges based on the routing option that you select:
 
@@ -603,7 +605,7 @@ The following table shows an example of the charges based on the routing option 
 |--------------|---------|
 |Local routing data transfer | No charges |
 |Global routing data transfer | $0.011 GB|
-{: caption="An example of Transit Gateway charges based on routing" caption-side="top"}
+{: caption="An example of Transit Gateway charges based on routing" caption-side="bottom"}
 
 The following table shows examples of the charges based on the number of connections that includes Direct Link, VPC, Classic that you can create:
 
@@ -613,7 +615,7 @@ The following table shows examples of the charges based on the number of connect
 |5 - 20 | $9.405 |
 |21 - 50 |$7.315 |
 |51+ | $4.7025 |
-{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="top"}
+{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="bottom"}
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
 {: important}

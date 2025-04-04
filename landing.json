@@ -49,7 +49,7 @@
   ],
   "section_devtools": {
     "api": "/apidocs/power-cloud",
-    "cli": "/docs/power-iaas-cli-plugin",
+    "cli": "/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {

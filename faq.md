@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-03"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -354,7 +354,7 @@ If you find the storage tiers are over or under-provisioned, you can change the 
 
 By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
 
-## What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?
+## What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?
 {: #processor}
 {: faq}
 
@@ -512,8 +512,8 @@ None. Use the API and CLI to perform snapshot or clone operations. Using the {{s
 - [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
 
 **CLIs to create snapshot and clone**
-- [Create a snapshot](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
-- [Create a volume clone for specific volumes](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
+- [Create a snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
+- [Create a volume clone for specific volumes](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
 
 ## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}

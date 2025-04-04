@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-20"
+lastupdated: "2025-04-01"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -136,6 +136,9 @@ The following table explains how to determine the primary and secondary site bas
 {: class="simple-table"}
 {: caption="Primary and secondary site reference based on volume creation" caption-side="bottom"}
 
+
+
+
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
 {: #locations-GRS}
 
@@ -160,6 +163,12 @@ The following table shows the location pairs that support replication:
 | `lon04`           | `lon06`                   |
 {: class="simple-table"}
 {: caption="Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
+
+
+
+
+
+
 
 ## Preparation for disaster recovery
 {: #dr-prep}
@@ -252,7 +261,7 @@ The impacts of GRS on other {{site.data.keyword.powerSys_notm}} operations are a
 - By default, when you clone a replication-enabled volume, the cloned volume is replication-enabled. During cloning, you can optionally specify whether the cloned volume must be replication-enabled or not. If you want the cloned volume to be replication-enabled, specify the policy for the clone volume. You can use the following methods to clone a volume:
 
     - [Clone a volume by using API](/apidocs/power-cloud#pcloud-v2-volumesclone-execute-post){: external}.
-    - [Clone a volume by using CLI](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone){: external}.
+    - [Clone a volume by using CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone){: external}.
     - [Clone a volume by using Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_clone){: external}.
 
 ## Disabling GRS
@@ -265,11 +274,11 @@ To disable the replication service between the primary volume and auxiliary volu
 Failure to complete this procedure in the specified order might result in loss of source volume data.
 {: attention}
 
-1. **Remove the volumes from the volume group on the primary site**: On the primary site, if a volume is associated with a volume group, remove the volume from its associated volume group. Use the [ibmcloud pi volume-group update](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update) CLI command to remove the volumes from the volume group.
+1. **Remove the volumes from the volume group on the primary site**: On the primary site, if a volume is associated with a volume group, remove the volume from its associated volume group. Use the [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update) CLI command to remove the volumes from the volume group.
 
     For example, `ibmcloud pi vgu 5bbe734a-7ec6-4f0a-a34e-8bd45fc189ca --remove-member-volume-ids afd07003-a61a-45ca-97d1-4f910272306d`
 
-2. **Disable the volume replication service**: Disable the volume replication service by setting the `replication-enabled` flag to `False`. Use the [ibmcloud pi volume action](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action) CLI command to disable the volume replication.
+2. **Disable the volume replication service**: Disable the volume replication service by setting the `replication-enabled` flag to `False`. Use the [ibmcloud pi volume action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action) CLI command to disable the volume replication.
 
     For example, `ibmcloud pi vola afd07003-a61a-45ca-97d1-4f910272306d –replication_enabled=False`
 
@@ -285,7 +294,7 @@ Failure to complete this procedure in the specified order might result in loss o
     This step is required if the volume is on-boarded into a workspace on the secondary site.
     {: note}
 
-    Use the [ibmcloud pi volume-group update](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update) CLI command to remove the volumes from the volume group.
+    Use the [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update) CLI command to remove the volumes from the volume group.
 
     For example, `ibmcloud pi vgu 96e037e3-9efd-4d6d-90cf-d1f6cc76d6c3 --remove-member-volume-ids ba147c20-578a-4ae1-8a94-252b6bbcd9cb`
 
@@ -301,7 +310,7 @@ Failure to complete this procedure in the specified order might result in loss o
 You can resize the primary volume or switch the bootable or shareable options of the volume as `True` or `False`.
 
 
-Use the [ibmcloud pi volume-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-update) CLI command with the following options to update the primary volume:
+Use the [ibmcloud pi volume-update](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-update) CLI command with the following options to update the primary volume:
 
 - **Resize** `--size NEW_SIZE` option: On `DAL10` and `WDC07` location pair, when you resize a replication-enabled primary volume from the primary site, the system resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For all other location pairs, before you resize a replication-enabled volume, remove the volume from the volume group. After the volume resize is completed, add the volume back to the volume group.
 
@@ -329,7 +338,7 @@ To delete a primary volume, complete the following steps:
 
 
 1. Remove the primary volume from the volume group, if the primary volume is associated with a volume group.
-2. Delete the primary volume from the primary site. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
+2. Delete the primary volume from the primary site. You can use the CLI command [ibmcloud pi volume-delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-delete) to delete the volume.
 3. Remove the auxiliary volume from the volume group, if the auxiliary volume is associated with a volume group.
 4. Delete the auxiliary volume from the secondary site.
 
@@ -367,7 +376,7 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 
 When you disable the replication service on the primary volume or delete a primary volume, the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary site is associated with a volume group, remove the auxiliary volume from the volume group. Delete the auxiliary volume manually. If the auxiliary volume is not deleted from the secondary site, an out-of-band periodic check (occurring every 24 hours) sets the auxiliary volume to an error state.
 
-Use the [ibmcloud pi volume delete](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete) CLI command to delete the auxiliary volume.
+Use the [ibmcloud pi volume delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete) CLI command to delete the auxiliary volume.
 
 For example, `ibmcloud pi vold afd07003-a61a-45ca-97d1-4f910272306d`
 
@@ -379,7 +388,7 @@ When you create a volume group and add the replication-enabled volumes to the vo
 
 You can add only replication-enabled volumes to a volume group. If you try to add a non-replication-enabled volume to a volume group, the action fails.
 
-To create a volume group, you can use the CLI command, [ibmcloud pi volume-group-create](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-create){: external}.
+To create a volume group, you can use the CLI command, [ibmcloud pi volume-group-create](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-create){: external}.
 
 
 ### Updating a volume group
@@ -387,7 +396,7 @@ To create a volume group, you can use the CLI command, [ibmcloud pi volume-group
 
 You can add or remove storage volumes from a volume group. After onboarding primary volumes, if you add storage volumes to a volume group on the primary site after the primary volumes, you must onboard the associated auxiliary volumes on the secondary site. If you remove the storage volumes from a volume group on the primary site after the onboarding operation, then you must also remove the associated auxiliary volumes from the secondary site.
 
-To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
+To update a volume group, you can use the CLI command, [ibmcloud pi volume-group-update](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-update){: external}.
 
 
 
@@ -425,7 +434,7 @@ The limitations of GRS are as follows:
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume){: external}.
 * Get volume groups storage details by using the following methods:
     * [Power Cloud API](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external}.
-    * [Power Virtual Server CLI](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details){: external}
+    * [Power Virtual Server CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details){: external}
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}.
 
 - When you add or remove a primary or an auxiliary volume from a volume group from one site, perform the same operation from the other site to keep the data in sync.

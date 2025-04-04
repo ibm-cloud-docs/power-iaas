@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-12-09"
+lastupdated: "2025-03-28"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -51,7 +51,7 @@ A maximum of four VPN connections are supported for one user account. A maximum 
 Due to your bandwidth variation when connecting via a shared VPN gateway, performance varies. For workloads that require the transfer of large data volumes, you should consider by using a site-to-site VPN configuration with your own dedicated gateway devices. For more information, see [Configuring the client-managed environment VPN gateway](#vpn-connecting-onpremise).
 {: important}
 
-To learn more about using the command-line interface (CLI) for VPN connections, see [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#ibmcloud-pi-vpn-connection).
+To learn more about using the command-line interface (CLI) for VPN connections, see [IBM {{site.data.keyword.powerSys_notm}}s CLI Reference](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-vpn-connection).
 
 ### {{site.data.keyword.powerSys_notm}} workspace support with VPN
 {: #powervs-support-vpn}
@@ -110,7 +110,7 @@ To create an IKE policy, complete the following steps:
 
 5. Click **Create**.
 
-To create, view, update, or delete an IKE policy by using CLI, see CLI reference for [VPN IKE policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
+To create, view, update, or delete an IKE policy by using CLI, see CLI reference for [VPN IKE policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#vpn-ike-policy).
 
 The display of an example IKE Policy is as follows. Pre-shared key is not displayed for an IKE policy.
 
@@ -145,7 +145,7 @@ To create an IPsec policy, complete the following steps:
      - **Key lifetime**: Specify the key lifetime of the IPsec policy in seconds. The valid value is in the range 180 - 86400 seconds.
 5. Click **Create**.
 
-To create, view, update, or delete an IPsec policy by using CLI, see the CLI reference for [VPN IPsec policy](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-ike-policy).
+To create, view, update, or delete an IPsec policy by using CLI, see the CLI reference for [VPN IPsec policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#vpn-ike-policy).
 
 The display of an example IPsec policy is as follows:
 
@@ -183,7 +183,7 @@ To create a VPN connection, complete the following steps:
 
 You can edit the VPN connection options after creating a VPN connection. Click the existing VPN connection that you want to edit, click **Edit details**, and modify the options.
 
-To create, view, update, or delete a VPN connection by using CLI, see the CLI reference for [VPN connections](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference#vpn-connections).
+To create, view, update, or delete a VPN connection by using CLI, see the CLI reference for [VPN connections](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#vpn-connections).
 
 When you delete a virtual server instance, it deletes the private networks (subnets) and other resources. It would help if you considered the following:
 -  You must delete VPN connections before deleting the virtual server instance.
@@ -227,7 +227,7 @@ To create, attach, or detach a local subnet or a peer subnet to a VPN connection
 2. In the **VPN connections** page, click an existing VPN connection that you want to edit.
 3. In the **VPN connection details** page, click **Attach another +** option to attach other local and peer subnets. Click **Detach** to detach the existing local and peer subnets from the VPN connection.
 
-For more information about attaching or detaching subnets by using CLI, see the CLI reference for [VPN subnets](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-vpn-subnet).
+For more information about attaching or detaching subnets by using CLI, see the CLI reference for [VPN subnets](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn-subnet).
 
 In addition to the subnet restrictions specified in [Configuring and adding a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet), VPNaaS has the following restrictions:
 

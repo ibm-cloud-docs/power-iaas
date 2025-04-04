@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-04"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -38,7 +38,7 @@ For more information about billing for operating systems, see [Operating systems
 In the IBM Cloud catalog for {{site.data.keyword.on-prem-fname}}, the estimated price might differ from the actual price when you purchase the {{site.data.keyword.on-prem-fname}} infrastructure or instances. The actual price might include the discounts and promotion codes.
 
 
-For more information about IBM Cloud regions can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+For more information about IBM Cloud regions that can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 
 ## Monthly usage
@@ -77,7 +77,10 @@ For the example in Table 1, we might see four distinct part numbers for the foll
 
 
 
-For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. To view the part numbers, refer to Table 2.
+For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. Refer to the following table to view the part number descriptions and the associated metric IDs.
+
+
+
 
 
 
@@ -129,28 +132,61 @@ For detailed usage and billing information, refer to the part numbers in your in
 | IBM i P30 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30 |
 | IBM i Cloud Storage Solutions instance core-hour | ppcaas-metric-ibmi-cos |
 | IBM i Rational Developer Studio instance core-hour| ppcaas-metric-ibmi-rds |
+| Virtual Tape Library terabyte-hour | ppcaas-metric-vtl |
+{: class="simple-tab-table"}
+{: tab-group="part_number_descriptions_private"}
+{: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
+{: #virtual-machine-group-private}
+{: tab-title="Virtual machine group"}
+
+
+|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
+|  --------------------------------------------------------------- | ---------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud volume group**  |
 | Volume Storage Tier 0 gigabyte-hour  | ppcaas-metric-volume-tier0 |
 | Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
 | Volume Storage Tier 3 gigabyte-hour  | ppcaas-metric-volume-tier3 |
 | Volume Storage Tier 5k gigabyte-hour | ppcaas-metric-volume-tier5k |
+{: class="simple-tab-table"}
+{: tab-group="part_number_descriptions_private"}
+{: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
+{: #volume-group-private}
+{: tab-title="Volume group"}
+
+
+|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
+|  --------------------------------------------------------------- | ---------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud snapshot group**  |
 | Snapshot Storage Tier 0 gigabyte-hour  | ppcaas-metric-snapshot-tier0 |
 | Snapshot Storage Tier 1 gigabyte-hour  | ppcaas-metric-snapshot-tier1 |
 | Snapshot Storage Tier 3 gigabyte-hour  | ppcaas-metric-snapshot-tier3 |
 | Snapshot Storage Tier 5k gigabyte-hour | ppcaas-metric-snapshot-tier5k |
-| **IBM Power Systems Virtual Server Private Cloud virtual tape library group** |
-|  Virtual Tape Library terabyte-hour | ppcaas-metric-vtl |
+{: class="simple-tab-table"}
+{: tab-group="part_number_descriptions_private"}
+{: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
+{: #snapshot-group-private}
+{: tab-title="Snapshot group"}
+
+
+|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
+|  --------------------------------------------------------------- | ---------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |             |
 |  IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
 | IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
 | IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores  |
-{: caption="Part descriptions and metric IDs" caption-side="bottom"}
-{: #Table2}
+{: class="simple-tab-table"}
+{: tab-group="part_number_descriptions_private"}
+{: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
+{: #shared-procesor-pool-group-private}
+{: tab-title="Shared Processor Pool group"}
+
+
+
+
+
+
 
 For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).
-
-
 
 
 
@@ -165,7 +201,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription you can subscribe to an updated or upgraded packages from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription, you can subscribe to an updated or upgraded package from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -230,9 +266,21 @@ Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usa
 ## Pricing for shared processor pool
 {: #pricing-spp-private-cloud}
 
-SPP provides the capability to manage CPU cores efficiently and offers pricing for memory and storage that is on par with {{site.data.keyword.powerSys_notm}}.
 
-In the {{site.data.keyword.on-prem-fname}} environment, there exists a minimum core-to-virtual core ratio of 1:20. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure. Therefore, the calculation of operating system license charges follows a distinct method within the {{site.data.keyword.on-prem-fname}} setup to accommodate this core-to-virtual core ratio efficiently.
+
+
+
+
+Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP do not incur additional cost for per VM core.
+
+
+
+
+In the {{site.data.keyword.on-prem-fname}} environment, a minimum core-to-virtual core ratio of 1:20 exists. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure. Therefore, the calculation of the operating system license charges follows a distinct method within the {{site.data.keyword.on-prem-fname}} setup to accommodate the core-to-virtual core ratio efficiently.
+
+
+
+
 
 When you use SPP in {{site.data.keyword.on-prem-fname}}, you pay for the following items:
 
@@ -247,24 +295,15 @@ Table 12 shows the details of SPP in {{site.data.keyword.on-prem-fname}}.
 
 
 
-| Offering/Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
+| Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
 | -----------------  | -----------  | ------------  | ------------------ |
 | {{site.data.keyword.on-prem-fname}}	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode  \n For {{site.data.keyword.on-prem-fname}}, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
 | Default Pool | 1:20 | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change |
-{: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="top"}
+{: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="bottom"}
 
 For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 
-
-
-
-### Shared processor pool optimization
-{: #pricing-spp-private-optim}
-
-You can deploy workloads to VMs in the shared processor pool (SPP) that you define. In the SPPs that you define, the cost is not calculated for the cores that are used by the VMs but the cost for the reserved cores is calculated.
-
-The cost on the memory in the VMs when VMs are in the SPPs that you define is calculated based on its use by using the standard memory parts. You can use SPPs to optimize the cost for Oracle licensing, pricing for disaster recovery solutions such as IBM i CBU, and other workloads.
 
 
 
@@ -275,7 +314,7 @@ The cost on the memory in the VMs when VMs are in the SPPs that you define is ca
 ## Pricing for dedicated hosts
 {: #pricing-dh-private}
 
-Dedicated hosts are priced based upon the host type – either an IBM Power S922 or IBM Power S1022.  Each server type is metered by the hour and the price includes the entire capacity of the host.
+Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022. Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
 * You are not charged separately for shared processor pools you deploy to the dedicated host.
@@ -420,10 +459,10 @@ Review the following frequently asked questions about pricing:
 
    * Log on to [IBM global catalog](https://globalcatalog.cloud.ibm.com/){: external}.
    * Search the catalog for the resources for which you need pricing. The following options for search strings are available:
-     - `Power Virtual Server Virtual Machine` for Virtual Machines that includes processor, memory, operating systems, and workloads.
+     - `Power Virtual Server Virtual Machine` for virtual machines that includes processor, memory, operating systems, and workloads.
      - `Power Virtual Server Volume` for Volumes.
      - `Power Virtual Server Snapshot` for Snapshots.
-     - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools. There is no pricing that is associated with other types of resources.
+     - `Power Virtual Server Shared Processor Pool` for Shared Processor Pools. No pricing is associated with other types of resources.
    * Click the selected resource type entry from the search results. The corresponding page opens.
    * Click the {{site.data.keyword.powerSys_notm}} Private Cloud billing plan from the left page:
      - `Power Virtual Server Private Cloud Virtual Machine Group` for virtual machines.
@@ -431,7 +470,7 @@ Review the following frequently asked questions about pricing:
      - `Power Virtual Server Private Cloud Snapshot Group` for Snapshots.
      - `Power Virtual Server Private Cloud Shared Processor Pool` for Shared Processor Pools (SPP).
          Deployments with different satellite regions are displayed.
-   * Select the deployment with the name ending with the satellite region for which you want the pricing.
+   * Select the deployment with the name that ends with the satellite region for which you want the pricing.
       For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** deployment displays the pricing for virtual machines in the satellite locations that are hosted in the Dallas region.
    * Click the **Pricing** tab on the right navigation page to view the pricings for different **Metric IDs**.
       Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
@@ -463,7 +502,7 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 | 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
 |         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
 |         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
-{: caption="Pricing for OS licensing in SPP in {{site.data.keyword.on-prem-fname}}" caption-side="top"}
+{: caption="Pricing for OS licensing in SPP in {{site.data.keyword.on-prem-fname}}" caption-side="bottom"}
 
 
 

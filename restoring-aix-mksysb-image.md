@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-06-07"
+lastupdated: "2025-03-28"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -256,4 +256,4 @@ When the old boot volume is detached and deleted by using the user interface, th
 {: #restore-aix-image-resources}
 
 * [Getting Started with IBM Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-getting-started).
-* [{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference).
+* [{{site.data.keyword.powerSys_notm}} CLI Reference](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference).

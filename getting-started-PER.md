@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-03-28"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -98,7 +98,7 @@ For detailed networking PER use cases and architecture diagrams, see [Power Edge
 
 
 
-The migration of an existing workspace to PER is supported through CLI by using the [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command with the following values:
+The migration of an existing workspace to PER is supported through CLI by using the [ibmcloud pi workspace action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command with the following values:
 
 - `per-migrate-start`: Initiates the migration of the workspace to PER.
 - `per-migrate-validate`: Removes the Cloud Connections for the workspace from the network database. Use this command after you remove the Cloud Connections for the workspace from the Transit Gateway.
@@ -125,17 +125,17 @@ Complete the following steps to migrate the workspace to PER:
 
 
 
-3. Initiate the migration by using the `per-migrate-start` value with [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
+3. Initiate the migration by using the `per-migrate-start` value with [ibmcloud pi workspace action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
 
-   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to get the migration status of your workspace. In the CLI response, once the `migrationStatus` property changes to `migrating` and `state` property changes to `user-validation` you can continue to complete the next steps.
+   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to get the migration status of your workspace. In the CLI response, once the `migrationStatus` property changes to `migrating` and `state` property changes to `user-validation` you can continue to complete the next steps.
 
 4. Attach the workspace to the Transit Gateway to validate the connectivity of the workspace with other workspaces.
 
 5. Remove the Cloud Connections from the Transit Gateway.
 
-6. Remove the Cloud Connections from the network database by using the `per-migrate-validate` value with [ibmcloud pi workspace action](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
+6. Remove the Cloud Connections from the network database by using the `per-migrate-validate` value with [ibmcloud pi workspace action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-action){: external} command.
 
-   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](https://cloud.ibm.com/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to view the Cloud Connection clean up progress of the migration process. In the CLI response, once the `migrationStatus` property is not included and `state` property is set to `Active` state, the migration process is complete and the workspace and network operations can be resumed.
+   Use the CLI command [ibmcloud pi workspace get <WORKSPACE_ID> --json](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get) to view the Cloud Connection clean up progress of the migration process. In the CLI response, once the `migrationStatus` property is not included and `state` property is set to `Active` state, the migration process is complete and the workspace and network operations can be resumed.
 
    You cannot delete the workspace and add or delete the subnets that are attached to the workspace until you complete the migration process by using the `per-migrate-validate` command.
    {: note}
@@ -261,7 +261,7 @@ PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and 
 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
 - API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
-- CLI - [Create a cloud connection](/docs/power-iaas-cli-plugin?topic=power-iaas-cli-plugin-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
+- CLI - [Create a cloud connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
 
 ## Data centers that support PER
 {: #dcs-per}

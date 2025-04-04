@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-02"
 
 keywords: activity tracker service, regulatory audit requirements, abnormal activity, view events, IBM Cloud Logs
 
@@ -45,8 +45,8 @@ For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs
 
 
 
-As of `28 March 2024`, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of `30 March 2025`. You must migrate to {{site.data.keyword.logs_full_notm}} before `30 March 2025`. During the migration period, you can use {{site.data.keyword.at_full_notm}} with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
-{: important}
+
+
 
 
 
