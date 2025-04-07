@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-07"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -453,7 +453,7 @@ Shared processor pool (SPP) provides the capability to manage CPU cores efficien
 
 
 
-Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP do not incur additional costs for per VM core or the cost for high-use memory parts.
+Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VM core or the cost for high-use memory parts.
 
 
 
