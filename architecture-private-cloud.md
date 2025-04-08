@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-08"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -111,30 +111,30 @@ A small pod has 1x42U rack and S1022 and E1050 system types are supported in the
 
 
 
-| Server types                | Min (2 TB option)  | Min (4 TB option) | Max |
-| --------------------------- | ------|-----|---- |
-| Server quantity in a pod    | 6     | 5   | 9   |
-| Number of cores per server  | 40    | 40  | 40  |
-| Total number of cores       | 240   | 200 | 360 |
-| Usable cores                | 198   | 165 | 297 |
-|                             |       |     |     |
+| Server types               | Min (2 TB option) | Min (4 TB option) | Max |
+| -------------------------- | ----------------- | ----------------- | --- |
+| Server quantity in a pod   | 6                 | 5                 | 9   |
+| Number of cores per server | 40                | 40                | 40  |
+| Total number of cores      | 240               | 200               | 360 |
+| Usable cores               | 198               | 165               | 297 |
+|                            |                   |                   |     |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Small pod configuration." caption-side="top"}
-{: #single-rack}
+{: #S1022}
 {: tab-title="S1022"}
 
 
-| Server types                | Min      | Max |
-| --------------------------- | -------- | --- |
-| Server quantity in a pod    | 2        | 4   |
-| Number of cores per server  | 96       | 96  |
-| Total number of cores       | 192      | 384 |
-| Usable cores                | 170      | 340 |
+| Server types               | Min | Max |
+| -------------------------- | --- | --- |
+| Server quantity in a pod   | 2   | 4   |
+| Number of cores per server | 96  | 96  |
+| Total number of cores      | 192 | 384 |
+| Usable cores               | 170 | 340 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="Small pod configuration." caption-side="top"}
-{: #single-rack}
+{: #E1050}
 {: tab-title="E1050"}
 
 For the S1022 server, the following memory configurations are available:
@@ -151,16 +151,16 @@ For the E1050 server, only an 8 TB memory option per server with a minimum 16 TB
 
 The small pod with one rack is available with FS 230 TB flash system storage.
 
-| Storage types                         | FS 230 TB |        |
-| ------------------------------------- | ----------|--------|
-| Number of racks                       | 1         |   1    |
-| Drives for each flash system          | 12        | 12     |
-| Capacity for each drive in TB         | 19.2      | 19.2   |
-| Number of flash systems in a pod      | 1         | 2      |
-| Total drives in a pod                 | 12        | 24     |
-| Total capacity in TB                  | 230       | 460    |
-| Usable capacity in TB                 | 219       | 438    |
-| Usable capacity in TB at 2x compression | 438        | 876    |
+| Storage types                           | FS 230 TB |      |
+| --------------------------------------- | --------- | ---- |
+| Number of racks                         | 1         | 1    |
+| Drives for each flash system            | 12        | 12   |
+| Capacity for each drive in TB           | 19.2      | 19.2 |
+| Number of flash systems in a pod        | 1         | 2    |
+| Total drives in a pod                   | 12        | 24   |
+| Total capacity in TB                    | 230       | 460  |
+| Usable capacity in TB                   | 219       | 438  |
+| Usable capacity in TB at 2x compression | 438       | 876  |
 {: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
 
@@ -172,93 +172,93 @@ A  medium pod has 2x42 U or 4x42 U rack and S1022, E1050, and E1080 (2CEC) syste
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
-|  Server types               | Min   | Max | Min | Max  |
-| --------------------------- | ------|-----|-----|------|
-| Number of racks             | 2     |  2  | 4   |  4   |
-| Server quantity in a pod    | 12    | 15  | 16  | 40   |
-| Number of cores per server  | 40    | 40  | 40  | 40   |
-| Total number of cores       | 480   | 600 | 640 | 1600 |
-| Usable cores                | 396   | 495 | 528 | 1320 |
-| **Memory types**            |       |     |     |      |
-| 2 TB                        | 24    | 30  | 32  | 80   |
-| 4 TB                        | 48    | 60  | 64  | 160  |
-| 8 TB                        |  -    |  -  | -   |  -   |
-| 16 TB                       |  -    |  -  | -   |  -   |
-| 32 TB                       |  -    |  -  | -   |  -   |
+| Server types               | Min | Max | Min | Max  |
+| -------------------------- | --- | --- | --- | ---- |
+| Number of racks            | 2   | 2   | 4   | 4    |
+| Server quantity in a pod   | 12  | 15  | 16  | 40   |
+| Number of cores per server | 40  | 40  | 40  | 40   |
+| Total number of cores      | 480 | 600 | 640 | 1600 |
+| Usable cores               | 396 | 495 | 528 | 1320 |
+| **Memory types**           |     |     |     |      |
+| 2 TB                       | 24  | 30  | 32  | 80   |
+| 4 TB                       | 48  | 60  | 64  | 160  |
+| 8 TB                       | -   | -   | -   | -    |
+| 16 TB                      | -   | -   | -   | -    |
+| 32 TB                      | -   | -   | -   | -    |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
-{: #multi-rack}
+{: #S1022-multi-rack}
 {: tab-title="S1022"}
 
-| Server types                | Min      | Max  | Min   | Max  |
-| --------------------------- | -------- | ---- | ----- | ---- |
-| Number of racks             | 2        | 2    | 4     | 4    |
-| Server quantity in a pod    | 5        | 7    | 8     | 19   |
-| Number of cores per server  | 96       | 96   | 96    | 96   |
-| Total number of cores       | 480      | 672  | 768   | 1824 |
-| Usable cores                | 425      | 595  | 680   | 1615 |
-| **Memory types**            |          |      |       |      |
-| 2 TB                        |  -       |  -   |  -    |  -   |
-| 4 TB                        | 20       | 28   |  32   | 76   |
-| 8 TB                        | 40       | 56   | 64    | 152  |
-| 16 TB                       |  -       |  -   |  -    |  -   |
-| 32 TB                       |  -       |  -   |  -    |  -   |
+| Server types               | Min | Max | Min | Max  |
+| -------------------------- | --- | --- | --- | ---- |
+| Number of racks            | 2   | 2   | 4   | 4    |
+| Server quantity in a pod   | 5   | 7   | 8   | 19   |
+| Number of cores per server | 96  | 96  | 96  | 96   |
+| Total number of cores      | 480 | 672 | 768 | 1824 |
+| Usable cores               | 425 | 595 | 680 | 1615 |
+| **Memory types**           |     |     |     |      |
+| 2 TB                       | -   | -   | -   | -    |
+| 4 TB                       | 20  | 28  | 32  | 76   |
+| 8 TB                       | 40  | 56  | 64  | 152  |
+| 16 TB                      | -   | -   | -   | -    |
+| 32 TB                      | -   | -   | -   | -    |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
-{: #multi-rack}
+{: #E1050-multi-rack}
 {: tab-title="E1050"}
 
-| Server types                | Min          | Max |
-| --------------------------- | -------------| --- |
-| Number of racks             | 4            | 4   |
-| Server quantity in a pod    | 2            | 5   |
-| Number of cores per server  | 120          | 120 |
-| Total number of cores       | 240          | 600 |
-| Usable cores                | 214          | 535 |
-| **Memory types**            |              |     |
-| 2 TB                        |  -           | -   |
-| 4 TB                        |  -           |  -  |
-| 8 TB                        | 16           | 40  |
-| 16 TB                       | 32           | 80  |
-| 32 TB                       | 64           | 160 |
+| Server types               | Min | Max |
+| -------------------------- | --- | --- |
+| Number of racks            | 4   | 4   |
+| Server quantity in a pod   | 2   | 5   |
+| Number of cores per server | 120 | 120 |
+| Total number of cores      | 240 | 600 |
+| Usable cores               | 214 | 535 |
+| **Memory types**           |     |     |
+| 2 TB                       | -   | -   |
+| 4 TB                       | -   | -   |
+| 8 TB                       | 16  | 40  |
+| 16 TB                      | 32  | 80  |
+| 32 TB                      | 64  | 160 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
-{: #multi-rack}
+{: #E1080-multi-rack}
 {: tab-title="E1080 (2CEC)"}
 
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
 
-| Storage types                         | Min                    | Max  | Min   | Max  |
-| ------------------------------------- | -----------------------|----- | ------|------|
-| Drives for each flash system          | 24                     | 48   | 24    | 48   |
-| Capacity for each drive in TB         | 19.2                   | 19.2 | 19.2  | 19.2 |
-| Number of flash systems in a pod      | 1                      | 1    | 2     | 2    |
-| Total Drives in a pod                 | 24                     | 48   | 48    | 96   |
-| Total capacity in TB                  | 460                    | 920  | 920   | 1840 |
-| Usable capacity in TB                 | 438                    | 876  | 876   | 1752 |
-| Usable capacity in TB at 2x compression | 876                  | 1752 | 1752  | 3504 |
+| Storage types                           | Min  | Max  | Min  | Max  |
+| --------------------------------------- | ---- | ---- | ---- | ---- |
+| Drives for each flash system            | 24   | 48   | 24   | 48   |
+| Capacity for each drive in TB           | 19.2 | 19.2 | 19.2 | 19.2 |
+| Number of flash systems in a pod        | 1    | 1    | 2    | 2    |
+| Total Drives in a pod                   | 24   | 48   | 48   | 96   |
+| Total capacity in TB                    | 460  | 920  | 920  | 1840 |
+| Usable capacity in TB                   | 438  | 876  | 876  | 1752 |
+| Usable capacity in TB at 2x compression | 876  | 1752 | 1752 | 3504 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
 {: caption="Medium pod with flash system storage configuration." caption-side="top"}
-{: #multi-rack-storage}
+{: #2-4-multi-rack-storage}
 {: tab-title="2 or 4 racks"}
 
-| Storage types                         | Min   | Max  | Min   | Max   |
-| ------------------------------------- | ----- | ---- | ----- | ----- |
-| Drives for each flash system          | 24    | 48   | 24    | 48    |
-| Capacity for each drive in TB         | 19.2  | 19.2 | 19.2  | 19.2  |
-| Number of flash systems in a pod      | 3     | 3    | 4     | 4     |
-| Total Drives in a pod                 | 72    | 144  | 96    | 192   |
-| Total capacity in TB                  | 1380  | 2760 | 1840  | 3680  |
-| Usable capacity in TB                 | 1314  | 2628 | 1752  | 3504  |
-| Usable capacity in TB at 2x compression | 2628  | 5256 | 3504  | 7007  |
+| Storage types                           | Min  | Max  | Min  | Max  |
+| --------------------------------------- | ---- | ---- | ---- | ---- |
+| Drives for each flash system            | 24   | 48   | 24   | 48   |
+| Capacity for each drive in TB           | 19.2 | 19.2 | 19.2 | 19.2 |
+| Number of flash systems in a pod        | 3    | 3    | 4    | 4    |
+| Total Drives in a pod                   | 72   | 144  | 96   | 192  |
+| Total capacity in TB                    | 1380 | 2760 | 1840 | 3680 |
+| Usable capacity in TB                   | 1314 | 2628 | 1752 | 3504 |
+| Usable capacity in TB at 2x compression | 2628 | 5256 | 3504 | 7007 |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
 {: caption="Medium pod with flash system storage configuration." caption-side="top"}
-{: #multi-rack-storage}
+{: #4-multi-rack-storage}
 {: tab-title="4 racks"}
 
 
@@ -300,12 +300,12 @@ Flexible IOPS is a tier-less storage offering that removes the notion of a disk 
 
 Table 5 shows the supported storage tiers with corresponding IOPS.
 
-| Tier level | IOPS  | Performance |
-|---------------|---------------|---------------------|
-| Tier 0 | 25 IOPS/GB | A 100-GB volume receives 2500 IOPS.  \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1 | 10 IOPS/GB | A 100-GB volume receives 1000 IOPS.  \n This is 3.3x faster than tier 3. |
-| Tier 3 | 3 IOPS/GB | A 100-GB volume receives 300 IOPS. |
-| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS. |
+| Tier level | IOPS                         | Performance                                                                                          |
+| ---------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Tier 0     | 25 IOPS/GB                   | A 100-GB volume receives 2500 IOPS.  \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1     | 10 IOPS/GB                   | A 100-GB volume receives 1000 IOPS.  \n This is 3.3x faster than tier 3.                             |
+| Tier 3     | 3 IOPS/GB                    | A 100-GB volume receives 300 IOPS.                                                                   |
+| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS.                                                                  |
 {: caption="Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
