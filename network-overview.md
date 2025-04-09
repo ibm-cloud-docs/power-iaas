@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-06"
+lastupdated: "2025-04-09"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -42,6 +42,8 @@ The {{site.data.keyword.on-prem-fname}} network architecture requires connectivi
 The control plane network is set up with redundancy, providing multiple network paths, to ensure that the pods are connected to the IBM Cloud regions reliably. The control plane network can be set up by using an IBM Cloud Direct Link 2.0 or Virtual private network (VPN). For IBM Cloud Direct Link 2.0 connection, IBM orders the device that uses an IPsec over VPN (last-mile connectivity) to connect to the {{site.data.keyword.on-prem-fname}} in client loaction pod in the IBM Cloud region.
 
 Before the pod installation, provide the required network-specific information so that either the IBM Cloud Direct Link 2.0 connection or VPN connection can be established.
+
+
 
 ### IBM Cloud Direct Link 2.0 Connect
 {: #direct-link}
