@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-04-09"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -28,6 +28,19 @@ subcollection: power-iaas
 
 
 ---
+
+[IDD-for-a-for-a-charge-service-start]{: tag-green}
+
+The End-of-Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 June 2025. See the original deprecation plan [announcement](https://cloud.ibm.com/status/announcement) from May 2024 for reference.
+
+To connect Power Virtual Server workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth, you are encouraged to use the new [Power Edge Router](/docs/power-iaas?topic=power-iaas-per) (PER) capability integrated with Transit Gateway service at no additional cost.
+
+While support for the no-charge Cloud Connections will continue, effective 1 July 2025, metering charges will be applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections, ranging from USD 100 to USD 5000. To avoid these charges, you are encouraged to migrate your workspace to PER-enabled workspaces before 1 July 2025.
+
+If you have manually configured the network configurations in your workspace without customizations through a support ticket, you can use self-service automation to complete your PER migration. The automation to migrate an existing network to PER is supported using the `ibmcloud pi workspace action` CLI command. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per). If you need assistance with the migration, you can open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
+[IDD-for-a-for-a-charge-service-end]{: tag-green}
 
 You can use {{site.data.keyword.powerSys_notm}} Cloud Connections to connect your {{site.data.keyword.powerSys_notm}} instances to {{site.data.keyword.cloud_notm}} resources on {{site.data.keyword.cloud_notm}} classic network and Virtual Private Cloud (VPC) infrastructures. {{site.data.keyword.powerSys_notm}} Cloud Connection creates a {{site.data.keyword.dl_short}} (2.0) Connect instance to connect your {{site.data.keyword.powerSys_notm}} instances to the {{site.data.keyword.cloud_notm}} resources within your account. For cross-account connectivity, use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC) infrastructures. The speed and reliability of the {{site.data.keyword.dl_short}} connection extends your {{site.data.keyword.powerSys_notm}} network to the IBM Cloud network and offers more consistent and higher-throughput connectivity, while keeping the network traffic within {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
