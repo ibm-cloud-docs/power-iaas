@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-04-07"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -58,7 +58,7 @@ Complete the following steps for creating a VPC VPN connection:
 1.	Create a VPC resource.
 2.	Create a Site-to-Site VPN gateway in VPC.
 3.	Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace by using one of the following methods:
-     -	Use a Transit Gateway in a PER workspace.
+     -	Use a Transit Gateway in a Power Edge Router (PER) workspace.
      -	Use a Cloud connection in a non-PER workspace.
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding a Transit Gateway is feasible, but it incurs extra charges. The cloud connection setup is not required in a PER-enabled workspace.
@@ -101,24 +101,27 @@ It is recommended that you create a direct cloud connection between the VPC and 
 ### Considerations for configuring VPC VPN in a non-PER workspace
 {: #vpcvpn-cons}
 
-Consider the following points for configuring VPC VPN in a non-PER workspace:
+
+
+To configure VPC VPN in a non-PER workspace, you must consider the following points:
 
 * Use a policy-based VPN in all the configurations of the VPN connection. 
-* Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the Local CIDR list of IBM Cloud VPC and Peer CIDR list of VPC in your client-managed environment.
-* Enable VPN Gateway and traffic source for Direct Link and Transit Gateway (in the Edit Traffic window) in the routing table of IBM Cloud VPC.
-1. Choose the Direct Link that is enabled with the Transit Gateway or disable the configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
+* Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the local CIDR list of IBM Cloud VPC and to the peer CIDR list of VPC in your client-managed environment.
+* Enable VPN gateway and traffic source for Direct Link and Transit Gateway in the **Edit Traffic** window that is present in the routing table of IBM Cloud VPC.
+
+Select Direct Link that is enabled with Transit Gateway or disable the configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
 
 
 
-### Changing from VPNaaS to VPC VPN service
+### Changing from VPNaaS to the VPC VPN service
 {: #vpnaas-to-vpcvpn}
 
-To use VPC VPN service, you must switch from VPNaaS to VPC VPN service. The following example illustrates the steps to set up the VPC VPN connection and to validate the connectivity:
+To use the VPC VPN service, you must switch from VPNaaS to VPC VPN service. The following example illustrates the steps to set up the VPC VPN connection and \validate the switch from VPNaaS to the VPC VPN service:
 
 1. Create a VPC connection in the same data center as the {{site.data.keyword.powerSys_notm}} by using the same account. Complete the following configurations:
 
       1. The default routing table must be configured by selecting the `VPN server` and `VPN gateway` values for **Accepts routes from** option. This configuration allows the traffic between the virtual servers that are members of the VPC subnet and the devices on the remote side of the VPN connection.
-      2. Create a second routing table to select VPN Server, VPN Gateway, and Transit Gateway. Under Transit Gateway, select the **Advertise to** option. For more information, see [Getting started with Virtual Private Cloud (VPC)](https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started){: external}.
+      2. Create a second routing table to select VPN server, VPN gateway, and Transit Gateway. Under Transit Gateway, select the **Advertise to** option. For more information, see [Getting started with Virtual Private Cloud (VPC)](https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started){: external}.
 
 2. Establish a VPN connection between the VPC and the remote side of the existing VPNaaS. Use the following considerations:
 
@@ -126,7 +129,8 @@ To use VPC VPN service, you must switch from VPNaaS to VPC VPN service. The foll
    2. Subnets for the remote VPN, VPC, and workspace must be distinct. Subnets cannot be shared or overlapped.
    3. Add the workspace CIDRs to the list of local CIDRs in the VPN connection.
    4. Add the workspace CIDRs to the peer CIDRs list in the VPNaaS remote side.
-   5. For more information about VPN options, see [About site-to-site VPN gateways](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn){: external}.
+
+   For more information about VPN options, see [About site-to-site VPN gateways](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn){: external}.
 
 3. Create a Transit Gateway by completing the following steps:
    1. Add VPC to Transit Gateway.

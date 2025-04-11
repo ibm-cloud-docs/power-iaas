@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-11"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -18,7 +18,16 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: shortdesc}
 
 
+## April 2025
+{: #April-2025}
 
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+- Global replication service supports new data center pair `WDC06`-`DAL14`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+
+
+
+- You can enable Cloud Security Posture Management (CSPM) feature in your existing and new {{site.data.keyword.powerSys_notm}} workspaces. For more information about CSPM, see [Integrating Power Virtual Server with IBM Cloud Security and Compliance Center Workload Protection](/docs/power-iaas?topic=power-iaas-integrate-scc).
 
 
 
@@ -51,7 +60,6 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
 - The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
-
 
 
 ## February 2025

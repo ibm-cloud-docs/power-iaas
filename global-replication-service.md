@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-11"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -139,12 +139,16 @@ The following table explains how to determine the primary and secondary site bas
 
 
 
+
+
+
+
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
 {: #locations-GRS}
 
 You can use the GRS location APIs to determine the locations that support storage replication and their mapped location. For more information, see [all disaster recovery locations that are supported by {{site.data.keyword.powerSys_notm}}](/apidocs/power-cloud#pcloud-locations-disasterrecovery-getall) in API documentation.
 
-The following table shows the location pairs that support replication:
+The following table shows the location pairs that support replication pairs:
 
 
 
@@ -154,17 +158,16 @@ The following table shows the location pairs that support replication:
 | `mad02`           | `eu-de-1 (fra04)`        |
 | `mad04`           | `eu-de-2 (fra05)`        |
 | `us-east (wdc04)` | `us-south (dal13)`       |
-| `wdc06`           | `dal12`                  |
+| `wdc06`           | `dal12`                   |
+| `wdc06`           | `dal14`                  |
 | `wdc07`           | `dal10`                  |
 | `osa21`           | `tok04`                  |
 | `syd04`           | `syd05`                  |
 | `sao01`           | `sao04`                  |
 | `mon01`           | `tor01`                  |
-| `lon04`           | `lon06`                   |
+| `lon04`           | `lon06`                  |
 {: class="simple-table"}
 {: caption="Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
-
-
 
 
 

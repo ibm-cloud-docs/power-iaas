@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-07"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -33,14 +33,14 @@ Learn more about different AIX and Linux backup strategies for IBM&reg; Power Sy
 
 
 
-## Secure automated backup with Compass for AIX and Linux® in {{site.data.keyword.off-prem}}
+## Secure automated backup with Compass for AIX and Linux®
 {: #baas}
 
 IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called Secure Automated Backup with Compass® from now on referred as “Backup Offering.”
 
 The Backup Offering is powered by Cobalt Iron Compass and is accessible from the {{site.data.keyword.cloud_notm}} [catalog](https://cloud.ibm.com/catalog){: external}.
 
-## Deploying the backup instance in {{site.data.keyword.off-prem}}
+## Deploying the backup instance
 {: deploy-backup-inst-dc}
 
 To deploy the Backup Offering in {{site.data.keyword.off-prem}}, complete the following steps:
@@ -61,7 +61,7 @@ To deploy the Backup Offering in {{site.data.keyword.off-prem}}, complete the fo
 
 4. Modify the default granular backup policies for your virtual server instances, files, and file systems.
 
-### Network architecture for deploying the backup instance in {{site.data.keyword.off-prem}}
+### Network architecture for deploying the backup instance
 {: #baas-architechture}
 
 To deploy the backup instance, use one of the following architectures:

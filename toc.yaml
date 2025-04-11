@@ -69,6 +69,8 @@ toc:
               - compliances.md
               - eu-compliance.md
               - Integrate_hpcs.md
+              - topic: Integrate_scc.md
+                navtitle: Integrating Power Virtual Server with IBM Cloud Security and Compliance Center
       - topicgroup:
           label: Use cases
           topics:
@@ -197,9 +199,9 @@ toc:
           - cli-release-notes.md
           - cli-before-you-begin.md
           - cli-upgrade-v1.md
-          - cli-power-iaas-cli.md
-          - cli-power-iaas-cli-v1.md
-          - cli-power-iaas-cli-onprem.md
+          - cli-power-iaas.md
+          - cli-power-iaas-v1.md
+          - cli-power-iaas-onprem.md
       - link:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture
