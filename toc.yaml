@@ -69,6 +69,8 @@ toc:
               - compliances.md
               - eu-compliance.md
               - Integrate_hpcs.md
+              - topic: Integrate_scc.md
+                navtitle: Integrating Power Virtual Server with IBM Cloud Security and Compliance Center
       - topicgroup:
           label: Use cases
           topics:
