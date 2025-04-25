@@ -116,7 +116,6 @@ toc:
                     - environmental-req.md
                     - power-requirements.md
                     - network-requirements.md
-                    - network-planning
                     - safety-notices.md
               - network-use-cases.md
               - network_latency.md

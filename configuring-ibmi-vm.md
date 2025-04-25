@@ -59,7 +59,7 @@ To open the VSI console on the first boot, complete the following steps:
     The idle timeout for the VSI console is 2 hours.
     {: important}
 
-[2Q-POWERIAAS-Console-resiliency-enhancement-17-April-end]{: tag-green}
+
 
 
 To disconnect from the VSI console session, close the web browser window that is titled 'noVNC'.
