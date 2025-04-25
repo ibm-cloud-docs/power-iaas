@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-25"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -277,7 +277,6 @@ Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of O
 
 
 In the {{site.data.keyword.on-prem-fname}} environment, a minimum core-to-virtual core ratio of 1:20 exists. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure. Therefore, the calculation of the operating system license charges follows a distinct method within the {{site.data.keyword.on-prem-fname}} setup to accommodate the core-to-virtual core ratio efficiently.
-
 
 
 

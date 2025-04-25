@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-25"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -366,10 +366,6 @@ Refer to the following table to view the part number descriptions and the associ
 {: tab-title="Snapshot group"}
 
 
-
-
-
-
 ## Base instances
 {: #pricing-base-instance-prices}
 
@@ -443,6 +439,27 @@ The following tables show examples of how different processor types affect the c
 | 1                       | $0.15 (shared uncapped)      | $106.06                  |
 | 1                       | $0.22 (shared capped)        | $159.14                  |
 {: caption="S1022 processor type pricing example" caption-side="bottom"}
+
+
+## Pricing for Global Replication Services
+{: #price-grs}
+
+The cost for the Global Replication Services (GRS) depends on the location where the replication-enabled volumes are active. When you create a replication-enabled volume, it is active in the location where it was created. When a failover event occurs, the auxiliary volume becomes the active volume.
+
+The following costs are calculated for replication-enabled volumes:
+
+- Cost of the basic services for the replication capability is based on the size of the replication-enabled volume under the part number `GLOBAL_REPLICATION_STORAGE_GIGABYTE_HOURS`.
+- Cost of the storage is equal to two times the size of the volumes against two different storage part numbers. This cost is based on the tier of the volume against the primary volume.
+
+Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume.
+
+The cost of the auxiliary volumes are not calculated separately and are part of the cost of primary volume.
+{: note}
+
+The cost of GRS is calculated for only one location at any point in time. The location where the volumes are not active does not incur any cost. If replication is broken among the primary or auxiliary volumes, the cost of the volumes is same as the normal volumes on both primary and secondary locations. The cost is calculated based on the size of the volume according to the tier and no cost is considered for replication capability.
+
+
+
 
 ## Pricing for shared processor pool
 {: #price-spp}

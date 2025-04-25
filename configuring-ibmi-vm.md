@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-04-25"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -31,41 +31,47 @@ subcollection: power-iaas
 The following instructions describe the first boot and usage of your IBM i virtual machine (VM).
 {: shortdesc}
 
-IBM i 7.2, and later, VMs support up to 127 storage volumes per VM.
+VMs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VM by default and can be configured to support up to 508 storage volumes per VM.
 {: note}
 
 ## First boot of IBM i
 {: #first-boot}
 
-When you use IBM i 7.5 stock OS Image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VM deployment for the TCP configuration to finish.
+When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VM deployment for the TCP configuration to finish.
 
-The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the VNC Console. For a refresh of VNC Console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
+The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the Virtual Server Instance (VSI) console. For a refresh of VSI console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
-For steps on changing the DST password, see [First boot change password](#first-boot-change-password).
+For steps on changing the DST password, see [Changing the DST password](#first-boot-change-dst-password).
 {: note}
 
 
-### First boot VNC Console access
-{: #first-boot-vnc-console-access}
 
-To begin your first boot, open the VNC Console:
+### Accessing the VSI console
+{: #first-boot-access-vsi-console}
 
-1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance.
-2. Click **VM actions** in the server details page and select **Open console** from the drop-down list. On the console setting page, select the language and click **Open console**.
+To open the VSI console on the first boot, complete the following steps:
 
-    IBM i console opens as a new window. Ensure that your browser setting does not block any pop-up window.
-    {: note}
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
+2. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The Console Setting dialog is displayed.
+3. Select **037 English** from the **Console language** drop-down list.
+4. Click **Open console**. The IBM i console opens in a new window. Ensure that your browser settings allow pop-up windows.
 
-    The Idle timeout for the VNC console is 30 minutes.
+    The idle timeout for the VSI console is 2 hours.
     {: important}
 
-To disconnect from the VNC Console session, close the web browser window that is titled 'noVNC'.
+[2Q-POWERIAAS-Console-resiliency-enhancement-17-April-end]{: tag-green}
 
-If you lose internet connectivity, your VNC Console session (provided through noVNC) shows as "Server disconnected (code: 1006)" and will not auto-connect when internet connectivity is restored.
 
-To restore the VNC Console session, return to the IBM Power Virtual Instance, and again click **VM actions** in the server details page and select **Open console** from the drop-down list. Your session is restored and shows 'Connected (encrypted)'.
+To disconnect from the VSI console session, close the web browser window that is titled 'noVNC'.
 
-Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VNC Console session URL, such as using a shell command loop:
+If you lose internet connectivity, your VSI console session (provided through noVNC) displays the "Server disconnected (code: 1006)" message and will not auto-connect when internet connectivity is restored.
+
+To restore the VSI console session, complete the following steps:
+
+1. Return to the IBM Power Virtual instance.
+2. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The session is restored and the 'Connected (encrypted)' message is displayed
+
+Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VSI console session URL, such as using a shell command loop:
 
 ```shell
 ibmcloud pi service-list
@@ -73,32 +79,32 @@ ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
 for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
 ```
 
-### First boot change password
-{: #first-boot-change-password}
+### Changing the DST password
+{: #first-boot-change-dst-password}
 
-When the VNC Console loads and the IBM i console screen is shown (IBM i 7.5), complete the following steps to reset the password of the IBM i standard user:
+When the VSI console loads and the IBM i console screen is shown (IBM i 7.5 or later), complete the following steps to reset the password of the IBM i standard user:
 
-Releases prior to IBM i 7.5 will be presented the System Sign-on screen first, where the QSECOFR password needs to be reset.
+Releases before IBM i 7.5 is presented on the System Sign-on screen first, where the `QSECOFR` password needs to be reset.
 {: note}
 
-1. In the VNC Console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
-2. The **Change Service Tools User Password** screen loads, and the cursor will be on `Current password . . . .`, enter `QSECOFR`.
+1. In the VSI console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
+2. The **Change Service Tools User Password** screen loads, and the cursor is on `Current password . . . .`, enter `QSECOFR`.
 3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
 4. Repeat the step on the `New password (to verify) . . . .` field and enter the new password again.
 5. Press ENTER to continue.
-6. The **IPL or Install the System** screen is shown. See more steps documented on this page.
+6. The **IPL or Install the System** screen is shown.
 
 Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
 {: note}
 
-After this, the IBM i virtual machine is ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
+The IBM i virtual machine is now ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
 
 The default is to select Option 1 'Perform an IPL'.
 
-### First boot license choice
-{: #first-boot-license-choice}
+### Reviewing software agreements
+{: #first-boot-review-software-licenses}
 
-When the installation is complete, the **System Sign-On** screen is presented. Follow the similar steps from [First boot change password](#first-boot-change-password) to change `QSECOFR` password. After the System sign-on is complete, accept the Licensed Program Software Agreements.
+When the installation is complete, the **System Sign-On** screen is presented. Follow the similar steps from [Changing the DST password](#first-boot-change-dst-password) to change `QSECOFR` password. After the System sign-on is complete, accept the Licensed Program Software Agreements.
 
 1. Following login, the screen will automatically change to the work with **Software Agreements** screen.
 2. To accept the license agreements from the console, press **5=display** each license agreement and press ENTER.
@@ -165,16 +171,17 @@ The IBM i virtual machine might result in a timeout error, if you update the IBM
 ## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
 {: #sst-dst}
 
-By default, the SST, and DST passwords are expired. Complete the following tasks to get into SST, change your passwords, and configure the newly attached disk. Configuring a newly attached disk is required and must be done if other disks are attached.
+The SST and DST passwords are expired by default. Complete the following tasks to get into SST and change the passwords.
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
 
-To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords complete the following steps:
+To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords, complete the following steps:
 
-1. Click the VM instance to view the **Server details** page and click **Operations**.
-2. Choose **(21) Active dedicated service tools** option from the displayed list under the **Job operations**.
-3. Click **Run action**.
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
+2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog is displayed.
+3. Select **(21) Active dedicated service tools** option from the list displayed on the **Control Panel funstions** tab.
+4. Click **Run action**.
 
 
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
@@ -183,11 +190,15 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 ## Managing the IBM i VM instance
 {: #manage-IBMi-VM}
 
-You can use the **Operations** page to manage advanced VM operations and configuration. To open the **Operations** page and to run job operations or boot operations, complete the following steps:
+You can use the **IBM i operations** option to manage advanced VM operations and configuration. To run the control panel functions or boot operations, complete the following steps:
 
-1. Click the VM instance to view the **Server details** page.
-2. Click **Operations**. The **Operations** button is available only for the IBM i VM instances.
-3. In the **Operations** page, in the **Job operations** tab, click one of the following actions as per your requirements:
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
+2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog is displayed.
+
+The **IBM i operations** option is available only for the IBM i VM instances.
+{: note}
+
+3. In the IBM i operations dialog, select one of the following actions listed on the **Control panel functions** as per your requirements:
 
    Job operations:
 
@@ -206,14 +217,14 @@ You can use the **Operations** page to manage advanced VM operations and configu
       You must not shut down the system before the MSD operation. This action can cause data loss.
       {: note}
 
-4. In the **Operations** page, in the **Boot operations** tab, configure one of the following options according to your requirements:
+4. In the IBM i operations dialog, configure one of the following options listed on the **Boot operations** tab as per your requirements:
 
    Boot operations:
 
      - **Server boot mode**
          - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
          - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
-         - **C-** Reserved for hardware service use only.
+         - **C-** Reserved for IBM lab use only.
          - **D-** Perform an IPL operation from a media other than the load-source disk. Perform an alternative IPL operation for code installation support.
 
      - **Server operating mode**
@@ -221,3 +232,25 @@ You can use the **Operations** page to manage advanced VM operations and configu
          - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
 
 5. Click **Run Action**.
+
+
+
+
+## IBM i national language considerations
+{: #ibmi-language-consid}
+
+Consider the following IBM i national language factors when working with the VSI console:
+
+- IBM i stock OS images support English (2924) or English DBCS (2984) language. Additional secondary languages can be installed, and the primary language can be changed on an IBM i virtual machine.
+
+- The VSI console of an IBM i virtual machine that is provided by the IBM Cloud UI, supports English language by default. The VSI console also supports the Japanese if installed as a primary or secondary language.
+
+    Selecting Japanese as the language in the Console Setting dialog before starting the IBM i VSI console does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that is performed on an IBM i virtual machine.
+    {: note}
+
+- When you deploy an IBM i virtual machine with the Cloud Optical Repository (COR) stock OS image, you can install national languages as either the primary or secondary language.
+
+For more information about IBM i network and software installation, see:
+
+- [Setting up an IBM i network install server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-preparing-install-server){: external}
+- [Globalization and IBM i software installation](https://www.ibm.com/docs/en/i/7.6.0?topic=installation-globalization-i-software#rzahcglobalconsider){: external}

@@ -141,6 +141,7 @@ toc:
               - managing_events_logs.md
               - setting-terraform.md
               - returning-pod.md
+              - working-with-VSI-console.md
       - topicgroup:
             label: Custom OS Images
             topics:

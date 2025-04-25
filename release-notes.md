@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -21,13 +21,24 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## April 2025
 {: #April-2025}
 
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+
+
+- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
+
+
 
 - Global replication service supports new data center pair `WDC06`-`DAL14`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 
 
 - You can enable Cloud Security Posture Management (CSPM) feature in your existing and new {{site.data.keyword.powerSys_notm}} workspaces. For more information about CSPM, see [Integrating Power Virtual Server with IBM Cloud Security and Compliance Center Workload Protection](/docs/power-iaas?topic=power-iaas-integrate-scc).
+
+
 
 
 
@@ -43,7 +54,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-The End of Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 June 2025. However, starting with 1 July 2025 metering charges are applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections. To avoid these charges, migrate your workspace before 1 July 2025. For more information about the migration, see [Migrating to Power Edge Router](docs/power-iaas?topic=power-iaas-per#migrate-per).
+The End of Life date for the no-charge Cloud Connections, which IBM Power Virtual Server provides to clients to access IBM Cloud resources in their network, is now extended indefinitely beyond the original date of 18 June 2025. However, starting with 1 July 2025 metering charges are applied to any remaining Direct Link connections. After this date, you will incur monthly charges for any Direct Link connections, with pricing based on the port speed of your connections. To avoid these charges, migrate your workspace before 1 July 2025. For more information about the migration, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 {: important}
 
 
@@ -53,7 +64,7 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 
 
-- Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP will not incur additional cost for per VM core or the cost for high-use memory parts. For more information, see [Pricing for shared processor pool for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs-draft/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) and [Pricing for shared processor pool for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs-draft/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud).
+- Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP will not incur additional cost for per VM core or the cost for high-use memory parts. For more information, see [Pricing for shared processor pool for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) and [Pricing for shared processor pool for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud)
 
 
 
