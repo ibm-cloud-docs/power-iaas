@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-25"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -42,6 +42,29 @@ The {{site.data.keyword.on-prem-fname}} network architecture requires connectivi
 The control plane network is set up with redundancy, providing multiple network paths, to ensure that the pods are connected to the IBM Cloud regions reliably. The control plane network can be set up by using an IBM Cloud Direct Link 2.0 or Virtual private network (VPN). For IBM Cloud Direct Link 2.0 connection, IBM orders the device that uses an IPsec over VPN (last-mile connectivity) to connect to the {{site.data.keyword.on-prem-fname}} in client loaction pod in the IBM Cloud region.
 
 Before the pod installation, provide the required network-specific information so that either the IBM Cloud Direct Link 2.0 connection or VPN connection can be established.
+
+
+
+
+
+### Impact of unplanned network outage
+{: #unplanned-network-disconnect-impact}
+
+
+
+When an {{site.data.keyword.on-prem-fname}} infrastructure deployed in a client location encounters an unplanned network outage, the communication link is interrupted and results in the loss of both primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud. The following table outlines the implications of an {{site.data.keyword.on-prem-fname}} infrastructure that is operating in the disconnected mode.
+
+| Capability                                                                          | Impact    | Description                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Client workload and data                                                            | No impact | Client workload remains operational and data remains fully accessible.                                                                                                          |
+| GUI or API for `read` operations                                                    | Minimum   | GUI remains operational and uses the last known cached data.                                                                                                                    |
+| GUI or API for `write` operations, such as virtual machine (VM) and volume creation | Maximum   | `Write` operations to the resources are unavailable until the connectivity to the control plane network is restored.                                                              |
+| Command-line interface (CLI)                                                        | Minimum   | `Read` operations remain operational. However `write` operations are unavailable until the connectivity to the control plane network is restored.                                   |
+| Billing and metering                                                                | No impact | Metering uses the last known cached data. If the infrastructure is disconnected, no `write` operations can be performed until the connectivity to the control plane network is restored. |
+| Dynamic Host Configuration Protocol (DHCP) services for client data networks        | No impact | DHCP services are provided by the {{site.data.keyword.on-prem-fname}} infrastructure-resident network and do not require a connection to the IBM Cloud.                         |
+| IBM remote support                                                                  | Maximum   | IBM remote support team cannot remotely connect to the {{site.data.keyword.on-prem-fname}} infrastructure until the connectivity to the control plane network is restored.      |
+{: caption="Impact of unplanned network outage" caption-side="bottom"}
+
 
 
 
