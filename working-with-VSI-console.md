@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-30"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -43,10 +43,10 @@ To start the VSI console of a {{site.data.keyword.powerSys_notm}} instance from 
 
 3. Select a virtual server instance to open the Virtual server instance details page.
 
-4. On the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open console**. The VSI console opens in a new browser window. Ensure that your browser settings allow pop-up windows.
+4. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The VSI console opens in a new browser window. Ensure that your browser settings allow pop-up windows.
 
-When you open the console for an IBM i-based {{site.data.keyword.powerSys_notm}} instance through the IBM Cloud UI, the Console Setting dialog is displayed. You can optionally select a language other than English and click **Open console** to open the VSI console. To change the language, see [Changing the VSI console language](#changing-vsi-console-lang).
-{: note}
+  When you open the console for an IBM i-based {{site.data.keyword.powerSys_notm}} instance through the IBM Cloud UI, the Console Setting dialog is displayed. You can optionally select a language other than English and click **Open console** to open the VSI console. To change the language, see [Changing the VSI console language](#changing-vsi-console-lang).
+  {: note}
 
 To open the VSI console of a {{site.data.keyword.powerSys_notm}} instance by using the IBM Cloud CLI, complete the following steps:
 
@@ -75,7 +75,7 @@ When you open the VSI console of a {{site.data.keyword.powerSys_notm}} instance 
 
 3. Select an IBM i-based virtual server instance to open the Virtual server instance details page.
 
-4. On the Virtual server details page, click the overflow menu (icon with 3 vertical dots) and select **Open console**. The Console Setting dialog is displayed.
+4. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The Console Setting dialog is displayed.
 
 5. Select a language from the **Console language** drop-down list.
 

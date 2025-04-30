@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-30"
 
 ---
 
@@ -14,8 +14,14 @@ lastupdated: "2025-04-15"
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}} CLI plug-in.
 {: shortdesc}
 
+## April 2025
+{: #april-2025}
 
+New CLI version v1.5.1 is available. The Power Virtual Server CLI plug-in is available with the following features:
 
+**What's changed**
+
+- Security update with CLI plugin dependencies.
 
 ## March 2025
 {: #mar-2025}

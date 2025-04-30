@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-04-03"
+lastupdated: "2025-04-30"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -43,7 +43,7 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offerin
 
 ## What is the difference between the {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}?
 {: #private-cloud-on-cloud-diff}
-
+{: faq}
 
 
 
@@ -51,6 +51,7 @@ The primary difference between the two is where the physical infrastructure resi
 
 ## Which Power servers are supported?
 {: #servers-supported}
+{: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
 
@@ -69,6 +70,7 @@ The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on
 
 ### AIX
 {: #aix-os-version}
+{: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -122,6 +124,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 
 ### IBM i
 {: #ibm-os-versions}
+{: faq}
 
 {{site.data.keyword.powerSys_notm}} supports IBM i 7.2, or later.
 The {{site.data.keyword.on-prem-fname}} supports IBM i 7.3, or later.
@@ -146,8 +149,6 @@ IBM i stock images currently available when you create a VM are:
 
 
 
-
-
 [^2]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 [^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
@@ -165,6 +166,7 @@ IBM i stock images currently available when you create a VM are:
 
 ### Linux
 {: #linux-os-versions}
+{: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -238,6 +240,7 @@ The following list is an example of the FLS offerings:
 
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
+{: faq}
 
 To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for {{site.data.keyword.on-prem-fname}}, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
 
@@ -245,16 +248,19 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 ## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional compute nodes?
 {: #expand-pods}
+{: faq}
 
 Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
 
 ## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional storage?
 {: #expand-pods-storage}
+{: faq}
 
 Yes, you can expand the pod with additional storage capacity. But you cannot add more storage controllers.
 
 ## Are the {{site.data.keyword.on-prem-fname}} in Client location pods equipped with spare compute nodes for maintenance?
 {: #spare-compute-node}
+{: faq}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
 
@@ -262,7 +268,7 @@ In each pod, one spare node is available that is exclusively usable for IBM oper
 
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
-
+{: faq}
 
 
 
@@ -274,21 +280,21 @@ As a security officer, auditor, or manager, you can use the IBM Cloud Logs servi
 
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
 {: #pod-disconnect-unplanned-nw-mcp}
+{: faq}
 
 If an unplanned network outage occurs for the management network that is connecting the IBM Cloud instance to the pod infrastructure, the VMs continue to run within the pod.
 
-See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to IBM are lost.
+See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud are lost.
 
-|  Capability            | Status | Impact of disconnected mode |
-| ------------           | --------------------------- | ---- |
-| Your workload and data | No impact | Your workload is operational and data is available. |
-| GUI or API (for read operations) | Minimal impact | The GUI is operational and uses the last-known cached data. The incoming updates for data, such as storage consumption, remains fixed until control plane connectivity is reestablished. |
-| GUI or API (for write operations – for example, VM or volume creation) |  Unavailable | The resource write operations are unavailable until the connectivity to the control plane is re-established. |
-| command-line interface (CLI) | Minimal impact | The read operations remain operational and the write operations are unavailable until connectivity is re-established.|
-| Billing and metering | No impact | Metering uses last-known cached data. If the pod gets disconnected, the write operations are unavailable. |
-| Telemetry | Unavailable | The telemetry data within the pod is unavailable until the control plane connectivity is re-established. However, IBM Storage Insights continue to cache the information for a selected period. |
-| DHCP service (for your data network) |  No impact | DHCP services are provided by the pod-resident network infrastructure and do not require a connection to IBM Cloud. |
-| IBM remote support | Unavailable | IBM operations team cannot connect remotely to the pod until the connectivity is reestablished.|
+| Capability                                                                          | Impact    | Description                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Client workload and data                                                            | No impact | Client workload remains operational and data remains fully accessible.                                                                                                          |
+| GUI or API for `read` operations                                                    | Minimum   | GUI remains operational and uses the last known cached data.                                                                                                                    |
+| GUI or API for `write` operations, such as virtual machine (VM) and volume creation | Maximum   | `Write` operations to the resources are unavailable until the connectivity to the control plane network is restored.                                                              |
+| Command-line interface (CLI)                                                        | Minimum   | `Read` operations remain operational. However `write` operations are unavailable until the connectivity to the control plane network is restored.                                   |
+| Billing and metering                                                                | No impact | Metering uses the last known cached data. If the infrastructure is disconnected, no `write` operations can be performed until the connectivity to the control plane network is restored. |
+| Dynamic Host Configuration Protocol (DHCP) services for client data networks        | No impact | DHCP services are provided by the {{site.data.keyword.on-prem-fname}} infrastructure-resident network and do not require a connection to the IBM Cloud.                         |
+| IBM remote support                                                                  | Maximum   | IBM remote support team cannot remotely connect to the {{site.data.keyword.on-prem-fname}} infrastructure until the connectivity to the control plane network is restored.      |
 {: caption="Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
 
 
@@ -679,6 +685,7 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 
 ## What must be the network latency between the data center and the corresponding IBM Cloud region?
 {: #network_latency-private-cloud}
+{: faq}
 
 [{{site.data.keyword.on-prem}}]{: tag-red} The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/power-iaas?topic=power-iaas-network_latency_main).
 
@@ -806,5 +813,7 @@ Yes, you can add a user interface to an existing virtual machine by performing O
 
 ## How can I search for {{site.data.keyword.powerSys_notm}} resources using the assigned user tags?
 {: #search-user-tags}
+{: faq}
+
 
 To view or search for resources that are provisioned in {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources). Note that the `user tags` are not included in the response for GET API and CLI requests.

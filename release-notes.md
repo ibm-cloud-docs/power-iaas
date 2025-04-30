@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-30"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,6 +23,24 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS levels are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual machines (VMs) that are using these stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VMs to a supported OS level. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
+{: important}
+
+- IBM i 7.3, 7.2 and COR stock images have been refreshed.
+
+- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of Cloud Resource Names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+
+  The billing and metering plans are updated with the following changes:
+
+    - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
+    - Each resource type has its own billing plan instead of billing all the resources under the `Workspace for Power Virtual Server` plan.
+    - The value for the `Pricing Region` field is based on metro regions and not based on data center and zone regions. However, the value for the `Location` field of the instance is based on data center and zone regions.
+    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with volume metrics.
+
+  The existing price of the resources does not change. The way in which the costs of the resources are organized and visualized are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
 
 
 

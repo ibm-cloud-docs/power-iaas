@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-29"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.1 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -57,7 +57,6 @@ The following list of commands are available with command-line interface (CLI) f
 - `storage-pools`:    List all storage pools for the targeted region.
 - `storage-tiers`:    List all storage tiers for the targeted region.
 - `subnet`:    IBM Cloud Power Virtual Server Subnets.
-- `system-pools`:    List of available system pools within a particular data center.
 - `virtual-serial-number`:    IBM Cloud Power Virtual Server Virtual Serial Number.
 - `volume`:    IBM Cloud Power Virtual Server Volumes.
 - `volume-group`:    IBM Cloud Power Virtual Server Volume Groups.
@@ -3039,8 +3038,7 @@ create SHARED_PROCESSOR_POOL_NAME --host-group HOST_GROUP --reserved-cores NUMBE
 **Available Flags**:
 
 ```bash
-  -g, --host-group string           The host group where the host will be chosen. See "ibmcloud pi system-pools" command or
-                                    "ibmcloud pi host-group list" command to get valid values.
+  -g, --host-group string           The host group where the host will be chosen. See "ibmcloud pi host-group list" command to get valid values.
   -i, --host-id string              The identifier of a host in a host group. This flag is only available for dedicated hosts.
   -p, --placement-group-id string   The identifier of the shared processor pool placement group the pool will be added to.
   -r, --reserved-cores int          The integer amount of reserved processor cores for the shared processor pool.
@@ -3696,17 +3694,6 @@ update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]
   -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
   -n, --name string           New name of the subnet.
 ```
-
----
-
-## `ibmcloud pi system-pools`
-{: #ibmcloud-pi-system-pools}
-
-**Alias**: `system-pools, sysp`
-
-**Description**: List of available system pools within a particular data center.
-
-**Usage**: `system-pools`
 
 ---
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-30"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -178,7 +178,7 @@ A volume group is a {{site.data.keyword.powerSys_notm}} managed resource. By usi
 
 When you create a volume group on the primary location, the storage replication consistency group is created in the storage backend at both primary and secondary locations. The storage replication consistency group stores the consistent copy for the volumes in the volume group. To perform any operations on the consistency group, you must perform the operation on the volume group that represents the consistency group. {{site.data.keyword.powerSys_notm}} does not directly manage the consistency group in the storage backend. A storage backend is the storage subsystem that contains the storage pool and the storage controller.
 
-When you onboard a volume on the secondary location, if the volume group is not yet created, the volume is created and the onboarded auxiliary volume is added to it. This volume group is visible and managed by {{site.data.keyword.powerSys_notm}} on the secondary location. For more information, see [Onboarding an auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS-new#onboarding-an-auxiliary-volume).
+When you onboard a volume on the secondary location, if the volume group is not yet created, the volume is created and the onboarded auxiliary volume is added to it. This volume group is visible and managed by {{site.data.keyword.powerSys_notm}} on the secondary location. For more information, see [Onboarding an auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-an-auxiliary-volume).
 
 During the first data synchronization, the entire data from the primary volume is copied to the auxiliary volumes. For subsequent data synchronizations, only the changes between the two synchronization operations are copied. The effective Recovery Point Objective (RPO) depends on the capability of the network throughput and the application characteristics. If the network throughput is insufficient to meet the defined RPO, the duration between the data synchronization increases.
 

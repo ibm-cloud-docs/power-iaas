@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-02-18"
+lastupdated: "2025-04-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -28,7 +28,7 @@ You get fast and flexible management that can be connected to access a stack of 
 
 In the data centers, the {{site.data.keyword.powerSys_notm}} are separated from the rest of the IBM Cloud servers with separate networks and direct-attached storage. The internal networks are fenced but offer connectivity options to IBM Cloud infrastructure or private cloud environments. This infrastructure design enables {{site.data.keyword.powerSys_notm}} to maintain key enterprise software certification and support as the {{site.data.keyword.powerSys_notm}} architecture is identical to certified private cloud infrastructure.
 
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-vpc-infrastructure){: external}.
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-powervs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-powervs-set-up-power-infrastructure){: external}.
 
 If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-app-modernization-using-RedHat-openshift).
 
@@ -77,11 +77,9 @@ Before you create your first {{site.data.keyword.powerSys_notm}} instance, revie
 
 
 
-![Getting Started with IBM {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_overview_Dec2024.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}}"){: caption="Getting Started with IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 
 
-
-
+![Getting Started with IBM {{site.data.keyword.powerSys_notm}}](./figures/PowerVS-lifecycle_overview_Jan2025.png "Getting Started with IBM {{site.data.keyword.powerSys_notm}}"){: caption="Getting Started with IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 
 
 ## Lifecycle of a {{site.data.keyword.powerSys_notm}}

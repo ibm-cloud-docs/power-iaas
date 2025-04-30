@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-30"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. Metering is done based on resource allocation for the purpose of billing. The following list of resources are metered:
+{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. Metering is done based on resource allocation for billing purpose. The following list of resources are metered:
 
 * Virtual machines: CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB)
 
@@ -68,10 +68,10 @@ All prices that are mentioned in the topic are illustrative and do not represent
 [^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
 
 
-For more information about the availability of the systems for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
+For more information about the systems that are available for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
-It is important to note that a theoretical maximum of a system depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
-{: shortdesc}
+A theoretical maximum of a system depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
+
 
 ## Billing details
 {: #billing-details}
@@ -92,12 +92,12 @@ The Consumer ID groups the billing usages that are under a single resource such 
 
 Following are the benefits of consumer ID:
 - You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
-- Charges are itemized by resource that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
+- Charges are itemized by a resource type that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
 
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
-2. On the left navigation menu, click **Usage**.
-3. Click **View plans** for the entry- **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
+2. Click **Usage**, on the left navigation menu.
+3. Click **View plans** for the entry **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
 5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected virtual server instance is opened.
 
@@ -115,7 +115,7 @@ As CRNs are assigned to individual resources, a comprehensive bill is generated 
 
 When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to the resource.
 
-When you delete a workspace, the resources that are associated with the workspace are deleted and then the workspace is deleted. If you are using a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VMs) from the dedicated host and then delete the dedicated host workspace.
+When you delete a workspace, the resources that are associated with the workspace are deleted and then the workspace is deleted. If you are using a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VMs) from the dedicated host. Then, delete the dedicated host workspace.
 
 For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](https://cloud.ibm.com/docs/account?topic=account-crn).
 
@@ -128,17 +128,17 @@ To view or search for resources that are provisioned in IBM {{site.data.keyword.
 
 The following table lists the {{site.data.keyword.powerSys_notm}} resources that are CRN enabled.
 
-| Logical Resource      | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
-| --------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **General**           |                                             |                                                           |                                                                                                                                                              |
-| Workspace             | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN \n * IBM i DB2 Web Query                                                                                                                               |
-| **Compute**           |                                             |                                                           |                                                                                                                                                              |
-| Virtual machine       | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | SPP cores                                                                                                                                                    |
-| Dedicated Host        | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
-| **Storage**           |                                             |                                                           |                                                                                                                                                              |
-| Volume                | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
-| Snapshot              | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | Snapshot storage                                                                                                                                             |
+| Logical Resource      | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements  |
+| -------- | ---------- | -------- | ----------------- |
+| **General**           |                     |            |            |
+| Workspace             | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)  | * VPN \n * IBM i DB2 Web Query  |
+| **Compute**    |   |         |   |
+| Virtual machine   | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)       | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses   |
+| Shared Processor Pool | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)      | SPP cores   |
+| Dedicated Host        | ![Checkmark icon](./images/checkmark.svg)   | X   | Dedicated host capacity |
+| **Storage**           |       |       |   |
+| Volume                | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)     | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
+| Snapshot              | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)       | Snapshot storage   |
 {: caption="{{site.data.keyword.powerSys_notm}} resources that are CRN enabled." caption-side="bottom"}
 
 
@@ -162,10 +162,10 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
 
 
-| Hours elapsed in a month  | Amount charged                     | LPAR description                       |
-| ------------------------- | ---------------------------------- | -------------------------------------- |
-| 300 hours                 | (300 hours x $0.343)/month = $103  | 1 core, 8 GB memory, 150 GB disk, AIX  |
-| 430 hours                 | (430 hours x $0.465)/month = $200  | 1 core, 16 GB memory, 150 GB disk, AIX |
+| Hours elapsed in a month  | Amount charged   | LPAR description  |
+| ------------------------- | ---------------- | ----------------- |
+| 300 hours   | (300 hours x $0.343)/month = $103  | 1 core, 8 GB memory, 150 GB disk, AIX  |
+| 430 hours  | (430 hours x $0.465)/month = $200  | 1 core, 16 GB memory, 150 GB disk, AIX |
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
 {: caption="Monthly LPAR charges" caption-side="bottom"}
 
@@ -175,7 +175,7 @@ In this example, if 300 hours is reached in the month, the LPAR resources are in
 ## Part number descriptions
 {: #part-numbers}
 
-A part number is associated with the license for the software product to be used in {{site.data.keyword.cloud_notm}}. For detailed usage and billing information, you can refer to the part number descriptions listed in your invoice or in the [IBM&reg; Cloud billing](https://cloud.ibm.com/billing){: external} portal.
+A part number is associated with the license for the software product to be used in {{site.data.keyword.cloud_notm}}. For detailed usage and billing information, refer to the part number descriptions. The part number descriptions are listed in your invoice or in the [IBM&reg; Cloud billing](https://cloud.ibm.com/billing){: external} portal.
 
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
@@ -194,7 +194,7 @@ Refer to the following table to view the part number descriptions and the associ
 | IBM Power S922 shared capped core-hour                                                      | power-iaas-metric-S922-core-capped             |
 | IBM Power S922 dedicated core-hour                                                          | power-iaas-metric-S922-core-dedicated          |
 | IBM Power S922 shared uncapped core-hour                                                    | power-iaas-metric-S922-core-shared             |
-| AIX scale-out license core-hour                                                             | power-iaas-metric-aix-scale-out                |
+| AIX scale-out license core-hour              | power-iaas-metric-aix-scale-out                |
 | AIX scale-up license core-hour                                                              | power-iaas-metric-aix-scale-up                 |
 | SAP HANA workload balanced profile (bh1) - IBM Power E980 core-hour                         | power-iaas-metric-bh1-hana-core                |
 | SAP HANA workload compute optimized profile (ch1) - IBM Power E980 core-hour                | power-iaas-metric-ch1-hana-core                |
@@ -472,8 +472,7 @@ Shared processor pool (SPP) provides the capability to manage CPU cores efficien
 
 Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VM core or the cost for high-use memory parts.
 
-
-
+{{_include-segments/spp-pricing-JIRA-18311.md}}
 
 
 
@@ -606,7 +605,7 @@ Total billable storage = 595 GB
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies per region. So, if you use one VPN connection that is active for a month, the monthly bill would be the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price would be $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
+IBM charges with the base price hourly per connection. The base price varies for each region. So, if you use one VPN connection that is active for a month, the monthly bill is calculated as the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price is $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
 
 On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will reach its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
 {: important}
@@ -640,7 +639,7 @@ The Transit Gateway charges indicated in the preceding tables are subjected to c
 ## End of billing
 {: #pricing-end-billing}
 
-The monthly billing cycle ends when you delete the LPAR. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the LPAR provision change. If you stop the LPAR, the billing process is not stopped. You must delete the LPAR to stop the billing cycle.
+The monthly billing cycle ends when you delete the LPAR. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the LPAR provision change. If you stop the LPAR, the billing process is not stopped. Delete the LPAR to stop the billing cycle.
 
 You are still charged if the VM is in a *suspended state*. When your VM is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VM's core count and memory.
 {: important}

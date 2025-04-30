@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-30"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -212,7 +212,7 @@ The cost of the snapshot is the sum of the costs of volume A and volume B.
 {: #vol-clon-bp}
 
 ### Creating a volumes-clone request
-{: #vol-clon-bp-req}
+{: #create-vol-clon-req}
 
 The clone operation creates a full copy of the volume. You can select multiple volumes and initiate a group clone operation. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
 
@@ -328,7 +328,7 @@ The volumes-clone request must be in the `Available` state.
 
 
 #### Executing volumes-clone request by using API and CLI command
-{: #start-vol-clone-api-cli}
+{: #execute-vol-clone-api-cli}
 
 After you initiate the `execute` operation, the initial `percentComplete` will be 0% and the status is set to `executing`.
 
@@ -371,7 +371,7 @@ You must consider the following restrictions and considerations before you start
 The `Cancel a volumes-clone request` operation initiates the cleanup activity that performs the cleanup of the preparatory clones and snapshot volumes.
 
 #### Prerequisites
-{: #cancel-vol-clone-req}
+{: #cancel-vol-clone-preq}
 
 The volumes-clone request must be in the `Available` state.
 
@@ -413,7 +413,7 @@ The volumes-clone request must be in one of these final statuses: `Completed`, `
 
 
 #### Deleting a volumes-clone request by using API and CLI command
-{: #cancel-vol-clone-api-cli}
+{: #delete-vol-clone-api-cli}
 
 Use the following API and CLI command to delete the volumes-clone request:
 
@@ -443,7 +443,7 @@ None.
 
 
 #### Getting the status of volumes-clone request by using API and CLI command
-{: #cancel-vol-clone-api-cli}
+{: #get-vol-clone-api-cli}
 
 
 - **API**: [Get the status of a volumes clone request for the specified clone task ID](/apidocs/power-cloud#pcloud-v2-volumes-clonetasks-get)
@@ -468,7 +468,7 @@ The API request provides a list of all volumes-clone requests in a workspace and
 None.
 
 #### Getting a list of volumes-clone request by using API and CLI command
-{: #cancel-vol-clone-api-cli}
+{: #getlist-vol-clone-req-api-cli}
 
 
 - **API**: [Get the list of volumes-clone request for a cloud instance](/apidocs/power-cloud#pcloud-v2-volumesclone-getall)
