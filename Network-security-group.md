@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-05-02"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -244,10 +244,10 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `rst`
                 - `syn`
 
-      - **UPD**
+      - **UDP**
           1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If you do not see the network address group that you want, click **Create network address group** to create one.
 
-          2. **Source port range**: Specify the range of ports from which the inbound traffic originates from. The valid range is `1–65535`.
+          2. **Source port range**: Specify the range of ports from which the inbound traffic originates. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
 
       - **ICMP**
