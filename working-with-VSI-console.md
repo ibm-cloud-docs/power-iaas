@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-06"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment, also known as VTERM, is an important utility that you can use to interact with the AIX, IBM i, and Linux-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
+The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment is also known as VTERM. You can use the VSI console to interact with the AIX, IBM i, and Linux-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
 
 - Provides access to the AIX, IBM i, and Linux-based VMs (Linux, SAP HANA, and SAP NetWeaver) to perform various OS-related tasks such as installation, configuration, troubleshooting, and recovery
 - Debugs VM boot issues
@@ -50,7 +50,7 @@ To start the VSI console of a {{site.data.keyword.powerSys_notm}} instance from 
 
 To open the VSI console of a {{site.data.keyword.powerSys_notm}} instance by using the IBM Cloud CLI, complete the following steps:
 
-1. To get the URL that you can use to open the VSI console, use the [`ibmcloud pi instance console`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-get) IBM Cloud CLI command. The `INSTANCE_ID` in the following command is the unique identifier or name of the instance and must be replaced with the actual ID of your VSI.
+1. To get the URL that you can use to open the VSI console, use the [`ibmcloud pi instance console`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-get) IBM Cloud CLI command. In the following command, `INSTANCE_ID` is a unique identifier or the name of the instance and must be replaced with the actual ID of your VSI.
 
     ```sh
     ibmcloud pi instance console get INSTANCE_ID
@@ -67,7 +67,9 @@ To close a VSI console session for a {{site.data.keyword.powerSys_notm}} instanc
 ## Changing the VSI console language
 {: #changing-vsi-console-lang}
 
-When you open the VSI console of a {{site.data.keyword.powerSys_notm}} instance that is running IBM i as the boot image, you can change the console language from English to another language. To change the language from the IBM Cloud UI, complete the following steps:
+When you open the VSI console of a {{site.data.keyword.powerSys_notm}} instance that is running IBM i as the boot image, you can change the console language from English to another language.
+
+To change the language from the IBM Cloud UI, complete the following steps:
 
 1. Open the [{{site.data.keyword.powerSys_notm}} user interface](https://cloud.ibm.com/power/overview) and log in with your credentials.
 
@@ -81,7 +83,7 @@ When you open the VSI console of a {{site.data.keyword.powerSys_notm}} instance 
 
 6. Click **Open console** to open the console using the language that you selected in the previous step.
 
-To change the VSI console language, you can use the [`ibmcloud pi instance console update`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-console-update) IBM Cloud CLI command. The `INSTANCE_ID` and `CODE` in the following command must be replaced with the ID of your VSI and the associated language code:
+To change the VSI console language from the IBM Cloud CLI, run the [`ibmcloud pi instance console update`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-console-update) command. In the following command, `INSTANCE_ID` and `CODE` must be replaced with the ID of your VSI and the associated language code:
 
 ```sh
 ibmcloud pi instance console update INSTANCE_ID --code CODE
