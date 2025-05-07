@@ -121,16 +121,15 @@ To view or edit IBM Cloud connections, complete the following steps:
 
 To delete an IBM Cloud connection, complete the following steps:
 
-1. From the {{site.data.keyword.powerSys_notm}} dashboard, click **Cloud connections** in the left navigation window.
+1. From the {{site.data.keyword.powerSys_notm}} dashboard, click **Cloud connections** in the left navigation window. A list of IBM Cloud connections that are currently configured is displayed.
 
-   You can see the list of IBM Cloud connections that are currently configured.
+2. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
 
-   1. To delete a specific IBM Cloud connection, click the **Delete** icon in the last column of the table.
+When you delete a virtual server instance, it deletes the private networks (subnets) and other resources. Consider the following before you delete a virtual server instance:
 
-When you delete a virtual server instance, it deletes the private networks (subnets) and other resources. Review the following considerations before you delete a virtual server instance:
--You must delete the Cloud Connection (Direct Link) from the IBM Cloud Transit Gateway interface before you delete the Cloud Connection.
--When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
-{: note}
+1. You must delete the Cloud Connection (Direct Link) from the IBM Cloud Transit Gateway interface before you delete the Cloud Connection.
+
+2. When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
 
 ## Setting up high availability over IBM Cloud connections
 {: #ha-availability-cloud-connections}
