@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-25"
+lastupdated: "2025-05-08"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -236,19 +236,19 @@ The **IBM i operations** option is available only for the IBM i VM instances.
 
 
 
-## IBM i national language considerations
-{: #ibmi-language-consid}
+## IBM i language support
+{: #ibmi-language-support}
 
-Consider the following IBM i national language factors when working with the VSI console:
+The VSI console of an IBM i virtual machine supports English language by default and provides the following additional language support:
 
-- IBM i stock OS images support English (2924) or English DBCS (2984) language. Additional secondary languages can be installed, and the primary language can be changed on an IBM i virtual machine.
+- IBM i stock OS images support English (2924) or English DBCS (2984). You can install additional secondary languages and  change the primary language on an IBM i virtual machine.
 
-- The VSI console of an IBM i virtual machine that is provided by the IBM Cloud UI, supports English language by default. The VSI console also supports the Japanese if installed as a primary or secondary language.
+- The VSI console also supports Japanese if it is installed as a primary or secondary language.
 
-    Selecting Japanese as the language in the Console Setting dialog before starting the IBM i VSI console does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that is performed on an IBM i virtual machine.
-    {: note}
+  If you select Japanese as the language in the Console Setting dialog before you start the IBM i VSI console, the system does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that you must perform on an IBM i virtual machine.
+  {: note}
 
-- When you deploy an IBM i virtual machine with the Cloud Optical Repository (COR) stock OS image, you can install national languages as either the primary or secondary language.
+- The COR stock OS image can be used to deploy a second IBM i virtual machine. The second IBM i virtual machine that is deployed contains the language media that can be used to install primary and secondary languages on other IBM i virtual machines.
 
 For more information about IBM i network and software installation, see:
 
