@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-12"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -286,16 +286,7 @@ If an unplanned network outage occurs for the management network that is connect
 
 See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud are lost.
 
-| Capability                                                                          | Impact    | Description                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client workload and data                                                            | No impact | Client workload remains operational and data remains fully accessible.                                                                                                          |
-| GUI or API for `read` operations                                                    | Minimum   | GUI remains operational and uses the last known cached data.                                                                                                                    |
-| GUI or API for `write` operations, such as virtual machine (VM) and volume creation | Maximum   | `Write` operations to the resources are unavailable until the connectivity to the control plane network is restored.                                                              |
-| Command-line interface (CLI)                                                        | Minimum   | `Read` operations remain operational. However `write` operations are unavailable until the connectivity to the control plane network is restored.                                   |
-| Billing and metering                                                                | No impact | Metering uses the last known cached data. If the infrastructure is disconnected, no `write` operations can be performed until the connectivity to the control plane network is restored. |
-| Dynamic Host Configuration Protocol (DHCP) services for client data networks        | No impact | DHCP services are provided by the {{site.data.keyword.on-prem-fname}} infrastructure-resident network and do not require a connection to the IBM Cloud.                         |
-| IBM remote support                                                                  | Maximum   | IBM remote support team cannot remotely connect to the {{site.data.keyword.on-prem-fname}} infrastructure until the connectivity to the control plane network is restored.      |
-{: caption="Impacts of a pod running in an unexpected or disconnected mode." caption-side="top"}
+{{_include-segments/network-outage-impact-table.md}}
 
 
 
