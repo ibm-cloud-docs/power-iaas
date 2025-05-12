@@ -1,7 +1,7 @@
 
 
 
-| Capability                                                                          | Behavior in the disconnected mode                                                                                                                                                        |
+| Capability                                                                          | Behavior in disconnected mode                                                                                                                                                        |
 | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Client workload and data                                                            | Client workload is operational and you can access all the data.                                                                                                                   |
 | GUI or API for `read` operations                                                    | GUI is operational and uses the most recent cached data.                                                                                                                             |
