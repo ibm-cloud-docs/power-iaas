@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-05-09"
+lastupdated: "2025-05-12"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -52,20 +52,11 @@ Before the pod installation, provide the required network-specific information s
 
 
 
-When an {{site.data.keyword.on-prem-fname}} infrastructure deployed in a client location encounters an unplanned network outage, the communication link is interrupted and results in the loss of both primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud. The following table outlines the implications of an {{site.data.keyword.on-prem-fname}} infrastructure that is operating in the disconnected mode.
+When an {{site.data.keyword.on-prem-fname}} infrastructure deployed in a client location encounters an unplanned network outage, the communication link is interrupted and results in the loss of primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud. The following table outlines the implications of an {{site.data.keyword.on-prem-fname}} infrastructure that is operating in the disconnected mode.
 
 
 
-| Capability                                                                          | Behavior during disconnected mode                                                                                                                                                        |
-| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client workload and data                                                            | Client workload remains operational and data remains fully accessible.                                                                                                                   |
-| GUI or API for `read` operations                                                    | GUI remains operational and uses the last known cached data.                                                                                                                             |
-| GUI or API for `write` operations, such as virtual machine (VM) and volume creation | `Write` operations to the resources are unavailable until the connectivity to the control plane network is restored.                                                                     |
-| Command-line interface (CLI)                                                        | `Read` operations remain operational. However `write` operations are unavailable until the connectivity to the control plane network is restored.                                        |
-| Billing and metering                                                                | Metering uses the last known cached data. If the infrastructure is disconnected, no `write` operations can be performed until the connectivity to the control plane network is restored. |
-| Dynamic Host Configuration Protocol (DHCP) services for client data networks        | DHCP services are provided by the {{site.data.keyword.on-prem-fname}} infrastructure-resident network and do not require a connection to the IBM Cloud.                                  |
-| IBM remote support                                                                  | IBM remote support team cannot remotely connect to the {{site.data.keyword.on-prem-fname}} infrastructure until the connectivity to the control plane network is restored.               |
-{: caption="Impact of unplanned network outage" caption-side="bottom"}
+{{_include-segments/network-outage-impact-table.md}}
 
 
 
