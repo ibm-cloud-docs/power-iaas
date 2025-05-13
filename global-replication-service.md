@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-13"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -465,7 +465,14 @@ To access the auxiliary volumes from the secondary location due to a primary loc
 You can perform the failover operation by using the following API and CLI commands:
 
 - **API**: [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API with **access** flag set to `True`
+
+
+
 - **CLI**: [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace)
+
+
+
+
 
 If you are using the CLI command to onboard an auxiliary volume, the service workspace must be set to the workspace where the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
