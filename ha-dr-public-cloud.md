@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-05-05"
+lastupdated: "2025-05-16"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -27,6 +27,30 @@ subcollection: power-iaas
 
 
 
+
+
+
+This topic describes various high availability and disaster recovery solutions that you can deploy in the {{site.data.keyword.powerSysFull}} environment. The host failure recovery is the default high availability solution supported by {{site.data.keyword.powerSys_notm}}. This topic also covers some of the advanced high availability and disaster recovery solutions that you can deploy.
+{: shortdesc}
+
+
+## Host failure recovery
+{: #host-failure-recovery}
+
+{{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure, including redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that all the hosts are working correctly and responsive.
+
+When a host fails unexpectedly, the virtual server instances on the failed host are automatically restarted on a working host. In some cases, manual recovery of the failed host is attempted.
+
+The host failure recovery process involves restarting the virtual server instances on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
+{: note}
+
+The host failure recovery:
+
+- Is enabled by default for all the virtual server instances in the Power Virtual Server environment.
+
+- Does not restart any pinned virtual server instances. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time taken to repair the failed host. To prevent or minimize downtime, ensure that the virtual server instances are not pinned to the host.
+
+- Restarts the virtual server instance on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
 
 

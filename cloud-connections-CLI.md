@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2025-05-08"
+lastupdated: "2025-05-16"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -28,6 +28,23 @@ subcollection: power-iaas
 
 
 ---
+
+
+
+
+## [Important announcement]{: tag-green}
+{: #imp-announcement}
+
+IBM Power Virtual Server provides no-charge Cloud Connections to clients to access IBM Cloud resources within their network. The End-of-Life date for the no-charge service for Cloud Connections is 1 July 2025. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection).
+
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025.
+
+To connect the Power Virtual Server workspaces with the IBM Cloud, use the [Power Edge Router](/docs/power-iaas?topic=power-iaas-per) (PER) capability that is integrated with the Transit Gateway service without any additional charge. PER-enabled workspaces provide improved user experience and increased bandwidth.
+
+If you have manually configured the network in your workspace, see [Migrating the existing network configurations to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per). Alternatively, you can use the `ibmcloud pi workspace action` CLI command to migrate the existing Power Virtual Server workspaces to PER-enabled workspaces. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+
+If you need assistance with the migration, you can open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
 
 
 ---
@@ -130,6 +147,11 @@ When you delete a virtual server instance, it deletes the private networks (subn
 - You must delete the Cloud Connection (Direct Link) from the IBM Cloud Transit Gateway interface before you delete the Cloud Connection.
 
 - When there are more than one virtual server instances that use the Cloud Connection, and you delete one, you can delete the Cloud Connection from the existing server instances.
+
+
+
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+{: note}
 
 
 
