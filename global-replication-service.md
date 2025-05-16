@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-05-13"
+lastupdated: "2025-05-16"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -237,7 +237,7 @@ To enable volume replication on the primary site, complete the following steps:
 1. [Create a volume for replication](#create-vol-rep)
 2. [Verify the replication status of the volume](#veri-vol-rep)
 3. [Update an existing volume as a replication-enabled volume](#update-vol-rep-enabled)
-4. [Create a volume group](#create-vol-grp)
+4. [Create a volume group](#create-vol-grp-prime)
 5. [Verify the status of the volume group](#verify-vol-grp-stat)
 
 #### Creating a volume for replication
@@ -287,7 +287,7 @@ Refer to the following table for the properties of a replication-enabled volume.
 
 
 #### Creating a volume group
-{: #create-vol-grp}
+{: #create-vol-grp-prime}
 
 Create a volume group (consistency group) to add replication-enabled volumes to it. You can create a volume group by using the following API or CLI commands:
 
@@ -468,7 +468,8 @@ You can perform the failover operation by using the following API and CLI comman
 
 
 
-- **CLI**: [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace)
+
+- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID, `--operation` flag to `stop`, and `--allow-read-access` flag to `True`.
 
 
 
@@ -662,7 +663,7 @@ You can perform these steps only if you complete the onboarding operation of the
 
    1. [Remove the auxiliary volume from the volume group](#rem-aux-vol-grp)
    2. [Delete the auxiliary volume group, if empty](#del-aux-vol-grp)
-   3. [Delete the auxiliary volume](#del-aux-vol)
+   3. [Delete the auxiliary volume](#del-aux-vol-second)
 
 
 ### Removing the primary volume from the volume group
@@ -760,7 +761,7 @@ Use the following API and CLI commands to delete the auxiliary volume group if i
 
 
 ### Deleting an auxiliary volume
-{: #del-aux-vol}
+{: #del-aux-vol-second}
 
 Use the following API and CLI commands to delete the auxiliary volume:
 
