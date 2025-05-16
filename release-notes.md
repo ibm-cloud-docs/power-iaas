@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-15"
+lastupdated: "2025-05-16"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -53,7 +53,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 
 
-- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
+- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
 
 
 
