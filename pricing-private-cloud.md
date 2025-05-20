@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-04-29"
+lastupdated: "2025-05-13"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -51,16 +51,16 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 In the following example, the customer provisions an {{site.data.keyword.on-prem-fname}} instance. The instance has 1 core with 8 GB of memory, a 150 GB disk, and is running Red Hat Enterprise Linux (RHEL) operating system (OS).
 Assume the following hypothetical monthly prices:
-* Cores: $143.23/month x 1 = $143.23
-* Memory: $9/month each GB x 8 = $ 72.00
-* Storage: $0.216/month each GB x 150 GB = $ 32.40
-* OS license: $43.80/month each core   = $ 43.80
+* Cores: $143.23 per month x 1 = $143.23
+* Memory: $9 per month each GB x 8 = $ 72.00
+* Storage: $0.216 per month each GB x 150 GB = $ 32.40
+* OS license: $43.80 per month each core   = $ 43.80
 
 **Total cost per month**     = $291.43
 
-Factoring the example quantities and prices, the base price for the virtual machine is $291.43 per month or an average of $0.399 per hour for all the resources consumed. Assume that in the course of the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine is higher to account for the extra memory. The new price amounts to $0.498 per hour for all the resources consumed. The monthly bill is prorated by an hour for the resources that are deployed as shown in Table 1.
+Factoring the example quantities and prices, the base price for the virtual machine is $291.43 per month or an average of $0.399 per hour. The base price is calculated for all the resources that are used. Assume that during the month, the customer allocates more memory to the virtual machine. At the end of the month, the new price for the virtual machine is higher to account for the extra memory. The new price amounts to $0.498 per hour for all the resources that are used. The monthly bill is prorated by an hour for the resources that are deployed as shown in the following table.
 
-In Table 1, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
+In the table, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
 | Hours elapsed in a month   | Amount charged                               |  Virtual machine description    |
 | -------------------------- | -------------------------------------------- |  --------------------------------------- |
@@ -69,7 +69,7 @@ In Table 1, the virtual machine resources are increased (after the resources rea
 | 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
 {: caption="An example of monthly charges for a virtual machine" caption-side="bottom"}
 
-For the example in Table 1, we might see four distinct part numbers for the following resources in the invoice:
+For the example, in this table you can see four distinct part numbers for the following resources in the invoice:
 * The virtual cores (one for each core)
 * The memory
 * The volume storage (disk)
@@ -110,11 +110,11 @@ For detailed usage and billing information, refer to the part numbers in your in
 | IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared |
 | IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-2u-hanamem-standard |
 | IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-4u-hanamem-standard |
-| AIX operating system scale-up license core-hour | ppcaas-metric-aix-scale-up |
-| AIX operating system scale-out license core-hour | ppcaas-metric-aix-scale-out |
-| Red Hat Enterprise Linux operating system scale-up license core-hour | ppcaas-metric-rhel-scale-up |
-| Red Hat Enterprise Linux operating system scale-out license core-hour | ppcaas-metric-rhel-scale-out |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up |
+| AIX operating system scale-up license core-hour   | ppcaas-metric-aix-scale-up   |
+| AIX operating system scale-out license core-hour   | ppcaas-metric-aix-scale-out   |
+| Red Hat Enterprise Linux operating system scale-up license core-hour   | ppcaas-metric-rhel-scale-up |
+| Red Hat Enterprise Linux operating system scale-out license core-hour   | ppcaas-metric-rhel-scale-out |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload   | ppcaas-metric-rhel-sap-scale-up |
 | Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
 | SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
 | SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
@@ -147,6 +147,11 @@ For detailed usage and billing information, refer to the part numbers in your in
 | Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
 | Volume Storage Tier 3 gigabyte-hour  | ppcaas-metric-volume-tier3 |
 | Volume Storage Tier 5k gigabyte-hour | ppcaas-metric-volume-tier5k |
+| Asynchronous replicated volume storage (tier 0: 25 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier0-async-replicated |
+| Asynchronous replicated volume storage (tier 1: 10 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier1-async-replicated |
+| Asynchronous replicated volume storage (tier 3: 3 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier3-async-replicated |
+| Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour  |  ppcaas-metric-volume-tier5k-async-replicated |
+|Asynchronous global replication storage gigabyte-hour  |  ppcaas-metric-volume-async-replication-service |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -201,7 +206,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription, you can subscribe to an updated or upgraded package from a Red Hat Satellite server by configuring the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription, you can subscribe to an updated or upgraded package from a Red Hat Satellite server. To subscribe, configure the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 
@@ -223,7 +228,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 In the following example, assume that the cost of different types of virtual processor cores is the same within each system type they belong to.
 
-Tables 3 to 5 show how different processor types affect the cost per system:
+The following tables show how different processor types affect the cost of each system:
 
 | Number of cores (S1022)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
@@ -251,7 +256,7 @@ Tables 3 to 5 show how different processor types affect the cost per system:
 ## Memory types
 {: #memory-types}
 
-Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usage (in gigabytes), and the type of the system chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. Table 6 shows how memory types affect the cost per system:
+The system determines the cost of {{site.data.keyword.on-prem-fname}} based on the memory usage (in gigabytes) and the type of the system that is chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. The following table shows how memory types affect the cost of each system:
 
 | Number of GBs |  Memory type                      | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 | ---------------- | ----------------------------------  | -----------------------  | ------------------------  |
@@ -271,12 +276,14 @@ Charges for {{site.data.keyword.on-prem-fname}} are determined by the memory usa
 
 
 
-Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP do not incur additional cost for per VM core.
+Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP do not incur additional costs for each VM core.
 
 
 
 
 In the {{site.data.keyword.on-prem-fname}} environment, a minimum core-to-virtual core ratio of 1:20 exists. This ratio stipulates the relationship between physical cores and virtual cores within the cloud infrastructure. Therefore, the calculation of the operating system license charges follows a distinct method within the {{site.data.keyword.on-prem-fname}} setup to accommodate the core-to-virtual core ratio efficiently.
+
+
 
 {{_include-segments/spp-pricing-JIRA-18311.md}}
 
@@ -285,10 +292,10 @@ When you use SPP in {{site.data.keyword.on-prem-fname}}, you pay for the followi
 * The maximum capacity of the SPP reserved cores that use the shared capped part number.
 * The entitled capacity of the shared capped or uncapped part numbers when virtual server instance cores are deployed into the SPP. This amount is variable and depends on the entitled capacity.
 * The operating system license, which is based on the following types of virtual server instances:
-    * Capped SPP: pricing is determined by the entitled capacity.
-    * Uncapped SPP: pricing is determined by the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP for each type of operating system such as AIX or IBM i.
+    * Capped SPP: pricing is calculated based on the entitled capacity.
+    * Uncapped SPP: pricing is calculated based on the minimum value between the total number of virtual processors and the maximum capacity of the SPP. To get the total number of virtual processors, count the number of virtual processors that are associated with the partitions in an SPP. The partitions must be considered for each type of operating system such as AIX or IBM i.
 
-Table 12 shows the details of SPP in {{site.data.keyword.on-prem-fname}}.
+Following table shows the details core pricing and OS license pricing of SPP in {{site.data.keyword.on-prem-fname}}.
 
 
 
@@ -299,7 +306,7 @@ Table 12 shows the details of SPP in {{site.data.keyword.on-prem-fname}}.
 | Default Pool | 1:20 | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change |
 {: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="bottom"}
 
-For more information about calculating the pricing for OS licensing in the uncapped SPP, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
+For more information, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
 
 
 
@@ -325,7 +332,7 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 
 {{site.data.keyword.on-prem-fname}} charges are based on the following storage types:
 
-* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. Table 7 shows an example of how you are billed based on your volume creation:
+* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. The following table shows an example billing based on your volume creation:
 
    | Volume size that you create  | Volume size that you are billed  |
    |  ---------------------  | ----------------------------  |
@@ -340,7 +347,7 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
    - Single volume billing - When the image has a single backing volume, you are billed based on the size (GB) of the single volume.
    - Multiple volume billing - When the image has multiple backing volumes, billing is based on tallying up the sizes of all the image backing volumes.
 
-Table 8 shows an example of how you are billed based on your boot volume:
+The following table shows an example of how you are billed based on your boot volume:
 
 
    | Image volume size                   | Single or multiple backing  | Billed volume size |
@@ -350,7 +357,7 @@ Table 8 shows an example of how you are billed based on your boot volume:
    {: caption="Calculation of image backing volume" caption-side="bottom"}
 
 
-* **Deployed virtual machine volumes**: When you deploy a virtual machine with an image, it gets a copy of all the volumes in the image. Extra data volumes added to the deployed virtual machine are billed separately as Data Volumes. Table 9 shows an example of how you are billed based on the virtual machines that you deploy:
+* **Deployed virtual machine volumes**: When you deploy a virtual machine with an image, it gets a copy of all the volumes in the image. Extra data volumes added to the deployed virtual machine are billed separately as Data Volumes. The following table shows an example of the billing based on the virtual machines that you deploy:
 
    | Image backing volume  | Billed volume size |
    |  -------------------  | ----------------|
@@ -368,7 +375,7 @@ Snapshot sizes are not predictable as they are related to the updates made to th
 {: note}
 
 
-Tables 10 and 11 show how different storage types affect the cost per system:
+The following tables show how different storage types affect the cost per system:
 
 | Volume storage           | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
 |  ----------------------  | ----------------------------  | ------------------------  |
@@ -390,7 +397,7 @@ Tables 10 and 11 show how different storage types affect the cost per system:
 ### Use case of account billable storage
 {: #billable-storage}
 
-Table 13 shows the use case on how you are billed based on the storage that you use (assuming tier 1):
+The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
    | Name           |  Size    | State or Description         |
    | -------------  | -------  | ------------------------- |
@@ -471,10 +478,7 @@ Review the following frequently asked questions about pricing:
    * Select the deployment with the name that ends with the satellite region for which you want the pricing.
       For example, the **Power Virtual Server Private Cloud PVM Instance Groupsatcon_dal** deployment displays the pricing for virtual machines in the satellite locations that are hosted in the Dallas region.
    * Click the **Pricing** tab on the right navigation page to view the pricings for different **Metric IDs**.
-      Refer to [Table 2: Part definition and metric ID](#Table2) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
-
-
-
+      Refer to the table with [Part definitions and metric IDs](#virtual-machine-group-private) to find the metric ID corresponding to the part description. Prices are listed for all IBM Cloud supported currencies.
 
 
 
@@ -487,11 +491,7 @@ To calculate the price for OS licensing in the uncapped SPP, consider the follow
 * If the total number of VPs associated with the partitions in an SPP is greater than the maximum capacity of the pool, then the cost is distributed proportionately for all VPs.
 * If the total number of VPs associated with the partitions in an SPP is less than or equal to the maximum capacity of the pool, then the pricing is considered for each VP.
 
-
-
-
-
-Table 14 shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores :
+The following table shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores :
 
 | Example | VM      | VP on VM | Total number of VPs versus Maximum pool capacity | Cost calculation |
 | ------  | ------- | -------- | --------------------------------------------- | ---------------- |
@@ -521,7 +521,7 @@ Table 14 shows how the pricing for OS licensing is calculated considering that t
 ### In terms of costs, what do I pay for?
 {: #payment}
 
-   The monthly consumption charges are factored based on the minimum committed spend and metered consumption charges. If the consumption charges are less than or equal to the minimum-committed spend, you pay the minimum-committed spend amount. If the consumption charges exceed the minimum committed spend, you pay the metered consumption charges.
+   The monthly consumption charges are factored based on the` minimum committed spend` and metered consumption charges. If the consumption charges are less than or equal to the `minimum committed spend`, you pay the `minimum committed spend` amount. If the consumption charges exceed the `minimum committed spend`, you pay the metered consumption charges.
 
 ### Can I change infrastructure configuration based on my requirements after my virtual servers are provisioned? How will it impact billing?
 {: #change-infra-post-provisioning}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-20"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -16,6 +16,31 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+## May 2025
+{: #May-2025}
+
+
+
+- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+
+
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+- The following RHEL OS stock images are refreshed and available for Power Virtual Servers in the IBM data centers:
+  - RHEL 9.4 for SAP
+  - RHEL 9.2 for SAP
+  - RHEL 8.10 for SAP
+  - RHEL 8.8 for SAP
+  - RHEL 8.10 general purpose
+  - RHEL 9.4 general purpose
+
+- You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-nw-profiles).
+
+
 
 
 ## April 2025
@@ -46,7 +71,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 
 
-- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
+- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
 
 
 
@@ -111,11 +136,13 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 - {{site.data.keyword.powerSys_notm}} is now HITRUST CSF&reg; compliant. For more information, see [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#hitrust).
 
-- [{{site.data.keyword.off-prem}}]{: tag-blue} {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
 
 
 
-- [{{site.data.keyword.off-prem}}]{: tag-blue} You can now use Network security groups (NSG) in your PER-enabled {{site.data.keyword.powerSys_notm}} workspaces to control internal and external inbound traffic to your virtual network. You can define security rules for NSGs based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). This new capability is available when creating new PER-enabled workspaces. Existing workspaces are planned to be migrated to support NSGs by `June 2025`. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
+- You can now use Network security groups (NSG) in your PER-enabled {{site.data.keyword.powerSys_notm}} workspaces to control internal and external inbound traffic to your virtual network. You can define security rules for NSGs based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). This new capability is available when creating new PER-enabled workspaces. Existing workspaces are planned to be migrated to support NSGs by `June 2025`. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 
 
 

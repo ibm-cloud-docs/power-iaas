@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-05-20"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -63,3 +63,20 @@ The following SAP HANA profiles are available for IBM Power9 processor-based ser
 {: caption="Power9 SAP HANA certified profiles " caption-side="bottom"}
 
 For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs). For more information about pricing, see [Pricing for Power Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+
+
+
+
+
+## SAP NetWeaver profiles
+{: #sap-nw-profiles}
+
+You can use the CLI, API, and Terraform interfaces and specify an sr2 profile ID that matches a NetWeaver profile to deploy certified SAP NetWeaver profiles.
+
+You can use the following commands to get the details of an SAP profile:
+
+* **CLI** : [ibmcloud pi image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image){:external}
+* **API** : [Get list of SAP profiles](/apidocs/power-cloud#pcloud-sap-getall){:external}
+
+The `Type` property of an SAP NetWeaver profile has the value `sap-rise-app`.
+{: note}

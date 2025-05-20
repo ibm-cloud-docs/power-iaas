@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-05-13"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -139,7 +139,16 @@ You can update or delete the following details of an existing SPP:
 
 * Name of the SPP - Follow the same naming conventions that you used while creating an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
 * Number of cores - You can update the number of reserved cores based on resource availability and allocation.
+
+
+
 * Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no VMs exist in the SPP. If VMs are present, it must be deleted or moved with a support ticket.
+
+
+
+
+
+
 
 ## Managing a VM of a shared processor pool
 {: #manage-vm-inside-spp}
