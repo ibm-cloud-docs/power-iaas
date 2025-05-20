@@ -28,6 +28,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
 - The following RHEL OS stock images are refreshed and available for Power Virtual Servers in the IBM data centers:
   - RHEL 9.4 for SAP
   - RHEL 9.2 for SAP
