@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-05-21"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -98,6 +98,8 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^1]
 
 [^1]: Available only at `DAL14` data center.
+
+
 
 
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
