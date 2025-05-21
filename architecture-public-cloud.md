@@ -112,7 +112,8 @@ You can compare the performance of your current environment with the environment
 You can check and compare your data center capabilities among three different data centers on the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console. You can also use the external interfaces such as API, CLI, and Terraform to check your data center capabilities.
 
 For example, you can determine the support for the following capabilities in each data center:
-- Machine types (Power9 or Power10)
+
+
 - Global replication site pair(s)
 - Dedicated host types
 
@@ -135,6 +136,8 @@ The IBM data centers are configured with one or more of the following IBM Power 
 * [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^2]
 
 [^2]: Available only at `DAL14` data center.
+
+
 
 For more information about your data center capabilities, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
