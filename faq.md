@@ -351,7 +351,7 @@ If you find the storage tiers are over or under-provisioned, you can change the 
 {: #rootvg}
 {: faq}
 
-By default, the system deploys 20 GBs for the AIX *rootvg*. You can extend the AIX *rootvg* by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
+By default, the system deploys 20 GBs for the AIX _rootvg_. You can extend the AIX _rootvg_ by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
 
 ## What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?
 {: #processor}
@@ -408,7 +408,7 @@ To migrate your VM from one data center to another, you must capture and export 
 {: #pinning}
 {: faq}
 
-You can choose a pinning policy: *soft pin* or *hard pin*, to pin a VM to the host where it is running. When you *soft pin* a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you *hard pin* a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is *none*.
+You can choose a pinning policy: _soft pin_ or _hard pin_, to pin a VM to the host where it is running. When you _soft pin_ a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you _hard pin_ a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is _none_.
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
@@ -430,7 +430,7 @@ The use of volume affinity policy (affinity or anti-affinity) requires the avail
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the *storagePoolAffinity* property of the new PVM instance to false. By default, the *storagePoolAffinity* property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
 
 ## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
 {: #licensing-os}
@@ -481,7 +481,7 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's *FlashCopy* feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -608,7 +608,7 @@ You can find self-certification and listing information on the [IBM Global Solut
 {: #delete-service}
 {: faq}
 
-To delete a workspace (and all its resources), use the left navigation to navigate the workspace page. Find the workspace to be deleted and click the overflow menu on the upper right corner of the tile. Click **Delete** and confirm the request from the pull-down menu by typing *Delete* in the text field. Finally, click the red **Delete** button to initiate the request.
+To delete a workspace (and all its resources), use the left navigation to navigate the workspace page. Find the workspace to be deleted and click the overflow menu on the upper right corner of the tile. Click **Delete** and confirm the request from the pull-down menu by typing _Delete_ in the text field. Finally, click the red **Delete** button to initiate the request.
 
 ## How do I delete a single virtual server instance?
 {: #delete-service-instance}
