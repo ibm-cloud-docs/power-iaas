@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-21"
+lastupdated: "2025-05-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -52,13 +52,13 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-| Power systems                                             | Usable cores | Memory                                                 |
-| --------------------------------------------------------- | ------------ | ------------------------------------------------------ |
-| E980 (9080-M9S)                                           | 143          | Up to 15,307 GB [^1]                                   |
-| S922 (9009-22A) [^2]                                      | 15           | Up to 942 GB                                           |
-| S1022 (9105-22A) [^3]                                     | 33           | Up to 1984 GB                                          |
-| E1080 (9080-HEX)                                          | 165          | Up to 64 TB                                            |
-| E1050 (9043-MRX)                                          | 87           | Up to 8,192 GB                                         |
+| Power systems                             | Usable cores | Memory               |
+| ----------------------------------------- | ------------ | -------------------- |
+| E980 (9080-M9S)                           | 143          | Up to 15,307 GB [^1] |
+| S922 (9009-22A) [^2]                      | 15           | Up to 942 GB         |
+| S1022 (9105-22A) [^3]                     | 33           | Up to 1984 GB        |
+| E1080 (9080-HEX)                          | 165          | Up to 64 TB          |
+| E1050 (9043-MRX)                          | 87           | Up to 8,192 GB       |   |                      |
 {: caption="Theoretical maximum processors and memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
