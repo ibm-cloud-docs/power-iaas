@@ -65,7 +65,7 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 
 The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).
 
-Power servers E1080 (9080-HEX) and S1022 (9105-22A) supports AIX 7.1 TL 5 and later.
+Power servers E1080 (9080-HEX) and S1022 (9105-22A) supports AIX 7.1 TL5 and later.
 
 
 
