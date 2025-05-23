@@ -53,7 +53,9 @@ The primary difference between the two is where the physical infrastructure resi
 {: #servers-supported}
 {: faq}
 
-[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
+
+
+
 
 [{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
