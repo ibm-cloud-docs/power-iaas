@@ -177,6 +177,11 @@ In this example, if 300 hours is reached in the month, the LPAR resources are in
 
 A part number is associated with the license for the software product to be used in {{site.data.keyword.cloud_notm}}. For detailed usage and billing information, refer to the part number descriptions. The part number descriptions are listed in your invoice or in the [IBM&reg; Cloud billing](https://cloud.ibm.com/billing){: external} portal.
 
+
+
+
+
+
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 | Part description (available on the IBM invoice)                                             | Metric ID (available in the IBM Cloud catalog) |
@@ -364,6 +369,8 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
+
+
 
 
 ## Base instances
