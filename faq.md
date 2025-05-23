@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-05-12"
+lastupdated: "2025-05-23"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -78,6 +78,8 @@ The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} su
 * S922  -  7.1 or later
 * E980  -  7.1 or later
 * S1022 -  7.1 Technology Level (TL) 5 or later
+
+
 
 The following stock images are available when you create a virtual machine:
 
