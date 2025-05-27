@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-20"
+lastupdated: "2025-05-27"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -16,6 +16,11 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+
+
+
 
 
 ## May 2025
@@ -39,9 +44,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - RHEL 9.4 general purpose
 
 - You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-nw-profiles).
-
-
-
 
 ## April 2025
 {: #April-2025}
