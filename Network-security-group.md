@@ -283,7 +283,8 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 17.	Click **Create**. You can find the NSG that you created listed on the **Network security groups** tab.
 
 After the NSGs are created, you can manage them by performing the following actions:
-- [Renaming an NSG](#rename-nsg)
+- [Renaming an NSG](#rename-nsg)\
+- [Cloning an NSG] (#clone-nsg)
 - [Deleting an NSG](#delete-nsg)
 
 ### Renaming an NSG
@@ -302,6 +303,8 @@ To rename an NSG, complete the following steps:
 5.	Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The Edit network security group details pane is displayed.
 
 6.	Enter a new name for the NSG and click **Save**.
+
+
 
 ### Deleting an NSG
 {: #delete-nsg}
