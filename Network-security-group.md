@@ -283,8 +283,8 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 17.	Click **Create**. You can find the NSG that you created listed on the **Network security groups** tab.
 
 After the NSGs are created, you can manage them by performing the following actions:
-- [Renaming an NSG](#rename-nsg)\
-- [Cloning an NSG] (#clone-nsg)
+- [Renaming an NSG](#rename-nsg)
+- [Cloning an NSG](#clone-nsg)
 - [Deleting an NSG](#delete-nsg)
 
 ### Renaming an NSG
