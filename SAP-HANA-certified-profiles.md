@@ -14,7 +14,6 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
 # SAP HANA certified profiles
 {: #SAP-hana-certified-profiles}
 
