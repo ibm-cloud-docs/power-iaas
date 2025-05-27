@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-05-13"
+lastupdated: "2025-05-27"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -143,7 +143,6 @@ You can update or delete the following details of an existing SPP:
 
 
 * Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no VMs exist in the SPP. If VMs are present, it must be deleted or moved with a support ticket.
-
 
 
 
