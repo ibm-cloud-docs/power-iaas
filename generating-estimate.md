@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-05-28"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -102,6 +102,8 @@ To learn about the fields and descriptions that you need to enter, see the follo
 | Memory (GB)                  | (**Required**) Define how much space you need per core.                                                |
 | Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
 {: caption="UI fields in estimating a VSI" caption-side="top"}
+
+
 
 
 To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
