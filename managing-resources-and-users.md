@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-05-29"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -83,8 +83,11 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
     - Resource group
     - Service instance
 
+
+
 Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
 {: note}
+
 
 ## Access role requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
