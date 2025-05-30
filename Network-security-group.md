@@ -498,6 +498,7 @@ To delete a rule from an existing NSG, complete the following steps:
 You can manage members that are associated with an NSG by performing the following operations:
 
 - [Adding members to a network security group](#add-members-nsg})
+- [Moving members from one NSG to another](#move-members)
 - [Removing members from a network security group](#remove-members-nsg)
 
 ### Adding members to a network security group
@@ -528,6 +529,9 @@ A member can only be associated with one network security group at a time.
 8.	Select one or more network interfaces from the list and click **Add member**.
 9.	Click **Create**.
 
+
+
+
 ### Removing members from an NSG
 {: #remove-members-nsg}
 
@@ -547,7 +551,7 @@ To remove members that are associated with an NSG, complete the following steps:
 
 7.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
-When you remove a network or subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
+When you remove a network interface or a subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
 {: note}
 
 ## Quotas and limitations
