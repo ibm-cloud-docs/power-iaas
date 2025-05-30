@@ -329,7 +329,7 @@ To delete a NSG, complete the following steps:
 
 
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
-{: note}
+{: important}
 
 
 
