@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-05-30"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -309,7 +309,7 @@ To rename an NSG, complete the following steps:
 ### Deleting an NSG
 {: #delete-nsg}
 
-To delete a custom (user-created) NSG, complete the following steps:
+You can delete only user-created NSGs and not the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace. To delete a user-created NSG, complete the following steps:
 
 1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -323,13 +323,8 @@ To delete a custom (user-created) NSG, complete the following steps:
 
 6.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
-You cannot delete the default NSG that is created when you enable the NSG feature on a {{site.data.keyword.powerSys_notm}} workspace.
-{: note}
 
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
-{: note}
-
-When you remove a network or subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
 {: note}
 
 You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, or API, or Terraform.
@@ -552,6 +547,8 @@ To remove members that are associated with an NSG, complete the following steps:
 
 7.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
+When you remove a network or subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
+{: note}
 
 ## Quotas and limitations
 {: #quotas-limitations}
