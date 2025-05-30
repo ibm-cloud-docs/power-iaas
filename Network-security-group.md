@@ -309,7 +309,11 @@ To rename an NSG, complete the following steps:
 ### Deleting an NSG
 {: #delete-nsg}
 
-You can delete only user-created NSGs and not the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace. To delete a user-created NSG, complete the following steps:
+You can delete only the NSGs that you created and not the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace.
+
+
+
+To delete a NSG, complete the following steps:
 
 1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -327,8 +331,7 @@ You can delete only user-created NSGs and not the default NSG that is created wh
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
 {: note}
 
-You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, or API, or Terraform.
-{: remember}
+
 
 ### Creating and managing NAGs in a workspace
 {: #create-manage-nag}
