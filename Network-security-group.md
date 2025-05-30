@@ -232,7 +232,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
       - **Internet Control Message Protocol (ICMP)**: Ideal for network diagnostics such as `ping` and `traceroute`. Unlike TCP or UDP, ICMP does not support data transmission between applications.
 
-      - **Any**: Ideal for creating rules that applies to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
+      - **Any**: Ideal for creating rules that apply to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
 
 10. Depending on the protocol that you select from the list in the previous step, complete the following steps:
       - **TCP**
