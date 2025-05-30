@@ -137,7 +137,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     
 
 
-4.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+1.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
     Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
 
@@ -146,7 +146,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
-5.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+2.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
@@ -154,7 +154,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-6.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+3.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
     If your account has fewer than 100 VMs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VMs. If your account has more than 100 VMs, the VMs might not be displayed in the user interface. You can reduce the number of VMs by using the CLI or API so that they are displayed again on the user interface.
     {: note}
