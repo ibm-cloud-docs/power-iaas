@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-28"
+lastupdated: "2025-06-01"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -64,10 +64,10 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
     - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
     - Each resource type has its own billing plan instead of billing all the resources under the `Workspace for Power Virtual Server` plan.
-    - The value for the `Pricing Region` field is based on metro regions and not based on data center and zone regions. However, the value for the `Location` field of the instance is based on data center and zone regions.
-    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with volume metrics.
+    - The value for the `Pricing Region` field is based on metro regions and is not based on data center and zone regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
+    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with the volume metrics.
 
-  The existing price of the resources does not change. The way in which the costs of the resources are organized and visualized are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
+  The existing price of the resources does not change. The organization and visualization of the costs of the resources are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
 
 
 
