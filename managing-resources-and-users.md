@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-05-29"
+lastupdated: "2025-06-03"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -68,7 +68,7 @@ You can use the service access roles to define the actions that the users can pe
 
 | Service access role | Description of actions |
 |-----------|-------------------------|
-| Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot make changes to the resources. |
+| Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot modify the resources. |
 | Manager | Configure all resources. You can perform the following actions:  \n * Create instances  \n * Increase storage volume sizes  \n * Create SSH keys  \n * Modify network settings  \n * Create boot images  \n * Delete storage volumes |
 {: caption="IAM service access roles" caption-side="bottom"}
 
@@ -85,7 +85,11 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
 
 
 
-Although you can select a **Resource type** from the **Attribute type** drop-down, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
+The access management tags are supported only on {{site.data.keyword.powerSys_notm}} workspaces. The access management tags attached to the individual resources in a workspace are ignored.
+
+
+
+Although you can select a **Resource type** from the **Attribute type** list, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
 {: note}
 
 
