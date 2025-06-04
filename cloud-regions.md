@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-04"
 
 keywords: power systems, cloud regions
 
@@ -29,6 +29,10 @@ The following table displays the appropriate region for your workspace:
 
 Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
 {: note}
+
+
+
+The network round-trip latency, also known as round-trip time (RTT), is approximately 0.4 milliseconds when your workloads are running in Power Virtual Server and IBM Cloud VPC, which are colocated in the same zone and connected through IBM Cloud Transit Gateway. RTT statistics might vary and are intended to help you plan the optimal placement of your cloud deployment.
 
 
 
