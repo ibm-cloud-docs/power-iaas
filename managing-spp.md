@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-05-13"
+lastupdated: "2025-06-03"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -28,25 +28,27 @@ subcollection: power-iaas
 
 ---
 
-A shared processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM).
+A Shared Processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM).
 {: shortdesc}
 
 
 In SPP, reserved cores can be adjusted based on availability, unlike a VM with a fixed processing capacity.
 
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
+
 |Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
 |-----|-----------|-----------|-----------|-----------|
 |No|Maximum cores = 5  \n Mode = Dedicated|Maximum cores = 6  \n Mode = Dedicated|NA|5+6 = 11|
-|Yes|Maximum cores = 5  \n Mode = Shared/Uncapped  \n Entitled capacity = 4.25|Maximum cores = 6  \n Mode = Shared/Uncapped  \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by reserved cores in pool|
+|Yes|Maximum cores = 5  \n Mode = Shared/Uncapped  \n Entitled capacity = 4.25|Maximum cores = 6  \n Mode = Shared/Uncapped  \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by the reserved cores in a pool|
 {: class="simple-table"}
 {: caption="SPP helps to reduce the licensing cost" caption-side="bottom"}
 
 The benefits of using an SPP are as follows:
-- Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licesnses.
+- Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licenses.
 - A better overall ability to manage processor resources.
 
-{{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. The SPP is used and shared by a set of VMs of the same machine type (host).
+{{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. A set of VMs that belongs to the same machine type (host) can use and share an SPP.
+
 
 ## Managing the core-to-virtual core ratio
 {: #ec-vp-ratio}
@@ -59,9 +61,10 @@ For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
+In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside an SPP with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
 
 For example, the following table shows how your VC is determined based of EC selection:
+
 | User-defined EC value | Possible VC value |
 |-----------------------|-------------------|
 | EC is set to 1.5      | VPs can be 2 or 3 |
@@ -72,19 +75,21 @@ For example, the following table shows how your VC is determined based of EC sel
 Review the following points when you use core-to-virtual core ratio:
 * You can set EC in increments of 0.25.
 * You can set VC in increments of 1.
-* The ratio can only be set on a user-defined SPP.
+* The ratio can be set only on a user-defined SPP.
 * For non-dedicated hosts on Power10, you can set up to 3.0 cores.
 * For Power9 and for virtual machines with entitled capacities greater than 2, the core-to-virtual core ratio is 1:1.
 
 
 
-You can specify the host affinity and anti-affinity between two or more SPPs with shared processor pool placement groups. For more information, see [Configuring shared processor pool placement group](/docs/power-iaas?topic=power-iaas-manage-SPP#configure-SPP-PG).
+You can specify the host affinity and anti-affinity between two or more SPPs with SPP placement groups. For more information, see [Configuring shared processor pool placement group](/docs/power-iaas?topic=power-iaas-manage-SPP#configure-SPP-PG).
 
 
-## Pricing for shared processor pool
+## Pricing for Shared Processor Pool
 {: #price-spp}
 
-When you use SPPs, you can optimize your charges by using reserved cores that are shared by VMs in the SPP. For more information about the pricing for VMs within SPPs, see [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) if you are using in {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} or [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud) if you are using {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+When you use SPPs, you can optimize the cost by using reserved cores that are shared by VMs in the SPP. For more information about the pricing for VMs within SPPs, see the following topics:
+- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
+- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud) if you are using {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 
 
 
@@ -106,8 +111,10 @@ Create an SPP by specifying the following parameters:
 
 When you define these parameters, a backend process determines the best host for the new SPP.
 
-When the SPP you create is not configured successfully on the host, the SPP will not have any allocated processing cores. These SPPs must be removed manually, as they are not automatically deleted.
+If the SPP is not configured successfully on the host, the SPP is not allocated with any processing cores. These SPPs must be removed manually, as they are not automatically deleted.
 {: note}
+
+
 
 ### Creating a shared processor pool
 {: #create-spp}
@@ -117,6 +124,7 @@ To create an SPP, complete the following steps:
 1. Go to **Shared processor pools** in the {{site.data.keyword.powerSys_notm}} user interface under **Compute**.
 2. Click **Create pool**.
 3. In the **Create new shared processor pool** window, define the following preferences based on your requirements:
+
     |Field|Description|
     |----|----|
     |Name|Enter a name that is unique within your cloud account.  \n Use a name of minimum 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
@@ -137,15 +145,12 @@ To update or delete an SPP, navigate to **Compute** > **Shared processor pools**
 
 You can update or delete the following details of an existing SPP:
 
-* Name of the SPP - Follow the same naming conventions that you used while creating an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
-* Number of cores - You can update the number of reserved cores based on resource availability and allocation.
+* Name of the SPP: Follow the same naming conventions that you used when you created an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
+* Number of cores: You can update the number of reserved cores based on resource availability and allocation.
 
 
 
-* Delete an existing SPP - You can delete any existing SPP. Before deleting, ensure that no VMs exist in the SPP. If VMs are present, it must be deleted or moved with a support ticket.
-
-
-
+* Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VMs do not exist in the SPP. If VMs are present in the SPP, delete all VMs in the SPP.
 
 
 
@@ -172,13 +177,13 @@ To add VMs to an existing SPP, complete the following steps:
 2. Click **Create instance**.
 3. Complete the input fields under the **General** tile based on your requirement.
 4. Select the checkbox **Add to a Shared processor pool**.
-5. Select an existing shared processor pool.
+5. Select an existing SPP.
 6. Continue with the process of creating a VM. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
 ## Configuring a shared processor pool placement group
 {: #configure-SPP-PG}
 
-You can configure an SPP with the shared processor pool placement group (SPP PG) to control the host in which SPPs are deployed.
+You can configure an SPP with the SPP placement group (SPP PG) to control the host in which SPPs are deployed.
 
 SPP PGs are different from server placement groups. They serve the same purpose but cannot combine resource types.
 {: note}
@@ -219,6 +224,7 @@ To create an SPP PG, complete the following steps:
 2. Click the **Pool placement groups** tab.
 3. Click **Create group**.
 4. In the **Create new pool placement group** window, enter the following details:
+
     |Field|Description                                             |
     |-----|--------------------------------------------------------|
     |Name |Enter a name that is unique within your cloud account.  \n Use a minimum of 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|

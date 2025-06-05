@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-05-02"
+lastupdated: "2025-06-05"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -146,7 +146,7 @@ Review the following topics to understand the various aspects of setting up, con
 ### Enabling or disabling NSG in a workspace
 {: #enable-disable-nsg}
 
-You can enable or disable the NSG feature in PER and enhanced CRN-enabled workspaces. However, you cannot enable NSG on previous, manual, VPN, or cloud-connection workspaces.
+You can enable or disable the NSG feature in PER and enhanced CRN-enabled workspaces. However, you cannot enable NSG on previous, manual, VPN, or Cloud Connection workspaces.
 {: shortdesc}
 
 To determine whether your {{site.data.keyword.powerSys_notm}} workspace has the prerequisites to support NSGs, run the following IBM Cloud CLI command:
@@ -173,7 +173,9 @@ To enable or disable the NSG feature on an existing workspace, complete the foll
 4. Set the Network security groups feature to **Enabled** or **Disabled**.
 
 When the NSG feature is enabled on a workspace, a default NSG is automatically created containing members of any existing NIC attachments in the workspace with two rules. The first rule allows all bidirectional communication (`Protocol=ALL`) from other members in the “default” NSG. The second rule allows all bidirectional communication (`Protocol=ALL`) with the “default” NAG (`0.0.0.0/0` network CIDR outside of the workspace).
-{: important}
+
+
+
 
 The default rules can be deleted to achieve complete isolation between members in the same NSG, as well as from external addresses. When the default rules are deleted, all inbound traffic is denied by default. To delete these rules, complete the steps that are listed in the [Deleting rules from an existing NSG](#delete-rule-nsg) section.
 {: tip}
@@ -230,7 +232,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
       - **Internet Control Message Protocol (ICMP)**: Ideal for network diagnostics such as `ping` and `traceroute`. Unlike TCP or UDP, ICMP does not support data transmission between applications.
 
-      - **Any**: Ideal for creating rules that applies to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
+      - **Any**: Ideal for creating rules that apply to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
 
 10. Depending on the protocol that you select from the list in the previous step, complete the following steps:
       - **TCP**
@@ -301,10 +303,16 @@ To rename an NSG, complete the following steps:
 
 6.	Enter a new name for the NSG and click **Save**.
 
+
+
 ### Deleting an NSG
 {: #delete-nsg}
 
-To delete a custom (user-created) NSG, complete the following steps:
+You can delete only the NSGs that you created and not the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace.
+
+
+
+To delete a NSG, complete the following steps:
 
 1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -318,17 +326,18 @@ To delete a custom (user-created) NSG, complete the following steps:
 
 6.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
-You cannot delete the default NSG that is created when you enable the NSG feature on a {{site.data.keyword.powerSys_notm}} workspace.
-{: note}
 
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
-{: note}
+{: important}
 
-When you remove a network or subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
-{: note}
 
-You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, or API, or Terraform.
+
+
+
+You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, API, or Terraform interfaces.
 {: remember}
+
+
 
 ### Creating and managing NAGs in a workspace
 {: #create-manage-nag}
@@ -528,6 +537,9 @@ A member can only be associated with one network security group at a time.
 8.	Select one or more network interfaces from the list and click **Add member**.
 9.	Click **Create**.
 
+
+
+
 ### Removing members from an NSG
 {: #remove-members-nsg}
 
@@ -547,6 +559,8 @@ To remove members that are associated with an NSG, complete the following steps:
 
 7.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
+When you remove a network interface or a subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
+{: note}
 
 ## Quotas and limitations
 {: #quotas-limitations}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-05-23"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -29,8 +29,14 @@ subcollection: power-iaas
 
 ---
 
+
+
+
 When workloads are deployed on a new system, you must pay attention to its configuration and tuning to achieve the expected performance. {{site.data.keyword.powerSys_notm}} uses different IBM Power Systems: E980 (9080-M9S), S922 (9009-22A), S1022 (9105-22A), and E1080 (9080-HEX).
 {: shortdesc}
+
+
+
 
 
 
@@ -58,22 +64,7 @@ Before you migrate to a newer IBM Power, review the following checklist:
 - Follow the I/O consideration guide.
 - Consider contacting [IBM Technology Expert Labs](#lab-services) to ease the migration process.
 
-## Migrating to an IBM Power9
-{: #power9-migration}
 
-Learn more about migrating workloads from your older IBM POWER to a Power9. Before you begin your migration, review the information in this section.
-
-Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
-{: tip}
-
-- Power9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from an older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
-- Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workloads).
-
-To learn more about IBM Power9 performance and migration strategies, see the following articles:
-
-- [Hints and tips for migrating workloads to IBM Power9](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
-- [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
-- [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 
 ## Migrating to an IBM Power10
 {: #power10-migration}
@@ -96,6 +87,25 @@ To learn more about IBM Power10 performance and migration strategies, see the fo
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
+
+
+## Migrating to an IBM Power9
+{: #power9-migration}
+
+Learn more about migrating workloads from your older IBM POWER to a Power9. Before you begin your migration, review the information in this section.
+
+Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
+{: tip}
+
+- Power9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from an older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
+- Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workloads).
+
+To learn more about IBM Power9 performance and migration strategies, see the following articles:
+
+- [Hints and tips for migrating workloads to IBM Power9](https://www.ibm.com/downloads/cas/39XWR7YM){: external}
+- [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
+- [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
+
 
 
 ## Lab services

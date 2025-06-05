@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-06-05"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -54,18 +54,18 @@ You are not charged for creating an estimate. The resources that you estimate ca
 4. Click **Estimate Cost** to generate an estimated cost summary. An estimate is the approximate cost of the resources that you want to use in your workspace.
     You are redirected to the **Estimate cost** page for {{site.data.keyword.powerSys_notm}}.
 
-5. Select the type of virtual server from the **Location** drop-down list as [**{{site.data.keyword.on-prem}}**](#on-prem-location-type) or [**{{site.data.keyword.off-prem}}**](#off-prem-location-type).
+5. Select the type of virtual server from the **Location** list as [**{{site.data.keyword.on-prem}}**](#on-prem-location-type) or [**{{site.data.keyword.off-prem}}**](#off-prem-location-type).
 
-6. Select an IBM Cloud region from the **Location** drop-down list. Select an IBM Cloud region.
+6. Select an IBM Cloud region from the **Location** list. Select an IBM Cloud region.
     For IBM {{site.data.keyword.powerSys_notm}} Private Cloud, select an IBM Cloud region that is closest to your physical location or data center where the pod will reside.
 
 7. On the right-side panel, click **Add to estimate** to review the configuration.
 
-8. If you are not logged in, choose **from catalog** in the **Add product to estimate** drop-down menu.
+8. If you are not logged in, choose **from catalog** in the **Add product to estimate** list.
 
 9.  Click **Save**.
 
-10. Click **View estimate** to view and to take actions on them.
+10. Click **View estimate** to view and to act on them.
 
 
 ### Location type: {{site.data.keyword.off-prem}}
@@ -87,21 +87,28 @@ The summary of the selected infrastructure is displayed on the **Summary** page.
 #### Estimating a virtual server instance
 {: #est-vsi}
 
-Before deploying a virtual server instance in a workspace, create an estimate of it. You can create an estimate of a virtual server instance from the estimation page and virtual server instance provisioning page on IBM Cloud.
+Before you deploy a virtual server instance in a workspace, create an estimate of it. You can create an estimate of a virtual server instance from the estimation page and virtual server instance provisioning page on IBM Cloud.
 
 To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	                        | Description                                                                                           |
 |-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | (**Required**) Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
-| Operating system              |	Select the operating system that meets your requirements from the drop-down.                                |
+| Operating system              |	Select the operating system that meets your requirements from the list.                                |
 | Configure for Epic workloads  |	Check this indicator if you want to deploy on E980 or E1080 machines with Tier 1 storage and dedicated cores, at a shared-capped price.  \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic workloads, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).                                |
 | Machine type                  |	Specify the machine type.                                                                           |
 | Core type                 	| Specify the core type.                                                                                |
 | Cores	                        | (**Required**) Define how many cores you need.                                                         |
 | Memory (GB)                  | (**Required**) Define how much space you need per core.                                                |
-| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
+| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
 {: caption="UI fields in estimating a VSI" caption-side="top"}
+
+
+
+
+
+
+
 
 
 To learn more on how to create an instance, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
@@ -110,12 +117,12 @@ To learn more on how to create an instance, see [Configuring a {{site.data.keywo
 #### Estimating a storage volume
 {: #est-storage-vol}
 
-Before deploying a storage volume in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
+Before you deploy a storage volume in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field                         |	Description                                                              |
 |-------------------------------|----------------------------------------------------------------------------|
 | Number of volumes	Required:   |   Specify the number of volumes that you need.                                  |
-| Tier	                        |   Choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers.|
+| Tier	                        |   Choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of these tiers.|
 | Total storage (GB)	        |   Enter the amount of volume that you need.                                     |
 {: caption="UI fields in estimating a storage volume" caption-side="top"}
 
@@ -159,7 +166,7 @@ Before you deploy a virtual tape library (VTL) in a workspace, create an estimat
 | Core type	        |   Specify the core type.                                                      |
 | Cores	            |   (**Required**) Define how many cores you need.                               |
 | Memory (GB)	    |   (**Required**) Define how much space you need per core.                      |
-|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs or a combination of these tiers.  \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume considering the boot volumes and data volume that you might need. |
+|Storage tiers	    |   **Optional**: Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of these tiers.  \n You cannot add a separate boot volume estimation. Hence, you should enter the storage volume by considering the boot volumes and data volume that you might need. |
 {: caption="UI fields in estimating a VTL" caption-side="top"}
 
 To learn more about virtual tape libraries, see [Managing a virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
@@ -169,12 +176,12 @@ To learn more about virtual tape libraries, see [Managing a virtual tape library
 #### Estimating a dedicated host
 {: #est-dh}
 
-Before deploying a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
+Before you deploy a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
 | Field	            |   Description                                                                 |
 |-------------------|-------------------------------------------------------------------------------|
-| Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts you want to create.  |
-| Machine type      |   (**Required**) Select the available machine types where you can crreate dedicated host. |
+| Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts that you want to create.  |
+| Machine type      |   (**Required**) Select the available machine types where you can create dedicated host. |
 {: caption="UI fields in estimating a dedicated host" caption-side="top"}
 
 To learn more about dedicated host, see [Getting started with dedicated host].
@@ -193,7 +200,7 @@ If you select the **Location type** as {{site.data.keyword.on-prem}}, proceed wi
     Currently, IBM Power S1022 (2U), IBM Power E1050 (4U), and IBM Power E1080 (12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
 
 
-2. The **Minimum committed spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod. Select the number of years for the **Contract commitment term** drop-down list.
+2. The **Minimum committed spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod. Select the number of years for the **Contract commitment term** list.
 
     A longer contract commitment term reduces the minimum committed spend value. You can contact IBM to learn more about the possible savings with the commitment plans. Metered cost is determined based on the consumption and it is charged only when the consumption rate is greater than the minimum committed spend value.
     {: note}
@@ -218,7 +225,7 @@ When you generate the estimate, you can create and export the configuration esti
 1. Click **Add to estimate** on the **Summary** page of the **Estimate Cost** page.
 
 2. The **Estimate** window appears.
-   - Select an existing estimate from the drop-down list if you want to add the product to an existing estimate.
+   - Select an existing estimate from the list if you want to add the product to an existing estimate.
    - Click **Create a new estimate** if you want to create a new estimate.
         On the **Create a new estimate** window, specify a name for the estimate and an optional description. Click **Create**.
 

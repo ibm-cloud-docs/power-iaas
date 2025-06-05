@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-03-05"
+lastupdated: "2025-05-27"
 
 keywords: power, SAP, full system profiles
 
@@ -12,6 +12,7 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # SAP full system profiles
 {: #SAP-full-system-profiles}

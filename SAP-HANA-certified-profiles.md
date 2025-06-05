@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-20"
+lastupdated: "2025-06-04"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -12,6 +12,7 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # SAP HANA certified profiles
 {: #SAP-hana-certified-profiles}
@@ -22,6 +23,8 @@ subcollection: power-iaas
 
 
 ---
+
+
 
 
 
@@ -80,3 +83,9 @@ You can use the following commands to get the details of an SAP profile:
 
 The `Type` property of an SAP NetWeaver profile has the value `sap-rise-app`.
 {: note}
+
+
+
+
+
+For more information about SAP NetWeaver profiles, see [IBM Power Virtual Server certified profiles for SAP NetWeaver.](/docs/sap?topic=sap-nw-iaas-offerings-profiles-power-vs){:external}

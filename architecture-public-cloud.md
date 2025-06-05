@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-02-24"
+lastupdated: "2025-06-05"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -100,6 +100,8 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 [^1]: Available only at `DAL14` data center.
 
 
+
+
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
 
@@ -110,6 +112,8 @@ You can compare the performance of your current environment with the environment
 You can check and compare your data center capabilities among three different data centers on the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console. You can also use the external interfaces such as API, CLI, and Terraform to check your data center capabilities.
 
 For example, you can determine the support for the following capabilities in each data center:
+
+
 - Machine types (Power9 or Power10)
 - Global replication site pair(s)
 - Dedicated host types
@@ -133,6 +137,8 @@ The IBM data centers are configured with one or more of the following IBM Power 
 * [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^2]
 
 [^2]: Available only at `DAL14` data center.
+
+
 
 For more information about your data center capabilities, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
@@ -267,6 +273,10 @@ Some of the limitations of flexible IOPS are as follows:
 
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to Fixed IOPS is not allowed.
+
+
+
+
 
 
 ## Public and private networks

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-20"
+lastupdated: "2025-06-05"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -16,6 +16,25 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+## June 2025
+{: #June-2025}
+
+
+
+- The migration of existing workspaces to Cloud Resource Names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
+
+- The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS levels are no longer supported by Red Hat:
+
+  - RHEL8.8 general purpose
+  - RHEL9.2 general purpose
+  - RHEL8.4 for SAP (HANA)
+  - RHEL8.4 for SAP NetWeaver
+
+
+
+
 
 
 ## May 2025
@@ -40,9 +59,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 - You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-nw-profiles).
 
-
-
-
 ## April 2025
 {: #April-2025}
 
@@ -62,10 +78,10 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
     - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
     - Each resource type has its own billing plan instead of billing all the resources under the `Workspace for Power Virtual Server` plan.
-    - The value for the `Pricing Region` field is based on metro regions and not based on data center and zone regions. However, the value for the `Location` field of the instance is based on data center and zone regions.
-    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with volume metrics.
+    - The value for the `Pricing Region` field is based on metro regions and is not based on data center and zone regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
+    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with the volume metrics.
 
-  The existing price of the resources does not change. The way in which the costs of the resources are organized and visualized are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
+  The existing price of the resources does not change. The organization and visualization of the costs of the resources are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
 
 
 
@@ -486,61 +502,3 @@ The data center where you can monitor your platform metrics currently are `WDC06
 - {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - IBM i 7.5 is supported on {{site.data.keyword.powerSys_notm}}s.
 - With virtual appliances independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSys_notm}} workloads. See [Managing virtual appliances](/docs/power-iaas?topic=power-iaas-virtual-appliances).
-
-## April 2022
-{: #apr-2022}
-
-- Snapshots that are created are monitored hourly and priced depending on the disk space used. See [Metering and pricing of snapshot](/docs/power-iaas?topic=power-iaas-snapshots-cloning#metering-snapshot).
-
-## March 2022
-{: #march-2022}
-
-- The {{site.data.keyword.powerSys_notm}} now supports [AIX 7.3](/docs/power-iaas?topic=power-iaas-deploy-custom-image#aix-details).
-- You can view best practices and guidelines on [AIX backup performance on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-backup-strategies).
-
-## December 2021
-{: #dec-2021}
-
-- You can now configure [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
-- You can now configure [Placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups) by using the {{site.data.keyword.powerSys_notm}} GUI.
-- You can now set a [10 Gbps speed for Cloud connection](/docs/power-iaas?topic=power-iaas-cloud-connections) by using the {{site.data.keyword.powerSys_notm}} GUI.
-- You can now set [affinity policies for storage pools](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance) by using the {{site.data.keyword.powerSys_notm}} GUI.
-
-## October 2021
-{: #oct-2021}
-
-- You can now use [Virtual private network (VPN)](/docs/power-iaas?topic=power-iaas-VPN-connections) to connect an {{site.data.keyword.on-prem}} VPN gateway to an IBM Cloud™ VPN gateway that is created within a {{site.data.keyword.powerSys_notm}} VPN service.
-- You can now use [Virtual tape libraries](/docs/power-iaas?topic=power-iaas-manage-vtl) to backup IBM i data.
-
-## September 2021
-{: #sep-2021}
-
-- You can now use [Capturing and exporting a virtual machine](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm) to view the new Job feature and view restrictions for VM capture, image import, and image export.
-- You can now use [Mixed storage](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage) to attach storage volumes to a PVM instance from different storage tiers and pools.
-
-## June 2021
-{: #jun-2021}
-
-- You can now use [Placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups) to add your servers into groups and apply affinity or anti-affinity policies.
-
-## May 2021
-{: #may-2021}
-
-- You can now use [Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections) to automate the way you connect your {{site.data.keyword.powerSys_notm}} instances to the IBM Cloud resources.
-- {{site.data.keyword.powerSys_notm}} now supports SAP HANA applications in IBM-provided RHEL stock images. For more information, see [Preparing Linux OS on IBM Power VS for SAP HANA](/docs/sap?topic=sap-power-vs-sles-hana).
-
-
-## March 2021
-{: #mar-2021}
-
-- You can now deploy a Red Hat Enterprise Linux (RHEL) 8.1 and 8.2 virtual machine (VM) on a VM instance. For more information, see [Using RHEL within the {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
-- {{site.data.keyword.powerSys_notm}} provides a community-supported CentOS image under the Linux operating system. However, IBM does not provide any support for this image. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance ).
-- You can now choose a `OSA21` data center to deploy your {{site.data.keyword.powerSys_notm}}.
-
-## February 2021
-{: #feb-2021}
-
-- You can now choose a `MON01` data center to deploy your {{site.data.keyword.powerSys_notm}}.
-- The {{site.data.keyword.powerSys_notm}} offering now supports IBM i 7.1. For more information, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
-- You can clone a volume or multiple volumes to create a consistent full copy of the volume. For more information, see [Cloning a volume](/docs/power-iaas?topic=power-iaas-snapshots-cloning#cloning-volume).
-- You can resize the memory and core counts to a maximum of 8 times of the specified values, and to a minimum of 1/8 times of the specified values when the VM was provisioned. For more information, see [Resizing the virtual machine core count and memory](/docs/power-iaas?topic=power-iaas-modifying-instance#resize-core-mem).
