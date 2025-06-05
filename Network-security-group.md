@@ -332,6 +332,13 @@ When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in tha
 
 
 
+
+
+You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, API, or Terraform interfaces.
+{: remember}
+
+
+
 ### Creating and managing NAGs in a workspace
 {: #create-manage-nag}
 
