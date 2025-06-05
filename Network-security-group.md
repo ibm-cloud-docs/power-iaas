@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-05-30"
+lastupdated: "2025-06-05"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -284,7 +284,6 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 After the NSGs are created, you can manage them by performing the following actions:
 - [Renaming an NSG](#rename-nsg)
-- [Cloning an NSG](#clone-nsg)
 - [Deleting an NSG](#delete-nsg)
 
 ### Renaming an NSG
@@ -501,7 +500,6 @@ To delete a rule from an existing NSG, complete the following steps:
 You can manage members that are associated with an NSG by performing the following operations:
 
 - [Adding members to a network security group](#add-members-nsg})
-- [Moving members from one NSG to another](#move-members)
 - [Removing members from a network security group](#remove-members-nsg)
 
 ### Adding members to a network security group
