@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-01"
+lastupdated: "2025-06-05"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -17,6 +17,20 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+
+## June 2025
+{: #June-2025}
+
+
+
+- The migration of existing workspaces to Cloud Resource Names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
+
+- The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS levels are no longer supported by Red Hat:
+
+  - RHEL8.8 general purpose
+  - RHEL9.2 general purpose
+  - RHEL8.4 for SAP (HANA)
+  - RHEL8.4 for SAP NetWeaver
 
 
 
