@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-05"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -114,6 +114,7 @@ You can check and compare your data center capabilities among three different da
 For example, you can determine the support for the following capabilities in each data center:
 
 
+- Machine types (Power9 or Power10)
 - Global replication site pair(s)
 - Dedicated host types
 
