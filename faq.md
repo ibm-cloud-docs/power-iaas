@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -184,17 +184,17 @@ Red Hat
 * RHEL 9.4 general purpose (RHEL9-SP4)
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
-
 * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP)
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
 * RHEL 8.10 general purpose (RHEL8-SP10)
 * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA)
 * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)
-
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
 * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)
 * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
 * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
+
+
 
 
 
@@ -239,7 +239,7 @@ The following list is an example of the FLS offerings:
 
 
 * Stock images: RHEL 8.4 (General), RHEL 8.6 (General), RHEL 9.4 (General)
-* Support:	You pay IBM for support
+* Support: You pay IBM for support
 * Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
 
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
