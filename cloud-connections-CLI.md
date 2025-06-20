@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2025-05-16"
+lastupdated: "2025-06-19"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -32,6 +32,7 @@ subcollection: power-iaas
 
 
 
+
 ## [Important announcement]{: tag-green}
 {: #imp-announcement}
 
@@ -44,6 +45,9 @@ To connect the Power Virtual Server workspaces with the IBM Cloud, use the [Powe
 If you have manually configured the network in your workspace, see [Migrating the existing network configurations to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per). Alternatively, you can use the `ibmcloud pi workspace action` CLI command to migrate the existing Power Virtual Server workspaces to PER-enabled workspaces. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
 If you need assistance with the migration, you can open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
+
 
 
 

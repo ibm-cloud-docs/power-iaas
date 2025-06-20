@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-20"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -55,12 +55,18 @@ The primary difference between the two is where the physical infrastructure resi
 
 
 
-
 [{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
 
 [{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
 
 For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+
+
+
+
+
+
+
 
 
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
@@ -77,10 +83,14 @@ The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
+
+
 The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following operating systems:
-* S922  -  7.1 or later
-* E980  -  7.1 or later
-* S1022 -  7.1 Technology Level (TL) 5 or later
+* S922 - 7.1 or later
+* E980 - 7.1 or later
+* S1022 - 7.1 Technology Level (TL) 5 or later
+
+
 
 
 
@@ -99,9 +109,15 @@ The following stock images are available when you create a virtual machine:
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
+
+
 The {{site.data.keyword.on-prem-fname}} supports the following operating systems:
 * S1022 - 7.2 or later
 * E1080 - 7.2 or later
+
+
+
+
 
 The following stock images are available when you create a virtual machine:
 
@@ -120,10 +136,16 @@ The following stock images are available when you create a virtual machine:
 
 To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
+
+
 - [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
 - [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
 - [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
 - [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
+
+
+
+
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
@@ -136,20 +158,27 @@ The {{site.data.keyword.on-prem-fname}} supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-- [S922 (9009-22A), E980 (9080-M9S) and S1022 (9105-22A) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+
+
+- [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A)software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
+
+
+
+
 
 IBM i stock images currently available when you create a VM are:
 
 
 
 
-* IBM i COR [^2][^3]
+* IBM i COR[^2][^3]
+* IBM i 7.6[^4]
 * IBM i 7.5 TR5
 * IBM i 7.4 TR11
-* IBM i 7.3 TR13[^4]
-* IBM i 7.2 TR9 [^4A][^5]
+* IBM i 7.3 TR13[^5]
+* IBM i 7.2 TR9[^5A][^6]
 
 
 
@@ -158,13 +187,16 @@ IBM i stock images currently available when you create a VM are:
 
 [^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 
-[^4]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
-[^4A]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+[^4]: IBM i 7.6 is supported on IBM Power10 systems only.
+
+[^5]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+
+[^5A]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
 
 
-[^5]: Not supported on {{site.data.keyword.on-prem}}.
+[^6]: Not supported on {{site.data.keyword.on-prem}}.
 
 
 
@@ -593,7 +625,13 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: #monitoring}
 {: faq}
 
+
+
 IBM does not provide status and performance monitoring for the {{site.data.keyword.powerSys_notm}}. Clients must use their own private cloud tools.
+
+
+
+
 
 ## What performance and capacity planning services do you provide for IBM i?
 {: #ibmi-performance}

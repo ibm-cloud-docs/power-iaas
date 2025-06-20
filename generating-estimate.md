@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-20"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -91,7 +91,7 @@ Before you deploy a virtual server instance in a workspace, create an estimate o
 
 To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	                        | Description                                                                                           |
+| Field                         | Action                                                               |
 |-------------------------------|-------------------------------------------------------------------------------------------------------|
 | Number of virtual servers	    | (**Required**) Specify the number of instances that you want to estimate for the {{site.data.keyword.powerSys_notm}}. |
 | Operating system              |	Select the operating system that meets your requirements from the list.                                |
@@ -100,13 +100,38 @@ To learn about the fields and descriptions that you need to enter, see the follo
 | Core type                 	| Specify the core type.                                                                                |
 | Cores	                        | (**Required**) Define how many cores you need.                                                         |
 | Memory (GB)                  | (**Required**) Define how much space you need per core.                                                |
-| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must enter the storage volume considering the boot volumes and data volume that you might need.|
+| Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must define the storage volume value by considering the boot volumes and data volume that you might need.|
 {: caption="UI fields in estimating a VSI" caption-side="top"}
 
+If you select **Linux for SAP (HANA)** OS type, you can create the estimate of an instance with SAP workloads. For more information, see [Estimating SAP workloads](#est-sap-workloads).
 
 
 
 
+
+
+
+
+
+
+
+
+
+##### Estimating SAP workloads
+{: #est-sap-workloads}
+
+To create an estimate of a {{site.data.keyword.powerSys_notm}} instance with SAP workloads, update the fields that are listed in the following table.
+
+| Field                         | Action                                                              |
+|-------------------------------|----------------------------------------------------------------------------|
+| Operating system              | - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.  \n - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.                     |
+| Machine type                  | \n - Select a machine type from the list to deploy an SAP HANA profile.  \n - Select an IBM Power10 or later machine type from the list to deploy an SAP certified profile.
+| Advance Configuration	        |   Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                       |
+| Profile                       |   Select an SAP HANA, a Standard RISE, or an Application Server profile.                      |
+{: caption="UI fields for estimating an SAP workload" caption-side="top"}
+
+The SAP certified profiles are available with IBM Power10 or later servers.
+{: note}
 
 
 
@@ -119,7 +144,7 @@ To learn more on how to create an instance, see [Configuring a {{site.data.keywo
 
 Before you deploy a storage volume in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field                         |	Description                                                              |
+| Field                         | Action                                                              |
 |-------------------------------|----------------------------------------------------------------------------|
 | Number of volumes	Required:   |   Specify the number of volumes that you need.                                  |
 | Tier	                        |   Choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of these tiers.|
@@ -132,7 +157,7 @@ Before you deploy a storage volume in a workspace, create an estimate of it. To 
 
 Before you deploy a shared processor pool in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	            | Description                                                   |
+| Field	            | Action                                                   |
 |-------------------|---------------------------------------------------------------|
 | Number of pools	| (**Required**) Specify the number of pools that you need.           |
 | Machine type	    | Specify the machine type.                                     |
@@ -146,7 +171,7 @@ To learn more about a shared processor pool, see [Managing a shared processor po
 
 Before you create and attach a VPN connection, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	                |   Description                                                 |
+| Field	                | Action                                                 |
 |-----------------------|---------------------------------------------------------------|
 | Number of connections	|   Enter the number of VPN connections that you want to estimate.   |
 {: caption="UI fields in estimating a VPN conection" caption-side="top"}
@@ -158,7 +183,7 @@ To learn more about VPN connections, see [Creating VPN connections](/docs/power-
 
 Before you deploy a virtual tape library (VTL) in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	            |   Description                                                                 |
+| Field	            |  Action                                                                 |
 |-------------------|-------------------------------------------------------------------------------|
 | Number of VTLs 	|   (**Required**) Enter the number of virtual tape library instances that you need.  |
 | Licensed repository capacity (TB)	|   Define the size of your repository capacity that determines which software license is needed. |
@@ -178,7 +203,7 @@ To learn more about virtual tape libraries, see [Managing a virtual tape library
 
 Before you deploy a dedicated host in a workspace, create an estimate of it. To learn about the fields and descriptions that you need to enter, see the following table:
 
-| Field	            |   Description                                                                 |
+| Field	            |   Action                                                                 |
 |-------------------|-------------------------------------------------------------------------------|
 | Number of dedicated hosts	|   (**Required**) Enter the number of dedicated hosts that you want to create.  |
 | Machine type      |   (**Required**) Select the available machine types where you can create dedicated host. |
@@ -197,7 +222,12 @@ If you select the **Location type** as {{site.data.keyword.on-prem}}, proceed wi
 
 1. Specify the infrastructure requirements that include the machine type, number of systems, and storage capacity for your data center in the **Infrastructure configuration** section. The **Infrastructure overview** section displays the summary of the selected configuration. The pod size depends on the number of systems that you select including the total memory and the total number of cores that you plan to use in your data center.
 
+
+
     Currently, IBM Power S1022 (2U), IBM Power E1050 (4U), and IBM Power E1080 (12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
+
+
+
 
 
 2. The **Minimum committed spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod. Select the number of years for the **Contract commitment term** list.

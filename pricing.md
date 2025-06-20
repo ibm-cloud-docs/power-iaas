@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-18"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -28,7 +28,15 @@ subcollection: power-iaas
 
 
 
+
+
 {{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. Metering is done based on resource allocation for billing purpose. The following list of resources are metered:
+
+
+
+
+
+
 
 * Virtual machines: CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB)
 
@@ -52,14 +60,19 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-| Power systems                             | Usable cores | Memory               |
-| ----------------------------------------- | ------------ | -------------------- |
-| E980 (9080-M9S)                           | 143          | Up to 15,307 GB [^1] |
-| S922 (9009-22A) [^2]                      | 15           | Up to 942 GB         |
-| S1022 (9105-22A) [^3]                     | 33           | Up to 1984 GB        |
-| E1080 (9080-HEX)                          | 165          | Up to 64 TB          |
-| E1050 (9043-MRX)                          | 87           | Up to 8,192 GB       |
+
+| Power systems         | Usable cores | Memory               |
+| --------------------- | ------------ | -------------------- |
+| E980 (9080-M9S)       | 143          | Up to 15,307 GB [^1] |
+| S922 (9009-22A) [^2]  | 15           | Up to 942 GB         |
+| S1022 (9105-22A) [^3] | 33           | Up to 1984 GB        |
+| E1080 (9080-HEX)      | 165          | Up to 64 TB          |
+| E1050 (9043-MRX)      | 87           | Up to 8,192 GB       |
 {: caption="Theoretical maximum processors and memory" caption-side="bottom"}
+
+
+
+
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
@@ -172,15 +185,11 @@ As the month progresses, the customer adds more memory. The new price for the LP
 In this example, if 300 hours is reached in the month, the LPAR resources are increased from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
 
 
+
 ## Part number descriptions
 {: #part-numbers}
 
 A part number is associated with the license for the software product to be used in {{site.data.keyword.cloud_notm}}. For detailed usage and billing information, refer to the part number descriptions. The part number descriptions are listed in your invoice or in the [IBM&reg; Cloud billing](https://cloud.ibm.com/billing){: external} portal.
-
-
-
-
-
 
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
@@ -373,6 +382,8 @@ Refer to the following table to view the part number descriptions and the associ
 
 
 
+
+
 ## Base instances
 {: #pricing-base-instance-prices}
 
@@ -419,7 +430,7 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 
 You are charged different rates based on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type  For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
+Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type  (S922, E1080, S1022, and E1080)   For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-20"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -85,7 +85,7 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
 
 
 
-The access management tags are supported only on {{site.data.keyword.powerSys_notm}} workspaces. The access management tags attached to the individual resources in a workspace are ignored.
+The access management tags are supported only on {{site.data.keyword.powerSys_notm}} workspaces. The access management tags that are attached to the individual resources in a workspace are ignored.
 
 
 

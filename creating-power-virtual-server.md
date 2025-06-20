@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-20"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -86,9 +86,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-1. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
+3. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-2. Complete the **Boot image** fields.
+4. Complete the **Boot image** fields.
 
     You can create or provision a virtual server instance (VM) without any initial boot image volume. VMs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VM can be created without a boot volume and the volume that is cloned or replicated can be attached to a VM to bring the backed-up VM.
 
@@ -131,10 +131,21 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
+    To deploy an SAP workload, from the **Operating system** list select one of the following options:
+
+    - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
+    - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
+
+    To deploy an SAP certified profile - Standard RISE profile or an Application server profile, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled if **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list are selected.
+
+
+    
 
 
 
-3. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
+
+
+5. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
     {: important}
@@ -145,11 +156,21 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
     
+    To deploy an SAP workload, complete the following steps:
+
+    1. Select a **Machine type** from the list.
+       - To deploy an SAP HANA profile, you can select a machine type from the list.
+       - To deploy an SAP certified profile, you must select an IBM Power10 or later machine type from the list.
+    2. Select a profile to deploy an SAP HANA profile.
+    3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
+
+    The **SAP RISE deployment** option is enabled if **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list are selected.
+
+    
 
 
 
-
-4.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+6.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
     Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
 
@@ -158,7 +179,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
-5.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+7.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
@@ -166,7 +187,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-6.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+8.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
     If your account has fewer than 100 VMs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VMs. If your account has more than 100 VMs, the VMs might not be displayed in the user interface. You can reduce the number of VMs by using the CLI or API so that they are displayed again on the user interface.
     {: note}
@@ -200,7 +221,7 @@ A VM is moved across systems with its associated VSN. Hence, when a VSN is assoc
 
 
 
-VSN is a unique identifier and can be assigned only to one VM at a time. If you simultaneously deploy more than one VM assigning the same VSN, only one of the VMs gets the VSN and the others are deployed without the VSN being assigned.
+VSN is a unique identifier and can be assigned only to one VM at a time. If you simultaneously deploy more than one VM assigning the same VSN, only one of the VMs gets the VSN, and the others are deployed without the VSN being assigned.
 {: important}
 
 

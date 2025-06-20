@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-13"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -64,14 +64,16 @@ You cannot assign the subnet that has already been assigned to another virtual m
 
 5. Click **Subnets** in the left navigation pane, then **Add subnet**.
 
-6. Enter a name for the subnet, CIDR value (for example: 192.168.100.14/24), gateway number (for example: 192.168.100.15), and the IP range values for the subnet.
 
-7. You must provide the **DNS server** value.
+
+1. Enter a name for the subnet, CIDR value (for example: 192.168.100.14/24), gateway number (for example: 192.168.100.15), and the IP range values for the subnet.
+
+2. You must provide the **DNS server** value.
     A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during the startup operation. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
-8. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
+3. You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
-9.  Click **Create subnet**.
+4.  Click **Create subnet**.
 
 You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section.
 

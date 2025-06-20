@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2025-01-06"
+lastupdated: "2025-06-17"
 
 keywords: use case, Oracle, database, demos. oracle on Power VS
 
@@ -13,12 +13,10 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying an Oracle database in IBM {{site.data.keyword.powerSys_notm}}s
+# Deploying Oracle Workloads on AIX in IBM {{site.data.keyword.powerSys_notm}}s
 {: #use-case-oracle}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -31,7 +29,11 @@ subcollection: power-iaas
 Learn how to deploy an Oracle database in an {{site.data.keyword.powerSysFull}} instance.
 {: shortdesc}
 
-To migrate an AIX-based Oracle database from IBM Power to {{site.data.keyword.powerSys_notm}}, see [Oracle technical migration procedure](https://ibm.biz/BdabLr){: external}.
+
+
+
+
+To migrate an AIX-based Oracle database from IBM Power to Power Virtual Server, see [Oracle technical migration procedure](https://ibm.biz/BdabLr){: external}.
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-20"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -29,6 +29,8 @@ subcollection: power-iaas
 
 To understand the {{site.data.keyword.on-prem}} architecture, key features, and hardware and software requirements, review the following topics:
 
+
+
 - [Architecture for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](#architecture-for-sitedatakeywordon-prem-fname-in-sitedatakeywordon-prem)
   - [High-level architecture](#high-level-architecture)
   - [Key features](#key-features)
@@ -43,6 +45,10 @@ To understand the {{site.data.keyword.on-prem}} architecture, key features, and 
   - [Network](#network)
   - [Data center capabilities](#data-center-capabilities)
 
+
+
+
+
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
 
@@ -55,6 +61,7 @@ The following diagram provides a high-level architectural view of the {{site.dat
 
 The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.data.keyword.powerSys_notm}} are as follows:
 
+
 * **Easy management and automation interfaces**: You can easily manage your {{site.data.keyword.powerSys_notm}} resources by using GUI, CLI, API, or Terraform interfaces.
 * **Bring your own image**: You can bring your own custom IBM AIX, Linux&reg;, or IBM i image that is tested and deployed. Currently, the supported images include the following operating system images:
     * IBM AIX 7.2, or later
@@ -62,6 +69,9 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
     * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
+
+
+
 
     [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
@@ -86,15 +96,24 @@ For more information about IBM Cloud regions can host connections from the pods 
 ### Pods
 {: #pod-spec-private-cloud}
 
+
+
 The following pod sizes are available:
 * Small: 1 rack of IBM Power10 (S1022 and E1050) processors
 * Medium: 2 – 4 racks of IBM Power10 (S1022, E1050, or E1080) processors.
 
 You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1080 processors. The spare nodes is used for maintenance or automatic high availability purposes.
+
+
+
+
+
 You can use 100% of the core, memory, and storage of the nodes by excluding the spare nodes.
 
 The spare node is used by the IBM site reliability engineering (SRE) team for maintenance and is not available for your use.
 {: note}
+
+
 
 
 
@@ -143,9 +162,6 @@ For the S1022 server, the following memory configurations are available:
 - **4 TB memory option per server**: A minimum 20 TB of memory and a maximum 36 TB of memory.
 
 For the E1050 server, only an 8 TB memory option per server with a minimum 16 TB of memory and a maximum 32 TB of memory is available.
-
-
-
 
 
 
@@ -267,11 +283,12 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 ### Supported Power10 servers
 {: #power-system-spec-private-cloud}
 
-The following Power10 are supported:
+The following Power10 servers are supported:
 
 * [IBM Power S1022](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 * [IBM Power E1050](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}
 * [IBM Power E1080](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
+
 
 ### Operating systems
 {: #os-spec-private-cloud}
@@ -312,8 +329,6 @@ The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which
 {: important}
 
 For example, a 100 GB Tier 3 storage can receive up to 300 IOPs, and a 100 GB Tier 1 storage volume can receive up to 1000 IOPs. After the IOPs limit is reached for the storage volume, the I/O latency increases. Tier 3 storage is not suitable for production workloads. When you are choosing a storage tier, ensure that you consider not just the average I/O load, but more importantly the peak IOPs of your storage workload.
-
-
 
 
 ## Network

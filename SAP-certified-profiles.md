@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-04"
+lastupdated: "2025-06-19"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -14,8 +14,9 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# SAP HANA certified profiles
-{: #SAP-hana-certified-profiles}
+
+# SAP certified profiles
+{: #SAP-certified-profiles}
 
 ---
 
@@ -26,16 +27,20 @@ subcollection: power-iaas
 
 
 
+You can deploy SAP certified profiles on IBM Power10 or later servers by using a single custom OS boot image. You can use the UI, CLI, API, and Terraform interfaces to deploy SAP certified profiles.
 
+## SAP certified profiles for SAP HANA
+{: #sap-certpro-hana}
 
-You can deploy SAP HANA on the following IBM® Power® servers:
+The SAP certified profiles for SAP HANA are a set of profiles with defined attributes such as CPU cores and RAM.
+
+You can deploy SAP HANA on the following {{site.data.keyword.powerSysFull}}s:
 
 - **Power10**: S1022, E1050, and E1080
 - **Power9**: E980
 
-You can use the UI, CLI, API, and Terraform interfaces to deploy certified SAP HANA profiles.
 
-## Power10 profiles
+### Power10 profiles
 {: #power10-profiles}
 
 The following SAP HANA profiles are available for IBM Power10 processor-based servers:
@@ -48,10 +53,10 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 | BH2     | Balanced     | Suitable for midsize databases and common cloud applications with moderate traffic.                                      |
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
-SR2 profiles must be deployed and edited by using the CLI, API, and Terraform interfaces. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI.
+SR2 profiles must be deployed and edited by using the UI, CLI, API, and Terraform interfaces. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. SR2 profiles are not available with the E980 machine type.
 {: note}
 
-## Power9 profiles
+### Power9 profiles
 {: #power9-profiles}
 
 The following SAP HANA profiles are available for IBM Power9 processor-based servers:
@@ -65,27 +70,42 @@ The following SAP HANA profiles are available for IBM Power9 processor-based ser
 | CH1     | Compute      | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers.                       |
 {: caption="Power9 SAP HANA certified profiles " caption-side="bottom"}
 
-For more information about SAP HANA profiles, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs). For more information about pricing, see [Pricing for Power Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 
 
 
 
-## SAP NetWeaver profiles
-{: #sap-nw-profiles}
+## SAP Application Server profiles
+{: #sap-appser-profiles}
 
-You can use the CLI, API, and Terraform interfaces and specify an sr2 profile ID that matches a NetWeaver profile to deploy certified SAP NetWeaver profiles.
+By using SAP Application Server profiles you can deploy a certified profile for SAP Application Servers or SAP NetWeaver on {{site.data.keyword.powerSys_notm}}. The SAP Application Server profiles are available on IBM Power S1022 systems.
+
+To deploy a certified profile for SAP Application Servers or SAP NetWeaver by using CLI, API, or Terraform interfaces, specify an sr2 profile ID that matches an SAP Application Server profile.
 
 You can use the following commands to get the details of an SAP profile:
 
 * **CLI** : [ibmcloud pi image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image){:external}
 * **API** : [Get list of SAP profiles](/apidocs/power-cloud#pcloud-sap-getall){:external}
 
-The `Type` property of an SAP NetWeaver profile has the value `sap-rise-app`.
+The `Type` property of an SAP Application Server profile has the value `sap-rise-app`.
 {: note}
 
 
 
 
 
-For more information about SAP NetWeaver profiles, see [IBM Power Virtual Server certified profiles for SAP NetWeaver.](/docs/sap?topic=sap-nw-iaas-offerings-profiles-power-vs){:external}
+For more information about SAP Application Server profiles, see [SAP Application Server certified instances on IBM Power Virtual Server.](/docs/sap?topic=sap-nw-iaas-offerings-profiles-power-vs){:external}
+
+
+
+## Generating an estimate of a Power Virtual Server instance
+{: #sap-hana-prof-est}
+
+When you are generating an estimate of a {{site.data.keyword.powerSys_notm}} instance, you can select SAP certified profiles. For more information about generating an estimate of a {{site.data.keyword.powerSys_notm}} instance with SAP certified profiles, see [Estimating SAP workloads](/docs/power-iaas?topic=power-iaas-generating-an-estimate#est-sap-workloads).
+
+
+## Creating a Power Virtual Server instance
+{: #create-sap-hana-inst}
+
+When you are creating a {{site.data.keyword.powerSys_notm}} instance, you can select SAP certified profiles. For more information about creating a {{site.data.keyword.powerSys_notm}} instance with SAP certified profiles, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).

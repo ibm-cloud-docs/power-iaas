@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-20"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,6 +20,13 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 ## June 2025
 {: #June-2025}
+
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+- You can deploy SAP certified profiles on IBM Power10 or later servers using a single custom OS boot image. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
+- The single byte IBM i 7.6 stock image for IBM Power10 systems is available in the OS image catalog. This stock image is not supported on IBM Power9 systems. The double byte IBM i 7.6 stock image will be available at a later date.
 
 
 
@@ -57,7 +64,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
   - RHEL 8.10 general purpose
   - RHEL 9.4 general purpose
 
-- You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-nw-profiles).
+- You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-appser-profiles).
 
 ## April 2025
 {: #April-2025}

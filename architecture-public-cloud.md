@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-18"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -114,9 +114,15 @@ You can check and compare your data center capabilities among three different da
 For example, you can determine the support for the following capabilities in each data center:
 
 
+
 - Machine types (Power9 or Power10)
 - Global replication site pair(s)
 - Dedicated host types
+
+
+
+
+
 
 The IBM data centers have the following hardware components:
 
@@ -273,10 +279,6 @@ Some of the limitations of flexible IOPS are as follows:
 
 - Snapshot data cannot be changed from one tier to another. All volumes of a snapshot must reside in the same storage pool.
 - Any volume that has a storage type of tier 0, tier 1, or tier 3 and the volume size is greater than 200 GB then the option to change to Fixed IOPS is not allowed.
-
-
-
-
 
 
 ## Public and private networks

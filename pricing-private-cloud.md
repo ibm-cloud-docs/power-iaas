@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-05-13"
+lastupdated: "2025-06-13"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -62,11 +62,11 @@ Factoring the example quantities and prices, the base price for the virtual mach
 
 In the table, the virtual machine resources are increased (after the resources reach 300 hours in the month) from 8 GB to 16 GB of memory. The price of the virtual machine is prorated by an hour for the final monthly price of $303.
 
-| Hours elapsed in a month   | Amount charged                               |  Virtual machine description    |
-| -------------------------- | -------------------------------------------- |  --------------------------------------- |
-| 300 hours                  | (300 hours x $0.399)/month = $119.70         |  1 core, 8 GB memory, 150 GB disk, RHEL  |
-| 430 hours                  | (430 hours x $0.498)/month = $214.14         |  1 core, 16 GB memory, 150 GB disk, RHEL |
-| 730 hours (Monthly Total)  | $119.70 + $214.14 = $333.84 (Monthly Total)  |  1 core, 16 GB memory, 150 GB disk, RHEL |
+| Hours elapsed in a month  | Amount charged                              | Virtual machine description             |
+| ------------------------- | ------------------------------------------- | --------------------------------------- |
+| 300 hours                 | (300 hours x $0.399)/month = $119.70        | 1 core, 8 GB memory, 150 GB disk, RHEL  |
+| 430 hours                 | (430 hours x $0.498)/month = $214.14        | 1 core, 16 GB memory, 150 GB disk, RHEL |
+| 730 hours (Monthly Total) | $119.70 + $214.14 = $333.84 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, RHEL |
 {: caption="An example of monthly charges for a virtual machine" caption-side="bottom"}
 
 For the example, in this table you can see four distinct part numbers for the following resources in the invoice:
@@ -77,62 +77,58 @@ For the example, in this table you can see four distinct part numbers for the fo
 
 
 
+
+
 For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. Refer to the following table to view the part number descriptions and the associated metric IDs.
 
-
-
-
-
-
-
-|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
-|  --------------------------------------------------------------- | ---------------------------------------------- |
-| **IBM Power Systems Virtual Server virtual machine group**       |                                                |
-| IBM Power Systems E1080 virtual processor core hour - capped     | ppcaas-metric-E1080-cores-capped |
-| IBM Power Systems E1080 virtual processor core hour - dedicated  | ppcaas-metric-E1080-cores-dedicated |
-| IBM Power Systems E1080 virtual processor core hour - shared     | ppcaas-metric-E1080-cores-shared |
-| IBM Power Systems E1050 virtual processor core hour - capped     | ppcaas-metric-E1050-cores-capped |
-| IBM Power Systems E1050 virtual processor core hour - dedicated  | ppcaas-metric-E1050-cores-dedicated |
-| IBM Power Systems E1050 virtual processor core hour - shared     | ppcaas-metric-E1050-cores-shared |
-| IBM Power Systems S1022 virtual processor core hour - capped     | ppcaas-metric-S1022-cores-capped |
-| IBM Power Systems S1022 virtual processor core hour - dedicated  | ppcaas-metric-S1022-cores-dedicated |
-| IBM Power Systems S1022 virtual processor core hour - shared     | ppcaas-metric-S1022-cores-shared |
-| IBM Power Systems scale-out memory gigabyte hours                | ppcaas-metric-p10-2u-memory-standard |
-| IBM Power Systems scale-up memory gigabyte hours                 | ppcaas-metric-p10-4u-memory-standard |
-| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-capped |
-| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-dedicated |
-| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-shared |
-| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-capped |
-| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1050-hana-cores-dedicated |
-| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-shared |
-| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-capped |
-| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-S1022-hana-cores-dedicated |
-| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared |
-| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-2u-hanamem-standard |
-| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload  | ppcaas-metric-p10-4u-hanamem-standard |
-| AIX operating system scale-up license core-hour   | ppcaas-metric-aix-scale-up   |
-| AIX operating system scale-out license core-hour   | ppcaas-metric-aix-scale-out   |
-| Red Hat Enterprise Linux operating system scale-up license core-hour   | ppcaas-metric-rhel-scale-up |
-| Red Hat Enterprise Linux operating system scale-out license core-hour   | ppcaas-metric-rhel-scale-out |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload   | ppcaas-metric-rhel-sap-scale-up |
-| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-out |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour | ppcaas-metric-sles-tier1 |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour | ppcaas-metric-sles-tier2 |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour | ppcaas-metric-sles-tier3 |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier1 |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier2 |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload  | ppcaas-metric-sles-sap-tier3 |
-| IBM i operating system P10 license core-hour | ppcaas-metric-ibmi-os-p10 |
-| IBM i operating system P30 license core-hour | ppcaas-metric-ibmi-os-p30 |
-| IBM i operating system P10 service extension core-hour | ppcaas-metric-ibmi-os-p10-sve |
-| IBM i operating system P30 service extension core-hour | ppcaas-metric-ibmi-os-p30-sve |
-| IBM i LPP P10 license core-hour | ppcaas-metric-ibmi-lpp-p10 |
-| IBM i LPP P30 license core-hour | ppcaas-metric-ibmi-lpp-p30 |
-| IBM i P10 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p10 |
-| IBM i P30 PowerHA instance core-hour | ppcaas-metric-ibmi-pha-p30 |
-| IBM i Cloud Storage Solutions instance core-hour | ppcaas-metric-ibmi-cos |
-| IBM i Rational Developer Studio instance core-hour| ppcaas-metric-ibmi-rds |
-| Virtual Tape Library terabyte-hour | ppcaas-metric-vtl |
+| Part description (visible on the invoice from IBM)                                   | Metric ID (visible in the IBM Cloud catalog) |
+| ------------------------------------------------------------------------------------ | -------------------------------------------- |
+| **IBM Power Systems Virtual Server virtual machine group**                           |                                              |
+| IBM Power Systems E1080 virtual processor core hour - capped                         | ppcaas-metric-E1080-cores-capped             |
+| IBM Power Systems E1080 virtual processor core hour - dedicated                      | ppcaas-metric-E1080-cores-dedicated          |
+| IBM Power Systems E1080 virtual processor core hour - shared                         | ppcaas-metric-E1080-cores-shared             |
+| IBM Power Systems E1050 virtual processor core hour - capped                         | ppcaas-metric-E1050-cores-capped             |
+| IBM Power Systems E1050 virtual processor core hour - dedicated                      | ppcaas-metric-E1050-cores-dedicated          |
+| IBM Power Systems E1050 virtual processor core hour - shared                         | ppcaas-metric-E1050-cores-shared             |
+| IBM Power Systems S1022 virtual processor core hour - capped                         | ppcaas-metric-S1022-cores-capped             |
+| IBM Power Systems S1022 virtual processor core hour - dedicated                      | ppcaas-metric-S1022-cores-dedicated          |
+| IBM Power Systems S1022 virtual processor core hour - shared                         | ppcaas-metric-S1022-cores-shared             |
+| IBM Power Systems scale-out memory gigabyte hours                                    | ppcaas-metric-p10-2u-memory-standard         |
+| IBM Power Systems scale-up memory gigabyte hours                                     | ppcaas-metric-p10-4u-memory-standard         |
+| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-capped        |
+| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-dedicated     |
+| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-shared        |
+| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-capped        |
+| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1050-hana-cores-dedicated     |
+| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-shared        |
+| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-capped        |
+| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-S1022-hana-cores-dedicated     |
+| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared        |
+| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload                | ppcaas-metric-p10-2u-hanamem-standard        |
+| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload                 | ppcaas-metric-p10-4u-hanamem-standard        |
+| AIX operating system scale-up license core-hour                                      | ppcaas-metric-aix-scale-up                   |
+| AIX operating system scale-out license core-hour                                     | ppcaas-metric-aix-scale-out                  |
+| Red Hat Enterprise Linux operating system scale-up license core-hour                 | ppcaas-metric-rhel-scale-up                  |
+| Red Hat Enterprise Linux operating system scale-out license core-hour                | ppcaas-metric-rhel-scale-out                 |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up              |
+| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload | ppcaas-metric-rhel-sap-scale-out             |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour                   | ppcaas-metric-sles-tier1                     |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour                   | ppcaas-metric-sles-tier2                     |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour                   | ppcaas-metric-sles-tier3                     |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier1                 |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier2                 |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier3                 |
+| IBM i operating system P10 license core-hour                                         | ppcaas-metric-ibmi-os-p10                    |
+| IBM i operating system P30 license core-hour                                         | ppcaas-metric-ibmi-os-p30                    |
+| IBM i operating system P10 service extension core-hour                               | ppcaas-metric-ibmi-os-p10-sve                |
+| IBM i operating system P30 service extension core-hour                               | ppcaas-metric-ibmi-os-p30-sve                |
+| IBM i LPP P10 license core-hour                                                      | ppcaas-metric-ibmi-lpp-p10                   |
+| IBM i LPP P30 license core-hour                                                      | ppcaas-metric-ibmi-lpp-p30                   |
+| IBM i P10 PowerHA instance core-hour                                                 | ppcaas-metric-ibmi-pha-p10                   |
+| IBM i P30 PowerHA instance core-hour                                                 | ppcaas-metric-ibmi-pha-p30                   |
+| IBM i Cloud Storage Solutions instance core-hour                                     | ppcaas-metric-ibmi-cos                       |
+| IBM i Rational Developer Studio instance core-hour                                   | ppcaas-metric-ibmi-rds                       |
+| Virtual Tape Library terabyte-hour                                                   | ppcaas-metric-vtl                            |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -140,18 +136,18 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: tab-title="Virtual machine group"}
 
 
-|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
-|  --------------------------------------------------------------- | ---------------------------------------------- |
-| **IBM Power Systems Virtual Server Private Cloud volume group**  |
-| Volume Storage Tier 0 gigabyte-hour  | ppcaas-metric-volume-tier0 |
-| Volume Storage Tier 1 gigabyte-hour  | ppcaas-metric-volume-tier1 |
-| Volume Storage Tier 3 gigabyte-hour  | ppcaas-metric-volume-tier3 |
-| Volume Storage Tier 5k gigabyte-hour | ppcaas-metric-volume-tier5k |
-| Asynchronous replicated volume storage (tier 0: 25 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier0-async-replicated |
-| Asynchronous replicated volume storage (tier 1: 10 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier1-async-replicated |
-| Asynchronous replicated volume storage (tier 3: 3 IOPS per GB) gigabyte-hour  |  ppcaas-metric-volume-tier3-async-replicated |
-| Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour  |  ppcaas-metric-volume-tier5k-async-replicated |
-|Asynchronous global replication storage gigabyte-hour  |  ppcaas-metric-volume-async-replication-service |
+| Part description (visible on the invoice from IBM)                            | Metric ID (visible in the IBM Cloud catalog)   |
+| ----------------------------------------------------------------------------- | ---------------------------------------------- |
+| **IBM Power Systems Virtual Server Private Cloud volume group**               |                                                |
+| Volume Storage Tier 0 gigabyte-hour                                           | ppcaas-metric-volume-tier0                     |
+| Volume Storage Tier 1 gigabyte-hour                                           | ppcaas-metric-volume-tier1                     |
+| Volume Storage Tier 3 gigabyte-hour                                           | ppcaas-metric-volume-tier3                     |
+| Volume Storage Tier 5k gigabyte-hour                                          | ppcaas-metric-volume-tier5k                    |
+| Asynchronous replicated volume storage (tier 0: 25 IOPS per GB) gigabyte-hour | ppcaas-metric-volume-tier0-async-replicated    |
+| Asynchronous replicated volume storage (tier 1: 10 IOPS per GB) gigabyte-hour | ppcaas-metric-volume-tier1-async-replicated    |
+| Asynchronous replicated volume storage (tier 3: 3 IOPS per GB) gigabyte-hour  | ppcaas-metric-volume-tier3-async-replicated    |
+| Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour    | ppcaas-metric-volume-tier5k-async-replicated   |
+| Asynchronous global replication storage gigabyte-hour                         | ppcaas-metric-volume-async-replication-service |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -159,13 +155,13 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: tab-title="Volume group"}
 
 
-|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
-|  --------------------------------------------------------------- | ---------------------------------------------- |
-| **IBM Power Systems Virtual Server Private Cloud snapshot group**  |
-| Snapshot Storage Tier 0 gigabyte-hour  | ppcaas-metric-snapshot-tier0 |
-| Snapshot Storage Tier 1 gigabyte-hour  | ppcaas-metric-snapshot-tier1 |
-| Snapshot Storage Tier 3 gigabyte-hour  | ppcaas-metric-snapshot-tier3 |
-| Snapshot Storage Tier 5k gigabyte-hour | ppcaas-metric-snapshot-tier5k |
+| Part description (visible on the invoice from IBM)                | Metric ID (visible in the IBM Cloud catalog) |
+| ----------------------------------------------------------------- | -------------------------------------------- |
+| **IBM Power Systems Virtual Server Private Cloud snapshot group** |                                              |
+| Snapshot Storage Tier 0 gigabyte-hour                             | ppcaas-metric-snapshot-tier0                 |
+| Snapshot Storage Tier 1 gigabyte-hour                             | ppcaas-metric-snapshot-tier1                 |
+| Snapshot Storage Tier 3 gigabyte-hour                             | ppcaas-metric-snapshot-tier3                 |
+| Snapshot Storage Tier 5k gigabyte-hour                            | ppcaas-metric-snapshot-tier5k                |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -173,23 +169,17 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: tab-title="Snapshot group"}
 
 
-|  Part description (visible on the invoice from IBM)              | Metric ID (visible in the IBM Cloud catalog) |
-|  --------------------------------------------------------------- | ---------------------------------------------- |
-| **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |             |
-|  IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-S1022-spp-cores |
-| IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1050-spp-cores |
-| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool | ppcaas-metric-E1080-spp-cores  |
+| Part description (visible on the invoice from IBM)                             | Metric ID (visible in the IBM Cloud catalog) |
+| ------------------------------------------------------------------------------ | -------------------------------------------- |
+| **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |                                              |
+| IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-S1022-spp-cores                |
+| IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-E1050-spp-cores                |
+| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-E1080-spp-cores                |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #shared-procesor-pool-group-private}
 {: tab-title="Shared Processor Pool group"}
-
-
-
-
-
-
 
 For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).
 
@@ -230,25 +220,25 @@ In the following example, assume that the cost of different types of virtual pro
 
 The following tables show how different processor types affect the cost of each system:
 
-| Number of cores (S1022)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-|  ----------------------  | ----------------------------  | ------------------------  |
-|  1                       | $0.1962 (dedicated)           | $143.23                  |
-|  1                       | $0.1962 (shared uncapped)     | $143.23                  |
-|  1                       | $0.1962 (shared capped)       | $143.23                  |
+| Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ----------------------- | ---------------------------- | ------------------------ |
+| 1                       | $0.1962 (dedicated)          | $143.23                  |
+| 1                       | $0.1962 (shared uncapped)    | $143.23                  |
+| 1                       | $0.1962 (shared capped)      | $143.23                  |
 {: caption="S1022 processor type pricing" caption-side="bottom"}
 
-| Number of cores (E1080)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-|  ----------------------  | ----------------------------  | ------------------------  |
-|  1                       | $0.6866 (dedicated)           | $501.20                   |
-|  1                       | $0.6866 (shared uncapped)     | $501.20                   |
-|  1                       | $0.6866 (shared capped)       | $501.20                   |
+| Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ----------------------- | ---------------------------- | ------------------------ |
+| 1                       | $0.6866 (dedicated)          | $501.20                  |
+| 1                       | $0.6866 (shared uncapped)    | $501.20                  |
+| 1                       | $0.6866 (shared capped)      | $501.20                  |
 {: caption="E1080 processor type pricing" caption-side="bottom"}
 
-| Number of cores (E1050)  | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-|  ----------------------  | ----------------------------  | ------------------------  |
-|  1                       | $0.2945 (dedicated)           | $215.00                   |
-|  1                       | $0.2945 (shared uncapped)     | $215.00                   |
-|  1                       | $0.2945 (shared capped)       | $215.00                   |
+| Number of cores (E1050) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ----------------------- | ---------------------------- | ------------------------ |
+| 1                       | $0.2945 (dedicated)          | $215.00                  |
+| 1                       | $0.2945 (shared uncapped)    | $215.00                  |
+| 1                       | $0.2945 (shared capped)      | $215.00                  |
 {: caption="E1050 processor type pricing" caption-side="bottom"}
 
 
@@ -258,10 +248,10 @@ The following tables show how different processor types affect the cost of each 
 
 The system determines the cost of {{site.data.keyword.on-prem-fname}} based on the memory usage (in gigabytes) and the type of the system that is chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. The following table shows how memory types affect the cost of each system:
 
-| Number of GBs |  Memory type                      | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-| ---------------- | ----------------------------------  | -----------------------  | ------------------------  |
-|  1               | IBM Power Systems scale-out memory  | $0.01232877              | $9.00                     |
-|  1               | IBM Power Systems scale-up memory   | $0.01232877              | $9.00                     |
+| Number of GBs | Memory type                        | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------- | ---------------------------------- | ---------------------------- | ------------------------ |
+| 1             | IBM Power Systems scale-out memory | $0.01232877                  | $9.00                    |
+| 1             | IBM Power Systems scale-up memory  | $0.01232877                  | $9.00                    |
 {: caption="Memory type pricing" caption-side="bottom"}
 
 
@@ -300,10 +290,10 @@ Following table shows the details core pricing and OS license pricing of SPP in 
 
 
 
-| Solution  | Core-to-virtual core ratio  | Core Pricing  | OS license pricing |
-| -----------------  | -----------  | ------------  | ------------------ |
-| {{site.data.keyword.on-prem-fname}}	User-defined Pools  | 1:20 | 1. SPP capacity at shared capped processor rate  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode  \n For {{site.data.keyword.on-prem-fname}}, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
-| Default Pool | 1:20 | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change |
+| Solution                                               | Core-to-virtual core ratio | Core Pricing                                                                                                                            | OS license pricing                                                                                                                                                                                                                             |
+| ------------------------------------------------------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{site.data.keyword.on-prem-fname}}	User-defined Pools | 1:20                       | 1. SPP capacity at shared capped processor rate  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change | Per OS type: Minimum of (sum of VP of VMs in pool or max capacity of pool); only for uncapped mode  \n For {{site.data.keyword.on-prem-fname}}, these OS license charges are associated with the respective VM proportionate to VPs of that VM |
+| Default Pool                                           | 1:20                       | 1. No charge at SPP level  \n 2. VM cores charged at EC (capped or uncapped)  \n 3. Existing behavior – no change                       |                                                                                                                                                                                                                                                |
 {: caption="Shared processor pool for {{site.data.keyword.on-prem-fname}}" caption-side="bottom"}
 
 For more information, see [How to calculate the pricing for OS licensing in SPP](#cal-OSlic).
@@ -334,10 +324,10 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 
 * **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. The following table shows an example billing based on your volume creation:
 
-   | Volume size that you create  | Volume size that you are billed  |
-   |  ---------------------  | ----------------------------  |
-   |  10 GB                  | 10 GB                         |
-   |  10+5 GB                | 15 GB                         |
+   | Volume size that you create | Volume size that you are billed |
+   | --------------------------- | ------------------------------- |
+   | 10 GB                       | 10 GB                           |
+   | 10+5 GB                     | 15 GB                           |
    {: caption="Calculation of data volume" caption-side="bottom"}
 
 
@@ -350,19 +340,19 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 The following table shows an example of how you are billed based on your boot volume:
 
 
-   | Image volume size                   | Single or multiple backing  | Billed volume size |
-   | ----------------------------------  | --------------------------  | ----------------|
-   | 20 GB                               | Single backing volume       | 20 GB           |
-   | Volume 1 (20 GB), volume 2 (10 GB)  | Multiple backing volumes     | 30 GB           |
+   | Image volume size                  | Single or multiple backing | Billed volume size |
+   | ---------------------------------- | -------------------------- | ------------------ |
+   | 20 GB                              | Single backing volume      | 20 GB              |
+   | Volume 1 (20 GB), volume 2 (10 GB) | Multiple backing volumes   | 30 GB              |
    {: caption="Calculation of image backing volume" caption-side="bottom"}
 
 
 * **Deployed virtual machine volumes**: When you deploy a virtual machine with an image, it gets a copy of all the volumes in the image. Extra data volumes added to the deployed virtual machine are billed separately as Data Volumes. The following table shows an example of the billing based on the virtual machines that you deploy:
 
-   | Image backing volume  | Billed volume size |
-   |  -------------------  | ----------------|
-   |  20 GB                | 20 GB           |
-   |  20 GB + 30 GB        | 50 GB           |
+   | Image backing volume | Billed volume size |
+   | -------------------- | ------------------ |
+   | 20 GB                | 20 GB              |
+   | 20 GB + 30 GB        | 50 GB              |
    {: caption="Calculation of deployed virtual machines volume" caption-side="bottom"}
 
 * **Deployed virtual machine snapshots**: The snapshots of the volumes are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of the volumes of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
@@ -377,20 +367,20 @@ Snapshot sizes are not predictable as they are related to the updates made to th
 
 The following tables show how different storage types affect the cost per system:
 
-| Volume storage           | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-|  ----------------------  | ----------------------------  | ------------------------  |
-|  Tier 0                  | $0.00029589                   | $0.22                     |
-|  Tier 1                  | $0.00024658                   | $0.18                     |
-|  Tier 3                  | $0.00012884                   | $0.09                     |
-|  Tier 5k                 | $0.00035507                   | $0.26                     |
+| Volume storage | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| -------------- | ---------------------------- | ------------------------ |
+| Tier 0         | $0.00029589                  | $0.22                    |
+| Tier 1         | $0.00024658                  | $0.18                    |
+| Tier 3         | $0.00012884                  | $0.09                    |
+| Tier 5k        | $0.00035507                  | $0.26                    |
 {: caption="Volume storage pricing" caption-side="bottom"}
 
-| Snapshot storage         | Hourly rate (Processor type)  | Monthly cost (730 hours)  |
-|  ----------------------  | ----------------------------  | ------------------------  |
-|  Tier 0                  | $0.00008877                   | $0.06                     |
-|  Tier 1                  | $0.00007397                   | $0.05                     |
-|  Tier 3                  | $0.00003865                   | $0.03                     |
-|  Tier 5k                 | $0.00010652                   | $0.08                     |
+| Snapshot storage | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ---------------- | ---------------------------- | ------------------------ |
+| Tier 0           | $0.00008877                  | $0.06                    |
+| Tier 1           | $0.00007397                  | $0.05                    |
+| Tier 3           | $0.00003865                  | $0.03                    |
+| Tier 5k          | $0.00010652                  | $0.08                    |
 {: caption="Snapshot storage pricing" caption-side="bottom"}
 
 
@@ -399,15 +389,15 @@ The following tables show how different storage types affect the cost per system
 
 The following table shows the use case on how you are billed based on the storage that you use (assuming tier 1):
 
-   | Name           |  Size    | State or Description         |
-   | -------------  | -------  | ------------------------- |
-   | data-volume-1  |  20 GB   | Available                 |
-   | data-volume-2  |  25 GB   | In-use (attached to vm-1) |
-   | data-volume-3  | 100 GB   | In-use (attached to vm-1) |
-   | data-volume-4  |  30 GB   | Available                 |
-   | data-volume-5  |  60 GB   | In-use (attached to vm-2) |
-   | image-volume-1 | 100 GB   | In-use (attached to vm-1) |
-   | image-volume-2 | 100 GB   | In-use (attached to vm-2) |
+   | Name           | Size   | State or Description      |
+   | -------------- | ------ | ------------------------- |
+   | data-volume-1  | 20 GB  | Available                 |
+   | data-volume-2  | 25 GB  | In-use (attached to vm-1) |
+   | data-volume-3  | 100 GB | In-use (attached to vm-1) |
+   | data-volume-4  | 30 GB  | Available                 |
+   | data-volume-5  | 60 GB  | In-use (attached to vm-2) |
+   | image-volume-1 | 100 GB | In-use (attached to vm-1) |
+   | image-volume-2 | 100 GB | In-use (attached to vm-2) |
    {: caption="Account billable for storage use case" caption-side="bottom"}
 
 Total billable storage = 595 GB
@@ -493,13 +483,13 @@ To calculate the price for OS licensing in the uncapped SPP, consider the follow
 
 The following table shows how the pricing for OS licensing is calculated considering that the maximum pool capacity is 8 cores :
 
-| Example | VM      | VP on VM | Total number of VPs versus Maximum pool capacity | Cost calculation |
-| ------  | ------- | -------- | --------------------------------------------- | ---------------- |
-| 1       | AIX VM1 | 4        | 6 < 8 (6 is considered)                      | 4 x cost of AIX OS license |
-|         | AIX VM2 | 2        |                                               | 2 x cost of AIX OS license |
-| 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                      | 3.2 x cost of AIX OS license |
-|         | AIX VM2 | 2        |                                               | 1.6 x cost of AIX OS license |
-|         | AIX VM3 | 4        |                                               | 3.2 x cost of AIX OS license |
+| Example | VM      | VP on VM | Total number of VPs versus Maximum pool capacity | Cost calculation             |
+| ------- | ------- | -------- | ------------------------------------------------ | ---------------------------- |
+| 1       | AIX VM1 | 4        | 6 < 8 (6 is considered)                          | 4 x cost of AIX OS license   |
+|         | AIX VM2 | 2        |                                                  | 2 x cost of AIX OS license   |
+| 2       | AIX VM1 | 4        | 10 > 8 (8 is considered)                         | 3.2 x cost of AIX OS license |
+|         | AIX VM2 | 2        |                                                  | 1.6 x cost of AIX OS license |
+|         | AIX VM3 | 4        |                                                  | 3.2 x cost of AIX OS license |
 {: caption="Pricing for OS licensing in SPP in {{site.data.keyword.on-prem-fname}}" caption-side="bottom"}
 
 

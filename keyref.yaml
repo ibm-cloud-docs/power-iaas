@@ -7,3 +7,9 @@ keyword:
     IBM {{site.data.keyword.powerSys_notm}} Private Cloud
   on-prem:
     Client location
+  ibmi-vst:
+    IBM i software tier
+  vst:
+    software tier
+  arp-flooding:
+    Subnet ARP Broadcast
