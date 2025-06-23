@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-06-23"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -34,6 +34,9 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 {: shortdesc}
 
 {{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} powered by Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
+
+
+
 
 
 

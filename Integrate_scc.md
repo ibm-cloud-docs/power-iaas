@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-04-11"
+lastupdated: "2025-06-23"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -65,11 +65,18 @@ To enable CSPM in a new Power Virtual Server workspace, complete the following s
 6. In the Details section, provide a name for the workspace and select the resource group from the **Resource group** drop-down list. You can optionally provide User tags and Access management tags for the workspace.
 7. Click **Continue**. The selected workspace details are displayed on the Summary page.
 
+
+
 8. In the Integrations (Optional) section, note that the **Cloud security posture management** toggle switch is enabled by default. To disable CSPM, set **Cloud security posture management** to off.
 
-9. Click **Finish**. The selected workspace details are displayed on the Summary page.
 
-10. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
+
+
+
+
+10. Click **Finish**. The selected workspace details are displayed on the Summary page.
+
+11. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
 
 Integration costs are usage based and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection) in **IBM Cloud catalog**.
 {: important}
@@ -81,8 +88,16 @@ To enable CSPM in an existing Power Virtual Server workspace, complete the follo
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/login?state=%2Fpower%2Foverview) Power Virtual Server user interface.
 2. Click **Workspaces** in the left navigation menu.
+
+
+
 3. Select the workspace on which you want to enable CSPM. The Workspace details pane is displayed.
    
+
+
+
+
+
 4. To enable CSPM, click **Add CSPM** in the Integrations section. The Add cloud security posture management pane is displayed with the predefined SCC Workload Protection instance, Trusted profile, and App Configuration instance.
 
 5. Click **Edit** to change the name, location, and plan for the CSPM instance, and click **Save**.
@@ -105,6 +120,3 @@ After you provision an instance of the {{site.data.keyword.compliance_short}} {{
 For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts, see [Managing the Workload Protection agent in Linux on PowerVS](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 
 For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts, see [Managing the Workload Protection agent in AIX on PowerVS](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
-
-
-

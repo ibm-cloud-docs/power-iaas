@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-06-23"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -103,7 +103,10 @@ To learn about the fields and descriptions that you need to enter, see the follo
 | Storage tiers             	| Attach volumes to your estimate. You can choose from Tier 0, Tier 1, Tier 3, Fixed IOPs, or a combination of tiers.  \n You cannot add a separate boot volume estimation. Hence, you must define the storage volume value by considering the boot volumes and data volume that you might need.|
 {: caption="UI fields in estimating a VSI" caption-side="top"}
 
+
+
 If you select **Linux for SAP (HANA)** OS type, you can create the estimate of an instance with SAP workloads. For more information, see [Estimating SAP workloads](#est-sap-workloads).
+
 
 
 

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-06-23"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -109,9 +109,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-    
-
-
     [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
     {: note}
 
@@ -123,6 +120,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     - Rational Dev Studio for IBM i.
 
     Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
+
+    
+
 
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and Bring Your Own License (BYOL) images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
