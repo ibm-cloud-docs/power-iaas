@@ -18,16 +18,13 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: shortdesc}
 
 
+
+
+
 ## June 2025
 {: #June-2025}
 
-
-
-
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-
 
 
 - You can deploy SAP certified profiles on IBM Power10 or later servers using a single custom OS boot image. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
