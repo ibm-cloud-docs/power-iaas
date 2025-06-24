@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-06-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,7 +23,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+
 
 - You can deploy SAP certified profiles on IBM Power10 or later servers using a single custom OS boot image. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
 - The single byte IBM i 7.6 stock image for IBM Power10 systems is available in the OS image catalog. This stock image is not supported on IBM Power9 systems. The double byte IBM i 7.6 stock image will be available at a later date.
