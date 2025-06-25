@@ -42,7 +42,7 @@ In highly regulated sectors such as financial services, continuous compliance in
 ## IBM Cloud® Security Posture Management (CSPM)
 {: #cspm}
 
-CSPM accelerates hybrid cloud adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-about). CSPM helps with:
+CSPM accelerates hybrid cloud adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework. The automated compliance checks for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-about). CSPM helps with:
 
 - Continuous validation of compliance
 - Vulnerability prioritization
@@ -73,14 +73,14 @@ To enable CSPM in a new Power Virtual Server workspace, complete the following s
 2. In the search box, type **Power Virtual Server** and click the **Power Virtual Server** tile.
 3. Click **Create a workspace**.
 4. Select **IBM data center** as the location type.
-5. Select an IBM data center from the **Location** drop-down list and click **Continue**.
+5. Select an IBM data center from the **Location** list and click **Continue**.
 6. In the Details section, provide a name for the workspace and select the resource group from the **Resource group** drop-down list. You can optionally provide User tags and Access management tags for the workspace.
 7. Click **Continue**. The selected workspace details are displayed on the Summary page.
-8. In the Integrations (Optional) section, note that the **Cloud security posture management** toggle switch is enabled by default. To disable CSPM, set **Cloud security posture management** to off.
+8. In the Integrations (Optional) section, the **Cloud security posture management** toggle switch is enabled by default. To disable CSPM, set **Cloud security posture management** to off.
 9. Click **Finish**. The selected workspace details are displayed on the Summary page.
 10. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
 
-Integration costs are usage based and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection) in **IBM Cloud catalog**.
+Integration costs are based on usage and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection) in **IBM Cloud catalog**.
 {: important}
 
 ### Enabling CSPM in an existing workspace
