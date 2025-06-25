@@ -30,7 +30,14 @@ subcollection: power-iaas
 
 {{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](docs/workload-protection?topic=workload-protection-getting-started).
 
+
+
 In highly regulated sectors such as financial services, continuous compliance in the cloud environment is crucial to protect customer and application data. Cloud Security Posture Management (CSPM) is one of the key features of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service. When this feature is enabled in your workspace, the CSPM ensures that automatic compliance checks are integrated in your development workflow to mitigate such risks on a daily basis.
+
+
+
+
+
 
 ## IBM Cloud® Security Posture Management (CSPM)
 {: #cspm}
@@ -44,8 +51,12 @@ CSPM accelerates hybrid cloud adoption by verifying security and regulatory comp
 
 You can enable the CSPM feature in your new and existing {{site.data.keyword.powerSys_notm}} workspaces. CSPM provides a unified platform to manage security and compliance across hybrid and multicloud environments and services.
 
+
+
+
 ## Integrating CSPM with Power Virtual Server workspaces
 {: #integrate-cspm}
+
 
 To integrate {{site.data.keyword.powerSys_notm}} with Cloud Security and Compliance Center, enable Cloud Security Posture Management (CSPM) feature in your existing or new workspaces:
 
@@ -53,15 +64,8 @@ To integrate {{site.data.keyword.powerSys_notm}} with Cloud Security and Complia
 - [Enabling CSPM in an existing workspace](#enable-cspm-existing)
 
 
-
-
 ### Enabling CSPM in a new workspace
 {: #enable-cspm-new}
-
-
-
-
-
 
 To enable CSPM in a new Power Virtual Server workspace, complete the following steps:
 
@@ -72,19 +76,9 @@ To enable CSPM in a new Power Virtual Server workspace, complete the following s
 5. Select an IBM data center from the **Location** drop-down list and click **Continue**.
 6. In the Details section, provide a name for the workspace and select the resource group from the **Resource group** drop-down list. You can optionally provide User tags and Access management tags for the workspace.
 7. Click **Continue**. The selected workspace details are displayed on the Summary page.
-
-
-
 8. In the Integrations (Optional) section, note that the **Cloud security posture management** toggle switch is enabled by default. To disable CSPM, set **Cloud security posture management** to off.
-
-
-
-
-
-
-10. Click **Finish**. The selected workspace details are displayed on the Summary page.
-
-11. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
+9. Click **Finish**. The selected workspace details are displayed on the Summary page.
+10. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
 
 Integration costs are usage based and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection) in **IBM Cloud catalog**.
 {: important}
@@ -92,15 +86,15 @@ Integration costs are usage based and vary based on the hourly consumption for n
 ### Enabling CSPM in an existing workspace
 {: #enable-cspm-existing}
 
-To enable CSPM in an existing Power Virtual Server workspace, complete the following steps:
+To enable Monitoring or CSPM in an existing Power Virtual Server workspace, complete the following steps:
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/login?state=%2Fpower%2Foverview) Power Virtual Server user interface.
 2. Click **Workspaces** in the left navigation menu.
 
-
-
-3. Select the workspace on which you want to enable CSPM. The Workspace details pane is displayed.
+3. Select the workspace for which you want to enable Monitoring or CSPM. The Workspace details pane is displayed.
    
+
+
 
 
 
