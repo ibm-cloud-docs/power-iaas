@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-06-23"
+lastupdated: "2025-06-25"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -52,8 +52,16 @@ To integrate {{site.data.keyword.powerSys_notm}} with Cloud Security and Complia
 - [Enabling CSPM in a new workspace](#enable-cspm-new)
 - [Enabling CSPM in an existing workspace](#enable-cspm-existing)
 
+
+
+
 ### Enabling CSPM in a new workspace
 {: #enable-cspm-new}
+
+
+
+
+
 
 To enable CSPM in a new Power Virtual Server workspace, complete the following steps:
 
