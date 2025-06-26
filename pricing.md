@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-18"
+lastupdated: "2025-06-26"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -147,7 +147,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Workspace             | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN \n * IBM i DB2 Web Query                                                                                                                               |
 | **Compute**           |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine       | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | SPP cores                                                                                                                                                    |
+| Shared Processor Pool | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | SPP cores  \n  |
 | Dedicated Host        | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**           |                                             |                                                           |                                                                                                                                                              |
 | Volume                | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
