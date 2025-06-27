@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-06-27"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -75,9 +75,6 @@ Before you migrate to a newer IBM Power, review the following checklist:
 
 Learn more about migrating workloads from an existing IBM Power to a Power10. Before you begin your migration, review the information in this section.
 
-[P11-enablement-edits-end]{: tag-green}
-
-
 **AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
 
 **Linux** - You must migrate your Linux operating system level to a Power10-supported level. To accomplish this migration, the following Linux distributions are supported:
@@ -94,8 +91,6 @@ To learn more about IBM Power10 performance and migration strategies, see the fo
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power Systems Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
-
-[P11-enablement-edits-start]{: tag-green}
 
 ## Migrating to an IBM Power9
 {: #power9-migration}
