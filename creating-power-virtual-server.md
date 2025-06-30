@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-23"
+lastupdated: "2025-06-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -140,10 +140,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
     
-
-
-
-
 
 5. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
