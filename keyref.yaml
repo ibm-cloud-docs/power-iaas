@@ -11,5 +11,5 @@ keyword:
     IBM i software tier
   vst:
     software tier
-  arp-flooding:
+  arp-broadcast:
     Subnet ARP Broadcast

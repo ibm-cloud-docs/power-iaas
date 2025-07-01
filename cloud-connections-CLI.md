@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2024
 
-lastupdated: "2025-06-19"
+lastupdated: "2025-07-01"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -31,23 +31,16 @@ subcollection: power-iaas
 
 
 
-
-
 ## [Important announcement]{: tag-green}
 {: #imp-announcement}
 
-IBM Power Virtual Server provides no-charge Cloud Connections to clients to access IBM Cloud resources within their network. The End-of-Life date for the no-charge service for Cloud Connections is 1 July 2025. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection).
-
-Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025.
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection). Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges.
 
 To connect the Power Virtual Server workspaces with the IBM Cloud, use the [Power Edge Router](/docs/power-iaas?topic=power-iaas-per) (PER) capability that is integrated with the Transit Gateway service without any additional charge. PER-enabled workspaces provide improved user experience and increased bandwidth.
 
 If you have manually configured the network in your workspace, see [Migrating the existing network configurations to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per). Alternatively, you can use the `ibmcloud pi workspace action` CLI command to migrate the existing Power Virtual Server workspaces to PER-enabled workspaces. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
 If you need assistance with the migration, you can open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
-
-
-
 
 
 
