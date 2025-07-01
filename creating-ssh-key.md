@@ -26,7 +26,6 @@ subcollection: power-iaas
 
 ---
 
-
 In this example, the user created a public key on a Linux-based IBM Cloud compute instance by using the `ssh-keygen` tool:
 
 ```text
