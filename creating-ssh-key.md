@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-05"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -138,7 +138,7 @@ Run the following commands to start an SSH client debug session:
 # /usr/bin/ssh -vvv {hostname/IP_of_ssh_server}
 ```
 
-After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering **exit** command.
+After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering the **exit** command.
 
 ## Additional support information
 {: #extra-info-aix-vm}
