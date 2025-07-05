@@ -136,7 +136,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
-    To deploy an SAP certified profile  from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
+    To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
 
 
     

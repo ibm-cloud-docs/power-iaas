@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-23"
+lastupdated: "2025-07-05"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -123,7 +123,7 @@ If you select **Linux for SAP (HANA)** OS type, you can create the estimate of a
 ##### Estimating SAP workloads
 {: #est-sap-workloads}
 
-To create an estimate of a {{site.data.keyword.powerSys_notm}} instance with SAP workloads, update the fields that are listed in the following table.
+Before you deploy a {{site.data.keyword.powerSys_notm}} instance with SAP workloads, create an estimate of the instance with SAP workloads. To learn about the fields and the actions to take, see the following table.
 
 | Field                         | Action                                                              |
 |-------------------------------|----------------------------------------------------------------------------|
