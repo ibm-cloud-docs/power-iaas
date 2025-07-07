@@ -17,8 +17,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-
-
 ## April 2025
 {: #april-2025}
 
