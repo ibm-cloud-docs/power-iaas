@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-05-16"
+lastupdated: "2025-07-08"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -14,7 +14,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Global Replication Services (GRS)
+# Global Replication Services
 {: #getting-started-GRS}
 ---
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 ---
 
 
-{{site.data.keyword.powerSysFull}} supports Global Replication Services (GRS). GRS provides volume replication services based on Storage Area Network (SAN) that can be used as the foundation for building disaster recovery (DR) solutions. GRS is based on an asynchronous replication technology called IBM FlashSystem Global Mirror Change Volume (GMCV).
+{{site.data.keyword.powerSysFull}} supports Global Replication Services (GRS). You can use GRS that provides volume replication services based on Storage Area Network (SAN) as the foundation for building disaster recovery (DR) solutions. GRS is based on an asynchronous replication technology called IBM FlashSystem Global Mirror Change Volume (GMCV).
 
 You can create a replication-enabled volume from the GRS-enabled location. The replication-enabled volume is considered as the primary volume. The replicated volume on the secondary location is known as the auxiliary volume.
 
@@ -36,47 +36,48 @@ GRS on {{site.data.keyword.powerSys_notm}} has the following benefits:
 
 - Maintains a consistent and recoverable copy of the data at a secondary location. The copy of the data is created with minimal impact to applications at your primary location.
 
-- Synchronizes the data between primary and secondary locations. The failover and fail back modes in the primary and secondary locations reduces the time that is required to switch back to the primary location after a planned or unplanned outage.
+- Synchronizes the data between the primary and secondary locations. The failover and fail back modes in the primary and secondary locations reduce the time that is required to return to the primary location after a planned or unplanned outage.
 
 - Maintains redundant data centers in distant locations for fast recovery from disasters.
 
-- Eliminates the dedicated networks that are expensive for replication and avoids bandwidth upgrades.
+- Eliminates the dedicated networks that are overpriced for replication and avoids bandwidth upgrades.
 
-The GRS enablement in IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers where storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both directions.
+Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers in which storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both the directions.
 
 
 
 ## Terms and definitions
 {: #GRS-terminology}
 
+In the following table, the terms that are used throughout the document are defined.
 
 | Term               | Definition                                                                            |
 |--------------------|---------------------------------------------------------------------------------------|
 | Primary location   | Location where the volume is created.                                                 |
 | Secondary location | Location where the auxiliary volume for replication is created.                       |
-| Primary volume     | Initial instance of the replication volume at the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
-| Auxiliary volume   | Instance of the replicated volume at the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
-| IBM Cloud Resource Names (CRNs)  | Identifiers that are assigned to uniquely identify resources within IBM Cloud.        |
+| Primary volume     | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
+| Auxiliary volume   | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
+| IBM Cloud Resource Names (CRNs)  | Identifiers that are assigned to uniquely identify resources in IBM Cloud.        |
 {: class="simple-table"}
-{: caption="Terms and definitions related to Global Replication Services" caption-side="bottom"}
+{: caption="GRS terms and definitions" caption-side="bottom"}
 
 
-## GRS in [{{site.data.keyword.on-prem}}]{: tag-red}
+## GRS in the [{{site.data.keyword.on-prem}}]{: tag-red}
 {: #grs-on-prem}
 
-The GRS enablement in {{site.data.keyword.on-prem-fname}} enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} provides.
+Enabling GRS in the {{site.data.keyword.on-prem-fname}} enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} provides.
 
-Provide the network configuration between the primary location and the secondary location for replication, which includes the following prerequisites:
+The network configuration between the primary location and the secondary location for replication includes the following prerequisites:
 
 * The network bandwidth must be greater than or equal to 10 Gbps.
 * The network latency must be less than or equal to 200 ms.
 
-During the first synchronization, the entire data from primary volumes is copied to the auxiliary volumes. For subsequent synchronizations, only the changes between the two synchronization operations are copied. The effective Recovery Point Objective (RPO) depends on the capability of the underlying network throughput and the application characteristics. If the network throughput is insufficient to reach the defined RPO, then the time duration between the synchronization increases.
+During the first data synchronization of primary volumes and auxiliary volumes, the entire data from the primary volumes is copied to the auxiliary volumes. For subsequent synchronizations, only the changes between the two synchronization operations are copied. The effective Recovery Point Objective (RPO) depends on the capability of the underlying network throughput and the application characteristics. If the network throughput is insufficient to reach the defined RPO, the time between the synchronization increases.
 
-If the defined RPO exceeds for more than 8 hours, the IBM operations team alerts you.
+When the defined RPO exceeds more than 8 hours, the IBM operations team alerts you.
 {: note}
 
-Replication is not supported between the VMs in {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} environment and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} environment.
+Replication is not supported between the VMs in the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} environment and the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} environment.
 
 
 
@@ -99,7 +100,7 @@ Part numbers are used for calculating the cost of GRS based on the storage tier 
 
 
 
-The following table shows the location pairs that support replication:
+The following table shows the location pairs that support replication.
 
 
 
@@ -118,19 +119,23 @@ The following table shows the location pairs that support replication:
 | `mon01`           | `tor01`                  |
 | `lon04`           | `lon06`                   |
 {: class="simple-table"}
-{: caption="Replication-enabled {{site.data.keyword.powerSys_notm}} region pairs" caption-side="bottom"}
+{: caption="The {{site.data.keyword.powerSys_notm}} region pairs that are replication-enabled" caption-side="bottom"}
 
-To get a list of replication-enabled location names, use the following API or CLI commands:
+
+### Listing the {{site.data.keyword.powerSys_notm}} regions that support GRS by using API or CLI commands
+{: #location-api-cli}
+
+To get a list of {{site.data.keyword.powerSys_notm}} regions that are replication-enabled, use the following API or CLI commands:
 
 - **API**: [Get the disaster recovery site details for the current location](https://cloud.ibm.com/apidocs/power-cloud#pcloud-locations-disasterrecovery-get){: external}
 
 - **CLI**: [`ibmcloud pi disaster-recovery`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-disaster-recovery){: external}. Set the `--all-regions` flag as `true`.
 
 
-Verify whether the primary and secondary locations to be used for replication are enabled for replication services and are in the list of replication-enabled pairs.
+Verify whether the primary and secondary locations to be used for replication are enabled for replication services and are location pairs that support replication.
 {: note}
 
-In the following example, the `wdc07` and `dal10` data centers are in a replication-enabled pair:
+To verify whether two data centers are a location pair that support replication, you can use the code similar to the following example. In the following example, the `wdc07` and `dal10` data centers are a location pair that support replication:
 
 ```code
 
@@ -164,27 +169,29 @@ You can allocate replication-enabled volumes only from storage pools that suppor
 
 If a storage pool supports replication, the `replication-enabled` property is set to `true`.
 
-When you create a volume that is replication-enabled, by default the volume is created within one of the storage pools that supports replication. If you want to update a volume to enable replication, ensure that you create it within a storage pool that supports replication. Otherwise, the update operation fails.
+
+
+When you create a volume that is replication-enabled, the volume is created in one of the storage pools that supports replication. To update a volume for replication services at a later point, you must create the volume in a storage pool that supports replication. Otherwise, the update operation fails.
 
 
 ## Creating a volume group for GRS
 {: #create-vol-grp}
 
-A volume group is a {{site.data.keyword.powerSys_notm}} managed resource. By using the volume group, you can enable, disable, and manage a storage replication consistency group. The volume group contains the volumes that must be recovered at the time of disaster. You can add the replication-enabled volumes to a volume group. A replication-enabled volume can be a part of only one volume group at a time. In addition, all volumes in a volume group must be a part of the same storage pool.
+A volume group is a {{site.data.keyword.powerSys_notm}} managed resource. By using the volume group, you can enable, disable, and manage a storage replication consistency group. The volume group contains the volumes that must be recovered during disaster. You can add the replication-enabled volumes to a volume group. A replication-enabled volume can be a part of only one volume group at any time. In addition, all volumes in a volume group must be a part of the same storage pool.
 
 
 
 
 
-When you create a volume group on the primary location, the storage replication consistency group is created in the storage backend at both primary and secondary locations. The storage replication consistency group stores the consistent copy for the volumes in the volume group. To perform any operations on the consistency group, you must perform the operation on the volume group that represents the consistency group. {{site.data.keyword.powerSys_notm}} does not directly manage the consistency group in the storage backend. A storage backend is the storage subsystem that contains the storage pool and the storage controller.
+When you create a volume group on the primary location, the storage replication consistency group is created in the storage backend in the primary and secondary locations. A storage backend is the storage subsystem that contains the storage pool and the storage controller. The storage replication consistency group stores the consistent copy for the volumes in the volume group. You cannot perform any operation on a consistency group. Instead, you must perform the operation on the volume group that represents the consistency group. {{site.data.keyword.powerSys_notm}} does not directly manage the consistency group in the storage backend.
 
-When you onboard a volume on the secondary location, if the volume group is not yet created, the volume is created and the onboarded auxiliary volume is added to it. This volume group is visible and managed by {{site.data.keyword.powerSys_notm}} on the secondary location. For more information, see [Onboarding an auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-an-auxiliary-volume).
+When you onboard a volume on the secondary location, if the volume group is not yet created, the volume group is created and then the volume that is onboarded is added to it. This volume group is visible and managed by {{site.data.keyword.powerSys_notm}} on the secondary location. For more information, see [Onboarding an auxiliary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#onboarding-an-auxiliary-volume).
 
-During the first data synchronization, the entire data from the primary volume is copied to the auxiliary volumes. For subsequent data synchronizations, only the changes between the two synchronization operations are copied. The effective Recovery Point Objective (RPO) depends on the capability of the network throughput and the application characteristics. If the network throughput is insufficient to meet the defined RPO, the duration between the data synchronization increases.
 
-A volume group is used to enable, disable, and manage a replication-enabled consistency group in storage volumes. By using a consistency group, you can perform operations on multiple volumes instead of managing each volume individually. The consistency group has a `state` property that indicates the state of the `copy` operation of the volumes in the group.
 
-Refer to the following table that lists different states of the replication-enabled consistency group in storage volumes.
+
+
+A volume group is used to enable, disable, and manage a replication-enabled consistency group in storage volumes. By using a consistency group, you can perform operations on multiple volumes instead of managing each volume individually. The consistency group has a `state` property that indicates the state of the `copy` operation of the volumes in the group. Refer to the following table that lists different states of the replication-enabled consistency group in storage volumes.
 
 | State  |  Description             |
 | ------------------------------------- | ------------------------ |
@@ -236,16 +243,16 @@ To enable volume replication on the primary site, complete the following steps:
 
 1. [Create a volume for replication](#create-vol-rep)
 2. [Verify the replication status of the volume](#veri-vol-rep)
-3. [Update an existing volume as a replication-enabled volume](#update-vol-rep-enabled)
+3. [Update an existing volume to support replication](#update-vol-rep-enabled)
 4. [Create a volume group](#create-vol-grp-prime)
 5. [Verify the status of the volume group](#verify-vol-grp-stat)
 
 #### Creating a volume for replication
 {: #create-vol-rep}
 
-Use {{site.data.keyword.powerSys_notm}} interface to create a virtual server instance with replication-enabled volumes.
+Use {{site.data.keyword.powerSys_notm}} interface to create a virtual server instance with volumes that support replication.
 
-The boot volumes of virtual server instances that you create are always set to nonreplication-enabled. You can provide a combination of replication- and nonreplication-enabled volumes for a virtual server instance if they belong to the same storage pool. All the affinity policies that are related to a storage pool are valid for replication-enabled volumes. For more information, see [Configuring affinity policies](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#affinity-pol).
+The boot volumes of virtual server instances that you create are always set to non-replication-enabled. You can provide a combination of replication- and non-replication-enabled volumes for a virtual server instance if they belong to the same storage pool. All the affinity policies that are related to a storage pool are valid for replication-enabled volumes. For more information, see [Configuring affinity policies](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#affinity-pol).
 {: note}
 
 You can also create a replication-enabled volume by using the following API or CLI commands:
@@ -363,8 +370,8 @@ Obtain the following information from the primary location to request for onboar
 
 When onboarding an auxiliary volume, the following conditions apply:
 
-- If a volume group of the auxiliary volume exists at the secondary location, the auxiliary volume is added to it.
-- If a volume group of the auxiliary volume does not exist at the secondary location, the onboarding operation automatically creates a volume group. The volume group is associated with the auxiliary volume on the secondary location.
+- If a volume group of the auxiliary volume exists in the secondary location, the auxiliary volume is added to it.
+- If a volume group of the auxiliary volume does not exist in the secondary location, the onboarding operation automatically creates a volume group. The volume group is associated with the auxiliary volume on the secondary location.
 
 The onboarded auxiliary volume is added to this volume group. The volume group that is created on the secondary location is associated with the volume group on the primary location. The volume group on the primary location contains the primary volume that is associated with the auxiliary volume. To verify the replication status between the two primary and the auxiliary volumes, compare the consistency group name of the volume group on both the locations.
 
@@ -425,7 +432,7 @@ Refer to the following table to verify whether the replication properties of the
 {: caption="Verifying the replication status of an auxiliary volume." caption-side="bottom"}
 
 
-Using the `groupID` value of the auxiliary volume, query the details of the volume group. Verify whether the auxiliary volume is enabled for replication by using the following API and CLI commands:
+Using the `groupID` value of the auxiliary volume, query the details of the volume group. Verify whether the auxiliary volume is replication-enabled by using the following API and CLI commands:
 
 
 - **CLI**: [ibmcloud pi volume-group get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-get)
@@ -508,7 +515,7 @@ When the primary location is recovered, you can re-enable the primary volume gro
 3. [Stop the primary volume group to disable replication](#stop-prim-vol-grp-disable-rep)
 4. [Re-enable replication on the primary volume group](#re-enabl-repl)
 
-After replication is re-enabled, you can start the virtual server instance and its workload at the primary location. When the primary server instance is the active instance, you can turn off the virtual server instance at the secondary location.
+After replication is re-enabled, you can start the virtual server instance and its workload in the primary location. When the primary server instance is the active instance, you can turn off the virtual server instance in the secondary location.
 
 #### Synchronizing I/O updates from auxiliary volume to primary volume
 {: #sync-io-aux-prim}
@@ -776,7 +783,7 @@ You can modify the attributes of a replication-enabled primary volume. To modify
 
 ### Changing the size of a primary volume
 
-To change the size of a replication-enabled, complete the following steps:
+To change the size of a replication-enabled primary volume, complete the following steps:
 
 1. Remove the primary volume from the volume group
 2. Change the size of the primary volume
