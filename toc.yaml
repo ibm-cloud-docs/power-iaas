@@ -102,7 +102,6 @@ toc:
                     - network-architecture-former.md
                     - cloud-connections-CLI.md
                     - ordering-direct-link.md
-                    - vpn-connections-deprecated.md
       - topicgroup:
           label: Networking for Client location
           topics:

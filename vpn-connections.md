@@ -36,10 +36,6 @@ For more information about creating a VPN connection, see [Creating a Virtual Pr
 
 The following deprecated method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated) [Deprecated]{: tag-red}
 
-
-
-
-
 ## Creating a Virtual Private Cloud VPN connection
 {: #vpc-vpn}
 
@@ -69,6 +65,11 @@ Complete the following steps for creating a VPC VPN connection:
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding a Transit Gateway is feasible, but it incurs extra charges. The cloud connection setup is not required in a PER-enabled workspace.
 {: note}
+
+
+
+
+
 
 ### Architecture diagram
 {: #arc-diag-vpcvpn}
