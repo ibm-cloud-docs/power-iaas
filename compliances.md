@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-09"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -40,7 +40,7 @@ The {{site.data.keyword.powerSys_notm}} provides programs and certifications tha
 {: #hitrust}
 
 
-The HITRUST CSF&reg; is a framework for assessing and managing cybersecurity threats and safeguarding sensitive data such as protected health information (PHI). {{site.data.keyword.powerSys_notm}} is HITRUST CSF&reg; compliant. Contact an IBM representative to request HITRUST certification letters for {{site.data.keyword.powerSys_notm}} with more detailed scope descriptions for {{site.data.keyword.cloud_notm}} infrastructure services.
+The HITRUST CSF&reg; is a framework for assessing and managing cybersecurity threats and safeguarding sensitive data such as protected health information (PHI). {{site.data.keyword.powerSys_notm}} is HITRUST CSF&reg; compliant. [Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request HITRUST certification letters for {{site.data.keyword.powerSys_notm}} with more detailed scope descriptions for {{site.data.keyword.cloud_notm}} infrastructure services.
 
 For more information, see [What is HITRUST?](https://www.ibm.com/cloud/compliance/hitrust){: external}.
 
