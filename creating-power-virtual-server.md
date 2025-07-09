@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-09"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -304,6 +304,9 @@ The following table provides more information about each {{site.data.keyword.pow
 | Public Networks | Select this option to use an IBM-provided public network. Cost is associated when you select this option.  \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
+
+
+
 
 
 

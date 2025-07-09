@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2025
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-07-09"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -76,7 +76,7 @@ You can set up authorization for usage of a dedicated host for other workspaces 
 |Role           | Description                                                                    |
 |---------------|--------------------------------------------------------------------------------|
 | Reader        | View the workspaces that a dedicated host is shared with.        |
-| Manager       | Perform all CRUD (Create, Read, Update, Delete) actions on dedicated hosts, including:  \n - Reserve and delete dedicated hosts  \n - Share and unshare with other workspaces  - Manage any other aspects of dedicated hosts.    |
+| Manager       | Perform all CRUD (Create, Read, Update, Delete) actions on dedicated hosts, including:  \n - Reserve and delete dedicated hosts  \n - Share and unshare with other workspaces  \n - Manage any other aspects of dedicated hosts.    |
 {: caption="Roles and permissions in dedicated host" caption-side="bottom"}
 
 ## Creating a dedicated host group
