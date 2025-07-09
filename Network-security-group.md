@@ -552,8 +552,8 @@ To add members to an existing NSG, complete the following steps:
 
 6. In the Members section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If virtual servers are not listed, you can create a virtual server by completing the steps provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-A member can only be associated with one network security group at a time.
-{: note}
+    A member can only be associated with one network security group at a time.
+    {: note}
 
 7.	Select the virtual server instance and click **Next**. All the existing network interfaces that are part of the virtual server instance are displayed.
 8.	Select one or more network interfaces from the list and click **Add member**.
