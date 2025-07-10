@@ -13,3 +13,11 @@ keyword:
     software tier
   arp-broadcast:
     Subnet ARP Broadcast
+  nsg-lc:
+    network security group
+  nag-lc:
+    network address group
+  nsg-sc:
+    Network security group
+  nag-sc:
+    Network address group
