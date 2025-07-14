@@ -74,9 +74,9 @@ Complete the following steps to capture and export a virtual server instance:
 
 6. Give your captured image a **Name**.
 
-7. *(Optional)* You can export the captured image to Cloud Object Storage (COS) by completing the following steps.
+7. *(Optional)* You can export the captured image to Cloud Object Storage by completing the following steps.
 
-    The maximum image size that you can export to Cloud Object Storage (COS) is 10 TB.
+    The maximum image size that you can export to Cloud Object Storage is 10 TB.
     {: note}
 
    1. Select the **Region**.
