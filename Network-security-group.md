@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-14"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
+A {{site.data.keyword.nsg-lc}} (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
 
 
@@ -49,14 +49,14 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 
 Review the following topics to understand the components that are part of the NSG implementation:
 
-- [Network address groups](#nag)
+- [{{site.data.keyword.nag-sc}}s](#nag)
 - [Members](#members)
 - [Rules](#rules)
 
-### Network address groups
+### {{site.data.keyword.nag-sc}}s
 {: #nag}
 
-A network address group (NAG) is a collection of one or more external network address ranges, such as Classless Inter-Domain Routing (CIDRs), that are not directly related to provisioned network resources in your {{site.data.keyword.powerSys_notm}} workspace. NAGs are used to categorize external network address ranges, such as those accessible over Transit Gateway or natively by PER, such as [IBM Cloud Private endpoints](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=cluster-cloud-private-endpoints).
+A {{site.data.keyword.nag-lc}} (NAG) is a collection of one or more external network address ranges, such as Classless Inter-Domain Routing (CIDRs), that are not directly related to provisioned network resources in your {{site.data.keyword.powerSys_notm}} workspace. NAGs are used to categorize external network address ranges, such as those accessible over Transit Gateway or natively by PER, such as [IBM Cloud Private endpoints](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=cluster-cloud-private-endpoints).
 
 NAGs are used as reference points in NSG rules to simplify NSG implementation by grouping multiple external IP addresses, subnets, or virtual network segments under a single entity (NAG). Instead of listing multiple IP addresses or subnets in an NSG security rule, you can refer to a NAG to apply the same rule to all addresses in that group.
 
@@ -129,7 +129,7 @@ To allow traffic from `10.55.55.2`, an NSG rule must explicitly allow traffic fr
 
 For more information about working with NAGs, see [Creating and managing NAGs in a workspace](#create-manage-nag).
 
-## Setting up network security groups in a workspace
+## Setting up {{site.data.keyword.nsg-lc}}s in a workspace
 {: #setting-nsg-ws}
 
 When you provision a workspace in your {{site.data.keyword.powerSys_notm}} environment, a default NSG and NAG are automatically created to allow bidirectional communication between the existing network interfaces in that workspace.
@@ -194,7 +194,7 @@ You can create an NSG in your workspace either with the default configuration wi
 When you create an NSG in your workspace, you are not required to mandatorily define security rules or add members to the NSG. However, after an NSG is created with default settings, you can add rules and members to it later.
 {: shortdesc}
 
-By default, all inbound network traffic is denied and does not reach any member of the network security group. To create an NSG with default configuration, complete the following steps:
+By default, all inbound network traffic is denied and does not reach any member of the {{site.data.keyword.nsg-lc}}. To create an NSG with default configuration, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -242,7 +242,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 11. Depending on the protocol that you select from the list in the previous step, complete the following steps:
       - **TCP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates from. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
@@ -253,13 +253,13 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `syn`
 
       - **UDP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If you do not see the network address group that you want, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
 
       - **ICMP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **ICMP Message type**: Select the required message type from the list. Supported types are:
                 - `all`
@@ -270,14 +270,14 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `destination-unreach`
 
       - **Any**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
 12. Click **Create rule**.
 13. Click **Continue** to add members to the NSG.
 
 14.	In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-    Adding members to a network security group allows you to control inbound network traffic to these members. A member can only be associated with one network security group at a time.
+    Adding members to a {{site.data.keyword.nsg-lc}} allows you to control inbound network traffic to these members. A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}
 
 15. Select the virtual server instance and click **Next**. A list of network interfaces that belong to the virtual server instance is displayed.
@@ -526,15 +526,15 @@ To delete a rule from an existing NSG, complete the following steps:
 
 You can manage members that are associated with an NSG by performing the following operations:
 
-- [Adding members to a network security group](#add-members-nsg})
-- [Removing members from a network security group](#remove-members-nsg)
+- [Adding members to a {{site.data.keyword.nsg-lc}}](#add-members-nsg})
+- [Removing members from a {{site.data.keyword.nsg-lc}}](#remove-members-nsg)
 
-### Adding members to a network security group
+### Adding members to a {{site.data.keyword.nsg-lc}}
 {: #add-members-nsg}
 
 You can add members to an NSG to control the inbound network traffic to the associated network interfaces.
 
-Members can be added at two points. First, when you are initially creating an NSG, and second, at a later point by revisiting the Network security group details page of an existing NSG. To add members to an NSG when you are creating it, complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom) section.
+Members can be added at two points. First, when you are initially creating an NSG, and second, at a later point by revisiting the {{site.data.keyword.nsg-sc}} details page of an existing NSG. To add members to an NSG when you are creating it, complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom) section.
 
 To add members to an existing NSG, complete the following steps:
 
@@ -552,7 +552,7 @@ To add members to an existing NSG, complete the following steps:
 
 6. In the Members section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If virtual servers are not listed, you can create a virtual server by completing the steps provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-    A member can only be associated with one network security group at a time.
+    A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}
 
 7.	Select the virtual server instance and click **Next**. All the existing network interfaces that are part of the virtual server instance are displayed.
