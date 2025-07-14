@@ -215,6 +215,15 @@ You can release a dedicated host when no resources are deployed on the host. To 
 
 
 
+When IBM needs to perform maintenance on a dedicated host, its virtual server instances (VMs) are live migrated to another dedicated host during the maintenance operation window.
+
+If a dedicated host suffers from a server failure, IBM restarts its VMs on another dedicated host (pending capacity availability). Note that this VM restart capability does not protect against data center, storage or network related failures; in such scenarios, the appropriate business continuity procedures (high availability and disaster recovery) should be invoked.
+
+
+
+
+
+
 When VMs are relocated to another dedicated host for maintenance, you are not charged for an extra dedicated host.
 {: note}
 
