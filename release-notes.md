@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-10"
+lastupdated: "2025-07-14"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -21,6 +21,12 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #July-2025}
 
 
+
+
+- IBM {{site.data.keyword.powerSys_notm}} integrates with IBM watsonx SaaS services to deliver a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid cloud environment with automated AI infrastructure setup and management. For more information, see [IBM Power Virtual Server and watsonx integration](/docs/powervs-watsonx-toolkit).
+
+**End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-release-notes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+{: important}
 
 
 
