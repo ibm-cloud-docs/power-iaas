@@ -35,6 +35,12 @@ When you capture and export a VM, you can choose the image catalog, Cloud Object
 
 
 
+The maximum image size that you can export to Cloud Object Storage is 10 TB.
+{: note}
+
+
+
+
 The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account. See the following APIs and CLIs that are associated to these tasks:
 - API for VM capture - [Capture a PVM instance and create a deployable image (version 2)](/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post).
 - API for image export - [Add an image export job to the jobs queue (version 2)](/apidocs/power-cloud#pcloud-v2-images-export-post).
@@ -72,14 +78,14 @@ Complete the following steps to capture and export a virtual server instance:
 
 5. Select whether you want to export the volume-backed image to the image catalog, Cloud Object Storage, or both.
 
-6. Give your captured image a **Name**.
+6. Give your captured image a **Name**. 
 
 7. *(Optional)* You can export the captured image to Cloud Object Storage by completing the following steps.
 
     The maximum image size that you can export to Cloud Object Storage is 10 TB.
     {: note}
 
-   1. Select the **Region**.
+   1. Select the **Region**. 
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
    4. Select the **Generate checksum file** toggle button to generate a checksum file.

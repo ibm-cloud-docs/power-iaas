@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-06-25"
+lastupdated: "2025-07-14"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Security and Compliance Center Workload Protection
+# Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Monitoring and IBM Cloud Security and Compliance Center Workload Protection
 {: #integrate-scc}
 
 ---
