@@ -211,8 +211,6 @@ You can release a dedicated host when no resources are deployed on the host. To 
 ## Maintenance in dedicated host
 {: #mainetnance-dh}
 
-When IBM needs to do maintenance on a dedicated host, the virtual server instances (VMs) are evacuated to another dedicated host specifically for the maintenance operation window. You will not notice any changes unless there is a host failure that requires replacement of the original dedicated host.
-
 
 
 
