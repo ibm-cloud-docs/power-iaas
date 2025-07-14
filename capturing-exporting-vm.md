@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-07-07"
+lastupdated: "2025-07-14"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -75,7 +75,7 @@ Complete the following steps to capture and export a virtual server instance:
 
 6. Give your captured image a **Name**.
 
-7. *(Optional)* If you decide to export to Cloud Object Storage, you are presented with more options:
+7. *(Optional)* If you decide to export to Cloud Object Storage (up to 10 TB), you are presented with more options:
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
