@@ -62,8 +62,7 @@ CHGASPACT ASPDEV(*SYSBAS) OPTION(*FRCWRT)
 
 Complete the following steps to capture and export a virtual server instance:
 
-1. Open the **Virtual server instances** page from the [IBM Cloud console](https://cloud.ibm.com/power/servers).
-    Ensure you select a workspace if you do not see any virtual server instances.
+1. Open the **Virtual server instances** page from the [IBM Cloud console](https://cloud.ibm.com/power/servers). Ensure you select a workspace if you do not see any virtual server instances.
 
 2. Click the virtual server that you want to capture.
 
