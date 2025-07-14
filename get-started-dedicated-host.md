@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2025
 
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-14"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -213,7 +213,9 @@ You can release a dedicated host when no resources are deployed on the host. To 
 
 When IBM needs to do maintenance on a dedicated host, the virtual server instances (VMs) are evacuated to another dedicated host specifically for the maintenance operation window. You will not notice any changes unless there is a host failure that requires replacement of the original dedicated host.
 
-If a dedicated host suffers from a failure, IBM restarts the VMs on another dedicated host.
+
+
+
 
 When VMs are relocated to another dedicated host for maintenance, you are not charged for an extra dedicated host.
 {: note}
