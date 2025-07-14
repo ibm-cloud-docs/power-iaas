@@ -20,6 +20,7 @@ toc:
       - getting-started.md
       - release-notes.md
       - about-power-virtual-server.md
+      - integrating-watsonx.md
       - topicgroup:
               label: Architecture
               topics:

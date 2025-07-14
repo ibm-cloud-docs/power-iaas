@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-09"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -136,7 +136,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
-    To deploy an SAP certified profile - Standard RISE profile or an Application server profile, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled if **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list are selected.
+    To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
 
 
     
@@ -304,6 +304,9 @@ The following table provides more information about each {{site.data.keyword.pow
 | Public Networks | Select this option to use an IBM-provided public network. Cost is associated when you select this option.  \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
+
+
+
 
 
 

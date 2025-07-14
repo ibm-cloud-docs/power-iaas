@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-10"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -17,25 +17,10 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
-
-
-
-
 ## July 2025
 {: #July-2025}
 
 
-
-
-
-**End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-release-notes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
-{: important}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-- The migration of existing workspaces to Cloud Resource Names (CRNs) in all the data centers including DAL14 is completed. For more information about CRNs, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
-
-- The double byte IBM i 7.6 stock image for IBM Power10 systems is available in the OS image catalog. This stock image is not supported on IBM Power9 systems.
 
 
 

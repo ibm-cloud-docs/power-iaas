@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-04-29"
+lastupdated: "2025-07-07"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.1 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.2 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-07-08"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -94,8 +94,9 @@ The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} su
 
 
 
-The following stock images are available when you create a virtual machine:
 
+
+The following stock images are available when you create a virtual machine:
 
 
 
@@ -103,6 +104,11 @@ The following stock images are available when you create a virtual machine:
 * AIX 7.3 TL3 SP0
 * AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1]
+
+
+
+
+
 
 
 

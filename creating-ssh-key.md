@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-05"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -17,8 +17,6 @@ subcollection: power-iaas
 {: #creating-ssh-key}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -35,7 +33,12 @@ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey
 ```
 
-To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-key-create) command. To add the generated public key, enter the following command (replacing the example value with your own public key):
+
+
+To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-key-create) command.
+
+
+To add the generated public key, enter the following command (replacing the example value with your own public key):
 
 ```text
 ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
@@ -50,6 +53,12 @@ ibmcloud pi key testkey
 Name      Key                                          CreationDate
 testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ```
+
+
+
+
+
+
 
 
 
@@ -129,7 +138,7 @@ Run the following commands to start an SSH client debug session:
 # /usr/bin/ssh -vvv {hostname/IP_of_ssh_server}
 ```
 
-After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering **exit** command.
+After you end the SSH client debug session, close the script session by pressing **Ctrl+D** or by entering the **exit** command.
 
 ## Additional support information
 {: #extra-info-aix-vm}

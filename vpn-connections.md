@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021, 2024
+  years: 2021, 2025
 
-lastupdated: "2025-04-07"
+lastupdated: "2025-07-08"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -27,6 +27,8 @@ subcollection: power-iaas
 
 
 ---
+
+
 
 {{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between the client-managed environment and the virtual server instances that are deployed on IBM Cloud.
 
@@ -63,6 +65,11 @@ Complete the following steps for creating a VPC VPN connection:
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding a Transit Gateway is feasible, but it incurs extra charges. The cloud connection setup is not required in a PER-enabled workspace.
 {: note}
+
+
+
+
+
 
 ### Architecture diagram
 {: #arc-diag-vpcvpn}

@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-07-14"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -26,14 +26,8 @@ subcollection: power-iaas
 
 ---
 
-A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
+A {{site.data.keyword.nsg-lc}} (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
-
-
-
-The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
-
-
 
 Security rules in NSG define which inbound or ingress network traffic is allowed or denied from reaching members. Members are one or more network interfaces (NIC) at the subnet and virtual machine (VM) level. All outbound or egress traffic is automatically allowed.
 
@@ -44,19 +38,25 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 - Incurs no additional cost for using NSG; included as part of {{site.data.keyword.powerSys_notm}} workspaces
 - Does not negatively impact on overall network throughput or network latency for any NSG members
 
+
+
+The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+
+
+
 ## NSG components
 {: #nsg-components}
 
 Review the following topics to understand the components that are part of the NSG implementation:
 
-- [Network address groups](#nag)
+- [{{site.data.keyword.nag-sc}}s](#nag)
 - [Members](#members)
 - [Rules](#rules)
 
-### Network address groups
+### {{site.data.keyword.nag-sc}}s
 {: #nag}
 
-A network address group (NAG) is a collection of one or more external network address ranges, such as Classless Inter-Domain Routing (CIDRs), that are not directly related to provisioned network resources in your {{site.data.keyword.powerSys_notm}} workspace. NAGs are used to categorize external network address ranges, such as those accessible over Transit Gateway or natively by PER, such as [IBM Cloud Private endpoints](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=cluster-cloud-private-endpoints).
+A {{site.data.keyword.nag-lc}} (NAG) is a collection of one or more external network address ranges, such as Classless Inter-Domain Routing (CIDRs), that are not directly related to provisioned network resources in your {{site.data.keyword.powerSys_notm}} workspace. NAGs are used to categorize external network address ranges, such as those accessible over Transit Gateway or natively by PER, such as [IBM Cloud Private endpoints](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=cluster-cloud-private-endpoints).
 
 NAGs are used as reference points in NSG rules to simplify NSG implementation by grouping multiple external IP addresses, subnets, or virtual network segments under a single entity (NAG). Instead of listing multiple IP addresses or subnets in an NSG security rule, you can refer to a NAG to apply the same rule to all addresses in that group.
 
@@ -129,7 +129,7 @@ To allow traffic from `10.55.55.2`, an NSG rule must explicitly allow traffic fr
 
 For more information about working with NAGs, see [Creating and managing NAGs in a workspace](#create-manage-nag).
 
-## Setting up network security groups in a workspace
+## Setting up {{site.data.keyword.nsg-lc}}s in a workspace
 {: #setting-nsg-ws}
 
 When you provision a workspace in your {{site.data.keyword.powerSys_notm}} environment, a default NSG and NAG are automatically created to allow bidirectional communication between the existing network interfaces in that workspace.
@@ -168,12 +168,14 @@ Verify that the `resourceCRNs` property is present and its value is set to `true
 To enable or disable the NSG feature on an existing workspace, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
-2. Click **workspaces** in the left navigation menu.
-3. Select the workspace on which you want to enable or disable the NSG feature. The Workspace details pane is displayed.
-4. Set the Network security groups feature to **Enabled** or **Disabled**.
+
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+
+3. Select the workspace on which you want to enable or disable the NSG feature. The "Workspace details" panel is displayed.
+
+4. Set the **Network security groups** switch to **Enabled** or **Disabled**.
 
 When the NSG feature is enabled on a workspace, a default NSG is automatically created containing members of any existing NIC attachments in the workspace with two rules. The first rule allows all bidirectional communication (`Protocol=ALL`) from other members in the “default” NSG. The second rule allows all bidirectional communication (`Protocol=ALL`) with the “default” NAG (`0.0.0.0/0` network CIDR outside of the workspace).
-
 
 
 
@@ -192,15 +194,17 @@ You can create an NSG in your workspace either with the default configuration wi
 When you create an NSG in your workspace, you are not required to mandatorily define security rules or add members to the NSG. However, after an NSG is created with default settings, you can add rules and members to it later.
 {: shortdesc}
 
-By default, all inbound network traffic is denied and does not reach any member of the network security group. To create an NSG with default configuration, complete the following steps:
+By default, all inbound network traffic is denied and does not reach any member of the {{site.data.keyword.nsg-lc}}. To create an NSG with default configuration, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the left navigation menu.
-3. Select a workspace in which you want to create the NSG.
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
-5. Click **Create network security group**. The Create network security group pane is displayed.
-6. In the details section, enter a name for the network security group and click **Continue**. To define **Inbound security rules** and add **Members** to the NSG later, click **Continue** > **Finish** > **Create**.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
+4. Click **View virtual servers**.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+6. Click **Create network security group**. The "Create network security group" page is displayed.
+7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
+8. To define **Inbound security rules** and add **Members** to the NSG later, click **Continue** > **Finish** > **Create**.
 
 ### Creating an NSG with inbound rules and members
 {: #create-nsg-custom}
@@ -209,23 +213,25 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select a workspace in which you want to create the NSG.
+3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5. Click **Create network security group**. The Create network security group pane is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. In the Details section, enter a name for the network security group and click **Continue**.
+6. Click **Create network security group**. The "Create network security group" panel is displayed.
 
-7. In the Inbound rules (optional) section, click **Create rule**. The Create rule pane is displayed.
+7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
 
-8. Select any of the following actions:
+8. In the Inbound rules (optional) section, click **Create rule**. The "Create rule" panel is displayed.
+
+9. Select any of the following actions:
      - **Allow**: Use this option to allow network traffic from the specified Remote.
      - **Deny**:  Use this option to create traffic exceptions by overriding the allow rules.
 
-9. Select one of the following protocols based on the type of traffic that you want to control:
+10. Select one of the following protocols based on the type of traffic that you want to control:
       - **Transmission Control Protocol (TCP)**: Ideal for reliable, connection-oriented traffic such as web (HTTP/HTTPS), SSH, RDP, FTP, and databases. This protocol guarantees that all sent packets reach the destination and in the correct order.
 
       - **User Datagram Protocol (UDP)**: Ideal for real-time communication, fast, and connection-less traffic such as DNS, VoIP, network monitoring, video streaming, and gaming. This protocol does not guarantee delivery, order, or error correction.
@@ -234,9 +240,9 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
       - **Any**: Ideal for creating rules that apply to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
 
-10. Depending on the protocol that you select from the list in the previous step, complete the following steps:
+11. Depending on the protocol that you select from the list in the previous step, complete the following steps:
       - **TCP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates from. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
@@ -247,13 +253,13 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `syn`
 
       - **UDP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If you do not see the network address group that you want, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
 
       - **ICMP**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **ICMP Message type**: Select the required message type from the list. Supported types are:
                 - `all`
@@ -264,23 +270,23 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `destination-unreach`
 
       - **Any**
-          1. **Remote**: Select a network security group or network address group to allow or deny traffic for the rule. If the network address group that you want is unavailable, click **Create network address group** to create one.
+          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
-11.	Click **Create rule**.
-12.	Click **Continue** to add members to the NSG.
+12. Click **Create rule**.
+13. Click **Continue** to add members to the NSG.
 
-13.	In the Members (optional) section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+14.	In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-    Adding members to a network security group allows you to control inbound network traffic to these members. A member can only be associated with one network security group at a time.
+    Adding members to a {{site.data.keyword.nsg-lc}} allows you to control inbound network traffic to these members. A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}
 
-14.	Select the virtual server instance and click **Next**. A list of network interfaces that belong to the virtual server instance is displayed.
+15. Select the virtual server instance and click **Next**. A list of network interfaces that belong to the virtual server instance is displayed.
 
-15.	 Select one or more network interfaces from the list and click **Add member**.
+16. Select one or more network interfaces from the list and click **Add member**.
 
-16.	Click **Finish**.
+17. Click **Finish**.
 
-17.	Click **Create**. You can find the NSG that you created listed on the **Network security groups** tab.
+18. Click **Create**. You can find the NSG that you created listed on the **Network security groups** tab.
 
 After the NSGs are created, you can manage them by performing the following actions:
 - [Renaming an NSG](#rename-nsg)
@@ -291,40 +297,44 @@ After the NSGs are created, you can manage them by performing the following acti
 
 To rename an NSG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG to rename.
+3. Select the workspace that contains the NSG to rename. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The Edit network security group details pane is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6.	Enter a new name for the NSG and click **Save**.
+6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The "Edit network security group details" panel is displayed.
+
+7. Enter a new name for the NSG in the **Name** field and click **Save**.
 
 
 
 ### Deleting an NSG
 {: #delete-nsg}
 
-You can delete only the NSGs that you created and not the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace.
+You can delete the NSGs that you have created. However, you cannot delete the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace.
 
 
 
 To delete a NSG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG to delete.
+3. Select the workspace that contains the NSG to delete. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to delete and select **Delete**. The Delete network security group confirmation message box appears.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups page" is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6.	Click **Delete** to initiate the deletion request. This action cannot be undone.
+6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to delete and select **Delete**. The "Delete network security group" confirmation message box appears.
+
+7. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
 
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
@@ -346,21 +356,23 @@ NAGs form a part of the inbound rules that defines inbound traffic from network 
 
 To create an NAG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1 Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace in which you want to create the NAG.
+3. Select the workspace in which you want to create the NAG. The "Workspace details" panel is displayed.
 
-4.	Click **Network security groups** under Networking in the left navigation pane. The Network security groups pane is displayed.
+4. Click **View virtual servers**.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed.
 
-5.	Select the **Network address groups** tab. A list of existing NAGs is displayed.
+6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-6.	Click **Create network address group**. The Create network address group pane is displayed.
+7. Click **Create network address group**. The "Create network address group" panel is displayed.
 
-7.	Enter a name and user tags (optional) for the NAG. At this step, you can optionally choose to add members by adding external IP addresses through CIDR. Note that the same CIDR cannot be used in more than one NAG. Follow these guidelines for adding members using CIDR:
+8. Enter a name in the **Name** field for the NAG. Optionally, you can provide user tags in the **User tags (optional)** field.
+
+9. Optionally, you can use the **CIDR** field to add members by adding external IP addresses through CIDR. Note that the same CIDR cannot be used in more than one NAG. Follow these guidelines for adding members using CIDR:
 
     - You must use a CIDR notation that is defined in [RFC 1518](https://datatracker.ietf.org/doc/html/rfc1518){: external} and [RFC 1519](https://datatracker.ietf.org/doc/html/rfc1519){: external} documents.
     - The valid CIDR format is `<IPv4 address>/<number>`. For example, `192.168.1.0/24` represents the IP range of `192.168.1.0 — 192.168.1.255` and `10.0.0.0/16` represents the IP range of `10.0.0.0—10.0.255.255`.
@@ -372,8 +384,7 @@ To create an NAG, complete the following steps:
     Besides customer-defined NAGs, a default NAG is available for convenience consisting of the 0.0.0.0/0 CIDR.
     {: note}
 
-    CIDR `161.26.0.0/16` can be used to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP.<br>
-    CIDR `166.8.0.0/14` can be used to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
+    CIDR `161.26.0.0/16` can be used to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP. CIDR `166.8.0.0/14` can be used to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
     {: tip}
 
 8. Click **Create group**.
@@ -388,19 +399,19 @@ After the NAGs are created, you can manage them by performing the following acti
 
 To rename an NAG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NAG to rename.
+3. Select the workspace that contains the NAG to rename. The "Workspace details" panel is displayed.
 
-4.	Click **Network security groups** under Networking in the left navigation pane.
+4. Click **View virtual servers**.
 
-4. In the navigation pane, click **Networking** > **Network security groups**.
+5. In the navigation panel, click **Networking** > **Network security groups**.
 
-5.	Select the **Network address groups** tab. A list of existing NAGs is displayed.
+6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-6.	Click the overflow menu (icon with 3 vertical dots) on the far right of the NAG entry that you want to rename and select **Edit**. The Edit network address group details pane is displayed.
+7. Click the overflow menu (icon with 3 vertical dots) on the far right of the NAG entry that you want to rename and select **Edit**. The "Edit network address group details" panel is displayed.
 
 7.	Enter a new name for the NAG and click **Save**.
 
@@ -411,17 +422,19 @@ To delete an NAG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NAG to be deleted.
+3. Select the workspace that contains the NAG to be deleted. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**.
+4. Click **View virtual servers**.
 
-5.	Select the **Network address groups** tab. A list of existing NAGs is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**.
 
-6.	Click the overflow menu (icon with 3 vertical dots) on the NAG entry that you want to delete and select **Delete**. The Delete network address group confirmation message box appears.
+6.	Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-7.	Click **Delete** to initiate the deletion request. This action cannot be undone.
+7.	Click the overflow menu (icon with 3 vertical dots) on the NAG entry that you want to delete and select **Delete**. The "Delete network address group" confirmation message box appears.
+
+8.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
 ### Creating and managing inbound rules in an NSG
 {: #create-manage-ib-rules}
@@ -444,15 +457,17 @@ To create rules on an existing NSG, complete the following steps:
 
 1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG in which you want to create rules.
+3. Select the workspace that contains the NSG in which you want to create rules. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Select the NSG in which you want to create the rule. The Network security group detail of the selected NSG is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6.	In the Inbound rules section, click **Create rule**. The Create rule pane is displayed.
+5.	Select the NSG in which you want to create the rule. The "Network security group details" page is displayed.
+
+6.	In the Inbound rules section, click **Create rule**. The "Create rule" panel is displayed.
 
 7.	Complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom}) section.
 
@@ -463,21 +478,23 @@ To create an inbound rule with the same configuration as an existing inbound rul
 
 You can also customize the cloned properties of a rule to create a different rule efficiently and quickly. To clone an existing rule, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG with the rules that you want to clone.
+3. Select the workspace that contains the NSG with the rules that you want to clone. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Select the NSG that contains the rule that you want to clone. The Network security group details page of the selected NSG is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The 'Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6.	In the Inbound rules section, select the tab (**TCP**, **UDP**, **ICMP**, or **Any**) which contains the rule to be cloned.
+6.	Select the NSG that contains the rule that you want to clone. The "Network security group details" page of the selected NSG is displayed.
 
-7.	Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Duplicate**. The Create rule pane is displayed.
+7.	In the Inbound rules section, select the tab (**TCP**, **UDP**, **ICMP**, or **Any**) which contains the rule to be cloned.
 
-8.	Click **Create** rule. The new rule is created with the exact same configuration. You can also create a rule with different configurations by making the necessary changes before you click **Create rule**.
+8.	Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Duplicate**. The "Create rule" panel is displayed.
+
+9.	Click **Create** rule. The new rule is created with the exact same configuration. You can also create a rule with different configurations by making the necessary changes before you click **Create rule**.
 
 
 ### Deleting rules from an existing NSG
@@ -485,19 +502,21 @@ You can also customize the cloned properties of a rule to create a different rul
 
 To delete a rule from an existing NSG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG with the rule that you want to delete.
+3. Select the workspace that contains the NSG with the rule that you want to delete. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Select the NSG with the rule that you want to delete. The Network security group details page of the selected NSG is displayed.
+4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+
+5.	Select the NSG with the rule that you want to delete. The "Network security group details" page of the selected NSG is displayed.
 
 6.	In the Inbound rules section, select the tab (**TCP**, **UDP**, **ICMP**, or **Any**) which contains the rule to delete.
 
-8.	Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Delete**. The Delete network security group rule confirmation message box appears.
+8.	Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Delete**. The "Delete network security group rule" confirmation message box appears.
 
 9.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
@@ -506,34 +525,36 @@ To delete a rule from an existing NSG, complete the following steps:
 
 You can manage members that are associated with an NSG by performing the following operations:
 
-- [Adding members to a network security group](#add-members-nsg})
-- [Removing members from a network security group](#remove-members-nsg)
+- [Adding members to a {{site.data.keyword.nsg-lc}}](#add-members-nsg})
+- [Removing members from a {{site.data.keyword.nsg-lc}}](#remove-members-nsg)
 
-### Adding members to a network security group
+### Adding members to a {{site.data.keyword.nsg-lc}}
 {: #add-members-nsg}
 
 You can add members to an NSG to control the inbound network traffic to the associated network interfaces.
 
-Members can be added at two points. First, when you are initially creating an NSG, and second, at a later point by revisiting the Network security group details page of an existing NSG. To add members to an NSG when you are creating it, complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom) section.
+Members can be added at two points. First, when you are initially creating an NSG, and second, at a later point by revisiting the {{site.data.keyword.nsg-sc}} details page of an existing NSG. To add members to an NSG when you are creating it, complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom) section.
 
 To add members to an existing NSG, complete the following steps:
 
-1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2.	Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
 
-3.	Select the workspace that contains the NSG for adding members.
+3. Select the workspace that contains the NSG for adding members. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5.	Select the NSG to which you want to add members. The Network security group details page of the selected NSG is displayed.
+4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6.	In the Members section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If virtual servers are not listed, you can create a virtual server by completing the steps provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+5. Select the NSG to which you want to add members. The "Network security group details" page of the selected NSG is displayed.
 
-A member can only be associated with one network security group at a time.
-{: note}
+6. In the Members section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If virtual servers are not listed, you can create a virtual server by completing the steps provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-7.	Select the virtual server instance and click **Next**. Existing network interfaces that are part of the virtual server instance are displayed.
+    A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
+    {: note}
+
+7.	Select the virtual server instance and click **Next**. All the existing network interfaces that are part of the virtual server instance are displayed.
 8.	Select one or more network interfaces from the list and click **Add member**.
 9.	Click **Create**.
 
@@ -547,15 +568,17 @@ To remove members that are associated with an NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of the existing workspaces.
 
-3. Select the workspace that contains the NSG from which you want to remove the members.
+3. Select the workspace that contains the NSG from which you want to remove the members. The "Workspace details" panel is displayed.
 
-4. In the navigation pane, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
+4. Click **View virtual servers**.
 
-5. Select the NSG from which you want to remove the members. The Network security group details page of the selected NSG is displayed.
+4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. In the Members section, click the delete icon against the member entry that you want to remove from the NSG. The Delete network security group member confirmation message box appears.
+5. Select the NSG from which you want to remove the members. The "Network security group details" page of the selected NSG is displayed.
+
+6. In the Members section, click the delete icon against the member entry that you want to remove from the NSG. The "Delete network security group member" confirmation message box appears.
 
 7.	Click **Delete** to initiate the deletion request. This action cannot be undone.
 
