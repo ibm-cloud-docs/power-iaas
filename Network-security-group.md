@@ -384,8 +384,7 @@ To create an NAG, complete the following steps:
     Besides customer-defined NAGs, a default NAG is available for convenience consisting of the 0.0.0.0/0 CIDR.
     {: note}
 
-    CIDR `161.26.0.0/16` can be used to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP.<br>
-    CIDR `166.8.0.0/14` can be used to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
+    CIDR `161.26.0.0/16` can be used to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP. CIDR `166.8.0.0/14` can be used to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
     {: tip}
 
 8. Click **Create group**.
