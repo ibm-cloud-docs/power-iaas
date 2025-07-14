@@ -75,7 +75,10 @@ Complete the following steps to capture and export a virtual server instance:
 
 6. Give your captured image a **Name**.
 
-7. *(Optional)* You can export the captured image to IBM Cloud Object Storage (COS) by completing the following steps. Note that the maximum file upload size to IBM COS is 10 TB.
+7. *(Optional)* You can export the captured image to IBM Cloud Object Storage (COS) by completing the following steps.
+    Note that the maximum file upload size to IBM COS is 10 TB.
+    {: note}
+
    1. Select the **Region**.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
