@@ -29,12 +29,6 @@ subcollection: power-iaas
 A {{site.data.keyword.nsg-lc}} (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs in the Power Virtual Server environment to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
 
-
-
-The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
-
-
-
 Security rules in NSG define which inbound or ingress network traffic is allowed or denied from reaching members. Members are one or more network interfaces (NIC) at the subnet and virtual machine (VM) level. All outbound or egress traffic is automatically allowed.
 
 Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the following benefits:
@@ -43,6 +37,12 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 - Supports creation of specific security rules based on source, destination, port, and protocols (TCP, UDP, ICMP, and Any)
 - Incurs no additional cost for using NSG; included as part of {{site.data.keyword.powerSys_notm}} workspaces
 - Does not negatively impact on overall network throughput or network latency for any NSG members
+
+
+
+The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+
+
 
 ## NSG components
 {: #nsg-components}
