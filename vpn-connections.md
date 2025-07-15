@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2025
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-15"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -27,34 +27,20 @@ subcollection: power-iaas
 
 
 ---
-
-
-
-{{site.data.keyword.powerSysFull}} offers a robust Virtual Private Network (VPN) solution that is tailored with security and seamless connectivity for businesses with diverse networking requirements. The VPN for {{site.data.keyword.powerSys_notm}} establishes a private and encrypted communication channel between the client-managed environment and the virtual server instances that are deployed on IBM Cloud.
-
-For more information about creating a VPN connection, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) [Recommended]{: tag-teal}
-
-The following deprecated method is also currently supported - [Creating a {{site.data.keyword.powerSys_notm}} VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated) [Deprecated]{: tag-red}
-
-## Creating a Virtual Private Cloud VPN connection
-{: #vpc-vpn}
-
-By using the Virtual Private Cloud (VPC) provided Virtual Private Network (VPN) service, you can use a dedicated VPN for a one-cloud experience and achieve improved reliability and high availability.
-
-If you are using the {{site.data.keyword.powerSys_notm}} VPN as a Service (VPNaaS), you are encouraged to upgrade to the IBM Cloud VPC VPN before March 2024. The end of service for {{site.data.keyword.powerSys_notm}} VPNaaS is on 14 July 2025. IBM will not provide the standard support for the {{site.data.keyword.powerSys_notm}} VPNaaS after 18 January 2025. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
-{: note}
-
-
-
-When you complete the VPC VPN setup, you get the following benefits:
--	Private and low-cost connectivity to IBM Cloud services.
--	Access to your virtual server instances through the private IP address. You can use Secure Shell (SSH) and other client-managed applications that are running on your host for the access.
+The Virtual Private Cloud (VPC) provided Virtual Private Network (VPN) service provides private and low-cost connectivity to the IBM Cloud services for improved reliability and high availability. You can use the Secure Shell (SSH) and other client-managed applications that are running on your host to access your virtual server instances through private IP addresses.
 
 IBM Cloud offers the following two VPN options:
+
 * _VPN for VPC_ for site-to-site gateways to safely and securely connect from client-managed environment to resources in VPC, Power, and classic infrastructure.
 * _Client VPN for VPC_ for client-to-site servers that allow remote devices to secretly connect to the VPC network in a secure manner.
 
-To learn more on the VPN options you get, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
+**End of Service reminder** - Effective 14 July 2025, the Power Virtual Server VPNaaS product has reached its end of life and is no longer available for use. If you are using Power Virtual Server VPNaaS product, you are encouraged to move to the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+{: important}
+
+For more information about the available VPN options, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
+
+## Creating a Virtual Private Cloud VPN connection
+{: #vpc-vpn}
 
 Complete the following steps for creating a VPC VPN connection:
 1.	Create a VPC resource.
@@ -65,11 +51,6 @@ Complete the following steps for creating a VPC VPN connection:
 
 It is recommended that you create a direct cloud connection between the VPC and the {{site.data.keyword.powerSys_notm}}. Adding a Transit Gateway is feasible, but it incurs extra charges. The cloud connection setup is not required in a PER-enabled workspace.
 {: note}
-
-
-
-
-
 
 ### Architecture diagram
 {: #arc-diag-vpcvpn}

@@ -13,8 +13,16 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
 # Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Security and Compliance Center Workload Protection
 {: #integrate-scc}
+
+
+
+
+
 
 ---
 
