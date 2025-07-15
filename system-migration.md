@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-27"
+lastupdated: "2025-07-15"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -79,10 +79,10 @@ Learn more about migrating workloads from an existing IBM Power to a Power10. Be
 
 **Linux** - You must migrate your Linux operating system level to a Power10-supported level. To accomplish this migration, the following Linux distributions are supported:
 
-|  IBM® Power10 processor-based systems    |  Supported Linux distributions  |
-|-------------------|--------------|
-| S1022 (9105-22A)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
-| E1080 (9080-HEX)   |  * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
+| IBM® Power10 processor-based systems | Supported Linux distributions                                                                                                                                                                                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| S1022 (9105-22A)                     | * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (Power9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (Power9 compatibility mode only) |
+| E1080 (9080-HEX)                     | * Red Hat Enterprise Linux 8.4, any subsequent RHEL 8.x releases  \n * Red Hat Enterprise Linux 8.2 (POWER9 compatibility mode only).  \n * SUSE Linux Enterprise Server 15 SP3, any subsequent SLES 15 updates  \n * SUSE Linux Enterprise Server 12 SP5 (POWER9 compatibility mode only) |
 {: caption="Supported Linux distributions for Power10 processor-based systems" caption-side="bottom"}
 
 To learn more about IBM Power10 performance and migration strategies, see the following articles:
