@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-14"
+lastupdated: "2025-07-15"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,8 +20,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## July 2025
 {: #July-2025}
 
-
-
+On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached its end of life and is no longer available for use. However, you can use the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+{: important}
 
 - IBM {{site.data.keyword.powerSys_notm}} integrates with IBM watsonx SaaS services to deliver a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid cloud environment with automated AI infrastructure setup and management. For more information, see [IBM Power Virtual Server and watsonx integration](/docs/powervs-watsonx-toolkit).
 
