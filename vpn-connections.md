@@ -34,7 +34,7 @@ IBM Cloud offers the following two VPN options:
 * _VPN for VPC_ for site-to-site gateways to safely and securely connect from client-managed environment to resources in VPC, Power, and classic infrastructure.
 * _Client VPN for VPC_ for client-to-site servers that allow remote devices to secretly connect to the VPC network in a secure manner.
 
-**End of Service reminder** - Effective 14 July 2025, the Power Virtual Server VPNaaS product has reached its end of life and is no longer available for use. If you are using Power Virtual Server VPNaaS product, you are encouraged to move to the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
+On 14 July 2025, the Power Virtual Server VPNaaS product reached its end of life and is no longer available for use. If you are using Power Virtual Server VPNaaS product, you are encouraged to move to the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: important}
 
 For more information about the available VPN options, see the VPC documentation on [VPNs for VPC overview](/docs/vpc?topic=vpc-vpn-overview).
