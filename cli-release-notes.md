@@ -16,9 +16,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-## July 2025
-{: #april-2025}
-
 New CLI version v1.5.2 available. The Power Virtual Server CLI plug-in is available with the following features:
 
 **What's Changed**
