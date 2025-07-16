@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-07-07"
+lastupdated: "2025-07-16"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.2 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.6.0 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -16,7 +16,7 @@ lastupdated: "2025-07-07"
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
----
+----
 
 
 
@@ -25,7 +25,8 @@ The following list of commands are available with command-line interface (CLI) f
 
 
 
-## `ibmcloud pi`
+
+# `ibmcloud pi`
 {: #ibmcloud-pi}
 
 **Alias**: `pi`
@@ -42,15 +43,16 @@ The following list of commands are available with command-line interface (CLI) f
 - `disaster-recovery`:    List disaster recovery locations for the current region or all regions.
 - `host`:    IBM Cloud Power Virtual Server Host.
 - `host-group`:    IBM Cloud Power Virtual Server Host Group.
-- `ike-policy`:    IBM Cloud Power Virtual Server Internet Key Exchange policies.
+- `ike-policy`:    [DEPRECATED] IBM Cloud Power Virtual Server Internet Key Exchange policies.
 - `image`:    IBM Cloud Power Virtual Server Images.
 - `instance`:    IBM Cloud Power Virtual Server Instances.
-- `ipsec-policy`:    IBM Cloud Power Virtual Server Internet Protocol Security policies.
+- `ipsec-policy`:    [DEPRECATED] IBM Cloud Power Virtual Server Internet Protocol Security policies.
 - `job`:    IBM Cloud Power Virtual Server Jobs.
 - `network-address-group`:    IBM Cloud Power Virtual Server Network Address Groups.
 - `network-interface`:    IBM Cloud Power Virtual Server Network Interfaces.
 - `network-security-group`:    IBM Cloud Power Virtual Server Network Security Groups.
 - `placement-group`:    IBM Cloud Power Virtual Server Placement Groups.
+- `route`:    IBM Cloud Power Virtual Server Network Routes.
 - `shared-processor-pool`:    IBM Cloud Power Virtual Server Shared Processor Pools.
 - `snapshot`:    [DEPRECATED] IBM Cloud Power Virtual Server Snapshots.
 - `ssh-key`:    IBM Cloud Power Virtual Server SSH-Keys.
@@ -60,7 +62,7 @@ The following list of commands are available with command-line interface (CLI) f
 - `virtual-serial-number`:    IBM Cloud Power Virtual Server Virtual Serial Number.
 - `volume`:    IBM Cloud Power Virtual Server Volumes.
 - `volume-group`:    IBM Cloud Power Virtual Server Volume Groups.
-- `vpn`:    IBM Cloud Power Virtual Server Virtual Private Networking.
+- `vpn`:    [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking.
 - `workspace`:    IBM Cloud Power Virtual Server Workspaces.
 
 ---
@@ -121,13 +123,13 @@ create CONNECTION_NAME --speed SPEED
 ```bash
   -c, --classic             Enable "Classic" cloud connection endpoint.
   -g, --global-routing      Global routing flag.
-  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option. GRE tunnel cannot be configured with speeds above 5000.
+  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" flag. GRE tunnel cannot be configured with speeds above 5000.
   -m, --metered             Metered cloud connection flag.
   -s, --speed int           Speed of the cloud connection (speed in megabits per second). Allowed values are 50, 100, 200, 500, 1000, 2000, 5000, 10000.
   -n, --subnets strings     Comma separated subnet identifiers.
   -r, --transit-enabled     Enable transit gateway.
   -v, --vpc                 Enable "VPC" cloud connection endpoint.
-  -p, --vpcIDs strings      VPC ID (i.e. crn:v1:..) to add to cloud connection. Use with "--vpc" option.
+  -p, --vpcIDs strings      VPC ID (i.e. crn:v1:..) to add to cloud connection. Use with "--vpc" flag.
 ```
 
 **Examples**:
@@ -267,12 +269,12 @@ update CONNECTION_ID [--classic=True|False [--gre-tunnel "CIDR DEST-IP"]] [--glo
 ```bash
   -c, --classic             Enable "Classic" cloud connection endpoint.
   -g, --global-routing      Global routing flag.
-  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option. GRE tunnel cannot be configured with speeds above 5000.
+  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" flag. GRE tunnel cannot be configured with speeds above 5000.
   -m, --metered             Metered cloud connection flag.
   -n, --name string         Name of the cloud connection.
   -s, --speed int           New speed value for the cloud connection. Allowed values are 50, 100, 200, 500, 1000, 2000, 5000. Speeds currently at 10000 cannot be downgraded lower and speeds cannot be increased to 10000.
   -v, --vpc                 Enable "VPC" cloud connection endpoint.
-  -p, --vpcIDs strings      VPC ID (i.e. crn:v1:..) to add to cloud connection. Use with "--vpc" option.
+  -p, --vpcIDs strings      VPC ID (i.e. crn:v1:..) to add to cloud connection. Use with "--vpc" flag.
 ```
 
 **Examples**:
@@ -460,7 +462,7 @@ release HOST_ID
 **Usage**:
 
 ```bash
-update HOST_ID --display-name NEW_NAME
+update HOST_ID --display-name NAME
 
   HOST_ID: The unique identifier of the host.
 ```
@@ -578,17 +580,17 @@ update HOST_GROUP_ID ([--add-workspaces "WORKSPACE_ID1 [HOST_GROUP_NAME1]"[,"WOR
 
 **Alias**: `ike-policy, ike`
 
-**Description**: IBM Cloud Power Virtual Server Internet Key Exchange policies.
+**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Internet Key Exchange policies.
 
 **Usage**: `ike-policy`
 
 **Available Commands**:
 
-- `create`:    Create a VPN IKE policy.
-- `delete`:    Delete a VPN IKE policy.
-- `get`:    View details of a VPN IKE policy.
-- `list`:    List all VPN IKE policies.
-- `update`:    Update a VPN IKE policy.
+- `create`:    [DEPRECATED] Create a VPN IKE policy.
+- `delete`:    [DEPRECATED] Delete a VPN IKE policy.
+- `get`:    [DEPRECATED] View details of a VPN IKE policy.
+- `list`:    [DEPRECATED] List all VPN IKE policies.
+- `update`:    [DEPRECATED] Update a VPN IKE policy.
 
 ---
 
@@ -597,7 +599,7 @@ update HOST_GROUP_ID ([--add-workspaces "WORKSPACE_ID1 [HOST_GROUP_NAME1]"[,"WOR
 
 **Alias**: `create, cr`
 
-**Description**: Create a VPN IKE policy.
+**Description**: [DEPRECATED] Create a VPN IKE policy.
 
 **Usage**:
 
@@ -631,7 +633,7 @@ create IKE_POLICY_NAME --version VERSION --authentication AUTHENTICATION --encry
 
 **Alias**: `delete, del`
 
-**Description**: Delete a VPN IKE policy.
+**Description**: [DEPRECATED] Delete a VPN IKE policy.
 
 **Usage**:
 
@@ -648,7 +650,7 @@ delete IKE_POLICY_ID
 
 **Alias**: `get`
 
-**Description**: View details of a VPN IKE policy.
+**Description**: [DEPRECATED] View details of a VPN IKE policy.
 
 **Usage**:
 
@@ -665,7 +667,7 @@ get IKE_POLICY_ID
 
 **Alias**: `list, ls`
 
-**Description**: List all VPN IKE policies.
+**Description**: [DEPRECATED] List all VPN IKE policies.
 
 **Usage**: `list`
 
@@ -676,12 +678,12 @@ get IKE_POLICY_ID
 
 **Alias**: `update, upd`
 
-**Description**: Update a VPN IKE policy.
+**Description**: [DEPRECATED] Update a VPN IKE policy.
 
 **Usage**:
 
 ```bash
-update IKE_POLICY_ID [--name NEW_NAME] [--version VERSION] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--preshared-key KEY] [--key-lifetime SECONDS]
+update IKE_POLICY_ID [--name NAME] [--version VERSION] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--preshared-key KEY] [--key-lifetime SECONDS]
 
   IKE_POLICY_ID: The unique identifier of the VPN IKE policy.
 ```
@@ -862,18 +864,18 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 ```bash
   -k, --access-key string                 Cloud Object Storage HMAC access key.
   -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against;
-                                          required if "--affinity-policy affinity" is specified and --affinity-volume is not provided.
+                                          required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
   -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity".
-                                          If --storage-pool is provided then this cannot be specified.
+                                          If "--storage-pool" is provided then this cannot be specified.
   -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against;
-                                          required if "--affinity-policy affinity" is specified and --affinity-instance is not provided.
+                                          required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
   -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against;
-                                          required if "--affinity-policy anti-affinity" is specified and --anti-affinity-volumes is not provided.
+                                          required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-volumes" is not provided.
   -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against;
-                                          required if "--affinity-policy anti-affinity" is specified  and --anti-affinity-instances is not provided.
+                                          required if "--affinity-policy anti-affinity" is specified  and "--anti-affinity-instances" is not provided.
   -b, --bucket string                     Cloud Object Storage bucket name.
-  -u, --bucket-access string              Indicates the bucket access type (private or public). Private access requires access and secret keys.
-                                          Public access requires the --job option. Default is private.
+  -u, --bucket-access string              Indicates the bucket access type ("private" or "public"). Private access requires access and secret keys.
+                                          Default is "private".
   -n, --image-file-name string            The image file name.
   -d, --import-details strings            Import details for SAP image. Must include a license, product and vendor.
                                           Valid license values: byol.
@@ -883,7 +885,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -r, --region string                     Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string                 Cloud Object Storage HMAC secret key.
   -p, --storage-pool string               Storage pool where the image will be imported to (use "ibmcloud pi storage-pools" to see available storage pools).
-                                          If --storage-pool is provided then --affinity-policy cannot be specified.
+                                          If "--storage-pool" is provided then "--affinity-policy" cannot be specified.
   -t, --storage-tier string               Tier of the disk storage (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region).
                                           Default to tier3 if not provided.
       --user-tags strings                 Comma separated list of user tags to be attached to the imported image.
@@ -989,7 +991,7 @@ action INSTANCE_ID --operation OPERATION
 **Available Flags**:
 
 ```bash
-  -o, --operation string   Operation to be done in a PVM server instance. Valid values are "hard-reboot", "immediate-shutdown", "reset-state", "soft-reboot", "start", and "stop".
+  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
 ```
 
 **Examples**:
@@ -1172,7 +1174,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
-    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]"]
+    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE-TIER]]
     [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
 
   INSTANCE_NAME: The name of the instance.
@@ -1184,11 +1186,11 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
       --IBMiCSS-license                           IBMi CSS software license associated with the instance.
       --IBMiPHA-license                           IBMi PHA software license associated with the instance.
       --IBMiRDS-users int                         Number of IBMi RDS users software license associated with the instance, default IBMiRDSUsers=0 (no license).
-  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. False by default.
+  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. Default is "false".
       --deployment-target string                  The deployment of the dedicated host. Deployment must include either
                                                   a host group id and "hostGroup", or a host id and "host".
-  -d, --deployment-type string                    The custom deployment type ("EPIC" or "VMNoStorage"). If --deployment-type "VMNoStorage" is set,
-                                                  then --image must be one of "AIX-EMPTY", "IBMI-EMPTY", "RHEL-EMPTY", or "SLES-EMPTY".
+  -d, --deployment-type string                    The custom deployment type ("EPIC" or "VMNoStorage"). If '--deployment-type "VMNoStorage"' is set,
+                                                  then "--image" must be one of "AIX-EMPTY", "IBMI-EMPTY", "RHEL-EMPTY", or "SLES-EMPTY".
   -i, --image string                              Operating system image identifier or name.
   -k, --key-name string                           Name of SSH key.
   -m, --memory float                              Amount of memory (in GB) to allocate to the instance. Default is 2GB.
@@ -1202,17 +1204,18 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
                                                   Values greater than 1 will result in the creation of multiple instances.
       --replication-sites strings                 Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
       --shared-processor-pool string              The shared processor pool ID of the pool that the server will be in.
+      --software-tier string                      IBMi licensing software tiers. Must be set with "--virtual-serial-number" flag. Valid values are: P05, P10, P20, P30.
       --storage-affinity string                   Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
-                                                  If --storage-pool is provided, then this flag cannot be specified.
+                                                  If "--storage-pool" is provided, then this flag cannot be specified.
       --storage-affinity-instance string          PVM instance identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-volume is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
       --storage-affinity-volume string            Volume identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-instance is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-instance" is not provided.
       --storage-anti-affinity-instances strings   Comma separated list of PVM instance identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-volumes is not provided.
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-volumes" is not provided.
       --storage-anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-instances is not provided.
-      --storage-connection string                 The storage connection type. Valid values are "vSCSI" and "maxVolumeSupport".
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
+      --storage-connection string                 The storage connection type. Valid values are: vSCSI, maxVolumeSupport.
       --storage-pool string                       Storage pool for server deployment (use "ibmcloud pi storage-pools" to see available storage pools).
                                                   Only valid when you deploy one of the IBM supplied stock images.
                                                   Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
@@ -1229,11 +1232,11 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
   -n, --subnets strings                           Comma separated list of subnet identifiers or names, an optional IP address,
                                                   and network security group id that the network interface is a member of to associate with the instance.
                                                   If no network group security group id is specified, default one is used.
-  -s, --sys-type string                           Name of System Type ('s922', 's1022', 'e980', 'e1080')
+  -s, --sys-type string                           Name of System Type ('s922', 's1022', 's1122', 'e980', 'e1080', 'e1150', 'e1180')
   -u, --user-data string                          The user data passed into the instance. Strings and file names are supported. File names must be prepended with "@".
       --user-tags strings                         Comma separated list of user tags to be attached to the instance.
       --virtual-cores int                         The number of virtual cores assigned.
-      --virtual-serial-number string              IBMi Virtual serial number information added with the instance.
+      --virtual-serial-number string              IBMi virtual serial number information added with the instance.
                                                   Must include an existing virtual serial number or 'auto-assign' and optionally a description.
   -v, --volumes strings                           Comma separated list of volume identifiers or names to associate with the instance.
 ```
@@ -1269,7 +1272,7 @@ delete INSTANCE_ID [--delete-data-volumes=True|False] [--retainVSN=True|False]
 ```bash
   -d, --delete-data-volumes   Indicates whether all data volumes attached to the instance must be deleted.
                               Shared data volumes will be deleted if no other instances are attached.
-  -r, --retainVSN             Determines if the virtual serial number will be retained after being removed from the instance. Default is false.
+  -r, --retainVSN             Determines if the virtual serial number will be retained after being removed from the instance. Default is "false".
 ```
 
 ---
@@ -1320,10 +1323,10 @@ operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating
 **Available Flags**:
 
 ```bash
-  -b, --boot-mode string             Name of the server boot mode; allowable values are "a", "b", "c", and "d".
-  -m, --boot-operating-mode string   Name of the server operating mode; allowable values are "normal" and "manual".
-  -j, --job-task string              Name of the job task to execute; allowable values are "dston", "retrydump", "consoleservice", "iopreset", "remotedstoff", "remotedston", "iopdump", and "dumprestart".
-  -o, --operation-type string        Name of the operation to execute; allowable values are "job" and "boot".
+  -b, --boot-mode string             Name of the server boot mode. Valid values are: a, b, c, d.
+  -m, --boot-operating-mode string   Name of the server operating mode. Valid values are: manual, normal.
+  -j, --job-task string              Name of the job task to execute. Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
+  -o, --operation-type string        Name of the operation to execute. Valid values are: boot, job.
 ```
 
 **Examples**:
@@ -1376,7 +1379,7 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
 **Available Flags**:
 
 ```bash
-  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. False by default.
+  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. Default is "false".
       --deployment-target string                  The deployment of the dedicated host. Deployment must include either
                                                   a host group id and "hostGroup", or a host id and "host".
   -i, --image string                              Operating system image identifier or name.
@@ -1386,15 +1389,15 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
   -p, --profile-id string                         The unique identifier of the SAP profile.
       --replication-sites strings                 Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
       --storage-affinity string                   Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
-                                                  If --storage-pool is provided, then this flag cannot be specified.
+                                                  If "--storage-pool" is provided, then this flag cannot be specified.
       --storage-affinity-instance string          PVM instance identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-volume is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
       --storage-affinity-volume string            Volume identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-instance is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-instance" is not provided.
       --storage-anti-affinity-instances strings   Comma separated list of PVM instance identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-volumes is not provided.
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-volumes" is not provided.
       --storage-anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-instances is not provided.
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
       --storage-pool string                       Storage pool for SAP PVM instance deployment. Only valid when you deploy one of the IBM supplied stock images.
   -t, --storage-tier string                       Storage tiers for SAP PVM instance deployment when deploying a stock or custom image
                                                   (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
@@ -1425,7 +1428,14 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
 
 **Description**: List all SAP profiles for the targeted region.
 
-**Usage**: `list`
+**Usage**: `list [--family FAMILY] [--prefix PREFIX]`
+
+**Available Flags**:
+
+```bash
+  -f, --family string   SAP profile family to filter by. Valid values are: balanced, compute, memory, sap-rise, sap-rise-app, small, ultra-memory.
+  -p, --prefix string   SAP profile prefix to filter by. Valid values are: bh1, bh2, ch1, ch2, mh1, mh2, umh, ush1, sh2, sr2.
+```
 
 ---
 
@@ -1571,7 +1581,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 
 ```bash
   -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore - allowable values: ["retry","rollback"].
+  -r, --restore string    Action to take on a failed snapshot restore. Valid values for "--restore" are: retry, rollback.
   -s, --snapshot string   The unique identifier of the snapshot.
 ```
 
@@ -1593,7 +1603,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 **Usage**:
 
 ```bash
-update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
+update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 
   SNAPSHOT_ID: The unique identifier of the snapshot.
 ```
@@ -1673,7 +1683,7 @@ detach INSTANCE_ID --subnet SUBNET_ID [--mac-address MAC_ADDRESS]
 **Available Flags**:
 
 ```bash
-  -m, --mac-address string   The mac address of the subnet interface to be removed. The default is all mac addresses.
+  -m, --mac-address string   The mac address of the subnet interface to be removed. Default is all mac addresses.
   -n, --subnet string        The subnet ID.
 ```
 
@@ -1713,9 +1723,9 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NEW_NAME] [--pin-policy POLICY]
+    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
     [--processor-type TYPE] [--processors NUMBER] [--profile-id SAP_PROFILE_ID] [--storage-pool-affinity=True|False]
-    [--virtual-cores ASSIGNED_CORES]
+    [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1739,7 +1749,7 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
                                         For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
       --virtual-cores int               New number of virtual cores assigned.
-  -v, --virtual-optical-device string   Attach or Detach a Virtual Optical Device to this instance. Valid values are "attach" and "detach".
+  -v, --virtual-optical-device string   Attach or detach a virtual optical device to this instance. Valid values are: attach, detach.
 ```
 
 **Examples**:
@@ -1833,7 +1843,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Available Flags**:
 
 ```bash
-  -r, --retainVSN   Determines if virtual serial number will be retained after being unassigned from the instance. Default is false.
+  -r, --retainVSN   Determines if virtual serial number will be retained after being unassigned from the instance. Default is "false".
 ```
 
 **Examples**:
@@ -1854,7 +1864,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Usage**:
 
 ```bash
-update INSTANCE_ID [--description DESCRIPTION]
+update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE-TIER)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1862,7 +1872,8 @@ update INSTANCE_ID [--description DESCRIPTION]
 **Available Flags**:
 
 ```bash
-  -d, --description string   New virtual serial number description.
+  -d, --description string     New virtual serial number description.
+      --software-tier string   IBMi licensing software tiers. Valid values are: P05, P10, P20, P30.
 ```
 
 ---
@@ -1933,9 +1944,9 @@ bulk-detach INSTANCE_ID (--detach-all=True|False | --volumes VOLUME1[,VOLUMEn]) 
 **Available Flags**:
 
 ```bash
-  -a, --detach-all        Indicates if all volumes, except primary boot volume, attached to the instance should be detached. Required if --volumes is not provided.
+  -a, --detach-all        Indicates if all volumes, except primary boot volume, attached to the instance should be detached. Required if "--volumes" is not provided.
   -p, --detach-primary    Indicates if primary boot volume attached to the instance should be detached.
-  -v, --volumes strings   List of volumes to be detached from an instance. Required if --detach-all is not provided.
+  -v, --volumes strings   List of volumes to be detached from an instance. Required if "--detach-all" is not provided.
 ```
 
 **Examples**:
@@ -1997,17 +2008,17 @@ list INSTANCE_ID
 
 **Alias**: `ipsec-policy, ips`
 
-**Description**: IBM Cloud Power Virtual Server Internet Protocol Security policies.
+**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Internet Protocol Security policies.
 
 **Usage**: `ipsec-policy`
 
 **Available Commands**:
 
-- `create`:    Create a VPN IPSec policy.
-- `delete`:    Delete a VPN IPSec policy.
-- `get`:    View details of a VPN IPSec policy.
-- `list`:    List all IPSec policies.
-- `update`:    Update a VPN IPSec policy.
+- `create`:    [DEPRECATED] Create a VPN IPSec policy.
+- `delete`:    [DEPRECATED] Delete a VPN IPSec policy.
+- `get`:    [DEPRECATED] View details of a VPN IPSec policy.
+- `list`:    [DEPRECATED] List all IPSec policies.
+- `update`:    [DEPRECATED] Update a VPN IPSec policy.
 
 ---
 
@@ -2016,7 +2027,7 @@ list INSTANCE_ID
 
 **Alias**: `create, cr`
 
-**Description**: Create a VPN IPSec policy.
+**Description**: [DEPRECATED] Create a VPN IPSec policy.
 
 **Usage**:
 
@@ -2049,7 +2060,7 @@ create IPSEC_POLICY_NAME --authentication AUTHENTICATION --dh-group DH_GROUP --e
 
 **Alias**: `delete, del`
 
-**Description**: Delete a VPN IPSec policy.
+**Description**: [DEPRECATED] Delete a VPN IPSec policy.
 
 **Usage**:
 
@@ -2066,7 +2077,7 @@ delete IPSEC_POLICY_ID
 
 **Alias**: `get`
 
-**Description**: View details of a VPN IPSec policy.
+**Description**: [DEPRECATED] View details of a VPN IPSec policy.
 
 **Usage**:
 
@@ -2083,7 +2094,7 @@ get IPSEC_POLICY_ID
 
 **Alias**: `list, ls`
 
-**Description**: List all IPSec policies.
+**Description**: [DEPRECATED] List all IPSec policies.
 
 **Usage**: `list`
 
@@ -2094,12 +2105,12 @@ get IPSEC_POLICY_ID
 
 **Alias**: `update, upd`
 
-**Description**: Update a VPN IPSec policy.
+**Description**: [DEPRECATED] Update a VPN IPSec policy.
 
 **Usage**:
 
 ```bash
-update IPSEC_POLICY_ID  [--name NEW_NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--key-lifetime SECONDS] [--pfs=True|False]]
+update IPSEC_POLICY_ID  [--name NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--key-lifetime SECONDS] [--pfs=True|False]]
 
   IPSEC_POLICY_ID: The unique identifier of the VPN IPSec policy.
 ```
@@ -2180,9 +2191,9 @@ get JOB_ID
 **Available Flags**:
 
 ```bash
-  -a, --operation-action string   Operation action to filter returned jobs. Valid values are vmCapture, imageExport, imageImport, storage.
+  -a, --operation-action string   Operation action to filter returned jobs. Valid values are: imageExport, imageImport, storage, vmCapture.
   -i, --operation-id string       Operation ID to filter returned jobs.
-  -t, --operation-target string   Operation target to filter returned jobs. Valid values are cloudConnection, pvmInstance, image.
+  -t, --operation-target string   Operation target to filter returned jobs. Valid values are: cloudConnection, image, pvmInstance.
 ```
 
 ---
@@ -2486,7 +2497,7 @@ get NETWORK_INTERFACE_ID --network-id NETWORK_ID
 **Usage**:
 
 ```bash
-update NETWORK_INTERFACE_ID --network-id NETWORK_ID [--instance-id INSTANCE_ID] [--name NEW_NAME]
+update NETWORK_INTERFACE_ID --network-id NETWORK_ID [--instance-id INSTANCE_ID] [--name NAME]
 
   NETWORK_INTERFACE_ID: The unique identifier of the network interface.
 ```
@@ -2684,7 +2695,7 @@ member-add NETWORK_SECURITY_GROUP_ID --member-type ("ipv4-address" | "network-in
 **Available Flags**:
 
 ```bash
-  -m, --member-type string   The type of member. Valid values are 'ipv4-address', and 'network-interface'.
+  -m, --member-type string   The type of member. Valid values are: ipv4-address, network-interface.
   -t, --target string        The target member to add. This is an IP4 address if type is set to 'ipv4-address'. This is a network interface ID if type is set to 'network-interface'.
 ```
 
@@ -2878,7 +2889,7 @@ update NETWORK_SECURITY_GROUP_ID --name NAME
 **Usage**:
 
 ```bash
-create PLACEMENT_GROUP_NAME --policy POLICY
+create PLACEMENT_GROUP_NAME --policy POLICY [--user-tags USER_TAG1[,USER_TAGn]]
 
   PLACEMENT_GROUP_NAME: A unique name of the placement group.
 ```
@@ -2886,7 +2897,8 @@ create PLACEMENT_GROUP_NAME --policy POLICY
 **Available Flags**:
 
 ```bash
-  -p, --policy string   Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -p, --policy string       Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the placement group.
 ```
 
 **Examples**:
@@ -2996,6 +3008,152 @@ server-remove PLACEMENT_GROUP_ID --server INSTANCE_ID
 
 ```bash
     ibmcloud pi placement-group server-remove 43064761-948f-469d-ac8e-b8e5f0d6056f --server 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+## `ibmcloud pi route`
+{: #ibmcloud-pi-route}
+
+**Alias**: `route, rt`
+
+**Description**: IBM Cloud Power Virtual Server Network Routes.
+
+**Usage**: `route`
+
+**Available Commands**:
+
+- `create`:    Create a network custom route.
+- `delete`:    Delete a network custom route.
+- `get`:    View details of a network custom route.
+- `list`:    List all network custom routes.
+- `report`:    View details of network custom route report.
+- `update`:    Update a network custom route.
+
+---
+
+### `ibmcloud pi route create`
+{: #ibmcloud-pi-route-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network custom route.
+
+**Usage**:
+
+```bash
+create ROUTE_NAME --destination DESTINATION --next-hop NEXT_HOP
+    [--action ACTION] [--advertise ("enable" | "disable")] [--destination-type DESTINATION_TYPE]
+    [--enabled=True|False] [--next-hop-type NEXT_HOP_TYPE] [--user-tags USER_TAG1[,USER_TAGn]]
+
+  ROUTE_NAME: A unique name of the network custom route.
+```
+
+**Available Flags**:
+
+```bash
+  -a, --action string             The action of the route to take. Valid values are: deliver. Default is "deliver".
+      --advertise string          Enable the route to be advertised. Valid values are: enable, disable. Default is "enable".
+  -d, --destination string        The route destination.
+      --destination-type string   The route destination type. Valid values are: ipv4-address. Default is "ipv4-address".
+  -e, --enabled                   Indicates if the route should be enabled in the fabric.
+      --next-hop string           The IP address to route the packet to.
+      --next-hop-type string      The next hop type. Valid values are: ipv4-address. Default is "ipv4-address".
+  -u, --user-tags strings         Comma separated list of user tags to be attached to the network security group.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi route create test-route --advertise disable --destination 192.168.1.23 --next-hop 192.168.1.24
+```
+
+---
+
+### `ibmcloud pi route delete`
+{: #ibmcloud-pi-route-delete}
+
+**Alias**: `delete, del`
+
+**Description**: Delete a network custom route.
+
+**Usage**:
+
+```bash
+delete ROUTE_ID
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+---
+
+### `ibmcloud pi route get`
+{: #ibmcloud-pi-route-get}
+
+**Alias**: `get`
+
+**Description**: View details of a network custom route.
+
+**Usage**:
+
+```bash
+get ROUTE_ID
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+---
+
+### `ibmcloud pi route list`
+{: #ibmcloud-pi-route-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all network custom routes.
+
+**Usage**: `list`
+
+---
+
+### `ibmcloud pi route report`
+{: #ibmcloud-pi-route-report}
+
+**Alias**: `report, rp`
+
+**Description**: View details of network custom route report.
+
+**Usage**: `report`
+
+---
+
+### `ibmcloud pi route update`
+{: #ibmcloud-pi-route-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a network custom route.
+
+**Usage**:
+
+```bash
+update ROUTE_ID [--action ACTION] [--advertise ("enable" | "disable")]
+    [--destination DESTINATION] [--destination-type DESTINATION_TYPE] [--enabled=True|False]
+    [--name NAME] [--next-hop NEXT_HOP] [--next-hop-type NEXT_HOP_TYPE]
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+**Available Flags**:
+
+```bash
+  -a, --action string             The action of the route to take. Valid values are: deliver.
+      --advertise string          Enable the route to be advertised. Valid values are: enable, disable.
+  -d, --destination string        The route destination.
+      --destination-type string   The route destination type. Valid values are: ipv4-address.
+  -e, --enabled                   Indicates if the route should be enabled in the fabric.
+  -n, --name string               New name of the route.
+      --next-hop string           The IP address to route the packet to.
+      --next-hop-type string      The next hop type. Valid values are: ipv4-address.
 ```
 
 ---
@@ -3128,7 +3286,7 @@ get SHARED_PROCESSOR_POOL_ID
 **Usage**:
 
 ```bash
-create PLACEMENT_GROUP_NAME --policy POLICY
+create PLACEMENT_GROUP_NAME --policy POLICY [--user-tags USER_TAG1[,USER_TAGn]]
 
   PLACEMENT_GROUP_NAME: A unique name of the placement group.
 ```
@@ -3136,7 +3294,8 @@ create PLACEMENT_GROUP_NAME --policy POLICY
 **Available Flags**:
 
 ```bash
-  -p, --policy string   Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -p, --policy string       Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the shared processor pool placement group.
 ```
 
 **Examples**:
@@ -3414,7 +3573,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 **Usage**:
 
 ```bash
-update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
+update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 
   SNAPSHOT_ID: The unique identifier of the snapshot.
 ```
@@ -3457,7 +3616,7 @@ update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
 **Usage**:
 
 ```bash
-create KEY_NAME --key KEY
+create KEY_NAME --key KEY [--description DESCRIPTION] [--visibility ("account" | "workspace")]
 
   KEY_NAME: The name of the key.
 ```
@@ -3465,7 +3624,12 @@ create KEY_NAME --key KEY
 **Available Flags**:
 
 ```bash
-  -k, --key string   SSH RSA key string within a double quotation marks. For example, "ssh-rsa AAA... "
+  -d, --description string   Description of the SSH-Key.
+  -k, --key string           SSH RSA key string within a double quotation marks. For example, "ssh-rsa AAA... "
+  -v, --visibility string    Visibility of the SSH-Key. Valid values are: account, workspace.
+                             Value of "workspace" means SSH-Key is only accessible in a workspace.
+                             Value of "account" means SSH-Key is accessible throughout an account.
+                             Default is "workspace".
 ```
 
 **Examples**:
@@ -3531,7 +3695,7 @@ get KEY_NAME
 **Usage**:
 
 ```bash
-update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
+update KEY_NAME [--description DESCRIPTION] [--key KEY] [--name NAME] [--visibility ("account" | "workspace")]
 
   KEY_NAME: The name of the key.
 ```
@@ -3539,8 +3703,12 @@ update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
 **Available Flags**:
 
 ```bash
-  -k, --new-key string    SSH RSA key string
-  -n, --new-name string   SSH-Key name
+  -d, --description string   Description of the SSH-Key.
+  -k, --key string           SSH RSA key string.
+  -n, --name string          SSH-Key name.
+  -v, --visibility string    Visibility of the SSH-Key. Valid values are: account, workspace.
+                             Value of "workspace" means SSH-Key is only accessible in a workspace.
+                             Value of "account" means SSH-Key is accessible throughout an account.
 ```
 
 ---
@@ -3596,8 +3764,10 @@ update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
 **Usage**:
 
 ```bash
-create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"] [--jumbo=True|False] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
-  pi subnet create SUBNET_NAME --net-type public [--dns-servers "DNS1 DNS2"] [--jumbo=True|False] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
+create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")]
+      [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"]
+      [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
+  pi subnet create SUBNET_NAME --net-type public [--dns-servers "DNS1 DNS2"] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
 
   SUBNET_NAME: The name of the subnet.
 ```
@@ -3605,16 +3775,17 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DN
 **Available Flags**:
 
 ```bash
-  -c, --cidr-block string     Subnet in CIDR notation (192.168.1.0/22).
-  -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-                              127.0.0.1 by default if DNS server is not specified for private subnet types.
-                              9.9.9.9 by default for public subnet types.
-  -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
-  -j, --jumbo                 [DEPRECATED] replaced by "mtu". Enable MTU Jumbo Subnet. The default value is false.
-  -m, --mtu int               Maximum Transmission Unit. MTU be between 1450 and 9000.
-  -n, --net-type string       Subnet type. Either "public" or "private".
-  -u, --user-tags strings     Comma separated list of user tags to be attached to the subnet.
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable".
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable".
+  -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
+  -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
+                               127.0.0.1 by default if DNS server is not specified for private subnet types.
+                               9.9.9.9 by default for public subnet types.
+  -g, --gateway string         Gateway to use for this subnet.
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -m, --mtu int                Maximum Transmission Unit. MTU be between 1450 and 9000.
+  -n, --net-type string        Subnet type. Either "public" or "private".
+  -u, --user-tags strings      Comma separated list of user tags to be attached to the subnet.
 ```
 
 **Examples**:
@@ -3681,7 +3852,7 @@ get SUBNET_ID
 **Usage**:
 
 ```bash
-update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]"] [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
+update SUBNET_ID [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")] [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
 
   SUBNET_ID: The unique identifier or name of the subnet.
 ```
@@ -3689,10 +3860,12 @@ update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]
 **Available Flags**:
 
 ```bash
-  -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-  -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
-  -n, --name string           New name of the subnet.
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable.
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable.
+  -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
+  -g, --gateway string         Gateway to use for this subnet.
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -n, --name string            New name of the subnet.
 ```
 
 ---
@@ -3711,6 +3884,7 @@ update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]
 - `delete`:    Delete a virtual serial number.
 - `get`:    View details of a virtual serial number.
 - `list`:    List all virtual serial number assigned to an instance or all virtual serial numbers in the workspace.
+- `software-tiers`:    List all supported software tiers.
 - `update`:    Update a retained virtual serial number.
 
 ---
@@ -3767,8 +3941,19 @@ list ([PVM_INSTANCE_ID] | [--retainVSN=True|False])
 **Available Flags**:
 
 ```bash
-  -r, --retainVSN   Lists only retained virtual serial numbers. Default is false.
+  -r, --retainVSN   Lists only retained virtual serial numbers. Default is "false".
 ```
+
+---
+
+### `ibmcloud pi virtual-serial-number software-tiers`
+{: #ibmcloud-pi-virtual-serial-number-software-tiers}
+
+**Alias**: `software-tiers, st`
+
+**Description**: List all supported software tiers.
+
+**Usage**: `software-tiers`
 
 ---
 
@@ -3840,7 +4025,7 @@ action VOLUME_ID [--replication-enabled=True|False] [--target-tier STORAGE_TIER]
 **Available Flags**:
 
 ```bash
-  -r, --replication-enabled   Enables storage replication on the volume. False by default.
+  -r, --replication-enabled   Enables storage replication on the volume. Default is "false".
   -t, --target-tier string    Change the storage tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). "Tier5k" volumes cannot exceed 200GB.
 ```
 
@@ -4158,17 +4343,17 @@ create VOLUME_NAME --size SIZE [--count COUNT] [--replication-enabled=True|False
 **Available Flags**:
 
 ```bash
-  -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and --affinity-volume is not provided.
-  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity". If --storage-pool is provided then this cannot be specified.
-  -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and --affinity-instance is not provided.
-  -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified and --anti-affinity-volumes is not provided.
-  -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified  and --anti-affinity-instances is not provided.
-  -c, --count int                         Number of volumes to create. 1 by default.
-  -r, --replication-enabled               Enables storage replication on the volume. False by default.
+  -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
+  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity". If "--storage-pool" is provided then this cannot be specified.
+  -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
+  -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-volumes" is not provided.
+  -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified  and "--anti-affinity-instances" is not provided.
+  -c, --count int                         Number of volumes to create. Default is 1.
+  -r, --replication-enabled               Enables storage replication on the volume. Default is "false".
       --replication-sites strings         List of replication sites for volume replication. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
-  -e, --shareable                         Whether the volumes can be attached to multiple VMs. False by default.
+  -e, --shareable                         Whether the volumes can be attached to multiple VMs. Default is "false".
   -s, --size int                          Size of the volume (in GB). Size cannot exceed 200GB for storage tier "Tier5k".
-  -p, --storage-pool string               Volume pool where the volume will be created. If --storage-pool is provided then --affinity-policy values cannot be specified.
+  -p, --storage-pool string               Volume pool where the volume will be created. If the "--storage-pool" flag is set then the "--affinity-policy" flag cannot be specified.
   -t, --storage-tier string               Tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). Default to tier3 if not provided.
   -u, --user-tags strings                 Comma separated list of user tags to be attached to the volume.
 ```
@@ -4247,9 +4432,9 @@ get VOLUME_ID
 **Available Flags**:
 
 ```bash
-  -a, --auxiliary             Filter auxiliary volumes if set to True or non-auxiliary volumes if False. True by default.
+  -a, --auxiliary             Filter auxiliary volumes if set to "true" or non-auxiliary volumes if set to "false". Default is "true".
   -l, --long                  Retrieve all volume details.
-  -r, --replication-enabled   Filter replication-enabled volumes if set to True or non-replication-enabled volumes if False. True by default.
+  -r, --replication-enabled   Filter replication-enabled volumes if set to "true" or non-replication-enabled volumes if set to "false". Default is "true".
 ```
 
 ---
@@ -4283,7 +4468,7 @@ get VOLUME_ID
 **Available Flags**:
 
 ```bash
-  -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this option to add more auxiliary volumes.
+  -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this flag to add more auxiliary volumes.
   -d, --description string          Volume onboarding description.
   -s, --source-crn string           CRN of source ServiceBroker instance from where auxiliary volumes need to be onboarded.
   -u, --user-tags strings           Comma separated list of user tags to be attached to the volume onboarding.
@@ -4396,7 +4581,7 @@ get SNAPSHOT_ID
 **Usage**:
 
 ```bash
-update VOLUME_ID [--bootable=True|False] [--name NEW_NAME] [--size NEW_SIZE] [--shareable=True|False]
+update VOLUME_ID [--bootable=True|False] [--name NAME] [--size SIZE] [--shareable=True|False]
 
   VOLUME_ID: The unique identifier or name of the volume.
 ```
@@ -4455,9 +4640,9 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Available Flags**:
 
 ```bash
-  -a, --allow-read-access   Allow the auxiliary volume to be accessible after stopping the volume group. Default is false.
-  -o, --operation string    Operation to be done in a volume group. Valid values are "start", "stop", and "reset".
-      --source string       The copying volume source. Allowed values are master or auxiliary. Default is "master".
+  -a, --allow-read-access   Allow the auxiliary volume to be accessible after stopping the volume group. Default is "false".
+  -o, --operation string    Operation to be done in a volume group. Valid values are: reset, start, stop.
+      --source string       The copying volume source. Valid values are: auxiliary, master.Default is "master".
       --status string       New status to be set for a volume group. Default is "available".
 ```
 
@@ -4621,19 +4806,19 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 
 **Alias**: `vpn`
 
-**Description**: IBM Cloud Power Virtual Server Virtual Private Networking.
+**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking.
 
 **Usage**: `vpn`
 
 **Available Commands**:
 
-- `create`:    Create a VPN connection.
-- `delete`:    Delete a VPN connection.
-- `get`:    View details of a VPN connection.
-- `list`:    List all VPN connections.
-- `peer-subnet`:    IBM Cloud Power Virtual Server Virtual Private Networking Peer-Subnets.
-- `subnet`:    IBM Cloud Power Virtual Server Virtual Private Networking Subnets.
-- `update`:    Update a VPN connection.
+- `create`:    [DEPRECATED] Create a VPN connection.
+- `delete`:    [DEPRECATED] Delete a VPN connection.
+- `get`:    [DEPRECATED] View details of a VPN connection.
+- `list`:    [DEPRECATED] List all VPN connections.
+- `peer-subnet`:    [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking Peer-Subnets.
+- `subnet`:    [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking Subnets.
+- `update`:    [DEPRECATED] Update a VPN connection.
 
 ---
 
@@ -4642,7 +4827,7 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 
 **Alias**: `create, cr`
 
-**Description**: Create a VPN connection.
+**Description**: [DEPRECATED] Create a VPN connection.
 
 **Usage**:
 
@@ -4670,7 +4855,7 @@ create VPN_CONNECTION_NAME --ike-policy-id IKE_POLICY_ID --ipsec-policy-id IPSEC
 
 **Alias**: `delete, del`
 
-**Description**: Delete a VPN connection.
+**Description**: [DEPRECATED] Delete a VPN connection.
 
 **Usage**:
 
@@ -4687,7 +4872,7 @@ delete VPN_CONNECTION_ID
 
 **Alias**: `get`
 
-**Description**: View details of a VPN connection.
+**Description**: [DEPRECATED] View details of a VPN connection.
 
 **Usage**:
 
@@ -4704,7 +4889,7 @@ get VPN_CONNECTION_ID
 
 **Alias**: `list, ls`
 
-**Description**: List all VPN connections.
+**Description**: [DEPRECATED] List all VPN connections.
 
 **Usage**: `list`
 
@@ -4715,15 +4900,15 @@ get VPN_CONNECTION_ID
 
 **Alias**: `peer-subnet, pnet`
 
-**Description**: IBM Cloud Power Virtual Server Virtual Private Networking Peer-Subnets.
+**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking Peer-Subnets.
 
 **Usage**: `peer-subnet`
 
 **Available Commands**:
 
-- `attach`:    Attach a peer subnet to a specific VPN connection.
-- `detach`:    Detach a peer subnet from a specific VPN connection.
-- `list`:    Get a list of peer subnets attached to a specific VPN connection.
+- `attach`:    [DEPRECATED] Attach a peer subnet to a specific VPN connection.
+- `detach`:    [DEPRECATED] Detach a peer subnet from a specific VPN connection.
+- `list`:    [DEPRECATED] Get a list of peer subnets attached to a specific VPN connection.
 
 ---
 
@@ -4732,7 +4917,7 @@ get VPN_CONNECTION_ID
 
 **Alias**: `attach, att`
 
-**Description**: Attach a peer subnet to a specific VPN connection.
+**Description**: [DEPRECATED] Attach a peer subnet to a specific VPN connection.
 
 **Usage**:
 
@@ -4761,7 +4946,7 @@ attach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
 
 **Alias**: `detach, det`
 
-**Description**: Detach a peer subnet from a specific VPN connection.
+**Description**: [DEPRECATED] Detach a peer subnet from a specific VPN connection.
 
 **Usage**:
 
@@ -4790,7 +4975,7 @@ detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
 
 **Alias**: `list, ls`
 
-**Description**: Get a list of peer subnets attached to a specific VPN connection.
+**Description**: [DEPRECATED] Get a list of peer subnets attached to a specific VPN connection.
 
 **Usage**: `list VPN_CONNECTION_ID`
 
@@ -4801,15 +4986,15 @@ detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
 
 **Alias**: `subnet, snet`
 
-**Description**: IBM Cloud Power Virtual Server Virtual Private Networking Subnets.
+**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Virtual Private Networking Subnets.
 
 **Usage**: `subnet`
 
 **Available Commands**:
 
-- `attach`:    Attach a subnet to a specific VPN connection.
-- `detach`:    Detach a subnet to a specific VPN connection.
-- `list`:    Get a list of subnets attached to a specific VPN connection.
+- `attach`:    [DEPRECATED] Attach a subnet to a specific VPN connection.
+- `detach`:    [DEPRECATED] Detach a subnet to a specific VPN connection.
+- `list`:    [DEPRECATED] Get a list of subnets attached to a specific VPN connection.
 
 ---
 
@@ -4818,7 +5003,7 @@ detach VPN_CONNECTION_ID --peer-subnet-cidr CIDR
 
 **Alias**: `attach, att`
 
-**Description**: Attach a subnet to a specific VPN connection.
+**Description**: [DEPRECATED] Attach a subnet to a specific VPN connection.
 
 **Usage**:
 
@@ -4847,7 +5032,7 @@ attach VPN_CONNECTION_ID --subnet ID
 
 **Alias**: `detach, det`
 
-**Description**: Detach a subnet to a specific VPN connection.
+**Description**: [DEPRECATED] Detach a subnet to a specific VPN connection.
 
 **Usage**:
 
@@ -4876,7 +5061,7 @@ detach VPN_CONNECTION_ID --subnet ID
 
 **Alias**: `list, ls`
 
-**Description**: Get a list of subnets attached to a specific VPN connection.
+**Description**: [DEPRECATED] Get a list of subnets attached to a specific VPN connection.
 
 **Usage**: `list VPN_CONNECTION_ID`
 
@@ -4887,7 +5072,7 @@ detach VPN_CONNECTION_ID --subnet ID
 
 **Alias**: `update, upd`
 
-**Description**: Update a VPN connection.
+**Description**: [DEPRECATED] Update a VPN connection.
 
 **Usage**:
 
@@ -4947,7 +5132,7 @@ action WORKSPACE_ID --operation OPERATION
 **Available Flags**:
 
 ```bash
-  -o, --operation string   Operation to be done in a workspace. Valid values are per-migrate-start, per-migrate-validate.
+  -o, --operation string   Operation to be done in a workspace. Valid values are: per-migrate-start, per-migrate-validate.
 ```
 
 **Examples**:
@@ -4987,7 +5172,11 @@ create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN
 **Available Flags**:
 
 ```bash
-  -d, --datacenter string   The datacenter location where the instance should be hosted. Use the "datacenter list" command to see possible values.
+  -d, --datacenter string   The datacenter location where the instance should be hosted.
+                            Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
+                            and the "ibmcloud sat location ls" command to see values for private datacenters.
+                            When using the "ibmcloud sat location ls" to get a private datacenter,
+                            please prefix "satloc_<REGION>_" to the displayed id.
   -g, --group string        The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
   -p, --plan string         Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
   -u, --user-tags strings   Comma separated list of user tags to be attached to the workspace.

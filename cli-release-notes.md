@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2025-07-14"
+  years: 2019, 2025
+lastupdated: "2025-07-16"
 
 ---
 
@@ -25,8 +25,6 @@ New CLI version v1.5.2 available. The Power Virtual Server CLI plug-in is availa
 
 - Fixed bug in CLI plug-in metadata.
 
-
-
 ## April 2025
 {: #april-2025}
 
@@ -35,6 +33,10 @@ New CLI version v1.5.1 is available. The Power Virtual Server CLI plug-in is ava
 **What's changed**
 
 - Security update with CLI plugin dependencies.
+
+
+
+
 
 ## March 2025
 {: #mar-2025}
@@ -52,6 +54,12 @@ New CLI version v1.5.0 is available. The Power Virtual Server CLI plug-in is ava
 **What's changed**
 - In the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}, if you enable the `sap-subscription-mode` option for the workspace, different options are displayed in the image list-catalog.
 - Added a default system to the instance SAP profile and the instance SAP list.
+
+
+
+
+
+
 
 
 ## February 2025
