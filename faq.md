@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-16"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -220,12 +220,12 @@ The following list of Linux stock images are available:
 
 Red Hat
 
-* RHEL 9.4 general purpose (RHEL9-SP4)
+* RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
 * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP)
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
-* RHEL 8.10 general purpose (RHEL8-SP10)
+* RHEL 8.10 general purpose (RHEL8-SP10)  [^footnote6]
 * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA)
 * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
@@ -240,7 +240,7 @@ Red Hat
 
 SUSE [^footnote8]
 
-* SLES 15 SP6 general purpose (SLES15)
+* SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
@@ -250,7 +250,9 @@ SUSE [^footnote8]
 
 
 
-
+[^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote8]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
