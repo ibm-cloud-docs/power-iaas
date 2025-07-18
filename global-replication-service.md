@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-18"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -40,7 +40,7 @@ GRS on {{site.data.keyword.powerSys_notm}} has the following benefits:
 
 - Maintains redundant data centers in distant locations for fast recovery from disasters.
 
-- Eliminates the dedicated networks that are overpriced for replication and avoids bandwidth upgrades.
+- Removes the dedicated networks that are overpriced for replication and avoids bandwidth upgrades.
 
 Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers in which storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both the directions.
 
@@ -53,8 +53,8 @@ In the following table, the terms that are used throughout the document are defi
 
 | Term               | Definition                                                                            |
 |--------------------|---------------------------------------------------------------------------------------|
-| Primary location   | Location where the volume is created.                                                 |
-| Secondary location | Location where the auxiliary volume for replication is created.                       |
+| Primary location   | Location in which the volume is created.                                                 |
+| Secondary location | Location in which the auxiliary volume for replication is created.                       |
 | Primary volume     | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
 | Auxiliary volume   | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
 | IBM Cloud Resource Names (CRNs)  | Identifiers that are assigned to uniquely identify resources in IBM Cloud.        |
@@ -195,11 +195,11 @@ A volume group is used to enable, disable, and manage a replication-enabled cons
 
 | State  |  Description             |
 | ------------------------------------- | ------------------------ |
-| `inconsistent_stopped` | The primary volumes are accessible for `read` and `write` I/O operations, but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume is stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.|
-| `inconsistent_copying` | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation is started on the consistency group that was previously in the `inconsistent_stopped` state. |
+| `inconsistent_stopped` | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.|
+| `inconsistent_copying` | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state. |
 | `consistent_copying` | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes. |
-| `consistent_stopped` | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group was in a `consistent_copying` state and it was stopped. |
-| `idling` | The primary and auxiliary volumes are both operating in the primary role and both are accessible for `read` and `write` I/O operations. This state indicates that the data from one set of volumes is not copied to the other set of volumes in the replication pair because the replication process is disabled. |
+| `consistent_stopped` | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group that was in a `consistent_copying` state was stopped. |
+| `idling` | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled. |
 | `idling_disconnected` | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations. |
 | `consistent_disconnected` | This state indicates that the volumes in the consistency groups are operating in the non-primary role and you cannot perform `read` or `write` I/O operations. |
 | `empty` | This state indicates that the volumes in the consistency group do not have any relationship with each other. |
@@ -286,7 +286,7 @@ Refer to the following table for the properties of a replication-enabled volume.
 | `masterVolumeName`     | Indicates the name of the `master` volume in the storage. The storage controller auto-generates this name. |
 | `mirroringState`       | Indicates the mirrored state of the replication-enabled volume. This state is related to the current state of replication between the primary and the auxiliary volumes. For more information, see [Status of volume groups](#vol-grop-status-table). |
 | `outOfBandDeleted`     | Indicates the status of the replication-enabled volume when deleted. If the replication status is `disabled` on the primary volume and the auxiliary volume on the secondary location is not deleted within 24 hours, the status of the `outOfBandDeleted` property is set to `true`. In this state, you cannot perform any actions on the primary volume. When primary volumes are in this state, they are not billed. |
-| `primaryRole`          | Indicates the active volume in the primary and auxiliary volume. If this property value is set to `master`, the primary volume is the active volume where you can perform I/O operations. If this property value is set to `aux`, the auxiliary volume is the active volume where you can perform I/O operations. An inactive volume does not allow I/O operations to be performed on it. For a replication-enabled volume pair, the value of this property is the same. |
+| `primaryRole`          | Indicates the active volume in the primary and auxiliary volume. If this property value is set to `master`, the primary volume is the active volume in which you can perform I/O operations. If this property value is set to `aux`, the auxiliary volume is the active volume in which you can perform I/O operations. An inactive volume does not allow I/O operations to be performed on it. For a replication-enabled volume pair, the value of this property is the same. |
 | `replicationEnabled`   | Indicates the replication status of a volume. Set to `True` if the volume is replication-enabled. |
 | `replicationStatus`    | Returns the value of the replication status for a volume. If the returned value is `enabled`, the replication is active for the volume. If the returned value is `disabled`, the replication is inactive for the volume. If the returned value is `not-capable`, the volume is not replication-enabled and not associated with another volume on a different location. |
 {: class="simple-table"}
@@ -316,7 +316,7 @@ Verify that the volume group is created successfully and it is in a `consistent_
 
 Set the value of the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Provide the primary volume group IDs to get the details.
 
-Refer to the following table for the properties and its definitions.
+Refer to the following table for the properties that you can use with the API and CLI commands for verifying the status of the volume group and its definitions.
 
 | Property               | Description |
 | ---------------------- | ----------- |
@@ -336,10 +336,10 @@ The status of the volume group changes to `consistent_copying` state when the pr
 
 You must have the following information before you start onboarding the auxiliary volumes on the secondary location:
 
-- CRN of the workspace where the primary volumes are added
+- CRN of the workspace in which the primary volumes are added
 - Auxiliary volume names associated with the primary volumes that are replication-enabled. You can get the auxiliary volume names by querying the details of the primary volumes.
 
-After you collect the CRN and auxiliary volume names, you can switch to the secondary location and the workspace where the auxiliary volumes are located.
+After you collect the CRN and auxiliary volume names, you can switch to the secondary location and the workspace in which the auxiliary volumes are located.
 
 The workspace must be part of the same IBM Cloud account ID as the primary location workspace.
 {: note}
@@ -364,7 +364,7 @@ Obtain the following information from the primary location to request for onboar
 
 - Have editor role access on both the primary and the secondary location workspaces
 - Maintain the same IBM Cloud account ID on both primary and secondary location workspaces
-- Fetch the Cloud Resource Name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance where the primary volumes are located (primary location)
+- Fetch the Cloud Resource Name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance in which the primary volumes are located (primary location)
 - Fetch the auxiliary volume names from the **auxVolumeName** field of primary volumes in the primary location for onboarding
 
 
@@ -375,7 +375,7 @@ When onboarding an auxiliary volume, the following conditions apply:
 
 The onboarded auxiliary volume is added to this volume group. The volume group that is created on the secondary location is associated with the volume group on the primary location. The volume group on the primary location contains the primary volume that is associated with the auxiliary volume. To verify the replication status between the two primary and the auxiliary volumes, compare the consistency group name of the volume group on both the locations.
 
-Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the value of the workspace to the service workspace where the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
+Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the value of the workspace to the service workspace in which the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
 
 To onboard the auxiliary volume on the secondary site, use the following API or CLI commands:
@@ -384,7 +384,7 @@ To onboard the auxiliary volume on the secondary site, use the following API or 
 - **CLI**: [ibmcloud pi volume onboarding create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-create)
 
 Specify the following parameters:
-- source CRN: Specify the CRN parameter of the workspace where the primary volume is located
+- source CRN: Specify the CRN parameter of the workspace in which the primary volume is located
 - auxiliary volume: Specify the auxiliary volume name
 
 #### Verifying the replication status of the auxiliary volume
@@ -396,7 +396,7 @@ An onboarding task ID is returned when you complete onboarding the auxiliary vol
 - **CLI**: [ibmcloud pi volume onboarding get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-get)
 
 
-Refer to the following table for the properties and its definitions.
+Refer to the following table for the properties that you can use with the API or CLI commands for verifying the replication status of the auxiliary volume and its definitions.
 
 | Property               | Description |
 | ---------------------- | ----------- |
@@ -482,7 +482,7 @@ You can perform the failover operation by using the following API and CLI comman
 
 
 
-If you are using the CLI command to onboard an auxiliary volume, the service workspace must be set to the workspace where the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
+If you are using the CLI command to onboard an auxiliary volume, the service workspace must be set to the workspace in which the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
 
 Verify that the action that you perform on a volume group meets the current state of the volume group. Otherwise, an error message appears indicating that the volume group is not in the expected state.
@@ -522,7 +522,7 @@ After replication is re-enabled, you can start the virtual server instance and i
 
 To fallback to the primary volume, any I/O updates made to the auxiliary volume must be replicated to the primary volume. Start the primary volume group in the auxiliary mode to synchronize the data from auxiliary volume to primary volume.
 
-Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace where the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
+Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace in which the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
 
 Use the following API or CLI commands to start the primary volume in auxiliary mode:
@@ -693,7 +693,7 @@ Use the following API and CLI commands to remove the primary volume from the vol
 
 - **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID, and set the `--remove-member-volume-ids` flag to the primary volume IDs that must be removed from the volume group.
 
-Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace where the primary volumes are located. For example, `ibmcloud pi ws target PRIMARY_WS_CRN`.
+Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace in which the primary volumes are located. For example, `ibmcloud pi ws target PRIMARY_WS_CRN`.
 {: note}
 
 You can remove multiple replication-enabled volumes from a volume group.
@@ -860,7 +860,7 @@ If the auxiliary volume is not deleted from the secondary site, an out-of-band p
 
 Use the following API or CLI commands to remove the primary volume from its volume group:
 
-Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the target workspace to the workspace where the primary volumes are located. For example, `ibmcloud pi ws target PRIMARY_WS_CRN`.
+Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the target workspace to the workspace in which the primary volumes are located. For example, `ibmcloud pi ws target PRIMARY_WS_CRN`.
 {: note}
 
 
