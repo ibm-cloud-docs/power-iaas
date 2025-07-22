@@ -71,7 +71,7 @@ To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.po
 
 3. Select a workspace on which you want to enable the IBM Cloud Monitoring service. The Workspace details pane is displayed.
 
-4. To enable Monitoring, set **Monitoring** to on in the Integrations section. If the IBM Cloud Monitoring is already enabled on the workspace, the **View Monitoring** button is displayed instead. For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+4. To enable Monitoring, set **Monitoring** to on in the Integrations section. If the IBM Cloud Monitoring is already enabled on the workspace, click **View Monitoring** to view the monitoring metrics. For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
 
 [Observability-July-25-end]{: tag-green}
 
