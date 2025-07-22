@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-06-25"
+lastupdated: "2025-07-22"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -55,6 +55,26 @@ For more information about basic metrics, see [Platform metrics overview](/docs/
 
 
 
+## Integrating IBM Cloud Monitoring service with Power Virtual Server workspaces
+{: #monitor-pvsw}
+
+[Observability-July-25-start]{: tag-green}
+
+The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can gain operational visibility into the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
+
+The **Monitoring** option is enabled by default when you create an {{site.data.keyword.off-prem-fname}} workspace. When the **Monitoring** option is enabled, the workspace is registered as an observability instance on the IBM Cloud Monitoring system.
+
+To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
+
+1. Log in to the [IBM Cloud](https://cloud.ibm.com/login?state=%2Fpower%2Foverview) Power Virtual Server user interface.
+2. Click **Workspaces** in the left navigation menu.
+
+3. Select a workspace on which you want to enable the IBM Cloud Monitoring service. The Workspace details pane is displayed.
+
+4. To enable Monitoring, set **Monitoring** to on in the Integrations section. If the IBM Cloud Monitoring is already enabled on the workspace, the **View Monitoring** button is displayed instead. For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+
+[Observability-July-25-end]{: tag-green}
+
 
 ## Platform metrics overview
 {: #sysdig-ov}
@@ -96,6 +116,7 @@ To view the metrics dashboards, access the user interface of the {{site.data.key
 
 To view metrics in your dashboard, you must enable the platform metrics of the {{site.data.keyword.mon_full_notm}} instance.
 {: important}
+
 
 ### Accessing metrics from {{site.data.keyword.powerSys_notm}} workspace
 {: #sysdig-view-ui}

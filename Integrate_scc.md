@@ -20,15 +20,9 @@ subcollection: power-iaas
 {: #integrate-scc}
 
 
-
-
-
-
 ---
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
 
 
 
@@ -39,12 +33,7 @@ subcollection: power-iaas
 {{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](docs/workload-protection?topic=workload-protection-getting-started).
 
 
-
 In highly regulated sectors such as financial services, continuous compliance in the cloud environment is crucial to protect customer and application data. Cloud Security Posture Management (CSPM) is one of the key features of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service. When this feature is enabled in your workspace, the CSPM ensures that automatic compliance checks are integrated in your development workflow to mitigate such risks on a daily basis.
-
-
-
-
 
 
 ## IBM Cloud® Security Posture Management (CSPM)
@@ -58,7 +47,6 @@ CSPM accelerates hybrid cloud adoption by verifying security and regulatory comp
 - Forensics and incident response
 
 You can enable the CSPM feature in your new and existing {{site.data.keyword.powerSys_notm}} workspaces. CSPM provides a unified platform to manage security and compliance across hybrid and multicloud environments and services.
-
 
 
 
@@ -100,13 +88,6 @@ To enable Monitoring or CSPM in an existing Power Virtual Server workspace, comp
 2. Click **Workspaces** in the left navigation menu.
 
 3. Select the workspace for which you want to enable Monitoring or CSPM. The Workspace details pane is displayed.
-   
-
-
-
-
-
-
 
 4. To enable CSPM, click **Add CSPM** in the Integrations section. The Add cloud security posture management pane is displayed with the predefined SCC Workload Protection instance, Trusted profile, and App Configuration instance.
 
