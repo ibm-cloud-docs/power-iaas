@@ -14,6 +14,8 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 # Release notes
 {: #release-notes}
 
+
+
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
