@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-23"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -121,6 +121,12 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Adding a license increases the service cost. The selected licenses are injected to your VM instance. You can install specific solutions on your VM instance, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VM instance, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VM instance.
 
+
+
+    
+
+    To enable the {{site.data.keyword.ibmi-vst}}, select an image with OS version 7.3 or later from the **Boot image** field.
+
     
 
 
@@ -147,6 +153,19 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     {: important}
 
     When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as disabled. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
+
+
+
+    
+
+
+    To assign an {{site.data.keyword.ibmi-vst}} to a {{site.data.keyword.powerSys_notm}} instance, complete the following steps to meet the prerequisites:
+
+      - Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section
+      - Select an IBM Power10 or later server type from the **Machine type** list
+      - Assign a VSN to the instance. If a VSN is not assigned to the instance, edit the **Virtual serial number (VSN)** field. The Virtual serial number (VSN) summary pane appears, select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
+
+    A list of supported {{site.data.keyword.ibmi-vst}}s is displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type. A text message with the recommended {{site.data.keyword.ibmi-vst}} is displayed after the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and memory size you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.
 
     
 
