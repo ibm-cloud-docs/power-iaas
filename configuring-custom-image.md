@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-06-18"
+lastupdated: "2025-07-23"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -75,11 +75,7 @@ Power servers E1080 (9080-HEX) and S1022 (9105-22A) supports AIX 7.1 TL5 or late
 
 When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
-
-- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
-- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
-- [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
+For more information about which versions of AIX are compatible with various Power Systems, see the [System to AIX maps](https://www.ibm.com/support/pages/node/6020074){: external}.
 
 
 
