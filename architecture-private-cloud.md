@@ -30,18 +30,18 @@ subcollection: power-iaas
 To understand the {{site.data.keyword.on-prem}} architecture, key features, and hardware and software requirements, review the following topics:
 
 - [Architecture for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](#architecture-for-sitedatakeywordon-prem-fname-in-sitedatakeywordon-prem)
-  - [High-level architecture](#high-level-architecture)
+  - [High-level architecture](#high-level-architecture-private-cloud)
   - [Key features](#key-features)
   - [Hardware and software specifications](#hardware-and-software-specifications)
-    - [Pods](#pods)
-    - [Small pod configurations](#small-pod-configurations)
-    - [Medium pod configurations](#medium-pod-configurations)
-    - [Supported Power11 servers](#supported-power11-servers)
-    - [Operating systems](#operating-systems)
-    - [Storage](#storage)
-    - [Storage tiers](#storage-tiers)
-  - [Network](#network)
-  - [Data center capabilities](#data-center-capabilities)
+    - [Pods](#pod-spec-private-cloud)
+    - [Small pod configurations](#pod-config-small)
+    - [Medium pod configurations](#pod-config-medium)
+    - [Supported Power11 servers](#power-system-spec-private-cloud)
+    - [Operating systems](#os-spec-private-cloud)
+    - [Storage](#storage-private-cloud)
+    - [Storage tiers](#storage-tiers-spec-private-cloud)
+  - [Network](#network-spec-private-cloud)
+  - [Data center capabilities](#dc-capabilities-private)
 
 
 ## High-level architecture
