@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-07-14"
+lastupdated: "2025-07-24"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -179,6 +179,11 @@ When the NSG feature is enabled on a workspace, a default NSG is automatically c
 
 
 
+Before you disable the {{site.data.keyword.nsg-lc}}s feature on a workspace, you must delete all the existing NSGs and NAGs, except the NSG and NAG that are tagged as **Default**.
+{: important}
+
+
+
 The default rules can be deleted to achieve complete isolation between members in the same NSG, as well as from external addresses. When the default rules are deleted, all inbound traffic is denied by default. To delete these rules, complete the steps that are listed in the [Deleting rules from an existing NSG](#delete-rule-nsg) section.
 {: tip}
 
@@ -290,6 +295,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 After the NSGs are created, you can manage them by performing the following actions:
 - [Renaming an NSG](#rename-nsg)
+- [Cloning an NSG](#clone-nsg)
 - [Deleting an NSG](#delete-nsg)
 
 ### Renaming an NSG
@@ -313,10 +319,37 @@ To rename an NSG, complete the following steps:
 
 
 
+### Cloning an NSG
+{: #clone-nsg}
+
+When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the same rules and member configurations as the original NSG from which it was cloned. To clone an NSG, complete the following steps:
+
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+
+3. Select the workspace that contains the NSG to be cloned. The "Workspace details" panel is displayed.
+
+4. Click **View virtual servers**.
+
+4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+
+5.	Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to clone and select **Clone**. The "Clone network security group" dialog is displayed.
+
+6.	Enter a name for the NSG in the **Name** field and click **Clone**.
+
+
+
+
 ### Deleting an NSG
 {: #delete-nsg}
 
 You can delete the NSGs that you have created. However, you cannot delete the default NSG that is created when the NSG feature is enabled on a {{site.data.keyword.powerSys_notm}} workspace.
+
+
+
+You cannot delete an NSG or NAG until all the associated rules and members are removed. For more information, see [Deleting rules from an existing NSG](#delete-rule-nsg) and [Removing members from an NSG](#remove-members-nsg).
+{: important}
 
 
 
@@ -339,13 +372,6 @@ To delete a NSG, complete the following steps:
 
 When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in that workspace are also deleted.
 {: important}
-
-
-
-
-
-You must delete all the NSGs and NAGs before you disable the NSG feature by using the CLI, API, or Terraform interfaces.
-{: remember}
 
 
 
@@ -526,6 +552,7 @@ To delete a rule from an existing NSG, complete the following steps:
 You can manage members that are associated with an NSG by performing the following operations:
 
 - [Adding members to a {{site.data.keyword.nsg-lc}}](#add-members-nsg})
+- [Moving members from one NSG to another NSG](#move-members)
 - [Removing members from a {{site.data.keyword.nsg-lc}}](#remove-members-nsg)
 
 ### Adding members to a {{site.data.keyword.nsg-lc}}
@@ -558,6 +585,43 @@ To add members to an existing NSG, complete the following steps:
 8.	Select one or more network interfaces from the list and click **Add member**.
 9.	Click **Create**.
 
+
+
+### Moving members from one NSG to another NSG
+{: #move-members}
+
+You can use the **Move** option to transfer members from one NSG to another NSG in some of the following situations:
+
+- **Security policy changes**: When security policies or requirements evolve and you need to apply updated rules to specific members without affecting other members in the original NSG.
+
+- **Environment segmentation**: When you want to isolate certain members during network reconfiguration or restructuring, such as separating development, staging, and production environments. You can move members to different NSGs to achieve member isolation and meet compliance or operational requirements.
+
+- **Access control adjustments**: When a member requires access to a different set of services or external networks. You can move the member to a new NSG with appropriate rules to ensure the required connectivity and permissions.
+
+- **Incident response and troubleshooting**: When you respond to cybersecurity incidents or troubleshoot connectivity issues. You can move the affected member to a more restrictive or isolated NSG to contain the security threat and safely test network behavior.
+
+When you move a network interface (member) from one {{site.data.keyword.nsg-lc}} to another, the change is applied instantly and does not require approval. After the member is successfully moved and associated with the new NSG, the rules of the new NSG take effect immediately.
+{: important}
+
+To move a member from one NSG to another NSG, complete the following steps:
+
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+
+2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of the existing workspaces.
+
+3. Select the workspace that contains the NSG from which you want to move the members. The "Workspace details" panel is displayed.
+
+4. Click **View virtual servers**.
+
+4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+
+5. Select the NSG from which you want to move the members. The "Network security group details" page of the selected NSG is displayed.
+
+6.	In the Members section, click the overflow menu (icon with 3 vertical dots) on the member entry that you want to move and select **Move**. The "Move network interface" dialog is displayed.
+
+7. From the **Target network security group** list, select the NSG to which you want to move the member.
+
+8. Click **Move network interface**.
 
 
 

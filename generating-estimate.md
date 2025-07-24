@@ -256,13 +256,7 @@ If you select the **Location type** as {{site.data.keyword.on-prem}}, proceed wi
 
 1. Specify the infrastructure requirements that include the machine type, number of systems, and storage capacity for your data center in the **Infrastructure configuration** section. The **Infrastructure overview** section displays the summary of the selected configuration. The pod size depends on the number of systems that you select including the total memory and the total number of cores that you plan to use in your data center.
 
-
-
-    Currently, IBM Power S1022 (2U), IBM Power E1050 (4U), and IBM Power E1080 (12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
-
-
-
-
+    Currently, IBM Power S1122 (2U), IBM Power E1150 (4U), and IBM Power E1180 (12U) servers are supported by specific memory. Each server type is shipped with a fixed number of cores.
 
 2. The **Minimum committed spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod. Select the number of years for the **Contract commitment term** list.
 

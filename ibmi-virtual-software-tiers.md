@@ -97,4 +97,5 @@ IBM i is not supported on IBM E1050 and E1150 system types.
 
 
 
-
+If you deploy multiple IBM i virtual server instances (VSIs) simultaneously on the IBM S1022 hosts using the P20 IBM i software tiers, the deployment might fail when the IBM data center is being upgraded. However, the deployment of a single VSI is supported.
+{: restriction}

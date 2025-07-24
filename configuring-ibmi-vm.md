@@ -250,6 +250,10 @@ The VSI console of an IBM i virtual machine supports English language by default
 
 
 
+- To change the service tools language of your IBM i system, see [Changing the service tools language of your system or logical partition](https://www.ibm.com/docs/en/i/7.6.0?topic=mst-changing-service-tools-language-your-system-logical-partition){: external}.
+
+
+
 - The COR stock OS image can be used to deploy a second IBM i virtual machine. The second IBM i virtual machine that is deployed contains the language media that can be used to install primary and secondary languages on other IBM i virtual machines.
 
 For more information about IBM i network and software installation, see:

@@ -18,7 +18,8 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - release-notes.md
+      - topic: release-notes.md
+        navtitle: Release notes
       - about-power-virtual-server.md
       - integrating-watsonx.md
       - topicgroup:
@@ -83,6 +84,8 @@ toc:
              - use-case-oracle.md
              - use-case-redhat-openshift.md
              - use-case-sap-hana.md
+             - topic: nsg-architectural-overview.md
+               navtitle: Implementing network security groups for securing three-tier web architecture workloads
   - navgroup:
       id: howto
       topics:
@@ -93,6 +96,7 @@ toc:
              - new-network-architecture.md
              - getting-started-PER.md
              - Network-security-group.md
+             - static-routes.md
              - vpn-connections.md
              - network-security.md
              - X86-based-systems.md
@@ -212,7 +216,8 @@ toc:
   - navgroup:
       id: help
       topics:
-      - faq.md
+      - topic: faq.md
+        navtitle: FAQs
       - topicgroup:
           label: Troubleshooting
           topics:

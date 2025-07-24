@@ -11,9 +11,8 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes
+# Release notes for {{site.data.keyword.powerSys_notm}}
 {: #release-notes}
-
 
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
@@ -21,6 +20,58 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## July 2025
 {: #July-2025}
+
+
+
+- Starting on 25 July 2025, you can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [supported operating system levels](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for Power11.
+
+
+
+- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system on which it runs. It controls the pricing tier for the IBM i operating system and licensed program products (LPPs). The {{site.data.keyword.ibmi-vst}} also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
+
+
+
+- You can set the scope of an SSH key to improve the security and privacy of the SSH key. When the scope is set, the visibility of the SSH key is restricted to a workspace or an account. For more information, see [Setting the scope of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
+
+
+
+- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The software tier limits the size of the VSI, but not the physical system on which it runs. The IBM i software tier controls the pricing tier for the IBM i operating system and licensed program products (LPPs). It also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
+
+
+
+
+
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+- You can use the routes feature in your PER-enabled Power Virtual Server workspaces to view implicit network routes and to create or manage static routes. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
+
+- The network security group feature is enhanced to provide the following additional capabilities:
+
+    - You can clone an existing network security group to create a network security group. For more information, see [Cloning an NSG](/docs/power-iaas?topic=power-iaas-nsg#clone-nsg).
+
+    - You can transfer members from one network security group to another. For more information, see [Moving members from one NSG to another NSG](/docs/power-iaas?topic=power-iaas-nsg#move-members).
+
+
+
+- You can enable the Address Resolution Protocol (ARP) to map IP addresses to physical Media Access Control (MAC) addresses in the {{site.data.keyword.powerSys_notm}} network. For more information, see [Configuring the Subnet ARP Broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
+
+
+
+- You can integrate your Power Virtual Server workspace with IBM Cloud&reg; Monitoring service to gain operational visibility about the performance and health of your applications, services, and platforms. For more information, see [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig#monitor-pvsw).
+
+
+
+
+- CRN is enabled by default when you create a server placement group or a shared processor pool placement group. Starting with August 2025, the existing placement groups are migrated to CRNs.
+
+
+
+
+
 
 
 
