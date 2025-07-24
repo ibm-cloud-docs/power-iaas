@@ -64,7 +64,7 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports the following version of AIX depending on the IBM Power server:
+The {{site.data.keyword.powerSys_notm}} offering supports the following versions of AIX operating system depending on the IBM Power server:
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
