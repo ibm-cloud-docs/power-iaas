@@ -96,7 +96,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 - IBM i 7.3, 7.2 and COR stock images have been refreshed.
 
-- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of Cloud Resource Names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts. 
 
   The billing and metering plans are updated with the following changes:
 
