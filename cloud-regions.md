@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-06-20"
+lastupdated: "2025-07-24"
 
 keywords: power systems, cloud regions
 
@@ -27,8 +27,8 @@ subcollection: power-iaas
 
 The following table displays the appropriate region for your workspace:
 
-Japanese language support for IBM i is supported in OSA21, SAO01, TOK04, DAL12, FRA04, FRA05, and SYD05 data centers.
-{: note}
+
+
 
 
 
