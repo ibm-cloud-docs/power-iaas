@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-07-16"
+lastupdated: "2025-07-24"
 
 ---
 
@@ -23,7 +23,7 @@ New CLI version v1.5.2 available. The Power Virtual Server CLI plug-in is availa
 - Fixed bug in CLI plug-in metadata.
 
 ## April 2025
-{: #april-2025}
+{: #cli-april-2025}
 
 New CLI version v1.5.1 is available. The Power Virtual Server CLI plug-in is available with the following features:
 

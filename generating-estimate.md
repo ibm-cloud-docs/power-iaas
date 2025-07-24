@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-24"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -105,10 +105,41 @@ To learn about the fields and descriptions that you need to enter, see the follo
 
 
 
-If you select **Linux for SAP (HANA)** OS type, you can create the estimate of an instance with SAP workloads. For more information, see [Estimating SAP workloads](#est-sap-workloads).
 
 
 
+
+
+You can perform the following actions based on the type of OS:
+
+- **IBM i**: Assign an {{site.data.keyword.ibmi-vst}} to your instance to restrict the number of CPUs and the amount of memory that can be assigned to the instance. For more information, see [Estimating an IBM i workloads with {{site.data.keyword.ibmi-vst}}](#est-ibmi-vst).
+- **Linux for SAP (HANA)**: Select an SAP certified profile. For more information, see [Estimating SAP workloads](#est-sap-workloads).
+
+
+##### Estimating a {{site.data.keyword.powerSys_notm}} instance with an {{site.data.keyword.ibmi-vst}}
+{: #est-ibmi-vst}
+
+A virtual software tier limits the size of the virtual machines (VMs) for a particular pricing tier but the tiers can run on any system. The {{site.data.keyword.ibmi-vst}} is used for the software pricing of operating system (OS) and IBM i licensed program products (LPP). When you assign an {{site.data.keyword.ibmi-vst}} to an instance, the number of CPUs and the amount of memory that can be assigned to the instance is restricted by the {{site.data.keyword.ibmi-vst}}. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-vsw-system-types).
+
+You can create an estimate of the {{site.data.keyword.powerSys_notm}} instance with an {{site.data.keyword.ibmi-vst}} before you deploy the instance. To assign an {{site.data.keyword.ibmi-vst}} to an IBM i {{site.data.keyword.powerSys_notm}} instance, meet the following prerequisites:
+
+- IBM i image version is 7.3 or later
+- VSN is assigned to the instance
+- Machine type is IBM Power10 or later
+
+To learn about the fields and the actions, see the following table.
+
+| Field                         | Action                                                                   |
+|-------------------------------|--------------------------------------------------------------------------|
+| Operating system              |  Select **IBM i** from the **Operating system** list.                     |
+| Version                       |  Select version number 7.3 or later from the **Version** list.   |
+| Virtual serial number (VSN)   |  Set **Virtual serial number (VSN)** to `Assigned` to assign a VSN to the instance.                     |
+| Machine type                  |  Select an IBM Power10 or later server type from the list.            |
+| Cores                         |  Select the core size.                                           |
+| Memory (GiB)                  |  Select the memory size.                                         |
+| Virtual serial number (VSN)   |  Select an option to assign VSN from the virtual serial number (VSN) pane. Select **Auto-assign** for the system to assign a VSN. Select **Select from retained VSNs** to assign a VSN from the list of retained VSNs.                              |
+| IBM i software tier           |  Based on the machine type, a list of supported {{site.data.keyword.ibmi-vst}}s is displayed. A text message with the recommended {{site.data.keyword.ibmi-vst}} is displayed after the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and memory size you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.  |
+{: caption="UI fields for estimating a Power Virtual Server instance with IBM i software tier" caption-side="top"}
 
 
 

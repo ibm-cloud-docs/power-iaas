@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-24"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -147,7 +147,8 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Workspace                                             | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN \n * IBM i DB2 Web Query                                                                                                                               |
 | **Compute**                                           |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                                       | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                                 | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | SPP cores                                                |
+| Shared Processor Pool                                 | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n * SAP workloads                                                |
+| Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                        | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**                                           |                                             |                                                           |                                                                                                                                                              |
 | Volume                                                | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
@@ -183,6 +184,7 @@ As the month progresses, the customer adds more memory. The new price for the LP
 {: caption="Monthly LPAR charges" caption-side="bottom"}
 
 In this example, if 300 hours is reached in the month, the LPAR resources are increased from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
+
 
 
 
@@ -384,6 +386,7 @@ Refer to the following table to view the part number descriptions and the associ
 
 
 
+
 ## Base instances
 {: #pricing-base-instance-prices}
 
@@ -565,6 +568,11 @@ The following tables show examples of how different storage types affect the cos
 | Tier 3           | $0.00003865                  | $0.03                    |
 | Tier 5k          | $0.00010652                  | $0.08                    |
 {: caption="Snapshot storage pricing example" caption-side="bottom"}
+
+
+
+
+- **{{site.data.keyword.ibmi-vst}}** is used for the Operating System (OS) and License Program Products (LPP) software pricing. The {{site.data.keyword.vst}} that is selected caps the amount of CPU and memory that can be assigned to that instance. If the IBM i instance must expand beyond the limits of the {{site.data.keyword.vst}}, the tier can be changed when the instance is powered off. Dynamic changes to CPU and memory can be made if they are in the limits of the {{site.data.keyword.vst}}. When the {{site.data.keyword.vst}} is changed, the billing for the {{site.data.keyword.vst}} automatically changes to the new tier rate for IBM OS and LPP software.
 
 
 
