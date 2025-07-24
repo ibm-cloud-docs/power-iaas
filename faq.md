@@ -75,11 +75,12 @@ The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following operating systems:
-* S922 - 7.1 or later
-* E980 - 7.1 or later
-* S1022 - 7.1 Technology Level (TL) 5 or later
-* S1122 - 7.2 TL5 SP10 and 7.3 TL3 SP1 or later
+The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following versions of the AIX operating system:
+
+* S922 - AIX 7.1 or later
+* E980 - AIX 7.1 or later
+* S1022 - AIX 7.1 Technology Level (TL) 5 or later
+* S1122 - AIX 7.2 TL5 SP10 and 7.3 TL3 SP1 or later
 
 The following stock images are available when you create a virtual machine:
 
@@ -95,7 +96,8 @@ The following stock images are available when you create a virtual machine:
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-The {{site.data.keyword.on-prem-fname}} supports the following operating systems:
+The {{site.data.keyword.on-prem-fname}} supports the following versions of the AIX operating system:
+
 - S1122 - AIX 7.2 TL5 SP9 or later
 - S1150 - AIX 7.2 TL5 SP9 or later
 - E1180 - AIX 7.2 TL5 SP9 or later
