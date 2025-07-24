@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-24"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -63,9 +63,9 @@ For more information about appropriate region for your workspace, see [IBM Cloud
 ## Configuring a {{site.data.keyword.powerSys_notm}} instance
 {: #configuring-instance}
 
-To create a virtual server instance, you must first create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and select a workspace. The created workspaces are listed under **Workspaces** of the {{site.data.keyword.powerSys_notm}} user interface in the left navigation page. Select the workspace for which you want to create an instance. Complete the following steps to create a virtual machine instance:
+To create a virtual server instance, you must first create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and select a workspace. The created workspaces are listed under **Workspaces** of the {{site.data.keyword.powerSys_notm}} user interface in the navigation panel. Select the workspace for which you want to create an instance. Complete the following steps to create a virtual machine instance:
 
-1. Click **Virtual server instances** on the left page.
+1. Click **Virtual server instances** in the navigation panel.
 
     Select a workspace to display the virtual server instances that were provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
     {: important}

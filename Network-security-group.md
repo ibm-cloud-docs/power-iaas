@@ -169,7 +169,7 @@ To enable or disable the NSG feature on an existing workspace, complete the foll
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace on which you want to enable or disable the NSG feature. The "Workspace details" panel is displayed.
 
@@ -203,7 +203,7 @@ By default, all inbound network traffic is denied and does not reach any member 
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
 4. Click **View virtual servers**.
 5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
@@ -218,7 +218,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
 
@@ -305,7 +305,7 @@ To rename an NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG to rename. The "Workspace details" panel is displayed.
 
@@ -326,7 +326,7 @@ When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the sa
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG to be cloned. The "Workspace details" panel is displayed.
 
@@ -357,7 +357,7 @@ To delete a NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG to delete. The "Workspace details" panel is displayed.
 
@@ -384,7 +384,7 @@ To create an NAG, complete the following steps:
 
 1 Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace in which you want to create the NAG. The "Workspace details" panel is displayed.
 
@@ -427,7 +427,7 @@ To rename an NAG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NAG to rename. The "Workspace details" panel is displayed.
 
@@ -448,7 +448,7 @@ To delete an NAG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NAG to be deleted. The "Workspace details" panel is displayed.
 
@@ -483,7 +483,7 @@ To create rules on an existing NSG, complete the following steps:
 
 1.	Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG in which you want to create rules. The "Workspace details" panel is displayed.
 
@@ -506,7 +506,7 @@ You can also customize the cloned properties of a rule to create a different rul
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG with the rules that you want to clone. The "Workspace details" panel is displayed.
 
@@ -530,7 +530,7 @@ To delete a rule from an existing NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG with the rule that you want to delete. The "Workspace details" panel is displayed.
 
@@ -566,7 +566,7 @@ To add members to an existing NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG for adding members. The "Workspace details" panel is displayed.
 
@@ -607,7 +607,7 @@ To move a member from one NSG to another NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of the existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
 
 3. Select the workspace that contains the NSG from which you want to move the members. The "Workspace details" panel is displayed.
 
@@ -632,7 +632,7 @@ To remove members that are associated with an NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation menu. The Workspaces page is displayed with a list of the existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
 
 3. Select the workspace that contains the NSG from which you want to remove the members. The "Workspace details" panel is displayed.
 

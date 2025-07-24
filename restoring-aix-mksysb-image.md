@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-07-24"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -70,7 +70,7 @@ Path: /etc/obj repos
 ## Creating the mksysb image on the source AIX instance
 {: #create-image-source-AIX}
 
-Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details on the command usage. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg. 
+Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details on the command usage. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg.
 
 In the following example, mksysb creates the image in /tmp. The `-i` builds the image from the latest rootvg details and the `-b` option can potentially improve the performance when creating the mksysb image. The `-X` mksysb option expands `/tmp` if necessary for the boot image. This can be omitted if the available space is known to be sufficient.
 
@@ -112,7 +112,7 @@ An AIX instance is required in {{site.data.keyword.powerSys_notm}} that can be c
 
 The instance must be at the same AIX version as the AIX instance where the mksyb image was created. {{site.data.keyword.powerSys_notm}} provides a set of stock images that can be used to facilitate the conversion. When deployed, the AIX instance needs some updates to host the mksysb image. Choose the stock image and deploy a new {{site.data.keyword.powerSys_notm}} AIX instance via the user interface or CLI with the cpu, memory, and network details that are required for the final converted instance.
 
-For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum required size in Megabytes. Below is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
+For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum required size in Megabytes. The following is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
 
 The following details should be observed with the deployed AIX instance.
 

@@ -133,7 +133,7 @@ To verify that `cloud-init` configured your IP addresses correctly, on the **IBM
 
 One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` should be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
 
-See an example below of the `cloud-init` configuration verification:
+See the following example of the `cloud-init` configuration verification:
 
 ```screen
                     Work with TCP/IP Interfaces

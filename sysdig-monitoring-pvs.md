@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-24"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -73,7 +73,7 @@ The **Monitoring** option is enabled by default when you create an {{site.data.k
 To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/login?state=%2Fpower%2Foverview) Power Virtual Server user interface.
-2. Click **Workspaces** in the left navigation menu.
+2. Click **Workspaces** in the navigation panel.
 3. Select a workspace on which you want to enable the IBM Cloud Monitoring service. The Workspace details pane is displayed.
 4. Click **Monitoring** in the Integrations section to enable the IBM Cloud Monitoring service. If the IBM Cloud Monitoring service is already enabled on the workspace, click **View Monitoring** to view the monitoring metrics. For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
 
@@ -127,7 +127,7 @@ To view metrics in your dashboard, you must enable the platform metrics of the {
 ### Accessing metrics from {{site.data.keyword.powerSys_notm}} workspace
 {: #sysdig-view-ui}
 
-From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
+From the navigation panel of the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
 1.  Click **workspaces**.
 2.  Select the workspace for which a monitoring instance is available.
 3.  From the **workspace details** page, click **Launch monitoring**.
@@ -139,7 +139,7 @@ From the left navigation menu of the {{site.data.keyword.powerSys_notm}} user in
 
 To access the dashboard, complete the following steps:
 1.  Log in to [IBM Cloud](https://cloud.ibm.com/login) console.
-2.  Expand the left navigation window.
+2.  Expand the navigation panel.
 3.  Click **Resource list**.
 4.  Click **Observability** **>** **Monitoring**.
 5.  Click the instance.
