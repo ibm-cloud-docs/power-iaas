@@ -64,7 +64,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- New server placement groups and shared processor pools are created with Cloud Resource Names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be migrated by the end of August 2025 to benefit from CRNs.
+- New server placement groups and shared processor pools are created with Cloud Resource Names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be assigned a CRN by the end of August 2025.
 
 
 
