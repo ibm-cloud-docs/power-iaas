@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-25"
 
 ---
 
@@ -43,7 +43,7 @@ The CLI version v1.6.0 is available with the following features:
 - Added support for Power11 systems to the CLI commands.
 - Added the `Status Detail` field to the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) command for improved snapshot status visibility.
 - Updated the hidden fields in the [ibmcloud pi volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume) command's output when replication is disabled on the volume.
-- Deprecated the [ibmcloud pi vpn](docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) family of commands as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use.
+- Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) family of commands as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use.
 - Deprecated the `--new-name` and `--new-key` flags for the [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) command. You can use the `--name` and `--key` flags instead.
 - Removed the deprecated `--access-config`, `--jumbo`, `--peer-id`, `--peer-type`, and `--source-ip` flags from the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command.
 - Removed the DHCP option as a subnet type in the Power Virtual Server workspaces at the client location.
