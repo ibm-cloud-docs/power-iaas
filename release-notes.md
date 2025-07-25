@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -66,7 +66,9 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- CRN is enabled by default when you create a server placement group or a shared processor pool placement group. Starting with August 2025, the existing placement groups are migrated to CRNs.
+
+
+- New server placement groups and shared processor pools are created with Cloud Resource Names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be migrated by the end of August 2025 to benefit from CRNs.
 
 
 

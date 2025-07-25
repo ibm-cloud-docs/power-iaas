@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-25"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -542,7 +542,7 @@ The following tables show examples of how different storage types affect the cos
 
 
 
-- **{{site.data.keyword.ibmi-vst}}** is used for the Operating System (OS) and License Program Products (LPP) software pricing. The {{site.data.keyword.vst}} that is selected caps the amount of CPU and memory that can be assigned to that instance. If the IBM i instance must expand beyond the limits of the {{site.data.keyword.vst}}, the tier can be changed when the instance is powered off. Dynamic changes to CPU and memory can be made if they are in the limits of the {{site.data.keyword.vst}}. When the {{site.data.keyword.vst}} is changed, the billing for the {{site.data.keyword.vst}} automatically changes to the new tier rate for IBM OS and LPP software.
+- **{{site.data.keyword.ibmi-vst}}**: Starting with IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system it runs on. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
 
 
 

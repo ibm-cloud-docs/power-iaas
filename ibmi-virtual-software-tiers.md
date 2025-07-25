@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-25"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -29,8 +29,7 @@ subcollection: power-iaas
 
 
 
-
-With IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The software tier limits the size of the VSI, but not the physical system it runs on. For example, a virtual server assigned a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
+Starting with IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system it runs on. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
 
 The {{site.data.keyword.ibmi-vst}} controls the pricing tier for the IBM i operating system and licensed program products (LPPs). It also defines the boundaries for the following resources:
 - Maximum number of virtual processors
