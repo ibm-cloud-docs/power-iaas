@@ -89,4 +89,4 @@ Migrating the data from one infrastructure to another requires planning and stra
 ## Data ownership
 {: #data-port-data-owner}
 
-The exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
+The data that is exported to on-premises or on service providers is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
