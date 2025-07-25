@@ -19,14 +19,14 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 The CLI version v1.6.0 is available with the following features:
 
-**New commands**:
+**New commands**
 
 - Added the [ibmcloud pi route](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-route) family of commands (create, delete, get, list, report, and update) to manage custom network routes within the Power Virtual Server workspaces in the IBM data center.
 - Added the [ibmcloud pi virtual-serial-number software-tiers](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-virtual-serial-number-software-tiers) command. You can use this command to list all the supported software-tiers.
 - Added the [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-operation) command for the Power Virtual Server workspaces in the client location. You can use this command to perform operations such as to set the server boot mode and server operating mode for IBM i virtual server instances.
 
 
-**New flags**:
+**New flags**
 
 - Added the `--family` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter SAP profiles by the family type.
 - Added the `--prefix` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter SAP profiles by its prefix.
@@ -38,7 +38,7 @@ The CLI version v1.6.0 is available with the following features:
 - Added the `--arp-broadcast` flag to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update) commands. You can use this flag to enable or disable the ARP broadcast.
 - Added the `--software-tier` flag to the [ibmcloud pi instance virtual-serial-number update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-virtual-serial-number-update) command. You can use this flag to set a software tier on an IBM i instance.
 
-**Additional changes**:
+**Additional changes**
 
 - Added support for Power11 systems to the CLI commands.
 - Added the `Status Detail` field to the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) command for improved snapshot status visibility.
