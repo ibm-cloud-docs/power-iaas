@@ -31,7 +31,7 @@ To understand the {{site.data.keyword.on-prem}} architecture, key features, and 
 
 - [High-level architecture](#high-level-architecture-private-cloud)
 - [Key features](#key-features)
-- [Hardware and software specifications](#hardware-and-software-specifications)
+- [Hardware and software specifications](#hardware-software-specs-private-cloud)
       - [Pods](#pod-spec-private-cloud)
       - [Small pod configurations](#pod-config-small)
       - [Medium pod configurations](#pod-config-medium)
