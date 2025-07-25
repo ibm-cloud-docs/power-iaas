@@ -35,10 +35,6 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The software tier limits the size of the VSI, but not the physical system on which it runs. The IBM i software tier controls the pricing tier for the IBM i operating system and licensed program products (LPPs). It also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
-
-
-
 
 
 
