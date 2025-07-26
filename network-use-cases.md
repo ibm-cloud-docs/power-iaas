@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-18"
+lastupdated: "2025-07-24"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -47,10 +47,14 @@ Figure 1 describes the private network within a pod type of network setup.
 
 
 
+
+
+
+
 ## Use case 2: Multiple external connections
 {: #static-l3}
 
-With this use case, you can access the external connectivity to and from the virtual machines in a subnet. You can also establish an outbound-only network connectivity through the dynamic Network Address Translation (NAT gateway configuration.
+With this use case, you can access the external connectivity to and from the virtual machines in a subnet. 
 
 To access the external connectivity, you must create peer interfaces and establish an external subnet in a workspace. The VMs deployed on the workspace can access the external environment.
 
@@ -73,41 +77,17 @@ To create a peer interface, complete the following steps:
 
 **Step 2: Create an external subnet**
 
-To create an external subnet, use one of the peer interfaces configured in `Step 1`. Optionally, if you choose the `NAT` configuration for Layer 3 (BGP or static) external network, you must provide the `NAT` source IP address. The source IP address is used in your firewall to allow the traffic. For Layer 2 external networks, NAT configuration is not applicable.
+To create an external subnet, use one of the peer interfaces configured in `Step 1`.
 
-To create an external subnet, select one of the following options to allow NAT gateway configuration:
 
-* Border Gateway Protocol (BGP) only: You can use BGP with or without NAT gateway configuration. You must provide the source IP address and use the same IP address in your firewall to allow the traffic. For more information about the BGP use case with NAT enabled, see [Outbound-only](#outbound-ext-conn-dnat). For more information about the BGP use case without NAT enabled, see [Bidirectional external connectivity through BGP](#bi-dir-ext-conn-bgp).
-* Static only: You can use static routing with or without NAT gateway configuration. You must provide the source IP address and use the same IP address in your firewall to allow the traffic. For more information about the static route use case with NAT enabled, see [Outbound-only](#outbound-ext-conn-dnat). For more information about the static route use case without NAT enabled, see [Bidirectional external connectivity through static routes](#bi-dir-ext-conn-static-routes).
-
-NAT gateway configuration is not available with L2 routes. For more information, see [Bidirectional external connectivity - Layer 2](#bi-dir-ext-conn-L2out).
-{: note}
 
 **Step 3: Deploy VMs to access external connectivity**
 
 To configure your workspace, open a [support ticket](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
 
-You can deploy VMs on your workspace after you receive the confirmation from the support team about the completion of configuring your workspace. The VMs can access the external environment by using BGP with NAT enabled or static with NAT enabled routes that you selected in `Step 2`. For more information about configuring the VMs on your workspace, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+You can deploy VMs on your workspace after you receive the confirmation from the support team about the completion of configuring your workspace.
 
 
-### Outbound-only
-{: #outbound-ext-conn-dnat}
-
-The outbount-only use cases are applicable only with NAT gateway configuration that is paired with BGP or static routes. For more information see, [Multiple external connectivity](#static-l3).
-{: note}
-
-With this use case, you can establish a private network that allows communication between applications within the pod and with external destination points. However, the applications within the pod are not accessible from the destination points on the external network. You can establish an outbound-only network connectivity through dynamic NAT gateway configuration, resembling a network established by using routers.
-
-
-#### Example
-{: #out-example}
-
-A virtual machine within a pod downloads and deploys software from the internet.
-
-You can specify the outbound-only network type when you define network requirements before pod installation. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). After pod installation, you can configure the outbound-only network type by using Support Center ticketing system. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
-
-Figure 2 describes the outbound-only type of network setup.
-![Outbound-only network type](./figures/outbound-ext-conn-dnat.png "Outbound-only network type"){: caption="Outbound-only network type" caption-side="bottom"}
 
 ### Bidirectional external connectivity through BGP
 {: #bi-dir-ext-conn-bgp}
@@ -155,18 +135,3 @@ The network connectivity for full Linux subscription can be established by provi
 Figure 6 describes the network connectivity between a virtual machine and a Red Hat Satellite server on IBM Cloud setup.
 
 ![Network connectivity for full Linux subscription](./figures/net-conn-full-linux-sub.png "Network connectivity for full Linux subscription"){: caption="Network connectivity for full Linux subscription" caption-side="bottom"}
-
-## Use case 4: DHCP network inside the pod
-{: #dhcp-network}
-
-With this use case, you can use the Dynamic Host Configuration Protocol (DHCP) protocol within the pod to dynamically assign an IP address to a virtual machine.
-
-The presence of the DHCP network within the pod is mandatory when you are using the OpenShift Container Platform on the {{site.data.keyword.on-prem-fname}} in client location environment. The DHCP network is intended for use only in the OpenShift Container Platform.
-{: note}
-
-{{site.data.keyword.on-prem-fname}} in client location pods can be configured to include a private and hardware-based DHCP network. The edge router within the pod is configured with the DHCP pool and gateway. You can deploy virtual machines in the DHCP network. The virtual machines are assigned IP addresses from the DHCP server.
-
-You can attach only one DHCP network interface card (NIC) to a virtual machine. If you attach more than one DHCP NIC to a virtual machine, only one NIC acquires the IP address from the DHCP server that is assigned to the virtual machine.
-
-When you create a DHCP network, note that the first  four IP addresses are reserved. You must configure a network that has more than four  IP addresses. For example, if the subnet mask is 255.255.255.248, the total number of IP addresses is eight. You cannot create a network with a subnet mask beyond 255.255.255.248 as it has less than or equal to five IP addresses.
-{: important}

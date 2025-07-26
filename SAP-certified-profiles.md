@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-24"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -51,6 +51,7 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 | SH2     | Small        | Suitable for balanced workloads that require less CPU and storage consumption.                                           |
 | CH2     | Compute      | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers. |
 | BH2     | Balanced     | Suitable for midsize databases and common cloud applications with moderate traffic.                                      |
+| MH2      | Very high memory            |  Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver.|
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
 SR2 profiles must be deployed and edited by using the UI, CLI, API, and Terraform interfaces. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. SR2 profiles are not available with the E980 machine type.

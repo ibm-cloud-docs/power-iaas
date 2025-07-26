@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-07-07"
+lastupdated: "2025-07-16"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.5.2 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.6.0 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -19,8 +19,6 @@ lastupdated: "2025-07-07"
 
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
-
-
 
 ## `ibmcloud pi`
 {: #ibmcloud-pi}
@@ -217,7 +215,7 @@ export IMAGE_ID --access-key KEY --bucket BUCKET_NAME --region REGION_NAME --sec
 ```bash
   -a, --access-key string   Cloud Object Storage HMAC access key.
   -b, --bucket string       Cloud Object Storage bucket name.
-  -c, --checksum            Creates a checksum file. False by default.
+  -c, --checksum            Creates a checksum file. Default is "false".
   -r, --region string       Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string   Cloud Object Storage HMAC secret key.
 ```
@@ -291,18 +289,18 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 ```bash
   -k, --access-key string                 Cloud Object Storage HMAC access key.
   -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against;
-                                          required if "--affinity-policy affinity" is specified and --affinity-volume is not provided.
+                                          required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
   -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity".
-                                          If --storage-pool is provided then this cannot be specified.
+                                          If "--storage-pool" is provided then this cannot be specified.
   -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against;
-                                          required if "--affinity-policy affinity" is specified and --affinity-instance is not provided.
+                                          required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
   -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against;
-                                          required if "--affinity-policy anti-affinity" is specified and --anti-affinity-volumes is not provided.
+                                          required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-volumes" is not provided.
   -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against;
-                                          required if "--affinity-policy anti-affinity" is specified  and --anti-affinity-instances is not provided.
+                                          required if "--affinity-policy anti-affinity" is specified  and "--anti-affinity-instances" is not provided.
   -b, --bucket string                     Cloud Object Storage bucket name.
-  -u, --bucket-access string              Indicates the bucket access type (private or public). Private access requires access and secret keys.
-                                          Public access requires the --job option. Default is private.
+  -u, --bucket-access string              Indicates the bucket access type ("private" or "public"). Private access requires access and secret keys.
+                                          Default is "private".
   -c, --checksum                          Checks the checksum file from the COS bucket against the one computed on the downloaded image.
   -n, --image-file-name string            The image file name.
   -d, --import-details strings            Import details for SAP image. Must include a license, product and vendor.
@@ -313,7 +311,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -r, --region string                     Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string                 Cloud Object Storage HMAC secret key.
   -p, --storage-pool string               Storage pool where the image will be imported to (use "ibmcloud pi storage-pools" to see available storage pools).
-                                          If --storage-pool is provided then --affinity-policy cannot be specified.
+                                          If "--storage-pool" is provided then "--affinity-policy" cannot be specified.
   -t, --storage-tier string               Tier of the disk storage (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region).
                                           Default to tier3 if not provided.
       --user-tags strings                 Comma separated list of user tags to be attached to the imported image.
@@ -391,6 +389,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 - `delete`:    Delete a server instance.
 - `get`:    View details of a server instance.
 - `list`:    List all server instances.
+- `operation`:    Perform an operation on an IBMi server instance.
 - `snapshot`:    IBM Cloud Power Virtual Server Instance Snapshots.
 - `subnet`:    IBM Cloud Power Virtual Server Instance Subnets.
 - `update`:    Update a server instance.
@@ -417,7 +416,7 @@ action INSTANCE_ID --operation OPERATION
 **Available Flags**:
 
 ```bash
-  -o, --operation string   Operation to be done in a PVM server instance. Valid values are "hard-reboot", "immediate-shutdown", "reset-state", "soft-reboot", "start", and "stop".
+  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
 ```
 
 **Examples**:
@@ -463,7 +462,7 @@ create INSTANCE_ID --destination DEST --name NAME [--access-key KEY] [--checksum
 
 ```bash
   -a, --access-key string    Cloud Object Storage HMAC access key. Required if destination is cloud-storage.
-  -c, --checksum             Creates a checksum file. False by default.
+  -c, --checksum             Creates a checksum file. Default is "false".
   -d, --destination string   Destination for the deployable image (image-catalog, cloud-storage, both).
   -i, --image-path string    Cloud Object Storage image path. Required if destination is cloud-storage. E.g. bucket-name[/optional/folder].
   -n, --name string          Name of the deployable image created for the captured instance.
@@ -552,7 +551,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
-    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]"]
+    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE-TIER]]
     [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
 
   INSTANCE_NAME: The name of the instance.
@@ -564,7 +563,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
       --IBMiCSS-license                           IBMi CSS software license associated with the instance.
       --IBMiPHA-license                           IBMi PHA software license associated with the instance.
       --IBMiRDS-users int                         Number of IBMi RDS users software license associated with the instance, default IBMiRDSUsers=0 (no license).
-  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. False by default.
+  -b, --boot-volume-replication-enabled           Enables storage replication on the boot volume. Default is "false".
   -i, --image string                              Operating system image identifier or name.
   -k, --key-name string                           Name of SSH key.
   -m, --memory float                              Amount of memory (in GB) to allocate to the instance. Default is 2GB.
@@ -578,17 +577,18 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
                                                   Values greater than 1 will result in the creation of multiple instances.
       --replication-sites strings                 Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
       --shared-processor-pool string              The shared processor pool ID of the pool that the server will be in.
+      --software-tier string                      IBMi licensing software tiers. Must be set with "--virtual-serial-number" flag. Valid values are: P05, P10, P20, P30.
       --storage-affinity string                   Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
-                                                  If --storage-pool is provided, then this flag cannot be specified.
+                                                  If "--storage-pool" is provided, then this flag cannot be specified.
       --storage-affinity-instance string          PVM instance identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-volume is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
       --storage-affinity-volume string            Volume identifier or name to base storage affinity policy against;
-                                                  required if "--storage-affinity affinity" is specified and --storage-affinity-instance is not provided.
+                                                  required if "--storage-affinity affinity" is specified and "--storage-affinity-instance" is not provided.
       --storage-anti-affinity-instances strings   Comma separated list of PVM instance identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-volumes is not provided.
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-volumes" is not provided.
       --storage-anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base storage affinity policy against;
-                                                  required if "--storage-affinity anti-affinity" is specified and --storage-anti-affinity-instances is not provided.
-      --storage-connection string                 The storage connection type. Valid values are "vSCSI" and "maxVolumeSupport".
+                                                  required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
+      --storage-connection string                 The storage connection type. Valid values are: vSCSI, maxVolumeSupport.
       --storage-pool string                       Storage pool for server deployment (use "ibmcloud pi storage-pools" to see available storage pools).
                                                   Only valid when you deploy one of the IBM supplied stock images.
                                                   Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
@@ -603,11 +603,11 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
                                                   (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
                                                   Default to tier3 if not provided.
   -n, --subnets strings                           Comma separated list of subnet identifiers or names and optional IP address to associate with the instance.
-  -s, --sys-type string                           Name of System Type ('s1022', 'e1050', 'e1080')
+  -s, --sys-type string                           Name of System Type ('s1022', 's1122', 'e1050', 'e1080', 'e1150', 'e1180')
   -u, --user-data string                          The user data passed into the instance. Strings and file names are supported. File names must be prepended with "@".
       --user-tags strings                         Comma separated list of user tags to be attached to the instance.
       --virtual-cores int                         The number of virtual cores assigned.
-      --virtual-serial-number string              IBMi Virtual serial number information added with the instance.
+      --virtual-serial-number string              IBMi virtual serial number information added with the instance.
                                                   Must include an existing virtual serial number or 'auto-assign' and optionally a description.
   -v, --volumes strings                           Comma separated list of volume identifiers or names to associate with the instance.
 ```
@@ -643,7 +643,7 @@ delete INSTANCE_ID [--delete-data-volumes=True|False] [--retainVSN=True|False]
 ```bash
   -d, --delete-data-volumes   Indicates whether all data volumes attached to the instance must be deleted.
                               Shared data volumes will be deleted if no other instances are attached.
-  -r, --retainVSN             Determines if the virtual serial number will be retained after being removed from the instance. Default is false.
+  -r, --retainVSN             Determines if the virtual serial number will be retained after being removed from the instance. Default is "false".
 ```
 
 ---
@@ -673,6 +673,38 @@ get INSTANCE_ID
 **Description**: List all server instances.
 
 **Usage**: `list`
+
+---
+
+### `ibmcloud pi instance operation`
+{: #ibmcloud-pi-instance-operation}
+
+**Alias**: `operation, op`
+
+**Description**: Perform an operation on an IBMi server instance.
+
+**Usage**:
+
+```bash
+operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating-mode MODE] [--job-task TASK]
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Flags**:
+
+```bash
+  -b, --boot-mode string             Name of the server boot mode. Valid values are: a, b, c, d.
+  -m, --boot-operating-mode string   Name of the server operating mode. Valid values are: manual, normal.
+  -j, --job-task string              Name of the job task to execute. Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
+  -o, --operation-type string        Name of the operation to execute. Valid values are: boot, job.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi instance operation 43064761-948f-469d-ac8e-b8e5f0d6056f --operation-type boot --boot-mode c --boot-operating-mode normal
+```
 
 ---
 
@@ -801,7 +833,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 
 ```bash
   -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore - allowable values: ["retry","rollback"].
+  -r, --restore string    Action to take on a failed snapshot restore. Valid values for "--restore" are: retry, rollback.
   -s, --snapshot string   The unique identifier of the snapshot.
 ```
 
@@ -823,7 +855,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 **Usage**:
 
 ```bash
-update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
+update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 
   SNAPSHOT_ID: The unique identifier of the snapshot.
 ```
@@ -902,7 +934,7 @@ detach INSTANCE_ID --subnet SUBNET_ID [--mac-address MAC_ADDRESS]
 **Available Flags**:
 
 ```bash
-  -m, --mac-address string   The mac address of the subnet interface to be removed. The default is all mac addresses.
+  -m, --mac-address string   The mac address of the subnet interface to be removed. Default is all mac addresses.
   -n, --subnet string        The subnet ID.
 ```
 
@@ -942,9 +974,9 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NEW_NAME] [--pin-policy POLICY]
+    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
     [--processor-type TYPE] [--processors NUMBER] [--storage-pool-affinity=True|False]
-    [--virtual-cores ASSIGNED_CORES]
+    [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -967,7 +999,7 @@ update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False
                                         For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
       --virtual-cores int               New number of virtual cores assigned.
-  -v, --virtual-optical-device string   Attach or Detach a Virtual Optical Device to this instance. Valid values are "attach" and "detach".
+  -v, --virtual-optical-device string   Attach or detach a virtual optical device to this instance. Valid values are: attach, detach.
 ```
 
 **Examples**:
@@ -1061,7 +1093,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Available Flags**:
 
 ```bash
-  -r, --retainVSN   Determines if virtual serial number will be retained after being unassigned from the instance. Default is false.
+  -r, --retainVSN   Determines if virtual serial number will be retained after being unassigned from the instance. Default is "false".
 ```
 
 **Examples**:
@@ -1082,7 +1114,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Usage**:
 
 ```bash
-update INSTANCE_ID [--description DESCRIPTION]
+update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE-TIER)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1090,7 +1122,8 @@ update INSTANCE_ID [--description DESCRIPTION]
 **Available Flags**:
 
 ```bash
-  -d, --description string   New virtual serial number description.
+  -d, --description string     New virtual serial number description.
+      --software-tier string   IBMi licensing software tiers. Valid values are: P05, P10, P20, P30.
 ```
 
 ---
@@ -1161,9 +1194,9 @@ bulk-detach INSTANCE_ID (--detach-all=True|False | --volumes VOLUME1[,VOLUMEn]) 
 **Available Flags**:
 
 ```bash
-  -a, --detach-all        Indicates if all volumes, except primary boot volume, attached to the instance should be detached. Required if --volumes is not provided.
+  -a, --detach-all        Indicates if all volumes, except primary boot volume, attached to the instance should be detached. Required if "--volumes" is not provided.
   -p, --detach-primary    Indicates if primary boot volume attached to the instance should be detached.
-  -v, --volumes strings   List of volumes to be detached from an instance. Required if --detach-all is not provided.
+  -v, --volumes strings   List of volumes to be detached from an instance. Required if "--detach-all" is not provided.
 ```
 
 **Examples**:
@@ -1283,9 +1316,9 @@ get JOB_ID
 **Available Flags**:
 
 ```bash
-  -a, --operation-action string   Operation action to filter returned jobs. Valid values are vmCapture, imageExport, imageImport, storage.
+  -a, --operation-action string   Operation action to filter returned jobs. Valid values are: imageExport, imageImport, storage, vmCapture.
   -i, --operation-id string       Operation ID to filter returned jobs.
-  -t, --operation-target string   Operation target to filter returned jobs. Valid values are cloudConnection, pvmInstance, image.
+  -t, --operation-target string   Operation target to filter returned jobs. Valid values are: cloudConnection, image, pvmInstance.
 ```
 
 ---
@@ -1346,7 +1379,7 @@ get JOB_ID
 **Usage**:
 
 ```bash
-create PLACEMENT_GROUP_NAME --policy POLICY
+create PLACEMENT_GROUP_NAME --policy POLICY [--user-tags USER_TAG1[,USER_TAGn]]
 
   PLACEMENT_GROUP_NAME: A unique name of the placement group.
 ```
@@ -1354,7 +1387,8 @@ create PLACEMENT_GROUP_NAME --policy POLICY
 **Available Flags**:
 
 ```bash
-  -p, --policy string   Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -p, --policy string       Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the placement group.
 ```
 
 **Examples**:
@@ -1595,7 +1629,7 @@ get SHARED_PROCESSOR_POOL_ID
 **Usage**:
 
 ```bash
-create PLACEMENT_GROUP_NAME --policy POLICY
+create PLACEMENT_GROUP_NAME --policy POLICY [--user-tags USER_TAG1[,USER_TAGn]]
 
   PLACEMENT_GROUP_NAME: A unique name of the placement group.
 ```
@@ -1603,7 +1637,8 @@ create PLACEMENT_GROUP_NAME --policy POLICY
 **Available Flags**:
 
 ```bash
-  -p, --policy string   Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -p, --policy string       Affinity policy for placement group being created. Valid values are affinity and anti-affinity.
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the shared processor pool placement group.
 ```
 
 **Examples**:
@@ -1881,7 +1916,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 **Usage**:
 
 ```bash
-update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
+update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 
   SNAPSHOT_ID: The unique identifier of the snapshot.
 ```
@@ -1924,7 +1959,7 @@ update SNAPSHOT_ID [--description NEW_DESCRIPTION] [--name NEW_NAME]
 **Usage**:
 
 ```bash
-create KEY_NAME --key KEY
+create KEY_NAME --key KEY [--description DESCRIPTION] [--visibility ("account" | "workspace")]
 
   KEY_NAME: The name of the key.
 ```
@@ -1932,7 +1967,12 @@ create KEY_NAME --key KEY
 **Available Flags**:
 
 ```bash
-  -k, --key string   SSH RSA key string within a double quotation marks. For example, "ssh-rsa AAA... "
+  -d, --description string   Description of the SSH-Key.
+  -k, --key string           SSH RSA key string within a double quotation marks. For example, "ssh-rsa AAA... "
+  -v, --visibility string    Visibility of the SSH-Key. Valid values are: account, workspace.
+                             Value of "workspace" means SSH-Key is only accessible in a workspace.
+                             Value of "account" means SSH-Key is accessible throughout an account.
+                             Default is "workspace".
 ```
 
 **Examples**:
@@ -1998,7 +2038,7 @@ get KEY_NAME
 **Usage**:
 
 ```bash
-update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
+update KEY_NAME [--description DESCRIPTION] [--key KEY] [--name NAME] [--visibility ("account" | "workspace")]
 
   KEY_NAME: The name of the key.
 ```
@@ -2006,8 +2046,12 @@ update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
 **Available Flags**:
 
 ```bash
-  -k, --new-key string    SSH RSA key string
-  -n, --new-name string   SSH-Key name
+  -d, --description string   Description of the SSH-Key.
+  -k, --key string           SSH RSA key string.
+  -n, --name string          SSH-Key name.
+  -v, --visibility string    Visibility of the SSH-Key. Valid values are: account, workspace.
+                             Value of "workspace" means SSH-Key is only accessible in a workspace.
+                             Value of "account" means SSH-Key is accessible throughout an account.
 ```
 
 ---
@@ -2063,8 +2107,8 @@ update KEY_NAME --new-name NEW_NAME --new-key NEW_KEY
 **Usage**:
 
 ```bash
-create SUBNET_NAME --cidr-block CIDR --net-type private|dhcp ([--access-config CONFIG] | [--peer-id PEER_ID] [--peer-type PEER_TYPE] [--source-ip SOURCE_IP])
-        [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
+create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY]
+      [--ip-range "startIP-endIP[,startIP-endIP]"] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
 
   SUBNET_NAME: The name of the subnet.
 ```
@@ -2072,21 +2116,15 @@ create SUBNET_NAME --cidr-block CIDR --net-type private|dhcp ([--access-config C
 **Available Flags**:
 
 ```bash
-  -a, --access-config string   [DEPRECATED] replaced by the network-peer flags "--peer-id", "--peer-type", and "--source-ip".
-                               Network communication configuration.
-                               Valid values are: internal-only, outbound-only, bidirectional-static-route, bidirectional-bgp, bidirectional-l2out.
-  -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
-  -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
-                               127.0.0.1 by default if DNS server is not specified for private subnet types.
-                               9.9.9.9 by default for public subnet types.
-  -g, --gateway string         Gateway to use for this subnet.
-  -i, --ip-range string        IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
-  -m, --mtu int                Maximum Transmission Unit. MTU be between 1450 and 9000. The default value is 1450.
-  -n, --net-type string        Subnet type. Either "dhcp" or "private".
-      --peer-id string         ID of the network peer.
-      --peer-type string       Network peer type. Valid values are: L2, L3BGP, L3STATIC.
-  -s, --source-ip string       Source IP address, required if network peer type is L3BGP or L3STATIC and if network address translation is enabled
-  -u, --user-tags strings      Comma separated list of user tags to be attached to the subnet.
+  -c, --cidr-block string     Subnet in CIDR notation (192.168.1.0/22).
+  -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
+                              127.0.0.1 by default if DNS server is not specified for private subnet types.
+                              9.9.9.9 by default for public subnet types.
+  -g, --gateway string        Gateway to use for this subnet.
+  -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -m, --mtu int               Maximum Transmission Unit. MTU be between 1450 and 9000. Default is 1450.
+  -n, --net-type string       Subnet type.
+  -u, --user-tags strings     Comma separated list of user tags to be attached to the subnet.
 ```
 
 **Examples**:
@@ -2153,7 +2191,7 @@ get SUBNET_ID
 **Usage**:
 
 ```bash
-update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]"] [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
+update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
 
   SUBNET_ID: The unique identifier or name of the subnet.
 ```
@@ -2183,6 +2221,7 @@ update SUBNET_ID [--name SUBNET_NAME] [--ip-range "startIP-endIP[,startIP-endIP]
 - `delete`:    Delete a virtual serial number.
 - `get`:    View details of a virtual serial number.
 - `list`:    List all virtual serial number assigned to an instance or all virtual serial numbers in the workspace.
+- `software-tiers`:    List all supported software tiers.
 - `update`:    Update a retained virtual serial number.
 
 ---
@@ -2239,8 +2278,19 @@ list ([PVM_INSTANCE_ID] | [--retainVSN=True|False])
 **Available Flags**:
 
 ```bash
-  -r, --retainVSN   Lists only retained virtual serial numbers. Default is false.
+  -r, --retainVSN   Lists only retained virtual serial numbers. Default is "false".
 ```
+
+---
+
+### `ibmcloud pi virtual-serial-number software-tiers`
+{: #ibmcloud-pi-virtual-serial-number-software-tiers}
+
+**Alias**: `software-tiers, st`
+
+**Description**: List all supported software tiers.
+
+**Usage**: `software-tiers`
 
 ---
 
@@ -2312,7 +2362,7 @@ action VOLUME_ID [--replication-enabled=True|False] [--target-tier STORAGE_TIER]
 **Available Flags**:
 
 ```bash
-  -r, --replication-enabled   Enables storage replication on the volume. False by default.
+  -r, --replication-enabled   Enables storage replication on the volume. Default is "false".
   -t, --target-tier string    Change the storage tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). "Tier5k" volumes cannot exceed 200GB.
 ```
 
@@ -2630,17 +2680,17 @@ create VOLUME_NAME --size SIZE [--count COUNT] [--replication-enabled=True|False
 **Available Flags**:
 
 ```bash
-  -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and --affinity-volume is not provided.
-  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity". If --storage-pool is provided then this cannot be specified.
-  -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and --affinity-instance is not provided.
-  -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified and --anti-affinity-volumes is not provided.
-  -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified  and --anti-affinity-instances is not provided.
-  -c, --count int                         Number of volumes to create. 1 by default.
-  -r, --replication-enabled               Enables storage replication on the volume. False by default.
+  -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
+  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity". If "--storage-pool" is provided then this cannot be specified.
+  -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against; required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
+  -j, --anti-affinity-instances strings   Comma separated list of instance identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-volumes" is not provided.
+  -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against; required if "--affinity-policy anti-affinity" is specified  and "--anti-affinity-instances" is not provided.
+  -c, --count int                         Number of volumes to create. Default is 1.
+  -r, --replication-enabled               Enables storage replication on the volume. Default is "false".
       --replication-sites strings         List of replication sites for volume replication. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
-  -e, --shareable                         Whether the volumes can be attached to multiple VMs. False by default.
+  -e, --shareable                         Whether the volumes can be attached to multiple VMs. Default is "false".
   -s, --size int                          Size of the volume (in GB). Size cannot exceed 200GB for storage tier "Tier5k".
-  -p, --storage-pool string               Volume pool where the volume will be created. If --storage-pool is provided then --affinity-policy values cannot be specified.
+  -p, --storage-pool string               Volume pool where the volume will be created. If the "--storage-pool" flag is set then the "--affinity-policy" flag cannot be specified.
   -t, --storage-tier string               Tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). Default to tier3 if not provided.
   -u, --user-tags strings                 Comma separated list of user tags to be attached to the volume.
 ```
@@ -2719,9 +2769,9 @@ get VOLUME_ID
 **Available Flags**:
 
 ```bash
-  -a, --auxiliary             Filter auxiliary volumes if set to True or non-auxiliary volumes if False. True by default.
+  -a, --auxiliary             Filter auxiliary volumes if set to "true" or non-auxiliary volumes if set to "false". Default is "true".
   -l, --long                  Retrieve all volume details.
-  -r, --replication-enabled   Filter replication-enabled volumes if set to True or non-replication-enabled volumes if False. True by default.
+  -r, --replication-enabled   Filter replication-enabled volumes if set to "true" or non-replication-enabled volumes if set to "false". Default is "true".
 ```
 
 ---
@@ -2755,7 +2805,7 @@ get VOLUME_ID
 **Available Flags**:
 
 ```bash
-  -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this option to add more auxiliary volumes.
+  -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this flag to add more auxiliary volumes.
   -d, --description string          Volume onboarding description.
   -s, --source-crn string           CRN of source ServiceBroker instance from where auxiliary volumes need to be onboarded.
   -u, --user-tags strings           Comma separated list of user tags to be attached to the volume onboarding.
@@ -2868,7 +2918,7 @@ get SNAPSHOT_ID
 **Usage**:
 
 ```bash
-update VOLUME_ID [--bootable=True|False] [--name NEW_NAME] [--size NEW_SIZE] [--shareable=True|False]
+update VOLUME_ID [--bootable=True|False] [--name NAME] [--size SIZE] [--shareable=True|False]
 
   VOLUME_ID: The unique identifier or name of the volume.
 ```
@@ -2927,9 +2977,9 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Available Flags**:
 
 ```bash
-  -a, --allow-read-access   Allow the auxiliary volume to be accessible after stopping the volume group. Default is false.
-  -o, --operation string    Operation to be done in a volume group. Valid values are "start", "stop", and "reset".
-      --source string       The copying volume source. Allowed values are master or auxiliary. Default is "master".
+  -a, --allow-read-access   Allow the auxiliary volume to be accessible after stopping the volume group. Default is "false".
+  -o, --operation string    Operation to be done in a volume group. Valid values are: reset, start, stop.
+      --source string       The copying volume source. Valid values are: auxiliary, master.Default is "master".
       --status string       New status to be set for a volume group. Default is "available".
 ```
 
@@ -3136,7 +3186,11 @@ create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN
 **Available Flags**:
 
 ```bash
-  -d, --datacenter string   The datacenter location where the instance should be hosted. Use the "datacenter list" command to see possible values.
+  -d, --datacenter string   The datacenter location where the instance should be hosted.
+                            Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
+                            and the "ibmcloud sat location ls" command to see values for private datacenters.
+                            When using the "ibmcloud sat location ls" to get a private datacenter,
+                            please prefix "satloc_<REGION>_" to the displayed id.
   -g, --group string        The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
   -p, --plan string         Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
   -u, --user-tags strings   Comma separated list of user tags to be attached to the workspace.

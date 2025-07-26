@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-13"
+lastupdated: "2025-07-25"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -77,58 +77,72 @@ For the example, in this table you can see four distinct part numbers for the fo
 
 
 
-
-
 For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. Refer to the following table to view the part number descriptions and the associated metric IDs.
 
-| Part description (visible on the invoice from IBM)                                   | Metric ID (visible in the IBM Cloud catalog) |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- |
-| **IBM Power Systems Virtual Server virtual machine group**                           |                                              |
-| IBM Power Systems E1080 virtual processor core hour - capped                         | ppcaas-metric-E1080-cores-capped             |
-| IBM Power Systems E1080 virtual processor core hour - dedicated                      | ppcaas-metric-E1080-cores-dedicated          |
-| IBM Power Systems E1080 virtual processor core hour - shared                         | ppcaas-metric-E1080-cores-shared             |
-| IBM Power Systems E1050 virtual processor core hour - capped                         | ppcaas-metric-E1050-cores-capped             |
-| IBM Power Systems E1050 virtual processor core hour - dedicated                      | ppcaas-metric-E1050-cores-dedicated          |
-| IBM Power Systems E1050 virtual processor core hour - shared                         | ppcaas-metric-E1050-cores-shared             |
-| IBM Power Systems S1022 virtual processor core hour - capped                         | ppcaas-metric-S1022-cores-capped             |
-| IBM Power Systems S1022 virtual processor core hour - dedicated                      | ppcaas-metric-S1022-cores-dedicated          |
-| IBM Power Systems S1022 virtual processor core hour - shared                         | ppcaas-metric-S1022-cores-shared             |
-| IBM Power Systems scale-out memory gigabyte hours                                    | ppcaas-metric-p10-2u-memory-standard         |
-| IBM Power Systems scale-up memory gigabyte hours                                     | ppcaas-metric-p10-4u-memory-standard         |
-| IBM Power Systems E1080 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-capped        |
-| IBM Power Systems E1080 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1080-hana-cores-dedicated     |
-| IBM Power Systems E1080 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1080-hana-cores-shared        |
-| IBM Power Systems E1050 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-capped        |
-| IBM Power Systems E1050 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-E1050-hana-cores-dedicated     |
-| IBM Power Systems E1050 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-E1050-hana-cores-shared        |
-| IBM Power Systems S1022 virtual processor core hour - capped - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-capped        |
-| IBM Power Systems S1022 virtual processor core hour - dedicated - SAP HANA workload  | ppcaas-metric-S1022-hana-cores-dedicated     |
-| IBM Power Systems S1022 virtual processor core hour - shared - SAP HANA workload     | ppcaas-metric-S1022-hana-cores-shared        |
-| IBM Power Systems scale-out memory gigabyte hours - SAP HANA workload                | ppcaas-metric-p10-2u-hanamem-standard        |
-| IBM Power Systems scale-up memory gigabyte hours - SAP HANA workload                 | ppcaas-metric-p10-4u-hanamem-standard        |
-| AIX operating system scale-up license core-hour                                      | ppcaas-metric-aix-scale-up                   |
-| AIX operating system scale-out license core-hour                                     | ppcaas-metric-aix-scale-out                  |
-| Red Hat Enterprise Linux operating system scale-up license core-hour                 | ppcaas-metric-rhel-scale-up                  |
-| Red Hat Enterprise Linux operating system scale-out license core-hour                | ppcaas-metric-rhel-scale-out                 |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload  | ppcaas-metric-rhel-sap-scale-up              |
-| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload | ppcaas-metric-rhel-sap-scale-out             |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour                   | ppcaas-metric-sles-tier1                     |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour                   | ppcaas-metric-sles-tier2                     |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour                   | ppcaas-metric-sles-tier3                     |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier1                 |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier2                 |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload    | ppcaas-metric-sles-sap-tier3                 |
-| IBM i operating system P10 license core-hour                                         | ppcaas-metric-ibmi-os-p10                    |
-| IBM i operating system P30 license core-hour                                         | ppcaas-metric-ibmi-os-p30                    |
-| IBM i operating system P10 service extension core-hour                               | ppcaas-metric-ibmi-os-p10-sve                |
-| IBM i operating system P30 service extension core-hour                               | ppcaas-metric-ibmi-os-p30-sve                |
-| IBM i LPP P10 license core-hour                                                      | ppcaas-metric-ibmi-lpp-p10                   |
-| IBM i LPP P30 license core-hour                                                      | ppcaas-metric-ibmi-lpp-p30                   |
-| IBM i P10 PowerHA instance core-hour                                                 | ppcaas-metric-ibmi-pha-p10                   |
-| IBM i P30 PowerHA instance core-hour                                                 | ppcaas-metric-ibmi-pha-p30                   |
-| IBM i Cloud Storage Solutions instance core-hour                                     | ppcaas-metric-ibmi-cos                       |
-| IBM i Rational Developer Studio instance core-hour                                   | ppcaas-metric-ibmi-rds                       |
-| Virtual Tape Library terabyte-hour                                                   | ppcaas-metric-vtl                            |
+
+
+
+
+| Part description (visible on the invoice from IBM)                                         | Metric ID (visible in the IBM Cloud catalog)    |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| **IBM Power Systems Virtual Server virtual machine group**                                 |                                                 |
+| IBM Power Systems E1180 virtual processor core hour - capped                               | ppcaas-metric-E1180-cores-capped                |
+| IBM Power Systems E1180 virtual processor core hour - dedicated                            | ppcaas-metric-E1180-cores-dedicated             |
+| IBM Power Systems E1180 virtual processor core hour - shared                               | ppcaas-metric-E1180-cores-shared                |
+| IBM Power Systems E1150 virtual processor core hour - capped                               | ppcaas-metric-E1150-cores-capped                |
+| IBM Power Systems E1150 virtual processor core hour - dedicated                            | ppcaas-metric-E1150-cores-dedicated             |
+| IBM Power Systems E1150 virtual processor core hour - shared                               | ppcaas-metric-E1150-cores-shared                |
+| IBM Power Systems S1122 virtual processor core hour - capped                               | ppcaas-metric-S1122-cores-capped                |
+| IBM Power Systems S1122 virtual processor core hour - dedicated                            | ppcaas-metric-S1122-cores-dedicated             |
+| IBM Power Systems S1122 virtual processor core hour - shared                               | ppcaas-metric-S1122-cores-shared                |
+| IBM Power Systems P11 scale-out memory gigabyte hours                                      | ppcaas-metric-p11-2u-memory-standard            |
+| IBM Power Systems P11 scale-up memory gigabyte hours                                       | ppcaas-metric-p11-4u-memory-standard            |
+| AIX operating system scale-up license core-hour                                            | ppcaas-metric-aix-scale-up                      |
+| AIX operating system scale-out license core-hour                                           | ppcaas-metric-aix-scale-out                     |
+| Red Hat Enterprise Linux operating system scale-up license core-hour                       | ppcaas-metric-rhel-scale-up                     |
+| Red Hat Enterprise Linux operating system scale-out license core-hour                      | ppcaas-metric-rhel-scale-out                    |
+| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload        | ppcaas-metric-rhel-sap-scale-up                 |
+| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload       | ppcaas-metric-rhel-sap-scale-out                |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour                         | ppcaas-metric-sles-tier1                        |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour                         | ppcaas-metric-sles-tier2                        |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour                         | ppcaas-metric-sles-tier3                        |
+| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier1                    |
+| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier2                    |
+| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier3                    |
+| IBM i P10 license core-hour                                                                | ppcaas-metric-ibmi-os-p10                       |
+| IBM i P30 license core-hour                                                                | ppcaas-metric-ibmi-os-p30                       |
+| IBM i P10 service extension core-hour                                                      | ppcaas-metric-ibmi-os-p10-sve                   |
+| IBM i P30 service extension core-hour                                                      | ppcaas-metric-ibmi-os-p30-sve                   |
+| IBM i LPP core-hour                                                                        | ppcaas-metric-ibmi-lpp                          |
+| IBM i P10 LPP core-hour                                                                    | ppcaas-metric-ibmi-lpp-p10                      |
+| IBM i P30 LPP core-hour                                                                    | ppcaas-metric-ibmi-lpp-p30                      |
+| IBM i P10 PowerHA instance core-hour                                                       | ppcaas-metric-ibmi-pha-p10                      |
+| IBM i P30 PowerHA instance core-hour                                                       | ppcaas-metric-ibmi-pha-p30                      |
+| IBM i PowerHA small instance core-hour                                                     | ppcaas-metric-ibmi-pha-small                    |
+| IBM i PowerHA medium instance core-hour                                                    | ppcaas-metric-ibmi-pha-medium                   |
+| IBM i P10 license - mobile core-hour - SWMA paid                                           | ppcaas-metric-ibmi-os-p10-mol                   |
+| IBM i P30 license - mobile core-hour - SWMA paid                                           | ppcaas-metric-ibmi-os-p30-mol                   |
+| IBM i LPP P10 - mobile core-hour - SWMA paid                                               | ppcaas-metric-ibmi-lpp-p10-mol                  |
+| IBM i LPP P30 - mobile core-hour - SWMA paid                                               | ppcaas-metric-ibmi-lpp-p30-mol                  |
+| IBM i LPP core-hour - mobile core-hour - SWMA paid                                         | ppcaas-metric-ibmi-lpp-mol                      |
+| IBM i Db2 Web Query instance core-hour                                                     | ppcaas-metric-ibmi-db2wq                        |
+| IBM i Cloud Storage Solutions instance core-hour                                           | ppcaas-metric-ibmi-cos                          |
+| IBM i Rational Development Studio instance-hour                                            | ppcaas-metric-ibmi-rds                          |
+| IBM i P05 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p05-tier                  |
+| IBM i P10 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p10-tier                  |
+| IBM i P20 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p20-tier                  |
+| IBM i P30 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p30-tier                  |
+| IBM i P05 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p05-sve-tier              |
+| IBM i P10 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p10-sve-tier              |
+| IBM i P20 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p20-sve-tier              |
+| IBM i P30 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p30-sve-tier              |
+| IBM i software tier LPP core-hour                                                          | ppcaas-metric-ibmi-lpp-tier                     |
+| IBM i software tier PowerHA small instance core-hour                                       | ppcaas-metric-ibmi-pha-small-tier               |
+| IBM i software tier PowerHA medium instance core-hour                                      | ppcaas-metric-ibmi-pha-medium-tier              |
+| IBM i P10 software tier license - mobile core-hour - SWMA paid                             | ppcaas-metric-ibmi-os-p10-mol-tier              |
+| IBM i P30 software tier license - mobile core-hour - SWMA paid                             | ppcaas-metric-ibmi-os-p30-mol-tier              |
+| IBM i software tier LPP - mobile core-hour - SWMA paid                                     | ppcaas-metric-ibmi-lpp-mol-tier                 |
+| Virtual Tape Library terabyte-hour                                                         | ppcaas-metric-vtl                               |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -169,17 +183,23 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: tab-title="Snapshot group"}
 
 
-| Part description (visible on the invoice from IBM)                             | Metric ID (visible in the IBM Cloud catalog) |
-| ------------------------------------------------------------------------------ | -------------------------------------------- |
-| **IBM Power Systems Virtual Server Private Cloud shared processor pool group** |                                              |
-| IBM Power Systems S1022 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-S1022-spp-cores                |
-| IBM Power Systems E1050 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-E1050-spp-cores                |
-| IBM Power Systems E1080 virtual processor core-hour - Shared Processor Pool    | ppcaas-metric-E1080-spp-cores                |
+| Part description (visible on the invoice from IBM)                                 | Metric ID (visible in the IBM Cloud catalog) |
+| ---------------------------------------------------------------------------------- | -------------------------------------------- |
+| **IBM Power Systems Virtual Server Private Cloud shared processor pool group**     |                                              |
+| IBM Power Systems S1122 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-S1122-spp-cores                |
+| IBM Power Systems E1150 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-E1150-spp-cores                |
+| IBM Power Systems E1180 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-E1180-spp-cores                |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #shared-procesor-pool-group-private}
 {: tab-title="Shared Processor Pool group"}
+
+
+
+
+
+
 
 For more information about unit prices for each metric ID, see [Where can I find the unit prices for the billing metrics?](#billing-metrics).
 
@@ -204,7 +224,7 @@ If you bring your own custom image, you are charged for the image size and the s
 ## Processor types
 {: #processor-types}
 
-Depending on the type of system that you choose for your virtual machine, you are charged different rates. Enterprise systems, such as E1080 or E1050, cost more because they provide more processing capacity per core. For example, the E1080 costs more than the E1050.
+Depending on the type of system that you choose for your virtual machine, you are charged different rates. Enterprise systems, such as E1180 or E1150, cost more because they provide more processing capacity per core. For example, the E1180 costs more than the E1150.
 
 You can choose one of the following core types for your workload:
 * **Dedicated virtual processor cores**
@@ -220,39 +240,44 @@ In the following example, assume that the cost of different types of virtual pro
 
 The following tables show how different processor types affect the cost of each system:
 
-| Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| ----------------------- | ---------------------------- | ------------------------ |
-| 1                       | $0.1962 (dedicated)          | $143.23                  |
-| 1                       | $0.1962 (shared uncapped)    | $143.23                  |
-| 1                       | $0.1962 (shared capped)      | $143.23                  |
-{: caption="S1022 processor type pricing" caption-side="bottom"}
+| Number of cores (S1122) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------------------------------------ | ---------------------------- | ------------------------ |
+| 1                                          | $0.1962 (dedicated)          | $143.23                  |
+| 1                                          | $0.1962 (shared uncapped)    | $143.23                  |
+| 1                                          | $0.1962 (shared capped)      | $143.23                  |
+{: caption="S1122 processor type pricing" caption-side="bottom"}
 
-| Number of cores (E1080) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| ----------------------- | ---------------------------- | ------------------------ |
-| 1                       | $0.6866 (dedicated)          | $501.20                  |
-| 1                       | $0.6866 (shared uncapped)    | $501.20                  |
-| 1                       | $0.6866 (shared capped)      | $501.20                  |
-{: caption="E1080 processor type pricing" caption-side="bottom"}
+| Number of cores (E1180) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------------------------------------ | ---------------------------- | ------------------------ |
+| 1                                          | $0.6866 (dedicated)          | $501.20                  |
+| 1                                          | $0.6866 (shared uncapped)    | $501.20                  |
+| 1                                          | $0.6866 (shared capped)      | $501.20                  |
+{: caption="E1180 processor type pricing" caption-side="bottom"}
 
-| Number of cores (E1050) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| ----------------------- | ---------------------------- | ------------------------ |
-| 1                       | $0.2945 (dedicated)          | $215.00                  |
-| 1                       | $0.2945 (shared uncapped)    | $215.00                  |
-| 1                       | $0.2945 (shared capped)      | $215.00                  |
-{: caption="E1050 processor type pricing" caption-side="bottom"}
+| Number of cores (E1150) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------------------------------------ | ---------------------------- | ------------------------ |
+| 1                                          | $0.2945 (dedicated)          | $215.00                  |
+| 1                                          | $0.2945 (shared uncapped)    | $215.00                  |
+| 1                                          | $0.2945 (shared capped)      | $215.00                  |
+{: caption="E1150 processor type pricing" caption-side="bottom"}
 
 
 
 ## Memory types
 {: #memory-types}
 
-The system determines the cost of {{site.data.keyword.on-prem-fname}} based on the memory usage (in gigabytes) and the type of the system that is chosen for the virtual machine. Enterprise systems, such as E1080 or E1050, use scale-up memory with higher density, whereas S1022 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. The following table shows how memory types affect the cost of each system:
+The system determines the cost of {{site.data.keyword.on-prem-fname}} based on the memory usage (in gigabytes) and the type of the system that is chosen for the virtual machine. Enterprise systems, such as E1180 or E1150, use scale-up memory with higher density, whereas S1122 systems use scale-up memory with lesser density. Currently, both scale-up and scale-out memory might cost you the same price. However, this pricing is subject to change in the future, depending on the cost of the memory chips. The following table shows how memory types affect the cost of each system:
 
 | Number of GBs | Memory type                        | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ------------- | ---------------------------------- | ---------------------------- | ------------------------ |
 | 1             | IBM Power Systems scale-out memory | $0.01232877                  | $9.00                    |
 | 1             | IBM Power Systems scale-up memory  | $0.01232877                  | $9.00                    |
 {: caption="Memory type pricing" caption-side="bottom"}
+
+
+
+
+
 
 
 
@@ -306,16 +331,7 @@ For more information, see [How to calculate the pricing for OS licensing in SPP]
 
 
 
-## Pricing for dedicated hosts
-{: #pricing-dh-private}
 
-Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022. Each server type is metered by the hour and the price includes the entire capacity of the host.
-
-Consider the following points for dedicated host pricing:
-* You are not charged separately for shared processor pools you deploy to the dedicated host.
-* Software charges for the supported operating systems are metered and charged by the core.
-
-To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 ## Storage types
 {: #storage-types}
@@ -384,6 +400,16 @@ The following tables show how different storage types affect the cost per system
 {: caption="Snapshot storage pricing" caption-side="bottom"}
 
 
+
+
+
+- **{{site.data.keyword.ibmi-vst}}**: Starting with IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system it runs on. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
+
+
+
+
+
+
 ### Use case of account billable storage
 {: #billable-storage}
 
@@ -410,6 +436,9 @@ Total billable storage = 595 GB
 
 To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
+
+
+
 
 ## End of billing
 {: #end-billing}

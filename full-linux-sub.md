@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-03-25"
+lastupdated: "2025-07-22"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -89,6 +89,7 @@ Configure the squid by using the following commands:
       for example, `10.140.129.217/29`
 2. `acl ibmprivate dst 161.26.0.0/16`
 3. `acl ibmprivate dst 166.8.0.0/14`
+4. `acl SSL_ports port 8443`
 
 Also, look at the other entries and make necessary changes according to your environment.
 

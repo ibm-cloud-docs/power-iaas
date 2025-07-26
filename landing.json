@@ -27,8 +27,8 @@
         "href": "/docs/power-iaas?topic=power-iaas-powervs-faqs"
       },
       {
-        "title": "Global Replication Services",
-        "href": "/docs/power-iaas?topic=power-iaas-getting-started-GRS"
+        "title": "Migrating to an IBM Power11 system",
+        "href": "/docs/power-iaas?topic=power-iaas-system-migration#power11-migration"
       }
     ]
   },
@@ -56,8 +56,8 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "25 April 2025",
-        "title": "You can enable Cloud Security Posture Management (CSPM) feature in your existing and new IBM Power Virtual Server workspaces."
+        "date": "25 July 2025",
+        "title": "You can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability)."
       }
     ]
   }

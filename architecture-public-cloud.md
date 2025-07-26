@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-06-18"
+lastupdated: "2025-07-24"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -96,15 +96,13 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 - [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
 - [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^1]
+- [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
+
 
 [^1]: Available only at `DAL14` data center.
 
-
-
-
 You can compare the performance of your current environment with the environment available through the {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 {: tip}
-
 
 ## Data center capabilities
 {: #dc-capabilities}
@@ -113,16 +111,9 @@ You can check and compare your data center capabilities among three different da
 
 For example, you can determine the support for the following capabilities in each data center:
 
-
-
-- Machine types (Power9 or Power10)
+- Machine types (Power9, Power10, or Power11)
 - Global replication site pair(s)
 - Dedicated host types
-
-
-
-
-
 
 The IBM data centers have the following hardware components:
 
@@ -141,9 +132,9 @@ The IBM data centers are configured with one or more of the following IBM Power 
 * [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
 * [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
 * [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^2]
+* [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
 
 [^2]: Available only at `DAL14` data center.
-
 
 
 For more information about your data center capabilities, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.

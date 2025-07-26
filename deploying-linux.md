@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-07-25"
 
 keywords: linux deployment, ova, powervc capture, vios
 
@@ -50,7 +50,13 @@ If you've deployed PowerVC in your private cloud environment, you can use it to 
 
 
 
+
+
 The [`create_ova` RPM](https://cloud.ibm.com/media/docs/downloads/create_ova-1.0-2.aix7.2.ppc.rpm){: external} contains scripts that create a virtual disk image of a `mksysb` backup, raw disk file, or disk volume and packages the content into a consumable Open Virtual Appliance (OVA) package. To use this capture method, it is required that the root file system be present on a single disk. When you use the VIOS disk capture capability, you must obtain the appropriate disk volume name of the client VM that you are trying to capture.  **You must shut down your Linux LPAR for this method to work. Otherwise, you might encounter disk errors and the OVA image might not boot**.
+
+
+
+
 
 The `create_ova` RPM also contains the `create_ova` man page and license. You must install the RPM on VIOS releases, which are before VIOS 3.1.2.0. The `create_ova` command is provided as a system command on VIOS release 3.1.2.0, or later.
 {: note}

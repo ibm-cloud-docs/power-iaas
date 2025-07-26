@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-15"
+lastupdated: "2025-07-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -11,14 +11,67 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes
+# Release notes for {{site.data.keyword.powerSys_notm}}
 {: #release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}}.
+
+Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
 ## July 2025
 {: #July-2025}
+
+
+
+- Starting on 25 July 2025, you can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [supported operating system levels](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for Power11.
+
+
+
+- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system on which it runs. It controls the pricing tier for the IBM i operating system and licensed program products (LPPs). The {{site.data.keyword.ibmi-vst}} also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
+
+
+
+- You can set the scope of an SSH key to improve the security and privacy of the SSH key. When the scope is set, the visibility of the SSH key is restricted to a workspace or an account. For more information, see [Setting the scope of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
+
+
+
+
+
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+
+- You can use the routes feature in your PER-enabled Power Virtual Server workspaces to view implicit network routes and to create or manage static routes. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
+
+- The network security group feature is enhanced to provide the following additional capabilities:
+
+    - You can clone an existing network security group to create a network security group. For more information, see [Cloning an NSG](/docs/power-iaas?topic=power-iaas-nsg#clone-nsg).
+
+    - You can transfer members from one network security group to another. For more information, see [Moving members from one NSG to another NSG](/docs/power-iaas?topic=power-iaas-nsg#move-members).
+
+
+
+- You can enable the Address Resolution Protocol (ARP) to map IP addresses to physical Media Access Control (MAC) addresses in the {{site.data.keyword.powerSys_notm}} network. For more information, see [Configuring the Subnet ARP Broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
+
+
+
+- You can integrate your Power Virtual Server workspace with IBM Cloud&reg; Monitoring service to gain operational visibility about the performance and health of your applications, services, and platforms. For more information, see [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig#monitor-pvsw).
+
+
+
+
+
+
+- New server placement groups and shared processor pools are created with Cloud Resource Names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be assigned a CRN by the end of August 2025.
+
+
+
+
+
+
+
 
 On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached its end of life and is no longer available for use. However, you can use the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: important}
@@ -27,7 +80,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 **End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-release-notes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 {: important}
-
 
 
 
@@ -93,7 +145,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 - IBM i 7.3, 7.2 and COR stock images have been refreshed.
 
-- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of Cloud Resource Names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
   The billing and metering plans are updated with the following changes:
 

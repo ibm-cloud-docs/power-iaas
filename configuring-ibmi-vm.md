@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-05-08"
+lastupdated: "2025-07-24"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -133,7 +133,7 @@ To verify that `cloud-init` configured your IP addresses correctly, on the **IBM
 
 One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` should be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
 
-See an example below of the `cloud-init` configuration verification:
+See the following example of the `cloud-init` configuration verification:
 
 ```screen
                     Work with TCP/IP Interfaces
@@ -247,6 +247,12 @@ The VSI console of an IBM i virtual machine supports English language by default
 
   If you select Japanese as the language in the Console Setting dialog before you start the IBM i VSI console, the system does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that you must perform on an IBM i virtual machine.
   {: note}
+
+
+
+- To change the service tools language of your IBM i system, see [Changing the service tools language of your system or logical partition](https://www.ibm.com/docs/en/i/7.6.0?topic=mst-changing-service-tools-language-your-system-logical-partition){: external}.
+
+
 
 - The COR stock OS image can be used to deploy a second IBM i virtual machine. The second IBM i virtual machine that is deployed contains the language media that can be used to install primary and secondary languages on other IBM i virtual machines.
 

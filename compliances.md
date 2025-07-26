@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-23"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -29,6 +29,17 @@ The {{site.data.keyword.powerSys_notm}} provides programs and certifications tha
 {: shortdesc}
 
 
+
+
+
+
+
+
+
+## ISMAP
+{: #ismap}
+
+The Information System Security Management and Assessment Program (ISMAP) is a Japanese government program to assess the security of public cloud service providers (CSP). ISMAP approves independent third-party auditors who evaluate and register CSPs and their services to ensure they meet specific security requirements set by the Japanese government, enabling agency usage without the added burden and cost of agency-led assessments. {{site.data.keyword.powerSys_notm}} is ISMAP compliant and is registered on the [ISMAP Website](https://www.ismap.go.jp/csm?id=cloud_service_list_detail&sys_id=7670240c93c2ea102e57189dc7373ce0){: external} (Listing is in Japanese). The listing contains all {{site.data.keyword.powerSys_notm}} ISMAP documents available for download in the Japanese Language. For more information about IBM Cloud&reg; ISMAP compliance certification, see [IBM Cloud® compliance: ISMAP](https://www.ibm.com/cloud/compliance/ismap){: external}.
 
 
 

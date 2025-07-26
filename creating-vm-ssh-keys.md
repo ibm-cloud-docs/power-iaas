@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2023
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-07-16"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -17,8 +17,6 @@ subcollection: power-iaas
 {: #create-vm}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 

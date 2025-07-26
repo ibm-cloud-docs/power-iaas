@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-06-18"
+lastupdated: "2025-07-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -58,31 +58,36 @@ The supported AIX and IBM i operating system versions depend on the IBM Power ha
 If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to the current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
 {: important}
 
-To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following system software maps:
-
+To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following information:
 
 
 ### AIX
 {: #aix-details}
 
-The {{site.data.keyword.powerSys_notm}} offering supports AIX 7.1, or later on the S922 (9009-22A) and E980 (9080-M9S).
+The {{site.data.keyword.powerSys_notm}} offering supports the following versions of AIX operating system depending on the IBM Power server:
 
-Power servers E1080 (9080-HEX) and S1022 (9105-22A) supports AIX 7.1 TL5 or later.
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+| Machine type                              | Supported AIX versions                                |
+| ----------------------------------------- | ----------------------------------------------------- |
+| * S922 (9009-22A)  \n * E980 (9080-M9S)   | AIX 7.1 or later                                      |
+| * E1080 (9080-HEX) \n *  S1022 (9105-22A) | AIX 7.1 TL5 or later                                  |
+| * S1122 (9824-22A)                        | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
+{: caption="Supported AIX versions in IBM data center" caption-side="bottom"}
 
 
+[{{site.data.keyword.on-prem}}]{: tag-red}
 
-
+| Machine type                                                   | Supported AIX versions                                |
+| -------------------------------------------------------------- | ----------------------------------------------------- |
+| * S1122 (9824-22A) \n * E1150 (9043-MRU) \n * E1180 (9080-HEU) | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
+{: caption="Supported AIX versions in client location" caption-side="bottom"}
 
 When you view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
 
-- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
-- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
-- [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
 
-
-
+For more information about which versions of AIX are compatible with various Power Systems, see the [System to AIX maps](https://www.ibm.com/support/pages/node/6020074){: external}.
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 {: note}
@@ -95,14 +100,29 @@ Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current 
 
 
 
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
+| Machine type                             | Supported IBM i versions |
+| ---------------------------------------- | ------------------------ |
+| * E1022 (9105-22A) \n * E1080 (9080-HEX) | IBM i 7.3 or later       |
+{: caption="Supported IBM i versions in IBM data center" caption-side="bottom"}
 
-The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} supports IBM i 7.3, or later and IBM i COR.
+[{{site.data.keyword.on-prem}}]{: tag-red}
+
+| Machine type                             | Supported IBM i versions |
+| ---------------------------------------- | ------------------------ |
+| * S1122 (9824-22A) \n * E1180 (9080-HEU) | IBM i 7.4 or later       |
+{: caption="Supported IBM i versions in client location" caption-side="bottom"}
+
+The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} supports IBM i 7.4, or later and IBM i COR.
 {: note}
 
+For more information, see:
 
-
-
+- [S1022 (9105-22A) IBM i software map](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
+- [E1080 (9080-HEX) IBM i software map](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
+- [S1122 (9824-22A) IBM i software map](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
+- [E1180 (9080-HEU) IBM i software map](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 

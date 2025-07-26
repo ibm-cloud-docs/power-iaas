@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-23"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -25,6 +25,17 @@ subcollection: power-iaas
 
 
 ---
+
+
+
+You can set up one or more Secure Shell (SSH) keys for root login when you create a new virtual machine (VM). The keys are loaded into the **authorized_keys** file in the root directory. By using SSH keys, you can securely log in to a VM. You must use the available operating system options to create SSH keys. To generate SSH keys on a Linux&reg; or Mac OS system, for example, you can use the standard `ssh-keygen` tool.
+{: shortdesc}
+
+
+
+
+
+
 
 In this example, the user created a public key on a Linux-based IBM Cloud compute instance by using the `ssh-keygen` tool:
 
@@ -62,6 +73,26 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 
 
 
+## Setting the scope of an SSH key in a {{site.data.keyword.powerSys_notm}} workspace
+{: #scope-ssh}
+
+In a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key, you can set the scope of an SSH key as `Workspace` or `Account`. When you set the scope of an SSH key, the visibility of the SSH key is restricted to a workspace or an account. Therefore, the security and privacy of the SSH key is improved.
+{: shortdesc}
+
+Complete the following steps to create and set the scope of an SSH key:
+
+1. Open a workspace to add an SSH key from the {{site.data.keyword.powerSys_notm}} user interface.
+2. Click **SSH keys** under **Compute**. The list of SSH keys that are associated with the workspace are displayed on the "SSH key" page.
+3. Click **Create SSH Key**. The "New SSH key" page appears.
+4. Enter a unique name in the **Key name** field.
+5. Select one of the following options from the **Access setting** section to set the scope of the SSH key:
+   - **Workspace**: The SSH key is visible only within the workspace in which it is created.
+   - **Account**: The SSH key is visible to all the workspaces in the account. However, you can delete the SSH key only from the workspace in which it is created.
+6. Enter a description about the SSH key in the **Description** field.
+7. Enter the SSH key in the **Public key** field.
+8. Click **Add SSH key**.
+
+The SSH key is created and listed in the data table on the "SSH key" page. The **Access setting** column in the data table displays the scope of the SSH key as `Workspace` or `Account`.
 
 
 

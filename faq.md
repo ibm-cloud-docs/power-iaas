@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-24"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs
+# FAQs for {{site.data.keyword.powerSys_notm}}
 {: #powervs-faqs}
 
 ---
@@ -53,19 +53,11 @@ The primary difference between the two is where the physical infrastructure resi
 {: #servers-supported}
 {: faq}
 
+[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power S1122.
 
-
-[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, and IBM Power S1022.
-
-[{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1022, IBM Power E1050, IBM Power E1080.
+[{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1122, IBM Power E1150, IBM Power E1180.
 
 For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
-
-
-
-
-
-
 
 
 
@@ -83,47 +75,32 @@ The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
+The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following versions of the AIX operating system:
 
-
-The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following operating systems:
-* S922 - 7.1 or later
-* E980 - 7.1 or later
-* S1022 - 7.1 Technology Level (TL) 5 or later
-
-
-
-
-
-
+* S922 - AIX 7.1 or later
+* E980 - AIX 7.1 or later
+* S1022 - AIX 7.1 Technology Level (TL) 5 or later
+* S1122 - AIX 7.2 TL5 SP10 and 7.3 TL3 SP1 or later
 
 The following stock images are available when you create a virtual machine:
 
 
 
 
-* AIX 7.3 TL3 SP0
-* AIX 7.2 TL5 SP9
-* AIX 7.1 TL5 SP9[^1]
-
-
-
-
-
+- AIX 7.3 TL3 SP1
+- AIX 7.2 TL5 SP10
+- AIX 7.1 TL5 SP9[^1]
 
 
 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
+The {{site.data.keyword.on-prem-fname}} supports the following versions of the AIX operating system:
 
-
-The {{site.data.keyword.on-prem-fname}} supports the following operating systems:
-* S1022 - 7.2 or later
-* E1080 - 7.2 or later
-
-
-
-
+- S1122 - AIX 7.2 TL5 SP9 or later
+- S1150 - AIX 7.2 TL5 SP9 or later
+- E1180 - AIX 7.2 TL5 SP9 or later
 
 The following stock images are available when you create a virtual machine:
 
@@ -142,15 +119,7 @@ The following stock images are available when you create a virtual machine:
 
 To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
-
-
-- [S922 (9009-22A) AIX software map](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9009-22A-vios-only){: external}
-- [E980 (9080-M9S) AIX software map](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}
-- [S1022 (9105-22A) AIX software map](https://www.ibm.com/support/pages/node/6604269){: external}
-- [E1080 (9080-HEX) AIX software map](https://www.ibm.com/support/pages/system-software-map-power-systems-e1080-9080-hex-and-aix-all-io-configurations){: external}
-
-
-
+For more information about which versions of AIX are compatible with various Power Systems, see the [System to AIX maps](https://www.ibm.com/support/pages/node/6020074){: external}.
 
 
 For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
@@ -164,15 +133,9 @@ The {{site.data.keyword.on-prem-fname}} supports IBM i 7.3, or later.
 
 If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-
-
-- [S922 (9009-22A), E980 (9080-M9S), and S1022 (9105-22A)software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
+- [S922 (9009-22A), E980 (9080-M9S), S1022 (9105-22A), S1122 (9824-22A), and E1180 (9080-HEU) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
 - [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
 - [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
-
-
-
-
 
 IBM i stock images currently available when you create a VM are:
 
@@ -181,10 +144,11 @@ IBM i stock images currently available when you create a VM are:
 
 * IBM i COR[^2][^3]
 * IBM i 7.6[^4]
-* IBM i 7.5 TR5
-* IBM i 7.4 TR11
+* IBM i 7.5 TR5[^4x]
+* IBM i 7.4 TR11[^4y]
 * IBM i 7.3 TR13[^5]
 * IBM i 7.2 TR9[^5A][^6]
+
 
 
 
@@ -194,7 +158,11 @@ IBM i stock images currently available when you create a VM are:
 [^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 
 
-[^4]: IBM i 7.6 is supported on IBM Power10 systems only.
+[^4]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
+
+[^4x]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
+
+[^4y]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
 
 [^5]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
@@ -220,12 +188,12 @@ The following list of Linux stock images are available:
 
 Red Hat
 
-* RHEL 9.4 general purpose (RHEL9-SP4)
+* RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
 * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP)
 * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
-* RHEL 8.10 general purpose (RHEL8-SP10)
+* RHEL 8.10 general purpose (RHEL8-SP10)  [^footnote6]
 * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA)
 * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)
 * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
@@ -240,7 +208,7 @@ Red Hat
 
 SUSE [^footnote8]
 
-* SLES 15 SP6 general purpose (SLES15)
+* SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
@@ -250,7 +218,9 @@ SUSE [^footnote8]
 
 
 
-
+[^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote8]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
@@ -633,7 +603,18 @@ IBM Cloud Connect is only available to IBM clients within the US.
 
 
 
-IBM does not provide status and performance monitoring for the {{site.data.keyword.powerSys_notm}}. Clients must use their own private cloud tools.
+
+
+
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+IBM provides performance monitoring and status monitoring services for {{site.data.keyword.powerSys_notm}} only if the {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system. The IBM Cloud Monitoring system is a cloud-native and container-intelligence management system. You can gain operational visibility about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. A {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system when the **Monitoring** option is set to for the workspace. By default, the **Monitoring** option is set to on when you create an {{site.data.keyword.off-prem-fname}} workspace. You can set the **Monitoring** option to on or off for an existing workspace on the Workspace details page. For more information, see [Monitoring a workspace](/docs/power-iaas?topic=power-iaas-integrate-scc#cloud-monitoring).
+
+For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+
+
 
 
 
