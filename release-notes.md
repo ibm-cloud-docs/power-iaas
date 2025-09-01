@@ -22,7 +22,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## August 2025
 {: #Aug-2025}
 
-- The IBM i 7.4, 7.5, 7.6, and COR OS images support Power10 and later systems.
+- The IBM i 7.4, 7.5, 7.6, and COR OS images are supported on Power10 and later systems.
 
 
 ## July 2025
