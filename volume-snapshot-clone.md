@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-08-29"
+lastupdated: "2025-09-01"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -49,7 +49,11 @@ You can initiate multiple snapshot operations. However, these concurrent snapsho
 A snapshot is a copy of the state of a volume or a set of volumes that is taken at a specific time. By using snapshot, you can restore your volumes to the state when you took the snapshot.
 {: shortdesc}
 
-With **<s>the</s>** snapshot **<s>interface</s>**, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
+
+
+With the snapshot interface, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
+
+
 
 
 
