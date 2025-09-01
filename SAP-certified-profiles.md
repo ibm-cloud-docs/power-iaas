@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-08-22"
+lastupdated: "2025-09-01"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -31,7 +31,7 @@ subcollection: power-iaas
 
 
 
-You can deploy SAP certified profiles on IBM Power9 or later servers by using a single custom OS boot image. You can use the UI, CLI, API, and Terraform interfaces to deploy SAP certified profiles.
+You can deploy SAP certified profiles on IBM POWER9 or later servers by using a single custom OS boot image. You can use the UI, CLI, API, and Terraform interfaces to deploy SAP certified profiles.
 
 
 
@@ -42,7 +42,7 @@ The SAP certified profiles for SAP HANA are a set of profiles with defined attri
 
 
 
-You can deploy SAP HANA on the following IBM® Power® server types:
+You can deploy SAP HANA on the following IBM&reg; Power&reg; server types:
 
 
 
