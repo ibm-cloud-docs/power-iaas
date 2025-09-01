@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-09-01"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -100,7 +100,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-    You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a VSN is assigned to a VM without storage, you must assign the VSN before you attach the boot volume and start the VM.
+    You can create a VM without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a Virtual serial number (VSN) is assigned to a VM without storage, you must assign the VSN before you attach the boot volume and start the VM.
     {: important}
 
     
@@ -113,6 +113,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     {: note}
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VM instance for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
+
+    
+
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VM instance:
     - IBM i Cloud Storage Solution
@@ -129,6 +132,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
+    
+
+    
 
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and Bring Your Own License (BYOL) images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
@@ -158,14 +164,17 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
+    You must complete the following prerequisites to assign an {{site.data.keyword.ibmi-vst}} to a {{site.data.keyword.powerSys_notm}} instance:
 
-    To assign an {{site.data.keyword.ibmi-vst}} to a {{site.data.keyword.powerSys_notm}} instance, complete the following steps to meet the prerequisites:
+   - Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section.
+   - Select an IBM Power10 or later server type from the **Machine type** list.
+   - Complete the following steps to assign a VSN to the instance:
+     - Edit the **Virtual serial number (VSN)** field.
+     - The Virtual serial number (VSN) summary pane appears.
+     - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
-      - Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section
-      - Select an IBM Power10 or later server type from the **Machine type** list
-      - Assign a VSN to the instance. If a VSN is not assigned to the instance, edit the **Virtual serial number (VSN)** field. The Virtual serial number (VSN) summary pane appears, select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
+    A list of supported {{site.data.keyword.ibmi-vst}}s is displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type. A recommended {{site.data.keyword.ibmi-vst}} is displayed based on the number of cores and memory size that you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.
 
-    A list of supported {{site.data.keyword.ibmi-vst}}s is displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type. A text message with the recommended {{site.data.keyword.ibmi-vst}} is displayed after the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and memory size you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.
 
     
 
@@ -332,7 +341,11 @@ The following table provides more information about each {{site.data.keyword.pow
 ## Reusing Volume names or VM names in {{site.data.keyword.powerSys_notm}}
 {: #reusing_volume_names}
 
-You can deploy a {{site.data.keyword.powerSys_notm}} VM by specifying any name. To delete a VM and to deploy a new VM with the same name, you must allow 1 hour between deleting the original instance and creating a VM with the same name.
+
+
+You can deploy a {{site.data.keyword.powerSys_notm}} VM by specifying any name. To delete a VM and to deploy a new VM with the same name, you must allow up to 1 hour between deleting the original instance and creating a VM with the same name.
+
+
 
 For example, you create a VM with the name TEST-VM and you delete this VM later. The name "TEST-VM" is not immediately available for reuse. Before you attempt to use the name TEST-VM again, you must allow 1 hour to pass after the VM was deleted.
 

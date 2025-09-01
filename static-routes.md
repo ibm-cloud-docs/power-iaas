@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-08-04"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
@@ -65,7 +65,7 @@ The static route that you created is displayed on the **Static routes** tab. The
 
 - **Defined**: Indicates that the static route is configured but not yet deployed or active. A static route might be in the defined state when the specified next hop IP address does not currently exist in any subnet within the {{site.data.keyword.powerSys_notm}} workspace.
 
-  Routes in the defined state are not used for forwarding network traffic and is not advertised externally even if **Advertise** is set to **Enabled**. However, after a subnet that includes the next hop IP address is created, the static route automatically becomes active and the status is changed to **Deployed**.
+  Routes in the defined state are not used for forwarding network traffic and are not advertised externally even if **Advertise** is set to **Enabled**. However, after a subnet that includes the next hop IP address is created, the static route automatically becomes active and the status changes to **Deployed**.
 
 - **Disabled**: Indicates that the static route is manually disabled by setting **Status** to **Disabled**. Routes in the disabled state are not used for forwarding traffic and are not advertised externally.
 

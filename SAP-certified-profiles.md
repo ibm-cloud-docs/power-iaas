@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-08-22"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -27,17 +27,34 @@ subcollection: power-iaas
 
 
 
-You can deploy SAP certified profiles on IBM Power10 or later servers by using a single custom OS boot image. You can use the UI, CLI, API, and Terraform interfaces to deploy SAP certified profiles.
+
+
+
+
+You can deploy SAP certified profiles on IBM Power9 or later servers by using a single custom OS boot image. You can use the UI, CLI, API, and Terraform interfaces to deploy SAP certified profiles.
+
+
 
 ## SAP certified profiles for SAP HANA
 {: #sap-certpro-hana}
 
 The SAP certified profiles for SAP HANA are a set of profiles with defined attributes such as CPU cores and RAM.
 
-You can deploy SAP HANA on the following {{site.data.keyword.powerSysFull}}s:
+
+
+You can deploy SAP HANA on the following IBM® Power® server types:
+
+
 
 - **Power10**: S1022, E1050, and E1080
 - **Power9**: E980
+
+
+
+
+
+
+
 
 
 ### Power10 profiles
@@ -56,6 +73,8 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 
 SR2 profiles must be deployed and edited by using the UI, CLI, API, and Terraform interfaces. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. SR2 profiles are not available with the E980 machine type.
 {: note}
+
+
 
 ### Power9 profiles
 {: #power9-profiles}

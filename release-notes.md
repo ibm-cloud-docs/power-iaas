@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-09-01"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -18,6 +18,13 @@ keywords: release notes, announcements, feature updates, changes, power virtual 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+
+## August 2025
+{: #Aug-2025}
+
+- The IBM i 7.4, 7.5, 7.6, and COR OS images support Power10 and later systems.
+
+
 ## July 2025
 {: #July-2025}
 
@@ -31,7 +38,17 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- You can set the scope of an SSH key to improve the security and privacy of the SSH key. When the scope is set, the visibility of the SSH key is restricted to a workspace or an account. For more information, see [Setting the scope of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
+
+
+- You can set the scope of an SSH key to improve the security and privacy of the SSH key. When you set the scope of an SSH key, the SSH key is only visible within a workspace or an account. For more information, see [Setting the scope of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
+
+
+
+
+
+
+
+
 
 
 
@@ -57,7 +74,10 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- You can integrate your Power Virtual Server workspace with IBM Cloud&reg; Monitoring service to gain operational visibility about the performance and health of your applications, services, and platforms. For more information, see [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig#monitor-pvsw).
+
+
+
+- You can integrate your Power Virtual Server workspace with IBM Cloud&reg; Monitoring service to get the visibility to the performance and health of your applications, services, and platforms. For more information, see [Monitoring metrics for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-monitor-sysdig#monitor-pvsw).
 
 
 
@@ -145,7 +165,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 - IBM i 7.3, 7.2 and COR stock images have been refreshed.
 
-- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of Cloud Resource Names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
   The billing and metering plans are updated with the following changes:
 

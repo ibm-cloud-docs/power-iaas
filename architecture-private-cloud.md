@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-08-25"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -29,19 +29,18 @@ subcollection: power-iaas
 
 To understand the {{site.data.keyword.on-prem}} architecture, key features, and hardware and software requirements, review the following topics:
 
-- [High-level architecture](#high-level-architecture-private-cloud)
-- [Key features](#key-features)
-- [Hardware and software specifications](#hardware-software-specs-private-cloud)
-    - [Pods](#pod-spec-private-cloud)
-    - [Small pod configurations](#pod-config-small)
-    - [Medium pod configurations](#pod-config-medium)
-    - [Supported Power11 servers](#power-system-spec-private-cloud)
-    - [Operating systems](#os-spec-private-cloud)
-    - [Storage](#storage-private-cloud)
-    - [Storage tiers](#storage-tiers-spec-private-cloud)
-- [Network](#network-spec-private-cloud)
-- [Data center capabilities](#dc-capabilities-private)
-
+- [High-level architecture](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#high-level-architecture-private-cloud)
+- [Key features](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#key-features)
+- [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud)
+    - [Pods](#pods)
+    - [Small pod configurations](#small-pod-configurations)
+    - [Medium pod configurations](#medium-pod-configurations)
+    - [Supported Power11 servers](#supported-power11-servers)
+    - [Operating systems](#operating-systems)
+    - [Storage](#storage)
+    - [Storage tiers](#storage-tiers)
+  - [Network](#network)
+  - [Data center capabilities](#data-center-capabilities)
 
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
@@ -86,9 +85,16 @@ For more information about IBM Cloud regions can host connections from the pods 
 ### Pods
 {: #pod-spec-private-cloud}
 
+
+
 The following pod sizes are available:
 * Small: 1 rack of IBM Power11 (S1122 and E1150) processors
 * Medium: 2–4 racks of IBM Power11 (S1122, E1150, or E1180) processors.
+
+
+
+
+
 
 You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes is used for maintenance or automatic high availability purposes.
 

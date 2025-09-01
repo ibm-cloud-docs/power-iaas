@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-09-01"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -142,13 +142,15 @@ IBM i stock images currently available when you create a VM are:
 
 
 
+
+
+
 * IBM i COR[^2][^3]
-* IBM i 7.6[^4]
-* IBM i 7.5 TR5[^4x]
-* IBM i 7.4 TR11[^4y]
+* IBM i 7.6
+* IBM i 7.5 TR5
+* IBM i 7.4 TR11
 * IBM i 7.3 TR13[^5]
 * IBM i 7.2 TR9[^5A][^6]
-
 
 
 
@@ -157,16 +159,17 @@ IBM i stock images currently available when you create a VM are:
 
 [^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 
+[^5]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
-[^4]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
+[^5A]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
-[^4x]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
 
-[^4y]: This image supports IBM Power10 systems only. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download section**.
 
-[^5]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+The IBM i 7.4, 7.5, 7.6, and COR OS images support Power10 and later systems. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download** section.
+{: note}
 
-[^5A]: IBM i 7.3 & 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+
+
 
 
 
@@ -211,6 +214,9 @@ SUSE [^footnote8]
 * SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
+
+
+
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
@@ -610,7 +616,11 @@ IBM Cloud Connect is only available to IBM clients within the US.
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-IBM provides performance monitoring and status monitoring services for {{site.data.keyword.powerSys_notm}} only if the {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system. The IBM Cloud Monitoring system is a cloud-native and container-intelligence management system. You can gain operational visibility about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. A {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system when the **Monitoring** option is set to for the workspace. By default, the **Monitoring** option is set to on when you create an {{site.data.keyword.off-prem-fname}} workspace. You can set the **Monitoring** option to on or off for an existing workspace on the Workspace details page. For more information, see [Monitoring a workspace](/docs/power-iaas?topic=power-iaas-integrate-scc#cloud-monitoring).
+IBM provides performance monitoring and status monitoring services for {{site.data.keyword.powerSys_notm}} only if the {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system. The IBM Cloud Monitoring system is a cloud-native and container-intelligence management system. You can get the visibility to the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. A {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system when the **Monitoring** option is set to for the workspace. By default, the **Monitoring** option is set to on when you create an {{site.data.keyword.off-prem-fname}} workspace. You can set the **Monitoring** option to on or off for an existing workspace on the Workspace details page. For more information, see [Monitoring a workspace](/docs/power-iaas?topic=power-iaas-integrate-scc#cloud-monitoring).
+
+
+
+
 
 For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
 

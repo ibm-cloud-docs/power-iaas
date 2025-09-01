@@ -33,7 +33,7 @@ subcollection: power-iaas
 {{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](/docs/workload-protection?topic=workload-protection-getting-started).
 
 
-In highly regulated sectors such as financial services, continuous compliance in the cloud environment is crucial to protect customer and application data. Cloud Security Posture Management (CSPM) is one of the key features of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service. When this feature is enabled in your workspace, the CSPM ensures that automatic compliance checks are integrated in your development workflow to mitigate such risks on a daily basis.
+In sectors such as financial services, continuous compliance in the cloud environment is crucial to protect customer and application data. Cloud Security Posture Management (CSPM) is one of the key features of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service. When this feature is enabled in your workspace, the CSPM ensures that automatic compliance checks are integrated in your development workflow to mitigate such risks on a daily basis.
 
 
 ## IBM Cloud® Security Posture Management (CSPM)

@@ -3,7 +3,7 @@
   "title": "Power Virtual Server",
   "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers on IBM Cloud (that are running either the AIX, IBM i, or Linux operating systems).",
   "product_page": "https://www.ibm.com/products/power-virtual-server",
-  "console_page": "/cloud.ibm.com/power/overview",
+  "console_page": "//cloud.ibm.com/power/overview",
   "section_topics": {
     "links": [
       {
@@ -34,15 +34,15 @@
   },
   "section_highlights": [
     {
-        "title": "Use Power Virtual Server to boost competitive advantage",
-      "description": "Expand hybrid cloud and AI adoption with IBM Power Virtual Server to boost competitive advantage",
-      "href": "https://newsroom.ibm.com/Blog-Expand-hybrid-cloud-and-AI-adoption-with-IBM-Power-Virtual-Server-to-boost-competitive-advantage",
+        "title": "IBM Power11 Launches in IBM Power Virtual Server",
+      "description": "With the general availability of IBM Power11 in IBM Power Virtual Server and across all server classes - clients can unlock new levels of performance, flexibility, and resilience for their mission-critical workloads.",
+      "href": "https://community.ibm.com/community/user/blogs/anthony-ciccone/2025/07/07/ibm-power11-launches-in-ibm-power-virtual-server-u",
       "type": "blog"
     },
     {
       "title": "Connecting Power Virtual Server to Microsoft Azure",
       "description": "This topic provides a detailed guide on how to connect IBM Power Virtual Server to Microsoft Azure with Megaport.",
-      "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
+      "href": "https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-connect-azure-with-megaport",
       "type": "redbook",
       "recommended": true
     }

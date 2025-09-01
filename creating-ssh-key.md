@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-23"
+lastupdated: "2025-09-01"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -46,26 +46,30 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 
 
 
-To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi key-create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-key-create) command.
+
+To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi ssh-key create KEY_NAME --key KEY`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) command.
 
 
-To add the generated public key, enter the following command (replacing the example value with your own public key):
+To add the generated public key and to set its [scope]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
+
+To add the generated public key and to set its [access]{: tag-green} [level]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
+
+To add the generated public key and to set its [visibility]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
+
 
 ```text
-ibmcloud pi key-create testkey --key "ssh-rsa AAAAB3NzaC
-1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey"
+ibmcloud pi ssh-key create testkey --key "ssh-rsa AAAAB3NzaC
+1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7UNKoTY39zjQ8mhOwaA3HEo12tOdzdFDYHHWNOYufCcFFk61CAL6HyQGGClib1nFc1xUcgTI9Dee8zzaAsN8mIIr1CgbRELhvOsTv23U4QddpfjkcVoKfF0BAtxgauvooQdPZBoxa2rsD+BvcWnjglkYWG2aBbuzFvSl1fLMihjfej8w1lxbcsYEcJg2X96NJPLmLsEJ+XwoXfVuv0X4z8IoBzZ8UbyTlrDv73EAH34GViYfZFbrIaNnwnz/f/tuOKcINihH72YP+oZn9JeiHQ+hKpMqJAmOK2UIzYr3u+79n9 testkey" --visibility "account"
 SSHKey created: testkey
 ```
 
-To confirm that the key was successfully added, use the [`ibmcloud pi keys`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-keys) command:
+To confirm that the key was successfully added, use the [`ibmcloud pi ssh list`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-list) command:
 
 ```text
-ibmcloud pi key testkey
-Name      Key                                          CreationDate
-testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
+ibmcloud pi ssh list
+Name      Key                                          Visibility CreationDate
+testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  account    2019-07-26T18:21:56.030Z
 ```
-
-
 
 
 
@@ -76,8 +80,11 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  2019-07-26T18:21:56.030Z
 ## Setting the scope of an SSH key in a {{site.data.keyword.powerSys_notm}} workspace
 {: #scope-ssh}
 
-In a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key, you can set the scope of an SSH key as `Workspace` or `Account`. When you set the scope of an SSH key, the visibility of the SSH key is restricted to a workspace or an account. Therefore, the security and privacy of the SSH key is improved.
+n a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key, you can set the scope of an SSH key as `Workspace` or `Account`. When you set the scope of an SSH key as `Workspace`, the SSH key is available only in the workspace where it is created and not available in other workspaces. When you set the scope of an SSH key as `Account`, the SSH key is available in all the workspaces under the account. However, you can delete the SSH key only from the workspace in which it is created. Therefore, the security and privacy of the SSH key is improved.
 {: shortdesc}
+
+
+
 
 Complete the following steps to create and set the scope of an SSH key:
 
@@ -86,13 +93,20 @@ Complete the following steps to create and set the scope of an SSH key:
 3. Click **Create SSH Key**. The "New SSH key" page appears.
 4. Enter a unique name in the **Key name** field.
 5. Select one of the following options from the **Access setting** section to set the scope of the SSH key:
-   - **Workspace**: The SSH key is visible only within the workspace in which it is created.
+   - **Workspace**: The SSH key is visible only in the workspace in which it is created.
    - **Account**: The SSH key is visible to all the workspaces in the account. However, you can delete the SSH key only from the workspace in which it is created.
 6. Enter a description about the SSH key in the **Description** field.
 7. Enter the SSH key in the **Public key** field.
 8. Click **Add SSH key**.
 
 The SSH key is created and listed in the data table on the "SSH key" page. The **Access setting** column in the data table displays the scope of the SSH key as `Workspace` or `Account`.
+
+
+
+
+
+
+
 
 
 

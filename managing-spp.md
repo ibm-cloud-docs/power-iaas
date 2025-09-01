@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-06-03"
+lastupdated: "2025-08-04"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -141,6 +141,8 @@ To create an SPP, complete the following steps:
 ### Updating or deleting a shared processor pool
 {: #update-delete-spp}
 
+
+
 To update or delete an SPP, navigate to **Compute** > **Shared processor pools**. Then, select the SPP that you want to edit, and click the edit icon. You will receive a notification after the SPP is deleted successfully.
 
 You can update or delete the following details of an existing SPP:
@@ -151,6 +153,10 @@ You can update or delete the following details of an existing SPP:
 
 
 * Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VMs do not exist in the SPP. If VMs are present in the SPP, delete all VMs in the SPP.
+
+
+
+
 
 
 

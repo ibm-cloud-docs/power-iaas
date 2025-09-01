@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-08-29"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -171,7 +171,7 @@ To enable or disable the NSG feature on an existing workspace, complete the foll
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace on which you want to enable or disable the NSG feature. The "Workspace details" panel is displayed.
+3. Select the workspace on which you want to enable or disable the NSG feature. The Workspace details panel is displayed.
 
 4. Set the **Network security groups** switch to **Enabled** or **Disabled**.
 
@@ -204,10 +204,10 @@ By default, all inbound network traffic is denied and does not reach any member 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
-3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
+3. Select the workspace in which you want to create the NSG. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
-6. Click **Create network security group**. The "Create network security group" page is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+6. Click **Create network security group**. The Create network security group page is displayed.
 7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
 8. To define **Inbound security rules** and add **Members** to the NSG later, click **Continue** > **Finish** > **Create**.
 
@@ -220,17 +220,17 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace in which you want to create the NSG. The "Workspace details" panel is displayed.
+3. Select the workspace in which you want to create the NSG. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. Click **Create network security group**. The "Create network security group" panel is displayed.
+6. Click **Create network security group**. The Create network security group panel is displayed.
 
 7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
 
-8. In the Inbound rules (optional) section, click **Create rule**. The "Create rule" panel is displayed.
+8. In the Inbound rules (optional) section, click **Create rule**. The Create rule panel is displayed.
 
 9. Select any of the following actions:
      - **Allow**: Use this option to allow network traffic from the specified Remote.
@@ -307,13 +307,13 @@ To rename an NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG to rename. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG to rename. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The "Edit network security group details" panel is displayed.
+6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The Edit network security group details panel is displayed.
 
 7. Enter a new name for the NSG in the **Name** field and click **Save**.
 
@@ -328,13 +328,13 @@ When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the sa
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG to be cloned. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG to be cloned. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to clone and select **Clone**. The "Clone network security group" dialog is displayed.
+5. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to clone and select **Clone**. The Clone network security group dialog is displayed.
 
 6. Enter a name for the NSG in the **Name** field and click **Clone**.
 
@@ -359,13 +359,13 @@ To delete a NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG to delete. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG to delete. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups page" is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to delete and select **Delete**. The "Delete network security group" confirmation message box appears.
+6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to delete and select **Delete**. The Delete network security group confirmation message box appears.
 
 7. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
@@ -386,15 +386,15 @@ To create an NAG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace in which you want to create the NAG. The "Workspace details" panel is displayed.
+3. Select the workspace in which you want to create the NAG. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed.
 
 6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-7. Click **Create network address group**. The "Create network address group" panel is displayed.
+7. Click **Create network address group**. The Create network address group panel is displayed.
 
 8. Enter a name in the **Name** field for the NAG. Optionally, you can provide user tags in the **User tags (optional)** field.
 
@@ -429,7 +429,7 @@ To rename an NAG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NAG to rename. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NAG to rename. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
@@ -437,7 +437,7 @@ To rename an NAG, complete the following steps:
 
 6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-7. Click the overflow menu (icon with 3 vertical dots) on the far right of the NAG entry that you want to rename and select **Edit**. The "Edit network address group details" panel is displayed.
+7. Click the overflow menu (icon with 3 vertical dots) on the far right of the NAG entry that you want to rename and select **Edit**. The Edit network address group details panel is displayed.
 
 7. Enter a new name for the NAG and click **Save**.
 
@@ -450,7 +450,7 @@ To delete an NAG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NAG to be deleted. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NAG to be deleted. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
@@ -458,7 +458,7 @@ To delete an NAG, complete the following steps:
 
 6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
 
-7. Click the overflow menu (icon with 3 vertical dots) on the NAG entry that you want to delete and select **Delete**. The "Delete network address group" confirmation message box appears.
+7. Click the overflow menu (icon with 3 vertical dots) on the NAG entry that you want to delete and select **Delete**. The Delete network address group confirmation message box appears.
 
 8. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
@@ -485,15 +485,15 @@ To create rules on an existing NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG in which you want to create rules. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG in which you want to create rules. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Select the NSG in which you want to create the rule. The "Network security group details" page is displayed.
+5. Select the NSG in which you want to create the rule. The Network security group details page is displayed.
 
-6. In the Inbound rules section, click **Create rule**. The "Create rule" panel is displayed.
+6. In the Inbound rules section, click **Create rule**. The Create rule panel is displayed.
 
 7. Complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom}) section.
 
@@ -508,17 +508,17 @@ You can also customize the cloned properties of a rule to create a different rul
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG with the rules that you want to clone. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG with the rules that you want to clone. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The 'Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-6. Select the NSG that contains the rule that you want to clone. The "Network security group details" page of the selected NSG is displayed.
+6. Select the NSG that contains the rule that you want to clone. The Network security group details page of the selected NSG is displayed.
 
 7. In the Inbound rules section, select the tab (**TCP**, **UDP**, **ICMP**, or **Any**) which contains the rule to be cloned.
 
-8. Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Duplicate**. The "Create rule" panel is displayed.
+8. Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Duplicate**. The Create rule panel is displayed.
 
 9. Click **Create** rule. The new rule is created with the exact same configuration. You can also create a rule with different configurations by making the necessary changes before you click **Create rule**.
 
@@ -532,17 +532,17 @@ To delete a rule from an existing NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG with the rule that you want to delete. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG with the rule that you want to delete. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Select the NSG with the rule that you want to delete. The "Network security group details" page of the selected NSG is displayed.
+5. Select the NSG with the rule that you want to delete. The Network security group details page of the selected NSG is displayed.
 
 6. In the Inbound rules section, select the tab (**TCP**, **UDP**, **ICMP**, or **Any**) which contains the rule to delete.
 
-8. Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Delete**. The "Delete network security group rule" confirmation message box appears.
+8. Click the overflow menu (icon with 3 vertical dots) on the rule entry that you want to clone and select **Delete**. The Delete network security group rule confirmation message box appears.
 
 9. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
@@ -568,13 +568,13 @@ To add members to an existing NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-3. Select the workspace that contains the NSG for adding members. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG for adding members. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Select the NSG to which you want to add members. The "Network security group details" page of the selected NSG is displayed.
+5. Select the NSG to which you want to add members. The Network security group details page of the selected NSG is displayed.
 
 6. In the Members section, click **Add member**. Existing virtual server instances that are part of the workspace is listed. If virtual servers are not listed, you can create a virtual server by completing the steps provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
@@ -592,13 +592,13 @@ To add members to an existing NSG, complete the following steps:
 
 You can use the **Move** option to transfer members from one NSG to another NSG in some of the following situations:
 
-- **Security policy changes**: When security policies or requirements evolve and you need to apply updated rules to specific members without affecting other members in the original NSG.
+- **Security policy changes**: When security policies or requirements evolve, you can use the Move option to apply updated rules to specific members without affecting other members in the original NSG.
 
-- **Environment segmentation**: When you want to isolate certain members during network reconfiguration or restructuring, such as separating development, staging, and production environments. You can move members to different NSGs to achieve member isolation and meet compliance or operational requirements.
+- **Environment segmentation**: During network reconfiguration or restructuring, such as separating development, staging, and production environments, you can move members to different NSGs to achieve member isolation and meet compliance or operational requirements.
 
-- **Access control adjustments**: When a member requires access to a different set of services or external networks. You can move the member to a new NSG with appropriate rules to ensure the required connectivity and permissions.
+- **Access control adjustments**: When a member requires access to a different set of services or external networks, you can move the member to a new NSG with appropriate rules to ensure the required connectivity and permissions.
 
-- **Incident response and troubleshooting**: When you respond to cybersecurity incidents or troubleshoot connectivity issues. You can move the affected member to a more restrictive or isolated NSG to contain the security threat and safely test network behavior.
+- **Incident response and troubleshooting**: When you respond to cybersecurity incidents or troubleshoot connectivity issues, you can move the affected member to a more restrictive or isolated NSG to contain the security threat and safely test network behavior.
 
 When you move a network interface (member) from one {{site.data.keyword.nsg-lc}} to another, the change is applied instantly and does not require approval. After the member is successfully moved and associated with the new NSG, the rules of the new NSG take effect immediately.
 {: important}
@@ -609,15 +609,15 @@ To move a member from one NSG to another NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
 
-3. Select the workspace that contains the NSG from which you want to move the members. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG from which you want to move the members. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Select the NSG from which you want to move the members. The "Network security group details" page of the selected NSG is displayed.
+5. Select the NSG from which you want to move the members. The Network security group details page of the selected NSG is displayed.
 
-6. In the Members section, click the overflow menu (icon with 3 vertical dots) on the member entry that you want to move and select **Move**. The "Move network interface" dialog is displayed.
+6. In the Members section, click the overflow menu (icon with 3 vertical dots) on the member entry that you want to move and select **Move**. The Move network interface dialog is displayed.
 
 7. From the **Target network security group** list, select the NSG to which you want to move the member.
 
@@ -634,15 +634,15 @@ To remove members that are associated with an NSG, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
 
-3. Select the workspace that contains the NSG from which you want to remove the members. The "Workspace details" panel is displayed.
+3. Select the workspace that contains the NSG from which you want to remove the members. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
 
-5. Select the NSG from which you want to remove the members. The "Network security group details" page of the selected NSG is displayed.
+5. Select the NSG from which you want to remove the members. The Network security group details page of the selected NSG is displayed.
 
-6. In the Members section, click the delete icon against the member entry that you want to remove from the NSG. The "Delete network security group member" confirmation message box appears.
+6. In the Members section, click the delete icon against the member entry that you want to remove from the NSG. The Delete network security group member confirmation message box appears.
 
 7. Click **Delete** to initiate the deletion request. This action cannot be undone.
 

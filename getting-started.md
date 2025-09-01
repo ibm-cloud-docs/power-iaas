@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-08-26"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -22,6 +22,7 @@ You get fast and flexible management that can be connected to access a stack of 
 
 ## IBM {{site.data.keyword.powerSys_notm}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 {: #public-cloud}
+
 
 
  IBM {{site.data.keyword.powerSys_notm}} resources reside in IBM data centers with dedicated networking and Storage area network (SAN)-attached Fibre Channel storage. You can choose one of the regions that is listed in the specifications that are nearest to your data center. IBM Power clients who rely on private cloud infrastructure can now quickly and economically extend their Power IT resources on the cloud.

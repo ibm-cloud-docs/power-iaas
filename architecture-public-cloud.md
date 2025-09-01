@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-08-29"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid cloud environment, linux, aix, ibm i,
 
@@ -125,6 +125,8 @@ The IBM data centers have the following hardware components:
 ### Compute
 {: #computes}
 
+
+
 The IBM data centers are configured with one or more of the following IBM Power Systems:
 
 * [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
@@ -135,6 +137,9 @@ The IBM data centers are configured with one or more of the following IBM Power 
 * [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
 
 [^2]: Available only at `DAL14` data center.
+
+
+
 
 
 For more information about your data center capabilities, see the overview page of the [IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.

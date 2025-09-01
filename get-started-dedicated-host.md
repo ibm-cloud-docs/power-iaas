@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2025
 
-lastupdated: "2025-07-14"
+lastupdated: "2025-08-28"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -31,6 +31,8 @@ subcollection: power-iaas
 ---
 
 Using the dedicated host capability on {{site.data.keyword.powerSysFull}} you can provision an entire server for your sole use, significantly expanding your computing options. You can handle mission-critical workloads with complete isolation, control, and security.
+
+
 
 The hourly billing for a Dedicated host on a Power Virtual Server covers the entire server. Using a dedicated host provides extra flexibility in two ways:
 - It allows you to create virtual server instances and control their placement, and
@@ -199,14 +201,12 @@ You can release a dedicated host when no resources are deployed on the host. To 
 2. Select a workspace.
 3. Click **Dedicated hosts** on the left navigation menu.
         Here, you can see all existing dedicated hosts.
-4. Select the dedicated host you want to release.
-
- You must remove all associated resources provisioned on the host before releasing it.
+4. Select the dedicated host you want to release. You must remove all associated resources provisioned on the host before releasing it.
 
 5. Click **Release host**.
 
-        When releasing the last dedicated host in a dedicated host group, the group will also be deleted. Empty dedicated host groups are not allowed on a workspace.
-        {: note}
+     When releasing the last dedicated host in a dedicated host group, the group will also be deleted. Empty dedicated host groups are not allowed on a workspace.
+     {: note}
 
 ## Maintenance in dedicated host
 {: #mainetnance-dh}
@@ -218,8 +218,6 @@ You can release a dedicated host when no resources are deployed on the host. To 
 When IBM needs to perform maintenance on a dedicated host, its virtual server instances (VMs) are live migrated to another dedicated host during the maintenance operation window.
 
 If a dedicated host suffers from a server failure, IBM restarts its VMs on another dedicated host (pending capacity availability). Note that this VM restart capability does not protect against data center, storage or network related failures; in such scenarios, the appropriate business continuity procedures (high availability and disaster recovery) should be invoked.
-
-
 
 
 

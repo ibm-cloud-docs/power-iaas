@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-07-29"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -235,7 +235,7 @@ A VXC is a point-to-point Layer 2 circuit between two endpoints that is mapped w
 
 This section describes how to connect to IBM Direct Link from an MCR. For more information on connecting from a Port, see [Connecting to IBM Cloud Direct Link](https://docs.megaport.com/cloud/megaport/ibm/direct-link-2.0/).
 
-You can also watch this [Private Connectivity to IBM Cloud](https://www.youtube.com/watch?v=FK8ZDjlZsSM) video, which shows how quick and easy to connect to IBM Cloud using Megaport.
+You can also watch this [Private Connectivity to IBM Cloud](https://www.youtube.com/watch?v=FK8ZDjlZsSM){: external} video, which shows how quick and easy to connect to IBM Cloud using Megaport.
 
 See the documentation outlined in [Megaport documentation](https://docs.megaport.com/cloud/mcr/ibm-2.0/), by using the worksheet fields that you entered previously.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-08-05"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -60,7 +60,10 @@ For more information about basic metrics, see [Platform metrics overview](/docs/
 
 
 
-The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can gain operational visibility about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
+The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can get the visibility to the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
+
+
+
 
 
 You can register a {{site.data.keyword.powerSys_notm}} workspace as an observability instance on the IBM Cloud Monitoring system. Integration costs are based on the usage and vary based on the hourly consumption for nodes and virtual machines. Review the cost that is associated with Monitoring in the IBM Cloud catalog. For more information about the costs associated with monitoring, see [Pricing](https://cloud.ibm.com/docs/monitoring?topic=monitoring-pricing_plans){: external}. You can review the estimated cost on the Summary page and generate an estimate before you enable the IBM Cloud Monitoring service. For more information about generating an estimate, see [Cloud Monitoring](https://cloud.ibm.com/observability/catalog/ibm-cloud-monitoring){: external}.
@@ -69,8 +72,6 @@ You can register a {{site.data.keyword.powerSys_notm}} workspace as an observabi
 ### Enabling IBM Cloud Monitoring in a Power Virtual Server workspace
 {: #monitor-enable}
 
-The **Monitoring** option is enabled by default when you create an {{site.data.keyword.off-prem-fname}} workspace.
-
 To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
 1. Log in to the [IBM Cloud](https://cloud.ibm.com/login?state=%2Fpower%2Foverview) Power Virtual Server user interface.
@@ -78,6 +79,8 @@ To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.po
 3. Select a workspace on which you want to enable the IBM Cloud Monitoring service. The Workspace details pane is displayed.
 4. Click **Monitoring** in the Integrations section to enable the IBM Cloud Monitoring service.
 5. Click **View Monitoring** to view the monitoring metrics if the IBM Cloud Monitoring service is already enabled on the workspace.
+
+The **Monitoring** option is enabled by default when you create an {{site.data.keyword.off-prem-fname}} workspace.
 
 For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
 

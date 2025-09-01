@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-04-30"
+lastupdated: "2025-08-29"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -31,11 +31,26 @@ subcollection: power-iaas
 
 
 
-## Creating a Snapshot
+## Use case
+{: #create-snapshot-taking-usecase}
+
+The snapshot feature has several use cases. Consider the following example:
+- An administrator plans to upgrade the middleware. If the upgrade to the middleware fails, the administrator must restore the source disk to its original state.
+- The administrator completes the following steps:
+
+
+
+You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on different sets of disks.
+{: note}
+
+## Creating a snapshot
 {: #create-snapshot}
 
 A snapshot is a copy of the state of a volume or a set of volumes that is taken at a specific time. By using snapshot, you can restore your volumes to the state when you took the snapshot.
 {: shortdesc}
+
+With **<s>the</s>** snapshot **<s>interface</s>**, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
+
 
 
 ### Prerequisites
@@ -52,25 +67,7 @@ A snapshot is a copy of the state of a volume or a set of volumes that is taken 
 - Volumes to be included in the snapshot must not be in the `error` state and the health state of the volume must be `ok`.
 
 
-### Creating a snapshot
-{: #create-snapshot-taking}
 
-With the snapshot interface, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
-
-#### Use case
-{: #create-snapshot-taking-usecase}
-
-
-The snapshot feature has several use cases. Consider the following example:
-- An administrator plans to upgrade the middleware. If the upgrade to the middleware fails, the administrator must restore the source disk to its original state.
-- The administrator completes the following steps:
-    1. Initiate the snapshot of the source disk where the middleware information resides by using the [API command](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post). A snapshot of the source disk is created.
-    2. Upgrade the middleware.
-    3. If the upgrade fails, the administrator restores the source disk by using the snapshot.
-    4. If the upgrade succeeds, the administrator deletes the snapshot.
-
-You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on different sets of disks.
-{: note}
 
 ### Creating a snapshot by using API or CLI commands
 {: #create-snapshot-api-cli}
@@ -136,6 +133,9 @@ Ensure that the following prerequisites are met before you initiate the `restore
 - If you are not sure how to quiesce your applications, it is recommended to shut down any VMs attached to the volumes that you want to include in the snapshot.
 
 
+
+
+
 ### Restoring a snapshot by using API or CLI commands
 {: #restoring-snapshot-api-cli}
 
@@ -186,6 +186,7 @@ Consider the following scenarios to restore a snapshot:
 * After successful `restore retry` operation, the VM state might not reset from `Error` state. Use `Reset State` feature on the UI to reset the VM state.
 
 * You cannot restore a PVM Instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
+
 
 
 ## Metering and pricing of snapshot

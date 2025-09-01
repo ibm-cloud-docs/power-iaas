@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-07-25"
+lastupdated: "2025-08-23"
 
 ---
 
@@ -13,6 +13,10 @@ lastupdated: "2025-07-25"
 
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}} CLI plug-in.
 {: shortdesc}
+
+
+
+
 
 ## July 2025
 {: #july-2025}
@@ -28,8 +32,8 @@ The CLI version v1.6.0 is available with the following features:
 
 **New flags**
 
-- Added the `--family` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter SAP profiles by the family type.
-- Added the `--prefix` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter SAP profiles by its prefix.
+- Added the `--family` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter the SAP profiles by the family type.
+- Added the `--prefix` flag to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this flag to filter the SAP profiles by their prefix.
 - Added the `--user-tags` flag to the [ibmcloud pi placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-placement-group-create) and [ibmcloud pi shared-processor-pool placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-placement-group-create) commands. You can use this flag to add user tags to the Power Virtual Server resources.
 - Added the `--description` flag to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) command. You can use this flag to add or update the description of an SSH key.
 - Added the `--visibility` flag to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) and [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) commands. You can use this flag to set the visibility of an SSH key at `account` or `workspace` level.
@@ -43,7 +47,7 @@ The CLI version v1.6.0 is available with the following features:
 - Added support for Power11 systems to the CLI commands.
 - Added the `Status Detail` field to the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) command for improved snapshot status visibility.
 - Updated the hidden fields in the [ibmcloud pi volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume) command's output when replication is disabled on the volume.
-- Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) family of commands as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use.
+- Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) family of commands as the Power Virtual Server VPN as a Service (VPNaaS) has reached its end of life and is not available for use.
 - Deprecated the `--new-name` and `--new-key` flags for the [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) command. You can use the `--name` and `--key` flags instead.
 - Removed the deprecated `--access-config`, `--jumbo`, `--peer-id`, `--peer-type`, and `--source-ip` flags from the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command.
 - Removed the DHCP option as a subnet type in the Power Virtual Server workspaces at the client location.
@@ -54,6 +58,13 @@ New CLI version v1.5.2 available. The Power Virtual Server CLI plug-in is availa
 **What's Changed**
 
 - Fixed bug in CLI plug-in metadata.
+
+
+
+
+
+
+
 
 ## April 2025
 {: #cli-april-2025}
