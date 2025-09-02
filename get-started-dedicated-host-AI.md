@@ -38,6 +38,7 @@ Dedicated hosts on a {{site.data.keyword.powerSys_notm}} provide the following f
 - Ability to set custom names for dedicated hosts and dedicated host groups.
 
 ## Pricing for dedicated hosts on {{site.data.keyword.powerSys_notm}}
+{: #pricing-dedicated}
 
 The hourly billing for a dedicated host on a Power Virtual Server covers the entire server.
 
@@ -377,5 +378,3 @@ The following code examples provide the old format and new format of the virtual
      }
 ]
 ```
-
-
