@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-02"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -164,7 +164,7 @@ IBM i stock images currently available when you create a VM are:
 [^5A]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
 
-The IBM i 7.4, 7.5, 7.6, and COR OS images are supported on Power10 and later systems. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download** section.
+The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported are supported on Power10 and later systems. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download** section.
 {: note}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-02"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -22,7 +22,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## August 2025
 {: #Aug-2025}
 
-- The IBM i 7.4, 7.5, 7.6, and COR OS images are supported on Power10 and later systems.
+- The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported are supported on Power10 and later systems.
 
 
 ## July 2025

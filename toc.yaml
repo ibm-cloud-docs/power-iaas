@@ -129,7 +129,7 @@ toc:
             topics:
               - managing-resources-and-users.md
               - creating-power-virtual-server.md
-              - get-started-dedicated-host.md
+              - get-started-dedicated-host-AI.md
               - viewing-pod-details.md
               - creating-ssh-key.md
               - modifying-instance.md

@@ -7,6 +7,8 @@ keyword:
     IBM {{site.data.keyword.powerSys_notm}} Private Cloud
   on-prem:
     Client location
+  on-prem-lc:
+    client location
   ibmi-vst:
     IBM i software tier
   vst:
