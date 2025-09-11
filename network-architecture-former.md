@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-12"
+lastupdated: "2025-09-10"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -281,7 +281,7 @@ This deployment topology uses the IBM Cloud classic infrastructure gateway appli
 
 * All appliance features are customer-managed.
 
-* By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
+* By using the IBM Cloud GUI, CLI, or API, you can select your VLANs, and hence, the associated subnets, that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
 
 * A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
 
@@ -327,7 +327,7 @@ This deployment topology uses the IBM Cloud classic infrastructure gateway appli
 
 * All appliance features are customer-managed.
 
-* By using the IBM Cloud UI, CLI, or API, you can select your VLANs, and hence, the associated subnets that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
+* By using the IBM Cloud GUI, CLI, or API, you can select your VLANs, and hence, the associated subnets that you want to associate with your gateway appliance. Associating a VLAN with a gateway appliance reroutes (or trunks) that VLAN and all of its subnets to your appliance, giving you control over filtering, forwarding, and protection.
 
 * A gateway appliance is attached to two nonremovable transit VLANs, one each for your public and private networks.
 

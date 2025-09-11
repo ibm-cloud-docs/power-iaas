@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-09-05"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -90,7 +90,7 @@ In your invoice, use one of the following identifiers to identify the charges th
 * [Consumer ID](#consumer-id)
     The Consumer ID groups the billing usages that are under a single resource.
 
-* [IBM Cloud Resource Names (CRNs)](#granular-crns)
+* [IBM cloud resource names (CRNs)](#granular-crns)
     The IBM CRNs enable the identification and tracking of Power Virtual Server resources, such as volumes and snapshots, to manage and bill the usage of the resources.
 
 
@@ -119,7 +119,7 @@ For more information on the billing and usage page, see [Billing and Usage docum
 
 
 
-IBM Cloud Resource Names (CRNs) are identifiers that are assigned to uniquely identify resources within IBM Cloud.
+IBM cloud resource names (CRNs) are identifiers that are assigned to uniquely identify resources within IBM Cloud.
 As CRNs are assigned to individual resources, a comprehensive bill is generated with individual {{site.data.keyword.powerSys_notm}} resource billing.
 
 When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to the resource.

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-05-19"
+lastupdated: "2025-09-05"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -129,7 +129,7 @@ Complete the following steps to migrate the workspace to PER:
 
 
 
-2. Set the IBM Cloud Resource Names (CRN) value for the workspace to be migrated by using the `ibmcloud pi workspace target <crn>` CLI command.
+2. Set the IBM cloud resource name (CRN) value for the workspace to be migrated by using the `ibmcloud pi workspace target <crn>` CLI command.
 
 
 

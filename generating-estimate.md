@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-09"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -59,13 +59,13 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 12. Click **Save**.
 
-10. Click **View estimate** to view the estimate. The estimation is displayed on a new tab where you can download the estimate in XLSX, CSV, and PDF format.
+10. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
 
 
-### Estimating {{site.data.keyword.powerSys_notm}} resources in {{site.data.keyword.off-prem}}
+### Estimating {{site.data.keyword.powerSys_notm}} resources in an {{site.data.keyword.off-prem}}
 {: #off-prem-location-type}
 
-You can create estimate for {{site.data.keyword.powerSys_notm}} resources in {{site.data.keyword.off-prem}} where the infrastructure is hosted and managed in the IBM data centers.
+You can create an estimate for {{site.data.keyword.powerSys_notm}} resources in an {{site.data.keyword.off-prem}} where the infrastructure is hosted and managed by IBM.
 
 If you select the **Location type** as **{{site.data.keyword.off-prem}}**, you can select one of the resources that are listed in the Estimate resource section. Refer to the following information to understand the fields that you are presented and their corresponding configurations:
 

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2025
 
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-08"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -12,6 +12,8 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Snapshots, restoring, and cloning
 {: #snapshots-cloning}
@@ -187,7 +189,7 @@ Consider the following scenarios to restore a snapshot:
 
 * Before you perform a `restore` operation on a boot disk, the virtual machine must be shut down and the status must change to `shutoff` state.
 
-* After successful `restore retry` operation, the VM state might not reset from `Error` state. Use `Reset State` feature on the UI to reset the VM state.
+* After successful `restore retry` operation, the VM state might not reset from `Error` state. Use `Reset State` feature on the GUI to reset the VM state.
 
 * You cannot restore a PVM Instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
 
@@ -503,7 +505,7 @@ You must consider the following restrictions and considerations before you get t
 ## Frequently asked questions
 {: #snap-clone-faqs}
 
-Following are some of the frequently asked questions on snapshots and clonning that are documented on the FAQ page:
+The following are some of the frequently asked questions on snapshots and cloning that are documented on the FAQ page:
 - [What are the key differences between a snapshot and a clone?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
 - [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
 - [Are there any initial snapshot requirements in terms of storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)

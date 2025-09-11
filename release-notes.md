@@ -3,10 +3,13 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-05"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
+subcollection: power-iaas
+
+content-type: release-note
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -21,12 +24,16 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## August 2025
 {: #Aug-2025}
+{: release-note}
+
 
 - The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on Power10 and later systems.
 
 
 ## July 2025
 {: #July-2025}
+{: release-note}
+
 
 
 
@@ -84,7 +91,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- New server placement groups and shared processor pools are created with Cloud Resource Names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be assigned a CRN by the end of August 2025.
+- New server placement groups and shared processor pools are created with cloud resource names (CRNs), to provide benefits such as tagging and visibility in the IBM Cloud Resource list. The existing server placement groups and shared processor pools will be assigned a CRN by the end of August 2025.
 
 
 
@@ -107,6 +114,8 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## June 2025
 {: #June-2025}
+{: release-note}
+
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -116,7 +125,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-- The migration of existing workspaces to Cloud Resource Names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
+- The migration of existing workspaces to cloud resource names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
 
 - The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS levels are no longer supported by Red Hat:
 
@@ -132,6 +141,8 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## May 2025
 {: #May-2025}
+{: release-note}
+
 
 
 
@@ -154,6 +165,8 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## April 2025
 {: #April-2025}
+{: release-note}
+
 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -165,7 +178,7 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 - IBM i 7.3, 7.2 and COR stock images have been refreshed.
 
-- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of Cloud Resource Names (CRNs) for new workspaces. Starting from April to June 2025, the existing workspaces are being migrated to CRNs. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
   The billing and metering plans are updated with the following changes:
 
@@ -196,6 +209,8 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 ## March 2025
 {: #March-2025}
+{: release-note}
+
 
 - New AIX 7.3 TL3 SP0 and 7.2 TL5 SP9, IBM i 7.4 TR11 and 7.5 TR5, SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) and SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
@@ -227,6 +242,8 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 ## February 2025
 {: #Feb-2025}
+{: release-note}
+
 
 
 
@@ -247,7 +264,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM Cloud Resource Names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM Cloud Resource Names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
+- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM cloud resource names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
 
 
 
@@ -257,6 +274,8 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 ## January 2025
 {: #Jan-2025}
+{: release-note}
+
 
 
 
@@ -278,6 +297,8 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 ## December 2024
 {: #Dec-2024}
+{: release-note}
+
 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}

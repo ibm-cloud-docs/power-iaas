@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-06-05"
+lastupdated: "2025-09-10"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -19,8 +19,6 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
@@ -28,6 +26,8 @@ subcollection: power-iaas
 
 
 ---
+
+
 
 Learn how to modify your {{site.data.keyword.powerSysFull}} to better meet your business needs.
 {: shortdesc}
@@ -217,7 +217,7 @@ You can delete a single virtual server instance by completing the following step
 
 1. On the **Virtual server instances** page, click the overflow menu (icon with 3 vertical dots) at the end of each virtual server instance entry on the table. From the overflow menu, click **Delete**. The **Delete virtual server instance** confirmation message box appears.<br>
 Or<br>
-On the **Virtual server instances** page, click the name of the virtual server instance that you want to delete. The **Virtual server instance details** page opens. Find and click the trash icon on the upper right of the screen. The **Delete virtual server instance** confirmation message box appears.
+On the **Virtual server instances** page, click the name of the virtual server instance that you want to delete. The **Virtual server instance details** page is displayed. Find and click the trash icon on the upper right of the screen. The **Delete virtual server instance** confirmation message box appears.
 2. On the confirmation message box, if you set the toggle button to on you agree for the following actions to occur:
     - To delete the data volumes that are attached to the virtual server instance. The data volumes are not deleted if they are attached to multiple virtual server instances.
     - To delete any auxiliary volumes on the secondary site.
@@ -226,8 +226,6 @@ On the **Virtual server instances** page, click the name of the virtual server i
 
 After the deletion request is initiated, the action cannot be undone.
 {: note}
-
-
 
 ## Adding or removing a public network
 {: #adding-removing-network}

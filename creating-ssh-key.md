@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-06"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -47,14 +47,11 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtuQnQOc2k4zaGzE7b3xUMCjUy++s/9O9HE4fXSm7U
 
 
 
+
 To use an SSH key with a VM-create operation, you must first add the public key to the {{site.data.keyword.powerSysFull}} instance by using the [`ibmcloud pi ssh-key create KEY_NAME --key KEY`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) command.
 
 
-To add the generated public key and to set its [scope]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
-
-To add the generated public key and to set its [access]{: tag-green} [level]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
-
-To add the generated public key and to set its [visibility]{: tag-green} by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
+To add the generated public key and to set its scope by using the `visibility` attribute, enter the following command (replacing the example value with your own public key) :
 
 
 ```text
@@ -70,6 +67,8 @@ ibmcloud pi ssh list
 Name      Key                                          Visibility CreationDate
 testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  account    2019-07-26T18:21:56.030Z
 ```
+
+
 
 
 
@@ -100,9 +99,6 @@ Complete the following steps to create and set the scope of an SSH key:
 8. Click **Add SSH key**.
 
 The SSH key is created and listed in the data table on the "SSH key" page. The **Access setting** column in the data table displays the scope of the SSH key as `Workspace` or `Account`.
-
-
-
 
 
 

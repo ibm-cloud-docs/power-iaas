@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-05-12"
+lastupdated: "2025-09-04"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -18,15 +18,13 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
 
 
-Establishing a connectivity between the pod in your data center and {{site.data.keyword.powerSysFull}} IBM Cloud requires meticulous planning, site preparation, meeting the prerequisites, understanding the network architecture, and others.
+Establishing the connectivity between the pod in your data center and {{site.data.keyword.powerSysFull}} IBM Cloud requires meticulous planning, site preparation, meeting the prerequisites, understanding the network architecture, and others.
 
 
 Setting up of a network involves setting up the following two networks:
@@ -52,7 +50,7 @@ Before the pod installation, provide the required network-specific information s
 
 
 
-When an {{site.data.keyword.on-prem-fname}} infrastructure deployed in a client location encounters an unplanned network outage, the communication link is interrupted and results in the loss of primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud. The following table outlines the implications of an {{site.data.keyword.on-prem-fname}} infrastructure that is operating in the disconnected mode.
+When an {{site.data.keyword.on-prem-fname}} infrastructure that is deployed in a client location encounters an unplanned network outage, the communication link is interrupted. This outage results in the loss of primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud. The following table outlines the implications of an {{site.data.keyword.on-prem-fname}} infrastructure that is operating in the disconnected mode.
 
 
 
@@ -70,7 +68,7 @@ The IBM Cloud Direct Link 2.0 Connect can be viewed as an alternative to a tradi
 
 The connectivity between IBM Cloud and pod has two parts:
 * Shared connectivity between the IBM Cloud network infrastructure and the third-party network provider infrastructure.
-* An internet-based connectivity between the third-party network provider infrastructure and the data center. This is called as ‘last mile connectivity’ and might involve an IPsec VPN. Contract with a service provider to provide the last mile connection.
+* An internet-based connectivity between the third-party network provider infrastructure and the data center. This connectivity is called as ‘last mile connectivity’ and might involve an IPsec VPN. Contract with a service provider to provide the last mile connection.
 
 To establish this connectivity, the collaboration between you, IBM, and the third-party network provider is required.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-08-28"
+lastupdated: "2025-09-03"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -54,7 +54,7 @@ You must complete the following prerequisites to assign an {{site.data.keyword.i
   - The Virtual serial number (VSN) summary pane appears.
   - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
-A list of supported {{site.data.keyword.ibmi-vst}}s is displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type. A recommended {{site.data.keyword.ibmi-vst}} is displayed based on the number of cores and memory size that you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.
+The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
 
 For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 

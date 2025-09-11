@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -213,9 +213,8 @@ SUSE [^footnote8]
 * SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
-
-
-
+* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP)
+* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER)
 * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
@@ -516,6 +515,8 @@ The key differences are as follows:
 
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
 
+
+
 ## Is there any UI to perform snapshot or clone operations?
 {: #snap-clone-ui}
 {: faq}
@@ -529,6 +530,11 @@ None. Use the API and CLI to perform snapshot or clone operations. Using the {{s
 **CLIs to create snapshot and clone**
 - [Create a snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
 - [Create a volume clone for specific volumes](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
+
+
+
+
+
 
 ## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}
@@ -739,7 +745,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 {: #convert-to-replication-vol}
 {: faq}
 
-[{{site.data.keyword.off-prem}}]{: tag-blue}
+
 
 You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
 
@@ -747,7 +753,7 @@ You can retype the volume to toggle the `replicationEnable` flag of the volume b
 {: #check-for-replication-vol}
 {: faq}
 
-[{{site.data.keyword.off-prem}}]{: tag-blue}
+
 
 You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
 
@@ -756,7 +762,7 @@ You need to check the `replicationEnabled` attribute of the volume. A volume is 
 {: faq}
 
 
-[{{site.data.keyword.off-prem}}]{: tag-blue}
+
 
 Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
 

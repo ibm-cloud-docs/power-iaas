@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-03"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -173,7 +173,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
      - The Virtual serial number (VSN) summary pane appears.
      - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
-    A list of supported {{site.data.keyword.ibmi-vst}}s is displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type. A recommended {{site.data.keyword.ibmi-vst}} is displayed based on the number of cores and memory size that you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list.
+    The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
 
 
     

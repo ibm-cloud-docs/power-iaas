@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-18"
+lastupdated: "2025-09-09"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -57,7 +57,7 @@ In the following table, the terms that are used throughout the document are defi
 | Secondary location | Location in which the auxiliary volume for replication is created.                       |
 | Primary volume     | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
 | Auxiliary volume   | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
-| IBM Cloud Resource Names (CRNs)  | Identifiers that are assigned to uniquely identify resources in IBM Cloud.        |
+| IBM cloud resource names (CRNs)  | Identifiers that are assigned to uniquely identify resources in IBM Cloud.        |
 {: class="simple-table"}
 {: caption="GRS terms and definitions" caption-side="bottom"}
 
@@ -364,7 +364,7 @@ Obtain the following information from the primary location to request for onboar
 
 - Have editor role access on both the primary and the secondary location workspaces
 - Maintain the same IBM Cloud account ID on both primary and secondary location workspaces
-- Fetch the Cloud Resource Name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance in which the primary volumes are located (primary location)
+- Fetch the cloud resource name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance in which the primary volumes are located (primary location)
 - Fetch the auxiliary volume names from the **auxVolumeName** field of primary volumes in the primary location for onboarding
 
 
@@ -831,7 +831,13 @@ After you change the `bootable` or `shareable` property values for a primary vol
 ## Changing the tier of a primary volume
 {: #chang-tier-prim-vol}
 
+
+
 You cannot change the tier of a replication-enabled volume.
+
+
+
+
 
 
 

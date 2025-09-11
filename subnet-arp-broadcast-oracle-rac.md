@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-08-28"
+lastupdated: "2025-09-10"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -64,7 +64,7 @@ If the **{{site.data.keyword.arp-broadcast}}** option is disabled, the {{site.da
 {: #arp-enabl-metds}
 
 
-To enable the {{site.data.keyword.arp-broadcast}} option when you create a new subnet, set **{{site.data.keyword.arp-broadcast}}** to **Enabled** on the Create subnet page. By default, the **{{site.data.keyword.arp-broadcast}}** option is set to **Disabled**. For more information, see [Configuring a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can enable or disable the subnet ARP option by using the UI, CLI, or API interfaces.
+To enable the {{site.data.keyword.arp-broadcast}} option when you create a new subnet, set **{{site.data.keyword.arp-broadcast}}** to **Enabled** on the Create subnet page. By default, the **{{site.data.keyword.arp-broadcast}}** option is set to **Disabled**. For more information, see [Configuring a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet). You can enable or disable the subnet ARP option by using the GUI, CLI, or API.
 
 To change the status of the **{{site.data.keyword.arp-broadcast}}** option for an existing subnet on the **{{site.data.keyword.powerSys_notm}}** page, complete the following steps:
 

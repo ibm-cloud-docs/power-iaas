@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-07-22"
+lastupdated: "2025-09-10"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -27,17 +27,24 @@ subcollection: power-iaas
 
 ---
 
-The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES)support through IBM.
+The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) support through IBM.
 {: shortdesc}
 
-The full Linux subscription uses activation keys to provide access to interim fixes and updates for the operating system for {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.powerSys_notm}} is hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply for setting up a Full Linux subscription account.
+The full Linux subscription uses activation keys to provide access to interim fixes and updates for the operating system (OS) for {{site.data.keyword.powerSysFull}}. The {{site.data.keyword.powerSys_notm}} is hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply for setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for non-SAP applications.
+To register for the full Linux subscription, you must select one of the stock OS images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for non-SAP applications.
 
 To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
 
+
+
+
 The OS file name for the full Linux subscription feature starts with RHEL or SLES. For SAP applications, ensure that you are using an IBM stock OS image for SAP. These stock images are certified for using SAP applications. Bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}}, see these [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
 {: note}
+
+
+
+
 
 ## Setting up full Linux subscription
 {: #setup-fls}
@@ -68,7 +75,7 @@ To create a proxy setup, complete the following steps:
 
 2. In the default Security group that is attached to your proxy, add 443, 8443, 80 and 3128 ports.
 
-3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a secure shell (SSH) connection by using this temporary IP address in the `ssh` command in the following format:
+3. On the VSI, enable a floating IP temporarily. In the proxy instance, start a Secure Shell (SSH) connection by using this temporary IP address in the `ssh` command in the following format:
 
     `ssh root@<external IP address>`
 
@@ -126,11 +133,11 @@ To check whether the setup is complete and the subscription is successful, check
 ## Passing user-defined scripts
 {: #cloud-init-fls-private-cloud}
 
-When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you have the option to pass in user data during the first boot runtime.
+When you select a Full Linux Subscription (FLS) boot image while provisioning a {{site.data.keyword.powerSys_notm}} instance, you can pass in user data during the first boot runtime.
 
-In the user data, you have the option to include custom content that enables you to tailor the startup configuration for the specific instance.
+In the user data, you can include custom content to tailor the startup configuration for the specific instance.
 
 The custom user data must meet the following conditions:
 -  It is uncompressed.
 -  It starts with `#cloud-config`.
--  It should not exceed 63 Kb in size.
+-  It must be within 63 Kb in size.

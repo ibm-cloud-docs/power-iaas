@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-09-05"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -55,7 +55,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 2.	Select **Workspace for {{site.data.keyword.powerSys_notm}}**under **Topic** and **Power VS Network Related** under **Subtopic**.
 3.	Provide a short description of your migration requirements in the **Subject**.
 4.	In the **Description** box under additional information, provide the following information and click **Next**:
-    1.  The CRN (Cloud Resource Name) of your workspace that you want to upgrade.
+    1.  The CRN (cloud resource name) of your workspace that you want to upgrade.
     2.	The list of subnets configured in the workspace.
     3.	The list of Direct Link connections to which the subnets are attached.
 

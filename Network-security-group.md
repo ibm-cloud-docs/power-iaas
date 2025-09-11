@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  year: 2025
+  year: 2024, 2025
 
-lastupdated: "2025-08-29"
+lastupdated: "2025-09-11"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Network security groups
+# Network security groups in IBM {{site.data.keyword.powerSys_notm}}
 {: #nsg}
 
 ---
@@ -40,7 +40,7 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 
 
 
-The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on Cloud Resource Name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
 
 
 
@@ -251,11 +251,16 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates from. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
-          4. **Allowed/Denied flags**: You can use the Advanced option to select one or more TCP flags from the list. Supported flags are:
+
+        
+
+          4. **Allowed/Denied flags**: You can use the **Advanced** section to select one or more TCP flags from the **Allowed/Denied flags** list to evaluate the incoming packets based on the selected flags. If you do not select any flags, the network fabric does not apply flag-based filtering. When you select multiple flags, the network fabric applies the rule only to the packets in which all the selected flags are present simultaneously. Therefore, the incoming packet must contain every flag that you have selected for the rule to take effect. You can select the following TCP flags:
                 - `ack`
                 - `fin`
                 - `rst`
                 - `syn`
+
+        
 
       - **UDP**
           1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.

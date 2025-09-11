@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-09-11"
 
 ---
 
@@ -16,6 +16,10 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
+## September 2025
+{: #sep-2025}
+
+The CLI version v1.6.1 is available with updates related to translation.
 
 
 ## July 2025
@@ -58,8 +62,6 @@ New CLI version v1.5.2 available. The Power Virtual Server CLI plug-in is availa
 **What's Changed**
 
 - Fixed bug in CLI plug-in metadata.
-
-
 
 
 

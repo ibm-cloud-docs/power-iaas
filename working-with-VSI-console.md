@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-05-06"
+lastupdated: "2025-09-10"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -45,7 +45,7 @@ To start the VSI console of a {{site.data.keyword.powerSys_notm}} instance from 
 
 4. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The VSI console opens in a new browser window. Ensure that your browser settings allow pop-up windows.
 
-  When you open the console for an IBM i-based {{site.data.keyword.powerSys_notm}} instance through the IBM Cloud UI, the Console Setting dialog is displayed. You can optionally select a language other than English and click **Open console** to open the VSI console. To change the language, see [Changing the VSI console language](#changing-vsi-console-lang).
+  When you open the console for an IBM i-based {{site.data.keyword.powerSys_notm}} instance through the IBM Cloud GUI, the Console Setting dialog is displayed. You can optionally select a language other than English and click **Open console** to open the VSI console. To change the language, see [Changing the VSI console language](#changing-vsi-console-lang).
   {: note}
 
 To open the VSI console of a {{site.data.keyword.powerSys_notm}} instance by using the IBM Cloud CLI, complete the following steps:
@@ -69,7 +69,7 @@ To close a VSI console session for a {{site.data.keyword.powerSys_notm}} instanc
 
 When you open the VSI console of a {{site.data.keyword.powerSys_notm}} instance that is running IBM i as the boot image, you can change the console language from English to another language.
 
-To change the language from the IBM Cloud UI, complete the following steps:
+To change the VSI console language using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
 
 1. Open the [{{site.data.keyword.powerSys_notm}} user interface](https://cloud.ibm.com/power/overview) and log in with your credentials.
 
