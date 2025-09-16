@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-15"
+lastupdated: "2025-09-16"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -668,6 +668,9 @@ Click the overflow menu (icon with 3 vertical dots) on the far right of each vir
 
 - Delete a single virtual server instance from the details page.
 On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+
+
+
 
 
 
