@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-17"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -84,6 +84,13 @@ In a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key,
 
 
 
+You cannot access the SSH key between {{site.data.keyword.on-prem-fname}} locations, even if the `visibility` property of an SSH key is set to `Account`.
+{: note}
+
+
+
+
+
 Complete the following steps to create and set the scope of an SSH key:
 
 1. Open a workspace to add an SSH key from the {{site.data.keyword.powerSys_notm}} user interface.
@@ -98,7 +105,6 @@ Complete the following steps to create and set the scope of an SSH key:
 8. Click **Add SSH key**.
 
 The SSH key is created and listed in the data table on the "SSH key" page. The **Access setting** column in the data table displays the scope of the SSH key as `Workspace` or `Account`.
-
 
 
 
