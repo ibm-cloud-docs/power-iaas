@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2025
 
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-18"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -195,7 +195,7 @@ Virtual server instances that are deployed on the dedicated host are not billed 
 ## Creating SPP in a dedicated host on {{site.data.keyword.powerSys_notm}}
 {: #spp-dh}
 
-A shared processor pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM). You can create an SPP in a single-tenant environment on a {{site.data.keyword.powerSys_notm}} dedicated host. The SPPs provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).
+A shared processor pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VSIs). You can create an SPP in a single-tenant environment on a {{site.data.keyword.powerSys_notm}} dedicated host. The SPPs provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).
 {: shortdesc}
 
 To create an SPP in a dedicated host, complete the following steps:
@@ -235,14 +235,15 @@ To release a dedicated host, complete the following steps:
 
 
 
-When IBM needs to perform maintenance on a dedicated host, its virtual server instances (VMs) are live migrated to another dedicated host during the maintenance operation window.
-
-If a dedicated host suffers from a server failure, IBM restarts its VMs on another dedicated host (pending capacity availability). The VM restart capability does not protect against data center, storage, or network-related failures; in such scenarios, the appropriate business continuity procedures (high availability and disaster recovery) should be invoked.
+When IBM needs to perform maintenance on a dedicated host, its virtual server instances (VSIs) are live migrated to another dedicated host during the maintenance operation window.
 
 
 
+If a dedicated host encounters a server failure, IBM restarts the affected VSIs on another dedicated host, subject to the available capacity. This VSI restart capability does not protect against data center, storage, or network failures. For such scenarios, you can implement appropriate business continuity measures, such as high availability (HA) and disaster recovery (DR) solutions.
 
-When VMs are relocated to another dedicated host for maintenance, you are not charged for an extra dedicated host.
+
+
+When VSIs are relocated to another dedicated host for maintenance, you are not charged for an extra dedicated host.
 {: note}
 
 
@@ -257,7 +258,7 @@ You can use the virtual host identifier (ID) to get information about your {{sit
 The {{site.data.keyword.powerSys_notm}} dedicated host identifier format is updated to use the virtual host ID format. If you are using dedicated hosts and depend on specific resource identifiers such as API and CLI calls, you must update the logic to use the virtual host ID format. Otherwise, the logic might fail.
 {: important}
 
-To map a dedicated host with VMs or SPP resources, you must use the values of the `host` attribute of the VM or the `hostID` attribute of the SPP in the `hostReference` attribute of the dedicated host.
+To map a dedicated host with VSIs or SPP resources, you must use the values of the `host` attribute of the VSI or the `hostID` attribute of the SPP in the `hostReference` attribute of the dedicated host.
 
 To fetch the virtual host ID of a dedicated host, use the following API or CLI commands:
 
