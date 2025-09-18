@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-06"
+lastupdated: "2025-09-17"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -79,8 +79,14 @@ testkey   ssh-rsa AAAAB3NzaC1y...UIzYr3u+79n9 testkey  account    2019-07-26T18:
 ## Setting the scope of an SSH key in a {{site.data.keyword.powerSys_notm}} workspace
 {: #scope-ssh}
 
-n a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key, you can set the scope of an SSH key as `Workspace` or `Account`. When you set the scope of an SSH key as `Workspace`, the SSH key is available only in the workspace where it is created and not available in other workspaces. When you set the scope of an SSH key as `Account`, the SSH key is available in all the workspaces under the account. However, you can delete the SSH key only from the workspace in which it is created. Therefore, the security and privacy of the SSH key is improved.
+In a {{site.data.keyword.powerSys_notm}} workspace, when you create the SSH key, you can set the scope of an SSH key as `Workspace` or `Account`. When you set the scope of an SSH key as `Workspace`, the SSH key is available only in the workspace where it is created and not available in other workspaces. When you set the scope of an SSH key as `Account`, the SSH key is available in all the workspaces under the account. However, you can delete the SSH key only from the workspace in which it is created. Therefore, the security and privacy of the SSH key is improved.
 {: shortdesc}
+
+
+
+You cannot access the SSH key between {{site.data.keyword.on-prem-fname}} locations, even if the `visibility` property of an SSH key is set to `Account`.
+{: note}
+
 
 
 
@@ -99,7 +105,6 @@ Complete the following steps to create and set the scope of an SSH key:
 8. Click **Add SSH key**.
 
 The SSH key is created and listed in the data table on the "SSH key" page. The **Access setting** column in the data table displays the scope of the SSH key as `Workspace` or `Account`.
-
 
 
 

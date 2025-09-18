@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-09"
+lastupdated: "2025-09-17"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -833,8 +833,14 @@ After you change the `bootable` or `shareable` property values for a primary vol
 
 
 
-You cannot change the tier of a replication-enabled volume.
 
+
+You can change the tier of a replication-enabled primary volume if the `primaryRole` property of the volume is set to `master` by using the following API and CLI commands:
+
+- API: [Perform an action on a Volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
+- CLI: [ibmcloud pi volume-action](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
+
+The change in the tier of the primary volume do not sync on the paired auxiliary volume. Any attempt to change the tier of a replication-enabled auxiliary volume fails.
 
 
 
