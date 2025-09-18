@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-16"
+lastupdated: "2025-09-18"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -224,7 +224,6 @@ SUSE [^footnote8]
 
 [^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
-[^footnote11]: RHEL 9.6 GP is supported on IBM Power9, Power10 and Power11 systems.
 
 [^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
