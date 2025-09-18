@@ -37,7 +37,7 @@ Dedicated hosts on a {{site.data.keyword.powerSys_notm}} provide the following f
 - Ability to share dedicated hosts with all or a subset of workspaces on the same account, and the flexibility to control access to dedicated hosts across your organization.
 - Ability to set custom names for dedicated hosts and dedicated host groups.
 
-## Pricing for dedicated hosts on {{site.data.keyword.powerSys_notm}}
+## Pricing for dedicated hosts
 {: #pricing-dedicated}
 
 The hourly billing for a dedicated host on a Power Virtual Server covers the entire server.
@@ -47,7 +47,7 @@ You can create a cost estimate of a dedicated host before you deploy it by using
 
 
 
-## Primary workspace in a {{site.data.keyword.powerSys_notm}} for a dedicated host
+## Primary workspace for a dedicated host
 {: #primary-ws-dh}
 
 A {{site.data.keyword.powerSys_notm}} primary workspace is the owning tenant of a dedicated host with full control over the associated resources.
@@ -57,7 +57,7 @@ A primary workspace can delete or share the dedicated resources that it owns und
 
 Billing for dedicated hosts is charged to the primary workspace.
 
-## Secondary workspace in a {{site.data.keyword.powerSys_notm}} for a dedicated host
+## Secondary workspace for a dedicated host
 {: #secondary-ws-dh}
 
 A {{site.data.keyword.powerSys_notm}} secondary workspace is the one with which the dedicated resources are shared.
@@ -65,7 +65,7 @@ A {{site.data.keyword.powerSys_notm}} secondary workspace is the one with which 
 
 A secondary workspace can deploy virtual server instances on the shared dedicated resources. You can use a secondary workspace to grant access to the resources in the dedicated host. However, a secondary workspace cannot further share a resource that it doesn't own with another workspace.
 
-## Access and authorization for dedicated hosts on {{site.data.keyword.powerSys_notm}}
+## Access and authorization for dedicated hosts
 {: #access-auth-dh}
 
 You can set up authorization for usage of a {{site.data.keyword.powerSys_notm}} dedicated host for other workspaces by using IBM Cloud IAM Service Authorization capabilities.
@@ -88,7 +88,7 @@ To deploy a dedicated host to your workspace, select the server (IBM Power S922 
 
 
 
-## Creating a dedicated host group on {{site.data.keyword.powerSys_notm}}
+## Creating a dedicated host group
 {: #create-group-dh}
 
 
@@ -145,14 +145,14 @@ To share workspaces, complete the following steps:
 
 To stop sharing dedicated host access with a secondary workspace, ensure that the selected workspace does not have any provisioned resources on the dedicated host.
 
-## Reserving a dedicated host on {{site.data.keyword.powerSys_notm}}
+## Reserving a dedicated host
 {: #reserv-dh}
 
 You can allocate an entire dedicated host exclusively to a single tenant by reserving the host.
 {: shortdesc}
 
 
-To reserve a dedicated host, complete the following steps:
+To reserve a dedicated host in {{site.data.keyword.powerSys_notm}}, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -178,7 +178,7 @@ To reserve a dedicated host, complete the following steps:
 You can click into a dedicated host to access its details, create and manage virtual server instances, created shared processor pools, or release the host.
 {: important}
 
-## Deploying a virtual server in a dedicated host on {{site.data.keyword.powerSys_notm}}
+## Deploying a virtual server in a dedicated host
 {: #vsi-dh}
 
 You can create a virtual server instance in a single-tenant environment on a dedicated host. The virtual server instance that is provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).
@@ -192,7 +192,7 @@ To deploy a virtual server in a dedicated host, complete the following steps:
 Virtual server instances that are deployed on the dedicated host are not billed for core and memory charges.
 {: note}
 
-## Creating SPP in a dedicated host on {{site.data.keyword.powerSys_notm}}
+## Creating SPP in a dedicated host
 {: #spp-dh}
 
 A shared processor pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VSIs). You can create an SPP in a single-tenant environment on a {{site.data.keyword.powerSys_notm}} dedicated host. The SPPs provisioned on a dedicated host can be deployed with any value up to a 20:1 ratio of Virtual Processor (VP) to Entitled Capacity (EC).
@@ -207,7 +207,7 @@ To create an SPP in a dedicated host, complete the following steps:
 When you use a dedicated host to deploy SPPs, the SPPs are not billed for the reserved capacity.
 {: note}
 
-## Releasing a dedicated host from {{site.data.keyword.powerSys_notm}}
+## Releasing a dedicated host
 {: #release-dh}
 
 To release a dedicated host is to delete it from your account. You must delete all the associated resources that are provisioned on the host before you release it.
@@ -249,7 +249,7 @@ When VSIs are relocated to another dedicated host for maintenance, you are not c
 
 
 
-## Using the virtual host identifier for dedicated hosts on {{site.data.keyword.powerSys_notm}}
+## Using the virtual host identifier for dedicated hosts
 {: #virtual-host-ID}
 
 You can use the virtual host identifier (ID) to get information about your {{site.data.keyword.powerSys_notm}} dedicated hosts. The virtual host ID follows a standard format to uniquely identify other {{site.data.keyword.powerSys_notm}} resources.
