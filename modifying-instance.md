@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-18"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -55,7 +55,7 @@ To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial crea
 
 You can scale up and scale down the memory and core counts of the virtual machine (VM) according to your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VM is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memory and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
 
-| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+| Specified value when the VSI was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
 |4 core and 8 GB memory | 0.5 cores and 2 GB memory | 32 cores and 64 GB memory |
 {: class="simple-tab-table"}
@@ -65,7 +65,7 @@ You can scale up and scale down the memory and core counts of the virtual machin
 {: tab-title="When VM is active"}
 
 
-| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+| Specified value when the VSI was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
 |4 core and 8 GB memory | You can specify any value that is greater than 0.25 cores, 2 GB memory | You can specify any value that is smaller than the available resources in the host |
 {: class="simple-tab-table"}
@@ -79,7 +79,7 @@ To resize an existing VM that was created before 15 December 2020 to an 8x ratio
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-You can attach storage volumes to a VM instance from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VM instance is deployed. To attach a storage volume, you must modify the VM instance and set the new VM instance *storagePoolAffinity* property to false. You can now attach mixed storage to a VM instance. For more information, see [How to set a VM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
+You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's *storagePoolAffinity* property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
 ### Creating a storage volume
 {: #create-storage-vol}
@@ -124,12 +124,12 @@ If you want to attach or detach a volume, complete the following steps:
 
 6. Select one of the following Storage pool options:
    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity.
-   - **Affinity**: Use this option to select an existing virtual server instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using VM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
-   - **Anti-affinity**: Use this option to specify one or more existing VM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
+   - **Affinity**: Use this option to select an existing virtual server instance (VSI) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
+   - **Anti-affinity**: Use this option to specify one or more existing VSIs or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
 
     For more information about affinity and anti-affinity policies, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
-    In the API, for create volume feature the properties `antiAffinityVMInstances` and `antiAffinityVolumes` are used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
+    In the API, for create volume feature the properties `antiAffinityVMInstances` and `antiAffinityVolumes` are used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VSIs or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
     {: note}
 
 7.  Click **Create and Attach**.
@@ -183,7 +183,7 @@ If you cannot take the downtime, you can add extra volumes. You can attach a max
 
 5. To verify your new storage size, go back to **Storage volumes**.
 
-6. In an AIX VM instance, if you resize your boot storage volume, run the `chvg -g rootvg` command.
+6. In an AIX VSI, if you resize your boot storage volume, run the `chvg -g rootvg` command.
 
 To apply or verify an IBM i software key, the VM must be active and in a running state. If you already ran a resize operation, you must wait until the resize operation completes and the VM returns to OK status.
 {: note}
@@ -245,7 +245,7 @@ SRC is only supported for AIX and IBM i virtual machines.
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VSIs, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
 
 ## Use cases
