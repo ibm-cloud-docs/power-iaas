@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-09-19"
 
 ---
 
@@ -16,10 +16,6 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 
 
-## September 2025
-{: #sep-2025}
-
-The CLI version v1.6.1 is available with updates related to translation.
 
 
 ## July 2025
