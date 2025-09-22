@@ -27,13 +27,13 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-- You can use the {{site.data.keyword.powerSys_notm}} user interface to edit the preferred processor compatibility mode for VSIs that are already deployed. The processor compatibility mode determines which Instruction Set Architecture (ISA) version is used by the processor and which platform-level features are available to the VSI. For more information, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
+- You can use the {{site.data.keyword.powerSys_notm}} user interface to edit the preferred processor compatibility mode for VSIs that are already deployed. The processor compatibility mode determines the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. For more information, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 
 - You can change the tier of the replication-enabled primary volume. For more information, see [Changing the tier of a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#chang-tier-prim-vol).
 
 - You can use the IBM Cloud&reg; carbon calculator to track, analyze, and manage your greenhouse gas (GHG) emissions for {{site.data.keyword.powerSys_notm}} data from workspaces on Power10 or later systems. For more information, see [Using carbon calculator with Power Virtual Server](/docs/power-iaas?topic=power-iaas-carbon-cal).
 
-- You can use the {{site.data.keyword.powerSys_notm}} user interface to create and manage instance snapshots for your VSIs. For more information, see [Creating a snapshot by using the Power Virtual Server user interface](/docs/power-iaas?topic=power-iaas-snapshots-cloning#create-snapshot-gui).
+- You can use the {{site.data.keyword.powerSys_notm}} user interface to create and manage the instance snapshots for your VSIs. For more information, see [Creating a snapshot by using the Power Virtual Server user interface](/docs/power-iaas?topic=power-iaas-snapshots-cloning#create-snapshot-gui).
 
 - You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces to create a network peering connection. For more information, see [Creating a peer network connection](/docs/power-iaas?topic=power-iaas-network-private-cloud#network-peering).
 
