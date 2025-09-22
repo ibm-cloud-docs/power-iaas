@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-09-04"
+lastupdated: "2025-09-22"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -111,3 +111,48 @@ As part of the network planning, you can review the following use cases and iden
 
 Figure 1 shows the overall view of the network architecture.
 ![{{site.data.keyword.powerSys_notm}} network architecture](./figures/PPC-network-arc-Sept.png "High-level network architecture in {{site.data.keyword.powerSys_notm}}"){: caption="High-level network architecture in {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+
+
+
+
+
+## Creating a network peering connection
+{: #network-peering}
+
+You create a network peering connection when you connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network. When you create a network peering connection, you can enable file sharing, use distributed applications, and work collaboratively between the two networks. Hence, your {{site.data.keyword.powerSys_notm}} workspace becomes scalable and efficient.
+{: shortdesc}
+
+To create a network peering connection, you must inform the {{site.data.keyword.on-prem-fname}} support team before the pod setup. You can enable the network peering connection only if the data network in your infrastructure supports bidirectional external connectivity. For more information about bidirectional external network use cases, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases).
+
+A peer network interface is a physical network endpoint in the IBM Power Virtual Server Private Cloud network fabric that is used for external network connectivity. Based on the type of data network in your infrastructure, the IBM Power Virtual Server Private Cloud support team defines one or more peer network interfaces during the pod setup. You can use a peer network interface to logically configure the network peering connections.
+
+You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces. To create a network peering connection, collect the following network related information from your network engineering team:
+
+- Network interface name
+- BGP Autonomous System Number (ASN) for your network
+- IBM BGP ASN
+- IBM IPv4 Classless Inter-Domain Routing (CIDR)
+- IPv4 CIDR for your network
+- VLAN ID
+
+You can create the network peering connection successfully only if you use the details that are provided by your network engineering team; otherwise, the connection fails.
+{: note}
+
+To allow or deny the data center network from accessing the network peering connection, complete the following steps:
+
+1. Open the Connection details page on the peer interface.
+2. Click the **BGP** tab.
+3. Open the **Route Filter** details.
+4. Under **Import route filters**, select **Permit all import filters** for the peer network to access the {{site.data.keyword.on-prem-fname}} data center network.
+5. Under **Export route filters**, select **Permit all export filters** for the {{site.data.keyword.on-prem-fname}} data center network to access the peer network.
+
+
+You can set the import or export route filters as `Allow` or `Deny` as defined in the following list:
+
+- If you set the **Import route filter** to `Allow`, the data center network can reach VSIs only in the allowed Classless Inter-Domain Routing (CIDR). VSIs in all other CIDRs cannot be reached from the data center network.
+- If you set the **Import route filter** to `Deny`, the data center network cannot reach VSIs in the denied CIDR. VSIs in all other CIDRs can be reached from the data center network.
+- If you set for the **Export route filter** to `Allow`, only VSIs within the allowed CIDR can reach the data center network. VSIs in all other CIDRs cannot reach the data center network.
+- If you set for the **Export route filter** to `Deny`, VSIs that are marked as denied CIDR cannot reach the data center network. VSIs in all other CIDRs can reach the data center network.
+
+If the same CIDR is set to both `Allow` and `Deny` actions in import or export filters, the rule with the higher priority takes precedence, and the other action is ignored.
+{: note}

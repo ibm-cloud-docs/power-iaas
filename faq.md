@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-18"
+lastupdated: "2025-09-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -183,13 +183,14 @@ The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or bring your own license. For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 The following list of Linux stock images are available:
 
 
 Red Hat
 
+* RHEL 9.6 general purpose (RHEL9-SP6) [^footnote11]
 * RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
@@ -224,6 +225,7 @@ SUSE [^footnote8]
 
 [^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote11]: RHEL 9.6 GP is supported on IBM Power9, Power10 and Power11 systems.
 
 [^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
@@ -242,7 +244,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-The {{site.data.keyword.on-prem-fname}} supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+The {{site.data.keyword.on-prem-fname}} supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the bring your own license or custom Linux image model. For more information, see [Full Linux subscription for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 {: #FLS}
 
 
@@ -317,7 +319,7 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 {: faq}
 {: support}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+Yes. This feature is known as **bring your own image**. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 
 
