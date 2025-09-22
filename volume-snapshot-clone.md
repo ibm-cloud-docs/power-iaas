@@ -567,12 +567,12 @@ You must consider the following restrictions and considerations before you cance
 
 
 ### Deleting a volumes-clone request
-{: del-vol-clone-req}
+{: #del-vol-clone-req}
 
 When a volumes-clone request is no longer required, you can delete the request by initiating the volumes-clone delete operation.
 
 #### Prerequisites
-{: del-vol-clone-prereq}
+{: #del-vol-clone-prereq}
 
 The volumes-clone request must be in one of these final statuses: `Completed`, `Failed`, or `Cancelled`.
 
@@ -591,18 +591,18 @@ You must provide values for the following parameters in the API and CLI commands
 - `Force`: (Optional) Force the cancellation of a volumes-clone request. The `cancel` operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the `cancel` operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
 
 #### Restrictions and considerations
-{: del-vol-clone-res-con}
+{: #del-vol-clone-res-con}
 
 If the volumes-clone request is not in one of the final statuses that is required for deletion, you can cancel the request, do any remaining cleanup, and transition the status to `Cancelled`. If the volumes-clone request is in the `Cancelled` status, the request can be deleted.
 
 ### Getting the status for a volumes-clone request
-{: get-vol-clone-req}
+{: #get-vol-clone-req}
 
 
 This API request returns detailed information about the status of the volumes-clone request. For example, the list of source volumes that are getting cloned and the list of cloned volumes when the `execute` operation is successfully completed.
 
 #### Prerequisites
-{: get-vol-clone-prereq}
+{: #get-vol-clone-prereq}
 
 None.
 
@@ -617,18 +617,18 @@ None.
 Provide a value for the `volume-clones-id` field. The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
 
 #### Restrictions and considerations
-{: get-vol-clone-res-con}
+{: #get-vol-clone-res-con}
 
 None.
 
 
 ### Getting the list of volumes-clone request
-{: getlist-vol-clone-req}
+{: #getlist-vol-clone-req}
 
 The API request provides a list of all volumes-clone requests in a workspace and the status of each request.
 
 #### Prerequisites
-{: getlist-vol-clone-prereq}
+{: #getlist-vol-clone-prereq}
 
 None.
 
@@ -651,7 +651,7 @@ Provide one of the values to the `filter` parameter from the following list:
 - `finalized` - included status values (completed, failed, cancelled)
 
 #### Restrictions and considerations
-{: getlist-vol-clone-res-con}
+{: #getlist-vol-clone-res-con}
 
 You must consider the following restrictions and considerations before you get the list of volumes-clone requests:
 
@@ -665,7 +665,6 @@ You must consider the following restrictions and considerations before you get t
 
 The following are some of the frequently asked questions on snapshots and cloning that are documented on the FAQ page:
 - [What are the key differences between a snapshot and a clone?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
-- <s> [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)</s>
 - [Are there any initial snapshot requirements in terms of storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)
 - [Does the snapshot and volume clone support any safeguard policy?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-safeguard)
 - [Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?](/docs/power-iaas?topic=power-iaas-powervs-faqs#poweha-toolkit)
