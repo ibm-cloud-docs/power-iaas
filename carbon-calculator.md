@@ -27,13 +27,13 @@ subcollection: power-iaas
 
 ---
 
-The IBM Cloud&reg; carbon calculator is a dashboard to track, analyze, and manage your greenhouse gas (GHG) emissions that are associated with your IBM Cloud services. Carbon emission data is available on IBM Power10 or later systems. You must be the account owner, account administrator, or a user with a viewer role or higher on the billing service to view and export emissions data for the entire account.
+The IBM Cloud&reg; carbon calculator is a dashboard to track, analyze, and manage greenhouse gas (GHG) emissions that is associated with your IBM Cloud services. Carbon emission data is available on IBM Power10 or later systems. To view and export GHG emissions data for an account, you must be able to access the billing service for that account. To access the billing service, you must be the account owner, account administrator, a user with a viewer role, or a user with higher permissions.
 {: shortdesc}
 
-The carbon calculator can perform the following operations:
-- Display greenhouse gas (GHG) emission data for an account.
+A carbon calculator can perform the following functions:
+- Display the GHG emission data for an account.
 - Monitor the electricity consumption for services, resources, and the location and efficiency of your data centers.
-- Track the GHG emissions associated with your account to manage and mitigate your carbon footprint over time.
+- Track the GHG emissions that are associated with your account to manage and mitigate your carbon footprint over time.
 
 For more information about carbon calculator, see [Working with IBM Cloud's carbon calculator](https://cloud.ibm.com/docs/account?topic=account-what-is-cloud-calc){: external}.
 
@@ -46,20 +46,20 @@ As organizations and users work together to achieve better outcomes for their bu
 For more information about environmental, social, and governance (ESG) initiatives, see [IBM Releases 2023 Impact Report](https://newsroom.ibm.com/2023-04-11-IBM-Releases-2023-Impact-Report){: external}. For more information about how different geographical areas address sustainability challenges, see [The State of Sustainability 2024 report](https://www.ibm.com/think/insights/state-of-sustainability-geo-data){: external}.
 
 
-## FAQs
+## FAQs about carbon calculator
 {: #faq-ccc}
 
-### What is Greenhouse Gas?
+### What is GHG?
 {: ghg}
 {: #faq-ccc}
 
-Greenhouse Gas (GHG) is a gaseous substance that has a warming effect on the Earth when released to the atmosphere. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
+GHG is a gaseous substance that has a warming effect on the Earth when released to the atmosphere. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
 ### How is GHG measured in IBM Cloud?
 {: ghg-how}
 {: #faq-ccc}
 
-IBM Cloud plays a critical role in achieving IBM’s energy conservation, renewable electricity procurement, and greenhouse gas (GHG) emissions reduction targets. IBM Cloud is improving the estimation approach by introducing the carbon calculator, which gives you a detailed view of your cloud electricity consumption and associated GHG emissions. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
+IBM Cloud plays a critical role in achieving IBM’s energy conservation, renewable electricity procurement, and GHG emissions reduction targets. IBM Cloud is improving the estimation approach by introducing the carbon calculator, which gives you a detailed view of your cloud electricity consumption and associated GHG emissions. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
 
 ### What methodology does IBM Cloud carbon calculator use?
@@ -73,7 +73,7 @@ IBM Cloud carbon calculator uses data from electricity consumption, measurement 
 {: ghg-who}
 {: #faq-ccc}
 
-Account owners, account administrators, and users with a viewer role or higher on the billing service can view and export emissions data for the entire account. An account or billing administrator role is required to grant other users access to the billing service. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
+To view and export GHG emissions data for an account, you must be able to access the billing service for that account. To access the billing service, you must be the account owner, account administrator, a user with a viewer role, or a user with higher permissions. You must have an account or have a billing administrator role to grant other users access to the billing service. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
 
 ### How to view the Power Virtual Server GHG emissions data on carbon calculator?
@@ -87,21 +87,21 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 {: ghg-why}
 {: #faq-ccc}
 
-The data from your workspace is not displayed in the carbon calculator or you are not be able to see the data for your workspace because of the following reasons:
+The data for your workspace is not displayed in the carbon calculator or you are not be able to see the data for your workspace because of the following reasons:
 - Only the data from your workspaces on IBM Power10 or later systems is used to calculate the carbon emissions. If your workspace is on IBM Power9 or previous generations, the carbon emissions data is not available.
 - You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=api#billing-acct-mgmt-api){: external}.
 - The Power Usage Effectiveness (PUE) and Carbon Efficiency Factor (CEF) for your workspace location is set to zero. For more information about PUE and CEF, see [Energy and carbon quantification methodology](https://cloud.ibm.com/media/docs/downloads/account/carbon-calc-method-v4.pdf){: external}.
 
 
-### How do I track GHG emissions for my account in the carbon calculator?
+### How to view and export GHG emissions for an account in the carbon calculator?
 {: ghg-howtrack}
 {: #faq-ccc}
 
-To view emissions data for your account, you must be assigned the viewer or higher role on the billing service to view and export the emissions data for the entire account. For more information, see [Tracking account emissions with carbon calculator](https://cloud.ibm.com/docs/account?topic=account-tracking-emissions-account){: external}.
+To view and export GHG emissions data for an account, you must be able to access the billing service for that account. To access the billing service, you must be the account owner, account administrator, a user with a viewer role, or a user with higher permissions. For more information, see [Tracking account emissions with carbon calculator](https://cloud.ibm.com/docs/account?topic=account-tracking-emissions-account){: external}.
 
 
 ### How to extract GHG emissions data by using API?
 {: ghg-howextract}
 {: #faq-ccc}
 
-For more information about extracting emissions data by using API, see [Carbon Calculator API](https://cloud.ibm.com/apidocs/carbon-calculator){: external}.
+You can use APIs to extract GHG emissions data. For more information, see [Carbon Calculator API](https://cloud.ibm.com/apidocs/carbon-calculator){: external}.
