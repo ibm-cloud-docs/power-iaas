@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-22"
+lastupdated: "2025-09-23"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -58,7 +58,7 @@ The SR3 SAP HANA profiles are SAP RISE profiles, which are available for IBM Pow
 
 
 
-[Improvements-suggested-by-SAP-team-start]{: tag-green}
+
 
 ### Power10 profiles
 {: #power10-profiles}
