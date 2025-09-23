@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-22"
+lastupdated: "2025-09-23"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -298,7 +298,7 @@ Consider the following scenarios to restore a snapshot:
 
 
 
-* To restore volumes that are enabled for volume replication with Global Replication Services (GRS), all the volumes must be part of the same volume group. The restore operation fails when a snapshot contains multiple GRS-enabled volumes from different volume groups.
+* To restore volumes that are enabled for volume replication with Global Replication Services (GRS), all the volumes must belong to the same volume group. You cannot restore volumes when a snapshot contains multiple GRS-enabled volumes from different volume groups.
 
 
 
