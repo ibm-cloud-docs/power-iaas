@@ -41,7 +41,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-- You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces to create a network peering connection. For more information, see [Creating a peer network connection](/docs/power-iaas?topic=power-iaas-network-private-cloud#network-peering).
+- You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces to create a network peering connection. For more information, see [Creating a network peering connection](/docs/power-iaas?topic=power-iaas-network-private-cloud#network-peering).
 
 
 
