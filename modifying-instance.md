@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-22"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -28,112 +28,233 @@ subcollection: power-iaas
 ---
 
 
-
-Learn how to modify your {{site.data.keyword.powerSysFull}} to better meet your business needs.
+After you create a virtual server instance (VSI) in your {{site.data.keyword.powerSysFull}} workspace, you can modify some of its configurations to meet your business and workload needs. You can update the VSI name, change the preferred processor compatibility mode, adjust its pinning state and placement group, change its capacity, such as the core type, number of cores, virtual cores, and memory. You can also manage the storage volumes and reconfigure the network interfaces that are attached to the VSI.
 {: shortdesc}
 
-## Resizing an instance by using the {{site.data.keyword.powerSys_notm}} user interface
+
+## Modifying a VSI by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #resizing-vm}
 
-To resize a {{site.data.keyword.powerSys_notm}} instance after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
+To modify a VSI after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
 
-1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface.
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click a virtual server instance to open the **Virtual server instance details** page.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Click the **Edit** icon, a menu appears. From the menu, select the value that you want to modify for the {{site.data.keyword.powerSys_notm}} instance. You can modify the following values: **Name**, **Entitled capacity**, **Memory (GB)**, and **VM pinning** state.
+3. Select the workspace that contains the virtual server instance that you want to modify. The Workspace details panel is displayed.
 
-    If the virtual machine (VM) is inactive, you can change the processor type to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
-    {: tip}
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
-4. Select the service agreement box and click **Order** to complete the instance modification process and accept the price.
+5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
 
-5. View the **Server details** page to verify {{site.data.keyword.powerSys_notm}} instance modification.
 
-### Resizing the memory and core counts of the virtual machine
+
+From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
+- [Changing the VSI name](#edit-vsi-name)
+- [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
+- [Changing the pinning state and server placement group](#edit-vsi-pinning-placement)
+- [Resizing the capacity of a VSI](#resize-core-mem)
+- [Managing the storage volumes](#modifying-volume-network)
+- [Adding or removing a public network](#adding-removing-network)
+
+
+
+
+
+
+### Changing the VSI name
+{: #edit-vsi-name}
+
+To change the name of the VSI, complete the following steps:
+
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+2. Enter the new name in the **Name** field.
+3. Click **Save**.
+
+### Changing the preferred processor compatibility mode
+{: #change-cpu-compatibility}
+
+In virtualization environments, a VSI can operate in different processor compatibility modes. These modes determine the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. The Virtual server instance details page on the **Overview** tab displays the *Preferred* and *Effective* processor compatibility mode that is currently set for the VSI. Processor compatibility modes are defined as follows:
+
+- **Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
+
+- **Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI is running determines the effective processor compatibility mode.
+
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI again. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+
+You are responsible for selecting the appropriate processor mode to ensure compatibility with the operating system in use. If you set the preferred processor compatibility mode to one that the operating system in your VSI does not support, the VSI will not boot correctly and might enter an *Error* state. To resolve this, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external} for assistance in correcting the processor compatibility mode.
+{: important}
+
+
+
+
+
+
+
+
+The effective mode might differ from the preferred mode if the host does not support the preferred mode that you have specified for the VSI.
+{: note}
+
+You can use the CLI, API or Terraform to set the preferred processor compatibility mode for a VSI during its creation. When using the GUI, you can change the preferred mode only by editing an existing VSI that has already been deployed.
+
+To change the preferred processor compatibility mode of a VSI by using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
+
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+2. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
+3. Click **Save**.
+
+Note that after you change the preferred processor compatibility mode of a VSI, you must shut down the VSI and then start the VSI again for the changes to take effect. A restart alone does not activate the selected preferred processor compatibility mode.
+
+To shut down the VSI, complete the following steps:
+
+1. From the virtual server instance details page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The OS shutdown confirmation dialog is displayed.
+
+2. Click **Shutdown** to procced. A notification is displayed to indicate that the shutdown process has started.
+
+To start the VSI again, complete the following steps :
+
+1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI is being started.
+
+2. Click the **Refresh** icon to see the change take effect.
+
+For more information about the processor compatibility mode, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}
+
+
+### Changing the pinning state and server placement group
+{: #edit-vsi-pinning-placement}
+
+You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host where it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
+
+Server placement groups provides you control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information about see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups){: external}.
+
+To change the pinning state and server placement group of the VSI, complete the following steps:
+
+1. In the **Overview** tab, click the **Edit** icon in the Placement section. The Edit placement panel is displayed.
+3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
+4. Click **Save**
+
+### Resizing the capacity of a VSI
 {: #resize-core-mem}
 
-You can scale up and scale down the memory and core counts of the virtual machine (VM) according to your workload requirements. When the VM is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VM is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memory and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VM is shut down. The following table shows an example of recalculated values:
+You can edit a VSI to resize its capacity, including memory, core type, and number of physical and virtual cores.
 
-| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+You can scale up and scale down the memory and core counts of the VSI according to your workload requirements. When the VSI is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VSI is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memory and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VSI is shut down. The following table shows an example of recalculated values:
+
+| Specified value when the VSI instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
 |4 core and 8 GB memory | 0.5 cores and 2 GB memory | 32 cores and 64 GB memory |
 {: class="simple-tab-table"}
 {: tab-group="resize_core_memory"}
-{: caption="Resizing VM core count and memory when the VM is active" caption-side="top"}
+{: caption="Resizing VSI core count and memory when the VSI is active" caption-side="top"}
 {: #resize_core_memory-1}
-{: tab-title="When VM is active"}
+{: tab-title="When VSI is active"}
 
 
-| Specified value when the VM instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
+| Specified value when the VSI instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
 |4 core and 8 GB memory | You can specify any value that is greater than 0.25 cores, 2 GB memory | You can specify any value that is smaller than the available resources in the host |
 {: class="simple-tab-table"}
 {: tab-group="resize_core_memory"}
-{: caption="Resizing VM core count and memory when the VM is shut down" caption-side="top"}
+{: caption="Resizing VSI core count and memory when the VSI is shut down" caption-side="top"}
 {: #resize_core_memory-2}
-{: tab-title="When VM is shut down"}
+{: tab-title="When VSI is shut down"}
 
-To resize an existing VM that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VM, resize it, and then activate it. Resize the VM at least once when the VM is shut down to enable the 8x ratio. If you shut down and activate the VM, the 8x ratio of memory and core counts are not enabled.
+To resize an existing VSI that was created before 15 December 2020 to an 8x ratio of memory and core counts, you must first shut down the VSI, resize it, and then activate it. Resize the VSI at least once when the VSI is shut down to enable the 8x ratio. If you shut down and activate the VSI, the 8x ratio of memory and core counts are not enabled.
+
+To edit a VSI and resize its capacity, complete the following steps:
+
+1. On the **Overview** tab, click the **Edit** icon in the Capacity section. The Edit capacity panel is displayed.
+2. Select the new value and size for the VSI's memory, cores, and virtual cores. The total estimated cost for the new selection is displayed for your review.
+3. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
+
+    If the VSI that you are editing is in inactive state, you can change the **Core type** to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
+    {: tip}
+
+
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
 
-You can attach storage volumes to a VM instance from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VM instance is deployed. To attach a storage volume, you must modify the VM instance and set the new VM instance *storagePoolAffinity* property to false. You can now attach mixed storage to a VM instance. For more information, see [How to set a VM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
+You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's *storagePoolAffinity* property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
 ### Creating a storage volume
 {: #create-storage-vol}
 
-You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. If the existing volume is a replication-enabled volume, follow the steps to [delete a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol). After you delete the original volume, you must allow a minimum of one hour to create a new volume with the same name.
+After you create a VSI, you can modify the VSI to include additional storage volumes, either by adding new volumes or attaching existing ones.
+
+To modify a VSI to add additional storage volumes, complete the following steps:
+
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
+
+3. Select the workspace that contains the virtual server instance to which you want to add additional volumes to. The Workspace details panel is displayed.
+
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
+
+5. Select the VSI to which you want to add additional volumes. The Virtual server instance details page is displayed for the selected VSI.
+
+Based on whether you want to attach an existing storage volume or create a new one for the VSI, follow the steps in the relevant section below.
+
+- [Attaching an existing volume to the VSI](#attach-existing-vol)
+- [Creating a new storage volume for the VSI](#create-new-vol)
+
+#### Attaching an existing volume to the VSI
+{: #attach-existing-vol}
+
+1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The Attach storage volumes panel is displayed with a list of existing storage volumes.
+
+2. Select the storage volumes that you want to add to the VSI. If the **Mixed storage pools in virtual server instances** warning message is displayed, select the following checkboxes:
+    - *I acknowledge snapshots and clones will fail when performed on a set of volumes that are on mixed pools*.
+    - *I acknowledge volume replication across mixed storage pools will require managing multiple volume replication groups when enabled*.
+
+3. Click **Attach volume**.
+
+Attaching storage volumes to a virtual server instance is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to confirm that it is successfully attached to the virtual server instance. If the volume is still not attached, you must make another attachment request.
 {: note}
 
+#### Creating a new storage volume for the VSI
+{: #create-new-vol}
 
-You can create a replication-enabled volume from any site. The site from which the replication is initiated contains what is referred to as the `primary volume`; the remote site volume is referred to as the `auxiliary volume`. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
+1. On the **Storage** tab, click **Create volume** in the Storage volumes section. The Create volume panel is displayed.
 
-When you are creating a storage volume from the user interface, you can enable the volume for replication by completing the following steps:
+2. Enter the **Name**, and **User tags** (optional) for the storage volume.
 
-- In the **Global Replication Service** section, set the **Volume replication** to on. The name of the primary data center is displayed.
-- From the **Secondary data center** list, select the displayed secondary site name.
+3. Select the required storage tier from the **Tier** list.
 
-The primary volume and the auxiliary volume are mapped into one-to-one relationship mode in both directions. These two sites are fixed and are in replication partnership in both directions. For more information, see [Setting up GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-GRS).
+4. Enter the **Number of volumes**, and **Size** of the storage volume.
 
-The GRS details of the volume are displayed when you click the storage volume.
+5. Set **Shareable** to **On** to allow multiple virtual instances to write data to the same data volume.
 
+6. Select one of the following **Storage pool** options:
 
-### Adding and managing storage volumes
-{: #adding-managing-volume}
-
-If you want to attach or detach a volume, complete the following steps:
-
-
-1. Go to **Virtual server instances** in the {{site.data.keyword.powerSys_notm}} user interface and click your instance.
-
-2. Under the Attached volumes section, click **Attach volume** to add a storage volume from the list.
-
-   Attaching storage volumes to a virtual server instance is an asynchronous operation. Before you use the storage volume, reload the page and check the status of the selected storage volume to confirm that it is successfully attached to the virtual server instance. If the volume is still not attached, you must make another attachment request.
-   {: note}
-
-3. To detach a storage volume, click **Detach** in the table.
-
-    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Make another detach request if the volume is still not disconnected.
-    {: note}
-
-4. You can also create a new storage volume.
-
-5. Enter the **Name**, **Tier**, **Number of volumes**, and **Size** of the storage volume. You can also toggle the Shareable switch to the On position to allow multiple virtual instances to write data to the same data volume.
-
-6. Select one of the following Storage pool options:
    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity.
-   - **Affinity**: Use this option to select an existing virtual server instance (VM) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using VM instance as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
-   - **Anti-affinity**: Use this option to specify one or more existing VM instances or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
+
+   - **Affinity**: Use this option to select an existing virtual server instance (VSI) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
+
+   - **Anti-affinity**: Use this option to specify one or more existing VSIs or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
 
     For more information about affinity and anti-affinity policies, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
-    In the API, for create volume feature the properties `antiAffinityVMInstances` and `antiAffinityVolumes` are used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VM instances or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
+    In the API, for create volume feature the properties `antiAffinityVMInstances` and `antiAffinityVolumes` are used to specify anti-affinity objects. You can specify only one object type for affinity or anti-affinity objects, either VSIs or Volumes. For more information about storage volumes APIs, see [Create a new data volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post) and [Create multiple data volumes from a single definition](/apidocs/power-cloud#pcloud-v2-volumes-post).
     {: note}
 
-7.  Click **Create and Attach**.
+7. Optional: Set **Volume replication with GRS** to on to enable the volume for asynchronous replication. The name of the primary location (data center) is displayed. From the **Secondary data center** list, select the required secondary location.
 
+    If the **Mixed storage pools in virtual server instances** warning message is displayed, select the following checkboxes:
+    - *I acknowledge snapshots and clones will fail when performed on a set of volumes that are on mixed pools*.
+    - *I acknowledge volume replication across mixed storage pools will require managing multiple volume replication groups when enabled*.
+
+8. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and then click **Create and Attach**.
+
+
+You can create a storage volume by specifying any name of your choice. If you want to reuse the storage volume name, you must delete the existing storage volume with the same name. If the existing volume is a replication-enabled volume, follow the steps to [delete a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol). After you delete the original volume, you must allow a minimum of one hour to create a new volume with the same name.
+{: note}
+
+You can create a replication-enabled volume from any site. The site from which the replication is initiated contains what is referred to as the `primary volume`; the remote site volume is referred to as the `auxiliary volume`. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS). The GRS details of the volume are displayed when you click the storage volume.
+
+The primary volume and the auxiliary volume are mapped into one-to-one relationship mode in both directions. These two sites are fixed and are in replication partnership in both directions. For more information, see [Setting up GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-GRS).
+{: note}
 
 For more information about updating the volume groups for GRS, see [Updating a volume group](/docs/power-iaas?topic=power-iaas-getting-started-GRS&q=deleting+a+volume&tags=power-iaas#update-vol-grp).
 
@@ -150,44 +271,69 @@ The error message appears when you perform the following actions:
 
 
 
+### Detaching storage volumes from a VSI
+{: #detaching-volumes}
 
+If you want to detach storage volumes from a VSI, complete the following steps:
+
+1. On the **Storage** tab, select the storage volumes that you want to detach from the Storage volumes section.
+
+2. Click **Detach**. The **Confirm detach** dialog is displayed.
+
+    Detached volumes are not deleted. Volumes must be deleted to stop charges from incurring.To delete a volume, see [Deleting a volume](#deleting-volume).
+    {: note}
+
+3. To confirm, click **Detach**.
+
+    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Make another detach request if the volume is still not disconnected.
+    {: note}
 
 ### Resizing a storage volume
 {: #resizing-volume}
 {: help}
 {: support}
 
-You can resize a storage volume after its initial creation. However, resizing is not immediately available after you deploy a VM.
-
+You can resize a storage volume after its initial creation. However, resizing is not immediately available after you deploy a VSI.
 
 For more information about resizing a replication-enabled volume, see [Updating a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS&q=deleting+a+volume&tags=power-iaas#update-prime-vol).
-
 
 [{{site.data.keyword.off-prem}}]{: tag-blue} For IBM i 7.3 and later versions, you can resize a volume to increase the volume size, but this action requires an initial program load (IPL) to recognize the new volume size.
 
 Before you perform the IPL operation, you must run the macro to ensure that the volume resize operation is complete, then proceed with the IPL operation. For more information, see [Dynamically increasing the size of a SAN LUN](https://www.ibm.com/support/pages/dynamically-increasing-size-san-lun){: external}. If you do an IPL operation before the resize operation is complete, an extra IPL is required.
 {: important}
 
-If you cannot take the downtime, you can add extra volumes. You can attach a maximum of 127 volumes to the VM.
+If you cannot accommodate downtime, you can add extra volumes. You can attach a maximum of 127 volumes to the VSI.
 
 [{{site.data.keyword.off-prem}}]{: tag-blue} Any volume that is included in a snapshot cannot be resized. To resize a volume that is included in a snapshot, you must first delete all the snapshots the volume is a part of.
 {: important}
 
-1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Storage volumes**.
+To resize a storage volume after its creation, complete the following steps:
 
-2. Click the **Edit** icon to the right of your storage volume.
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-3. Click **Edit** to select the desired storage volume size in the **Modify storage volume** window. You can increase only the size of the storage volume.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Read the service agreement and agree to the terms. Click **Order** to complete the volume modification process and accept the price.
+3. Select the workspace which contains the virtual server instance that you want modify to resize its storage volumes. The Workspace details panel is displayed.
 
-5. To verify your new storage size, go back to **Storage volumes**.
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
-6. In an AIX VM instance, if you resize your boot storage volume, run the `chvg -g rootvg` command.
+5. Select the VSI with the attached storage volume that you want to resize. The Virtual server instance details page is displayed for the selected VSI.
 
-To apply or verify an IBM i software key, the VM must be active and in a running state. If you already ran a resize operation, you must wait until the resize operation completes and the VM returns to OK status.
+6. Click the **Storage** tab.
+
+7. From the Storage volumes section, click the overflow menu (⋮) on the volume entry that you want to resize and select **Edit**. The Edit storage volume panel is displayed.
+
+8. You can specify a new name, storage tier, and size for the storage volume.
+
+    The size of a volume cannot be decreased once it is created. The maximum size of a volume that can be created is 72551 GB.
+    {: note}
+
+9. Optional: Set either the Shareable or Bootable property of the storage volume to **On**. You cannot set both the options to **On** at the same time.
+
+10. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
+
+In an AIX VSI, if you resize your boot storage volume, run the `chvg -g rootvg` command.
 {: note}
-
 
 
 ### Deleting a volume
@@ -195,37 +341,65 @@ To apply or verify an IBM i software key, the VM must be active and in a running
 {: help}
 {: support}
 
-To delete a volume or a replication-enabled primary volume, the status of the storage volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Also, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
+When you modify a VSI to update its configuration, you can use the **Storage** tab only to detach a storage volume from the VSI, not to delete it. Detached volumes are not deleted. To delete a storage volume, complete the following steps:
 
-Once you initiate the action to delete the volume, the action cannot be undone.
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
+
+3. Select the workspace which contains the storage volume that you want delete. The Workspace details panel is displayed.
+
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
+
+5. In the navigation panel, click **Storage** > **Storage volumes**. The Storage volumes page is displayed with a list of existing storage volumes on the **Volumes** tab.
+
+6. Click the overflow menu (⋮) on the volume entry that you want to delete and select **Delete**. The Confirm delete dialog is displayed.
+
+7. To continue, click **Delete**.
+
+    You cannot recover a storage volume after it is successfully deleted.
+    {: note}
+
+To delete a volume or a replication-enabled primary volume, the status of the storage volume must be `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. Also, the storage volume cannot be deleted if it is in the state of migrating, attached, belongs to a group, has snapshots, or is disassociated from its snapshots after a transfer.
 {: note}
 
 For more information about deleting a primary volume, see [Deleting a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#delete-prime-vol).
 
 
 
-
-### Deleting a virtual server instance
+## Deleting a virtual server instance
 {: #deleting-virtual-server-instance}
 {: help}
 {: support}
 
-Deleting a virtual server instance is a manual process. To delete all virtual server instances, delete the workspace or delete a subset of the virtual server instance.
+You must delete a virtual server instance manually. To delete all virtual server instances, delete the workspace or delete a subset of the virtual server instance.
 
-You can delete a single virtual server instance by completing the following steps:
+To delete a single virtual server instance, complete the following steps:
 
 
-1. On the **Virtual server instances** page, click the overflow menu (icon with 3 vertical dots) at the end of each virtual server instance entry on the table. From the overflow menu, click **Delete**. The **Delete virtual server instance** confirmation message box appears.<br>
-Or<br>
-On the **Virtual server instances** page, click the name of the virtual server instance that you want to delete. The **Virtual server instance details** page is displayed. Find and click the trash icon on the upper right of the screen. The **Delete virtual server instance** confirmation message box appears.
-2. On the confirmation message box, if you set the toggle button to on you agree for the following actions to occur:
+1. On the **Virtual server instances** page, click the overflow menu (⋮) at the end of the virtual server instance entry and select **Delete**. The **Delete virtual server instance** confirmation dialog is displayed.<br>
+
+    Or <br>
+
+   On the **Virtual server instances** page, select the virtual server instance that you want to delete. The **Virtual server instance details** page is displayed. Click the **delete** icon on the upper right of the screen. The **Delete virtual server instance** confirmation dialog appears.
+
+2. On the confirmation dialog, set **Delete data volumes attached to this instance** to on to agree to the following:
     - To delete the data volumes that are attached to the virtual server instance. The data volumes are not deleted if they are attached to multiple virtual server instances.
     - To delete any auxiliary volumes on the secondary site.
-3. Type the virtual server instance name in the textbox.
-4. Click **Delete the virtual server instance** to initiate the deletion request.
 
-After the deletion request is initiated, the action cannot be undone.
+3. To confirm, type the virtual server instance name in the text field.
+
+4. Click **Delete virtual server instance** to initiate the deletion request.
+
+You cannot recover a virtual server instance after it is successfully deleted.
 {: note}
+
+
+
+You cannot delete a virtual server instance if it has one or more associated snapshots. You must first delete all associated snapshots before you can delete the virtual server instance. For more information about how to delete a snapshot, see [Deleting a snapshot](/docs/power-iaas?topic=power-iaas-snapshots-cloning#delete-snapshot).
+{: important}
+
+
 
 ## Adding or removing a public network
 {: #adding-removing-network}
@@ -245,7 +419,7 @@ SRC is only supported for AIX and IBM i virtual machines.
 
 A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VM instances, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VSIs, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
 
 ## Use cases

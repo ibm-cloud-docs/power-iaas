@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-22"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -45,17 +45,20 @@ The SAP certified profiles for SAP HANA are a set of profiles with defined attri
 You can deploy SAP HANA on the following IBM&reg; Power&reg; server types:
 
 
-
+- **Power11**: S1122, E1150, and E1180
 - **Power10**: S1022, E1050, and E1080
 - **Power9**: E980
 
 
 
+### Power11 profiles
+{: #power11-profiles}
+
+The SR3 SAP HANA profiles are SAP RISE profiles, which are available for IBM Power11 processor-based servers. SR3 profiles also support the custom combination of physical CPU cores and memory. You must deploy custom SR3 profiles by using the CLI or API only. For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs).
 
 
 
-
-
+[Improvements-suggested-by-SAP-team-start]{: tag-green}
 
 ### Power10 profiles
 {: #power10-profiles}
@@ -64,16 +67,14 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 
 | Profile | Profile type | Description                                                                                                                |
 | ------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| SR2     | Custom       | SR2 profiles are custom profiles that support selection of any combination of physical CPU cores and memory. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware]( https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. Custom profiles must be deployed by using the CLI or API interface.         |
-| SH2     | Small        | Suitable for balanced workloads that require less CPU and storage consumption.                                           |
-| CH2     | Compute      | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers. |
-| BH2     | Balanced     | Suitable for midsize databases and common cloud applications with moderate traffic.                                      |
+| SR2     | SAP RISE       | SR2 profiles are SAP RISE profiles.          |
+| SH2     | Small          | Suitable for balanced workloads that require less CPU and storage consumption.                                           |
+| CH2     | Compute        | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers.  |
+| BH2     | Balanced       | Suitable for midsize databases and common cloud applications with moderate traffic.                                      |
 | MH2      | Very high memory            |  Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver.|
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
-SR2 profiles must be deployed and edited by using the UI, CLI, API, and Terraform interfaces. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. SR2 profiles are not available with the E980 machine type.
-{: note}
-
+SR2 profiles also support custom combination of physical CPU cores and memory. You must deploy custom SR2 profiles by using the CLI or API only. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware]( https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. SR2 profiles are not available with the E980 machine type.
 
 
 ### Power9 profiles

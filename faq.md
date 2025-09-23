@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-18"
+lastupdated: "2025-09-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -183,13 +183,14 @@ The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or Bring Your Own License (BYOL). For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
+{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or bring your own license. For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 
 The following list of Linux stock images are available:
 
 
 Red Hat
 
+* RHEL 9.6 general purpose (RHEL9-SP6) [^footnote11]
 * RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
@@ -224,6 +225,7 @@ SUSE [^footnote8]
 
 [^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote11]: RHEL 9.6 GP is supported on IBM Power9, Power10 and Power11 systems.
 
 [^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
@@ -242,7 +244,7 @@ To view the certification details in the Red Hat catalog, see [IBM Power System 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-The {{site.data.keyword.on-prem-fname}} supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the Bring Your Own License (BYOL) or custom Linux image model. For more information, see [Full Linux subscription for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+The {{site.data.keyword.on-prem-fname}} supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the bring your own license or custom Linux image model. For more information, see [Full Linux subscription for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 {: #FLS}
 
 
@@ -317,7 +319,7 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 {: faq}
 {: support}
 
-Yes. This function is known as **bring your own image**. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+Yes. This feature is known as **bring your own image**. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 
 
@@ -520,25 +522,6 @@ See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapsh
 
 
 
-## Is there any UI to perform snapshot or clone operations?
-{: #snap-clone-ui}
-{: faq}
-
-None. Use the API and CLI to perform snapshot or clone operations. Using the {{site.data.keyword.powerSys_notm}} API and command-line interface (CLI) you can create, restore, delete, and attach the snap-shots and volume-clones.
-
-**APIs to create snapshot and clone**
-- [Create a new volume clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
-- [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
-
-**CLIs to create snapshot and clone**
-- [Create a snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
-- [Create a volume clone for specific volumes](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-create-clone)
-
-
-
-
-
-
 ## Are there any initial snapshot requirements in terms of storage?
 {: #snap-storage-req}
 {: faq}
@@ -670,6 +653,41 @@ On the Virtual server instances page, click the virtual server instance name pre
 
 
 
+
+
+
+## How does the processor compatibility mode work in a VSI?
+{: #processor-compatibility-modes-vsi}
+{: faq}
+
+You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the CLI, API, or Terraform. By using the GUI, you can edit the preferred processor compatibility mode only for existing VSIs that are already deployed.
+
+On the **Overview** tab of the VSI details page in the Power Virtual Server user interface, you can view the *Preferred* and *Effective* processor compatibility modes. The processor compatibility modes are defined as follows:
+
+-	**Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
+
+-	**Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI is running determines the effective processor compatibility mode.
+
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI again. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+{: important}
+
+The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode.
+{: note}
+
+When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the operating system that is running in the VSI supports that mode. If the operating system supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the operating system does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the operating system. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
+
+For example,
+
+- If the VSI runs on a `POWER11` processor-based host and you have set `POWER11` as the preferred processor compatibility mode.
+- The operating system that is installed in the VSI supports only the `POWER10` processor capabilities and not the `POWER11` processor capabilities.
+
+In such a scenario, the hypervisor assigns `POWER10` as the effective processor compatibility mode. The `POWER10` mode is the highest mode that both the operating system and firmware on the host server supports and it is lower than the preferred mode of `POWER11`.
+
+If you set the preferred processor compatibility mode to `default`, the hypervisor does not consider `POWER9` mode as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10` mode, or `POWER11` mode, but it cannot be `POWER9` mode.
+
+Use caution when you select `default` mode as the preferred processor compatibility mode. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment can prevent the VSI from migrating back to its original host.
+
+For more information about how to change the preferred processor compatibility mode for a VSI, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 
 
 

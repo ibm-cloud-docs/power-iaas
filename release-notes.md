@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-15"
+lastupdated: "2025-09-22"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -21,10 +21,21 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## September 2025
+{: #Sep-2025}
+{: release-note}
 
 
 
+- You can use the {{site.data.keyword.powerSys_notm}} user interface to edit the preferred processor compatibility mode for VSIs that are already deployed. The processor compatibility mode determines the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. For more information, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 
+- You can change the tier of the replication-enabled primary volume. For more information, see [Changing the tier of a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#chang-tier-prim-vol).
+
+- You can use the IBM Cloud&reg; carbon calculator to track, analyze, and manage your greenhouse gas (GHG) emissions for {{site.data.keyword.powerSys_notm}} data from workspaces on Power10 or later systems. For more information, see [Using carbon calculator with Power Virtual Server](/docs/power-iaas?topic=power-iaas-carbon-cal).
+
+- You can use the {{site.data.keyword.powerSys_notm}} user interface to create and manage the instance snapshots for your VSIs. For more information, see [Creating a snapshot by using the Power Virtual Server user interface](/docs/power-iaas?topic=power-iaas-snapshots-cloning#create-snapshot-gui).
+
+- The RHEL 9.6 general purpose (RHEL9-SP6) OS stock image is available in the IBM OS Image Catalog. The image is supported on IBM Power9, Power10, and Power11 systems.
 
 
 
@@ -116,9 +127,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 {: important}
 
 
-
-
-
 ## June 2025
 {: #June-2025}
 {: release-note}
@@ -140,8 +148,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
   - RHEL9.2 general purpose
   - RHEL8.4 for SAP (HANA)
   - RHEL8.4 for SAP NetWeaver
-
-
 
 
 
@@ -244,7 +250,7 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-- The pricing for IBM Power Subscription plan to provision VMs with SAP BYOL or Linux BYOL images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
+- The pricing for IBM Power Subscription plan to provision VMs with SAP bring your own license or Linux bring your own license images is now based on a flat subscription rate instead of metered usage charges. For more information, see [Using SLES within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-using-linux) or [Using RHEL within the Power Virtual Server](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
 
 
 ## February 2025

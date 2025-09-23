@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2025
 
-lastupdated: "2025-09-17"
+lastupdated: "2025-09-18"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -42,6 +42,7 @@ GRS on {{site.data.keyword.powerSys_notm}} has the following benefits:
 
 - Removes the dedicated networks that are overpriced for replication and avoids bandwidth upgrades.
 
+
 Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers in which storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both the directions.
 
 
@@ -64,6 +65,7 @@ In the following table, the terms that are used throughout the document are defi
 
 ## GRS in the [{{site.data.keyword.on-prem}}]{: tag-red}
 {: #grs-on-prem}
+
 
 Enabling GRS in the {{site.data.keyword.on-prem-fname}} enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} provides.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-25"
+lastupdated: "2025-09-22"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -216,7 +216,7 @@ The pricing for memory is calculated based on a ratio of 64 GB per core. For exa
 ## Operating systems
 {: #operating-systems}
 
-Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription, you can subscribe to an updated or upgraded package from a Red Hat Satellite server. To subscribe, configure the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you Bring Your Own License (BYOL), it is not metered or billed.
+Linux and AIX operating systems are supported and only RHEL stock images are available. For more information about supported versions and distributions, see [Full Linux subscription for Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub). When you select a RHEL Linux stock image, the pricing includes the full Linux subscription charges. By using the Full Linux subscription, you can subscribe to an updated or upgraded package from a Red Hat Satellite server. To subscribe, configure the provisioned virtual machine. The usage meter for RHEL full Linux subscription starts when you create the virtual machine. If you bring your own license, it is not metered or billed.
 
 If you bring your own custom image, you are charged for the image size and the storage tier that you use for the custom image. After you deploy a stock image (and only after deployment), you are charged for the space that is used to store the stock image. The storage unit price (per GB) for the stored boot images is the same as the selected storage tier (Tier 0, Tier 1, or Tier 3) where your boot disks are deployed. To estimate the storage rates, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. To reduce costs, select the virtual machine that is not needed and delete it.
 

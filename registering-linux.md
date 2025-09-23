@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-08"
+lastupdated: "2025-09-22"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -66,7 +66,7 @@ You cannot contact the SUSE-based repository and download the appropriate softwa
 ## Capturing and importing a SLES image
 {: #preparing-linux-image}
 
-To use SLES within the {{site.data.keyword.powerSys_notm}}, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also BYOL. If you cannot use PowerVC to capture an image, see the [Power OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
+To use SLES within the {{site.data.keyword.powerSys_notm}}, you can use the [IBM Power Virtualization Center (PowerVC)](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_images_hmc.html){: external} to capture your Linux image, then [import it](/docs/power-iaas?topic=power-iaas-deploy-custom-image) as an Open Virtualization Appliance (OVA) file. You must also bring your own license. If you cannot use PowerVC to capture an image, see the [Power OVA image capture](/docs/power-iaas?topic=power-iaas-linux-deployment#vios-capture) instructions.
 
 ## Linux networking
 {: #sles-linux-networking}

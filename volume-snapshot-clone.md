@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-08"
+lastupdated: "2025-09-22"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -12,8 +12,6 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 # Snapshots, restoring, and cloning
 {: #snapshots-cloning}
@@ -41,6 +39,14 @@ The snapshot feature has several use cases. Consider the following example:
 - The administrator completes the following steps:
 
 
+   1. Initiate the snapshot of the source disk where the middleware information resides by using the GUI, API, or CLI. A snapshot of the source disk is created.
+
+   2. Upgrade the middleware.
+
+   3. If the upgrade fails, the administrator restores the source disk by using the snapshot.
+
+   4. If the upgrade succeeds, the administrator deletes the snapshot.
+
 
 You can initiate multiple snapshot operations. However, these concurrent snapshot operations occur on different sets of disks.
 {: note}
@@ -53,9 +59,9 @@ A snapshot is a copy of the state of a volume or a set of volumes that is taken 
 
 
 
-With the snapshot interface, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
+With snapshots, you can create a relationship between your source disks and a target disk at a defined time, for example **T1**. Target disks are created as part of creating a snapshot operation. The snapshot operation tracks the changes that are made to the source disk beyond **T1** time. Thus, you can restore the source disks to their **T1** state at a later point in time.
 
-
+You can create and manage snapshots in your {{site.data.keyword.powerSys_notm}} workspace by using the GUI, API, and CLI.
 
 
 
@@ -64,7 +70,7 @@ With the snapshot interface, you can create a relationship between your source d
 
 - Before you take a snapshot of a volume, it is recommended that you quiesce all the applications that access the volume. This action is required to ensure that all the data is moved to the disk to avoid loss of data.
 
-- If you are creating a snapshot of a volume that is shared among multiple virtual server instances (VMs) then you must quiesce all the applications on all these VMs. If you are not sure how to quiesce your applications, it is recommended to shut down any VMs attached to the volumes that you want to include in the snapshot.
+- If you are creating a snapshot of a volume that is shared among multiple virtual server instances, then you must quiesce all the applications on all these virtual server instances. If you are not sure how to quiesce your applications, it is recommended to shut down any virtual server instances that are attached to the volumes that you want to include in the snapshot.
 
 - Snapshot names must be unique for your workspace. If you want to reuse a snapshot name, delete the existing snapshot with that name, and then reuse the name.
 
@@ -72,6 +78,58 @@ With the snapshot interface, you can create a relationship between your source d
 
 - Volumes to be included in the snapshot must not be in the `error` state and the health state of the volume must be `ok`.
 
+
+
+### Creating a snapshot by using the {{site.data.keyword.powerSys_notm}} user interface
+{: #create-snapshot-gui}
+
+To create a snapshot by using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
+
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external} and log in with your credentials.
+
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+
+3. Select a workspace in which you want to create the snapshot. The Workspace details panel is displayed.
+
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
+
+5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of any existing snapshots.
+
+6. Click **Create instance snapshot**. The Create instance snapshot page is displayed.
+
+7. In the General section, enter a name for the snapshot in the **Name** field.
+
+8. Optional: Enter user tags and description for the snapshot in the **User tags (optional)** and **Description** fields.
+
+9. Click **Continue**.
+
+10. In the Volumes section, select the required virtual server instance from the **Select virtual server instance** list. Any storage volumes that are attached to the selected virtual server instance are displayed.
+
+11. Select the storage volumes to include in the snapshot and click **Finish**. The summary of the selected snapshot configuration and its total estimated cost is displayed in the Summary panel.
+
+    You can select multiple storage volumes to include in the snapshot. However, all the selected volumes must belong to the same storage pool.
+    {: note}
+
+12. Optional: Click **Add to estimate** to add the cost information to an existing estimate or to create a new estimate.
+
+13. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and click **Create**. After the snapshot is successfully created, a success message is displayed on the screen.
+
+The snapshot that you created is displayed in the Instance snapshots page with the following details:
+
+- **Name**: Snapshot name.
+- **Volumes**: Number of storage volumes that are included in the snapshot.
+- **Description**: Snapshot description.
+- **Virtual server instance**: Name of the virtual server instance to which the selected storage volumes were attached at the time of the snapshot creation.
+- **Created**: Timestamp that indicates when the snapshot was created.
+- **Status** and **Status details**: These two columns display the current status of a snapshot. A snapshot can have one of the following statuses:
+     - **Available**: The snapshot was successfully created and is available for restore operations.
+     - **Error**: An error has occurred while creating the snapshot. The snapshot cannot be recovered and must be deleted.
+     - **Restoring**: A restore operation is currently in progress.
+     - **Restore error**: An error has occurred during the restore process. You can use the **Restore** option from the overflow menu to retry the restore process. To revert a snapshot with *Restore error* status to its last working state, you can use the **Rollback** option from the **Actions** menu on the snapshot's details page.
+     - **Restore reverted**: The restore attempt was reverted, likely because a storage volume that is included in the snapshot is currently involved in another snapshot operation. You can retry the restore once the other snapshot operation is complete.
+     - **Rolling back**: A rollback operation is currently in progress. The rollback operation reverts the virtual server instance to its last working state.
+     - **Rollback error**: An error has occurred during the rollback process.
+- **Last update**: Timestamp that indicates when the snapshot was last updated.
 
 
 
@@ -92,7 +150,7 @@ You must provide values for the following parameters in the API and CLI commands
     {: note}
 
 * `description`: (Optional) Describes the snapshot.
-* `volumeIDs`: (Optional) Includes a list of one or more volumes to be included in the snapshot. If this parameter is left empty, all volumes that are attached to the Power virtual machine (PVM) Instance are included in the snapshot.
+* `volumeIDs`: (Optional) Includes a list of one or more volumes to be included in the snapshot. If this parameter is left empty, all volumes that are attached to the virtual server instance (VSI) are included in the snapshot.
 
 
 ### Restrictions and considerations for creating a snapshot
@@ -100,17 +158,31 @@ You must provide values for the following parameters in the API and CLI commands
 
 You must consider the following restrictions and considerations when you create a snapshot:
 
-- You cannot run PVM Instance snapshot operations in parallel from different PVM Instances for the same shared volume at a specific time.
 
-- You cannot resize a volume if the volume is included in a PVM Instance snapshot. To resize such a volume, you must first delete all the instance snapshots that the volume is part of.
 
-- You cannot detach volumes from the PVM Instance that are included in an instance snapshot. To detach such volumes, you must first delete all the instance snapshots these volumes are a part of.
 
--	You must attach all volumes that are included in the snapshot to the same PVM Instance.
+- You cannot create a snapshot of a virtual server instance if any of its attached volumes are currently undergoing cloning or snapshot operations.
 
--	If the `volumeIDs` option is not specified, all volumes that are attached to the PVM Instance are included in the snapshot.
+- You cannot modify the shareable or bootable properties of any volume that is part of an existing snapshot.
 
--	If the volumes that are attached to the PVM Instance are not in the same storage pool, then use the `volumeIDs` option to include the volumes that are in the same storage pool. In this case, you must group the volumes from the same storage pool and create a snapshot for each volume group in the storage pool.
+
+
+- You cannot run snapshot operations in parallel from different virtual server instances for the same shared volume at a specific time.
+
+- You cannot resize a volume if the volume is included in a virtual server instance snapshot. To resize such a volume, you must first delete all the snapshots that the volume is part of.
+
+- You cannot detach volumes from the virtual server instance that are included in an instance snapshot. To detach such volumes, you must first delete all the snapshots these volumes are a part of.
+
+-	You must attach all volumes that are included in the snapshot to the same virtual server instance.
+
+
+
+-	When you create a snapshot by using the API or CLI, the `volumeIDs` parameter is optional. If the `volumeIDs` option is not specified, all volumes that are attached to the virtual server instance are included in the snapshot.
+
+
+
+
+-	If the volumes that are attached to the virtual server instance are not in the same storage pool, then use the `volumeIDs` option to include the volumes that are in the same storage pool. In this case, you must group the volumes from the same storage pool and create a snapshot for each volume group in the storage pool.
 
 If the operation to create a snapshot fails, it results in an `error` state. You can delete this snapshot so that no other operations can be performed on it.
 {: important}
@@ -118,25 +190,57 @@ If the operation to create a snapshot fails, it results in an `error` state. You
 ## Restoring a snapshot
 {: #restoring-snapshot}
 
-The `restore` operation restores the volumes that are part of a VM snapshot to the source disks. When the restore operation is in progress, {{site.data.keyword.powerSys_notm}} creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, the snapshot status is set to `restore-error`. You can attempt to retry the restore or roll back operations to their original state. Use the `restore_fail_action` query parameter with `retry` value to retry the restore operation. To roll back to a previous disk state, use the `restore_fail_action` query parameter with the `rollback` value. When the restore operation fails, the VM enters an **Error** state.
+The `restore` operation restores the volumes that are part of a virtual server instance snapshot to the source disks. When the restore operation is in progress, {{site.data.keyword.powerSys_notm}} creates a backup snapshot, which can be used if the restore operation fails. If the restore operation succeeds, the backup snapshots are deleted. If the restore operation fails, the snapshot status is set to `restore-error`. You can attempt to retry the restore or roll back operations to their original state. Use the `restore_fail_action` query parameter with `retry` value to retry the restore operation. To roll back to a previous disk state, use the `restore_fail_action` query parameter with the `rollback` value. When the restore operation fails, the virtual server instance enters an **Error** state.
 
 ### Prerequisites
 {: #restoring-snapshot-prereq}
 
 Ensure that the following prerequisites are met before you initiate the `restore` operation:
 
-- By default, you must shut down the PVM Instance before you initiate the `restore` operation.
+- By default, you must shut down the virtual server instance before you initiate the `restore` operation.
 
-- To restore the data on a live PVM Instance, use the `force restore` operations. The following conditions must be met:
+- To restore the data on a live virtual server instance, use the `force restore` operations. The following conditions must be met:
+
   - Quiesce the applications
   - Do not run I/O operations on the volume disks
 
   Failure to meet the conditions for `force restore` operation can result in data corruption.
   {:important}
 
-- If you are restoring an instance snapshot of a volume that is shared among multiple VMs then you must quiesce all the applications on all VMs. Also, no I/O operations must be running on the shared volumes during the restore operation.
+- If you are restoring an instance snapshot of a volume that is shared among multiple virtual server instances, then you must quiesce all the applications on all the virtual server instances. Also, no I/O operations must be running on the shared volumes during the restore operation.
 
-- If you are not sure how to quiesce your applications, it is recommended to shut down any VMs attached to the volumes that you want to include in the snapshot.
+- If you are not sure how to quiesce your applications, it is recommended to shut down any virtual server instances that are attached to the volumes that you want to include in the snapshot.
+
+
+
+### Restoring a snapshot by using the {{site.data.keyword.powerSys_notm}} user interface
+{: #restore-snapshot-gui}
+
+To restore a snapshot by using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
+
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external} and log in with your credentials.
+
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+
+3. Select the workspace which contains the snapshot that you want to restore. The Workspace details panel is displayed.
+
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
+
+5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of the existing snapshots.
+
+6. From the list of available snapshots, select the snapshot that you want to restore. The snapshot details page is displayed.
+
+7. Select **Restore**. The Confirm restore dialog is displayed.
+
+    To restore an instance snapshot, you must first shut down all the related virtual server instances, including the source and any shared volumes that are attached to the instance snapshot. If you cannot shut down the virtual server instances, quiesce all the related applications and set **Force restore** to **Enabled**.
+    {: important}
+
+8. Click **Restore**.
+
+   When the restore begins, a notification is displayed to indicate that the restore process has started and a progress bar displays the completion percentage. After the snapshot is restored successfully, the **Status details** column displays the Restore successfully completed status.
+
+A failed restore operation changes the snapshot status to **Restore error**. You can use the **Restore** option from the overflow menu to retry the restore process. To revert a snapshot with *Restore error* status to its last working state, select **Rollback** from the **Actions** menu on the snapshot's details page.
+{: note}
 
 
 
@@ -154,8 +258,8 @@ Use the following API and CLI commands to restore a snapshot:
 You must provide values for the following parameters in the API and CLI commands:
 
 * `SNAPSHOT_ID`: (Required) Specify a unique identifier for the snapshot
-* `force`: (Optional) Specify the value of the flag as `True` or `False`. By default, the flag is set to `False`. This flag is set to `true` only if the VM instance is shut down. By default, the VM must be shut down before you initiate a snapshot restore operation. When the `force` flag is set to `True`, the prerequisite of the VM being shut down is relaxed.
-* `restore`: (Optional) Use the `restore_fail_action` query parameter only if a previous restore operation results in setting the PVM Instance snapshot to `restore-error` status. The `restore_fail_action` query parameter accepts the following `retry` or `rollback` values:
+* `force`: (Optional) Specify the value of the flag as `True` or `False`. By default, the flag is set to `False`. This flag is set to `true` only if the virtual server instance is shut down. By default, the virtual server instance must be shut down before you initiate a snapshot restore operation. When the `force` flag is set to `True`, the prerequisite of the virtual server instance being shut down is relaxed.
+* `restore`: (Optional) Use the `restore_fail_action` query parameter only if a previous restore operation results in setting the snapshot to the `restore-error` status. The `restore_fail_action` query parameter accepts the following `retry` or `rollback` values:
   * If the snapshot status is set to `retry`, then again the failed restore operation is attempted.
   * If the snapshot status is set to `rollback`, then the volumes that were failed to be restored are rolled back to their original state.
 
@@ -166,22 +270,21 @@ If you are using the `force` option, you must ensure that all the applications t
 
 Consider the following scenarios to restore a snapshot:
 
-- Restoring all of the volumes that are part of a VM snapshot
-- Running multiple VM restore operations
-- Retrying a VM restore operation if it originally failed
-- Rolling back a VM to its original volume state
-
+- Restoring all of the volumes that are part of a virtual server instance snapshot
+- Running multiple virtual server instance restore operations
+- Retrying a virtual server instance restore operation if it originally failed
+- Rolling back a virtual server instance to its original volume state
 
 ### Restrictions and considerations
 {: #restoring-snapshot-rest-cons}
 
-* Before the system begins the `restore` operation of the PVM Instance snapshot, a temporary backup snapshot of the volumes is created for internal use only. If the snapshot `restore` operation fails, the temporary backup is used by the system to restore the PVM Instance to the state before the `restore` operation failed.
+* Before the system begins the `restore` operation of the snapshot, a temporary backup snapshot of the volumes is created for internal use only. If the snapshot `restore` operation fails, the temporary backup is used by the system to restore the virtual server instance to the state before the `restore` operation failed.
 
 * Volume restore operation is not allowed if any copy operations are running on the target volume. The volumes in the instance snapshot are validated to ensure that no copy operations are running against them. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
 
-* When you perform a `restore` operation on a PVM Instance snapshot, the PVM Instance task status changes to `restoring`, the volume status is changed to `reverting`, and no other PVM Instance operations are allowed.
+* When you perform a `restore` operation, the snapshot task status changes to `restoring`, the volume status is changed to `reverting`, and no other snapshot operations are allowed.
 
-* When `restore` operation on a PVM Instance snapshot fails, the PVM Instance status changes to `restore-Error` state. You can retry the PVM Instance snapshot `restore` operation or you can request to roll back the PVM Instance to its original state it was in before the restore operation failed.
+* When `restore` operation on a virtual server instance snapshot fails, the virtual server instance status changes to `restore-Error` state. You can retry the `restore` operation or you can request to roll back the virtual server instance to its original state it was in before the `restore` operation failed.
 
 * If you perform a `restore` operation on the shared volume, all the virtual machines that are sharing the volume are restored.
 
@@ -189,9 +292,64 @@ Consider the following scenarios to restore a snapshot:
 
 * Before you perform a `restore` operation on a boot disk, the virtual machine must be shut down and the status must change to `shutoff` state.
 
-* After successful `restore retry` operation, the VM state might not reset from `Error` state. Use `Reset State` feature on the GUI to reset the VM state.
+* After successful `restore retry` operation, the virtual server instance state might not reset from `Error` state. Use `Reset State` feature on the GUI to reset the virtual server instance state.
 
-* You cannot restore a PVM Instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
+* You cannot restore a virtual server instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
+
+
+
+* To restore volumes that are enabled for volume replication with Global Replication Services (GRS), all the volumes must be part of the same volume group. The restore operation fails when a snapshot contains multiple GRS-enabled volumes from different volume groups.
+
+
+
+
+
+## Deleting a snapshot
+{: #delete-snapshot}
+
+You can delete a snapshot by using the GUI, API, or CLI.
+
+You cannot delete a virtual server instance if it has one or more associated snapshots. You must delete all the associated snapshots before you can delete the virtual server instance.
+{: important}
+
+### Deleting a snapshot by using the {{site.data.keyword.powerSys_notm}} user interface
+{: #deleting-snapshot-gui}
+
+To delete a snapshot using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
+
+1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external} and log in with your credentials.
+
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+
+3. Select the workspace which contains the snapshot that you want to delete. The Workspace details panel is displayed.
+
+4. Click **View virtual servers**. The Virtual server instances page is displayed.
+
+5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of the existing snapshots.
+
+6. From the list of available snapshots, select the snapshot that you want to delete. The snapshot details page is displayed.
+
+7. Select **Delete** from the **Actions** menu. The Confirm delete dialog is displayed.
+
+8. Type the confirmation text and click **Delete**.
+
+You cannot recover a snapshot after it is successfully deleted.
+{: important}
+
+
+### Deleting a snapshot by using API or CLI commands
+{: #deleting-snapshot-api-cli}
+
+Use the following API and CLI commands to delete a snapshot:
+
+* **API**: [Delete a PVM instance snapshot of a cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-snapshots-delete){: external}.
+
+* **CLI**: [ibmcloud pi snapshot-delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-delete){: external}.
+
+You must provide values for the following parameters in the API and CLI commands:
+
+* `SNAPSHOT_ID`: (Required) Specify a unique identifier for the snapshot
+
 
 
 
@@ -200,7 +358,7 @@ Consider the following scenarios to restore a snapshot:
 
 Each snapshot that you create is monitored during every hour and charged depending on the disk space that is requested for the snapshot. The space that is used by a snapshot is charged at 30% of the base rate.
 
-For example, consider that you have **M** disks on a VM that add up to 600 GB of space. The **M** disks are used as source disks for snapshots. The following charges are applicable on **M** disks:
+For example, consider that you have **M** disks on a virtual server instance that add up to 600 GB of space. The **M** disks are used as source disks for snapshots. The following charges are applicable on **M** disks:
 
 - If you create one snapshot, you are charged for the disk space that is used by the base 600 GB of **M** disks plus 30% of 600 GB of disk space. That is, 600 GB (space of M disks) + 180 GB (30% of 600 GB) = 780 GB of disk space.
 - If you create another snapshot by using same disks, you are charged for the disk space that is used by **M** disks. That is, 600 GB (space of M disks) + (30% of 600 GB) + (30% of 600 GB) = 960 GB of disk space.
@@ -409,12 +567,12 @@ You must consider the following restrictions and considerations before you cance
 
 
 ### Deleting a volumes-clone request
-{: del-vol-clone-req}
+{: #del-vol-clone-req}
 
 When a volumes-clone request is no longer required, you can delete the request by initiating the volumes-clone delete operation.
 
 #### Prerequisites
-{: del-vol-clone-prereq}
+{: #del-vol-clone-prereq}
 
 The volumes-clone request must be in one of these final statuses: `Completed`, `Failed`, or `Cancelled`.
 
@@ -433,18 +591,18 @@ You must provide values for the following parameters in the API and CLI commands
 - `Force`: (Optional) Force the cancellation of a volumes-clone request. The `cancel` operation is allowed only if the status is set to `prepared` or `available`. When the status is set to `True`, the `cancel` operation is allowed when the status is set to `NOT completed`, `cancelling`, `cancelled`, or `failed`.
 
 #### Restrictions and considerations
-{: del-vol-clone-res-con}
+{: #del-vol-clone-res-con}
 
 If the volumes-clone request is not in one of the final statuses that is required for deletion, you can cancel the request, do any remaining cleanup, and transition the status to `Cancelled`. If the volumes-clone request is in the `Cancelled` status, the request can be deleted.
 
 ### Getting the status for a volumes-clone request
-{: get-vol-clone-req}
+{: #get-vol-clone-req}
 
 
 This API request returns detailed information about the status of the volumes-clone request. For example, the list of source volumes that are getting cloned and the list of cloned volumes when the `execute` operation is successfully completed.
 
 #### Prerequisites
-{: get-vol-clone-prereq}
+{: #get-vol-clone-prereq}
 
 None.
 
@@ -459,18 +617,18 @@ None.
 Provide a value for the `volume-clones-id` field. The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
 
 #### Restrictions and considerations
-{: get-vol-clone-res-con}
+{: #get-vol-clone-res-con}
 
 None.
 
 
 ### Getting the list of volumes-clone request
-{: getlist-vol-clone-req}
+{: #getlist-vol-clone-req}
 
 The API request provides a list of all volumes-clone requests in a workspace and the status of each request.
 
 #### Prerequisites
-{: getlist-vol-clone-prereq}
+{: #getlist-vol-clone-prereq}
 
 None.
 
@@ -493,7 +651,7 @@ Provide one of the values to the `filter` parameter from the following list:
 - `finalized` - included status values (completed, failed, cancelled)
 
 #### Restrictions and considerations
-{: getlist-vol-clone-res-con}
+{: #getlist-vol-clone-res-con}
 
 You must consider the following restrictions and considerations before you get the list of volumes-clone requests:
 
@@ -507,7 +665,6 @@ You must consider the following restrictions and considerations before you get t
 
 The following are some of the frequently asked questions on snapshots and cloning that are documented on the FAQ page:
 - [What are the key differences between a snapshot and a clone?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-vs-clone)
-- [Is there any UI to perform snapshot or clone operations?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-ui)
 - [Are there any initial snapshot requirements in terms of storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-storage-req)
 - [Does the snapshot and volume clone support any safeguard policy?](/docs/power-iaas?topic=power-iaas-powervs-faqs#snap-clone-safeguard)
 - [Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?](/docs/power-iaas?topic=power-iaas-powervs-faqs#poweha-toolkit)

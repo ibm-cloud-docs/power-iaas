@@ -187,6 +187,7 @@ toc:
       - topicgroup:
             label: Observability
             topics:
+              - carbon-calculator.md
               - sysdig-monitoring-pvs.md
               - at-events.md
 # Mukesh to provide the content             - migrate-ibmi-data-ibmi-vm.md

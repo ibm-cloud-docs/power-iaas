@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-09-04"
+lastupdated: "2025-09-22"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
