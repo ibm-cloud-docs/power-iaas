@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-22"
+lastupdated: "2025-09-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -34,6 +34,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 - You can use the IBM Cloud&reg; carbon calculator to track, analyze, and manage your greenhouse gas (GHG) emissions for {{site.data.keyword.powerSys_notm}} data from workspaces on Power10 or later systems. For more information, see [Using carbon calculator with Power Virtual Server](/docs/power-iaas?topic=power-iaas-carbon-cal).
 
 - You can use the {{site.data.keyword.powerSys_notm}} user interface to create and manage the instance snapshots for your VSIs. For more information, see [Creating a snapshot by using the Power Virtual Server user interface](/docs/power-iaas?topic=power-iaas-snapshots-cloning#create-snapshot-gui).
+
+- You can deploy SR3 SAP HANA profiles on IBM Power11 processor-based servers. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
 
 - The RHEL 9.6 general purpose (RHEL9-SP6) OS stock image is available in the IBM OS Image Catalog. The image is supported on IBM Power9, Power10, and Power11 systems.
 
