@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-22"
+lastupdated: "2025-09-26"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -211,6 +211,7 @@ Red Hat
 
 SUSE [^footnote8]
 
+* SLES 15 SP7 general purpose (SLES15)  [^footnote12]
 * SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
@@ -228,6 +229,7 @@ SUSE [^footnote8]
 [^footnote11]: RHEL 9.6 GP is supported on IBM Power9, Power10 and Power11 systems.
 
 [^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
+[^footnote12]: SLES 15 SP7 GP is supported on IBM Power9, Power10 and Power11 systems.
 [^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
 [^footnote8]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
@@ -428,7 +430,14 @@ To migrate your VM from one data center to another, you must capture and export 
 {: #pinning}
 {: faq}
 
+
+
 You can choose a pinning policy: _soft pin_ or _hard pin_, to pin a VM to the host where it is running. When you _soft pin_ a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you _hard pin_ a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is _none_.
+
+
+
+
+
 
 ## What does it mean to set an affinity or anti-affinity rule?
 {: #affinity}
