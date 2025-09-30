@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-30"
 
 ---
 
@@ -20,13 +20,13 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 
 ### CLI v1.7.0
 
-CLI plug-in version 1.7.0 is available for the IBM Power Virtual Server in IBM data center and IBM Power Virtual Server Private Cloud in the Client location. In this release, the CLI is updated to use the latest version of the internationalization package. Also, messages and options are updated to use new description guidelines.
+CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use new description guidelines.
 
 **New commands**
 
 The following CLI commands are added to the IBM Power Virtual Server Private Cloud workspaces:
 
-- [ibmcloud pi network-peer](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer). You can use this command to create, delete, get, list, and update network peering connection, and list peer network interfaces.
+- [ibmcloud pi network-peer](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer). You can use this command to create, delete, get, list, and update network peering connection. In addition, you can use this command to list peer network interfaces.
 - [ibmcloud pi network-peer route-filter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer-route-filter). You can use this command to create, delete, and get the details of the route filters in the network peering connection.
 
 
