@@ -830,6 +830,9 @@ A volume can be either shareable or bootable, but cannot be both.
 
 After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
 
+
+
+
 ## Changing the tier of a primary volume
 {: #chang-tier-prim-vol}
 
