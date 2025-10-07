@@ -778,6 +778,10 @@ Use the following API and CLI commands to delete the auxiliary volume:
 
 - **CLI**: [ibmcloud pi volume delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete). Set the `VOLUME_ID` parameter to an auxiliary volume ID that must be deleted.
 
+
+
+
+
 ## Modifying a replication-enabled primary volume
 {: #modify-rep-prim-vol}
 
