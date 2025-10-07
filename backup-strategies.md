@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-04-07"
+lastupdated: "2025-10-07"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -36,9 +36,15 @@ Learn more about different AIX and Linux backup strategies for IBM&reg; Power Sy
 ## Secure automated backup with Compass for AIX and Linux®
 {: #baas}
 
-IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called Secure Automated Backup with Compass® from now on referred as “Backup Offering.”
+
+
+IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called as Secure Automated Backup with Compass® from now on referred as “Backup Offering.”
 
 The Backup Offering is powered by Cobalt Iron Compass and is accessible from the {{site.data.keyword.cloud_notm}} [catalog](https://cloud.ibm.com/catalog){: external}.
+
+
+
+
 
 ## Deploying the backup instance
 {: deploy-backup-inst-dc}
@@ -94,7 +100,7 @@ The Backup as a Service (BaaS) VPC is created when the Backup Offering is provis
 - VPE for secure connectivity to each of the backup servers
 - Security group with inbound rule, address prefix, and subnet
 
-The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of a Direct Link connection.
+The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of the Direct Link connection.
 
 #### Dual copy Backup Offering
 {: #dual-copy-backup}
@@ -119,7 +125,7 @@ The Backup Offering VPC is a managed backup server instance that is deployed whe
 - VPE for each of the backup servers
 - Security group with inbound rule, address prefix, and subnet
 
-The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of a Direct Link connection.
+The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of the Direct Link connection.
 
 
 ### Provisioning the backup instance in {{site.data.keyword.off-prem}}
@@ -140,7 +146,7 @@ It is recommended not to deploy any additional resources to the Backup Offering 
 
 4. Define the fields – **Pricing plan**, **Service name**, **Resource group**, your **IBM Cloud API key**, and Compass organization name according to your business needs. Also, specify the VPC subnet IP range that you want to use to access the Compass Vaults.
 5. Click **Create**.
-6. Compass creates and connects the Backup VPC to the {{site.data.keyword.powerSys_notm}} workspace that you want to back up by using the local Transit Gateway. A Transit Gateway is created if it does not exist.
+6. Compass creates and connects the Backup VPC to the {{site.data.keyword.powerSys_notm}} workspace that you want to back up by using the local Transit Gateway. The Transit Gateway is created if it does not exist.
 
     For more information, see [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui) and [Using virtual private endpoints for VPC to privately connect to IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-vpe-connection&interface=cli).
 
@@ -155,7 +161,7 @@ When you use the Backup Offering, you are billed monthly through IBM Cloud for t
 
 In your account, the following deployments are made:
 
-* Establishes the connectivity between {{site.data.keyword.powerSys_notm}} instances and the backup server through a Transit Gateway connection to the backup VPC. The automation when the Backup Offering is provisioned establishes this connection.
+* Establishes the connectivity between {{site.data.keyword.powerSys_notm}} instances and the backup server through the Transit Gateway connection to the backup VPC. The automation when the Backup Offering is provisioned establishes this connection.
 
 * Achieve the name resolution for the backup server connection by using the file on the agent system available at `/etc/hosts` path or by adding `CNAME` entries to the DNS server associated with the agent system.
 
