@@ -1,0 +1,1 @@
+Select either [JIRA-POWERIAAS-16879-start]{: tag-green} **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** [JIRA-POWERIAAS-16879-end]{: tag-green}for the region.

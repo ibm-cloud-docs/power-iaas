@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-10-08"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -190,8 +190,9 @@ Complete the following steps to provision a new instance by using a custom boot 
 1. Before you create a new {{site.data.keyword.powerSys_notm}} instance, go to **Boot images** and click **Import**.
 
 2. After you click **Import**, refer to the following table to complete the **Import boot image** fields:
-    The **Image file name** field supports the following formats: *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*.
-    {: important}
+
+The **Image file name** field supports the following formats: *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*.
+{: important}
 
 | Field                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
