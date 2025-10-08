@@ -202,7 +202,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-    For more information, see [Configuring for large quantity of volumes](#config-large-vol).
+For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
 7.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
