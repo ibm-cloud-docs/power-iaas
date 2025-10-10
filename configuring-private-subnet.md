@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}}, providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
+You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}} by providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}
 
 How the private network subnet is configured depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} Workspace, which can use one of the following four approaches:
