@@ -197,8 +197,12 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
 
-    <s>Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VMs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VMs.</s>
+    
+
+    Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VMs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VMs.
     {: note}
+
+    
 
     
 
