@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-05"
+lastupdated: "2025-10-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -140,7 +140,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **General**                                   |                                             |                                                           |                                                                                                                                                              |
-| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN \n * IBM i DB2 Web Query                                                                                                                               |
+| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN  Query                                                                                                                               |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
 | Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n * SAP workloads                                                                                                         |
@@ -231,8 +231,7 @@ Refer to the following table to view the part number descriptions and the associ
 | IBM i P10 LPP core-hour                                                                     | power-iaas-metric-ibmi-lpp-p10                 |
 | IBM i LPP P10 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p10-mol             |
 | IBM i P30 LPP core-hour                                                                     | power-iaas-metric-ibmi-lpp-p30                 |
-| IBM i LPP P30 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p30-mol             |
-| IBM i Db2 Web Query instance core-hour                                                      | power-iaas-metric-ibmi-db2wq                   |
+| IBM i LPP P30 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p30-mol                        |
 | IBM i P05 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p05-tier             |
 | IBM i P10 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p10-tier             |
 | IBM i P20 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p20-tier             |
