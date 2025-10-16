@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-16"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -140,7 +140,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **General**                                   |                                             |                                                           |                                                                                                                                                              |
-| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN  Query                                                                                                                               |
+| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN                                                                                                                                |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
 | Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n * SAP workloads                                                                                                         |
