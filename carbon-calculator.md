@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-16"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -37,7 +37,6 @@ A carbon calculator can perform the following functions:
 - Display the GHG emission data for an account.
 - Monitor the electricity consumption for services, resources, and the location and efficiency of your data centers.
 - Track the GHG emissions that are associated with your account to manage and mitigate your carbon footprint over time.
-
 
 
 
@@ -123,7 +122,7 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 The data for your workspace is not displayed in the carbon calculator or you are not be able to see the data for your workspace because of the following reasons:
 - Only the data from your workspaces on IBM Power10 or later systems is used to calculate the carbon emissions. If your workspace is on IBM Power9 or previous generations, the carbon emissions data is not available.
 - You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=api#billing-acct-mgmt-api){: external}.
-- The Power Usage Effectiveness (PUE) and Carbon Efficiency Factor (CEF) for your workspace location is set to zero. For more information about PUE and CEF, see [Energy and carbon quantification methodology](https://cloud.ibm.com/media/docs/downloads/account/carbon-calc-method-v5.pdf){: external}.
+
 
 
 ### How to view and export GHG emissions for an account in the carbon calculator?
@@ -131,6 +130,8 @@ The data for your workspace is not displayed in the carbon calculator or you are
 {: #faq-ccc}
 
 To view and export GHG emissions data for an account, you must have account owner, administrator, or viewer level access on the billing service. For more information, see [Tracking account emissions with carbon calculator](https://cloud.ibm.com/docs/account?topic=account-tracking-emissions-account){: external}.
+
+
 
 
 ### How to extract GHG emissions data by using API?
