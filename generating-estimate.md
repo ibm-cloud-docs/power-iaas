@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-09"
+lastupdated: "2025-10-17"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -59,7 +59,7 @@ You are not charged for creating an estimate. The resources that you estimate ca
 
 12. Click **Save**.
 
-10. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
+13. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
 
 
 ### Estimating {{site.data.keyword.powerSys_notm}} resources in an {{site.data.keyword.off-prem}}
