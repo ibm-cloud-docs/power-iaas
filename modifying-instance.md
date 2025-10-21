@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-21"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -47,20 +47,14 @@ To modify a VSI after its [initial creation](/docs/power-iaas?topic=power-iaas-c
 
 5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
 
-
-
 From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
 - [Changing the pinning state and server placement group](#edit-vsi-pinning-placement)
 - [Resizing the capacity of a VSI](#resize-core-mem)
+- [Changing licenses for an IBM i-based VSI](#change-ibmi-license)
 - [Managing the storage volumes](#modifying-volume-network)
 - [Adding or removing a public network](#adding-removing-network)
-
-
-
-
-
 
 ### Changing the VSI name
 {: #edit-vsi-name}
@@ -170,7 +164,27 @@ To edit a VSI and resize its capacity, complete the following steps:
     If the VSI that you are editing is in inactive state, you can change the **Core type** to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
     {: tip}
 
+### Adding or removing additional software licenses for an IBM i-based VSI
+{: #change-ibmi-license}
 
+After you provision an IBM i-based VSI with the base IBM i OS license, you can modify the VSI to add or remove additional software licenses. To add or remove additional software licenses for the VSI, complete the following steps:
+
+1. From the Virtual server instances page, select the IBM i-based VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
+
+2. On the **Overview** tab, click the **Edit** icon next to Software licenses in the IBM i licensing section. The Edit licenses panel is displayed.
+
+3. Select the additional software licenses that you want to add. To remove a license, clear the corresponding checkbox. The total estimated cost for the selected licenses is displayed. The available options are:
+    - IBM Cloud Storage Solutions for IBM i
+    - IBM PowerHA SystemMirror for IBM i
+    - IBM Rational Development Studio for IBM i
+
+4. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and then click **Save**.
+
+You can also use the IBM i licensing section to change or assign virtual server number (VSN) for an IBM i-based VSI. The VSI must be in the *Shutoff* state before performing this operation.
+{: tip}
+
+To apply or remove an IBM i software key, the VSI must be active and in the running state. If you have already ran a resize operation, you must wait until the resize operation completes and the VSI returns to the *Active* state.
+{: note}
 
 ## Managing your storage volumes
 {: #modifying-volume-network}
