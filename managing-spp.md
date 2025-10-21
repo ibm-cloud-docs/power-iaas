@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-10-09"
+lastupdated: "2025-10-21"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -186,6 +186,36 @@ To add VSIs to an existing SPP, complete the following steps:
 5. Select an existing SPP.
 6. Continue with the process of creating a VSI. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
+
+
+### Assigning an existing VSI to a shared processor pool
+{: #assign-vsi-to-spp}
+
+You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and add the VSI to a new or existing SPP during the deployment.
+
+To assign an existing VSI to an SPP, complete the following steps:
+
+1. Identity an existing SPP that you want to use or create a new SPP by following the steps in the [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp) section.
+
+2. Identify the VSI that you want to assign to an SPP, and then use the *Capture and export* function by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
+
+    - Ensure that you select **Image catalog** as the export destination, as this option allows for faster deployment of the VSI.
+
+    If you select **Cloud Object Storage** as the export destination, you must re-import the image from Cloud Object Storage, which can increase the VSI deployment time.
+    {: note}
+
+3.	Deploy a new VSI into an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. During the deployment of the VSI, ensure that you make the following selections:
+
+    - Select the **Add to a Shared processor pool** checkbox and then select the SPP that you want to use from the list.
+    - In the Boot image section, select the VSI image that you exported in step 2 from the **Image** list.
+
+Complete all the remaining steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section to finish the VSI deployment.
+
+After you verify that the new VSI is deployed successfully, you can delete the VSI that was used for the *Capture and export* operation and the exported image to prevent ongoing charges and optimize resource utilization. For more information, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance){: external}.
+{: tip}
+
+The VSI capture, image export, and image import operations are restricted to one operation at a time in each {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another operation cannot be submitted until the previous operation is complete.
+{: important}
 
 
 ## Configuring a shared processor pool placement group
