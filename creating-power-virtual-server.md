@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-21"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -56,6 +56,7 @@ For more information about appropriate region for your workspace, see [IBM Cloud
 
 
 {{_include-segments/workspace-note.md}}
+
 
 
 
@@ -197,17 +198,8 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
 
-    
-
     Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VMs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VMs.
     {: note}
-
-    
-
-    
-
-
-
 
 For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
@@ -223,6 +215,10 @@ For more information, see [Configuring for large quantity of volumes](#config-la
 
     If your account has fewer than 100 VMs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VMs. If your account has more than 100 VMs, the VMs might not be displayed in the user interface. You can reduce the number of VMs by using the CLI or API so that they are displayed again on the user interface.
     {: note}
+
+
+
+
 
 
 
