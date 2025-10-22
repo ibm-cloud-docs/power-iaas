@@ -123,8 +123,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
 
-
-
     
 
     To enable the {{site.data.keyword.ibmi-vst}}, select an image with OS version 7.3 or later from the **Boot image** field.
