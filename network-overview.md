@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-22"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -111,6 +111,8 @@ As part of the network planning, you can review the following use cases and iden
 
 Figure 1 shows the overall view of the network architecture.
 ![{{site.data.keyword.powerSys_notm}} network architecture](./figures/PPC-network-arc-Sept.png "High-level network architecture in {{site.data.keyword.powerSys_notm}}"){: caption="High-level network architecture in {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
+
+
 
 
 

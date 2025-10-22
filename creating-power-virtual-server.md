@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-21"
+lastupdated: "2025-10-22"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -115,8 +115,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    
-
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VSI:
     - IBM i Cloud Storage Solution
@@ -130,10 +128,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     
 
     To enable the {{site.data.keyword.ibmi-vst}}, select an image with OS version 7.3 or later from the **Boot image** field.
-
-    
-
-    
 
     
 

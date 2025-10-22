@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-16"
+lastupdated: "2025-10-22"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -287,6 +287,10 @@ Refer to the following table to view the part number descriptions and the associ
 | SUSE Linux Enterprise Server tier 1 instance-hour                                           | power-iaas-metric-sles-tier1                   |
 | SUSE Linux Enterprise Server tier 2 instance-hour                                           | power-iaas-metric-sles-tier2                   |
 | SUSE Linux Enterprise Server tier 3 instance-hour                                           | power-iaas-metric-sles-tier3                   |
+|     |                                              |
+| SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 core-hour            | power-iaas-metric-sr3-hana-S1122-core          |
+| SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 memory gigabyte-hour | power-iaas-metric-sr3-hana-S1122-memory        |
+|       |                                              |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 core-hour            | power-iaas-metric-sr2-hana-E1050-core          |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 memory gigabyte-hour | power-iaas-metric-sr2-hana-E1050-memory        |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 core-hour            | power-iaas-metric-sr2-hana-E1080-core          |

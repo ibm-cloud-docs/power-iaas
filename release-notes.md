@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-21"
+lastupdated: "2025-10-22"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -308,9 +308,6 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 
 - Global replication service supports new data center pair `LON04`-`LON06`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
-
-
-
 
 
 
