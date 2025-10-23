@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-05"
+lastupdated: "2025-10-23"
 
 keywords: AIX and IBM i development, test, use case, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to
 
@@ -49,7 +49,7 @@ For example,
 ## Examples
 {: #use-case-dev-examples}
 
-- An initial step in the *Hybrid Cloud Journey*
+- An initial step in the *Hybrid platform Journey*
 - Testing complicated or large architecture changes without the need to procure the capital (for example, evaluating a scale-up E980 system deployment if the client's needs grow beyond scale-out image limits)
 - Looking for a temporary and isolated infrastructure for application testing
 - Wants to test hardware before a refresh

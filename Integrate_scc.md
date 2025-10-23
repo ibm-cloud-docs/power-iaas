@@ -39,7 +39,7 @@ In sectors such as financial services, continuous compliance in the cloud enviro
 ## IBM Cloud® Security Posture Management (CSPM)
 {: #cspm}
 
-CSPM accelerates hybrid cloud adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework. The automated compliance checks for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-about). CSPM helps with:
+CSPM accelerates hybrid platform adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework. The automated compliance checks for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-about). CSPM helps with:
 
 - Continuous validation of compliance
 - Vulnerability prioritization

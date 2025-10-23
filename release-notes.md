@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -129,7 +129,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached its end of life and is no longer available for use. However, you can use the IBM Cloud VPC VPN to avoid VPN service interruptions. For assistance to upgrade or migrate to IBM Cloud VPC VPN, open a [support ticket](https://www.ibm.com/cloud/support){: external} or engage with your Customer Support Manager (CSM).
 {: important}
 
-- IBM {{site.data.keyword.powerSys_notm}} integrates with IBM watsonx SaaS services to deliver a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid cloud environment with automated AI infrastructure setup and management. For more information, see [IBM Power Virtual Server and watsonx integration](/docs/powervs-watsonx-toolkit).
+- IBM {{site.data.keyword.powerSys_notm}} integrates with IBM watsonx SaaS services to deliver a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid platform environment with automated AI infrastructure setup and management. For more information, see [IBM Power Virtual Server and watsonx integration](/docs/powervs-watsonx-toolkit).
 
 **End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-release-notes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 {: important}
@@ -437,7 +437,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     -  `DAL12` on June 24, 2024
     -  `SAO01` on September 07, 2024
 
-    {{site.data.keyword.on-prem-fname}} is also enabled for users to run Power workloads in a private pod Hybrid Cloud environment.
+    {{site.data.keyword.on-prem-fname}} is also enabled for users to run Power workloads in a private pod hybrid platform environment.
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
