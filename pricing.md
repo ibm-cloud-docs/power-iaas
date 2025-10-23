@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -14,7 +14,10 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}s
-{: #pricing-virtual-server-on-cloud}
+{: #pricing-ibm-data-center}
+
+
+
 
 ---
 
@@ -50,7 +53,13 @@ In addition to hardware resources, the licensed operating systems and the associ
 
 
 
+
+
 You can generate an estimate of the resources on the {{site.data.keyword.cloud_notm}} catalog for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the {{site.data.keyword.cloud_notm}} infrastructure or instances. The actual cost might include discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+
+
+
+
 
 IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
