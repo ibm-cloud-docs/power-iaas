@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-23"
+lastupdated: "2025-10-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -437,7 +437,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     -  `DAL12` on June 24, 2024
     -  `SAO01` on September 07, 2024
 
-    {{site.data.keyword.on-prem-fname}} is also enabled for users to run Power workloads in a private pod hybrid platform environment.
+    {{site.data.keyword.on-prem-fname}} is also enabled for users to run Power workloads in a private pod. 
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
