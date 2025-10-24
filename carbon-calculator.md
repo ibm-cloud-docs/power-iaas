@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-24"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -111,6 +111,20 @@ To view and export GHG emissions data for an account, you must have account owne
 
 On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calculator) GUI, select the **Power Virtual Server** option from the **Filter by server** list.
 
+
+
+
+
+
+
+### Why no data is displayed in the carbon calculator?
+{: ghg-why}
+{: #faq-ccc}
+
+The data for your workspace is not displayed in the carbon calculator or you are not be able to see the data for your workspace because of the following reasons:
+- Only the data from your workspaces on IBM Power10 or later systems is used to calculate the carbon emissions. If your workspace is on IBM Power9 or previous generations, the carbon emissions data is not available.
+- You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=api#billing-acct-mgmt-api){: external}.
+- The Power Usage Effectiveness (PUE) and Carbon Efficiency Factor (CEF) for your workspace location is set to zero. For more information about PUE and CEF, see [Energy and carbon quantification methodology](https://cloud.ibm.com/media/docs/downloads/account/carbon-calc-method-v5.pdf){: external}.
 
 
 
