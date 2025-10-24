@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-24"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -91,7 +91,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 4. Complete the **Boot image** fields.
 
-    You can create or provision a virtual server instance (VSI) without any initial boot image volume. VMs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VSI can be created without a boot volume and the volume that is cloned or replicated can be attached to a VSI to bring the backed-up VSI.
+    You can create or provision a virtual server instance (VSI) without any initial boot image volume. VSIs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VSI can be created without a boot volume and the volume that is cloned or replicated can be attached to a VSI to bring the backed-up VSI.
 
     Select the **Deploy empty virtual server instance** checkbox to provision a VSI without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
@@ -108,9 +108,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
-    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a VSI capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VMs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
+    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a VSI capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VSIs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-    [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VMs are deployed on a single storage tier.
+    [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VSIs are deployed on a single storage tier.
     {: note}
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
@@ -190,7 +190,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
 
-    Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VMs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VMs.
+    Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VSIs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VSIs.
     {: note}
 
 For more information, see [Configuring for large quantity of volumes](#config-large-vol).
@@ -205,7 +205,7 @@ For more information, see [Configuring for large quantity of volumes](#config-la
 
 8.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
-    If your account has fewer than 100 VMs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VMs. If your account has more than 100 VMs, the VMs might not be displayed in the user interface. You can reduce the number of VMs by using the CLI or API so that they are displayed again on the user interface.
+    If your account has fewer than 100 VSIs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VSIs. If your account has more than 100 VSIs, the VSIs might not be displayed in the user interface. You can reduce the number of VSIs by using the CLI or API so that they are displayed again on the user interface.
     {: note}
 
 
@@ -241,12 +241,12 @@ A VSI is moved across systems with its associated VSN. Hence, when a VSN is asso
 
 
 
-VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VMs gets the VSN, and the others are deployed without the VSN being assigned.
+VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VSIs gets the VSN, and the others are deployed without the VSN being assigned.
 {: important}
 
 
 
-View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VMs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
 
 
 ### Mapping the customer account number to the cloud account ID
@@ -351,7 +351,7 @@ For example, you create a VSI with the name TEST-VSI and you delete this VSI lat
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-set-up-power-infrastructure){: external}.
 
-Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VMs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
+Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
 ## Configuring a VSI for Epic workloads
 {: #configuring-a-vm-for-epic-workloads}
@@ -360,7 +360,7 @@ You can configure your VSI to deploy Epic workloads when you select AIX as your 
 
 To configure a VSI for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify whether the deployed VSI supports Epic workloads by checking the corresponding VSI details page. On the VSI details page, the **Deployment type** field must be set to **Epic**.
 
-In the VSI details page, for the VMs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues. For the VMs on which Epic workloads are supported and are in a shut-down state, you must not change the core type to any value other than `dedicated` to avoid performance issues.
+In the VSI details page, for the VSIs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues. For the VSIs on which Epic workloads are supported and are in a shut-down state, you must not change the core type to any value other than `dedicated` to avoid performance issues.
 {: important}
 
 The following table explains the differences in VSI configuration that may or might not support Epic workloads:
@@ -388,14 +388,14 @@ You can choose to configure a VSI for Epic workloads only when you select AIX as
 ## Configuring affinity policies
 {: #affinity-pol}
 
-You can use the user interface to set the affinity policies for storage pools only when the total number of VMs in your account is less than 100. If your account has more than 100 VMs, then you must use the CLI or API to set the volume affinity policies.
+You can use the user interface to set the affinity policies for storage pools only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, then you must use the CLI or API to set the volume affinity policies.
 
 Select one of the following Storage pool options:
 - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool for the storage tier with sufficient capacity.
 
 - **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing VSI or storage volume from your account. The new storage volumes for the VSI are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
 
-- **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes. The boot volumes are placed based on one or more existing VMs or storage volumes from your account. When you select a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are not selected. If you are using VSI as the anti-affinity objects, the storage pools are excluded depending on the root (boot) volume of each PVM instance that you specify.
+- **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes. The boot volumes are placed based on one or more existing VSIs or storage volumes from your account. When you select a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are not selected. If you are using VSI as the anti-affinity objects, the storage pools are excluded depending on the root (boot) volume of each PVM instance that you specify.
 
 To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
@@ -410,7 +410,7 @@ If you add volumes to be created and attached to your new VSI during creation th
 
 Create and deploy a virtual server instance (VM) without an initial boot volume.
 
-The VMs without boot volume can be used for cloning operations. These VMs are not bootable until a boot volume is attached post provisioning. The following table shows which images are deployed based on your OS selection:
+The VSIs without boot volume can be used for cloning operations. These VSIs are not bootable until a boot volume is attached post provisioning. The following table shows which images are deployed based on your OS selection:
 
 When you attach boot volume post provisioning of the VM, the boot image still shows the OS-specific image without the boot volume name. 
 {: note}
@@ -423,7 +423,7 @@ When you attach boot volume post provisioning of the VM, the boot image still sh
 | Linux for SAP (HANA)| Provision of VSI without boot volume is not supported|
 | Linux for SAP (NetWeaver)| Provision of VSI without boot volume is not supported|
 | Client supplied subscriptions | Provision of VSI without boot volume is not supported for these OSs |
-{: caption="Provision of VMs without boot volume based on the OS selection." caption-side="top"}
+{: caption="Provision of VSIs without boot volume based on the OS selection." caption-side="top"}
 
 When you select the **Deploy empty virtual server instance** checkbox, you can provision a VSI without a boot image and boot volume. Review the following table to understand how the selection of the **Deploy empty virtual server instance** checkbox works along with the provisioning of the large quantity of data volumes:
 
