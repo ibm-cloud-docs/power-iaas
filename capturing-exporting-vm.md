@@ -85,7 +85,7 @@ Complete the following steps to capture and export a virtual server instance:
     The maximum image size that you can export to Cloud Object Storage is 10 TB.
     {: note}
 
-   1. Select the **Region**.  Select either  **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** for the region.
+   1. Select the **Region**.  Select either **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** for the region.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
    4. Select the **Generate checksum file** toggle button to generate a checksum file.
