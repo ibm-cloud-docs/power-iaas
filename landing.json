@@ -1,13 +1,13 @@
 {
   "version": 2,
   "title": "Power Virtual Server",
-  "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers on IBM Cloud (that are running either the AIX, IBM i, or Linux operating systems).",
+  "introduction": "With the Power Virtual Server, you can quickly create and deploy one or more virtual servers (that are running either the AIX, IBM i, or Linux operating systems).",
   "product_page": "https://www.ibm.com/products/power-virtual-server",
   "console_page": "//cloud.ibm.com/power/overview",
   "section_topics": {
     "links": [
       {
-        "title": "Getting started with IBM® Power® Virtual Servers",
+        "title": "Getting started with IBM\u00ae Power\u00ae Virtual Servers",
         "href": "/docs/power-iaas?topic=power-iaas-getting-started"
       },
       {
@@ -34,7 +34,7 @@
   },
   "section_highlights": [
     {
-        "title": "IBM Power11 Launches in IBM Power Virtual Server",
+      "title": "IBM Power11 Launches in IBM Power Virtual Server",
       "description": "With the general availability of IBM Power11 in IBM Power Virtual Server and across all server classes - clients can unlock new levels of performance, flexibility, and resilience for their mission-critical workloads.",
       "href": "https://community.ibm.com/community/user/blogs/anthony-ciccone/2025/07/07/ibm-power11-launches-in-ibm-power-virtual-server-u",
       "type": "blog"

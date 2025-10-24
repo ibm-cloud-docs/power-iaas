@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-05"
+lastupdated: "2025-10-24"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -14,7 +14,10 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Pricing for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}s
-{: #pricing-virtual-server-on-cloud}
+{: #pricing-ibm-data-center}
+
+
+
 
 ---
 
@@ -50,7 +53,15 @@ In addition to hardware resources, the licensed operating systems and the associ
 
 
 
-You can generate an estimate of the resources on the {{site.data.keyword.cloud_notm}} catalog for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the {{site.data.keyword.cloud_notm}} infrastructure or instances. The actual cost might include discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+
+
+
+
+You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+
+
+
+
 
 IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
@@ -140,10 +151,10 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **General**                                   |                                             |                                                           |                                                                                                                                                              |
-| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * VPN \n * IBM i DB2 Web Query                                                                                                                               |
+| Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN     |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n * SAP workloads                                                                                                         |
+| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n  * SAP workloads                                                                                                         |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
@@ -231,8 +242,7 @@ Refer to the following table to view the part number descriptions and the associ
 | IBM i P10 LPP core-hour                                                                     | power-iaas-metric-ibmi-lpp-p10                 |
 | IBM i LPP P10 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p10-mol             |
 | IBM i P30 LPP core-hour                                                                     | power-iaas-metric-ibmi-lpp-p30                 |
-| IBM i LPP P30 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p30-mol             |
-| IBM i Db2 Web Query instance core-hour                                                      | power-iaas-metric-ibmi-db2wq                   |
+| IBM i LPP P30 - mobile core-hour - SWMA paid                                                | power-iaas-metric-ibmi-lpp-p30-mol                        |
 | IBM i P05 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p05-tier             |
 | IBM i P10 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p10-tier             |
 | IBM i P20 software tier license core-hour                                                   | power-iaas-metric-ibmi-os-p20-tier             |
@@ -288,6 +298,10 @@ Refer to the following table to view the part number descriptions and the associ
 | SUSE Linux Enterprise Server tier 1 instance-hour                                           | power-iaas-metric-sles-tier1                   |
 | SUSE Linux Enterprise Server tier 2 instance-hour                                           | power-iaas-metric-sles-tier2                   |
 | SUSE Linux Enterprise Server tier 3 instance-hour                                           | power-iaas-metric-sles-tier3                   |
+|     |                                              |
+| SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 core-hour            | power-iaas-metric-sr3-hana-S1122-core          |
+| SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 memory gigabyte-hour | power-iaas-metric-sr3-hana-S1122-memory        |
+|       |                                              |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 core-hour            | power-iaas-metric-sr2-hana-E1050-core          |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 memory gigabyte-hour | power-iaas-metric-sr2-hana-E1050-memory        |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 core-hour            | power-iaas-metric-sr2-hana-E1080-core          |

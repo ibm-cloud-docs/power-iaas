@@ -1,7 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in /docs/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
----
 toc:
   properties:
     subcollection: power-iaas
@@ -12,7 +8,6 @@ toc:
     product-page: https://www.ibm.com/cloud/power-virtual-server
     path: power-iaas
     label: Power Virtual Server
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See /docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -23,176 +18,173 @@ toc:
       - about-power-virtual-server.md
       - integrating-watsonx.md
       - topicgroup:
-              label: Architecture
-              topics:
-              - architecture-public-cloud.md
-              - architecture-private-cloud.md
+          label: Architecture
+          topics:
+          - architecture-public-cloud.md
+          - architecture-private-cloud.md
       - topicgroup:
-              label: Locations
-              topics:
-              - cloud-regions.md
-              - satellite-location-private.md
+          label: Locations
+          topics:
+          - cloud-regions.md
+          - satellite-location-private.md
       - topicgroup:
-              label: Pricing
-              topics:
-              - pricing.md
-              - pricing-private-cloud.md
-              - generating-estimate.md
+          label: Pricing
+          topics:
+          - pricing.md
+          - pricing-private-cloud.md
+          - generating-estimate.md
       - topicgroup:
-              label: High availability and disaster recovery
-              topics:
-              - ha-dr.md
-              - ha-dr-public-cloud.md
-              - ha-dr-private-cloud.md
+          label: High availability and disaster recovery
+          topics:
+          - ha-dr.md
+          - ha-dr-public-cloud.md
+          - ha-dr-private-cloud.md
       - topicgroup:
-              label: Backup strategies
-              topics:
-              - backup-strategies.md
-              - backup-strategies-ibmi.md
-              - additional-backup-strategies.md
+          label: Backup strategies
+          topics:
+          - backup-strategies.md
+          - backup-strategies-ibmi.md
+          - additional-backup-strategies.md
       - topicgroup:
-              label: Migration strategies
-              topics:
-              - system-migration.md
-              - migration-strategies-aix.md
-              - migration-strategies.md
-              - additional-migration-strategies.md
-              - migration-strategies-third-party.md
-              - migration-strategies-backup-restore.md
+          label: Migration strategies
+          topics:
+          - system-migration.md
+          - migration-strategies-aix.md
+          - migration-strategies.md
+          - additional-migration-strategies.md
+          - migration-strategies-third-party.md
+          - migration-strategies-backup-restore.md
       - topicgroup:
-              label: Replication
-              topics:
-              - host-and-os-based-logical-replication.md
-              - global-replication-service.md
+          label: Replication
+          topics:
+          - host-and-os-based-logical-replication.md
+          - global-replication-service.md
       - topicgroup:
-              label: Security and compliance
-              topics:
-              - gdpr.md
-              - compliances.md
-              - eu-compliance.md
-              - Integrate_hpcs.md
-              - topic: Integrate_scc.md
-                navtitle: Integrating Power Virtual Server with IBM Cloud Security and Compliance Center
+          label: Security and compliance
+          topics:
+          - gdpr.md
+          - compliances.md
+          - eu-compliance.md
+          - Integrate_hpcs.md
+          - topic: Integrate_scc.md
+            navtitle: Integrating Power Virtual Server with IBM Cloud Security and Compliance Center
       - topicgroup:
           label: Use cases
           topics:
-             - connect-azure-multicloud.md
-             - db2-migration.md
-             - use-case-dev.md
-             - use-case-app.md
-             - use-case-hybrid.md
-             - use-case-oracle.md
-             - use-case-redhat-openshift.md
-             - use-case-sap-hana.md
-             - topic: nsg-architectural-overview.md
-               navtitle: Implementing network security groups for securing three-tier web architecture workloads
+          - connect-azure-multicloud.md
+          - db2-migration.md
+          - use-case-dev.md
+          - use-case-app.md
+          - use-case-hybrid.md
+          - use-case-oracle.md
+          - use-case-redhat-openshift.md
+          - use-case-sap-hana.md
+          - topic: nsg-architectural-overview.md
+            navtitle: Implementing network security groups for securing three-tier web architecture workloads
   - navgroup:
       id: howto
       topics:
       - topicgroup:
           label: Networking for IBM data center
           topics:
-             - configuring-private-subnet.md
-             - new-network-architecture.md
-             - getting-started-PER.md
-             - Network-security-group.md
-             - static-routes.md
-             - vpn-connections.md
-             - network-security.md
-             - X86-based-systems.md
-             - subnet-arp-broadcast-oracle-rac.md
-             - topicgroup:
-                 label: Former IBM data center networking configurations
-                 topics:
-                    - manual-PER-mig.md
-                    - network-architecture-former.md
-                    - cloud-connections-CLI.md
-                    - ordering-direct-link.md
+          - configuring-private-subnet.md
+          - new-network-architecture.md
+          - getting-started-PER.md
+          - Network-security-group.md
+          - static-routes.md
+          - vpn-connections.md
+          - network-security.md
+          - X86-based-systems.md
+          - subnet-arp-broadcast-oracle-rac.md
+          - topicgroup:
+              label: Former IBM data center networking configurations
+              topics:
+              - manual-PER-mig.md
+              - network-architecture-former.md
+              - cloud-connections-CLI.md
+              - ordering-direct-link.md
       - topicgroup:
           label: Networking for Client location
           topics:
-              - network-overview.md
-              - topicgroup:
-                  label: Preparing the data center
-                  topics:
-                    - preinstallation-checklist.md
-                    - site-readiness.md
-                    - site-access-requirements.md
-                    - environmental-req.md
-                    - power-requirements.md
-                    - network-requirements.md
-                    - safety-notices.md
-              - network-use-cases.md
-              - network_latency.md
+          - network-overview.md
+          - topicgroup:
+              label: Preparing the data center
+              topics:
+              - preinstallation-checklist.md
+              - site-readiness.md
+              - site-access-requirements.md
+              - environmental-req.md
+              - power-requirements.md
+              - network-requirements.md
+              - safety-notices.md
+          - network-use-cases.md
+          - network_latency.md
       - topicgroup:
-            label: Creating, managing, and deploying
-            topics:
-              - managing-resources-and-users.md
-              - creating-power-virtual-server.md
-              - get-started-dedicated-host-AI.md
-              - viewing-pod-details.md
-              - creating-ssh-key.md
-              - modifying-instance.md
-              - virtual-applianes-catalog.md
-              - importing-boot-image.md
-              - configuring-custom-image.md
-              - manage-placement-groups.md
-              - managing-spp.md
-              - virtual-tape-library.md
-              - capturing-exporting-vm.md
-              - downloading-fixes.md
-              - volume-snapshot-clone.md
-              - managing_events_logs.md
-              - setting-terraform.md
-              - returning-pod.md
-              - working-with-VSI-console.md
+          label: Creating, managing, and deploying
+          topics:
+          - managing-resources-and-users.md
+          - creating-power-virtual-server.md
+          - get-started-dedicated-host-AI.md
+          - viewing-pod-details.md
+          - creating-ssh-key.md
+          - modifying-instance.md
+          - virtual-applianes-catalog.md
+          - importing-boot-image.md
+          - configuring-custom-image.md
+          - manage-placement-groups.md
+          - managing-spp.md
+          - virtual-tape-library.md
+          - capturing-exporting-vm.md
+          - downloading-fixes.md
+          - volume-snapshot-clone.md
+          - managing_events_logs.md
+          - setting-terraform.md
+          - returning-pod.md
+          - working-with-VSI-console.md
       - topicgroup:
-            label: Custom OS Images
-            topics:
-             - imaging.md
+          label: Custom OS Images
+          topics:
+          - imaging.md
       - topicgroup:
-            label: AIX
-            topics:
-              - creating-vm-ssh-keys.md
-              - restoring-aix-mksysb-image.md
-              - aix-migration-steps.md
-              - removing-network-interface.md
-              - rsct-rmc-aix.md
-              - provisioning-nim-server.md
+          label: AIX
+          topics:
+          - creating-vm-ssh-keys.md
+          - restoring-aix-mksysb-image.md
+          - aix-migration-steps.md
+          - removing-network-interface.md
+          - rsct-rmc-aix.md
+          - provisioning-nim-server.md
       - topicgroup:
-            label: IBM i
-            topics:
-              - configuring-ibmi-vm.md
-              - topic: ibmi-virtual-software-tiers.md
-                navtitle: Assigning an IBM i software tier to an IBM i instance
-              - connecting-ibmi-port.md
-              - creating-network-install-server.md
-              - removing-network-interface-ibmi.md
-              - ibmi-minimum-levels.md
-              - ibmi-license-info.md
+          label: IBM i
+          topics:
+          - configuring-ibmi-vm.md
+          - topic: ibmi-virtual-software-tiers.md
+            navtitle: Assigning an IBM i software tier to an IBM i instance
+          - connecting-ibmi-port.md
+          - creating-network-install-server.md
+          - removing-network-interface-ibmi.md
+          - ibmi-minimum-levels.md
+          - ibmi-license-info.md
       - topicgroup:
-            label: Linux
-            topics:
-              - set-full-linux.md
-              - full-linux-sub.md
-              - registering-linux.md
-              - using-rhel.md
-              - deploying-linux.md
+          label: Linux
+          topics:
+          - set-full-linux.md
+          - full-linux-sub.md
+          - registering-linux.md
+          - using-rhel.md
+          - deploying-linux.md
       - topicgroup:
-           label: SAP
-           topics:
-             - deploying-SAP-custom-image.md
-             - SAP-certified-profiles.md
-             - SAP-full-system-profiles.md
+          label: SAP
+          topics:
+          - deploying-SAP-custom-image.md
+          - SAP-certified-profiles.md
+          - SAP-full-system-profiles.md
       - topicgroup:
-            label: Observability
-            topics:
-              - carbon-calculator.md
-              - sysdig-monitoring-pvs.md
-              - at-events.md
-# Mukesh to provide the content             - migrate-ibmi-data-ibmi-vm.md
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see /docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group.
+          label: Observability
+          topics:
+          - carbon-calculator.md
+          - sysdig-monitoring-pvs.md
+          - at-events.md
   - navgroup:
       id: reference
       topics:
@@ -213,7 +205,6 @@ toc:
       - link:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_capture
-# Will complete before GA  - responsibility-matrix.md
   - navgroup:
       id: help
       topics:
@@ -225,4 +216,3 @@ toc:
           - troubleshoot-aix.md
           - troubleshoot-snapshot.md
       - getting-help-and-support.md
-# Will use this toipc if any troubleshooting info to be added      - troubleshoot-ppcaas.md

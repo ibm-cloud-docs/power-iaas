@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-08-04"
+lastupdated: "2025-10-21"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -28,15 +28,15 @@ subcollection: power-iaas
 
 ---
 
-A Shared Processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VM).
+A Shared Processor Pool (SPP) is a pool of processor capacity that is shared between a group of virtual server instances (VSI).
 {: shortdesc}
 
 
-In SPP, reserved cores can be adjusted based on availability, unlike a VM with a fixed processing capacity.
+In SPP, reserved cores can be adjusted based on availability, unlike a VSI with a fixed processing capacity.
 
 The following table shows how an SPP is used to reduce the licensing cost when you pay per core:
 
-|Use of SPP|VM 1|VM 2|Reserved cores in Pool (User defined)|License requirement per core|
+|Use of SPP|VSI 1|VSI 2|Reserved cores in Pool (User defined)|License requirement per core|
 |-----|-----------|-----------|-----------|-----------|
 |No|Maximum cores = 5  \n Mode = Dedicated|Maximum cores = 6  \n Mode = Dedicated|NA|5+6 = 11|
 |Yes|Maximum cores = 5  \n Mode = Shared/Uncapped  \n Entitled capacity = 4.25|Maximum cores = 6  \n Mode = Shared/Uncapped  \n Entitled capacity = 5.25|Maximum cores = 10|10, Determined by the reserved cores in a pool|
@@ -47,7 +47,7 @@ The benefits of using an SPP are as follows:
 - Control licensing costs by limiting the number of processors an uncapped partition can use, reducing the number of software licenses.
 - A better overall ability to manage processor resources.
 
-{{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. A set of VMs that belongs to the same machine type (host) can use and share an SPP.
+{{site.data.keyword.powerSys_notm}} always has at least one defined SPP as the default pool. You can add up to 63 more SPPs to a single {{site.data.keyword.powerSys_notm}} host. A set of VSIs that belongs to the same machine type (host) can use and share an SPP.
 
 
 ## Managing the core-to-virtual core ratio
@@ -61,7 +61,7 @@ For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside an SPP with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
+In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VSI inside an SPP with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
 
 For example, the following table shows how your VC is determined based of EC selection:
 
@@ -87,7 +87,7 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 ## Pricing for Shared Processor Pool
 {: #price-spp}
 
-When you use SPPs, you can optimize the cost by using reserved cores that are shared by VMs in the SPP. For more information about the pricing for VMs within SPPs, see the following topics:
+When you use SPPs, you can optimize the cost by using reserved cores that are shared by VSIs in the SPP. For more information about the pricing for VSIs within SPPs, see the following topics:
 - [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
 - [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud) if you are using {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 
@@ -152,7 +152,7 @@ You can update or delete the following details of an existing SPP:
 
 
 
-* Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VMs do not exist in the SPP. If VMs are present in the SPP, delete all VMs in the SPP.
+* Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VSIs do not exist in the SPP. If VSIs are present in the SPP, delete all VSIs in the SPP.
 
 
 
@@ -161,22 +161,22 @@ You can update or delete the following details of an existing SPP:
 
 
 
-## Managing a VM of a shared processor pool
+## Managing a VSI of a shared processor pool
 {: #manage-vm-inside-spp}
 
-When you deploy a VM, you can choose an SPP instead of a host. As you cannot move a VM into or out of an SPP, you can deploy a VM directly into an SPP as a best practice. You can also deploy a VM into a server placement group; the selected SPP host must be compatible with the affinity policy of the placement group that you selected.
+When you deploy a VSI, you can choose an SPP instead of a host. As you cannot move a VSI into or out of an SPP, you can deploy a VSI directly into an SPP as a best practice. You can also deploy a VSI into a server placement group; the selected SPP host must be compatible with the affinity policy of the placement group that you selected.
 
-When you deploy multiple VMs simultaneously, a new server placement group is created automatically.
+When you deploy multiple VSIs simultaneously, a new server placement group is created automatically.
 {: note}
 
-During any planned maintenance activity or when you want to perform a remote restart operation, ensure that the VMs are linked to an SPP based on your requirements.
+During any planned maintenance activity or when you want to perform a remote restart operation, ensure that the VSIs are linked to an SPP based on your requirements.
 
-### Deploying a VM into a shared processor pool
+### Deploying a VSI into a shared processor pool
 {: #deploy-pvm-in-spp}
 
-To add VMs to an existing SPP, complete the following steps:
+To add VSIs to an existing SPP, complete the following steps:
 
-[{{site.data.keyword.on-prem}}]{: tag-red} Use the API and CLI for bulk deployment of VMs in an SPP. However, you cannot provision more than 3 VMs within an SPP in both small and medium pods.
+[{{site.data.keyword.on-prem}}]{: tag-red} Use the API and CLI for bulk deployment of VSIs in an SPP. However, you cannot provision more than 3 VSIs within an SPP in both small and medium pods.
 {: important}
 
 1. Open the **Virtual server instances** page in the {{site.data.keyword.powerSys_notm}} user interface.
@@ -184,7 +184,39 @@ To add VMs to an existing SPP, complete the following steps:
 3. Complete the input fields under the **General** tile based on your requirement.
 4. Select the checkbox **Add to a Shared processor pool**.
 5. Select an existing SPP.
-6. Continue with the process of creating a VM. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+6. Continue with the process of creating a VSI. For more information, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+
+
+
+### Assigning an existing VSI to a shared processor pool
+{: #assign-vsi-to-spp}
+
+You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and add the VSI to a new or existing SPP during the deployment.
+
+To assign an existing VSI to an SPP, complete the following steps:
+
+1. Identity an existing SPP that you want to use or create a new SPP by following the steps in the [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp) section.
+
+2. Identify the VSI that you want to assign to an SPP, and then use the *Capture and export* function by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
+
+    - Ensure that you select **Image catalog** as the export destination, as this option allows for faster deployment of the VSI.
+
+    If you select **Cloud Object Storage** as the export destination, you must re-import the image from Cloud Object Storage, which can increase the VSI deployment time.
+    {: note}
+
+3.	Deploy a new VSI into an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. During the deployment of the VSI, ensure that you make the following selections:
+
+    - Select the **Add to a Shared processor pool** checkbox and then select the SPP that you want to use from the list.
+    - In the Boot image section, select the VSI image that you exported in step 2 from the **Image** list.
+
+Complete all the remaining steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section to finish the VSI deployment.
+
+After you verify that the new VSI is deployed successfully, you can delete the VSI that was used for the *Capture and export* operation and the exported image to prevent ongoing charges and optimize resource utilization. For more information, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance){: external}.
+{: tip}
+
+The VSI capture, image export, and image import operations are restricted to one operation at a time in each {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another operation cannot be submitted until the previous operation is complete.
+{: important}
+
 
 ## Configuring a shared processor pool placement group
 {: #configure-SPP-PG}

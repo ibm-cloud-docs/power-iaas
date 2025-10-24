@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-07-29"
+lastupdated: "2025-10-23"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -151,7 +151,7 @@ To configure a Transit Gateway, you need to:
 For more information on how to add a {{site.data.keyword.powerSys_notm}} connection to your Transit Gateway, see [IBM Cloud Docs pages](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-adding-connections&interface=ui).
 
 
-## Configuring hybrid cloud connectivity with Megaport
+## Configuring hybrid platform connectivity with Megaport
 {: #configure-hybrid-cloud}
 
 ### Configuring Megaport portal
@@ -186,7 +186,7 @@ The first step is to log in to the Megaport portal: [https://portal.megaport.com
 #### Creating a Megaport Cloud Router
 {: #create-mega-router}
 
-The Megaport Cloud Router (MCR) is a managed virtual router service that establishes Layer 3 connectivity on the worldwide Megaport software-defined network (SDN). MCR instances are preconfigured in data centers in key global routing zones. An MCR enables data transfer between multi-cloud or hybrid cloud networks, network service providers, and cloud service providers.
+The Megaport Cloud Router (MCR) is a managed virtual router service that establishes Layer 3 connectivity on the worldwide Megaport software-defined network (SDN). MCR instances are preconfigured in data centers in key global routing zones. An MCR enables data transfer between multi-cloud or hybrid platform networks, network service providers, and cloud service providers.
 
 An MCR joins two or more independent Virtual Cross Connect (VXC) services into a single routing domain, providing connectivity between all the VXCs attached to the MCR. In this example, two VXCs are needed; one for IBM Cloud Direct Link and one for Microsoft Azure ExpressRoute. VCXs are configured after the MCR is provisioned.
 

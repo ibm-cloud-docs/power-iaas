@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-10-10"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -28,20 +28,20 @@ subcollection: power-iaas
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the volume is created, you cannot change the storage types. A virtual machine (VM) can have disks from multiple storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the volume is created, you cannot change the storage types. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to successfully import. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
 Image import requires Hash-Based Message Authentication Code (HMAC) keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using IBM COS HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
-The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VM capture, image export, and image import across multiple workspaces in your cloud account.
+The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
 
 As part of this Job feature, the following API and CLIs are available:
 - API for image import - [Create a new image from available images you have stored in IBM COS](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.
 - CLI command - [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.
 - CLI command [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.
 
-The {{site.data.keyword.powerSys_notm}} VM capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VM capture, image export, and image import) cannot be submitted until the previous operation is complete.
+The {{site.data.keyword.powerSys_notm}} VSI capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VSI capture, image export, and image import) cannot be submitted until the previous operation is complete.
 {: important}
 
 
@@ -122,11 +122,11 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 | Field | Description |
 | ------| ------------|
 | Catalog image name | Enter the name that you want your imported image to display in your image name catalog.|
-| Storage type | Select whether you want **Tier 1 (NVMe-based Flash Storage)** or **Tier 3 (SSD Flash Storage)** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types.|
-| Storage pool | One or more custom image storage volumes are placed in the storage pool based on the storage pool placement options (auto-select, affinity, or anti-affinity) that you choose. The boot volume of any VM that is deployed by using this image deploys in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).|
+| Storage type | Select whether you want **Tier 1 (NVMe-based Flash Storage)** or **Tier 3 (SSD Flash Storage)** for the storage type. A VSI cannot have disks from both **Tier 1** and **Tier 3** storage types.|
+| Storage pool | One or more custom image storage volumes are placed in the storage pool based on the storage pool placement options (auto-select, affinity, or anti-affinity) that you choose. The boot volume of any VSI that is deployed by using this image deploys in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).|
 | Auto-select pool | Select this option to automatically create the storage volume in a pool that has sufficient capacity. |
-| Affinity | Use this option to identify the storage pool that must be used to place the boot volumes, based on an existing PVM instance (VM) or storage volume from your account. The custom image storage volumes are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected to place the boot volumes is based on the PVM instance’s root (boot) volume. |
-| Anti-affinity | Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes based on one or more existing PVM instances (VMs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified. |
+| Affinity | Use this option to identify the storage pool that must be used to place the boot volumes, based on an existing PVM instance (VSI) or storage volume from your account. The custom image storage volumes are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected to place the boot volumes is based on the PVM instance’s root (boot) volume. |
+| Anti-affinity | Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes based on one or more existing PVM instances (VSIs) or storage volumes from your account. While choosing a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are selected. If you are using PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified. |
 | Source details (Cloud storage) | Use the following fields to set the Cloud storage details.|
 | Region | Select either **us-east**, **us-south**, **ca-tor**, **eu-de**, **eu-es**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region.|
 | Image file name | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are `tar` and `ova`. You can compress image files by using `gzip`. The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz` and `.tgz`. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.

@@ -1,0 +1,2 @@
+The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode.
+{: note}

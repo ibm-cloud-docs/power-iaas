@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-07-14"
+lastupdated: "2025-10-23"
 
 keywords: Power Virtual Server and watsonx integration, watsonx for powervs
 
@@ -28,9 +28,9 @@ subcollection: power-iaas
 
 IBM watsonx is a powerful AI platform that helps you unlock the full potential of your data by providing advanced capabilities in machine learning, data analytics, and natural language processing. You can use IBM watsonx to automate complex tasks, gain actionable insights from large datasets, and deliver personalized experiences.
 
-Integrating IBM {{site.data.keyword.powerSys_notm}} workloads with IBM watsonx SaaS services provides a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid cloud environment with automated AI infrastructure setup and management. Some of the benefits of integrating {{site.data.keyword.powerSys_notm}} with IBM watsonx include:
+Integrating IBM {{site.data.keyword.powerSys_notm}} workloads with IBM watsonx SaaS services provides a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid platform environment with automated AI infrastructure setup and management. Some of the benefits of integrating {{site.data.keyword.powerSys_notm}} with IBM watsonx include:
 
-- Seamless hybrid cloud integration
+- Seamless hybrid platform integration
 - AI-driven insights for business transformation
 - Cost efficiency with cloud flexibility
 - Simplified management and integration

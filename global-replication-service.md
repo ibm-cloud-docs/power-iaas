@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-22"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -778,6 +778,30 @@ Use the following API and CLI commands to delete the auxiliary volume:
 
 - **CLI**: [ibmcloud pi volume delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete). Set the `VOLUME_ID` parameter to an auxiliary volume ID that must be deleted.
 
+
+
+
+
+
+## Changing the tier of a replication-enabled volume
+{: #chang-tier-prim-vol}
+
+You can change the tier of a replication-enabled volume if one of the following conditions is met:
+
+- The volume is a primary volume and the `primaryRole` property of the volume is set to `master`.
+- The volume is an auxiliary volume and the `primaryRole` property of the volume is set to `aux`.
+
+Any attempt to change the tier of a replication-enabled volume fails, if one of the conditions are not met. The change in the tier of the replication-enabled volume does not synchronize with the paired volume.
+
+You can change the tier of the replication-enabled volume by using the following API and CLI commands:
+
+- API: [Perform an action on a Volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
+- CLI: [ibmcloud pi volume-action](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
+
+
+
+
+
 ## Modifying a replication-enabled primary volume
 {: #modify-rep-prim-vol}
 
@@ -829,20 +853,6 @@ A volume can be either shareable or bootable, but cannot be both.
 {: note}
 
 After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
-
-## Changing the tier of a primary volume
-{: #chang-tier-prim-vol}
-
-
-
-
-
-You can change the tier of a replication-enabled primary volume if the `primaryRole` property of the volume is set to `master` by using the following API and CLI commands:
-
-- API: [Perform an action on a Volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
-- CLI: [ibmcloud pi volume-action](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
-
-The change in the tier of the primary volume do not sync on the paired auxiliary volume. Any attempt to change the tier of a replication-enabled auxiliary volume fails.
 
 
 

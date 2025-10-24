@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-26"
+lastupdated: "2025-10-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -669,7 +669,13 @@ On the Virtual server instances page, click the virtual server instance name pre
 {: #processor-compatibility-modes-vsi}
 {: faq}
 
+
+
 You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the CLI, API, or Terraform. By using the GUI, you can edit the preferred processor compatibility mode only for existing VSIs that are already deployed.
+
+
+
+
 
 On the **Overview** tab of the VSI details page in the Power Virtual Server user interface, you can view the *Preferred* and *Effective* processor compatibility modes. The processor compatibility modes are defined as follows:
 
@@ -680,8 +686,8 @@ On the **Overview** tab of the VSI details page in the Power Virtual Server user
 You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI again. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 {: important}
 
-The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode.
-{: note}
+{{_include-segments/cpu-compatibility-note.md}}
+
 
 When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the operating system that is running in the VSI supports that mode. If the operating system supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the operating system does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the operating system. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
 
