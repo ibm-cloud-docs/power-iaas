@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-24"
+lastupdated: "2025-10-27"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -116,7 +116,6 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 
 
 
-
 ### Why no data is displayed in the carbon calculator?
 {: ghg-why}
 {: #faq-ccc}
@@ -137,8 +136,6 @@ The data for your workspace is not displayed in the carbon calculator or you are
 {: #faq-ccc}
 
 To view and export GHG emissions data for an account, you must have account owner, administrator, or viewer level access on the billing service. For more information, see [Tracking account emissions with carbon calculator](https://cloud.ibm.com/docs/account?topic=account-tracking-emissions-account){: external}.
-
-
 
 
 ### How to extract GHG emissions data by using API?
