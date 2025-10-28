@@ -30,12 +30,12 @@ The following CLI commands are added to the IBM Power Virtual Server Private Clo
 - [ibmcloud pi network-peer route-filter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer-route-filter). You can use this command to create, delete, and get the details of the route filters in the network peering connection.
 
 
-**New option**
+**New options**
 
 The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to set the instance to your preferred processor compatibility mode. The processor must be compatible with the system in use.
 
 
-**Changes to the command output**
+**Updated commands**
 
 The outputs to the following commands are updated:
 
