@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-10-29"
 
 ---
 
@@ -37,7 +37,7 @@ The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas
 
 **Updated commands**
 
-The outputs to the following commands are updated:
+The following commands are updated:
 
 - Added `Effective Processor Compatibility Mode` and `Preferred Processor Compatibility Mode` to the instance output.
 - Added `Creation Date` to the shared-processor-pool output.
