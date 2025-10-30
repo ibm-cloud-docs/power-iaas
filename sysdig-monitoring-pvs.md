@@ -25,7 +25,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 ---
 
