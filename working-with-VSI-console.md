@@ -107,6 +107,8 @@ Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys
 
 When multiple users open the VSI console for the same {{site.data.keyword.powerSys_notm}} instance, the same VSI console (VTERM) session is shared among all users. When the last user closes the VSI console, the underlying console session is terminated. Reopening the VSI console creates a new VTERM and establishes a new console connection to the VSI on the host.
 
+
+
 ## VSI console considerations
 {: #vsi-console-considerations}
 
