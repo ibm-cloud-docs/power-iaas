@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-10-08"
+lastupdated: "2025-10-31"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -99,6 +99,8 @@ ibmcloud pi instance console list
 
 Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys_notm}} instance terminates any open console sessions before a new console session is started.
 {: note}
+
+
 
 ## Sharing the VSI console session
 {: #sharing-console-session}
