@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2025
 
-lastupdated: "2025-09-11"
+lastupdated: "2025-11-04"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -661,8 +661,16 @@ NSGs have the following limitations in the {{site.data.keyword.powerSys_notm}} e
 
 - You can only create 10 NSGs and 10 NAGs in a single workspace. These quotas are defined at a data center level and can be increased, subject to standard limits through a [support ticket](https://cloud.ibm.com/unifiedsupport/supportcenter).
 
+
+
 The support tickets to increase the quota are evaluated by customer support and {{site.data.keyword.powerSys_notm}} operations and are at the discretion of IBM.
 {: note}
+
+
+
+
+
+
 
 
 
