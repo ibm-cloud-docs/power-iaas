@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-24"
+lastupdated: "2025-11-04"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -371,6 +371,12 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
+
+
+
+
+
+
 
 ## Base instances
 {: #pricing-base-instance-prices}
