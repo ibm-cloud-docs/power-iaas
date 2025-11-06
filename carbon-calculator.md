@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-27"
+lastupdated: "2025-11-06"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -66,7 +66,10 @@ For more information about environmental, social, and governance (ESG) initiativ
 {: ghg}
 {: #faq-ccc}
 
-GHG emission stands for greenhouse gas emission. GHG is a gaseous substance that has a warming effect on the Earth when released to the atmosphere. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
+GHG emission stands for greenhouse gas emission. For more information, see [https://cloud.ibm.com/docs/account?topic=account-carbon-calc-terms](https://cloud.ibm.com/docs/account?topic=account-carbon-calc-terms){: external} and [What are greenhouse gas (GHG) emissions?](https://www.ibm.com/think/topics/greenhouse-gas-emissions){: external}.
+
+
+
 
 ### How is GHG measured in IBM Cloud?
 {: ghg-how}
