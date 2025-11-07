@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-11-07"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -922,6 +922,13 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 
 
 When you [disable the replication service on the primary volume](#disable-vol-repli) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
+
+
+
+
+
+
+
 
 ## GRS impacts on other {{site.data.keyword.powerSys_notm}} operations
 {: #impacts-on-powervs}
