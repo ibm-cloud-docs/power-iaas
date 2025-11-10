@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-10"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment is also known as VTERM. You can use the VSI console to interact with the AIX, IBM i, and Linux-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
+The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment is also known as VTERM. You can use the VSI console to interact with the AIX&reg, IBM i, and Linux&reg-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
 
 - Provides access to the AIX, IBM i, and Linux-based VSIs (Linux, SAP HANA, and SAP NetWeaver) to perform various OS-related tasks such as installation, configuration, troubleshooting, and recovery
 - Debugs VSI boot issues
