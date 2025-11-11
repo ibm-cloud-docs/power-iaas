@@ -76,6 +76,7 @@ If you select the **Location type** as **{{site.data.keyword.off-prem}}**, you c
 * [Estimating a shared processor pool](#est-spp)
 * [Estimating a virtual tape library](#est-vtl)
 * [Estimating a dedicated host](#est-dh) 
+* [Estimating  a vPMEM volume](#est-vpmem)
 
 The summary of the selected infrastructure is displayed in the **Summary** panel. You can review the total estimated cost per hour and per month that is displayed in the **Summary** panel. To add, save, and download the estimate, see [Adding, saving, and viewing an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate#creating-an-estimate).
 
@@ -151,7 +152,7 @@ The following table explains the fields that you can use to create an estimate f
 | Operating system      | - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.  \n - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license. |
 | Linux image type      | Select the required Linux image type. Available options are SUSE and Red Hat Enterprise.                                                                                                                                          |
 | Machine type          | \n - Select the required Power system from the list to deploy an SAP HANA profile.  \n - Select an IBM Power10 or later machine type from the list to deploy an SAP certified profile.                                            |
-| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                  |
+| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.        |
 | Profile               | Select an SAP HANA, a Standard RISE, or an Application Server profile.                                                                                                                                                            |
 {: caption="Fields and corresponding actions for estimating an SAP workload in {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
@@ -227,6 +228,8 @@ The following table explains the fields that you can use to create an estimate f
 
 
 To learn more about dedicated host, see [Getting started with dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
+
+
 
 
 
