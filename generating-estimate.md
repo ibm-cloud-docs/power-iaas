@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-10-17"
+lastupdated: "2025-11-11"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -151,7 +151,7 @@ The following table explains the fields that you can use to create an estimate f
 | Operating system      | - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.  \n - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license. |
 | Linux image type      | Select the required Linux image type. Available options are SUSE and Red Hat Enterprise.                                                                                                                                          |
 | Machine type          | \n - Select the required Power system from the list to deploy an SAP HANA profile.  \n - Select an IBM Power10 or later machine type from the list to deploy an SAP certified profile.                                            |
-| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                                                    |
+| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                  |
 | Profile               | Select an SAP HANA, a Standard RISE, or an Application Server profile.                                                                                                                                                            |
 {: caption="Fields and corresponding actions for estimating an SAP workload in {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
