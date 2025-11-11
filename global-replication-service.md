@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-07"
+lastupdated: "2025-11-11"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -852,7 +852,12 @@ To change the values of the `bootable` or `shareable` properties on the primary 
 A volume can be either shareable or bootable, but cannot be both.
 {: note}
 
+
+
 After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
+
+
+
 
 
 
