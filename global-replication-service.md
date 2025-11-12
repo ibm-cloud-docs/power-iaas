@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-11"
+lastupdated: "2025-11-12"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -885,7 +885,7 @@ If you do not delete the auxiliary volume from the secondary site, an out-of-ban
 
 
 ### Removing the primary volume from its volume group
-{: rem-prim-vol-vol-grp}
+{: #rem-prim-vol-vol-grp}
 
 Use the following API or CLI commands to remove the primary volume from its volume group:
 
