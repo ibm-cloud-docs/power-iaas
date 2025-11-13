@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-24"
+lastupdated: "2025-11-13"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -188,10 +188,14 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 6.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
-    Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VM-level that remains unmodifiable upon provisioning.
+    Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
-    Machine types E980 and E1080 are optimized to support the attachment of large quantity of volumes. Only IBM i VSIs support the configuration of large volumes. You cannot create or attach volumes with more than 2 TB for IBM i VSIs.
+    
+
+    You cannot create or attach volumes larger than 2047 GB on IBM i-based VSIs. However, machine types E890 and E1080 are optimized to support the attachment of a higher number of volumes on IBM i-based VSIs.
     {: note}
+
+    
 
 For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
