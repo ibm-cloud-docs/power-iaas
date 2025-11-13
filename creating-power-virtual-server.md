@@ -59,8 +59,6 @@ For more information about appropriate region for your workspace, see [IBM Cloud
 
 
 
-
-
 ## Configuring a {{site.data.keyword.powerSys_notm}} instance
 {: #configuring-instance}
 
@@ -83,9 +81,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can easily create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
 
-
-
-
+    
 
 3. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
@@ -95,9 +91,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     Select the **Deploy empty virtual server instance** checkbox to provision a VSI without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
-
     
-
 
     
 
@@ -108,24 +102,22 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     You can set the affinity policies for storage pools. For more information, see [Configuring affinity policies](#affinity-pol).
 
-    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a VSI capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VSIs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
+    When you select **Boot image**, the {{site.data.keyword.powerSys_notm}} user interface allows you to select the boot images from a set of available stock images or from a custom image in your image catalog. Custom images are images that you can import from IBM Cloud Object Storage or create from a virtual server instance (VM) capture. When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VSIs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
     [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VSIs are deployed on a single storage tier.
     {: note}
 
-    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
-
-
-    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to include the following licenses to your VSI:
-    - IBM i Cloud Storage Solution
-    - IBM i Power HA, and
-    - Rational Dev Studio for IBM i.
-
-    Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
+    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VM for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
     
 
-    To enable the {{site.data.keyword.ibmi-vst}}, select an image with OS version 7.3 or later from the **Boot image** field.
+    If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
+    - Include the following licenses to your VSI:
+      - IBM i Cloud Storage Solution
+      - IBM i Power HA, and
+      - Rational Dev Studio for IBM i.
+        Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
+    - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
     
 
@@ -143,7 +135,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
 
-
     
 
 5. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
@@ -152,8 +143,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     {: important}
 
     When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as disabled. For more information, see [How to create a new AIX VM with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
-
-
 
     
 
@@ -170,7 +159,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-
     
     To deploy an SAP workload, complete the following steps:
 
@@ -184,12 +172,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-
-
-6.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
-
-    Under **Advanced configurations**, enable the **Configure for large quantity volumes** toggle button to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
-
     
 
     You cannot create or attach volumes larger than 2047 GB on IBM i-based VSIs. However, machine types E890 and E1080 are optimized to support the attachment of a higher number of volumes on IBM i-based VSIs.
@@ -199,7 +181,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
-7.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+8.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
@@ -207,14 +189,10 @@ For more information, see [Configuring for large quantity of volumes](#config-la
     For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-8.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+9.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
     If your account has fewer than 100 VSIs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VSIs. If your account has more than 100 VSIs, the VSIs might not be displayed in the user interface. You can reduce the number of VSIs by using the CLI or API so that they are displayed again on the user interface.
     {: note}
-
-
-
-
 
 
 
