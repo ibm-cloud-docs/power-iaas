@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-13"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -33,12 +33,17 @@ You can use the IBM Cloud&reg; carbon calculator to view and export carbon emiss
 
 
 
-A carbon calculator can perform the following functions:
-- Display the GHG emission data for an account.
-- Monitor the electricity consumption for services, resources, and the location and efficiency of your data centers.
-- Track the GHG emissions that are associated with your account to manage and mitigate your carbon footprint over time.
 
 
+
+
+
+The IBM Cloud carbon calculator performs the following functions:
+
+- Displays the GHG emission data for an account. The GHG emission data is classified based on total energy consumption by an account, region, location, or service.
+- Reports the overall energy consumption of an account and the efficiency of data centers.
+- Tracks the GHG emissions that are associated with an account.
+- Identifies **hot-spots** such as services, locations, or resource groups that reports the highest emissions to mitigate the carbon footprint.
 
 
 
@@ -53,9 +58,9 @@ As organizations and users work together to achieve better outcomes for their bu
 
 
 
-For more information about environmental, social, and governance (ESG) initiatives, see [IBM Releases 2023 Impact Report](https://newsroom.ibm.com/2023-04-11-IBM-Releases-2023-Impact-Report){: external}. For more information about how different geographical areas address sustainability challenges, see [The State of Sustainability 2024 report](https://www.ibm.com/think/insights/state-of-sustainability-geo-data){: external}.
 
 
+For more information about environmental, social, and governance (ESG) initiatives of IBM, see [IBM Releases 2023 Impact Report](https://newsroom.ibm.com/2023-04-11-IBM-Releases-2023-Impact-Report){: external}. For more information about how different geographical areas address sustainability challenges, see [The State of Sustainability 2024 report](https://www.ibm.com/think/insights/state-of-sustainability-geo-data){: external}.
 
 
 
@@ -79,9 +84,10 @@ GHG emission stands for greenhouse gas emission. For more information, see [http
 
 
 
-You can use IBM Cloud carbon calculator for a detailed view of your cloud electricity consumption and associated GHG emissions. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
 
+
+You can use the IBM Cloud carbon calculator for a detailed view of your cloud GHG emissions. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
 
 
@@ -93,10 +99,8 @@ You can use IBM Cloud carbon calculator for a detailed view of your cloud electr
 
 
 
-IBM Cloud carbon calculator uses the calculation method based on the gross electricity consumption and GHG emissions factor per location. For more information, see [FAQ for IBM Cloud Carbon Calculator](https://cloud.ibm.com/docs/account?topic=account-carboncalcfaqs){: external}.
 
-
-
+IBM Cloud carbon calculator uses a calculation methodology that conforms to the GHG protocol. For more information, see [IBM Cloud carbon calculator methodology](https://cloud.ibm.com/docs/account?topic=account-what-is-cloud-calc#carbon-methodology){: external}.
 
 
 
@@ -116,6 +120,12 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 
 
 
+For {{site.data.keyword.powerSys_notm}}, GHG emissions are not distinguished for individual services. It is a combined report of GHG emissions for workloads that run on {{site.data.keyword.powerSys_notm}} instances (VSIs).
+
+You can create a resource group and add the {{site.data.keyword.powerSys_notm}} VSIs for a specific workload to the resource group. View the **Emissions by resource group** widget on the carbon calculator GUI to view the carbon emissions for the resource group that you created. For more information about creating a resource group, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui){: external}.
+
+
+
 
 
 
@@ -124,9 +134,13 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 {: #faq-ccc}
 
 The data for your workspace is not displayed in the carbon calculator or you are not be able to see the data for your workspace because of the following reasons:
+
 - Only the data from your workspaces on IBM Power10 or later systems is used to calculate the carbon emissions. If your workspace is on IBM Power9 or previous generations, the carbon emissions data is not available.
+
 - You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=api#billing-acct-mgmt-api){: external}.
-- The Power Usage Effectiveness (PUE) and Carbon Efficiency Factor (CEF) for your workspace location is set to zero. For more information about PUE and CEF, see [Energy and carbon quantification methodology](https://cloud.ibm.com/media/docs/downloads/account/carbon-calc-method-v5.pdf){: external}.
+
+- If you run workloads in a zero emission data center, emissions that are calculated by using the market-based methodology are set to zero and no data is displayed. To view emissions that are calculated by using the location-based methodology, check the **Display unadjusted emissions** checkbox on the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calculator) dashboard. For more information about the market-based and location-based methodology, see [Market-based and location-based methodology](https://cloud.ibm.com/docs/account?topic=account-what-is-cloud-calc#market-location-methodology){: external}.
+
 
 
 
