@@ -680,9 +680,7 @@ On the Virtual server instances page, click the virtual server instance name pre
 
 
 
-You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the CLI, API, or Terraform. By using the GUI, you can edit the preferred processor compatibility mode only for existing VSIs that are already deployed.
-
-
+You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
 
 
 
