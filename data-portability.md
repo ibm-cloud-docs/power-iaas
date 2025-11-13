@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-25"
+lastupdated: "2025-11-13"
 
 keywords: data portability, power virtual server
 
@@ -60,10 +60,10 @@ For more information about the responsibility assignment matrix for {{site.data.
 
 
 
-## Migrating the data
+## Migrating data
 {: #data-port-export-proc}
 
-Migrating the data from one infrastructure to another requires planning and strategies to achieve the expected performance. Perform the steps defined in the following topics to migrate Power workloads to a {{site.data.keyword.powerSys_notm}}:
+Migrating data from one infrastructure to another requires planning and strategies to achieve the expected performance. Perform the steps defined in the following topics to migrate Power workloads to a {{site.data.keyword.powerSys_notm}}:
 
 * [Planning a workload migration to IBM&reg; Power&reg; Virtual Server](/docs/power-iaas?topic=power-iaas-system-migration)
 * [Migration strategies for AIX](/docs/power-iaas?topic=power-iaas-migration-aix)

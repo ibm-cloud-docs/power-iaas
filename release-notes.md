@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-10-24"
+lastupdated: "2025-11-13"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,7 +23,13 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+## November 2025
+{: #Nov-2025}
+{: release-note}
 
+
+
+- You can set the preferred processor compatibility mode for a VSI when you create a VSI in the {{site.data.keyword.powerSys_notm}} user interface. Previously, the option to set the preferred processor compatibility mode was available only through the CLI, API, or Terraform. For more information about processor compatibility mode, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
 
 ## September 2025
 {: #Sep-2025}
