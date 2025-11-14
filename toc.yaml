@@ -33,6 +33,7 @@ toc:
           - pricing.md
           - pricing-private-cloud.md
           - generating-estimate.md
+          - creating-estimate-private.md
       - topicgroup:
           label: High availability and disaster recovery
           topics:
