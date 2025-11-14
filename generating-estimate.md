@@ -235,3 +235,5 @@ To begin the ordering process for IBM Power Virtual Server through an IBM Busine
    - Finalize the order
 
 If you do not work with an IBM Business Partner, contact IBM through email or [book a meeting](https://www.ibm.com/solutions/cloud?schedulerform){: external} with an IBM expert.
+
+For more information about creating an estimate for Power Virtual Server Private Cloud resources in a client location, see [Creating an estimate for Power Virtual Server resources in a client location](/docs/power-iaas?topic=power-iaas-creating-an-estimate-private).
