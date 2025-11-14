@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2025
 
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-14"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -663,8 +663,9 @@ NSGs have the following limitations in the {{site.data.keyword.powerSys_notm}} e
 
 
 
-The support tickets to increase the quota are evaluated by customer support and {{site.data.keyword.powerSys_notm}} operations and are at the discretion of IBM.
-{: note}
+
+The support tickets for quota increases are evaluated by Customer Support and the Power Virtual Server operations team. IBM makes the final decision at its discretion and might decline the request depending on resource availability and the business justification.
+{: important}
 
 
 
