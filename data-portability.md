@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-25"
+lastupdated: "2025-11-14"
 
 keywords: data portability, power virtual server
 
@@ -47,23 +47,14 @@ You can accomplish the following tasks by using data portability:
 
 
 
-## Responsibilities
-{: #data-port-respon}
-
-{{site.data.keyword.powerSys_notm}} provides interfaces and instructions to guide you to copy and store your content on your selected location. The content can include data that is stored on logical volumes, operating system images, and configuration parameters.
-
-You are responsible for the use of the exported data and configuration to enable data portability to other infrastructures. You are responsible for creating and executing the plan to set up the infrastructure on a different service provider that has capabilities similar to the {{site.data.keyword.powerSys_notm}} services.
-
-For more information about the responsibility assignment matrix for {{site.data.keyword.powerSys_notm}}, see [High-level architecture](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#high-level-architecture-on-cloud).
 
 
 
 
-
-## Migrating the data
+## Migrating data
 {: #data-port-export-proc}
 
-Migrating the data from one infrastructure to another requires planning and strategies to achieve the expected performance. Perform the steps defined in the following topics to migrate Power workloads to a {{site.data.keyword.powerSys_notm}}:
+Migrating data from one infrastructure to another requires planning and strategies to achieve the expected performance. Perform the steps defined in the following topics to migrate Power workloads to a {{site.data.keyword.powerSys_notm}}:
 
 * [Planning a workload migration to IBM&reg; Power&reg; Virtual Server](/docs/power-iaas?topic=power-iaas-system-migration)
 * [Migration strategies for AIX](/docs/power-iaas?topic=power-iaas-migration-aix)

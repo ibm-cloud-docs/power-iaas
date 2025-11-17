@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-29"
 
 ---
 
@@ -30,14 +30,14 @@ The following CLI commands are added to the IBM Power Virtual Server Private Clo
 - [ibmcloud pi network-peer route-filter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer-route-filter). You can use this command to create, delete, and get the details of the route filters in the network peering connection.
 
 
-**New option**
+**New options**
 
 The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to set the instance to your preferred processor compatibility mode. The processor must be compatible with the system in use.
 
 
-**Changes to the command output**
+**Updated commands**
 
-The outputs to the following commands are updated:
+The following commands are updated:
 
 - Added `Effective Processor Compatibility Mode` and `Preferred Processor Compatibility Mode` to the instance output.
 - Added `Creation Date` to the shared-processor-pool output.
@@ -68,15 +68,15 @@ The CLI version v1.6.1 is available with updates related to translation.
 The CLI plug-in version 1.6.0 supports Power11 systems. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
 
-**New command**
+**New commands**
 
 The following CLI commands are added:
 
 - [ibmcloud pi route](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-route): You can use this command to create, delete, get, list, report, and update the custom network routes within the Power Virtual Server workspaces in the IBM data center.
 - [ibmcloud pi virtual-serial-number software-tiers](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-virtual-serial-number-software-tiers): You can use this command to list all the supported software-tiers.
-- [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-operation): You can use this command to assign a server boot mode, a server operating mode, a job task, or an operation type to an IBM i virtual server instance. This command can be used for the Power Virtual Server Private Cloud.
+- [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-operation): You can use this command to set the server boot mode, the server operating mode, a job task, or an operation type to an IBM i virtual server instance. This command can be used for the Power Virtual Server Private Cloud.
 
-**New option**
+**New options**
 
 The following options are added to the existing CLI commands:
 
@@ -92,13 +92,11 @@ The following options are added to the existing CLI commands:
 
 
 
-**Deprecated or removed changes**
+**Deprecated commands or options**
 
 You can no longer use the following commands or options as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use:
 
-- [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn)
-- [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy)
-- [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy).
+- Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) command as the Power Virtual Server VPN as a Service (VPNaaS) has reached its end of life and is not available for use.
 - `--access-config`, `--jumbo`, `--peer-id`, `--peer-type`, and `--source-ip` options from the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command.
 
 - Removed the DHCP option as a subnet type in the Power Virtual Server Private Cloud.

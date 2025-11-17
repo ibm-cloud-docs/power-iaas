@@ -1,25 +1,13 @@
 keyword:
-  off-prem-fname:
-    IBM {{site.data.keyword.powerSys_notm}}
-  off-prem:
-    IBM data center
-  on-prem-fname:
-    IBM {{site.data.keyword.powerSys_notm}} Private Cloud
-  on-prem:
-    Client location
-  on-prem-lc:
-    client location
-  ibmi-vst:
-    IBM i software tier
-  vst:
-    software tier
-  arp-broadcast:
-    Subnet ARP Broadcast
-  nsg-lc:
-    network security group
-  nag-lc:
-    network address group
-  nsg-sc:
-    Network security group
-  nag-sc:
-    Network address group
+  off-prem-fname: IBM {{site.data.keyword.powerSys_notm}}
+  off-prem: IBM data center
+  on-prem-fname: IBM {{site.data.keyword.powerSys_notm}} Private Cloud
+  on-prem: Client location
+  on-prem-lc: client location
+  ibmi-vst: IBM i software tier
+  vst: software tier
+  arp-broadcast: Subnet ARP Broadcast
+  nsg-lc: network security group
+  nag-lc: network address group
+  nsg-sc: Network security group
+  nag-sc: Network address group

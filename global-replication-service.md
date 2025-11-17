@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-10-22"
+lastupdated: "2025-11-12"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -852,7 +852,12 @@ To change the values of the `bootable` or `shareable` properties on the primary 
 A volume can be either shareable or bootable, but cannot be both.
 {: note}
 
+
+
 After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
+
+
+
 
 
 
@@ -880,7 +885,7 @@ If you do not delete the auxiliary volume from the secondary site, an out-of-ban
 
 
 ### Removing the primary volume from its volume group
-{: rem-prim-vol-vol-grp}
+{: #rem-prim-vol-vol-grp}
 
 Use the following API or CLI commands to remove the primary volume from its volume group:
 
@@ -922,6 +927,13 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 
 
 When you [disable the replication service on the primary volume](#disable-vol-repli) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
+
+
+
+
+
+
+
 
 ## GRS impacts on other {{site.data.keyword.powerSys_notm}} operations
 {: #impacts-on-powervs}

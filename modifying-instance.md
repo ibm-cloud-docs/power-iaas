@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-10-21"
+lastupdated: "2025-11-13"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -89,7 +89,11 @@ You must select the appropriate processor mode to ensure compatibility with the 
 The effective mode might differ from the preferred mode if the host does not support the preferred mode that you have specified for the VSI.
 {: note}
 
-You can use the CLI, API or Terraform to set the preferred processor compatibility mode for a VSI during its creation. When using the GUI, you can change the preferred mode only by editing an existing VSI that has already been deployed.
+
+
+You can use the GUI, CLI, API or Terraform to set the preferred processor compatibility mode for a VSI during its creation. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance){: external}.
+
+
 
 To change the preferred processor compatibility mode of a VSI by using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
 

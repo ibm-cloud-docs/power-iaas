@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-10-21"
+lastupdated: "2025-11-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -432,9 +432,18 @@ To migrate your VM from one data center to another, you must capture and export 
 
 
 
-You can choose a pinning policy: _soft pin_ or _hard pin_, to pin a VM to the host where it is running. When you _soft pin_ a VM for high availability, PowerVC automatically migrates the VM to the original host. The PowerVC is migrated when the host is back to its operating state. When you _hard pin_ a VM, the movement of the VM is restricted if the VM has a licensing restriction with the host. The VM movement is restricted during remote restart, automated remote restart, DRO, and live partition migration. The default pinning policy is _none_.
 
 
+
+
+
+You can choose a pinning policy: _soft pin_ or _hard pin_, to pin a VSI to the host where it is running. If pinning is not set or if it is set to _soft pin_, the VSI is automatically migrated or remote restarted during maintenance windows or in case of host failure.
+
+When you _soft pin_ a VSI for high availability, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host is back to its operating state.
+
+When you _hard pin_ a VSI, the movement of the VSI is restricted during remote restart, automated remote restart, dynamic resource optimization, and live partition migration. The movement of the VSI is also restricted if the VSI has a licensing restriction with the host. If the VSIs are set to _hard pin_, VSIs are stopped if the frame is down.
+
+The default pinning policy is _none_.
 
 
 
@@ -671,9 +680,7 @@ On the Virtual server instances page, click the virtual server instance name pre
 
 
 
-You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the CLI, API, or Terraform. By using the GUI, you can edit the preferred processor compatibility mode only for existing VSIs that are already deployed.
-
-
+You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
 
 
 

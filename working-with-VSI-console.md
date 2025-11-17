@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-10-08"
+lastupdated: "2025-11-12"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment is also known as VTERM. You can use the VSI console to interact with the AIX, IBM i, and Linux-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
+The Virtual Server Instance (VSI) console in the {{site.data.keyword.powerSysFull}} environment is also known as VTERM. You can use the VSI console to interact with the AIX&reg;, IBM i, and Linux&reg;-based Power virtual servers. The VSI console performs several management and troubleshooting activities. The VSI console provides the following benefits:
 
 - Provides access to the AIX, IBM i, and Linux-based VSIs (Linux, SAP HANA, and SAP NetWeaver) to perform various OS-related tasks such as installation, configuration, troubleshooting, and recovery
 - Debugs VSI boot issues
@@ -100,10 +100,14 @@ ibmcloud pi instance console list
 Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys_notm}} instance terminates any open console sessions before a new console session is started.
 {: note}
 
+
+
 ## Sharing the VSI console session
 {: #sharing-console-session}
 
 When multiple users open the VSI console for the same {{site.data.keyword.powerSys_notm}} instance, the same VSI console (VTERM) session is shared among all users. When the last user closes the VSI console, the underlying console session is terminated. Reopening the VSI console creates a new VTERM and establishes a new console connection to the VSI on the host.
+
+
 
 ## VSI console considerations
 {: #vsi-console-considerations}
