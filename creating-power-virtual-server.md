@@ -201,7 +201,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
 
-    For an AIX VM, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
+    For an AIX VSI, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
 9.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
@@ -251,7 +251,7 @@ View the details of a VSN associated with a VSI on the VSI details page. You can
 
 For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a Virtual Serial Number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
 
-### Assigning a VSN to a new VM
+### Assigning a VSN to a new VSI
 {: #VSN-new-VM}
 
 You can assign a VSN only to a VSI with IBM i OS. To assign a VSN when you create a VM, select **IBM i** OS. The **Virtual serial number** field is enabled. The default VSN value is **None**.
@@ -261,7 +261,7 @@ Edit the default VSN value and select one of the following options:
 - **Auto-assign**: Assigns a system-generated VSN to your VSI only if your `IBM Cloud account ID` is mapped with your `customer number` in the Entitled System Support (ESS).
 - **Select from retained VSNs**: Displays a list of the retained VSNs. You can select a VSN in the `retained` state and assign it to your IBM i VSI.
 
-For more information about creating a VM, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](#configuring-instance).
+For more information about creating a VSI, see [Configuring a {{site.data.keyword.powerSys_notm}} instance](#configuring-instance).
 
 
 
@@ -405,11 +405,11 @@ If you add volumes to be created and attached to your new VSI during creation th
 ## Provisioning a virtual machine without an initial boot volume
 {: #empty-vm}
 
-Create and deploy a virtual server instance (VM) without an initial boot volume.
+Create and deploy a virtual server instance (VSI) without an initial boot volume.
 
 The VSIs without boot volume can be used for cloning operations. These VSIs are not bootable until a boot volume is attached post provisioning. The following table shows which images are deployed based on your OS selection:
 
-When you attach boot volume post provisioning of the VM, the boot image still shows the OS-specific image without the boot volume name. 
+When you attach boot volume post provisioning of the VSI, the boot image still shows the OS-specific image without the boot volume name. 
 {: note}
 
 | OS selected | Image deployed                  |
@@ -439,7 +439,7 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-While provisioning, you can configure your virtual server instance (VM) to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
+While provisioning, you can configure your virtual server instance (VSI) to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
 
 
 
