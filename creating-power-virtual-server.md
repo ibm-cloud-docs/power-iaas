@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-11-14"
+lastupdated: "2025-11-17"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -168,6 +168,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
        - To deploy an SAP HANA profile, you can select a machine type from the list.
        - To deploy an SAP certified profile, you must select an IBM Power10 or later machine type from the list.
     2. Select a profile to deploy an SAP HANA profile.
+
     3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
 
     The **SAP RISE deployment** option is enabled if **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list are selected.
@@ -176,12 +177,11 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-    You cannot create or attach volumes larger than 2047 GB on IBM i-based VSIs. However, machine types E890 and E1080 are optimized to support the attachment of a higher number of volumes on IBM i-based VSIs.
+    You cannot create or attach volumes larger than 2047 GB on IBM i-based VSIs. However, machine types E890 and E1080 are optimized to support the attachment of a higher number of volumes on IBM i-based VSIs. For more information, see [Configuring for large quantity of volumes](#config-large-vol).
     {: note}
 
     
 
-For more information, see [Configuring for large quantity of volumes](#config-large-vol).
 
 8.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
