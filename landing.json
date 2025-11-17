@@ -53,12 +53,6 @@
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
-    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
-    "tiles": [
-      {
-        "date": "25 July 2025",
-        "title": "You can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability)."
-      }
-    ]
+    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes"
   }
 }
