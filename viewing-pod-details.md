@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-11-11"
+lastupdated: "2025-11-18"
 
 keywords: viewing pod, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -32,6 +32,7 @@ You can view the {{site.data.keyword.on-prem}} pod details such as the total num
 
 
 To view the pod details, complete the following steps:
+
 
 
 1. In the {{site.data.keyword.powerSys_notm}} interface, click **Infrastructure capacity**. The **Infrastructure capacity** page displays the total number of cores, memory, storage, and system units that are available for each of the {{site.data.keyword.powerSys_notm}} pod.
