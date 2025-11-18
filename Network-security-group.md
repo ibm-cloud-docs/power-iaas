@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2025
 
-lastupdated: "2025-11-14"
+lastupdated: "2025-11-18"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -47,7 +47,7 @@ The existing workspaces can provide NSG support only after the data center in wh
 ## NSG components
 {: #nsg-components}
 
-Review the following topics to understand the components that are part of the NSG implementation:
+Review the following topics to understand the components that are part of the NSG implementation in {{site.data.keyword.powerSys_notm}}:
 
 - [{{site.data.keyword.nag-sc}}s](#nag)
 - [Members](#members)

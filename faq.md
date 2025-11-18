@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-11-13"
+lastupdated: "2025-11-18"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -534,7 +534,6 @@ The key differences are as follows:
 | Ease of creation | Easy and quick process| Three-step process and takes a long time|
 | Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
 {: caption="Differences between a snapshot and clone" caption-side="bottom"}
-
 
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
 
