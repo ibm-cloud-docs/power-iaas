@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-11-14"
+lastupdated: "2025-11-18"
 
 keywords: data portability, power virtual server
 
@@ -72,10 +72,18 @@ Migrating data from one infrastructure to another requires planning and strategi
 
 
 
+
 ## Capturing and exporting a virtual machine
 {: #data-port-export-data}
 
 {{site.data.keyword.powerSys_notm}} provides mechanisms to capture and export a virtual machine (VM). For more information, see [Capturing and exporting a virtual machine (VM)](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).
+
+
+
+
+
+
+
 
 ## Data ownership
 {: #data-port-data-owner}

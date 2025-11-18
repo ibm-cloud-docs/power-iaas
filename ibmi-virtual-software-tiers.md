@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-09-03"
+lastupdated: "2025-11-18"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -29,15 +29,22 @@ subcollection: power-iaas
 
 
 
+
 Starting with IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI. But, you can select any physical system that supports the selected {{site.data.keyword.ibmi-vst}}. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
 
 The {{site.data.keyword.ibmi-vst}} determines the pricing tier for the IBM i operating system and licensed program products (LPPs). It also defines the limits for the following resources:
 - Maximum number of virtual processors
 - Maximum memory size
 
-You can dynamically adjust the number of CPUs and the memory size if the numbers are within the {{site.data.keyword.ibmi-vst}} limits. To expand the size beyond the limit of the current {{site.data.keyword.ibmi-vst}}, you must follow these steps:
+
+
+You can dynamically adjust the number of CPUs and the memory size if the numbers are within the {{site.data.keyword.ibmi-vst}} limits. To increase the size beyond the limit of the current {{site.data.keyword.ibmi-vst}}, you must follow these steps:
 1. Power off the VSI.
 2. Change the {{site.data.keyword.ibmi-vst}} to a tier that aligns with your resource requirements.
+
+
+
+
 
 For more information, see [Supported resource limits by the IBM i software tier](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-vsw-vp-mem).
 
@@ -47,12 +54,12 @@ You can generate an estimate of {{site.data.keyword.powerSys_notm}} resources wi
 
 You must complete the following prerequisites to assign an {{site.data.keyword.ibmi-vst}} to a {{site.data.keyword.powerSys_notm}} instance:
 
-- Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section.
-- Select an IBM Power10 or later server type from the **Machine type** list.
-- Complete the following steps to assign a VSN to the instance:
-  - Edit the **Virtual serial number (VSN)** field.
-  - The Virtual serial number (VSN) summary pane appears.
-  - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
+1. Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section.
+2. Select an IBM Power10 or later server type from the **Machine type** list.
+3. Complete the following steps to assign a VSN to the instance:
+   1. Edit the **Virtual serial number (VSN)** field.
+   2. The Virtual serial number (VSN) summary pane appears.
+   3. Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
 The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
 
@@ -60,10 +67,16 @@ For more information, see [Configuring a Power Virtual Server instance](/docs/po
 
 
 
+
 ## Supported resource limits by the {{site.data.keyword.ibmi-vst}}
 {: #ibmi-vsw-vp-mem}
 
-For each {{site.data.keyword.ibmi-vst}}, the supported limits for resources are defined. These limits help align resource usage with software licensing costs. You must understand the supported limits of resources for planning your VSI size and ensure compliance with IBM i licensing models.
+
+
+
+
+
+ For each {{site.data.keyword.ibmi-vst}}, the supported limits for resources are defined. These limits help align resource usage with software licensing costs. You must understand the supported limits of resources for planning your VSI size and ensure compliance with IBM i licensing models.
 
 The following table provides the details of the maximum number of virtual processors and memory size allowed on each {{site.data.keyword.ibmi-vst}}.
 
