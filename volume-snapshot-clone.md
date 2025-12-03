@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-02"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -151,6 +151,12 @@ You must provide values for the following parameters in the API and CLI commands
 
 * `description`: (Optional) Describes the snapshot.
 * `volumeIDs`: (Optional) Includes a list of one or more volumes to be included in the snapshot. If this parameter is left empty, all volumes that are attached to the virtual server instance (VSI) are included in the snapshot.
+
+
+
+
+You can use the [Get a list of flashcopy mappings of a given volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge){: external} API to confirm that the operation to create a snapshot of a volume is completed before you retry the resize operation.
+
 
 
 

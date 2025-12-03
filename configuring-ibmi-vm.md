@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-07-24"
+lastupdated: "2025-12-03"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -104,13 +104,13 @@ The default is to select Option 1 'Perform an IPL'.
 ### Reviewing software agreements
 {: #first-boot-review-software-licenses}
 
-When the installation is complete, the **System Sign-On** screen is presented. Follow the similar steps from [Changing the DST password](#first-boot-change-dst-password) to change `QSECOFR` password. After the System sign-on is complete, accept the Licensed Program Software Agreements.
+When the installation is complete, the **System Sign-On** screen is displayed. Follow the [Changing the DST password](#first-boot-change-dst-password) procedure to change `QSECOFR` password. After the system sign-on is complete, accept the Licensed Program Software Agreements.
 
-1. Following login, the screen will automatically change to the work with **Software Agreements** screen.
+1. After you login, the screen automatically changes to the work with **Software Agreements** screen.
 2. To accept the license agreements from the console, press **5=display** each license agreement and press ENTER.
-3. Use **F14** to accept each agreement.
-4. After all are accepted, press ENTER to continue to the IBM i main menu.
-5. When the IBM i main menu is shown, the cloud-init configuration of the network and injection of the license keys begin. The cloud-init configuration process ran and can take up to 5 minutes.
+3. Press **F14** to accept each agreement.
+4. Once you accept all agreements press ENTER, the IBM i main menu is displayed.
+5. When the IBM i main menu is shown, the cloud-init configuration of the network and injection of the license keys begin. The cloud-init configuration process can take up to 5 minutes.
 6. Confirm that the system has the [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 
@@ -126,8 +126,22 @@ When the installation is complete, the **System Sign-On** screen is presented. F
 - `CRTUSRPRF` and `CHGUSRPRF` use the same new security rules as `QSECOFR`, requiring at least a 15 character password.
 
 
-## Verify licenses and network configuration
+## Verifying licenses and network configuration
 {: #verify-licences-and-network-configuration}
+
+
+To resolve an issue with operating system licenses that are expired when you deploy IBM i images, perform the following steps on the IBM {{site.data.keyword.powerSys_notm}} console:
+
+1. After you change the default login password for OS in an IBM i VSI, the Operating System License Information screen is displayed. If you see the error message, `No operating system licenses are available at this time.` wait for 15 min.
+2. Press **F5** to retry license verification and to continue with the sign-on process.
+3. Accept Software Agreements.
+4. Run IBM i command `STRSBS QBASE` or `STRSBS QCTL` to exit restricted state.
+5. Run IBM i command `CFGTCP` to verify whether the TCP/IP configuration is complete.
+
+If the stock image is deployed without displaying the Operating System License Information screen, run the `STRSBS QBASE` command within one hour of the VSI deployment. For additional help, contact the support team. For more information, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
+
 
 To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1` and press ENTER again.
 

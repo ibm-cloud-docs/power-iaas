@@ -190,6 +190,7 @@ toc:
       id: reference
       topics:
       - data-portability.md
+      - powervs-maintenance.md
       - link:
           label: API reference
           href: https://cloud.ibm.com/apidocs/power-cloud

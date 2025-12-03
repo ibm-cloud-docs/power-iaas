@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-12"
+lastupdated: "2025-11-25"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -179,7 +179,7 @@ When you create a volume that is replication-enabled, the volume is created in o
 ## Creating a volume group for GRS
 {: #create-vol-grp}
 
-A volume group is a {{site.data.keyword.powerSys_notm}} managed resource. By using the volume group, you can enable, disable, and manage a storage replication consistency group. The volume group contains the volumes that must be recovered during disaster. You can add the replication-enabled volumes to a volume group. A replication-enabled volume can be a part of only one volume group at any time. In addition, all volumes in a volume group must be a part of the same storage pool.
+A volume group is a {{site.data.keyword.powerSys_notm}} managed resource. By using the volume group, you can enable, disable, and manage a storage replication consistency group. The volume group contains the volumes that must be recovered during a disaster. You can add the replication-enabled volumes to a volume group. A replication-enabled volume can be a part of only one volume group at any time. In addition, all volumes in a volume group must be a part of the same storage pool.
 
 
 

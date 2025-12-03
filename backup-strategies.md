@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-10-07"
+lastupdated: "2025-12-02"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -41,8 +41,6 @@ Learn more about different AIX and Linux backup strategies for IBM&reg; Power Sy
 IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called as Secure Automated Backup with Compass® from now on referred as “Backup Offering.”
 
 The Backup Offering is powered by Cobalt Iron Compass and is accessible from the {{site.data.keyword.cloud_notm}} [catalog](https://cloud.ibm.com/catalog){: external}.
-
-
 
 
 
@@ -100,7 +98,7 @@ The Backup as a Service (BaaS) VPC is created when the Backup Offering is provis
 - VPE for secure connectivity to each of the backup servers
 - Security group with inbound rule, address prefix, and subnet
 
-The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of the Direct Link connection.
+The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. Connect your on-premises workloads to the Transit Gateway through the Direct Link connection. Use VPN connection in place of the Direct Link connection.
 
 #### Dual copy Backup Offering
 {: #dual-copy-backup}

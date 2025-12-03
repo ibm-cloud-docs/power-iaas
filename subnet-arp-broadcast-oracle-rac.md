@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-09-10"
+lastupdated: "2025-12-01"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -45,7 +45,7 @@ The **{{site.data.keyword.arp-broadcast}}** option is not available if you are u
 
 When you enable the **{{site.data.keyword.arp-broadcast}}** in {{site.data.keyword.powerSys_notm}} subnets, dynamic communication between IP addresses is enabled and scalability and compatibility with various devices and systems improves. Hence, network administration is simplified because the automatic conversion of the IP address to MAC address is enabled. Thus, manual configuration of the network is reduced and network performance improves.
 
-To get the benefits of the **{{site.data.keyword.arp-broadcast}}**, you must set the option to **Enabled** for a subnet of a {{site.data.keyword.powerSys_notm}} workspace on the Subnet page. The ARP request is broadcast across the subnet. You can perform the following actions in the subnet:
+To get the benefits of the **{{site.data.keyword.arp-broadcast}}**, you must set the option to **Enabled** for a subnet of a {{site.data.keyword.powerSys_notm}} workspace on the Subnet page. The ARP request is broadcast across the subnet. You can determine the following actions in the subnet:
 
 - Identify the change in the MAC address of a device that is mapped to an IP address
 - Identify a MAC address of an IP address that frequently moves from one MAC addresses to another
@@ -79,6 +79,14 @@ To change the status of the **{{site.data.keyword.arp-broadcast}}** option for a
 
 To change the status of the **{{site.data.keyword.arp-broadcast}}** option for an existing subnet, use the following API or CLI commands:
 
-* **API**: To enable or disable the broadcast of ARP when you create a subnet, use the [Create a new Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-post) API. To enable or disable the broadcast of ARP when you update a subnet, use the [Update a Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-put) API. Set the `arpBroadcast` parameter to `enable` or `disable` value. By default, the `arpBroadcast` parameter is set to `disable` value.
+* **API**: Use the following APIs to enable or disable the ARP broadcast option:
+  * When you create a subnet, use the [Create a new Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-post) API.
+  * When you update a subnet, use the [Update a Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-put) API.
 
-* **CLI**: To enable or disable the ARP broadcast option when you create a subnet, use the command [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create). To enable or disable the ARP broadcast option when you update a subnet, use the command [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update). Set the `arpBroadcast` parameter to `enable` or `disable` value. By default, the `arpBroadcast` parameter is set to `disable` value.
+  Set the `arpBroadcast` parameter to `enable` or `disable` value. By default, the `arpBroadcast` parameter is set to `disable` value.
+
+* **CLI**: Use the following commands to enable or disable the ARP broadcast option:
+  * When you create a subnet, use the command [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create).
+  * When you update a subnet, use the command [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update).
+
+  Set the `arpBroadcast` parameter to `enable` or `disable` value. By default, the `arpBroadcast` parameter is set to `disable` value.

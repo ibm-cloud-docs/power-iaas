@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2025-01-17"
+lastupdated: "2025-12-02"
 
 keywords: ibm i, program temporary fixes
 
@@ -29,15 +29,16 @@ subcollection: power-iaas
 
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 
-
-
-
-
 - IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272), SJ02850
 - IBM i 7.3 - MF99207 (TR7) and SI77412, SI77206, SJ02851
-- IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202, SJ02854
+- IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202, SJ05537
 - IBM i 7.5 - SJ02853
+- IBM i 7.6 - Included in the *Base* release
 
+
+
+Ensure that your IBM i image includes the necessary code levels for the Power system that you are deploying. To verify the minimum supported code level, see the [IBM i Platform Support Summary](https://www.ibm.com/support/pages/node/1135276){: external}.
+{: important}
 
 
 
@@ -57,7 +58,12 @@ You must install the program temporary fixes (PTFs) depending on the version of 
 ## Best practices for using IBM i stock images
 {: #best-practice-stock-images}
 
-1.	When you select an IBM i stock image, you must verify that the latest group of PTFs are installed, especially the Hiper and Security group. For more information, see [IBM i Group PTFs with level](https://www.ibm.com/support/pages/ibm-i-group-ptfs-level).
-2.	Refer to the [IBM PSIRT blog](https://www.ibm.com/blogs/psirt/) for the latest Product Security Incident Response.
-3.	You can subscribe to valuable product notifications at [My Notifications](https://www.ibm.com/support/pages/node/253211).
-4. Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+1. When you select an IBM i stock image, you must verify that the latest group of PTFs are installed, especially the Hiper and Security group. For more information, see [IBM i Group PTFs with level](https://www.ibm.com/support/pages/ibm-i-group-ptfs-level).
+
+2. Refer to the [IBM PSIRT blog](https://www.ibm.com/blogs/psirt/) for the latest Product Security Incident Response.
+
+3. You can subscribe to valuable product notifications at [My Notifications](https://www.ibm.com/support/pages/node/253211).
+
+4. Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+
+5. English (2924) and English DBSC (2984) versions are included with IBM i stock images. To install other languages, you can use the NFS stock image that is mentioned in the preceding best practice. 

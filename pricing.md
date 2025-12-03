@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-11-04"
+lastupdated: "2025-12-02"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -160,6 +160,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
 | Volume                                        | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
 | Snapshot                                      | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | Snapshot storage                                                                                                                                             |
+
 {: caption="{{site.data.keyword.powerSys_notm}} resources that are CRN enabled." caption-side="bottom"}
 
 
@@ -298,10 +299,8 @@ Refer to the following table to view the part number descriptions and the associ
 | SUSE Linux Enterprise Server tier 1 instance-hour                                           | power-iaas-metric-sles-tier1                   |
 | SUSE Linux Enterprise Server tier 2 instance-hour                                           | power-iaas-metric-sles-tier2                   |
 | SUSE Linux Enterprise Server tier 3 instance-hour                                           | power-iaas-metric-sles-tier3                   |
-|     |                                              |
 | SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 core-hour            | power-iaas-metric-sr3-hana-S1122-core          |
 | SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 memory gigabyte-hour | power-iaas-metric-sr3-hana-S1122-memory        |
-|       |                                              |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 core-hour            | power-iaas-metric-sr2-hana-E1050-core          |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 memory gigabyte-hour | power-iaas-metric-sr2-hana-E1050-memory        |
 | SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 core-hour            | power-iaas-metric-sr2-hana-E1080-core          |
@@ -374,16 +373,13 @@ Refer to the following table to view the part number descriptions and the associ
 
 
 
-
-
-
-
 ## Base instances
 {: #pricing-base-instance-prices}
 
 The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
-The pricing for memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
+The pricing for memory  is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
+
 
 ## Operating systems
 {: #pricing-operating-systems}
@@ -611,6 +607,13 @@ Total billable storage = 595 GB
 - Data volumes: 235 GB
 - Image volumes: 200 GB
 - Deployed VMs: 160 GB
+
+
+
+
+
+
+
 
 ## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
 {: #pricing-vpn}

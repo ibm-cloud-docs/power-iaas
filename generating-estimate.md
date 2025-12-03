@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-17"
+lastupdated: "2025-11-20"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -98,7 +98,7 @@ You can perform the following actions based on the type of OS:
 ### Estimating a {{site.data.keyword.powerSys_notm}} instance with an {{site.data.keyword.ibmi-vst}}
 {: #est-ibmi-vst}
 
-A virtual software tier limits the size of the virtual machines (VMs) for a particular pricing tier, but the tiers can run on any system. The {{site.data.keyword.ibmi-vst}} is used for the software pricing of operating system (OS) and IBM i licensed program products (LPP). When you assign an {{site.data.keyword.ibmi-vst}} to an instance, the number of CPUs and the amount of memory that can be assigned to the instance is restricted by the {{site.data.keyword.ibmi-vst}}. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-vsw-system-types).
+A virtual software tier limits the size of the virtual machines (VMs) for a particular pricing tier, but the tiers can run on any system. The {{site.data.keyword.ibmi-vst}} is used for the software pricing of operating system (OS) and IBM i Licensed Program Products (LPP). When you assign an {{site.data.keyword.ibmi-vst}} to an instance, the number of CPUs and the amount of memory that can be assigned to the instance is restricted by the {{site.data.keyword.ibmi-vst}}. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-vsw-system-types).
 
 You can create an estimate of the {{site.data.keyword.powerSys_notm}} instance with an {{site.data.keyword.ibmi-vst}} before you deploy the instance. To assign an {{site.data.keyword.ibmi-vst}} to an IBM i {{site.data.keyword.powerSys_notm}} instance, meet the following prerequisites:
 

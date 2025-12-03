@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-14"
+lastupdated: "2025-11-24"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -15,8 +15,13 @@ subcollection: power-iaas
 
 
 
+
 # Using carbon calculator on {{site.data.keyword.powerSys_notm}}
 {: #carbon-cal}
+
+
+
+
 
 ---
 
@@ -28,7 +33,7 @@ subcollection: power-iaas
 
 ---
 
-You can use the IBM Cloud&reg; carbon calculator to view and export carbon emission data on {{site.data.keyword.powerSys_notm}}. The carbon calculator is a dashboard to track, analyze, and manage greenhouse gas (GHG) emissions that is associated with your IBM Cloud services. Carbon emission data is available on IBM Power10 or later systems. To view and export GHG emissions data for an account, you must have account owner, administrator, or viewer level access on the billing service.
+You can use the IBM Cloud&reg; carbon calculator to view and export carbon emission data on {{site.data.keyword.powerSys_notm}}. The carbon calculator is a dashboard to track, analyze, and manage greenhouse gas (GHG) emissions that is associated with your IBM Cloud services. Carbon emission data is available for IBM Power10 or later systems. To view and export GHG emissions data for an account, you must have account owner, administrator, or viewer level access on the billing service.
 {: shortdesc}
 
 
