@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-09"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -918,3 +918,15 @@ Yes, you can add a user interface to an existing virtual machine by performing O
 
 
 To view or search for resources that are provisioned in {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources). Note that the `user tags` are not included in the response for GET API and CLI requests.
+
+
+
+
+
+
+
+## How can I share images across IBM Cloud accounts?
+{: #shared-image}
+{: faq}
+
+In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
