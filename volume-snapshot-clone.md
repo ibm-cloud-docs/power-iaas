@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-09"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -306,9 +306,6 @@ Consider the following scenarios to restore a snapshot:
 
 * You cannot restore a virtual server instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI command to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
 
-
-
-* To restore volumes that are enabled for volume replication with Global Replication Services (GRS), all the volumes must belong to the same volume group. You cannot restore volumes when a snapshot contains multiple GRS-enabled volumes from different volume groups.
 
 
 

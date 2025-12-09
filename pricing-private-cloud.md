@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-09-22"
+lastupdated: "2025-12-08"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -25,7 +25,9 @@ subcollection: power-iaas
 
 ----
 
-The {{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} provides secure and unified billing for using the hardware and software resources. The following list of hardware resources is metered:
+
+
+The {{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} provides secure and unified billing system for using the hardware and software resources. The following list of hardware resources is metered:
 
 - Virtual machines: The CPU (in cores), with processor modes (capped, shared, dedicated), and memory (in GB).
 
@@ -35,7 +37,12 @@ The {{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} provides
 
 For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
-In the IBM Cloud catalog for {{site.data.keyword.on-prem-fname}}, the estimated price might differ from the actual price when you purchase the {{site.data.keyword.on-prem-fname}} infrastructure or instances. The actual price might include the discounts and promotion codes.
+In the IBM Cloud catalog for {{site.data.keyword.on-prem-fname}}, the estimated price might differ from the actual price when you purchase the {{site.data.keyword.on-prem-fname}} infrastructure or instances. The actual price might include discounts and promotion codes. 
+
+
+
+
+
 
 
 For more information about IBM Cloud regions that can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).

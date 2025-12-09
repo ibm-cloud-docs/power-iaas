@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-05"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.7.0 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.8.0 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -291,7 +291,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -k, --access-key string                 Cloud Object Storage HMAC access key.
   -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against.
                                           This is required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
-  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity".
+  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are: "affinity" and "anti-affinity".
                                           If "--storage-pool" is provided then this cannot be specified.
   -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against.
                                           This is required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
@@ -300,7 +300,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against.
                                           This is required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-instances" is not provided.
   -b, --bucket string                     Cloud Object Storage bucket name.
-  -u, --bucket-access string              Indicates the bucket access type ("private" or "public"). Private access requires access and secret keys.
+  -u, --bucket-access string              Indicates the bucket access type. Valid values are: "public", "private". Private access requires access and secret keys.
                                           Default is "private".
   -c, --checksum                          Checks the checksum file from the COS bucket against the one computed on the downloaded image.
   -n, --image-file-name string            The image file name.
@@ -308,12 +308,12 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
                                           Valid license values: byol.
                                           Valid product values: Hana, Netweaver.
                                           Valid vendor values: SAP.
-  -o, --os-type string                    Operating system contained in the image (rhel, sles, aix, ibmi). Required when importing a raw image.
+  -o, --os-type string                    Operating system contained in the image. Valid values are: "aix", "ibmi", "rhel", "sles". Required when importing a raw image.
   -r, --region string                     Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string                 Cloud Object Storage HMAC secret key.
-  -p, --storage-pool string               Storage pool where the image will be imported to (use "ibmcloud pi storage-pools" to see available storage pools).
+  -p, --storage-pool string               Storage pool where the image will be imported to. Use "ibmcloud pi storage-pools" to see available storage pools.
                                           If "--storage-pool" is provided then "--affinity-policy" cannot be specified.
-  -t, --storage-tier string               Tier of the disk storage (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region).
+  -t, --storage-tier string               Tier of the disk storage. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
                                           Default to tier3 if not provided.
       --user-tags strings                 Comma separated list of user tags to be attached to the imported image.
 ```
@@ -417,7 +417,7 @@ action INSTANCE_ID --operation OPERATION
 **Available Options**:
 
 ```bash
-  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
+  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: dumprestart, hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
 ```
 
 **Examples**:
@@ -464,7 +464,7 @@ create INSTANCE_ID --destination DEST --name NAME [--access-key KEY] [--checksum
 ```bash
   -a, --access-key string    Cloud Object Storage HMAC access key. Required if destination is cloud-storage.
   -c, --checksum             Creates a checksum file. Default is "false".
-  -d, --destination string   Destination for the deployable image (image-catalog, cloud-storage, both).
+  -d, --destination string   Destination for the deployable image. Valid values are: "cloud-storage", "image-catalog", "both".
   -i, --image-path string    Cloud Object Storage image path. Required if destination is cloud-storage. E.g. bucket-name[/optional/folder].
   -n, --name string          Name of the deployable image created for the captured instance.
   -r, --region string        Cloud Object Storage regions au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
@@ -543,7 +543,7 @@ get INSTANCE_ID
 ```bash
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--boot-volume-replication-enabled=True|False]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER-USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
@@ -553,7 +553,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
-    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE-TIER]]
+    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
     [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
 
   INSTANCE_NAME: The name of the instance.
@@ -564,12 +564,12 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
       --IBMiPHA-license                                 IBMi PHA software license associated with the instance.
-      --IBMiRDS-users int                               Number of IBMi RDS users software license associated with the instance, default IBMiRDSUsers=0 (no license).
+      --IBMiRDS-users int                               Number of IBMi RDS users software license associated with the instance. Default is IBMiRDSUsers=0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
-  -m, --memory float                                    Amount of memory (in GB) to allocate to the instance. Default is 2GB.
-      --pin-policy string                               Pin policy ("none", "soft", "hard"). Default is "none".
+  -m, --memory float                                    Amount of memory in GB to allocate to the instance. Default is 2GB.
+      --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           Type of processors: "shared" or "dedicated" or "capped". Default is "dedicated".
@@ -581,7 +581,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
       --replication-sites strings                       Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
       --shared-processor-pool string                    The shared processor pool ID of the pool that the server will be in.
       --software-tier string                            IBMi licensing software tiers. Must be set with "--virtual-serial-number" option. Valid values are: P05, P10, P20, P30.
-      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
+      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are: "affinity" and "anti-affinity".
                                                         If "--storage-pool" is provided, then this option cannot be specified.
       --storage-affinity-instance string                PVM instance identifier or name to base storage affinity policy against.
                                                         This is required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
@@ -690,7 +690,7 @@ get INSTANCE_ID
 **Usage**:
 
 ```bash
-operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating-mode MODE] [--job-task TASK]
+operation INSTANCE_ID (--operation-type "boot" --boot-mode MODE --boot-operating-mode MODE | --operation-type "job" --job-task TASK)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -700,7 +700,8 @@ operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating
 ```bash
   -b, --boot-mode string             Name of the server boot mode. Valid values are: a, b, c, d.
   -m, --boot-operating-mode string   Name of the server operating mode. Valid values are: manual, normal.
-  -j, --job-task string              Name of the job task to execute. Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
+  -j, --job-task string              Name of the job task to execute.
+                                     Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
   -o, --operation-type string        Name of the operation to execute. Valid values are: boot, job.
 ```
 
@@ -978,7 +979,7 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
+    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
     [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
     [--processors NUMBER] [--storage-pool-affinity=True|False]
     [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
@@ -994,7 +995,7 @@ update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False
       --IBMiRDS-users int                               New number of IBMi RDS users software license associated with the instance.
   -m, --memory float                                    New amount of memory for the server instance.
   -n, --name string                                     New name of the server instance.
-      --pin-policy string                               New pin policy for the server instance ("none", "soft", "hard").
+      --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           New processor type for the server instance.
   -p, --processors float                                New amount of processors for the server instance.
@@ -1120,7 +1121,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Usage**:
 
 ```bash
-update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE-TIER)
+update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE_TIER)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -2123,7 +2124,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 
 ```bash
   -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore - allowable values: ["retry","rollback"].
+  -r, --restore string    Action to take on a failed snapshot restore. Valid values are: "retry", "rollback".
   -s, --snapshot string   The unique identifier of the snapshot.
 ```
 
@@ -2347,10 +2348,12 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DN
 ```bash
   -c, --cidr-block string     Subnet in CIDR notation (192.168.1.0/22).
   -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-                              127.0.0.1 by default if DNS server is not specified for private subnet types.
+                              161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for
+                              private subnet types in PER enabled workspaces else
+                              127.0.0.1 by default if DNS server is not specified and workspace is not PER enabled.
                               9.9.9.9 by default for public subnet types.
   -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -m, --mtu int               Maximum Transmission Unit. MTU be between 1450 and 9000. Default is 1450.
   -n, --net-type string       Subnet type.
   -u, --user-tags strings     Comma separated list of user tags to be attached to the subnet.
@@ -2430,7 +2433,7 @@ update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "
 ```bash
   -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
   -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -n, --name string           New name of the subnet.
 ```
 
@@ -2746,7 +2749,8 @@ execute VOLUME_CLONE_REQUEST_ID --name BASE_NAME [--replication-enabled=True|Fal
   -n, --name string           Base name of the new cloned volume(s).
       --replication-enabled   Enables replication for the cloned volume. By default, the replication property of the source volume will be used to determine the replication property of the cloned target volume.
       --rollback-prepare      Determines rollback behavior. If false, execute failure rolls back clone activity but leaves prepared snapshot. If true, Execute failure rolls back clone activity and removes the prepared snapshot. Default false.
-  -t, --target-tier string    Target storage tier for the cloned volumes (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region). Default to the storage tier of the original volume(s) if not specified.
+  -t, --target-tier string    Target storage tier for the cloned volumes. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
+                              Default to the storage tier of the original volume(s) if not specified.
   -u, --user-tags strings     Comma separated list of user tags to be attached to the cloned volume.
 ```
 
@@ -2857,8 +2861,10 @@ create CLONE_NAME --volumes VOLUME1[,VOLUMEn] [--replication-enabled=True|False]
 **Available Options**:
 
 ```bash
-  -r, --replication-enabled   Enables replication for the cloned volume. If no value is provided, it will default to the replication status of the source volume.
-  -t, --target-tier string    Target storage tier for the cloned volumes (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region). Default to the storage tier of the original volume(s) if not specified.
+  -r, --replication-enabled   Enables replication for the cloned volume.
+                              If no value is provided, it will default to the replication status of the source volume.
+  -t, --target-tier string    Target storage tier for the cloned volumes. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
+                              Default to the storage tier of the original volume(s) if not specified.
   -u, --user-tags strings     Comma separated list of user tags to be attached to the cloned volume.
   -v, --volumes strings       Comma separated list of volume identifiers or names to be cloned.
 ```
@@ -2922,7 +2928,7 @@ create VOLUME_NAME --size SIZE [--count COUNT] [--replication-enabled=True|False
   -r, --replication-enabled               Enables storage replication on the volume. Default is "false".
       --replication-sites strings         List of replication sites for volume replication. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
   -e, --shareable                         Whether the volumes can be attached to multiple VMs. Default is "false".
-  -s, --size int                          Size of the volume (in GB). Size cannot exceed 200GB for storage tier "Tier5k".
+  -s, --size int                          Size of the volume in GB. Size cannot exceed 200GB for storage tier "Tier5k".
   -p, --storage-pool string               Volume pool where the volume will be created. If the "--storage-pool" option is set then the "--affinity-policy" option cannot be specified.
   -t, --storage-tier string               Tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). Default to tier3 if not provided.
   -u, --user-tags strings                 Comma separated list of user tags to be attached to the volume.
@@ -3411,7 +3417,7 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 **Usage**:
 
 ```bash
-create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--user-tags USER_TAG1[,USER_TAGn]]
+create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--parameters "KEY1 VALUE1",["KEYn VALUEn"]] [--user-tags USER_TAG1[,USER_TAGn]]
 
   WORKSPACE_NAME: The desired name of the workspace.
 ```
@@ -3419,14 +3425,16 @@ create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN
 **Available Options**:
 
 ```bash
-  -d, --datacenter string   The datacenter location where the instance should be hosted.
-                            Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
-                            and the "ibmcloud sat location ls" command to see values for private datacenters.
-                            When using the "ibmcloud sat location ls" to get a private datacenter,
-                            please prefix "satloc_<REGION>_" to the displayed id.
-  -g, --group string        The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
-  -p, --plan string         Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
-  -u, --user-tags strings   Comma separated list of user tags to be attached to the workspace.
+  -d, --datacenter string    The datacenter location where the instance should be hosted.
+                             Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
+                             and the "ibmcloud sat location ls" command to see values for private datacenters.
+                             When using the "ibmcloud sat location ls" to get a private datacenter,
+                             please prefix "satloc_<REGION>_" to the displayed id.
+  -g, --group string         The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
+      --parameters strings   List of key-value parameter pairs. Each pair must be a quoted string in the format "KEY VALUE".
+                             Example: --parameters "env dev" "version 1.0"
+  -p, --plan string          Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
+  -u, --user-tags strings    Comma separated list of user tags to be attached to the workspace.
 ```
 
 **Examples**:

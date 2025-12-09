@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-11-12"
+lastupdated: "2025-12-09"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -100,14 +100,69 @@ ibmcloud pi instance console list
 Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys_notm}} instance terminates any open console sessions before a new console session is started.
 {: note}
 
+## Copying and pasting text in the VSI console
+{: #copy-paste-console}
 
+The copy and paste functionality of the VSI console enables bidirectional text transfer between Windows&reg;, macOS&reg;, and Linux-based workstations and AIX, IBM i, and Linux-based VSI console. You can copy text, such as commands and large scripts and paste the copied text into the VSI console to run them. You can also copy logs and error messages from the console to your workstation for troubleshooting or support tickets.
+
+### Copying and pasting text from your workstation to the VSI console
+{: #copy-paste-workstation-console}
+
+To copy and paste text from your workstation to the VSI console, complete the following steps:
+
+1. To copy text from your workstation, select the text that you want to copy and use the following key combination for your operating system:
+    - **Windows**: `Ctrl + C`
+    - **Mac**: `Command + C`
+    - **Linux** : `Ctrl + C`
+
+2. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
+
+3. Click the **Show/hide the control bar** icon, which is located on the left side of the VSI console window.
+
+4. Click the **Clipboard** icon. The Clipboard panel is displayed.
+
+5. Paste the copied text into the VSI console by completing the following steps:
+
+    1. Type or paste the copied text into the text field of the Clipboard panel. To paste, press `Ctrl + V` (Windows/Linux) or `Command + V` (Mac).
+
+    2. After the text appears in the Clipboard panel, click the **Clipboard** icon to return to the VSI console, or click directly inside the console window, which remains visible in the background. Then, press the same key combination to paste the text at the cursor in the console window.
+
+### Copying and pasting text from the VSI console to your workstation
+{: #copy-paste-console-workstation}
+
+To copy and paste text from the VSI console to your workstation, complete the following steps:
+
+1. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
+
+2. Click the **Show/hide the control bar** icon, which is located on the left side of the VSI console window.
+
+3. Click the **Clipboard** icon. The Clipboard panel is displayed.
+
+4. To copy text from the VSI, select the text that you want to copy, and the selected text is automatically copied to the clipboard. However, for the IBM i-based VSI console, press `Ctrl + C` or `Command + C` to copy the selected text.
+
+5. To paste the copied text to your workstation, use the following key combination for your operating system:
+    - **Windows**: `Ctrl + V`
+    - **Mac**: `Command + V`
+    - **Linux** : `Ctrl + V`
+
+You can use the **Full screen** option on the control bar to open the VSI console in the full-screen mode.
+{: tip}
+
+### Copy and paste limitations
+{: #copy-paste-limitation}
+
+The copy and paste functionality in the VSI console have the following limitations:
+
+- The copy and paste functionality from the clipboard into the VSI console might not work if the Caps Lock key is turned on.
+
+- The copy and paste functionality in the VSI console currently supports only English text.
+
+- Special characters such as `^V`, `[[200~`, `{}`, or `[[201~` might appear when you paste text from your workstation into the VSI console of an AIX- or Linux-based VSI that uses bash as the command shell and is configured to use bracketed-paste mode. For more information, see [enable-bracketed-paste](https://www.gnu.org/software/bash/manual/bash.html#index-enable_002dbracketed_002dpaste){: external}.
 
 ## Sharing the VSI console session
 {: #sharing-console-session}
 
 When multiple users open the VSI console for the same {{site.data.keyword.powerSys_notm}} instance, the same VSI console (VTERM) session is shared among all users. When the last user closes the VSI console, the underlying console session is terminated. Reopening the VSI console creates a new VTERM and establishes a new console connection to the VSI on the host.
-
-
 
 ## VSI console considerations
 {: #vsi-console-considerations}
@@ -116,7 +171,7 @@ To use the VSI console, consider the following factors:
 
 - {{site.data.keyword.powerSys_notm}} attempts to keep the browser window for the VSI console active and open for up to 2 hours. After the VSI console is idle for 2 hours, the console connection is terminated.
 
-- The connection to the VSI console can be interrupted or disconnected for various reasons, including a disruption in the network connectivity between your workstation and the {{site.data.keyword.powerSys_notm}} host.
+- The connection to the VSI console can be interrupted or disconnected for various reasons, including a disruption in the network connectivity between your workstation and the {{site.data.keyword.powerSys_notm}} host. When the VSI console connection is interrupted, {{site.data.keyword.powerSys_notm}} attempts to reconnect and restore the connection automatically.
 
 - If multiple users connect to the same IBM i-based {{site.data.keyword.powerSys_notm}} instance and one of the users changes the console language and opens the VSI console, the console that is in use by the other users is terminated and requires the console to be reopened.
 

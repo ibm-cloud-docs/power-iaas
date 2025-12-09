@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-20"
+lastupdated: "2025-12-09"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -70,7 +70,6 @@ For more information, see [Configuring a Power Virtual Server instance](/docs/po
 
 ## Supported resource limits by the {{site.data.keyword.ibmi-vst}}
 {: #ibmi-vsw-vp-mem}
-
 
 
  For each {{site.data.keyword.ibmi-vst}}, the supported limits for resources are defined. These limits help align resource usage with software licensing costs. You must understand the supported limits of resources for planning your VSI size and ensure compliance with IBM i licensing models.

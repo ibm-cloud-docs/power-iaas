@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-11-14"
+lastupdated: "2025-12-08"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,6 +20,31 @@ content-type: release-note
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+## December 2025
+{: #Dec-2025}
+{: release-note}
+
+- Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later system. vPMEM volumes enables the key use cases such as reducing the amount of time it takes to restart SAP HANA virtual machines. For more information see, [Enabling Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
+
+- The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text into an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
+
+- IBM Cloud Monitoring service can be used with {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
+
+- Added a data center `SAO05` to the existing list of {{site.data.keyword.powerSys_notm}} data centers. For more information, see [IBM Cloud® regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
+
+- The following AIX, RHEL, and SLES stock images are available in the IBM OS Image Catalog:
+
+    - AIX 7.3 TL4 SP0
+    - AIX 7.2 TL5 SP11
+    - RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA)
+    - RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER)
+    - SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP)
+    - SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER)
+
+- Following the SUSE lifecycle policy, support for SLES 15 SP3 for SAP ends on 31 December 2025. The stock image for SLES 15 SP3 for SAP is scheduled for removal from the Power Virtual Server Image Catalog starting 31 December 2025.
+
 
 
 

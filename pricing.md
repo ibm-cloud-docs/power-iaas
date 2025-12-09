@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-08"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -47,7 +47,7 @@ subcollection: power-iaas
 
 * Snapshots: Storage snapshots (in GB)
 
-* Dedicated Hosts: Dedicated hosts in host units
+* Dedicated hosts: Dedicated hosts in host units
 
 In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about the billing of VM resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#linux-SAP-workload-types).
 
@@ -64,6 +64,7 @@ You can generate an estimate of the resources for IBM {{site.data.keyword.powerS
 
 
 IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
+
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To calculate the exact pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
 {: important}
@@ -135,7 +136,7 @@ As CRNs are assigned to individual resources, a comprehensive bill is generated 
 
 When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to the resource.
 
-When you delete a workspace, the resources that are associated with the workspace are deleted and then the workspace is deleted. If you are using a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VMs) from the dedicated host. Then, delete the dedicated host workspace.
+When you delete a workspace, the resources that are associated with the workspace are deleted before the workspace is deleted. If you use a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VMs) from the dedicated host, then delete the dedicated host workspace.
 
 For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](https://cloud.ibm.com/docs/account?topic=account-crn).
 
@@ -146,7 +147,15 @@ To view or search for resources that are provisioned in IBM {{site.data.keyword.
 
 
 
+
+
 The following table lists the {{site.data.keyword.powerSys_notm}} resources that are CRN enabled.
+
+
+
+
+
+
 
 | Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -154,12 +163,13 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN     |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n  * SAP workloads                                                                                                         |
+| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                         |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
 | Volume                                        | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
 | Snapshot                                      | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | Snapshot storage                                                                                                                                             |
+| Virtual Persistent Memory             | ![Checkmark icon](./images/checkmark.svg)   |   X              | Virtual Persistent Memory storage  |
 
 {: caption="{{site.data.keyword.powerSys_notm}} resources that are CRN enabled." caption-side="bottom"}
 
@@ -170,10 +180,20 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 
 IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
 
-To reduce costs, you can capture and delete the VM when it is not used. For more information, see [Capturing and exporting a virtual machine (VM)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).
+
+
+To reduce costs, capture and delete the VM when it is not used. For more information, see [Capturing and exporting a virtual machine (VM)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).
+
+
+
+
+
+
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
+
+
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance with the following configurations at a base price of $250.57 per month ($0.343 per hour):
 
@@ -371,14 +391,36 @@ Refer to the following table to view the part number descriptions and the associ
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
 
-
+| Part description for vPMEM composite service (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
+| ------------------------------------------------------------------ | ---------------------------------------------- |
+| SAP workload - IBM Power E1050 virtual persistent memory volume gigabyte-hour  | power-iaas-metric-sap-E1050-vpmem  |
+| SAP workload - IBM Power E1080 virtual persistent memory volume gigabyte-hour  | power-iaas-metric-sap-E1080-vpmem  |
+| SAP workoad - IBM Power S1022 virtual persistent memory volume gigabyte-hour   | power-iaas-metric-sap-S1022-vpmem  |
+| SAP application server workload - IBM Power S1022 virtual persistent memory volume gigabyte | power-iaas-metric-netweaver-S1022-vpmem  |
+| IBM Power10 high-use scale-out virtual persistent memory volume gigabyte-hour  | power-iaas-metric-p10-so-vpmem-highuse  |
+| IBM Power10 standard scale-out virtual persistent memory volume gigabyte-hour  | power-iaas-metric-p10-so-vpmem-standard |
+| IBM Power10 high-use scale-up virtual persistent memory volume gigabyte-hour   | power-iaas-metric-p10-su-vpmem-highuse  |
+| IBM Power10 standard scale-up virtual persistent memory volume gigabyte-hour   | power-iaas-metric-p10-su-vpmem-standard |
+| SAP workload - IBM Power E1150 virtual persistent memory volume gigabyte-hour  | power-iaas-metric-sap-E1150-vpmem       |
+| SAP workload - IBM Power E1180 virtual persistent memory volume gigabyte-hour  | power-iaas-metric-sap-E1180-vpmem       |
+| SAP workload - IBM Power S1122 virtual persistent memory volume gigabyte-hour  | power-iaas-metric-sap-S1122-vpmem       |
+| SAP application server workload - IBM Power S1122 virtual persistent memory volume gigabyte-hour | power-iaas-metric-netweaver-S1122-vpmem |
+| IBM Power11 high-use scale-out virtual persistent memory volume gigabyte-hour  | power-iaas-metric-p11-so-vpmem-highuse |
+| IBM Power11 standard scale-out virtual persistent memory volume gigabyte-hour  | power-iaas-metric-p11-so-vpmem-standard |
+| IBM Power11 high-use scale-up virtual persistent memory volume gigabyte-hour   | power-iaas-metric-p11-su-vpmem-highuse  |
+| IBM Power11 standard scale-up virtual persistent memory volume gigabyte-hour   | power-iaas-metric-p11-su-vpmem-standard |
+{: class="simple-tab-table"}
+{: tab-group="part_number_descriptions"}
+{: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
+{: #snapshot-group}
+{: tab-title="vPMEM group"}
 
 ## Base instances
 {: #pricing-base-instance-prices}
 
 The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
-The pricing for memory  is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
+The pricing for memory and for vPMEM memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
 
 ## Operating systems
@@ -390,9 +432,18 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must purchase an operating system license for virtual server resources. The pricing for AIX and IBM i operating system license is not based on whether you use a custom image or a stock image.
 
+
+
 IBM {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You can select a Linux stock image that is provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The storage unit price (per GB) for stored boot images is the same as the selected storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+
+
+
+
+
+
+
 
 
 ## Linux for SAP workloads
@@ -472,12 +523,12 @@ The cost of GRS is calculated for only one location at any point in time. The lo
 {: #price-spp}
 
 
-Shared processor pool (SPP) provides the capability to manage CPU cores efficiently. The number of cores that are assigned to an SPP depends on the entitled cores (EC) and virtual cores (VC) ratio. The EC:VP ratio varies by system type. For example, Power10 systems allow different ratios as compared to Power9 systems. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
+Shared processor pool (SPP) provides the capability to manage CPU cores efficiently. The number of cores that are assigned to an SPP depends on the entitled cores (EC) and virtual cores (VC) ratio. The EC:VP ratio varies by system type. For example, POWER10 systems allow different ratios as compared to POWER9 systems. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
 
 
 
-Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VM core or the cost for high-use memory parts.
+SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VM core or the cost for high-use memory parts.
 
 {{_include-segments/spp-pricing-JIRA-18311.md}}
 
@@ -609,10 +660,15 @@ Total billable storage = 595 GB
 - Deployed VMs: 160 GB
 
 
+## Virtual Persistent Memory
+{: #vPMEM-parts}
 
+Virtual Persistent Memory (vPMEM) volumes are available on IBM Power10 or later systems with AIX, Linux, or Linux (SAP HANA) operating systems.
 
+vPMEM is not supported on a VSI with IBM i operating system.
+{: note}
 
-
+For VSIs with AIX or Linux OS that are attached with vPMEM volumes, the total cost is calculated based on the total memory usage. For VSI with SAP (HANA) profile, the vPMEM volume memory is allocated from the SAP profile size so the cost of the memory remains the same.
 
 
 ## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
@@ -656,5 +712,5 @@ The Transit Gateway charges indicated in the preceding tables are subjected to c
 
 The monthly billing cycle ends when you delete the LPAR. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the LPAR provision change. If you stop the LPAR, the billing process is not stopped. Delete the LPAR to stop the billing cycle.
 
-You are still charged if the VM is in a *suspended state*. When your VM is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VM's core count and memory.
+You are charged even if the VM is in a *suspended state*. When your VM is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VM core count and memory.
 {: important}

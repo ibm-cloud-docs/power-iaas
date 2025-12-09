@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-08"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -87,9 +87,14 @@ The following stock images are available when you create a virtual machine:
 
 
 
+
+- AIX 7.3 TL4 SP0
 - AIX 7.3 TL3 SP1
 - AIX 7.2 TL5 SP10
+- AIX 7.2 TL5 SP11
 - AIX 7.1 TL5 SP9[^1]
+
+
 
 
 
@@ -106,9 +111,13 @@ The following stock images are available when you create a virtual machine:
 
 
 
+
+- AIX 7.3 TL4 SP0
 * AIX 7.3 TL3 SP0
+- AIX 7.2 TL5 SP11
 * AIX 7.2 TL5 SP9
 * AIX 7.1 TL5 SP9[^1A]
+
 
 [^1]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
 
@@ -187,10 +196,11 @@ The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on
 
 The following list of Linux stock images are available:
 
-
 Red Hat
 
 * RHEL 9.6 general purpose (RHEL9-SP6) [^footnote11]
+* RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA)
+* RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER)
 * RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
 * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
 * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
@@ -212,6 +222,8 @@ Red Hat
 SUSE [^footnote8]
 
 * SLES 15 SP7 general purpose (SLES15)  [^footnote12]
+* SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP)
+* SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER)
 * SLES 15 SP6 general purpose (SLES15)  [^footnote7]
 * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
 * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
@@ -221,6 +233,7 @@ SUSE [^footnote8]
 * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
 * SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
 * SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
+
 
 
 
@@ -387,18 +400,18 @@ When you deploy a VM, you can choose between **Dedicated**, **Shared capped**, o
 
 The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores. For more information, see [How does shared processor performance compare to dedicated processors](https://community.ibm.com/community/user/power/blogs/pete-heyrman1/2020/06/16/how-does-shared-processor-performance-compare-to-d?CommunityKey=71e6bb8a-5b34-44da-be8b-277834a183b0&tab=recentcommunityblogsdashboard){: external}, [Pricing for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud), and [Pricing for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
-|Dedicated processors|
-|:-----------------|
-| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications.|
+| Dedicated processors                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications. |
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Dedicated processors" caption-side="top"}
 {: #proc-table-1}
 {: tab-title="Dedicated processors"}
 
-|Shared processors|
-|:-----------------|
-| Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units.|
+| Shared processors                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Shared processors have two sharing modes: capped or uncapped. For a capped partition, the amount of CPU time is capped to the value specified for the entitlement. For example, a capped partition with processing units set to 0.5, can use up to 30 seconds of CPU time every minute. For an uncapped partition, the number of virtual processors defines the upper-limit of CPU consumption and not the value that is specified for processing units. For example, if the number of virtual processors are set to 3, the partition can use up to 180 seconds of CPU time every minute (three virtual processors each running at 100% utilization are equivalent of three physical cores worth of CPU time). The server must have unused capacity available for a partition to use more than its configured processing units. |
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Shared processors" caption-side="top"}
@@ -527,12 +540,12 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 
 The key differences are as follows:
 
-| Context | Snapshot | Clone |
-|-|-|-|
-| Definition | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts.|
-| Primary function | Revert or restore the source disks to a desired state|Create a complete volume clone|
-| Ease of creation | Easy and quick process| Three-step process and takes a long time|
-| Pricing | Charged 30% of the regular storage rate| target volume storage plus the GRS costs|
+| Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Definition       | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts. |
+| Primary function | Revert or restore the source disks to a desired state                                                           | Create a complete volume clone                                                                                               |
+| Ease of creation | Easy and quick process                                                                                          | Three-step process and takes a long time                                                                                     |
+| Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the GRS costs                                                                                     |
 {: caption="Differences between a snapshot and clone" caption-side="bottom"}
 
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
@@ -654,7 +667,14 @@ You can find self-certification and listing information on the [IBM Global Solut
 {: #delete-service}
 {: faq}
 
+
+
+
 To delete a workspace (and all its resources), use the left navigation to navigate the workspace page. Find the workspace to be deleted and click the overflow menu on the upper right corner of the tile. Click **Delete** and confirm the request from the pull-down menu by typing _Delete_ in the text field. Finally, click the red **Delete** button to initiate the request.
+
+
+
+
 
 ## How do I delete a single virtual server instance?
 {: #delete-service-instance}

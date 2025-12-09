@@ -2,13 +2,13 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-05"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.7.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.8.0 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -18,12 +18,7 @@ lastupdated: "2025-12-03"
 
 ---
 
-
-
-
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}.
-
-
 
 
 ## `ibmcloud pi`
@@ -123,9 +118,11 @@ create CONNECTION_NAME --speed SPEED
 ```bash
   -c, --classic             Enable "Classic" cloud connection endpoint.
   -g, --global-routing      Global routing option.
-  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option. GRE tunnel cannot be configured with speeds above 5000.
+  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option.
+                            GRE tunnel cannot be configured with speeds above 5000.
   -m, --metered             Metered cloud connection option.
-  -s, --speed int           Speed of the cloud connection (speed in megabits per second). Allowed values are 50, 100, 200, 500, 1000, 2000, 5000, 10000.
+  -s, --speed int           Speed of the cloud connection. Speed is in megabits per second.
+                            Valid values are: 50, 100, 200, 500, 1000, 2000, 5000, 10000.
   -n, --subnets strings     Comma separated subnet identifiers.
   -r, --transit-enabled     Enable transit gateway.
   -v, --vpc                 Enable "VPC" cloud connection endpoint.
@@ -269,10 +266,13 @@ update CONNECTION_ID [--classic=True|False [--gre-tunnel "CIDR DEST-IP"]] [--glo
 ```bash
   -c, --classic             Enable "Classic" cloud connection endpoint.
   -g, --global-routing      Global routing option.
-  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option. GRE tunnel cannot be configured with speeds above 5000.
+  -t, --gre-tunnel string   Space separated "cidr" and "destinationIPAddress". Use with "--classic" option.
+                            GRE tunnel cannot be configured with speeds above 5000.
   -m, --metered             Metered cloud connection option.
   -n, --name string         Name of the cloud connection.
-  -s, --speed int           New speed value for the cloud connection. Allowed values are 50, 100, 200, 500, 1000, 2000, 5000. Speeds currently at 10000 cannot be downgraded lower and speeds cannot be increased to 10000.
+  -s, --speed int           New speed value for the cloud connection.
+                            Valid values are: 50, 100, 200, 500, 1000, 2000, 5000.
+                            Speeds currently at 10000 cannot be downgraded lower and speeds cannot be increased to 10000.
   -v, --vpc                 Enable "VPC" cloud connection endpoint.
   -p, --vpcIDs strings      VPC ID (i.e. crn:v1:..) to add to cloud connection. Use with "--vpc" option.
 ```
@@ -604,7 +604,7 @@ update HOST_GROUP_ID ([--add-workspaces "WORKSPACE_ID1 [HOST_GROUP_NAME1]"[,"WOR
 **Usage**:
 
 ```bash
-create IKE_POLICY_NAME --version VERSION --authentication AUTHENTICATION --encryption ENCRYPTION --dh-group DH_GROUP --preshared-key KEY --key-lifetime SECONDS
+create IKE_POLICY_NAME --authentication AUTHENTICATION --dh-group DH_GROUP --encryption ENCRYPTION --key-lifetime SECONDS --preshared-key KEY --version VERSION
 
   IKE_POLICY_NAME: A unique name of the VPN IKE policy. The maximum name length is 47 characters.
 ```
@@ -612,12 +612,14 @@ create IKE_POLICY_NAME --version VERSION --authentication AUTHENTICATION --encry
 **Available Options**:
 
 ```bash
-  -a, --authentication string   Authentication algorithm of the IKE policy. Valid values are 'sha-256', 'sha-384', 'sha1', 'none'.
-  -d, --dh-group int            DH group number of the IKE policy. Valid values are '2', '14', '19', '20', '24', '5', '1'.
-  -e, --encryption string       Encryption algorithm of the IKE policy. Valid values are 'aes-256-cbc', 'aes-192-cbc', 'aes-128-cbc', 'aes-256-gcm', 'aes-128-gcm', '3des-cbc'. When using 'aes-128-gcm' or 'aes-256-gcm' authentication should be set to 'none'.
+  -a, --authentication string   Authentication algorithm of the IKE policy. Valid values are: "sha-256", "sha-384", "sha1", "none".
+  -d, --dh-group int            DH group number of the IKE policy. Valid values are: "1", "2", "5", "14", "19", "20", "24".
+  -e, --encryption string       Encryption algorithm of the IKE policy.
+                                Valid values are: "aes-256-cbc", "aes-192-cbc", "aes-128-cbc", "aes-256-gcm", "aes-128-gcm", "3des-cbc".
+                                When using "aes-128-gcm" or "aes-256-gcm" authentication should be set to "none".
   -k, --key-lifetime int        Key lifetime of the IKE policy in seconds. Valid range is 180 to 86400 seconds.
   -p, --preshared-key string    Preshared key used in this VPN connection. The key length must be even.
-  -v, --version int             Version number of the IKE policy. Valid values are '2', '1'.
+  -v, --version int             Version number of the IKE policy. Valid values are: "1", "2".
 ```
 
 **Examples**:
@@ -683,7 +685,7 @@ get IKE_POLICY_ID
 **Usage**:
 
 ```bash
-update IKE_POLICY_ID [--name NAME] [--version VERSION] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--preshared-key KEY] [--key-lifetime SECONDS]
+update IKE_POLICY_ID [--authentication AUTHENTICATION] [--dh-group DH_GROUP] [--encryption ENCRYPTION] [--key-lifetime SECONDS] [--name NAME] [--preshared-key KEY] [--version VERSION]
 
   IKE_POLICY_ID: The unique identifier of the VPN IKE policy.
 ```
@@ -691,13 +693,15 @@ update IKE_POLICY_ID [--name NAME] [--version VERSION] [--authentication AUTHENT
 **Available Options**:
 
 ```bash
-  -a, --authentication string   Authentication algorithm of the IKE policy. Valid values are 'sha-256', 'sha-384', 'sha1', 'none'.
-  -d, --dh-group int            DH group number of the IKE policy. Valid values are '2', '14', '19', '20', '24', '5', '1'.
-  -e, --encryption string       Encryption algorithm of the IKE policy. Valid values are 'aes-256-cbc', 'aes-192-cbc', 'aes-128-cbc', 'aes-256-gcm', 'aes-128-gcm', '3des-cbc'. When using 'aes-128-gcm' or 'aes-256-gcm' authentication should be set to 'none'.
+  -a, --authentication string   Authentication algorithm of the IKE policy. Valid values are: "sha-256", "sha-384", "sha1", "none".
+  -d, --dh-group int            DH group number of the IKE policy. Valid values are: "1", "2", "5", "14", "19", "20", "24".
+  -e, --encryption string       Encryption algorithm of the IKE policy.
+                                Valid values are: "aes-256-cbc", "aes-192-cbc", "aes-128-cbc", "aes-256-gcm", "aes-128-gcm", "3des-cbc".
+                                When using "aes-128-gcm" or "aes-256-gcm" authentication should be set to "none".
   -k, --key-lifetime int        Key lifetime of the IKE policy in seconds. Valid range is 180 to 86400 seconds.
   -n, --name string             New unique name of the IKE Policy. The maximum name length is 47 characters.
   -p, --preshared-key string    Preshared key used in this VPN connection. The key length must be even.
-  -v, --version int             Version number of the IKE policy. Valid values are '2', '1'.
+  -v, --version int             Version number of the IKE policy. Valid values are: "1", "2".
 ```
 
 ---
@@ -865,7 +869,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -k, --access-key string                 Cloud Object Storage HMAC access key.
   -i, --affinity-instance string          PVM instance identifier or name to base volume affinity policy against.
                                           This is required if "--affinity-policy affinity" is specified and "--affinity-volume" is not provided.
-  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are "affinity" and "anti-affinity".
+  -a, --affinity-policy string            Affinity policy for data volume being created. Valid values are: "affinity" and "anti-affinity".
                                           If "--storage-pool" is provided then this cannot be specified.
   -v, --affinity-volume string            Volume identifier or name to base volume affinity policy against.
                                           This is required if "--affinity-policy affinity" is specified and "--affinity-instance" is not provided.
@@ -874,19 +878,19 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
   -w, --anti-affinity-volumes strings     Comma separated list of volume identifiers or names to base volume anti-affinity policy against.
                                           This is required if "--affinity-policy anti-affinity" is specified and "--anti-affinity-instances" is not provided.
   -b, --bucket string                     Cloud Object Storage bucket name.
-  -u, --bucket-access string              Indicates the bucket access type ("private" or "public"). Private access requires access and secret keys.
+  -u, --bucket-access string              Indicates the bucket access type. Valid values are: "public", "private". Private access requires access and secret keys.
                                           Default is "private".
   -n, --image-file-name string            The image file name.
   -d, --import-details strings            Import details for SAP image. Must include a license, product and vendor.
                                           Valid license values: byol.
                                           Valid product values: Hana, Netweaver.
                                           Valid vendor values: SAP.
-  -o, --os-type string                    Operating system contained in the image (rhel, sles, aix, ibmi). Required when importing a raw image.
+  -o, --os-type string                    Operating system contained in the image. Valid values are: "aix", "ibmi", "rhel", "sles". Required when importing a raw image.
   -r, --region string                     Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string                 Cloud Object Storage HMAC secret key.
-  -p, --storage-pool string               Storage pool where the image will be imported to (use "ibmcloud pi storage-pools" to see available storage pools).
+  -p, --storage-pool string               Storage pool where the image will be imported to. Use "ibmcloud pi storage-pools" to see available storage pools.
                                           If "--storage-pool" is provided then "--affinity-policy" cannot be specified.
-  -t, --storage-tier string               Tier of the disk storage (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region).
+  -t, --storage-tier string               Tier of the disk storage. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
                                           Default to tier3 if not provided.
       --user-tags strings                 Comma separated list of user tags to be attached to the imported image.
 ```
@@ -929,13 +933,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 
 **Description**: List images available in the regional image catalog.
 
-**Usage**: `list-catalog [--sap=True|False]`
-
-**Available Options**:
-
-```bash
-  -s, --sap   Include SAP images.
-```
+**Usage**: `list-catalog`
 
 **Examples**:
 
@@ -970,6 +968,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 - `update`:    Update a server instance.
 - `virtual-serial-number`:    IBM Cloud Power Virtual Server Instance Virtual Serial Number.
 - `volume`:    IBM Cloud Power Virtual Server Instance Volumes.
+- `vpmem-volume`:    IBM Cloud Power Virtual Server Instance vPMEM Volumes.
 
 ---
 
@@ -991,7 +990,7 @@ action INSTANCE_ID --operation OPERATION
 **Available Options**:
 
 ```bash
-  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
+  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: dumprestart, hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
 ```
 
 **Examples**:
@@ -1037,7 +1036,7 @@ create INSTANCE_ID --destination DEST --name NAME [--access-key KEY] [--image-pa
 
 ```bash
   -a, --access-key string    Cloud Object Storage HMAC access key. Required if destination is cloud-storage.
-  -d, --destination string   Destination for the deployable image (image-catalog, cloud-storage, both).
+  -d, --destination string   Destination for the deployable image. Valid values are: "cloud-storage", "image-catalog", "both".
   -i, --image-path string    Cloud Object Storage image path. Required if destination is cloud-storage. E.g. bucket-name[/optional/folder].
   -n, --name string          Name of the deployable image created for the captured instance.
   -r, --region string        Cloud Object Storage regions au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
@@ -1165,7 +1164,7 @@ update INSTANCE_ID --code CODE
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
     [--boot-volume-replication-enabled=True|False]
     [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")] [--deployment-type DEPLOYMENT_TYPE]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER-USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
@@ -1175,8 +1174,8 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
-    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE-TIER]]
-    [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
+    [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
+    [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]] [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
 
   INSTANCE_NAME: The name of the instance.
 ```
@@ -1186,16 +1185,16 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
       --IBMiPHA-license                                 IBMi PHA software license associated with the instance.
-      --IBMiRDS-users int                               Number of IBMi RDS users software license associated with the instance, default IBMiRDSUsers=0 (no license).
+      --IBMiRDS-users int                               Number of IBMi RDS users software license associated with the instance. Default is IBMiRDSUsers=0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
       --deployment-target string                        The deployment of the dedicated host. Deployment must include either
                                                         a host group id and "hostGroup", or a host id and "host".
-  -d, --deployment-type string                          The custom deployment type ("EPIC" or "VMNoStorage"). If '--deployment-type "VMNoStorage"' is set,
+  -d, --deployment-type string                          The custom deployment type. Valid values are: "EPIC" or "VMNoStorage". If '--deployment-type "VMNoStorage"' is set,
                                                         then "--image" must be one of "AIX-EMPTY", "IBMI-EMPTY", "RHEL-EMPTY", or "SLES-EMPTY".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
-  -m, --memory float                                    Amount of memory (in GB) to allocate to the instance. Default is 2GB.
-      --pin-policy string                               Pin policy ("none", "soft", "hard"). Default is "none".
+  -m, --memory float                                    Amount of memory in GB to allocate to the instance. Default is 2GB.
+      --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           Type of processors: "shared" or "dedicated" or "capped". Default is "dedicated".
@@ -1207,7 +1206,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
       --replication-sites strings                       Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
       --shared-processor-pool string                    The shared processor pool ID of the pool that the server will be in.
       --software-tier string                            IBMi licensing software tiers. Must be set with "--virtual-serial-number" option. Valid values are: P05, P10, P20, P30.
-      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
+      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are: "affinity" and "anti-affinity".
                                                         If "--storage-pool" is provided, then this option cannot be specified.
       --storage-affinity-instance string                PVM instance identifier or name to base storage affinity policy against.
                                                         This is required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
@@ -1242,6 +1241,8 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
       --virtual-serial-number string                    IBMi virtual serial number information added with the instance.
                                                         Must include an existing virtual serial number or 'auto-assign' and optionally a description.
   -v, --volumes strings                                 Comma separated list of volume identifiers or names to associate with the instance.
+      --vpmem-volumes strings                           Comma separated list of vPMEM volume names and sizes to associate with the instance.
+                                                        The maximum number of vPMEM volumes for SAP instances is 1 otherwise it is 4.
 ```
 
 **Examples**:
@@ -1318,7 +1319,7 @@ get INSTANCE_ID
 **Usage**:
 
 ```bash
-operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating-mode MODE] [--job-task TASK]
+operation INSTANCE_ID (--operation-type "boot" --boot-mode MODE --boot-operating-mode MODE | --operation-type "job" --job-task TASK)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1328,7 +1329,8 @@ operation INSTANCE_ID --operation-type TYPE [--boot-mode MODE] [--boot-operating
 ```bash
   -b, --boot-mode string             Name of the server boot mode. Valid values are: a, b, c, d.
   -m, --boot-operating-mode string   Name of the server operating mode. Valid values are: manual, normal.
-  -j, --job-task string              Name of the job task to execute. Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
+  -j, --job-task string              Name of the job task to execute.
+                                     Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
   -o, --operation-type string        Name of the operation to execute. Valid values are: boot, job.
 ```
 
@@ -1374,6 +1376,7 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
     [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-pool STORAGE_POOL] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
+    [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
 
   SAP_INSTANCE_NAME: The name of the SAP instance.
 ```
@@ -1386,12 +1389,12 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
                                                         a host group id and "hostGroup", or a host id and "host".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
-      --pin-policy string                               Pin policy ("none", "soft", "hard"). Default is "none".
+      --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER10, POWER11
   -p, --profile-id string                               The unique identifier of the SAP profile.
       --replication-sites strings                       Indicates the replication sites of the boot volume. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
-      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are "affinity" and "anti-affinity".
+      --storage-affinity string                         Affinity policy for storage pool selection. Valid values are: "affinity" and "anti-affinity".
                                                         If "--storage-pool" is provided, then this option cannot be specified.
       --storage-affinity-instance string                PVM instance identifier or name to base storage affinity policy against.
                                                         This is required if "--storage-affinity affinity" is specified and "--storage-affinity-volume" is not provided.
@@ -1403,7 +1406,7 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
                                                         This is required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
       --storage-pool string                             Storage pool for SAP PVM instance deployment. Only valid when you deploy one of the IBM supplied stock images.
   -t, --storage-tier string                             Storage tiers for SAP PVM instance deployment when deploying a stock or custom image
-                                                        (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
+                                                        Use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region.
                                                         Default to tier3 if not provided.
   -n, --subnets strings                                 Comma separated list of subnet identifiers or names, an optional IP address,
                                                         and network security group id that the network interface is a member of to associate with the instance.
@@ -1412,6 +1415,8 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
   -u, --user-data string                                The user data passed into the instance. Strings and file names are supported. File names must be prepended with "@".
       --user-tags strings                               Comma separated list of user tags to be attached to the instance.
   -v, --volumes strings                                 Comma separated list of volume identifiers or names to associate with the instance.
+      --vpmem-volumes strings                           Comma separated list of vPMEM volume names and sizes to associate with the instance.
+                                                        The maximum number of vPMEM volumes for SAP instances is 1.
 ```
 
 **Examples**:
@@ -1726,7 +1731,7 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER-USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
+    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
     [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
     [--processors NUMBER] [--profile-id SAP_PROFILE_ID] [--storage-pool-affinity=True|False]
     [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
@@ -1742,7 +1747,7 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
       --IBMiRDS-users int                               New number of IBMi RDS users software license associated with the instance.
   -m, --memory float                                    New amount of memory for the server instance.
   -n, --name string                                     New name of the server instance.
-      --pin-policy string                               New pin policy for the server instance ("none", "soft", "hard").
+      --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           New processor type for the server instance.
   -p, --processors float                                New amount of processors for the server instance.
@@ -1869,7 +1874,7 @@ unassign INSTANCE_ID [--retainVSN=True|False]
 **Usage**:
 
 ```bash
-update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE-TIER)
+update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE_TIER)
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -2008,6 +2013,112 @@ list INSTANCE_ID
 
 ---
 
+### `ibmcloud pi instance vpmem-volume`
+{: #ibmcloud-pi-instance-vpmem-volume}
+
+**Alias**: `vpmem-volume, vpmem, vpmemvol`
+
+**Description**: IBM Cloud Power Virtual Server Instance vPMEM Volumes.
+
+**Usage**: `vpmem-volume`
+
+**Available Commands**:
+
+- `attach`:    Attach a vPMEM volume to an instance.
+- `detach`:    Detach a vPMEM volume from an instance.
+- `get`:    Get a vPMEM volume attached to an instance.
+- `list`:    List all vPMEM volumes attached to an instance.
+
+---
+
+#### `ibmcloud pi instance vpmem-volume attach`
+{: #ibmcloud-pi-instance-vpmem-volume-attach}
+
+**Alias**: `attach, att`
+
+**Description**: Attach a vPMEM volume to an instance.
+
+**Usage**:
+
+```bash
+attach INSTANCE_ID --vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]" [--user-tags USER_TAG1[,USER_TAGn]]
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -u, --user-tags strings       User tags to add to the created vPMEM volume(s).
+      --vpmem-volumes strings   Comma separated list of vPMEM volume names and sizes to associate with the instance.
+                                The maximum number of vPMEM volumes for SAP instances is 1 otherwise it is 4.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume detach`
+{: #ibmcloud-pi-instance-vpmem-volume-detach}
+
+**Alias**: `detach, det`
+
+**Description**: Detach a vPMEM volume from an instance.
+
+**Usage**:
+
+```bash
+detach INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume get`
+{: #ibmcloud-pi-instance-vpmem-volume-get}
+
+**Alias**: `get`
+
+**Description**: Get a vPMEM volume attached to an instance.
+
+**Usage**:
+
+```bash
+get INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume list`
+{: #ibmcloud-pi-instance-vpmem-volume-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all vPMEM volumes attached to an instance.
+
+**Usage**:
+
+```bash
+list INSTANCE_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+---
+
 ## `ibmcloud pi ipsec-policy`
 {: #ibmcloud-pi-ipsec-policy}
 
@@ -2045,9 +2156,11 @@ create IPSEC_POLICY_NAME --authentication AUTHENTICATION --dh-group DH_GROUP --e
 **Available Options**:
 
 ```bash
-  -a, --authentication string   Authentication encryption type of the IPSec policy. Valid values are 'hmac-sha-256-128', 'hmac-sha1-96', 'none'.
-  -d, --dh-group int            DH group number of the IPSec policy. Valid values are '2', '14', '19', '20', '24', '5', '1'.
-  -e, --encryption string       Connection encryption policy of the IPSec policy. Valid values are 'aes-256-cbc', 'aes-192-cbc', 'aes-128-cbc', 'aes-256-gcm', 'aes-192-gcm', 'aes-128-gcm', '3des-cbc'. When using 'aes-128-gcm', 'aes-192-gcm' or 'aes-256-gcm' authentication should be set to 'none'.
+  -a, --authentication string   Authentication encryption type of the IPSec policy. Valid values are: "hmac-sha-256-128", "hmac-sha1-96", "none".
+  -d, --dh-group int            DH group number of the IPSec policy. Valid values are: "1", "2", "5", "14", "19", "20", "24".
+  -e, --encryption string       Connection encryption policy of the IPSec policy.
+                                Valid values are: "aes-256-cbc", "aes-192-cbc", "aes-128-cbc", "aes-256-gcm", "aes-192-gcm", "aes-128-gcm", "3des-cbc".
+                                When using "aes-128-gcm", "aes-192-gcm" or "aes-256-gcm" authentication should be set to "none".
   -k, --key-lifetime int        Key lifetime of the IPSec policy in seconds. Valid range is 180 to 86400 seconds.
   -p, --pfs                     Enable perfect forward secrecy. Disabled if not specified.
 ```
@@ -2115,7 +2228,7 @@ get IPSEC_POLICY_ID
 **Usage**:
 
 ```bash
-update IPSEC_POLICY_ID  [--name NAME] [--authentication AUTHENTICATION] [--encryption ENCRYPTION] [--dh-group DH_GROUP] [--key-lifetime SECONDS] [--pfs=True|False]]
+update IPSEC_POLICY_ID [--authentication AUTHENTICATION] [--dh-group DH_GROUP] [--encryption ENCRYPTION] [--key-lifetime SECONDS] [--name NAME] [--pfs=True|False]]
 
   IPSEC_POLICY_ID: The unique identifier of the VPN IPSec policy.
 ```
@@ -2123,9 +2236,11 @@ update IPSEC_POLICY_ID  [--name NAME] [--authentication AUTHENTICATION] [--encry
 **Available Options**:
 
 ```bash
-  -a, --authentication string   Authentication encryption type of the IPSec policy. Valid values are 'hmac-sha-256-128', 'hmac-sha1-96', 'none'.
-  -d, --dh-group int            DH group number of the IPSec policy. Valid values are '2', '14', '19', '20', '24', '5', '1'.
-  -e, --encryption string       Connection encryption policy of the IPSec policy. Valid values are 'aes-256-cbc', 'aes-192-cbc', 'aes-128-cbc', 'aes-256-gcm', 'aes-192-gcm', 'aes-128-gcm', '3des-cbc'. When using 'aes-128-gcm', 'aes-192-gcm' or 'aes-256-gcm' authentication should be set to 'none'.
+  -a, --authentication string   Authentication encryption type of the IPSec policy. Valid values are: "hmac-sha-256-128", "hmac-sha1-96", "none".
+  -d, --dh-group int            DH group number of the IPSec policy. Valid values are: "1", "2", "5", "14", "19", "20", "24".
+  -e, --encryption string       Connection encryption policy of the IPSec policy.
+                                Valid values are: "aes-256-cbc", "aes-192-cbc", "aes-128-cbc", "aes-256-gcm", "aes-192-gcm", "aes-128-gcm", "3des-cbc".
+                                When using "aes-128-gcm", "aes-192-gcm" or "aes-256-gcm" authentication should be set to "none".
   -k, --key-lifetime int        Key lifetime of the IPSec policy in seconds. Valid range is 180 to 86400 seconds.
   -n, --name string             New unique name of the IPSec policy. The maximum name length is 47 characters.
   -p, --pfs                     Enable perfect forward secrecy. Disabled if not specified.
@@ -2795,9 +2910,9 @@ rule-add NETWORK_SECURITY_GROUP_ID --action ("allow" | "deny")
   -i, --icmp-type string         The ICMP packet type affected by ICMP rules. Valid values are: all, echo, echo-reply, source-quench, time-exceeded, destination-unreach.
   -p, --protocol string          The protocol of the network traffic. Valid values are: all, icmp, tcp, udp.
   -g, --remote-group-id string   The unique identifier of the remote network address group or network security group.
-  -r, --remote-type string       The type of remote group (MAC addresses, IP addresses, CIDRs, external CIDRs) that are the originators of rule's network traffic to match.
+  -r, --remote-type string       The type of remote group. The MAC addresses, IP addresses, CIDRs, external CIDRs, that are the originators of rule's network traffic to match.
                                  Valid values are: default-network-address-group, network-address-group, network-security-group.
-                                 The 'default-network-address-group' is a network address group that specifies all external network traffic.
+                                 The "default-network-address-group" is a network address group that specifies all external network traffic.
       --src-port-max int         The end of the source port range. If the value is not present then the default value of 65535 will be the maximum port number.
       --src-port-min int         The start of the source port range. If the value is not present then the default value of 1 will be the minimum port number.
   -t, --tcp-flags strings        Comma separated list of TCP flag options. Valid values are: syn, ack, fin, rst.
@@ -3556,7 +3671,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 
 ```bash
   -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore - allowable values: ["retry","rollback"].
+  -r, --restore string    Action to take on a failed snapshot restore. Valid values are: "retry", "rollback".
   -s, --snapshot string   The unique identifier of the snapshot.
 ```
 
@@ -3784,10 +3899,12 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" |
   -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable".
   -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
   -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
-                               127.0.0.1 by default if DNS server is not specified for private subnet types.
+                               161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for
+                               private subnet types in PER enabled workspaces else
+                               127.0.0.1 by default if DNS server is not specified and workspace is not PER enabled.
                                9.9.9.9 by default for public subnet types.
   -g, --gateway string         Gateway to use for this subnet.
-  -i, --ip-range string        IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -m, --mtu int                Maximum Transmission Unit. MTU be between 1450 and 9000.
   -n, --net-type string        Subnet type. Either "public" or "private".
   -u, --user-tags strings      Comma separated list of user tags to be attached to the subnet.
@@ -3869,7 +3986,7 @@ update SUBNET_ID [--advertise ("enable" | "disable")] [--arp-broadcast ("enable"
   -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable.
   -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
   -g, --gateway string         Gateway to use for this subnet.
-  -i, --ip-range string        IP Addresses range(s) for this subnet, format: startIP-endIP[,startIP-endIP].
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -n, --name string            New name of the subnet.
 ```
 
@@ -4185,7 +4302,8 @@ execute VOLUME_CLONE_REQUEST_ID --name BASE_NAME [--replication-enabled=True|Fal
   -n, --name string           Base name of the new cloned volume(s).
       --replication-enabled   Enables replication for the cloned volume. By default, the replication property of the source volume will be used to determine the replication property of the cloned target volume.
       --rollback-prepare      Determines rollback behavior. If false, execute failure rolls back clone activity but leaves prepared snapshot. If true, Execute failure rolls back clone activity and removes the prepared snapshot. Default false.
-  -t, --target-tier string    Target storage tier for the cloned volumes (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region). Default to the storage tier of the original volume(s) if not specified.
+  -t, --target-tier string    Target storage tier for the cloned volumes. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
+                              Default to the storage tier of the original volume(s) if not specified.
   -u, --user-tags strings     Comma separated list of user tags to be attached to the cloned volume.
 ```
 
@@ -4296,8 +4414,10 @@ create CLONE_NAME --volumes VOLUME1[,VOLUMEn] [--replication-enabled=True|False]
 **Available Options**:
 
 ```bash
-  -r, --replication-enabled   Enables replication for the cloned volume. If no value is provided, it will default to the replication status of the source volume.
-  -t, --target-tier string    Target storage tier for the cloned volumes (use "ibmcloud pi storage-tiers" to see available tiers in the targeted region). Default to the storage tier of the original volume(s) if not specified.
+  -r, --replication-enabled   Enables replication for the cloned volume.
+                              If no value is provided, it will default to the replication status of the source volume.
+  -t, --target-tier string    Target storage tier for the cloned volumes. Use "ibmcloud pi storage-tiers" to see available tiers in the targeted region.
+                              Default to the storage tier of the original volume(s) if not specified.
   -u, --user-tags strings     Comma separated list of user tags to be attached to the cloned volume.
   -v, --volumes strings       Comma separated list of volume identifiers or names to be cloned.
 ```
@@ -4361,7 +4481,7 @@ create VOLUME_NAME --size SIZE [--count COUNT] [--replication-enabled=True|False
   -r, --replication-enabled               Enables storage replication on the volume. Default is "false".
       --replication-sites strings         List of replication sites for volume replication. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
   -e, --shareable                         Whether the volumes can be attached to multiple VMs. Default is "false".
-  -s, --size int                          Size of the volume (in GB). Size cannot exceed 200GB for storage tier "Tier5k".
+  -s, --size int                          Size of the volume in GB. Size cannot exceed 200GB for storage tier "Tier5k".
   -p, --storage-pool string               Volume pool where the volume will be created. If the "--storage-pool" option is set then the "--affinity-policy" option cannot be specified.
   -t, --storage-tier string               Tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). Default to tier3 if not provided.
   -u, --user-tags strings                 Comma separated list of user tags to be attached to the volume.
@@ -5173,7 +5293,7 @@ action WORKSPACE_ID --operation OPERATION
 **Usage**:
 
 ```bash
-create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--user-tags USER_TAG1[,USER_TAGn]]
+create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--parameters "KEY1 VALUE1",["KEYn VALUEn"]] [--user-tags USER_TAG1[,USER_TAGn]]
 
   WORKSPACE_NAME: The desired name of the workspace.
 ```
@@ -5181,14 +5301,16 @@ create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN
 **Available Options**:
 
 ```bash
-  -d, --datacenter string   The datacenter location where the instance should be hosted.
-                            Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
-                            and the "ibmcloud sat location ls" command to see values for private datacenters.
-                            When using the "ibmcloud sat location ls" to get a private datacenter,
-                            please prefix "satloc_<REGION>_" to the displayed id.
-  -g, --group string        The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
-  -p, --plan string         Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
-  -u, --user-tags strings   Comma separated list of user tags to be attached to the workspace.
+  -d, --datacenter string    The datacenter location where the instance should be hosted.
+                             Use the "ibmcloud pi datacenter list" command to see values for public datacenters,
+                             and the "ibmcloud sat location ls" command to see values for private datacenters.
+                             When using the "ibmcloud sat location ls" to get a private datacenter,
+                             please prefix "satloc_<REGION>_" to the displayed id.
+  -g, --group string         The ID of the resource group. Use the "ibmcloud resource groups" command to see possible values.
+      --parameters strings   List of key-value parameter pairs. Each pair must be a quoted string in the format "KEY VALUE".
+                             Example: --parameters "env dev" "version 1.0"
+  -p, --plan string          Plan associated with the offering. Valid values are "public"/"off-prem" or "private"/"on-prem".
+  -u, --user-tags strings    Comma separated list of user tags to be attached to the workspace.
 ```
 
 **Examples**:

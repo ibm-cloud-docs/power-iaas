@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-09"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users.
 {: shortdesc}
 
-PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud Multi Protocol Label Switching (MPLS) backbone, making it easy for different parts of the IBM network to communicate with each other. 
+PER improves network communication across different parts of the IBM network. The PER solution creates a direct connection to the IBM Cloud Multi Protocol Label Switching (MPLS) backbone, making it easy for different parts of the IBM network to communicate with each other.  The PER solution consists of two routers that enable an aggregate connectivity of 400 Gbps to each {{site.data.keyword.powerSys_notm}} data center. 
 
 In a PER and enhanced CRN-enabled workspace, you can also define security rules for network traffic control using the network security group feature. For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 
@@ -209,8 +209,83 @@ Select **{{site.data.keyword.powerSys_notm}}** under connection to attach a virt
 
 The connections attached to the Transit Gateway can communicate with each other. For example, a {{site.data.keyword.powerSys_notm}} workspace and VPC added under the Transit Gateway connection can access the resources that are associated with each other.
 
-Make sure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
+Ensure that the classic infrastructure is Virtual Routing and Forwarding (VRF) enabled before you attach it to the Transit Gateway.
 {: note}
+
+
+
+## Managing PER workspace fallback scenarios
+{: #manage-per-fallback}
+
+When you create a PER-enabled workspace, the underlying network device configuration might fail. In such cases, the system automatically falls back to a non-PER-enabled workspace.
+
+A workspace that is created in this fallback scenario might support the Cloud Connection capability instead of the PER capability. In addition, the Transit Gateway service does not detect the fallback workspace as an available connection in the data center.
+
+### Verifying PER configuration for a workspace
+{: #verify-per-ws}
+
+To check whether your workspace is PER-enabled by using the Power Virtual Server user interface, complete the following steps:
+
+1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+2. Click **Workspaces** in the left navigation menu.
+3. Select the workspace for which you want to review the PER configuration. The Workspace details panel is displayed.
+4. In the Workspace details panel, locate the **Power Edge Router (PER)** section. If PER is enabled for the selected workspace, the section displays Status as **Active**.
+
+To verify PER status of a workspace by using the command-line interface (CLI), run the following command:
+
+```sh
+ibmcloud pi workspace get <WORKSPACE_ID>
+```
+{: pre}
+
+If the workspace is PER-enabled, the Power Edge Router details are displayed in the command output. For example,
+
+```bash
+ID:                               12345678-abcd-1234-abcd-1234567890ab
+Name:                             SAMPLE-WORKSPACE
+Region:                           dal10
+Status:                           active
+Type:                             off-premises
+Capabilities:
+   cloud-connections             false
+   custom-virtual-cores          true
+   dedicated-hosts               false
+   network-security-groups       true
+   open-systems-enabled          false
+   power-edge-router             true
+   power-vpn-connections         false
+   routes                        true
+   shared-images                 false
+   transit-gateway-connection    false
+Power Edge Router Details:
+   State                         active
+   Type                         automated
+Network Security Group Details:
+   State                         active
+```
+{: screen}
+
+The absence of the Power Edge Router (PER) section in the Workspace details panel and in the `$ ibmcloud pi workspace get <WORKSPACE_ID>` output indicates that the workspace is not PER-enabled and is likely configured to use Cloud Connection instead.
+{: note}
+
+### Resolving a fallback Cloud Connection workspace
+{: #resolve-non-per-ws}
+
+To resolve a fallback Cloud Connection workspace, you can delete the workspace and create a new PER-enabled workspace. To create a new PER-enabled workspace, complete the steps provided in the [Creating a PER workspace]( /docs/power-iaas?topic=power-iaas-per#create-per-workspace) section.
+
+Deleting a workspace does not automatically remove the failed underlying network configuration. To remove the failed network configurations, [open a support ticket]( /docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
+{: important}
+
+### Best practices for creating PER-enabled workspaces
+{: #per-ws-best-practices}
+
+To prevent scenarios where workspaces are created without PER capabilities, allow enough time between workspace creation requests when creating multiple PER-enabled workspaces in succession.
+
+A time gap between workspace creation requests reduces the likelihood of backend network configuration conflicts that can lead to PER-enabled workspace provisioning failures.
+{: tip}
+
+
+
 
 ## OS support in a PER workspace
 {: #os-per}

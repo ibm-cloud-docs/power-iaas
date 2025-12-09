@@ -7,7 +7,7 @@
   "section_topics": {
     "links": [
       {
-        "title": "Getting started with IBM\u00ae Power\u00ae Virtual Servers",
+        "title": "Getting started with IBM® Power® Virtual Servers",
         "href": "/docs/power-iaas?topic=power-iaas-getting-started"
       },
       {
@@ -56,8 +56,16 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "25 July 2025",
-        "title": "You can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability)."
+        "date": "08 December 2025",
+        "title": "The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console."
+      },
+      {
+        "date": "08 December 2025",
+        "title": "You can attach a vPMEM volume to a Power Virtual Server instance (VSI) with AIX®, Linux®,, or Linux (SAP HANA) operating systems on a Power10 or later system."
+      },
+      {
+        "date": "13 November 2025",
+        "title": "You can set the preferred processor compatibility mode for a VSI during its creation in the IBM Power Virtual Server user interface."
       }
     ]
   }

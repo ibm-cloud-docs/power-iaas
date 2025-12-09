@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-09-17"
+lastupdated: "2025-12-08"
 
 keywords: power systems, cloud regions
 
@@ -45,7 +45,7 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 | Dallas        | us-south   | us-south                                   | us-south-1  \n us-south-2  \n us-south-3 | dal10  \n dal12  \n us-south  \n dal14 | dal08[^9] \n dal09  \n dal10  \n dal12  \n dal13 \n dal14 |
 | Montreal       | ca-mon     | mon                                   | x       |  mon01                                                  | mon01  |
 | San Jose      | x          | x                                          | x                                        | x                                      | sjc03  \n sjc04     |
-| Sao Paulo     | br-sao     | sao                                        | br-sao-1  \n br-sao-2  \n br-sao-3       | sao01  \n sao04  \n x                                                       | sao01  \n sao04  \n sao05     |
+| Sao Paulo     | br-sao     | sao                                        | br-sao-1  \n br-sao-2  \n br-sao-3       | sao01  \n sao04  \n sao05                                                       | sao01  \n sao04  \n sao05     |
 | Toronto       | ca-tor     | tor                                   | ca-tor-1  \n ca-tor-2  \n ca-tor-3       | tor01[^2]  \n tor04  \n tor05                                                   | tor01  \n tor04  \n tor05  |
 | Washington DC | us-east    | us-east                                    | us-east-1  \n us-east-2  \n us-east-3    | us-east  \n wdc06  \n wdc07                                                 | wdc03[^9a]  \n wdc04  \n wdc06  \n wdc07 |
 {: class="simple-tab-table"}

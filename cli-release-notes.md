@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-08"
 
 ---
 
@@ -14,6 +14,45 @@ lastupdated: "2025-11-21"
 Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}} CLI plug-in.
 {: shortdesc}
 
+## December 2025
+{: #december-2025}
+
+The CLI plug-in version v1.8.0 is available. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+**New commands**
+
+The following CLI command is added for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center.
+
+- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume-get): You can use this command to attach, detach, view, and list virtual persistent memory (vPMEM) volumes for an instance.
+
+**New options**
+
+The following options are added to the existing CLI commands:
+
+- `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center. You can use this option to specify a list of vPMEM volumes that you can associate with an instance. The maximum allowed vPMEM volumes vary by the instance type:
+    - SAP instances: 1
+    - Other instances: 4
+
+- `--parameters` is added to the [ibmcloud pi workspace create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-create) command. You can use this option to configure additional key-value pairs in a workspace.
+
+**Updated commands**
+
+The following commands are updated:
+
+- Updated the usage instructions for the [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-operation) command.
+
+- Updated the [ibmcloud pi instance action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-action) command by adding *dumprestart* as a valid value.
+
+
+**Other enhancements**
+
+The following enhancements are included in this release:
+
+- Resolved issues where some object responses were incomplete.
+
+- Enhanced the output of the [ibmcloud pi image create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-create) and [ibmcloud pi image get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-get) commands to include *Shared* and *Type* properties, and to dynamically hide properties that are not available in the response.
+
+- Updated command messages and descriptions to improve translation accuracy and readability across supported languages.
 
 
 ## September 2025

@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-20"
+lastupdated: "2025-12-08"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -220,6 +220,22 @@ To learn more about dedicated host, see [Getting started with dedicated host](/d
 
 
 
+#### Estimating a vPMEM volume
+{: #est-vpmem}
+
+To create an estimate of a Virtual Persistent Memory (vPMEM) volume on a Power10 or later system, you must update the following fields:
+
+| Field                 | Action                |
+| --------------------- | --------------------- |
+| Operating system      | Select **AIX** or **Linux for SAP (HANA)**.     |
+| Image type            | Select the required AIX or Linux image type.    |
+| Machine type          | Select Power10 or later system from the list.   |
+| Advance Configuration | Set **Virtual persistent memory volumes** to on. Select the existing vPMEM or you can create a vPMEM volume to add to the VSI. |
+{: caption="Fields and corresponding actions for estimating a vPMEM volume" caption-side="top"}
+
+When you add a vPMEM volume to a VSI with AIX OS, the vPMEM volumes use memory in addition to the base memory. The total cost is calculated based on the total memory usage.
+
+When you add a vPMEM volume to a VSI with SAP (HANA) profile, select the SAP certified profile that supports vPMEM volume. The total memory of the VSI that is the base memory with vPMEM memory, the overall memory consumption, and the cost of the memory remains the same.
 
 
 ## Contacting IBM to place an order
