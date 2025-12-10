@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-05"
+lastupdated: "2025-12-10"
 
 ---
 
@@ -3053,7 +3053,7 @@ get VOLUME_ID
 **Examples**:
 
 ```bash
-    ibmcloud pi volume onboarding create test-volume --auxiliary-volumes "test-auxiliary-volume-name" --source-crn "crn:v1:staging:public:power-iaas:dal13:a/mockcrn::"
+    ibmcloud pi volume onboarding create --auxiliary-volumes "test-auxiliary-volume-name" --source-crn "crn:v1:staging:public:power-iaas:dal13:a/mockcrn::"
 ```
 
 ---
