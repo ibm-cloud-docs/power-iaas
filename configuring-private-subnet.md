@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-11-13"
+lastupdated: "2025-12-10"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -78,7 +78,7 @@ You cannot assign the subnet that has already been assigned to another virtual m
 
 You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section.
 
-You can also create and configure a private network subnet by using the IBM command line interface (CLI). Use the following command to create a private network subnet:
+You can also create and configure a private network subnet by using the IBM command-line interface (CLI). Use the following command to create a private network subnet:
 
 ```shell
 ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "startIP-endIP[,startIP-endIP]" [--dns-servers "DNS1 DNS2"] [--gateway GATEWAY] [--json]
