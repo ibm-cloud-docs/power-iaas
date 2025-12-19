@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-09-30"
+lastupdated: "2025-12-17"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -48,6 +48,7 @@ You can deploy SAP HANA on the following IBM&reg; Power&reg; server types:
 - **Power11**: S1122, E1150, and E1180
 - **Power10**: S1022, E1050, and E1080
 - **Power9**: E980
+
 
 
 

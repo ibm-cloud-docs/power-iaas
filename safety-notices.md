@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2025-12-18"
 
 keywords: power, power server, private cloud, safety notice
 
@@ -57,10 +57,15 @@ Electrical voltage and current from power, telephone, and communication cables a
 * Do not connect or disconnect any cables or do the installation, maintenance, or reconfiguration of this product during an electrical storm.
 * The product might be equipped with multiple power cords. To remove all hazardous voltages, disconnect all power cords.
     - For AC power, disconnect all power cords from their AC power source.
-    - For racks with a DC power distribution panel (PDP), disconnect the customer’s DC power source to the PDP.
+
+    
+    
 * When connecting power to the product ensure all power cables are properly connected.
     - For racks with AC power, connect all power cords to a properly wired and grounded electrical outlet. Ensure that the outlet supplies proper voltage and phase rotation according to the system rating plate.
-    - For racks with a DC power distribution panel (PDP), connect the customer’s DC power source to the PDP. Ensure that the proper polarity is used when you attach the DC power and DC power return wiring.
+
+    
+    
+
 * Connect any equipment that is attached to this product to properly wired outlets.
 * When possible, use one hand only to connect or disconnect signal cables.
 * Never turn on any equipment when there is evidence of fire, water, or structural damage.
@@ -78,17 +83,20 @@ Electrical voltage and current from power, telephone, and communication cables a
 To Disconnect:
 1. Turn off everything (unless instructed otherwise).
 2. For AC power, remove the power cords from the outlets.
-3. For racks with a DC power distribution panel (PDP), turn off the circuit breakers that are located in the PDP and remove the power from the Customer's DC power source.
-4. Remove the signal cables from the connectors.
-5. Remove all cables from the devices.
+3. Remove the signal cables from the connectors.
+4. Remove all cables from the devices.
+
+
+
 
 To connect:
 1. Turn off everything (unless instructed otherwise).
 2. Attach all cables to the devices.
 3. Attach the signal cables to the connectors.
 4. For AC power, attach the power cords to the outlets.
-5. For racks with a DC power distribution panel (PDP), restore the power from the Customer's DC power source and turn on the circuit breakers that are located in the PDP.
 6. Turn on the devices.
+
+
 
 Sharp edges, corners, and joints might be present in and around the system. Use care when handling equipment to avoid cuts, scrapes, and pinching. **(D005)**
 
@@ -129,7 +137,9 @@ Sharp edges, corners, and joints might be present in and around the system. Use 
 * Rack-mounted devices are not to be used as shelves or workspaces. Do not place objects on top of rack-mounted devices. In addition, do not lean on rack-mounted devices and do not use them to stabilize your body position (for example, when working from a ladder).
 * Each rack cabinet might have more than one power cord.
     - For AC-powered racks, be sure to disconnect all power cords in the rack cabinet when directed to disconnect power during servicing.
-    - For racks with a DC power distribution panel (PDP), turn off the circuit breaker that controls the power to the system units, or disconnect the customer’s DC power source, when directed to disconnect power during servicing.
+
+    
+
 * Connect all devices installed in a rack cabinet to power devices installed in the same rack cabinet. Do not plug a power cord from a device that is installed in one rack cabinet into a power device that is installed in a different rack cabinet.
 * An electrical outlet that is not correctly wired might place hazardous voltage on the metal parts of the system or the devices that attach to the system. It is the responsibility of the customer to ensure that the outlet is correctly wired and grounded to prevent an electrical shock.
 

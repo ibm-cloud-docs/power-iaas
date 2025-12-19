@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-10-21"
+lastupdated: "2025-12-19"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -58,6 +58,15 @@ The benefits of using an SPP are as follows:
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
 For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio is 1:20. The minimum Entitled Capacity (EC) must be 0.05 and can be incremented by 0.05.
+
+
+
+The create or update operations of a VSI fails even if the core-to-virtual core ratio of 1:20 is satisfied but the configured count of vCPU exceeds the maximum supported per-instance limit as defined by the system policy.
+{: note}
+
+
+
+
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 

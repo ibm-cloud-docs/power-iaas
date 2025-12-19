@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-25"
+lastupdated: "2025-12-19"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -199,7 +199,7 @@ A volume group is used to enable, disable, and manage a replication-enabled cons
 | ------------------------------------- | ------------------------ |
 | `inconsistent_stopped` | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.|
 | `inconsistent_copying` | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state. |
-| `consistent_copying` | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes. |
+| `consistent_copying` | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes.  \n The `consistent_copying` progress bar is an indicator to show the progress of copy operation. One cycle period of copy operation is expected to be between the range of 1-100%. In some cases, the copy operation can complete the activity before the progress bar reaches the maximum value of 100%. |
 | `consistent_stopped` | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group that was in a `consistent_copying` state was stopped. |
 | `idling` | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled. |
 | `idling_disconnected` | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations. |
@@ -880,8 +880,13 @@ To delete a primary volume, you must complete the actions on the primary and sec
     1. [Remove an auxiliary volume from its volume group, if the auxiliary volume is associated with a volume group](#rem-aux-vol-grp)
     2. [Delete the auxiliary volume](#del-aux-vol)
 
+
+
 If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state and the only operation that you can perform is to delete the volume.
 {: note}
+
+
+
 
 
 ### Removing the primary volume from its volume group

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-19"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -325,6 +325,60 @@ The following table provides more information about each {{site.data.keyword.pow
 | Public Networks | Select this option to use an IBM-provided public network. Cost is associated when you select this option.  \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks) |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).|
 {: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
+
+
+
+
+## Virtual server pinning and its impacts on VSI availability
+{: #vmpinning}
+
+Virtual Server Instances (VSIs) can be optionally pinned to a host. Pin VSIs only when it is necessary as it negatively impacts the VSI availability during maintenance activities such as maintenance of software license compliance. VSI pinning restricts the movement of VSIs during the maintenance operations, host failures, and other restart events.
+
+### Virtual server pinning policies
+{: #vmpinning-policies}
+
+The behavior of the VSI depends on the following **Virtual server pinning** policies that you select:
+
+- **None**: If you select **None**, the VSI migrates automatically or starts remotely during maintenance windows or if the host fails. The default value is **None**.
+- **Soft**: If you select **Soft**, a backend process restarts the VSI on another host if the current host fails. When the initial host recovers, the backend process migrates the VSI to the initial host automatically by using live partition migration (LPM).
+- **Hard**: If you select **Hard**, the movement of the VSI from the host do not occur during compute host failures and maintenance activities.
+
+### Impacts of pinning a VSI
+{: #vmpinning-impacts}
+
+Enabling **Virtual server pinning** directly affects the VSI availability posture. The impacts of pinning a VSI are detailed in the following events:
+
+- [Maintenance of Power Virtual server](#vmpinning-main)
+- [Unplanned host failures](#vmpinning-unplan-main)
+
+Use the following table to determine when the VSI incurs downtime during planned maintenance and host failure events based on the type of pinning policy that is selected for the VSI.
+
+| **Virtual server pinning** policies | VSI downtime during planned maintenance | VSI downtime during host failure |
+| ----------------------------------- | --------------------------------------- | -------------------------------- |
+| Soft                                | Yes                                     | No                               |
+| Hard                                | Yes                                     | Yes                              |
+| None                                | No                                      | No                               |
+{: caption="VSI availability posture during planned maintenance or host failure events" caption-side="top"}
+
+
+### Maintenance of Power Virtual server
+{: #vmpinning-main}
+
+IBM {{site.data.keyword.powerSys_notm}} operations team performs planned maintenance activities based on the requirements of the IBM {{site.data.keyword.powerSys_notm}} infrastructure. During the performance of the planned maintenance, the operations team cannot use the LPM feature to move VSIs that are set to a pinning policy.
+
+To perform a planned maintenance activity, the IBM {{site.data.keyword.powerSys_notm}} operations team coordinates with the owner of the VSI to temporarily remove pinning and performs the LPM without downtime. The owner of the VSI must approve the temporary removal of VSI pinning. If the owner of the VSI does not approve, the VSI is shut down until the maintenance operation is completed. After the maintenance operation is completed, the owner must restart the VSI.
+
+### Unplanned host failures
+{: #vmpinning-unplan-main}
+
+
+
+When a host fails, the selected pinning policy determines the recovery process of the VSI that were previously operating on the failed host:
+- If the VSI is set to **Soft**, it automatically restarts on the available compute resources.
+- If the VSI is set to **Hard**, it cannot be automatically restarted on the available compute resources. Such VSIs remain unavailable until the IBM {{site.data.keyword.powerSys_notm}} operations team resolves the issues that are related to host failure. Based on the type of the issue, the IBM {{site.data.keyword.powerSys_notm}} operations team might require extra time to resolve the issue.
+
+Considering the impacts of pinning a VSI, it is recommended to pin a VSI only if it is necessary. You can use IBM i virtual serial numbers (VSNs) to retain the same serial number throughout the lifecycle of a VSI independent of the compute host on which the VSI runs. For more information, contact your independent software vendor (ISV).
+{: note}
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-10-23"
+lastupdated: "2025-12-19"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -76,6 +76,14 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
 * **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
+
+
+
+The create or update operations of a VSI fails even if the core-to-virtual core ratio of 1:20 is satisfied but the configured count of vCPU exceeds the maximum supported per-instance limit as defined by the system policy.
+{: note}
+
+
+
 
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}

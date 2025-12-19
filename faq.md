@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-12-09"
+lastupdated: "2025-12-19"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -663,7 +663,7 @@ IBM uses the same tools that are on a private cloud system.
 
 You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
 
-## How do I delete a workspace?
+## How to delete a workspace?
 {: #delete-service}
 {: faq}
 
