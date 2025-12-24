@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -174,14 +174,14 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-- You can deploy SAP certified profiles on IBM Power10 or later servers using a single custom OS boot image. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
-- The single byte IBM i 7.6 stock image for IBM Power10 systems is available in the OS image catalog. This stock image is not supported on IBM Power9 systems. The double byte IBM i 7.6 stock image will be available at a later date.
+- You can deploy SAP certified profiles on IBM Power10 or later servers by using a single custom OS boot image. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
+- The single byte IBM i 7.6 stock image for IBM Power10 systems is available in the OS image catalog. The stock image is not supported on IBM Power9 systems. 
 
 
 
 - The migration of existing workspaces to cloud resource names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
 
-- The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS levels are no longer supported by Red Hat:
+- The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS versions are no longer supported by Red Hat:
 
   - RHEL8.8 general purpose
   - RHEL9.2 general purpose
@@ -198,7 +198,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can view and delete the connections using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 
 
 
@@ -213,7 +213,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
   - RHEL 8.10 general purpose
   - RHEL 9.4 general purpose
 
-- You can deploy SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-appser-profiles).
+- You can deploy the SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-appser-profiles).
 
 ## April 2025
 {: #April-2025}
@@ -225,19 +225,28 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS levels are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual machines (VMs) that are using these stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VMs to a supported OS level. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
+
+
+The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual machines (VMs) that use the stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VMs to a supported OS version. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 {: important}
 
-- IBM i 7.3, 7.2 and COR stock images have been refreshed.
+- IBM i 7.3, 7.2 and Cloud Optical Repository (COR) stock images have been refreshed.
 
 - In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+
+
+
+
+
+
+
 
   The billing and metering plans are updated with the following changes:
 
     - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
     - Each resource type has its own billing plan instead of billing all the resources under the `Workspace for Power Virtual Server` plan.
-    - The value for the `Pricing Region` field is based on metro regions and is not based on data center and zone regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
-    - The costs of the snapshots are now billed by using independent metrics for snapshots and are not included with the volume metrics.
+    - The value for the `Pricing Region` field of the instance is based on metro regions and is not based on data center and zone regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
+    - The costs of the snapshots are billed by using independent metrics for snapshots and are not included with the volume metrics.
 
   The existing price of the resources does not change. The organization and visualization of the costs of the resources are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
 
@@ -245,15 +254,15 @@ The Red Hat Enterprise Linux (RHEL) End of Support date for RHEL 9.2 general pur
 
 
 
-- The idle timeout for the Virtual Server Instance (VSI) console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
+- The idle timeout for the virtual server instance (VSI) console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
 
 
 
-- Global replication service supports new data center pair `WDC06`-`DAL14`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- The new data center pair `WDC06`-`DAL14` supports global replication services. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 
 
-- You can enable Cloud Security Posture Management (CSPM) feature in your existing and new {{site.data.keyword.powerSys_notm}} workspaces. For more information about CSPM, see [Integrating Power Virtual Server with IBM Cloud Security and Compliance Center Workload Protection](/docs/power-iaas?topic=power-iaas-integrate-scc).
+- You can enable the Cloud Security Posture Management (CSPM) feature in your existing and new {{site.data.keyword.powerSys_notm}} workspaces. For more information about enabling CSPM, see [Integrating Power Virtual Server with IBM Cloud Security and Compliance Center Workload Protection](/docs/power-iaas?topic=power-iaas-integrate-scc).
 
 
 
