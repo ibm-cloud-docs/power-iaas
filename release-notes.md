@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-24"
+lastupdated: "2025-12-29"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -234,13 +234,6 @@ The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general pur
 
 - In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
-
-
-
-
-
-
-
   The billing and metering plans are updated with the following changes:
 
     - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
@@ -249,6 +242,12 @@ The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general pur
     - The costs of the snapshots are billed by using independent metrics for snapshots and are not included with the volume metrics.
 
   The existing price of the resources does not change. The organization and visualization of the costs of the resources are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
+
+
+
+
+
+
 
 
 
