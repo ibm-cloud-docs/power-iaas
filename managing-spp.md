@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-06"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -200,25 +200,23 @@ To add VSIs to an existing SPP, complete the following steps:
 ### Assigning an existing VSI to a shared processor pool
 {: #assign-vsi-to-spp}
 
-You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and add the VSI to a new or existing SPP during the deployment.
+You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you have already deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and assign the VSI to a new SPP or an existing SPP during the deployment.
 
 To assign an existing VSI to an SPP, complete the following steps:
 
-1. Identity an existing SPP that you want to use or create a new SPP by following the steps in the [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp) section.
+1. Identify an existing SPP that you want to use or create an SPP by following the steps in the [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp) section.
 
-2. Identify the VSI that you want to assign to an SPP, and then use the *Capture and export* function by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
+2. Identify the existing VSI that you want to assign to an SPP and then capture and export the VSI by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
 
-    - Ensure that you select **Image catalog** as the export destination, as this option allows for faster deployment of the VSI.
+    When you capture and export the VSI, ensure that you select **Image catalog** as the export destination because exporting to Image catalog allows faster VSI deployment. If you select **Cloud Object Storage** as the export destination, you must reimport the image from Cloud Object Storage, which can increase the VSI deployment time.
+    {: important}
 
-    If you select **Cloud Object Storage** as the export destination, you must re-import the image from Cloud Object Storage, which can increase the VSI deployment time.
-    {: note}
-
-3.	Deploy a new VSI into an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. During the deployment of the VSI, ensure that you make the following selections:
+3. Deploy a new VSI to an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. When you deploy the VSI, ensure that you make the following selections:
 
     - Select the **Add to a Shared processor pool** checkbox and then select the SPP that you want to use from the list.
     - In the Boot image section, select the VSI image that you exported in step 2 from the **Image** list.
 
-Complete all the remaining steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section to finish the VSI deployment.
+Complete all the remaining steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section to complete the VSI deployment.
 
 After you verify that the new VSI is deployed successfully, you can delete the VSI that was used for the *Capture and export* operation and the exported image to prevent ongoing charges and optimize resource utilization. For more information, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance){: external}.
 {: tip}
