@@ -3,7 +3,7 @@
 copyright:
   year: 2025
 
-lastupdated: "2025-12-09"
+lastupdated: "2026-01-07"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -103,7 +103,7 @@ Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys
 ## Copying and pasting text in the VSI console
 {: #copy-paste-console}
 
-The copy and paste functionality of the VSI console enables bidirectional text transfer between Windows&reg;, macOS&reg;, and Linux-based workstations and AIX, IBM i, and Linux-based VSI console. You can copy text, such as commands and large scripts and paste the copied text into the VSI console to run them. You can also copy logs and error messages from the console to your workstation for troubleshooting or support tickets.
+The copy-and-paste functionality of the VSI console enables bidirectional text transfer between Windows&reg;, macOS&reg;, and Linux-based workstations, and AIX, IBM i, and Linux-based VSI consoles. You can copy text, such as commands and large scripts, and paste the copied text into the VSI console to run them. You can also copy logs and error messages from the console to your workstation for troubleshooting or support tickets.
 
 ### Copying and pasting text from your workstation to the VSI console
 {: #copy-paste-workstation-console}
