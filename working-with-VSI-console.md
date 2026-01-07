@@ -137,7 +137,7 @@ To copy and paste text from your workstation to the VSI console, complete the fo
 
 To copy and paste text from the VSI console to your workstation, complete the following steps:
 
-1. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
+1. From the Virtual server instance details page, click the **VM actions** list and select **Open Console**. The VSI console window is displayed.
 
 2. Click the **Show/hide the control bar** icon, which is located on the left side of the VSI console window.
 
