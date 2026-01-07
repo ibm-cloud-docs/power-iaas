@@ -103,17 +103,19 @@ Changing the VSI console language on an IBM i-based {{site.data.keyword.powerSys
 ## Copying and pasting text in the VSI console
 {: #copy-paste-console}
 
-The copy-and-paste functionality of the VSI console enables bidirectional text transfer between Windows&reg;, macOS&reg;, and Linux-based workstations, and AIX, IBM i, and Linux-based VSI consoles. You can copy text, such as commands and large scripts, and paste the copied text into the VSI console to run them. You can also copy logs and error messages from the console to your workstation for troubleshooting or support tickets.
+The copy-and-paste functionality of the VSI console enables bidirectional text transfer between Windows&reg;, macOS&reg;, and Linux-based workstations, and AIX, IBM i, and Linux-based VSI consoles. You can copy text, such as commands and large scripts, and paste the copied text into the VSI console. You can also copy logs and error messages from the console to your workstation for troubleshooting or support tickets.
 
 ### Copying and pasting text from your workstation to the VSI console
 {: #copy-paste-workstation-console}
 
 To copy and paste text from your workstation to the VSI console, complete the following steps:
 
-1. To copy text from your workstation, select the text that you want to copy and use the following key combination for your operating system:
-    - **Windows**: `Ctrl + C`
-    - **Mac**: `Command + C`
-    - **Linux** : `Ctrl + C`
+1. Select the text that you want to copy on your workstation.
+
+2. Use the following key combination based on your operating system to copy the selected text:
+    - Windows: Press `Ctrl+C`.
+    - Mac: Press `Command+C`.
+    - Linux: Press `Ctrl+C`.
 
 2. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
 
@@ -123,7 +125,10 @@ To copy and paste text from your workstation to the VSI console, complete the fo
 
 5. Paste the copied text into the VSI console by completing the following steps:
 
-    1. Type or paste the copied text into the text field of the Clipboard panel. To paste, press `Ctrl + V` (Windows/Linux) or `Command + V` (Mac).
+    1. Type or paste the copied text in the text field of the Clipboard panel. To paste, use the following key combination based on your operating system:
+      - Windows: Press `Ctrl+V`.
+      - Mac: Press `Command+V`.
+      - Linux: Press `Ctrl+V`.
 
     2. After the text appears in the Clipboard panel, click the **Clipboard** icon to return to the VSI console, or click directly inside the console window, which remains visible in the background. Then, press the same key combination to paste the text at the cursor in the console window.
 
@@ -138,12 +143,12 @@ To copy and paste text from the VSI console to your workstation, complete the fo
 
 3. Click the **Clipboard** icon. The Clipboard panel is displayed.
 
-4. To copy text from the VSI, select the text that you want to copy, and the selected text is automatically copied to the clipboard. However, for the IBM i-based VSI console, press `Ctrl + C` or `Command + C` to copy the selected text.
+4. To copy text from the VSI, select the text that you want to copy, and the selected text is automatically copied to the clipboard. However, for the IBM i-based VSI console, press `Ctrl+C` or `Command+C` to copy the selected text.
 
-5. To paste the copied text to your workstation, use the following key combination for your operating system:
-    - **Windows**: `Ctrl + V`
-    - **Mac**: `Command + V`
-    - **Linux** : `Ctrl + V`
+5. To paste the copied text to your workstation, use the following key combination based on your operating system:
+    - Windows: Press `Ctrl+V`.
+    - Mac: Press `Command+V`.
+    - Linux: Press `Ctrl+V`.
 
 You can use the **Full screen** option on the control bar to open the VSI console in the full-screen mode.
 {: tip}
@@ -151,11 +156,11 @@ You can use the **Full screen** option on the control bar to open the VSI consol
 ### Copy and paste limitations
 {: #copy-paste-limitation}
 
-The copy and paste functionality in the VSI console have the following limitations:
+The copy and paste functionality in the VSI console has the following limitations:
 
 - The copy and paste functionality from the clipboard into the VSI console might not work if the Caps Lock key is turned on.
 
-- The copy and paste functionality in the VSI console currently supports only English text.
+- The copy and paste functionality in the VSI console currently supports English only.
 
 - Special characters such as `^V`, `[[200~`, `{}`, or `[[201~` might appear when you paste text from your workstation into the VSI console of an AIX- or Linux-based VSI that uses bash as the command shell and is configured to use bracketed-paste mode. For more information, see [enable-bracketed-paste](https://www.gnu.org/software/bash/manual/bash.html#index-enable_002dbracketed_002dpaste){: external}.
 
