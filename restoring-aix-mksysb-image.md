@@ -21,7 +21,7 @@ Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keywor
 
 A simple way to migrate a local AIX environment (or workload) into {{site.data.keyword.powerSys_notm}} is to restore an operating system `rootvg` backup over an existing image and then migrate the data. The `rootvg` backup is created with the AIX `mksysb` command. The restored mksysb image applies the AIX configuration details while preserving the {{site.data.keyword.powerSys_notm}} deployed storage and networking resources.
 
-when the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
+When the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
 {: note}
 
 
