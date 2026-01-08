@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-24"
+lastupdated: "2026-01-08"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -24,6 +24,8 @@ A simple way to migrate a local AIX environment (or workload) into {{site.data.k
 when the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
 {: note}
 
+
+
 It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance by using the {{site.data.keyword.powerSys_notm}} user interface or the IBM Cloud CLI.
 
 ## Considerations before creating the mksysb image on the source AIX instance
@@ -39,6 +41,7 @@ The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} sho
 
 The AIX technology levels (TL) do not need to match, but you might consider by using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
 {: important}
+
 
 1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
 
@@ -66,6 +69,10 @@ Path: /etc/obj repos
 5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Enure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
 
 6. Delete any temporary files or files, especially large files that are not necessary on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
+
+
+
+
 
 ## Creating the mksysb image on the source AIX instance
 {: #create-image-source-AIX}
