@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-12-08"
+lastupdated: "2026-01-08"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -15,7 +15,7 @@ subcollection: power-iaas
 
 
 
-# Enabling Virtual Persistent Memory in a {{site.data.keyword.powerSys_notm}} instance
+# Attaching Virtual Persistent Memory in a {{site.data.keyword.powerSys_notm}} instance
 {: #vPMEM}
 
 ---
