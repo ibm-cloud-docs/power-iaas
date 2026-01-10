@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-05"
+lastupdated: "2026-01-10"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -874,7 +874,7 @@ To delete a primary volume, you must complete the actions on the primary and sec
     2. [Delete the auxiliary volume](#del-aux-vol)
 
 
-If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state and the only operation that you can perform is to delete the volume.
+If you do not delete the auxiliary volume from the secondary location, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state. You can only delete the volume.
 {: note}
 
 
