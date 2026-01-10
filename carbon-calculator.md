@@ -127,7 +127,7 @@ On the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calcul
 
 For {{site.data.keyword.powerSys_notm}}, GHG emissions are not distinguished for individual services. The data is a combined report of GHG emissions for workloads that run on {{site.data.keyword.powerSys_notm}} instances (VSIs).
 
-You can create a resource group and add the {{site.data.keyword.powerSys_notm}} VSIs for a specific workload to the resource group. View the **Emissions by resource group** widget on the carbon calculator GUI to view the carbon emissions for the resource group that you created. For more information about creating a resource group, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui){: external}.
+You can create a resource group and add the {{site.data.keyword.powerSys_notm}} VSIs for a specific workload to the resource group. View the Emissions by resource group widget on the carbon calculator GUI to view the carbon emissions for the resource group that you created. For more information about creating a resource group, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui){: external}.
 
 
 
