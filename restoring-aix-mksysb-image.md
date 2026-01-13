@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-13"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Replicating a desired AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
+# Replicating an AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
 {: #restoring-aix-mksysb-image}
 
 Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keyword.powerSysFull}} instance.
@@ -66,7 +66,7 @@ Path: /etc/obj repos
 
 4. Verify that the AIX initab file does not contain entries with dependencies on unique aspects of the source environment that would not be present in {{site.data.keyword.powerSys_notm}}. Otherwise, the converted {{site.data.keyword.powerSys_notm}} AIX instance might not boot. Similarly, if other boot time actions exist such as NFS file system mounts, those might need to be disabled.
 
-5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Enure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
+5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Ensure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
 
 6. Delete any temporary files or files, especially large files that are not necessary on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
 
