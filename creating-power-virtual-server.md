@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-13"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -121,6 +121,8 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
+
+
     
 
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and bring your own license images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
@@ -139,7 +141,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-5. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
+1. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
@@ -175,7 +177,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-6. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
+2. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
 
     - Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list. The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
 
@@ -184,7 +186,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     The *Effective* processor compatibility mode for the VSI might not match the *Preferred* mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}.
     {: note}
 
-7.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+3.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
     Expand **Advanced configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
@@ -217,8 +219,15 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 You can assign a Virtual Serial Number (VSN) to a VSI.
 
+
+
 VSN is supported only on a VSI with IBM i operating system.
 {: note}
+
+
+
+
+
 
 
 
