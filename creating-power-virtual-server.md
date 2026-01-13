@@ -109,8 +109,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    
-
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
     - Include the following licenses to your VSI:
       - IBM i Cloud Storage Solution
@@ -123,14 +121,12 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 
 
-    
-
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and bring your own license images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 
-    
+
 
     To deploy an SAP workload, from the **Operating system** list select one of the following options:
 
@@ -139,7 +135,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
 
-    
+
 
 1. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
