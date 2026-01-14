@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-07-24"
+lastupdated: "2026-01-14"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Replicating a desired AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
+# Replicating an AIX configuration in {{site.data.keyword.powerSysFull}} using an AIX mksysb image
 {: #restoring-aix-mksysb-image}
 
 Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keyword.powerSysFull}} instance.
@@ -21,51 +21,61 @@ Learn how to create and restore an AIX `mksysb` image onto an {{site.data.keywor
 
 A simple way to migrate a local AIX environment (or workload) into {{site.data.keyword.powerSys_notm}} is to restore an operating system `rootvg` backup over an existing image and then migrate the data. The `rootvg` backup is created with the AIX `mksysb` command. The restored mksysb image applies the AIX configuration details while preserving the {{site.data.keyword.powerSys_notm}} deployed storage and networking resources.
 
-when the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
+When the restored AIX configuration is active, various methods can be used to migrate applications and related data. Those methods are outside the scope of this page.
 {: note}
 
-It is assumed the reader has AIX administration experience and is familiar with deploying a {{site.data.keyword.powerSys_notm}} AIX instance by using the {{site.data.keyword.powerSys_notm}} user interface or the IBM Cloud CLI.
+
+
+Ensure that you have experience in AIX administration and are familiar with deploying {{site.data.keyword.powerSys_notm}} instances using the {{site.data.keyword.powerSys_notm}} user interface or the IBM Cloud CLI.
+
+
 
 ## Considerations before creating the mksysb image on the source AIX instance
 {: #consider-image-source-AIX}
 
-1. Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. For more information see, [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
+- Ensure that the installed RSCT package is at version 3.2.6.2 or later. The `/opt/rsct/install/bin/ctversion` command can be used to display the installed version. For more information see, [Recommended Reliable Scalable Cluster Technology (RSCT) package levels for imported AIX images](/docs/power-iaas?topic=power-iaas-recommended-rsct-package).
 
-2. The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}.
+- The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}.
 
-Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
+    Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
 
-The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
+    The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 
-The AIX technology levels (TL) do not need to match, but you might consider by using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
-{: important}
-
-1. Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
+    The AIX technology levels (TL) do not need to match, but you might consider by using the latest TL that is available from the {{site.data.keyword.powerSys_notm}} stock images.
+    {: important}
 
 
-```screen
-#
-# lslpp -l devices.vdevice.IBM.vfc-client.rte
-  Fileset                      Level     State      Description
-  -------------------------------------------------------------
 
-Path: /usr/lib/obj repos
-  devices.vdevice.IBM.vfc-client.rte
-                            7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
+- If you plan to capture an AIX system that is restored from an `mksysb` backup as a custom image, you must install the cloud-init packages before starting the capture. An AIX system that is restored from an `mksysb` backup might not include the cloud-init packages, which can result in a captured image without cloud-init. The cloud-init packages are required to ensure that the {{site.data.keyword.powerSys_notm}} instances that are created from the image initialize correctly.
 
 
-Path: /etc/obj repos
-  devices.vdevice.IBM.vfc-client.rte
-                            7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
 
-#
-```
 
-4. Verify that the AIX initab file does not contain entries with dependencies on unique aspects of the source environment that would not be present in {{site.data.keyword.powerSys_notm}}. Otherwise, the converted {{site.data.keyword.powerSys_notm}} AIX instance might not boot. Similarly, if other boot time actions exist such as NFS file system mounts, those might need to be disabled.
+- Ensure that that NPIV file sets are installed in the AIX environment as {{site.data.keyword.powerSys_notm}} VMs use the NPIV storage virtualization model. This can be checked by using the lslpp command as follows.
 
-5. {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Enure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
+        ```screen
+        #
+        # lslpp -l devices.vdevice.IBM.vfc-client.rte
+          Fileset                      Level     State      Description
+          -------------------------------------------------------------
 
-6. Delete any temporary files or files, especially large files that are not necessary on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
+        Path: /usr/lib/obj repos
+          devices.vdevice.IBM.vfc-client.rte
+                                    7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
+
+
+        Path: /etc/obj repos
+          devices.vdevice.IBM.vfc-client.rte
+                                    7.1.5.38     COMMITTED  Virtual Fibre Channel Client Support
+
+        #
+        ```
+
+- Verify that the AIX initab file does not contain entries with dependencies on unique aspects of the source environment that would not be present in {{site.data.keyword.powerSys_notm}}. Otherwise, the converted {{site.data.keyword.powerSys_notm}} AIX instance might not boot. Similarly, if other boot time actions exist such as NFS file system mounts, those might need to be disabled.
+
+- {{site.data.keyword.powerSys_notm}} uses IBM Storage with the built-in AIX MPIO driver. Ensure that the I/O configuration of the source LPAR does not conflict with the use of AIX MPIO.
+
+- Delete any temporary files or files, especially large files that are not necessary on the target {{site.data.keyword.powerSys_notm}} AIX instance. The `-e` and `-x` mksysb options can also be used to exclude unneeded directories and file systems in rootvg. This reduces the size of the mksysb image for transfer to {{site.data.keyword.powerSys_notm}}.
 
 ## Creating the mksysb image on the source AIX instance
 {: #create-image-source-AIX}

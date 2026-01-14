@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-14"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -27,6 +27,30 @@ subcollection: power-iaas
 
 The {{site.data.keyword.powerSysFull}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
+
+
+
+## ENS High
+{: #enshigh}
+
+{{site.data.keyword.powerSys_notm}} is Esquema Nacional de Seguridad (ENS) High certified. Spain’s National Security Framework is a set of basic principles and minimum requirements for information security and data protection established by the Spanish government. The ENS was established by Royal Decree 311/2022, of 3 May. That royal decree was intended to modernize Spain’s information security policy for both public sector agencies and private sector entities that provide services to the government agencies.
+
+For more information about ENS High and the list of validated IBM Cloud services, see [Esquema Nacional de Seguridad (ENS)](https://www.ibm.com/products/cloud/compliance/ens){: external}.
+
+
+
+
+
+
+## Protected B
+{: #protectedb}
+
+The Canadian Centre for Cyber Security (CCCS) established the Government of Canada Cloud Service Provider (CSP) Information Technology Security (ITS) Assessment Program, a framework that is designed to evaluate the security of cloud services. The primary objective of this program is to assure the Government of Canada (GC) departments and agencies that cloud offerings meet the GC’s public cloud security requirements for handling information and services that are classified up to the Protected B level.
+
+Federal government contracts contain clauses with security requirements. These requirements specify the levels of security needed to safeguard sensitive information, assets, and work sites. Protected B is one of the classified security levels that applies to information or assets that, if compromised, could cause serious injury to an individual, organization or government. Systems that handles Protected B data must meet enhanced security controls, covering access management, encryption, incident response, and physical protection to ensure the confidentiality, integrity, and availability of the information. For more information about Protected B, see [IBM Cloud® compliance: Protected B](https://www.ibm.com/products/cloud/compliance/protected-b){: external}.
+
+
+For more information about IBM Cloud Protected B Compliant services, see [GC Cloud Framework Agreements catalogue](https://hosting-services-hebergement.canada.ca/s/gc-cloud-fa-catalogue?language=en_US){: external}.
 
 
 

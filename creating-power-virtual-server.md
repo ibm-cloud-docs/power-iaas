@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-13"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -109,8 +109,6 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    
-
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
     - Include the following licenses to your VSI:
       - IBM i Cloud Storage Solution
@@ -121,14 +119,14 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
-    
+
 
     If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and bring your own license images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
     Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
 
-    
+
 
     To deploy an SAP workload, from the **Operating system** list select one of the following options:
 
@@ -137,9 +135,9 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type is IBM Power10 or later.
 
-    
 
-5. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
+
+1. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
@@ -175,7 +173,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     
 
-6. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
+2. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
 
     - Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list. The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
 
@@ -184,7 +182,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     The *Effective* processor compatibility mode for the VSI might not match the *Preferred* mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}.
     {: note}
 
-7.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+3.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
     Expand **Advanced configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
@@ -217,8 +215,15 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 You can assign a Virtual Serial Number (VSN) to a VSI.
 
+
+
 VSN is supported only on a VSI with IBM i operating system.
 {: note}
+
+
+
+
+
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-11-13"
+lastupdated: "2026-01-14"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -246,7 +246,7 @@ Attaching storage volumes to a virtual server instance is an asynchronous operat
 
 6. Select one of the following **Storage pool** options:
 
-   - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the desired storage tier, that has sufficient capacity.
+   - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the required storage tier, that has sufficient capacity.
 
    - **Affinity**: Use this option to select an existing virtual server instance (VSI) or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
 
@@ -451,7 +451,7 @@ The following are some of the scenarios that you might face when you make a requ
 When you attempt to resize the memory and the CPU of a deployed virtual server instance through a single request, it might fail due to the following reasons:
 - No free memory is available on the host.
 - No free memory is available on the logical partition as the resources on it are running.
-- The free memory that is available on the logical partition is less than the desired value indicated in the resizing request.
+- The free memory that is available on the logical partition is less than the required value indicated in the resizing request.
 - Multiple attempts are made for resizing.
 
     Currently, there is no preference for memory or CPU on what can be resized first. If the first request processing fails, the second request also fails automatically.
@@ -467,7 +467,7 @@ When you attempt to resize the memory and the CPU of a deployed virtual server i
 When you attempt to resize the memory of a deployed virtual server instance through a request, it might partially resize or might fail due to the following reasons:
 - No free memory is available on the host.
 - No free memory is available on the logical partition as the resources are running on it.
-- The free memory that is available on the logical partition is less than the desired value indicated in the resizing request.
+- The free memory that is available on the logical partition is less than the required value indicated in the resizing request.
 - Multiple attempts are made for resizing.
 
 `Example`: Consider that the allocated memory for the logical partition is 4 GB. You make a request to reduce the memory value to 2 GB. The logical partitioning is using up to 3 GB for running resources in it and so can free up only 1 GB memory. Then, the partial resize can reduce the memory to 3 GB.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-12-10"
+lastupdated: "2026-01-14"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -102,7 +102,7 @@ An IP address that is present in the reserved list is not auto assigned to a vir
 
 To add an IP address into the reserved IP address list, perform the following steps:
 * Open the [Subnets](https://cloud.ibm.com/power/subnets){: external} page in the IBM Cloud.
-* From the list of subnets that you have created, click the desired subnet for which you want to reserve the IP address.
+* From the list of subnets that you have created, click the subnet for which you want to reserve the IP address.
 * Click **Reserve IP**.
 * Enter your IP address in the **IP address** field.
 

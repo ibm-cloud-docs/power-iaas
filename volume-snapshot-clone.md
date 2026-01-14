@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-12-09"
+lastupdated: "2026-01-08"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -112,7 +112,9 @@ To create a snapshot by using the {{site.data.keyword.powerSys_notm}} user inter
 
 12. Optional: Click **Add to estimate** to add the cost information to an existing estimate or to create a new estimate.
 
-13. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and click **Create**. After the snapshot is successfully created, a success message is displayed on the screen.
+13. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and click **Create**.
+
+After the snapshot is successfully created, a success message is displayed on the screen.
 
 The snapshot that you created is displayed in the Instance snapshots page with the following details:
 
@@ -124,10 +126,10 @@ The snapshot that you created is displayed in the Instance snapshots page with t
 - **Status** and **Status details**: These two columns display the current status of a snapshot. A snapshot can have one of the following statuses:
      - **Available**: The snapshot was successfully created and is available for restore operations.
      - **Error**: An error has occurred while creating the snapshot. The snapshot cannot be recovered and must be deleted.
-     - **Restoring**: A restore operation is currently in progress.
+     - **Restoring**: A restore operation is in progress.
      - **Restore error**: An error has occurred during the restore process. You can use the **Restore** option from the overflow menu to retry the restore process. To revert a snapshot with *Restore error* status to its last working state, you can use the **Rollback** option from the **Actions** menu on the snapshot's details page.
-     - **Restore reverted**: The restore attempt was reverted, likely because a storage volume that is included in the snapshot is currently involved in another snapshot operation. You can retry the restore once the other snapshot operation is complete.
-     - **Rolling back**: A rollback operation is currently in progress. The rollback operation reverts the virtual server instance to its last working state.
+     - **Restore reverted**: The restore attempt was reverted. A storage volume that is included in the snapshot might be involved in another snapshot operation. You can retry the restore once the other snapshot operation is complete.
+     - **Rolling back**: A rollback operation is in progress. The rollback operation reverts the virtual server instance to its last working state.
      - **Rollback error**: An error has occurred during the rollback process.
 - **Last update**: Timestamp that indicates when the snapshot was last updated.
 
@@ -171,7 +173,7 @@ You must consider the following restrictions and considerations when you create 
 
 
 
-- You cannot create a snapshot of a virtual server instance if any of its attached volumes are currently undergoing cloning or snapshot operations.
+- You cannot create a snapshot of a virtual server instance if its attached volumes are currently undergoing cloning or snapshot operations.
 
 - You cannot modify the shareable or bootable properties of any volume that is part of an existing snapshot.
 
@@ -338,7 +340,7 @@ To delete a snapshot using the {{site.data.keyword.powerSys_notm}} user interfac
 
 7. Select **Delete** from the **Actions** menu. The Confirm delete dialog is displayed.
 
-8. Type the confirmation text and click **Delete**.
+8. Type the snapshot name that is displayed in the Confirm delete dialog and click **Delete**.
 
 You cannot recover a snapshot after it is successfully deleted.
 {: important}

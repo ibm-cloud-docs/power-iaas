@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2026-01-10"
 
 ---
 
@@ -60,7 +60,7 @@ The following enhancements are included in this release:
 
 ### CLI v1.7.0
 
-CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use new description guidelines.
+CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use the new guidelines for writing the descriptions.
 
 **New commands**
 
@@ -83,9 +83,9 @@ The following commands are updated:
 - Added `Creation Date` to the shared-processor-pool output.
 - Added `State` to the image output.
 - Added `CRN` to the volume snapshot output.
-- Added `sr3` value to the [ibmcloud pi instance sap list --prefix](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) option to filter on s1122 and e1150 profiles.
+- Added the `sr3` filter based on the [ibmcloud pi instance sap list --prefix](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) option to filter on s1122 and e1150 profiles.
 - Updated the [ibmcloud pi snapshot update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshot-update) output.
-- Standardized the usage of `Creation Date` and `Last Update` dates across all outputs.
+- Updated the use of `Creation Date` and `Last Update` dates to be consistent across all outputs.
 
 
 ### CLI v1.6.1

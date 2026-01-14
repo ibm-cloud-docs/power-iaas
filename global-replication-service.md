@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-10"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -14,7 +14,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Global Replication Services
+# {{site.data.keyword.powerSysFull}} Global Replication Services
 {: #getting-started-GRS}
 ---
 
@@ -26,6 +26,8 @@ subcollection: power-iaas
 
 
 ---
+
+
 
 
 {{site.data.keyword.powerSysFull}} supports Global Replication Services (GRS). You can use GRS that provides volume replication services based on Storage Area Network (SAN) as the foundation for building disaster recovery (DR) solutions. GRS is based on an asynchronous replication technology called IBM FlashSystem Global Mirror Change Volume (GMCV).
@@ -80,8 +82,6 @@ When the defined RPO exceeds more than 8 hours, the IBM operations team alerts y
 {: note}
 
 Replication is not supported between the VMs in the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} environment and the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} environment.
-
-
 
 
 
@@ -852,14 +852,7 @@ To change the values of the `bootable` or `shareable` properties on the primary 
 A volume can be either shareable or bootable, but cannot be both.
 {: note}
 
-
-
 After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
-
-
-
-
-
 
 
 
@@ -881,12 +874,8 @@ To delete a primary volume, you must complete the actions on the primary and sec
     2. [Delete the auxiliary volume](#del-aux-vol)
 
 
-
-If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state and the only operation that you can perform is to delete the volume.
+If you do not delete the auxiliary volume from the secondary location, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state. You can only delete the volume.
 {: note}
-
-
-
 
 
 ### Removing the primary volume from its volume group
@@ -932,12 +921,6 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 
 
 When you [disable the replication service on the primary volume](#disable-vol-repli) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
-
-
-
-
-
-
 
 
 ## GRS impacts on other {{site.data.keyword.powerSys_notm}} operations

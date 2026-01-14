@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -670,8 +670,20 @@ You can find self-certification and listing information on the [IBM Global Solut
 
 
 
-To delete a workspace (and all its resources), use the left navigation to navigate the workspace page. Find the workspace to be deleted and click the overflow menu on the upper right corner of the tile. Click **Delete** and confirm the request from the pull-down menu by typing _Delete_ in the text field. Finally, click the red **Delete** button to initiate the request.
 
+To delete your workspace and its resources from IBM {{site.data.keyword.powerSys_notm}}, complete the following steps:
+
+1. Log in to [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials. IBM Cloud Dashboard screen is displayed.
+2. Type **{{site.data.keyword.powerSys_notm}}** in the search field of the IBM Cloud Dashboard to view the Catalog Results.
+3. Select **{{site.data.keyword.powerSys_notm}}** from the Catalog Results. {{site.data.keyword.powerSys_notm}} window is displayed.
+4. Click **Workspaces** on the left navigation pane of the **{{site.data.keyword.powerSys_notm}}** window. A list of workspaces that are available in your account is displayed.
+5. Click the overflow menu of the workspace that must be deleted to view the delete option.
+6. Click **Delete** from the overflow menu. **Delete workspace** pop-up window with a confirmation message for deleting is displayed.
+7. Type the workspace name in the text field provided to confirm the deletion.
+8. Click **Delete**.
+
+You must first delete the resources of the workspace to increase the success of the workspace deletion.
+{: note}
 
 
 
@@ -905,7 +917,7 @@ You can customize the cloud-init configurations only through the {{site.data.key
 {: #ui-vm}
 {: faq}
 
-Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the desired adapter settings.
+Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the required adapter settings.
 
 
 

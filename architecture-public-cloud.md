@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-10-23"
+lastupdated: "2026-01-14"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -262,7 +262,7 @@ All volumes that are created during VM provisioning are created on the same stor
 
 To create a volume, complete the following steps:
 - Enter a unique name.
-- Enter the desired size of the volume.
+- Enter the size of the volume.
 - Enter the quantity of volumes that you need.
 - Select from **Tier 0**, **Tier 1**, **Tier 3**, or Fixed IOPS.
 

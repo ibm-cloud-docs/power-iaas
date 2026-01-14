@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2025
 
-lastupdated: "2025-07-15"
+lastupdated: "2026-01-08"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -86,6 +86,9 @@ It is recommended that you create a direct cloud connection between the VPC and 
    - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#migrate-per).
    - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
+
+
+
 ### Considerations for configuring VPC VPN in a non-PER workspace
 {: #vpcvpn-cons}
 
@@ -140,6 +143,10 @@ To use the VPC VPN service, you must switch from VPNaaS to VPC VPN service. The 
 6. Connect to the Transit Gateway after the workspace is PER-enabled.
 
 7. Generate the routing table. The CIDRs for the workspace are listed along with the existing CIDRs.
+
+
+
+
 
 
 

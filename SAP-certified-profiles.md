@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-17"
+lastupdated: "2026-01-08"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -55,7 +55,7 @@ You can deploy SAP HANA on the following IBM&reg; Power&reg; server types:
 ### Power11 profiles
 {: #power11-profiles}
 
-The SR3 SAP HANA profiles are SAP RISE profiles, which are available for IBM Power11 processor-based servers. For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs).
+SR3 SAP HANA profiles are SAP RISE profiles, which are available for IBM Power11 processor-based servers. For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs).
 
 
 
