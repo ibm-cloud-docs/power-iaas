@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2024-12-03"
+lastupdated: "2026-01-14"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
 
@@ -126,7 +126,7 @@ Complete the following steps to configure SUMA to use the proxy settings:
 
     ```screen
     Type or select values in entry fields.
-    Press Enter AFTER making all desired changes.
+    Press Enter AFTER making all changes.
                                                                [Entry Fields]
       Connection type                                          [HTTP_Proxy]
       Test service configuration                              [Yes]
@@ -153,7 +153,7 @@ Base SMIT configuration:
                      Base Configuration
 
 Type or select values in entry fields.
-Press Enter AFTER making all desired changes.
+Press Enter AFTER making all changes.
                                                               [Entry Fields]
 Screen output verbosity                                   [Info/Warnings/Errors]  +
 Logfile output verbosity                                  [Verbose]               +

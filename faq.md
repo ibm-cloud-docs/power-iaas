@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2026-01-13"
+lastupdated: "2026-01-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -917,7 +917,7 @@ You can customize the cloud-init configurations only through the {{site.data.key
 {: #ui-vm}
 {: faq}
 
-Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the desired adapter settings.
+Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the required adapter settings.
 
 
 
