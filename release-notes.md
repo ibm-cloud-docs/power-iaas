@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-19"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -227,7 +227,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual machines (VMs) that use the stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VMs to a supported OS version. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
+The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual server instances (VSIs) that use the stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VSIs to a supported OS version. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 {: important}
 
 - IBM i 7.3, 7.2 and Cloud Optical Repository (COR) stock images have been refreshed.
