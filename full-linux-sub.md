@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2026-01-09"
+lastupdated: "2026-01-21"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -42,7 +42,7 @@ To know more about the SLES versions that are supported, see [What versions of A
 
 
 
-To select the OS images, click **Boot image** > **Operating system** on the Create virtual server instance page. To use your own license and supply your own subscription, select the images under **Client supplied subscription**. Select the OS images based on the following subscription types:
+To select the OS images, click **Boot image** > **Operating system** on the Create virtual server instance page. To use your own license and supply your own subscription, select the images under Client supplied subscription. Select the OS images based on the following subscription types:
 
 - To use the full Linux subscription, select the OS image with the file name that starts with `RHEL` or `SLES`.
 - To use your own license and supply your own subscription, select the OS image that is suffixed with `-BYOL`.

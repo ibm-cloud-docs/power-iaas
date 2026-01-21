@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-12-17"
+lastupdated: "2026-01-21"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -31,12 +31,7 @@ subcollection: power-iaas
 
 
 
-
-
-{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. Metering is done based on resource allocation for billing purpose. The following list of resources are metered:
-
-
-
+{{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} provides a secure and unified billing system for the used hardware and software resources. The resources are metered that is the usage of the resources are tracked and measured based on the actual consumption. Metering is done based on resource allocation for billing purpose. The following list of resources are metered:
 
 
 

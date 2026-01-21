@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2025
 
-lastupdated: "2025-11-18"
+lastupdated: "2026-01-21"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -12,7 +12,7 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
+ 
 # Network security groups in IBM {{site.data.keyword.powerSys_notm}}
 {: #nsg}
 
