@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-13"
+lastupdated: "2026-01-22"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -22,6 +22,13 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
+[vPMEM-Private-Enablement-start]{: tag-purple}
+
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
+[vPMEM-Private-Enablement-end]{: tag-purple}
+
+
 ---
 
 Virtual Persistent Memory (vPMEM) is nonvolatile memory that retains data even when the system is powered off. vPMEM is an enhancement to the IBM Power advanced virtualization platform (PowerVM) that enables the system to configure the persistent volumes by using the existing DRAM (dynamic RAM) technology. The vPMEM feature is available on IBM Power10 or later systems with IBM AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
@@ -30,6 +37,8 @@ vPMEM is not supported on a {{site.data.keyword.powerSys_notm}} instance (VSI) w
 {: note}
 
 In the [IBM Cloud Resource List](https://cloud.ibm.com/resources){: external}, you can identify your vPMEM volume under **Compute** resources. If you add a vPMEM volume when you create a VSI and add user tags to the VSI, the tag is also added to the vPMEM volume. If you add a vPMEM volume to an existing VSI, you can add user tags only to the vPMEM volume.
+
+
 
 
 ## Before you begin
@@ -46,6 +55,10 @@ Before you create and add the vPMEM volumes to a VSI, review the following infor
 
 To add a vPMEM volume to an existing VSI or to delete a vPMEM volume from the VSI, the VSI must be in the `Shutoff` state.
 {: important}
+
+
+
+
 
 
 ## Adding a vPMEM volume during VSI provisioning
