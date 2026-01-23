@@ -12,7 +12,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding IBM {{site.data.keyword.powerSys_notm}} maintenance operations
+# IBM {{site.data.keyword.powerSys_notm}} maintenance operations overview
 {: #about-cloud-maintenance}
 
 ---
@@ -49,7 +49,7 @@ For more information about VSI pinning, see [What does VM pinning do?](/docs/pow
 ## Network maintenance
 {: #power-vs-network-maintenance}
 
-{{site.data.keyword.powerSys_notm}} infrastructure includes redundant network paths that support nondisruptive network maintenance. Network maintenance operation targets only one network fabric at a time from the set of redundant network fabrics. When one of the network fabrics is under maintenance, {{site.data.keyword.powerSys_notm}} automatically redirects traffic to the alternate fabric. Some network packet loss might occur during any traffic rerouting, including when traffic is redirected from one network fabric to another.
+{{site.data.keyword.powerSys_notm}} infrastructure includes redundant network paths that support nondisruptive network maintenance. Network maintenance operation targets only one network fabric at a time from the set of redundant network fabrics. When one of the network fabrics is under maintenance, the network automatically redirects traffic to the alternate fabric. Some network packet loss might occur during any traffic rerouting, including when traffic is redirected from one network fabric to another.
 
 If you use IBM Cloud Connections instead of Power Edge Router (PER), you must configure two Cloud Connections to reduce network disruptions during the maintenance activities. For more information about how to migrate to PER, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per){: external}.
 {: important}
