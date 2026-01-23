@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-01-06"
+lastupdated: "2026-01-23"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -90,7 +90,7 @@ In this depiction, a client-managed data center uses a Direct Link connection to
 
     ![Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway](./images/pvs-nw-arch-dia/power-arch-DL-PER-onprem_new5.svg "Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway"){: caption="Connecting an client-managed workspace with a PER-enabled {{site.data.keyword.powerSys_notm}} by using the Transit Gateway." caption-side="bottom"}
 
-2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+2. You pay for the Direct Link connection that you use to connect your client-managed environment with the Transit Gateway. You can use up to 4 connections on a local Transit Gateway without any charges. For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#per-pricing).
 
 3. You can attach a PER-enabled {{site.data.keyword.powerSys_notm}} workspace that is located in different IBM Cloud Accounts through a Transit Gateway. The Transit Gateway enables the connectivity to the client-managed data center through the incoming Direct Link connectivity.
 
@@ -111,7 +111,7 @@ You do not pay extra charges for Transit Gateway. To establish the connection, t
 
 *  The workspace must be connected to a Transit Gateway.
 
-For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+For more information on Transit Gateway pricing, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#per-pricing).
 
 
 
@@ -156,7 +156,7 @@ For detailed steps, see [Configuring Generic Routing Encapsulation (GRE) tunnel]
 
 Establish a connection between a PER-enabled {{site.data.keyword.powerSys_notm}} workspace and a Virtual Private Cloud (VPC) by using the Transit Gateway. To create a multi-connection network, connect the classic infrastructure with the Transit Gateway. Thus, a three-way connection is established between the PER-enabled workspace, VPC, and the classic infrastructure is established.
 
-The pricing for this connection depends on the usage of a local or global Transit Gateway. For more information, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+The pricing for this connection depends on the usage of a local or global Transit Gateway. For more information, see: [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#per-pricing).
 
 
 
@@ -177,7 +177,7 @@ You can also connect a PER-enabled workspace seamlessly with the Secure Endpoint
 
     On a PER-enabled workspace that uses a custom IP address, the network is routed through a Network Address Translator (NAT) device. The NAT device converts the custom IP address into an IBM Cloud-supported IP address.
 
-For information about Transit Gateway pricing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+For information about Transit Gateway pricing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#per-pricing).
 
 
 
@@ -216,7 +216,7 @@ Use a local Transit Gateway to connect multiple {{site.data.keyword.powerSys_not
 
 Use a global Transit Gateway to connect the workspaces that are present in different regions.
 
-For more information about Transit Gateway charges for local and global routing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#per-pricing).
+For more information about Transit Gateway charges for local and global routing, see [Pricing for Power Edge Router](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#per-pricing).
 
 
 

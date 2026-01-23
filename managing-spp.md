@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2026-01-06"
+lastupdated: "2026-01-23"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -97,7 +97,7 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 {: #price-spp}
 
 When you use SPPs, you can optimize the cost by using reserved cores that are shared by VSIs in the SPP. For more information about the pricing for VSIs within SPPs, see the following topics:
-- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
+- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
 - [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud) if you are using {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 
 

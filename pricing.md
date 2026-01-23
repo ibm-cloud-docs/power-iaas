@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-21"
+lastupdated: "2026-01-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -44,7 +44,7 @@ subcollection: power-iaas
 
 * Dedicated hosts: Dedicated hosts in host units
 
-In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about the billing of VM resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#linux-SAP-workload-types).
+In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about the billing of VM resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
 
 
 

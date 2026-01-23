@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2025
 
-lastupdated: "2025-09-18"
+lastupdated: "2026-01-23"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -42,7 +42,7 @@ Dedicated hosts on a {{site.data.keyword.powerSys_notm}} provide the following f
 
 The hourly billing for a dedicated host on a Power Virtual Server covers the entire server.
 
-You can create a cost estimate of a dedicated host before you deploy it by using the [cost estimator](https://cloud.ibm.com/power/estimate){: external} or see the [pricing](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#pricing-dh) page to learn more.
+You can create a cost estimate of a dedicated host before you deploy it by using the [cost estimator](https://cloud.ibm.com/power/estimate){: external} or see the [pricing](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-dh) page to learn more.
 
 
 
