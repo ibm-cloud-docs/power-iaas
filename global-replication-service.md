@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-10"
+lastupdated: "2026-01-23"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -94,7 +94,7 @@ Replication is not supported between the VMs in the {{site.data.keyword.off-prem
 ## Pricing for GRS
 {: #pricing-GRS}
 
-Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume. For more information, see [Pricing for Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-grs).
+Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume. For more information, see [Pricing for Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-grs).
 
 
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
