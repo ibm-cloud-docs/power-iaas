@@ -22,6 +22,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
+
+
 ## December 2025
 {: #Dec-2025}
 {: release-note}
