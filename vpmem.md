@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-22"
+lastupdated: "2026-01-27"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -15,7 +15,7 @@ subcollection: power-iaas
 
 
 
-# Attaching Virtual Persistent Memory in a {{site.data.keyword.powerSys_notm}} instance
+# Attaching virtual persistent memory in a {{site.data.keyword.powerSys_notm}} instance
 {: #vPMEM}
 
 ---
@@ -31,7 +31,7 @@ subcollection: power-iaas
 
 ---
 
-Virtual Persistent Memory (vPMEM) is nonvolatile memory that retains data even when the system is powered off. vPMEM is an enhancement to the IBM Power advanced virtualization platform (PowerVM) that enables the system to configure the persistent volumes by using the existing DRAM (dynamic RAM) technology. The vPMEM feature is available on IBM Power10 or later systems with IBM AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
+The virtual persistent memory (vPMEM) is nonvolatile memory that retains data even when the system is powered off. vPMEM is an enhancement to the IBM Power advanced virtualization platform (PowerVM) that enables the system to configure the persistent volumes by using the existing DRAM (dynamic RAM) technology. The vPMEM feature is available on IBM Power10 or later systems with IBM AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
 
 vPMEM is not supported on a {{site.data.keyword.powerSys_notm}} instance (VSI) with the IBM i operating system.
 {: note}
@@ -53,7 +53,7 @@ Before you create and add the vPMEM volumes to a VSI, review the following infor
   - VSI profile memory is the total memory that includes the vPMEM volume.
   - You cannot resize VSI.
 
-To add a vPMEM volume to an existing VSI or to delete a vPMEM volume from the VSI, the VSI must be in the `Shutoff` state.
+To add a vPMEM volume to an existing VSI or to delete a vPMEM volume from the VSI, the VSI must be in the Shutoff state.
 {: important}
 
 
@@ -83,13 +83,13 @@ On the Virtual server instances page, complete the following steps:
 1. Click the VSI to which you want to add the vPMEM volume.
 2. Complete the following steps on the **Overview** tab of the VSI page:
    1. Click **Create volume** under the Virtual persistent memory volumes section. The Create virtual persistent memory volume pane appears.
-   2. Update the fields that are defined in the [Creating a vPMEM volume](#vPMEM-create) topic.
+   2. Update the fields to create a vPMEM volume. For more information, see [Creating a vPMEM volume](#vPMEM-create).
 
 
 ## Creating a vPMEM volume
 {: #vPMEM-create}
 
-Update the following fields to create a vPMEM volume on the Create virtual persistent memory pane.
+Update the following fields to create a vPMEM volume in the Create virtual persistent memory pane.
 
 | Field                 | Action                                          |
 | --------------------- | ----------------------------------------------- |
@@ -153,7 +153,7 @@ For more information about the part numbers for vPMEM volumes, see [Pricing for 
 
 vPMEM has the following limitations:
 
-- You can create and add vPMEM volume to a VSI on IBM Power10 or later systems with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
+- You can create and add vPMEM volume to a VSI only on IBM Power10 or later systems with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
 - You can add or detach a vPMEM volume to a VSI only when the VSI is shut down.
 - You can add one vPMEM volume to a VSI with SAP (HANA) profile and add four vPMEM volumes to a VSI with AIX or Linux operating system.
 - You cannot add a vPMEM volume to a VSI with the IBM i operating system.
