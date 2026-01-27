@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2025
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-27"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -98,7 +98,7 @@ To configure VPC VPN in a non-PER workspace, you must consider the following poi
 
 * Use a policy-based VPN in all the configurations of the VPN connection. 
 * Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the local CIDR list of IBM Cloud VPC and to the peer CIDR list of VPC in your client-managed environment.
-* Enable VPN gateway and traffic source for Direct Link and Transit Gateway in the **Edit Traffic** window that is present in the routing table of IBM Cloud VPC.
+* Enable VPN gateway and traffic source for Direct Link and Transit Gateway in the Edit Traffic window that is present in the routing table of IBM Cloud VPC.
 
 Select Direct Link that is enabled with Transit Gateway or disable the configuration for different {{site.data.keyword.powerSys_notm}} workspaces that are in the same region.
 
@@ -119,21 +119,21 @@ To use the VPC VPN service, you must switch from VPNaaS to VPC VPN service. The 
    1. Use a policy-based VPN in all the configurations of the VPN connection.
    2. Subnets for the remote VPN, VPC, and workspace must be distinct. Subnets cannot be shared or overlapped.
    3. Add the workspace CIDRs to the list of local CIDRs in the VPN connection.
-   4. Add the workspace CIDRs to the peer CIDRs list in the VPNaaS remote side.
+   4. Add the workspace CIDRs to the peer CIDRs list in the remote VPNaaS connection.
 
    For more information about VPN options, see [About site-to-site VPN gateways](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn){: external}.
 
 3. Create a Transit Gateway by completing the following steps:
    1. Add VPC to Transit Gateway.
-   2. Under the **Routes** tab, generate a routing table. You can see the list of VPC, CIDR, and the CIDR for the remote side of the VPN.
+   2. Under the **Routes** tab, generate a routing table. You can see the list of VPC, CIDR, and the CIDR for the remote VPN connection.
 
    For more information about Transit Gateways, see [Getting started with IBM Cloud Transit Gateway](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-getting-started){: external}.
 
    The transition to VPC VPN can begin assuming that the following list is true:
-   * The connectivity between a virtual server on the VPC and a system on the remote side of the VPN is working.
+   * The connectivity between a virtual server on the VPC and a system on the remote VPN connection is working.
    * The CIDRs are advertised through to the Transit Gateway.
 
-     The workspace and the remote side of the VPN are not connected until all transition to VPC VPN is completed.
+     The workspace and the remote VPN connection are not connected until all transition to VPC VPN is completed.
      {: note}
 
 4. Delete the VPNaaS gateway. You must select the VPNaaS connections that are attached to the workspace.
