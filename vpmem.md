@@ -33,8 +33,9 @@ subcollection: power-iaas
 
 The virtual persistent memory (vPMEM) is nonvolatile memory that retains data even when the system is powered off. vPMEM is an enhancement to the IBM Power advanced virtualization platform (PowerVM) that enables the system to configure the persistent volumes by using the existing DRAM (dynamic RAM) technology. The vPMEM feature is available on IBM Power10 or later systems with IBM AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
 
-vPMEM is not supported on a {{site.data.keyword.powerSys_notm}} instance (VSI) with the IBM i operating system.
+vPMEM is not supported on IBM i-based virtual server instances (VSIs).
 {: note}
+
 
 In the [IBM Cloud Resource List](https://cloud.ibm.com/resources){: external}, you can identify your vPMEM volume under **Compute** resources. If you add a vPMEM volume when you create a VSI and add user tags to the VSI, the tag is also added to the vPMEM volume. If you add a vPMEM volume to an existing VSI, you can add user tags only to the vPMEM volume.
 
@@ -49,7 +50,7 @@ Before you create and add the vPMEM volumes to a VSI, review the following infor
 - When you add vPMEM volumes to a VSI with AIX or Linux OS, the vPMEM volumes use memory in addition to the base memory.
 
 - When you add a vPMEM volume to a VSI that is created by using an SAP certified profile, consider the following points:
-  - SAP certified profile must support vPMEM volume.
+  - The selected SAP certified profile must support vPMEM volumes.
   - VSI profile memory is the total memory that includes the vPMEM volume.
   - You cannot resize VSI.
 
