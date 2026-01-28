@@ -113,7 +113,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
     - Include the following licenses to your VSI:
       - IBM i Cloud Storage Solution
       - IBM i Power HA, and
-      - Rational Dev Studio for IBM i.
+      - Rational Dev Studio for IBM i
 
         Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
 
