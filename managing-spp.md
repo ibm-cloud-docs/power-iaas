@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2026-01-23"
+lastupdated: "2026-01-28"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -200,7 +200,7 @@ To add VSIs to an existing SPP, complete the following steps:
 ### Assigning an existing VSI to a shared processor pool
 {: #assign-vsi-to-spp}
 
-You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you have already deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and assign the VSI to a new SPP or an existing SPP during the deployment.
+You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. If you deployed a VSI without assigning the VSI to an SPP, you cannot assign the VSI to an SPP directly. Instead, you must export the VSI as an image and then deploy a new VSI from that image. During the deployment, you can assign the new VSI to a new SPP or an existing SPP.
 
 To assign an existing VSI to an SPP, complete the following steps:
 
@@ -208,7 +208,7 @@ To assign an existing VSI to an SPP, complete the following steps:
 
 2. Identify the existing VSI that you want to assign to an SPP and then capture and export the VSI by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
 
-    When you capture and export the VSI, ensure that you select **Image catalog** as the export destination because exporting to Image catalog allows faster VSI deployment. If you select **Cloud Object Storage** as the export destination, you must reimport the image from Cloud Object Storage, which can increase the VSI deployment time.
+    When you capture and export the VSI, ensure that you select **Image catalog** as the export destination because exporting to Image catalog allows faster VSI deployment. If you select **Cloud Object Storage** as the export destination, you must import the image again from the Cloud Object Storage, which can increase the VSI deployment time.
     {: important}
 
 3. Deploy a new VSI to an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. When you deploy the VSI, ensure that you make the following selections:
