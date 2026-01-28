@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-13"
+lastupdated: "2026-01-28"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -204,9 +204,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
 9.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
-    If your account has fewer than 100 VSIs, you can use the {{site.data.keyword.powerSys_notm}} user interface to view the VSIs. If your account has more than 100 VSIs, the VSIs might not be displayed in the user interface. You can reduce the number of VSIs by using the CLI or API so that they are displayed again on the user interface.
-    {: note}
-
+    
 
 
 
