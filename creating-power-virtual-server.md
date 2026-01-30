@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-29"
+lastupdated: "2026-01-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -167,7 +167,7 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
 
-    The **SAP RISE deployment** option is enabled if **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list are selected.
+    The **SAP RISE deployment** option is enabled when you select **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list.
 
     
 
@@ -216,11 +216,8 @@ You can assign a Virtual Serial Number (VSN) to a VSI.
 
 
 
-VSN is supported only on a VSI with IBM i operating system.
+Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.
 {: note}
-
-
-
 
 
 

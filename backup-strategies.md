@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-12-02"
+lastupdated: "2026-01-30"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -36,16 +36,13 @@ Learn more about different AIX and Linux backup strategies for IBM&reg; Power Sy
 ## Secure automated backup with Compass for AIX and Linux®
 {: #baas}
 
+IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called as `Secure Automated Backup with Compass®`.
+{: shortdesc}
 
-
-IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX and Linux instances of {{site.data.keyword.powerSysFull}}. The backup offering is called as Secure Automated Backup with Compass® from now on referred as “Backup Offering.”
-
-The Backup Offering is powered by Cobalt Iron Compass and is accessible from the {{site.data.keyword.cloud_notm}} [catalog](https://cloud.ibm.com/catalog){: external}.
-
-
+The Secure Automated Backup with Compass® is powered by Cobalt Iron Compass and is accessible from the {{site.data.keyword.cloud_notm}} [catalog](https://cloud.ibm.com/catalog){: external}. The Secure Automated Backup with Compass® is referred as “Backup Offering” throughout the topic.
 
 ## Deploying the backup instance
-{: deploy-backup-inst-dc}
+{: #deploy-backup-inst-dc}
 
 To deploy the Backup Offering in {{site.data.keyword.off-prem}}, complete the following steps:
 
@@ -66,7 +63,7 @@ To deploy the Backup Offering in {{site.data.keyword.off-prem}}, complete the fo
 4. Modify the default granular backup policies for your virtual server instances, files, and file systems.
 
 ### Network architecture for deploying the backup instance
-{: #baas-architechture}
+{: #baas-architecture}
 
 To deploy the backup instance, use one of the following architectures:
 
@@ -98,7 +95,7 @@ The Backup as a Service (BaaS) VPC is created when the Backup Offering is provis
 - VPE for secure connectivity to each of the backup servers
 - Security group with inbound rule, address prefix, and subnet
 
-The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. Connect your on-premises workloads to the Transit Gateway through the Direct Link connection. Use VPN connection in place of the Direct Link connection.
+The Backup Offering VPC and the {{site.data.keyword.powerSys_notm}} workspaces must exist in the same region and be connected by using the local Transit Gateway. You can connect your on-premises workloads to the Transit Gateway through the Direct Link connection. You can use VPN connection in place of the Direct Link connection.
 
 #### Dual copy Backup Offering
 {: #dual-copy-backup}
@@ -116,7 +113,8 @@ Do not deploy any additional resources to the Backup Offering VPC.
 
 ![Backup Offering network architecture](./images/onPremCloudCobaltIron.svg "Backup Offering network architecture"){: caption="Dual copy Backup Offering network architecture" caption-side="bottom"}
 
-The Backup Offering VPC is a managed backup server instance that is deployed when the Backup Offering is provisioned. When you deploy the backup server instance, an automation process creates the following network segments:
+
+When you provision the Backup Offering in the {{site.data.keyword.off-prem}}, the Backup Offering VPC is also deployed. The Backup Offering VPC is a backup server instance that is managed by {{site.data.keyword.off-prem}}. When you deploy the backup server instance, an automation process creates the following network segments:
 
 - Local Transit Gateway if it does not exist
 - VPC for backup activity only
@@ -139,7 +137,10 @@ To create and deploy a backup server instance from the IBM Cloud catalog, comple
 2. In the search box, type _Compass Backup_ and click **Secure Automated Backup with Compass** tile.
 3. Select a deployment location for your backup instance.
 
-It is recommended not to deploy any additional resources to the Backup Offering VPC.
+
+
+
+Do not to deploy any additional resources to the Backup Offering VPC.
 {: important}
 
 4. Define the fields – **Pricing plan**, **Service name**, **Resource group**, your **IBM Cloud API key**, and Compass organization name according to your business needs. Also, specify the VPC subnet IP range that you want to use to access the Compass Vaults.
@@ -197,7 +198,7 @@ The dual copy Backup Offering is available in the following data center pairs:
 | SYD04         | SYD05         |
 | DAL13         | WDC04         |
 | LON04         | LON06         |
-{: caption="Data center pair availibility for Backup Offering" caption-side="bottom"}
+{: caption="Data center pairs that are availibile for Backup Offering" caption-side="bottom"}
 
 
 ## Support for Backup Offering

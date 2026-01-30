@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2026-01-28"
+lastupdated: "2026-01-30"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -150,23 +150,16 @@ To create an SPP, complete the following steps:
 ### Updating or deleting a shared processor pool
 {: #update-delete-spp}
 
+To update an SPP, navigate to **Compute** > **Shared processor pools**. Then, click the SPP that you want to edit.
 
-
-To update or delete an SPP, navigate to **Compute** > **Shared processor pools**. Then, select the SPP that you want to edit, and click the edit icon. You will receive a notification after the SPP is deleted successfully.
-
-You can update or delete the following details of an existing SPP:
+You can update the following details of an existing SPP:
 
 * Name of the SPP: Follow the same naming conventions that you used when you created an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
 * Number of cores: You can update the number of reserved cores based on resource availability and allocation.
 
 
 
-* Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VSIs do not exist in the SPP. If VSIs are present in the SPP, delete all VSIs in the SPP.
-
-
-
-
-
+To delete an SPP, navigate to **Compute** > **Shared processor pools**. At the end of the SPP row that you want to delete, click the delete icon. Before you delete, ensure that VSIs do not exist in the SPP. If VSIs are present in the SPP, delete all VSIs in the SPP.
 
 
 

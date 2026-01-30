@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-30"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -18,15 +18,8 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
 
 
-
-
-# Monitoring metrics for IBM {{site.data.keyword.powerSys_notm}}
+# Monitoring platform metrics for IBM {{site.data.keyword.powerSys_notm}}
 {: #monitor-sysdig}
-
-
-
-
-
 
 ---
 
@@ -40,19 +33,7 @@ keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 You can monitor platform metrics from resources in your {{site.data.keyword.powerSysFull}} workspace by enabling [{{site.data.keyword.mon_full}}](#sysdig-create-monitor) for basic platform metrics or by installing the [Cloud Monitoring agent for Linux operating systems](#monitor-agnt). The Linux based agent can fetch over 100 infrastructure metrics.
 {: shortdesc}
 
-
-
-
-{{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service that is used for application visibility, alerting, and troubleshooting. {{site.data.keyword.mon_full_notm}} powered by Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
-
-
-
-
-
-
-
-
-
+{{site.data.keyword.mon_full_notm}} is an enterprise-grade monitoring service to view, alert, and troubleshoot an application. {{site.data.keyword.mon_full_notm}} powered by Sysdig is used by enterprise development and IT teams that build, ship, and run business-critical applications at scale.
 
 
 
@@ -65,28 +46,28 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 {: #sysdig-ov}
 {: #platform_metrics}
 
-You can view platform metrics for {{site.data.keyword.powerSys_notm}} after you create an {{site.data.keyword.mon_full_notm}} instance in the same region that is enabled for platform monitoring. For more information, see [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in IBM Cloud. You can monitor metrics from enabled-monitoring services on the IBM Cloud in the region where the service is available. For more information, see [Working with platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_working){: external}.
 
-Before you create an {{site.data.keyword.mon_full_notm}} instance on your platform, consider the following points:
+You can view the platform metrics for {{site.data.keyword.powerSys_notm}} after you create an {{site.data.keyword.mon_full_notm}} instance in the same region that is enabled for monitoring the platform metrics. For more information, see [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+
+Before you create an {{site.data.keyword.mon_full_notm}} instance, consider the following points:
 
 * You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region on your platform.
-* To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.powerSys_notm}} instance is provisioned.
-* Platform metrics are collected automatically and are available for monitoring through the {{site.data.keyword.mon_full_notm}}-enabled instance.
+* To monitor platform metrics, verify whether the {{site.data.keyword.mon_full_notm}} instance and the {{site.data.keyword.powerSys_notm}} instance are provisioned in the same region.
+* The {{site.data.keyword.mon_full_notm}}-enabled instance collects the platform metrics automatically for monitoring.
 
 
-## Installing the {{site.data.keyword.mon_short}} agent for Linux VMs
+## {{site.data.keyword.mon_short}} agent for Linux VMs
 {: #monitor-agnt}
 
-You must provision the {{site.data.keyword.mon_full}} service instance in the {{site.data.keyword.cloud_notm}}. Then, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts in a {{site.data.keyword.powerSys_notm}} workspace to collect the data and metrics from the active VMs.
+You must provision the {{site.data.keyword.mon_full}} service instance in the {{site.data.keyword.cloud_notm}}. Then, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts in a {{site.data.keyword.powerSys_notm}} workspace to collect the data and platform metrics from the active VMs.
 
 
-The {{site.data.keyword.mon_short}} can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring your environment for metrics, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-powervs){: external}.
+The {{site.data.keyword.mon_short}} service instance can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the IBM Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the {{site.data.keyword.mon_short}} agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring the metrics for your environment, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-powervs){: external}.
 
+By default, the Linux-based agent collects core infrastructure and network time series metrics. You can use the collected metrics to monitor the application host. For more information about a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
 
-By default, the Linux based agent collects core infrastructure and network time series metrics. You can use the collected metrics to monitor the host. For more information about a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
-
-For more information about basic metrics, see [Platform metrics overview](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-ov).
-
+For more information about basic platform metrics, see [Platform metrics overview](/docs/power-iaas?topic=power-iaas-monitor-sysdig#sysdig-ov).
 
 
 
@@ -97,13 +78,15 @@ For more information about basic metrics, see [Platform metrics overview](/docs/
 
 
 
-The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can get the visibility to the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
+The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can get the information about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
 
 
 
 
+Before you enable the IBM Cloud Monitoring service, you can review the estimated cost on the Summary page and generate an estimate. For more information about generating an estimate, see [Cloud Monitoring](https://cloud.ibm.com/observability/catalog/ibm-cloud-monitoring){: external}.
 
-You can register a {{site.data.keyword.powerSys_notm}} workspace as an observability instance on the IBM Cloud Monitoring system. Integration costs are based on the usage and vary based on the hourly consumption for nodes and virtual machines. Review the cost that is associated with Monitoring in the IBM Cloud catalog. For more information about the costs associated with monitoring, see [Pricing](https://cloud.ibm.com/docs/monitoring?topic=monitoring-pricing_plans){: external}. You can review the estimated cost on the Summary page and generate an estimate before you enable the IBM Cloud Monitoring service. For more information about generating an estimate, see [Cloud Monitoring](https://cloud.ibm.com/observability/catalog/ibm-cloud-monitoring){: external}.
+You can register a {{site.data.keyword.powerSys_notm}} workspace as an observability instance on the IBM Cloud Monitoring system. Integration costs are based on the usage and vary due to the hourly consumption of nodes and virtual machines. Review the cost that is associated Monitoring services in the IBM Cloud catalog. For more information about the costs associated with a {{site.data.keyword.powerSys_notm}} workspace monitoring, see [Pricing](https://cloud.ibm.com/docs/monitoring?topic=monitoring-pricing_plans){: external}.
+
 
 ### Enabling IBM Cloud Monitoring service in a Power Virtual Server workspace
 {: #monitor-enable}
@@ -119,13 +102,6 @@ To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.po
 The **Monitoring** option is enabled by default when you create an {{site.data.keyword.off-prem-fname}} workspace.
 
 For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
-
-
-
-
-
-
-
 
 
 

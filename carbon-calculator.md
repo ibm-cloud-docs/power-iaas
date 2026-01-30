@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-28"
+lastupdated: "2026-01-30"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -14,14 +14,8 @@ subcollection: power-iaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-
-# Using carbon calculator on {{site.data.keyword.powerSys_notm}}
+# Using carbon calculator to view and export greenhouse gas emission data for {{site.data.keyword.powerSys_notm}}
 {: #carbon-cal}
-
-
-
-
 
 ---
 

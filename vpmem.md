@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-27"
+lastupdated: "2026-01-30"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -32,6 +32,7 @@ subcollection: power-iaas
 ---
 
 The virtual persistent memory (vPMEM) is nonvolatile memory that retains data even when the system is powered off. vPMEM is an enhancement to the IBM Power advanced virtualization platform (PowerVM) that enables the system to configure the persistent volumes by using the existing DRAM (dynamic RAM) technology. The vPMEM feature is available on IBM Power10 or later systems with IBM AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems.
+{: shortdesc}
 
 vPMEM is not supported on IBM i-based virtual server instances (VSIs).
 {: note}
@@ -140,7 +141,7 @@ Use the following API and CLI commands to delete a vPMEM volume:
 
 
 ## Pricing for vPMEM volumes
-{: vpmem-price}
+{: #vpmem-price}
 
 The cost of a vPMEM volume is calculated based on the OS type of the VSI. Refer to the following examples to calculate the price for a vPMEM volume that is associated with a VSI with Linux for SAP (HANA), AIX&reg;, or Linux&reg; operating systems:
 

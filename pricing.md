@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-23"
+lastupdated: "2026-01-30"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -44,7 +44,7 @@ subcollection: power-iaas
 
 * Dedicated hosts: Dedicated hosts in host units
 
-In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about the billing of VM resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
+In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual server instance (VSI) resources. For more information about the billing of VSI resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
 
 
 
@@ -79,9 +79,9 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
-[^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
+[^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
 
-[^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VM.
+[^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
 
 
 For more information about the systems that are available for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
@@ -104,7 +104,7 @@ In your invoice, use one of the following identifiers to identify the charges th
 ### Consumer ID
 {: #consumer-id}
 
-The Consumer ID groups the billing usages that are under a single resource such as VMs, shared processor pools (SPP), and storages. You can view resource usage with broken down metrics.
+The Consumer ID groups the billing usages that are under a single resource such as VSIs, shared processor pools (SPPs), and storages. You can view resource usage with broken down metrics.
 
 Following are the benefits of consumer ID:
 - You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
@@ -131,7 +131,7 @@ As CRNs are assigned to individual resources, a comprehensive bill is generated 
 
 When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to the resource.
 
-When you delete a workspace, the resources that are associated with the workspace are deleted before the workspace is deleted. If you use a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VMs) from the dedicated host, then delete the dedicated host workspace.
+When you delete a workspace, the resources that are associated with the workspace are deleted before the workspace is deleted. If you use a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VSIs) from the dedicated host, then delete the dedicated host workspace.
 
 For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](https://cloud.ibm.com/docs/account?topic=account-crn).
 
@@ -142,15 +142,7 @@ To view or search for resources that are provisioned in IBM {{site.data.keyword.
 
 
 
-
-
-The following table lists the {{site.data.keyword.powerSys_notm}} resources that are CRN enabled.
-
-
-
-
-
-
+The following table lists the {{site.data.keyword.powerSys_notm}} resources that are enabled with CRN.
 
 | Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -175,20 +167,10 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 
 IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
 
-
-
-To reduce costs, capture and delete the VM when it is not used. For more information, see [Capturing and exporting a virtual machine (VM)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).
-
-
-
-
-
-
+To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a virtual machine (VM)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
-
-
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance with the following configurations at a base price of $250.57 per month ($0.343 per hour):
 
@@ -427,19 +409,10 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must purchase an operating system license for virtual server resources. The pricing for AIX and IBM i operating system license is not based on whether you use a custom image or a stock image.
 
+You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
-IBM {{site.data.keyword.powerSys_notm}} also provides Linux&reg; stock images. You can select a Linux stock image that is provided by IBM or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
-
-If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The storage unit price (per GB) for stored boot images is the same as the selected storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
-
-
-
-
-
-
-
-
+If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
