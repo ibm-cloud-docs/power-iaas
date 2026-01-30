@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-13"
+lastupdated: "2026-01-30"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -29,6 +29,8 @@ subcollection: power-iaas
 
 
 
+{{site.data.keyword.ibmi-vst}}s are a licensing model that groups IBM {{site.data.keyword.powerSys_notm}}s based on processor characteristics, which determines the price and feature set for the IBM i operating system (OS) and other software.
+{: shortdesc}
 
 Starting with IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI. But, you can select any physical system that supports the selected {{site.data.keyword.ibmi-vst}}. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI but not its hardware compatibility.
 
@@ -37,14 +39,9 @@ The {{site.data.keyword.ibmi-vst}} determines the pricing tier for the IBM i OS 
 - Maximum memory size
 
 
-
-You can dynamically adjust the number of CPUs and the memory size if the numbers are within the {{site.data.keyword.ibmi-vst}} limits. To increase the size of the current {{site.data.keyword.ibmi-vst}}, you must follow these steps:
+You can dynamically adjust the number of CPUs and the memory size if the numbers are within the {{site.data.keyword.ibmi-vst}} limits. To exceed the defined size of the {{site.data.keyword.ibmi-vst}}, you must follow these steps:
 1. Power off the VSI.
 2. Change the {{site.data.keyword.ibmi-vst}} to a tier that aligns with your resource requirements.
-
-
-
-
 
 For more information, see [Supported resource limits by the IBM i software tier](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-vsw-vp-mem).
 
@@ -61,7 +58,8 @@ You must complete the following prerequisites to assign an {{site.data.keyword.i
    2. The Virtual serial number (VSN) summary pane appears.
    3. Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
-
+Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.
+{: note}
 
 
 The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
@@ -75,7 +73,7 @@ For more information, see [Configuring a Power Virtual Server instance](/docs/po
 {: #ibmi-vsw-vp-mem}
 
 
- For each {{site.data.keyword.ibmi-vst}}, the supported limits for resources are defined. These limits help align resource usage with software licensing costs. You must understand the supported limits of resources for planning your VSI size and ensure compliance with IBM i licensing models.
+{{site.data.keyword.ibmi-vst}} are available in different licensing models such as P05, P10, P20, and P30. For each {{site.data.keyword.ibmi-vst}}, the supported limits for resources are defined. These limits help align resource usage with software licensing costs. You must understand the supported limits of resources for planning your VSI size and ensure compliance with IBM i licensing models.
 
 The following table provides the details of the maximum number of virtual processors and memory size that are supported on each {{site.data.keyword.ibmi-vst}}.
 
@@ -92,12 +90,7 @@ The following table provides the details of the maximum number of virtual proces
 {: #ibmi-vsw-system-types}
 
 
-
-All {{site.data.keyword.ibmi-vst}}s are not supported on all the {{site.data.keyword.powerSys_notm}} system types. The following table shows which {{site.data.keyword.ibmi-vst}}s are compatible with each system type.
-
-
-
-
+You can assign {{site.data.keyword.ibmi-vst}}s only to a compatible {{site.data.keyword.powerSys_notm}} system types. The following table lists the {{site.data.keyword.ibmi-vst}}s that are compatible with each system type.
 
 
 

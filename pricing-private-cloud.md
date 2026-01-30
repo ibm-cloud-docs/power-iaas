@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-21"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -27,22 +27,19 @@ subcollection: power-iaas
 
 
 
-The {{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} provides secure and unified billing system for using the hardware and software resources. The following list of hardware resources is metered:
-
-- Virtual machines: The CPU (in cores), with processor modes (capped, shared, dedicated), and memory (in GB).
-
-- Volumes: Volume (in GB).
-
-- Snapshots: Snapshots (in GB).
-
-For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
-
-In the IBM Cloud catalog for {{site.data.keyword.on-prem-fname}}, the estimated price might differ from the actual price when you purchase the {{site.data.keyword.on-prem-fname}} infrastructure or instances. The actual price might include discounts and promotion codes. 
+{{site.data.keyword.powerSysFull}} in {{site.data.keyword.on-prem}} provides a secure and unified billing system for the used hardware and software resources. The resources are metered that is the usage of the resources are tracked and measured based on the actual consumption. Metering is done based on resource allocation for billing purpose. The following list of resources are metered:
 
 
 
+- Virtual machines: CPU (in cores) with processor modes (capped, shared, dedicated) and memory (in GB)
 
+- Volumes: Volume (in GB)
 
+- Snapshots: Snapshots (in GB)
+
+In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
+
+You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 
 
 For more information about IBM Cloud regions that can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).

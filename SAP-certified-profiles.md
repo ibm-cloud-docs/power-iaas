@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-30"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -49,6 +49,9 @@ You can deploy SAP HANA on the following IBM&reg; Power&reg; server types:
 - **Power10**: S1022, E1050, and E1080
 - **Power9**: E980
 
+
+IBM Power9 and a few Power10 sr2 certified profiles are discouraged for new deployments. Users are advised to migrate to IBM Power11 certified profiles, selecting the appropriate profile based on memory and core requirements.
+{: attention}
 
 
 
@@ -101,9 +104,16 @@ For more information about SAP certified profiles for SAP HANA, see [IBM Power V
 ## SAP Application Server profiles
 {: #sap-appser-profiles}
 
+
+
 When you use SAP Application Server profiles, you can deploy a certified profile for SAP Application Servers or SAP NetWeaver on {{site.data.keyword.powerSys_notm}}. The SAP Application Server profiles are available on IBM Power S1022 systems.
 
 To deploy a certified profile for SAP Application Servers or SAP NetWeaver by using CLI, API, or Terraform interfaces, specify an sr2 profile ID that matches an SAP Application Server profile.
+
+
+
+
+
 
 You can use the following commands to get the details of an SAP profile:
 

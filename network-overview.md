@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-01-30"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -119,19 +119,17 @@ Figure 1 shows the overall view of the network architecture.
 
 
 
-
-
-## Creating a network peering connection
+## About network peering connection
 {: #network-peering}
 
-You create a network peering connection when you connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network. When you create a network peering connection, you can enable file sharing, use distributed applications, and work collaboratively between the two networks. Hence, your {{site.data.keyword.powerSys_notm}} workspace becomes scalable and efficient.
+You create a network peering connection when you connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network. When you create a network peering connection, you can enable file sharing, use distributed applications, and work collaboratively between the two networks. Thus, by using the network peering connection you can improve your {{site.data.keyword.powerSys_notm}} workspace as scalable and efficient.
 {: shortdesc}
 
 To create a network peering connection, you must inform the {{site.data.keyword.on-prem-fname}} support team before the pod setup. You can enable the network peering connection only if the data network in your infrastructure supports bidirectional external connectivity. For more information about bidirectional external network use cases, see [Network use cases](/docs/power-iaas?topic=power-iaas-network_use_cases).
 
-A peer network interface is a physical network endpoint in the IBM Power Virtual Server Private Cloud network fabric that is used for external network connectivity. Based on the type of data network in your infrastructure, the IBM Power Virtual Server Private Cloud support team defines one or more peer network interfaces during the pod setup. You can use a peer network interface to logically configure the network peering connections.
+A peer network interface is a physical network endpoint in the IBM Power Virtual Server Private Cloud network fabric that is used for external network connectivity. Based on the type of data network in your infrastructure, the {{site.data.keyword.on-prem-fname}} support team defines one or more peer network interfaces during the pod setup. You can use a peer network interface to logically configure the network peering connections.
 
-You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces. To create a network peering connection, collect the following network related information from your network engineering team:
+You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data center network as a dynamic routing session through BGP over each of the physical peer interfaces. To create a network peering connection, collect the following network information from your network engineering team:
 
 - Network interface name
 - BGP Autonomous System Number (ASN) for your network
@@ -140,24 +138,44 @@ You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data
 - IPv4 CIDR for your network
 - VLAN ID
 
-You can create the network peering connection successfully only if you use the details that are provided by your network engineering team; otherwise, the connection fails.
+
+### Creating a network peering connection
+{: #network-peering-create}
+
+After you collect the required details from your network engineering team, complete the following steps to create a network peering connection:
+
+1. Log in to [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials. IBM Cloud Dashboard screen is displayed.
+2. Type **{{site.data.keyword.powerSys_notm}}** in the search field of the IBM Cloud Dashboard to view the Catalog Results.
+3. Select **{{site.data.keyword.powerSys_notm}}** from the Catalog Results. The {{site.data.keyword.powerSys_notm}} window is displayed.
+4. Click **Workspaces** on the left navigation pane of the **{{site.data.keyword.powerSys_notm}}** window. A list of workspaces that are available in your account is displayed.
+5. Click the workspace that you want to update. The Workspace details pane appears.
+6. Click **View virtual servers** in the Workspace details pane.
+7. Click **Network peering** under **Networking** section in the left pane. The Network peering page appears.
+8. Click **Create peering connection**. The Create peering connection page appears.
+   1. Specify a name in the **Name** field.
+   2. Select a network interface from the **Network interface** list.
+   3. Select the type of network from the **Peer network type** list.
+   4. Click **Continue**.
+   5. On the **BGP** tab, update the fields with the network information collected from your network engineering team.
+9. Agree to the terms and conditions in the Summary pane.
+10. Click **Create**.
+
+You can create the network peering connection only if you use the details that are provided by your network engineering team. Otherwise, the network peering connection is not created.
 {: note}
 
-To allow or deny the data center network from accessing the network peering connection, complete the following steps:
+To allow data exchange between the data center network and the network peering connection, set **Import route filter** and **Export route filter** to `Allow` or `Deny` as defined in the following list:
 
-1. Open the Connection details page on the peer interface.
-2. Click **BGP** tab.
-3. Open **Route Filter** details.
-4. Under **Import route filters**, select **Permit all import filters** for the peer network to access the {{site.data.keyword.on-prem-fname}} data center network.
-5. Under **Export route filters**, select **Permit all export filters** for the {{site.data.keyword.on-prem-fname}} data center network to access the peer network.
+- If you set **Import route filter** to `Allow`, the data center network can access only the virtual server instances (VSIs) within the Classless Inter-Domain Routing (CIDR) that are marked as allowed and not in the other CIDRs.
+- If you set **Import route filter** to `Deny`, the data center network cannot access the VSIs within the CIDR that are marked as denied but can access the VSIs in all the other CIDRs.
+- If you set **Export route filter** to `Allow`, only the VSIs within the CIDR that are marked as allowed can access the data center network but the VSIs in all the other CIDRs cannot access the data center network.
+- If you set **Export route filter** to `Deny`, VSIs within the CIDR that are marked as denied cannot access the data center network but the VSIs in all the other CIDRs can access the data center network.
 
-
-You can set the import or export route filters as `Allow` or `Deny` as defined in the following list:
-
-- If you set **Import route filter** to `Allow`, the data center network can reach virtual server instances (VSIs) only in the allowed Classless Inter-Domain Routing (CIDR). VSIs in all the other CIDRs cannot be reached from the data center network.
-- If you set **Import route filter** to `Deny`, the data center network cannot reach VSIs in the denied CIDR. VSIs in all the other CIDRs can be reached from the data center network.
-- If you set for **Export route filter** to `Allow`, only VSIs within the allowed CIDR can reach the data center network. VSIs in all the other CIDRs cannot reach the data center network.
-- If you set for **Export route filter** to `Deny`, VSIs that are marked as denied CIDR cannot reach the data center network. VSIs in all the other CIDRs can reach the data center network.
-
-If the same CIDR is set to both `Allow` and `Deny` actions in import or export filters, the rule with the higher priority takes precedence, and the other action is ignored.
+If a CIDR is set as both `Allow` and `Deny` in the **Import route filter** or **Export route filter**, the rule with the higher priority takes precedence, and the other action is ignored.
 {: note}
+
+To set **Import route filter** and **Export route filter** complete the following steps:
+
+1. Click **Network peering** under the **Networking** section in the left navigation pane of the **{{site.data.keyword.powerSys_notm}}** window. The Network peering page appears.
+2. Click a network peering connection.
+3. Select **Permit all import filters** on the **Import route filters** tab for network peering connection to access the {{site.data.keyword.on-prem-fname}} data center network.
+4. Select **Permit all export filters** under the **Export route filters** tab for the {{site.data.keyword.on-prem-fname}} data center network to access the network peering connection.

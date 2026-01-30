@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2026-01-06"
+lastupdated: "2026-01-30"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -97,7 +97,7 @@ You can specify the host affinity and anti-affinity between two or more SPPs wit
 {: #price-spp}
 
 When you use SPPs, you can optimize the cost by using reserved cores that are shared by VSIs in the SPP. For more information about the pricing for VSIs within SPPs, see the following topics:
-- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
+- [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-spp) if you are using {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}
 - [Pricing for shared processor pool](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud) if you are using {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 
 
@@ -150,23 +150,16 @@ To create an SPP, complete the following steps:
 ### Updating or deleting a shared processor pool
 {: #update-delete-spp}
 
+To update an SPP, navigate to **Compute** > **Shared processor pools**. Then, click the SPP that you want to edit.
 
-
-To update or delete an SPP, navigate to **Compute** > **Shared processor pools**. Then, select the SPP that you want to edit, and click the edit icon. You will receive a notification after the SPP is deleted successfully.
-
-You can update or delete the following details of an existing SPP:
+You can update the following details of an existing SPP:
 
 * Name of the SPP: Follow the same naming conventions that you used when you created an SPP. For more information, see [Creating a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#create-spp).
 * Number of cores: You can update the number of reserved cores based on resource availability and allocation.
 
 
 
-* Delete an existing SPP: You can delete any existing SPP. Before you delete, ensure that VSIs do not exist in the SPP. If VSIs are present in the SPP, delete all VSIs in the SPP.
-
-
-
-
-
+To delete an SPP, navigate to **Compute** > **Shared processor pools**. At the end of the SPP row that you want to delete, click the delete icon. Before you delete, ensure that VSIs do not exist in the SPP. If VSIs are present in the SPP, delete all VSIs in the SPP.
 
 
 
@@ -200,7 +193,7 @@ To add VSIs to an existing SPP, complete the following steps:
 ### Assigning an existing VSI to a shared processor pool
 {: #assign-vsi-to-spp}
 
-You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. However, if you have already deployed a VSI without assigning the VSI to a shared processor pool (SPP), you can still assign the VSI to an SPP by exporting the VSI as an image. You can then deploy a new VSI from that image and assign the VSI to a new SPP or an existing SPP during the deployment.
+You can assign a VSI to a shared processor pool (SPP) only during the deployment of the VSI. If you deployed a VSI without assigning the VSI to an SPP, you cannot assign the VSI to an SPP directly. Instead, you must export the VSI as an image and then deploy a new VSI from that image. During the deployment, you can assign the new VSI to a new SPP or an existing SPP.
 
 To assign an existing VSI to an SPP, complete the following steps:
 
@@ -208,7 +201,7 @@ To assign an existing VSI to an SPP, complete the following steps:
 
 2. Identify the existing VSI that you want to assign to an SPP and then capture and export the VSI by following the steps in the [Using the Power Virtual Server user interface to capture and export a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export){: external} section.
 
-    When you capture and export the VSI, ensure that you select **Image catalog** as the export destination because exporting to Image catalog allows faster VSI deployment. If you select **Cloud Object Storage** as the export destination, you must reimport the image from Cloud Object Storage, which can increase the VSI deployment time.
+    When you capture and export the VSI, ensure that you select **Image catalog** as the export destination because exporting to Image catalog allows faster VSI deployment. If you select **Cloud Object Storage** as the export destination, you must import the image again from the Cloud Object Storage, which can increase the VSI deployment time.
     {: important}
 
 3. Deploy a new VSI to an SPP by following the steps in the [Deploying a VSI into a shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP#deploy-pvm-in-spp) section. When you deploy the VSI, ensure that you make the following selections:

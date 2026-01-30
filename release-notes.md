@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-30"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,6 +20,8 @@ content-type: release-note
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
 
 
 ## December 2025
@@ -102,14 +104,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-
-
-- You can set the scope of an SSH key to improve the security and privacy of the SSH key. When you set the scope of an SSH key, the SSH key is only visible within a workspace or an account. For more information, see [Setting the scope of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
-
-
-
-
-
+- You can set the visibility of an SSH key to improve the security and privacy of the SSH key. When you set the visibility of an SSH key, the SSH key is available only within a workspace or an account. For more information, see [Setting the access level of an SSH key in a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-ssh-key).
 
 
 
@@ -179,7 +174,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-- The migration of existing workspaces to cloud resource names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns).
+- The migration of existing workspaces to cloud resource names (CRNs) in all the data centers except DAL14 is completed. For more information about CRNs, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#granular-crns).
 
 - The following RHEL OS stock images are removed from the Power Virtual Server image library as the OS versions are no longer supported by Red Hat:
 
@@ -225,28 +220,21 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-
-
-The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual machines (VMs) that use the stock images can continue to operate without interruption. However, to ensure ongoing support and maintenance, update your VMs to a supported OS version. For more information about the RHEL End of Support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external} and for available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
+The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual server instances (VSIs) that use the stock images can continue to operate without interruption. To get continued support and maintenance from IBM, update your VSIs to a supported OS version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 {: important}
 
 - IBM i 7.3, 7.2 and Cloud Optical Repository (COR) stock images have been refreshed.
 
-- In [February 2025](#Feb-2025), IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces. Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual machines (VMs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces in [February 2025](#Feb-2025) . Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual server instances (VSIs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
   The billing and metering plans are updated with the following changes:
 
     - For billing, an instance of a resource is identified by using the associated CRN and not by the `Consumer ID` value.
     - Each resource type has its own billing plan instead of billing all the resources under the `Workspace for Power Virtual Server` plan.
-    - The value for the `Pricing Region` field of the instance is based on metro regions and is not based on data center and zone regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
+    - In the billing plan, the value for the `Pricing Region` field of the instance is based on metro regions. However, the value for the `Location` field of the instance is based on the data center and zone regions.
     - The costs of the snapshots are billed by using independent metrics for snapshots and are not included with the volume metrics.
 
   The existing price of the resources does not change. The organization and visualization of the costs of the resources are updated to match the billing and metering plans for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} that supports CRNs.
-
-
-
-
-
 
 
 
@@ -291,7 +279,7 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 
 
-- Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP will not incur additional cost for per VM core or the cost for high-use memory parts. For more information, see [Pricing for shared processor pool for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#price-spp) and [Pricing for shared processor pool for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud)
+- Shared Processor Pool (SPP) metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and DR scenarios. Virtual servers that are configured within an SPP will not incur additional cost for per VM core or the cost for high-use memory parts. For more information, see [Pricing for shared processor pool for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-spp) and [Pricing for shared processor pool for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#pricing-spp-private-cloud)
 
 
 
@@ -324,7 +312,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM cloud resource names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
+- {{site.data.keyword.powerSys_notm}} is enhanced to provide complete billing transparency. With the enablement of IBM cloud resource names (CRNs), you can view the contribution of each resource to your monthly cloud expenditure. For more information, see [IBM cloud resource names](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#granular-crns). This enhancement does not introduce any changes in {{site.data.keyword.powerSys_notm}} pricing. The IBM CRNs are displayed when you create new workspaces. Note that the existing workspaces are planned to be enhanced with CRNs by `June 2025` without disrupting your work.
 
 
 
@@ -486,7 +474,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - Power Edge Router (PER) is now available in the `DAL13`, `TOR01`, and `WDC04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 - Power Virtual Server now offers refreshed images for IBM i 7.2 TR 9.
 - The SLES 15 SP4 general purpose (SLES15-SP4) stock image is in the process of being removed from the {{site.data.keyword.powerSys_notm}} data centers since the OS level is no longer supported by Red Hat.
-- You can now see a **Consumer ID** in your [Billing and Usage](https://cloud.ibm.com/billing){: external} page. Using the consumer ID you can identify and get a detailed view at the resource level broken down by part metric. For more information, see [Consumer ID](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud#consumer-id).
+- You can now see a **Consumer ID** in your [Billing and Usage](https://cloud.ibm.com/billing){: external} page. Using the consumer ID you can identify and get a detailed view at the resource level broken down by part metric. For more information, see [Consumer ID](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#consumer-id).
 - {{site.data.keyword.powerSys_notm}} is now Financial Services® Validated and has received a SOC 2 Type II report. For more information, see the [compliance](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp) page.
 - Flexible I/O operation per second (IOPS) is now available in the `TOR01` data center. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
