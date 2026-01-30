@@ -21,7 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## January 2026
+{: #Jan-2026}
+{: release-note}
 
+ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
+:   {{site.data.keyword.powerSys_notm}} is Esquema Nacional de Seguridad (ENS) High and Protected B certified. For more information about ENS High and Protected B compliance certifications, see [ENS High](/docs/power-iaas?topic=power-iaas-compliances-list#enshigh) and [Protected B](/docs/power-iaas?topic=power-iaas-compliances-list#protectedb).
 
 
 ## December 2025
