@@ -360,7 +360,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- You can now assign a Virtual Serial Number (VSN) to an IBM i VM. With a VSN associated with your VM, you need not pin the VM to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
+- You can now assign a Virtual Serial Number (VSN) to an IBM i VSI. With a VSN associated with your VSI, you need not pin the VSI to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
 - You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 - As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
@@ -408,7 +408,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
 
 
-The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions). For new deployments, you must use the latest stock image in the catalog. Existing VMs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VM to the latest service pack level for the most recent maintenance.
+The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions). For new deployments, you must use the latest stock image in the catalog. Existing VSIs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VSI to the latest service pack level for the most recent maintenance.
 {: note}
 
 ## September 2024
