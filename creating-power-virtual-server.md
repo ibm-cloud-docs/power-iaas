@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-02"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -167,7 +167,11 @@ To create a virtual server instance, you must first create a [{{site.data.keywor
 
     3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
 
+    
+
     The **SAP RISE deployment** option is enabled when you select **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list.
+
+    
 
     
 
