@@ -103,8 +103,6 @@ Default output format [None]: json
 
 Veeam for AIX provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
 
-{{_include-segments/veeam-deprecated-note.md}}
-
 
 
 ## FalconStor StorSafe VTL
