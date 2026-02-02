@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-02"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -151,6 +151,16 @@ IBM i stock images currently available when you create a VM are:
 
 
 
+
+
+
+
+* IBM i COR[^2][^3]
+* IBM i 7.6
+* IBM i 7.5 TR6
+* IBM i 7.4 TR12
+* IBM i 7.3 TR13[^5]
+* IBM i 7.2 TR9[^5A][^6]
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2024
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-02"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -103,19 +103,7 @@ Default output format [None]: json
 
 Veeam for AIX provides simple physical server backup solutions for machines that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
 
-
-
-### Ordering Veeam stand-alone licenses
-{: #backup_veeam_ordering_licenses}
-
-You can order a Veeam® stand-alone license via the IBM Cloud portal [Order Veeam license](https://cloud.ibm.com/infrastructure/vmware-solutions/console/instances/licenses).
-
-An email is sent confirming the order. If the order is incorrect, it can be deleted. For more information, see [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses).
-
-A license key is generated to whomever placed the order.
-
-
-
+{{_include-segments/veeam-deprecated-note.md}}
 
 
 
