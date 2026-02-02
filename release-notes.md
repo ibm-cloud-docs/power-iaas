@@ -68,8 +68,6 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 {: #Oct-2025}
 {: release-note}
 
-Test
-
 {{_include-segments/veeam-deprecated-note.md}}
 
 ## September 2025
