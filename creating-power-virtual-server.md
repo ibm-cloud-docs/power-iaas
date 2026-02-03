@@ -80,7 +80,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 4. Optional: Enter user tags in the **User tags (optional)** field.
 
-5. Set the number of VSIs that you want to create in the **Number of instances** field. The default is `1` and you can create up to `5` VSIs at a time. If you select more than one instance, additional options are displayed.
+5. Set the number of VSIs that you want to create in the **Number of instances** field. The default is `1`, and you can create up to `5` VSIs at a time. If you select more than one instance, additional options are displayed.
 
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}

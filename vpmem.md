@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-03"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -121,7 +121,7 @@ Use the following API and CLI commands to create and add a vPMEM volume to a VSI
 You can delete a vPMEM volume from a VSI only if the VSI is in the **Shutoff** state.
 {: note}
 
-To delete a vPMEM volume complete the following steps:
+To delete a vPMEM volume, complete the following steps:
 
 1. Click the VSI from which you want to delete the vPMEM volume on the Virtual server instances page.
 2. Click the delete icon that is associated with the vPMEM volume to be deleted from the Virtual persistent memory volumes section.
