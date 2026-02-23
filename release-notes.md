@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-02-02"
+lastupdated: "2026-02-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,6 +20,9 @@ content-type: release-note
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
+
+
+
 
 ## January 2026
 {: #Jan-2026}
