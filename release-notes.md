@@ -21,8 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## February 2026
+{: #Feb-2026}
+{: release-note}
 
-
+CHE02 and CHE03 VPC-only data centers are available
+:   `CHE02` and `CHE03` are available as VPC‑only {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. Both data centers use IBM VPC cloud technology and run Power10 S1022 hosts to support {{site.data.keyword.powerSys_notm}} workloads. Additionally, `CHE03` data center also offers Power11 S1122 hosts.
 
 ## January 2026
 {: #Jan-2026}
