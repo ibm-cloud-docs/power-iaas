@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-10"
+lastupdated: "2026-02-23"
 
 ---
 
@@ -417,7 +417,8 @@ action INSTANCE_ID --operation OPERATION
 **Available Options**:
 
 ```bash
-  -o, --operation string   Operation to be done in a PVM server instance. Valid values are: dumprestart, hard-reboot, immediate-shutdown, soft-reboot, reset-state, start, stop.
+  -o, --operation string   Operation to be done in a PVM server instance.
+                           Valid values are: dumprestart, hard-reboot, immediate-shutdown, reset-state, soft-reboot, start, stop.
 ```
 
 **Examples**:
@@ -551,7 +552,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--storage-affinity STORAGE_AFFINITY_POLICY] [--storage-affinity-instance INSTANCE]
     [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
-    [--storage-pool STORAGE_POOL] [--storage-pool-affinity] [--storage-tier STORAGE_TIER]
+    [--storage-pool STORAGE_POOL] [--storage-pool-affinity=True|False] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
     [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
     [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
@@ -563,12 +564,12 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
 
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
-      --IBMiPHA-license                                 IBMi PHA software license associated with the instance.
-      --IBMiRDS-users int                               Number of IBMi RDS users software license associated with the instance. Default is IBMiRDSUsers=0.
+      --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
+      --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
-  -m, --memory float                                    Amount of memory in GB to allocate to the instance. Default is 2GB.
+  -m, --memory float                                    Amount of memory in GiB to allocate to the instance. Default is 2 GiB.
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
@@ -978,7 +979,7 @@ list INSTANCE_ID
 **Usage**:
 
 ```bash
-update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False]
+update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
     [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
     [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
     [--processors NUMBER] [--storage-pool-affinity=True|False]
@@ -991,8 +992,8 @@ update INSTANCE_ID [--IBMiCSS-license=True|False]  [--IBMiPHA-license=True|False
 
 ```bash
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
-      --IBMiPHA-license                                 New IBMi PHA software license associated with the instance.
-      --IBMiRDS-users int                               New number of IBMi RDS users software license associated with the instance.
+      --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
+      --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
   -m, --memory float                                    New amount of memory for the server instance.
   -n, --name string                                     New name of the server instance.
       --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
@@ -2423,7 +2424,8 @@ get SUBNET_ID
 **Usage**:
 
 ```bash
-update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
+update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
+    [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
 
   SUBNET_ID: The unique identifier or name of the subnet.
 ```
@@ -2432,6 +2434,7 @@ update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "
 
 ```bash
   -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
+      --enable-dhcp           Indicates if the network will support DHCP or not.
   -g, --gateway string        Gateway to use for this subnet.
   -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -n, --name string           New name of the subnet.
@@ -2596,7 +2599,7 @@ action VOLUME_ID [--replication-enabled=True|False] [--target-tier STORAGE_TIER]
 ```bash
   -r, --replication-enabled   Enables storage replication on the volume. Default is "false".
   -t, --target-tier string    Change the storage tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
-                              "Tier5k" volumes cannot exceed 200GB.
+                              "Tier5k" volumes cannot exceed 200 GiB.
 ```
 
 **Examples**:
@@ -2928,7 +2931,7 @@ create VOLUME_NAME --size SIZE [--count COUNT] [--replication-enabled=True|False
   -r, --replication-enabled               Enables storage replication on the volume. Default is "false".
       --replication-sites strings         List of replication sites for volume replication. See "ibmcloud pi disaster-recovery" command to get a list of replication sites.
   -e, --shareable                         Whether the volumes can be attached to multiple VMs. Default is "false".
-  -s, --size int                          Size of the volume in GB. Size cannot exceed 200GB for storage tier "Tier5k".
+  -s, --size int                          Size of the volume in GiB. Size cannot exceed 200 GiB for storage tier "Tier5k".
   -p, --storage-pool string               Volume pool where the volume will be created. If the "--storage-pool" option is set then the "--affinity-policy" option cannot be specified.
   -t, --storage-tier string               Tier of the volume (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region). Default to tier3 if not provided.
   -u, --user-tags strings                 Comma separated list of user tags to be attached to the volume.
@@ -3168,7 +3171,7 @@ update VOLUME_ID [--bootable=True|False] [--name NAME] [--size SIZE] [--shareabl
   -b, --bootable      New value for whether the volume can be booted.
   -n, --name string   New name of the volume.
   -t, --shareable     New value for whether the volume can be attached to multiple VMs.
-  -s, --size int      New size of the volume. Size cannot exceed 200GB for storage tier "Tier5k".
+  -s, --size int      New size of the volume. Size cannot exceed 200 GiB for storage tier "Tier5k".
 ```
 
 ---
@@ -3417,7 +3420,7 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 **Usage**:
 
 ```bash
-create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--parameters "KEY1 VALUE1",["KEYn VALUEn"]] [--user-tags USER_TAG1[,USER_TAGn]]
+create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN [--parameters "KEY1 VALUE1"[,"KEYn VALUEn"]] [--user-tags USER_TAG1[,USER_TAGn]]
 
   WORKSPACE_NAME: The desired name of the workspace.
 ```

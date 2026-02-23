@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-02-06"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -51,6 +51,7 @@ Federal government contracts contain clauses with security requirements. These r
 
 
 For more information about IBM Cloud Protected B Compliant services, see [GC Cloud Framework Agreements catalogue](https://hosting-services-hebergement.canada.ca/s/gc-cloud-fa-catalogue?language=en_US){: external}.
+
 
 
 
