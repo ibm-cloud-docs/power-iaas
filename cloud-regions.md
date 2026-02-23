@@ -77,25 +77,19 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 [^3]: For more information about the list of classic data centers in IBM Cloud, see [Classic data centers](/docs/overview?topic=overview-locations#data-centers){: external}.
 [^7]: For more information about the IBM Cloud regions that support VPC, see [Creating a VPC in a different region](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli){: external}.
 
-
-
-| Location | VPC region[^8] | {{site.data.keyword.powerSys_notm}} region | VPC zone                           | {{site.data.keyword.powerSys_notm}} zone | Classic infrastructure[^4] |
-| -------- | -------------- | ------------------------------------------ | ---------------------------------- | ---------------------------------------- | -------------------------- |
-| Chennai  | x              | in-che          | x                                  | che01 [^5]                               | che01                      |
-| Osaka    | jp-osa         | osa                                        | jp-osa-1  \n jp-osa-2  \n jp-osa-3 | osa21  \n x  \n x                        | osa21  \n osa22  \n osa23  |
-| S----e   | x----x         | x-x                                        | x--------------------------------x | x-------------------x                    | s-----------------------1  |
-| Sydney   | au-syd         | syd                                        | au-syd-1  \n au-syd-2  \n au-syd-3 | x  \n syd04  \n syd05                    | syd01  \n syd04  \n syd05  |
-| Tokyo    | jp-tok         | tok                                        | jp-tok-1  \n jp-tok-2  \n jp-tok-3 | x  \n tok04  \n x                        | tok02  \n tok04  \n tok05  |
+| Location  | VPC region[^8] | {{site.data.keyword.powerSys_notm}} region | VPC zone                           | {{site.data.keyword.powerSys_notm}} zone | Classic infrastructure[^4] |
+| --------- | -------------- | ------------------------------------------ | ---------------------------------- | ---------------------------------------- | -------------------------- |
+| Chennai   | x              | in-che          | x                                  | che01 [^5]                               | che01                      |
+| Chennai   | in-che         | x                                          | in-che-2 \n in-che-3               | che02 \n che03                           | x                          |
+| Osaka     | jp-osa         | osa                                        | jp-osa-1  \n jp-osa-2  \n jp-osa-3 | osa21  \n x  \n x                        | osa21  \n osa22  \n osa23  |
+| Singapore | x              | x                                          | x                                  | x                                        | sng01                      |
+| Sydney    | au-syd         | syd                                        | au-syd-1  \n au-syd-2  \n au-syd-3 | x  \n syd04  \n syd05                    | syd01  \n syd04  \n syd05  |
+| Tokyo     | jp-tok         | tok                                        | jp-tok-1  \n jp-tok-2  \n jp-tok-3 | x  \n tok04  \n x                        | tok02  \n tok04  \n tok05  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
 {: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Asia Pacific" caption-side="top"}
 {: #asia-pacific}
 {: tab-title="Asia Pacific"}
-
-
-
-
-
 
 **x - Not available**
 
