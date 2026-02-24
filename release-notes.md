@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -26,8 +26,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #Feb-2026}
 {: release-note}
 
-CHE02 and CHE03 VPC-only data centers are available
-:   `CHE02` and `CHE03` are available as VPC‑only {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. Both data centers use IBM VPC cloud technology and run Power10 S1022 hosts to support {{site.data.keyword.powerSys_notm}} workloads. Additionally, `CHE03` data center also offers Power11 S1122 hosts.
+CHE02 and CHE03 data centers are available
+:   `CHE02` and `CHE03` are available as {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. For more information about the data center capabilities, see [Data center capabilities](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external}.
 
 ## January 2026
 {: #Jan-2026}
