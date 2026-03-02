@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2024
 
-lastupdated: "2025-12-19"
+lastupdated: "2026-03-02"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -121,6 +121,8 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 
 A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack.
 
+
+
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
 
@@ -178,8 +180,10 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 ### Medium pod configurations
 {: #pod-config-medium}
 
-
 A medium pod has 2x42 U or 4x42 U rack and S1122, E1150, and E1180 (2CEC) system types are supported in the rack.
+
+
+
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
