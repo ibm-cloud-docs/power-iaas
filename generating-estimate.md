@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-12-08"
+lastupdated: "2026-03-02"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -55,6 +55,8 @@ You can create an estimate for {{site.data.keyword.powerSys_notm}} resources in 
     * [Estimating a virtual tape library](#est-vtl)
     * [Estimating a dedicated host](#est-dh) 
 
+
+
 8. In the Summary panel, review the estimated cost and click **Add to estimate**. The **Estimate** panel is displayed.
 
 9. From the **Add product to estimate** list, select **Create new estimate**. The Create new estimate panel is displayed.
@@ -68,6 +70,9 @@ You can create an estimate for {{site.data.keyword.powerSys_notm}} resources in 
 13. Click **Save**.
 
 14. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
+
+
+
 
 ### Estimating a virtual server instance
 {: #est-vsi}

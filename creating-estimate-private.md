@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-11-14"
+lastupdated: "2026-03-02"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -56,6 +56,7 @@ To create an estimate for {{site.data.keyword.powerSys_notm}} infrastructure in 
     Machine types cannot be mixed within a rack, and all systems must have the same amount of memory.
     {: note}
 
+
 9. In the **Committed monthly spend** section, select the number of years from the **Contract commitment term** list. The **Committed monthly spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod.
 
     A longer contract commitment term reduces the minimum committed spend value. You can contact IBM to learn more about the possible savings with the commitment plans. Metered cost is determined based on the consumption and it is charged only when the consumption rate is greater than the minimum committed spend value.
@@ -78,6 +79,10 @@ To create an estimate for {{site.data.keyword.powerSys_notm}} infrastructure in 
 16. Click **Save**.
 
 17. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
+
+
+
+
 
 ## Contacting IBM to place an order for {{site.data.keyword.powerSys_notm}} Private Cloud in a {{site.data.keyword.on-prem-lc}}
 {: #contacting-ibm-private}
