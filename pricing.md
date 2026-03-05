@@ -662,17 +662,7 @@ The following table shows an example of the charges based on the routing option 
 | Global routing data transfer | $0.011 GB  |
 {: caption="An example of Transit Gateway charges based on routing" caption-side="bottom"}
 
-The following table shows examples of the charges based on the number of connections that includes Direct Link, VPC, Classic that you can create:
-
-| Number of connections | Charges    |
-| --------------------- | ---------- |
-| 1 - 4                 | No charges |
-| 5 - 20                | $9.405     |
-| 21 - 50               | $7.315     |
-| 51+                   | $4.7025    |
-{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="bottom"}
-
-The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
+There are no specific charges to use PER in IBM Power Virtual Server, however charges for Transit Gateway are explained in detail at  [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
 {: important}
 
 ## End of billing
