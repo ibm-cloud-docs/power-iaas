@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-03-05"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -649,8 +649,6 @@ IBM charges with the base price hourly per connection. The base price varies for
 On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will reach its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
 {: important}
 
-## Pricing for Power Edge Router (PER)
-{: #per-pricing}
 
 No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options that are associated to the use of PER.
 
@@ -674,6 +672,9 @@ The following table shows examples of the charges based on the number of connect
 
 The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
 {: important}
+
+
+
 
 ## End of billing
 {: #pricing-end-billing}
