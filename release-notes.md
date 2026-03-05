@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-05"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -46,6 +46,8 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 - Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes enable the key use case such as reducing the amount of time it takes to restart SAP HANA virtual machines. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
 
 - The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
+
+- Currently VPMEM and the VSI console copy and paste text feature are available in select data centers. These features are expected to be present in all regions shortly.
 
 - IBM Cloud Monitoring service can be used with {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
