@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2026-02-23"
+lastupdated: "2026-03-05"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -196,6 +196,9 @@ To delete the PER workspaces that are connected to the Transit Gateway, you must
 {: #cloud-services-per}
 
 From your PER workspace, you can create a virtual server instance and attach subnets to it. These virtual server instances can then access the IBM Cloud resources such as Cloud Object Storage, Domain Name System (DNS), and other services that use the allocated IP addresses in the range `161.26.0.0/16`. See [IaaS endpoints](/docs/vpc?topic=vpc-service-endpoints-for-vpc#infrastructure-as-a-service-iaas-endpoints) for more information.
+
+
+
 
 Attach the workspace to the Transit Gateway if you want to connect your workspace with the VPC and classic infrastructure.
 {: important}
