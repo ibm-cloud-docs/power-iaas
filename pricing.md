@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-06"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -649,32 +649,12 @@ IBM charges with the base price hourly per connection. The base price varies for
 On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will reach its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
 {: important}
 
+## Pricing for Power Edge Router (PER)
+{: #per-pricing}
 
-No additional charges are levied for PER in IBM {{site.data.keyword.powerSys_notm}}. You are only charged based on the number of Transit Gateway connections and routing options that are associated to the use of PER.
+There are no specific charges to use PER in IBM Power Virtual Server. However, you are charged based on the number of Transit Gateway connections and routing options that are associated with the use of PER. See the [Transit Gateway provisioning](https://cloud.ibm.com/interconnectivity/transit/provision) page for the summary of Transit Gateway charges in the IBM Cloud console.
 
-The following table shows an example of the charges based on the routing option that you select:
-
-| Routing type                 | Charges    |
-| ---------------------------- | ---------- |
-| Local routing data transfer  | No charges |
-| Global routing data transfer | $0.011 GB  |
-{: caption="An example of Transit Gateway charges based on routing" caption-side="bottom"}
-
-The following table shows examples of the charges based on the number of connections that includes Direct Link, VPC, Classic that you can create:
-
-| Number of connections | Charges    |
-| --------------------- | ---------- |
-| 1 - 4                 | No charges |
-| 5 - 20                | $9.405     |
-| 21 - 50               | $7.315     |
-| 51+                   | $4.7025    |
-{: caption="Examples of Transit Gateway charges based on number of connections" caption-side="bottom"}
-
-The Transit Gateway charges indicated in the preceding tables are subjected to change. See the summary of Transit Gateway charges from the [provisioning page](https://cloud.ibm.com/interconnectivity/transit/provision) in the IBM Cloud console. See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
-{: important}
-
-
-
+See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips#pricing-considerations) section in the Transit Gateway documentation for more information.
 
 ## End of billing
 {: #pricing-end-billing}
