@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026
 
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-06"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -644,44 +644,3 @@ The data center where you can monitor your platform metrics currently are `WDC06
 
 - **Access your event logs and notifications**:
     You can now access your event logs and notification from the **Event logs** page on the {{site.data.keyword.powerSys_notm}} user interface. For more information, see [Managing events logs and notifications](/docs/power-iaas?topic=power-iaas-manage-event-logs)
-
-## February 2023
-{: #feb-2023}
-
-- Added a new data center DAL10 in the existing list of {{site.data.keyword.powerSys_notm}} data centers. For more information, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
-
-## December 2022
-{: #dec-2022}
-
-- Get the list of internationally recognized {{site.data.keyword.powerSys_notm}} compliance certifications. For more information, see [{{site.data.keyword.powerSys_notm}} compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list).
-
-- You can integrate Hyper Protect Crypto Services (HPCS) with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with HPCS](/docs/power-iaas?topic=power-iaas-integrate-hpcs).
-
-## September 2022
-{: #sept-2022}
-
-- You can share a group of processors between multiple virtual machines that allows you to group your applications together by using the shared processor pool. For more information, see [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
-
-- {{site.data.keyword.powerSys_notm}} allows you to automate the complete data recovery solution by using the API and CLI interfaces of a global replication service. For more information, see [Managing a global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
-
-- You can choose to deploy Epic workloads on a VM for more cost savings. For more information, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
-
-- The full Linux subscription on {{site.data.keyword.powerSys_notm}} now supports SLES 15 SP4 (General).
-
-## August 2022
-{: #aug-2022}
-
-- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration as a Service for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
-
-## July 2022
-{: #jul-2022}
-
-- You can use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC). See [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
-- {{site.data.keyword.powerSys_notm}} now supports a full Linux subscription on RHEL 8.6. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-
-## June 2022
-{: #jun-2022}
-
-- {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-- IBM i 7.5 is supported on {{site.data.keyword.powerSys_notm}}s.
-- With virtual appliances independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSys_notm}} workloads. See [Managing virtual appliances](/docs/power-iaas?topic=power-iaas-virtual-appliances).
