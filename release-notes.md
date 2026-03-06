@@ -47,7 +47,7 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 - The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
 
-- Currently VPMEM and the VSI console copy and paste text feature are available in select data centers. These features are expected to be present in all regions shortly.
+
 
 - IBM Cloud Monitoring service can be used with {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
