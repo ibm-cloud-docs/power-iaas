@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026
 
-lastupdated: "2026-02-23"
+lastupdated: "2026-03-06"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -22,12 +22,14 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
+
+
 ## February 2026
 {: #Feb-2026}
 {: release-note}
 
-CHE02 and CHE03 VPC-only data centers are available
-:   `CHE02` and `CHE03` are available as VPC‑only {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. Both data centers use IBM VPC cloud technology and run Power10 S1022 hosts to support {{site.data.keyword.powerSys_notm}} workloads. Additionally, `CHE03` data center also offers Power11 S1122 hosts.
+CHE02 and CHE03 data centers are available
+:   `CHE02` and `CHE03` are available as {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. For more information about the data center capabilities, see [Data center capabilities](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external}.
 
 ## January 2026
 {: #Jan-2026}
@@ -44,6 +46,8 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 - Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes enable the key use case such as reducing the amount of time it takes to restart SAP HANA virtual machines. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
 
 - The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
+
+
 
 - IBM Cloud Monitoring service can be used with {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 
@@ -640,44 +644,3 @@ The data center where you can monitor your platform metrics currently are `WDC06
 
 - **Access your event logs and notifications**:
     You can now access your event logs and notification from the **Event logs** page on the {{site.data.keyword.powerSys_notm}} user interface. For more information, see [Managing events logs and notifications](/docs/power-iaas?topic=power-iaas-manage-event-logs)
-
-## February 2023
-{: #feb-2023}
-
-- Added a new data center DAL10 in the existing list of {{site.data.keyword.powerSys_notm}} data centers. For more information, see [Creating a {{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
-
-## December 2022
-{: #dec-2022}
-
-- Get the list of internationally recognized {{site.data.keyword.powerSys_notm}} compliance certifications. For more information, see [{{site.data.keyword.powerSys_notm}} compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list).
-
-- You can integrate Hyper Protect Crypto Services (HPCS) with {{site.data.keyword.powerSys_notm}} to securely store and protect encryption key information for AIX and Linux. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with HPCS](/docs/power-iaas?topic=power-iaas-integrate-hpcs).
-
-## September 2022
-{: #sept-2022}
-
-- You can share a group of processors between multiple virtual machines that allows you to group your applications together by using the shared processor pool. For more information, see [Managing shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
-
-- {{site.data.keyword.powerSys_notm}} allows you to automate the complete data recovery solution by using the API and CLI interfaces of a global replication service. For more information, see [Managing a global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
-
-- You can choose to deploy Epic workloads on a VM for more cost savings. For more information, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
-
-- The full Linux subscription on {{site.data.keyword.powerSys_notm}} now supports SLES 15 SP4 (General).
-
-## August 2022
-{: #aug-2022}
-
-- You can use FalconStor VTL in {{site.data.keyword.powerSys_notm}} for data protection and cloud migration as a Service for IBM i. See [Managing Virtual tape library](/docs/power-iaas?topic=power-iaas-manage-vtl).
-
-## July 2022
-{: #jul-2022}
-
-- You can use IBM Transit Gateway to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC). See [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
-- {{site.data.keyword.powerSys_notm}} now supports a full Linux subscription on RHEL 8.6. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-
-## June 2022
-{: #jun-2022}
-
-- {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications by using full Linux subscription. See [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-- IBM i 7.5 is supported on {{site.data.keyword.powerSys_notm}}s.
-- With virtual appliances independent software vendors (ISV) can offer OVA (ISV software plus operating system of your choice) for quick deployment of {{site.data.keyword.powerSys_notm}} workloads. See [Managing virtual appliances](/docs/power-iaas?topic=power-iaas-virtual-appliances).

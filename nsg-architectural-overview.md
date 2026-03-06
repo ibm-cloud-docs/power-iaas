@@ -3,7 +3,7 @@
 copyright:
   years: 2025
 
-lastupdated: "2025-08-14"
+lastupdated: "2026-02-26"
 
 keywords: nsg, nag, network security group, nsg architectural overview
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
----
+----
 
 This topic provides the architectural overview of network security groups (NSGs) with the help of illustrations and examples, and explains how NSGs work in your Power Edge Router (PER) and enhanced CRN-enabled {{site.data.keyword.powerSysFull}} workspaces. A network security group (NSG) is used to define security rules to allow or deny specific network traffic that is related to resources provisioned in a {{site.data.keyword.powerSys_notm}} workspace. For more information about NSG and its core components, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
 

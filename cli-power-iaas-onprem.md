@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-24"
 
 ---
 
@@ -599,7 +599,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
                                                         defaults to the storage tier and pool the image was created in.
       --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
                                                         If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
+                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone, only data volumes that are of
                                                         the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
                                                         For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
