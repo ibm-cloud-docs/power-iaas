@@ -19,6 +19,8 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 ## December 2025
 {: #december-2025}
 
+### CLI v1.8.0
+
 The CLI plug-in version v1.8.0 is available. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
 **New commands**
