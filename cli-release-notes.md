@@ -20,6 +20,7 @@ Use these release notes to learn about the latest changes to the {{site.data.key
 {: #december-2025}
 
 ### CLI v1.8.0
+{: #cli-v1.8.0}
 
 The CLI plug-in version v1.8.0 is available. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
@@ -63,6 +64,7 @@ The following enhancements are included in this release:
 {: #sep-2025}
 
 ### CLI v1.7.0
+{: #cli-v1.7.0}
 
 CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use the new guidelines for writing the descriptions.
 
