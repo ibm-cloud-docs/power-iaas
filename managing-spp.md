@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-03-11"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -70,7 +70,16 @@ The create or update operations of a VSI fails even if the core-to-virtual core 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
+
+
 In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VSI inside an SPP with Virtual Cores (VC) up to 3.0 cores. For any Entitled Capacity (EC) up to 3.0 cores, you can select the ceiling of cores in VC up to 3.0 cores. For EC more than 3.0, VC is rounded off to the next higher integer value. VC is always equal or greater to EC.
+
+
+
+
+
+
+In a Power Virtual Server environment
 
 For example, the following table shows how your VC is determined based of EC selection:
 
