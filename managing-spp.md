@@ -78,9 +78,6 @@ In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VSI i
 
 
 
-
-In a Power Virtual Server environment
-
 For example, the following table shows how your VC is determined based of EC selection:
 
 | User-defined EC value | Possible VC value |
