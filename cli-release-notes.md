@@ -81,6 +81,8 @@ The following CLI commands are added to the IBM Power Virtual Server Private Clo
 
 **New options**
 
+The following options are added to the existing CLI commands:
+
 The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to set the instance to your preferred processor compatibility mode. The processor must be compatible with the system in use.
 
 
