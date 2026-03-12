@@ -64,7 +64,7 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 | --------- | -------------- | ------------------------------------------ | ------------------------------- | ---------------------------------------- | ---------------------------------- |
 | Amsterdam | x              | x                                          | x                               | x                                        | ams03                              |
 | Frankfurt | eu-de          | eu-de                                      | eu-de-1  \n eu-de-2  \n eu-de-3 | x  \n eu-de-1  \n eu-de-2                | fra02  \n fra04  \n fra05          |
-| London    | eu-gb          | lon                                        | eu-gb-1  \n eu-gb-2  \n eu-gb-3 | lon04  \n x  \n lon06                    | lon02 \n lon04  \n lon05  \n lon06 |
+| London    | eu-gb          | <td valign="middle">lon</td>                | eu-gb-1  \n eu-gb-2  \n eu-gb-3 | lon04  \n x  \n lon06                    | lon02 \n lon04  \n lon05  \n lon06 |
 | Madrid    | eu-es          | mad                                        | eu-es-1  \n eu-es-2  \n eu-es-3 | mad02  \n mad04  \n x                    | mad02  \n mad04  \n mad05          |
 | Milan     | x              | x                                          | x                               | x                                        | mil01                              |
 | Paris     | x              | x                                          | x                               | x                                        | par01                              |
