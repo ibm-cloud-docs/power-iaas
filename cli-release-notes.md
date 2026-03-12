@@ -1,21 +1,29 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2026-01-10"
+  years: 2019, 2026
+lastupdated: "2026-03-12"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes
+# {{site.data.keyword.powerSysFull}} CLI change log
 {: #cli-release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}} CLI plug-in.
-{: shortdesc}
+In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.powerSysFull}} CLI plug-in.
+
+
+
+
+
+
 
 ## December 2025
 {: #december-2025}
+
+### CLI v1.8.0
+{: #cli-v1.8.0}
 
 The CLI plug-in version v1.8.0 is available. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
@@ -59,6 +67,7 @@ The following enhancements are included in this release:
 {: #sep-2025}
 
 ### CLI v1.7.0
+{: #cli-v1.7.0}
 
 CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use the new guidelines for writing the descriptions.
 
