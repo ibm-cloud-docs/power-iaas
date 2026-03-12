@@ -2,17 +2,20 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-03-09"
+lastupdated: "2026-03-12"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes
+# {{site.data.keyword.powerSysFull}} CLI change log
 {: #cli-release-notes}
 
-Use these release notes to learn about the latest changes to the {{site.data.keyword.powerSysFull}} CLI plug-in.
-{: shortdesc}
+In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.powerSysFull}} CLI plug-in.
+
+
+
+
 
 
 
