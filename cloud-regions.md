@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-12"
 
 keywords: power systems, cloud regions
 
@@ -80,7 +80,7 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 | Location  | VPC region[^8] | {{site.data.keyword.powerSys_notm}} region | VPC zone                           | {{site.data.keyword.powerSys_notm}} zone | Classic infrastructure[^4] |
 | --------- | -------------- | ------------------------------------------ | ---------------------------------- | ---------------------------------------- | -------------------------- |
 | Chennai   | x              | in-che          | x                                  | che01 [^5]                               | che01                      |
-| Chennai   | in-che         | in-che \n in-che                           | in-che-2 \n in-che-3               | che02 \n che03                           | x                          |
+| Chennai   | in-che         | in-che                                     | in-che-1 \n in-che-2 \n in-che-3   | x \n che02 \n che03                      | x \n x \n x                |
 | Osaka     | jp-osa         | osa                                        | jp-osa-1  \n jp-osa-2  \n jp-osa-3 | osa21  \n x  \n x                        | osa21  \n osa22  \n osa23  |
 | Singapore | x              | x                                          | x                                  | x                                        | sng01                      |
 | Sydney    | au-syd         | syd                                        | au-syd-1  \n au-syd-2  \n au-syd-3 | x  \n syd04  \n syd05                    | syd01  \n syd04  \n syd05  |
