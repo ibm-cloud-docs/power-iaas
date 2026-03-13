@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2025
 
-lastupdated: "2026-02-02"
+lastupdated: "2026-03-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -58,6 +58,7 @@ The primary difference between the two is where the physical infrastructure resi
 [{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1122, IBM Power E1150, IBM Power E1180.
 
 For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+
 
 
 
@@ -275,6 +276,12 @@ The following list is an example of the FLS offerings:
 * Stock images: RHEL 8.4 (General), RHEL 8.6 (General), RHEL 9.4 (General)
 * Support: You pay IBM for support
 * Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
+
+
+
+
+
+
 
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
