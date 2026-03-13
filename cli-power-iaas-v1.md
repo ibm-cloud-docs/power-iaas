@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2026-02-23"
+  years: 2026
+lastupdated: "2026-03-13"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.8.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.9.0 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -19,6 +19,7 @@ lastupdated: "2026-02-23"
 ---
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}.
+
 
 
 ## `ibmcloud pi`
@@ -1165,7 +1166,8 @@ update INSTANCE_ID --code CODE
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
     [--boot-volume-replication-enabled=True|False]
     [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")] [--deployment-type DEPLOYMENT_TYPE]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
+    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
@@ -1185,6 +1187,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
 
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
+      --IBMiPHA-FSM-count int                           Number of IBMi PHA Full System Management (FSM) software licenses associated with the instance. Default is 0.
       --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
@@ -1223,10 +1226,10 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
                                                         Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
                                                         defaults to the storage tier and pool the image was created in.
       --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
   -t, --storage-tier string                             Storage tier for server deployment when deploying a stock or custom image
                                                         (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
@@ -1732,10 +1735,11 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
-    [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
-    [--processors NUMBER] [--profile-id SAP_PROFILE_ID] [--storage-pool-affinity=True|False]
-    [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
+    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
+    [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
+    [--processor-type TYPE] [--processors NUMBER] [--profile-id SAP_PROFILE_ID]
+    [--storage-pool-affinity=True|False] [--virtual-cores ASSIGNED_CORES]
+    [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1744,6 +1748,7 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
 
 ```bash
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
+      --IBMiPHA-FSM-count int                           New number of IBMi PHA Full System Management (FSM) software licenses associated with the instance.
       --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
   -m, --memory float                                    New amount of memory for the server instance.
@@ -1754,10 +1759,10 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
   -p, --processors float                                New amount of processors for the server instance.
       --profile-id string                               SAP profile ID.
   -s, --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
       --virtual-cores int                               New number of virtual cores assigned.
   -v, --virtual-optical-device string                   Attach or detach a virtual optical device to this instance. Valid values are: attach, detach.
@@ -3896,8 +3901,8 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" |
 **Available Options**:
 
 ```bash
-      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable".
-  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable".
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable" for private networks.
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable" for private networks.
   -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
   -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
                                161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for
@@ -4797,7 +4802,7 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Usage**:
 
 ```bash
-create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"
+create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]" [--target-crn SECONDARY_WORKSPACE_CRN]
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -4807,6 +4812,9 @@ create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSIST
 ```bash
   -c, --consistency-group-name string   Storage volume group name. This is required to onboard existing volume group on the target site for DR set up.
   -m, --member-volume-ids strings       Comma separated member volume identifiers.
+  -t, --target-crn string               Target CRN of the secondary workspace where the auxiliary data resides. If specified, the auxiliary volumes
+                                        for the primary volumes getting added to the new volume group will be automatically onboarded into the secondary
+                                        workspace and added to the corresponding auxiliary consistency group.
   -v, --volume-group-name string        Storage volume group name. This is required for the creation of new volume group.
 ```
 
@@ -4919,7 +4927,7 @@ storage-details VOLUME_GROUP_ID
 **Usage**:
 
 ```bash
-update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"]
+update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--target-crn SECONDARY_WORKSPACE_CRN]
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -4929,6 +4937,8 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 ```bash
   -a, --add-member-volume-ids strings      Comma separated volume identifiers to add as members of the volume group.
   -r, --remove-member-volume-ids strings   Comma separated volume identifiers to remove as members of the volume group.
+  -t, --target-crn string                  Target CRN of the secondary workspace where the auxiliary data resides. If specified, the primary
+                                           volume's corresponding auxiliary volume will be automatically added or removed from the auxiliary consistency group.
 ```
 
 ---
