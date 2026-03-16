@@ -69,7 +69,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     Repeat the preceding steps for each of the Direct Link connections. If you face any PER connectivity problem, you can revert to the Direct Link path. To revert, select **Permit all import routes** to unblock the Direct Link routes and disconnect the workspace from the Transit Gateway.
 
-6.	Upon successful testing, for example, through a ping test, [delete the Direct Link connections](https://cloud.ibm.com/docs/dl?topic=dl-delete-direct-link-gateway&interface=ui) and notify IBM by updating the ticket.
+6.	Upon successful testing, for example, through a ping test, [delete the Direct Link connections](https://cloud.ibm.com/docs/dl?topic=dl-delete-direct-link&interface=ui) and notify IBM by updating the ticket.
 7.	The {{site.data.keyword.powerSys_notm}} team marks the workspace as `Migrated` and closes the ticket.
 
 After the workspace is migrated to the PER network through the ticketing process, continue to refer to the support ticket for network configuration information (subnet create, delete, and update gateway). Before you delete your old migrated workspace, open a support ticket to remove the configuration of the backend devices. Then, you can delete the workspace.
