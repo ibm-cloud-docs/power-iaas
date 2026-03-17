@@ -78,7 +78,7 @@ Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud
 ```shell
 ibmcloud pi workspace list
 ibmcloud pi workspace target <<IBM_POWER_VS_WORKSPACE_CRN>>
-for i in $(ibmcloud pi instance list --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance console get "$i"; done
+for i in $(ibmcloud pi instance list --json | jq -r '.pvmInstances.[] | select(.operatingSystem.type=="ibmi").id'); do echo "" && ibmcloud pi instance console get "$i"; done
 ```
 
 ### Changing the DST password
