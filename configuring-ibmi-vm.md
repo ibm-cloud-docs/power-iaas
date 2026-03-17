@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026
 
-lastupdated: "2025-12-03"
+lastupdated: "2026-03-17"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring your IBM i virtual machine (VM)
+# Configuring your IBM i VSI
 {: #configuring-ibmi}
 
 ---
@@ -28,18 +28,18 @@ subcollection: power-iaas
 
 ---
 
-The following instructions describe the first boot and usage of your IBM i virtual machine (VM).
+The following instructions describe the first boot and usage of your IBM i-based virtual server instance (VSI).
 {: shortdesc}
 
-VMs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VM by default and can be configured to support up to 508 storage volumes per VM.
+VSIs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VSI by default and can be configured to support up to 508 storage volumes per VSI.
 {: note}
 
 ## First boot of IBM i
 {: #first-boot}
 
-When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VM deployment for the TCP configuration to finish.
+When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VSI deployment for the TCP configuration to finish.
 
-The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the Virtual Server Instance (VSI) console. For a refresh of VSI console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
+The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the VSI console. For a refresh of VSI console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
 For steps on changing the DST password, see [Changing the DST password](#first-boot-change-dst-password).
 {: note}
@@ -73,10 +73,12 @@ To restore the VSI console session, complete the following steps:
 
 Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VSI console session URL, such as using a shell command loop:
 
+
+
 ```shell
-ibmcloud pi service-list
-ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
-for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
+ibmcloud pi workspace list
+ibmcloud pi workspace target <<IBM_POWER_VS_WORKSPACE_CRN>>
+for i in $(ibmcloud pi instance list --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance console get "$i"; done
 ```
 
 ### Changing the DST password
