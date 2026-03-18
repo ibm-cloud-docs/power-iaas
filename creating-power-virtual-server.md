@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2026-03-17"
+lastupdated: "2026-03-18"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -138,7 +138,11 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
+    
+
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later. 
+
+    
 
     
 
