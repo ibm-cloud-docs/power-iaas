@@ -106,7 +106,7 @@ For more information about SAP certified profiles for SAP HANA, see [IBM Power V
 ## SAP profile attributes and performance metrics
 {: #sap-performance-metrics}
 
-The following table outlines the fields displayed for an SAP profile in the {{site.data.keyword.powerSys_notm}} user interface, along with their configuration details and associated performance indicators.
+The following table describes the fields displayed for an SAP profile in the {{site.data.keyword.powerSys_notm}} user interface, along with their configuration details and associated performance indicators.
 
 | Field   | Description                                                                                                                                                                                                                                                                             |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
