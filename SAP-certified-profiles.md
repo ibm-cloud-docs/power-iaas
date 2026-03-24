@@ -108,18 +108,17 @@ For more information about SAP certified profiles for SAP HANA, see [IBM Power V
 
 The following table describes the fields listed for an SAP profile on the Power Virtual Server user interface, including its configuration details and performance indicators:
 
-    | Field   | Description                                                                                                                                                                                                                                                                             |
-    | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | Profile | Profile identifier that represents the profile type, number of cores, and memory allocation                                                                                                                                                                                             |
-    | Cores   | Number of virtual CPU cores that are allocated to the profile                                                                                                                                                                                                                           |
-    | RAM     | Memory allocation for the profile in GiB (gibibytes)                                                                                                                                                                                                                                    |
-    | SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment. For more information about SAPS, see [SAP Application Performance Standard](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}. |
-    | aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                                                                                                                                                                        |
-    | Price   | Hourly cost that is associated with the profile                                                                                                                                                                                                                                         |
-    {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
+| Field   | Description                                                                                                                                                                                                                                                                             |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Profile | Profile identifier that represents the profile type, number of cores, and memory allocation.                                                                                                                                                                                             |
+| Cores   | Number of virtual CPU cores that are allocated to the profile.                                                                                                                                                                                                                           |
+| RAM     | Memory allocation for the profile in GiB (gibibytes).                                                                                                                                                                                                                                    |
+| SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment. For more information about SAPS, see [SAP Application Performance Standard](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}. |
+| aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                           |
+| Price   | Hourly cost that is associated with the profile.                                                                                                                                                                                                                                         |
+{: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
 
 [aSAP-measurement-25-march-end]{: tag-green}
-
 
 ## SAP Application Server profiles
 {: #sap-appser-profiles}
