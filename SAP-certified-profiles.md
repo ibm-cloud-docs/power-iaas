@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-03-24"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -69,13 +69,13 @@ SR3 SAP HANA profiles are SAP RISE profiles, which are available for IBM Power11
 
 The following SAP HANA profiles are available for IBM Power10 processor-based servers:
 
-| Profile | Profile type | Description                                                                                                                |
-| ------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| SR2     | SAP RISE       | SR2 profiles are SAP RISE profiles.          |
-| SH2     | Small          | Suitable for balanced workloads that require less CPU and storage consumption.                                           |
-| CH2     | Compute        | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers.  |
-| BH2     | Balanced       | Suitable for midsize databases and common cloud applications with moderate traffic.                                      |
-| MH2      | Very high memory            |  Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver.|
+| Profile                       | Profile type     | Description                                                                                                             |
+| ----------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| SR2                           | SAP RISE         | SR2 profiles are SAP RISE profiles.                                                                                     |
+| SH2                           | Small            | Suitable for balanced workloads that require less CPU and storage consumption.                                          |
+| CH2                           | Compute          | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers. |
+| BH2                           | Balanced         | Suitable for midsize databases and common cloud applications with moderate traffic.                                     |
+| MH2  | Very high memory | Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver.                               |
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
 SR2 profiles also support custom combination of physical CPU cores and memory. You must deploy custom SR2 profiles by using the CLI or API only. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware]( https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. SR2 profiles are not available with the E980 machine type.
@@ -86,19 +86,39 @@ SR2 profiles also support custom combination of physical CPU cores and memory. Y
 
 The following SAP HANA profiles are available for IBM Power9 processor-based servers:
 
-| Profile | Profile type | Description                                                                                                                                      |
-| ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Profile | Profile type | Description                                                                                                                                       |
+| ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CNP     | Custom       | Ideal for test or development use only. These profiles are not intended for production use and are not supported or certified for SAP production. |
-| USH1    | Small        | Suitable for balanced workloads that require less CPU and storage consumption.                                                                 |
+| USH1    | Small        | Suitable for balanced workloads that require less CPU and storage consumption.                                                                    |
 | UMH     | Ultra Memory | Provides the highest vCPU-to-memory ratios for serving in-memory OLTP databases, such as SAP HANA.                                                |
-| BH1     | Balanced     | Suitable for midsize databases and common cloud applications with moderate traffic.                                                            |
-| CH1     | Compute      | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers.                       |
+| BH1     | Balanced     | Suitable for midsize databases and common cloud applications with moderate traffic.                                                               |
+| CH1     | Compute      | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers.                           |
 {: caption="Power9 SAP HANA certified profiles " caption-side="bottom"}
 
 For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see [Pricing for Power Virtual Servers](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
 
 
 
+
+
+[aSAP-measurement-25-march-start]{: tag-green}
+
+## SAP profile attributes and performance metrics
+{: #sap-performance-metrics}
+
+The following table describes the fields listed for an SAP profile on the Power Virtual Server user interface, including its configuration details and performance indicators:
+
+    | Field   | Description                                                                                                                                                                                                                                                                             |
+    | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | Profile | Profile identifier that represents the profile type, number of cores, and memory allocation                                                                                                                                                                                             |
+    | Cores   | Number of virtual CPU cores that are allocated to the profile                                                                                                                                                                                                                           |
+    | RAM     | Memory allocation for the profile in GiB (gibibytes)                                                                                                                                                                                                                                    |
+    | SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment. For more information about SAPS, see [SAP Application Performance Standard](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}. |
+    | aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                                                                                                                                                                        |
+    | Price   | Hourly cost that is associated with the profile                                                                                                                                                                                                                                         |
+    {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
+
+[aSAP-measurement-25-march-end]{: tag-green}
 
 
 ## SAP Application Server profiles
