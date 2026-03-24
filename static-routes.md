@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  year: 2025
+  year: 2025, 2026 
 
-lastupdated: "2025-08-04"
+lastupdated: "2026-03-24"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
