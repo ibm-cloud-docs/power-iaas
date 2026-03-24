@@ -126,12 +126,9 @@ To copy and paste text from your workstation to the VSI console, complete the fo
 6. Paste the copied text into the VSI console by completing the following steps:
 
     1. Type or paste the copied text in the text field of the Clipboard panel. To paste, use the following key combination based on your operating system:
-    
        - Windows: Press `Ctrl+V`.
-       - Mac: Press `Command+V`.
+       - Mac: Press `Control+V`. 
        - Linux: Press `Ctrl+V`.
-    
-
 
     2. After the text appears in the Clipboard panel, click the **Clipboard** icon to return to the VSI console, or click directly inside the console window, which remains visible in the background. Then, press the same key combination to paste the text at the cursor in the console window.
 

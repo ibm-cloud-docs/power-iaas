@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2025, 2026 
 
-lastupdated: "2026-02-03"
+lastupdated: "2026-03-24"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -40,27 +40,28 @@ vPMEM is not supported on IBM i-based virtual server instances (VSIs).
 
 In the [IBM Cloud Resource List](https://cloud.ibm.com/resources){: external}, you can identify your vPMEM volume under **Compute** resources. If you add a vPMEM volume when you create a VSI and add user tags to the VSI, the tag is also added to the vPMEM volume. If you add a vPMEM volume to an existing VSI, you can add user tags only to the vPMEM volume.
 
-
-
-
 ## Before you begin
 {: #vpmem-byb}
 
 Before you create and add the vPMEM volumes to a VSI, review the following information:
 
-- When you add vPMEM volumes to a VSI with AIX or Linux OS, the vPMEM volumes use memory in addition to the base memory.
+- When you add vPMEM volumes to an AIX or Linux-based VSI, the vPMEM volumes use memory in addition to the base memory.
 
-- When you add a vPMEM volume to a VSI that is created by using an SAP certified profile, consider the following points:
-  - The selected SAP certified profile must support vPMEM volumes.
-  - VSI profile memory is the total memory that includes the vPMEM volume.
-  - You cannot resize VSI.
 
-To add a vPMEM volume to an existing VSI or to delete a vPMEM volume from the VSI, the VSI must be in the Shutoff state.
+
+- Review the following considerations before adding a vPMEM volume to an SAP-certified VSI in an IBM data center:
+  - The selected SAP-certified profile must support vPMEM volumes.
+  - The VSI profile memory is the total available memory and includes the vPMEM volume.
+  - You cannot resize the VSI after it is provisioned with an SAP‑certified profile.
+
+You can deploy VSIs by using SAP-certified profiles only in IBM data centers. SAP-certified profiles are not supported for VSIs that are deployed in {{site.data.keyword.on-prem-fname}} environments.
+{: note}
+
+
+
+
+To add a vPMEM volume to an existing VSI or to delete a vPMEM volume from the VSI, the VSI must be in the `Shutoff` state.
 {: important}
-
-
-
-
 
 
 ## Adding a vPMEM volume during VSI provisioning

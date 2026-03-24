@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2026
-lastupdated: "2026-03-20"
+  years: 2019, 2026 
+lastupdated: "2026-03-24"
 
 ---
 
@@ -21,7 +21,42 @@ In this change log, you can learn about the latest changes, improvements, and up
 
 
 
+## March 2026
+{: #march-2026}
 
+### CLI v1.9.0
+{: #cli-v1.9.0}
+
+The CLI plug-in version v1.9.0 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+**New commands**
+
+The following CLI command is added to the {{site.data.keyword.powerSys_notm}} Private Cloud workspaces:
+
+- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume): You can use this command to attach, detach, view, and list virtual persistent memory (vPMEM) volumes for a {{site.data.keyword.powerSys_notm}} instance.
+
+**New options**
+
+The following option is added to the existing CLI command:
+
+- `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-create) command for private workspaces. You can use this option to attach vPMEM volumes to a {{site.data.keyword.powerSys_notm}} instance. You can attach up to 1 vPMEM volume to an SAP instance and up to 4 PMEM volumes to other instances.
+
+**Other enhancements**
+
+The following enhancements are included in this release:
+
+- Added `Accelerated SAP Application Performance Standard (aSAPs)` field to the output of the [ibmcloud pi instance sap profile](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-profile) and [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) commands.
+
+- Added `External IP Address` field to the output of the [ibmcloud pi network-interface get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-get), [ibmcloud pi network-interface create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-create), and [ibmcloud pi network-interface update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-update) commands.
+
+- Added `Replication Target CRN` field to the output of the [ibmcloud pi volume-group get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-get) command.
+
+- Enhanced the output of the [ibmcloud pi instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance) commands to group fields more clearly and omit fields that are not returned in the command output.
+
+### CLI v1.8.1
+{: #cli-v1.8.1}
+
+The CLI plug-in version v1.8.1 is available. This version fixes an issue where the `--storage-pool-affinity` option in the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command did not apply correctly.
 
 ## December 2025
 {: #december-2025}

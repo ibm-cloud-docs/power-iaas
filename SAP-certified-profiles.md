@@ -101,12 +101,12 @@ For more information about SAP certified profiles for SAP HANA, see [IBM Power V
 
 
 
-[aSAP-measurement-25-march-start]{: tag-green}
+
 
 ## SAP profile attributes and performance metrics
 {: #sap-performance-metrics}
 
-The following table describes the fields displayed for an SAP profile in the {{site.data.keyword.powerSys_notm}} user interface, along with their configuration details and associated performance indicators.
+The following table describes the fields displayed for an SAP profile in the {{site.data.keyword.powerSys_notm}} user interface, along with their configuration details and associated performance indicators:
 
 | Field   | Description                                                                                                                                                                                                                                                                             |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -118,18 +118,16 @@ The following table describes the fields displayed for an SAP profile in the {{s
 | Price   | Hourly cost that is associated with the profile.                                                                                                                                                                                                                                         |
 {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
 
-[aSAP-measurement-25-march-end]{: tag-green}
+
 
 ## SAP Application Server profiles
 {: #sap-appser-profiles}
 
 
 
-When you use SAP Application Server profiles, you can deploy a certified profile for SAP Application Servers or SAP NetWeaver on {{site.data.keyword.powerSys_notm}}. The SAP Application Server profiles are available on IBM Power S1022 systems.
+When you use SAP Application Server profiles, you can deploy a certified profile for SAP Application Servers or SAP NetWeaver on {{site.data.keyword.powerSys_notm}}. The SAP Application Server profiles are available on IBM Power S1022 and S1122 systems.
 
-To deploy a certified profile for SAP Application Servers or SAP NetWeaver by using CLI, API, or Terraform interfaces, specify an sr2 profile ID that matches an SAP Application Server profile.
-
-
+To deploy a certified profile for SAP Application Servers or SAP NetWeaver by using CLI, API, or Terraform interfaces, specify an sr2 or sr3 profile ID that matches an SAP Application Server profile.
 
 
 

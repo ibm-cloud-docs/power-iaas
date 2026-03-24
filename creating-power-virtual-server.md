@@ -1,8 +1,8 @@
 ---
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026 
 
-lastupdated: "2026-03-18"
+lastupdated: "2026-03-24"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -138,13 +138,20 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
-    
 
-    To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later. 
+    To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
 
-    
 
-    
+
+    To deploy a VSI for SAP NetWeaver workloads without an SAP certified profile, complete the following steps:
+
+   1. In the Boot image section, select **Linux for SAP (NetWeaver)** from the **Operating system** list.
+   2. Select the appropriate SAP NetWeaver image from the **Image** list.
+   3. Select a storage tier from the **Tier** list.
+   4. Select a storage pool from the **Storage pool** field.
+   5. Click **Done editing** to continue to the Profile section.
+
+
 
 8. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
@@ -178,15 +185,9 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
 
-    
-
     The **SAP RISE deployment** option is enabled when you select **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list.
 
     
-
-    
-
-
 
 2. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
 

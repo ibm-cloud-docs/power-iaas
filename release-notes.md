@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2026
+  years: 2019, 2026 
 
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -21,7 +21,38 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## March 2026
+{: #March-2026}
+{: release-note}
 
+aSAPS metric available for SAP profiles
+:   Accelerated SAPS (aSAPS) is available as a performance measurement attribute for SAP profiles. aSAPS is an advanced SAP performance unit that represents system capacity based on the SAP quote‑to‑cash (Q2C) benchmark. For more information, see [SAP profile attributes and performance metrics](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles#sap-performance-metrics).
+
+Deploying VSIs for SAP NetWeaver without SAP-certified profiles
+:   You can deploy VSIs for SAP NetWeaver workloads without using an SAP‑certified profile. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance:~:text=without%20an%20SAP%20certified%20profile).
+
+SAP Application Server profiles available on IBM Power S1122
+:   SAP Application Server profiles are supported on the IBM Power S1122 system. For more information, see [SAP Application Server profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles#sap-appser-profiles).
+
+IBM Cloud support for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
+:   IBM provides advanced or premium IBM cloud support for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. For more information, see [Creating an estimate for Power Virtual Server resources in a client location](/docs/power-iaas?topic=power-iaas-creating-an-estimate-private).
+
+AIX, IBM i, and SLES stock images added to OS Image Catalog
+:   The following AIX, IBM i, and SLES stock images are available in the IBM OS Image Catalog:
+
+   - SLES 16 general purpose (SLES16)
+   - AIX 7.3 TL3 SP2
+   - IBM i 7.5 TR7
+   - IBM i 7.4 TR12 (refreshed)
+   - IBM i 7.3 TR13 (refreshed)
+   - IBM i COR (refreshed)
+
+End of Life reminder for IBM i 7.2, RHEL 9.4 general purpose, and RHEL 8.6 SAP OS images
+:   **End of Life Reminder:** The end of support date for the IBM i 7.2 operating system is 30 April 2026. Stock images for the IBM i 7.2 are scheduled to be removed from the {{site.data.keyword.powerSys_notm}} image library starting 1 May 2026. Existing virtual server instances (VSIs) that use these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the IBM i end of support guidelines, see [IBM i Release Life Cycle](https://www.ibm.com/support/pages/release-life-cycle). For more information about available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+{: important}
+
+:   **End of Life Reminder:** The Red Hat Enterprise Linux (RHEL) end of support date for the RHEL 9.4 general purpose and RHEL 8.6 SAP is 30 April 2026, and 31 May 2026 respectively. Stock images for these operating system versions are scheduled to be removed from the {{site.data.keyword.powerSys_notm}} image library starting 1 May 2026, and 1 June 2026 respectively. Existing virtual server instances (VSIs) that use these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+{: important}
 
 ## February 2026
 {: #Feb-2026}
