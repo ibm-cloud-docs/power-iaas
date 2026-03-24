@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2025, 2026
 
-lastupdated: "2026-03-02"
+lastupdated: "2026-03-24"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -56,33 +56,24 @@ To create an estimate for {{site.data.keyword.powerSys_notm}} infrastructure in 
     Machine types cannot be mixed within a rack, and all systems must have the same amount of memory.
     {: note}
 
+9. In the **Committed monthly spend** section, select the number of years from the **Contract commitment term** list. Choose **Advanced** or **Premium** IBM Cloud support.
 
-9. In the **Committed monthly spend** section, select the number of years from the **Contract commitment term** list. The **Committed monthly spend** value indicates the minimum monthly cost for your {{site.data.keyword.powerSys_notm}} pod.
+    The **Summary** panel displays the estimated costs for the contract commitment years based on your selection of IBM Cloud support.
 
-    A longer contract commitment term reduces the minimum committed spend value. You can contact IBM to learn more about the possible savings with the commitment plans. Metered cost is determined based on the consumption and it is charged only when the consumption rate is greater than the minimum committed spend value.
+    A longer contract commitment term reduces the minimum committed spend value. You can contact IBM to learn more about the possible savings with the commitment plans.
     {: note}
 
-10. In the **Metered consumption cost** section, click **Model consumption** to set the predicted consumption of the configured infrastructure resources that you plan to use during the contract commitment term. You can specify the predicted memory and core usage for each of the server types. You can also set the predicted storage capacity that you plan to use. After you set the predicted usage and reviewed the estimated metered cost, close the **Model metered consumption on configured infrastructure** window.
+10. In the Summary panel, review the estimated cost and click **Add to estimate**. The **Estimate** panel is displayed.
 
-    The **Summary** panel displays the estimated costs for the contract commitment years based on your selection of predicted infrastructure resource usage. Metered consumption cost is charged only when the actual metered cost exceeds the **Committed monthly spend** value.
+11. In the **Save Estimate** panel, select **Create New**.
 
-11. In the Summary panel, review the estimated cost and click **Add to estimate**. The **Estimate** panel is displayed.
+12. Enter a name for the estimate in the **Name** field.
 
-12. From the **Add product to estimate** list, select **Create new estimate**. The Create new estimate panel is displayed.
+13. Optional: Enter a description for the estimate in the **Description (optional)** field.
 
-13. Enter a name for the estimate in the **Name** field.
+14. Click **Save estimate**. You are redirected to the Estimate panel.
 
-14. Optional: Enter a description for the estimate in the **Description (optional)** field.
-
-15. Click **Create**. You are redirected to the Estimate panel.
-
-16. Click **Save**.
-
-17. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
-
-
-
-
+15. Click **View estimate** to open the estimate in a new tab. You can use the **Action** menu to export the estimate in XLSX, CSV, or PDF format.
 
 ## Contacting IBM to place an order for {{site.data.keyword.powerSys_notm}} Private Cloud in a {{site.data.keyword.on-prem-lc}}
 {: #contacting-ibm-private}
