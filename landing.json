@@ -53,28 +53,6 @@
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
-    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
-    "tiles": [
-      {
-        "date": "25 March 2026",
-        "title": "Accelerated SAPS (aSAPS) is available as a performance measurement attribute for SAP profiles. aSAPS is an advanced SAP performance unit that represents system capacity based on the SAP quote‑to‑cash (Q2C) benchmark."
-      },
-      {
-        "date": "25 March 2026",
-        "title": "You can deploy VSIs for SAP NetWeaver workloads without using an SAP‑certified profile."
-      },
-      {
-        "date": "25 March 2026",
-        "title": "SAP Application Server profiles are supported on the IBM Power S1122 system."
-      },
-      {
-        "date": "25 March 2026",
-        "title": "IBM provides advanced or premium IBM cloud support for IBM Power Virtual Server Private Cloud in Client location."
-      },
-      {
-        "date": "23 February 2026",
-        "title": "CHE02 and CHE03 are available as Power Virtual Server data centers in Chennai, India."
-      }
-    ]
+    "view_more": "/docs/power-iaas?topic=power-iaas-release-notes"
   }
 }
