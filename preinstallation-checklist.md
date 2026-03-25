@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2024-12-06"
+lastupdated: "2026-03-25"
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network validation, account activation
 
@@ -77,7 +77,7 @@ You must complete the following steps to validate the network functions and to a
 * The SRE team configures the network for network validation testing.
     The network validation testing ensures the functionality of the control plane network.
 * The SRE team conducts provisioning testing over the control plane by simulating a user request from the IBM Cloud.
-    To complete the remaining network connectivity after the installation of the pod, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
+    To complete the remaining network connectivity after the installation of the pod, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/account?topic=account-using-avatar){: external}.
 * After testing is complete, the SRE team activates the account specifying the period from when the billing starts.
 * The SRE team works with you to ensure the visibility of the pod Satellite location in your {{site.data.keyword.on-prem-fname}} account.
 * Perform a provisioning test by using the service broker. The provisioning test is successful if the following statements are true:

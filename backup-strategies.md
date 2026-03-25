@@ -1,9 +1,9 @@
 ﻿---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-03-25"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -139,9 +139,8 @@ To create and deploy a backup server instance from the IBM Cloud catalog, comple
 
 
 
-
-Do not to deploy any additional resources to the Backup Offering VPC.
-{: important}
+   Do not to deploy any additional resources to the Backup Offering VPC.
+   {: important}
 
 4. Define the fields – **Pricing plan**, **Service name**, **Resource group**, your **IBM Cloud API key**, and Compass organization name according to your business needs. Also, specify the VPC subnet IP range that you want to use to access the Compass Vaults.
 5. Click **Create**.
@@ -149,12 +148,12 @@ Do not to deploy any additional resources to the Backup Offering VPC.
 
     For more information, see [Ordering IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui) and [Using virtual private endpoints for VPC to privately connect to IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-vpe-connection&interface=cli).
 
-7. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass Commander page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: external}.
+7. Click **Launch Compass UI** that will redirect you to the Cobalt Iron Compass Commander page where you need to complete the setup. For more information, see [Cobalt Iron documentation](https://help.cobaltiron.com/?s=POWERVS){: external}.
 
 ### Pricing in {{site.data.keyword.off-prem}}
 {: #baas-pricing}
 
-When you use the Backup Offering, you are billed monthly through IBM Cloud for the amount of data that is backed up for the region. The backup data is the stored data after duplication and compression. For more information about pricing plans, see [Cobalt Iron - Secure Automated Backup](https://cloud.ibm.com/catalog/services/cobalt-iron---secure-automated-backup-){: external}. The page is accessible from the IBM Cloud [catalog](https://cloud.ibm.com/catalog){: external}. You can generate an estimate of the cost based on your expected usage from the **Summary** pane.
+When you use the Backup Offering, you are billed monthly through IBM Cloud for the amount of data that is backed up for the region. The backup data is the stored data after duplication and compression. For more information about pricing plans, see [Secure Automated Backup with Compass for Power VS](https://cloud.ibm.com/catalog/services/secure-automated-backup-with-compass-for-power-vs){: external}. The page is accessible from the IBM Cloud [catalog](https://cloud.ibm.com/catalog){: external}. You can generate an estimate of the cost based on your expected usage from the **Summary** pane.
 
 
 
@@ -206,7 +205,7 @@ The dual copy Backup Offering is available in the following data center pairs:
 
 To get the support for Backup Offering, contact Cobalt Iron. You must have the login credentials to Cobalt Iron to access the following pages:
 
-* For more information, see the [Cobalt Iron documentation](https://help.cobaltiron.com/getting-started-with-powervs-and-compass-commander/){: extrnal}.
+* For more information, see the [Cobalt Iron documentation](https://help.cobaltiron.com/?s=POWERVS/){: extrnal}.
 * For issues related to backup and restore, contact Cobalt Iron by opening a service ticket through `support.cobaltiron.com`.
 
 For more information about the issues that are related to {{site.data.keyword.powerSys_notm}} or IBM Cloud, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
