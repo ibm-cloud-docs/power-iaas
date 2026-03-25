@@ -16,6 +16,7 @@ toc:
       - topic: release-notes.md
         navtitle: Release notes
       - about-power-virtual-server.md
+      - operating-systems.md
       - integrating-watsonx.md
       - topicgroup:
           label: Architecture

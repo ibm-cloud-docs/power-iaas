@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2026-02-24"
+  years: 2024, 2026 
+lastupdated: "2026-03-25"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.8.0 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.9.0 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2026-02-24"
 
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
+
 
 
 ## `ibmcloud pi`
@@ -396,6 +397,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 - `update`:    Update a server instance.
 - `virtual-serial-number`:    IBM Cloud Power Virtual Server Instance Virtual Serial Number.
 - `volume`:    IBM Cloud Power Virtual Server Instance Volumes.
+- `vpmem-volume`:    IBM Cloud Power Virtual Server Instance vPMEM Volumes.
 
 ---
 
@@ -555,7 +557,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity=True|False] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
     [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
-    [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]]
+    [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]] [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
 
   INSTANCE_NAME: The name of the instance.
 ```
@@ -598,10 +600,10 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
                                                         Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
                                                         defaults to the storage tier and pool the image was created in.
       --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone, only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
   -t, --storage-tier string                             Storage tier for server deployment when deploying a stock or custom image
                                                         (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
@@ -615,6 +617,8 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
       --virtual-serial-number string                    IBMi virtual serial number information added with the instance.
                                                         Must include an existing virtual serial number or 'auto-assign' and optionally a description.
   -v, --volumes strings                                 Comma separated list of volume identifiers or names to associate with the instance.
+      --vpmem-volumes strings                           Comma separated list of vPMEM volume names and sizes to associate with the instance.
+                                                        The maximum number of vPMEM volumes for SAP instances is 1 otherwise it is 4.
 ```
 
 **Examples**:
@@ -1001,10 +1005,10 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
   -r, --processor-type string                           New processor type for the server instance.
   -p, --processors float                                New amount of processors for the server instance.
   -s, --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
       --virtual-cores int                               New number of virtual cores assigned.
   -v, --virtual-optical-device string                   Attach or detach a virtual optical device to this instance. Valid values are: attach, detach.
@@ -1250,6 +1254,112 @@ detach INSTANCE_ID --volume VOLUME_ID
 **Alias**: `list, ls`
 
 **Description**: List all the attached volumes.
+
+**Usage**:
+
+```bash
+list INSTANCE_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+---
+
+### `ibmcloud pi instance vpmem-volume`
+{: #ibmcloud-pi-instance-vpmem-volume}
+
+**Alias**: `vpmem-volume, vpmem, vpmemvol`
+
+**Description**: IBM Cloud Power Virtual Server Instance vPMEM Volumes.
+
+**Usage**: `vpmem-volume`
+
+**Available Commands**:
+
+- `attach`:    Attach a vPMEM volume to an instance.
+- `detach`:    Detach a vPMEM volume from an instance.
+- `get`:    Get a vPMEM volume attached to an instance.
+- `list`:    List all vPMEM volumes attached to an instance.
+
+---
+
+#### `ibmcloud pi instance vpmem-volume attach`
+{: #ibmcloud-pi-instance-vpmem-volume-attach}
+
+**Alias**: `attach, att`
+
+**Description**: Attach a vPMEM volume to an instance.
+
+**Usage**:
+
+```bash
+attach INSTANCE_ID --vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]" [--user-tags USER_TAG1[,USER_TAGn]]
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -u, --user-tags strings       User tags to add to the created vPMEM volume(s).
+      --vpmem-volumes strings   Comma separated list of vPMEM volume names and sizes to associate with the instance.
+                                The maximum number of vPMEM volumes for SAP instances is 1 otherwise it is 4.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume detach`
+{: #ibmcloud-pi-instance-vpmem-volume-detach}
+
+**Alias**: `detach, det`
+
+**Description**: Detach a vPMEM volume from an instance.
+
+**Usage**:
+
+```bash
+detach INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume get`
+{: #ibmcloud-pi-instance-vpmem-volume-get}
+
+**Alias**: `get`
+
+**Description**: Get a vPMEM volume attached to an instance.
+
+**Usage**:
+
+```bash
+get INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume list`
+{: #ibmcloud-pi-instance-vpmem-volume-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all vPMEM volumes attached to an instance.
 
 **Usage**:
 
@@ -2434,7 +2544,6 @@ update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
 
 ```bash
   -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-      --enable-dhcp           Indicates if the network will support DHCP or not.
   -g, --gateway string        Gateway to use for this subnet.
   -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
   -n, --name string           New name of the subnet.

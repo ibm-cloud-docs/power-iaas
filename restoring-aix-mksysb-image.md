@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-03-25"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -37,7 +37,7 @@ Ensure that you have experience in AIX administration and are familiar with depl
 
 - The AIX environment should be running an AIX version and technology level that is in standard support. For AIX levels that are under an extended support model, arrangements should be made to obtain an extended support agreement to cover the use of the AIX level in {{site.data.keyword.powerSys_notm}}.
 
-    Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [FAQ on OS versions that are supported](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for more details.
+    Consult the [General AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information) and [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) for more details.
 
     The AIX instance that is deployed in the {{site.data.keyword.powerSys_notm}} should be at the same AIX version as the source AIX instance. For example, if the source instance is at AIX 7.2, then the deployed {{site.data.keyword.powerSys_notm}} instance should also be a 7.2 based image.
 

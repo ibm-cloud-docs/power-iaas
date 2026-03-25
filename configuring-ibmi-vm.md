@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026 
 
-lastupdated: "2025-12-03"
+lastupdated: "2026-03-24"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring your IBM i virtual machine (VM)
+# Configuring your IBM i VSI
 {: #configuring-ibmi}
 
 ---
@@ -28,18 +28,18 @@ subcollection: power-iaas
 
 ---
 
-The following instructions describe the first boot and usage of your IBM i virtual machine (VM).
+The following instructions describe the first boot and usage of your IBM i-based virtual server instance (VSI).
 {: shortdesc}
 
-VMs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VM by default and can be configured to support up to 508 storage volumes per VM.
+VSIs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VSI by default and can be configured to support up to 508 storage volumes per VSI.
 {: note}
 
 ## First boot of IBM i
 {: #first-boot}
 
-When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VM deployment for the TCP configuration to finish.
+When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. This step needs to be completed within an hour of VSI deployment for the TCP configuration to finish.
 
-The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the Virtual Server Instance (VSI) console. For a refresh of VSI console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
+The IBM i standard user `QSECOFR` is set to the password `QSECOFR`, and must be changed to a password with 15 characters (no blank spaces) through the VSI console. For a refresh of VSI console usage with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
 For steps on changing the DST password, see [Changing the DST password](#first-boot-change-dst-password).
 {: note}
@@ -51,8 +51,8 @@ For steps on changing the DST password, see [Changing the DST password](#first-b
 
 To open the VSI console on the first boot, complete the following steps:
 
-1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
-2. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The Console Setting dialog is displayed.
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and select your IBM i-based VSI. The Virtual server instance details page is displayed.
+2. Click **VM actions** and select **Open console** from the drop-down list. The Console Setting dialog is displayed.
 3. Select **037 English** from the **Console language** drop-down list.
 4. Click **Open console**. The IBM i console opens in a new window. Ensure that your browser settings allow pop-up windows.
 
@@ -71,12 +71,14 @@ To restore the VSI console session, complete the following steps:
 1. Return to the IBM Power Virtual instance.
 2. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The session is restored and the 'Connected (encrypted)' message is displayed
 
-Alternatively, if you have many IBM i virtual machines you can use the IBM Cloud CLI to return the VSI console session URL, such as using a shell command loop:
+Alternatively, if you have multiple IBM i-based VSIs you can use the IBM Cloud CLI to return the VSI console session URL, such as using a shell command loop:
+
+
 
 ```shell
-ibmcloud pi service-list
-ibmcloud pi service-target <<IBM_POWER_VS_WORKSPACE_CRN>>
-for i in $(ibmcloud pi instances --json | jq -r '.pvmInstances.[] | select(.osType=="ibmi").serverName'); do echo "" && ibmcloud pi instance-get-console "$i"; done
+ibmcloud pi workspace list
+ibmcloud pi workspace target <<IBM_POWER_VS_WORKSPACE_CRN>>
+for i in $(ibmcloud pi instance list --json | jq -r '.pvmInstances.[] | select(.operatingSystem.type=="ibmi").id'); do echo "" && ibmcloud pi instance console get "$i"; done
 ```
 
 ### Changing the DST password
@@ -87,7 +89,7 @@ When the VSI console loads and the IBM i console screen is shown (IBM i 7.5 or l
 Releases before IBM i 7.5 is presented on the System Sign-on screen first, where the `QSECOFR` password needs to be reset.
 {: note}
 
-1. In the VSI console window, the IBM i virtual machine waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
+1. In the VSI console window, the IBM i VSI waits on **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` followed by clicking **PF5** at the end of the console window to open the change password screen for the IBM i standard user.
 2. The **Change Service Tools User Password** screen loads, and the cursor is on `Current password . . . .`, enter `QSECOFR`.
 3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
 4. Repeat the step on the `New password (to verify) . . . .` field and enter the new password again.
@@ -97,7 +99,7 @@ Releases before IBM i 7.5 is presented on the System Sign-on screen first, where
 Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
 {: note}
 
-The IBM i virtual machine is now ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
+The IBM i VSI is now ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
 
 The default is to select Option 1 'Perform an IPL'.
 
@@ -166,7 +168,7 @@ F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
 F12=Cancel    F17=Top         F18=Bottom
 ```
 
-For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VM if the ping doesn't return anything.
+For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VSI if the ping doesn't return anything.
 
 
 Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values should be populated for each license.
@@ -177,7 +179,7 @@ If license keys for the operating system or any IBM i licensed program Products 
 
 If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
 
-The IBM i virtual machine might result in a timeout error, if you update the IBM i virtual machine license and memory together.
+The IBM i VSI might result in a timeout error, if you update the IBM i VSI license and memory together.
 {: note}
 
 
@@ -192,7 +194,7 @@ For more information on user ID types, see [Managing service tools user IDs](htt
 
 To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords, complete the following steps:
 
-1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VSI. The Virtual server instance details page is displayed.
 2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog is displayed.
 3. Select **(21) Active dedicated service tools** option from the list displayed on the **Control Panel funstions** tab.
 4. Click **Run action**.
@@ -201,15 +203,15 @@ To change the System Service Tools (SST) and Dedicated Service Tools (DST) passw
 For more information on user ID types, see [Managing service tools user IDs](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzamh/rzamhmanageuserids.htm){: external}.
 {: note}
 
-## Managing the IBM i VM instance
+## Managing the IBM i VSI instance
 {: #manage-IBMi-VM}
 
-You can use the **IBM i operations** option to manage advanced VM operations and configuration. To run the control panel functions or boot operations, complete the following steps:
+You can use the **IBM i operations** option to manage advanced VSI operations and configuration. To run the control panel functions or boot operations, complete the following steps:
 
-1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VM instance. The Virtual server instance details page is displayed.
+1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VSI. The Virtual server instance details page is displayed.
 2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog is displayed.
 
-The **IBM i operations** option is available only for the IBM i VM instances.
+The **IBM i operations** option is available only for the IBM i VSIs.
 {: note}
 
 3. In the IBM i operations dialog, select one of the following actions listed on the **Control panel functions** as per your requirements:
@@ -253,14 +255,15 @@ The **IBM i operations** option is available only for the IBM i VM instances.
 ## IBM i language support
 {: #ibmi-language-support}
 
-The VSI console of an IBM i virtual machine supports English language by default and provides the following additional language support:
+The VSI console of an IBM i VSI supports English language by default and provides the following additional language support:
 
-- IBM i stock OS images support English (2924) or English DBCS (2984). You can install additional secondary languages and  change the primary language on an IBM i virtual machine.
+- IBM i stock OS images support English (2924) or English DBCS (2984). You can install additional secondary languages and  change the primary language on an IBM i VSI.
 
 - The VSI console also supports Japanese if it is installed as a primary or secondary language.
 
-  If you select Japanese as the language in the Console Setting dialog before you start the IBM i VSI console, the system does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that you must perform on an IBM i virtual machine.
-  {: note}
+    If you select Japanese as the language in the Console Setting dialog before you start the IBM i VSI console, the system does not install the Japanese language. Installing Japanese as a primary or secondary language is a separate task that you must perform on an IBM i VSI.
+    {: note}
+
 
 
 
@@ -268,7 +271,7 @@ The VSI console of an IBM i virtual machine supports English language by default
 
 
 
-- The COR stock OS image can be used to deploy a second IBM i virtual machine. The second IBM i virtual machine that is deployed contains the language media that can be used to install primary and secondary languages on other IBM i virtual machines.
+- The COR stock OS image can be used to deploy a second IBM i VSI. The second IBM i VSI that is deployed contains the language media that can be used to install primary and secondary languages on other IBM i VSI.
 
 For more information about IBM i network and software installation, see:
 

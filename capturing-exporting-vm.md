@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2026 
 
-lastupdated: "2025-10-24"
+lastupdated: "2026-03-25"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -115,7 +115,7 @@ Complete the following steps to capture and export a virtual server instance:
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
 
-To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} CLI Reference](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) and [IBM COS CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+To learn more about using the command-line interface to capture and export a VM, see [{{site.data.keyword.powerSysFull}} CLI Reference](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) and [IBM COS CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli){: external}.
 
 1. To capture a VM, use the `ibmcloud pi instance-capture` command. You can export it to your image catalog, Cloud Object Storage, or both.
 

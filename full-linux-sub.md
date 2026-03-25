@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2026-01-21"
+lastupdated: "2026-03-25"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -34,7 +34,7 @@ The full Linux subscription uses activation keys to provide access to interim fi
 
 To register for the full Linux subscription, you must select one of the stock OS images that are provided by IBM. IBM currently provides RHEL and SLES stock OS images for non-SAP applications.
 
-To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+To know more about the SLES versions that are supported, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 

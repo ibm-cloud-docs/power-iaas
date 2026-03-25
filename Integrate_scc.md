@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  year: 2025
+  year: 2025, 2026 
 
-lastupdated: "2025-07-14"
+lastupdated: "2026-03-25" 
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -76,7 +76,7 @@ To enable CSPM in a new Power Virtual Server workspace, complete the following s
 9. Click **Finish**. The selected workspace details are displayed on the Summary page.
 10. Select the **I agree to the Terms and conditions** checkbox and click **Create**.
 
-Integration costs are based on usage and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection) in **IBM Cloud catalog**.
+Integration costs are based on usage and vary based on the hourly consumption for nodes and virtual machines. You can review the estimated cost on the Summary page. To review the cost associated with CSPM, see [Security and Compliance Center Workload Protection](https://cloud.ibm.com/workload-protection/catalog/security-and-compliance-center-workload-protection){: external} in **IBM Cloud catalog**.
 {: important}
 
 ### Enabling CSPM in an existing workspace

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  year: 2025
+  year: 2025, 2026 
 
-lastupdated: "2026-01-28"
+lastupdated: "2026-03-25"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -117,18 +117,18 @@ To copy and paste text from your workstation to the VSI console, complete the fo
     - Mac: Press `Command+C`.
     - Linux: Press `Ctrl+C`.
 
-2. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
+3. From the Virtual server instance details page, click the overflow menu (icon with 3 vertical dots) and select **Open Console**. The VSI console window is displayed.
 
-3. Click the **Show/hide the control bar** icon, which is located on the left side of the VSI console window.
+4. Click the **Show/hide the control bar** icon, which is located on the left side of the VSI console window.
 
-4. Click the **Clipboard** icon. The Clipboard panel is displayed.
+5. Click the **Clipboard** icon. The Clipboard panel is displayed.
 
-5. Paste the copied text into the VSI console by completing the following steps:
+6. Paste the copied text into the VSI console by completing the following steps:
 
     1. Type or paste the copied text in the text field of the Clipboard panel. To paste, use the following key combination based on your operating system:
-      - Windows: Press `Ctrl+V`.
-      - Mac: Press `Command+V`.
-      - Linux: Press `Ctrl+V`.
+       - Windows: Press `Ctrl+V`.
+       - Mac: Press `Control+V`. 
+       - Linux: Press `Ctrl+V`.
 
     2. After the text appears in the Clipboard panel, click the **Clipboard** icon to return to the VSI console, or click directly inside the console window, which remains visible in the background. Then, press the same key combination to paste the text at the cursor in the console window.
 
@@ -180,4 +180,4 @@ To use the VSI console, consider the following factors:
 
 - If multiple users connect to the same IBM i-based {{site.data.keyword.powerSys_notm}} instance and one of the users changes the console language and opens the VSI console, the console that is in use by the other users is terminated and requires the console to be reopened.
 
-For more information about how to use the VSI console with IBM i, see [Tips for working with the IBM i console](/docs/en/power-virtual-server?topic=i-configuring-your-virtual-machine-vm#tips-ibmi).
+For more information about how to use the VSI console with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).

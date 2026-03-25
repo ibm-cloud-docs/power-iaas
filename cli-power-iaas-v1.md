@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2026-02-23"
+  years: 2026, 2026 
+lastupdated: "2026-03-25"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.8.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.9.0 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -1223,10 +1223,10 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
                                                         Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
                                                         defaults to the storage tier and pool the image was created in.
       --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
   -t, --storage-tier string                             Storage tier for server deployment when deploying a stock or custom image
                                                         (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
@@ -1754,10 +1754,10 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
   -p, --processors float                                New amount of processors for the server instance.
       --profile-id string                               SAP profile ID.
   -s, --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
-                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance;
-                                                        This impacts PVM instance snapshot, capture, and clone. For capture and clone only data volumes that are of
-                                                        the same storage tier and in the same storage pool of the PVM instance's boot volume can be included.
-                                                        For snapshot all data volumes to be included in the snapshot must reside in the same storage tier and pool.
+                                                        If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
+                                                        This setting affects PVM instance snapshot, capture, and clone operations. For capture and clone operations,
+                                                        only data volumes that are of the same storage tier and in the same storage pool of the boot volume of the PVM instance can be included.
+                                                        For snapshot operations, all data volumes to be included in the snapshot must reside in the same storage tier and storage pool.
                                                         Once set to false, cannot be set back to true unless all volumes attached reside in the same storage tier and pool.
       --virtual-cores int                               New number of virtual cores assigned.
   -v, --virtual-optical-device string                   Attach or detach a virtual optical device to this instance. Valid values are: attach, detach.
@@ -3896,8 +3896,8 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" |
 **Available Options**:
 
 ```bash
-      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable".
-  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable".
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable" for private networks.
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable" for private networks.
   -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
   -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
                                161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for

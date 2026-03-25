@@ -1,9 +1,8 @@
----
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2026-01-21"
+lastupdated: "2026-03-25"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -445,7 +444,11 @@ Total billable storage = 595 GB
 
 * Deployed virtual machine boot volumes: 200 GB
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see the following links:
+
+* [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
+
+* [Creating an estimate for Power Virtual Server resources in a client location](/docs/power-iaas?topic=power-iaas-creating-an-estimate-private).
 {: important}
 
 
@@ -467,10 +470,14 @@ Review the following frequently asked questions about pricing:
 ### Where do I find cost estimates for {{site.data.keyword.powerSys_notm}} offerings?
 {: #cost-estimates}
 
-   You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+   You can generate an estimated price by using the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see the following links:
+
+* [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
+
+* [Creating an estimate for Power Virtual Server resources in a client location](/docs/power-iaas?topic=power-iaas-creating-an-estimate-private).
 
 
-   By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost){: external}.
+   By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/account?topic=account-cost){: external}.
 
 
 

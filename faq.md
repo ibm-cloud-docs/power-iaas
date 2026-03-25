@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2026 
 
-lastupdated: "2026-02-02"
+lastupdated: "2026-03-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -60,59 +60,24 @@ The primary difference between the two is where the physical infrastructure resi
 For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
-
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
 {: #os-versions}
 {: faq}
 {: support}
 
-The supported versions of AIX, IBM i, and Linux&reg; operating systems depend on the IBM Power hardware.
-
-
-### AIX
-{: #aix-os-version}
-{: faq}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-The IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} supports the following versions of the AIX operating system:
-
-* S922 - AIX 7.1 or later
-* E980 - AIX 7.1 or later
-* S1022 - AIX 7.1 Technology Level (TL) 5 or later
-* S1122 - AIX 7.2 TL5 SP10 and 7.3 TL3 SP1 or later
-
-The following stock images are available when you create a virtual machine:
-
-
-
-
-
-- AIX 7.3 TL4 SP0
-- AIX 7.3 TL3 SP1
-- AIX 7.2 TL5 SP10
-- AIX 7.2 TL5 SP11
-- AIX 7.1 TL5 SP9[^1]
+For details about supported AIX, IBM i, and Linux operating systems on {{site.data.keyword.powerSys_notm}}, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 
 
 
 
-[{{site.data.keyword.on-prem}}]{: tag-red}
-
-The {{site.data.keyword.on-prem-fname}} supports the following versions of the AIX operating system:
-
-- S1122 - AIX 7.2 TL5 SP9 or later
-- S1150 - AIX 7.2 TL5 SP9 or later
-- E1180 - AIX 7.2 TL5 SP9 or later
-
-The following stock images are available when you create a virtual machine:
 
 
 
 
-- AIX 7.3 TL4 SP0
+
+<!--- AIX 7.3 TL4 SP0
 * AIX 7.3 TL3 SP0
 - AIX 7.2 TL5 SP11
 * AIX 7.2 TL5 SP9
@@ -126,163 +91,46 @@ The following stock images are available when you create a virtual machine:
 
 
 
-To view the system software maps, refer to the AIX 7.1, AIX 7.2, and AIX 7.3 information. If you use an unsupported version, it is subject to outages during planned maintenance windows with no advanced notification given.
 
-For more information about which versions of AIX are compatible with various Power Systems, see the [System to AIX maps](https://www.ibm.com/support/pages/node/6020074){: external}.
 
 
-For more information about end of service pack support (EoSPS) dates, see [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
-### IBM i
-{: #ibm-os-versions}
-{: faq}
 
-{{site.data.keyword.powerSys_notm}} supports IBM i 7.2, or later.
-The {{site.data.keyword.on-prem-fname}} supports IBM i 7.3, or later.
 
-If you are using IBM i 6.1, you must first upgrade the OS to a current support level, then migrate to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
 
-- [S922 (9009-22A), E980 (9080-M9S), S1022 (9105-22A), S1122 (9824-22A), and E1180 (9080-HEU) software maps](https://www-01.ibm.com/support/docview.wss?uid=ssm1platformibmi){: external}
-- [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels)
-- [IBM i release life cycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-IBM i stock images currently available when you create a VM are:
 
 
 
 
 
+<!--[^6]: Not supported on {{site.data.keyword.on-prem}}.
 
 
 
-* IBM i COR[^2][^3]
-* IBM i 7.6
-* IBM i 7.5 TR6
-* IBM i 7.4 TR12
-* IBM i 7.3 TR13[^5]
-* IBM i 7.2 TR9[^5A][^6]
 
 
 
 
-[^2]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-[^3]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 
-[^5]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
-[^5A]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
 
-The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on Power10 and later systems. However, you can create a custom image or upgrade your IBM i virtual server instance (VSI) by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and by navigating to **My entitled software** > **IBM i Evaluation and NLV Download** section.
-{: note}
 
 
 
 
 
 
-[^6]: Not supported on {{site.data.keyword.on-prem}}.
 
 
-
-
-### Linux
-{: #linux-os-versions}
-{: faq}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-{{site.data.keyword.powerSys_notm}} supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise (SLES) distributions. Linux stock images are available when you select Full Linux Subscription or bring your own license. For more information, see [Full Linux® subscription for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-set-full-Linux).
-
-The following list of Linux stock images are available:
-
-Red Hat
-
-* RHEL 9.6 general purpose (RHEL9-SP6) [^footnote11]
-* RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA)
-* RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER)
-* RHEL 9.4 general purpose (RHEL9-SP4) [^footnote5]
-* RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA)
-* RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER)
-* RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP)
-* RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER)
-* RHEL 8.10 general purpose (RHEL8-SP10)  [^footnote6]
-* RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA)
-* RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)
-* RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP)
-* RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)
-* RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP)
-* RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER)
-
-
-
-
-
-
-SUSE [^footnote8]
-
-* SLES 15 SP7 general purpose (SLES15)  [^footnote12]
-* SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP)
-* SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER)
-* SLES 15 SP6 general purpose (SLES15)  [^footnote7]
-* SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) [^footnote9]
-* SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) [^footnote10]
-* SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP)
-* SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER)
-* SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP)
-* SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER)
-* SLES 15 SP3 for SAP HANA (SLES15-SP3-SAP)
-* SLES 15 SP3 for SAP NetWeaver (SLES15-SP3-SAP-NETWEAVER)
-
-
-
-
-[^footnote5]: RHEL 9.4 GP is supported on IBM Power9, Power10 and Power11 systems.
-[^footnote6]: RHEL 8.10 GP is supported on IBM Power9, Power10 and Power11 systems.
-[^footnote11]: RHEL 9.6 GP is supported on IBM Power9, Power10 and Power11 systems.
-
-[^footnote7]: SLES 15 SP6 GP is supported on IBM Power9, Power10 and Power11 systems.
-[^footnote12]: SLES 15 SP7 GP is supported on IBM Power9, Power10 and Power11 systems.
-[^footnote9]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote10]: Install the [insserv package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite.
-[^footnote8]: SLES images are not currently supported on {{site.data.keyword.on-prem}}.
-
-
-
-The S1022 systems support RHEL 8.4 (and later) and SLES 15 SP3 (and later) versions.
-{: note}
-
-To use your own license, select the OS image that with `-BYOL` suffix. On the **Create virtual server instance** page, these images are listed under the **Client supplied subscription** section. Alternatively, you can create your own customized Linux image in OVA format by using the Linux stock images that are available when you select Full Linux Subscription. For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
-
-To view the certification details in the Red Hat catalog, see [IBM Power System E980 (9080-M9S)](https://catalog.redhat.com/hardware/servers/detail/17035){: external} and [IBM Power System S922 (9009-22A)](https://catalog.redhat.com/hardware/servers/detail/9225){: external}. For additional support, refer to the distribution (distro). For instructions, see [Installing and configuring cloud-init on Linux](https://www.ibm.com/support/knowledgecenter/en/SSXK2N_1.4.4/com.ibm.powervc.standard.help.doc/powervc_install_cloudinit_hmc.html){: external}.
-
-
-[{{site.data.keyword.on-prem}}]{: tag-red}
-
-The {{site.data.keyword.on-prem-fname}} supports Red Hat Enterprise Linux (RHEL) with RHEL stock images that includes support from IBM and access to RHEL bug fixes from Satellite servers hosted on IBM Cloud. This capability is referred to as the Full Linux Subscription (FLS) model, which is different from the bring your own license or custom Linux image model. For more information, see [Full Linux subscription for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
-{: #FLS}
-
-
-FLS provides access to RHEL OS fixes and updates through activation keys for Power servers, which are hosted on an IBM satellite server within the IBM Cloud environment. To register for FLS, select one of the stock (RHEL OS) images that are provided by the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
-
-The following list is an example of the FLS offerings:
-
-
-
-
-
-* Stock images: RHEL 8.4 (General), RHEL 8.6 (General), RHEL 9.4 (General)
-* Support: You pay IBM for support
-* Patches: You receive keys for satellite servers to obtain Linux patches from Linux distribution (Linux distros)
 
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
 {: faq}
 
 To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for {{site.data.keyword.on-prem-fname}}, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
-
-
 
 ## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional compute nodes?
 {: #expand-pods}
@@ -500,7 +348,7 @@ You can use the movable IBM i (IBM i MOL) to move your existing on premises enti
 
 {{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-For more information about supported versions of OS, see [What versions of AIX, IBM i, and Linux&reg; are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+For more information about supported versions of OS, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 ## How does third-party licensing work?
 {: #third-party}

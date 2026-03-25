@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-30"
+  years: 2025, 2026 
+lastupdated: "2026-03-25" 
 
 keywords: virtual server instances (VSI), vm, power, compute, virtual machines, planning, best practices, instances, virtual machines (VM), virtual machine (VM) instance, Power virtual machine (VM) , maintenance, IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power S1122, S922, E980, S1022, S1122, PowerVS, Power virtual server
 
