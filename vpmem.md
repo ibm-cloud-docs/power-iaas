@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -22,12 +22,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-[vPMEM-Private-Enablement-start]{: tag-purple}
-
 {{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
-
-[vPMEM-Private-Enablement-end]{: tag-purple}
-
 
 ---
 

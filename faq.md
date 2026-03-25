@@ -40,12 +40,9 @@ subcollection: power-iaas
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your {{site.data.keyword.on-prem}} infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 
-
 ## What is the difference between the {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}?
 {: #private-cloud-on-cloud-diff}
 {: faq}
-
-
 
 The primary difference between the two is where the physical infrastructure resides. The {{site.data.keyword.on-prem}} infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
@@ -66,65 +63,6 @@ For complete specifications, see [Hardware specifications for {{site.data.keywor
 {: support}
 
 For details about supported AIX, IBM i, and Linux operating systems on {{site.data.keyword.powerSys_notm}}, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
-
-
-
-
-
-
-
-
-
-
-
-<!--- AIX 7.3 TL4 SP0
-* AIX 7.3 TL3 SP0
-- AIX 7.2 TL5 SP11
-* AIX 7.2 TL5 SP9
-* AIX 7.1 TL5 SP9[^1A]
-
-
-[^1]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
-
-[^1A]: AIX 7.1 on Power Virtual Server ended normal support on 30 April 2023 and is supported via service extension only. Please refer to the [AIX support lifecycle](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external} upcoming EoL dates and prepare to upgrade to a later version.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--[^6]: Not supported on {{site.data.keyword.on-prem}}.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
 {: #estimate}
@@ -150,19 +88,11 @@ Yes, you can expand the pod with additional storage capacity. But you cannot add
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
 
-
-
 ## Where can I find the logs for the pod software or operator access logs?
 {: #pod-logs}
 {: faq}
 
-
-
-
 As a security officer, auditor, or manager, you can use the IBM Cloud Logs service to manage general purpose application logs, platform logs, or structured audit events. IBM Cloud Logs can be used with logs from both IBM Cloud services and customer applications. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started){: external}
-
-
-
 
 ## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
 {: #pod-disconnect-unplanned-nw-mcp}
@@ -173,8 +103,6 @@ If an unplanned network outage occurs for the management network that is connect
 See Table 1 for the implications of a pod that is running in a disconnected mode due to an unplanned network outage. Also, the primary and secondary management connections (Direct Link or site-to-site VPN) to the IBM Cloud are lost.
 
 {{_include-segments/network-outage-impact-table.md}}
-
-
 
 
 
