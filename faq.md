@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -348,7 +348,7 @@ You can use the movable IBM i (IBM i MOL) to move your existing on premises enti
 
 {{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-For more information about supported versions of OS, see [What versions of AIX, IBM i, and Linux&reg; are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+For more information about supported versions of OS, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 ## How does third-party licensing work?
 {: #third-party}

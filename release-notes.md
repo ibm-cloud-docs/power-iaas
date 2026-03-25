@@ -150,7 +150,7 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 
 
-- Starting on 25 July 2025, you can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [supported operating system levels](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) for Power11.
+- Starting on 25 July 2025, you can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) for more details.
 
 
 
@@ -314,7 +314,7 @@ The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general pur
 {: release-note}
 
 
-- New AIX 7.3 TL3 SP0 and 7.2 TL5 SP9, IBM i 7.4 TR11 and 7.5 TR5, SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) and SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New AIX 7.3 TL3 SP0 and 7.2 TL5 SP9, IBM i 7.4 TR11 and 7.5 TR5, SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) and SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -417,7 +417,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
  For more information about your data center capabilities, see {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview) page in the IBM Cloud console.
 
-- New RHEL 8.10 general purpose (RHEL8-SP10), RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA), RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER), RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA), RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER), SLES 15 SP6 general purpose (SLES15), and AIX 7.3 TL2 SP2 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New RHEL 8.10 general purpose (RHEL8-SP10), RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA), RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER), RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA), RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER), SLES 15 SP6 general purpose (SLES15), and AIX 7.3 TL2 SP2 operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 - Starting `February 24, 2025`, the {{site.data.keyword.powerSys_notm}} dedicated host identifier will use the virtual host ID format. The virtual host ID has the standard format that is used to uniquely identify other {{site.data.keyword.powerSys_notm}} resources. If you are using dedicated hosts and depend on specific resource identifiers such as API and CLI calls, you must update the logic to use the virtual host ID format; otherwise, the logic might fail. For more information, see [Understanding a Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID).
 
@@ -427,7 +427,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 - You can now enable Global Replication Services (GRS) for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
 - You can now access external connectivity to and from the virtual machines in a subnet. For more information, see [Use case 2: Multiple external connectivities](/docs/power-iaas?topic=power-iaas-network_use_cases#static-l3).
 - You can now discover infrastructure capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}}    [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#dc-capabilities).
-- The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 ## October 2024
@@ -450,7 +450,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
 
 
-The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions). For new deployments, you must use the latest stock image in the catalog. Existing VSIs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VSI to the latest service pack level for the most recent maintenance.
+The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs). For new deployments, you must use the latest stock image in the catalog. Existing VSIs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VSI to the latest service pack level for the most recent maintenance.
 {: note}
 
 ## September 2024
@@ -464,9 +464,9 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - [{{site.data.keyword.on-prem}}]{: tag-red}You can now validate the import file against the SHA-256 checksum file from the user interface. For more information, see [Using the Power Virtual Server user interface to import a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#console-import-image) and [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
 - You can now download, Secure Automated Backup with Compass by Cobalt Iron, from [IBM Cloud Catalog](https://cloud.ibm.com/catalog){: external} for immediate deployment. The solution provides the environment for Cloud backup and recovery for IBM {{site.data.keyword.powerSys_notm}} workloads. The offering is the only automated BaaS and recovery solution for IBM {{site.data.keyword.powerSys_notm}} workloads that are powered by IBM Storage Protect, such as SAP HANA, Oracle, Db2 on AIX and Linux. For more information, see [Cobalt Iron Expands Access to Secure Automated Backup With Compass for IBM Power Virtual Server](https://info.cobaltiron.com/news/cobalt-iron-ibm-vs-baas-global-expansion){: external}.
 
-- [{{site.data.keyword.off-prem}}]{: tag-blue} new AIX 7.2 TL5 SP8 and RHEL 9.4 general purpose (RHEL9-SP4) operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
-- [{{site.data.keyword.on-prem}}]{: tag-red} new AIX 7.3 TL2 SP1 and AIX 7.2 TL5 SP8 operating system images are available. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
-- New IBM i 7.5 TR4 and IBM i 7.4 TR10 operating system images are available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. For more information, see the [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- [{{site.data.keyword.off-prem}}]{: tag-blue} new AIX 7.2 TL5 SP8 and RHEL 9.4 general purpose (RHEL9-SP4) operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+- [{{site.data.keyword.on-prem}}]{: tag-red} new AIX 7.3 TL2 SP1 and AIX 7.2 TL5 SP8 operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+- New IBM i 7.5 TR4 and IBM i 7.4 TR10 operating system images are available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - New `IBM i COR` stock image is available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. While you are installing the image, if you encounter any issues, you can refer to the [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external} procedure. For more information, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#ibm-os-versions).
 
 **End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
@@ -536,7 +536,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 {: #apr-2024}
 
 - Power Edge Router (PER) is now available in the `LON06` and `SYD04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
-- {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 general purpose, RHEL 9.2 for SAP, RHEL8.8 general purpose, and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [FAQ documentation for supported OS versions](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- {{site.data.keyword.powerSys_notm}} now offers refreshed images for RHEL 9.2 general purpose, RHEL 9.2 for SAP, RHEL8.8 general purpose, and RHEL 8.8 for SAP. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}} and [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - AIX 7.1 will continue to be charged at standard usage rates until further notice [^2]. For additional information on AIX lifecycle and service extensions, refer to [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 - {{site.data.keyword.powerSys_notm}} on IBM Cloud is now HIPAA-ready. See the [Compliance certifications](/docs/power-iaas?topic=power-iaas-compliances-list#HIPAA-cert) for more details.
 
@@ -548,8 +548,8 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 {: #mar-2024}
 
 - Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
-- New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
-- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, see the [FAQ documentation](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+- New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+- New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - A new data center `CHE01` is available. The following are some capabilities that differ for this data center:
     - `CHE01` supports up to 5 GB Direct Link connections compared to other data centers that supports up to 10 GB.
     - To use Transit Gateway, you need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
@@ -608,7 +608,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
   - **Flexible IOPS**
     {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
-  - New RHEL versions are available. See the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions) page for details on the latest version.
+  - New RHEL versions are available. See [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) page for details on the latest version.
   - **Update on the new SAP HANA large t-shirt profiles feature**
     The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
   - **New Global Replication Service (GRS) pairs support**

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2026 
 
-lastupdated: "2024-12-03"
+lastupdated: "2026-03-25"
 
 keywords: full Linux, set full Linux, proxy
 
@@ -30,7 +30,7 @@ The full Linux&reg; subscription feature enables Red Hat Enterprise Linux (RHEL)
 
 The full Linux subscription also provides, via activation keys, access to OS interim fixes and updates for Power servers hosted on an IBM satellite server within the IBM Cloud environment. Extra charges apply when setting up a Full Linux subscription account.
 
-To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [What versions of AIX, IBM i, and Linux are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+To register for the full Linux subscription, you must select one of the stock operating system (OS) images that are provided by IBM. IBM provides RHEL and SLES stock OS images for SAP and non-SAP applications. To know more about the SLES versions that are supported, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 The full Linux subscription feature OS file name starts with the Red Hat or SUSE distribution name, `RHEL...` or `SLES...`.

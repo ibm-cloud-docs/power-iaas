@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026 
 
-lastupdated: "2025-08-25"
+lastupdated: "2026-03-25"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -95,7 +95,7 @@ Learn more about migrating workloads from an existing IBM Power system to a Powe
 
 **Linux** - You must migrate your Linux operating system level to a Power11-supported level.
 
-For more information about the supported operating system levels and available stock images for Power11 systems, see [What versions of AIX, IBM i, and Linux® are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+For more information about the supported operating system levels and available stock images for Power11 systems, [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 
@@ -122,7 +122,7 @@ Learn more about migrating workloads from an existing IBM Power system to a Powe
 
 **Linux** - You must migrate your Linux operating system level to a Power10-supported level.
 
-For more information about the supported operating system levels and available stock images for Power11 systems, see [What versions of AIX, IBM i, and Linux® are supported?](/docs/power-iaas?topic=power-iaas-powervs-faqs#os-versions).
+For more information about the supported operating system levels and available stock images for Power11 systems, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 
