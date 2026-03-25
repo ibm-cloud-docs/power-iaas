@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2025-07-14"
+lastupdated: "2026-03-25" 
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
