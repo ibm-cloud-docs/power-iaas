@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 ---
 
@@ -48,8 +48,6 @@ The following enhancements are included in this release:
 - Added `Accelerated SAP Application Performance Standard (aSAPs)` field to the output of the [ibmcloud pi instance sap profile](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-profile) and [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) commands.
 
 - Added `External IP Address` field to the output of the [ibmcloud pi network-interface get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-get), [ibmcloud pi network-interface create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-create), and [ibmcloud pi network-interface update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-update) commands.
-
-- Added `Replication Target CRN` field to the output of the [ibmcloud pi volume-group get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-get) command.
 
 - Enhanced the output of the [ibmcloud pi instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance) commands to group fields more clearly and omit fields that are not returned in the command output.
 
