@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2026
-lastupdated: "2026-03-13"
+  years: 2026, 2026 
+lastupdated: "2026-03-25"
 
 ---
 
@@ -19,7 +19,6 @@ lastupdated: "2026-03-13"
 ---
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}.
-
 
 
 ## `ibmcloud pi`
@@ -1166,8 +1165,7 @@ update INSTANCE_ID --code CODE
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
     [--boot-volume-replication-enabled=True|False]
     [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")] [--deployment-type DEPLOYMENT_TYPE]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
@@ -1187,7 +1185,6 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
 
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
-      --IBMiPHA-FSM-count int                           Number of IBMi PHA Full System Management (FSM) software licenses associated with the instance. Default is 0.
       --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
@@ -1735,11 +1732,10 @@ list INSTANCE_ID
 
 ```bash
 update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
-    [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
-    [--processor-type TYPE] [--processors NUMBER] [--profile-id SAP_PROFILE_ID]
-    [--storage-pool-affinity=True|False] [--virtual-cores ASSIGNED_CORES]
-    [--virtual-optional-device ("attach" | "detach")]
+    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
+    [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
+    [--processors NUMBER] [--profile-id SAP_PROFILE_ID] [--storage-pool-affinity=True|False]
+    [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1748,7 +1744,6 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
 
 ```bash
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
-      --IBMiPHA-FSM-count int                           New number of IBMi PHA Full System Management (FSM) software licenses associated with the instance.
       --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
   -m, --memory float                                    New amount of memory for the server instance.
@@ -4802,7 +4797,7 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Usage**:
 
 ```bash
-create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]" [--target-crn SECONDARY_WORKSPACE_CRN]
+create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -4812,9 +4807,6 @@ create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSIST
 ```bash
   -c, --consistency-group-name string   Storage volume group name. This is required to onboard existing volume group on the target site for DR set up.
   -m, --member-volume-ids strings       Comma separated member volume identifiers.
-  -t, --target-crn string               Target CRN of the secondary workspace where the auxiliary data resides. If specified, the auxiliary volumes
-                                        for the primary volumes getting added to the new volume group will be automatically onboarded into the secondary
-                                        workspace and added to the corresponding auxiliary consistency group.
   -v, --volume-group-name string        Storage volume group name. This is required for the creation of new volume group.
 ```
 
@@ -4927,7 +4919,7 @@ storage-details VOLUME_GROUP_ID
 **Usage**:
 
 ```bash
-update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--target-crn SECONDARY_WORKSPACE_CRN]
+update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"]
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -4937,8 +4929,6 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--
 ```bash
   -a, --add-member-volume-ids strings      Comma separated volume identifiers to add as members of the volume group.
   -r, --remove-member-volume-ids strings   Comma separated volume identifiers to remove as members of the volume group.
-  -t, --target-crn string                  Target CRN of the secondary workspace where the auxiliary data resides. If specified, the primary
-                                           volume's corresponding auxiliary volume will be automatically added or removed from the auxiliary consistency group.
 ```
 
 ---
