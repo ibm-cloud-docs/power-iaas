@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2025-10-10"
+lastupdated: "2026-03-25"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -136,4 +136,4 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 {: caption="Boot images options" caption-side="bottom"}
 
 
-If you' want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external}.
+If you' want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.

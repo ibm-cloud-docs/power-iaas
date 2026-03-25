@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -180,4 +180,4 @@ To use the VSI console, consider the following factors:
 
 - If multiple users connect to the same IBM i-based {{site.data.keyword.powerSys_notm}} instance and one of the users changes the console language and opens the VSI console, the console that is in use by the other users is terminated and requires the console to be reopened.
 
-For more information about how to use the VSI console with IBM i, see [Tips for working with the IBM i console](/docs/en/power-virtual-server?topic=i-configuring-your-virtual-machine-vm#tips-ibmi).
+For more information about how to use the VSI console with IBM i, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).

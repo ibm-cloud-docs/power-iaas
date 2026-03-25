@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-28"
+  years: 2024, 2026 
+lastupdated: "2026-03-25"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2025-03-28"
 
 To install, update, or view the IBM {{site.data.keyword.powerSys_notm}} CLI plug-in, complete the following steps:
 
-1. Install the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started){: external}.
+1. Install the [{{site.data.keyword.cloud}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started){: external}.
 
 2. Install or update the `power-iaas` plug-in.
 

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2026 
 
-lastupdated: "2025-07-16"
+lastupdated: "2026-03-25"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key
 
@@ -65,7 +65,7 @@ You can create an AIX VM instance with a configured SSH key by using the {{site.
 
 You must [generate a public SSH key](#ssh-setup) before you can create an AIX VM with a configured SSH key.
 
-1. Ensure that you have the necessary account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](https://cloud.ibm.com/docs/account?topic=account-mngclassicinfra#how-classic-infra-permissions-work){: external} and [Managing device access](/docs/vsi?topic=virtual-servers-managing-device-access).
+1. Ensure that you have the necessary account permissions and device access. Only the account owner, or a user with the **Manage Users** classic infrastructure permission, can adjust the permissions. For more information, see [Classic infrastructure permissions](https://cloud.ibm.com/docs/account?topic=account-mngclassicinfra#how-classic-infra-permissions-work){: external} and [Managing device access](https://cloud.ibm.com/docs/virtual-servers?topic=virtual-servers-managing-device-access){: external}.
 
 2. Click **Virtual server instances** from the left navigation in the {{site.data.keyword.powerSys_notm}} user interface.
 
