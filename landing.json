@@ -56,16 +56,24 @@
     "view_more": "/docs/power-iaas?topic=power-iaas-release-notes",
     "tiles": [
       {
-        "date": "08 December 2025",
-        "title": "The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console."
+        "date": "25 March 2026",
+        "title": "Accelerated SAPS (aSAPS) is available as a performance measurement attribute for SAP profiles. aSAPS is an advanced SAP performance unit that represents system capacity based on the SAP quote‑to‑cash (Q2C) benchmark."
       },
       {
-        "date": "08 December 2025",
-        "title": "You can attach a vPMEM volume to a Power Virtual Server instance (VSI) with AIX®, Linux®,, or Linux (SAP HANA) operating systems on a Power10 or later system."
+        "date": "25 March 2026",
+        "title": "You can deploy VSIs for SAP NetWeaver workloads without using an SAP‑certified profile."
       },
       {
-        "date": "13 November 2025",
-        "title": "You can set the preferred processor compatibility mode for a VSI during its creation in the IBM Power Virtual Server user interface."
+        "date": "25 March 2026",
+        "title": "SAP Application Server profiles are supported on the IBM Power S1122 system."
+      },
+      {
+        "date": "25 March 2026",
+        "title": "IBM provides advanced or premium IBM cloud support for IBM Power Virtual Server Private Cloud in Client location."
+      },
+      {
+        "date": "23 February 2026",
+        "title": "CHE02 and CHE03 are available as Power Virtual Server data centers in Chennai, India."
       }
     ]
   }
