@@ -178,8 +178,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials)
-    {: external} and [Bucket permissions](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
+    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage topic=cloud-object-storage-service-credentials){: external} and [Bucket permissions](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
 
 ## Using a custom boot image to provision a new instance
 {: #upload-custom-boot}

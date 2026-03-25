@@ -546,7 +546,7 @@ get INSTANCE_ID
 ```bash
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--boot-volume-replication-enabled=True|False]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-FSM-license=True|False] [--IBMiRDS-users NUMBER_USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
