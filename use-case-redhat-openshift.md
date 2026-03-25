@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2026
+  years: 2020, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: Red hat use case, use case, Application, modernization, cloud, native
 
@@ -43,14 +43,13 @@ You can deploy Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} by using
 
 
 
-- User-Provisioned Infrastructure (UPI): Uses a manual process specific to your environment that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with UPI](https://docs.redhat.com/en/documentation/openshift_container_platform/4.13/html/installing_on_any_platform/installing-platform-agnostic){: external}.
+- User-Provisioned Infrastructure (UPI): Uses a manual process specific to your environment that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with UPI](https://docs.openshift.com/container-platform/4.21/installing/installing_platform_agnostic/installing-platform-agnostic.html){: external}.
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-- Installer-Provisioned Installation (IPI): Creates all the necessary infrastructure services within the Red Hat OpenShift cluster and provides a turn-key solution. Choose this deployment method for an automated and faster installation. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with IPI](https://docs.redhat.com/en/documentation/openshift_container_platform_installation/4.13/html/installing_on_ibm_power_virtual_server/index){: external}.
+- Installer-Provisioned Installation (IPI): Creates all the necessary infrastructure services within the Red Hat OpenShift cluster and provides a turn-key solution. Choose this deployment method for an automated and faster installation. Additional benefits, including support for autoscaling, are available when you deploy Red Hat OpenShift by using IPI on PowerVS. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}} with IPI](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/installing_on_ibm_power_virtual_server/index){: external}.
 
-
-
-
+For IPI-related issues, you must first contact [Red Hat support](https://access.redhat.com/support). The Red Hat support team assists you with the issues and routes any underlying infrastructure problems to the appropriate team within IBM if necessary.
+{: note}
 
 - Additionally, IBM developers created a set of playbooks to help you get started with a UPI installation. You can use these playbooks as-is, or take as examples. For more information, see the [GitHub Playbooks](https://github.com/ocp-power-automation/ocp4-upi-powervs){: external}.
 
