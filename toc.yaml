@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: power-iaas
+    service-name: power-iaas
     category: virtualservers
     audience: service
     href: /docs/power-iaas
