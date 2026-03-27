@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  year: 2025, 2026 
+  years: 2025, 2026 
 
 lastupdated: "2026-03-27" 
 
