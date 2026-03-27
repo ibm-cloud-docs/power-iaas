@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-03-26" 
+lastupdated: "2026-03-27" 
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -13,22 +13,14 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
-
 # Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Security and Compliance Center Workload Protection
 {: #integrate-scc}
-
 
 ---
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
-
 ---
-
-
 
 {{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](/docs/workload-protection?topic=workload-protection-getting-started).
 
