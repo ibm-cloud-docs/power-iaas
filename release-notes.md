@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-03-31"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,6 +23,10 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## March 2026
 {: #March-2026}
+{: release-note}
+
+### 25 March 2026
+{: #pvs-mar2526}
 {: release-note}
 
 aSAPS metric available for SAP profiles
