@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2026-03-02"
+lastupdated: "2026-04-07"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -119,7 +119,8 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 ### Small pod configurations
 {: #pod-config-small}
 
-A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack.
+A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server up to the rack’s maximum capacity.
+
 
 
 
