@@ -158,7 +158,13 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
     {: note}
 
+
+
 6. First, choose a necessary level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
+
+
+
+
 
 7. Choose the *storage class* of the bucket, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
