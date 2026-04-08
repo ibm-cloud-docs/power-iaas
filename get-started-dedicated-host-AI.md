@@ -18,7 +18,7 @@ subcollection: power-iaas
 # Getting started with dedicated hosts on {{site.data.keyword.off-prem-fname}}
 {: #dedicated-host}
 
-A dedicated host on {{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} is a virtualized, single-tenant, dedicated server. It provides you with maximum control over workload placement and flexible post-provisioning options. Dedicated server that hosts from {{site.data.keyword.powerSys_notm}} is designed to provide total isolation, control, and security for your heavy mission-critical workloads.
+A dedicated host on {{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} is a virtualized, single-tenant, dedicated server. It provides you with maximum control over workload placement and flexible post-provisioning options. A dedicated server that hosts from {{site.data.keyword.powerSys_notm}} is designed to provide total isolation, control, and security for your heavy mission-critical workloads.
 {: shortdesc}
 
 Using the dedicated host capability on {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} you can provision an entire server for your sole use, significantly expanding your computing options. You can handle mission-critical workloads with complete isolation, control, and security.
@@ -92,7 +92,7 @@ To deploy a dedicated host to your workspace, select the server (IBM Power S922 
 
 
 
-## Create a dedicated host group
+## Creating a dedicated host group
 {: #create-group-dh}
 
 

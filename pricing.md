@@ -58,7 +58,7 @@ You can generate an estimate of the resources for IBM {{site.data.keyword.powerS
 
 
 
-IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
+IBM {{site.data.keyword.powerSys_notm}}s are offered in selected regions with scale-out or scale-up logical partitions (LPARs). The IBM Power Systems that can host {{site.data.keyword.powerSys_notm}}s have the following theoretical maximums:
 
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To calculate the exact pricing, use the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
@@ -67,7 +67,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-| Power systems         | Usable cores | Memory               |
+| Power Systems         | Usable cores | Memory               |
 | --------------------- | ------------ | -------------------- |
 | E980 (9080-M9S)       | 143          | Up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]  | 15           | Up to 942 GB         |
@@ -150,7 +150,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN                                                                                                   |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores  \n * SAP workloads                                                                                                         |
+| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                         |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
@@ -377,7 +377,7 @@ Refer to the following table to view the part number descriptions and the associ
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
 | SAP workload - IBM Power E1050 virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-sap-E1050-vpmem              |
 | SAP workload - IBM Power E1080 virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-sap-E1080-vpmem              |
-| SAP workoad - IBM Power S1022 virtual persistent memory volume gigabyte-hour                     | power-iaas-metric-sap-S1022-vpmem              |
+| SAP workload - IBM Power S1022 virtual persistent memory volume gigabyte-hour                     | power-iaas-metric-sap-S1022-vpmem              |
 | SAP application server workload - IBM Power S1022 virtual persistent memory volume gigabyte      | power-iaas-metric-netweaver-S1022-vpmem        |
 | IBM Power10 high-use scale-out virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-p10-so-vpmem-highuse         |
 | IBM Power10 standard scale-out virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-p10-so-vpmem-standard        |
@@ -417,7 +417,7 @@ You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword
 You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
-If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
@@ -444,7 +444,7 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 
 You are charged different rates based on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
 
-Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor).
+Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -479,15 +479,15 @@ The cost for the Global Replication Services (GRS) depends on the location where
 
 The following costs are calculated for replication-enabled volumes:
 
-- Cost of the basic services for the replication capability is based on the size of the replication-enabled volume under the part number `GLOBAL_REPLICATION_STORAGE_GIGABYTE_HOURS`.
-- Cost of the storage is equal to two times the size of the volumes against two different storage part numbers. This cost is based on the tier of the volume against the primary volume.
+- The cost of the basic services for the replication capability is based on the size of the replication-enabled volume under the part number `GLOBAL_REPLICATION_STORAGE_GIGABYTE_HOURS`.
+- The cost of the storage is equal to two times the size of the volumes against two different storage part numbers. This cost is based on the tier of the volume against the primary volume.
 
 Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume.
 
-The cost of the auxiliary volumes are not calculated separately and are part of the cost of primary volume.
+The cost of the auxiliary volumes is not calculated separately and are part of the cost of the primary volume.
 {: note}
 
-The cost of GRS is calculated for only one location at any point in time. The location where the volumes are not active does not incur any cost. If replication is broken among the primary or auxiliary volumes, the cost of the volumes is same as the normal volumes on both primary and secondary locations. The cost is calculated based on the size of the volume according to the tier and no cost is considered for replication capability.
+The cost of GRS is calculated for only one location at any point in time. The location where the volumes are not active does not incur any cost. If replication is broken among the primary or auxiliary volumes, the cost of the volumes is the same as the normal volumes on both primary and secondary locations. The cost is calculated based on the size of the volume according to the tier and no cost is considered for replication capability.
 
 
 
@@ -618,8 +618,8 @@ The following table shows the use case on how you are billed based on the storag
 
 | Name                      | Size   | Description                                                                                                                                                                 |
 | ------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vm-1 deployed AIX-71      | 30 GB  | Volume of AIX-71 +  \n data-volume-2 +  \n data-volume-3  \n (volumes that are created from copying  \n the deployed AIX-71 image,  \n Data volumes are already accounted.) |
-| vm-2 deployed IBMi-74-001 | 130 GB | Volume of IBMi-74-001 +  \n data-volume-5  \n (volumes that are created from copying  \n the deployed IBMi-74-001 image,  \n Data volumes are already accounted.)           |
+| vm-1 deployed AIX-71      | 30 GB  | Volume of AIX-71 +  \n data-volume-2 +  \n data-volume-3 \n (volumes that are created from copying \n the deployed AIX-71 image, \n Data volumes are already accounted.) |
+| vm-2 deployed IBMi-74-001 | 130 GB | Volume of IBMi-74-001 +  \n data-volume-5 \n (volumes that are created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)           |
 {: class="simple-tab-table"}
 {: tab-group="storage"}
 {: caption="Account billable for storage use case" caption-side="bottom"}
@@ -649,9 +649,9 @@ For VSIs with AIX or Linux OS that are attached with vPMEM volumes, the total co
 
 When you use a VPN connection, you are billed monthly.
 
-IBM charges with the base price hourly per connection. The base price varies for each region. So, if you use one VPN connection that is active for a month, the monthly bill is calculated as the VPN hourly base price for your region X 24 hours X 30 days. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price is $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
+IBM charges with the base price hourly per connection. The base price varies for each region. If you use one VPN connection that is active for a month, the monthly bill is calculated as the VPN hourly base price for your region that is multiplied by 24 hours per day and 30 days per month. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price is $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
 
-On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product will reach its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
+On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
 {: important}
 
 ## Pricing for Power Edge Router (PER)
