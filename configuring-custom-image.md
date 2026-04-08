@@ -159,9 +159,7 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     {: note}
 
 
-
 6. First, choose a necessary level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
-
 
 
 
