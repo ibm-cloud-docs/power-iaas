@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-03-26"
+lastupdated: "2026-04-08"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
