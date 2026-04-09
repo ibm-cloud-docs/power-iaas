@@ -191,7 +191,7 @@ toc:
           - sysdig-monitoring-pvs.md
           - at-events.md
       - topicgroup:
-          label: Metadata services
+          label: Metadata service
           topics:
           - topic: trusted-profiles.md
             tag: staging
