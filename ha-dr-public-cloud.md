@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-09"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -39,18 +39,25 @@ This topic describes various high availability and disaster recovery solutions t
 
 {{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure, including redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that all the hosts are working correctly and responsive.
 
-When a host fails unexpectedly, the virtual server instances on the failed host are automatically restarted on a working host. In some cases, manual recovery of the failed host is attempted.
+When a host fails unexpectedly, the virtual server instances (VSIs) on the failed host are automatically restarted on a working host. In some cases, manual recovery of the failed host is attempted.
 
-The host failure recovery process involves restarting the virtual server instances on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
+The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
 {: note}
+
+
 
 The host failure recovery:
 
-- Is enabled by default for all the virtual server instances in the Power Virtual Server environment.
+- Is enabled by default for all the VSIs in the Power Virtual Server environment.
 
-- Does not restart any pinned virtual server instances. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time taken to repair the failed host. To prevent or minimize downtime, ensure that the virtual server instances are not pinned to the host.
+- Does not restart any pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host.
 
-- Restarts the virtual server instance on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
+- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
+
+
+
+
+
 
 
 
@@ -75,9 +82,9 @@ Licenses that are purchased outside a subscription model license are not eligibl
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}
 
-You can implement a disaster recovery mechanism between two AIX virtual server instances that are installed on separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: external}. The Transmission Control Protocol (TCP) helps in tuning to improve wide area network (WAN) connection performance between AIX virtual machines. For more information, see [IBM support](https://www.ibm.com/support/pages/node/6410510).
+You can implement a disaster recovery mechanism between two AIX VSIs that are installed on separate IBM Cloud data centers by using GLVM replication. For a complete tutorial, see [AIX Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_DR_Tutorial_v1.pdf){: external}. The Transmission Control Protocol (TCP) helps in tuning to improve wide area network (WAN) connection performance between AIX virtual machines. For more information, see [IBM support](https://www.ibm.com/support/pages/node/6410510).
 
-You can implement disaster recovery mechanisms between two IBM i virtual server instances by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: external}.
+You can implement disaster recovery mechanisms between two IBM i VSIs by using PowerHA geographic mirroring. For a complete tutorial, see [IBM i Disaster Recovery with IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_DR_Tutorial_v1.pdf){: external}.
 
 ## Business Continuity through backup and restore
 {: #ha-dr-ha-business}

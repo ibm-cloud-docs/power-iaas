@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-04-09"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -47,6 +47,8 @@ To modify a VSI after its [initial creation](/docs/power-iaas?topic=power-iaas-c
 
 5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
 
+
+
 From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
@@ -55,6 +57,10 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 - [Changing licenses for an IBM i-based VSI](#change-ibmi-license)
 - [Managing the storage volumes](#modifying-volume-network)
 - [Adding or removing a public network](#adding-removing-network)
+
+
+
+
 
 ### Changing the VSI name
 {: #edit-vsi-name}
@@ -428,6 +434,10 @@ You can remove or add a public network by clicking the **Public networks** toggl
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
+
+
+
+
 
 ## Detecting problems by using the System Reference Code (SRC)
 {: #detect-problems-using-src}
