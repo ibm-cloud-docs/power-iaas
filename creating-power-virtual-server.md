@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-04-10"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -189,14 +189,18 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-2. Optional: Expand **Advanced Configuration**, and then set **Specify preferred processor compatibility mode** to on.
+2. Optional: Expand **Advanced Configuration** and set **Specify preferred processor compatibility mode** to on.
 
-    - Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list. The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
+3. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 
-    The Virtual server instance details page of a deployed VSI displays the *Preferred* as well as the *Effective* processor compatibility mode that is currently set for a VSI. The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host where the VSI is running determines the effective processor compatibility mode.
+    The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
+
+    The Virtual server instance details page of a deployed VSI displays the *Preferred* and the *Effective* processor compatibility mode that is currently set for a VSI. The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host in which the VSI runs determines the effective processor compatibility mode.
 
     The *Effective* processor compatibility mode for the VSI might not match the *Preferred* mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}.
     {: note}
+
+4. Click **Continue**.
 
 3.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
