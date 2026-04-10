@@ -190,11 +190,6 @@ toc:
           - carbon-calculator.md
           - sysdig-monitoring-pvs.md
           - at-events.md
-      - topicgroup:
-          label: Metadata service
-          topics:
-          - topic: trusted-profiles.md
-            tag: staging
   - navgroup:
       id: reference
       topics:
