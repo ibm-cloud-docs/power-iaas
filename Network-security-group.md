@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-04-10"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -12,7 +12,7 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
- 
+
 # Network security groups in IBM {{site.data.keyword.powerSys_notm}}
 {: #nsg}
 
@@ -40,7 +40,7 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 
 
 
-The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
 
 
 
@@ -285,7 +285,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 12. Click **Create rule**.
 13. Click **Continue** to add members to the NSG.
 
-14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
     Adding members to a {{site.data.keyword.nsg-lc}} allows you to control inbound network traffic to these members. A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}

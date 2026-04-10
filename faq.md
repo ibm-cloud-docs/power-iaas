@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-10"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -54,7 +54,7 @@ The primary difference between the two is where the physical infrastructure resi
 
 [{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1122, IBM Power E1150, IBM Power E1180.
 
-For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 
 ## What versions of AIX, IBM i, and Linux&reg; are supported?
@@ -289,7 +289,7 @@ Clients are responsible for third-party licensing.
 {: faq}
 {: support}
 
-For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
+For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
 ## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
 {: #multi}
@@ -488,7 +488,7 @@ On the Virtual server instances page, click the virtual server instance name pre
 
 
 
-You can set the preferred processor compatibility mode for a Virtual Server Instance (VSI) during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
+You can set the preferred processor compatibility mode for a Virtual server instance (VSI) during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
 
 
 
@@ -496,7 +496,7 @@ On the **Overview** tab of the VSI details page in the Power Virtual Server user
 
 -	**Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
 
--	**Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI is running determines the effective processor compatibility mode.
+-	**Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI runs determines the effective processor compatibility mode.
 
 You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI again. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 {: important}
@@ -508,14 +508,11 @@ When the VSI is deployed and activated, the hypervisor on the host server checks
 
 For example,
 
-- If the VSI runs on a `POWER11` processor-based host and you have set `POWER11` as the preferred processor compatibility mode.
-- The operating system that is installed in the VSI supports only the `POWER10` processor capabilities and not the `POWER11` processor capabilities.
-
-In such a scenario, the hypervisor assigns `POWER10` as the effective processor compatibility mode. The `POWER10` mode is the highest mode that both the operating system and firmware on the host server supports and it is lower than the preferred mode of `POWER11`.
+For example, if the VSI runs on a `POWER11` processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the operating system installed in the VSI supports only `POWER10` processor capabilities and not `POWER11` capabilities, the hypervisor assigns `POWER10` as the effective processor compatibility mode. The `POWER10` mode is the highest mode that both the operating system and firmware on the host server supports and it is lower than the preferred mode of `POWER11`.
 
 If you set the preferred processor compatibility mode to `default`, the hypervisor does not consider `POWER9` mode as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10` mode, or `POWER11` mode, but it cannot be `POWER9` mode.
 
-Use caution when you select `default` mode as the preferred processor compatibility mode. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment can prevent the VSI from migrating back to its original host.
+Use caution when selecting `default` mode as the preferred processor compatibility mode. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment can prevent the VSI from migrating back to its original host.
 
 For more information about how to change the preferred processor compatibility mode for a VSI, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 

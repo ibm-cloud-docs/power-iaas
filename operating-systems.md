@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-04-10"
 
 keywords: Operating systems, powerVS OS
 
@@ -193,7 +193,7 @@ Power Virtual Server supports multiple levels of RHEL and SLES. You can either u
 
 For more information about licensing, see:
 
-- IBM i: https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-ibmi-lpps
+- IBM i: /docs/power-iaas?topic=power-iaas-ibmi-lpps
 - AIX: https://www.ibm.com/support/customer/csol/terms/#search-result
 
 You must ensure compliance with all third-party software licenses that you use in your environment, including middleware, application software, monitoring tools, and any other non-IBM licensed components.

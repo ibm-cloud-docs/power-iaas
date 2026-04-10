@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-08"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -158,7 +158,11 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
     {: note}
 
+
 6. First, choose a necessary level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
+
+
+
 
 7. Choose the *storage class* of the bucket, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
@@ -178,7 +182,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage topic=cloud-object-storage-service-credentials){: external} and [Bucket permissions](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
+    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials){: external} and [Bucket permissions](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
 
 ## Using a custom boot image to provision a new instance
 {: #upload-custom-boot}

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024, 2025
+  years: 2024, 2026 
 
-lastupdated: "2026-01-23"
+lastupdated: "2026-04-08"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -18,7 +18,7 @@ subcollection: power-iaas
 # Getting started with dedicated hosts on {{site.data.keyword.off-prem-fname}}
 {: #dedicated-host}
 
-A dedicated host on {{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} is a virtualized, single-tenant, dedicated server. It provides you with maximum control over workload placement and flexible post-provisioning options. Dedicated server hosting from {{site.data.keyword.powerSys_notm}} is designed to provide total isolation, control and security for your heavy, mission-critical workloads.
+A dedicated host on {{site.data.keyword.powerSysFull}} in {{site.data.keyword.off-prem}} is a virtualized, single-tenant, dedicated server. It provides you with maximum control over workload placement and flexible post-provisioning options. A dedicated server that hosts from {{site.data.keyword.powerSys_notm}} is designed to provide total isolation, control, and security for your heavy mission-critical workloads.
 {: shortdesc}
 
 Using the dedicated host capability on {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} you can provision an entire server for your sole use, significantly expanding your computing options. You can handle mission-critical workloads with complete isolation, control, and security.
@@ -27,7 +27,7 @@ Using a dedicated host provides extra flexibility in two ways:
 - It allows you to create virtual server instances and control their placement, and
 - It offers a unique shared processor pool capability.
 
-A dedicated host on a {{site.data.keyword.powerSys_notm}} enables you to optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts enhance isolation from other users in a cloud environment, ensuring your operations run smoothly and securely.
+A dedicated host on a {{site.data.keyword.powerSys_notm}} enables you to optimize your cloud infrastructure by using single-tenant servers to manage software licensing costs. Most importantly, dedicated hosts enhance isolation from other users in a cloud environment to ensure that your operations run smoothly and securely.
 
 Dedicated hosts on a {{site.data.keyword.powerSys_notm}} provide the following features:
 - Ability to reserve a compatible server for exclusive use.
@@ -79,11 +79,15 @@ As an administrator of your organization, you can assign users the following sup
 | Manager       | Perform create, read, update, or delete actions on dedicated hosts, including:  \n - Reserve and delete dedicated hosts  \n - Share and unshare with other workspaces  \n - Manage any other aspects of dedicated hosts.    |
 {: caption="Roles and permissions in a dedicated host on a {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 
+
+
 ## Deploying a dedicated host to a workspace
 {: #create-dh}
 
 To deploy a dedicated host to your workspace, select the server (IBM Power S922 or S1022) and contact the IBM support team. You can create an estimate before you deploy a dedicated host by using the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
-{: shortdesc}
+
+
+
 
 
 
@@ -124,7 +128,7 @@ You can click a dedicated host group to access its details, create more dedicate
 ### Sharing or unsharing dedicated host groups among workspaces
 {: #share-dh}
 
-You can choose to grant workspaces with secondary access when [creating a dedicated host group](#create-group-dh) and from the dedicated host group details page. You can stop sharing them from the dedicated host group details page.
+You can choose to grant workspaces with secondary access when you [create a dedicated host group](#create-group-dh) and from the dedicated host group details page. You can stop sharing them from the dedicated host group details page.
 
 To share workspaces, complete the following steps:
 
@@ -225,7 +229,7 @@ To release a dedicated host, complete the following steps:
 4. Select the dedicated host that you want to release. You must remove all associated resources that are provisioned on the host before you release it.
 5. Click **Release host**.
 
-     When you release the last dedicated host in a dedicated host group, the group will also be deleted. Empty dedicated host groups are not allowed on a workspace.
+     When you release the last dedicated host in a dedicated host group, the group is also deleted. Empty dedicated host groups are not allowed on a workspace.
      {: note}
 
 ## Maintenance in dedicated host

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-04-10"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -35,7 +35,7 @@ After you create a virtual server instance (VSI) in your {{site.data.keyword.pow
 ## Modifying a VSI by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #resizing-vm}
 
-To modify a VSI after its [initial creation](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server), complete the following steps:
+To modify a VSI after you create it, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -47,6 +47,8 @@ To modify a VSI after its [initial creation](/docs/power-iaas?topic=power-iaas-c
 
 5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
 
+
+
 From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
@@ -55,6 +57,10 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 - [Changing licenses for an IBM i-based VSI](#change-ibmi-license)
 - [Managing the storage volumes](#modifying-volume-network)
 - [Adding or removing a public network](#adding-removing-network)
+
+
+
+
 
 ### Changing the VSI name
 {: #edit-vsi-name}
@@ -72,11 +78,11 @@ In virtualization environments, a VSI can operate in different processor compati
 
 - **Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
-- **Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI is running determines the effective processor compatibility mode.
+- **Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host in which the VSI is running determines the effective processor compatibility mode.
 
-You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI again. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and restart the VSI. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 
-You must select the appropriate processor mode to ensure compatibility with the operating system that is in use. If you set the preferred processor compatibility mode to a mode that the operating system in your VSI does not support, the VSI does not boot correctly and might enter the *Error* state. To resolve this problem, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
+You must select a processor compatibility mode that is supported by the operating system in use. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI fails to boot correctly and might enter the *Error* state. To resolve this issue, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
 {: important}
 
 
@@ -91,7 +97,7 @@ The effective mode might differ from the preferred mode if the host does not sup
 
 
 
-You can use the GUI, CLI, API or Terraform to set the preferred processor compatibility mode for a VSI during its creation. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance){: external}.
+You can use the GUI, CLI, API, or Terraform to set the preferred processor compatibility mode when you create the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance){: external}.
 
 
 
@@ -101,7 +107,7 @@ To change the preferred processor compatibility mode of a VSI by using the {{sit
 2. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 3. Click **Save**.
 
-Note that after you change the preferred processor compatibility mode of a VSI, you must shut down the VSI and then start the VSI again for the changes to take effect. A restart alone does not activate the selected preferred processor compatibility mode.
+After you change the preferred processor compatibility mode of a VSI, you must shut down and then start the VSI for the changes to take effect. Only restarting the VSI does not activate the selected preferred processor compatibility mode.
 
 To shut down the VSI, complete the following steps:
 
@@ -109,34 +115,34 @@ To shut down the VSI, complete the following steps:
 
 2. Click **Shutdown** to procced. A notification is displayed to indicate that the shutdown process has started.
 
-To start the VSI again, complete the following steps :
+To start the VSI, complete the following steps :
 
-1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI is being started.
+1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI is started.
 
-2. Click the **Refresh** icon to see the change take effect.
+2. Click the **Refresh** icon to see the change.
 
 For more information about the processor compatibility mode, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}
 
 
-### Changing the pinning state and server placement group
+### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
 
-You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host where it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
+You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host in which it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
 
-Server placement groups provides you control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information about see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups){: external}.
+Server placement groups providecontrol over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups){: external}.
 
 To change the pinning state and server placement group of the VSI, complete the following steps:
 
 1. In the **Overview** tab, click the **Edit** icon in the Placement section. The Edit placement panel is displayed.
 3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
-4. Click **Save**
+4. Click **Save**.
 
 ### Resizing the capacity of a VSI
 {: #resize-core-mem}
 
-You can edit a VSI to resize its capacity, including memory, core type, and number of physical and virtual cores.
+You can edit a VSI to resize its capacity, including the memory, core type, and number of physical and virtual cores.
 
-You can scale up and scale down the memory and core counts of the VSI according to your workload requirements. When the VSI is active, you can resize the memory and core counts to a maximum of eight times of the specified values. When the VSI is provisioned, you can resize the memory and core counts to a minimum of 1/8 times of the specified values. However, you cannot resize the memory and core count to less than 2 GB memory and 0.25 cores respectively. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VSI is shut down. The following table shows an example of recalculated values:
+You can scale up and scale down the memory and core counts of the VSI according to your workload requirements. When the VSI is active, you can resize the memory and core counts to a maximum of eight times the specified values. When the VSI is provisioned, you can resize the memory and core counts to a minimum of 1/8 times the specified values. However, you cannot resize the memory to less than 2 GB and core count to less than 0.25 cores. You can resize the memory and core count beyond the 8x and 1/8x boundaries when the VSI is shut down. The following table shows an example of the recalculated values:
 
 | Specified value when the VSI instance was provisioned | Minimum resize value (must be greater than or equal to 0.25 cores, 2 GB memory) | Maximum resize value |
 |---------------------- | ------------------------- | ------------------------- |
@@ -162,10 +168,10 @@ To resize an existing VSI that was created before 15 December 2020 to an 8x rati
 To edit a VSI and resize its capacity, complete the following steps:
 
 1. On the **Overview** tab, click the **Edit** icon in the Capacity section. The Edit capacity panel is displayed.
-2. Select the new value and size for the VSI's memory, cores, and virtual cores. The total estimated cost for the new selection is displayed for your review.
+2. Select the new value and size for the VSI memory, cores, and virtual cores. The total estimated cost for the new selection is displayed for your review.
 3. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
-    If the VSI that you are editing is in inactive state, you can change the **Core type** to *Dedicated*, *Shared uncapped shared*, or *Shared capped*.
+    If the VSI that you are editing is in inactive state, you can change the **Core type** to Dedicated, Shared uncapped shared, or Shared capped.
     {: tip}
 
 ### Adding or removing additional software licenses for an IBM i-based VSI
@@ -182,23 +188,23 @@ After you provision an IBM i-based VSI with the base IBM i OS license, you can m
     - IBM PowerHA SystemMirror for IBM i
     - IBM Rational Development Studio for IBM i
 
-4. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and then click **Save**.
+4. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
-You can also use the IBM i licensing section to change or assign virtual server number (VSN) for an IBM i-based VSI. The VSI must be in the *Shutoff* state before performing this operation.
+You can also use the IBM i licensing section to change or assign a virtual server number (VSN) for an IBM i-based VSI. The VSI must be in the *Shutoff* state before performing this operation.
 {: tip}
 
-To apply or remove an IBM i software key, the VSI must be active and in the running state. If you have already ran a resize operation, you must wait until the resize operation completes and the VSI returns to the *Active* state.
+To apply or remove an IBM i software key, the VSI must be active and in the running state. If you have already run a resize operation, you must wait until the resize operation completes and the VSI returns to the *Active* state.
 {: note}
 
-## Managing your storage volumes
+## Managing storage volumes on a VSI
 {: #modifying-volume-network}
 
 You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's *storagePoolAffinity* property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
-### Creating a storage volume
+### Adding additional storage volumes to a VSI
 {: #create-storage-vol}
 
-After you create a VSI, you can modify the VSI to include additional storage volumes, either by adding new volumes or attaching existing ones.
+After you create a VSI, you can modify the VSI to include additional storage volumes, by adding new volumes or attaching existing ones.
 
 To modify a VSI to add additional storage volumes, complete the following steps:
 
@@ -206,18 +212,18 @@ To modify a VSI to add additional storage volumes, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace that contains the virtual server instance to which you want to add additional volumes to. The Workspace details panel is displayed.
+3. Select the workspace that contains the virtual server instance to which you want to add additional volumes. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
 5. Select the VSI to which you want to add additional volumes. The Virtual server instance details page is displayed for the selected VSI.
 
-Based on whether you want to attach an existing storage volume or create a new one for the VSI, follow the steps in the relevant section below.
+Depending on whether you want to attach an existing storage volume or create a new one for the VSI, follow the steps in the relevant section below:
 
-- [Attaching an existing volume to the VSI](#attach-existing-vol)
+- [Attaching an existing volume to a VSI](#attach-existing-vol)
 - [Creating a new storage volume for the VSI](#create-new-vol)
 
-#### Attaching an existing volume to the VSI
+#### Attaching an existing volume to a VSI
 {: #attach-existing-vol}
 
 1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The Attach storage volumes panel is displayed with a list of existing storage volumes.
@@ -231,7 +237,7 @@ Based on whether you want to attach an existing storage volume or create a new o
 Attaching storage volumes to a virtual server instance is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to confirm that it is successfully attached to the virtual server instance. If the volume is still not attached, you must make another attachment request.
 {: note}
 
-#### Creating a new storage volume for the VSI
+#### Creating a new storage volume for a VSI
 {: #create-new-vol}
 
 1. On the **Storage** tab, click **Create volume** in the Storage volumes section. The Create volume panel is displayed.
@@ -428,6 +434,10 @@ You can remove or add a public network by clicking the **Public networks** toggl
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
+
+
+
+
 
 ## Detecting problems by using the System Reference Code (SRC)
 {: #detect-problems-using-src}

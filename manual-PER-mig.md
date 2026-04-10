@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2025
+  years: 2022, 2026 
 
-lastupdated: "2026-03-17"
+lastupdated: "2026-04-10"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -35,7 +35,7 @@ If you manually configure the network configurations in your workspace without c
 
 
 
-You must have access to Direct Link to complete your PER migration. For more information about roles with access rights, see [Access role requirements for Power Virtual Server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
+You must have access to Direct Link to complete your PER migration. For more information about roles with access rights, see [Access role requirements for Power Virtual Server](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
 {: note}
 
 

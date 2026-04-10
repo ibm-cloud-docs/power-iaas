@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: power-iaas
+    service-name: power-iaas
     category: virtualservers
     audience: service
     href: /docs/power-iaas
@@ -189,6 +190,11 @@ toc:
           - carbon-calculator.md
           - sysdig-monitoring-pvs.md
           - at-events.md
+      - topicgroup:
+          label: Metadata service
+          topics:
+          - topic: trusted-profiles.md
+            tag: staging
   - navgroup:
       id: reference
       topics:
