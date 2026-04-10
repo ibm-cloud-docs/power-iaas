@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-10"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -212,13 +212,7 @@ To use VPE or SE options, you do not need a public network and you can apply a n
 ### Connecting multiple workspaces across a data center
 {: #per-accross-dc}
 
-
-
-Use a local Transit Gateway to connect multiple {{site.data.keyword.powerSys_notm}} workspaces that are across different zones but in the same region. A PER-enabled workspace must be attached with the Transit Gateway that can exchange routes between two workspaces.
-
-
-
-
+Use a local Transit Gateway to connect multiple {{site.data.keyword.powerSys_notm}} workspaces that are in the same region. A PER-enabled workspace must be attached with the Transit Gateway that can exchange routes between two workspaces.
 
 Use a global Transit Gateway to connect the workspaces that are present in different regions.
 
