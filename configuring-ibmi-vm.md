@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-04-10"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -275,5 +275,5 @@ The VSI console of an IBM i VSI supports English language by default and provide
 
 For more information about IBM i network and software installation, see:
 
-- [Setting up an IBM i network install server](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-preparing-install-server){: external}
+- [Setting up an IBM i network install server](/docs/power-iaas?topic=power-iaas-preparing-install-server){: external}
 - [Globalization and IBM i software installation](https://www.ibm.com/docs/en/i/7.6.0?topic=installation-globalization-i-software#rzahcglobalconsider){: external}

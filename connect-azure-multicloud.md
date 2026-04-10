@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2025-10-23"
+lastupdated: "2026-04-10"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -124,7 +124,7 @@ To provision and configure your IBM {{site.data.keyword.powerSys_notm}} environm
 - An SSH Key
 - An instance
 
-For more information, see IBM Cloud docs pages [how to configure networking](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-configuring-subnet) and [how to create {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+For more information, see IBM Cloud docs pages [how to configure networking](/docs/power-iaas?topic=power-iaas-configuring-subnet) and [how to create {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
 
 ### Configuring IBM Cloud Transit Gateway

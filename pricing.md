@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-10"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -44,7 +44,7 @@ subcollection: power-iaas
 
 * Dedicated hosts: Dedicated hosts in host units
 
-In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual server instance (VSI) resources. For more information about the billing of VSI resources, see [Operating systems](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
+In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual server instance (VSI) resources. For more information about the billing of VSI resources, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
 
 
 
@@ -167,7 +167,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 
 IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
 
-To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a virtual machine (VM)](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
+To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a virtual machine (VM)](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -417,7 +417,7 @@ You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword
 You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
-If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
@@ -436,7 +436,7 @@ For SAP HANA workloads, the charges for processor and memory parts are the same 
 The pricing is subject to change depending on the SAP HANA operational costs.
 {: note}
 
-You can also bring your own SAP (HANA or NetWeaver) image with your own subscription. For more information, see [Deploying a Linux for SAP (HANA or NetWeaver) custom image](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-deploying-SAP-image).
+You can also bring your own SAP (HANA or NetWeaver) image with your own subscription. For more information, see [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image).
 
 
 ## Processor types
