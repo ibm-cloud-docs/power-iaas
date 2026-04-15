@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-15"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -150,7 +150,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN                                                                                                   |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
 | Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                         |
+| Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                          |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
 | **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
@@ -377,7 +377,7 @@ Refer to the following table to view the part number descriptions and the associ
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
 | SAP workload - IBM Power E1050 virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-sap-E1050-vpmem              |
 | SAP workload - IBM Power E1080 virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-sap-E1080-vpmem              |
-| SAP workload - IBM Power S1022 virtual persistent memory volume gigabyte-hour                     | power-iaas-metric-sap-S1022-vpmem              |
+| SAP workload - IBM Power S1022 virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-sap-S1022-vpmem              |
 | SAP application server workload - IBM Power S1022 virtual persistent memory volume gigabyte      | power-iaas-metric-netweaver-S1022-vpmem        |
 | IBM Power10 high-use scale-out virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-p10-so-vpmem-highuse         |
 | IBM Power10 standard scale-out virtual persistent memory volume gigabyte-hour                    | power-iaas-metric-p10-so-vpmem-standard        |
@@ -616,8 +616,8 @@ The following table shows the use case on how you are billed based on the storag
 {: #storage-spec-2}
 {: tab-title="Boot volumes of 200 GB"}
 
-| Name                      | Size   | Description                                                                                                                                                                 |
-| ------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                      | Size   | Description                                                                                                                                                              |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | vm-1 deployed AIX-71      | 30 GB  | Volume of AIX-71 +  \n data-volume-2 +  \n data-volume-3 \n (volumes that are created from copying \n the deployed AIX-71 image, \n Data volumes are already accounted.) |
 | vm-2 deployed IBMi-74-001 | 130 GB | Volume of IBMi-74-001 +  \n data-volume-5 \n (volumes that are created from copying \n the deployed IBMi-74-001 image, \n Data volumes are already accounted.)           |
 {: class="simple-tab-table"}
