@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-16"
 
 keywords: Operating systems, powerVS OS
 
@@ -185,7 +185,7 @@ System software maps are reference documents that outline the compatibility betw
 ## Licensing and software components
 {: #licensing-sw-components}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you have already purchased.
+The license for the AIX and IBM i operating systems is a part of the overall cost for the workspace. You cannot use an existing license that you have already purchased.
 
 You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL)) to move your existing on-premises entitlements to the {{site.data.keyword.powerSys_notm}}. Contact IBM support to know more about IBM i MOL. For the available support resources, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
 
@@ -223,11 +223,11 @@ Unsupported OS versions might continue to work in the {{site.data.keyword.powerS
 
 - **Limited feature compatibility**: {{site.data.keyword.powerSys_notm}} automation features such as Live Partition Mobility (LPM) and remote restart might not work, which can reduce application uptime during host maintenance.
 
-- **Server restart failures**: The standard {{site.data.keyword.powerSys_notm}} *server restart* function might not work, which can cause the VSIs to remain pinned to the host and disrupt availability.
+- **Server restart failures**: The standard {{site.data.keyword.powerSys_notm}} restart functionality might not work, which can cause the VSIs to remain pinned to the host and disrupt availability.
 
 - **Security vulnerabilities**: Unsupported OS versions might not receive critical security updates, which can increase exposure to security threats.
 
 ### Customer responsibilities
 {: #cust-responsibility-os}
 
-If you run an unsupported operating system version, you are responsible for managing all associated risks and issues that might occur. You are also solely responsible for maintaining, updating, and supporting any custom image that is based on an unsupported OS. In addition, you acknowledge that if IBM identifies a security vulnerability or other critical issue, IBM can suspend any VSI that is running an unsupported OS in the {{site.data.keyword.powerSys_notm}} environment.
+If you run an unsupported operating system version, you are responsible for managing all the associated risks and issues that might occur. You are also responsible for maintaining, updating, and supporting any custom image that is based on an unsupported OS. In addition, you acknowledge that if IBM identifies a security vulnerability or a critical issue, IBM can suspend any VSI that is running an unsupported OS in the {{site.data.keyword.powerSys_notm}} environment.
