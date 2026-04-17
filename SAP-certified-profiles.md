@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-17"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -117,7 +117,7 @@ The following table describes the fields displayed for an SAP profile in the {{s
 | Cores   | Number of virtual CPU cores that are allocated to the profile.                                                                                                                                                                                                                           |
 | RAM     | Memory allocation for the profile in GiB (gibibytes).                                                                                                                                                                                                                                    |
 | SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment. For more information about SAPS, see [SAP Application Performance Standard](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}. |
-| aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                           |
+| aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                           |
 | Price   | Hourly cost that is associated with the profile.                                                                                                                                                                                                                                         |
 {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
 
