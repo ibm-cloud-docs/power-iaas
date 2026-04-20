@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-20"
 
 keywords: image catalog, virtual machine capture, cos bucket, export virtual machine, ova
 
@@ -63,6 +63,7 @@ CHGASPACT ASPDEV(*SYSBAS) OPTION(*FRCWRT)
 
 
 
+
 ## Using the {{site.data.keyword.powerSys_notm}} user interface to capture and export a VM
 {: #console-capture-export}
 
@@ -85,7 +86,7 @@ Complete the following steps to capture and export a virtual server instance:
     The maximum image size that you can export to Cloud Object Storage is 10 TB.
     {: note}
 
-   1. Select the **Region**.  Select either **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** for the region.
+   1. Select the **Region**. Select either **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** for the region.
    2. Select your **Bucket name** and **optional folders**.
    3. Provide your [HMAC access and HMAC secret keys](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
    4. Select the **Generate checksum file** toggle button to generate a checksum file.
@@ -111,6 +112,10 @@ Complete the following steps to capture and export a virtual server instance:
    - If you chose to capture and export your volume-backed image to the image catalog, go to **Boot images**.
 
 11. *(Optional)* If you'd like to export your volume-backed image from your image catalog to Cloud Object Storage, select it, and click the **Capture and export** icon.
+
+
+
+
 
 ## Using the CLI to capture and export a VM
 {: #cli-capture-export}
