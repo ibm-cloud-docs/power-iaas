@@ -24,8 +24,6 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-
-
 ## March 2026
 {: #March-2026}
 {: release-note}
