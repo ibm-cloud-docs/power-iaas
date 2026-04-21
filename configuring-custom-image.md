@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-21"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -158,11 +158,7 @@ For SAP applications, ensure that you use an IBM stock OS image for SAP. These i
     When you create buckets or add objects, be sure to avoid the use of Personally Identifiable Information (PII). PII is information that can identify any user (natural person) by name, location, or any other means.
     {: note}
 
-
-6. First, choose a necessary level of *resiliency*, and then a *location* where you would like your data to be physically stored. Resiliency refers to the scope and scale of the geographic area across which your data is distributed. *Cross Region* resiliency spreads your data across several metropolitan areas, while *Regional* resiliency spreads data across a single metropolitan area. A single data center distributes data across devices within a single site only.
-
-
-
+6. Select **Regional resiliency** and then choose the location where you want your data to be physically stored. The **Regional resiliency** option distributes the data across multiple devices within a single metropolitan area. Currently, {{site.data.keyword.powerSys_notm}} supports regional resiliency and one single data center, which is **che01**. The Cross Region resiliency option is not supported.
 
 7. Choose the *storage class* of the bucket, which is a reflection of how often you expect to read the stored data and determines billing details. Follow the **Create** link to create and access your new bucket.
 
