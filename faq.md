@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-27"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -492,24 +492,28 @@ You can set the preferred processor compatibility mode for a Virtual server inst
 
 
 
-On the **Overview** tab of the VSI details page in the Power Virtual Server user interface, you can view the *Preferred* and *Effective* processor compatibility modes. The processor compatibility modes are defined as follows:
+On the **Overview** tab of the VSI details page in the {{site.data.keyword.powerSys_notm}} user interface, you can view the preferred and effective processor compatibility modes. The following processor compatibility modes are displayed:
 
--	**Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode supported by the targeted host type for the VSI.
+- **Preferred**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
--	**Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host where the VSI runs determines the effective processor compatibility mode.
+- **Effective**: The processor mode that is currently in use for the VSI. The physical host on which the VSI runs determines the effective processor compatibility mode.
 
-You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI. During the VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI. During the VSI startup, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 {: important}
+
+
+
 
 {{_include-segments/cpu-compatibility-note.md}}
 
 When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the operating system that is running in the VSI supports that mode. If the operating system supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the operating system does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the operating system. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
 
-For example, if the VSI runs on a `POWER11` processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the operating system installed in the VSI supports only `POWER10` processor capabilities and not `POWER11` capabilities, the hypervisor assigns `POWER10` as the effective processor compatibility mode. The `POWER10` mode is the highest mode that both the operating system and firmware on the host server supports and is lower than the preferred mode of `POWER11`.
+
+For example, if a VSI runs on a `POWER11` processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the operating system installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the operating system and the host firmware support and is lower than the preferred mode of `POWER11`.
 
 If you set the preferred processor compatibility mode to `default`, the hypervisor does not consider `POWER9` mode as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10` mode, or `POWER11` mode, but it cannot be `POWER9` mode.
 
-Use caution when selecting `default` mode as the preferred processor compatibility mode. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment of the processor compatibility mode can prevent the VSI from migrating back to its original host.
+Use the `default` mode as the preferred processor compatibility mode with caution. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment of the processor compatibility mode can prevent the VSI from migrating back to its original host.
 
 For more information about how to change the preferred processor compatibility mode for a VSI, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-13"
+lastupdated: "2026-04-27"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -74,15 +74,15 @@ To change the name of the VSI, complete the following steps:
 ### Changing the preferred processor compatibility mode
 {: #change-cpu-compatibility}
 
-In virtualization environments, a VSI can operate in different processor compatibility modes. These modes determine the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. The Virtual server instance details page on the **Overview** tab displays the *Preferred* and *Effective* processor compatibility mode that is currently set for the VSI. Processor compatibility modes are defined as follows:
+In virtualization environments, a VSI can operate in different processor compatibility modes. These modes determine the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. The Virtual server instance details page on the **Overview** tab displays the preferred and effective processor compatibility mode that is currently set for the VSI. The following processor compatibility modes are displayed:
 
-- **Preferred processor compatibility mode**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
+- **Preferred**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
-- **Effective processor compatibility mode**: The processor mode that is currently in use for the VSI. The physical host in which the VSI is running determines the effective processor compatibility mode.
+- **Effective**: The processor mode that is currently in use for the VSI. The physical host on which the VSI runs determines the effective processor compatibility mode.
 
 You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and restart the VSI. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 
-You must select a processor compatibility mode that is supported by the operating system in use. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI fails to boot correctly and might enter the *Error* state. To resolve this issue, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
+You must select the processor compatibility mode that the operating system that you use supports. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI does not boot correctly and might enter the *Error* state. To resolve this issue, [open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: important}
 
 
@@ -127,9 +127,9 @@ For more information about the processor compatibility mode, see [How does the p
 ### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
 
-You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host in which it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
+You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host on which it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
 
-Server placement groups providecontrol over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups){: external}.
+Server placement groups provide control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups).
 
 To change the pinning state and server placement group of the VSI, complete the following steps:
 
@@ -184,9 +184,9 @@ After you provision an IBM i-based VSI with the base IBM i OS license, you can m
 2. On the **Overview** tab, click the **Edit** icon next to Software licenses in the IBM i licensing section. The Edit licenses panel is displayed.
 
 3. Select the additional software licenses that you want to add. To remove a license, clear the corresponding checkbox. The total estimated cost for the selected licenses is displayed. The available options are:
-    - IBM Cloud Storage Solutions for IBM i
-    - IBM PowerHA SystemMirror for IBM i
-    - IBM Rational Development Studio for IBM i
+    - **IBM Cloud Storage Solutions for IBM i**
+    - **IBM PowerHA SystemMirror for IBM i**
+    - **IBM Rational Development Studio for IBM i**
 
 4. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
@@ -199,7 +199,7 @@ To apply or remove an IBM i software key, the VSI must be active and in the runn
 ## Managing storage volumes on a VSI
 {: #modifying-volume-network}
 
-You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's *storagePoolAffinity* property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
+You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's `storagePoolAffinity` property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
 ### Adding additional storage volumes to a VSI
 {: #create-storage-vol}
@@ -236,7 +236,7 @@ To attach an existing volume to a VSI, complete the following steps:
 
 3. Click **Attach volume**.
 
-Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to confirm that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab
+Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to verify that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab
 {: note}
 
 #### Creating a storage volume for a VSI
@@ -306,7 +306,7 @@ To detach storage volumes from a VSI, complete the following steps:
 
 1. On the **Storage** tab, select the storage volumes to detach from the Storage volumes section.
 
-2. Click **Detach**. The **Confirm detach** dialog is displayed.
+2. Click **Detach**. The **Confirm detach** window is displayed.
 
     Detached storage volumes are not deleted automatically and continue to incur charges until you delete them. For more information about deleting a volume, see [Deleting a volume](#deleting-volume).
     {: note}
@@ -336,7 +336,7 @@ If you cannot accommodate downtime, you can add extra volumes. You can attach a 
 [{{site.data.keyword.off-prem}}]{: tag-blue} Any volume that is included in a snapshot cannot be resized. To resize a volume that is included in a snapshot, you must first delete all the snapshots the volume is a part of.
 {: important}
 
-To resize a storage volume after its creation, complete the following steps:
+To resize a storage volume after you create it, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
@@ -352,7 +352,7 @@ To resize a storage volume after its creation, complete the following steps:
 
 7. From the Storage volumes section, click the overflow menu (⋮) on the volume entry that you want to resize and select **Edit**. The Edit storage volume panel is displayed.
 
-8. You can specify a new name, storage tier, and size for the storage volume.
+8. In the **Size (GB)** field, specify the new size for the storage volume. You can also modify the **Name** and **Tier** fields to update the name and performance tier of the selected volume.
 
     The size of a volume cannot be decreased once it is created. The maximum size of a volume that can be created is 72551 GB.
     {: note}
@@ -405,24 +405,27 @@ You must delete a VSI manually. To delete all VSIs, delete the workspace or dele
 
 To delete a VSI, complete the following steps:
 
+1. On the **Virtual server instances** page, locate the VSI that you want to delete and use one of the following methods:
 
-1. On the **Virtual server instances** page, click the overflow menu (⋮) on the VSI entry and select **Delete**. The Delete virtual server instance confirmation dialog is displayed.<br>
+   - Click the overflow menu (⋮) for the VSI entry and select **Delete**.
+   - Click the VSI name to open the **Virtual server instance details** page, then click the **Delete** icon.
 
-    Or <br>
-
-   On the **Virtual server instances** page, select the VSI that you want to delete. The **Virtual server instance details** page is displayed. Click the **delete** icon on the upper right of the screen. The Delete virtual server instance confirmation dialog is displayed.
+   The Delete virtual server instance confirmation dialog is displayed.
 
 2. On the confirmation dialog, set **Delete data volumes attached to this instance** to on to acknowledge the following:
 
     - The data volumes that are attached to the VSI are deleted. Data volumes that are attached to multiple VSIs are not deleted.
     - Any auxiliary volumes on the secondary site are also deleted.
 
-3. To confirm, type the VSI name in the text field.
+3. To confirm, type the name of the VSI that you want to delete.
 
-4. Click **Delete virtual server instance** to initiate the deletion request.
+4. Click **Delete virtual server instance**.
 
-You cannot recover a virtual server instance after it is deleted.
-{: note}
+   The deletion process begins immediately and cannot be undone. You cannot recover a virtual server instance after it is deleted.
+   {: note}
+
+
+
 
 
 
