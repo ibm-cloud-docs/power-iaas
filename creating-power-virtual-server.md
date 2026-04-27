@@ -140,8 +140,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
 
-
-
     To deploy a VSI for SAP NetWeaver workloads without an SAP certified profile, complete the following steps:
 
    1. In the Boot image section, select **Linux for SAP (NetWeaver)** from the **Operating system** list.
@@ -149,8 +147,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    3. Select a storage tier from the **Tier** list.
    4. Select a storage pool from the **Storage pool** field.
    5. Click **Done editing** to continue to the Profile section.
-
-
 
 8. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 

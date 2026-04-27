@@ -314,7 +314,7 @@ To detach storage volumes from a VSI, complete the following steps:
 
 3. To confirm, click **Detach**.
 
-    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Make another detach request if the volume is still not disconnected.
+    The user interface might display a failure message when you attempt to detach a volume from a virtual server instance. In such cases, you need to reload the page after a brief delay to see whether the volume is successfully detached. Make another detach request if the volume is still not detached.
     {: note}
 
 ### Resizing a storage volume
@@ -410,9 +410,9 @@ To delete a VSI, complete the following steps:
    - Click the overflow menu (⋮) for the VSI entry and select **Delete**.
    - Click the VSI name to open the **Virtual server instance details** page, then click the **Delete** icon.
 
-   The Delete virtual server instance confirmation dialog is displayed.
+   The Delete virtual server instance dialog is displayed.
 
-2. On the confirmation dialog, set **Delete data volumes attached to this instance** to on to acknowledge the following:
+2. On the Delete virtual server instance dialog, set **Delete data volumes attached to this instance** to on to acknowledge the following:
 
     - The data volumes that are attached to the VSI are deleted. Data volumes that are attached to multiple VSIs are not deleted.
     - Any auxiliary volumes on the secondary site are also deleted.
@@ -421,13 +421,8 @@ To delete a VSI, complete the following steps:
 
 4. Click **Delete virtual server instance**.
 
-   The deletion process begins immediately and cannot be undone. You cannot recover a virtual server instance after it is deleted.
-   {: note}
-
-
-
-
-
+The deletion process begins immediately and cannot be undone. You cannot recover a VSI after it is deleted.
+{: note}
 
 You cannot delete a VSI if it has one or more associated snapshots. You must delete all the associated snapshots before you delete the VSI. For more information about how to delete a snapshot, see [Deleting a snapshot](/docs/power-iaas?topic=power-iaas-snapshots-cloning#delete-snapshot).
 {: important}
