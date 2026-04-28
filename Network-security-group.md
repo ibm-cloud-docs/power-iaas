@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-28"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -285,7 +285,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 12. Click **Create rule**.
 13. Click **Continue** to add members to the NSG.
 
-14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by completing the steps that are provided in the [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) section.
 
     Adding members to a {{site.data.keyword.nsg-lc}} allows you to control inbound network traffic to these members. A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}
