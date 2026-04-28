@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-21"
+lastupdated: "2026-04-28"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -55,7 +55,7 @@ For complete tutorials on migrating your AIX and IBM i workloads to {{site.data.
 
 The supported AIX and IBM i operating system versions depend on the IBM Power hardware that you select for the {{site.data.keyword.powerSys_notm}}.
 
-If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to the current support level before migrating to the {{site.data.keyword.powerSys_notm}}.
+If you are running AIX 6.1 or IBM i 6.1, or earlier, you must first upgrade the OS to the current support level before you migrate to the {{site.data.keyword.powerSys_notm}}.
 {: important}
 
 To view a list of the supported AIX, IBM i, and Linux operating system technology levels, see the following information:
@@ -68,11 +68,11 @@ The {{site.data.keyword.powerSys_notm}} offering supports the following versions
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-| Machine type                              | Supported AIX versions                                |
-| ----------------------------------------- | ----------------------------------------------------- |
-| * S922 (9009-22A)  \n * E980 (9080-M9S)   | AIX 7.1 or later                                      |
-| * E1080 (9080-HEX) \n *  S1022 (9105-22A) | AIX 7.1 TL5 or later                                  |
-| * S1122 (9824-22A)                        | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
+| Machine type                             | Supported AIX versions                                |
+| ---------------------------------------- | ----------------------------------------------------- |
+| * S922 (9009-22A) \n * E980 (9080-M9S)   | AIX 7.1 or later                                      |
+| * E1080 (9080-HEX) \n * S1022 (9105-22A) | AIX 7.1 TL5 or later                                  |
+| * S1122 (9824-22A)                       | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
 {: caption="Supported AIX versions in IBM data center" caption-side="bottom"}
 
 
@@ -95,7 +95,7 @@ For more information about end of service pack support (EoSPS) dates, see [AIX s
 ### IBM i
 {: #ibmi-details}
 
-Clients running IBM i 6.1, or earlier, must first upgrade the OS to the current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.4 supports direct upgrades from IBM i 7.2 or 7.3. For more information, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
+If you are using an older version of IBM i, you must upgrade the OS to a current support level and then migrate to {{site.data.keyword.powerSys_notm}}. For more information about upgrading the IBM i OS, see [Fast path for software installation, upgrade, and deletion tasks](https://www.ibm.com/docs/en/i/7.6.0?topic=software-fast-path-installation-upgrade-deletion-tasks){: external}. For more information about the supported IBM i OS levels, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
 
 
 
@@ -126,13 +126,13 @@ For more information, see:
 
 Learn more about the [IBM i PTF minimum levels](/docs/power-iaas?topic=power-iaas-minimum-levels) and [IBM i release lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external}
 
-IBM i 7.2, and later, supports up to 127 storage volumes per VM. IBM i 7.2, and IBM i 7.3 VMs are at the end of support and are in service extension. Therefore, additional Service Extension fees apply.
+IBM i 7.3, and later, supports up to 127 storage volumes per VM. IBM i 7.3 VSIs are at the end of support and are in service extension. Therefore, additional Service Extension fees apply.
 {: note}
 
 ### Linux
 {: #linux-details}
 
-SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported by the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and configure it as per the steps that are documented as follows:
+SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported by the appropriate IBM Cloud environment cloud-init packages. Download the appropriate cloud-init package and perform the following steps to configure it:
 - [Installing and configuring cloud-init on SLES](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-sles){: external}.
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
@@ -198,7 +198,7 @@ The **Image file name** field supports the following formats: *.ova*, *.ova.gz*,
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Catalog image name              | Enter the name that you want displayed in your catalog.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Storage type                    | Select whether you want **Tier 1** or **Tier 3** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).                                                                                                                                                                                                                           |
-| Region                          | Select either  **us-east**, **us-south**, **eu-de**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa**, **ca-tor**, **br-sao**, **eu-es**, **che01** for the region.                                                                                                                                                                                                                                                                                                                                     |
+| Region                          | Select the region from the drop-down list. region.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Image file name                 | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are *tar* and *ova*. You can compress image files by using *gzip*. The supported file name extensions are *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.                                                                                                                              |
 | Bucket name                     | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. Optional folders can be added during an [export image](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export) operation to Cloud Object Storage. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.                                                                                                                                                                                                                          |
