@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-29"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -311,6 +311,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #virtual-machine-group}
 {: tab-title="Virtual machine group"}
+{: translate="no"}
 
 | Part description for shared processor pool group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
 | ------------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -326,6 +327,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #shared-processor-pool-group}
 {: tab-title="Shared processor pool group"}
+{: translate="no"}
 
 
 
@@ -338,6 +340,8 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #dedicated-host-group}
 {: tab-title="Dedicated host group"}
+{: translate="no"}
+
 
 
 
@@ -360,6 +364,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #volume-group}
 {: tab-title="Volume group"}
+{: translate="no"}
 
 | Part description for snapshot group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
 | ------------------------------------------------------------------ | ---------------------------------------------- |
@@ -372,6 +377,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
+{: translate="no"}
 
 | Part description for vPMEM composite service (available on the IBM invoice)                      | Metric ID (available in the IBM Cloud catalog) |
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
@@ -396,6 +402,8 @@ Refer to the following table to view the part number descriptions and the associ
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #snapshot-group}
 {: tab-title="vPMEM group"}
+{: translate="no"}
+
 
 ## Base instances
 {: #pricing-base-instance-prices}

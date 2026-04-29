@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -149,6 +149,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #virtual-machine-group-private}
 {: tab-title="Virtual machine group"}
+{: translate="no"}
 
 
 | Part description (visible on the invoice from IBM)                            | Metric ID (visible in the IBM Cloud catalog)   |
@@ -168,6 +169,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #volume-group-private}
 {: tab-title="Volume group"}
+{: translate="no"}
 
 
 | Part description (visible on the invoice from IBM)                | Metric ID (visible in the IBM Cloud catalog) |
@@ -182,6 +184,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #snapshot-group-private}
 {: tab-title="Snapshot group"}
+{: translate="no"}
 
 
 | Part description (visible on the invoice from IBM)                                 | Metric ID (visible in the IBM Cloud catalog) |
@@ -195,6 +198,7 @@ For detailed usage and billing information, refer to the part numbers in your in
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
 {: #shared-procesor-pool-group-private}
 {: tab-title="Shared Processor Pool group"}
+{: translate="no"}
 
 
 
