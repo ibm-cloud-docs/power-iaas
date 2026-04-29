@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
@@ -35,8 +35,11 @@ The routes feature is available only on the PER-enabled {{site.data.keyword.powe
 
 To create a static route in your {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
-1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
-2. Click **Workspaces** in the left navigation menu.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the left navigation menu.
 3. Select a workspace in which you want to create the static route. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
 5. In the navigation pane, click **Networking** > **Routes**. The Routes page is displayed with a list of any existing static routes on the **Static routes** tab.
@@ -75,8 +78,11 @@ The static route that you created is displayed on the **Static routes** tab. The
 
 You can edit an existing static route to modify its name, destination IP address, next hop IP address, and the advertise and status options. To modify a static route in your {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
-1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
-2. Click **Workspaces** in the left navigation menu.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the left navigation menu.
 3. Select the workspace that contains the static route that you want to modify. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
 5. In the navigation pane, click **Networking** > **Routes**. The Routes page is displayed with a list of any existing static routes on the **Static routes** tab.
@@ -91,8 +97,11 @@ You can modify the static routes by using the GUI, API, CLI, and Terraform inter
 
 To delete a static route in your {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
-1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
-2. Click **Workspaces** in the left navigation menu.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the left navigation menu.
 3. Select the workspace that contains the static route that you want to delete. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
 5. In the navigation pane, click **Networking** > **Routes**. The Routes page is displayed with a list of any existing static routes on the **Static routes** tab.
@@ -112,8 +121,11 @@ The external routes tab displays all external networks and subnets with which yo
 
 To view the external routes, complete the following steps:
 
-1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
-2. Click **Workspaces** in the left navigation menu.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the left navigation menu.
 3. Select a workspace in which you want to create the static route. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
 5. In the navigation pane, click **Networking** > **Routes**. The Routes page is displayed with a list of any existing static routes on the **Static routes** tab.
