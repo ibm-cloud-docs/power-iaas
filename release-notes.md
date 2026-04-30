@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-30"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -23,7 +23,17 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+## April 2026
+{: #April-2026}
+{: release-note}
 
+### 30 April 2026
+{: #april-2026}
+{: release-note}
+
+Stock images support
+:   * The RHEL 9.4 general purpose stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
+    * The IBM i 7.2 stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported.
 
 ## March 2026
 {: #March-2026}
