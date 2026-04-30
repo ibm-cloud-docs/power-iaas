@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-27"
+lastupdated: "2026-04-30"
 
 keywords: use case, Oracle, database, demos. oracle on Power VS
 
@@ -36,8 +36,8 @@ Learn how to deploy an Oracle database in an {{site.data.keyword.powerSysFull}} 
 
 To migrate an AIX-based Oracle database from IBM Power to {{site.data.keyword.powerSys_notm}}, complete the procedure that is provided in the following resources:
 - For more information about the procedure, see [Oracle technical migration procedure](https://ibm.biz/BdabLr){: external}.
-- For more information about instructions in a demo video, see [Migrating an Oracle Database from on-premises IBM Power to IBM Power Systems Virtual Server](https://mediacenter.ibm.com/playlist/dedicated/256892453/1_4gunuccs/1_75ewqo57){: external}
-- For more information about deploying Oracle Database on IBM {{site.data.keyword.powerSys_notm}} by using deployable architecture, see [Oracle on IBM Power Virtual Server](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-powervs-oracle-97af9ca3-851c-4c09-9afb-4cdcebd4f4a2-global ){: external}
+- For more information about instructions in a demo video, see [Migrating an Oracle Database from on-premises IBM Power to IBM Power Systems Virtual Server](https://mediacenter.ibm.com/playlist/dedicated/256892453/1_4gunuccs/1_75ewqo57){: external}.
+- For more information about deploying Oracle Database on IBM {{site.data.keyword.powerSys_notm}} by using deployable architecture, see [Oracle on IBM Power Virtual Server](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-powervs-oracle-97af9ca3-851c-4c09-9afb-4cdcebd4f4a2-global ){: external}.
 
 
 ## Implementing Oracle RAC on AIX in {{site.data.keyword.powerSys_notm}}
