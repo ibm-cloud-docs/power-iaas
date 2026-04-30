@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-30"
 
 keywords: Operating systems, powerVS OS
 
@@ -94,7 +94,7 @@ For additional Linux support, refer to your distribution’s documentation. For 
 ## Stock images
 {: #stock-images}
 
-A stock image is an IBM‑supplied OS image that is ready for deployment on {{site.data.keyword.powerSys_notm}}. Stock images are available for use when you deploy the VSIs. The latest version of each supported OS is provided for provisioning new {{site.data.keyword.powerSys_notm}} instances. As an alternative, you can use your own backup copy of an OS image. This option is called bring-your-own-image (BYOI). For more information, see [Deploying a custom image within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+A stock image is an IBM‑supplied OS image that is ready for deployment on {{site.data.keyword.powerSys_notm}}. The stock images are available for use when you deploy the VSIs. The latest version of each supported OS is provided for provisioning new {{site.data.keyword.powerSys_notm}} instances. As an alternative, you can use your own backup copy of an OS image. This option is called bring-your-own-image (BYOI). For more information, see [Deploying a custom image within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 For each major version of the OS that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is validated for {{site.data.keyword.powerSys_notm}} environment. IBM Cloud sends advance notifications before it removes the unsupported stock OS images.
 

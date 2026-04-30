@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2026-04-30"
 
-keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
+keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
 subcollection: power-iaas
 
@@ -141,7 +141,7 @@ Review the following topics to understand the various aspects of setting up, con
 - [Creating and managing NSGs in a workspace](#create-manage-NSG)
 - [Creating and managing NAGs in a workspace](#create-manage-nag)
 - [Managing rules in an NSG](#create-manage-ib-rules)
-- [Adding members to an NSG and managing them](##add-manage-memebers-nsg)
+- [Adding members to an NSG and managing them](##add-manage-members-nsg)
 
 ### Enabling or disabling NSG in a workspace
 {: #enable-disable-nsg}
@@ -576,7 +576,7 @@ To delete a rule from an existing NSG, complete the following steps:
 9. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
 ### Adding members to an NSG and managing them
-{: #add-manage-memebers-nsg}
+{: #add-manage-members-nsg}
 
 You can manage members that are associated with an NSG by performing the following operations:
 
