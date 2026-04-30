@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-30"
 
 keywords: Operating systems, powerVS OS
 
@@ -49,7 +49,7 @@ For information about supported IBM i versions for {{site.data.keyword.powerSys_
 
 When you use IBM i for your VSI, review the following requirements:
 
-- If you are using IBM i 6.1, you must upgrade the OS to a current support level and then migrate to {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+- If you are using an older version of IBM i, you must upgrade the OS to a current support level and then migrate to {{site.data.keyword.powerSys_notm}}. For more information about upgrading the IBM i OS, see [Fast path for software installation, upgrade, and deletion tasks](https://www.ibm.com/docs/en/i/7.6.0?topic=software-fast-path-installation-upgrade-deletion-tasks){: external}.
 
 - Install the appropriate program temporary fixes (PTFs) depending on the version of IBM i that you use. For more information about the minimum PTF levels, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
@@ -66,16 +66,16 @@ When you use Linux for your VSI, review the following Linux distribution options
 
 
 
-- {{site.data.keyword.powerSys_notm}} in the IBM data center supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) distributions. The Linux stock images are available when you select the Full Linux Subscription (FLS) option or the bring‑your‑own‑license (BYOL) option. An FLS image refers to an IBM‑provided RHEL or SLES stock OS image that includes the full Linux subscription support delivered through IBM.
+- {{site.data.keyword.powerSys_notm}} in the IBM data center supports Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) distributions. The Linux stock images are available when you select the Full Linux Subscription (FLS) option or the bring‑your‑own‑license (BYOL) option. An FLS image refers to an IBM‑provided RHEL or SLES stock OS image that includes the full Linux subscription support that is delivered through IBM.
 
     For more information about FLS, see [Full Linux® subscription for Power Virtual Server](/docs/power-iaas?topic=power-iaas-set-full-Linux){: external}.
 
-    SAP FLS stock images are available only in IBM data centers and are not available in the {{site.data.keyword.powerSys_notm}} Private Cloud environments deployed at the client locations.
+    SAP FLS stock images are available only in IBM data centers and are not available in the {{site.data.keyword.powerSys_notm}} Private Cloud environments that are deployed at the client locations.
     {: important}
 
 - To use your own license, select the OS image with the `-BYOL` suffix. On the *Create virtual server instance* page, these images are listed under the *Client supplied subscription* section. Alternatively, you can create your own customized Linux image in Open Virtualization Appliance (OVA) format by using the Linux stock images that are available when you select Full Linux Subscription (FLS). For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
-The following IBM Power systems are supported by Red Hat and SUSE:
+The following IBM Power Systems are supported by Red Hat and SUSE:
 
    - [IBM Power System E1180 (9080-HEU)](https://catalog.redhat.com/en/hardware/system/detail/282317){: external}
    - [IBM Power System E1150 (9043-MRU)](https://catalog.redhat.com/en/hardware/system/detail/280037){: external}
@@ -94,9 +94,9 @@ For additional Linux support, refer to your distribution’s documentation. For 
 ## Stock images
 {: #stock-images}
 
-A stock image is an IBM‑supplied OS image that is ready for deployment on {{site.data.keyword.powerSys_notm}}. Stock images are available for use when you deploy the VSIs. The latest version of each supported OS is provided for provisioning new {{site.data.keyword.powerSys_notm}} instances. As an alternative, you can use your own backup copy of an OS image. This option is called bring-your-own-image (BYOI). For more information, see [Deploying a custom image within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+A stock image is an IBM‑supplied OS image that is ready for deployment on {{site.data.keyword.powerSys_notm}}. The stock images are available for use when you deploy the VSIs. The latest version of each supported OS is provided for provisioning new {{site.data.keyword.powerSys_notm}} instances. As an alternative, you can use your own backup copy of an OS image. This option is called bring-your-own-image (BYOI). For more information, see [Deploying a custom image within IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
-For each major version of the OS that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is validated for {{site.data.keyword.powerSys_notm}} environment. IBM Cloud sends advance notifications before removing the unsupported stock OS images.
+For each major version of the OS that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is validated for {{site.data.keyword.powerSys_notm}} environment. IBM Cloud sends advance notifications before it removes the unsupported stock OS images.
 
 The VSIs can continue to run without any issues after the stock OS images are removed from the image catalog. However, you are advised to update the VSIs to the supported OS versions.
 {: note}
@@ -104,7 +104,7 @@ The VSIs can continue to run without any issues after the stock OS images are re
 ## Supported AIX, IBM i, and Linux versions for {{site.data.keyword.powerSys_notm}}
 {: #os-matrix-public-private}
 
-The following table lists the supported AIX, IBM i, and Linux OS versions that can be installed on {{site.data.keyword.powerSys_notm}} instances. OS versions not listed in the following table are not supported and cannot be installed on a VSI.
+The following table lists the supported AIX, IBM i, and Linux OS versions that can be installed on {{site.data.keyword.powerSys_notm}} instances. OS versions that are not listed in the following table are not supported and cannot be installed on a VSI.
 
 
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                        |
@@ -124,7 +124,7 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 | -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
 | Power11              | IBM i 7.4 or later           | IBM i COR[^3] [^4] \n IBM i 7.5 TR7 \n IBM i 7.4 TR12                                    |
 | Power10              | IBM i 7.3 or later           | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13[^5]                       |
-| Power9[^b]           | IBM i 7.1 or later[^i]       | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13 \n IBM i 7.2 TR9[^6] [^7] |
+| Power9[^b]           | IBM i 7.3 or later[^i]       | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13 |
 {: caption="Supported IBM i versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported IBM i versions for {{site.data.keyword.powerSys_notm}}"}
 {: #ibmi-public-private}
@@ -135,9 +135,9 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 | **Processor family** | **Supported RHEL versions**                                                                                                                                           | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power11              | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 general purpose and SAP \n * RHEL 8.10 general purpose and SAP                                                       | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 general purpose (RHEL9-SP4) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)                                                                                                                                                                                                                                                                                                                |
-| Power10              | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 general purpose and SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP \n * RHEL 8.6 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 general purpose (RHEL9-SP4) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) \n * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP) \n * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) |
-| Power9[^c]           | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 general purpose and SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP \n * RHEL 8.6 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 general purpose (RHEL9-SP4) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) \n * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP) \n * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) |
+| Power11              | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 8.10 general purpose and SAP                                                       | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER)                                                                                                                                                                                                                                                                                                                |
+| Power10              | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP \n * RHEL 8.6 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) \n * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP) \n * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) |
+| Power9[^c]           | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP \n * RHEL 8.6 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) \n * RHEL 8.6 for SAP HANA (RHEL8-SP6-SAP) \n * RHEL 8.6 for SAP NetWeaver (RHEL8-SP6-SAP-NETWEAVER) |
 {: caption="Supported Linux versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported Linux versions for {{site.data.keyword.powerSys_notm}}"}
 {: #linux-public-private}
@@ -166,15 +166,15 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 [^d]: Power10 systems running firmware level FW1110 support AIX 7.2 TL5 and later.
 [^3]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 [^4]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
-[^5]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
-[^6]: IBM i 7.3 and 7.2 on Power Virtual Server ended normal support on 1 October 2023 and are supported via paid service extension only. Please refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+[^5]: IBM i 7.3 on Power Virtual Server ended normal support on 1 October 2023 and is supported with paid service extension only. Refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
+[^6]: IBM i 7.3 on Power Virtual Server ended normal support on 1 October 2023 and is supported with paid service extension only. Refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 [^7]: Not supported on {{site.data.keyword.on-prem}}.
 [^i]: IBM i 7.1 is supported on the IBM Power9 S924 and E980 models.
 
 ## System software maps
 {: #sw-mapping}
 
-System software maps are reference documents that outline the compatibility between different OS versions and IBM Power Systems hardware. For more information about AIX, IBM i, and Linux (SUSE and RHEL) versions that are compatible with various Power systems, refer to the following software maps:
+System software maps are reference documents that outline the compatibility between different OS versions and IBM Power Systems hardware. For more information about AIX, IBM i, and Linux (SUSE and RHEL) versions that are compatible with various Power Systems, refer to the following software maps:
 
 - [System software maps for AIX](https://www.ibm.com/support/pages/node/6020074){: external}
 - [System software maps for IBM i](https://www.ibm.com/support/pages/node/6023368){: external}
@@ -185,7 +185,7 @@ System software maps are reference documents that outline the compatibility betw
 ## Licensing and software components
 {: #licensing-sw-components}
 
-The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you have already purchased.
+The license for the AIX and IBM i operating systems is a part of the overall cost for the workspace. You cannot use an existing license that you have already purchased.
 
 You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL)) to move your existing on-premises entitlements to the {{site.data.keyword.powerSys_notm}}. Contact IBM support to know more about IBM i MOL. For the available support resources, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
 
@@ -223,11 +223,11 @@ Unsupported OS versions might continue to work in the {{site.data.keyword.powerS
 
 - **Limited feature compatibility**: {{site.data.keyword.powerSys_notm}} automation features such as Live Partition Mobility (LPM) and remote restart might not work, which can reduce application uptime during host maintenance.
 
-- **Server restart failures**: The standard {{site.data.keyword.powerSys_notm}} *server restart* function might not work, which can cause the VSIs to remain pinned to the host and disrupt availability.
+- **Server restart failures**: The standard {{site.data.keyword.powerSys_notm}} restart function might not work, which can cause the VSIs to remain pinned to the host and disrupt availability.
 
 - **Security vulnerabilities**: Unsupported OS versions might not receive critical security updates, which can increase exposure to security threats.
 
 ### Customer responsibilities
 {: #cust-responsibility-os}
 
-If you run an unsupported operating system version, you are responsible for managing all associated risks and issues that might occur. You are also solely responsible for maintaining, updating, and supporting any custom image that is based on an unsupported OS. In addition, you acknowledge that if IBM identifies a security vulnerability or other critical issue, IBM can suspend any VSI that is running an unsupported OS in the {{site.data.keyword.powerSys_notm}} environment.
+If you run an unsupported operating system version, you are responsible for managing all the associated risks and issues that might occur. You are also responsible for maintaining, updating, and supporting any custom image that is based on an unsupported OS. In addition, you acknowledge that if IBM identifies a security vulnerability or a critical issue, IBM can suspend any VSI that is running an unsupported OS in the {{site.data.keyword.powerSys_notm}} environment.

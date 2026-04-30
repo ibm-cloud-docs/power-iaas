@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-28"
 
 keywords: power systems, cloud regions
 
@@ -76,6 +76,8 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 [^3]: For more information about the list of classic data centers in IBM Cloud, see [Classic data centers](/docs/overview?topic=overview-locations#data-centers){: external}.
 [^7]: For more information about the IBM Cloud regions that support VPC, see [Creating a VPC in a different region](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli){: external}.
 
+
+
 | Location  | VPC region[^8] | {{site.data.keyword.powerSys_notm}} region | VPC zone                           | {{site.data.keyword.powerSys_notm}} zone | Classic infrastructure[^4] |
 | --------- | -------------- | ------------------------------------------ | ---------------------------------- | ---------------------------------------- | -------------------------- |
 | Chennai   | x              | in-che          | x                                  | che01 [^5]                               | che01                      |
@@ -89,6 +91,10 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 {: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Asia Pacific" caption-side="top"}
 {: #asia-pacific}
 {: tab-title="Asia Pacific"}
+
+
+
+
 
 **x - Not available**
 

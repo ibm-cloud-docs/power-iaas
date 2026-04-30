@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-28"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -69,7 +69,7 @@ For AIX, {{site.data.keyword.powerSys_notm}} supports only AIX 7.1, or later. If
 ## Supported IBM i versions for {{site.data.keyword.powerSys_notm}}
 {: migration-IBMi-sup}
 
-IBM i customers must use IBM i 7.2 or later. If you are running IBM i 6.1, you must first upgrade the operating system (OS) to a current support level before migrating to the {{site.data.keyword.powerSys_notm}}. IBM i 7.2 supports direct [upgrades from IBM i 6.1 or 7.1 (N-2)](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzahc/fastpathrzahc.htm){: external}.
+You must use the latest version of IBM i OS. If you are using an older version of IBM i, you must upgrade the OS to a current support level and then migrate to {{site.data.keyword.powerSys_notm}}. For more information about upgrading the IBM i OS, see [Fast path for software installation, upgrade, and deletion tasks](https://www.ibm.com/docs/en/i/7.6.0?topic=software-fast-path-installation-upgrade-deletion-tasks){: external}. For more information about the supported IBM i OS levels, see [IBM i Release Support](https://www.ibm.com/support/pages/ibm-i-release-support){: external}.
 
 ## Migration checklist for {{site.data.keyword.powerSys_notm}}
 {: #migration-checklist}
@@ -91,7 +91,7 @@ Before you migrate to a newer IBM Power, review the following checklist:
 
 Learn more about migrating workloads from an existing IBM Power system to a Power11 system. Before you begin your migration, review the information in this section.
 
-**AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration.
+**AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can make your partitions or workloads vulnerable to issues that are resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration.
 
 **Linux** - You must migrate your Linux operating system level to a Power11-supported level.
 
@@ -110,7 +110,7 @@ For more information about IBM Power11 performance and migration strategies, see
 
 
 
-## Migrating to an IBM Power10 in IBM data center
+## Migrating to an IBM Power10 in an IBM data center
 {: #power10-migration}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -118,11 +118,11 @@ For more information about IBM Power11 performance and migration strategies, see
 
 Learn more about migrating workloads from an existing IBM Power system to a Power10 system. Before you begin your migration, review the information in this section.
 
-**AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
+**AIX and IBM i** - You must update your LPAR operating system to the recommended levels before you migrate to a newer system. Installing only the minimum levels can make your partitions or workloads vulnerable to issues that are resolved in some of the latest updates. Hence it is recommended to install the required and latest updates from Fix Central before you start your migration. For IBM i the supported levels are IBM i 7.3 TR 11 and IBM i 7.4 TR 5, or later.
 
 **Linux** - You must migrate your Linux operating system level to a Power10-supported level.
 
-For more information about the supported operating system levels and available stock images for Power11 systems, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+For more information about the supported operating system levels and available stock images for Power11 systems, see [Operating systems that are supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
 
@@ -135,17 +135,17 @@ To learn more about IBM Power10 performance and migration strategies, see the fo
 - [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
 
 
-## Migrating to an IBM Power9 in IBM data center
+## Migrating to an IBM Power9 in an IBM data center
 {: #power9-migration}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 Learn more about migrating workloads from your older IBM POWER to a Power9 system. Before you begin your migration, review the information in this section.
 
-Installing only the minimum levels can leave your partitions or workloads vulnerable to issues that have been resolved in some of the latest updates.
+Installing only the minimum levels can make your partitions or workloads vulnerable to issues that are resolved in some of the latest updates.
 {: tip}
 
-- Power9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when running in *SMT8* mode). When you migrate from an older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
+- Power9 makes more efficient use of the 8 hardware SMT threads that are available per CPU (when it runs in *SMT8* mode). When you migrate from an older system, consider the use of SMT8. Also, consider reducing the allocation of CPUs (in dedicated CPU LPARs), or reducing VPs and CPU entitlement on shared CPU LPARs.
 - Capacity planning is important when you are considering processor migration. When you are setting performance improvement goals and expectations, take note of the application behavior (for example, highly multi-threaded workloads vs single-threaded workloads).
 
 To learn more about IBM Power9 performance and migration strategies, see the following articles:

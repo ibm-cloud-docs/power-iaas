@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-03"
+lastupdated: "2026-04-29"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -13,17 +13,17 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Network security
+# Network security for {{site.data.keyword.powerSys_notm}}
 {: #network-security}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
 ---
+
+
 
 The infrastructure provides virtual LAN (VLAN) isolation between different tenants, which are enforced at Virtual I/O Server (VIOS) and physical switches and routers.
 {: shortdesc}

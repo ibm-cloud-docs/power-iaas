@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2026-02-06"
+lastupdated: "2026-04-30"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -131,3 +131,14 @@ You can build PCI-DSS compliant environments and applications by using IBM Cloud
 The US Health Insurance Portability and Accountability Act (HIPAA) and the Health Information Technology for Economic and Clinical Health (HITECH) Act define standards for handling electronic healthcare transactions and information. {{site.data.keyword.powerSys_notm}} on IBM Cloud is HIPAA-ready. You can build HIPAA-ready environments and applications by using {{site.data.keyword.powerSys_notm}}. For more information, see the [IBM Cloud® compliance: HIPAA](https://www.ibm.com/cloud/compliance/hipaa){: external}.
 
 If your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. By using this setting, you can filter on HIPAA Enabled services in the catalog, indicate to IBM that your account stores protected health information (PHI), and digitally accept the IBM Business Associate Addendum for covered entities. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa).
+
+## ISO/IEC 20000
+{: #ISO-20000-cert}
+
+ISO 20000 is the international standard for [IT service management (ITSM)](https://www.ibm.com/think/topics/it-service-management){: external}, developed jointly by the ISO and the International Electrotechnical Commission (IEC).
+
+ITSM is the practice of delivering IT services that enable an organization to meet the needs of its employees and customers, and achieve its business goals. ISO 20000 outlines requirements, best practices, benchmarks and guidance for planning, designing, implementing, maintaining, and continually improving a service management system (SMS).
+
+{{site.data.keyword.powerSys_notm}} is ISO 20000 certified alongside other IBM Cloud services. For more information, see the certificate at [ISO/IEC 20000 Scope of certification](https://www.ibm.com/downloads/documents/us-en/1443d5df0fcf47e6){: external}.
+
+For more information about IBM Cloud ISO 20000 certification, see [ISO/IEC 20000](https://www.ibm.com/products/cloud/compliance/iso-20000){: external}.

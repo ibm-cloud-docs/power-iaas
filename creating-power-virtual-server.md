@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-27"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -140,8 +140,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
 
-
-
     To deploy a VSI for SAP NetWeaver workloads without an SAP certified profile, complete the following steps:
 
    1. In the Boot image section, select **Linux for SAP (NetWeaver)** from the **Operating system** list.
@@ -149,8 +147,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    3. Select a storage tier from the **Tier** list.
    4. Select a storage pool from the **Storage pool** field.
    5. Click **Done editing** to continue to the Profile section.
-
-
 
 8. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
 
@@ -188,15 +184,17 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-2. Optional: Expand **Advanced Configuration** and set **Specify preferred processor compatibility mode** to on.
+9. Optional: Expand **Advanced Configuration** and set **Specify preferred processor compatibility mode** to on.
 
-3. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
+10. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
+
+    The Virtual server instance details page of a deployed VSI displays the preferred and the effective processor compatibility mode that is currently set for a VSI.
 
     The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
-    The Virtual server instance details page of a deployed VSI displays the *Preferred* and the *Effective* processor compatibility mode that is currently set for a VSI. The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host in which the VSI runs determines the effective processor compatibility mode.
+    The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host in which the VSI runs determines the effective processor compatibility mode.
 
-    The *Effective* processor compatibility mode for the VSI might not match the *Preferred* mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}.
+    The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
     {: note}
 
 4. Click **Continue**.

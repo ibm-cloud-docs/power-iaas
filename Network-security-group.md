@@ -3,9 +3,9 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-30"
 
-keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, memebers, nsg rules evaluation order, NAG precedence, traffic matching
+keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
 subcollection: power-iaas
 
@@ -141,7 +141,7 @@ Review the following topics to understand the various aspects of setting up, con
 - [Creating and managing NSGs in a workspace](#create-manage-NSG)
 - [Creating and managing NAGs in a workspace](#create-manage-nag)
 - [Managing rules in an NSG](#create-manage-ib-rules)
-- [Adding members to an NSG and managing them](##add-manage-memebers-nsg)
+- [Adding members to an NSG and managing them](##add-manage-members-nsg)
 
 ### Enabling or disabling NSG in a workspace
 {: #enable-disable-nsg}
@@ -167,7 +167,9 @@ Verify that the `resourceCRNs` property is present and its value is set to `true
 
 To enable or disable the NSG feature on an existing workspace, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -201,7 +203,9 @@ When you create an NSG in your workspace, you are not required to mandatorily de
 
 By default, all inbound network traffic is denied and does not reach any member of the {{site.data.keyword.nsg-lc}}. To create an NSG with default configuration, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 3. Select the workspace in which you want to create the NSG. The Workspace details panel is displayed.
@@ -216,7 +220,9 @@ By default, all inbound network traffic is denied and does not reach any member 
 
 To allow or deny inbound traffic, inbound rules must be explicitly defined. To create and define an NSG with inbound rules and members, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -285,7 +291,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 12. Click **Create rule**.
 13. Click **Continue** to add members to the NSG.
 
-14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by competing the steps that are provided at [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+14. In the Members (optional) section, click **Add member**. All the existing virtual server instances that are part of the workspace is listed. If you do not see any virtual servers listed, you can create one by completing the steps that are provided in the [Creating an IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server) section.
 
     Adding members to a {{site.data.keyword.nsg-lc}} allows you to control inbound network traffic to these members. A member can only be associated with one {{site.data.keyword.nsg-lc}} at a time.
     {: note}
@@ -308,7 +314,9 @@ After the NSGs are created, you can manage them by performing the following acti
 
 To rename an NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -329,7 +337,9 @@ To rename an NSG, complete the following steps:
 
 When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the same rules and member configurations as the original NSG from which it was cloned. To clone an NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
+
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -360,9 +370,11 @@ You cannot delete an NSG or NAG until all the associated rules and members are r
 
 To delete a NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG to delete. The Workspace details panel is displayed.
 
@@ -387,9 +399,11 @@ NAGs form a part of the inbound rules that defines inbound traffic from network 
 
 To create an NAG, complete the following steps:
 
-1 Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace in which you want to create the NAG. The Workspace details panel is displayed.
 
@@ -430,9 +444,11 @@ After the NAGs are created, you can manage them by performing the following acti
 
 To rename an NAG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NAG to rename. The Workspace details panel is displayed.
 
@@ -451,9 +467,11 @@ To rename an NAG, complete the following steps:
 
 To delete an NAG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NAG to be deleted. The Workspace details panel is displayed.
 
@@ -486,9 +504,11 @@ NSGs are stateless, and since all outbound traffic is automatically permitted, r
 
 To create rules on an existing NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG in which you want to create rules. The Workspace details panel is displayed.
 
@@ -509,9 +529,11 @@ To create an inbound rule with the same configuration as an existing inbound rul
 
 You can also customize the cloned properties of a rule to create a different rule efficiently and quickly. To clone an existing rule, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG with the rules that you want to clone. The Workspace details panel is displayed.
 
@@ -533,9 +555,11 @@ You can also customize the cloned properties of a rule to create a different rul
 
 To delete a rule from an existing NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG with the rule that you want to delete. The Workspace details panel is displayed.
 
@@ -552,7 +576,7 @@ To delete a rule from an existing NSG, complete the following steps:
 9. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
 ### Adding members to an NSG and managing them
-{: #add-manage-memebers-nsg}
+{: #add-manage-members-nsg}
 
 You can manage members that are associated with an NSG by performing the following operations:
 
@@ -569,9 +593,11 @@ Members can be added at two points. First, when you are initially creating an NS
 
 To add members to an existing NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG for adding members. The Workspace details panel is displayed.
 
@@ -610,9 +636,11 @@ When you move a network interface (member) from one {{site.data.keyword.nsg-lc}}
 
 To move a member from one NSG to another NSG, complete the following steps:
 
-1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
 
 3. Select the workspace that contains the NSG from which you want to move the members. The Workspace details panel is displayed.
 

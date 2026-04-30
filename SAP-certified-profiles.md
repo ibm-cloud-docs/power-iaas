@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-27"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -71,11 +71,11 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 
 | Profile                       | Profile type     | Description                                                                                                             |
 | ----------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| SR2                           | SAP RISE         | SR2 profiles are SAP RISE profiles.                                                                                     |
-| SH2                           | Small            | Suitable for balanced workloads that require less CPU and storage consumption.                                          |
-| CH2                           | Compute          | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers. |
-| BH2                           | Balanced         | Suitable for midsize databases and common cloud applications with moderate traffic.                                     |
-| MH2  | Very high memory | Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver.                               |
+| SR2                           | SAP RISE         | SR2 profiles are SAP RISE profiles                                                                                    |
+| SH2                           | Small            | Suitable for balanced workloads that require less CPU and storage consumption                                          |
+| CH2                           | Compute          | Suitable for CPU-intensive workloads, such as high web traffic, production batch processing, and front-end web servers |
+| BH2                           | Balanced         | Suitable for midsize databases and common cloud applications with moderate traffic                                     |
+| MH2  | Very high memory | Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver                               |
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
 SR2 profiles also support custom combination of physical CPU cores and memory. You must deploy custom SR2 profiles by using the CLI or API only. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware]( https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. SR2 profiles are not available with the E980 machine type.
@@ -111,15 +111,17 @@ For more information about SAP certified profiles for SAP HANA, see [IBM Power V
 
 The following table describes the fields displayed for an SAP profile in the {{site.data.keyword.powerSys_notm}} user interface, along with their configuration details and associated performance indicators:
 
-| Field   | Description                                                                                                                                                                                                                                                                             |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Profile | Profile identifier that represents the profile type, number of cores, and memory allocation.                                                                                                                                                                                             |
-| Cores   | Number of virtual CPU cores that are allocated to the profile.                                                                                                                                                                                                                           |
-| RAM     | Memory allocation for the profile in GiB (gibibytes).                                                                                                                                                                                                                                    |
-| SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment. For more information about SAPS, see [SAP Application Performance Standard](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}. |
-| aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark. For more more information about aSAPS, see [advanced SAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.                           |
-| Price   | Hourly cost that is associated with the profile.                                                                                                                                                                                                                                         |
+| Field   | Description                                                                                                               |
+| ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Profile | Profile identifier that represents the profile type, number of cores, and memory allocation                               |
+| Cores   | Number of virtual CPU cores that are allocated to the profile                                                             |
+| RAM     | Memory allocation for the profile in GiB (gibibytes)                                                                      |
+| SAPS    | Hardware-independent unit of measurement that represents the performance of a system configuration in the SAP environment |
+| aSAPS   | Advanced SAP performance unit that represents the system capacity based on the SAP quote-to-cash (Q2C) benchmark          |
+| Price   | Hourly cost that is associated with the profile                                                                           |
 {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
+
+For more information about SAPS and aSAPS, see [SAPS/aSAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.
 
 
 

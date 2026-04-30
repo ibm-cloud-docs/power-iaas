@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2024-12-04"
+lastupdated: "2026-04-30"
 
-keywords: returning pod, {{site.data.keyword.powerSys_notm}}, private cloud, decomission, remove pod
+keywords: returning pod, {{site.data.keyword.powerSys_notm}}, private cloud, decommission, remove pod
 
 subcollection: power-iaas
 

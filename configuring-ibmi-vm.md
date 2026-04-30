@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-28"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -31,7 +31,7 @@ subcollection: power-iaas
 The following instructions describe the first boot and usage of your IBM i-based virtual server instance (VSI).
 {: shortdesc}
 
-VSIs running the IBM i 7.2 or later stock OS images support up to 127 storage volumes per VSI by default and can be configured to support up to 508 storage volumes per VSI.
+VSIs that runs the IBM i 7.3 or later stock images, support up to 127 storage volumes per VSI by default. However, you can configure the VSIs to support up to 508 storage volumes per VSI.
 {: note}
 
 ## First boot of IBM i
@@ -64,7 +64,7 @@ To open the VSI console on the first boot, complete the following steps:
 
 To disconnect from the VSI console session, close the web browser window that is titled 'noVNC'.
 
-If you lose internet connectivity, your VSI console session (provided through noVNC) displays the "Server disconnected (code: 1006)" message and will not auto-connect when internet connectivity is restored.
+If you lose internet connectivity, your VSI console session (provided through noVNC) displays the "Server disconnected (code: 1006)" message and does not auto-connect when internet connectivity is restored.
 
 To restore the VSI console session, complete the following steps:
 
@@ -84,7 +84,7 @@ for i in $(ibmcloud pi instance list --json | jq -r '.pvmInstances.[] | select(.
 ### Changing the DST password
 {: #first-boot-change-dst-password}
 
-When the VSI console loads and the IBM i console screen is shown (IBM i 7.5 or later), complete the following steps to reset the password of the IBM i standard user:
+When the VSI console is loading and the IBM i console screen is shown (IBM i 7.5 or later), complete the following steps to reset the password of the IBM i standard user:
 
 Releases before IBM i 7.5 is presented on the System Sign-on screen first, where the `QSECOFR` password needs to be reset.
 {: note}
@@ -99,7 +99,7 @@ Releases before IBM i 7.5 is presented on the System Sign-on screen first, where
 Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
 {: note}
 
-The IBM i VSI is now ready to be configured and a prompt will be given whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
+The IBM i VSI is now ready to be configured and prompts to select whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
 
 The default is to select Option 1 'Perform an IPL'.
 
@@ -145,9 +145,9 @@ If the stock image is deployed without displaying the Operating System License I
 
 
 
-To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1` and press ENTER again.
+To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1`, and press ENTER again.
 
-One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` should be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
+One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` must be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
 
 See the following example of the `cloud-init` configuration verification:
 
@@ -168,16 +168,16 @@ F3=Exit       F5=Refresh      F6 Print list     F11-Display interface status
 F12=Cancel    F17=Top         F18=Bottom
 ```
 
-For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VSI if the ping doesn't return anything.
+For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal, and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VSI if the ping doesn't return anything.
 
 
-Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values should be populated for each license.
+Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values must be populated for each license.
 
 When you have verified your network and license key configuration, you can initial program load (IPL) the LPAR.
 
 If license keys for the operating system or any IBM i licensed program Products (LPP) are not applied, follow instructions in the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} document.
 
-If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before collecting the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
+If this is an upgraded system that contained license Keys before, allow a weekend (Saturday-Sunday) to process the updated keys before you collect the [PowerVS license key issues](https://www.ibm.com/support/pages/mustgather-powervs-license-key-issues){: external} information.
 
 The IBM i VSI might result in a timeout error, if you update the IBM i VSI license and memory together.
 {: note}
@@ -196,7 +196,7 @@ To change the System Service Tools (SST) and Dedicated Service Tools (DST) passw
 
 1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VSI. The Virtual server instance details page is displayed.
 2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog is displayed.
-3. Select **(21) Active dedicated service tools** option from the list displayed on the **Control Panel funstions** tab.
+3. Select **(21) Active dedicated service tools** option from the list displayed on the **Control Panel functions** tab.
 4. Click **Run action**.
 
 
@@ -214,13 +214,13 @@ You can use the **IBM i operations** option to manage advanced VSI operations an
 The **IBM i operations** option is available only for the IBM i VSIs.
 {: note}
 
-3. In the IBM i operations dialog, select one of the following actions listed on the **Control panel functions** as per your requirements:
+3. In the IBM i operations dialog, select one of the following actions that are listed on the **Control panel functions** as per your requirements:
 
    Job operations:
 
      - **(21) Activate dedicated service tools** – Activates dedicated service tools (DST) and makes it available on the system console display. You can use DST from the system console display to work with Licensed Internal Code (LIC), disk units, configuration and resources, and to verify devices and communications.
 
-     - **(34) Retry Dump** – Retries a failed main storage dump (MSD) operation. You can run this function when the VM instance is hung during the MSD operation or when you want to reattempt the initial program load (IPL) operation without losing the original dump information.
+     - **(34) Retry Dump** – Retries a failed main storage dump (MSD) operation. You can run this function when the VSI is hung during the MSD operation or when you want to reattempt the initial program load (IPL) operation without losing the original dump information.
 
      - **(66) Enable remote service** - Activates the communications port that is used by a remote service session or operations console.
 
@@ -233,7 +233,7 @@ The **IBM i operations** option is available only for the IBM i VSIs.
       You must not shut down the system before the MSD operation. This action can cause data loss.
       {: note}
 
-4. In the IBM i operations dialog, configure one of the following options listed on the **Boot operations** tab as per your requirements:
+4. In the IBM i operations dialog, configure one of the following options that are listed on the **Boot operations** tab as per your requirements:
 
    Boot operations:
 
@@ -255,9 +255,9 @@ The **IBM i operations** option is available only for the IBM i VSIs.
 ## IBM i language support
 {: #ibmi-language-support}
 
-The VSI console of an IBM i VSI supports English language by default and provides the following additional language support:
+The VSI console of an IBM i VSI supports the English language by default and provides the following language support:
 
-- IBM i stock OS images support English (2924) or English DBCS (2984). You can install additional secondary languages and  change the primary language on an IBM i VSI.
+- IBM i stock OS images support English (2924) or English DBCS (2984). You can install secondary languages and change the primary language on an IBM i VSI.
 
 - The VSI console also supports Japanese if it is installed as a primary or secondary language.
 

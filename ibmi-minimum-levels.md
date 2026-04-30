@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026 
 
-lastupdated: "2025-12-02"
+lastupdated: "2026-04-27"
 
 keywords: ibm i, program temporary fixes
 
@@ -29,11 +29,14 @@ subcollection: power-iaas
 
 Install the following program temporary fixes (PTFs) depending on the version of IBM i that is being used:
 
-- IBM i 7.2 - 5770SS1 SI71091 (prerequisite System Licensed Internal Code (SLIC) PTFs: MF66395, MF66394, MF66391, SI77413, SI77272), SJ02850
-- IBM i 7.3 - MF99207 (TR7) and SI77412, SI77206, SJ02851
-- IBM i 7.4 - MF99301 (TR1) and SI77411, SI77202, SJ05537
-- IBM i 7.5 - SJ02853
-- IBM i 7.6 - Included in the *Base* release
+
+
+- IBM i 7.3 - MF99213 (TR13) and SJ02851, SJ04128 
+- IBM i 7.4 - MJ99312 (TR12) and SJ09009, SJ04127 
+- IBM i 7.5 - MJ99407 (TR7) SJ08081 
+- IBM i 7.6 - MJ99501 (TR1) 
+
+
 
 
 
@@ -58,7 +61,7 @@ You must install the program temporary fixes (PTFs) depending on the version of 
 ## Best practices for using IBM i stock images
 {: #best-practice-stock-images}
 
-1. When you select an IBM i stock image, you must verify that the latest group of PTFs are installed, especially the Hiper and Security group. For more information, see [IBM i Group PTFs with level](https://www.ibm.com/support/pages/ibm-i-group-ptfs-level).
+1. When you select an IBM i stock image, you must verify that the latest group of PTFs is installed, especially the Hiper and Security group. For more information, see [IBM i Group PTFs with level](https://www.ibm.com/support/pages/ibm-i-group-ptfs-level).
 
 2. Refer to the [IBM PSIRT blog](https://www.ibm.com/blogs/psirt/) for the latest Product Security Incident Response.
 
