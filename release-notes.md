@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-04"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -30,6 +30,9 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ### 30 April 2026
 {: #april-2026}
 {: release-note}
+
+ISO/IEC 20000 compliance
+:   {{site.data.keyword.powerSys_notm}} is ISO 20000 certified alongside other IBM Cloud services. For more information, see [Compliance certification](/docs/power-iaas?topic=power-iaas-compliances-list#ISO-20000-cert).
 
 Stock images support
 :   * The RHEL 9.4 general purpose stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
