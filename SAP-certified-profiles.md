@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-27"
+lastupdated: "2026-05-05"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -97,7 +97,7 @@ The following SAP HANA profiles are available for IBM Power9 processor-based ser
 
 For more information about SAP certified profiles for SAP HANA, see [IBM Power Virtual Server certified profiles for SAP HANA](https://cloud.ibm.com/docs/sap?topic=sap-hana-iaas-offerings-profiles-power-vs){: external}. For more information about pricing, see the following topics:
 
-*[Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+* [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
 * [Pricing for IBM Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-pricing-private-cloud)
 
@@ -121,7 +121,7 @@ The following table describes the fields displayed for an SAP profile in the {{s
 | Price   | Hourly cost that is associated with the profile                                                                           |
 {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
 
-For more information about SAPS and aSAPS, see [SAPS/aSAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.
+For more information about AP Application Performance Standard (SAPS) and aSAPS, see [SAPS/aSAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.
 
 
 
