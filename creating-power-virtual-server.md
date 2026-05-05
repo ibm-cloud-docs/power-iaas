@@ -186,9 +186,9 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 9. Optional: Expand **Advanced Configuration** to configure additional settings for your VSI.
 
-    - **Specify preferred processor compatibility mode**: Set to on to select a specific processor compatibility mode.
+    - **Specify preferred processor compatibility mode**: Set to on and select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 
-        Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
+        Select
 
         The Virtual server instance details page of a deployed VSI displays the preferred and the effective processor compatibility mode that is currently set for a VSI.
 
