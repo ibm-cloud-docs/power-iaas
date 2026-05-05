@@ -121,7 +121,7 @@ The following table describes the fields displayed for an SAP profile in the {{s
 | Price   | Hourly cost that is associated with the profile                                                                           |
 {: caption="SAP profile attributes and performance metrics" caption-side="bottom"}
 
-For more information about AP Application Performance Standard (SAPS) and aSAPS, see [SAPS/aSAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.
+For more information about SAP Application Performance Standard (SAPS) and aSAPS, see [SAPS/aSAPS](https://www.sap.com/about/benchmark/sizing/decision-tree.html#saps){: external}.
 
 
 
