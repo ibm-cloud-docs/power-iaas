@@ -1,11 +1,11 @@
 ﻿---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026
 
-lastupdated: "2025-10-23"
+lastupdated: "2026-05-07"
 
-keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
+keywords: migration strategies, cos, mass data migration, powervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
 subcollection: power-iaas
 
