@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-11"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -36,7 +36,7 @@ subcollection: power-iaas
 
 
 
-* Virtual machines: CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB)
+* Virtual server instances: CPU (in cores) with processor modes (capped, shared, or dedicated), and memory (in GB)
 
 * Volumes: Storage volumes (in GB)
 
@@ -44,7 +44,7 @@ subcollection: power-iaas
 
 * Dedicated hosts: Dedicated hosts in host units
 
-In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual server instance (VSI) resources. For more information about the billing of VSI resources, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
+In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with VSI resources. For more information about the billing of VSI resources, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
 
 
 
@@ -104,18 +104,24 @@ In your invoice, use one of the following identifiers to identify the charges th
 ### Consumer ID
 {: #consumer-id}
 
+
+
 The Consumer ID groups the billing usages that are under a single resource such as VSIs, shared processor pools (SPPs), and storages. You can view resource usage with broken down metrics.
 
 Following are the benefits of consumer ID:
 - You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
 - Charges are itemized by a resource type that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
 
+
+
+
+
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. Click **Usage**, on the left navigation menu.
 3. Click **View plans** for the entry **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
-5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected virtual server instance is opened.
+5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected  (VSI) is opened.
 
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
@@ -149,7 +155,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | **General**                                   |                                             |                                                           |                                                                                                                                                              |
 | Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN                                                                                                   |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
-| Virtual machine                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
+| Virtual server instance                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
 | Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                          |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
@@ -165,9 +171,11 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 ## Monthly usage
 {: #pricing-monthly-usage}
 
+
+
 IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
 
-To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a virtual machine (VM)](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
+To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a virtual server instance (VSI)](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -179,6 +187,9 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 - AIX 7200-03-02 OS.
 
 As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
+
+
+
 
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
@@ -198,7 +209,7 @@ A part number is associated with the license for the software product to be used
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 
-| Part description for virtual machine group (available on the IBM invoice)                                         | Metric ID (available in the IBM Cloud catalog)                             |
+| Part description for virtual server instance group (available on the IBM invoice)                                         | Metric ID (available in the IBM Cloud catalog)                             |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | **Shared capped processor cores**                                                                                 |                                                                            |
 | IBM Power S1122 shared capped core-hour                                                                           | power-iaas-metric-S1122-core-capped                                        |
@@ -310,7 +321,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #virtual-machine-group}
-{: tab-title="Virtual machine group"}
+{: tab-title="Virtual server instance group"}
 {: translate="no"}
 
 | Part description for shared processor pool group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
@@ -408,7 +419,7 @@ Refer to the following table to view the part number descriptions and the associ
 ## Base instances
 {: #pricing-base-instance-prices}
 
-The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your virtual server instance, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
+The base instance billing depends on your virtual instance options when you create a {{site.data.keyword.powerSys_notm}}. The machine type, number of cores, and amount of memory all affect the base instance billing. When you create your VSI, the associated monthly rate is displayed. For more information, see [Creating a {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-power-virtual-server).
 
 The pricing for memory and for vPMEM memory is calculated based on a ratio of 64 GB per core. For example, if you use more than 16 GB for 0.25 cores, you must pay a premium high-use RAM price for the excess memory. However, if you use up to 128 GB for 2 cores, you do not have to pay any premium memory price.
 
@@ -422,7 +433,7 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must purchase an operating system license for virtual server resources. The pricing for AIX and IBM i operating system license is not based on whether you use a custom image or a stock image.
 
-You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual machine](/docs/power-iaas?topic=power-iaas-linux-deployment).
+You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual server instance](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
 If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
@@ -430,7 +441,7 @@ If you bring your own image, you are charged for the image size and the storage 
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
 
-You can deploy the following types of SAP workloads as virtual machines:
+You can deploy the following types of SAP workloads as VSIs:
 
 * **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are like other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not the same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on S1022, E1080, S922, and E980 systems.
 
@@ -450,7 +461,13 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 ## Processor types
 {: #pricing-processor}
 
-You are charged different rates based on the processor type that you choose for your virtual machine (VM). **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
+
+
+You are charged different rates based on the processor type that you choose for your VSI. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
+
+
+
+
 
 Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
 
@@ -509,7 +526,7 @@ Shared processor pool (SPP) provides the capability to manage CPU cores efficien
 
 
 
-SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VM core or the cost for high-use memory parts.
+SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VSI core or the cost for high-use memory parts.
 
 {{_include-segments/spp-pricing-JIRA-18311.md}}
 
@@ -552,18 +569,18 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     | Volume 1 (20 GB), volume 2 (10 GB) | Multiple backing volumes   | 30 GB          |
     {: caption="Calculation of image backing volume" caption-side="bottom"}
 
-- **Deployed VM volumes** are created when you deploy a VM with an image. The deployed VMs get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VM are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VMs that you deploy:
+- **Deployed VSI volumes** are created when you deploy a VSI with an image. The deployed VSIs get a copy of all the volumes in the image. Any additional data volumes attached to the deployed VSI are already accounted for under Data Volumes. The following table shows an example of how you are billed based on the VSIs that you deploy:
 
     | Image backing volume | You are billed |
     | -------------------- | -------------- |
     | 20 GB                | 20 GB          |
     | 20 GB + 30 GB        | 50 GB          |
-    {: caption="Calculation of deployed VMs volume" caption-side="bottom"}
+    {: caption="Calculation of deployed VSIs volume" caption-side="bottom"}
 
 
-- **Deployed virtual machine snapshots** are the snapshots of the volumes that are taken after the virtual machine is deployed. The size of the volume snapshot is related to the number of updates that are made to the virtual machine. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of one or more volumes of the virtual machine. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
+- **Deployed VSI snapshots** are the snapshots of the volumes that are taken after the VSI is deployed. The size of the volume snapshot is related to the number of updates that are made to the VSI. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of one or more volumes of the VSI. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
-For an example, consider a virtual machine with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
+For an example, consider a VSI with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
 
 Snapshot sizes are not predictable as they are related to the updates made to the volume between two snapshots.
 {: note}
@@ -590,7 +607,7 @@ The following tables show examples of how different storage types affect the cos
 
 
 
-- **{{site.data.keyword.ibmi-vst}}**: Starting with IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system it runs on. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
+- **{{site.data.keyword.ibmi-vst}}**: Starting with IBM Power10 systems and later, you can assign {{site.data.keyword.ibmi-vst}} to a VSI. The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system it runs on. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI, not its hardware compatibility.
 
 
 
@@ -632,13 +649,13 @@ The following table shows the use case on how you are billed based on the storag
 {: tab-group="storage"}
 {: caption="Account billable for storage use case" caption-side="bottom"}
 {: #storage-spec-3}
-{: tab-title="Deployed VMs of 160 GB"}
+{: tab-title="Deployed VSIs of 160 GB"}
 
 Total billable storage = 595 GB
 
 - Data volumes: 235 GB
 - Image volumes: 200 GB
-- Deployed VMs: 160 GB
+- Deployed VSIs: 160 GB
 
 
 ## Virtual Persistent Memory
@@ -674,5 +691,5 @@ See the [Pricing considerations](/docs/transit-gateway?topic=transit-gateway-hel
 
 The monthly billing cycle ends when you delete the LPAR. If you scale your infrastructure up and down in response to workload requirements, your billing follows the timing of the LPAR provision change. If you stop the LPAR, the billing process is not stopped. Delete the LPAR to stop the billing cycle.
 
-You are charged even if the VM is in a *suspended state*. When your VM is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VM core count and memory.
+You are charged even if the VSI is in a *suspended state*. When your VSI is inactive, you can use Dynamic Logical Partitioning (DLPAR) to resize it to a minimal state. You can drastically decrease the price per hour by reducing the VSI core count and memory.
 {: important}
