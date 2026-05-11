@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-27"
+lastupdated: "2026-05-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -210,13 +210,13 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 
 If you like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 
-## How do I migrate my VM from one data center to another (WDC04 to DAL13)?
+## How do I migrate my VSI from one data center to another (WDC04 to DAL13)?
 {: #vm-migration}
 {: faq}
 
-To migrate your VM from one data center to another, you must capture and export your VM to Cloud Object Storage. After you successfully capture and export your VM, copy it to the Cloud Object Storage in the destination region, then do an import followed by a deployment.
+To migrate your VSI from one data center to another, you must capture and export your VSI to Cloud Object Storage. After you successfully capture and export your VSI, copy it to the Cloud Object Storage in the destination region, then do an import followed by a deployment.
 
-## What does VM pinning do?
+## What does VSI pinning do?
 {: #pinning}
 {: faq}
 

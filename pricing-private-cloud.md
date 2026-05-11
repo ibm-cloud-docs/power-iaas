@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-08"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -78,11 +78,19 @@ For the example, in this table you can see four distinct part numbers for the fo
 
 
 
-For detailed usage and billing information, refer to the part numbers in your invoice. The part numbers in the invoice represent the charge unit for each resource charged. Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 
 
 
+
+
+
+## Part number descriptions
+{: #part-numbers-private}
+
+A part number is associated with the license for the software product to be used in {{site.data.keyword.cloud_notm}}. For detailed usage and billing information, refer to the part number descriptions. The part number descriptions are listed in your invoice or in the [IBM&reg; Cloud billing](https://cloud.ibm.com/billing){: external} portal.
+
+Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 | Part description (visible on the invoice from IBM)                                         | Metric ID (visible in the IBM Cloud catalog)    |
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------- |

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-27"
+lastupdated: "2026-05-11"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -184,22 +184,22 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-9. Optional: Expand **Advanced Configuration** and set **Specify preferred processor compatibility mode** to on.
+9. Optional: Expand **Advanced Configuration** to configure additional settings for your VSI.
 
-10. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
+    - **Specify preferred processor compatibility mode**: By default, this option is set to off. To use a specific processor compatibility mode, set **Specify preferred processor compatibility mode** to on, and then select the processor compatibility mode from the **Preferred processor compatibility mode** list.
 
-    The Virtual server instance details page of a deployed VSI displays the preferred and the effective processor compatibility mode that is currently set for a VSI.
+        The Virtual server instance details page of a deployed VSI displays the preferred and the effective processor compatibility mode that is currently set for a VSI.
 
-    The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
+        The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
-    The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host in which the VSI runs determines the effective processor compatibility mode.
+        The effective processor compatibility mode is the processor mode that is currently in use for the VSI. The physical host in which the VSI runs determines the effective processor compatibility mode.
 
-    The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
-    {: note}
+        The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
+        {: note}
 
-4. Click **Continue**.
+10. Click **Continue**.
 
-3.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+11. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
 
     Expand **Advanced configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
@@ -211,7 +211,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     
 
 
-8.  Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+12. Define your **Network interfaces** by adding a public network, private network, or both. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
@@ -219,7 +219,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     For an AIX VSI, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-9.  Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+13. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
     
 

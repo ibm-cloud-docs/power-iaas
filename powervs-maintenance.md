@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026 
-lastupdated: "2026-03-25" 
+lastupdated: "2026-05-05" 
 
 keywords: virtual server instances (VSI), vm, power, compute, virtual machines, planning, best practices, instances, virtual machines (VM), virtual machine (VM) instance, Power virtual machine (VM) , maintenance, IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power S1122, S922, E980, S1022, S1122, PowerVS, Power virtual server
 
@@ -44,7 +44,7 @@ Host maintenance activities, such as firmware updates, require a live partition 
 
 When you use the VSI pinning options, the VSI's availability during maintenance activities is affected. VSI pinning prevents {{site.data.keyword.powerSys_notm}} from migrating the VSI to another host during the maintenance operation. As a result, the live migration of the VSI is not possible, and the VSI must be in the *Shutoff* state for the host maintenance operation to complete. Therefore, you must use the VSI pinning options cautiously. Any downtime that is caused by VSI pinning during the host maintenance is excluded from the service-level agreements. For more information, see [Service Level Agreements for IBM Cloud](https://www.ibm.com/support/customer/csol/terms/?id=i126-9268&lc=en){: external}.
 
-For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
 ## Network maintenance
 {: #power-vs-network-maintenance}

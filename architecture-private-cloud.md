@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-05-11"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -119,13 +119,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 ### Small pod configurations
 {: #pod-config-small}
 
-
-
-A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack.
-
-
-
-
+A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server, up to the maximum capacity of the rack.
 
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
 
@@ -186,8 +180,8 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 
 A medium pod has 2x42 U or 4x42 U rack and S1122, E1150, and E1180 (2CEC) system types are supported in the rack.
 
-
-
+You can expand the capacity of a medium pod by adding servers of the same type that are already installed in the pod. A medium pod is available in two‑rack or four‑rack configurations; however, you cannot upgrade a two‑rack configuration to a four‑rack configuration. The expansion of the pod is limited to the existing rack count. You can add a minimum of one server per rack, up to the maximum capacity of each rack.
+{: note}
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 

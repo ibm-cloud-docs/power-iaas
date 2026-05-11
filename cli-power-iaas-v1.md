@@ -2,7 +2,9 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-03-25"
+lastupdated: "2026-05-01"
+
+content-type: cli-docs
 
 ---
 

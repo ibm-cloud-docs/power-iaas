@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-27"
+lastupdated: "2026-05-05"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -127,7 +127,7 @@ For more information about the processor compatibility mode, see [How does the p
 ### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
 
-You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host on which it is running. For more information about VSI pinning, see [What does VM pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning){: external}.
+You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host on which it is running. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
 Server placement groups provide control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups).
 
