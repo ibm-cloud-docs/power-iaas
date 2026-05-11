@@ -197,7 +197,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
         The effective processor compatibility mode for the VSI might not match the preferred mode that you have selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lower mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
         {: note}
 
-    
 10. Click **Continue**.
 
 11.  Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
