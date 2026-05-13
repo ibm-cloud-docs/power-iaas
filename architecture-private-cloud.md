@@ -189,7 +189,7 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
-| Number of racks            | 2   | 2   | 4   | 4.   |
+| Number of racks            | 2   | 2   | 4   | 4   |
 | Server quantity in a pod   | 12  | 15  | 16  | 40   |
 | Number of cores per server | 60  | 60  | 60  | 60   |
 | Total number of cores      | 720 | 900 | 960 | 2400 |
