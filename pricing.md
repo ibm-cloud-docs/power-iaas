@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-12"
+lastupdated: "2026-05-13"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -199,7 +199,13 @@ As the month progresses, the customer adds more memory. The new price for the LP
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
 {: caption="Monthly LPAR charges" caption-side="bottom"}
 
+
+
 In this example, if 300 hours is reached in the month, the LPAR resources are increased from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
+
+
+
+
 
 ## Part number descriptions
 {: #part-numbers}
