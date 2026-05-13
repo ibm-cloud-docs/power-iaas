@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-13"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -185,9 +185,11 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
 
+
+
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
-| Number of racks            | 2   | 2   | 4   | 4    |
+| Number of racks            | 2   | 2   | 4   | 4.   |
 | Server quantity in a pod   | 12  | 15  | 16  | 40   |
 | Number of cores per server | 60  | 60  | 60  | 60   |
 | Total number of cores      | 720 | 900 | 960 | 2400 |
@@ -203,6 +205,10 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 {: caption="Medium pod configuration." caption-side="top"}
 {: #S1122-multi-rack}
 {: tab-title="S1122"}
+
+
+
+
 
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
