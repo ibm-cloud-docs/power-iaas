@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-05-15"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -12,6 +12,8 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Backup for AIX and Linux instances in {{site.data.keyword.off-prem}}
 {: #backup-strategies}
