@@ -96,12 +96,12 @@ These additional LPPs for IBM i, which are available and can be included in your
    - IBM i Power HA (5770-HAS)
    - Rational Development Studio for IBM i (5770-WDS)
 
-
-
-
-
     Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance.
     If you want to use these programs on your IBM i VM instance, you must order these licensed programs through {{site.data.keyword.powerSys_notm}} you cannot use existing licenses in your VM instance.
+
+
+
+
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and to accept the price.
 
