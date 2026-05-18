@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-09"
+lastupdated: "2026-05-18"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -78,6 +78,8 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 Licenses that are purchased outside a subscription model license are not eligible to be used in the {{site.data.keyword.powerSys_notm}}.
 {: note}
+
+
 
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}

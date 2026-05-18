@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-05-18"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -81,10 +81,10 @@ The following table explains the fields that you can use to create an estimate f
 | Configure for Epic workloads (AIX) | Select this checkbox if you want to deploy epic workloads on E980, E1080, or E1180 Power Systems with Tier 1 storage and dedicated cores, at a shared-capped price. \n When you select this indicator, the other dependent fields are automatically filled. To learn more about epic workloads, see [Configuring a VM for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads){: external}. |
 | Add to a shared processor pool     | Select this checkbox if you want to use shared processor pool. A shared processor pool is a pool of processor capacity that is shared between a group of virtual server instances (VM).                                                                                                                                                                                                                                                                     |
 | Machine type                       | Select the required Power system from the list.                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Core type                          | Select the core type. The available options are: \n - **Shared uncapped**: Shared among other clients. \n - **Shared capped**: Shared, but resources do not expand beyond those that are requested (used mostly for licensing). \n - **Dedicated**: Resources are allocated for a specific client (used for specific third-party considerations).                                                                                                                 |
+| Core type                          | Select the core type. The available options are: \n - **Shared uncapped**: Shared among other clients. \n - **Shared capped**: Shared, but resources do not expand beyond those that are requested (used mostly for licensing). \n - **Dedicated**: Resources are allocated for a specific client (used for specific third-party considerations).                                                                                                           |
 | Cores                              | Specify the number of cores that you need. The minimum cores that you can specify is 0.25 for shared capped and shared uncapped core types. For dedicated core type, the minimum cores that you can specify is 1.                                                                                                                                                                                                                                           |
 | Memory (GiB)                       | Specify the memory size. The minimum memory size that you can specify is 2 GiB.                                                                                                                                                                                                                                                                                                                                                                             |
-| Storage tiers                      | Each estimated virtual server instance must have an associated boot volume. Total boot volume storage is multiplied by the number of estimated instances. You can choose from Tier 0, Tier 1, Tier 3, or Fixed IOPs. \n You cannot add a separate boot volume estimation. Hence, you must define the storage volume value by considering the boot volumes and data volume that you might need.                                                             |
+| Storage tiers                      | Each estimated virtual server instance must have an associated boot volume. Total boot volume storage is multiplied by the number of estimated instances. You can choose from Tier 0, Tier 1, Tier 3, or Fixed IOPs. \n You cannot add a separate boot volume estimation. Hence, you must define the storage volume value by considering the boot volumes and data volume that you might need.                                                              |
 {: caption="Fields and corresponding actions for estimating a VSI in Power Virtual Server" caption-side="top"}
 
 You can perform the following actions based on the type of OS:
@@ -106,17 +106,23 @@ You can create an estimate of the {{site.data.keyword.powerSys_notm}} instance w
 
 The following table explains the fields that you can use to create a {{site.data.keyword.powerSys_notm}} instance with an IBM i software tier:
 
+
+
 | Field                       | Action                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Operating system            | Select **IBM i** from the **Operating system** list.                                                                                                                                                                                                                                                                                                                                                                                    |
 | Version                     | Select the required IBM i version 7.3 or later from the **Version** list.                                                                                                                                                                                                                                                                                                                                                               |
-| Virtual serial number (VSN) | Set **Virtual serial number (VSN)** to `Assigned` to allocate a VSN to the VSI. VSN allocation enables IBM i software tiering options and does not impact the cost of the VSI.                                                                                                                                                                                                                                                                                                                                                     |
+| Virtual serial number (VSN) | Set **Virtual serial number (VSN)** to `Assigned` to allocate a VSN to the VSI. VSN allocation enables IBM i software tiering options and does not impact the cost of the VSI.                                                                                                                                                                                                                                                          |
 | IBM i Licenses              | Select the appropriate IBM i licenses. The available options are: \n – IBM i Cloud Storage Solution \n – IBM i Power HA \n – Rational Dev Studio for IBM i                                                                                                                                                                                                                                                                              |
 | Machine type                | Select an IBM Power10 or later Power system from the list.                                                                                                                                                                                                                                                                                                                                                                              |
 | Cores                       | Specify the number of cores that you need. The minimum cores that you can specify is 0.25 for shared capped and shared uncapped core types. For dedicated core type, the minimum cores that you can select is 1.                                                                                                                                                                                                                        |
 | Memory (GiB)                | Specify the memory size. The minimum memory size that you can specify is 2 GiB.                                                                                                                                                                                                                                                                                                                                                         |
 | IBM i software tier         | Based on the machine type, a list of supported {{site.data.keyword.ibmi-vst}}s is displayed. A text message with the recommended {{site.data.keyword.ibmi-vst}} is displayed after the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and memory size you select. You can select the recommended {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list or other options from the list. |
 {: caption="Fields and corresponding actions for estimating a Power Virtual Server instance with IBM i software tier" caption-side="top"}
+
+
+
+
 
 
 
@@ -138,7 +144,7 @@ The following table explains the fields that you can use to create an estimate f
 | Operating system      | - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.  \n - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license. |
 | Linux image type      | Select the required Linux image type. Available options are SUSE and Red Hat Enterprise.                                                                                                                                          |
 | Machine type          | \n - Select the required Power system from the list to deploy an SAP HANA profile.  \n - Select an IBM Power10 or later machine type from the list to deploy an SAP certified profile.                                            |
-| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                                   |
+| Advance Configuration | Set **SAP RISE deployment** to on to estimate the cost of a {{site.data.keyword.powerSys_notm}} instance with an SAP certified profile -  Standard RISE or Application Server.                                                    |
 | Profile               | Select an SAP HANA, a Standard RISE, or an Application Server profile.                                                                                                                                                            |
 {: caption="Fields and corresponding actions for estimating an SAP workload in {{site.data.keyword.powerSys_notm}}" caption-side="top"}
 
@@ -223,11 +229,11 @@ To learn more about dedicated host, see [Getting started with dedicated host](/d
 
 To create an estimate of a Virtual Persistent Memory (vPMEM) volume on a Power10 or later system, you must update the following fields:
 
-| Field                 | Action                |
-| --------------------- | --------------------- |
-| Operating system      | Select **AIX** or **Linux for SAP (HANA)**.     |
-| Image type            | Select the required AIX or Linux image type.    |
-| Machine type          | Select Power10 or later system from the list.   |
+| Field                 | Action                                                                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Operating system      | Select **AIX** or **Linux for SAP (HANA)**.                                                                                    |
+| Image type            | Select the required AIX or Linux image type.                                                                                   |
+| Machine type          | Select Power10 or later system from the list.                                                                                  |
 | Advance Configuration | Set **Virtual persistent memory volumes** to on. Select the existing vPMEM or you can create a vPMEM volume to add to the VSI. |
 {: caption="Fields and corresponding actions for estimating a vPMEM volume" caption-side="top"}
 
