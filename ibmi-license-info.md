@@ -91,9 +91,9 @@ These additional LPPs for IBM i, which are available and can be included in your
 
 2. Click the **Edit details** option in the **Server details** page. A menu appears.
 
+
+
 3. Select the wanted licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through {{site.data.keyword.powerSys_notm}}:
-
-
 
    - IBM i Cloud Storage Solutions (5773-ICC)
    - IBM i PowerHA (5770-HAS)

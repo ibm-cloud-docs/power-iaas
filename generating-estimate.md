@@ -129,11 +129,6 @@ The following table explains the fields that you can use to create a {{site.data
 
 
 
-
-
-
-
-
 ### Estimating SAP workloads
 {: #est-sap-workloads}
 
