@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-03"
+lastupdated: "2026-05-18"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -90,9 +90,14 @@ These additional LPPs for IBM i, which are available and can be included in your
 
 3. Select the wanted licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through {{site.data.keyword.powerSys_notm}}:
 
+
+
    - IBM i Cloud Storage Solutions (5773-ICC)
    - IBM i Power HA (5770-HAS)
    - Rational Development Studio for IBM i (5770-WDS)
+
+
+
 
     Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance.
     If you want to use these programs on your IBM i VM instance, you must order these licensed programs through {{site.data.keyword.powerSys_notm}} you cannot use existing licenses in your VM instance.
