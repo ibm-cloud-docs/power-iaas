@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-13"
+lastupdated: "2026-05-18"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -155,7 +155,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 | **General**                                   |                                             |                                                           |                                                                                                                                                              |
 | Workspace                                     | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | VPN                                                                                                   |
 | **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
-| Virtual server instance                               | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
+| Virtual server instance                       | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
 | Shared Processor Pool                         | ![Checkmark icon](./images/checkmark.svg)   | ![Checkmark icon](./images/checkmark.svg)                 | * SPP cores \n * SAP workloads                                                                                                          |
 | Server placement groups  | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | SAP workloads                                                                                                                                                |
 | Dedicated Host                                | ![Checkmark icon](./images/checkmark.svg)   | X                                                         | Dedicated host capacity                                                                                                                                      |
@@ -215,7 +215,7 @@ A part number is associated with the license for the software product to be used
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 
-| Part description for virtual server instance group (available on the IBM invoice)                                         | Metric ID (available in the IBM Cloud catalog)                             |
+| Part description for virtual server instance group (available on the IBM invoice)                                 | Metric ID (available in the IBM Cloud catalog)                             |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | **Shared capped processor cores**                                                                                 |                                                                            |
 | IBM Power S1122 shared capped core-hour                                                                           | power-iaas-metric-S1122-core-capped                                        |
@@ -257,7 +257,8 @@ Refer to the following table to view the part number descriptions and the associ
 | IBM i P10 LPP core-hour                                                                                           | power-iaas-metric-ibmi-lpp-p10                                             |
 | IBM i LPP P10 - mobile core-hour - SWMA paid                                                                      | power-iaas-metric-ibmi-lpp-p10-mol                                         |
 | IBM i P30 LPP core-hour                                                                                           | power-iaas-metric-ibmi-lpp-p30                                             |
-| IBM i LPP P30 - mobile core-hour - SWMA paid                                                                      | power-iaas-metric-ibmi-lpp-p30-mol      
+| IBM i P30 LPP core-hour                                                                                           | power-iaas-metric-ibmi-lpp-p30                                             |
+| IBM i LPP P30 - mobile core-hour - SWMA paid                                                                                           | power-iaas-metric-ibmi-lpp-p30-mol                                             |
 | IBM i P05 software tier license core-hour                                                                         | power-iaas-metric-ibmi-os-p05-tier                                         |
 | IBM i P10 software tier license core-hour                                                                         | power-iaas-metric-ibmi-os-p10-tier                                         |
 | IBM i P20 software tier license core-hour                                                                         | power-iaas-metric-ibmi-os-p20-tier                                         |
@@ -345,6 +346,8 @@ Refer to the following table to view the part number descriptions and the associ
 {: #shared-processor-pool-group}
 {: tab-title="Shared processor pool group"}
 {: translate="no"}
+
+
 
 
 
