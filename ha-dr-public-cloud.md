@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-18"
+lastupdated: "2026-05-19"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -52,7 +52,7 @@ The host failure recovery:
 
 - Does not restart any pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host.
 
-- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider to use capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
+- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
 
 
