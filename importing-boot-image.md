@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-13"
+lastupdated: "2026-05-19"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -28,13 +28,13 @@ subcollection: power-iaas
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the storage volume is created, you cannot change the storage types. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface or CLI. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the storage volume is created, you cannot change the storage types. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
-Image import requires Hash-Based Message Authentication Code (HMAC) keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires Hash-Based Message Authentication Code (HMAC) access and secret keys to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
-The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
+The {{site.data.keyword.powerSys_notm}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
 
 As part of this Job feature, the following API and CLIs are available:
 - API for image import - [Create an cos-image import job](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.
