@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-15"
+lastupdated: "2026-05-20"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -48,7 +48,7 @@ The Secure Automated Backup with Compass® is powered by Cobalt Iron Compass and
 
 To deploy the Backup Offering in {{site.data.keyword.off-prem}}, complete the following steps:
 
-1. Provision the Backup Offering for your account for a region from the {{site.data.keyword.cloud_notm}} catalog.
+1. Set up the Backup Offering for your account for a region from the {{site.data.keyword.cloud_notm}} catalog.
 
    To create or edit Virtual Private Cloud (VPC) and Transit Gateway, you must have roles with permissions such as `writer` or `editor` for your IBM Cloud account.
    {: note}
@@ -116,7 +116,7 @@ Do not deploy any additional resources to the Backup Offering VPC.
 ![Backup Offering network architecture](./images/onPremCloudCobaltIron.svg "Backup Offering network architecture"){: caption="Dual copy Backup Offering network architecture" caption-side="bottom"}
 
 
-When you provision the Backup Offering in the {{site.data.keyword.off-prem}}, the Backup Offering VPC is also deployed. The Backup Offering VPC is a backup server instance that is managed by {{site.data.keyword.off-prem}}. When you deploy the backup server instance, an automation process creates the following network segments:
+When you set up the Backup Offering in the {{site.data.keyword.off-prem}}, the Backup Offering VPC is also deployed. The Backup Offering VPC is a backup server instance that is managed by {{site.data.keyword.off-prem}}. When you deploy the backup server instance, an automation process creates the following network segments:
 
 - Local Transit Gateway if it does not exist
 - VPC for backup activity only
