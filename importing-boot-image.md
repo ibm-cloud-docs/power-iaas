@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-21"
+lastupdated: "2026-05-22"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -36,10 +36,10 @@ Image import requires Hash-Based Message Authentication Code (HMAC) access and s
 
 The {{site.data.keyword.powerSys_notm}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
 
-<s>As part of this Job feature, the following API and CLIs are available:
-- API for image import - [Create an cos-image import job](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.
-- CLI command - [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.
-- CLI command - [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.</s>
+<s>As part of this Job feature, the following API and CLIs are available:</s>
+<s>- API for image import - [Create an cos-image import job](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.</s>
+<s>- CLI command - [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.</s>
+<s>- CLI command - [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.</s>
 
 The {{site.data.keyword.powerSys_notm}} VSI capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If you submit one of these operations successfully, you cannot submit another operation (VSI capture, image export, or image import) until the previous operation completes.
 {: important}
