@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-22"
+lastupdated: "2026-05-25"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -28,11 +28,12 @@ subcollection: power-iaas
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface or CLI. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After you create the storage volume, you cannot change the storage type. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After you create a storage volume, you cannot change its storage type. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
-Image import requires Hash-Based Message Authentication Code (HMAC) access and secret keys to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires Hash-Based Message Authentication Code (HMAC) access and secret keys to access your IBM Cloud Object Storage bucket or external cloud storage. To generate HMAC keys for your IBM Cloud Object Storage bucket or external cloud storage, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
+
 
 The {{site.data.keyword.powerSys_notm}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
 
