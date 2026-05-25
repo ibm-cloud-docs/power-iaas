@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-13"
+lastupdated: "2026-05-25"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -175,6 +175,8 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 {: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
 
+
+
 ### Medium pod configurations
 {: #pod-config-medium}
 
@@ -189,7 +191,7 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
-| Number of racks            | 2   | 2   | 4   | 4   |
+| Number of racks            | 2   | 2   | 4   | 4    |
 | Server quantity in a pod   | 12  | 15  | 16  | 40   |
 | Number of cores per server | 60  | 60  | 60  | 60   |
 | Total number of cores      | 720 | 900 | 960 | 2400 |
