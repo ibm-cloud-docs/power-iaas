@@ -208,10 +208,6 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 {: #S1122-multi-rack}
 {: tab-title="S1122"}
 
-
-
-
-
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
 | Number of racks            | 2   | 2   | 4   | 4    |
@@ -249,6 +245,10 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 {: caption="Medium pod configuration." caption-side="top"}
 {: #E1180-multi-rack}
 {: tab-title="E1180 (2CEC)"}
+
+
+
+
 
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
 
