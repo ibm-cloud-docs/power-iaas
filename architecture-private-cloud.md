@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-25"
+lastupdated: "2026-05-26"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -250,6 +250,8 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 
 
 
+
+
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
 
 | Storage types                           | Min  | Max  | Min  | Max  |
@@ -281,6 +283,9 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 {: caption="Medium pod with flash system storage configuration." caption-side="top"}
 {: #4-multi-rack-storage}
 {: tab-title="4 racks"}
+
+
+
 
 
 
