@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-05-25"
+lastupdated: "2026-05-26"
 
 keywords: Operating systems, powerVS OS
 
@@ -152,7 +152,7 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Power11              | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP                                       | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER)                                                                                                                                                                                                                           |
 | Power10              | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP \n * SLES 15.5 SAP \n * SLES 15.4 SAP | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) \n * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) \n * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) \n * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP) \n * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER) |
-| Power9[^c]           | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP \n * SLES 15.5 SAP \n * SLES 15.4 SAP | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) \n * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) \n * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) \n * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP) \n * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER) |
+| Power9[^f]           | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP \n * SLES 15.5 SAP \n * SLES 15.4 SAP | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) \n * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) \n * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) \n * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP) \n * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER) |
 {: caption="Supported Linux versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported Linux versions for {{site.data.keyword.powerSys_notm}}"}
 {: #linux-public-private}
@@ -166,11 +166,12 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 [^b]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.
 [^c]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.
 [^d]: Power10 systems running firmware level FW1110 support AIX 7.2 TL5 and later.
+[^f]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.
 [^3]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 [^4]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
 [^5]: IBM i 7.3 on Power Virtual Server ended normal support on 1 October 2023 and is supported with paid service extension only. Refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
-[^6]: IBM i 7.3 on Power Virtual Server ended normal support on 1 October 2023 and is supported with paid service extension only. Refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
-[^7]: Not supported on {{site.data.keyword.on-prem}}.
+
+
 [^i]: IBM i 7.1 is supported on the IBM Power9 S924 and E980 models.
 
 ## System software maps
