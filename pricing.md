@@ -354,13 +354,14 @@ Refer to the following table to view the part number descriptions and the associ
 | `IBM Power S922 (15 usable cores; 1 TB memory) dedicated host-hour`                                | `power-iaas-metric-S922-dedicated-host`                              |
 | `IBM Power S1022 (33 usable cores; 2 TB memory) dedicated host-hour`                               | `power-iaas-metric-S1022-dedicated-host`                             |
 | `IBM Power S1122 (51 usable cores; 2 TB memory) dedicated host-hour` | `power-iaas-metric-S1122-dedicated-host` |
-|                                                                                                  |                                                                    | 
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #dedicated-host-group}
 {: tab-title="Dedicated host group"}
 {: translate="no"}
+
+
 
 
 | Part description for volume group (available on the IBM invoice)              | Metric ID (available in the IBM Cloud catalog)     |
