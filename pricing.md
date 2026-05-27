@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-05-22"
+lastupdated: "2026-05-27"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -349,21 +349,18 @@ Refer to the following table to view the part number descriptions and the associ
 
 
 
-
-| Part description for dedicated host group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
-| ------------------------------------------------------------------------ | ---------------------------------------------- |
-| IBM Power S922 (15 usable cores; 1 TB memory) dedicated host-hour        | power-iaas-metric-S922-dedicated-host          |
-| IBM Power S1022 (33 usable cores; 2 TB memory) dedicated host-hour       | power-iaas-metric-S1022-dedicated-host         |
+| Part description for dedicated host group (available on the IBM invoice)                         | Metric ID (available in the IBM Cloud catalog)                     |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `IBM Power S922 (15 usable cores; 1 TB memory) dedicated host-hour`                                | `power-iaas-metric-S922-dedicated-host`                              |
+| `IBM Power S1022 (33 usable cores; 2 TB memory) dedicated host-hour`                               | `power-iaas-metric-S1022-dedicated-host`                             |
+| `IBM Power S1122 (51 usable cores; 2 TB memory) dedicated host-hour` | `power-iaas-metric-S1122-dedicated-host` |
+|                                                                                                  |                                                                    | 
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #dedicated-host-group}
 {: tab-title="Dedicated host group"}
 {: translate="no"}
-
-
-
-
 
 
 | Part description for volume group (available on the IBM invoice)              | Metric ID (available in the IBM Cloud catalog)     |

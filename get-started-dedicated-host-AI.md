@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-08"
+lastupdated: "2026-05-27"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -78,14 +78,6 @@ As an administrator of your organization, you can assign users the following sup
 | Reader        | View the workspaces that a dedicated host is shared with.        |
 | Manager       | Perform create, read, update, or delete actions on dedicated hosts, including:  \n - Reserve and delete dedicated hosts  \n - Share and unshare with other workspaces  \n - Manage any other aspects of dedicated hosts.    |
 {: caption="Roles and permissions in a dedicated host on a {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
-
-
-
-## Deploying a dedicated host to a workspace
-{: #create-dh}
-
-To deploy a dedicated host to your workspace, select the server (IBM Power S922 or S1022) and contact the IBM support team. You can create an estimate before you deploy a dedicated host by using the [cost estimator](https://cloud.ibm.com/power/estimate){: external}.
-
 
 
 
