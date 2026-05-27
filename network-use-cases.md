@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-25"
+lastupdated: "2026-05-27"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -92,7 +92,7 @@ You can deploy VMs on your workspace after you receive the confirmation from the
 ### Bidirectional external connectivity through BGP
 {: #bi-dir-ext-conn-bgp}
 
-With this use case, you can establish a network that allows communication between the applications within the pod and with the destination points on the external network. By setting up the Layer 3 Firewall rules, you can allow both inbound and outbound connections. Configure the BGP manually between the pod router and the corporate network. By using the BGP configuration, establish a connection between the private network and the corporate network. To configure BGP manually, contact the Support Center. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+With this use case, you can establish a network that allows communication between the applications within the pod and with the destination points on the external network. By setting up the Layer 3 Firewall rules, you can allow both inbound and outbound connections. Configure the BGP manually between the pod router and the corporate network. By using the BGP configuration, establish a connection between the private network and the corporate network. To configure BGP manually, contact the Support Center. For more information, see the [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 #### Example
 {: #BGP-example}
@@ -105,7 +105,7 @@ Figure 3 describes the bidirectional external connectivity through BGP type of n
 ### Bidirectional external connectivity through static routes
 {: #bi-dir-ext-conn-static-routes}
 
-With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see the [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 #### Example
 {: #static-example}
@@ -118,7 +118,7 @@ Figure 4 describes the bidirectional external connectivity through static routes
 ### Bidirectional external connectivity - Layer 2
 {: #bi-dir-ext-conn-L2out}
 
-With this use case, you can create a network that allows communication between applications within the pod and with destination points on the external network. Integrate a Layer 2 firewall with one of your existing corporate networks to allow the outbound connections. In this type of network, bidirectional external connectivity bypasses the router and connect to the IBM {{site.data.keyword.powerSys_notm}} network fabric. You can establish this type of connectivity when you want the same IP address space on both internal and external networks. All other external networks involve two distinct subnets.
+With this use case, you can create a network that allows communication between applications within the pod and with destination points on the external network. Integrate a Layer 2 firewall with one of your existing corporate networks to allow the outbound connections. In this type of network, bidirectional external connectivity bypasses the router and connects to the IBM {{site.data.keyword.powerSys_notm}} network fabric. You can establish this type of connectivity when you want the same IP address space on both internal and external networks. All other external networks involve two distinct subnets.
 
 Figure 5 describes the bidirectional external connectivity by using Layer 2 firewall type of network setup.
 ![Bidirectional external connectivity through L2Out](./figures/bi-dir-ext-conn-ACI-L2out.png "Bidirectional external connectivity through L2Out"){: caption="Bidirectional external connectivity through L2Out" caption-side="bottom"}
@@ -130,7 +130,7 @@ With this use case, you can establish a network between a virtual machine in the
 
 Connect the virtual machine in the pod to a proxy network in the corporate network environment. Connect the proxy network to the Red Hat Satellite server on IBM Cloud by using either Direct Link or VPN connection. The virtual machine in the pod can access the Linux&reg; satellite server to retrieve software fixes and other artifacts.
 
-The network connectivity for full Linux subscription can be established by providing the network requirements before the installation of the pod. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). Once the pod is installed, you can configure the network connectivity for full Linux subscription by using the Support Center ticketing system. For more information about full Linux subscription, see [Full Linux subscription for Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). For more information about contacting the Support Center, see [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+The network connectivity for full Linux subscription can be established by providing the network requirements before the installation of the pod. For more information, see [Network requirement](/docs/power-iaas?topic=power-iaas-pre_installation_checklist#network-req). After the pod is installed, you can configure the network connectivity for full Linux subscription by using the Support Center ticketing system. For more information about full Linux subscription, see [Full Linux subscription for Power Virtual Server Private Cloud](/docs/power-iaas?topic=power-iaas-full-linux-sub). For more information about contacting the Support Center, see the [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 Figure 6 describes the network connectivity between a virtual machine and a Red Hat Satellite server on IBM Cloud setup.
 
@@ -141,4 +141,20 @@ Figure 6 describes the network connectivity between a virtual machine and a Red 
 
 
 
--->
+[SDN-DHCP-start]{: tag-purple}
+
+## Use case 4: DHCP network inside the pod
+{: #dhcp-network-new}
+
+The {{site.data.keyword.powerSys_notm}} Dynamic Host Configuration Protocol (DHCP) service provides automated IP address assignment and network configuration for virtual server instances (VSIs) within your workspace.
+
+You can enable or disable the DHCP service on any subnet in your {{site.data.keyword.powerSys_notm}} workspace. When DHCP is enabled on a subnet, network interfaces that are configured to use DHCP automatically receive their IPv4 connection information, including IP address, subnet mask, gateway, DNS servers, and MTU settings.
+
+The operating system (OS) of your LPAR must be configured to use the DHCP services.
+{: note}
+
+You can enable or disable the DHCP service on your subnet either when you create a new subnet or after the subnet is created.
+
+When you create a new subnet, the DHCP service is enabled by default. Any existing subnets that were created before this feature became available, the DHCP service is disabled by default.
+
+[SDN-DHCP-end]{: tag-purple}
