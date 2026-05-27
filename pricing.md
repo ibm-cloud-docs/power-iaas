@@ -104,17 +104,12 @@ In your invoice, use one of the following identifiers to identify the charges th
 ### Consumer ID
 {: #consumer-id}
 
+For metrics that are charged on a workspace instance, the **Consumer ID** groups billing usage under a VSI resource in that workspace. You can use the **Consumer ID** to identify the resource type and instance for each charge.
 
+The **Consumer ID** has the following benefits:
 
-The Consumer ID groups the billing usages that are under a single resource such as VSIs, shared processor pools (SPPs), and storages. You can view resource usage with broken down metrics.
-
-Following are the benefits of consumer ID:
-- You can see a more granular view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
-- Charges are itemized by a resource type that is identified in the **Consumer ID** field with the format `resource-type:resource-uuid`.
-
-
-
-
+* You can see a more detailed view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
+* Charges are itemized by a resource type and an instance UUID in the Consumer ID field with the format `resource-type:resource-uuid`. Currently, only one metric is charged at the workspace level, which uses `pvm-instance` (VSI) as the resource type.
 
 To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
@@ -170,9 +165,7 @@ The following table lists the {{site.data.keyword.powerSys_notm}} resources that
 ## Monthly usage
 {: #pricing-monthly-usage}
 
-
-
-IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is prorated per hour. If you add resources to an LPAR during the middle of the month, the monthly bill for the LPAR reflects the resource change and the LPAR price that is prorated per hour.
+IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is metered every hour. If you change resources in an LPAR during the month, the monthly bill for the LPAR reflects the resource change and the LPAR price aggregating all hourly charges before and after the change.
 
 To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
@@ -185,11 +178,7 @@ In the following monthly usage example, the customer purchases a {{site.data.key
 - A 150 GB disk
 - AIX 7200-03-02 OS.
 
-As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is prorated by the hour for the resources deployed.
-
-
-
-
+As the month progresses, the customer adds more memory. The new price for the LPAR is $339.45 per month ($0.465 per hour). The monthly bill is metered by the hour and reflects actual usage. The total amount combines the lesser rate that is charged for hours at the original configuration and the higher rate that is charged for hours at the updated configuration.
 
 | Hours elapsed in a month  | Amount charged                     | LPAR description                       |
 | ------------------------- | ---------------------------------- | -------------------------------------- |
@@ -198,13 +187,7 @@ As the month progresses, the customer adds more memory. The new price for the LP
 | 730 hours (Monthly Total) | $103 + $200 = $303 (Monthly Total) | 1 core, 16 GB memory, 150 GB disk, AIX |
 {: caption="Monthly LPAR charges" caption-side="bottom"}
 
-
-
-In this example, if 300 hours is reached in the month, the LPAR resources are increased from 8 GB to 16 GB of memory. The price of the LPAR is prorated by the hour for the final monthly price of $303.
-
-
-
-
+In this example, when the LPAR usage reaches 300 hours in a month, the LPAR memory is increased from 8 GB to 16 GB. The LPAR is metered by the hour. Out of the total 730 hours used in the month, the first 300 hours are metered at the lesser rate, while the remaining 430 hours are metered at the higher rate. This way of metering results in a total monthly cost of $303.
 
 ## Part number descriptions
 {: #part-numbers}
@@ -467,13 +450,7 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 ## Processor types
 {: #pricing-processor}
 
-
-
-You are charged different rates based on the processor type that you choose for your VSI. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly prorated basis according to the machine type, processor type, and the number of cores used in a month.
-
-
-
-
+You are charged different rates based on the processor type that you choose for your VSI. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly basis according to the machine type, processor type, and the number of cores that are used in a month.
 
 Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
 

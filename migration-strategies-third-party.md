@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-15"
+lastupdated: "2026-05-27"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -29,7 +29,7 @@ subcollection: power-iaas
 You can use the third-party tools to complete your data migration. The following third-party tools are commonly used for data migration:
 {: shortdesc}
 
-
+- Secure Automated Backup with Compass for PowerVS
 - Double-Take® MoveTM for AIX
 - [Falconstor StorSafe VTL](https://cloud.ibm.com/catalog/content/vtltile-tags-v10.03-01-f1e88e51-7e3d-4fbc-a7ed-3ab9adb2afea-global)
 - [Rocket iCluster HA/DR](https://cloud.ibm.com/catalog/content/poc-iClusterNew-df2ab864-0eb4-4645-8c08-f08e008e66bd-global)
