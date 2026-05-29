@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-05-29"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -29,9 +29,6 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ### 29th May 2026
 {: #power-iaas-may2926}
 {: release-note}
-
-S1122 servers as dedicated host
-:   You can provision S1022 servers as your dedicated host. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 
 
