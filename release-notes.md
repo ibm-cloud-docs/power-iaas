@@ -86,6 +86,9 @@ End-of-Life reminder for IBM i 7.2, RHEL 9.4 general purpose, and RHEL 8.6 SAP O
 :   The Red Hat Enterprise Linux (RHEL) end of support date for the RHEL 9.4 general purpose is 30 April 2026 and RHEL 8.6 SAP is 31 May 2026. Stock images for RHEL 9.4 general purpose are scheduled to be removed starting from 1 May 2026, and RHEL 8.6 SAP starting from 1 June 2026, from the {{site.data.keyword.powerSys_notm}} image library. Existing virtual server instances (VSIs) that are deployed using these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about the available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 {: important}
 
+
+
+
 ## February 2026
 {: #Feb-2026}
 
