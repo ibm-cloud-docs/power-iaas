@@ -72,7 +72,7 @@ Planning the outbound connectivity for your {{site.data.keyword.powerSys_notm}} 
 
 Complete the following steps to configure outbound network access for {{site.data.keyword.powerSys_notm}}:
 
-Ensure that a VSI is craeted before you configure outbound network access. For more informaiton see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
+Ensure that a VSI is created before you configure outbound network access. For more informaiton see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
 {: note}
 
 ### Step 1: Create the VPC infrastructure.
