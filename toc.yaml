@@ -96,6 +96,7 @@ toc:
           - getting-started-PER.md
           - Network-security-group.md
           - static-routes.md
+          - powervs-public-network-setup.md
           - vpn-connections.md
           - network-security.md
           - X86-based-systems.md

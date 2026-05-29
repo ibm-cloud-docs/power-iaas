@@ -1,2 +1,2 @@
-        Disabling the automated remote restart option for a VSI prevents the VSI from being restarted automatically on a working host in the event of a host failure. If you disable this option, ensure that high availability and disaster recovery policies are configured to maintain workload protection during a host failure. For more information, see [High availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr).
-        {: important}
+Disabling the automated remote restart option for a VSI prevents the VSI from being restarted automatically on a working host in the event of a host failure. If you disable this option, ensure that high availability and disaster recovery policies are configured to maintain workload protection during a host failure. For more information, see [High availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr).
+{: important}

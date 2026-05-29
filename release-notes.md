@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2026 
+  years: 2019, 2026
 
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-29"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -15,7 +15,7 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 # Release notes for {{site.data.keyword.powerSys_notm}}
-{: #release-notes}
+{: #power-iaas-relnotes}
 
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
@@ -23,14 +23,24 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+## May 2026
+{: #May-2026}
 
+### 29th May 2026
+{: #power-iaas-may2926}
+{: release-note}
+
+Changes in public network connectivity
+: You can configure public network connectivity for your {{site.data.keyword.powerSys_notm}} instances through IBM Cloud VPC, which provides both outbound and inbound network access. This approach offers enhanced security and integration with other IBM Cloud services. For detailed instructions about setting up public network connectivity, see [Public network connectivity for Power Virtual Server](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
+
+Stock images support
+:   The RHEL 8.6 SAP stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
 
 ## April 2026
 {: #April-2026}
-{: release-note}
 
 ### 30 April 2026
-{: #april-2026}
+{: #power-iaas-apr3026}
 {: release-note}
 
 ISO/IEC 20000 compliance
@@ -42,10 +52,9 @@ Stock images support
 
 ## March 2026
 {: #March-2026}
-{: release-note}
 
 ### 25 March 2026
-{: #pvs-mar2526}
+{: #power-iaas-mar2526}
 {: release-note}
 
 aSAPS metric available for SAP profiles
@@ -79,6 +88,9 @@ End-of-Life reminder for IBM i 7.2, RHEL 9.4 general purpose, and RHEL 8.6 SAP O
 
 ## February 2026
 {: #Feb-2026}
+
+### 23 Feb 2026
+{: #power-iaas-feb2326}
 {: release-note}
 
 CHE02 and CHE03 data centers are available
@@ -86,6 +98,9 @@ CHE02 and CHE03 data centers are available
 
 ## January 2026
 {: #Jan-2026}
+
+### 14 Jan 2026
+{: #power-iaas-jan1426}
 {: release-note}
 
 ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
@@ -94,7 +109,6 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 ## December 2025
 {: #Dec-2025}
-{: release-note}
 
 - Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes reduce the time it takes to restart SAP HANA virtual server instances. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
 
@@ -122,7 +136,6 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 ## November 2025
 {: #Nov-2025}
-{: release-note}
 
 
 
@@ -131,13 +144,11 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 ## October 2025
 {: #Oct-2025}
-{: release-note}
 
 {{_include-segments/veeam-deprecated-note.md}}
 
 ## September 2025
 {: #Sep-2025}
-{: release-note}
 
 
 
@@ -160,7 +171,6 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 ## August 2025
 {: #Aug-2025}
-{: release-note}
 
 
 - The IBM i 7.4, 7.5, 7.6, and COR OS images in the Image Catalog are supported on Power10 and later systems.
@@ -168,7 +178,6 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 ## July 2025
 {: #July-2025}
-{: release-note}
 
 
 
@@ -240,8 +249,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## June 2025
 {: #June-2025}
-{: release-note}
-
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -265,8 +272,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## May 2025
 {: #May-2025}
-{: release-note}
-
 
 
 
@@ -289,9 +294,6 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 ## April 2025
 {: #April-2025}
-{: release-note}
-
-
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -334,8 +336,6 @@ The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general pur
 
 ## March 2025
 {: #March-2025}
-{: release-note}
-
 
 - New AIX 7.3 TL3 SP0 and 7.2 TL5 SP9, IBM i 7.4 TR11 and 7.5 TR5, SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) and SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
@@ -367,9 +367,6 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 ## February 2025
 {: #Feb-2025}
-{: release-note}
-
-
 
 
 
@@ -399,8 +396,6 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 ## January 2025
 {: #Jan-2025}
-{: release-note}
-
 
 
 
@@ -416,14 +411,9 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 
 
-## 2024
-{: #2024}
 
-### December 2024
+## December 2024
 {: #Dec-2024}
-{: release-note}
-
-
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
@@ -455,7 +445,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 - The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 
 
-### October 2024
+## October 2024
 {: #Oct-2024}
 
 
@@ -478,7 +468,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 The latest IBM i and AIX stock images were added to the OS image catalog in September. Hence, the previous versions of the service pack will be removed from the catalog in the next thirty days. For more information about the OS versions, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs). For new deployments, you must use the latest stock image in the catalog. Existing VSIs that use the previous stock images continue to operate without problems. However, it is recommended that you update your VSI to the latest service pack level for the most recent maintenance.
 {: note}
 
-### September 2024
+## September 2024
 {: #Sep-2024}
 
 - You can now discover data center capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}} [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg#dc-capabilities).
@@ -497,15 +487,13 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 **End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
 {: important}
 
-
-
-### August 2024
+## August 2024
 {: #Aug-2024}
 
 - IBM Cloud Monitoring service is now available in `MON01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - You can now migrate Db2 on AIX to {{site.data.keyword.powerSys_notm}}. For more information, see [Migrating Db2 on AIX to {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-db2-migration).
 
-### July 2024
+## July 2024
 {: #jul-2024}
 
 - IBM Cloud Monitoring service is now available in `TOR01`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
@@ -521,7 +509,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 - Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-### June 2024
+## June 2024
 {: #jun-2024}
 
 - {{site.data.keyword.powerSys_notm}} Private Cloud, an infrastructure as a service (IaaS) offering, is now available. It extends the capabilities and benefits of {{site.data.keyword.powerSys_notm}} within your data center, with a prescriptive set of hardware and delivered in a consumption model with no upfront payment. For more information about {{site.data.keyword.powerSys_notm}} Private Cloud and how to get started, see [Getting started with IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-getting-started).
@@ -547,7 +535,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 - In a {{site.data.keyword.powerSys_notm}} with Power10, you can provision a VM inside a Shared Processor Pool (SPP) with values of up to 3.0 Virtual Cores. This enables you to select the maximum number of cores for the Virtual Cores deployment, providing greater flexibility for Oracle licensing. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
-### May 2024
+## May 2024
 {: #may-2024}
 
 - Power Edge Router (PER) is now available in the `DAL13`, `TOR01`, and `WDC04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -557,7 +545,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - {{site.data.keyword.powerSys_notm}} is now Financial Services® Validated and has received a SOC 2 Type II report. For more information, see the [compliance](/docs/power-iaas?topic=power-iaas-compliances-list#fs-cloud-comp) page.
 - Flexible I/O operation per second (IOPS) is now available in the `TOR01` data center. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-### April 2024
+## April 2024
 {: #apr-2024}
 
 - Power Edge Router (PER) is now available in the `LON06` and `SYD04` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -569,7 +557,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 [^2]: This update is regarding the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
 
-### March 2024
+## March 2024
 {: #mar-2024}
 
 - Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
@@ -586,7 +574,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
-### February 2024
+## February 2024
 {: #feb-2024}
 
 - PER is now available in the `SAO01` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -597,7 +585,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket. For more information, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per).
 - IBM Cloud Monitoring service is now available in `OSA21`, `DAL10`, and `WDC07`.
 
-### January 2024
+## January 2024
 {: #jan-2024}
 
 - Certain stock images for SAP will be updated with new Ansible packages. Until then it is recommended that you do not use the following images to create a new {{site.data.keyword.powerSys_notm}} instance for use with SAP workloads:

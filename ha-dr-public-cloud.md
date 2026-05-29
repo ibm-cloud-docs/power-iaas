@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-09"
+lastupdated: "2026-05-22"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -30,7 +30,7 @@ subcollection: power-iaas
 
 
 
-This topic describes various high availability and disaster recovery solutions that you can deploy in the {{site.data.keyword.powerSysFull}} environment. The host failure recovery is the default high availability solution supported by {{site.data.keyword.powerSys_notm}}. This topic also covers some of the advanced high availability and disaster recovery solutions that you can deploy.
+{{site.data.keyword.powerSysFull}} supports various high availability and disaster recovery solutions that you can deploy in your environment. The host failure recovery is the default high availability solution that is supported by {{site.data.keyword.powerSys_notm}}. You can also learn about advanced high availability and disaster recovery solutions available for deployment.
 {: shortdesc}
 
 
@@ -50,7 +50,7 @@ The host failure recovery:
 
 - Is enabled by default for all the VSIs in the Power Virtual Server environment.
 
-- Does not restart any pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host.
+- Does not restart any pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for Automated remote restart.
 
 - Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
@@ -78,6 +78,8 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 Licenses that are purchased outside a subscription model license are not eligible to be used in the {{site.data.keyword.powerSys_notm}}.
 {: note}
+
+
 
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}

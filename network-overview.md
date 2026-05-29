@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-05-29"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -137,6 +137,7 @@ You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data
 - IBM IPv4 Classless Inter-Domain Routing (CIDR)
 - IPv4 CIDR for your network
 - VLAN ID
+
 
 
 ### Creating a network peering connection

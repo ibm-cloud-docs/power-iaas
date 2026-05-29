@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-12"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Capturing and exporting a virtual server instance (VSI)
+# Capturing and exporting a VSI
 {: #capturing-exporting-vm}
 
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 ---
 
-You can capture and export a VSI by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VSI is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
+You can capture and export a virtual server instance (VSI) by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VSI is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
 {: shortdesc}
 
 When you capture and export a VSI, you can choose the image catalog, Cloud Object Storage, or both as destinations. The image catalog is on the IBM Power storage area network (SAN). IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over HTTP by using a REST API. This service uses the distributed storage technologies that are provided by the IBM Cloud Object Storage System (formerly Cleversafe). You can always export your image in your image catalog to Cloud Object Storage at a later point. You can also deploy the captured image to create a clone of the VSI by using a different network configuration.

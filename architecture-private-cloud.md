@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-26"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -60,7 +60,7 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
     * IBM i 7.4, or later and IBM i COR [^1] 
     * Red Hat Enterprise Linux (RHEL)
     * SUSE Linux Enterprise Server (SLES)
-    * Red Hat Enterprise Linux CoreOS (RHCOS) for OpenShift Container Platform
+    * Red Hat Enterprise Linux CoreOS (RHCOS) for Red Hat OpenShift Container Platform
 
     [^1]: IBM i Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
 
@@ -74,12 +74,13 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
     - **Dedicated**: The processor is allocated for the specific virtual machine.
 
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
-* **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or data sets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores equal 2 virtual cores.
+* **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or datasets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
+* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores are estimated up to the nearest whole number. For example, 1.25 cores equals 2 virtual cores.
 
 
 
-The create or update operations of a VSI fails even if the core-to-virtual core ratio of 1:20 is satisfied but the configured count of vCPU exceeds the maximum supported per-instance limit as defined by the system policy.
+The create or update operations of a VSI can fail even when the core-to-virtual core ratio of 1:20 is satisfied.
+This issue occurs if the configured count of vCPU exceeds the maximum supported per-instance limit defined by the system policy.
 {: note}
 
 
@@ -88,7 +89,7 @@ The create or update operations of a VSI fails even if the core-to-virtual core 
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
 
-For more information about IBM Cloud regions can host connections from the pods for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+For more information about how IBM Cloud regions hosts connections from the pods for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 ### Pods
 {: #pod-spec-private-cloud}
@@ -104,7 +105,7 @@ The following pod sizes are available:
 
 
 
-You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes is used for maintenance or automatic high availability purposes.
+You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes are used for maintenance or automatic high availability purposes.
 
 You can use 100% of the core, memory, and storage of the nodes by excluding the spare nodes.
 
@@ -119,9 +120,9 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 ### Small pod configurations
 {: #pod-config-small}
 
-A small pod has 1x42U rack and S1122 and E1150 system types are supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server, up to the maximum capacity of the rack.
+A small pod has a 1x42U rack and S1122 and E1150 system types are supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server, up to the maximum capacity of the rack.
 
-[Table 1](#single-rack) illustrates the available configurations for server types and memory types on small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pod with flash system storage options.
+[Table 1](#single-rack) illustrates the available configurations for server types and memory types on a small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pods with flash system storage options.
 
 
 
@@ -156,7 +157,7 @@ For the S1122 server, the following memory configurations are available:
 - **2 TB memory option per server**: A minimum 10 TB of memory and a maximum 18 TB of memory.
 - **4 TB memory option per server**: A minimum 20 TB of memory and a maximum 36 TB of memory.
 
-For the E1150 server, only an 4 TB memory option per server with a minimum 8 TB of memory and a maximum 32 TB of memory is available.
+For the E1150 server, only a 4 TB memory option per server with a minimum 8 TB of memory and a maximum 32 TB of memory is available.
 
 
 
@@ -175,15 +176,19 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 {: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
 
+
+
 ### Medium pod configurations
 {: #pod-config-medium}
 
-A medium pod has 2x42 U or 4x42 U rack and S1122, E1150, and E1180 (2CEC) system types are supported in the rack.
+A medium pod has a 2x42 U or 4x42 U rack and S1122, E1150, and E1180 (2CEC) system types are supported in the rack.
 
-You can expand the capacity of a medium pod by adding servers of the same type that are already installed in the pod. A medium pod is available in two‑rack or four‑rack configurations; however, you cannot upgrade a two‑rack configuration to a four‑rack configuration. The expansion of the pod is limited to the existing rack count. You can add a minimum of one server per rack, up to the maximum capacity of each rack.
+You can expand the capacity of a medium pod by adding servers of the same type that are already installed in the pod. A medium pod is available in two‑rack or four‑rack configurations. However, you cannot upgrade a two‑rack configuration to a four‑rack configuration. The expansion of the pod is limited to the existing rack count. You can add a minimum of one server per rack, up to the maximum capacity of each rack.
 {: note}
 
 [Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
+
+
 
 | Server types               | Min | Max | Min | Max  |
 | -------------------------- | --- | --- | --- | ---- |
@@ -242,6 +247,12 @@ You can expand the capacity of a medium pod by adding servers of the same type t
 {: #E1180-multi-rack}
 {: tab-title="E1180 (2CEC)"}
 
+
+
+
+
+
+
 The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
 
 | Storage types                           | Min  | Max  | Min  | Max  |
@@ -277,6 +288,9 @@ The medium pod with two or four racks is available with FS 460 TB or FS 920 TB f
 
 
 
+
+
+
 ### Supported Power11 servers
 {: #power-system-spec-private-cloud}
 
@@ -289,14 +303,14 @@ The following Power11 servers are supported:
 ### Operating systems
 {: #os-spec-private-cloud}
 
-The Power11 supports Linux, AIX, and IBM i  operating system.
+The Power11 supports Linux, AIX, and IBM i operating system.
 
-IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX  stock images are supported on the Power11 with AIX  operating system.
+IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} provides a complete Red Hat Enterprise Linux (RHEL) offering experience with RHEL stock images. The offering includes support from IBM and access to RHEL bug fixes from Satellite servers that are hosted in IBM Cloud. Currently, you must bring your own licenses for all the other operating system images. For more flexibility, you can always bring your own custom Linux image that is tested and deployed. The AIX stock images are supported on the Power11 with AIX operating system.
 
 ### Storage
 {: #storage-private-cloud}
 
-For small pods only the IBM Flash System FS5300 is supported. For more information, see [IBM Flash System FS5300](https://www.ibm.com/products/flashsystem-5300){: external}.
+For small pods, only the IBM Flash System FS5300 is supported. For more information, see [IBM Flash System FS5300](https://www.ibm.com/products/flashsystem-5300){: external}.
 
 
 
@@ -315,8 +329,8 @@ Table 5 shows the supported storage tiers with corresponding IOPS.
 
 | Tier level | IOPS                         | Performance                                                                                          |
 | ---------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Tier 0     | 25 IOPS/GB                   | A 100-GB volume receives 2500 IOPS.  \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
-| Tier 1     | 10 IOPS/GB                   | A 100-GB volume receives 1000 IOPS.  \n This is 3.3x faster than tier 3.                             |
+| Tier 0     | 25 IOPS/GB                   | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
+| Tier 1     | 10 IOPS/GB                   | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3.                             |
 | Tier 3     | 3 IOPS/GB                    | A 100-GB volume receives 300 IOPS.                                                                   |
 | Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS.                                                                  |
 {: caption="Tier and IOPS mapping" caption-side="bottom"}

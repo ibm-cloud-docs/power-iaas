@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-22"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -95,63 +95,63 @@ Refer to the following table to view the part number descriptions and the associ
 | Part description (visible on the invoice from IBM)                                         | Metric ID (visible in the IBM Cloud catalog)    |
 | ------------------------------------------------------------------------------------------ | ----------------------------------------------- |
 | **IBM Power Systems Virtual Server virtual machine group**                                 |                                                 |
-| IBM Power Systems E1180 virtual processor core hour - capped                               | ppcaas-metric-E1180-cores-capped                |
-| IBM Power Systems E1180 virtual processor core hour - dedicated                            | ppcaas-metric-E1180-cores-dedicated             |
-| IBM Power Systems E1180 virtual processor core hour - shared                               | ppcaas-metric-E1180-cores-shared                |
-| IBM Power Systems E1150 virtual processor core hour - capped                               | ppcaas-metric-E1150-cores-capped                |
-| IBM Power Systems E1150 virtual processor core hour - dedicated                            | ppcaas-metric-E1150-cores-dedicated             |
-| IBM Power Systems E1150 virtual processor core hour - shared                               | ppcaas-metric-E1150-cores-shared                |
-| IBM Power Systems S1122 virtual processor core hour - capped                               | ppcaas-metric-S1122-cores-capped                |
-| IBM Power Systems S1122 virtual processor core hour - dedicated                            | ppcaas-metric-S1122-cores-dedicated             |
-| IBM Power Systems S1122 virtual processor core hour - shared                               | ppcaas-metric-S1122-cores-shared                |
-| IBM Power Systems P11 scale-out memory gigabyte hours                                      | ppcaas-metric-p11-2u-memory-standard            |
-| IBM Power Systems P11 scale-up memory gigabyte hours                                       | ppcaas-metric-p11-4u-memory-standard            |
-| AIX operating system scale-up license core-hour                                            | ppcaas-metric-aix-scale-up                      |
-| AIX operating system scale-out license core-hour                                           | ppcaas-metric-aix-scale-out                     |
-| Red Hat Enterprise Linux operating system scale-up license core-hour                       | ppcaas-metric-rhel-scale-up                     |
-| Red Hat Enterprise Linux operating system scale-out license core-hour                      | ppcaas-metric-rhel-scale-out                    |
-| Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload        | ppcaas-metric-rhel-sap-scale-up                 |
-| Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload       | ppcaas-metric-rhel-sap-scale-out                |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour                         | ppcaas-metric-sles-tier1                        |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour                         | ppcaas-metric-sles-tier2                        |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour                         | ppcaas-metric-sles-tier3                        |
-| SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier1                    |
-| SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier2                    |
-| SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload          | ppcaas-metric-sles-sap-tier3                    |
-| IBM i P10 license core-hour                                                                | ppcaas-metric-ibmi-os-p10                       |
-| IBM i P30 license core-hour                                                                | ppcaas-metric-ibmi-os-p30                       |
-| IBM i P10 service extension core-hour                                                      | ppcaas-metric-ibmi-os-p10-sve                   |
-| IBM i P30 service extension core-hour                                                      | ppcaas-metric-ibmi-os-p30-sve                   |
-| IBM i LPP core-hour                                                                        | ppcaas-metric-ibmi-lpp                          |
-| IBM i P10 LPP core-hour                                                                    | ppcaas-metric-ibmi-lpp-p10                      |
-| IBM i P30 LPP core-hour                                                                    | ppcaas-metric-ibmi-lpp-p30                      |
-| IBM i P10 PowerHA instance core-hour                                                       | ppcaas-metric-ibmi-pha-p10                      |
-| IBM i P30 PowerHA instance core-hour                                                       | ppcaas-metric-ibmi-pha-p30                      |
-| IBM i PowerHA small instance core-hour                                                     | ppcaas-metric-ibmi-pha-small                    |
-| IBM i PowerHA medium instance core-hour                                                    | ppcaas-metric-ibmi-pha-medium                   |
-| IBM i P10 license - mobile core-hour - SWMA paid                                           | ppcaas-metric-ibmi-os-p10-mol                   |
-| IBM i P30 license - mobile core-hour - SWMA paid                                           | ppcaas-metric-ibmi-os-p30-mol                   |
-| IBM i LPP P10 - mobile core-hour - SWMA paid                                               | ppcaas-metric-ibmi-lpp-p10-mol                  |
-| IBM i LPP P30 - mobile core-hour - SWMA paid                                               | ppcaas-metric-ibmi-lpp-p30-mol                  |
-| IBM i LPP core-hour - mobile core-hour - SWMA paid                                         | ppcaas-metric-ibmi-lpp-mol                      |
-| IBM i Db2 Web Query instance core-hour                                                     | ppcaas-metric-ibmi-db2wq                        |
-| IBM i Cloud Storage Solutions instance core-hour                                           | ppcaas-metric-ibmi-cos                          |
-| IBM i Rational Development Studio instance-hour                                            | ppcaas-metric-ibmi-rds                          |
-| IBM i P05 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p05-tier                  |
-| IBM i P10 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p10-tier                  |
-| IBM i P20 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p20-tier                  |
-| IBM i P30 software tier license core-hour                                                  | ppcaas-metric-ibmi-os-p30-tier                  |
-| IBM i P05 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p05-sve-tier              |
-| IBM i P10 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p10-sve-tier              |
-| IBM i P20 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p20-sve-tier              |
-| IBM i P30 software tier service extension core-hour                                        | ppcaas-metric-ibmi-os-p30-sve-tier              |
-| IBM i software tier LPP core-hour                                                          | ppcaas-metric-ibmi-lpp-tier                     |
-| IBM i software tier PowerHA small instance core-hour                                       | ppcaas-metric-ibmi-pha-small-tier               |
-| IBM i software tier PowerHA medium instance core-hour                                      | ppcaas-metric-ibmi-pha-medium-tier              |
-| IBM i P10 software tier license - mobile core-hour - SWMA paid                             | ppcaas-metric-ibmi-os-p10-mol-tier              |
-| IBM i P30 software tier license - mobile core-hour - SWMA paid                             | ppcaas-metric-ibmi-os-p30-mol-tier              |
-| IBM i software tier LPP - mobile core-hour - SWMA paid                                     | ppcaas-metric-ibmi-lpp-mol-tier                 |
-| Virtual Tape Library terabyte-hour                                                         | ppcaas-metric-vtl                               |
+| `IBM Power Systems E1180 virtual processor core hour - capped`                               | `ppcaas-metric-E1180-cores-capped`                |
+| `IBM Power Systems E1180 virtual processor core hour - dedicated`                            | `ppcaas-metric-E1180-cores-dedicated`             |
+| `IBM Power Systems E1180 virtual processor core hour - shared`                               | `ppcaas-metric-E1180-cores-shared`                |
+| `IBM Power Systems E1150 virtual processor core hour - capped`                               | `ppcaas-metric-E1150-cores-capped`                |
+| `IBM Power Systems E1150 virtual processor core hour - dedicated`                            | `ppcaas-metric-E1150-cores-dedicated`             |
+| `IBM Power Systems E1150 virtual processor core hour - shared`                               | `ppcaas-metric-E1150-cores-shared`                |
+| `IBM Power Systems S1122 virtual processor core hour - capped`                               | `ppcaas-metric-S1122-cores-capped`                |
+| `IBM Power Systems S1122 virtual processor core hour - dedicated`                            | `ppcaas-metric-S1122-cores-dedicated`             |
+| `IBM Power Systems S1122 virtual processor core hour - shared`                               | `ppcaas-metric-S1122-cores-shared`                |
+| `IBM Power Systems P11 scale-out memory gigabyte hours`                                      | `ppcaas-metric-p11-2u-memory-standard`            |
+| `IBM Power Systems P11 scale-up memory gigabyte hours`                                       | `ppcaas-metric-p11-4u-memory-standard`            |
+| `AIX operating system scale-up license core-hour`                                            | `ppcaas-metric-aix-scale-up`                      |
+| `AIX operating system scale-out license core-hour`                                           | `ppcaas-metric-aix-scale-out`                     |
+| `Red Hat Enterprise Linux operating system scale-up license core-hour`                       | `ppcaas-metric-rhel-scale-up`                     |
+| `Red Hat Enterprise Linux operating system scale-out license core-hour`                      | `ppcaas-metric-rhel-scale-out`                    |
+| `Red Hat Enterprise Linux operating system scale-up license core-hour - SAP workload`        | `ppcaas-metric-rhel-sap-scale-up`                 |
+| `Red Hat Enterprise Linux operating system scale-out license core-hour - SAP workload`       | `ppcaas-metric-rhel-sap-scale-out`                |
+| `SUSE Linux Enterprise Server operating system tier 1 instance-hour`                         | `ppcaas-metric-sles-tier1`                        |
+| `SUSE Linux Enterprise Server operating system tier 2 instance-hour`                         | `ppcaas-metric-sles-tier2`                        |
+| `SUSE Linux Enterprise Server operating system tier 3 instance-hour`                         | `ppcaas-metric-sles-tier3`                        |
+| `SUSE Linux Enterprise Server operating system tier 1 instance-hour - SAP workload`          | `ppcaas-metric-sles-sap-tier1`                    |
+| `SUSE Linux Enterprise Server operating system tier 2 instance-hour - SAP workload`          | `ppcaas-metric-sles-sap-tier2`                    |
+| `SUSE Linux Enterprise Server operating system tier 3 instance-hour - SAP workload`          | `ppcaas-metric-sles-sap-tier3`                    |
+| `IBM i P10 license core-hour`                                                                | `ppcaas-metric-ibmi-os-p10`                       |
+| `IBM i P30 license core-hour`                                                                | `ppcaas-metric-ibmi-os-p30`                       |
+| `IBM i P10 service extension core-hour`                                                      | `ppcaas-metric-ibmi-os-p10-sve`                   |
+| `IBM i P30 service extension core-hour`                                                      | `ppcaas-metric-ibmi-os-p30-sve`                   |
+| `IBM i LPP core-hour`                                                                        | `ppcaas-metric-ibmi-lpp`                          |
+| `IBM i P10 LPP core-hour`                                                                    | `ppcaas-metric-ibmi-lpp-p10`                      |
+| `IBM i P30 LPP core-hour`                                                                    | `ppcaas-metric-ibmi-lpp-p30`                      |
+| `IBM i P10 PowerHA instance core-hour`                                                       | `ppcaas-metric-ibmi-pha-p10`                      |
+| `IBM i P30 PowerHA instance core-hour`                                                       | `ppcaas-metric-ibmi-pha-p30`                      |
+| `IBM i PowerHA small instance core-hour`                                                     | `ppcaas-metric-ibmi-pha-small`                    |
+| `IBM i PowerHA medium instance core-hour`                                                    | `ppcaas-metric-ibmi-pha-medium`                   |
+| `IBM i P10 license - mobile core-hour - SWMA paid`                                           | `ppcaas-metric-ibmi-os-p10-mol`                   |
+| `IBM i P30 license - mobile core-hour - SWMA paid`                                           | `ppcaas-metric-ibmi-os-p30-mol`                   |
+| `IBM i LPP P10 - mobile core-hour - SWMA paid`                                               | `ppcaas-metric-ibmi-lpp-p10-mol`                  |
+| `IBM i LPP P30 - mobile core-hour - SWMA paid`                                               | `ppcaas-metric-ibmi-lpp-p30-mol`                  |
+| `IBM i LPP core-hour - mobile core-hour - SWMA paid`                                         | `ppcaas-metric-ibmi-lpp-mol`                      |
+| `IBM i Db2 Web Query instance core-hour`                                                     | `ppcaas-metric-ibmi-db2wq`                        |
+| `IBM i Cloud Storage Solutions instance core-hour`                                           | `ppcaas-metric-ibmi-cos`                          |
+| `IBM i Rational Development Studio instance-hour`                                            | `ppcaas-metric-ibmi-rds`                          |
+| `IBM i P05 software tier license core-hour`                                                  | `ppcaas-metric-ibmi-os-p05-tier`                  |
+| `IBM i P10 software tier license core-hour`                                                  | `ppcaas-metric-ibmi-os-p10-tier`                  |
+| `IBM i P20 software tier license core-hour`                                                  | `ppcaas-metric-ibmi-os-p20-tier`                  |
+| `IBM i P30 software tier license core-hour`                                                  | `ppcaas-metric-ibmi-os-p30-tier`                  |
+| `IBM i P05 software tier service extension core-hour`                                        | `ppcaas-metric-ibmi-os-p05-sve-tier`              |
+| `IBM i P10 software tier service extension core-hour`                                        | `ppcaas-metric-ibmi-os-p10-sve-tier`              |
+| `IBM i P20 software tier service extension core-hour`                                        | `ppcaas-metric-ibmi-os-p20-sve-tier`              |
+| `IBM i P30 software tier service extension core-hour`                                        | `ppcaas-metric-ibmi-os-p30-sve-tier`              |
+| `IBM i software tier LPP core-hour`                                                          | `ppcaas-metric-ibmi-lpp-tier`                     |
+| `IBM i software tier PowerHA small instance core-hour`                                       | `ppcaas-metric-ibmi-pha-small-tier`               |
+| `IBM i software tier PowerHA medium instance core-hour`                                      | `ppcaas-metric-ibmi-pha-medium-tier`              |
+| `IBM i P10 software tier license - mobile core-hour - SWMA paid`                             | `ppcaas-metric-ibmi-os-p10-mol-tier`              |
+| `IBM i P30 software tier license - mobile core-hour - SWMA paid`                             | `ppcaas-metric-ibmi-os-p30-mol-tier`              |
+| `IBM i software tier LPP - mobile core-hour - SWMA paid`                                     | `ppcaas-metric-ibmi-lpp-mol-tier`                 |
+| `Virtual Tape Library terabyte-hour`                                                         | `ppcaas-metric-vtl`                               |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -163,15 +163,15 @@ Refer to the following table to view the part number descriptions and the associ
 | Part description (visible on the invoice from IBM)                            | Metric ID (visible in the IBM Cloud catalog)   |
 | ----------------------------------------------------------------------------- | ---------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud volume group**               |                                                |
-| Volume Storage Tier 0 gigabyte-hour                                           | ppcaas-metric-volume-tier0                     |
-| Volume Storage Tier 1 gigabyte-hour                                           | ppcaas-metric-volume-tier1                     |
-| Volume Storage Tier 3 gigabyte-hour                                           | ppcaas-metric-volume-tier3                     |
-| Volume Storage Tier 5k gigabyte-hour                                          | ppcaas-metric-volume-tier5k                    |
-| Asynchronous replicated volume storage (tier 0: 25 IOPS per GB) gigabyte-hour | ppcaas-metric-volume-tier0-async-replicated    |
-| Asynchronous replicated volume storage (tier 1: 10 IOPS per GB) gigabyte-hour | ppcaas-metric-volume-tier1-async-replicated    |
-| Asynchronous replicated volume storage (tier 3: 3 IOPS per GB) gigabyte-hour  | ppcaas-metric-volume-tier3-async-replicated    |
-| Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour    | ppcaas-metric-volume-tier5k-async-replicated   |
-| Asynchronous global replication storage gigabyte-hour                         | ppcaas-metric-volume-async-replication-service |
+| `Volume Storage Tier 0 gigabyte-hour`                                           | `ppcaas-metric-volume-tier0`                     |
+| `Volume Storage Tier 1 gigabyte-hour`                                           | `ppcaas-metric-volume-tier1`                     |
+| `Volume Storage Tier 3 gigabyte-hour`                                           | `ppcaas-metric-volume-tier3`                     |
+| `Volume Storage Tier 5k gigabyte-hour`                                          | `ppcaas-metric-volume-tier5k`                    |
+| `Asynchronous replicated volume storage (tier 0: 25 IOPS per GB) gigabyte-hour` | `ppcaas-metric-volume-tier0-async-replicated`    |
+| `Asynchronous replicated volume storage (tier 1: 10 IOPS per GB) gigabyte-hour` | `ppcaas-metric-volume-tier1-async-replicated`    |
+| `Asynchronous replicated volume storage (tier 3: 3 IOPS per GB) gigabyte-hour`  | `ppcaas-metric-volume-tier3-async-replicated`    |
+| `Asynchronous replicated volume storage (tier 5k: 5,000 IOPS) gigabyte-hour`    | `ppcaas-metric-volume-tier5k-async-replicated`   |
+| `Asynchronous global replication storage gigabyte-hour`                         | `ppcaas-metric-volume-async-replication-service` |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -183,10 +183,10 @@ Refer to the following table to view the part number descriptions and the associ
 | Part description (visible on the invoice from IBM)                | Metric ID (visible in the IBM Cloud catalog) |
 | ----------------------------------------------------------------- | -------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud snapshot group** |                                              |
-| Snapshot Storage Tier 0 gigabyte-hour                             | ppcaas-metric-snapshot-tier0                 |
-| Snapshot Storage Tier 1 gigabyte-hour                             | ppcaas-metric-snapshot-tier1                 |
-| Snapshot Storage Tier 3 gigabyte-hour                             | ppcaas-metric-snapshot-tier3                 |
-| Snapshot Storage Tier 5k gigabyte-hour                            | ppcaas-metric-snapshot-tier5k                |
+| `Snapshot Storage Tier 0 gigabyte-hour`                             | `ppcaas-metric-snapshot-tier0`                 |
+| `Snapshot Storage Tier 1 gigabyte-hour`                             | `ppcaas-metric-snapshot-tier1`                 |
+| `Snapshot Storage Tier 3 gigabyte-hour`                             | `ppcaas-metric-snapshot-tier3`                 |
+| `Snapshot Storage Tier 5k gigabyte-hour`                            | `ppcaas-metric-snapshot-tier5k`                |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}
@@ -198,9 +198,9 @@ Refer to the following table to view the part number descriptions and the associ
 | Part description (visible on the invoice from IBM)                                 | Metric ID (visible in the IBM Cloud catalog) |
 | ---------------------------------------------------------------------------------- | -------------------------------------------- |
 | **IBM Power Systems Virtual Server Private Cloud shared processor pool group**     |                                              |
-| IBM Power Systems S1122 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-S1122-spp-cores                |
-| IBM Power Systems E1150 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-E1150-spp-cores                |
-| IBM Power Systems E1180 virtual processor core-hour - Shared Processor Pool        | ppcaas-metric-E1180-spp-cores                |
+| `IBM Power Systems S1122 virtual processor core-hour - Shared Processor Pool`        | `ppcaas-metric-S1122-spp-cores`                |
+| `IBM Power Systems E1150 virtual processor core-hour - Shared Processor Pool`        | `ppcaas-metric-E1150-spp-cores`                |
+| `IBM Power Systems E1180 virtual processor core-hour - Shared Processor Pool`        | `ppcaas-metric-E1180-spp-cores`                |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions_private"}
 {: caption="Part number descriptions for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}." caption-side="bottom"}

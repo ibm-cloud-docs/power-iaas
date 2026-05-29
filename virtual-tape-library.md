@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2024-12-06"
+lastupdated: "2026-05-15"
 
 keywords: managing virtual tape library, ppcaas, virtual tape library, VTL IBM, VTL, tape library, FalconStor, VTL deployment guide
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing a Virtual Tape Library
+# Managing a Falconstor Virtual Tape Library
 {: #manage-vtl}
 
 ---
