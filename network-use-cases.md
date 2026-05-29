@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-05-29"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -135,26 +135,3 @@ The network connectivity for full Linux subscription can be established by provi
 Figure 6 describes the network connectivity between a virtual machine and a Red Hat Satellite server on IBM Cloud setup.
 
 ![Network connectivity for full Linux subscription](./figures/net-conn-full-linux-sub.png "Network connectivity for full Linux subscription"){: caption="Network connectivity for full Linux subscription" caption-side="bottom"}
-
-
-
-
-
-
-[SDN-DHCP-start]{: tag-purple}
-
-## Use case 4: DHCP network inside the pod
-{: #dhcp-network-new}
-
-The {{site.data.keyword.powerSys_notm}} Dynamic Host Configuration Protocol (DHCP) service provides automated IP address assignment and network configuration for virtual server instances (VSIs) within your workspace.
-
-You can enable or disable the DHCP service on any subnet in your {{site.data.keyword.powerSys_notm}} workspace. When DHCP is enabled on a subnet, network interfaces that are configured to use DHCP automatically receive their IPv4 connection information, including IP address, subnet mask, gateway, DNS servers, and MTU settings.
-
-The operating system (OS) of your LPAR must be configured to use the DHCP services.
-{: note}
-
-You can enable or disable the DHCP service on your subnet either when you create a new subnet or after the subnet is created.
-
-When you create a new subnet, the DHCP service is enabled by default. Any existing subnets that were created before this feature became available, the DHCP service is disabled by default.
-
-[SDN-DHCP-end]{: tag-purple}

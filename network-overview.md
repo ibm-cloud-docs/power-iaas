@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-05-29"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -138,11 +138,7 @@ You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data
 - IPv4 CIDR for your network
 - VLAN ID
 
-[GH-issue-592-start]{: tag-purple}
 
-Currently, the BGP connection shares the workspace host virtual server instance (VSI) IP addresses as `/32` routes. If these routes are not required, you can add a deny rule in the route filter for each address on the network peer.
-
-[GH-issue-592-end]{: tag-purple}
 
 ### Creating a network peering connection
 {: #network-peering-create}
