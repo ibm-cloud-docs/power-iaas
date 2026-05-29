@@ -116,7 +116,7 @@ To view the usage details at the resource level, do the following steps:
 2. Click **Usage**, on the left navigation menu.
 3. Click **View plans** for the entry **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
-5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected  (VSI) is opened.
+5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected VSI is opened.
 
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
@@ -426,7 +426,7 @@ The {{site.data.keyword.powerSys_notm}} pricing for AIX and IBM i includes licen
 
 You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword.powerSys_notm}} instance, but you must purchase an operating system license for virtual server resources. The pricing for AIX and IBM i operating system license is not based on whether you use a custom image or a stock image.
 
-You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [deploying a Linux virtual server instance](/docs/power-iaas?topic=power-iaas-linux-deployment).
+You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
 If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
