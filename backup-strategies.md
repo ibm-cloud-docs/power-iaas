@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-05-29"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -33,7 +33,7 @@ Learn more about different AIX, Linux, IBM i, and other workload backup strategi
 
 
 
-## Secure automated backup with Compass for AIX and Linux®
+## Secure automated backup with Compass for {{site.data.keyword.powerSys_notm}}
 {: #baas}
 
 IBM Cloud® Partner Cobalt Iron® provides an automated backup offering for AIX, Linux, IBM i, and other Power workloads on IBM {{site.data.keyword.powerSysFull}}. The backup offering is called as **Secure Automated Backup with Compass® for PowerVS**. The **Secure Automated Backup with Compass® for PowerVS** is referred as “Backup Offering” throughout the topic.
