@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-05-29"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -28,26 +28,21 @@ subcollection: power-iaas
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After you create a storage volume, you cannot change its storage type. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
+You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} CLI or the console. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After the storage volume is created, you cannot change the storage types. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
 
-Image import requires Hash-Based Message Authentication Code (HMAC) access and secret keys to access your IBM Cloud Object Storage bucket or external cloud storage. To generate HMAC keys for your IBM Cloud Object Storage bucket or external cloud storage, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+Image import requires Hash-Based Message Authentication Code (HMAC) keys (access, secret) to access your IBM Cloud Object Storage bucket. To generate your HMAC keys, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 {: important}
 
+The {{site.data.keyword.powerSysFull}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
 
-The {{site.data.keyword.powerSys_notm}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
+As part of this Job feature, the following API and CLIs are available:
+- API for image import - [Create an cos-image import job](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.
+- CLI command - [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.
+- CLI command - [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.
 
-<s>As part of this Job feature, the following API and CLIs are available:</s>
-
-<s>- API for image import - [Create an cos-image import job](/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external}.</s>
-
-<s>- CLI command - [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import){: external}.</s>
-
-<s>- CLI command - [`ibmcloud pi jobs`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job){: external}.</s>
-
-The {{site.data.keyword.powerSys_notm}} VSI capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If you submit one of these operations successfully, you cannot submit another operation (VSI capture, image export, or image import) until the previous operation completes.
+The {{site.data.keyword.powerSys_notm}} VSI capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If one of these operations is submitted successfully, then another new operation (VSI capture, image export, and image import) cannot be submitted until the previous operation is complete.
 {: important}
-
 
 
 ## Using the {{site.data.keyword.powerSys_notm}} API to import a boot image
@@ -78,14 +73,16 @@ Complete the following steps to import a boot image by using the {{site.data.key
 
 2. View the newly imported image by using the `ibmcloud pi images` command.
 
-    ```sh
+    ```text
+    shell
     ibmcloud pi images [--long] [--json]
     ```
-    {: pre}
+    {: codeblock}
 
 
 
 3. Import a customized SAP HANA or SAP NetWeaver image by using the [`-d, --import-details strings`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command.
+
 
 
 ## Using the {{site.data.keyword.powerSys_notm}} user interface to import a boot image
@@ -133,11 +130,11 @@ The **Image file name** field supports the following formats: _.ova_, _.ova.gz_,
 | Anti-affinity                   | Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes based on one or more existing PVM instances (VSIs) or storage volumes from your account. While you choose a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are selected. If you use PVM instances as the anti-affinity objects, the storage pools are excluded depending on each PVM instance’s root (boot) volume that you specified. |
 | Source details (Cloud storage)  | Use the following fields to set the Cloud storage details.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Region                          | Select either **us-east**, **us-south**, **ca-tor**, **eu-de**, **eu-es**, **eu-gb**, **au-syd**, **jp-tok**, **jp-osa** for the region.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Image file name                 | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are `tar` and `ova`. You can compress image files by using `gzip`. The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.ova.gz`.                                                                                                                                                                                         |
+| Image file name                 | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are `tar` and `ova`. You can compress image files by using `gzip`. The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.                                                                                                                                                                                         |
 | Bucket name                     | Sub folders can be used and specified as `bucketName/optional/folders`. Optional folders are created automatically if they don’t exist. To identity your bucket name, select the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**.                                                                                                                                                                                                                                       |
-| Cloud Object Storage access key | To identify your access key, select the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and paste it into this field.                                                                                                                                                                                                                                                                                     |
+| Cloud Object Storage access key | To identify your access key, select the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.                                                                                                                                                                                                                                                                                     |
 | Cloud Object Storage secret key | To identify your secret key, select the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into this field.                                                                                                                                                                                                                                                                                |
 {: caption="Boot images options" caption-side="bottom"}
 
 
-If you want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+If you' want to download your image at a later point, go to the **Resource List** in the IBM Cloud dashboard user interface, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
