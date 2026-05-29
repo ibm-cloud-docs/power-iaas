@@ -211,7 +211,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     
 
 
-12. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not supported in all the IBM data center locations When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+12. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not supported in all the IBM data center locations. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
