@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-26"
+lastupdated: "2026-06-01"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -75,12 +75,12 @@ The key features for the {{site.data.keyword.on-prem}} version of IBM {{site.dat
 
 * **Colocation policies for virtual machines and volumes**: You can apply an affinity or anti-affinity policy to each virtual machine instance to control the server on which a new virtual machine is placed. You can build high availability infrastructure within a data center by using this feature.
 * **Volume snapshot and clone operations**: You can capture full, point-in-time copies of the virtual machines or datasets. You can create delta snapshots, volume clones, and restore your disks by using IBM FlashCopy feature on {{site.data.keyword.powerSys_notm}}.
-* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores are estimated up to the nearest whole number. For example, 1.25 cores equals 2 virtual cores.
+* **Entitled processor-to-virtual-processor ratio**: The core-to-virtual core ratio can be in the range of 1:1 to 1:20. For shared processors, fractional cores are estimated up to the nearest whole number. For example, 1.25 cores is equal to 2 virtual cores.
 
 
 
 The create or update operations of a VSI can fail even when the core-to-virtual core ratio of 1:20 is satisfied.
-This issue occurs if the configured count of vCPU exceeds the maximum supported per-instance limit defined by the system policy.
+This issue occurs if the configured count of vCPU exceeds the maximum supported per-instance limit that is defined by the system policy.
 {: note}
 
 
@@ -89,7 +89,7 @@ This issue occurs if the configured count of vCPU exceeds the maximum supported 
 ## Hardware and software specifications
 {: #hardware-software-specs-private-cloud}
 
-For more information about how IBM Cloud regions hosts connections from the pods for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+For more information about how IBM Cloud region hosts connections from the pods for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
 
 ### Pods
 {: #pod-spec-private-cloud}
