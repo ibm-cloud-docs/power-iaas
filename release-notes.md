@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-02"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -31,7 +31,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: release-note}
 
 Changes in public network connectivity
-: You can configure public network connectivity for your {{site.data.keyword.powerSys_notm}} instances through IBM Cloud VPC, which provides both outbound and inbound network access. This approach offers enhanced security and integration with other IBM Cloud services. For detailed instructions about setting up public network connectivity, see [Public network connectivity for Power Virtual Server](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
+:   You can configure public network connectivity for your {{site.data.keyword.powerSys_notm}} instances through IBM Cloud VPC, which provides both outbound and inbound network access. This approach offers enhanced security and integration with other IBM Cloud services. For detailed instructions about setting up public network connectivity, see [Public network connectivity for Power Virtual Server](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
 
 Stock images support
 :   The RHEL 8.6 SAP stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
