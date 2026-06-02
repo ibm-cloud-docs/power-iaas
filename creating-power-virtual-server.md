@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-02"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -163,7 +163,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    - Select an IBM Power10 or later server type from the **Machine type** list.
    - Complete the following steps to assign a VSN to the instance:
      - Edit the **Virtual serial number (VSN)** field.
-     - The Virtual serial number (VSN) summary pane appears.
+     - The VSN summary pane appears.
      - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
     The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
@@ -225,10 +225,10 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 
 
-## About Virtual Serial Number in {{site.data.keyword.off-prem}}
+## About VSN in {{site.data.keyword.off-prem}}
 {: #vsn}
 
-You can assign a Virtual Serial Number (VSN) to a VSI.
+You can assign a VSN to a VSI.
 
 
 
@@ -256,11 +256,18 @@ A VSI is moved across systems with its associated VSN. Hence, when a VSN is asso
 
 
 VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VSIs gets the VSN, and the others are deployed without the VSN being assigned.
-{: important}
+
+<!-- Above paragraph is informaiton, it need not be a important callout>
 
 
 
 View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+
+
+
+When you upgrade an IBM i VSI that is assigned a VSN, you must contact IBM Support to ensure that the IBM i licenses are updated for the new IBM i version.
+{: important}
+
 
 
 ### Mapping the customer account number to the cloud account ID

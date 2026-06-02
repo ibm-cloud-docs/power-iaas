@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-02"
 
 keywords: Operating systems, powerVS OS
 
@@ -54,6 +54,8 @@ When you use IBM i for your VSI, review the following requirements:
 - Install the appropriate program temporary fixes (PTFs) depending on the version of IBM i that you use. For more information about the minimum PTF levels, see [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 - The IBM i 7.4, 7.5, 7.6, and Cloud Optical Repository (COR) OS images support Power10 and later systems. However, you can create a custom image or upgrade your IBM i VSI by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and navigating to the **My entitled software** > **IBM i Evaluation and NLV Download** section.
+
+- When you upgrade an IBM i VSI that is assigned a Virtual Serial Number (VSN), you must contact IBM Support to ensure that the IBM i licenses are updated for the new IBM i version. For more informaiton about VSN, see [About VSN in IBM data center](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
 
 ## Linux
 {: #linux-os}
