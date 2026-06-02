@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-02"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -67,6 +67,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
+
 | Power Systems         | Usable cores | Memory               |
 | --------------------- | ------------ | -------------------- |
 | E980 (9080-M9S)       | 143          | Up to 15,307 GB [^1] |
@@ -82,6 +83,10 @@ All prices that are mentioned in the topic are illustrative and do not represent
 [^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
 
 [^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
+
+
+
+
 
 
 For more information about the systems that are available for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
