@@ -277,10 +277,3 @@ For more information about IBM i network and software installation, see:
 
 - [Setting up an IBM i network install server](/docs/power-iaas?topic=power-iaas-preparing-install-server){: external}
 - [Globalization and IBM i software installation](https://www.ibm.com/docs/en/i/7.6.0?topic=installation-globalization-i-software#rzahcglobalconsider){: external}
-
-
-
-## Considerations for IBM i and Global Replication Services (GRS)
-{: #ibmi-grs-io}
-
-If you plan to use Global Replication Services to replicate your IBM i virtual server instance volumes, review the recommended volume limits and their impact on I/O response times. For more information, see [Performance and I/O considerations for GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#performance-IO-time).

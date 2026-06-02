@@ -265,7 +265,7 @@ View the details of a VSN associated with a VSI on the VSI details page. You can
 
 
 
-When you upgrade an IBM i VSI that is assigned a VSN, you must contact IBM Support to ensure that the IBM i licenses are updated for the new IBM i version.
+When you upgrade an IBM i VSI that has a VSN assigned, you must contact IBM Support to update the IBM i licenses to match the new version.
 {: important}
 
 
