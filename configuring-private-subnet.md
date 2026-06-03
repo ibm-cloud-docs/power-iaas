@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-03"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -117,7 +117,7 @@ To add an IP address into the reserved IP address list, complete the following s
 * Click **Reserve IP**.
 * Enter your IP address in the **IP address** field.
 
-   Make sure the IP address that you want to reserve falls in the IP range that is defined while creating the subnet.
+   Make sure the IP address that you want to reserve falls in the IP range that is defined when the subnet is created.
    {: note}
 
 * Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
@@ -157,9 +157,9 @@ For example, consider that you are adding a subnet `172.10.10.0/24` from the use
 
 
 
-You can use CIDR notations if public subnets are enabled and are in use. You can specify CIDR notation for a public subnet with either an [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918){: external} IP address space (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) or an IP address space registered with the Internet Assigned Numbers Authority (IANA). You must plan carefully when you use a non-RFC 1918 IP address space. If a subnet contains non-RFC 1918 IP addresses, a virtual server instance (VSI) in that subnet might not reach certain internet addresses when public networks are also attached to the VSI.
+You can use CIDR notations if public subnets are enabled and are in use. You can specify CIDR notation for a public subnet with either an [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918){: external} IP address space (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) or an IP address space registered with the Internet Assigned Numbers Authority (IANA). You must plan carefully when you use a non-RFC 1918 IP address space. If a subnet contains non-RFC 1918 IP addresses, a virtual server instance (VSI) in that subnet might not reach certain IP addresses when public networks are also attached to the VSI.
 
-The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `192.168.0.0/16` CIDR block to your account to enable connectivity to public networks. Once the IP addresses from the `192.168.0.0/16` block are assigned to your account for public network use, the same IP addresses cannot be used for private networks.
+The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `192.168.0.0/16` CIDR block to your account to enable connectivity to public networks. The IP addresses from the `192.168.0.0/16` block that are assigned to your account for public network use cannot be used for private networks.
 
 
 
