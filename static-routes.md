@@ -20,6 +20,8 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
 ---
 
 A network route is a defined path that data packets follow to travel from a source to a destination across a network. You can use the routes feature in the {{site.data.keyword.powerSysFull}} to view implicit network routes and to create or manage static routes within your {{site.data.keyword.powerSys_notm}} workspaces. Static routes are custom routes that control where the network packets are sent, depending on the destination Classless Inter-Domain Routing (CIDR) and the specified next hop address. The next hop is the IP address to which you want to route the network packet.
