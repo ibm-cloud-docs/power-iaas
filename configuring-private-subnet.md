@@ -29,7 +29,7 @@ subcollection: power-iaas
 You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}} by providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}
 
-The configuration of the private network subnet depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace, which can use one of the following four approaches:
+The configuration of the private network subnet depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace, which can use one of the following approaches:
 
 1. {{site.data.keyword.powerSys_notm}} workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This configuration is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 2. {{site.data.keyword.powerSys_notm}} workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). PER is the default connection, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
