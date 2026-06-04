@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-03-25"
+lastupdated: "2026-06-04"
 
 ---
 
@@ -33,7 +33,7 @@ The CLI plug-in version v1.9.0 is available for {{site.data.keyword.off-prem-fna
 
 The following CLI command is added to the {{site.data.keyword.powerSys_notm}} Private Cloud workspaces:
 
-- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume): You can use this command to attach, detach, view, and list virtual persistent memory (vPMEM) volumes for a {{site.data.keyword.powerSys_notm}} instance.
+- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume): You can use this command to attach, detach, view, and list vPMEM volumes for a {{site.data.keyword.powerSys_notm}} instance.
 
 **New options**
 
