@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-04"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -144,7 +144,7 @@ For example, consider that you are adding a subnet `172.10.10.0/24` from the use
 
 | Name          |  Gateway     | VLAN ID | CIDR       |
 | ------------- |  ----------- | ------- | ---------- |
-| powerns-net02 |  '172.10.10.1' | '3001'    | '172.10.10.0/26' |
+| powerns-net02 |  `172.10.10.1` | `3001`    | `172.10.10.0/26` |
 {: caption="Example subnet information displayed in the UI" caption-side="bottom"}
 
 
