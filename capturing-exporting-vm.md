@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-12"
+lastupdated: "2026-06-05"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -112,8 +112,6 @@ Complete the following steps to capture and export a virtual server instance:
    - If you chose to capture and export your volume-backed image to the image catalog, go to **Boot images**.
 
 11. *(Optional)* If you'd like to export your volume-backed image from your image catalog to Cloud Object Storage, select it, and click the **Capture and export** icon.
-
-
 
 
 
