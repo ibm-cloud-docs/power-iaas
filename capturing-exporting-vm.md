@@ -28,6 +28,8 @@ subcollection: power-iaas
 
 ---
 
+
+
 You can capture and export a virtual server instance (VSI) by using the {{site.data.keyword.powerSysFull}} user interface or CLI. A VSI is captured as a volume-backed image. The image is stored in new volumes on the storage providers. An image can be exported to an IBM Cloud Object Storage bucket. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it gets uploaded to the IBM Cloud Object Storage bucket.
 {: shortdesc}
 
@@ -59,8 +61,6 @@ Before you capture an IBM i VSI, ensure that any buffer I/O memory is flushed (w
 CHGASPACT ASPDEV(*SYSBAS) OPTION(*FRCWRT)
 ```
 {: codeblock}
-
-
 
 
 
