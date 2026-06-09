@@ -136,6 +136,7 @@ toc:
           - modifying-instance.md
           - virtual-applianes-catalog.md
           - importing-boot-image.md
+          - exporting-boot-image.md
           - configuring-custom-image.md
           - manage-placement-groups.md
           - managing-spp.md
