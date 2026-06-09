@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-09"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -90,11 +90,21 @@ Replication is not supported between the VMs in the {{site.data.keyword.off-prem
 
 
 
-
 ## Pricing for GRS
 {: #pricing-GRS}
 
 Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume. For more information, see [Pricing for Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-grs).
+
+
+
+## Performance and I/O considerations for GRS
+{: #performance-IO-time}
+
+To maintain the required performance and predictable I/O response times when you use GRS, it is best to limit each volume group to 30 volumes or fewer. As the number of replicated volumes grows, the storage system must coordinate a consistent set of changes across all volumes. The more volumes involved in this coordination, the greater the impact on response times. This additional synchronization can introduce latency and affect application responsiveness.
+
+The ideal number of volumes depends on your workload characteristics, including the operating system, I/O intensity, and the tolerance of your environment for increased response times.
+
+
 
 
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
