@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-09"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -24,15 +24,18 @@ subcollection: power-iaas
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
+
+
+
 ---
 
 You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}} by providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}
 
-How the private network subnet is configured depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} Workspace, which can use one of the following four approaches:
+The configuration of the private network subnet depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace, which can use one of the following approaches:
 
-1. {{site.data.keyword.powerSys_notm}} Workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-2. {{site.data.keyword.powerSys_notm}} Workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). PER is the default connection, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+1. {{site.data.keyword.powerSys_notm}} workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This configuration is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+2. {{site.data.keyword.powerSys_notm}} workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). PER is the default connection, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated).
 
@@ -42,17 +45,19 @@ When you specify a CIDR, the following values are automatically populated:
 - DNS server
 
 You must use a CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: external}.
-Here is the format of a CIDR:
+A CIDR has the following format:
 ```shell
 <IPv4 address>/<number>
 ```
 {: screen}
 
-For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1 bits).
+For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1 bit).
+
+
 
 To create a new subnet, complete the following steps:
 
-You cannot assign the subnet that has already been assigned to another virtual machine. However, when editing the configuration of a virtual machine, you can assign the same subnet multiple times.
+You cannot assign the subnet that is already assigned to another virtual machine. However, when you edit the configuration of a virtual machine, you can assign the same subnet multiple times.
 {: note}
 
 1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com){: external}.
@@ -63,14 +68,14 @@ You cannot assign the subnet that has already been assigned to another virtual m
 
 4. Select the {{site.data.keyword.powerSys_notm}} workspace to which you'd like to assign a subnet.
 
-5. Click **Subnets** in the left navigation pane, then **Add subnet**.
+5. Click **Subnets** in the left navigation panel, then **Add subnet**.
 
 6. (Optional) Set the **Subnet ARP Broadcast** option to **Enabled** if you want to enable the {{site.data.keyword.arp-broadcast}} option in the {{site.data.keyword.powerSys_notm}} subnets. The {{site.data.keyword.arp-broadcast}} distributes the ARP traffic in the {{site.data.keyword.powerSys_notm}} network fabric.
 
-7. Enter a name for the subnet, CIDR value (for example: 192.168.100.14/24), gateway number (for example: 192.168.100.15), and the IP range values for the subnet.
+7. Enter a name for the subnet, CIDR value (for example: '192.168.100.14/24'), gateway number (for example: '192.168.100.15'), and the IP range values for the subnet.
 
 8. You must provide the **DNS server** value.
-    A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This can cause the LPAR to hang during the startup operation. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
+    A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This issue can cause the LPAR to hang during the startup operation. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
 
 9.  You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
@@ -84,6 +89,10 @@ You can also create and configure a private network subnet by using the IBM comm
 ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "startIP-endIP[,startIP-endIP]" [--dns-servers "DNS1 DNS2"] [--gateway GATEWAY] [--json]
 ```
 {: codeblock}
+
+
+
+
 
 ## Reserving IP addresses
 {: #reserv-ip}
@@ -100,13 +109,13 @@ An IP address that is present in the reserved list is not auto assigned to a vir
 ### Adding an IP address in the reserved list
 {: #add-resrv-ip}
 
-To add an IP address into the reserved IP address list, perform the following steps:
+To add an IP address into the reserved IP address list, complete the following steps:
 * Open the [Subnets](https://cloud.ibm.com/power/subnets){: external} page in the IBM Cloud.
-* From the list of subnets that you have created, click the subnet for which you want to reserve the IP address.
+* From the list of subnets that are created, click the subnet for which you want to reserve the IP address.
 * Click **Reserve IP**.
 * Enter your IP address in the **IP address** field.
 
-   Make sure the IP address that you want to reserve falls in the IP range that you have defined while provisioning the subnet.
+   Make sure the IP address that you want to reserve falls in the IP range that is defined when the subnet is created.
    {: note}
 
 * Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
@@ -125,12 +134,12 @@ In case you are not using any of the four approaches, open a [support ticket](/d
 
 
 
-For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI).  The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instances to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
+For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI). The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instances to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
 
 
 | Name          |  Gateway     | VLAN ID | CIDR       |
 | ------------- |  ----------- | ------- | ---------- |
-| powerns-net02 |  172.10.10.1 | 3001    | 172.10.10.0/26 |
+| powerns-net02 |  `172.10.10.1` | `3001`    | `172.10.10.0/26` |
 {: caption="Example subnet information displayed in the UI" caption-side="bottom"}
 
 
@@ -146,9 +155,9 @@ For example, consider that you are adding a subnet `172.10.10.0/24` from the use
 
 
 
-You can use CIDR notations if public subnets are enabled and are in use. You can specify CIDR notation for a public subnet with either an [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918){: external} IP address space (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) or an IP address space registered with the Internet Assigned Numbers Authority (IANA). You must plan carefully when you use a non-RFC 1918 IP address space. If a subnet contains non-RFC 1918 IP addresses, a virtual server instance (VSI) in that subnet might not reach certain internet addresses when public networks are also attached to the VSI.
+You can use CIDR notations if public subnets are enabled and are in use. You can specify CIDR notation for a public subnet with either an [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918){: external} IP address space (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) or an IP address space registered with the Internet Assigned Numbers Authority (IANA). You must plan carefully when you use a non-RFC 1918 IP address space. If a subnet contains non-RFC 1918 IP addresses, a virtual server instance (VSI) in that subnet might not reach certain IP addresses when public networks are also attached to the VSI.
 
-The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `192.168.0.0/16` CIDR block to your account to enable connectivity to public networks. Once the IP addresses from the `192.168.0.0/16` block are assigned to your account for public network use, the same IP addresses cannot be used for private networks.
+The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `192.168.0.0/16` CIDR block to your account to enable connectivity to public networks. The IP addresses from the `192.168.0.0/16` block that are assigned to your account for public network use cannot be used for private networks.
 
 
 
@@ -161,7 +170,7 @@ The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `
 
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
-| CIDR block size | Available IP addresses (WDC04,WDC06) | Available IP addresses (non-WDC) |
+| CIDR block size | Available IP addresses (WDC04, WDC06) | Available IP addresses (non-WDC) |
 | --------------- | ------------------------------ | ---------------------------------- |
 |      /22        |        1019                    |          1021                      |
 |      /23        |         507                    |           509                      |

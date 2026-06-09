@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-09"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
@@ -19,6 +19,8 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
 
 ---
 
@@ -47,14 +49,14 @@ To create a static route in your {{site.data.keyword.powerSys_notm}} workspace, 
 7. Enter a name in the **Name** field.
 8. Optional: Enter user tags in the **User tags (optional)** field.
 9. Enter the destination IP address in the **Destination** field and the next hop IP address in the **Next hop** field.
-10. Set one of the following values for **Advertise**:
+10. Set **Advertise** to one of the following options:
     - **Enabled**: Default. If **Advertise** is set to **Enabled**, the static route is advertised to the external connections.
     - **Disabled**: If **Advertise** is set to **Disabled**, the static route is not advertised to the external connections.
-11. Set one of the following values for **Status**:
-    - **Enabled**: Default. If **Status** is set to **Enabled**, the static route is enabled within the network fabric.
-    - **Disabled**: If **Status** is set to **Disabled**, the static route is disabled within the network fabric.
+11. Set **State** to one of the following options:
+    - **Enabled**: Default. If **State** is set to **Enabled**, the static route is enabled within the network fabric.
+    - **Disabled**: If **State** is set to **Disabled**, the static route is disabled within the network fabric.
 
-    If you set **Status** to **Disabled**, the static route is not advertised to the external connections, even if **Advertise** is set to **Enabled**.
+    If you set **State** to **Disabled**, the static route is not advertised to the external connections, even if **Advertise** is set to **Enabled**.
     {: important}
 
 12.	Click **Create route**.

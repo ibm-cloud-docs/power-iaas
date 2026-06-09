@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-03"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -15,6 +15,11 @@ subcollection: power-iaas
 # Public network connectivity for {{site.data.keyword.powerSys_notm}}
 {: #powervs-public-network-setup}
 
+---
+
+{{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+---
 
 In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use Virtual Private Cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
 {: shortdesc}

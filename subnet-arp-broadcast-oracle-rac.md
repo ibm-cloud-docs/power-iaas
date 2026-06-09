@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2025, 2026 
 
-lastupdated: "2025-12-01"
+lastupdated: "2026-06-09"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -20,6 +20,8 @@ subcollection: power-iaas
 ---
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
 
 ---
 

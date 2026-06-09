@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-09"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -115,6 +115,8 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
+    
+
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
     - Include the following licenses to your VSI:
       - IBM i Cloud Storage Solution
@@ -122,6 +124,10 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
       - Rational Dev Studio for IBM i
 
         Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
+
+     
+
+     
 
     - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
@@ -163,7 +169,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    - Select an IBM Power10 or later server type from the **Machine type** list.
    - Complete the following steps to assign a VSN to the instance:
      - Edit the **Virtual serial number (VSN)** field.
-     - The Virtual serial number (VSN) summary pane appears.
+     - The VSN summary pane appears.
      - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
     The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
@@ -225,10 +231,10 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 
 
-## About Virtual Serial Number in {{site.data.keyword.off-prem}}
+## About VSN in {{site.data.keyword.off-prem}}
 {: #vsn}
 
-You can assign a Virtual Serial Number (VSN) to a VSI.
+You can assign a VSN to a VSI.
 
 
 
@@ -256,11 +262,18 @@ A VSI is moved across systems with its associated VSN. Hence, when a VSN is asso
 
 
 VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VSIs gets the VSN, and the others are deployed without the VSN being assigned.
-{: important}
+
+<!-- Above paragraph is information, it need not be a important callout>
 
 
 
 View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+
+
+
+When you upgrade an IBM i VSI that has a VSN assigned, you must contact IBM Support to update the IBM i licenses to match the new version.
+{: important}
+
 
 
 ### Mapping the customer account number to the cloud account ID

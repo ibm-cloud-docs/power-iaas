@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-06-09"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -54,13 +54,13 @@ Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous 
 
 In the following table, the terms that are used throughout the document are defined.
 
-| Term               | Definition                                                                            |
-|--------------------|---------------------------------------------------------------------------------------|
-| Primary location   | Location in which the volume is created.                                                 |
-| Secondary location | Location in which the auxiliary volume for replication is created.                       |
-| Primary volume     | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
-| Auxiliary volume   | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}.    |
-| IBM cloud resource names (CRNs)  | Identifiers that are assigned to uniquely identify resources in IBM Cloud.        |
+| Term                            | Definition                                                                                                                                                                 |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Primary location                | Location in which the volume is created.                                                                                                                                   |
+| Secondary location              | Location in which the auxiliary volume for replication is created.                                                                                                         |
+| Primary volume                  | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.          |
+| Auxiliary volume                | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}. |
+| IBM cloud resource names (CRNs) | Identifiers that are assigned to uniquely identify resources in IBM Cloud.                                                                                                 |
 {: class="simple-table"}
 {: caption="GRS terms and definitions" caption-side="bottom"}
 
@@ -90,11 +90,21 @@ Replication is not supported between the VMs in the {{site.data.keyword.off-prem
 
 
 
-
 ## Pricing for GRS
 {: #pricing-GRS}
 
 Part numbers are used for calculating the cost of GRS based on the storage tier that is associated with the primary volume. For more information, see [Pricing for Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#price-grs).
+
+
+
+## Performance and I/O considerations for GRS
+{: #performance-IO-time}
+
+To maintain the required performance and predictable I/O response times when you use GRS, it is best to limit each volume group to 30 volumes or fewer. As the number of replicated volumes grows, the storage system must coordinate a consistent set of changes across all volumes. The more volumes involved in this coordination, the greater the impact on response times. This additional synchronization can introduce latency and affect application responsiveness.
+
+The ideal number of volumes depends on your workload characteristics, including the operating system, I/O intensity, and the tolerance of your environment for increased response times.
+
+
 
 
 ## {{site.data.keyword.powerSys_notm}} regions that support GRS
@@ -107,19 +117,19 @@ The following table shows the location pairs that support replication.
 
 
 
-| Location 1        | Location 2               |
-| ----------------- | ------------------------ |
-| `mad02`           | `eu-de-1 (fra04)`        |
-| `mad04`           | `eu-de-2 (fra05)`        |
-| `us-east (wdc04)` | `us-south (dal13)`       |
-| `wdc06`           | `dal12`                  |
-| `wdc06`           | `dal14`                  |
-| `wdc07`           | `dal10`                  |
-| `osa21`           | `tok04`                  |
-| `syd04`           | `syd05`                  |
-| `sao01`           | `sao04`                  |
-| `mon01`           | `tor01`                  |
-| `lon04`           | `lon06`                   |
+| Location 1        | Location 2         |
+| ----------------- | ------------------ |
+| `mad02`           | `eu-de-1 (fra04)`  |
+| `mad04`           | `eu-de-2 (fra05)`  |
+| `us-east (wdc04)` | `us-south (dal13)` |
+| `wdc06`           | `dal12`            |
+| `wdc06`           | `dal14`            |
+| `wdc07`           | `dal10`            |
+| `osa21`           | `tok04`            |
+| `syd04`           | `syd05`            |
+| `sao01`           | `sao04`            |
+| `mon01`           | `tor01`            |
+| `lon04`           | `lon06`            |
 {: class="simple-table"}
 {: caption="The {{site.data.keyword.powerSys_notm}} region pairs that are replication-enabled" caption-side="bottom"}
 
@@ -195,16 +205,16 @@ When you onboard a volume on the secondary location, if the volume group is not 
 
 A volume group is used to enable, disable, and manage a replication-enabled consistency group in storage volumes. By using a consistency group, you can perform operations on multiple volumes instead of managing each volume individually. The consistency group has a `state` property that indicates the state of the `copy` operation of the volumes in the group. Refer to the following table that lists different states of the replication-enabled consistency group in storage volumes.
 
-| State  |  Description             |
-| ------------------------------------- | ------------------------ |
-| `inconsistent_stopped` | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.|
-| `inconsistent_copying` | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state. |
-| `consistent_copying` | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes.  \n The `consistent_copying` progress bar is an indicator to show the progress of copy operation. One cycle period of copy operation is expected to be between the range of 1-100%. In some cases, the copy operation can complete the activity before the progress bar reaches the maximum value of 100%. |
-| `consistent_stopped` | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group that was in a `consistent_copying` state was stopped. |
-| `idling` | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled. |
-| `idling_disconnected` | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations. |
-| `consistent_disconnected` | This state indicates that the volumes in the consistency groups are operating in the non-primary role and you cannot perform `read` or `write` I/O operations. |
-| `empty` | This state indicates that the volumes in the consistency group do not have any relationship with each other. |
+| State                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `inconsistent_stopped`    | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `inconsistent_copying`    | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `consistent_copying`      | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes.  \n The `consistent_copying` progress bar is an indicator to show the progress of copy operation. One cycle period of copy operation is expected to be between the range of 1-100%. In some cases, the copy operation can complete the activity before the progress bar reaches the maximum value of 100%.  |
+| `consistent_stopped`      | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group that was in a `consistent_copying` state was stopped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `idling`                  | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `idling_disconnected`     | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `consistent_disconnected` | This state indicates that the volumes in the consistency groups are operating in the non-primary role and you cannot perform `read` or `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `empty`                   | This state indicates that the volumes in the consistency group do not have any relationship with each other.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 {: class="simple-table"}
 {: caption="Different states of storage replication consistency group and their descriptions." caption-side="bottom"}
 
@@ -282,15 +292,15 @@ Use the following API and CLI commands to get the replication-status of a volume
 
 Refer to the following table for the properties of a replication-enabled volume.
 
-| Property               | Description |
-| ---------------------- | ----------- |
-| `consistencyGroupName` | Indicates the name of the consistency group when a volume is part of a volume group. |
-| `masterVolumeName`     | Indicates the name of the `master` volume in the storage. The storage controller auto-generates this name. |
-| `mirroringState`       | Indicates the mirrored state of the replication-enabled volume. This state is related to the current state of replication between the primary and the auxiliary volumes. For more information, see [Status of volume groups](#vol-grop-status-table). |
-| `outOfBandDeleted`     | Indicates the status of the replication-enabled volume when deleted. If the replication status is `disabled` on the primary volume and the auxiliary volume on the secondary location is not deleted within 24 hours, the status of the `outOfBandDeleted` property is set to `true`. In this state, you cannot perform any actions on the primary volume. When primary volumes are in this state, they are not billed. |
+| Property               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `consistencyGroupName` | Indicates the name of the consistency group when a volume is part of a volume group.                                                                                                                                                                                                                                                                                                                                                                                           |
+| `masterVolumeName`     | Indicates the name of the `master` volume in the storage. The storage controller auto-generates this name.                                                                                                                                                                                                                                                                                                                                                                     |
+| `mirroringState`       | Indicates the mirrored state of the replication-enabled volume. This state is related to the current state of replication between the primary and the auxiliary volumes. For more information, see [Status of volume groups](#vol-grop-status-table).                                                                                                                                                                                                                          |
+| `outOfBandDeleted`     | Indicates the status of the replication-enabled volume when deleted. If the replication status is `disabled` on the primary volume and the auxiliary volume on the secondary location is not deleted within 24 hours, the status of the `outOfBandDeleted` property is set to `true`. In this state, you cannot perform any actions on the primary volume. When primary volumes are in this state, they are not billed.                                                        |
 | `primaryRole`          | Indicates the active volume in the primary and auxiliary volume. If this property value is set to `master`, the primary volume is the active volume in which you can perform I/O operations. If this property value is set to `aux`, the auxiliary volume is the active volume in which you can perform I/O operations. An inactive volume does not allow I/O operations to be performed on it. For a replication-enabled volume pair, the value of this property is the same. |
-| `replicationEnabled`   | Indicates the replication status of a volume. Set to `True` if the volume is replication-enabled. |
-| `replicationStatus`    | Returns the value of the replication status for a volume. If the returned value is `enabled`, the replication is active for the volume. If the returned value is `disabled`, the replication is inactive for the volume. If the returned value is `not-capable`, the volume is not replication-enabled and not associated with another volume on a different location. |
+| `replicationEnabled`   | Indicates the replication status of a volume. Set to `True` if the volume is replication-enabled.                                                                                                                                                                                                                                                                                                                                                                              |
+| `replicationStatus`    | Returns the value of the replication status for a volume. If the returned value is `enabled`, the replication is active for the volume. If the returned value is `disabled`, the replication is inactive for the volume. If the returned value is `not-capable`, the volume is not replication-enabled and not associated with another volume on a different location.                                                                                                         |
 {: class="simple-table"}
 {: caption="Properties of replication-enabled volume and their descriptions." caption-side="bottom"}
 
@@ -320,16 +330,16 @@ Set the value of the `VOLUME_GROUP_ID` parameter to the primary volume group ID.
 
 Refer to the following table for the properties that you can use with the API and CLI commands for verifying the status of the volume group and its definitions.
 
-| Property               | Description |
-| ---------------------- | ----------- |
-| `consistencyGroupName` | Indicates the name of the replication consistency group that is created at the storage level. The name is same as the replication consistency group on the secondary location. The storage controller creates the name and not defined by the user. |
-| `auxiliary` | Indicates whether the volume group is for the auxiliary volumes or for the primary volumes. If the volume group is for the auxiliary volumes on the secondary location, the returned value is `true`. If the volume group is for the primary volumes on the primary location, the returned value is `false`. |
-| `name` | Indicates the name of the volume group that you provide when you created it in the primary location. In the secondary location, the name property is same as the `consistencyGroupName` property. |
-| `volumeIDs` | Lists the volume IDs that are part of the volume group. |
-| `statusDescription` | Assigned with a status, if any failure occurs when you add volumes to a volume group.|
-| `status` | Indicates one of the following volume group states: \n - `available` - ready to be managed\n - `error` - encountered an error. Volume group is not manageable in this state and you can only perform a `delete` operation\n - `updating` - `update` operation on the volume group is in progress\n - `creating` - `create` operation on the volume group is in progress |
-| `replicationStatus` | Indicates that replication status is active for the volume group. If this property value is set to `disabled`, replication is not active for the volume group. |
-| `state` | Indicates the status of the consistency group. |
+| Property               | Description                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consistencyGroupName` | Indicates the name of the replication consistency group that is created at the storage level. The name is same as the replication consistency group on the secondary location. The storage controller creates the name and not defined by the user.                                                                                                                     |
+| `auxiliary`            | Indicates whether the volume group is for the auxiliary volumes or for the primary volumes. If the volume group is for the auxiliary volumes on the secondary location, the returned value is `true`. If the volume group is for the primary volumes on the primary location, the returned value is `false`.                                                            |
+| `name`                 | Indicates the name of the volume group that you provide when you created it in the primary location. In the secondary location, the name property is same as the `consistencyGroupName` property.                                                                                                                                                                       |
+| `volumeIDs`            | Lists the volume IDs that are part of the volume group.                                                                                                                                                                                                                                                                                                                 |
+| `statusDescription`    | Assigned with a status, if any failure occurs when you add volumes to a volume group.                                                                                                                                                                                                                                                                                   |
+| `status`               | Indicates one of the following volume group states: \n - `available` - ready to be managed\n - `error` - encountered an error. Volume group is not manageable in this state and you can only perform a `delete` operation\n - `updating` - `update` operation on the volume group is in progress\n - `creating` - `create` operation on the volume group is in progress |
+| `replicationStatus`    | Indicates that replication status is active for the volume group. If this property value is set to `disabled`, replication is not active for the volume group.                                                                                                                                                                                                          |
+| `state`                | Indicates the status of the consistency group.                                                                                                                                                                                                                                                                                                                          |
 {: class="simple-table"}
 {: caption="Properties of a volume group and their descriptions." caption-side="bottom"}
 {: #vol-grop-status-table}
@@ -355,7 +365,7 @@ Complete the following actions to onboard auxiliary volumes on the secondary loc
 - [Verifying the auxiliary volume for replication](#verify-aux-vol)
 
 #### Onboarding an auxiliary volume
-{: onboard-aux-vol}
+{: #onboard-aux-vol}
 
 To manage the replicated volume on a remote location and perform volume recovery, onboard an auxiliary volume. For {{site.data.keyword.powerSys_notm}} to manage the auxiliary volume, onboard the auxiliary volume to the secondary location.
 
@@ -400,11 +410,11 @@ An onboarding task ID is returned when you complete onboarding the auxiliary vol
 
 Refer to the following table for the properties that you can use with the API or CLI commands for verifying the replication status of the auxiliary volume and its definitions.
 
-| Property               | Description |
-| ---------------------- | ----------- |
-| `progress` | Indicates the progress of the onboarding operation of the auxiliary volume in percentage |
-| `results` | Contains the list of onboarded volume names or details of any failures that occurred during the onboarding operation of the auxiliary volume |
-| `status` | Indicates the status of the volume onboarding operation. If the operation is successful, the return value is `Success`. If an error occurred during the onboarding operation, the return value is `Failure`. |
+| Property   | Description                                                                                                                                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `progress` | Indicates the progress of the onboarding operation of the auxiliary volume in percentage                                                                                                                     |
+| `results`  | Contains the list of onboarded volume names or details of any failures that occurred during the onboarding operation of the auxiliary volume                                                                 |
+| `status`   | Indicates the status of the volume onboarding operation. If the operation is successful, the return value is `Success`. If an error occurred during the onboarding operation, the return value is `Failure`. |
 {: class="simple-table"}
 {: caption="Properties of an auxiliary volume and their descriptions." caption-side="bottom"}
 
@@ -419,17 +429,17 @@ Obtain the status of the auxiliary volumes by using the auxiliary volume names. 
 
 Refer to the following table to verify whether the replication properties of the volume are as expected.
 
-| Property               | Verifying the replication status |
-| ---------------------- | ----------- |
-| `auxVolumeName` | Matches the `auxVolumeName` value that is used to onboard the volume |
-| `auxiliary` | Set to `true` because the volume is the auxiliary volume |
-| `consistencyGroupName` | Matches the consistency group name of the volume group on the primary location |
-| `groupID` | Returns the ID of the volume group |
-| `masterVolumeName` | Matches the `masterVolumeName` value of the primary volume on the primary location |
-| `mirroringState` |Set to `consistent_copying` state |
-| `primaryRole` | Set to `master` as the primary volume is acting as the active volume |
-| `replicationEnabled` | Set to `true` |
-| `replicationStatus` | Set to `enabled` |
+| Property               | Verifying the replication status                                                   |
+| ---------------------- | ---------------------------------------------------------------------------------- |
+| `auxVolumeName`        | Matches the `auxVolumeName` value that is used to onboard the volume               |
+| `auxiliary`            | Set to `true` because the volume is the auxiliary volume                           |
+| `consistencyGroupName` | Matches the consistency group name of the volume group on the primary location     |
+| `groupID`              | Returns the ID of the volume group                                                 |
+| `masterVolumeName`     | Matches the `masterVolumeName` value of the primary volume on the primary location |
+| `mirroringState`       | Set to `consistent_copying` state                                                  |
+| `primaryRole`          | Set to `master` as the primary volume is acting as the active volume               |
+| `replicationEnabled`   | Set to `true`                                                                      |
+| `replicationStatus`    | Set to `enabled`                                                                   |
 {: class="simple-table"}
 {: caption="Verifying the replication status of an auxiliary volume." caption-side="bottom"}
 
@@ -442,10 +452,10 @@ Using the `groupID` value of the auxiliary volume, query the details of the volu
 
 Refer to the following table to verify that the replication status of the volume group is as expected.
 
-| Property               | Verifying the replication status |
-| ---------------------- | ----------- |
-| `auxiliary` | Set to `true` |
-| `state` | Set to `consistent_copying` state to match the `mirroringState` of the auxiliary volume |
+| Property    | Verifying the replication status                                                                                                             |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `auxiliary` | Set to `true`                                                                                                                                |
+| `state`     | Set to `consistent_copying` state to match the `mirroringState` of the auxiliary volume                                                      |
 | `volumeIDs` | Contains a list of volume IDs that belongs to the volume group. Verify whether it contains the ID of the auxiliary volume that was onboarded |
 {: class="simple-table"}
 {: caption="Verifying the replication-enabled status of a volume group." caption-side="bottom"}
