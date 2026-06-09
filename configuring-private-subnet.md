@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-04"
+lastupdated: "2026-06-09"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -52,11 +52,6 @@ A CIDR has the following format:
 {: screen}
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1 bit).
-
-To create a new subnet, complete the following steps:
-
-You cannot assign the subnet that is already assigned to another virtual machine. However, when you update the configuration of a virtual machine, you can assign the same subnet multiple times.
-{: note}
 
 
 
