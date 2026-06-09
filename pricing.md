@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-09"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -66,28 +66,22 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-
-
 | Power Systems         | Usable cores | Memory               |
 | --------------------- | ------------ | -------------------- |
 | E980 (9080-M9S)       | 143          | Up to 15,307 GB [^1] |
 | S922 (9009-22A) [^2]  | 15           | Up to 942 GB         |
 | S1022 (9105-22A) [^3] | 33           | Up to 1984 GB        |
-| E1080 (9080-HEX)      | 165          | Up to 64 TB          |
+| E1080 (9080-HEX)      | 165          | Up to 32 TB          |
 | E1050 (9043-MRX)      | 87           | Up to 8,192 GB       |
 | S1122 (9824-22A)      | 51           | Up to 1,904 GB       |
 {: caption="Theoretical maximum processors and memory" caption-side="bottom"}
+
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
 
 [^2]: If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
 
 [^3]: If the machine type is S1022 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
-
-
-
-
-
 
 For more information about the systems that are available for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
