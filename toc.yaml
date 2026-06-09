@@ -221,6 +221,5 @@ toc:
           label: Troubleshooting
           topics:
           - troubleshoot-aix.md
-          - troubleshoot-snapshot.md<staging
-          - troubleshoot-metadata-service.md</staging>
+          - troubleshoot-snapshot.md
       - getting-help-and-support.md
