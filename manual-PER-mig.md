@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-06-10"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2021, 2024
+  years: 2021, 2026 
 
-lastupdated: "2025-07-01"
+lastupdated: "2026-06-10"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
-{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
+
 
 
 
