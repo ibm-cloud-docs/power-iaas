@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-10"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -26,6 +26,12 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #June-2026}
 
 
+
+### 19 June 2026
+{: #power-iaas-jun1926}
+{: release-note}
+
+:   {{site.data.keyword.powerSys_notm}} offers the `in-mum-1` and `in-mum-2` zones as data centers in Mumbai, India. For more information about the data center capabilities, see the **Data center capabilities** section in the [Power with the benefits of distributed hybrid infrastructure](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external} page.
 
 ### 9 June 2026
 {: #power-iaas-jun0926}
@@ -106,8 +112,8 @@ Private Cloud offering expansion
 ### 23 Feb 2026
 {: #power-iaas-feb2326}
 {: release-note}
-
-CHE02 and CHE03 data centers are available
+CHE02 and CHE03
+ data centers are available
 :   `CHE02` and `CHE03` are available as {{site.data.keyword.powerSys_notm}} data centers in Chennai, India. For more information about the data center capabilities, see [Data center capabilities](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external}.
 
 ## January 2026
