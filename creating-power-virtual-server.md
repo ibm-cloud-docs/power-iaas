@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-10"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -89,9 +89,11 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Complete the **Boot image** fields.
 
-    You can create or provision a VSI without any initial boot image volume. VSIs without boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. A VSI can be created without a boot volume and the volume that is cloned or replicated can be attached to a VSI to bring the backed-up VSI.
+
+8. Complete the **Boot image** fields.
+
+    You can create or provision a VSI without an initial boot image volume. VSIs without a boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. You can create a VSI without a boot volume and then attach a cloned or replicated volume to restore the backed-up VSI.
 
     Select the **Deploy empty virtual server instance** checkbox to provision a VSI without a boot volume. For more information, see [Provisioning a virtual machine without an initial boot volume](#empty-vm).
 
@@ -99,7 +101,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-    You can create a VSI without a boot volume for the AIX, IBM i, and Linux operating systems with an IBM provided subscription. If a Virtual serial number (VSN) is assigned to a VSI without storage, you must assign the VSN before you attach the boot volume and start the VSI.
+    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems with an IBM provided subscription. If you assign a Virtual serial number (VSN) to a VSI without storage, you must assign the VSN before you attach the boot volume and start the VSI.
     {: important}
 
     

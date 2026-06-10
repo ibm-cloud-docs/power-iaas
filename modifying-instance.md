@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-10"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -57,6 +57,7 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 - [Changing licenses for an IBM i-based VSI](#change-ibmi-license)
 - [Managing the storage volumes](#modifying-volume-network)
 - [Adding or removing a public network](#adding-removing-network)
+- [Enabling or disabling access to the metadata service](#enable-disable-metadata-service)
 
 
 
@@ -438,6 +439,8 @@ Public networks are not supported in all the IBM data center locations. If your 
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
+
+
 
 
 
