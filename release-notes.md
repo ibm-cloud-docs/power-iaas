@@ -31,7 +31,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #power-iaas-jun1926}
 {: release-note}
 
-in-mum-1 and in-mum-2 zones in {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}
+in-mum-1 and in-mum-2 zones in {{site.data.keyword.off-prem}}
 :   {{site.data.keyword.powerSys_notm}} offers the `in-mum-1` and `in-mum-2` zones as data centers in Mumbai, India. For more information about the data center capabilities, see the **Data center capabilities** section in the [Power with the benefits of distributed hybrid infrastructure](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external} page.
 
 ### 9 June 2026
