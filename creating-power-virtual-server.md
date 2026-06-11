@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-11"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -265,7 +265,7 @@ A VSI is moved across systems with its associated VSN. Hence, when a VSN is asso
 
 VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VSIs gets the VSN, and the others are deployed without the VSN being assigned.
 
-<!-- Above paragraph is information, it need not be a important callout>
+
 
 
 
