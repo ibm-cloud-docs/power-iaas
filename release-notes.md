@@ -57,7 +57,7 @@ Stock images support
 {: release-note}
 
 ISO/IEC 20000 compliance
-:   {{site.data.keyword.powerSys_notm}} is ISO 20000 certified alongside other IBM Cloud services. For more information, see [Compliance certification](/docs/power-iaas?topic=power-iaas-compliances-list#ISO-20000-cert).
+:   {{site.data.keyword.powerSys_notm}} is ISO 20000 certified with other IBM Cloud services. For more information, see [Compliance certification](/docs/power-iaas?topic=power-iaas-compliances-list#ISO-20000-cert).
 
 Stock images support
 :   * The RHEL 9.4 general purpose stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
