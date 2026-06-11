@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-11"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -32,12 +32,20 @@ subcollection: power-iaas
 You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}} by providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}
 
+
+
+
+
 The configuration of the private network subnet depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace, which can use one of the following approaches:
 
 1. {{site.data.keyword.powerSys_notm}} workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This configuration is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 2. {{site.data.keyword.powerSys_notm}} workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). PER is the default connection, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
 4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated).
+
+
+
+
 
 When you specify a CIDR, the following values are automatically populated:
 - A gateway
@@ -120,6 +128,9 @@ To add an IP address into the reserved IP address list, complete the following s
 
 * Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
 
+
+
+
 ## Networking considerations
 {: #networking-considerations}
 
@@ -129,7 +140,11 @@ You can establish a private network communication between the two {{site.data.ke
 3.	Set up routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
 4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
-In case you are not using any of the four approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
+
+
+
+
+In case you are not using any of these approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
 
 
 

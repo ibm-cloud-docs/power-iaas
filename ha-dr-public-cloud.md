@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-22"
+lastupdated: "2026-06-10"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -37,9 +37,9 @@ subcollection: power-iaas
 ## Host failure recovery
 {: #host-failure-recovery}
 
-{{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure, including redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that all the hosts are working correctly and responsive.
+{{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure with including redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that hosts are responsive and operating correctly.
 
-When a host fails unexpectedly, the virtual server instances (VSIs) on the failed host are automatically restarted on a working host. In some cases, manual recovery of the failed host is attempted.
+When a host fails unexpectedly, the virtual server instances (VSIs) on the failed host are automatically restarted on another available host. In some cases, manual recovery of the failed host is required.
 
 The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
 {: note}
@@ -48,9 +48,9 @@ The host failure recovery process involves restarting the VSIs on alternate host
 
 The host failure recovery:
 
-- Is enabled by default for all the VSIs in the Power Virtual Server environment.
+- Is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment.
 
-- Does not restart any pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for Automated remote restart.
+- Does not restart pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for Automated remote restart.
 
 - Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
