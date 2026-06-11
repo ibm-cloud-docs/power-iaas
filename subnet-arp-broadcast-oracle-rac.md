@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-11"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -39,8 +39,13 @@ The **{{site.data.keyword.arp-broadcast}}** is a switch that is provided on a su
 {: shortdesc}
 
 
-The **{{site.data.keyword.arp-broadcast}}** option is not available if you are using Cloud Connections for {{site.data.keyword.off-prem}}. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+
+The **{{site.data.keyword.arp-broadcast}}** option is not available if you are using Cloud Connections. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 {: note}
+
+
+
+
 
 ## Benefits of enabling the ARP broadcast in {{site.data.keyword.powerSys_notm}} subnets
 {: #arp-enabl-benefit}
