@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-15"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -79,7 +79,7 @@ In virtualization environments, a VSI can operate in different processor compati
 
 - **Effective**: The processor mode that is currently in use for the VSI. The physical host on which the VSI runs determines the effective processor compatibility mode.
 
-You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and restart the VSI. During VSI activation, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and restart the VSI. When you start the VSI, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 
 You must select the processor compatibility mode that the operating system that you use supports. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI does not boot correctly and might enter the *Error* state. To resolve this issue, [open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: important}
