@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-04-29"
+lastupdated: "2026-06-15"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -348,34 +348,21 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 
 The following table shows the data centers for {{site.data.keyword.powerSys_notm}} that supports PER:
 
-
-
-| Data centers           | PER available                             |
-| ---------------------- | ----------------------------------------- |
-| `CHE01`                | X                                         |
-| `CHE02`                | ![Checkmark icon](./images/checkmark.svg) |
-| `CHE03`                | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL10`                | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL12`                | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL13`                | ![Checkmark icon](./images/checkmark.svg) |
-| `DAL14` | ![Checkmark icon](./images/checkmark.svg) |
-| `FRA04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `FRA05`                | ![Checkmark icon](./images/checkmark.svg) |
-| `LON04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `LON06`                | ![Checkmark icon](./images/checkmark.svg) |
-| `MAD02`                | ![Checkmark icon](./images/checkmark.svg) |
-| `MAD04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `MON01`                | X                                         |
-| `OSA21`                | ![Checkmark icon](./images/checkmark.svg) |
-| `SAO01`                | ![Checkmark icon](./images/checkmark.svg) |
-| `SAO04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `SYD04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `SYD05`                | ![Checkmark icon](./images/checkmark.svg) |
-| `TOK04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `TOR01`                | ![Checkmark icon](./images/checkmark.svg) |
-| `WDC04`                | ![Checkmark icon](./images/checkmark.svg) |
-| `WDC06`                | ![Checkmark icon](./images/checkmark.svg) |
-| `WDCO7`                | ![Checkmark icon](./images/checkmark.svg) |
+| Location      | Data centers                             | PER availability         |
+| ------------- | ---------------------------------------- | ------------------------ |
+| Mumbai        | `in-mum-1` \n `in-mum-2`                 | Yes \n Yes               |
+| Chennai       | `CHE01` \n `CHE02` \n `CHE03`            | No \n Yes \n Yes         |
+| Dallas        | `DAL10` \n `DAL12` \n `DAL13` \n `DAL14` | Yes \n Yes \n Yes \n Yes |
+| Frankfurt     | `FRA04` \n `FRA05`                       | Yes \n Yes               |
+| London        | `LON04` \n `LON06`                       | Yes \n Yes               |
+| Madrid        | `MAD02` \n `MAD04`                       | Yes \n Yes               |
+| Montreal      | `MON01`                                  | No                       |
+| Osaka         | `OSA21`                                  | Yes                      |
+| Sao Paulo     | `SAO01` \n `SAO04`                       | Yes \n Yes               |
+| Sydney        | `SYD04` \n `SYD05`                       | Yes \n Yes               |
+| Tokyo         | `TOK04`                                  | Yes                      |
+| Toronto       | `TOR01`                                  | Yes                      |
+| Washington DC | `WDC04` \n `WDC06` \n `WDC07`            | Yes \n Yes \n Yes        |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="{{site.data.keyword.powerSys_notm}} supported data centers and its status for PER" caption-side="bottom"}
