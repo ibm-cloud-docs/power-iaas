@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-15"
+lastupdated: "2026-06-16"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -61,6 +61,7 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 
 
 
+
 ### Changing the VSI name
 {: #edit-vsi-name}
 
@@ -79,9 +80,9 @@ In virtualization environments, a VSI can operate in different processor compati
 
 - **Effective**: The processor mode that is currently in use for the VSI. The physical host on which the VSI runs determines the effective processor compatibility mode.
 
-You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and restart the VSI. When you start the VSI, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
+You cannot dynamically change the effective processor compatibility mode of a VSI. To change the effective processor compatibility mode, you must first change the preferred processor compatibility mode of the VSI, shut down the VSI, and then start the VSI. When the VSI starts, the hypervisor attempts to set the effective processor compatibility mode to match the preferred mode that you have specified for the VSI.
 
-You must select the processor compatibility mode that the operating system that you use supports. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI does not boot correctly and might enter the *Error* state. To resolve this issue, [open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+You must select the processor compatibility mode that the operating system that you use supports. If you set a preferred processor compatibility mode that the operating system in the VSI does not support, the VSI does not boot correctly and might enter the Error state. To resolve this issue, [open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: important}
 
 
@@ -112,11 +113,11 @@ To shut down the VSI, complete the following steps:
 
 1. From the virtual server instance details page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The OS shutdown confirmation dialog is displayed.
 
-2. Click **Shutdown** to procced. A notification is displayed to indicate that the shutdown process has started.
+2. Click **Shutdown** to proceed. A notification is displayed to indicate that the shutdown process has started.
 
-To start the VSI, complete the following steps :
+To start the VSI, complete the following steps:
 
-1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI is started.
+1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI has started.
 
 2. Click the **Refresh** icon to see the change.
 
@@ -126,7 +127,7 @@ For more information about the processor compatibility mode, see [How does the p
 ### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
 
-You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose *soft* pin or *hard* pin to pin a VSI to the host on which it is running. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+You can use VSI pinning to control the movement of VSIs during disasters and other restart events. You can either choose soft pin or hard pin to pin a VSI to the host on which it is running. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
 Server placement groups provide control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups).
 
@@ -170,7 +171,7 @@ To edit a VSI and resize its capacity, complete the following steps:
 2. Select the new value and size for the VSI memory, cores, and virtual cores. The total estimated cost for the new selection is displayed for your review.
 3. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
-    If the VSI that you are editing is in inactive state, you can change the **Core type** to Dedicated, Shared uncapped shared, or Shared capped.
+    If the VSI that you are editing is in an inactive state, you can change the **Core type** to Dedicated, Shared uncapped shared, or Shared capped.
     {: tip}
 
 ### Adding or removing additional software licenses for an IBM i-based VSI
@@ -189,16 +190,16 @@ After you provision an IBM i-based VSI with the base IBM i OS license, you can m
 
 4. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
-You can also use the IBM i licensing section to change or assign a virtual server number (VSN) for an IBM i-based VSI. The VSI must be in the *Shutoff* state before performing this operation.
+You can also use the IBM i licensing section to change or assign a virtual server number (VSN) for an IBM i-based VSI. The VSI must be in the `Shutoff` state before performing this operation.
 {: tip}
 
-To apply or remove an IBM i software key, the VSI must be active and in the running state. If you have already run a resize operation, you must wait until the resize operation completes and the VSI returns to the *Active* state.
+To apply or remove an IBM i software key, the VSI must be active and in the running state. If you have already run a resize operation, you must wait until the resize operation completes and the VSI returns to the `Active` state.
 {: note}
 
 ## Managing storage volumes on a VSI
 {: #modifying-volume-network}
 
-You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the storage pool where the root (boot) volume of the VSI is deployed. To attach a storage volume, you must modify the VSI and set the new VSI's `storagePoolAffinity` property to false. You can now attach mixed storage to a VSI. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
+You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the same storage pool where the root (boot) volume of the VSI is deployed. To attach mixed storage volumes, you must modify the VSI and set the `storagePoolAffinity` property to `false`. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
 ### Adding additional storage volumes to a VSI
 {: #create-storage-vol}
@@ -235,7 +236,7 @@ To attach an existing volume to a VSI, complete the following steps:
 
 3. Click **Attach volume**.
 
-Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to verify that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab
+Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to verify that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab.
 {: note}
 
 #### Creating a storage volume for a VSI
@@ -257,7 +258,7 @@ To create a storage volume and attach it to a VSI, complete the following steps:
 
    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the required storage tier, that has sufficient capacity.
 
-   - **Affinity**: Use this option to select an VSI or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
+   - **Affinity**: Use this option to select an VSI or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the VSI's root (boot) volume.
 
    - **Anti-affinity**: Use this option to specify one or more existing VSIs or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
 
@@ -356,7 +357,7 @@ To resize a storage volume after you create it, complete the following steps:
     The size of a volume cannot be decreased once it is created. The maximum size of a volume that can be created is 72551 GB.
     {: note}
 
-9. Optional: Set the Shareable or Bootable property of the storage volume to **On**. You cannot set both the options to **On** at the same time.
+9. Optional: Set the **Shareable** or **Bootable** property of the storage volume to **On**. You cannot set both options to **On** at the same time.
 
 10. Click the terms and conditions link to read the [IBM Cloud Terms of Use](/docs/overview?topic=overview-terms). To continue, select the **I agree to the Terms and conditions** checkbox and then click **Save**.
 
@@ -383,7 +384,7 @@ When you modify a VSI to update its configuration, you can use the **Storage** t
 
 6. Click the overflow menu (⋮) on the volume entry to delete and select **Delete**. The Confirm delete dialog is displayed.
 
-7. To continue, click **Delete**.
+7. Click **Delete**.
 
     You cannot recover a storage volume after it is deleted.
     {: note}
@@ -411,9 +412,10 @@ To delete a VSI, complete the following steps:
 
    The Delete virtual server instance dialog is displayed.
 
-2. On the Delete virtual server instance dialog, set **Delete data volumes attached to this instance** to on to acknowledge the following:
+2. On the Delete virtual server instance dialog, set **Delete data volumes attached to this instance** to on. When you enable this option, the following actions occur:
 
-    - The data volumes that are attached to the VSI are deleted. Data volumes that are attached to multiple VSIs are not deleted.
+    - Data volumes that are attached only to this VSI are deleted.
+    - Data volumes that are attached to multiple VSIs are not deleted.
     - Any auxiliary volumes on the secondary site are also deleted.
 
 3. To confirm, type the name of the VSI that you want to delete.
@@ -450,9 +452,9 @@ You cannot toggle a public network off if there are no other defined networks.
 SRC is only supported for AIX and IBM i virtual machines.
 {: note}
 
-A *system reference code (SRC)* is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
+A system reference code (SRC) is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
-[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VM, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VSIs, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
+[{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VSI, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VSIs, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 
 
 ## Use cases
