@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-17"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -144,18 +144,12 @@ You can establish a private network communication between the two {{site.data.ke
 
 
 
-In case you are not using any of these approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
 
 
 
 
-For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI). The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instances to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
 
 
-| Name          |  Gateway     | VLAN ID | CIDR       |
-| ------------- |  ----------- | ------- | ---------- |
-| powerns-net02 |  `172.10.10.1` | `3001`    | `172.10.10.0/26` |
-{: caption="Example subnet information displayed in the UI" caption-side="bottom"}
 
 
 
@@ -186,11 +180,11 @@ The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `
 The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
 
 | CIDR block size | Available IP addresses (WDC04, WDC06) | Available IP addresses (non-WDC) |
-| --------------- | ------------------------------ | ---------------------------------- |
-|      /22        |        1019                    |          1021                      |
-|      /23        |         507                    |           509                      |
-|      /25        |         123                    |           125                      |
-|      /26        |          59                    |            61                      |
-|      /27        |          27                    |            29                      |
-|      /28        |          11                    |            13                      |
+| --------------- | ------------------------------------- | -------------------------------- |
+| /22             | 1019                                  | 1021                             |
+| /23             | 507                                   | 509                              |
+| /25             | 123                                   | 125                              |
+| /26             | 59                                    | 61                               |
+| /27             | 27                                    | 29                               |
+| /28             | 11                                    | 13                               |
 {: caption="Understanding CIDR notation caption" caption-side="bottom"}
