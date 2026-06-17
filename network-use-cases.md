@@ -97,7 +97,7 @@ With this use case, you can establish a network that allows communication betwee
 #### Example
 {: #BGP-example}
 
- You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
+ You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. With Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
 
 Figure 3 describes the bidirectional external connectivity through BGP type of network setup.
 ![Bidirectional external connectivity through BGP](./figures/bi-dir-ext-conn-bgp.png "Bidirectional external connectivity through BGP"){: caption="Bidirectional external connectivity through BGP" caption-side="bottom"}
