@@ -35,6 +35,7 @@ Use [{{site.data.keyword.cloud}} {{site.data.keyword.dl_short}} (2.0) Connect](/
 {: shortdesc}
 
 
+
 {{site.data.keyword.dl_short}} (2.0) Connect provides the following advantages:
 
 - Support for connections to multiple {{site.data.keyword.cloud_notm}} accounts from a single direct link.
