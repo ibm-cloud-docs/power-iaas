@@ -374,7 +374,9 @@ Virtual Server Instances (VSIs) can be optionally pinned to a host. Pin VSIs onl
 The behavior of the VSI depends on the following **Virtual server pinning** policies that you select:
 
 - **None**: If you select **None**, the VSI migrates automatically or starts remotely during maintenance windows or if the host fails. The default value is **None**.
+
 - **Soft**: If you select **Soft**, a backend process restarts the VSI on another host if the current host fails. When the initial host recovers, the backend process migrates the VSI to the initial host automatically by using live partition migration (LPM).
+
 - **Hard**: If you select **Hard**, the movement of the VSI from the host do not occur during compute host failures and maintenance activities.
 
 
