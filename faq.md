@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-16"
+lastupdated: "2026-06-17"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -227,13 +227,20 @@ To migrate your VSI from one data center to another, you must capture and export
 
 
 
-You can choose a pinning policy: _soft pin_ or _hard pin_, to pin a VSI to the host where it is running. If pinning is not set or if it is set to _soft pin_, the VSI is automatically migrated or remote restarted during maintenance windows or in case of host failure.
 
-When you _soft pin_ a VSI for high availability, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host is back to its operating state.
 
-When you _hard pin_ a VSI, the movement of the VSI is restricted during remote restart, automated remote restart, dynamic resource optimization, and live partition migration. The movement of the VSI is also restricted if the VSI has a licensing restriction with the host. If the VSIs are set to _hard pin_, VSIs are stopped if the frame is down.
+You can choose a pinning policy: soft pin or hard pin, to pin a VSI to the host where it is running. If pinning is not set or if it is set to soft pin, the VSI is automatically migrated or remote restarted during maintenance windows or in case of host failure.
 
-The default pinning policy is _none_.
+When you soft pin a VSI for high availability, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host is back to its operating state.
+
+When you hard pin a VSI, the movement of the VSI is restricted during remote restart, automated remote restart, dynamic resource optimization, and live partition migration. The movement of the VSI is also restricted if the VSI has a licensing restriction with the host. If the VSIs are set to hard pin, VSIs are stopped if the frame is down.
+
+The default pinning policy is none.
+
+
+
+
+
 
 
 

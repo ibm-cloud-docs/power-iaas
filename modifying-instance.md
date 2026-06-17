@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-16"
+lastupdated: "2026-06-17"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -131,7 +131,13 @@ You can use VSI pinning to control the movement of VSIs during disasters and oth
 
 Server placement groups provide control over the host or server on which a new VSI is placed. By using server placement groups, you can build high availability within a data center. For more information, see [Managing server placement groups](/docs/power-iaas?topic=power-iaas-managing-placement-groups).
 
+
+
 To change the pinning state and server placement group of the VSI, complete the following steps:
+
+
+
+
 
 1. In the **Overview** tab, click the **Edit** icon in the Placement section. The Edit placement panel is displayed.
 3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
