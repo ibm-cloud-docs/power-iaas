@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-18"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -44,7 +44,7 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
 2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
-3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 4. Select the workspace which contains the boot image that you want to export. The **Virtual server instances** page of the selected workspace is displayed.
 
@@ -112,7 +112,3 @@ To export a boot image to IBM Cloud Object Storage by using the API, use the [Ad
 For information about importing boot images from IBM Cloud Object Storage, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image).
 
 For information about capturing and exporting virtual server instances, see [Capturing and exporting a virtual server instance](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).
-
-
-
-

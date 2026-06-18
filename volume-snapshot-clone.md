@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-06-18"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -230,7 +230,7 @@ To restore a snapshot by using the {{site.data.keyword.powerSys_notm}} user inte
 
 4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
-5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of the existing snapshots.
+5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of existing snapshots.
 
 6. From the list of available snapshots, select the snapshot that you want to restore. The snapshot details page is displayed.
 
@@ -331,7 +331,7 @@ To delete a snapshot using the {{site.data.keyword.powerSys_notm}} user interfac
 
 4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
-5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of the existing snapshots.
+5. In the navigation panel, click **Storage** > **Instance snapshots**. The Instance snapshots page is displayed with a list of existing snapshots.
 
 6. From the list of available snapshots, select the snapshot that you want to delete. The snapshot details page is displayed.
 

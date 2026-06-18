@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-18"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -37,7 +37,7 @@ You can create and configure IBM {{site.data.keyword.powerSys_notm}} instances b
 To create a {{site.data.keyword.powerSys_notm}} workspace, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 3. Click **Create a workspace**.
 4. Select **Location type** as {{site.data.keyword.on-prem}} or {{site.data.keyword.off-prem}}.
 

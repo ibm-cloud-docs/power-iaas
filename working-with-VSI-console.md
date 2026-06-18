@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-18"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -39,7 +39,7 @@ To start the VSI console of a {{site.data.keyword.powerSys_notm}} instance from 
 
 1. Open the [{{site.data.keyword.powerSys_notm}} user interface](https://cloud.ibm.com/power/overview) and log in with your credentials.
 
-2. Click **Virtual server instances** from the left navigation pane in the {{site.data.keyword.powerSys_notm}} user interface. The Virtual server instances page is displayed. A list of the existing virtual server instances that are associated with the selected workspace is displayed on the **Servers** tab.
+2. Click **Virtual server instances** from the left navigation pane in the {{site.data.keyword.powerSys_notm}} user interface. The Virtual server instances page is displayed. a list of existing virtual server instances that are associated with the selected workspace is displayed on the **Servers** tab.
 
 3. Select a virtual server instance to open the Virtual server instance details page.
 
@@ -73,7 +73,7 @@ To change the VSI console language using the {{site.data.keyword.powerSys_notm}}
 
 1. Open the [{{site.data.keyword.powerSys_notm}} user interface](https://cloud.ibm.com/power/overview) and log in with your credentials.
 
-2. Click **Virtual server instances** from the left navigation pane in the {{site.data.keyword.powerSys_notm}} user interface. The Virtual server instances page is displayed. A list of the existing virtual server instances that are associated with the selected workspace is displayed on the **Servers** tab.
+2. Click **Virtual server instances** from the left navigation pane in the {{site.data.keyword.powerSys_notm}} user interface. The Virtual server instances page is displayed. a list of existing virtual server instances that are associated with the selected workspace is displayed on the **Servers** tab.
 
 3. Select an IBM i-based virtual server instance to open the Virtual server instance details page.
 

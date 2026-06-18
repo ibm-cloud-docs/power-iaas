@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-18"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -39,7 +39,7 @@ To modify a VSI after you create it, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 3. Select the workspace that contains the virtual server instance that you want to modify. The Workspace details panel is displayed.
 
@@ -216,7 +216,7 @@ To modify a VSI to add additional storage volumes, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 3. Select the workspace that contains the virtual server instance to which you want to add additional volumes. The Workspace details panel is displayed.
 
@@ -234,7 +234,7 @@ Depending on whether you want to attach an existing storage volume or create a n
 
 To attach an existing volume to a VSI, complete the following steps:
 
-1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The Attach storage volumes panel is displayed with a list of the existing storage volumes.
+1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The Attach storage volumes panel is displayed with a list of existing storage volumes.
 
 2. From the list of the existing storage volumes, select the storage volumes that you want to attach to the VSI. If the **Mixed storage pools in virtual server instances** warning message is displayed, select the following checkboxes:
     - **I acknowledge snapshots and clones will fail when performed on a set of volumes that are on mixed pools**
@@ -346,7 +346,7 @@ To resize a storage volume after you create it, complete the following steps:
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 3. Select the workspace which contains the virtual server instance that you want modify to resize its storage volumes. The Workspace details panel is displayed.
 
@@ -380,13 +380,13 @@ When you modify a VSI to update its configuration, you can use the **Storage** t
 
 1. Open the {{site.data.keyword.powerSys_notm}} user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 3. Select the workspace which contains the storage volume to delete. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**. The Virtual server instances page is displayed.
 
-5. In the navigation panel, click **Storage** > **Storage volumes**. The Storage volumes page is displayed with a list of the existing storage volumes on the **Volumes** tab.
+5. In the navigation panel, click **Storage** > **Storage volumes**. The Storage volumes page is displayed with a list of existing storage volumes on the **Volumes** tab.
 
 6. Click the overflow menu (⋮) on the volume entry to delete and select **Delete**. The Confirm delete dialog is displayed.
 

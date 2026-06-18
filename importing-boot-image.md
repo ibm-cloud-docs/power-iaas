@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-18"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -53,7 +53,7 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
 2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the {{site.data.keyword.powerSys_notm}} tile.
 
-3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 4. Select the workspace where you want to import the boot image. The **Virtual server instances** page of the selected workspace is displayed.
 
