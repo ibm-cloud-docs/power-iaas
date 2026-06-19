@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-19"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -139,6 +139,16 @@ You can establish a private network communication between the two {{site.data.ke
 2.	Create and attach the subnet to a cloud connection and Transit Gateway.
 3.	Set up routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
 4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+
+In case you are not using any of these approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
+
+For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI). The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instances to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
+
+
+| Name          | Gateway       | VLAN ID | CIDR             |
+| ------------- | ------------- | ------- | ---------------- |
+| powerns-net02 | `172.10.10.1` | `3001`  | `172.10.10.0/26` |
+{: caption="Example subnet information displayed in the UI" caption-side="bottom"}
 
 
 
