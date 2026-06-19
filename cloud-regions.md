@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-15"
+lastupdated: "2026-06-19"
 
 keywords: power systems, cloud regions
 
@@ -48,9 +48,9 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 | Washington DC | us-east        | us-east                                    | x \n us-east-1  \n us-east-2  \n us-east-3                           | x \n us-east  \n wdc06  \n wdc07                 | wdc03[^9a]  \n wdc04  \n wdc06  \n wdc07                  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection"}
-{: caption="{{site.data.keyword.powerSys_notm}} regions and zones in Americas" caption-side="top"}
+{: caption="{{site.data.keyword.powerSys_notm}} regions and zones in North and South America" caption-side="top"}
 {: #Americas}
-{: tab-title="Americas"}
+{: tab-title="North and South America"}
 
 [^1]: For more information about the list of classic data centers in IBM Cloud, see [Classic data centers](/docs/overview?topic=overview-locations#data-centers){: external}.
 [^2]: This is a single data center for the location.

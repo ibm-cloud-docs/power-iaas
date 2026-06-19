@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-19"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -460,6 +460,8 @@ Processor cores are charged at different hourly rates based on the core type (**
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
+
+
 The following tables show examples of how different processor types affect the cost per system:
 
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
@@ -482,6 +484,11 @@ The following tables show examples of how different processor types affect the c
 | 1                       | $0.15 (shared uncapped)      | $106.06                  |
 | 1                       | $0.22 (shared capped)        | $159.14                  |
 {: caption="S1022 processor type pricing example" caption-side="bottom"}
+
+
+
+
+
 
 ## Pricing for Global Replication Services
 {: #price-grs}
