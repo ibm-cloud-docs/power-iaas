@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-22"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -532,7 +532,7 @@ SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX a
 ## Pricing for dedicated hosts
 {: #pricing-dh}
 
-Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022. Each server type is metered by the hour and the price includes the entire capacity of the host.
+Dedicated hosts are priced based on the host type. The availabe dedicated hosts are IBM Power S922, IBM Power S1022, and IBM Power S1122. Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
 * You are not charged separately for SPPs that you deploy to the dedicated host.
