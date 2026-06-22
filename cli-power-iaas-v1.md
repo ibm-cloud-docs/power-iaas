@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-05-01"
+lastupdated: "2026-06-22"
 
 content-type: cli-docs
 
@@ -10,7 +10,7 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.9.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
@@ -21,6 +21,7 @@ content-type: cli-docs
 ---
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}.
+
 
 
 ## `ibmcloud pi`
@@ -724,7 +725,7 @@ update IKE_POLICY_ID [--authentication AUTHENTICATION] [--dh-group DH_GROUP] [--
 - `export`:    Export an image to IBM Cloud Object Storage.
 - `export-show`:    View details of the last image export job.
 - `get`:    View details of an image.
-- `import`:    Import an image to IBM Cloud Object Storage.
+- `import`:    Import an image from IBM Cloud Object Storage.
 - `import-show`:    View details of the last image import job.
 - `list`:    List all images in a workspace.
 - `list-catalog`:    List images available in the regional image catalog.
@@ -848,7 +849,7 @@ get IMAGE_ID
 
 **Alias**: `import, im`
 
-**Description**: Import an image to IBM Cloud Object Storage.
+**Description**: Import an image from IBM Cloud Object Storage.
 
 **Usage**:
 
@@ -1030,7 +1031,8 @@ action INSTANCE_ID --operation OPERATION
 **Usage**:
 
 ```bash
-create INSTANCE_ID --destination DEST --name NAME [--access-key KEY] [--image-path PATH] [--region REGION] [--secret-key KEY] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
+create INSTANCE_ID --destination (cloud-storage | both) --name NAME --access-key KEY --image-path PATH --region REGION --secret-key KEY [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
+  pi instance capture create INSTANCE_ID --destination image-catalog --name NAME [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1165,18 +1167,19 @@ update INSTANCE_ID --code CODE
 
 ```bash
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
-    [--boot-volume-replication-enabled=True|False]
+    [--allow-remote-restart=True|False] [--boot-volume-replication-enabled=True|False]
+    [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
+     [--default-trusted-profile-autolink=True|False]]
     [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")] [--deployment-type DEPLOYMENT_TYPE]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
-    [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
+    [--key-name NAME] [--memory MEMORY] [--metadata-service=True|False] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
-    [--replication-sites SITE1[,SITEn]] [--shared-processor-pool SHARED_PROCESSOR_POOL]
-    [--storage-affinity STORAGE_AFFINITY_POLICY] [--storage-affinity-instance INSTANCE]
-    [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
-    [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
-    [--storage-pool STORAGE_POOL] [--storage-pool-affinity=True|False] [--storage-tier STORAGE_TIER]
-    [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
+    [--replication-sites SITE1[,SITEn]] [--shared-processor-pool SHARED_PROCESSOR_POOL] [--storage-affinity STORAGE_AFFINITY_POLICY]
+    [--storage-affinity-instance INSTANCE] [--storage-affinity-volume VOLUME]
+    [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]] [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]]
+    [--storage-connection STORAGE_CONNECTION] [--storage-pool STORAGE_POOL] [--storage-pool-affinity=True|False]
+    [--storage-tier STORAGE_TIER] [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
     [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
     [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]] [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
 
@@ -1189,14 +1192,18 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
       --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
+      --allow-remote-restart                            Enables automated remote restart for the instance.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
-      --deployment-target string                        The deployment of the dedicated host. Deployment must include either
-                                                        a host group id and "hostGroup", or a host id and "host".
+      --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
+  -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server creation.
+      --deployment-target string                        The deployment of the dedicated host. Deployment must include either a host group id and "hostGroup",
+                                                        or a host id and "host".
   -d, --deployment-type string                          The custom deployment type. Valid values are: "EPIC" or "VMNoStorage". If '--deployment-type "VMNoStorage"' is set,
                                                         then "--image" must be one of "AIX-EMPTY", "IBMI-EMPTY", "RHEL-EMPTY", or "SLES-EMPTY".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
   -m, --memory float                                    Amount of memory in GiB to allocate to the instance. Default is 2 GiB.
+      --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
@@ -1219,7 +1226,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
                                                         This is required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-volumes" is not provided.
       --storage-anti-affinity-volumes strings           Comma separated list of volume identifiers or names to base storage affinity policy against.
                                                         This is required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
-      --storage-connection string                       The storage connection type. Valid values are: vSCSI, maxVolumeSupport.
+      --storage-connection string                       The storage connection type. Valid values are: maxVolumeSupport.
       --storage-pool string                             Storage pool for server deployment (use "ibmcloud pi storage-pools" to see available storage pools).
                                                         Only valid when you deploy one of the IBM supplied stock images.
                                                         Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
@@ -1373,10 +1380,13 @@ operation INSTANCE_ID (--operation-type "boot" --boot-mode MODE --boot-operating
 
 ```bash
 create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
-    [--boot-volume-replication-enabled=True|False] [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")]
-    [--key-name KEY-NAME] [--pin-policy POLICY] [--placement-group PLACEMENT_GROUP_ID] [--preferred-processor-compatibility-mode MODE]
-    [--replication-sites SITE1[,SITEn]] [--storage-affinity STORAGE_AFFINITY_POLICY] [--storage-affinity-instance INSTANCE]
-    [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
+    [--allow-remote-restart=True|False] [--boot-volume-replication-enabled=True|False]
+    [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
+     [--default-trusted-profile-autolink=True|False]]
+    [--deployment-target ("HOST_GROUP_ID,hostGroup" | "HOST_ID,host")] [--key-name KEY-NAME] [--metadata-service=True|False]
+    [--pin-policy POLICY] [--placement-group PLACEMENT_GROUP_ID] [--preferred-processor-compatibility-mode MODE]
+    [--replication-sites SITE1[,SITEn]] [--storage-affinity STORAGE_AFFINITY_POLICY]
+    [--storage-affinity-instance INSTANCE] [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-pool STORAGE_POOL] [--storage-tier STORAGE_TIER]
     [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
     [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
@@ -1387,11 +1397,15 @@ create SAP_INSTANCE_NAME --image IMAGE --profile-id PROFILE_ID --subnets "SUBNET
 **Available Options**:
 
 ```bash
+      --allow-remote-restart                            Enables automated remote restart for the instance.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
+      --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
+  -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server creation.
       --deployment-target string                        The deployment of the dedicated host. Deployment must include either
                                                         a host group id and "hostGroup", or a host id and "host".
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
+      --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER10, POWER11
@@ -1733,11 +1747,16 @@ list INSTANCE_ID
 **Usage**:
 
 ```bash
-update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
-    [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
-    [--processors NUMBER] [--profile-id SAP_PROFILE_ID] [--storage-pool-affinity=True|False]
-    [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
+update INSTANCE_ID [--allow-remote-restart=True|False]
+    [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
+     [--default-trusted-profile-autolink=True|False]]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
+    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
+    [--metadata-service=True|False [--metadata-service-force=True|False]]
+    [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
+    [--processor-type TYPE] [--processors NUMBER] [--profile-id SAP_PROFILE_ID]
+    [--storage-pool-affinity=True|False] [--virtual-cores ASSIGNED_CORES]
+    [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -1748,7 +1767,14 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
       --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
+      --allow-remote-restart                            Enables automated remote restart for the instance.
+      --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
+  -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server update.
   -m, --memory float                                    New amount of memory for the server instance.
+      --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
+      --metadata-service-force                          If set to true, this allows the metadata service to be disabled while the VM is active,
+                                                        which may require manual interface cleanup by the OS administrator.
+                                                        This option is only supported for disabling the metadata service.
   -n, --name string                                     New name of the server instance.
       --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
@@ -2031,6 +2057,7 @@ list INSTANCE_ID
 - `detach`:    Detach a vPMEM volume from an instance.
 - `get`:    Get a vPMEM volume attached to an instance.
 - `list`:    List all vPMEM volumes attached to an instance.
+- `update`:    Update a server instance.
 
 ---
 
@@ -2118,6 +2145,30 @@ get INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
 list INSTANCE_ID
 
   INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume update`
+{: #ibmcloud-pi-instance-vpmem-volume-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a server instance.
+
+**Usage**:
+
+```bash
+update INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID --name NAME
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -n, --name string           New name of the vPMEM volume.
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
 ```
 
 ---
@@ -2913,7 +2964,8 @@ rule-add NETWORK_SECURITY_GROUP_ID --action ("allow" | "deny")
   -i, --icmp-type string         The ICMP packet type affected by ICMP rules. Valid values are: all, echo, echo-reply, source-quench, time-exceeded, destination-unreach.
   -p, --protocol string          The protocol of the network traffic. Valid values are: all, icmp, tcp, udp.
   -g, --remote-group-id string   The unique identifier of the remote network address group or network security group.
-  -r, --remote-type string       The type of remote group. The MAC addresses, IP addresses, CIDRs, external CIDRs, that are the originators of rule's network traffic to match.
+  -r, --remote-type string       Specifies the type of remote group that defines the origin of network traffic for rule matching.
+                                 Remote groups represent MAC addresses, IP addresses, CIDRs, or external CIDRs.
                                  Valid values are: default-network-address-group, network-address-group, network-security-group.
                                  The "default-network-address-group" is a network address group that specifies all external network traffic.
       --src-port-max int         The end of the source port range. If the value is not present then the default value of 65535 will be the maximum port number.
@@ -3890,7 +3942,6 @@ update KEY_NAME [--description DESCRIPTION] [--key KEY] [--name NAME] [--visibil
 create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")]
       [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"]
       [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
-  pi subnet create SUBNET_NAME --net-type public [--dns-servers "DNS1 DNS2"] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
 
   SUBNET_NAME: The name of the subnet.
 ```
@@ -3978,8 +4029,8 @@ get SUBNET_ID
 
 ```bash
 update SUBNET_ID [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")]
-    [--dns-servers "DNS1,[DNSn]"][--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"]
-    [--name SUBNET_NAME]
+      [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"]
+      [--name SUBNET_NAME]
 
   SUBNET_ID: The unique identifier or name of the subnet.
 ```
@@ -4799,7 +4850,7 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Usage**:
 
 ```bash
-create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"
+create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME1[,VOLUMEn]"
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -4921,7 +4972,7 @@ storage-details VOLUME_GROUP_ID
 **Usage**:
 
 ```bash
-update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"]
+update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME1[,VOLUMEn]"] [--remove-member-volume-ids "VOLUME1[,VOLUMEn]"]
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```

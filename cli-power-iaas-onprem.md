@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-05-01"
+lastupdated: "2026-06-22"
 
 content-type: cli-docs
 
@@ -10,7 +10,7 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.9.0 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -21,7 +21,6 @@ content-type: cli-docs
 
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
-
 
 
 ## `ibmcloud pi`
@@ -42,6 +41,7 @@ The following list of commands are available with command-line interface (CLI) f
 - `job`:    IBM Cloud Power Virtual Server Jobs.
 - `network-peer`:    IBM Cloud Power Virtual Server Network Peers.
 - `placement-group`:    IBM Cloud Power Virtual Server Placement Groups.
+- `route`:    IBM Cloud Power Virtual Server Network Routes.
 - `shared-processor-pool`:    IBM Cloud Power Virtual Server Shared Processor Pools.
 - `snapshot`:    [DEPRECATED] IBM Cloud Power Virtual Server Snapshots.
 - `ssh-key`:    IBM Cloud Power Virtual Server SSH-Keys.
@@ -146,7 +146,7 @@ get DATACENTER [--private=True|False]
 - `export`:    Export an image to IBM Cloud Object Storage.
 - `export-show`:    View details of the last image export job.
 - `get`:    View details of an image.
-- `import`:    Import an image to IBM Cloud Object Storage.
+- `import`:    Import an image from IBM Cloud Object Storage.
 - `import-show`:    View details of the last image import job.
 - `list`:    List all images in a workspace.
 - `list-catalog`:    List images available in the regional image catalog.
@@ -271,7 +271,7 @@ get IMAGE_ID
 
 **Alias**: `import, im`
 
-**Description**: Import an image to IBM Cloud Object Storage.
+**Description**: Import an image from IBM Cloud Object Storage.
 
 **Usage**:
 
@@ -459,7 +459,8 @@ action INSTANCE_ID --operation OPERATION
 **Usage**:
 
 ```bash
-create INSTANCE_ID --destination DEST --name NAME [--access-key KEY] [--checksum=True|False] [--image-path PATH] [--region REGION] [--secret-key KEY] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
+create INSTANCE_ID --destination (cloud-storage | both) --name NAME --access-key KEY --image-path PATH --region REGION --secret-key KEY [--checksum=True|False] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
+  pi instance capture create INSTANCE_ID --destination image-catalog --name NAME [--checksum=True|False] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -548,8 +549,10 @@ get INSTANCE_ID
 ```bash
 create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--boot-volume-replication-enabled=True|False]
+    [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
+     [--default-trusted-profile-autolink=True|False]]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
-    [--key-name NAME] [--memory MEMORY] [--pin-policy POLICY] [--placement-group GROUP_ID]
+    [--key-name NAME] [--memory MEMORY] [--metadata-service=True|False] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
     [--replication-sites SITE1[,SITEn]] [--shared-processor-pool SHARED_PROCESSOR_POOL]
@@ -571,9 +574,12 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
       --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
+      --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
+  -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server creation.
   -i, --image string                                    Operating system image identifier or name.
   -k, --key-name string                                 Name of SSH key.
   -m, --memory float                                    Amount of memory in GiB to allocate to the instance. Default is 2 GiB.
+      --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
@@ -596,7 +602,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
                                                         This is required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-volumes" is not provided.
       --storage-anti-affinity-volumes strings           Comma separated list of volume identifiers or names to base storage affinity policy against.
                                                         This is required if "--storage-affinity anti-affinity" is specified and "--storage-anti-affinity-instances" is not provided.
-      --storage-connection string                       The storage connection type. Valid values are: vSCSI, maxVolumeSupport.
+      --storage-connection string                       The storage connection type. Valid values are: maxVolumeSupport.
       --storage-pool string                             Storage pool for server deployment (use "ibmcloud pi storage-pools" to see available storage pools).
                                                         Only valid when you deploy one of the IBM supplied stock images.
                                                         Storage tier and pool for a custom image (an imported image or an image that is created from a PVMInstance capture)
@@ -985,10 +991,14 @@ list INSTANCE_ID
 **Usage**:
 
 ```bash
-update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
-    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT] [--name NAME] [--pin-policy POLICY]
-    [--preferred-processor-compatibility-mode MODE] [--processor-type TYPE]
-    [--processors NUMBER] [--storage-pool-affinity=True|False]
+update INSTANCE_ID
+    [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
+     [--default-trusted-profile-autolink=True|False]]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
+    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
+    [--metadata-service=True|False [--metadata-service-force=True|False]]
+    [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
+    [--processor-type TYPE] [--processors NUMBER] [--storage-pool-affinity=True|False]
     [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
 
   INSTANCE_ID: The unique identifier or name of the instance.
@@ -1000,7 +1010,13 @@ update INSTANCE_ID [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
       --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
+      --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
+  -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server update.
   -m, --memory float                                    New amount of memory for the server instance.
+      --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
+      --metadata-service-force                          If set to true, this allows the metadata service to be disabled while the VM is active,
+                                                        which may require manual interface cleanup by the OS administrator.
+                                                        This option is only supported for disabling the metadata service.
   -n, --name string                                     New name of the server instance.
       --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
@@ -1282,6 +1298,7 @@ list INSTANCE_ID
 - `detach`:    Detach a vPMEM volume from an instance.
 - `get`:    Get a vPMEM volume attached to an instance.
 - `list`:    List all vPMEM volumes attached to an instance.
+- `update`:    Update a server instance.
 
 ---
 
@@ -1369,6 +1386,30 @@ get INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID
 list INSTANCE_ID
 
   INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+---
+
+#### `ibmcloud pi instance vpmem-volume update`
+{: #ibmcloud-pi-instance-vpmem-volume-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a server instance.
+
+**Usage**:
+
+```bash
+update INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID --name NAME
+
+  INSTANCE_ID: The unique identifier or name of the instance.
+```
+
+**Available Options**:
+
+```bash
+  -n, --name string           New name of the vPMEM volume.
+  -v, --vpmem-volume string   vPMEM volume ID that is associated with the PVM instance.
 ```
 
 ---
@@ -1667,8 +1708,7 @@ get ROUTE_FILTER_ID --network-peer-id NETWORK_PEER_ID
 ```bash
 update NETWORK_PEER_ID [--customer-asn ASN] [--customer-cidr CIDR]
       [--default-export-route-filter ("allow" | "deny")] [--default-import-route-filter ("allow" | "deny")]
-      [--ibm-asn ASN] [--ibm-cidr CIDR] [--name NAME] [--peer-interface-id PEER_INTERFACE_ID]
-      [--type TYPE] [--vlan VLAN]
+      [--ibm-asn ASN] [--ibm-cidr CIDR] [--name NAME] [--type TYPE] [--vlan VLAN]
 
   NETWORK_PEER_ID: The unique identifier of the network peer.
 ```
@@ -1685,7 +1725,6 @@ update NETWORK_PEER_ID [--customer-asn ASN] [--customer-cidr CIDR]
       --ibm-cidr string                      The IP address used for configuring IBM network interface with network subnet mask.
                                               "--customer-cidr" and "--ibm-cidr" must have matching network and subnet mask values.
   -n, --name string                          New name of the network peer.
-      --peer-interface-id string             Peer interface ID.
   -t, --type string                          Type of the peer network. Valid values are: dcnetwork_bgp.
   -v, --vlan int                             The VLAN configured at the customer network.
 ```
@@ -1841,6 +1880,152 @@ server-remove PLACEMENT_GROUP_ID --server INSTANCE_ID
 
 ```bash
     ibmcloud pi placement-group server-remove 43064761-948f-469d-ac8e-b8e5f0d6056f --server 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+## `ibmcloud pi route`
+{: #ibmcloud-pi-route}
+
+**Alias**: `route, rt`
+
+**Description**: IBM Cloud Power Virtual Server Network Routes.
+
+**Usage**: `route`
+
+**Available Commands**:
+
+- `create`:    Create a network custom route.
+- `delete`:    Delete a network custom route.
+- `get`:    View details of a network custom route.
+- `list`:    List all network custom routes.
+- `report`:    View details of network custom route report.
+- `update`:    Update a network custom route.
+
+---
+
+### `ibmcloud pi route create`
+{: #ibmcloud-pi-route-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network custom route.
+
+**Usage**:
+
+```bash
+create ROUTE_NAME --destination DESTINATION --next-hop NEXT_HOP
+    [--action ACTION] [--advertise ("enable" | "disable")] [--destination-type DESTINATION_TYPE]
+    [--enabled=True|False] [--next-hop-type NEXT_HOP_TYPE] [--user-tags USER_TAG1[,USER_TAGn]]
+
+  ROUTE_NAME: A unique name of the network custom route.
+```
+
+**Available Options**:
+
+```bash
+  -a, --action string             The action of the route to take. Valid values are: deliver. Default is "deliver".
+      --advertise string          Enable the route to be advertised. Valid values are: enable, disable. Default is "enable".
+  -d, --destination string        The route destination.
+      --destination-type string   The route destination type. Valid values are: ipv4-address. Default is "ipv4-address".
+  -e, --enabled                   Indicates if the route should be enabled in the fabric.
+      --next-hop string           The IP address to route the packet to.
+      --next-hop-type string      The next hop type. Valid values are: ipv4-address. Default is "ipv4-address".
+  -u, --user-tags strings         Comma separated list of user tags to be attached to the network security group.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi route create test-route --advertise disable --destination 192.168.1.23 --next-hop 192.168.1.24
+```
+
+---
+
+### `ibmcloud pi route delete`
+{: #ibmcloud-pi-route-delete}
+
+**Alias**: `delete, del`
+
+**Description**: Delete a network custom route.
+
+**Usage**:
+
+```bash
+delete ROUTE_ID
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+---
+
+### `ibmcloud pi route get`
+{: #ibmcloud-pi-route-get}
+
+**Alias**: `get`
+
+**Description**: View details of a network custom route.
+
+**Usage**:
+
+```bash
+get ROUTE_ID
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+---
+
+### `ibmcloud pi route list`
+{: #ibmcloud-pi-route-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all network custom routes.
+
+**Usage**: `list`
+
+---
+
+### `ibmcloud pi route report`
+{: #ibmcloud-pi-route-report}
+
+**Alias**: `report, rp`
+
+**Description**: View details of network custom route report.
+
+**Usage**: `report`
+
+---
+
+### `ibmcloud pi route update`
+{: #ibmcloud-pi-route-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a network custom route.
+
+**Usage**:
+
+```bash
+update ROUTE_ID [--action ACTION] [--advertise ("enable" | "disable")]
+    [--destination DESTINATION] [--destination-type DESTINATION_TYPE] [--enabled=True|False]
+    [--name NAME] [--next-hop NEXT_HOP] [--next-hop-type NEXT_HOP_TYPE]
+
+  ROUTE_ID: The unique identifier of the network custom route.
+```
+
+**Available Options**:
+
+```bash
+  -a, --action string             The action of the route to take. Valid values are: deliver.
+      --advertise string          Enable the route to be advertised. Valid values are: enable, disable.
+  -d, --destination string        The route destination.
+      --destination-type string   The route destination type. Valid values are: ipv4-address.
+  -e, --enabled                   Indicates if the route should be enabled in the fabric.
+  -n, --name string               New name of the route.
+      --next-hop string           The IP address to route the packet to.
+      --next-hop-type string      The next hop type. Valid values are: ipv4-address.
 ```
 
 ---
@@ -2450,8 +2635,9 @@ update KEY_NAME [--description DESCRIPTION] [--key KEY] [--name NAME] [--visibil
 **Usage**:
 
 ```bash
-create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DNSn]]"] [--gateway GATEWAY]
-      [--ip-range "startIP-endIP[,startIP-endIP]"] [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
+create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")]
+      [--dns-servers "DNS1,[DNSn]]"] [--enable-dhcp=True|False] [--gateway GATEWAY] [--ip-range "startIP-endIP[,startIP-endIP]"]
+      [--mtu MTU] [--user-tags "USER_TAG1[,USER_TAGn]"]
 
   SUBNET_NAME: The name of the subnet.
 ```
@@ -2459,17 +2645,20 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--dns-servers "DNS1,[DN
 **Available Options**:
 
 ```bash
-  -c, --cidr-block string     Subnet in CIDR notation (192.168.1.0/22).
-  -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-                              161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for
-                              private subnet types in PER enabled workspaces else
-                              127.0.0.1 by default if DNS server is not specified and workspace is not PER enabled.
-                              9.9.9.9 by default for public subnet types.
-  -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
-  -m, --mtu int               Maximum Transmission Unit. MTU be between 1450 and 9000. Default is 1450.
-  -n, --net-type string       Subnet type.
-  -u, --user-tags strings     Comma separated list of user tags to be attached to the subnet.
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable. Default is "enable" for private networks.
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable. Default is "disable" for private networks.
+  -c, --cidr-block string      Subnet in CIDR notation (192.168.1.0/22).
+  -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
+                               161.26.0.10 and 161.26.0.11 by default if DNS server is not specified for
+                               private subnet types in PER enabled workspaces else
+                               127.0.0.1 by default if DNS server is not specified and workspace is not PER enabled.
+                               9.9.9.9 by default for public subnet types.
+      --enable-dhcp            Indicates if the network will support DHCP or not. Default is "true" for private networks.
+  -g, --gateway string         Gateway to use for this subnet.
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
+  -m, --mtu int                Maximum Transmission Unit. MTU be between 1450 and 9000. Default is 1450.
+  -n, --net-type string        Subnet type.
+  -u, --user-tags strings      Comma separated list of user tags to be attached to the subnet.
 ```
 
 **Examples**:
@@ -2536,8 +2725,9 @@ get SUBNET_ID
 **Usage**:
 
 ```bash
-update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
-    [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
+update SUBNET_ID [--advertise ("enable" | "disable")] [--arp-broadcast ("enable" | "disable")]
+      [--dns-servers "DNS1,[DNSn]"] [--enable-dhcp=True|False] [--gateway GATEWAY]
+      [--ip-range "startIP-endIP[,startIP-endIP]"] [--name SUBNET_NAME]
 
   SUBNET_ID: The unique identifier or name of the subnet.
 ```
@@ -2545,10 +2735,13 @@ update SUBNET_ID [--dns-servers "DNS1,[DNSn]"] [--gateway GATEWAY]
 **Available Options**:
 
 ```bash
-  -d, --dns-servers strings   Comma separated list of DNS Servers to use for this subnet.
-  -g, --gateway string        Gateway to use for this subnet.
-  -i, --ip-range string       IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
-  -n, --name string           New name of the subnet.
+      --advertise string       Enable the subnet to be advertised. Valid values are: enable, disable.
+  -b, --arp-broadcast string   Enable ARP Broadcast. Valid values are: enable, disable.
+  -d, --dns-servers strings    Comma separated list of DNS Servers to use for this subnet.
+      --enable-dhcp            Indicates if the network will support DHCP or not.
+  -g, --gateway string         Gateway to use for this subnet.
+  -i, --ip-range string        IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
+  -n, --name string            New name of the subnet.
 ```
 
 ---
@@ -3355,7 +3548,7 @@ action VOLUME_GROUP_ID --operation reset [--status STATUS]
 **Usage**:
 
 ```bash
-create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"
+create (--volume-group-name VOLUME_GROUP_NAME | --consistency-group-name CONSISTENCY_GROUP_NAME) --member-volume-ids "VOLUME1[,VOLUMEn]"
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
@@ -3477,7 +3670,7 @@ storage-details VOLUME_GROUP_ID
 **Usage**:
 
 ```bash
-update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"] [--remove-member-volume-ids "VOLUME_ID_1,[VOLUME_ID_N]"]
+update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME1[,VOLUMEn]"] [--remove-member-volume-ids "VOLUME1[,VOLUMEn]"]
 
   VOLUME_GROUP_ID: The unique identifier or name of the volume group.
 ```
