@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-18"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
@@ -29,8 +29,14 @@ A network route is a defined path that data packets follow to travel from a sour
 
 With static routes, you can build an overlay network by using CIDRs that are not associated with subnets in your {{site.data.keyword.powerSys_notm}} workspace to implement high availability (HA) and disaster recovery (DR) strategies. You can also view external network routes to identify which external destinations are accessible from your {{site.data.keyword.powerSys_notm}} workspace.
 
-The routes feature is available only on the PER-enabled {{site.data.keyword.powerSys_notm}} workspaces. For more information, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+
+
+The routes feature is available only on PER-enabled {{site.data.keyword.powerSys_notm}} workspaces. For more information about PER, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 {: note}
+
+
+
+
 
 ## Creating static routes
 {: #creating-routes}
@@ -39,7 +45,7 @@ To create a static route in your {{site.data.keyword.powerSys_notm}} workspace, 
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the left navigation menu.
 3. Select a workspace in which you want to create the static route. The Workspace details panel is displayed.
@@ -82,7 +88,7 @@ You can edit an existing static route to modify its name, destination IP address
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the left navigation menu.
 3. Select the workspace that contains the static route that you want to modify. The Workspace details panel is displayed.
@@ -101,7 +107,7 @@ To delete a static route in your {{site.data.keyword.powerSys_notm}} workspace, 
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the left navigation menu.
 3. Select the workspace that contains the static route that you want to delete. The Workspace details panel is displayed.
@@ -125,7 +131,7 @@ To view the external routes, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the left navigation menu.
 3. Select a workspace in which you want to create the static route. The Workspace details panel is displayed.

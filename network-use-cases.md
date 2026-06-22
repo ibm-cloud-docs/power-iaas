@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-06-17"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -97,7 +97,7 @@ With this use case, you can establish a network that allows communication betwee
 #### Example
 {: #BGP-example}
 
- You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
+ You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. With Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. The corporate network can access the pod subnets by using a BGP connection.
 
 Figure 3 describes the bidirectional external connectivity through BGP type of network setup.
 ![Bidirectional external connectivity through BGP](./figures/bi-dir-ext-conn-bgp.png "Bidirectional external connectivity through BGP"){: caption="Bidirectional external connectivity through BGP" caption-side="bottom"}
@@ -105,12 +105,12 @@ Figure 3 describes the bidirectional external connectivity through BGP type of n
 ### Bidirectional external connectivity through static routes
 {: #bi-dir-ext-conn-static-routes}
 
-With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see the [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
+With this use case, you can establish a network that allows communication between applications within the pod and with destination points on the external network. Using Layer 3 firewall rules, you can allow both inbound and outbound connections. Establish a static route between edge routers that are within the pod and to the next hop router that is within the corporate network. The static route establishes a connection between the pod subnet and the corporate network. To establish the static route connectivity manually, contact the Support Center. For more information, see the [Getting support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external} section.
 
 #### Example
 {: #static-example}
 
-You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. Your corporate network can access the pod subnets through a static route connection.
+You have a database server that is running inside the pod. You need to access the database server from another application that resides outside the pod but within your corporate network. With Layer 3 inbound access, you can route the traffic and apply your corporate firewall or routing rules to access the database server. Your corporate network can access the pod subnets through a static route connection.
 
 Figure 4 describes the bidirectional external connectivity through static routes type of network setup.
 ![Bidirectional external connectivity through static routes](./figures/static-route.png "Bidirectional external connectivity through static routes"){: caption="Bidirectional external connectivity through static routes" caption-side="bottom"}

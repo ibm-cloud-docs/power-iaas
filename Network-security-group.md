@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-18"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -169,7 +169,7 @@ To enable or disable the NSG feature on an existing workspace, complete the foll
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -205,12 +205,12 @@ By default, all inbound network traffic is denied and does not reach any member 
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 3. Select the workspace in which you want to create the NSG. The Workspace details panel is displayed.
 4. Click **View virtual servers**.
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 6. Click **Create network security group**. The Create network security group page is displayed.
 7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
 8. To define **Inbound security rules** and add **Members** to the NSG later, click **Continue** > **Finish** > **Create**.
@@ -222,7 +222,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -230,7 +230,7 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 6. Click **Create network security group**. The Create network security group panel is displayed.
 
@@ -316,7 +316,7 @@ To rename an NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -324,7 +324,7 @@ To rename an NSG, complete the following steps:
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to rename and select **Edit**. The Edit network security group details panel is displayed.
 
@@ -339,7 +339,7 @@ When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the sa
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -347,7 +347,7 @@ When you clone an NSG, a new {{site.data.keyword.nsg-lc}} is created with the sa
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to clone and select **Clone**. The Clone network security group dialog is displayed.
 
@@ -372,7 +372,7 @@ To delete a NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -380,7 +380,7 @@ To delete a NSG, complete the following steps:
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 6. Click the overflow menu (icon with 3 vertical dots) on the NSG entry that you want to delete and select **Delete**. The Delete network security group confirmation message box appears.
 
@@ -401,7 +401,7 @@ To create an NAG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -411,7 +411,7 @@ To create an NAG, complete the following steps:
 
 5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed.
 
-6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
+6. Select the **Network address groups** tab. a list of existing NAGs is displayed.
 
 7. Click **Create network address group**. The Create network address group panel is displayed.
 
@@ -446,7 +446,7 @@ To rename an NAG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -456,7 +456,7 @@ To rename an NAG, complete the following steps:
 
 5. In the navigation panel, click **Networking** > **Network security groups**.
 
-6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
+6. Select the **Network address groups** tab. a list of existing NAGs is displayed.
 
 7. Click the overflow menu (icon with 3 vertical dots) on the far right of the NAG entry that you want to rename and select **Edit**. The Edit network address group details panel is displayed.
 
@@ -469,7 +469,7 @@ To delete an NAG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -479,7 +479,7 @@ To delete an NAG, complete the following steps:
 
 5. In the navigation panel, click **Networking** > **Network security groups**.
 
-6. Select the **Network address groups** tab. A list of the existing NAGs is displayed.
+6. Select the **Network address groups** tab. a list of existing NAGs is displayed.
 
 7. Click the overflow menu (icon with 3 vertical dots) on the NAG entry that you want to delete and select **Delete**. The Delete network address group confirmation message box appears.
 
@@ -506,7 +506,7 @@ To create rules on an existing NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -514,7 +514,7 @@ To create rules on an existing NSG, complete the following steps:
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Select the NSG in which you want to create the rule. The Network security group details page is displayed.
 
@@ -531,7 +531,7 @@ You can also customize the cloned properties of a rule to create a different rul
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -539,7 +539,7 @@ You can also customize the cloned properties of a rule to create a different rul
 
 4. Click **View virtual servers**.
 
-5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+5. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 6. Select the NSG that contains the rule that you want to clone. The Network security group details page of the selected NSG is displayed.
 
@@ -557,7 +557,7 @@ To delete a rule from an existing NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -565,7 +565,7 @@ To delete a rule from an existing NSG, complete the following steps:
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Select the NSG with the rule that you want to delete. The Network security group details page of the selected NSG is displayed.
 
@@ -595,7 +595,7 @@ To add members to an existing NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
@@ -603,7 +603,7 @@ To add members to an existing NSG, complete the following steps:
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Select the NSG to which you want to add members. The Network security group details page of the selected NSG is displayed.
 
@@ -638,15 +638,15 @@ To move a member from one NSG to another NSG, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
-3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
+3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG from which you want to move the members. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Select the NSG from which you want to move the members. The Network security group details page of the selected NSG is displayed.
 
@@ -665,13 +665,13 @@ To remove members that are associated with an NSG, complete the following steps:
 
 1. Open the Power Virtual Server user interface in [IBM Cloud](https://cloud.ibm.com/power/overview){: external}.
 
-2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of the existing workspaces.
+2. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
 3. Select the workspace that contains the NSG from which you want to remove the members. The Workspace details panel is displayed.
 
 4. Click **View virtual servers**.
 
-4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of the existing NSGs on the **Network security groups** tab.
+4. In the navigation panel, click **Networking** > **Network security groups**. The Network security groups page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
 5. Select the NSG from which you want to remove the members. The Network security group details page of the selected NSG is displayed.
 

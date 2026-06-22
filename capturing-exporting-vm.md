@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-18"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -62,7 +62,7 @@ Complete the following steps to capture and export a VSI:
 
 2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
-3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of the existing workspaces is displayed.
+3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
 4. Select your workspace from the displayed list of workspaces.
 

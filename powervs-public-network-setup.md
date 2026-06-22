@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-18"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -35,7 +35,7 @@ Complete the following steps to configure public network access for your LPAR or
 
 2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the {{site.data.keyword.powerSys_notm}} tile.
 
-3. In the navigation panel, click **Workspaces**. The Workspaces page with a list of the existing workspaces is displayed.
+3. In the navigation panel, click **Workspaces**. The Workspaces page with a list of existing workspaces is displayed.
 
 4. Click your workspace from the list to open the virtual server instance page.
 

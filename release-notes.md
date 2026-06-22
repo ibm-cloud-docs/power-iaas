@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-15"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,7 +27,12 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+### 19 June 2026
+{: #power-iaas-jun1926}
+{: release-note}
 
+in-mum-1 and in-mum-2 zones in {{site.data.keyword.off-prem}}
+:   {{site.data.keyword.powerSys_notm}} offers the `in-mum-1` and `in-mum-2` zones as data centers in Mumbai, India. For more information about the data center capabilities, see the **Data center capabilities** section on the [Power with the benefits of distributed hybrid infrastructure](https://cloud.ibm.com/power/overview#:~:text=Data%20center%20capabilities){: external} page.
 
 ### 9 June 2026
 {: #power-iaas-jun0926}
@@ -57,10 +62,10 @@ Stock images support
 {: release-note}
 
 ISO/IEC 20000 compliance
-:   {{site.data.keyword.powerSys_notm}} is ISO 20000 certified alongside other IBM Cloud services. For more information, see [Compliance certification](/docs/power-iaas?topic=power-iaas-compliances-list#ISO-20000-cert).
+:   {{site.data.keyword.powerSys_notm}} is ISO 20000 certified with other IBM Cloud services. For more information, see [Compliance certification](/docs/power-iaas?topic=power-iaas-compliances-list#ISO-20000-cert).
 
 Stock images support
-:   * The RHEL 9.4 general purpose stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
+:   * The RHEL 9.4 general-purpose stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported by Red Hat.
     * The IBM i 7.2 stock image is removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported.
 
 ## March 2026

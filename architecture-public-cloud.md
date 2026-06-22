@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-06-11"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -298,7 +298,7 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
 {: #private-network}
 
 * Allows your {{site.data.keyword.powerSys_notm}} instance to access existing {{site.data.keyword.cloud_notm}} resources, such as IBM Cloud Bare Metal Servers, Kubernetes containers, and Cloud Object Storage.
-* Uses a Direct Link Connect connection to connect to your IBM Cloud account network and resources.
+* Uses a Power Edge Router (PER) to connect to your IBM Cloud account network and resources.
 * Required for communication between different {{site.data.keyword.powerSys_notm}} instances.
 
 For more information about the different options for configuring a private network, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).
