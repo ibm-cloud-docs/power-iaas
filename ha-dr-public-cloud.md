@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-23"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -43,18 +43,6 @@ When a host fails unexpectedly, the virtual server instances (VSIs) on the faile
 
 The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
 {: note}
-
-
-
-The host failure recovery:
-
-- Is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment.
-
-- Does not restart pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for Automated remote restart.
-
-- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
-
-
 
 
 
