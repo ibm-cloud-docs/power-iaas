@@ -41,11 +41,9 @@ Metadata service and trusted profiles support
 S1122 servers as dedicated hosts
 :   You can provision S1122 servers as dedicated hosts. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
-DHCP service for {{site.data.keyword.powerSys_notm}}
-:   You can enable or disable Dynamic Host Configuration Protocol (DHCP) services on subnets in your {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} page.
-
-{{site.data.keyword.powerSys_notm}} networking enhancements
-:   * **Network routes**: The network routes feature is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. A network route defines the path that data packets follow to travel from a source to a destination across a network. You can use the network routes feature in {{site.data.keyword.powerSys_notm}} to view implicit network routes and create or manage static routes in your Power Virtual Server workspaces. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
+Networking enhancements
+:   * **DHCP service for {{site.data.keyword.powerSys_notm}}**: You can enable or disable Dynamic Host Configuration Protocol (DHCP) services on subnets in your    {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} page.
+    * **Network routes**: The network routes feature is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. A network route defines the path that data packets follow to travel from a source to a destination across a network. You can use the network routes feature in {{site.data.keyword.powerSys_notm}} to view implicit network routes and create or manage static routes in your Power Virtual Server workspaces. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
     * **{{site.data.keyword.arp-broadcast}}**: The Address Resolution Protocol (ARP) is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. ARP maps IP addresses to physical Media Access Control (MAC) addresses in a network. For more information, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
 
 
@@ -507,7 +505,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
 
 
-- [{{site.data.keyword.off-prem}}]{: tag-blue} The refreshed RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and RHEL 8.6 for general purpose and SAP OS images are available in the image catalog that supports SAP t-shirt profiles with more than 64 cores. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-compute-os-design-considerations#os-power) for IBM {{site.data.keyword.powerSys_notm}}.
+- [{{site.data.keyword.off-prem}}]{: tag-blue} The refreshed RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and RHEL 8.6 for general purpose and SAP OS images are available in the image catalog that supports SAP t-shirt profiles with more than 64 cores. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-plan-os-powervs) for IBM {{site.data.keyword.powerSys_notm}}.
 
 
 
@@ -528,7 +526,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - [{{site.data.keyword.off-prem}}]{: tag-blue} new AIX 7.2 TL5 SP8 and RHEL 9.4 general purpose (RHEL9-SP4) operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - [{{site.data.keyword.on-prem}}]{: tag-red} new AIX 7.3 TL2 SP1 and AIX 7.2 TL5 SP8 operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - New IBM i 7.5 TR4 and IBM i 7.4 TR10 operating system images are available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
-- New `IBM i COR` stock image is available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. While you are installing the image, if you encounter any issues, you can refer to the [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external} procedure. For more information, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#ibm-os-versions).
+- New `IBM i COR` stock image is available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. While you are installing the image, if you encounter any issues, you can refer to the [Extended Base Support in Error](https://www.ibm.com/support/pages/extended-base-support-error){: external} procedure. For more information, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#ibm-os-versions).
 
 **End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
 {: important}
@@ -624,7 +622,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 {: #feb-2024}
 
 - PER is now available in the `SAO01` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
-- You can now provision the SLES 15 SP5 images. You are required to install an additional [software package](/docs/sap?topic=sap-power-vs-set-up-power-instances#power-vs-addtl-sw-sles-sap) as a prerequisite for SAP and Netweaver workloads.
+- You can now provision the SLES 15 SP5 images. You are required to install an additional [software package](/docs/sap?topic=sap-ha-sles-refs) as a prerequisite for SAP and Netweaver workloads.
 - You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that is listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available across all the data centers. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - Flexible IOPS is now available in the `FRA04`, `LON06`, and `MAD02` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 - Global Replication Service (GRS) is now available in `WDC07` and `DAL10` data center pair.

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2025-07-08"
+lastupdated: "2026-06-23"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -41,10 +41,10 @@ IAM enables you to securely authenticate users, control access to {{site.data.ke
 
 For more information about IAM, review the following information:
 
-- [Getting started with IAM](/docs/account?topic=account-access-getstarted)
-- [Managing resource groups](/docs/account?topic=account-rgs)
-- [Setting up access groups](/docs/account?topic=account-groups)
-- [IAM concepts](/docs/account?topic=account-iamoverview)
+- [Getting started with IAM](/docs/iam?topic=iam-iamoverview)
+- [Managing resource groups](/docs/account?topic=account-rgs&interface=ui)
+- [Streamlined access management with access groups](/docs/iam?topic=iam-groups&interface=ui)
+- [IAM access concepts](/docs/iam?topic=iam-access-management-overview)
 
 ## Platform access roles
 {: #platform-access-roles}
