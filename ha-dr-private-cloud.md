@@ -44,7 +44,7 @@ When a host fails unexpectedly, the virtual server instances (VSIs) on the faile
 The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
 {: note}
 
-Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the Automated remote restart feature. You can disable Automated remote restart for a VSI by modifying the related settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the automated remote restart feature. You can disable automated remote restart for a VSI by modifying the related settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
 Host failure recovery:
 
