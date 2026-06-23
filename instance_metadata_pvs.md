@@ -36,11 +36,11 @@ The metadata service provides metadata only about the VSI that makes the request
 
 Access to the metadata service is disabled by default. You can enable access to the metadata service for your VSIs by using the {{site.data.keyword.powerSys_notm}} user interface, API, or the CLI.
 
-The metadata service provides the following APIs:
+The metadata service provides the following API endpoints:
 
-* **Identity APIs** provides identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the Identity API to create a short-lived IAM token for writing to an {{site.data.keyword.cos_full_notm}} bucket.
+* **Identity endpoints** provides identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the identity endpoints to create a short-lived IAM token for writing to an {{site.data.keyword.cos_full_notm}} bucket.
 
-* **Metadata API** provides access to the metadata for a VSI. {{site.data.keyword.powerSys_notm}} supports the instance metadata API, which returns information about the VSI including the instance ID, name, CRN, workspace information, and network configuration.
+* **Metadata endpoint** provides access to the metadata for a VSI. {{site.data.keyword.powerSys_notm}} supports the instance metadata endpoint, which returns information about the VSI including the instance ID, name, CRN, workspace information, and network configuration.
 
 For more information about using these APIs, refer to the {{site.data.keyword.powerSys_notm}} [Metadata and Identity API](https://cloud.ibm.com/apidocs/power-cloud-metadata-identity){: external} documentation.
 
@@ -383,7 +383,7 @@ curl -X GET "https://api.metadata.power-iaas.cloud.ibm.com/metadata/v1/instance"
 ```
 {: codeblock}
 
-The response includes details about the VSI. For more information, see the [{{site.data.keyword.powerSys_notm}} Metadata API](/apidocs/power-cloud-metadata) reference.
+The response includes details about the VSI. For more information, see the [Retrieves information for the calling Virtual Server Instance (VSI)](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance).
 
 
 
@@ -451,5 +451,3 @@ sudo iptables --append OUTPUT --proto tcp --destination 169.254.169.253 --match 
 Limit the trusted profiles that you create for compute resource identities in IAM. If a VSI does not need a compute resource identity, do not assign a compute resource identity.
 
 You can also update existing trusted profiles by redefining the trust relationship, assigning access policies, and updating session limits. For more information, see [Updating trusted profiles](/docs/account?topic=account-trusted-profile-update){: external}.
-
-
