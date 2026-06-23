@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-01"
+lastupdated: "2026-06-23"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -327,12 +327,12 @@ Flexible IOPS is a tier-less storage offering that removes the notion of a disk 
 
 Table 5 shows the supported storage tiers with corresponding IOPS.
 
-| Tier level | IOPS                         | Performance                                                                                          |
-| ---------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Tier level | IOPS                         | Performance                                                                                         |
+| ---------- | ---------------------------- | --------------------------------------------------------------------------------------------------- |
 | Tier 0     | 25 IOPS/GB                   | A 100-GB volume receives 2500 IOPS. \n This is 2.5x faster than tier 1 and 8.3x faster than tier 3. |
 | Tier 1     | 10 IOPS/GB                   | A 100-GB volume receives 1000 IOPS. \n This is 3.3x faster than tier 3.                             |
-| Tier 3     | 3 IOPS/GB                    | A 100-GB volume receives 300 IOPS.                                                                   |
-| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS.                                                                  |
+| Tier 3     | 3 IOPS/GB                    | A 100-GB volume receives 300 IOPS.                                                                  |
+| Fixed IOPS | 5000 IOPS regardless of size | A 100-GB volume receives 5000 IOPS.                                                                 |
 {: caption="Tier and IOPS mapping" caption-side="bottom"}
 
 The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which is the break even size with Tier 0 (200 GB @ 25 IOPS/GB = 5000 IOPS).
