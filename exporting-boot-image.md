@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -23,8 +23,6 @@ subcollection: power-iaas
 {{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 ---
-
-
 
 You can export a custom boot image from your image catalog to IBM Cloud Object Storage.
 {: shortdesc}
@@ -105,10 +103,24 @@ To view details of an image export job, use the [`ibmcloud pi image export-show`
 
 To export a boot image to IBM Cloud Object Storage by using the API, use the [Add image export job to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-images-export-post){: external} method.
 
+## Viewing boot image export results
+{: #view-export-results}
+
+After you start a boot image export operation, the **Status** column on the **Boot images** page shows the export progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The following information is displayed:
+
+- Job ID
+- Operation type
+- Input resource
+- Creation time
+- Steps completed
+
+To view details of an image export job by using the CLI, use the [`ibmcloud pi image-export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-image-export-show) command.
+
+To view the image export status by using the API, use the [Get detail of last image export job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-images-export-get){: external} method.
 
 ## Related information
 {: #related-info-export}
 
-For information about importing boot images from IBM Cloud Object Storage, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image).
+For information about importing custom boot images, see [Importing a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image).
 
 For information about capturing and exporting virtual server instances, see [Capturing and exporting a virtual server instance](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).

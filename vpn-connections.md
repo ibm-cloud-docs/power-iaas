@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-23"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -18,12 +18,7 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-
 
 
 ---

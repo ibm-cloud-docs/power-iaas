@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -18,8 +18,6 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
@@ -27,9 +25,6 @@ subcollection: power-iaas
 
 
 ---
-
-
-
 
 You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After you create a storage volume, you cannot change its storage type. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
 {: shortdesc}
@@ -186,6 +181,21 @@ To import a customized SAP HANA or SAP NetWeaver image, specify the following im
 }
 ```
 {: codeblock}
+
+## Viewing boot image import results
+{: #view-import-results}
+
+After you start a boot image import operation, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The following information is displayed:
+
+- Job ID
+- Operation type
+- Input resource
+- Creation time
+- Steps completed
+
+To view details of an image import job by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
+
+To view the image import status by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}

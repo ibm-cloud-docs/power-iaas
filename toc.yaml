@@ -89,18 +89,21 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Networking for IBM data center
+          label: Networking
           topics:
           - configuring-private-subnet.md
+          - static-routes.md
+          - subnet-arp-broadcast-oracle-rac.md
+          - X86-based-systems.md
+      - topicgroup:
+          label: Networking for IBM data center
+          topics:
           - new-network-architecture.md
           - getting-started-PER.md
           - Network-security-group.md
-          - static-routes.md
           - powervs-public-network-setup.md
           - vpn-connections.md
           - network-security.md
-          - X86-based-systems.md
-          - subnet-arp-broadcast-oracle-rac.md
           - topicgroup:
               label: Former IBM data center networking configurations
               topics:

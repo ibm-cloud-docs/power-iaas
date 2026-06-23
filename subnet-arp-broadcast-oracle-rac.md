@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-23"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -21,7 +21,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 ---
 
@@ -38,14 +38,8 @@ The Address Resolution Protocol (ARP) is a network protocol that is used to map 
 The **{{site.data.keyword.arp-broadcast}}** is a switch that is provided on a subnet page of a {{site.data.keyword.powerSys_notm}} workspace. You can set **{{site.data.keyword.arp-broadcast}}** to **Enabled** or **Disabled**. When you set **{{site.data.keyword.arp-broadcast}}** to **Enabled**, the ARP request is broadcast across the subnet. You can use the broadcast request for ARP to distribute the ARP traffic in the {{site.data.keyword.powerSys_notm}} network fabric.  A Gratuitous ARP (GARP) request can update the host ARP caches when an IP address has a different MAC address. To accomplish GARP requests, you must broadcast an ARP request across the subnet. For example, when **{{site.data.keyword.arp-broadcast}}** is used with a cluster software such as Kubernetes, the network traffic is routed to the active cluster node.
 {: shortdesc}
 
-
-
-The **{{site.data.keyword.arp-broadcast}}** option is not available if you are using Cloud Connections. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+The **{{site.data.keyword.arp-broadcast}}** option is available on PER-enabled {{site.data.keyword.powerSys_notm}} workspaces and on {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about PER, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 {: note}
-
-
-
-
 
 ## Benefits of enabling the ARP broadcast in {{site.data.keyword.powerSys_notm}} subnets
 {: #arp-enabl-benefit}

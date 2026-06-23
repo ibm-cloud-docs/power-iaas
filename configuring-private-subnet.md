@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-23"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -23,7 +23,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 
@@ -32,17 +32,12 @@ subcollection: power-iaas
 You can configure a private network subnet when you create an {{site.data.keyword.powerSysFull}} by providing your subnet a name and specifying a Classless Inter-Domain Routing (CIDR).
 {: shortdesc}
 
+In a {{site.data.keyword.off-prem}}, the private network subnet configuration depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace. The networking configuration of the workspace can use one of the following approaches:
 
+* {{site.data.keyword.powerSys_notm}} workspace that is enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This configuration is the default for most locations if the workspace is created after mid-2023 and the workspace can use VPN Connections.
+* {{site.data.keyword.powerSys_notm}} workspace that is enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). In this configuration, PER is the default connection, and the workspace can use VPN Connections.
 
-
-
-The configuration of the private network subnet depends on the networking configuration of the {{site.data.keyword.powerSys_notm}} workspace, which can use one of the following approaches:
-
-1. {{site.data.keyword.powerSys_notm}} workspace enabled with the [Power Edge Router (PER)](/docs/power-iaas?topic=power-iaas-per). This configuration is default for most locations if created after mid-2023, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-2. {{site.data.keyword.powerSys_notm}} workspace enabled with [Power Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections). PER is the default connection, and can use [VPN Connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-3. [{{site.data.keyword.dl_short}} Connect for {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect).
-4. [{{site.data.keyword.powerSys_notm}} VPN service (Power VPNaaS) to {{site.data.keyword.powerSys_notm}}s](/docs/power-iaas?topic=power-iaas-VPN-connections-deprecated).
-
+For more information about VPN connections, see [VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
 
 
 
@@ -61,35 +56,66 @@ A CIDR has the following format:
 
 For example, `192.168.100.14/24` represents the IPv4 address, `192.168.100.14`, and its associated routing prefix `192.168.100.0`, or equivalently, its subnet mask `255.255.255.0` (which has 24 leading 1 bit).
 
-
+## Configure a private network subnet by using UI
 
 To create a new subnet, complete the following steps:
 
 You cannot assign the subnet that is already assigned to another virtual machine. However, when you edit the configuration of a virtual machine, you can assign the same subnet multiple times.
 {: note}
 
-1. Sign in to the [IBM Cloud Portal](https://cloud.ibm.com){: external}.
+1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
 
-2. Select the menu icon and select **Resource List**.
+2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the {{site.data.keyword.powerSys_notm}} tile.
 
-3. Click the arrow next to **Services**.
+3. In the navigation panel, click **Workspaces**. The workspaces page with a list of existing workspaces is displayed.
 
-4. Select the {{site.data.keyword.powerSys_notm}} workspace to which you'd like to assign a subnet.
+4. Click your workspace from the list to open the virtual server instance page.
 
-5. Click **Subnets** in the left navigation panel, then **Add subnet**.
+5. Click **Subnets** in the left navigation panel, then click **Create subnet**. The new subnet panel is displayed.
 
-6. (Optional) Set the **Subnet ARP Broadcast** option to **Enabled** if you want to enable the {{site.data.keyword.arp-broadcast}} option in the {{site.data.keyword.powerSys_notm}} subnets. The {{site.data.keyword.arp-broadcast}} distributes the ARP traffic in the {{site.data.keyword.powerSys_notm}} network fabric.
+6. Enter a name, CIDR value (for example, '192.168.100.14/24'), gateway number (for example, '192.168.100.15'), and the IP range values for the subnet.
 
-7. Enter a name for the subnet, CIDR value (for example: '192.168.100.14/24'), gateway number (for example: '192.168.100.15'), and the IP range values for the subnet.
+7. Enter the **DNS server** value.
 
-8. You must provide the **DNS server** value.
-    A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This issue can cause the LPAR to hang during the startup operation. Go with the default DNS server value of `127.0.0.1` to avoid this issue. As of now, you can add up to 20 DNS servers. The DNS IP addresses must be separated by commas.
+    A **DNS server** value of `9.9.9.9` might not be reachable if you don't have a public IP. This issue can cause the LPAR to hang during the startup operation. You can use the default DNS server value of `127.0.0.1` to avoid this issue. You can add up to 20 DNS server IP addresses separated by commas.
 
-9.  You can also attach a primary and redundant cloud connection to the subnet to set up high availability. For more information on high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
+8. Set **Advertise** to one of the following options:
+    - **Enabled**: The static route is advertised to external connections. **Advertise** is set to **Enabled** by default.
+    - **Disabled**: The static route is not advertised to external connections.
+
+9. Set **Subnet ARP Broadcast** to one of the following options:
+    - **Enabled**: Distributes the Address Resolution Protocol (ARP) traffic in the {{site.data.keyword.powerSys_notm}} network fabric.
+
+    - **Disabled**: Does not distribute the ARP traffic in the {{site.data.keyword.powerSys_notm}} network fabric. **Subnet ARP Broadcast** is set to **Disabled** by default.
+
+    For more information about subnet ARP broadcast, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
+
+10. Set **DHCP** to to one of the following options:
+    - **Enabled**: Network interfaces that are configured to use Dynamic Host Configuration Protocol (DHCP) receive their IPv4 configurations automatically. **DHCP** is set to **Enabled** by default.
+
+    - **Disabled**: Network interfaces that are configured to use DHCP do not receive their IPv4 configurations automatically.
+
+    The DHCP service is available only in IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about DHCP, see [DHCP network inside the pod](/docs/power-iaas?topic=power-iaas-network_use_cases#dhcp-network-new).
+
+11.  You can also attach a primary and redundant cloud connection to the subnet to set up high availability in an {{site.data.keyword.off-prem}}. For more information about high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
 10. Click **Create subnet**.
 
-You can also edit an existing subnet by clicking the subnet in the table. You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section.
+
+## Updating an existing subnet
+{: #update-subnet}
+
+Complete the following steps to update an existing subnet:
+
+1.  Click **Subnets** in the left navigation panel.
+
+2. Click the subnet that you want to update from the displayed list.
+
+3. Click **Edit details** to update the subnet.
+
+You can attach or detach cloud connections to each of the subnets in the **Attached cloud connections** section in {{site.data.keyword.off-prem}}.
+
+## Configure a private network subnet by using CLI
 
 You can also create and configure a private network subnet by using the IBM command-line interface (CLI). Use the following command to create a private network subnet:
 
@@ -97,10 +123,6 @@ You can also create and configure a private network subnet by using the IBM comm
 ibmcloud pi network-create-private NETWORK_NAME --cidr-block CIDR --ip-range "startIP-endIP[,startIP-endIP]" [--dns-servers "DNS1 DNS2"] [--gateway GATEWAY] [--json]
 ```
 {: codeblock}
-
-
-
-
 
 ## Reserving IP addresses
 {: #reserv-ip}
@@ -128,28 +150,12 @@ To add an IP address into the reserved IP address list, complete the following s
 
 * Provide a description of your reserved IP in the **Reserved IP description (optional)** field.
 
-
-
-
-## Networking considerations
+## Networking considerations for {{site.data.keyword.off-prem}}
 {: #networking-considerations}
 
-You can establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances with any one of the following four approaches:
+You can establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances with any one of the following approaches:
 1.	Use a PER-enabled workspace. See, [Getting started with PER](/docs/power-iaas?topic=power-iaas-per).
 2.	Create and attach the subnet to a cloud connection and Transit Gateway.
-3.	Set up routing over Direct Links. See, [Ordering Direct Link 2.0 Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect#order-direct-link-connect-2.0)
-4.	Configure VPNaaS and set up routing with VPNaaS. See, [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-
-In case you are not using any of these approaches, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support) if you need to establish a private network communication between the two {{site.data.keyword.powerSys_notm}} instances.
-
-For example, consider that you are adding a subnet `172.10.10.0/24` from the user interface (UI). The virtual server instances that are attached to the subnet must communicate with each other. If you want the virtual server instances to communicate without using any of the methods listed previously, open a support ticket. You must provide the following subnet information that is displayed in the {{site.data.keyword.powerSys_notm}} user interface to the support team.
-
-
-| Name          | Gateway       | VLAN ID | CIDR             |
-| ------------- | ------------- | ------- | ---------------- |
-| powerns-net02 | `172.10.10.1` | `3001`  | `172.10.10.0/26` |
-{: caption="Example subnet information displayed in the UI" caption-side="bottom"}
-
 
 
 

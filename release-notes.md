@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-15"
+lastupdated: "2026-06-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -24,6 +24,31 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## June 2026
 {: #June-2026}
+
+### 24 June 2026
+{: #power-iaas-jun2426}
+{: release-note}
+
+Disabling automated remote restart for a virtual server instance
+:   Automated remote restart is enabled by default for all virtual server instances (VSIs) in the {{site.data.keyword.powerSys_notm}} environment. You can disable automated remote restart by modifying the settings for a VSI. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+
+Monitoring boot image import, boot image export, and VSI capture and export status in the UI
+:   You can view the status of boot image import, boot image export, and VSI capture and export operations in the UI. This enhancement provides improved visibility into long-running image jobs before you start another image job. For more information, see [Viewing import boot image results](/docs/power-iaas?topic=power-iaas-importing-boot-image#view-import-results), [Viewing export boot image results](/docs/power-iaas?topic=power-iaas-exporting-boot-image#view-export-results), and [Viewing the capture and export results](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#view-capture-export-results).
+
+Metadata service and trusted profiles support
+:   You can use the metadata service to retrieve information about your VSIs and generate identity tokens for secure authentication. The metadata service enables you to access instance metadata and use trusted profiles to call IAM-enabled services without managing API keys. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
+
+S1122 servers as dedicated hosts
+:   You can provision S1122 servers as dedicated hosts. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
+
+DHCP service for {{site.data.keyword.powerSys_notm}}
+:   You can enable or disable Dynamic Host Configuration Protocol (DHCP) services on subnets in your {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} page.
+
+{{site.data.keyword.powerSys_notm}} networking enhancements
+:   * **Network routes**: The network routes feature is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. A network route defines the path that data packets follow to travel from a source to a destination across a network. You can use the network routes feature in {{site.data.keyword.powerSys_notm}} to view implicit network routes and create or manage static routes in your Power Virtual Server workspaces. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
+    * **{{site.data.keyword.arp-broadcast}}**: The Address Resolution Protocol (ARP) is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. ARP maps IP addresses to physical Media Access Control (MAC) addresses in a network. For more information, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
+
+
 
 
 
