@@ -85,8 +85,6 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
 
-    
-
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
 7. Optional: Expand **Advanced Configuration** to set additional options for your VSI.
@@ -95,7 +93,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     You can choose between **Soft** pinning and **Hard** pinning. For more information, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
 
-    - **Metadata service**: By default, the Metadata service option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
+    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
 
 
@@ -212,6 +210,12 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
         The effective processor compatibility mode for the VSI might not match the preferred mode that is selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lesser mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
         {: note}
+
+    - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. You can disable this feature during VSI creation by setting **Automated remote restart** to off, or later by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+
+        Automated remote restart does not restart pinned VSIs. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+
+        {{_include-segments/disable-arr.md}}
 
 10. Click **Continue**.
 
@@ -377,17 +381,18 @@ Virtual Server Instances (VSIs) can be optionally pinned to a host. Pin VSIs onl
 ### Virtual server pinning policies
 {: #vmpinning-policies}
 
-
-
 The behavior of the VSI depends on the following **Virtual server pinning** policies that you select:
 
-- **None**: If you select **None**, the VSI migrates automatically or starts remotely during maintenance windows or if the host fails. The default value is **None**.
-
-- **Soft**: If you select **Soft**, a backend process restarts the VSI on another host if the current host fails. When the initial host recovers, the backend process migrates the VSI to the initial host automatically by using live partition migration (LPM).
-
-- **Hard**: If you select **Hard**, the movement of the VSI from the host do not occur during compute host failures and maintenance activities.
 
 
+- **Soft**: If you select **Soft** pinning, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host returns to its operating state by using live partition migration (LPM).
+
+- **Hard**: If you select **Hard** pinning, the movement of the VSI from the host does not occur during compute host failures and maintenance activities. When you use Hard pinning, consider protecting your workload by using a separate [High availability](#x2284708){: term} (HA) and [Disaster recovery](#x2113280){: term} (DR) solution.
+
+When you change the pin policy of a VSI from **Hard** to **Soft** or disable the pin policy, consider enabling **Automated remote restart** on the VSI. The automated remote restart setting restarts the VSI on another available host if an IBM Power host fails.
+{: important}
+
+For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
 
 

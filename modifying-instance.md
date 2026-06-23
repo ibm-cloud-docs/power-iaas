@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -47,8 +47,6 @@ To modify a VSI after you create it, complete the following steps:
 
 5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
 
-
-
 From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
@@ -57,10 +55,8 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 - [Changing licenses for an IBM i-based VSI](#change-ibmi-license)
 - [Managing the storage volumes](#modifying-volume-network)
 - [Adding or removing a public network](#adding-removing-network)
-
-
-
-
+- [Enabling or disabling access to the metadata service](#enable-disable-metadata-service)
+- [Disabling automated remote restart for a VSI](#disable-arr)
 
 ### Changing the VSI name
 {: #edit-vsi-name}
@@ -133,11 +129,10 @@ Server placement groups provide control over the host or server on which a new V
 
 
 
+When you change the pinning policy of a VSI from **Hard** to **Soft** or disable the pinning policy, consider enabling automated remote restart setting on the VSI. The automated remote restart setting restarts the VSI on another available host if an IBM Power host fails.
+{: important}
+
 To change the pinning state and server placement group of the VSI, complete the following steps:
-
-
-
-
 
 1. In the **Overview** tab, click the **Edit** icon in the Placement section. The Edit placement panel is displayed.
 3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
@@ -446,11 +441,29 @@ Public networks are not supported in all the IBM data center locations. If your 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
+## Enabling or disabling access to the metadata service
+{: #enable-disable-metadata-service}
 
+Access to the metadata service for a VSI is disabled by default. For an existing VSI, you can enable or disable access to the metadata service by using the {{site.data.keyword.powerSys_notm}} user interface, CLI, or API.
 
+When you enable access to the metadata service, you can access information about a VSI and access IAM-enabled services. For more information about enabling or disabling access to the metadata service, see the following topics:
 
+- [Enabling access to the metadata service for an existing VSI](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-enable-existing-instance-ui)
+- [Disabling access to the metadata service](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-disable-instance-ui)
 
+## Disabling automated remote restart for a VSI
+{: #disable-arr}
 
+Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. To disable automated remote restart for a VSI, complete the following steps:
+
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+2. Set **Automated remote restart** to **Disabled**.
+3. Click **Save**.
+
+{{_include-segments/disable-arr.md}}
+
+The hard pin policy for a VSI takes precedence over the automated remote restart setting for the VSI; therefore, a hard-pinned VSI is not restarted automatically.
+{: note}
 
 ## Detecting problems by using the System Reference Code (SRC)
 {: #detect-problems-using-src}

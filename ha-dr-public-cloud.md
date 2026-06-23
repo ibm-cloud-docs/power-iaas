@@ -46,8 +46,13 @@ The host failure recovery process involves restarting the VSIs on alternate host
 
 
 
+Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the automated remote restart feature. You can disable automated remote restart for a VSI by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
+Host failure recovery:
 
+- Does not restart a pinned VSI. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that VSIs are not pinned to a host. For more information, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+
+- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using  virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}
