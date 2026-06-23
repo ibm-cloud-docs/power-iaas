@@ -36,7 +36,7 @@ Monitoring boot image import, boot image export, and VSI capture and export stat
 :   You can view the status of boot image import, boot image export, and VSI capture and export operations in the UI. This enhancement provides improved visibility into long-running image jobs before you start another image job. For more information, see [Viewing import boot image results](/docs/power-iaas?topic=power-iaas-importing-boot-image#view-import-results), [Viewing export boot image results](/docs/power-iaas?topic=power-iaas-exporting-boot-image#view-export-results), and [Viewing the capture and export results](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#view-capture-export-results).
 
 Metadata service and trusted profiles support
-:   You can use the metadata service to retrieve information about your VSIs and generate identity tokens for secure authentication. The metadata service enables you to access instance metadata and use trusted profiles to call IAM-enabled services without managing API keys. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
+:   The metadata service enables you to access instance metadata and use trusted profiles to call IAM-enabled services without managing API keys. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
 S1122 servers as dedicated hosts
 :   You can provision S1122 servers as dedicated hosts. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
