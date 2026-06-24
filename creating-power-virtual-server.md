@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-24"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -214,6 +214,8 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. You can disable this feature during VSI creation by setting **Automated remote restart** to off, or later by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
         Automated remote restart does not restart pinned VSIs. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+
+        
 
         {{_include-segments/disable-arr.md}}
 
