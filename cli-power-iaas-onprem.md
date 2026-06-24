@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-06-22"
+lastupdated: "2026-06-24"
 
 content-type: cli-docs
 
@@ -3353,7 +3353,7 @@ get VOLUME_ID
 ```bash
   -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this option to add more auxiliary volumes.
   -d, --description string          Volume onboarding description.
-  -s, --source-crn string           CRN of source ServiceBroker instance from where auxiliary volumes need to be onboarded.
+  -s, --source-crn string           The CRN of the workspace in which the primary volume is located.
   -u, --user-tags strings           Comma separated list of user tags to be attached to the volume onboarding.
 ```
 

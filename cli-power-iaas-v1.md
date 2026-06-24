@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-06-22"
+lastupdated: "2026-06-24"
 
 content-type: cli-docs
 
@@ -21,6 +21,7 @@ content-type: cli-docs
 ---
 
 The following list of commands are available with command-line interface (CLI) for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}.
+
 
 
 
@@ -1678,7 +1679,8 @@ attach INSTANCE_ID --subnet SUBNET_ID [--ip-address IP_ADDRESS] [--network-secur
 
 ```bash
   -i, --ip-address string                  The requested ip address of this subnet interface (192.168.1.0).
-      --network-security-group-id string   The network security group that the network interface is a member of. If not specified, the default network security group is used.
+      --network-security-group-id string   The network security group that the network interface is a member of.
+                                           If not specified, the default network security group is used.
   -n, --subnet string                      The subnet ID.
 ```
 
@@ -4655,7 +4657,7 @@ get VOLUME_ID
 ```bash
   -a, --auxiliary-volumes strings   Comma separated list of identifiers of the volume(s) at storage host level. Repeat this option to add more auxiliary volumes.
   -d, --description string          Volume onboarding description.
-  -s, --source-crn string           CRN of source ServiceBroker instance from where auxiliary volumes need to be onboarded.
+  -s, --source-crn string           The CRN of the workspace in which the primary volume is located.
   -u, --user-tags strings           Comma separated list of user tags to be attached to the volume onboarding.
 ```
 
