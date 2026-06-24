@@ -39,7 +39,7 @@ Access to the metadata service is disabled by default. You can enable access to 
 The metadata service provides the following API endpoints:
 
 Identity endpoints
-:   Identity endpoints provide identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the identity endpoints to create a short-lived IAM token for writing to an {{site.data.keyword.cos_full_notm}} bucket.
+:   The identity endpoints provide identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the identity endpoints to create a short-lived IAM token for writing to an {{site.data.keyword.cos_full_notm}} bucket.
 
 Metadata endpoint
 :   The metadata endpoint provides access to the metadata for a VSI. {{site.data.keyword.powerSys_notm}} supports the instance metadata endpoint, which returns information about the VSI including the instance ID, name, CRN, workspace information, and network configuration.
