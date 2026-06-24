@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -139,7 +139,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported b
 
 Power server E1080 (9080-HEX) and S1022 (9105-22A) supports: RHEL 8.4 or later and SLES 15 SP3 or later versions.
 
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} before you start deployment.
 {: note}
 
 ## Creating an IBM Cloud Object Storage bucket

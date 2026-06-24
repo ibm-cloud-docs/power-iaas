@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-24"
 
 keywords: Operating systems, powerVS OS
 
@@ -171,7 +171,7 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 [^d]: Power10 systems running firmware level FW1110 support AIX 7.2 TL5 and later.
 [^f]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.
 [^3]: IBM i Cloud Optical Repository (COR) is a virtual image. You can deploy the image and use it as a Network File Server (NFS) to perform various IBM i tasks that require media. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
-[^4]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/57xxss1-option-1-or-option-3-error-tips-reinstallation){: external}.
+[^4]: For more information about performing an upgrade, see [57xxSS1 Option 1 or Option 3 in *ERROR - Tips Before Reinstallation](https://www.ibm.com/support/pages/node/687255){: external}.
 [^5]: IBM i 7.3 on Power Virtual Server ended normal support on 1 October 2023 and is supported with paid service extension only. Refer to the [IBM i lifecycle](https://www.ibm.com/support/pages/release-life-cycle){: external} page for upcoming EoL dates and prepare to upgrade to a later version.
 
 

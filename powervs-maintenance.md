@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026 
-lastupdated: "2026-05-05" 
+lastupdated: "2026-06-24" 
 
 keywords: virtual server instances (VSI), vm, power, compute, virtual machines, planning, best practices, instances, virtual machines (VM), virtual machine (VM) instance, Power virtual machine (VM) , maintenance, IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power S1122, S922, E980, S1022, S1122, PowerVS, Power virtual server
 
@@ -40,7 +40,7 @@ Most updates do not affect the workloads that are running on the {{site.data.key
 {: #powervs-host-maintenance}
 
 
-Host maintenance activities, such as firmware updates, require a live partition migration of a virtual service instance (VSI) from the compute host to another host. In such cases, the VSIs continue to run without interruption. Therefore, IBM does not send a notification. For more information, see [Viewing notifications](/docs/account?topic=account-viewing-notifications){: external}.
+Host maintenance activities, such as firmware updates, require a live partition migration of a virtual service instance (VSI) from the compute host to another host. In such cases, the VSIs continue to run without interruption. Therefore, IBM does not send a notification. For more information, see [Viewing notifications](/docs/support?topic=support-viewing-notifications){: external}.
 
 When you use the VSI pinning options, the VSI's availability during maintenance activities is affected. VSI pinning prevents {{site.data.keyword.powerSys_notm}} from migrating the VSI to another host during the maintenance operation. As a result, the live migration of the VSI is not possible, and the VSI must be in the *Shutoff* state for the host maintenance operation to complete. Therefore, you must use the VSI pinning options cautiously. Any downtime that is caused by VSI pinning during the host maintenance is excluded from the service-level agreements. For more information, see [Service Level Agreements for IBM Cloud](https://www.ibm.com/support/customer/csol/terms/?id=i126-9268&lc=en){: external}.
 

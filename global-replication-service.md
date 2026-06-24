@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-24"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -116,8 +116,6 @@ The following table shows the location pairs that support replication.
 
 
 
-
-
 | Location 1        | Location 2         |
 | ----------------- | ------------------ |
 | `mad02`           | `eu-de-1 (fra04)`  |
@@ -133,10 +131,6 @@ The following table shows the location pairs that support replication.
 | `lon04`           | `lon06`            |
 {: class="simple-table"}
 {: caption="The {{site.data.keyword.powerSys_notm}} region pairs that are replication-enabled" caption-side="bottom"}
-
-
-
-
 
 
 ### Listing the {{site.data.keyword.powerSys_notm}} regions that support GRS by using API or CLI commands
