@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-06-23"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -64,7 +64,7 @@ You cannot contact the Red Hat-based repository and download the appropriate sof
 
 1. To buy an RHEL subscription, see [Red Hat Enterprise Linux Server](https://www.redhat.com/en/store/red-hat-enterprise-linux-ibm-power-little-endian){: external}.
 
-2. To register your system, see [Quick Registration for RHEL](https://docs.redhat.com/en/documentation/subscription_central/1-latest/html/getting_started_with_rhel_system_registration/basic-reg-rhel-gui){: external}.
+2. To register your system, see [Quick Registration for RHEL](https://docs.redhat.com/en/documentation/subscription_central/1-latest/html-single/getting_started_with_rhel_system_registration/index){: external}.
 
 
 ## Capturing and importing an RHEL image

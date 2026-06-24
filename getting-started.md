@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2026 
 
-lastupdated: "2025-10-24"
+lastupdated: "2026-06-23"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -34,7 +34,7 @@ In the data centers, the {{site.data.keyword.powerSys_notm}}s are separated from
 
 
 
-If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](https://cloud.ibm.com/docs/sap?topic=sap-powervs-planning-items){: external} and [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-powervs-set-up-power-infrastructure){: external}.
+If you are creating or configuring a {{site.data.keyword.powerSys_notm}} instance to support an SAP NetWeaver or SAP HANA workload, see [Planning your deployment](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} and [Deploying your infrastructure](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-set-up-power-sap-network){: external}.
 
 If you are creating or configuring a Red Hat OpenShift Cluster on {{site.data.keyword.powerSys_notm}}, see [Cloud native development and application modernization by using Red Hat OpenShift on IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-app-modernization-using-RedHat-openshift).
 

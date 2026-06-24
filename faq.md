@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-23"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -227,19 +227,14 @@ To migrate your VSI from one data center to another, you must capture and export
 
 
 
+You can pin a VSI to the host on which the VSI is running by selecting the **Soft** or **Hard** pinning policy. If you do not set a pinning policy or if you select **Soft**, {{site.data.keyword.powerSys_notm}} automatically migrates or remotely restarts the VSI during maintenance windows or if a host fails.
 
+When you select **Soft** pinning, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host after the host returns to its operating state.
 
-You can choose a pinning policy: soft pin or hard pin, to pin a VSI to the host where it is running. If pinning is not set or if it is set to soft pin, the VSI is automatically migrated or remote restarted during maintenance windows or in case of host failure.
+When you select **Hard** pinning, {{site.data.keyword.powerSys_notm}} restricts VSI movement during remote restart, automated remote restart, dynamic resource optimization, and live partition migration. {{site.data.keyword.powerSys_notm}} shuts off hard-pinned VSIs when the host is in a **Shutoff**, **Standby**, or **Error** state due to maintenance or host failure. When you use **Hard** pinning, consider protecting your workload by using a separate [High availability](#x2284708){: term} (HA) and [Disaster recovery](#x2113280){: term} (DR) solution.
 
-When you soft pin a VSI for high availability, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host is back to its operating state.
-
-When you hard pin a VSI, the movement of the VSI is restricted during remote restart, automated remote restart, dynamic resource optimization, and live partition migration. The movement of the VSI is also restricted if the VSI has a licensing restriction with the host. If the VSIs are set to hard pin, VSIs are stopped if the frame is down.
-
-The default pinning policy is none.
-
-
-
-
+When you change the pin policy of a VSI from **Hard** to **Soft** or disable the pin policy, consider enabling **Automated remote restart** on the VSI. The automated remote restart setting restarts the VSI on another available host if an IBM Power host fails.
+{: important}
 
 
 

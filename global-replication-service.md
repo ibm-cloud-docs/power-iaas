@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-24"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -113,7 +113,6 @@ The ideal number of volumes depends on your workload characteristics, including 
 
 
 The following table shows the location pairs that support replication.
-
 
 
 

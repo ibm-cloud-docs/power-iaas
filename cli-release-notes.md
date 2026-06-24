@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-06-04"
+lastupdated: "2026-06-23"
 
 ---
 
@@ -18,6 +18,61 @@ In this change log, you can learn about the latest changes, improvements, and up
 
 
 
+## June 2026
+{: #June-2026}
+
+### CLI v1.10.0
+{: #cli-v1.10.0}
+
+The CLI plug-in version v1.10.0 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+**New commands**
+
+The following CLI commands are added:
+
+- [ibmcloud pi route](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-route): You can use this command to create, delete, get, and list routes for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+- [ibmcloud pi vpmem-volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-vpmem-volume-update): You can use this command to update the names of the virtual persistent memory (vPMEM) volumes.
+
+**New options**
+
+The following options are added to the existing CLI commands:
+
+- `--advertise` is added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-update) commands for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. You can use this option to determine whether to advertise the private networks.
+
+- `--arp-broadcast` is added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-update) commands for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. You can use this option to enable or disable the ARP broadcast.
+
+- `--enable-dhcp` is added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-update) commands for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. You can use this option to enable or disable subnet support for Dynamic Host Configuration Protocol (DHCP).
+
+
+
+- `--allow-remote-restart` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to enable  for an instance.
+
+- `--default-trusted-profile` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify the trusted profile cloud resource name (CRN), ID, or name of the default identity and access management (IAM) trusted profile to use for a virtual server instance (VSI).
+
+- `--default-trusted-profile-autolink` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to enable the system to create a link to the specified trusted profile when you create or update the server.
+
+- `--metadata-service` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify whether the metadata service endpoint is available to the VSI.
+
+- `--metadata-service-force` is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to disable the metadata service while the VSI is active.
+
+
+
+
+
+**Other enhancements**
+
+The following enhancements are included in this release:
+
+- Added the `CRN` field to the output of the [ibmcloud pi workspace create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-create) command.
+
+- Added the `Deprecated` field to the output of the [ibmcloud pi instance sap profile](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-profile) command.
+
+- Updated the error message when `--net-type` is used in the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-create) command.
+
+- Improved the readability of volume clone displays.
+
+- Refined translations for improved clarity and consistency.
 
 
 

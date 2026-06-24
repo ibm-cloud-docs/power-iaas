@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-24"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, direct link connect, colocation, data center, cloud connect, megaport
 
@@ -21,9 +21,6 @@ subcollection: power-iaas
 
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-
 
 
 ---
@@ -64,7 +61,7 @@ These use cases describe the following deployment topologies:
 
 * Connecting {{site.data.keyword.powerSys_notm}} to IBM Cloud classic infrastructure by using IBM Cloud {{site.data.keyword.dl_short}} (2.0). Typical use cases for this topology are as follows:
     - Use IBM Cloud classic x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
-    - Build a backup and restore environment based on [IBM Spectrum Protect Cloud Blueprints](https://www.ibm.com/support/pages/ibm-spectrum-protect-cloud-blueprints) for both IBM Spectrum Protect and IBM Spectrum Protect Plus topologies. Also, see [AIX Backups with {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf).
+    - Build a backup and restore environment based on [IBM Spectrum Protect Cloud Blueprints](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Spectrum%20Protect%20Cloud%20Blueprint%20for%20IBM%20Cloud%20V2.0.pdf) for both IBM Spectrum Protect and IBM Spectrum Protect Plus topologies. Also, see [AIX Backups with {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_AIX_Backups_Tutorial_v1.pdf).
 * Connecting {{site.data.keyword.powerSys_notm}} to the IBM Cloud VPC infrastructure environment by using {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is to use IBM Cloud VPC x86 resources to create tiered applications across different hardware platforms, that is, x86 application servers and Power database servers.
 * Connecting {{site.data.keyword.powerSys_notm}} to the network in the client-managed environment by using Megaport or {{site.data.keyword.dl_short}} (2.0) Connect. A typical use case for this topology is that you require access to your Power virtual servers from your external networks, such as networks in your client-managed environment. This topology uses Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect.
 * Connecting two {{site.data.keyword.powerSys_notm}} environments by using Megaport or {{site.data.keyword.dl_short}} Connect. This topology connects two or more Power virtual server environments together by using Megaport services or {{site.data.keyword.dl_short}} (2.0) Connect. Connecting two or more environments together enables use cases, such as disaster recovery.
@@ -321,7 +318,7 @@ If {{site.data.keyword.dl_short}} (2.0) is not available at a suitable location,
 
 ![Connect to client-managed environment with Direct Link GRE Tunnel](./images/Power-arch-cc-classic-GRE.svg "Connect to client-managed environment with Direct Link GRE Tunnel"){: caption="Connect to client-managed environment with Direct Link GRE Tunnel." caption-side="bottom"}
 
-This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
+This deployment topology uses the IBM Cloud classic infrastructure gateway appliance to provide a GRE gateway. For more information, see [Getting started with IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started-ga).
 
 * The IBM Cloud gateway appliance allows you to selectively route private and optionally public network traffic through a full-featured, enterprise-level firewall that is powered by the software features of; VyOS, JunOS, or any other operating system (Bring Your Own Appliance) you choose.
 
@@ -333,7 +330,7 @@ This deployment topology uses the IBM Cloud classic infrastructure gateway appli
 
 Complete the following steps to implement this scenario:
 
-1. [Set up an IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
+1. [Set up an IBM Cloud Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-getting-started-ga).
 2. Complete all steps that are mentioned in [Connect-to-classic infrastructure by using IBM {{site.data.keyword.dl_short}}](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams-former#network-reference-architecture-classic). It includes configuring {{site.data.keyword.powerSys_notm}} private subnets and provisioning a {{site.data.keyword.dl_short}} (2.0) Connect or an IBM Cloud connection instance with the VRF option.
 3. The IBM Cloud classic infrastructure environment VRF contains the following routes:
     - Subnets that are assigned to you by IBM Cloud for use in your classic environment.

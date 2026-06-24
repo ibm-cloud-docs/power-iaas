@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2024
+  years: 2020, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-06-23"
 
 keywords: Power VS, X86, VSI, GRE tunnel
 
@@ -17,7 +17,6 @@ subcollection: power-iaas
 {: #powervs-integration-x86-workloads}
 
 ---
-
 
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}

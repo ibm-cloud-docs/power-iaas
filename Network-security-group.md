@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 

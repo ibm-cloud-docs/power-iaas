@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-06-24"
 
 keywords: Full Linux Subscription, {{site.data.keyword.powerSys_notm}}, private cloud, install squid base, creating proxy
 
@@ -49,7 +49,7 @@ To select the OS images, click **Boot image** > **Operating system** on the Crea
 
 You can import your own custom image when you plan to supply your own subscription.
 
-For SAP applications, you must use an IBM stock OS image for SAP that is certified for using SAP applications. The bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}} before you start deployment, see [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external}.
+For SAP applications, you must use an IBM stock OS image for SAP that is certified for using SAP applications. The bring your own images feature is not supported. To learn more about SAP applications with {{site.data.keyword.powerSys_notm}} before you start deployment, see [Must-Reads](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external}.
 
 The full Linux subscription feature for bring your own license or custom images is not available on the Create virtual server instance page under **IBM provided subscription** section. For Linux through IBM Cloud support, you must purchase a full Linux subscription from IBM Cloud. In addition, you must deploy one of the stock OS images for full Linux subscription that is available in the {{site.data.keyword.powerSys_notm}} image catalog. If you bring your own license, you must use a bring your own license stock image or a custom image. To get support for a bring your own license stock image or a custom image, contact the OS image provider or your Linux subscription provider.
 {: important}

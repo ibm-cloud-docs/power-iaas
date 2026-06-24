@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -27,8 +27,6 @@ subcollection: power-iaas
 
 
 ---
-
-
 
 You can capture and export a virtual server instance (VSI) by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. When you capture a VSI, the boot volume and any attached data volumes are saved as a volume-backed image. The image is stored in new volumes on the storage providers. You can export the captured image to the image catalog, an IBM Cloud Object Storage bucket, or both. When an image is exported, the volumes of the image are copied and packaged in an Open Virtualization Appliance (OVA) file. The OVA file is compressed by using *gzip* before it is uploaded to your selected destination.
 {: shortdesc}
@@ -117,14 +115,6 @@ Complete the following steps to capture and export a VSI:
 
 12. Click **Capture and export**. The **Capture & export virtual server** dialog is displayed with information about the capture operation. Review the information and click **Capture and export**.
 
-When the capture and export operation is complete, a notification is displayed indicating the status of the operation.
-
-To view your exported image:
-
-- If you exported your volume-backed image to IBM Cloud Object Storage, navigate to your Cloud Object Storage bucket to view the image.
-
-- If you exported your volume-backed image to the image catalog, navigate to the **Boot images** page to view the image.
-
 ## Capturing and exporting a VSI by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-capture-export}
 
@@ -134,6 +124,34 @@ To capture and export a VSI, use the [`ibmcloud pi instance-capture`](/docs/powe
 ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volumes "VOLUME1 VOLUME2"] [--access-key KEY] [--secret-key KEY] [--region REGION] [--image-path TYPE]
 ```
 {: codeblock}
+
+## Capturing and exporting a VSI by using the {{site.data.keyword.powerSys_notm}} API
+{: #api-capture-export}
+
+To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
+
+
+## Viewing the capture and export results
+{: #view-capture-export-results}
+
+After you click **Capture and export** in the confirmation dialog, a notification is displayed confirming that the capture and export process has started. A **Capture and export in progress** progress bar is displayed on the **Overview** tab of the selected virtual server instance.
+
+You can monitor the progress of the operation by clicking **View details** next to the progress bar.
+
+To view details of a capture and export job by using the CLI, use the [`ibmcloud pi instance capture show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-capture-show) command.
+
+To view details of a capture and export job by using the API, use the [Get detail of last capture job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-get){: external} method.
+
+If you select large volumes, the export process can take a significantly long time.
+{: important}
+
+When the capture and export operation is complete, another notification is displayed indicating the status of the operation.
+
+To view your exported image:
+
+- If you exported your volume-backed image to IBM Cloud Object Storage, navigate to your Cloud Object Storage bucket to view the image.
+
+- If you exported your volume-backed image to the image catalog, navigate to the **Boot images** page to view the image.
 
 To see your newly exported image in the image catalog by using the CLI, use the `ibmcloud pi image-list-catalog` command:
 
@@ -148,11 +166,6 @@ To see your newly exported image in Cloud Object Storage by using the CLI, use t
 ibmcloud cos list-objects --bucket BUCKET_NAME [--delimiter DELIMITER] [--encoding-type METHOD] [--prefix PREFIX] [--starting-token TOKEN] [--page-size SIZE] [--max-items NUMBER] [--region REGION] [--json]
 ```
 {: codeblock}
-
-## Capturing and exporting a VSI by using the {{site.data.keyword.powerSys_notm}} API
-{: #api-capture-export}
-
-To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
 
 ## Related information
 {: #related-info-capture-exp}

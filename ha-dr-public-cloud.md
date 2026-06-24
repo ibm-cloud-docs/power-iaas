@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-24"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -46,20 +46,15 @@ The host failure recovery process involves restarting the VSIs on alternate host
 
 
 
-The host failure recovery:
+Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the automated remote restart feature. You can disable automated remote restart for a VSI by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-- Is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment.
+Host failure recovery:
 
-- Does not restart pinned VSIs. [Pinning virtual server instances](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning) to specific hosts results in extended downtime, as the recovery depends on the time that is taken to repair the failed host. To prevent or minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for Automated remote restart.
+- Does not restart a pinned VSI. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that VSIs are not pinned to a host. For more information, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
-- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using capabilities such as virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
+- Does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to stay together on the same host. A hard-pinned VSI prevents the group from moving to another host. 
 
-
-
-
-
-
-
+- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using  virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}

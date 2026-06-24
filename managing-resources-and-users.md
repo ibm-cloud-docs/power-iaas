@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2025-07-08"
+lastupdated: "2026-06-24"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -41,10 +41,10 @@ IAM enables you to securely authenticate users, control access to {{site.data.ke
 
 For more information about IAM, review the following information:
 
-- [Getting started with IAM](/docs/account?topic=account-access-getstarted)
-- [Managing resource groups](/docs/account?topic=account-rgs)
-- [Setting up access groups](/docs/account?topic=account-groups)
-- [IAM concepts](/docs/account?topic=account-iamoverview)
+- [Getting started with IAM](/docs/iam?topic=iam-iamoverview)
+- [Managing resource groups](/docs/account?topic=account-rgs&interface=ui)
+- [Streamlined access management with access groups](/docs/iam?topic=iam-groups&interface=ui)
+- [IAM access concepts](/docs/iam?topic=iam-access-management-overview)
 
 ## Platform access roles
 {: #platform-access-roles}
@@ -72,7 +72,7 @@ You can use the service access roles to define the actions that the users can pe
 | Manager | Configure all resources. You can perform the following actions:  \n * Create instances  \n * Increase storage volume sizes  \n * Create SSH keys  \n * Modify network settings  \n * Create boot images  \n * Delete storage volumes |
 {: caption="IAM service access roles" caption-side="bottom"}
 
-To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/account?topic=account-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
+To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
 
 ### Resources supported for {{site.data.keyword.powerSys_notm}} IAM access policies
 {: #res-supported}
@@ -114,4 +114,45 @@ The following table displays the additional access roles that are required for t
 ## User access scenarios
 {: #user-access-scenarios}
 
-For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/account?topic=account-iamusermanpol).
+For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/iam?topic=iam-iamusermanpol).
+
+
+
+## Understanding trusted profiles for {{site.data.keyword.powerSys_notm}}
+{: #trusted-profiles}
+
+A trusted profile is a security mechanism that eliminates the need to store static secrets, such as IBM Cloud API keys, in potentially vulnerable environments like virtual server instances (VSIs). An {{site.data.keyword.cloud_notm}} instance is trusted by IBM Cloud IAM as a type of compute resource. As a result, trusted profiles can be used to grant {{site.data.keyword.powerSys_notm}} VSIs secure access to call other service API endpoints without storing credentials within the instance.
+{: shortdesc}
+
+
+### Benefits of using trusted profiles
+{: #trusted-profiles-benefits}
+
+Using trusted profiles with {{site.data.keyword.powerSys_notm}} provides several security and operational advantages:
+
+Enhanced security
+:   Eliminates the risk of credential exposure by removing the need to store API keys or passwords on your VSIs.
+
+Simplified credential management
+:   Eliminates the need to rotate, update, or manage static credentials across your VSI fleet.
+
+Dynamic authentication
+:   Applications in the guest OS can generate tokens on demand based on the VSI identity, ensuring that access is always current and tied to the specific instance.
+
+Reduced attack surface
+:   Without stored credentials, compromised VSIs cannot expose long-lived secrets that can be used to access other resources.
+
+Granular access control
+:   You can assign specific access rights to individual VSIs through IAM policies and access groups.
+
+### Managing trusted profiles
+{: #trusted-profiles-management}
+
+You manage trusted profiles through IBM Identity and Access Management (IAM). You can create, configure, and manage trusted profiles from the [IBM Cloud Trusted Profiles UI](https://cloud.ibm.com/iam/trusted-profiles){: external}. You can associate each profile with one or more {{site.data.keyword.powerSys_notm}} VSIs, and you can assign access policies to control which IBM Cloud services and resources the VSIs can access.
+
+### Creating a trusted profile for {{site.data.keyword.powerSys_notm}}
+{: #trusted-profiles-create}
+
+To use trusted profiles with your {{site.data.keyword.powerSys_notm}} VSIs, you must first create a trusted profile in IAM. You can configure rule-based policies for the VSIs or specify an individual VSI that can use a trusted profile. All configuration is done from within an individual trusted profile.
+
+For more information about creating and managing a trusted profile, see [Establishing trust with compute resources in the console](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-compute){: external}.

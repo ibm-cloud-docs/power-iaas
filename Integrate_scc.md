@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-03-27"
+lastupdated: "2026-06-23"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -89,7 +89,7 @@ To enable Monitoring or CSPM in an existing Power Virtual Server workspace, comp
 ## {{site.data.keyword.sysdigsecure_short}} agent in Linux® and AIX® on {{site.data.keyword.powerSys_notm}}
 {: #wp-linux-AIX}
 
-After you provision an instance of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service in IBM Cloud, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux or AIX hosts on {{site.data.keyword.powerSysFull}}. To provision an instance of {{site.data.keyword.sysdigsecure_short}}, see [Provisioning an instance](/docs/workload-protection?topic=workload-protection-provision&interface=ui).
+After you provision an instance of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service in IBM Cloud, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux or AIX hosts on {{site.data.keyword.powerSysFull}}. To provision an instance of {{site.data.keyword.sysdigsecure_short}}, see [Managing the Workload Protection agent in Linux on Power Virtual Server](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs) or [Managing the Workload Protection agent on AIX on Power Virtual Server](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
 
 {{site.data.keyword.sysdigsecure_short}} provides the following features to protect your stand-alone Linux or AIX hosts on {{site.data.keyword.powerSys_notm}}.
 

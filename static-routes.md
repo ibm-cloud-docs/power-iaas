@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: Network routes, static routes, custom route, route table, routes for high availability (ha) and disaster recovery (da)
 
@@ -20,7 +20,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 ---
 
@@ -29,14 +29,8 @@ A network route is a defined path that data packets follow to travel from a sour
 
 With static routes, you can build an overlay network by using CIDRs that are not associated with subnets in your {{site.data.keyword.powerSys_notm}} workspace to implement high availability (HA) and disaster recovery (DR) strategies. You can also view external network routes to identify which external destinations are accessible from your {{site.data.keyword.powerSys_notm}} workspace.
 
-
-
-The routes feature is available only on PER-enabled {{site.data.keyword.powerSys_notm}} workspaces. For more information about PER, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+The routes feature is available on PER-enabled {{site.data.keyword.powerSys_notm}} workspaces and on {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about PER, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 {: note}
-
-
-
-
 
 ## Creating static routes
 {: #creating-routes}

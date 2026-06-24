@@ -89,18 +89,21 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Networking for IBM data center
+          label: Networking
           topics:
           - configuring-private-subnet.md
+          - static-routes.md
+          - subnet-arp-broadcast-oracle-rac.md
+          - X86-based-systems.md
+      - topicgroup:
+          label: Networking for IBM data center
+          topics:
           - new-network-architecture.md
           - getting-started-PER.md
           - Network-security-group.md
-          - static-routes.md
           - powervs-public-network-setup.md
           - vpn-connections.md
           - network-security.md
-          - X86-based-systems.md
-          - subnet-arp-broadcast-oracle-rac.md
           - topicgroup:
               label: Former IBM data center networking configurations
               topics:
@@ -128,6 +131,7 @@ toc:
           label: Creating, managing, and deploying
           topics:
           - managing-resources-and-users.md
+          - instance_metadata_pvs.md
           - creating-power-virtual-server.md
           - vpmem.md
           - get-started-dedicated-host-AI.md
@@ -200,6 +204,9 @@ toc:
       - link:
           label: API reference
           href: https://cloud.ibm.com/apidocs/power-cloud
+      - link:
+          label: Metadata and Identity API
+          href: https://cloud.ibm.com/apidocs/power-cloud-metadata-identity
       - topicgroup:
           label: Command reference
           topics:
@@ -223,4 +230,5 @@ toc:
           topics:
           - troubleshoot-aix.md
           - troubleshoot-snapshot.md
+          - troubleshoot-metadata-service.md
       - getting-help-and-support.md

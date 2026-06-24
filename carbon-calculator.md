@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2025, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-06-23"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -136,7 +136,7 @@ The data for your workspace is not displayed on the carbon calculator or you are
 
 - Only the data from your workspaces on IBM Power10 or later systems is used to calculate the carbon emissions. If your workspace is on IBM Power9 or previous generations, the carbon emissions data is not available.
 
-- You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=api#billing-acct-mgmt-api){: external}.
+- You must have the required permissions or roles to view the data on the carbon calculator. For more information about assigning access, see [Assigning access to account management services](https://cloud.ibm.com/docs/iam?topic=iam-account-services&interface=ui#billing-acct-mgmt-api){: external}.
 
 - If you run workloads in a zero emission data center, emissions that are calculated by using the market-based methodology are set to zero and no data is displayed. To view emissions that are calculated by using the location-based methodology, select the **Display unadjusted emissions** checkbox on the [IBM Cloud carbon calculator](https://cloud.ibm.com/billing/carbon-calculator) dashboard. For more information about the market-based and location-based methodology, see [Market-based and location-based methodology](https://cloud.ibm.com/docs/account?topic=account-what-is-cloud-calc#market-location-methodology){: external}.
 

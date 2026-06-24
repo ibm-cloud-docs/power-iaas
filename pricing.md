@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-23"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -330,22 +330,17 @@ Refer to the following table to view the part number descriptions and the associ
 
 
 
-
-
 | Part description for dedicated host group (available on the IBM invoice)                         | Metric ID (available in the IBM Cloud catalog)                     |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | `IBM Power S922 (15 usable cores; 1 TB memory) dedicated host-hour`                                | `power-iaas-metric-S922-dedicated-host`                              |
 | `IBM Power S1022 (33 usable cores; 2 TB memory) dedicated host-hour`                               | `power-iaas-metric-S1022-dedicated-host`                             |
+| `IBM Power S1122 (51 usable cores; 2 TB memory) dedicated host-hour` | `power-iaas-metric-S1122-dedicated-host` |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #dedicated-host-group}
 {: tab-title="Dedicated host group"}
 {: translate="no"}
-
-
-
-
 
 
 
@@ -460,9 +455,7 @@ Processor cores are charged at different hourly rates based on the core type (**
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
 
-
-
-The following tables show examples of how different processor types affect the cost per system:
+The following examples show the cost per system for general purpose VSIs in North and South America regions:
 
 | Number of cores (S922) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ---------------------- | ---------------------------- | ------------------------ |
@@ -480,14 +473,17 @@ The following tables show examples of how different processor types affect the c
 
 | Number of cores (S1022) | Hourly rate (Processor type) | Monthly cost (730 hours) |
 | ----------------------- | ---------------------------- | ------------------------ |
-| 1                       | $0.58 (dedicated)            | $424.25                  |
+| 1                       | $0.59 (dedicated)            | $424.25                  |
 | 1                       | $0.15 (shared uncapped)      | $106.06                  |
 | 1                       | $0.22 (shared capped)        | $159.14                  |
 {: caption="S1022 processor type pricing example" caption-side="bottom"}
 
-
-
-
+| Number of cores (S1122) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ----------------------- | ---------------------------- | ------------------------ |
+| 1                       | $0.62 (dedicated)            | $454.37                  |
+| 1                       | $0.16 (shared uncapped)      | $113.59                  |
+| 1                       | $0.23 (shared capped)        | $170.44                  |
+{: caption="S1122 processor type pricing example" caption-side="bottom"}
 
 
 ## Pricing for Global Replication Services
@@ -532,7 +528,7 @@ SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX a
 ## Pricing for dedicated hosts
 {: #pricing-dh}
 
-Dedicated hosts are priced based on the host type – either an IBM Power S922 or IBM Power S1022. Each server type is metered by the hour and the price includes the entire capacity of the host.
+Dedicated hosts are priced based on the host type. The available dedicated hosts are IBM Power S922, IBM Power S1022, and IBM Power S1122. Each server type is metered by the hour and the price includes the entire capacity of the host.
 
 Consider the following points for dedicated host pricing:
 * You are not charged separately for SPPs that you deploy to the dedicated host.

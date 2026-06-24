@@ -6,7 +6,7 @@ keyword:
   on-prem-lc: client location
   ibmi-vst: IBM i software tier
   vst: software tier
-  arp-broadcast: Subnet ARP Broadcast
+  arp-broadcast: Subnet ARP broadcast
   nsg-lc: network security group
   nag-lc: network address group
   nsg-sc: Network security group

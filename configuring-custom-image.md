@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-30"
+lastupdated: "2026-06-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -139,7 +139,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported b
 
 Power server E1080 (9080-HEX) and S1022 (9105-22A) supports: RHEL 8.4 or later and SLES 15 SP3 or later versions.
 
-For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](https://cloud.ibm.com/docs/sap?topic=sap-power-vs-planning-items){: external} before you start deployment.
+For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} before you start deployment.
 {: note}
 
 ## Creating an IBM Cloud Object Storage bucket
@@ -207,5 +207,5 @@ The **Image file name** field supports the following formats: *.ova*, *.ova.gz*,
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
-    To download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-download-object){: external} for the Cloud Object Storage CLI command.
+    To download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#download-an-object){: external} for the Cloud Object Storage CLI command.
     {: tip}
