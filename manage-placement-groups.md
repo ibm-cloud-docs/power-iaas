@@ -34,6 +34,10 @@ Server placement groups provide you with control over the host or server on whic
 You can apply an affinity or anti-affinity policy to each VSI within a server placement group. After you create a placement group, you can provision a new VSI in the placement group. When you set a placement group with an affinity policy, all VSIs in the placement group are provisioned on the same server. When you set a placement group with an anti-affinity policy, all VSIs in the placement group are provisioned on different servers.
 
 
+When a host with VSIs fails unexpectedly, the VSIs do not automatically restart on another host if they belong to an affinity-based server placement group and one or more VSIs in the group are hard-pinned to the failed host. Affinity policies require all VSIs in the group to stay together on the same host. A hard-pinned VSI prevents the group from moving to another host.
+{: note}
+
+
 
 You can use the user interface for placement groups only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, you must use the CLI or API to create placement groups.
 {: important}

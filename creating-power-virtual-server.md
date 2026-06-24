@@ -215,6 +215,8 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
         Automated remote restart does not restart pinned VSIs. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
+        Automated remote restart also does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to stay together on the same host. A hard-pinned VSI prevents the group from moving to another host.
+
         
 
         {{_include-segments/disable-arr.md}}
