@@ -28,22 +28,23 @@ subcollection: power-iaas
 
 ---
 
-Server placement groups provide you control over the host or server on which a new virtual server instance (VSI) is placed. By using server placement groups, you can build high availability within a data center.
+Server placement groups provide you with control over the host or server on which a new virtual server instance (VSI) is placed. By using server placement groups, you can build high availability within a data center.
 {: shortdesc}
 
-You can apply an affinity or anti-affinity policy to each VSI within a server placement group. After you create a placement group, you can provision a new VSI in the placement group. When you set a placement group with an affinity policy, all VSIs in that placement group are provisioned on the same server. When you set a placement group with an anti-affinity policy, all VSIs in that placement group are provisioned on different servers.
+You can apply an affinity or anti-affinity policy to each VSI within a server placement group. After you create a placement group, you can provision a new VSI in the placement group. When you set a placement group with an affinity policy, all VSIs in the placement group are provisioned on the same server. When you set a placement group with an anti-affinity policy, all VSIs in the placement group are provisioned on different servers.
 
 
 
-You can use the user interface for placement groups only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, then you must use the CLI or API to create placement groups.
+You can use the user interface for placement groups only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, you must use the CLI or API to create placement groups.
 {: important}
 
-## Creating server placement groups
+## Creating server placement groups by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #creating-placement-groups}
 
-You can create server placement groups and provision VSIs in this placement group. The VSIs in this group can be set to have an affinity or anti-affinity policy with each other. Each placement group that you create must have a unique name. You can create a maximum of 25 placement groups. If you need to create more than 25 placement groups, raise a support ticket to increase the maximum limit. Use the following API to create a placement group: [Create a server placement group](/apidocs/power-cloud#pcloud-placementgroups-post).
 
-You can add or remove VSIs within the placement group. You cannot change the policy or name of a placement group after it is created.
+You can create server placement groups to provision VSIs with an affinity or anti-affinity policy. Each placement group that you create must have a unique name. You can create a maximum of 25 placement groups. If you need to create more than 25 placement groups, raise a support ticket to increase the maximum limit. Use the following API to create a placement group: [Create a server placement group](/apidocs/power-cloud#pcloud-placementgroups-post).
+
+You can add or remove VSIs within the placement group. You cannot change the policy or name of a placement group after you create it.
 
 To create a placement group, complete the following steps:
 
@@ -82,13 +83,15 @@ You can use the following APIs for managing server placement groups:
 - [Delete server placement group](/apidocs/power-cloud#pcloud-placementgroups-delete): Deletes server placement groups even if they contain member instances.
 - [Remove server from placement group](/apidocs/power-cloud#pcloud-placementgroups-members-delete): Removes a virtual server instance from a server placement group.
 
-## Add VSIs to a server placement group
+## Adding VSIs to a server placement group by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #add-server-pgroup}
 
-You can add VSIs to a server placement group.  You cannot add a VSI to a server placement group that contains a VSI that is in **Build** state.  In this case, you must wait until the VSI in the **Build** state changes to **Active** state, and then add a VSI to the server placement group. Use the following API to add a server to a placement group: [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
 
 
-When you add a VSI to the server placement group, the request might not be complete due to a conflict (409) with the affinity policy of the server placement group. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+You can add VSIs to a server placement group.  You cannot add a VSI to a server placement group that contains a VSI in the **Build** state.  You must wait until the VSI changes to the **Active** state before adding another VSI to the server placement group. Use the following API to add a server to a placement group: [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
+
+
+When you add a VSI to the server placement group, the request might fail due to a conflict (409) with the affinity policy. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 {: note}
 
 To add a VSI to a placement group, complete the following steps:
