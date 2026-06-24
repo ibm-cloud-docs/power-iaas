@@ -114,7 +114,7 @@ The following table displays the additional access roles that are required for t
 ## User access scenarios
 {: #user-access-scenarios}
 
-For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/iam?topic=iam-iamusermanpoll).
+For more information about managing and assigning access by using IAM policies, see [Managing access to resources](/docs/iam?topic=iam-iamusermanpol).
 
 
 
