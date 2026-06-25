@@ -29,8 +29,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #power-iaas-jun2626}
 {: release-note}
 
-Global Replication Service (GRS) pairs support
-:   GRS is available in the `che02` and `in-mum-2` data center pair.
+GRS pairs support
+:   Global Replication Services (GRS) is available in the `che02` and `in-mum-2` data center pair. For more information, see [{{site.data.keyword.powerSys_notm}} regions that support GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ### 24 June 2026
 {: #power-iaas-jun2426}
