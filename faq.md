@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-29"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -513,9 +513,9 @@ When the VSI is deployed and activated, the hypervisor on the host server checks
 
 For example, if a VSI runs on a POWER11 processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the operating system installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the operating system and the host firmware support and is lower than the preferred mode of `POWER11`.
 
-If you set the preferred processor compatibility mode to `default`, the hypervisor does not consider `POWER9` as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10`, or `POWER11`, but it cannot be `POWER9`.
+If you set the preferred processor compatibility mode to `Default`, the hypervisor does not consider `POWER9` as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10`, or `POWER11`, but it cannot be `POWER9`.
 
-Use the `default` mode as the preferred processor compatibility mode with caution. If the VSI for which the preferred mode is set to `default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment of the processor compatibility mode can prevent the VSI from migrating back to its original host.
+Use the `Default` mode as the preferred processor compatibility mode with caution. If the VSI for which the preferred mode is set to `Default` migrates to a different host during maintenance operations (or for other reasons) and you subsequently shut down and start the VSI again, the hypervisor might assign a different mode than the one the VSI was previously running in. This reassignment of the processor compatibility mode can prevent the VSI from migrating back to its original host.
 
 For more information about how to change the preferred processor compatibility mode for a VSI, see [Changing the preferred processor compatibility mode](/docs/power-iaas?topic=power-iaas-modifying-instance#change-cpu-compatibility).
 

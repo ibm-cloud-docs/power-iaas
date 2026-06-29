@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-06-26"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -37,7 +37,7 @@ subcollection: power-iaas
 ## Host failure recovery
 {: #host-failure-recovery}
 
-{{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure with including redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that hosts are responsive and operating correctly.
+{{site.data.keyword.powerSys_notm}} is built on the IBM Power enterprise infrastructure with redundant networking and storage area network (SAN) fabrics capabilities. IBM Power Virtual Server continuously monitors your infrastructure to ensure that hosts are responsive and operating correctly.
 
 When a host fails unexpectedly, the virtual server instances (VSIs) on the failed host are automatically restarted on another available host. In some cases, manual recovery of the failed host is required.
 

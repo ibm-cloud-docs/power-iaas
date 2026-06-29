@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-06-29"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -24,6 +24,13 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## June 2026
 {: #June-2026}
+
+### 29 June 2026
+{: #power-iaas-jun2626}
+{: release-note}
+
+GRS support in data center pairs
+:   Global Replication Services (GRS) is available in the `che02` and `in-mum-2` data center pair. For more information, see [{{site.data.keyword.powerSys_notm}} regions that support GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ### 24 June 2026
 {: #power-iaas-jun2426}
@@ -447,7 +454,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 {: important}
 
 
-- Starting `January 22, 2025`, [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn) and [Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID) are supported in all the data centers.
+- Starting `January 22, 2025`, [virtual serial number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn) and [Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID) are supported in all the data centers.
 
 
 - Global replication service supports new data center pair `LON04`-`LON06`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
@@ -461,7 +468,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- You can now assign a Virtual Serial Number (VSN) to an IBM i VSI. With a VSN associated with your VSI, you need not pin the VSI to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
+- You can now assign a virtual serial number (VSN) to an IBM i VSI. With a VSN associated with your VSI, you need not pin the VSI to a host for licensing or entitlement purposes. For more information, see [virtual serial number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
 - You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 - As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
@@ -483,7 +490,7 @@ Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
-- You can now enable Global Replication Services (GRS) for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
+- You can now enable GRS for asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. For more information, see [Global Replication Services in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-getting-started-GRS#grs-on-prem).
 - You can now access external connectivity to and from the virtual machines in a subnet. For more information, see [Use case 2: Multiple external connectivities](/docs/power-iaas?topic=power-iaas-network_use_cases#static-l3).
 - You can now discover infrastructure capabilities and important information that helps you to develop solutions by using Power Virtual Server on the {{site.data.keyword.powerSys_notm}}    [overview](https://cloud.ibm.com/power/overview){: external} page in the IBM Cloud console. For more information, see [Data center capabilities](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#dc-capabilities).
 - The new AIX 7.3 TL2 SP2 operating system image is available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
@@ -625,7 +632,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - You can now provision the SLES 15 SP5 images. You are required to install an additional [software package](/docs/sap?topic=sap-ha-sles-refs) as a prerequisite for SAP and Netweaver workloads.
 - You can now choose to use IBM provided Linux images with your own license. While provisioning the boot image, select the OS image that is listed under the **Client supplied subscription** section. The stock non-Full Linux Subscription (FLS) images are available across all the data centers. For more information see, [Full Linux® subscription for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-set-full-Linux).
 - Flexible IOPS is now available in the `FRA04`, `LON06`, and `MAD02` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
-- Global Replication Service (GRS) is now available in `WDC07` and `DAL10` data center pair.
+- GRS is now available in `WDC07` and `DAL10` data center pair.
 - You can now migrate your workspace that uses a Direct Link connection to a PER workspace through a support ticket. For more information, see [Migrating to Power Edge Router](/docs/power-iaas?topic=power-iaas-migrate-ws-per).
 - IBM Cloud Monitoring service is now available in `OSA21`, `DAL10`, and `WDC07`.
 
@@ -666,7 +673,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     - **Flexible IOPS** - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
     - New RHEL versions are available. See [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) page for details on the latest version.
     - **Update on the new SAP HANA large t-shirt profiles feature** - The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-plan-os-powervs) for IBM {{site.data.keyword.powerSys_notm}}.
-    - **New Global Replication Service (GRS) pairs support**
+    - **New GRS pairs support**
 
     The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
 
@@ -691,7 +698,7 @@ SAP Netweaver is not certified for use with S1022 systems, making them suitable 
 
 - **IBM i 7.3 service extension pricing** - Effective 1 October 2023, IBM i 7.3 on {{site.data.keyword.powerSys_notm}} is at the end of normal support and will be in service extension. Service extension pricing is automatically added to the IBM i charge for IBM i 7.3 usage.
 
-- **Addition of New Global Replication Service data center pair** - {{site.data.keyword.powerSys_notm}} expanded the Global Replication Service (GRS) capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is available on the Tier 1 storage support within the GRS framework. See: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
+- **Addition of New Global Replication Service data center pair** - {{site.data.keyword.powerSys_notm}} expanded the GRS capabilities by adding a new data center pair - `DAL13` and `WDC04`. This enhancement is available on the Tier 1 storage support within the GRS framework. See: [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ### June 2023
 {: #jun-2023}

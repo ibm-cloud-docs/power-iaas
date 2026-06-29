@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-29"
 
 keywords: power systems, cloud regions
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM Cloud&reg; regions
+# IBM Cloud&reg; regions for {{site.data.keyword.off-prem-fname}}
 {: #ibm-cloud-reg}
 
 ---
